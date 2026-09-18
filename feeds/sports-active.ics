@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Norwood.ma//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sports & active events
+X-WR-CALDESC:Public races\, skating\, sports events and active community programs.
+BEGIN:VEVENT
+UID:2026-09-18-ruth-solomon-symposium@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260920
+SUMMARY:The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating
+LOCATION:The Skating Club of Boston — 750 University Ave\, Norwood\, MA 02062
+DESCRIPTION:Public seminar/program at The Skating Club of Boston\; event runs Sept. 18–19. Registration applies.\nSource: https://scboston.org/event/figure-skating-health-and-performance-conference/
+URL:https://scboston.org/event/figure-skating-health-and-performance-conference/
+END:VEVENT
+END:VCALENDAR

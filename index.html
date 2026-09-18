@@ -1,49 +1,26 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#003B71"><title>Norwood.ma — Our Town. Online.</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="styles.css"></head><body>
-<div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></div>
-<div id="alertBar" class="alertbar" hidden><div><strong id="alertTitle">Local alert</strong><span id="alertText"></span></div><a id="alertLink" target="_blank" rel="noopener">Details →</a></div>
-<header class="top">
-<a class="brand" href="#home"><span class="word">Norwood</span><span class="dotma">.ma</span><small>OUR TOWN. ONLINE.</small></a>
-<button id="menu" aria-expanded="false">Menu</button>
-<nav id="nav"><a href="#news">News</a><a href="#events">Events</a><a href="#transit">Transit</a><a href="#resources">Resources</a><a href="#local">Local</a></nav>
-</header>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#003B71" name="theme-color"/><title>Norwood.ma — Our Town. Online.</title><link href="assets/favicon-approved.png" rel="icon"/><link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/><link href="styles.css?v=0.11.20" rel="stylesheet"/></head><body>
+<a class="skip-link" href="#home">Skip to main content</a>
+<div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
+<div aria-live="polite" class="alertbar" hidden="" id="alertBar" role="status"><div><strong id="alertTitle">Local alert</strong><span id="alertText"></span></div><a id="alertLink" rel="noopener" target="_blank">Details →</a></div>
+<header class="top"><a class="brand approved" href="index.html"><img alt="Norwood.ma — Our Town. Online." src="assets/logo-approved-transparent.png"/></a><button aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu" id="menu">Menu</button><nav id="nav"><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="calendars.html">Calendars</a><a href="resources.html">Local Resources</a></nav></header>
 <main id="home">
-<section class="hero"><div class="hero-bg"></div><div class="shade"></div><div class="hero-copy"><p class="eyebrow">NORWOOD, MASSACHUSETTS</p><h1>Your town,<br>right now.</h1><p>Local news, events, live transportation and useful resident resources — collected in one place.</p></div></section>
+<section aria-labelledby="hero-title" class="hero hero-compact"><div aria-label="Norwood, Massachusetts" class="hero-bg photo" id="heroPhoto" role="img"></div><div class="shade"></div><div class="hero-copy"><p class="eyebrow">NORWOOD, MASSACHUSETTS</p><h1 id="hero-title">Your town,<br/>right now.</h1><p>What’s happening, what’s changing, and what you need — in one place.</p></div><button aria-controls="photoInfo" aria-expanded="false" class="photo-credit" id="photoInfoButton">About this photo</button><div class="photo-info" hidden="" id="photoInfo"></div></section>
+<section class="happening"><b>TIME-SENSITIVE</b><div aria-live="polite" id="timelyItems">Checking local alerts and events…</div></section>
+<section class="status"><a href="weather.html"><span>☁</span><b id="temp">Weather</b><small id="forecast">Loading live forecast…</small></a><a class="dinner-spinner-quick" href="restaurants.html#dinner-spinner"><span class="mini-spinner" aria-hidden="true"></span><b>Dinner Spinner</b><small>Restaurant Randomizer &amp; Dining Directory →</small></a><a href="things.html"><span>★</span><b>Things to Do</b><small>Activities, entertainment &amp; places to explore →</small></a><a href="resources.html"><span>⌕</span><b>Local Resources</b><small>Services, programs &amp; organizations →</small></a></section>
+<section class="section dashboard-section" id="today"><div class="section-head"><div><p class="eyebrow">NORWOOD TODAY</p><h2>A quick look around town</h2></div><span class="muted">Live + frequently updated sources</span></div>
+<div class="dashboard-grid">
+<div class="dash-stack">
+<article class="dash-card event-splash"><div class="card-title"><span class="icon-chip">✨</span><div><p class="eyebrow">NEXT FEW DAYS</p><h3>What’s happening</h3></div></div><div class="event-mini" id="homeEvents"><span class="muted">Loading upcoming events…</span></div><a class="text-link" href="events.html">See more upcoming events →</a></article>
+<aside aria-label="Advertisement space" class="dash-card ad-slot" id="homeAdSlot"><div class="ad-slot-head"><span class="ad-label">ADVERTISEMENT</span></div><div class="ad-placeholder" id="homeAdCreative"><strong>Local advertising space</strong><span>Reserved for a future sponsor.</span></div><!-- Future ad creative should replace only #homeAdCreative. Keep the ADVERTISEMENT label visible. --></aside>
+</div>
+<article class="dash-card transit-preview"><div class="card-title"><span class="icon-chip">🚌</span><div><p class="eyebrow">LIVE TRANSIT</p><h3>Commuter Rail and 34E Bus</h3></div><span class="live" id="mapUpdated">CONNECTING…</span></div><div id="transitMap"></div><p class="muted small" id="selectedInfo">Tap a bus, train or station for live details.</p><a class="text-link" href="transit.html">Open detailed transit →</a></article>
+</div></section>
+<section class="section news-section" id="news"><div class="news-shell"><div class="section-head"><div><p class="eyebrow">LOCAL REPORTING</p><h2>Recent Norwood news</h2><p class="sub">Current reporting from local and regional sources.</p><span id="feedHealth">Loading bundled headlines…</span></div><a class="text-link" href="news.html">More local news →</a></div><div class="feed compact-headlines" id="newsFeed"><article>Loading current headlines…</article></div><button aria-expanded="false" class="more-news" id="moreNews">Show more current headlines ↓</button></div></section>
+<section class="section explore-home"><div class="section-head"><div><p class="eyebrow">EXPLORE NORWOOD</p><h2>Eat, play and get out around town</h2><p class="sub">Local favorites in Norwood, plus a few worthwhile nearby destinations.</p></div><a class="text-link" href="explore.html">Explore everything →</a></div><div class="explore-home-grid"><a class="explore-home-card feature" href="things.html"><span class="explore-icon">✨</span><div><b>Things to Do</b><p>Entertainment, arts, parks, trails, classes, family activities and nearby attractions.</p><strong>Find something to do →</strong></div></a><a class="explore-home-card feature" href="restaurants.html"><span class="explore-icon">🍽</span><div><b>Food &amp; Drink</b><p>Browse the searchable directory of Norwood restaurants, cafés, bakeries and takeout.</p><strong>Browse Food &amp; Drink →</strong></div></a></div><div class="explore-home-links"><a href="things.html#outdoors">🥾 Parks &amp; trails</a><a href="things.html#nearby">↗ Nearby favorites</a><a href="https://norwoodcommunitymedia.org/" rel="noopener" target="_blank">▶ Watch Norwood</a></div></section>
 
-<section class="status">
-<div><span>☁</span><b id="temp">Weather</b><small id="forecast">Loading live forecast…</small></div>
-<div><span>🚌</span><b>34E</b><small id="busStatus">Loading live vehicles…</small></div>
-<div><span>🚆</span><b>Commuter rail</b><small id="railStatus">Loading live trains…</small></div>
-<div><span>⚡</span><b>Norwood Light</b><small><a href="https://norwoodlight.com/report-an-outage/" target="_blank" rel="noopener">Power outage info ↗</a></small></div>
-</section>
-
-<section id="news" class="section">
-<div class="section-head"><div><p class="eyebrow">LOCAL INFORMATION</p><h2>Latest around Norwood</h2></div><span id="feedHealth">Loading sources…</span></div>
-<div class="news-layout"><div id="newsFeed" class="feed"><article>Loading live headlines…</article></div>
-<aside class="media-panel"><p class="eyebrow">WATCH NORWOOD</p><h3>Norwood Community Media</h3><p>Government meetings, community programs, school coverage and local video.</p><a class="button" href="https://norwoodcommunitymedia.org/" target="_blank" rel="noopener">Watch NCM ↗</a><hr><p class="eyebrow">LOCAL SOURCES</p><a href="https://insidenorwood.com/" target="_blank" rel="noopener">Inside Norwood ↗</a><a href="https://www.norwoodtownnews.com/" target="_blank" rel="noopener">Norwood Town News ↗</a><a href="https://www.norwood.k12.ma.us/about/news" target="_blank" rel="noopener">Norwood Public Schools ↗</a></aside></div>
-</section>
-
-<section id="transit" class="transit section">
-<div class="section-head light"><div><p class="eyebrow">LIVE TRANSIT</p><h2>34E + commuter rail</h2><p>Live MBTA vehicle positions on a real street map with cross-streets.</p></div><span id="mapUpdated" class="live">CONNECTING…</span></div>
-<div class="map-shell"><div id="transitMap"></div><div class="map-side"><h3>Live Norwood transit</h3><p id="selectedInfo">Tap a bus, train, or stop for details.</p><a class="button" href="transit.html">Open detailed transit →</a><small>Official MBTA V3 data. Street map © OpenStreetMap contributors. Vehicle locations update periodically and may lag actual movement.</small></div></div>
-</section>
-
-<section id="events" class="section compact"><div class="section-head"><div><p class="eyebrow">COMING UP</p><h2>Local calendars</h2></div></div>
-<div class="quick-grid"><a href="https://www.norwood.k12.ma.us/about/calendar" target="_blank" rel="noopener"><b>Schools</b><span>District calendar →</span></a><a href="https://norwoodlibrary.org/" target="_blank" rel="noopener"><b>Library</b><span>Programs & events →</span></a><a href="https://norwoodma.myrec.com/info/activities/default.aspx" target="_blank" rel="noopener"><b>Recreation</b><span>Programs →</span></a><a href="https://norwoodcommunitymedia.org/" target="_blank" rel="noopener"><b>Town meetings</b><span>Watch government coverage →</span></a></div></section>
-
-<section id="resources" class="resources section">
-<div class="section-head"><div><p class="eyebrow">RESIDENT DIRECTORY</p><h2>Find what you need</h2><p class="sub">Searchable links to official services and community resources.</p></div><span id="resourceCount"></span></div>
-<div class="resource-tools"><label class="search"><span>⌕</span><input id="resourceSearch" type="search" placeholder="Try housing, outages, veterans, trash, school…"></label><select id="categoryFilter"><option value="">All categories</option></select></div>
-<div id="resourceGrid" class="resource-grid"></div><p id="noResources" hidden>No matching resources.</p>
-</section>
-
-<section id="local" class="local section"><div><p class="eyebrow">DISCOVER NORWOOD</p><h2>Local places & organizations</h2><p>Useful links without pretending Norwood.ma is the municipal government or replacing original publishers.</p></div><div class="local-links"><a href="https://www.norwoodcenter.org/" target="_blank" rel="noopener">Friends of Norwood Center ↗</a><a href="https://norwoodhistoricalsociety.org/" target="_blank" rel="noopener">Historical Society ↗</a><a href="https://norwoodma.myrec.com/" target="_blank" rel="noopener">Recreation ↗</a></div></section>
+<section class="section bottom-community-ad" aria-label="Advertisement"><span class="ad-label community-ad-label">ADVERTISEMENT</span><a class="community-ad-image-link" href="https://www.facebook.com/share/g/1DfoBGetvb/" target="_blank" rel="noopener" aria-label="Join Norwood Next: News and Community Facebook Group"><img src="assets/ads/norwood-next-facebook.png" alt="Norwood Next: News and Community — Local news, conversations, and community updates. Join the Facebook Group." /></a></section>
 </main>
-<footer><div class="brand"><span class="word">Norwood</span><span class="dotma">.ma</span><small>OUR TOWN. ONLINE.</small></div><p>Independent community information site. Not affiliated with the Town of Norwood government.</p><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="app.js"></script>
-</body></html>
+<footer class="old-footer"><a class="footer-logo" href="index.html"><img alt="Norwood.ma — Our Town. Online." src="assets/logo-dark-approved.png"/></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>Inclusion of a news story, organization, business, event, resource, or external link does not constitute endorsement or support by Norwood.ma.</p></div><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></footer>
+<script src="nav.js?v=0.11.20"></script><script src="data/hero-photos-data.js"></script><script src="data/news-data.js"></script><script src="data/events-data.js"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="app.js?v=0.11.20"></script></body></html>

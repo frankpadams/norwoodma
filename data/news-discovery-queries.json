@@ -1,0 +1,30 @@
+[
+  {
+    "id": "google-news-norwood-primary",
+    "query": "\"norwood, ma\" news",
+    "purpose": "general local news discovery using quoted Norwood MA variant",
+    "cadence": "daily",
+    "priority": 1
+  },
+  {
+    "id": "google-news-norwood-secondary",
+    "query": "\"norwood ma\" news",
+    "purpose": "general local news discovery using unpunctuated city/state form",
+    "cadence": "daily",
+    "priority": 1
+  },
+  {
+    "id": "google-news-norwood-compact",
+    "query": "norwoodma news",
+    "purpose": "catch sources that style the town name as norwoodma",
+    "cadence": "daily",
+    "priority": 2
+  },
+  {
+    "id": "google-news-norwood-fullstate",
+    "query": "\"norwood, massachusetts\" news",
+    "purpose": "general local news discovery using full state name",
+    "cadence": "daily",
+    "priority": 1
+  }
+]

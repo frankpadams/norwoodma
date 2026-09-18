@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-17",
+  "purpose": "Source registry and ingestion rules for Norwood.ma local events/news/community data.",
+  "whats_happening_include": [
+    "Public community traditions and celebrations",
+    "Public fundraisers/benefits",
+    "Public arts/cultural performances",
+    "Public school arts/cultural events",
+    "Markets, fairs, festivals and vendor/craft events",
+    "Public-safety open houses/outreach",
+    "Public workshops/classes with a specific date/time",
+    "Ticketed public entertainment in Norwood",
+    "Community organization events open to the public"
+  ],
+  "whats_happening_exclude_default": [
+    "Routine youth practices/registered-participant-only games",
+    "Routine worship services or religious study",
+    "Member-only club meetings",
+    "Routine municipal board meetings unless shown in a separate civic feed",
+    "Undated resource pages",
+    "Events outside Norwood without a strong Norwood-specific reason",
+    "Duplicate syndicated listings when a primary source exists"
+  ],
+  "required_event_fields": [
+    "title",
+    "start",
+    "location",
+    "source_url",
+    "source_id",
+    "public_access"
+  ],
+  "preferred_event_fields": [
+    "end",
+    "description",
+    "category",
+    "cost",
+    "registration",
+    "organizer",
+    "address",
+    "image",
+    "recurrence",
+    "verification_status"
+  ],
+  "dedupe_keys": [
+    "normalized_title",
+    "start_date",
+    "venue_or_address"
+  ],
+  "expiration_rule": "Remove from upcoming feeds after event end; if no end is known, expire at 04:00 local time following the start date.",
+  "geography_rule": "Norwood physical venue required by default. Regional sources may be monitored, but non-Norwood events are rejected unless explicitly tagged as materially Norwood-specific.",
+  "source_precedence": [
+    "official organizer/venue",
+    "official Town/School/Library",
+    "established local organization",
+    "local media",
+    "community aggregator",
+    "social/discovery platform"
+  ]
+}

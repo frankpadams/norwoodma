@@ -1,0 +1,68 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Norwood.ma//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Food\, markets & fairs
+X-WR-CALDESC:Food-centered events\, markets\, fairs and vendor events.
+BEGIN:VEVENT
+UID:2026-09-20-onam-sarva@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:Onam Celebration at SARVA Little Venice
+LOCATION:SARVA Little Venice — Norwood\, MA
+DESCRIPTION:SARVA social post announces Onam Sadya at its Little Venice\, Norwood location on Sept. 20\; reservations/pre-orders were promoted.\nSource: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah
+URL:https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-22-farmers-bushels@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260922T140000
+DTEND;TZID=America/New_York:20260922T180000
+SUMMARY:Norwood Farmers Market: Bushels of Fun
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-29-farmers-market@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260929T140000
+DTEND;TZID=America/New_York:20260929T180000
+SUMMARY:Norwood Farmers Market
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-06-farmers-pumpkin@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261006T140000
+DTEND;TZID=America/New_York:20261006T180000
+SUMMARY:Norwood Farmers Market: Pumpkin Fest
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-farmers-market@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261013T140000
+DTEND;TZID=America/New_York:20261013T180000
+SUMMARY:Norwood Farmers Market
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-farmers-closing@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261020T140000
+DTEND;TZID=America/New_York:20261020T180000
+SUMMARY:Norwood Farmers Market: Closing Day
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,98 @@
+{
+  "town_names": [
+    "Norwood",
+    "Norwood, MA",
+    "Norwood MA",
+    "Town of Norwood"
+  ],
+  "major_venues": [
+    {
+      "canonical": "Norwood Town Common",
+      "aliases": [
+        "Town Common",
+        "Norwood Common"
+      ]
+    },
+    {
+      "canonical": "Morrill Memorial Library",
+      "aliases": [
+        "Morrill Library",
+        "Norwood Public Library"
+      ]
+    },
+    {
+      "canonical": "Norwood High School",
+      "aliases": [
+        "NHS",
+        "Norwood HS"
+      ]
+    },
+    {
+      "canonical": "Norwood Space Center",
+      "aliases": [
+        "NSC",
+        "Space Center"
+      ]
+    },
+    {
+      "canonical": "Winsmith Mill Market",
+      "aliases": [
+        "Winsmith Mill",
+        "Winsmith Mills"
+      ]
+    },
+    {
+      "canonical": "The Norwood Theatre",
+      "aliases": [
+        "Norwood Theatre"
+      ]
+    },
+    {
+      "canonical": "The Skating Club of Boston",
+      "aliases": [
+        "Skating Club of Boston",
+        "SCOB"
+      ]
+    },
+    {
+      "canonical": "Castle Island Brewing — Norwood Taproom",
+      "aliases": [
+        "Castle Island Brewing",
+        "Castle Island Norwood",
+        "CIBC Norwood"
+      ]
+    },
+    {
+      "canonical": "The Fallout Shelter",
+      "aliases": [
+        "Fallout Shelter",
+        "Extended Play Sessions"
+      ]
+    },
+    {
+      "canonical": "The Magic Room",
+      "aliases": [
+        "Magic Room"
+      ]
+    },
+    {
+      "canonical": "Four Points by Sheraton Norwood",
+      "aliases": [
+        "Four Points Norwood",
+        "Four Points by Sheraton"
+      ]
+    },
+    {
+      "canonical": "Norwood Senior Center",
+      "aliases": [
+        "Senior Center"
+      ]
+    }
+  ],
+  "normalization_rules": [
+    "Do not infer Norwood from an organization name alone; require venue/address or a Norwood-specific source.",
+    "Treat South Boston and other Castle Island locations as out-of-scope unless the event is at the Norwood taproom.",
+    "Normalize common abbreviations only after geographic validation.",
+    "Preserve organizer name separately from venue name."
+  ]
+}

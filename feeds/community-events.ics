@@ -1,0 +1,529 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Norwood.ma//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:All public community events
+X-WR-CALDESC:The full Norwood.ma public-event feed. Updated with the site’s twice-daily event refresh.
+BEGIN:VEVENT
+UID:2026-09-18-ballroom-dance@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260918T190000
+SUMMARY:Monthly Ballroom Dance
+LOCATION:Norwood Senior Center — 275 Prospect St\, Norwood\, MA 02062
+DESCRIPTION:Newcomers of all ages welcome\; Friends of the Norwood Council on Aging.\nCost: $12\nSource: https://www.norwoodrecord.com/events
+URL:https://www.norwoodrecord.com/events
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-18-margo-macero@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260918T190000
+SUMMARY:The Margo Macero Band
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-18-legally-blonde@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260921
+SUMMARY:Legally Blonde — Norwood High School
+LOCATION:Norwood High School — 245 Nichols St\, Norwood\, MA 02062
+DESCRIPTION:Public high-school theatrical production\; exact performance times should be confirmed before display.\nSource: https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596
+URL:https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-18-ruth-solomon-symposium@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260920
+SUMMARY:The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating
+LOCATION:The Skating Club of Boston — 750 University Ave\, Norwood\, MA 02062
+DESCRIPTION:Public seminar/program at The Skating Club of Boston\; event runs Sept. 18–19. Registration applies.\nSource: https://scboston.org/event/figure-skating-health-and-performance-conference/
+URL:https://scboston.org/event/figure-skating-health-and-performance-conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-19-floydian-trip@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260919T193000
+SUMMARY:Floydian Trip: Echoes Through Time
+LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
+DESCRIPTION:Source: https://norwoodstage.com/floydian-trip
+URL:https://norwoodstage.com/floydian-trip
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-20-not-done-yet@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260920T140000
+SUMMARY:“Not Done Yet” Free Concert
+LOCATION:First Congregational Church in Norwood — 100 Winter St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free\nSource: https://www.norwoodrecord.com/events
+URL:https://www.norwoodrecord.com/events
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-20-celtic-seisun@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260920T150000
+DTEND;TZID=America/New_York:20260920T180000
+SUMMARY:Celtic Traditional Open Seisun
+LOCATION:Irish Brewing Boston — 83 Morse St\, Building 4AB\, Norwood\, MA 02062
+DESCRIPTION:Cost: See venue\nSource: https://norwoodspacecenter.com/events/
+URL:https://norwoodspacecenter.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-20-onam-sarva@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:Onam Celebration at SARVA Little Venice
+LOCATION:SARVA Little Venice — Norwood\, MA
+DESCRIPTION:SARVA social post announces Onam Sadya at its Little Venice\, Norwood location on Sept. 20\; reservations/pre-orders were promoted.\nSource: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah
+URL:https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-22-caffeine-connections@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260922T083000
+DTEND;TZID=America/New_York:20260922T093000
+SUMMARY:Caffeine & Connections
+LOCATION:Norwood Space Center — Building 6 Cafe Area — 83 Morse St\, Norwood\, MA 02062
+DESCRIPTION:Neponset River Regional Chamber networking event.\nSource: https://www.nrrchamber.com/
+URL:https://www.nrrchamber.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-22-farmers-bushels@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260922T140000
+DTEND;TZID=America/New_York:20260922T180000
+SUMMARY:Norwood Farmers Market: Bushels of Fun
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-22-castle-musical-bingo@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260922T183000
+DTEND;TZID=America/New_York:20260922T203000
+SUMMARY:Musical Bingo
+LOCATION:Castle Island Brewing — Norwood Taproom — 31 Astor Ave\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free\nSource: https://www.castleislandbeer.com/calendar
+URL:https://www.castleislandbeer.com/calendar
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-23-fallout-open-mic@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260923T190000
+SUMMARY:Open Mic Night
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:All welcome\; 15-minute sets\; listing showed sold out at time of check.\nSource: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-24-leadership-on-tap@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260924T180000
+DTEND;TZID=America/New_York:20260924T200000
+SUMMARY:Leadership on Tap
+LOCATION:Castle Island Brewing — 31 Astor Ave\, Norwood\, MA 02062
+DESCRIPTION:Healthcare networking\; registration requested.\nSource: https://massache.org/event/ache-of-mas-2026-leadership-on-tap-final-event-in-our-2026-series/
+URL:https://massache.org/event/ache-of-mas-2026-leadership-on-tap-final-event-in-our-2026-series/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-24-charcuterie@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260924T180000
+DTEND;TZID=America/New_York:20260924T210000
+SUMMARY:Make a Charcuterie Board
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $70–$140\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-25-magic-room-far-trio@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260925T193000
+DTEND;TZID=America/New_York:20260925T230000
+SUMMARY:F.A.R. Trio — Rock and Soul
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-26-miniature-workshop@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260926T130000
+DTEND;TZID=America/New_York:20260926T160000
+SUMMARY:Miniature Model & Painting Workshop
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: Free–$20\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-26-magic-room-deadbeat@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260926T200000
+DTEND;TZID=America/New_York:20260926T230000
+SUMMARY:DeadBeat — Grateful Dead Tribute
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-27-check-mate@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260927T160000
+DTEND;TZID=America/New_York:20260927T210000
+SUMMARY:Check Mate — An Evening with Purpose
+LOCATION:Four Points by Sheraton Norwood — 1125 Boston-Providence Turnpike\, Norwood\, MA 02062
+DESCRIPTION:Promoting Conflict Resolution\, Inc. fundraiser supporting literacy\, mentorship\, and conflict-resolution programs.\nSource: https://pcrincboston.org/
+URL:https://pcrincboston.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-29-farmers-market@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260929T140000
+DTEND;TZID=America/New_York:20260929T180000
+SUMMARY:Norwood Farmers Market
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-01-mill-sharpening@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261001T180000
+DTEND;TZID=America/New_York:20261001T210000
+SUMMARY:Tool and Knife Sharpening Workshop
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $70–$135\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-02-selwyn-birchwood@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261002T190000
+SUMMARY:Selwyn Birchwood Band
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-03-intro-metalworking@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261003T130000
+DTEND;TZID=America/New_York:20261003T160000
+SUMMARY:Intro to Metalworking
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: Free–$90\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-03-magic-room-ballz@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261003T190000
+DTEND;TZID=America/New_York:20261003T230000
+SUMMARY:Ballz
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-03-rangemasters@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261003T190000
+SUMMARY:The Rangemasters
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-03-3-decades-rewind@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261003T193000
+SUMMARY:3 Decades Rewind
+LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
+DESCRIPTION:Cost: $51–$65\nSource: https://norwoodstage.com/3-decades-rewind
+URL:https://norwoodstage.com/3-decades-rewind
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-04-lumber-milling@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261004T100000
+DTEND;TZID=America/New_York:20261004T130000
+SUMMARY:Lumber Milling Workshop
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Source: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-04-woodturning@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261004T133000
+DTEND;TZID=America/New_York:20261004T173000
+SUMMARY:Introduction to Woodturning
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: Free–$90\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-06-farmers-pumpkin@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261006T140000
+DTEND;TZID=America/New_York:20261006T180000
+SUMMARY:Norwood Farmers Market: Pumpkin Fest
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-07-wednesdave-blues@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261007T190000
+SUMMARY:Dave Limina’s Wednesdave Blues II
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-08-router-workshop@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261008T180000
+DTEND;TZID=America/New_York:20261008T210000
+SUMMARY:Getting Started with the Router and Router Table
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $70–$135\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-claudettes@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261009T190000
+SUMMARY:The Claudettes
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-october-comedy@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261009T193000
+SUMMARY:October Live Comedy
+LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
+DESCRIPTION:Cost: $32–$45\nSource: https://norwoodstage.com/october-live-comedy
+URL:https://norwoodstage.com/october-live-comedy
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-10-nate-perry@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261010T190000
+SUMMARY:Nate Perry and Ragged Company
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-10-tapestry@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261010T193000
+SUMMARY:Tapestry\, the Carole King Songbook
+LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
+DESCRIPTION:Cost: $51–$65\nSource: https://norwoodstage.com/tapestry-a-carole-king-tribute
+URL:https://norwoodstage.com/tapestry-a-carole-king-tribute
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-farmers-market@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261013T140000
+DTEND;TZID=America/New_York:20261013T180000
+SUMMARY:Norwood Farmers Market
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-17-bow-thayer@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261017T190000
+SUMMARY:The Bow Thayer Large Band — Ninevah Release Show
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-17-docksiders@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261017T193000
+SUMMARY:The Docksiders
+LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
+DESCRIPTION:Cost: $51–$65\nSource: https://norwoodstage.com/the-docksiders
+URL:https://norwoodstage.com/the-docksiders
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-18-celtic-seisun@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261018T150000
+DTEND;TZID=America/New_York:20261018T180000
+SUMMARY:Celtic Traditional Open Seisun
+LOCATION:Irish Brewing Boston — 83 Morse St\, Building 4AB\, Norwood\, MA 02062
+DESCRIPTION:Source: https://norwoodspacecenter.com/venue/irish-brewing-boston/
+URL:https://norwoodspacecenter.com/venue/irish-brewing-boston/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-farmers-closing@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261020T140000
+DTEND;TZID=America/New_York:20261020T180000
+SUMMARY:Norwood Farmers Market: Closing Day
+LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
+DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
+URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-daybreak@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261023T193000
+SUMMARY:Daybreak — The Music & Passion of Barry Manilow
+LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
+DESCRIPTION:Cost: $51–$65\nSource: https://norwoodstage.com/daybreak-a-barry-manilow-tribute
+URL:https://norwoodstage.com/daybreak-a-barry-manilow-tribute
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-magic-heartbreaker@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261024T190000
+DTEND;TZID=America/New_York:20261024T230000
+SUMMARY:Heartbreaker — Music of Led Zeppelin
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Cost: From $22.07\nSource: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-love-dogs@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261024T190000
+SUMMARY:The Love Dogs
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Source: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-plywood@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261025T100000
+DTEND;TZID=America/New_York:20261025T130000
+SUMMARY:Making Cabinets and Bookcases with Plywood
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Source: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-magic-hunks@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261025T180000
+DTEND;TZID=America/New_York:20261025T220000
+SUMMARY:Girls Night Out — Magic Hunks
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-no-static@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261030T190000
+SUMMARY:No Static — Steely Dan Tribute
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:Sold out at time of source check\; livestream advertised.\nSource: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-mostly-maiden@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261031T190000
+DTEND;TZID=America/New_York:20261031T230000
+SUMMARY:Mostly Maiden
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-pumpkinpalooza@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261031T190000
+SUMMARY:Pumpkinpalooza Halloween Fundraiser
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:GRCPAC fundraiser\; bands Girl With A Hawk and Crow Follow\; Blue Ribbon BBQ catering.\nSource: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-05-charcuterie@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261105T180000
+DTEND;TZID=America/New_York:20261105T210000
+SUMMARY:Make a Charcuterie Board
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $70–$140\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-14-magic-zeppelin@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261114T190000
+DTEND;TZID=America/New_York:20261114T230000
+SUMMARY:A Night of Zeppelin
+LOCATION:Magic Room — 83 Morse St Unit 5\, Norwood\, MA 02062
+DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
+URL:https://events.ticketleap.com/events/magicroom-7
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-15-dreidels@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261115T100000
+DTEND;TZID=America/New_York:20261115T130000
+SUMMARY:Turn Tops and Dreidels — Craft Gifts from the Heart
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $75–$150\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-15-celtic-seisun@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261115T150000
+DTEND;TZID=America/New_York:20261115T180000
+SUMMARY:Celtic Traditional Open Seisun
+LOCATION:Irish Brewing Boston — 83 Morse St\, Building 4AB\, Norwood\, MA 02062
+DESCRIPTION:Source: https://norwoodspacecenter.com/venue/irish-brewing-boston/
+URL:https://norwoodspacecenter.com/venue/irish-brewing-boston/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-charcuterie@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261201T180000
+DTEND;TZID=America/New_York:20261201T210000
+SUMMARY:Make a Charcuterie Board
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $70–$140\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-dreidels@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261204T180000
+DTEND;TZID=America/New_York:20261204T210000
+SUMMARY:Turn Tops and Dreidels — Craft Gifts from the Heart
+LOCATION:Mill Forge Makerspace — 61 Endicott St\, Building 46\, Norwood\, MA
+DESCRIPTION:Cost: $75–$150\nSource: https://millforge.org/events/list/
+URL:https://millforge.org/events/list/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-celtic-seisun@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261220T150000
+DTEND;TZID=America/New_York:20261220T180000
+SUMMARY:Celtic Traditional Open Seisun
+LOCATION:Irish Brewing Boston — 83 Morse St\, Building 4AB\, Norwood\, MA 02062
+DESCRIPTION:Source: https://norwoodspacecenter.com/venue/irish-brewing-boston/
+URL:https://norwoodspacecenter.com/venue/irish-brewing-boston/
+END:VEVENT
+END:VCALENDAR

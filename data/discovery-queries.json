@@ -1,0 +1,333 @@
+[
+  {
+    "id": "public-community-events",
+    "query": "Norwood MA events",
+    "purpose": "broad event discovery",
+    "cadence": "daily",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "fundraisers",
+    "query": "Norwood MA fundraiser benefit charity event",
+    "purpose": "public fundraisers and community benefits",
+    "cadence": "daily",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "school-arts",
+    "query": "Norwood High School concert play musical theatre marching band Fine Arts event",
+    "purpose": "public school arts/cultural events",
+    "cadence": "weekly",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "school-community",
+    "query": "Norwood Public Schools community event open house fair",
+    "purpose": "public school/community happenings",
+    "cadence": "weekly",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "craft-vendor",
+    "query": "Norwood MA craft fair vendor fair maker market flea market swap meet",
+    "purpose": "markets, fairs and maker/vendor events",
+    "cadence": "weekly",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "public-safety",
+    "query": "Norwood MA police fire open house touch a truck safety event",
+    "purpose": "public-safety open houses and family events",
+    "cadence": "weekly",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "seasonal",
+    "query": "Norwood MA fall festival Halloween trunk or treat holiday tree lighting Santa parade",
+    "purpose": "seasonal traditions and celebrations",
+    "cadence": "weekly",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "music",
+    "query": "Norwood MA live music concert performance",
+    "purpose": "public music and performance events",
+    "cadence": "daily",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "theatre",
+    "query": "Norwood MA theatre play musical performance",
+    "purpose": "public theatre productions",
+    "cadence": "weekly",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "food-benefits",
+    "query": "Norwood MA restaurant fundraiser benefit night dine to donate",
+    "purpose": "restaurant and food-based community fundraisers",
+    "cadence": "weekly",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "5k-walks",
+    "query": "Norwood MA 5K walk run charity race",
+    "purpose": "public charity races and walks",
+    "cadence": "weekly",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "library",
+    "query": "Morrill Memorial Library Norwood events",
+    "purpose": "library programs and special events",
+    "cadence": "daily",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "history",
+    "query": "Norwood Historical Society event",
+    "purpose": "history programs and community events",
+    "cadence": "weekly",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "town-traditions",
+    "query": "site:norwoodma.gov Norwood Day Memorial Day July 4 Veterans Day community event",
+    "purpose": "official town traditions",
+    "cadence": "weekly",
+    "priority": 1,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "business-community",
+    "query": "Norwood MA chamber networking community event open to public",
+    "purpose": "business/community events physically in Norwood",
+    "cadence": "weekly",
+    "priority": 4,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "church-community",
+    "query": "Norwood MA church community event fair concert fundraiser",
+    "purpose": "public non-worship events hosted by houses of worship",
+    "cadence": "weekly",
+    "priority": 4,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "clubs-nonprofits",
+    "query": "Norwood MA Rotary Lions Elks VFW event fundraiser",
+    "purpose": "civic-club and nonprofit public events",
+    "cadence": "weekly",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "venue-space-center",
+    "query": "Norwood Space Center event",
+    "purpose": "Space Center and tenant events",
+    "cadence": "daily",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "venue-winsmith",
+    "query": "Winsmith Mill Norwood event",
+    "purpose": "Winsmith/Mill Forge tenant events",
+    "cadence": "daily",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "venue-castle-island",
+    "query": "Castle Island Brewing Norwood event",
+    "purpose": "Norwood taproom events only",
+    "cadence": "daily",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "venue-skating-club",
+    "query": "Skating Club of Boston Norwood public events",
+    "purpose": "public skating, shows, competitions and seminars",
+    "cadence": "weekly",
+    "priority": 3,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "community-news-events",
+    "query": "site:norwoodrecord.com Norwood upcoming events",
+    "purpose": "local-media event discovery and cross-checking",
+    "cadence": "daily",
+    "priority": 2,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "social-facebook",
+    "query": "site:facebook.com Norwood MA event fundraiser fair concert",
+    "purpose": "discovery of events primarily announced on social media",
+    "cadence": "daily",
+    "priority": 4,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "social-instagram",
+    "query": "site:instagram.com Norwood MA event fundraiser fair concert",
+    "purpose": "discovery of events primarily announced on social media",
+    "cadence": "daily",
+    "priority": 4,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "ticketing",
+    "query": "site:eventbrite.com Norwood MA events",
+    "purpose": "ticketed public-event discovery",
+    "cadence": "daily",
+    "priority": 4,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "emerald-city-events",
+    "query": "\"Emerald City Plant Shop\" Norwood event OR workshop OR class",
+    "purpose": "Catch hosted/collaborative events that may be announced by partners before appearing on the shop website.",
+    "priority": 2
+  }
+]

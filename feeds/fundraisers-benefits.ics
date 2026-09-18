@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Norwood.ma//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Fundraisers & benefits
+X-WR-CALDESC:Public fundraisers\, charity events and community benefits.
+BEGIN:VEVENT
+UID:2026-09-27-check-mate@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20260927T160000
+DTEND;TZID=America/New_York:20260927T210000
+SUMMARY:Check Mate — An Evening with Purpose
+LOCATION:Four Points by Sheraton Norwood — 1125 Boston-Providence Turnpike\, Norwood\, MA 02062
+DESCRIPTION:Promoting Conflict Resolution\, Inc. fundraiser supporting literacy\, mentorship\, and conflict-resolution programs.\nSource: https://pcrincboston.org/
+URL:https://pcrincboston.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-pumpkinpalooza@norwood.ma
+DTSTAMP:20260918T025827Z
+DTSTART;TZID=America/New_York:20261031T190000
+SUMMARY:Pumpkinpalooza Halloween Fundraiser
+LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
+DESCRIPTION:GRCPAC fundraiser\; bands Girl With A Hawk and Crow Follow\; Blue Ribbon BBQ catering.\nSource: https://www.extendedplaysessions.com/
+URL:https://www.extendedplaysessions.com/
+END:VEVENT
+END:VCALENDAR

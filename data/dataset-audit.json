@@ -1,0 +1,80 @@
+{
+  "source_registry": {
+    "total_sources": 225,
+    "duplicate_ids": [],
+    "missing_required_fields": []
+  },
+  "events_seed": {
+    "total_events": 56,
+    "publish_candidates": 54,
+    "duplicate_ids": [],
+    "dangling_source_ids": []
+  },
+  "restaurants": {
+    "total": 80,
+    "official_links": 70,
+    "google_maps_fallbacks": 10,
+    "duplicate_ids": [],
+    "duplicate_names": [],
+    "missing_required_fields": [],
+    "generic_google_web_search_urls": [],
+    "invalid_maps_fallbacks": [],
+    "official_links_pointing_to_google": [],
+    "brazilian_category_count": 2,
+    "middle_eastern_category_count": 4
+  },
+  "resources": {
+    "total": 312,
+    "houses_of_worship": 17,
+    "norwood_trails_url_present": true,
+    "youth_topic_entries": 34,
+    "dedicated_youth_topic_present": true,
+    "youth_source_registry_records_added": 24
+  },
+  "news": {
+    "bundled_stories": 10,
+    "bundled_sources": [
+      "Boston.com",
+      "CBS Boston",
+      "Inside Norwood",
+      "Norwood Public Schools",
+      "The Norwood Record",
+      "Town of Norwood"
+    ],
+    "google_news_query_variants_present": true,
+    "homepage_news_container_present": true
+  },
+  "automation": {
+    "twice_daily_cron_present": true,
+    "manual_dispatch_present": true
+  },
+  "things_to_do": {
+    "emerald_city_present": true,
+    "current_trails_url_present": true,
+    "nearby_destination_cards": 7,
+    "nearby_town_badges_present": true,
+    "temple_sinai_sharon_present": true,
+    "wards_berry_farm_present": true
+  },
+  "hero": {
+    "active_photos": 18,
+    "candidate_file_present": true
+  },
+  "result": "pass",
+  "generated_at": "2026-09-17",
+  "homepage": {
+    "advertising_slot_present": true,
+    "former_useful_updates_tile_removed": true
+  },
+  "calendar_builder": {
+    "source_records": 19,
+    "selectable_live_feeds": 15,
+    "official_school_feeds": 9,
+    "norwood_ma_generated_feeds": 6,
+    "generated_feed_files_present": true,
+    "browse_only_sources": 4,
+    "selection_persistence_present": true,
+    "shareable_selection_link_present": true,
+    "workflow_commits_feeds": true
+  }
+}

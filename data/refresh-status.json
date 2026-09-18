@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-09-17T22:58:27.422290-04:00",
+  "offline": true,
+  "events_published": 54,
+  "news_published": 59,
+  "calendar_feeds": [
+    {
+      "id": "norwood-community",
+      "name": "All public community events",
+      "path": "feeds/community-events.ics",
+      "events": 54,
+      "generated_at": "2026-09-17T22:58:27.419334-04:00"
+    },
+    {
+      "id": "norwood-arts",
+      "name": "Arts, music & entertainment",
+      "path": "feeds/arts-entertainment.ics",
+      "events": 29,
+      "generated_at": "2026-09-17T22:58:27.419788-04:00"
+    },
+    {
+      "id": "norwood-family",
+      "name": "Family & kids",
+      "path": "feeds/family-kids.ics",
+      "events": 3,
+      "generated_at": "2026-09-17T22:58:27.420077-04:00"
+    },
+    {
+      "id": "norwood-sports",
+      "name": "Sports & active events",
+      "path": "feeds/sports-active.ics",
+      "events": 1,
+      "generated_at": "2026-09-17T22:58:27.420401-04:00"
+    },
+    {
+      "id": "norwood-fundraisers",
+      "name": "Fundraisers & benefits",
+      "path": "feeds/fundraisers-benefits.ics",
+      "events": 2,
+      "generated_at": "2026-09-17T22:58:27.420674-04:00"
+    },
+    {
+      "id": "norwood-food-markets",
+      "name": "Food, markets & fairs",
+      "path": "feeds/food-markets-fairs.ics",
+      "events": 6,
+      "generated_at": "2026-09-17T22:58:27.420945-04:00"
+    }
+  ],
+  "event_sources": [],
+  "news_sources": [
+    {
+      "source": "queue_health",
+      "ok": true,
+      "found": 59,
+      "method": "minimum_queue_check",
+      "target": 50,
+      "note": null
+    }
+  ]
+}
