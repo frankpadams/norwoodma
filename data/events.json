@@ -1,51 +1,5 @@
 [
   {
-    "id": "2026-09-18-ballroom-dance",
-    "title": "Monthly Ballroom Dance",
-    "start": {
-      "date": "2026-09-18",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "venue": "Norwood Senior Center",
-    "address": "275 Prospect St, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "norwood-record-events",
-    "source_url": "https://www.norwoodrecord.com/events",
-    "cost": "$12",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
-  },
-  {
-    "id": "2026-09-18-margo-macero",
-    "title": "The Margo Macero Band",
-    "start": {
-      "date": "2026-09-18",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "venue": "The Fallout Shelter",
-    "address": "61 Endicott St, Norwood, MA",
-    "category": "live_music",
-    "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
-  },
-  {
     "id": "2026-09-18-legally-blonde",
     "title": "Legally Blonde — Norwood High School",
     "start": {
@@ -92,6 +46,52 @@
     "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
   },
   {
+    "id": "2026-09-18-ballroom-dance",
+    "title": "Monthly Ballroom Dance",
+    "start": {
+      "date": "2026-09-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-record-events",
+    "source_url": "https://www.norwoodrecord.com/events",
+    "cost": "$12",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
+  },
+  {
+    "id": "2026-09-18-margo-macero",
+    "title": "The Margo Macero Band",
+    "start": {
+      "date": "2026-09-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott St, Norwood, MA",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": null
+  },
+  {
     "id": "2026-09-19-floydian-trip",
     "title": "Floydian Trip: Echoes Through Time",
     "start": {
@@ -113,6 +113,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-20-onam-sarva",
+    "title": "Onam Celebration at SARVA Little Venice",
+    "start": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "SARVA Little Venice",
+    "address": "Norwood, MA",
+    "category": "food_culture",
+    "source_id": "sarva-social-feed",
+    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-20-not-done-yet",
@@ -159,29 +182,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-22-caffeine-connections",
@@ -276,6 +276,29 @@
     "notes": "All welcome; 15-minute sets; listing showed sold out at time of check."
   },
   {
+    "id": "2026-09-23-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-09-23",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-09-23",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
     "id": "2026-09-24-leadership-on-tap",
     "title": "Leadership on Tap",
     "start": {
@@ -320,6 +343,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-24-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-09-24",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-09-25-magic-room-far-trio",
@@ -437,6 +483,29 @@
     "notes": null
   },
   {
+    "id": "2026-09-30-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-09-30",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
     "id": "2026-10-01-mill-sharpening",
     "title": "Tool and Knife Sharpening Workshop",
     "start": {
@@ -458,6 +527,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-01-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-01",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-02-selwyn-birchwood",
@@ -667,6 +759,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-07-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-07",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
     "id": "2026-10-08-router-workshop",
     "title": "Getting Started with the Router and Router Table",
     "start": {
@@ -688,6 +803,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-08-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-09-claudettes",
@@ -805,6 +943,52 @@
     "notes": null
   },
   {
+    "id": "2026-10-14-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-14",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
+    "id": "2026-10-15-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-15",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
+  },
+  {
     "id": "2026-10-17-bow-thayer",
     "title": "The Bow Thayer Large Band — Ninevah Release Show",
     "start": {
@@ -895,6 +1079,52 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-21-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-21",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
+    "id": "2026-10-22-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-22",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-23-daybreak",
@@ -1010,6 +1240,52 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-28-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-28",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
+    "id": "2026-10-29-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-29",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-30-no-static",

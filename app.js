@@ -142,7 +142,7 @@ async function timely(){
    if(response.ok){
      const a=await response.json();
      if((a.data||[]).length){
-       bits.push(`<a href="transit.html">${a.data.length} active MBTA service alert${a.data.length===1?'':'s'} affecting local transit →</a>`);
+       bits.push(`<a href="transit.html#service-alerts">${a.data.length} active MBTA service alert${a.data.length===1?'':'s'} affecting local transit <span>See details →</span></a>`);
      }
    }
  }catch(e){}

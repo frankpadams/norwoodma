@@ -217,6 +217,18 @@
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
+    "name": "Bubbles Up Laundromat",
+    "category": "Local Service",
+    "description": "Self-service laundromat for everyday laundry and bulky items.",
+    "url": "https://www.google.com/maps/search/?api=1&query=Bubbles+Up+Laundromat+50+Central+St+Norwood+MA",
+    "tags": "laundromat laundry wash",
+    "topics": [
+      "services"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
     "name": "Building Department",
     "category": "Town Services",
     "description": "Building permits, inspections and code information.",
@@ -299,6 +311,18 @@
     "coverage": "Statewide",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Chris & Sam’s Barber Shop",
+    "category": "Local Service",
+    "description": "Family-owned Norwood barbershop offering haircuts and grooming.",
+    "url": "https://www.google.com/maps/search/?api=1&query=Chris+Sam%27s+Barber+Shop+1076+Washington+St+Norwood+MA",
+    "tags": "barber haircut grooming",
+    "topics": [
+      "services"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09"
   },
   {
     "name": "Cleveland Elementary School",
@@ -687,6 +711,18 @@
     "coverage": "Regional",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Gus’s Barber Shop",
+    "category": "Local Service",
+    "description": "Long-running Norwood barbershop for classic and modern cuts.",
+    "url": "https://www.google.com/maps/search/?api=1&query=Gus%27s+Barber+Shop+877+Washington+St+Norwood+MA",
+    "tags": "barber haircut grooming",
+    "topics": [
+      "services"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09"
   },
   {
     "name": "Gymnastic Academy of Boston — Norwood",
@@ -3603,6 +3639,18 @@
     "verified": "2026-09"
   },
   {
+    "name": "South Norwood Laundromat & Dry Cleaning",
+    "category": "Local Service",
+    "description": "Neighborhood laundromat with self-service laundry, wash-dry-fold and dry cleaning.",
+    "url": "https://www.google.com/maps/search/?api=1&query=South+Norwood+Laundromat+1239+Washington+St+Norwood+MA",
+    "tags": "laundromat laundry dry cleaning",
+    "topics": [
+      "services"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
     "name": "South Shore Elder Services",
     "category": "Older Adults",
     "description": "Aging-services organization providing information, protective services and supports in the region.",
@@ -3771,6 +3819,22 @@
     "tags": "elections voting clerk records licenses town meeting",
     "coverage": "Regional/State",
     "verified": "2026-09"
+  },
+  {
+    "name": "Town Common Books",
+    "category": "Books & Local Shopping",
+    "description": "Independent bookstore coming soon to Norwood Center, with new and used adult and children’s books, gifts, toys and community-focused events.",
+    "url": "https://www.towncommonbooks.com/",
+    "tags": "bookstore books independent bookstore local shopping gifts toys author events readings book clubs Norwood Center coming soon",
+    "topics": [
+      "services",
+      "community",
+      "business",
+      "todo"
+    ],
+    "coverage": "Norwood",
+    "verified": "2026-09",
+    "source_note": "Official site lists 679 Washington St and says Coming Soon to Norwood Center; Bookshop.org profile says planned Fall 2026 opening."
   },
   {
     "name": "Town of Norwood — Official Website",
@@ -3950,54 +4014,6 @@
     "url": "https://www.norwoodma.gov/government/boards_committees/zoning_board_of_appeals.php",
     "tags": "zoning appeals",
     "coverage": "Regional/State",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Bubbles Up Laundromat",
-    "category": "Local Service",
-    "description": "Self-service laundromat for everyday laundry and bulky items.",
-    "url": "https://www.google.com/maps/search/?api=1&query=Bubbles+Up+Laundromat+50+Central+St+Norwood+MA",
-    "tags": "laundromat laundry wash",
-    "topics": [
-      "services"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
-    "name": "South Norwood Laundromat & Dry Cleaning",
-    "category": "Local Service",
-    "description": "Neighborhood laundromat with self-service laundry, wash-dry-fold and dry cleaning.",
-    "url": "https://www.google.com/maps/search/?api=1&query=South+Norwood+Laundromat+1239+Washington+St+Norwood+MA",
-    "tags": "laundromat laundry dry cleaning",
-    "topics": [
-      "services"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Chris & Sam’s Barber Shop",
-    "category": "Local Service",
-    "description": "Family-owned Norwood barbershop offering haircuts and grooming.",
-    "url": "https://www.google.com/maps/search/?api=1&query=Chris+Sam%27s+Barber+Shop+1076+Washington+St+Norwood+MA",
-    "tags": "barber haircut grooming",
-    "topics": [
-      "services"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Gus’s Barber Shop",
-    "category": "Local Service",
-    "description": "Long-running Norwood barbershop for classic and modern cuts.",
-    "url": "https://www.google.com/maps/search/?api=1&query=Gus%27s+Barber+Shop+877+Washington+St+Norwood+MA",
-    "tags": "barber haircut grooming",
-    "topics": [
-      "services"
-    ],
-    "coverage": "Local",
     "verified": "2026-09"
   }
 ]

@@ -156,3 +156,9 @@ Expanded Explore with Live Music, Rage Zone and additional Space Center experien
 - Replaced Calendars quick tile with Things to Do.
 - Dinner Spinner quick tile deep-links directly to the randomizer and uses a small custom spinner icon with subtle hover motion.
 - Transit and Calendars remain in global navigation.
+
+
+## v0.11.25
+- Repositioned Time-Sensitive alert as a single compact line beneath desktop navigation while preserving the original header divider.
+- Restored desktop navigation behavior so the mobile Menu button does not appear on desktop.
+- Added Town Common Books (coming soon, 679 Washington St) to Local Resources and relevant search/topics.
