@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-17",
+  "updated_at": "2026-09-18",
   "purpose": "Source registry and ingestion rules for Norwood.ma local events/news/community data.",
   "whats_happening_include": [
     "Public community traditions and celebrations",
@@ -11,7 +11,9 @@
     "Public-safety open houses/outreach",
     "Public workshops/classes with a specific date/time",
     "Ticketed public entertainment in Norwood",
-    "Community organization events open to the public"
+    "Community organization events open to the public",
+    "Local, state and federal elections affecting Norwood voters",
+    "Public events held on the Norwood Town Common"
   ],
   "whats_happening_exclude_default": [
     "Routine youth practices/registered-participant-only games",

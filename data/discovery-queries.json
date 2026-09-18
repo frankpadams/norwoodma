@@ -329,5 +329,31 @@
     "query": "\"Emerald City Plant Shop\" Norwood event OR workshop OR class",
     "purpose": "Catch hosted/collaborative events that may be announced by partners before appearing on the shop website.",
     "priority": 2
+  },
+  {
+    "id": "norwood-elections",
+    "query": "Norwood MA election voting Town Clerk election calendar",
+    "purpose": "local, state and federal election dates affecting Norwood voters",
+    "cadence": "daily",
+    "priority": 1,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
+  },
+  {
+    "id": "town-common-events",
+    "query": "Norwood MA Town Common events gazebo concert market festival",
+    "purpose": "public events held on the Norwood Town Common",
+    "cadence": "daily",
+    "priority": 1,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
   }
 ]

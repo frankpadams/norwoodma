@@ -162,3 +162,7 @@ Expanded Explore with Live Music, Rage Zone and additional Space Center experien
 - Repositioned Time-Sensitive alert as a single compact line beneath desktop navigation while preserving the original header divider.
 - Restored desktop navigation behavior so the mobile Menu button does not appear on desktop.
 - Added Town Common Books (coming soon, 679 Washington St) to Local Resources and relevant search/topics.
+
+
+## Current test build
+Version 0.11.30: dark masthead plus activity-guide redesign.
