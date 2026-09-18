@@ -1,8 +1,5 @@
 const map=L.map('detailMap').setView([42.190,-71.198],14);
-const stadia=L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',{maxZoom:20,attribution:'&copy; OpenStreetMap contributors &copy; Stadia Maps'}).addTo(map);
-let basemapFallbackUsed=false,tileErrors=0;
-function useFallbackBasemap(){if(basemapFallbackUsed)return;basemapFallbackUsed=true;try{map.removeLayer(stadia)}catch(e){};L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri — Source: Esri, HERE, Garmin, USGS, NGA, EPA, USDA, NPS'}).addTo(map)}
-stadia.on('tileerror',()=>{if(++tileErrors>=2)useFallbackBasemap()});if(location.protocol==='file:')useFallbackBasemap();
+const basemap=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri — Source: Esri, HERE, Garmin, USGS, NGA, EPA, USDA, NPS'}).addTo(map);
 let live=L.layerGroup().addTo(map),busStops=L.layerGroup().addTo(map),railStops=L.layerGroup().addTo(map),busShapes=L.layerGroup().addTo(map),railShapes=L.layerGroup().addTo(map);
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function vehicleIcon(kind,bearing){const emoji=kind==='bus'?'🚌':'🚆',bg=kind==='bus'?'#F2C100':'#785a91';return L.divIcon({className:'',html:`<div class="vehicle transit-vehicle" style="background:${bg};transform:rotate(${Number.isFinite(bearing)?bearing:0}deg)"><span style="display:block;transform:rotate(${Number.isFinite(bearing)?-bearing:0}deg)">${emoji}</span><i class="direction-arrow">▲</i></div>`,iconSize:[34,34],iconAnchor:[17,17]})}

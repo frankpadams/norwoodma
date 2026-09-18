@@ -117,8 +117,7 @@ async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const i
 
 if(document.querySelector('#transitMap') && window.L){
 const map=L.map('transitMap',{scrollWheelZoom:false}).setView([42.190,-71.198],14);
-const stadia=L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',{maxZoom:20,attribution:'&copy; OpenStreetMap contributors &copy; Stadia Maps'}).addTo(map);
-let basemapFallbackUsed=false,tileErrors=0;function useFallbackBasemap(){if(basemapFallbackUsed)return;basemapFallbackUsed=true;try{map.removeLayer(stadia)}catch(e){};L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri — Source: Esri, HERE, Garmin, USGS, NGA, EPA, USDA, NPS'}).addTo(map)}stadia.on('tileerror',()=>{if(++tileErrors>=2)useFallbackBasemap()});if(location.protocol==='file:')useFallbackBasemap();
+const basemap=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri — Source: Esri, HERE, Garmin, USGS, NGA, EPA, USDA, NPS'}).addTo(map);
 let vehicleLayer=L.layerGroup().addTo(map),stopLayer=L.layerGroup().addTo(map),railStopLayer=L.layerGroup().addTo(map),shapeLayer=L.layerGroup().addTo(map),railShapeLayer=L.layerGroup().addTo(map);
 function vehicleIcon(kind,bearing){const emoji=kind==='bus'?'🚌':'🚆',bg=kind==='bus'?'#F2C100':'#785a91';return L.divIcon({className:'',html:`<div class="vehicle transit-vehicle" style="background:${bg};transform:rotate(${Number.isFinite(bearing)?bearing:0}deg)"><span style="display:block;transform:rotate(${Number.isFinite(bearing)?-bearing:0}deg)">${emoji}</span><i class="direction-arrow">▲</i></div>`,iconSize:[34,34],iconAnchor:[17,17]})}
 function decodePolyline(str){let index=0,lat=0,lng=0,coords=[];while(index<str.length){let b,shift=0,result=0;do{b=str.charCodeAt(index++)-63;result|=(b&0x1f)<<shift;shift+=5}while(b>=0x20);lat+=(result&1)?~(result>>1):(result>>1);shift=0;result=0;do{b=str.charCodeAt(index++)-63;result|=(b&0x1f)<<shift;shift+=5}while(b>=0x20);lng+=(result&1)?~(result>>1):(result>>1);coords.push([lat/1e5,lng/1e5])}return coords}
@@ -134,9 +133,25 @@ const localRail=(rs.data||[]).filter(x=>/Norwood Central|Norwood Depot/i.test(x.
 
 document.querySelector('#moreNews')?.addEventListener('click',function(){let feed=document.querySelector('#newsFeed');let open=feed.classList.toggle('expanded');this.textContent=open?'Show fewer headlines ↑':'Show more local headlines ↓'});
 async function timely(){
- const box=document.querySelector('#timelyItems'); if(!box)return; let bits=[];
- try{let a=await (await fetch('https://api-v3.mbta.com/alerts?filter[route]=34E,CR-Franklin')).json();if((a.data||[]).length)bits.push(`<a href="#transit">${a.data.length} active MBTA service alert${a.data.length===1?'':'s'} affecting local transit →</a>`)}catch(e){}
- // This area is deliberately extensible: cached community calendars/fundraisers can be merged here by scheduled ingestion.
- if(!bits.length)bits.push('No high-priority local alerts detected. Community events and fundraisers can appear here automatically when sourced.');
- box.innerHTML=bits.join(' · ');
+ const box=document.querySelector('#timelyItems');
+ const alert=document.querySelector('#timelyAlert');
+ if(!box||!alert)return;
+ let bits=[];
+ try{
+   const response=await fetch('https://api-v3.mbta.com/alerts?filter[route]=34E,CR-Franklin');
+   if(response.ok){
+     const a=await response.json();
+     if((a.data||[]).length){
+       bits.push(`<a href="transit.html">${a.data.length} active MBTA service alert${a.data.length===1?'':'s'} affecting local transit →</a>`);
+     }
+   }
+ }catch(e){}
+ // Only surface this strip when there is genuinely time-sensitive information.
+ if(bits.length){
+   box.innerHTML=bits.join(' · ');
+   alert.hidden=false;
+ }else{
+   box.innerHTML='';
+   alert.hidden=true;
+ }
 } timely();
