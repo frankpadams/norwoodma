@@ -176,6 +176,19 @@
     "verified": "2026-09"
   },
   {
+    "name": "Bodhi Spa",
+    "category": "Spas, Salons & Massage",
+    "description": "Norwood wellness/spa option, listed here rather than as a Things to Do destination.",
+    "url": "https://thebodhispa.com/",
+    "tags": "spa wellness massage hydrotherapy personal care",
+    "topics": [
+      "wellness",
+      "services"
+    ],
+    "coverage": "Norwood",
+    "verified": "2026-09"
+  },
+  {
     "name": "Boston Area Trans Support",
     "category": "LGBTQ+",
     "description": "Peer-run support for transgender and nonbinary adults in the Boston area.",
@@ -408,7 +421,7 @@
     "name": "Council on Aging / Senior Center",
     "category": "Seniors",
     "description": "Programs, transportation and services for older adults.",
-    "url": "https://www.norwoodma.gov/departments/council_on_aging/index.php",
+    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior seniors aging transportation programs",
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2238,7 +2251,7 @@
     "name": "Norwood Council on Aging & Senior Center",
     "category": "Older Adults",
     "description": "Norwood’s hub for older adults and caregivers, with programs, outreach, activities, benefits guidance and connections to transportation and nutrition services.",
-    "url": "https://www.norwoodma.gov/",
+    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior older adult aging caregiver outreach benefits activities council on aging",
     "topics": [
       "older",
@@ -2253,7 +2266,7 @@
     "name": "Norwood Council on Aging Transportation",
     "category": "Transportation & Older Adults",
     "description": "Local transportation information and ride assistance for eligible older Norwood residents through the Senior Center.",
-    "url": "https://www.norwoodma.gov/",
+    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior ride van transportation council aging",
     "topics": [
       "transport",
@@ -2269,6 +2282,18 @@
     "url": "https://massculturalcouncil.org/local-council/norwood/",
     "tags": "culture arts grants local council",
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Norwood dental & orthodontic directory",
+    "category": "Dental & Orthodontics",
+    "description": "A dedicated category for local dentists, orthodontists and oral-health providers; entries will continue to be expanded and verified.",
+    "url": "resources.html#dental",
+    "tags": "dentist dental orthodontist orthodontics oral health",
+    "topics": [
+      "dental"
+    ],
+    "coverage": "Norwood",
     "verified": "2026-09"
   },
   {
@@ -2400,6 +2425,19 @@
     "verified": "2026-09"
   },
   {
+    "name": "Norwood Hospital / regional medical care information",
+    "category": "Medical Care",
+    "description": "Local hospital information and current service updates; verify available services before visiting.",
+    "url": "https://www.steward.org/hospitals/norwood-hospital",
+    "tags": "medical hospital emergency health Norwood",
+    "topics": [
+      "medical",
+      "health"
+    ],
+    "coverage": "Norwood",
+    "verified": "2026-09"
+  },
+  {
     "name": "Norwood Housing Authority",
     "category": "Housing",
     "description": "Affordable public housing and housing-voucher information for Norwood, including applications, waiting lists, reasonable accommodations and resident resources.",
@@ -2512,7 +2550,7 @@
     "name": "Norwood Memory Café",
     "category": "Older Adults & Caregivers",
     "description": "Local social connection and supportive programming for people living with memory loss and their care partners.",
-    "url": "https://www.norwoodma.gov/",
+    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "memory cafe dementia Alzheimer caregiver senior",
     "topics": [
       "older",
@@ -2843,7 +2881,7 @@
     "name": "Norwood Senior Center / Council on Aging",
     "category": "Seniors",
     "description": "Programs and services for older residents.",
-    "url": "https://www.norwoodma.gov/departments/council_on_aging/index.php",
+    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior aging transportation",
     "coverage": "Local",
     "verified": "2026-09"
@@ -2980,6 +3018,18 @@
       "housing"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Norwood Urgent Care search",
+    "category": "Medical Care",
+    "description": "Use the resource search to locate current urgent-care and medical options serving Norwood.",
+    "url": "resources.html",
+    "tags": "medical urgent care clinic doctor physician",
+    "topics": [
+      "medical"
+    ],
+    "coverage": "Norwood",
     "verified": "2026-09"
   },
   {
@@ -3639,6 +3689,21 @@
     "verified": "2026-09"
   },
   {
+    "name": "Sophia “Sophie” Ricci — SRG Properties Group",
+    "category": "Realtor",
+    "description": "Norwood-based broker associate and team leader with SRG Properties Group / Century 21 North East. First listing in Norwood.ma’s realtor directory; additional local professionals can be added over time.",
+    "url": "https://www.srgpropertiesgroup.com/sophia-ricci",
+    "tags": "Sophie Sophia Ricci realtor real estate broker agent home buying home selling Century 21 SRG",
+    "topics": [
+      "realestate",
+      "housing",
+      "business"
+    ],
+    "coverage": "Norwood",
+    "verified": "2026-09",
+    "source_note": "Official SRG Properties Group profile; office at 168 Nahatan St, Norwood."
+  },
+  {
     "name": "South Norwood Laundromat & Dry Cleaning",
     "category": "Local Service",
     "description": "Neighborhood laundromat with self-service laundry, wash-dry-fold and dry cleaning.",
@@ -3768,6 +3833,20 @@
       "kids"
     ],
     "coverage": "Nearby — Dedham",
+    "verified": "2026-09"
+  },
+  {
+    "name": "The Learning Center for the Deaf",
+    "category": "Deaf & Hard of Hearing",
+    "description": "Framingham-based Deaf-centered organization providing education and community services for deaf and hard-of-hearing children, adults and families.",
+    "url": "https://www.tlcdeaf.org/",
+    "tags": "Deaf hard of hearing ASL education school audiology interpreting Framingham TLC",
+    "topics": [
+      "health",
+      "kids",
+      "community"
+    ],
+    "coverage": "Nearby — Framingham",
     "verified": "2026-09"
   },
   {
@@ -3949,6 +4028,20 @@
     "verified": "2026-09"
   },
   {
+    "name": "Walden Community Services",
+    "category": "Mental Health",
+    "description": "Statewide culturally and linguistically affirmative behavioral-health services for deaf and hard-of-hearing children, adults and families, with offices in Framingham and Springfield and home-based services across Massachusetts.",
+    "url": "https://www.tlcdeaf.org/behavioral-health-clinical-care/walden-community-services",
+    "tags": "Deaf hard of hearing ASL mental health behavioral health psychotherapy CBHI family Framingham Springfield Walden",
+    "topics": [
+      "health",
+      "kids",
+      "community"
+    ],
+    "coverage": "Statewide — offices in Framingham & Springfield",
+    "verified": "2026-09"
+  },
+  {
     "name": "Ward’s Berry Farm",
     "category": "Things to Do",
     "description": "Family farm and market in nearby Sharon with seasonal pick-your-own crops, hayrides, play areas, farm animals, food and other seasonal activities.",
@@ -3974,6 +4067,18 @@
       "kids"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Wellness & halotherapy nearby",
+    "category": "Spas, Salons & Massage",
+    "description": "Use this category for nearby salt-room/halotherapy and other specialty wellness options when current access is verified.",
+    "url": "resources.html#wellness",
+    "tags": "salt room salt cave halotherapy wellness spa massage",
+    "topics": [
+      "wellness"
+    ],
+    "coverage": "Nearby",
     "verified": "2026-09"
   },
   {
