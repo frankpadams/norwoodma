@@ -299,3 +299,15 @@ html[data-text-size="large"]{font-size:17px}
   .top>.brand.approved{width:min(190px,calc(100vw - 82px));height:62px;min-height:62px}
   .top>.brand.approved img{max-height:58px}
 }
+
+/* v0.11.37 — crisper masthead artwork and left-aligned brand */
+.top{padding-left:18px}
+.top>.brand.approved:after{display:none}
+.top>.brand.approved img{opacity:1;filter:none;mix-blend-mode:normal}
+@media(min-width:1101px){
+  .top{grid-template-columns:220px minmax(0,1fr);column-gap:20px}
+  .top>.brand.approved{width:220px;max-width:220px}
+  .top>.brand.approved img{width:220px;max-height:66px}
+}
+@media(max-width:1100px){.top{padding-left:14px}}
+@media(max-width:500px){.top{padding-left:10px}}

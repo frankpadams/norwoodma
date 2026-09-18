@@ -1,4 +1,4 @@
-# Norwood.ma v0.11.36
+# Norwood.ma v0.11.37
 
 - Reduced the approved masthead logo to approximately 230px on wide desktop, with smaller responsive sizes.
 - Reserved a fixed compact logo column so the primary navigation has substantially more room.
