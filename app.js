@@ -38,7 +38,7 @@ async function weather(){
 function renderNews(items){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
- let clean=(items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>new Date(b.date)-new Date(a.date));
+ let clean=(items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok||!String(x.summary||'').trim())return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>new Date(b.date)-new Date(a.date));
  // Use the smallest recent window that supplies a useful current-news set. The deeper queue remains available as resilience, not filler.
  const windows=[7,14,21,30,45,60,90,120], target=20; let selected=[], selectedDays=120;
  for(const days of windows){const cutoff=now-days*day, candidate=clean.filter(x=>Date.parse(x.date)>=cutoff);selected=candidate;selectedDays=days;if(candidate.length>=target)break;}
