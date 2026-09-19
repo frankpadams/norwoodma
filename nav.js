@@ -21,22 +21,6 @@
   ctl.innerHTML='<span class="sr-only">Display settings</span><button type="button" data-size="compact" aria-label="Smaller text">A−</button><button type="button" data-size="standard" aria-label="Standard text">A</button><button type="button" data-size="large" aria-label="Larger text">A+</button><button type="button" data-contrast aria-label="Toggle high contrast">◐ <span>Contrast</span></button>';
   document.body.appendChild(ctl);
 
-  const style=document.createElement('style');
-  style.textContent=`
-    .accessibility-controls{display:flex;gap:4px;align-items:center}
-    .accessibility-controls button[data-contrast]{width:auto;padding-inline:9px}
-    .accessibility-controls button[data-contrast] span{font-size:11px;font-weight:800}
-    html[data-high-contrast="true"]{--paper:#fff;--ink:#000;--muted:#222;--line:#000;--blue:#002b59;--dark:#000}
-    html[data-high-contrast="true"] body{background:#fff;color:#000}
-    html[data-high-contrast="true"] .top,html[data-high-contrast="true"] footer{background:#000!important;color:#fff!important}
-    html[data-high-contrast="true"] a{text-decoration-thickness:2px;text-underline-offset:2px}
-    html[data-high-contrast="true"] .dash-card,html[data-high-contrast="true"] .resource-item,html[data-high-contrast="true"] .topic-card,html[data-high-contrast="true"] .calendar-directory-card,html[data-high-contrast="true"] .explore-home-card,html[data-high-contrast="true"] .explore-primary-card,html[data-high-contrast="true"] .activity-grid>a,html[data-high-contrast="true"] .compact-place-grid>a{border:2px solid #000!important;box-shadow:none!important}
-    html[data-high-contrast="true"] .muted,html[data-high-contrast="true"] small,html[data-high-contrast="true"] .sub{color:#111!important}
-    html[data-high-contrast="true"] :focus-visible{outline:4px solid #ffbf00!important;outline-offset:3px}
-    @media(max-width:520px){.accessibility-controls button[data-contrast] span{display:none}}
-  `;
-  document.head.appendChild(style);
-
   const sync=()=>{
     ctl.querySelectorAll('button[data-size]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.size===(root.dataset.textSize||'standard'))));
     const cb=ctl.querySelector('[data-contrast]');
@@ -57,7 +41,7 @@
     const meta=document.createElement('p');
     meta.className='footer-build-meta';
     meta.setAttribute('aria-label','Site version and copyright');
-    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.2';
+    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.3';
     footer.appendChild(meta);
   }
 })();
