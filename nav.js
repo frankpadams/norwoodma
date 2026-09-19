@@ -50,4 +50,14 @@
     sync();
   });
   sync();
+
+  // Always-visible deployment marker: makes it easy to confirm which public build is loaded.
+  const footer=document.querySelector('footer');
+  if(footer){
+    const meta=document.createElement('p');
+    meta.className='footer-build-meta';
+    meta.setAttribute('aria-label','Site version and copyright');
+    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.1';
+    footer.appendChild(meta);
+  }
 })();
