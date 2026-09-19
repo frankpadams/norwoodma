@@ -1,50 +1,50 @@
 {
-  "generated_at": "2026-09-19T13:19:27.286797-04:00",
+  "generated_at": "2026-09-19T16:48:33.103178-04:00",
   "offline": false,
-  "events_published": 141,
+  "events_published": 136,
   "news_published": 120,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 141,
-      "generated_at": "2026-09-19T13:19:27.279369-04:00"
+      "events": 136,
+      "generated_at": "2026-09-19T16:48:33.096097-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 58,
-      "generated_at": "2026-09-19T13:19:27.280742-04:00"
+      "generated_at": "2026-09-19T16:48:33.097415-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 22,
-      "generated_at": "2026-09-19T13:19:27.281916-04:00"
+      "generated_at": "2026-09-19T16:48:33.098535-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 17,
-      "generated_at": "2026-09-19T13:19:27.282914-04:00"
+      "generated_at": "2026-09-19T16:48:33.099484-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-19T13:19:27.283691-04:00"
+      "generated_at": "2026-09-19T16:48:33.100200-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 15,
-      "generated_at": "2026-09-19T13:19:27.284672-04:00"
+      "events": 10,
+      "generated_at": "2026-09-19T16:48:33.101058-04:00"
     }
   ],
   "event_sources": [
@@ -113,10 +113,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 5,
-      "note": ""
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "source_id": "grace-calendar",
@@ -481,9 +481,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -521,7 +522,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 18,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -579,7 +580,7 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 26,
+      "found": 25,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
@@ -588,27 +589,26 @@
         "Wicked Local": 1,
         "MetroWest Daily News": 1,
         "Legacy obituary": 5,
-        "CBS News": 2,
+        "CBS News": 1,
         "CBS Boston": 1,
         "MaxPreps": 2,
         "maxpreps.com": 2,
-        "Kraw-Kornack Funeral Home": 16,
+        "Kraw-Kornack Funeral Home": 12,
+        "kraw-kornackfuneralhome.com": 12,
         "Inside Norwood": 11,
         "Boston.com": 2,
         "Norwood Public Schools": 1,
-        "The Norwood Record": 45,
+        "The Norwood Record": 44,
         "REBusinessOnline": 1,
-        "Dignity Memorial": 12,
+        "Dignity Memorial": 11,
         "Town of Norwood": 1,
-        "Patch": 5,
+        "Patch": 2,
         "CurrentObituary.com": 1,
         "NBC Boston": 1,
         "Cartmell Davis Funeral Home": 1,
         "cartmelldavis.com": 1,
         "John Guilfoil Public Relations": 1,
-        "news.jgpr.net": 1,
-        "delaneyfuneral.com": 1,
-        "WCVB": 1
+        "news.jgpr.net": 1
       },
       "note": null
     }
