@@ -6,17 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Arts\, music & entertainment
 X-WR-CALDESC:Concerts\, performances\, theatre\, comedy\, open mics\, arts and cultural events.
 BEGIN:VEVENT
-UID:2026-09-18-margo-macero@norwood.ma
-DTSTAMP:20260918T025827Z
-DTSTART;TZID=America/New_York:20260918T190000
-SUMMARY:The Margo Macero Band
-LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
-DESCRIPTION:Source: https://www.extendedplaysessions.com/
-URL:https://www.extendedplaysessions.com/
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-09-18-legally-blonde@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260921
 SUMMARY:Legally Blonde — Norwood High School
@@ -25,8 +16,28 @@ DESCRIPTION:Public high-school theatrical production\; exact performance times s
 URL:https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-19-live-in-person-the-2nd-biennial-ruth-solomon--aeb043c@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260919T000000
+DTEND;TZID=America/New_York:20260919T235900
+SUMMARY:LIVE In-Person: The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating
+LOCATION:The Skating Club of Boston
+DESCRIPTION:The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes returns September 18 and 19\, presented by Boston Children’s Hospital and Harvard Medical School Teaching Hospital. Hear from Ashley Wagner\, Simon Shnapir\, and Mirai Naga\nSource: https://scboston.org/event/figure-skating-health-and-performance-conference/2026-09-19/
+URL:https://scboston.org/event/figure-skating-health-and-performance-conference/2026-09-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-19-teen-morning-makerspace-c740a38@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260919T000000
+DTEND;TZID=America/New_York:20260919T000000
+SUMMARY:Teen Morning Makerspace
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Teen ProgramChildren's Program RoomGrades 7-12Get crafty and creative at the library with our Morning Makerspace for teens! From 10am to 12pm\, teens are invited to drop in and use our arts and crafts equipment to work on a current project\, \nSource: https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-10/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-10/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-19-floydian-trip@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20260919T193000
 SUMMARY:Floydian Trip: Echoes Through Time
 LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
@@ -34,8 +45,28 @@ DESCRIPTION:Source: https://norwoodstage.com/floydian-trip
 URL:https://norwoodstage.com/floydian-trip
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-20-end-of-summer-90-s-party-de3bcae@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260920T120000
+DTEND;TZID=America/New_York:20260920T170000
+SUMMARY:End of Summer 90’s Party
+LOCATION:South Boston Taproom\, 10 Old Colony Avenue\, Boston\, Massachusetts\, 02127\, United States — South Boston Taproom\, 10 Old Colony Avenue\, Boston\, Massachusetts\, 02127\, United States
+DESCRIPTION:Source: https://www.castleislandbeer.com/calendar
+URL:https://www.castleislandbeer.com/calendar
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-20-guided-tour-of-the-day-house-september-20-202-9decebe@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260920T130000
+DTEND;TZID=America/New_York:20260920T150000
+SUMMARY:Guided Tour of the Day House – September 20\, 2026
+LOCATION:F Holland Day House — 93 Day Street\, Norwood\, MA\, 02062
+DESCRIPTION:@ Step into history with a guided tour of the F. Holland Day House\, a stunning Victorian home nestled in Norwood\, Massachusetts. Visitors can explore the beautifully preserved rooms\, admire period furnishings\, and learn about Day’s contribu\nCost: $5\nSource: https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-sept-20-2026/
+URL:https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-sept-20-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-20-not-done-yet@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20260920T140000
 SUMMARY:“Not Done Yet” Free Concert
 LOCATION:First Congregational Church in Norwood — 100 Winter St\, Norwood\, MA 02062
@@ -44,7 +75,7 @@ URL:https://www.norwoodrecord.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-20-celtic-seisun@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20260920T150000
 DTEND;TZID=America/New_York:20260920T180000
 SUMMARY:Celtic Traditional Open Seisun
@@ -53,8 +84,28 @@ DESCRIPTION:Cost: See venue\nSource: https://norwoodspacecenter.com/events/
 URL:https://norwoodspacecenter.com/events/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-22-neponset-river-regional-chamber-caffeine-conv-babf85d@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260922T083000
+DTEND;TZID=America/New_York:20260922T093000
+SUMMARY:Neponset River Regional Chamber: Caffeine & Conversations
+LOCATION:Building 6 – Cafe Area — Norwood Space Center\, 83 Morse St\, Building 6\, Norwood\, MA\, 02062
+DESCRIPTION:CAFFEINE & CONNECTIONS BRING YOUR BUSINESS CARDS\, GRAB A COFFEE\, AND START YOUR MORNING WITH NEW CONNECTIONS. Start your Tuesday with meaningful collaborations at Caffeine & Connections\, a FREE monthly networking event designed to bring tog\nSource: https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-09-22-2026/
+URL:https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-09-22-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-23-paint-nite-for-kids-ca537e5@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260923T000000
+DTEND;TZID=America/New_York:20260923T000000
+SUMMARY:Paint Nite for Kids
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Join Ms. Nicole for a fun paint night! Follow along as we all create a masterpiece to bring home. We will be using acrylic paints\, so please wear appropriate clothing (it stains!)Ages 6 - 12\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-3/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-3/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-23-fallout-open-mic@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20260923T190000
 SUMMARY:Open Mic Night
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -62,8 +113,48 @@ DESCRIPTION:All welcome\; 15-minute sets\; listing showed sold out at time of ch
 URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-24-communication-without-limits-dbed085@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260924T000000
+DTEND;TZID=America/New_York:20260924T000000
+SUMMARY:Communication Without Limits
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Morrill Memorial Library is excited to partner with Lifeworks\, Inc to launch a unique program for neurodiverse (ND) adults. &nbsp\; We will be hosting a monthly ‘Communication Without Limits’ conversation circle for ND adults. &nbsp\;Our Sept\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/communication-without-limits-33/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/communication-without-limits-33/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-24-ache-of-ma-s-2026-leadership-on-tap-final-eve-1c49805@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260924T180000
+DTEND;TZID=America/New_York:20260924T200000
+SUMMARY:ACHE of MA’s 2026 “Leadership on Tap” Final Event in Our 2026 Series!
+LOCATION:ACHE of Massachusetts
+DESCRIPTION:Thursday\, Sept 24 6:00-8:00 PM Castle Island Brewing Company 31 Astor Avenue Norwood\, MA 02062 Join us for ACHE of MA’s 2026 “Leadership on Tap\,” a refreshing series of casual networking events hosted at local breweries across the region. D\nSource: https://massache.org/event/ache-of-mas-2026-leadership-on-tap-final-event-in-our-2026-series/
+URL:https://massache.org/event/ache-of-mas-2026-leadership-on-tap-final-event-in-our-2026-series/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-24-make-a-charcuterie-board-great-for-date-night-7fdd470@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260924T180000
+DTEND;TZID=America/New_York:20260924T210000
+SUMMARY:Make A Charcuterie Board – Great for Date Night! (September 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Are you intrigued by the beauty of charcuterie boards you see at crafts fairs? Join our beginner-friendly woodworking class where you’ll learn to design and build your very own hardwood cutting board. Here’s what awaits you: Introduction \nCost: $70.00 – $140.00\nSource: https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-september-2026/
+URL:https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-25-sensory-friendly-art-classes-for-adults-40255df@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260925T000000
+DTEND;TZID=America/New_York:20260925T000000
+SUMMARY:Sensory-friendly Art Classes for Adults
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Morrill Memorial Library is excited to partner with Norwood-based Lifeworks Inc to bring a series of art classes called Sensory-friendly Art Classes for Adults to the library. The classes will be held weekly on Fridays from 10:30 am to 11:4\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-123/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-123/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-25-magic-room-far-trio@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20260925T193000
 DTEND;TZID=America/New_York:20260925T230000
 SUMMARY:F.A.R. Trio — Rock and Soul
@@ -72,8 +163,18 @@ DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
 URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-26-miniature-model-painting-workshop-september-2-c2e4b63@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260926T130000
+DTEND;TZID=America/New_York:20260926T160000
+SUMMARY:Miniature Model & Painting Workshop (September 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Uplevel your tabletop game experience at Mill Forge Makerspace. Mill Forge is hosting a regular drop-in group event for 3D printing\, finishing\, and painting mini-figures and DIY game terrain elements. Together\, let’s bring your fantasy wo\nCost: Free – $20.00\nSource: https://millforge.org/event/miniature-model-painting-workshop-september-2026/
+URL:https://millforge.org/event/miniature-model-painting-workshop-september-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-26-magic-room-deadbeat@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20260926T200000
 DTEND;TZID=America/New_York:20260926T230000
 SUMMARY:DeadBeat — Grateful Dead Tribute
@@ -82,8 +183,58 @@ DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
 URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-27-musical-sundays-concert-series-musick-of-new--a93a8ae@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260927T000000
+DTEND;TZID=America/New_York:20260927T000000
+SUMMARY:Musical Sundays Concert Series: Musick of New England’s Revolution
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Let's kick off the new season of Fall concerts with a nod to America's 250th anniversary\, featuring Richard Franklin Donohue performing\, "What a Glorious Crash They Made: Musick of New England’s Revolution\," on Sunday\, September 27 at 3:00p\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-musick-of-new-england-s-revolution/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-musick-of-new-england-s-revolution/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-28-cozy-puzzle-night-6bdb279@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260928T000000
+DTEND;TZID=America/New_York:20260928T000000
+SUMMARY:Cozy Puzzle Night
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Morrill Memorial Library is hosting a Cozy Puzzle Night for adults on the last Monday of every month. September's Puzzle Night will take place on&nbsp\;Monday\, September 28 starting at 6:30pm in the Simoni Room. Hang out on an autumn night w\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/cozy-puzzle-night-15/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/cozy-puzzle-night-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-28-virtual-how-to-avoid-death-on-mount-washingto-abf5f14@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260928T000000
+DTEND;TZID=America/New_York:20260928T000000
+SUMMARY:[VIRTUAL] (how to avoid) "Death on Mount Washington" with Author Randi Minetor
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Morrill Memorial Library is partnering with Ashland Public Library to host a virtual program called (how to avoid) "Death on Mount Washington" with Author Randi Minetor on Zoom. It will be held on September 28\, 2026 at 7PM. Join author Rand\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/virtual-how-to-avoid-death-on-mount-washington-with-author-randi-minetor/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/virtual-how-to-avoid-death-on-mount-washington-with-author-randi-minetor/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-29-great-reads-ma-watch-party-virtual-q-a-with-a-0157e8a@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20260929T000000
+DTEND;TZID=America/New_York:20260929T000000
+SUMMARY:Great Reads MA: Watch Party - Virtual Q&A with Author Joseph Lee
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Morrill Memorial Library\, in partnership with the Norwood Historical Society and First Congregational Church of Norwood\, will host a watch party of Mass Center for the Book's virtual Q&amp\;A with the 2026 Great Reads MA author Joseph Lee on\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/great-reads-ma-watch-party-virtual-q-a-with-author-joseph-lee/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/great-reads-ma-watch-party-virtual-q-a-with-author-joseph-lee/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-01-tool-and-knife-sharpening-workshop-october-20-272418b@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261001T180000
+DTEND;TZID=America/New_York:20261001T210000
+SUMMARY:Tool and Knife Sharpening Workshop (October 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Keeping your knives\, chisels\, turning gauges\, planer irons\, and saw blades sharp is critical. Sharp blades not only ensure accurate and clean cuts but also contribute to safer tool use. Whether you want to hone your kitchen knives or tip \nCost: $70.00 – $135.00\nSource: https://millforge.org/event/tool-and-knife-sharpening-workshop-october-2026/
+URL:https://millforge.org/event/tool-and-knife-sharpening-workshop-october-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-02-selwyn-birchwood@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261002T190000
 SUMMARY:Selwyn Birchwood Band
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -91,8 +242,28 @@ DESCRIPTION:Source: https://www.extendedplaysessions.com/
 URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-03-first-saturday-devotions-5fc17d9@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261003T073000
+DTEND;TZID=America/New_York:20261003T083000
+SUMMARY:First Saturday Devotions
+LOCATION:Saint Catherine of Siena Parish
+DESCRIPTION:Please join us as we answer Our Lady’s request to make reparation for the offenses committed against Her Immaculate Heart.\nSource: https://stcatherinenorwood.org/
+URL:https://stcatherinenorwood.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-03-intro-to-metalworking-october-2026-c5546d0@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261003T130000
+DTEND;TZID=America/New_York:20261003T160000
+SUMMARY:Intro to Metalworking (October 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Introductory course on basic safety and operation of metalworking equipment at Mill Forge Makerspace. This class will cover all operational stationary power equipment in the metals area\, and will provide certification for solo use by Mill\nCost: Free – $90.00\nSource: https://millforge.org/event/intro-to-metalworking-october-2026/
+URL:https://millforge.org/event/intro-to-metalworking-october-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-03-magic-room-ballz@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261003T190000
 DTEND;TZID=America/New_York:20261003T230000
 SUMMARY:Ballz
@@ -102,7 +273,7 @@ URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-03-rangemasters@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261003T190000
 SUMMARY:The Rangemasters
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -111,7 +282,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-03-3-decades-rewind@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261003T193000
 SUMMARY:3 Decades Rewind
 LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
@@ -119,8 +290,38 @@ DESCRIPTION:Cost: $51–$65\nSource: https://norwoodstage.com/3-decades-rewind
 URL:https://norwoodstage.com/3-decades-rewind
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-04-lumber-milling-workshop-october-2026-832d507@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261004T100000
+DTEND;TZID=America/New_York:20261004T130000
+SUMMARY:Lumber Milling Workshop (October 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Learn how to turn rough milled lumber into boards ready for creating fine furniture. You will learn how to use the jointer and planer to surface all four sides of a board – A skill valuable for preparing rough lumber\, reclaimed timber\, an\nCost: $100.00 – $200.00\nSource: https://millforge.org/event/lumber-milling-workshop-october-2026/
+URL:https://millforge.org/event/lumber-milling-workshop-october-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-04-guided-tour-of-the-day-house-october-4-2026-d116abb@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261004T130000
+DTEND;TZID=America/New_York:20261004T150000
+SUMMARY:Guided Tour of the Day House – October 4\, 2026
+LOCATION:F Holland Day House — 93 Day Street\, Norwood\, MA\, 02062
+DESCRIPTION:@ Step into history with a guided tour of the F. Holland Day House\, a stunning Victorian home nestled in Norwood\, Massachusetts. Visitors can explore the beautifully preserved rooms\, admire period furnishings\, and learn about Day’s contribu\nSource: https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-oct-4-2026/
+URL:https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-oct-4-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-04-introduction-to-woodturning-october-2026-7ced958@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261004T133000
+DTEND;TZID=America/New_York:20261004T173000
+SUMMARY:Introduction to Woodturning (October 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Come enjoy a taste of woodturning. Learn how quick\, easy and relaxing it can be to carve wood into a wide variety of shapes. No prior woodturning (or even woodworking) experience is required. An instructor\, all tools\, materials and safety\nCost: Free – $90.00\nSource: https://millforge.org/event/introduction-to-woodturning-october-2026/
+URL:https://millforge.org/event/introduction-to-woodturning-october-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-07-wednesdave-blues@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261007T190000
 SUMMARY:Dave Limina’s Wednesdave Blues II
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -129,7 +330,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-09-claudettes@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261009T190000
 SUMMARY:The Claudettes
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -138,7 +339,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-09-october-comedy@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261009T193000
 SUMMARY:October Live Comedy
 LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
@@ -147,7 +348,7 @@ URL:https://norwoodstage.com/october-live-comedy
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-10-nate-perry@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261010T190000
 SUMMARY:Nate Perry and Ragged Company
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -156,7 +357,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-10-tapestry@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261010T193000
 SUMMARY:Tapestry\, the Carole King Songbook
 LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
@@ -165,7 +366,7 @@ URL:https://norwoodstage.com/tapestry-a-carole-king-tribute
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-17-bow-thayer@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261017T190000
 SUMMARY:The Bow Thayer Large Band — Ninevah Release Show
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -174,7 +375,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-17-docksiders@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261017T193000
 SUMMARY:The Docksiders
 LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
@@ -183,7 +384,7 @@ URL:https://norwoodstage.com/the-docksiders
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-18-celtic-seisun@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261018T150000
 DTEND;TZID=America/New_York:20261018T180000
 SUMMARY:Celtic Traditional Open Seisun
@@ -193,7 +394,7 @@ URL:https://norwoodspacecenter.com/venue/irish-brewing-boston/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-23-daybreak@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261023T193000
 SUMMARY:Daybreak — The Music & Passion of Barry Manilow
 LOCATION:Norwood Theatre — 109 Central St\, Norwood\, MA 02062
@@ -202,7 +403,7 @@ URL:https://norwoodstage.com/daybreak-a-barry-manilow-tribute
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-24-magic-heartbreaker@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261024T190000
 DTEND;TZID=America/New_York:20261024T230000
 SUMMARY:Heartbreaker — Music of Led Zeppelin
@@ -212,7 +413,7 @@ URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-24-love-dogs@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261024T190000
 SUMMARY:The Love Dogs
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -220,8 +421,18 @@ DESCRIPTION:Source: https://www.extendedplaysessions.com/
 URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-25-making-cabinets-and-bookcases-with-plywood-oc-899bc79@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261025T100000
+DTEND;TZID=America/New_York:20261025T130000
+SUMMARY:Making Cabinets and Bookcases with Plywood (October 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Plywood is a versatile material that can be more economical\, sustainable\, and durable than solid wood for many cases! Learn how to use plywood to make bookcases\, storage bins\, cabinets\, and lots more. We will cover: Plywood vs. Boards Cab\nSource: https://millforge.org/event/making-cabinets-and-bookcases-with-plywood-october-2026/
+URL:https://millforge.org/event/making-cabinets-and-bookcases-with-plywood-october-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-25-magic-hunks@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261025T180000
 DTEND;TZID=America/New_York:20261025T220000
 SUMMARY:Girls Night Out — Magic Hunks
@@ -230,8 +441,18 @@ DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
 URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-27-neponset-river-regional-chamber-caffeine-conv-d9d575a@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261027T083000
+DTEND;TZID=America/New_York:20261027T093000
+SUMMARY:Neponset River Regional Chamber: Caffeine & Conversations
+LOCATION:Building 6 – Cafe Area — Norwood Space Center\, 83 Morse St\, Building 6\, Norwood\, MA\, 02062
+DESCRIPTION:CAFFEINE & CONNECTIONS BRING YOUR BUSINESS CARDS\, GRAB A COFFEE\, AND START YOUR MORNING WITH NEW CONNECTIONS. Start your Tuesday with meaningful collaborations at Caffeine & Connections\, a FREE monthly networking event designed to bring tog\nSource: https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-10-27-2026/
+URL:https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-10-27-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-30-no-static@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261030T190000
 SUMMARY:No Static — Steely Dan Tribute
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -240,7 +461,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-31-mostly-maiden@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261031T190000
 DTEND;TZID=America/New_York:20261031T230000
 SUMMARY:Mostly Maiden
@@ -249,8 +470,18 @@ DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
 URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-11-05-make-a-charcuterie-board-great-for-date-night-57cc41c@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261105T180000
+DTEND;TZID=America/New_York:20261105T210000
+SUMMARY:Make A Charcuterie Board – Great for Date Night! (November 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Are you intrigued by the beauty of charcuterie boards you see at crafts fairs? Join our beginner-friendly woodworking class where you’ll learn to design and build your very own hardwood cutting board. Here’s what awaits you: Introduction \nCost: $70.00 – $140.00\nSource: https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-november-2026/
+URL:https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-november-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-11-14-magic-zeppelin@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261114T190000
 DTEND;TZID=America/New_York:20261114T230000
 SUMMARY:A Night of Zeppelin
@@ -259,8 +490,18 @@ DESCRIPTION:Source: https://events.ticketleap.com/events/magicroom-7
 URL:https://events.ticketleap.com/events/magicroom-7
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-11-15-turn-tops-and-dreidels-craft-gifts-from-the-h-26a0680@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261115T100000
+DTEND;TZID=America/New_York:20261115T130000
+SUMMARY:Turn Tops and Dreidels – Craft Gifts from the Heart! (November 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ A perfect date or family night activity! Craft gifts from the heart & perfect for the holidays or any occasion. Learn to turn toy tops and dreidels as you make gifts for friends and family. You will explore the use of the skew\, spindle go\nCost: $75.00 – $150.00\nSource: https://millforge.org/event/turn-tops-and-dreidels-craft-gifts-from-the-heart-november-2026/
+URL:https://millforge.org/event/turn-tops-and-dreidels-craft-gifts-from-the-heart-november-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-11-15-celtic-seisun@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261115T150000
 DTEND;TZID=America/New_York:20261115T180000
 SUMMARY:Celtic Traditional Open Seisun
@@ -269,8 +510,58 @@ DESCRIPTION:Source: https://norwoodspacecenter.com/venue/irish-brewing-boston/
 URL:https://norwoodspacecenter.com/venue/irish-brewing-boston/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-11-24-neponset-river-regional-chamber-caffeine-conv-e771129@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261124T083000
+DTEND;TZID=America/New_York:20261124T093000
+SUMMARY:Neponset River Regional Chamber: Caffeine & Conversations
+LOCATION:Building 6 – Cafe Area — Norwood Space Center\, 83 Morse St\, Building 6\, Norwood\, MA\, 02062
+DESCRIPTION:CAFFEINE & CONNECTIONS BRING YOUR BUSINESS CARDS\, GRAB A COFFEE\, AND START YOUR MORNING WITH NEW CONNECTIONS. Start your Tuesday with meaningful collaborations at Caffeine & Connections\, a FREE monthly networking event designed to bring tog\nSource: https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-11-24-2026/
+URL:https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-11-24-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-make-a-charcuterie-board-great-for-date-night-dfb8a9c@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261201T180000
+DTEND;TZID=America/New_York:20261201T210000
+SUMMARY:Make A Charcuterie Board – Great for Date Night! (December 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ Are you intrigued by the beauty of charcuterie boards you see at crafts fairs? Join our beginner-friendly woodworking class where you’ll learn to design and build your very own hardwood cutting board. Here’s what awaits you: Introduction \nCost: $70.00 – $140.00\nSource: https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-december-2026/
+URL:https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-turn-tops-and-dreidels-craft-gifts-from-the-h-8530193@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261204T180000
+DTEND;TZID=America/New_York:20261204T210000
+SUMMARY:Turn Tops and Dreidels – Craft Gifts from the Heart! (December 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ A perfect date or family night activity! Craft gifts from the heart & perfect for the holidays or any occasion. Learn to turn toy tops and dreidels as you make gifts for friends and family. You will explore the use of the skew\, spindle go\nCost: $75.00 – $150.00\nSource: https://millforge.org/event/turn-tops-and-dreidels-craft-gifts-from-the-heart-december-2026/
+URL:https://millforge.org/event/turn-tops-and-dreidels-craft-gifts-from-the-heart-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-personalize-laser-engraved-wood-cutting-board-8dcda72@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261213T100000
+DTEND;TZID=America/New_York:20261213T130000
+SUMMARY:Personalize Laser Engraved Wood Cutting Boards – Craft Gifts from the Heart! (December 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ A perfect date or family night activity to ramp up for the holidays! Learn all about using a laser engraver/cutter to customize wood crafts as you select from one of our handmade charcuterie boards to be engraved with your customized desi\nCost: $80.00 – $160.00\nSource: https://millforge.org/event/personalize-laser-engraved-wood-cutting-boards-craft-gifts-from-the-heart-december-2026/
+URL:https://millforge.org/event/personalize-laser-engraved-wood-cutting-boards-craft-gifts-from-the-heart-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-carve-spoons-and-cheese-knives-craft-gifts-fr-4f8f511@norwood.ma
+DTSTAMP:20260919T123347Z
+DTSTART;TZID=America/New_York:20261215T180000
+DTEND;TZID=America/New_York:20261215T210000
+SUMMARY:Carve Spoons and Cheese Knives – Craft Gifts from the Heart! (December 2026)
+LOCATION:Mill Forge Makerspace — 61 Endicott St.\, Building 46\, Norwood\, MA\, 02062
+DESCRIPTION:@ A perfect date or family night activity to ramp up for the holidays! Have fun learning to carve spoons\, cheese knives and more from a variety of woods. You can also try out using a Shinto rasp and the belt sander to make spoons and cheese\nCost: $85.00 – $165.00\nSource: https://millforge.org/event/carve-spoons-and-cheese-knives-craft-gifts-from-the-heart-december-2026/
+URL:https://millforge.org/event/carve-spoons-and-cheese-knives-craft-gifts-from-the-heart-december-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-12-20-celtic-seisun@norwood.ma
-DTSTAMP:20260918T025827Z
+DTSTAMP:20260919T123347Z
 DTSTART;TZID=America/New_York:20261220T150000
 DTEND;TZID=America/New_York:20261220T180000
 SUMMARY:Celtic Traditional Open Seisun
