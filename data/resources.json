@@ -1686,21 +1686,6 @@
     "verified": "2026-09"
   },
   {
-    "name": "Morrill Memorial Library Literacy Department",
-    "category": "Education & Language",
-    "description": "Local English-language learning, literacy and high-school-equivalency support through the Norwood library.",
-    "url": "https://norwoodlibrary.org/commres-refugee-immigr/",
-    "tags": "ESL English GED literacy immigrant language",
-    "topics": [
-      "community",
-      "jobs",
-      "kids"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
-  },
-  {
     "name": "Morrill Memorial Library — Children & Family Resources",
     "category": "Education & Family",
     "description": "Local and regional resources for children and families, including early childhood, disability and family-support services.",
@@ -1806,6 +1791,21 @@
     ],
     "coverage": "Local",
     "verified": "2026-09"
+  },
+  {
+    "name": "Morrill Memorial Library Literacy Department",
+    "category": "Education & Language",
+    "description": "Local English-language learning, literacy and high-school-equivalency support through the Norwood library.",
+    "url": "https://norwoodlibrary.org/commres-refugee-immigr/",
+    "tags": "ESL English GED literacy immigrant language",
+    "topics": [
+      "community",
+      "jobs",
+      "kids"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09",
+    "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
     "name": "Morrill Teen Services",
@@ -2475,6 +2475,15 @@
     "verified": "2026-09"
   },
   {
+    "name": "Norwood Light — Report an Outage",
+    "category": "Utilities",
+    "description": "Power outage reporting and outage information.",
+    "url": "https://norwoodlight.com/report-an-outage/",
+    "tags": "outage power electric emergency",
+    "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
     "name": "Norwood Light Broadband",
     "category": "Utilities",
     "description": "Municipal broadband service.",
@@ -2498,15 +2507,6 @@
     "description": "Municipal electric and broadband service, billing and customer information.",
     "url": "https://norwoodlight.com/",
     "tags": "electric power internet broadband utility bill",
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Norwood Light — Report an Outage",
-    "category": "Utilities",
-    "description": "Power outage reporting and outage information.",
-    "url": "https://norwoodlight.com/report-an-outage/",
-    "tags": "outage power electric emergency",
     "coverage": "Local",
     "verified": "2026-09"
   },
@@ -3470,6 +3470,18 @@
     "coverage": "Regional",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Riverside Community Behavioral Health Center — Norwood",
+    "category": "Mental Health",
+    "description": "Community Behavioral Health Center at 190 Lenox Street offering outpatient behavioral health services and 24/7 mobile crisis support for Norwood and surrounding communities.",
+    "url": "https://www.riversidecc.org/adult-services/mental-health-substance-use-adults/community-behavioral-health-centers/",
+    "tags": "Riverside CBHC mental health behavioral health crisis mobile crisis Norwood",
+    "topics": [
+      "health"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09"
   },
   {
     "name": "Riverside Community Care — Norwood Community Behavioral Health Center",

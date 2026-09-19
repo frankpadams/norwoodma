@@ -88,7 +88,7 @@ function groupEvents(items){
  const g={today:[],tomorrow:[],weekend:[],next:[],save:[]};
  for(const e of items){const d=e.start?.date||'';if(d===today)g.today.push(e);else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d<=next7Key)g.next.push(e);else g.save.push(e);}return g;
 }
-function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.source_url||'#')}" target="_blank" rel="noopener"><div class="event-date"><b>${day}</b><span>${mon}</span></div><div class="event-body"><span class="event-kind">${esc(eventKind(e.category))}</span><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
+function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.source_url||'#')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><span class="event-kind">${esc(eventKind(e.category))}</span><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
 function eventMatchesCalendar(e,key){
  if(!key||key==='all')return true;
  const cat=String(e.category||'').toLowerCase();
@@ -101,20 +101,33 @@ function eventMatchesCalendar(e,key){
   'food-markets':()=>['food','food_culture','market','market_festival'].includes(cat)||['market','fair','food','dinner','brunch'].some(x=>text.includes(x))
  };return rules[key]?rules[key]():true;
 }
+let allEventsForPage=[],eventView='list';
+function eventSearchText(e){return [e.title,e.notes,e.venue,e.address,e.town,e.category,e.organizer].filter(Boolean).join(' ').toLowerCase();}
+function renderCalendarView(items){
+ const byDate=new Map(); for(const e of items){const k=e.start?.date;if(!k)continue;if(!byDate.has(k))byDate.set(k,[]);byDate.get(k).push(e)}
+ const dates=[...byDate.keys()].sort(); if(!dates.length)return '<section class="event-period"><p>No events match this search.</p></section>';
+ return '<div class="event-calendar-grid">'+dates.map(k=>{const d=parseLocalDate(k);return `<section class="event-calendar-day"><div class="event-calendar-date"><b>${d.toLocaleDateString([],{weekday:'short'}).toUpperCase()}</b><span>${d.toLocaleDateString([],{month:'short',day:'numeric'})}</span></div><div>${byDate.get(k).map(eventRow).join('')}</div></section>`}).join('')+'</div>';
+}
 function renderEventsPage(items){
  const host=$('#eventPeriods'); if(!host)return;
  const calendarKey=new URLSearchParams(location.search).get('calendar')||'all';
- items=items.filter(e=>eventMatchesCalendar(e,calendarKey));
+ const q=($('#eventSearch')?.value||'').trim().toLowerCase();
+ items=items.filter(e=>eventMatchesCalendar(e,calendarKey)).filter(e=>!q||eventSearchText(e).includes(q));
  const labels={all:'All community events',arts:'Arts, music & entertainment',family:'Family & kids',sports:'Sports & active events',fundraisers:'Fundraisers & benefits','food-markets':'Food, markets & fairs'};
  const title=document.querySelector('.events-hero h1'), intro=document.querySelector('.events-hero p:not(.eyebrow)');
- if(calendarKey!=='all'&&labels[calendarKey]){if(title)title.textContent=labels[calendarKey];if(intro)intro.textContent='A filtered Norwood.ma calendar view. Use the source link on each event for the latest details.';}
- const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['weekend','This weekend'],['next','Next few days'],['save','Save the date']];
- const html=sections.filter(([k])=>g[k].length).map(([k,label])=>`<section class="event-period ${k==='save'?'save-date':''}"><div class="event-period-head"><p class="eyebrow">${esc(monthDayRange(g[k]))}</p><h2>${label}</h2></div><div class="event-list">${g[k].map(eventRow).join('')}</div></section>`).join('');
- host.innerHTML=html||'<section class="event-period"><p>No upcoming public events are currently verified. The automatic monitor will keep checking.</p></section>';
- const st=$('#eventsStatus');if(st)st.textContent=`${items.length} upcoming/current events · refreshed automatically twice daily`;
+ if(calendarKey!=='all'&&labels[calendarKey]){if(title)title.textContent=labels[calendarKey];if(intro)intro.textContent='A filtered Norwood.ma calendar view. Use the event link for the latest details.';}
+ if(eventView==='calendar') host.innerHTML=renderCalendarView(items);
+ else {
+  const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['weekend','This weekend'],['next','Next few days'],['save','Save the date']];
+  host.innerHTML=sections.filter(([k])=>g[k].length).map(([k,label])=>`<section class="event-period ${k==='save'?'save-date':''}"><div class="event-period-head"><p class="eyebrow">${esc(monthDayRange(g[k]))}</p><h2>${label}</h2></div><div class="event-list">${g[k].map(eventRow).join('')}</div></section>`).join('')||'<section class="event-period"><p>No upcoming public events match this search.</p></section>';
+ }
+ const st=$('#eventsStatus');if(st)st.textContent=`${items.length} upcoming/current events · refreshed every two hours`;
 }
 function renderHomeEvents(items){const host=$('#homeEvents');if(!host)return;host.innerHTML=items.slice(0,3).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';}
-async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();renderEventsPage(items);renderHomeEvents(items);}events();
+async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();allEventsForPage=items;renderEventsPage(items);renderHomeEvents(items);
+ $('#eventSearch')?.addEventListener('input',()=>renderEventsPage(allEventsForPage));
+ document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);}));
+}events();
 
 if(document.querySelector('#transitMap') && window.L){
 const map=L.map('transitMap',{scrollWheelZoom:false}).setView([42.190,-71.198],14);

@@ -57,7 +57,7 @@
     const meta=document.createElement('p');
     meta.className='footer-build-meta';
     meta.setAttribute('aria-label','Site version and copyright');
-    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.1';
+    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.2';
     footer.appendChild(meta);
   }
 })();
