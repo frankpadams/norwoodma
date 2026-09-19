@@ -49,7 +49,7 @@ function renderNews(items){
  const health=$('#feedHealth'); if(health)health.textContent=selected.length?`Local news from the past ${selectedDays} days · ${selected.length} verified stor${selected.length===1?'y':'ies'}`:'No verified local news is currently available';
  if(!selected.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article>';return;}
  const visibleItems=isHome?selected.slice(0,20):selected.slice(0,60), initialHome=9;
- feed.innerHTML=visibleItems.map((x,i)=>`<article class="${isHome && i>=initialHome?'news-extra':''}"><a href="${esc(x.url)}" target="_blank" rel="noopener"><span class="source">${esc(x.source)}</span><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original source for the full item.')}</p></a></article>`).join('');
+ feed.innerHTML=visibleItems.map((x,i)=>`<article class="${isHome && i>=initialHome?'news-extra':''}"><a href="${esc(x.url)}" target="_blank" rel="noopener"><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original article for details.')}</p></a></article>`).join('');
  const btn=$('#moreNews'); if(btn)btn.hidden=!isHome||selected.length<=initialHome;
 }
 async function news(){
@@ -88,7 +88,7 @@ function groupEvents(items){
  const g={today:[],tomorrow:[],weekend:[],next:[],save:[]};
  for(const e of items){const d=e.start?.date||'';if(d===today)g.today.push(e);else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d<=next7Key)g.next.push(e);else g.save.push(e);}return g;
 }
-function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.source_url||'#')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><span class="event-kind">${esc(eventKind(e.category))}</span><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
+function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.registration_url||e.source_url||'events.html')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><span class="event-kind">${esc(eventKind(e.category))}</span><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
 function eventMatchesCalendar(e,key){
  if(!key||key==='all')return true;
  const cat=String(e.category||'').toLowerCase();
@@ -103,10 +103,15 @@ function eventMatchesCalendar(e,key){
 }
 let allEventsForPage=[],eventView='list';
 function eventSearchText(e){return [e.title,e.notes,e.venue,e.address,e.town,e.category,e.organizer].filter(Boolean).join(' ').toLowerCase();}
+let calendarCursor=new Date(),calendarSelected='';
 function renderCalendarView(items){
- const byDate=new Map(); for(const e of items){const k=e.start?.date;if(!k)continue;if(!byDate.has(k))byDate.set(k,[]);byDate.get(k).push(e)}
- const dates=[...byDate.keys()].sort(); if(!dates.length)return '<section class="event-period"><p>No events match this search.</p></section>';
- return '<div class="event-calendar-grid">'+dates.map(k=>{const d=parseLocalDate(k);return `<section class="event-calendar-day"><div class="event-calendar-date"><b>${d.toLocaleDateString([],{weekday:'short'}).toUpperCase()}</b><span>${d.toLocaleDateString([],{month:'short',day:'numeric'})}</span></div><div>${byDate.get(k).map(eventRow).join('')}</div></section>`}).join('')+'</div>';
+ const byDate=new Map();for(const e of items){const k=e.start?.date;if(!k)continue;if(!byDate.has(k))byDate.set(k,[]);byDate.get(k).push(e)}
+ if(!calendarSelected&&items.length){calendarSelected=items[0].start?.date||dateKey(new Date());const d=parseLocalDate(calendarSelected);if(d)calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
+ const y=calendarCursor.getFullYear(),m=calendarCursor.getMonth(),first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),lead=first.getDay();
+ const cells=[];for(let i=0;i<lead;i++)cells.push('<span class="month-empty" aria-hidden="true"></span>');
+ for(let day=1;day<=days;day++){const k=dateKey(new Date(y,m,day)),count=(byDate.get(k)||[]).length;cells.push(`<button class="month-day ${k===calendarSelected?'selected':''} ${count?'has-events':''}" data-calendar-date="${k}" aria-pressed="${k===calendarSelected}"><span>${day}</span>${count?`<small>${count} event${count===1?'':'s'}</small>`:''}</button>`)}
+ const chosen=byDate.get(calendarSelected)||[],selectedDate=parseLocalDate(calendarSelected);
+ return `<section class="month-calendar"><div class="month-nav"><button type="button" data-month-step="-1" aria-label="Previous month">‹</button><h2>${calendarCursor.toLocaleDateString([],{month:'long',year:'numeric'})}</h2><button type="button" data-month-step="1" aria-label="Next month">›</button></div><div class="month-weekdays" aria-hidden="true">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<b>'+x+'</b>').join('')}</div><div class="month-grid">${cells.join('')}</div></section><section class="event-period calendar-selection"><div class="event-period-head"><h2>${selectedDate?selectedDate.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'}):'Select a day'}</h2></div><div class="event-list">${chosen.length?chosen.map(eventRow).join(''):'<p>No events currently listed for this day.</p>'}</div></section>`;
 }
 function renderEventsPage(items){
  const host=$('#eventPeriods'); if(!host)return;
@@ -126,7 +131,7 @@ function renderEventsPage(items){
 function renderHomeEvents(items){const host=$('#homeEvents');if(!host)return;host.innerHTML=items.slice(0,3).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';}
 async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();allEventsForPage=items;renderEventsPage(items);renderHomeEvents(items);
  $('#eventSearch')?.addEventListener('input',()=>renderEventsPage(allEventsForPage));
- document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);}));
+ document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);})); document.addEventListener('click',e=>{const day=e.target.closest('[data-calendar-date]');if(day){calendarSelected=day.dataset.calendarDate;renderEventsPage(allEventsForPage);return}const step=e.target.closest('[data-month-step]');if(step){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+Number(step.dataset.monthStep),1);calendarSelected=dateKey(calendarCursor);renderEventsPage(allEventsForPage)}});
 }events();
 
 if(document.querySelector('#transitMap') && window.L){
