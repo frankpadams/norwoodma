@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 TZ=ZoneInfo('America/New_York')
-UA='Norwood.ma community information bot/0.12.0 (+https://www.norwood.ma)'
+UA='Norwood.ma community information bot/0.12.3 (+https://www.norwood.ma)'
 
 try:
     import requests
@@ -248,6 +248,53 @@ def events_from_tribe(source):
         out.append({'id':event_id(title,sp['date'],venue_name or address),'title':title,'start':sp,'end':ep,'venue':venue_name or source.get('organization') or source.get('name'),'address':address or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':x.get('url') or source.get('url'),'cost':clean_text(x.get('cost')) or None,'public_access':'public','series':None,'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_tribe_api'})
     return out
 
+
+
+def normalize_community_submission(obj, source):
+    """Normalize one moderator-approved record from the privacy-safe Apps Script feed."""
+    if not isinstance(obj, dict): return None
+    title=clean_text(obj.get('title')); sd=clean_text(obj.get('date'))
+    if not title or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', sd): return None
+    try: date.fromisoformat(sd)
+    except Exception: return None
+    st=clean_text(obj.get('startTime')) or None; et=clean_text(obj.get('endTime')) or None
+    def valid_time(x): return bool(x and re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d', x))
+    if st and not valid_time(st): st=None
+    if et and not valid_time(et): et=None
+    venue=clean_text(obj.get('venue')); address=clean_text(obj.get('address')); town=clean_text(obj.get('town'))
+    desc=clean_text(obj.get('description')); extra=clean_text(obj.get('additionalInformation'))
+    notes=' '.join(x for x in [desc, extra] if x).strip()[:500] or None
+    source_url=clean_text(obj.get('sourceUrl') or obj.get('registrationUrl')) or source.get('url')
+    category_raw=clean_text(obj.get('category'))
+    category_map={
+      'arts & music':'arts','community':'community','food & drink':'food','government & civic':'government',
+      'kids & families':'family','schools':'school','sports & recreation':'sports','fundraiser / benefit':'fundraiser',
+      'seasonal / holiday':'community','other':'community'
+    }
+    category=category_map.get(category_raw.lower()) or category_from(f"{category_raw} {title} {desc}")
+    event={
+      'id':clean_text(obj.get('id')) or event_id(title,sd,venue or address),
+      'title':title,'start':{'date':sd,'time':st},'end':{'date':sd,'time':et},
+      'venue':venue or None,'address':address or None,'town':town or None,'category':category,
+      'source_id':source['id'],'source_url':source_url,'registration_url':clean_text(obj.get('registrationUrl')) or None,
+      'cost':clean_text(obj.get('cost')) or None,'accessibility':clean_text(obj.get('accessibility')) or None,
+      'organizer':clean_text(obj.get('organizer')) or None,'recurrence':clean_text(obj.get('recurrence')) or None,
+      'recurrence_details':clean_text(obj.get('recurrenceDetails')) or None,'public_access':'public','series':None,
+      'publish_candidate':True,'verification_status':'moderator_approved_submission','notes':notes,
+      'last_verified':clean_text(obj.get('lastVerified')) or None,'discovered_by':'community_submission_feed'
+    }
+    return event
+
+def events_from_community_submission_feed(source):
+    payload=request(source['url']).json()
+    if not isinstance(payload,dict) or not isinstance(payload.get('events'),list):
+        raise ValueError('community submission endpoint did not return an events array')
+    out=[]
+    for obj in payload['events']:
+        e=normalize_community_submission(obj,source)
+        if e: out.append(e)
+    return out
+
 def dedupe_events(events):
     chosen={}
     def score(e):
@@ -284,7 +331,8 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='tribe_events': got=events_from_tribe(src)
+                if method=='community_submission_json': got=events_from_community_submission_feed(src)
+                elif method=='tribe_events': got=events_from_tribe(src)
                 elif method=='ical':
                     feed=src.get('ingestion',{}).get('feed_url')
                     if not feed and src.get('id')=='nps-district-ical': feed='https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics'
@@ -469,7 +517,7 @@ def refresh_news(offline=False):
     return items,status
 
 def coverage(registry):
-    program={'tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']

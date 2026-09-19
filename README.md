@@ -200,3 +200,14 @@ Norwood.ma now has a public **Submit an Event** intake path using a Google Form 
 The public submission form does not accept file uploads. Submitters may optionally provide a public event/source URL. Contact information is for verification and is not intended for publication.
 
 The scheduled content refresh cadence is now every two hours. GitHub Pages remains the public host, with `www.norwood.ma` as the canonical public domain. Approved-submission ingestion into generated event data is the next automation step; until that authenticated bridge is configured, approval in the private Sheet does not by itself publish an event.
+
+## v0.12.2 — event submission system documentation
+
+- Added `EVENT-SUBMISSION-SYSTEM.md` as permanent developer documentation for the Google Form → Google Sheet → moderation → event-ingestion architecture.
+- Future releases must retain and update this document whenever the submission/moderation/publication workflow changes.
+
+## v0.12.3 — approved submissions reach the live event pipeline
+
+The deployed privacy-safe Google Apps Script feed for community submissions is now a first-class automated event source. The scheduled two-hour content refresh reads only the feed's Approved/Published public records, normalizes them into Norwood.ma's event schema, deduplicates them with other sources, applies normal expiration rules, and writes them into `data/events.json` / `data/events-data.js`. The private response spreadsheet is never read by GitHub Actions and remains private.
+
+Approved out-of-town events retain their submitted municipality, and the event UI explicitly labels non-Norwood municipalities (for example, `Framingham, MA`). Software releases are no longer required to add an approved community-submitted event.

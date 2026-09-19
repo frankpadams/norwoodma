@@ -113,3 +113,15 @@ Homepage Resource Directory naming, redundant resource CTA removal, all-Norwood 
 - Footer link beneath the non-endorsement disclosure is **Support Norwood.ma** and points to `support.html`.
 - Submit an Event remains a What’s Happening action rather than occupying that footer position.
 - Support page documents voluntary personal support, non-charitable/tax-deductibility status, and non-influence policy; Venmo handle is `@frankpadams`.
+
+### v0.12.2 — permanent event-submission documentation
+- Added `EVENT-SUBMISSION-SYSTEM.md` documenting the live Google Form, private response/moderation Sheet, Apps Script functions/triggers, status model, privacy boundary, verification rules, and future authenticated Approved → `events.json` bridge.
+- This file is a required persistent release artifact and must be updated when the workflow changes.
+
+### v0.12.3 — Approved submission feed connected
+- Connected the deployed Apps Script approved-event endpoint to `scripts/refresh_content.py` through a dedicated `community_submission_json` source adapter.
+- Registered the endpoint as an active, every-refresh event source in `data/source-registry.json`.
+- Community submissions are normalized into the same generated event dataset as other sources and therefore receive the normal deduplication and expiration behavior.
+- The importer consumes only the sanitized Apps Script JSON; it has no access to the private Google response Sheet or submitter/moderation fields.
+- Added explicit municipality display for approved events outside Norwood so regional events cannot be mistaken for Norwood locations.
+- Preserved the two-hour GitHub Actions refresh cadence and the existing search implementation.
