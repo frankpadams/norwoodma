@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 TZ=ZoneInfo('America/New_York')
-UA='Norwood.ma community information bot/0.12.4 (+https://www.norwood.ma)'
+UA='Norwood.ma community information bot/0.13.2 (+https://www.norwood.ma)'
 
 try:
     import requests
@@ -295,6 +295,12 @@ def events_from_community_submission_feed(source):
         if e: out.append(e)
     return out
 
+def canonical_title(s):
+    s=clean_text(s).lower()
+    s=re.sub(r'\b(the|a|an)\b',' ',s)
+    s=re.sub(r'\b20\d{2}\b',' ',s)
+    return re.sub(r'[^a-z0-9]+',' ',s).strip()
+
 def dedupe_events(events):
     chosen={}
     def score(e):
@@ -305,8 +311,9 @@ def dedupe_events(events):
         if e.get('start',{}).get('time'): v+=1
         return v
     for e in events:
-        title=re.sub(r'\W+',' ',e.get('title','').lower()).strip()
-        key=(title,e.get('start',{}).get('date'),re.sub(r'\W+',' ',str(e.get('venue') or e.get('address') or '').lower()).strip())
+        title=canonical_title(e.get('title',''))
+        # Same-day near-identical titles are duplicates even when one source omits/varies the venue.
+        key=(title,e.get('start',{}).get('date'))
         if key not in chosen or score(e)>score(chosen[key]): chosen[key]=e
     return list(chosen.values())
 
@@ -428,6 +435,23 @@ def news_from_visible_cards(html, source_name, source_url):
         out.append({'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':summary,'localVerified':True,'discovered_by':'scheduled_visible_date'})
     return out
 
+def summarize_article(url, fallback=''):
+    """Fetch a direct publisher article and derive a short factual 2–3 sentence blurb."""
+    if not url or 'news.google.com' in url: return clean_text(fallback)[:420]
+    try:
+        html=request(url,timeout=12).text
+        soup=BeautifulSoup(html,'html.parser') if BeautifulSoup else None
+        if not soup: return clean_text(fallback)[:420]
+        for sel in [('meta',{'name':'description'}),('meta',{'property':'og:description'})]:
+            tag=soup.find(sel[0],attrs=sel[1])
+            val=clean_text(tag.get('content')) if tag else ''
+            if len(val)>=70: return val[:420]
+        paras=[clean_text(p.get_text(' ')) for p in soup.find_all('p')]
+        paras=[p for p in paras if len(p)>=70 and not re.search(r'cookie|subscribe|sign up|advertis',p,re.I)]
+        if paras: return ' '.join(paras[:2])[:420]
+    except Exception: pass
+    return clean_text(fallback)[:420]
+
 def parse_google_news_rss(xml_text, query):
     """Google News RSS is used as broad discovery for exact Norwood, Massachusetts variants."""
     import xml.etree.ElementTree as ET
@@ -441,7 +465,7 @@ def parse_google_news_rss(xml_text, query):
         d=parse_dt(pub); combined=f'{title} {desc} {source}'
         if not title or not link or not d or wrong.search(combined): continue
         # The exact-location queries are the main relevance guard. Retain publisher attribution from RSS.
-        out.append({'source':source,'title':title,'date':d.astimezone(TZ).isoformat(),'url':link,'summary':'Discovered through Google News for Norwood, Massachusetts. Open the item for the publisher story.','localVerified':True,'discovered_by':'scheduled_google_news','discovery_query':query})
+        out.append({'source':source,'title':title,'date':d.astimezone(TZ).isoformat(),'url':link,'summary':'','localVerified':True,'discovered_by':'scheduled_google_news','discovery_query':query})
     return out
 
 def dedupe_news(items):
@@ -506,6 +530,13 @@ def refresh_news(offline=False):
             html=request(url).text; got=news_from_jsonld(html,name,url); got.extend(news_from_html_cards(html,name,url)); got.extend(news_from_visible_cards(html,name,url)); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(dedupe_news(got)),'method':'jsonld+semantic_html+visible_dates'})
         except Exception as ex: status.append({'source':name,'url':url,'ok':False,'found':0,'method':'page_parsers','note':str(ex)[:180]})
     items=current_news(items)
+    # Enrich thin cards from direct publisher pages. Discovery text is never shown as a summary.
+    for x in items:
+        s=clean_text(x.get('summary'))
+        if not s or s.startswith('Discovered through Google News'):
+            x['summary']=summarize_article(x.get('url'), '')
+        elif len(s)<70 and 'news.google.com' not in x.get('url',''):
+            x['summary']=summarize_article(x.get('url'), s)
     
     source_counts={}
     for x in items: source_counts[x.get('source','Unknown')]=source_counts.get(x.get('source','Unknown'),0)+1
