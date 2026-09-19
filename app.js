@@ -152,27 +152,11 @@ const localRail=(rs.data||[]).filter(x=>/Norwood Central|Norwood Depot|Windsor G
 
 document.querySelector('#moreNews')?.addEventListener('click',function(){let feed=document.querySelector('#newsFeed');let open=feed.classList.toggle('expanded');this.textContent=open?'Show fewer headlines ↑':'Show more local headlines ↓'});
 async function timely(){
- const box=document.querySelector('#timelyItems');
- const alert=document.querySelector('#timelyAlert');
+ const box=document.querySelector('#timelyItems'),alert=document.querySelector('#timelyAlert');
  if(!box||!alert)return;
- let bits=[];
- try{
-   const response=await fetch('https://api-v3.mbta.com/alerts?filter[route]=34E,CR-Franklin');
-   if(response.ok){
-     const a=await response.json();
-     if((a.data||[]).length){
-       bits.push(`<a href="transit.html#service-alerts">${a.data.length} active MBTA service alert${a.data.length===1?'':'s'} affecting local transit <span>See details →</span></a>`);
-     }
-   }
- }catch(e){}
- // Only surface this strip when there is genuinely time-sensitive information.
- if(bits.length){
-   box.innerHTML=bits.join(' · ');
-   alert.hidden=false;
- }else{
-   box.innerHTML='';
-   alert.hidden=true;
- }
+ // The site-wide strip is reserved for broadly relevant, genuinely urgent town information.
+ // Transit service alerts belong in the homepage transit card and detailed Transit page instead.
+ box.innerHTML='';alert.hidden=true;
 } timely();
 
 function featuredCommunity(){
