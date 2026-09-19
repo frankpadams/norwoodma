@@ -46,155 +46,50 @@
     "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
   },
   {
-    "id": "2026-09-19-homeworks-masssave-pop-up-resource-table-924596c",
-    "title": "HomeWorks/MassSave Pop-up Resource Table",
+    "id": "2026-09-18-ballroom-dance",
+    "title": "Monthly Ballroom Dance",
     "start": {
-      "date": "2026-09-19",
-      "time": "00:00"
+      "date": "2026-09-18",
+      "time": "19:00"
     },
     "end": {
-      "date": "2026-09-19",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/homeworks-masssave-pop-up-resource-table/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "A representative from HomeWorks Energy Inc (a MassSave program) will have a resource table in the Library's lobby today. Please stop by with any questions about how the MassSave program works and how you can get a free home energy audit, as",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-19-live-in-person-the-2nd-biennial-ruth-solomon--aeb043c",
-    "title": "LIVE In-Person: The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating",
-    "start": {
-      "date": "2026-09-19",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-19",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "arts",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/figure-skating-health-and-performance-conference/2026-09-19/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes returns September 18 and 19, presented by Boston Children’s Hospital and Harvard Medical School Teaching Hospital. Hear from Ashley Wagner, Simon Shnapir, and Mirai Naga",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-09-19-recurring-36feca4",
-    "title": "Recurring",
-    "start": {
-      "date": "2026-09-19",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-19",
+      "date": "2026-09-18",
       "time": null
     },
-    "venue": "The Skating Club of Boston",
-    "address": null,
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
     "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/figure-skating-health-and-performance-conference/all/",
-    "cost": null,
+    "source_id": "norwood-record-events",
+    "source_url": "https://www.norwoodrecord.com/events",
+    "cost": "$12",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html"
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
   },
   {
-    "id": "2026-09-19-teen-morning-makerspace-c740a38",
-    "title": "Teen Morning Makerspace",
+    "id": "2026-09-18-margo-macero",
+    "title": "The Margo Macero Band",
     "start": {
-      "date": "2026-09-19",
-      "time": "00:00"
+      "date": "2026-09-18",
+      "time": "19:00"
     },
     "end": {
-      "date": "2026-09-19",
-      "time": "00:00"
+      "date": "2026-09-18",
+      "time": null
     },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-10/",
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott St, Norwood, MA",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Teen ProgramChildren's Program RoomGrades 7-12Get crafty and creative at the library with our Morning Makerspace for teens! From 10am to 12pm, teens are invited to drop in and use our arts and crafts equipment to work on a current project, ",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-19-men-s-prayer-group-fd6c124",
-    "title": "Men's Prayer Group",
-    "start": {
-      "date": "2026-09-19",
-      "time": "07:30"
-    },
-    "end": {
-      "date": "2026-09-19",
-      "time": "08:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship.",
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "submission-2817ea8dcba4ba8c",
-    "title": "The Learning Center for the Deaf Homecoming (5k, Games, and Celebration)",
-    "start": {
-      "date": "2026-09-19",
-      "time": "07:30"
-    },
-    "end": {
-      "date": "2026-09-19",
-      "time": "15:00"
-    },
-    "venue": "The Learning Center for the Deaf",
-    "address": "848 Central St",
-    "town": "Framingham",
-    "category": "community",
-    "source_id": "community-event-submissions",
-    "source_url": "https://www.tlcdeaf.org/about/tlc-homecoming",
-    "registration_url": null,
-    "cost": null,
-    "accessibility": "ASL-accessible",
-    "organizer": "The Learning Center for the Deaf",
-    "recurrence": "No — one-time event",
-    "recurrence_details": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "moderator_approved_submission",
-    "notes": "5k Walk/Run, Vendor booths, face painting, Food & Ice Cream Trucks, National Lancer's Horses, and of course watch the games: Volleyball, Soccer. The general public is welcome",
-    "last_verified": null,
-    "discovered_by": "community_submission_feed"
+    "verification_status": "web_verified_2026-09-17",
+    "notes": null
   },
   {
     "id": "2026-09-19-floydian-trip",
@@ -220,76 +115,27 @@
     "notes": null
   },
   {
-    "id": "2026-09-20-4th-annual-halloween-costume-swap-1b395a6",
-    "title": "4th Annual Halloween Costume Swap",
+    "id": "2026-09-20-onam-sarva",
+    "title": "Onam Celebration at SARVA Little Venice",
     "start": {
       "date": "2026-09-20",
-      "time": "00:00"
+      "time": null
     },
     "end": {
       "date": "2026-09-20",
       "time": null
     },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-2/",
+    "venue": "SARVA Little Venice",
+    "address": "Norwood, MA",
+    "category": "food_culture",
+    "source_id": "sarva-social-feed",
+    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-20-end-of-summer-90-s-party-de3bcae",
-    "title": "End of Summer 90’s Party",
-    "start": {
-      "date": "2026-09-20",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "17:00"
-    },
-    "venue": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "address": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "category": "arts",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-09-20-guided-tour-of-the-day-house-september-20-202-9decebe",
-    "title": "Guided Tour of the Day House – September 20, 2026",
-    "start": {
-      "date": "2026-09-20",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "15:00"
-    },
-    "venue": "F Holland Day House",
-    "address": "93 Day Street, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "historical-society-events",
-    "source_url": "https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-sept-20-2026/",
-    "cost": "$5",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Step into history with a guided tour of the F. Holland Day House, a stunning Victorian home nestled in Norwood, Massachusetts. Visitors can explore the beautifully preserved rooms, admire period furnishings, and learn about Day’s contribu",
-    "discovered_by": "scheduled_tribe_api"
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-20-not-done-yet",
@@ -338,245 +184,6 @@
     "notes": null
   },
   {
-    "id": "2026-09-20-gay-beer-club-38a5017",
-    "title": "Gay Beer CLub",
-    "start": {
-      "date": "2026-09-20",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "20:30"
-    },
-    "venue": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "address": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "category": "community",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
-  },
-  {
-    "id": "2026-09-21-parachute-playtime-a7e9602",
-    "title": "Parachute Playtime",
-    "start": {
-      "date": "2026-09-21",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-21",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-18/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Parachute play for toddlers",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-21-poirier-village-center-open-play-cb39124",
-    "title": "Poirier Village Center Open Play",
-    "start": {
-      "date": "2026-09-21",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-21",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-5/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play, explore, and connect. This is an unstructured play opportunity where families",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-21-zoom-with-a-law-librarian-fe53faa",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-21",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-21",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-593/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-21-bible-study-527824d",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-09-21",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-21",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-09-22-helping-you-age-well-your-way-0a93dc3",
-    "title": "Helping You Age Well - Your Way",
-    "start": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/helping-you-age-well-your-way/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to bring in a team of experts, from real estate to legal to lifestyle, dedicated to helping you plan, prepare, and thrive through every stage of aging. Program Title: Helping You Age Well - Your WayDate: ",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-22-titles-on-tap-book-group-chocolat-816c4aa",
-    "title": "Titles on Tap Book Group - Chocolat",
-    "start": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "workshop",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/titles-on-tap-book-group-74/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us for our next meeting of Titles on Tap. We'll meet at Napper Tandy's in Norwood, in the left-hand-side bar, on Tuesday 9/22 at 7:30 pm. Our September title will be the classic, Chocolat by Joanne Harris. Copies of the book will be av",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-22-tuesday-pvc-play-and-learn-affcd92",
-    "title": "Tuesday PVC Play and Learn",
-    "start": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-18/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-22-zoom-with-a-law-librarian-b72dc33",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-22",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-576/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
     "id": "2026-09-22-caffeine-connections",
     "title": "Caffeine & Connections",
     "start": {
@@ -598,30 +205,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": "Neponset River Regional Chamber networking event."
-  },
-  {
-    "id": "2026-09-22-neponset-river-regional-chamber-caffeine-conv-babf85d",
-    "title": "Neponset River Regional Chamber: Caffeine & Conversations",
-    "start": {
-      "date": "2026-09-22",
-      "time": "08:30"
-    },
-    "end": {
-      "date": "2026-09-22",
-      "time": "09:30"
-    },
-    "venue": "Building 6 – Cafe Area",
-    "address": "Norwood Space Center, 83 Morse St, Building 6, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-09-22-2026/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "CAFFEINE & CONNECTIONS BRING YOUR BUSINESS CARDS, GRAB A COFFEE, AND START YOUR MORNING WITH NEW CONNECTIONS. Start your Tuesday with meaningful collaborations at Caffeine & Connections, a FREE monthly networking event designed to bring tog",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-22-farmers-bushels",
@@ -670,102 +253,6 @@
     "notes": null
   },
   {
-    "id": "2026-09-23-baby-bop-story-time-5d68494",
-    "title": "Baby Bop Story Time",
-    "start": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-58/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-23-hispanic-heritage-month-movie-series-37af42c",
-    "title": "Hispanic Heritage Month Movie Series",
-    "start": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/hispanic-heritage-month-movie-series-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Celebrate Hispanic Heritage Month at the Morrill Memorial Library with a weekly movie screening highlighting stories, cultures, and perspectives from across the Spanish-speaking world and American- Hispanic experiences. &nbsp;Showtimes:&nbs",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-23-paint-nite-for-kids-ca537e5",
-    "title": "Paint Nite for Kids",
-    "start": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-3/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join Ms. Nicole for a fun paint night! Follow along as we all create a masterpiece to bring home. We will be using acrylic paints, so please wear appropriate clothing (it stains!)Ages 6 - 12",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-23-zoom-with-a-law-librarian-bbb7015",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-23",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-581/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
     "id": "2026-09-23-fallout-open-mic",
     "title": "Open Mic Night",
     "start": {
@@ -789,172 +276,27 @@
     "notes": "All welcome; 15-minute sets; listing showed sold out at time of check."
   },
   {
-    "id": "2026-09-24-board-game-night-18-845f6db",
-    "title": "Board Game Night (18+)",
+    "id": "2026-09-23-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
     "start": {
-      "date": "2026-09-24",
-      "time": "00:00"
+      "date": "2026-09-23",
+      "time": "19:30"
     },
     "end": {
-      "date": "2026-09-24",
-      "time": "00:00"
+      "date": "2026-09-23",
+      "time": null
     },
-    "venue": "Morrill Memorial Library",
-    "address": null,
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
     "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/board-game-night-18-20/",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
     "cost": null,
     "public_access": "public",
-    "series": null,
+    "series": "Weekly Wednesday trivia",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Note, tonight's meeting will take place in the Trustees' Room. Join us for Board Games and fun! If you've been looking for a casual group of fellow board gamers, the Morrill Memorial Library is your spot. This Board Game Night for adults wi",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-24-communication-without-limits-dbed085",
-    "title": "Communication Without Limits",
-    "start": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/communication-without-limits-33/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to partner with Lifeworks, Inc to launch a unique program for neurodiverse (ND) adults. &nbsp; We will be hosting a monthly ‘Communication Without Limits’ conversation circle for ND adults. &nbsp;Our Sept",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-24-snack-lab-9e4fe03",
-    "title": "Snack Lab!",
-    "start": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/snack-lab-9/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Hands-on snacks, no heat required.",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-24-thursday-pvc-play-and-learn-53d4a09",
-    "title": "Thursday PVC Play and Learn",
-    "start": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-18/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-24-wacky-wiggles-and-giggles-87bbfd0",
-    "title": "Wacky Wiggles and Giggles",
-    "start": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-giggles-61/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Babies, Toddlers and PreschoolersNo Registration requiredJoin us for this drop-in storytime for kids of all ages! We will read short stories, sing songs and move around a lot! This story time is geared toward toddlers but all ages are welco",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-24-zoom-with-a-law-librarian-c876a7f",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-586/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-24-ache-of-ma-s-2026-leadership-on-tap-final-eve-1c49805",
-    "title": "ACHE of MA’s 2026 “Leadership on Tap” Final Event in Our 2026 Series!",
-    "start": {
-      "date": "2026-09-24",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "20:00"
-    },
-    "venue": "ACHE of Massachusetts",
-    "address": null,
-    "category": "arts",
-    "source_id": "ache-massachusetts-events",
-    "source_url": "https://massache.org/event/ache-of-mas-2026-leadership-on-tap-final-event-in-our-2026-series/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday, Sept 24 6:00-8:00 PM Castle Island Brewing Company 31 Astor Avenue Norwood, MA 02062 Join us for ACHE of MA’s 2026 “Leadership on Tap,” a refreshing series of casual networking events hosted at local breweries across the region. D",
-    "discovered_by": "scheduled_tribe_api"
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
   },
   {
     "id": "2026-09-24-leadership-on-tap",
@@ -980,30 +322,6 @@
     "notes": "Healthcare networking; registration requested."
   },
   {
-    "id": "2026-09-24-make-a-charcuterie-board-great-for-date-night-7fdd470",
-    "title": "Make A Charcuterie Board – Great for Date Night! (September 2026)",
-    "start": {
-      "date": "2026-09-24",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-09-24",
-      "time": "21:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-september-2026/",
-    "cost": "$70.00 – $140.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Are you intrigued by the beauty of charcuterie boards you see at crafts fairs? Join our beginner-friendly woodworking class where you’ll learn to design and build your very own hardwood cutting board. Here’s what awaits you: Introduction ",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-09-24-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -1027,76 +345,27 @@
     "notes": null
   },
   {
-    "id": "2026-09-25-beyond-beginner-mah-jongg-56c589c",
-    "title": "Beyond Beginner Mah Jongg",
+    "id": "2026-09-24-castle-island-trivia",
+    "title": "Trivia With Tim",
     "start": {
-      "date": "2026-09-25",
-      "time": "00:00"
+      "date": "2026-09-24",
+      "time": "19:00"
     },
     "end": {
-      "date": "2026-09-25",
-      "time": "00:00"
+      "date": "2026-09-24",
+      "time": "21:00"
     },
-    "venue": "Morrill Memorial Library",
-    "address": null,
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
     "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-4/",
-    "cost": null,
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
     "public_access": "public",
-    "series": null,
+    "series": "Weekly Thursday trivia",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "To all of the Mahjong enthusiasts out there…. Are you a passionate player of American Mahjong?Are you not a beginner, nor an expert, but somewhere in between?The Morrill Memorial Library is excited to launch a weekly Mahjong club designed f",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-25-sensory-friendly-art-classes-for-adults-40255df",
-    "title": "Sensory-friendly Art Classes for Adults",
-    "start": {
-      "date": "2026-09-25",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-25",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-123/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to partner with Norwood-based Lifeworks Inc to bring a series of art classes called Sensory-friendly Art Classes for Adults to the library. The classes will be held weekly on Fridays from 10:30 am to 11:4",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-25-zoom-with-a-law-librarian-7b488d4",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-25",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-25",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-590/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-09-25-magic-room-far-trio",
@@ -1145,30 +414,6 @@
     "notes": null
   },
   {
-    "id": "2026-09-26-miniature-model-painting-workshop-september-2-c2e4b63",
-    "title": "Miniature Model & Painting Workshop (September 2026)",
-    "start": {
-      "date": "2026-09-26",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "16:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/miniature-model-painting-workshop-september-2026/",
-    "cost": "Free – $20.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Uplevel your tabletop game experience at Mill Forge Makerspace. Mill Forge is hosting a regular drop-in group event for 3D printing, finishing, and painting mini-figures and DIY game terrain elements. Together, let’s bring your fantasy wo",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-09-26-magic-room-deadbeat",
     "title": "DeadBeat — Grateful Dead Tribute",
     "start": {
@@ -1190,54 +435,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-09-27-4th-annual-halloween-costume-swap-922222b",
-    "title": "4th Annual Halloween Costume Swap",
-    "start": {
-      "date": "2026-09-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-3/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-27-musical-sundays-concert-series-musick-of-new--a93a8ae",
-    "title": "Musical Sundays Concert Series: Musick of New England’s Revolution",
-    "start": {
-      "date": "2026-09-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "school_theatre",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-musick-of-new-england-s-revolution/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Let's kick off the new season of Fall concerts with a nod to America's 250th anniversary, featuring Richard Franklin Donohue performing, \"What a Glorious Crash They Made: Musick of New England’s Revolution,\" on Sunday, September 27 at 3:00p",
-    "discovered_by": "scheduled_jsonld"
   },
   {
     "id": "2026-09-27-check-mate",
@@ -1263,270 +460,6 @@
     "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
   },
   {
-    "id": "2026-09-28-cozy-puzzle-night-6bdb279",
-    "title": "Cozy Puzzle Night",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/cozy-puzzle-night-15/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is hosting a Cozy Puzzle Night for adults on the last Monday of every month. September's Puzzle Night will take place on&nbsp;Monday, September 28 starting at 6:30pm in the Simoni Room. Hang out on an autumn night w",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-monday-movie-matinee-7a4ee20",
-    "title": "Monday Movie Matinee",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "sports",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/monday-movie-matinee-60/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to continue our Monday Movie Matinee film series. The series will run from September -December, 2026. The films will be shown on the 2nd and 4th Monday of the month. &nbsp;Showtime at 1PM. If you love mov",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-norwood-walk-talk-d2626f7",
-    "title": "Norwood Walk & Talk",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/norwood-walk-talk-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Celebrate Good Neighbor Day with the Morrill Memorial Library and the Norwood Trails Committee&nbsp;for a friendly stroll on the Bernie Cooper Riverfront Park trail in Norwood on Monday September 28, 2026 at 3:00pm. The trail is fully acces",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-parachute-playtime-e6287e5",
-    "title": "Parachute Playtime",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-19/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Parachute play for toddlers",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-poirier-village-center-open-play-a63ebaf",
-    "title": "Poirier Village Center Open Play",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-6/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play, explore, and connect. This is an unstructured play opportunity where families",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-zoom-with-a-law-librarian-f8a08be",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-594/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-virtual-how-to-avoid-death-on-mount-washingto-abf5f14",
-    "title": "[VIRTUAL] (how to avoid) \"Death on Mount Washington\" with Author Randi Minetor",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-how-to-avoid-death-on-mount-washington-with-author-randi-minetor/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is partnering with Ashland Public Library to host a virtual program called (how to avoid) \"Death on Mount Washington\" with Author Randi Minetor on Zoom. It will be held on September 28, 2026 at 7PM. Join author Rand",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-bible-study-310da7b",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-09-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-09-29-great-reads-ma-watch-party-virtual-q-a-with-a-0157e8a",
-    "title": "Great Reads MA: Watch Party - Virtual Q&A with Author Joseph Lee",
-    "start": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/great-reads-ma-watch-party-virtual-q-a-with-author-joseph-lee/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library, in partnership with the Norwood Historical Society and First Congregational Church of Norwood, will host a watch party of Mass Center for the Book's virtual Q&amp;A with the 2026 Great Reads MA author Joseph Lee on",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-29-tuesday-pvc-play-and-learn-984da41",
-    "title": "Tuesday PVC Play and Learn",
-    "start": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-19/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-29-zoom-with-a-law-librarian-1d69018",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-577/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
     "id": "2026-09-29-farmers-market",
     "title": "Norwood Farmers Market",
     "start": {
@@ -1550,196 +483,27 @@
     "notes": null
   },
   {
-    "id": "2026-09-30-2026-boston-open-nqs-f21ccca",
-    "title": "2026 Boston Open NQS",
+    "id": "2026-09-30-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
     "start": {
       "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-09-30/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-09-30-baby-bop-story-time-a415f73",
-    "title": "Baby Bop Story Time",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-59/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-30-recurring-0206ffc",
-    "title": "Recurring",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
+      "time": "19:30"
     },
     "end": {
       "date": "2026-09-30",
       "time": null
     },
-    "venue": "The Skating Club of Boston",
-    "address": null,
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
     "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/all/",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
     "cost": null,
     "public_access": "public",
-    "series": null,
+    "series": "Weekly Wednesday trivia",
     "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html"
-  },
-  {
-    "id": "2026-09-30-sensory-friendly-lego-club-for-adults-b00e4fa",
-    "title": "Sensory-friendly Lego Club for Adults",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-54/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to host a Sensory-friendly Lego Club for Adults. Our September club meeting will be held in-person at the library on Wednesday September 30, 2026 from 10:30 am to 11:30 am. Please join us in this creative",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-30-teen-anime-movie-night-05e1df7",
-    "title": "Teen Anime Movie Night",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-movie-night/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Teen ProgramGrades 7-12Children's Program RoomJoin us for a special evening edition of Teen Anime Club, where we will be watching an anime movie and enjoying some popcorn and instant ramen! Space is limited, so please register!This program ",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-30-zoom-with-a-law-librarian-bc03270",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-582/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-10-01-2026-boston-open-nqs-cfdf5cd",
-    "title": "2026 Boston Open NQS",
-    "start": {
-      "date": "2026-10-01",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-01",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-10-01/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-01-recurring-a94e791",
-    "title": "Recurring",
-    "start": {
-      "date": "2026-10-01",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-01",
-      "time": null
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/all/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html"
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
   },
   {
     "id": "2026-10-01-mill-sharpening",
@@ -1765,100 +529,27 @@
     "notes": null
   },
   {
-    "id": "2026-10-01-tool-and-knife-sharpening-workshop-october-20-272418b",
-    "title": "Tool and Knife Sharpening Workshop (October 2026)",
+    "id": "2026-10-01-castle-island-trivia",
+    "title": "Trivia With Tim",
     "start": {
       "date": "2026-10-01",
-      "time": "18:00"
+      "time": "19:00"
     },
     "end": {
       "date": "2026-10-01",
       "time": "21:00"
     },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "live_music",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/tool-and-knife-sharpening-workshop-october-2026/",
-    "cost": "$70.00 – $135.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Keeping your knives, chisels, turning gauges, planer irons, and saw blades sharp is critical. Sharp blades not only ensure accurate and clean cuts but also contribute to safer tool use. Whether you want to hone your kitchen knives or tip ",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-02-2026-boston-open-nqs-acbfece",
-    "title": "2026 Boston Open NQS",
-    "start": {
-      "date": "2026-10-02",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
     "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-10-02/",
-    "cost": null,
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
     "public_access": "public",
-    "series": null,
+    "series": "Weekly Thursday trivia",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-02-recurring-62b88b2",
-    "title": "Recurring",
-    "start": {
-      "date": "2026-10-02",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": null
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/all/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html"
-  },
-  {
-    "id": "2026-10-02-first-friday-adoration-vigil-ddaff01",
-    "title": "First Friday Adoration Vigil",
-    "start": {
-      "date": "2026-10-02",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "19:00"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "All Night Vigil begins at Friday at 6 p.m. through Saturday till 6:30 a.m.",
-    "discovered_by": "scheduled_ical"
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-02-selwyn-birchwood",
@@ -1884,78 +575,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-03-2026-boston-open-nqs-5d36de7",
-    "title": "2026 Boston Open NQS",
-    "start": {
-      "date": "2026-10-03",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-10-03/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-03-recurring-1de4f91",
-    "title": "Recurring",
-    "start": {
-      "date": "2026-10-03",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/all/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html"
-  },
-  {
-    "id": "2026-10-03-first-saturday-devotions-5fc17d9",
-    "title": "First Saturday Devotions",
-    "start": {
-      "date": "2026-10-03",
-      "time": "07:30"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "08:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "arts",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Please join us as we answer Our Lady’s request to make reparation for the offenses committed against Her Immaculate Heart.",
-    "discovered_by": "scheduled_ical"
-  },
-  {
     "id": "2026-10-03-intro-metalworking",
     "title": "Intro to Metalworking",
     "start": {
@@ -1977,30 +596,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-03-intro-to-metalworking-october-2026-c5546d0",
-    "title": "Intro to Metalworking (October 2026)",
-    "start": {
-      "date": "2026-10-03",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "16:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "live_music",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/intro-to-metalworking-october-2026/",
-    "cost": "Free – $90.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Introductory course on basic safety and operation of metalworking equipment at Mill Forge Makerspace. This class will cover all operational stationary power equipment in the metals area, and will provide certification for solo use by Mill",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-03-magic-room-ballz",
@@ -2072,30 +667,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-04-2026-boston-open-nqs-aff5b7a",
-    "title": "2026 Boston Open NQS",
-    "start": {
-      "date": "2026-10-04",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-10-04/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-04-lumber-milling",
     "title": "Lumber Milling Workshop",
     "start": {
@@ -2119,54 +690,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-04-lumber-milling-workshop-october-2026-832d507",
-    "title": "Lumber Milling Workshop (October 2026)",
-    "start": {
-      "date": "2026-10-04",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "13:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/lumber-milling-workshop-october-2026/",
-    "cost": "$100.00 – $200.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Learn how to turn rough milled lumber into boards ready for creating fine furniture. You will learn how to use the jointer and planer to surface all four sides of a board – A skill valuable for preparing rough lumber, reclaimed timber, an",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-04-guided-tour-of-the-day-house-october-4-2026-d116abb",
-    "title": "Guided Tour of the Day House – October 4, 2026",
-    "start": {
-      "date": "2026-10-04",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "15:00"
-    },
-    "venue": "F Holland Day House",
-    "address": "93 Day Street, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "historical-society-events",
-    "source_url": "https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-oct-4-2026/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Step into history with a guided tour of the F. Holland Day House, a stunning Victorian home nestled in Norwood, Massachusetts. Visitors can explore the beautifully preserved rooms, admire period furnishings, and learn about Day’s contribu",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-04-woodturning",
     "title": "Introduction to Woodturning",
     "start": {
@@ -2188,78 +711,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-04-introduction-to-woodturning-october-2026-7ced958",
-    "title": "Introduction to Woodturning (October 2026)",
-    "start": {
-      "date": "2026-10-04",
-      "time": "13:30"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "17:30"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/introduction-to-woodturning-october-2026/",
-    "cost": "Free – $90.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Come enjoy a taste of woodturning. Learn how quick, easy and relaxing it can be to carve wood into a wide variety of shapes. No prior woodturning (or even woodworking) experience is required. An instructor, all tools, materials and safety",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-05-mondays-with-moms-1c715af",
-    "title": "Mondays with Moms",
-    "start": {
-      "date": "2026-10-05",
-      "time": "09:30"
-    },
-    "end": {
-      "date": "2026-10-05",
-      "time": "11:00"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Moms of all ages are invited to join us on the first Monday of each month in the chapel at 9:30 a.m. for Adoration, confession, and a short reflection followed by time for fellowship. Children are welcome!",
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-10-05-bible-study-9c519b5",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-10-05",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-05",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-06-farmers-pumpkin",
@@ -2308,6 +759,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-07-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-07",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
     "id": "2026-10-08-router-workshop",
     "title": "Getting Started with the Router and Router Table",
     "start": {
@@ -2329,6 +803,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-08-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-09-claudettes",
@@ -2446,6 +943,52 @@
     "notes": null
   },
   {
+    "id": "2026-10-14-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-14",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
+    "id": "2026-10-15-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-15",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
+  },
+  {
     "id": "2026-10-17-bow-thayer",
     "title": "The Bow Thayer Large Band — Ninevah Release Show",
     "start": {
@@ -2515,30 +1058,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-19-bible-study-61865ce",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-10-19",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-19",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
     "id": "2026-10-20-farmers-closing",
     "title": "Norwood Farmers Market: Closing Day",
     "start": {
@@ -2560,6 +1079,52 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-21-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
+    "start": {
+      "date": "2026-10-21",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": null
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Weekly Wednesday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
+    "id": "2026-10-22-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-22",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-23-daybreak",
@@ -2654,30 +1219,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-25-making-cabinets-and-bookcases-with-plywood-oc-899bc79",
-    "title": "Making Cabinets and Bookcases with Plywood (October 2026)",
-    "start": {
-      "date": "2026-10-25",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-25",
-      "time": "13:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "live_music",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/making-cabinets-and-bookcases-with-plywood-october-2026/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Plywood is a versatile material that can be more economical, sustainable, and durable than solid wood for many cases! Learn how to use plywood to make bookcases, storage bins, cabinets, and lots more. We will cover: Plywood vs. Boards Cab",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-25-magic-hunks",
     "title": "Girls Night Out — Magic Hunks",
     "start": {
@@ -2701,28 +1242,50 @@
     "notes": null
   },
   {
-    "id": "2026-10-27-neponset-river-regional-chamber-caffeine-conv-d9d575a",
-    "title": "Neponset River Regional Chamber: Caffeine & Conversations",
+    "id": "2026-10-28-irish-brewing-trivia",
+    "title": "Trivia Night with Dan Maloff",
     "start": {
-      "date": "2026-10-27",
-      "time": "08:30"
+      "date": "2026-10-28",
+      "time": "19:30"
     },
     "end": {
-      "date": "2026-10-27",
-      "time": "09:30"
+      "date": "2026-10-28",
+      "time": null
     },
-    "venue": "Building 6 – Cafe Area",
-    "address": "Norwood Space Center, 83 Morse St, Building 6, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-10-27-2026/",
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4A-4B, Norwood, MA",
+    "category": "community",
+    "source_id": "irish-brewing-boston",
+    "source_url": "https://www.irishbrewingboston.com/",
     "cost": null,
     "public_access": "public",
-    "series": null,
+    "series": "Weekly Wednesday trivia",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "CAFFEINE & CONNECTIONS BRING YOUR BUSINESS CARDS, GRAB A COFFEE, AND START YOUR MORNING WITH NEW CONNECTIONS. Start your Tuesday with meaningful collaborations at Caffeine & Connections, a FREE monthly networking event designed to bring tog",
-    "discovered_by": "scheduled_tribe_api"
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Team signup at 7:00 PM; game starts at 7:30 PM. Venue advises checking social channels for updates."
+  },
+  {
+    "id": "2026-10-29-castle-island-trivia",
+    "title": "Trivia With Tim",
+    "start": {
+      "date": "2026-10-29",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "21:00"
+    },
+    "venue": "Castle Island Brewing — Norwood Taproom",
+    "address": "31 Astor Ave, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Weekly Thursday trivia",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-18",
+    "notes": "Sporcle Events stump trivia; official Castle Island calendar states every Thursday."
   },
   {
     "id": "2026-10-30-no-static",
@@ -2794,54 +1357,6 @@
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering."
   },
   {
-    "id": "2026-11-02-bible-study-e0b0d02",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-11-02",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-11-02",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-11-05-make-a-charcuterie-board-great-for-date-night-57cc41c",
-    "title": "Make A Charcuterie Board – Great for Date Night! (November 2026)",
-    "start": {
-      "date": "2026-11-05",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-11-05",
-      "time": "21:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-november-2026/",
-    "cost": "$70.00 – $140.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Are you intrigued by the beauty of charcuterie boards you see at crafts fairs? Join our beginner-friendly woodworking class where you’ll learn to design and build your very own hardwood cutting board. Here’s what awaits you: Introduction ",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-11-05-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -2865,30 +1380,6 @@
     "notes": null
   },
   {
-    "id": "2026-11-09-bible-study-7789548",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-11-09",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-11-09",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
     "id": "2026-11-14-magic-zeppelin",
     "title": "A Night of Zeppelin",
     "start": {
@@ -2910,30 +1401,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-11-15-turn-tops-and-dreidels-craft-gifts-from-the-h-26a0680",
-    "title": "Turn Tops and Dreidels – Craft Gifts from the Heart! (November 2026)",
-    "start": {
-      "date": "2026-11-15",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": "13:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/turn-tops-and-dreidels-craft-gifts-from-the-heart-november-2026/",
-    "cost": "$75.00 – $150.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ A perfect date or family night activity! Craft gifts from the heart & perfect for the holidays or any occasion. Learn to turn toy tops and dreidels as you make gifts for friends and family. You will explore the use of the skew, spindle go",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-11-15-dreidels",
@@ -2982,78 +1449,6 @@
     "notes": null
   },
   {
-    "id": "2026-11-16-bible-study-165726f",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-11-16",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-11-16",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-11-24-neponset-river-regional-chamber-caffeine-conv-e771129",
-    "title": "Neponset River Regional Chamber: Caffeine & Conversations",
-    "start": {
-      "date": "2026-11-24",
-      "time": "08:30"
-    },
-    "end": {
-      "date": "2026-11-24",
-      "time": "09:30"
-    },
-    "venue": "Building 6 – Cafe Area",
-    "address": "Norwood Space Center, 83 Morse St, Building 6, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/event/neponset-river-regional-chamber-caffeine-conversations-11-24-2026/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "CAFFEINE & CONNECTIONS BRING YOUR BUSINESS CARDS, GRAB A COFFEE, AND START YOUR MORNING WITH NEW CONNECTIONS. Start your Tuesday with meaningful collaborations at Caffeine & Connections, a FREE monthly networking event designed to bring tog",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-12-01-make-a-charcuterie-board-great-for-date-night-dfb8a9c",
-    "title": "Make A Charcuterie Board – Great for Date Night! (December 2026)",
-    "start": {
-      "date": "2026-12-01",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-12-01",
-      "time": "21:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/make-a-charcuterie-board-great-for-date-night-december-2026/",
-    "cost": "$70.00 – $140.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Are you intrigued by the beauty of charcuterie boards you see at crafts fairs? Join our beginner-friendly woodworking class where you’ll learn to design and build your very own hardwood cutting board. Here’s what awaits you: Introduction ",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-12-01-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -3075,30 +1470,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-12-04-turn-tops-and-dreidels-craft-gifts-from-the-h-8530193",
-    "title": "Turn Tops and Dreidels – Craft Gifts from the Heart! (December 2026)",
-    "start": {
-      "date": "2026-12-04",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-12-04",
-      "time": "21:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/turn-tops-and-dreidels-craft-gifts-from-the-heart-december-2026/",
-    "cost": "$75.00 – $150.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ A perfect date or family night activity! Craft gifts from the heart & perfect for the holidays or any occasion. Learn to turn toy tops and dreidels as you make gifts for friends and family. You will explore the use of the skew, spindle go",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-12-04-dreidels",
@@ -3124,54 +1495,6 @@
     "notes": null
   },
   {
-    "id": "2026-12-13-personalize-laser-engraved-wood-cutting-board-8dcda72",
-    "title": "Personalize Laser Engraved Wood Cutting Boards – Craft Gifts from the Heart! (December 2026)",
-    "start": {
-      "date": "2026-12-13",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-12-13",
-      "time": "13:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/personalize-laser-engraved-wood-cutting-boards-craft-gifts-from-the-heart-december-2026/",
-    "cost": "$80.00 – $160.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ A perfect date or family night activity to ramp up for the holidays! Learn all about using a laser engraver/cutter to customize wood crafts as you select from one of our handmade charcuterie boards to be engraved with your customized desi",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-12-15-carve-spoons-and-cheese-knives-craft-gifts-fr-4f8f511",
-    "title": "Carve Spoons and Cheese Knives – Craft Gifts from the Heart! (December 2026)",
-    "start": {
-      "date": "2026-12-15",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-12-15",
-      "time": "21:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/carve-spoons-and-cheese-knives-craft-gifts-from-the-heart-december-2026/",
-    "cost": "$85.00 – $165.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ A perfect date or family night activity to ramp up for the holidays! Have fun learning to carve spoons, cheese knives and more from a variety of woods. You can also try out using a Shinto rasp and the belt sander to make spoons and cheese",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-12-20-celtic-seisun",
     "title": "Celtic Traditional Open Seisun",
     "start": {
@@ -3193,29 +1516,5 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-12-31-pitch-us-a-class-24c968d",
-    "title": "Pitch Us A Class!",
-    "start": {
-      "date": "2026-12-31",
-      "time": "08:00"
-    },
-    "end": {
-      "date": "2026-12-31",
-      "time": "17:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
-    "category": "workshop",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/event/pitch-us-a-class/",
-    "cost": "Free",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ More classes are being added, but if you are an expert, a dedicated hobbyist, a potential student, or someone with niche experience or training, we’d love to hear your ideas for a course! Mill Forge pays our instructors, usually $60 per h",
-    "discovered_by": "scheduled_tribe_api"
   }
 ]
