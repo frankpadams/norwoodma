@@ -41,7 +41,23 @@
     const meta=document.createElement('p');
     meta.className='footer-build-meta';
     meta.setAttribute('aria-label','Site version and copyright');
-    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.3.1';
+    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.3.2';
     footer.appendChild(meta);
   }
+})();
+(function iosHomePrompt(){
+ try{
+  const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  if(!ios||standalone||localStorage.getItem('norwood-ios-home-dismissed'))return;
+  const today=new Date().toISOString().slice(0,10),last=localStorage.getItem('norwood-ios-last-visit');
+  let visits=Number(localStorage.getItem('norwood-ios-visits')||0);
+  if(last!==today){visits++;localStorage.setItem('norwood-ios-visits',String(visits));localStorage.setItem('norwood-ios-last-visit',today)}
+  if(visits<3)return;
+  const el=document.createElement('aside');el.className='ios-home-prompt';el.setAttribute('role','dialog');el.setAttribute('aria-label','Add Norwood.ma to your Home Screen');
+  el.innerHTML='<button class="ios-home-close" aria-label="Dismiss">×</button><img src="assets/favicon-approved.png" alt=""><div><strong>Keep Norwood.ma handy</strong><p>Add Norwood.ma to your Home Screen for quick access. Tap <b>Share</b> ↑ and choose <b>Add to Home Screen</b>.</p><button class="ios-home-gotit">Got it</button><button class="ios-home-later">Not now</button></div>';
+  document.body.appendChild(el);
+  const dismiss=()=>{localStorage.setItem('norwood-ios-home-dismissed','1');el.remove()};el.querySelector('.ios-home-close').onclick=dismiss;el.querySelector('.ios-home-gotit').onclick=dismiss;
+  el.querySelector('.ios-home-later').onclick=()=>{localStorage.setItem('norwood-ios-visits','0');localStorage.setItem('norwood-ios-last-visit',today);el.remove()};
+ }catch(e){}
 })();
