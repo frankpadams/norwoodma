@@ -7410,5 +7410,102 @@
       "basis": "current web review"
     },
     "notes": "Experience business; monitor for public special events/promotions."
+  },
+  {
+    "id": "norwood-veterans-services",
+    "name": "Norwood Veterans Services",
+    "organization": "Town of Norwood Veterans Services",
+    "source_class": "official_department",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-19"
+    },
+    "notes": "Watch public veterans ceremonies, observances, benefits events and community programs."
+  },
+  {
+    "id": "norwood-summer-concerts",
+    "name": "Norwood summer concert discovery",
+    "organization": "Norwood community summer concert series",
+    "source_class": "seasonal_discovery",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "configured",
+      "verified_at": "2026-09-19"
+    },
+    "notes": "Seasonal watch for Norwood's public summer concert series; prefer direct organizer/event links."
+  },
+  {
+    "id": "norwood-youth-fundraisers",
+    "name": "Norwood youth and school fundraiser discovery",
+    "organization": "Norwood youth and school organizations",
+    "source_class": "community_discovery",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "configured",
+      "verified_at": "2026-09-19"
+    },
+    "notes": "Watch public school/youth fundraisers including car washes, fairs and benefits."
   }
 ]
