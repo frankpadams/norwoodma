@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 TZ=ZoneInfo('America/New_York')
-UA='Norwood.ma community information bot/0.11.15 (+https://norwood.ma)'
+UA='Norwood.ma community information bot/0.12.0 (+https://www.norwood.ma)'
 
 try:
     import requests

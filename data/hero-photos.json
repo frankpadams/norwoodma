@@ -10,7 +10,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_Central_station_building_from_the_south,_July_2021.jpg",
     "historical": false,
-    "position": "center 54%"
+    "position": "center 54%",
+    "heroPriority": "supporting"
   },
   {
     "id": "town-hall-2010",
@@ -23,7 +24,8 @@
     "license": "CC BY 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_Memorial_Municipal_Building,_Norwood_MA.jpg",
     "historical": false,
-    "position": "center 48%"
+    "position": "center 48%",
+    "heroPriority": "primary"
   },
   {
     "id": "norwood-depot-2012",
@@ -36,7 +38,8 @@
     "license": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_Depot,_Norwood_MA.jpg",
     "historical": false,
-    "position": "center 52%"
+    "position": "center 52%",
+    "heroPriority": "supporting"
   },
   {
     "id": "norwood-central-bay-window",
@@ -49,7 +52,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Bay_window_and_sign_at_Norwood_Central_station,_July_2021.jpg",
     "historical": false,
-    "position": "center 52%"
+    "position": "center 52%",
+    "heroPriority": "supporting"
   },
   {
     "id": "norwood-central-north",
@@ -62,7 +66,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_Central_station_building_from_the_north_(1),_July_2021.jpg",
     "historical": false,
-    "position": "center 52%"
+    "position": "center 52%",
+    "heroPriority": "supporting"
   },
   {
     "id": "norwood-depot-track-crossing",
@@ -75,7 +80,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Shelter_and_track_crossing_at_Norwood_Depot,_July_2021.jpg",
     "historical": false,
-    "position": "center 50%"
+    "position": "center 50%",
+    "heroPriority": "supporting"
   },
   {
     "id": "library-1899",
@@ -101,7 +107,8 @@
     "license": "Public domain in the United States",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_Central_station_prior_to_1899.jpg",
     "historical": true,
-    "position": "center 50%"
+    "position": "center 50%",
+    "heroPriority": "supporting"
   },
   {
     "id": "norwood-central-1906",
@@ -114,7 +121,8 @@
     "license": "Public domain in the United States",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_Central_1906.JPG",
     "historical": true,
-    "position": "center 50%"
+    "position": "center 50%",
+    "heroPriority": "supporting"
   },
   {
     "id": "norwood-high-school-2017",
@@ -127,7 +135,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Norwood_High_School,_Norwood_MA.jpg",
     "historical": false,
-    "position": "center 52%"
+    "position": "center 52%",
+    "heroPriority": "primary"
   },
   {
     "id": "town-hall-auditorium-2004",
@@ -153,7 +162,8 @@
     "license": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Norwoodmunicipal.jpg",
     "historical": false,
-    "position": "center 48%"
+    "position": "center 48%",
+    "heroPriority": "primary"
   },
   {
     "id": "fred-holland-day-house",
@@ -166,7 +176,8 @@
     "license": "CC BY 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Fred_Holland_Day_House,_Norwood_MA.jpg",
     "historical": false,
-    "position": "center 52%"
+    "position": "center 52%",
+    "heroPriority": "primary"
   },
   {
     "id": "windsor-gardens-2012",
@@ -179,7 +190,8 @@
     "license": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Windsor_Gardens_MBTA_station,_Norwood_MA.jpg",
     "historical": false,
-    "position": "center 52%"
+    "position": "center 52%",
+    "heroPriority": "supporting"
   },
   {
     "id": "nahatan-rail-bridge-2021",
@@ -192,7 +204,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Nahatan_Street_railroad_bridge,_July_2021.jpg",
     "historical": false,
-    "position": "center 55%"
+    "position": "center 55%",
+    "heroPriority": "supporting"
   },
   {
     "id": "neponset-river-2021",
@@ -205,7 +218,8 @@
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Neponset_River_in_Norwood,_July_2021.jpg",
     "historical": false,
-    "position": "center 50%"
+    "position": "center 50%",
+    "heroPriority": "primary"
   },
   {
     "id": "norwood-depot-train-2026",
@@ -218,7 +232,8 @@
     "license": "Creative Commons — see source",
     "source": "https://commons.wikimedia.org/wiki/File:MBTA_Franklin_Foxboro_Line_train_1731_approaching_Norwood_Depot_May_2026.jpg",
     "historical": false,
-    "position": "center 48%"
+    "position": "center 48%",
+    "heroPriority": "supporting"
   },
   {
     "id": "norwood-theatre-2022",
@@ -232,5 +247,35 @@
     "source": "https://www.flickr.com/photos/vanhoosear/52973878867",
     "historical": false,
     "position": "center 50%"
+  },
+  {
+    "id": "norwood-aerial-2019",
+    "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Aerial%20view%20of%20Norwood%2C%20Massachusetts%2C%20July%202019.JPG",
+    "alt": "Aerial view across Norwood, Massachusetts in summer",
+    "title": "Norwood from above",
+    "description": "A wide summer aerial view across Norwood.",
+    "date": "July 2019",
+    "creator": "Pi.1415926535",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Norwood,_Massachusetts,_July_2019.JPG",
+    "historical": false,
+    "position": "center 48%",
+    "heroPriority": "primary",
+    "resolution": "5184 × 3457"
+  },
+  {
+    "id": "oak-view-2022",
+    "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Oak%20View%20from%20the%20side%2C%20Norwood%20MA.jpg",
+    "alt": "Oak View historic landmark in Norwood, Massachusetts, surrounded by mature trees",
+    "title": "Oak View",
+    "description": "Recognized historic Norwood architecture framed by mature landscaping.",
+    "date": "December 2022",
+    "creator": "John Phelan",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oak_View_from_the_side,_Norwood_MA.jpg",
+    "historical": false,
+    "position": "center 48%",
+    "heroPriority": "primary",
+    "resolution": "4032 × 3024"
   }
 ]
