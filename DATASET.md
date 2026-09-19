@@ -74,3 +74,12 @@ Food & Drink now exposes **Brazilian** as its own cuisine/type. Turkish and Leba
 
 ## v0.11.8 additions
 Resources: 312 records. Source registry: 225 sources across 94 domains. Added Temple Sinai of Sharon and seven nearby Things to Do destinations with explicit municipality labeling.
+
+## v0.11.41 additions
+- `data/featured.json` / `data/featured-data.js`: optional manually curated homepage feature with enabled state, label, title, summary, specific URL, start date and expiration date.
+- `data/hero-photos.json`: `heroPriority` may be `primary` or `supporting`; homepage rotation prefers `primary` images. `resolution` is recorded when verified for newly added images.
+
+
+## Trivia question bank (v0.11.42)
+
+`data/trivia-questions.js` contains 152 launch questions. Each record stores the question, four answer choices, correct-answer index, category, explanatory fact, and a source URL. Current primary sources include the Norwood Historical Society, Morrill Memorial Library local-history archive, Town annual-report material, and Norwood on Film. The target is approximately 200 questions, but additions should be fact-checked and sourced rather than generated to hit a quota. Time-sensitive census/demographic questions must identify their reference year.

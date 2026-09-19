@@ -80,3 +80,36 @@ Homepage Resource Directory naming, redundant resource CTA removal, all-Norwood 
 - Replaced Calendars quick tile with Things to Do.
 - Dinner Spinner quick tile deep-links directly to the randomizer and uses a small custom spinner icon with subtle hover motion.
 - Transit and Calendars remain in global navigation.
+
+## v0.11.41 reconciliation (September 19, 2026)
+- Site search: confirmed functioning well; deliberately preserved.
+- Typography cleanup: implemented.
+- Automated event/news refresh: confirmed existing twice-daily GitHub Actions pipeline remains present and wired to generated data/feeds.
+- Things to Do: dense activity-first layout retained; Live Music and Food & Drink remain first-class activity links.
+- Manual timely/featured content: implemented as data-driven homepage feature with start/expiration dates and admin export tool.
+- Explore trivia/history: replaced in v0.11.42 with an interactive sourced multiple-choice game (152-question launch bank; ~200 target) plus current local trivia-night listings.
+- Hero imagery: homepage selection now favors architecture/nature and adds verified high-resolution aerial/Oak View options; ordinary private homes are not a target and rail imagery is de-emphasized.
+- Documentation: README and associated release docs are now a required part of each release.
+- Community submission moderation: remains a backend dependency; do not ship an insecure browser-only imitation on GitHub Pages.
+
+## v0.11.43
+- Confirmed site search is functioning well; no search redesign in this release.
+- Audited news sources and ingestion approaches; added `NEWS-SOURCES.md` and `data/news-source-registry.json`.
+- Moved homepage “More local news →” from the news-card header to the bottom of the card.
+- Identified next news-engineering work: source-specific parsers/health, duplicate-story clustering, categorization, direct URL resolution, and editorial overrides.
+
+## v0.12.0 reconciliation — community event submission
+- [x] Public Submit an Event form exists in administrator-owned Google account.
+- [x] What’s Happening links prominently to the live form.
+- [x] Standard footer links to Submit an Event beneath non-endorsement language.
+- [x] Form/Sheet workflow is moderation-first; no automatic publication from raw submissions.
+- [x] No file uploads are requested.
+- [x] Dynamic content refresh schedule is every two hours.
+- [x] Canonical GitHub Pages custom domain recorded as `www.norwood.ma`.
+- [ ] Authenticated Approved-Sheet → generated-events bridge remains to be configured and tested before it may be described as live.
+
+
+## v0.12.1 correction
+- Footer link beneath the non-endorsement disclosure is **Support Norwood.ma** and points to `support.html`.
+- Submit an Event remains a What’s Happening action rather than occupying that footer position.
+- Support page documents voluntary personal support, non-charitable/tax-deductibility status, and non-influence policy; Venmo handle is `@frankpadams`.

@@ -1,4 +1,23 @@
-# Norwood.ma v0.11.15
+# Norwood.ma v0.11.42
+
+## v0.11.42 interactive Norwood trivia
+
+- Replaces the static Trivia & Local History page with a playable, accessible multiple-choice Norwood trivia game.
+- Launches with 152 sourced questions across local history, notable people, landmarks, schools, industry, nature, archives and Norwood on screen; research continues toward the 200-question target rather than padding the bank with weak facts.
+- Supports randomized 10-, 25-, and 50-question rounds, randomized answer order, score/progress, answer explanations and per-question source links.
+- Adds current in-person trivia nights from the verified event dataset (Irish Brewing Boston Wednesdays; Castle Island Brewing Norwood Thursdays).
+- Adds Norwood Trivia to Things to Do as well as Explore.
+- Adds `data/trivia-questions.js` and `trivia.js`; updates documentation and cache-version references.
+
+## v0.11.41 reconciliation + typography
+
+- Preserves the functioning sitewide search.
+- Cleans up typography and visual hierarchy across desktop/mobile.
+- Adds a data-driven, date-bounded homepage featured-item mechanism plus local admin export UI.
+- Adds Norwood Trivia & Local History under Explore.
+- Favors civic architecture/nature in homepage hero rotation and adds verified high-resolution aerial and Oak View images with licensing metadata.
+- Confirms the existing twice-daily GitHub Actions refresh for events/news remains part of the release.
+- README, release notes, credits, dataset notes and reconciliation documentation are updated with the release.
 
 ## v0.11.15 navigation + calendar restructuring
 
@@ -166,3 +185,18 @@ Expanded Explore with Live Music, Rage Zone and additional Space Center experien
 
 ## Current test build
 Version 0.11.30: dark masthead plus activity-guide redesign.
+
+### v0.11.43 news aggregation audit
+The news system now has a documented source audit in `NEWS-SOURCES.md` and a machine-readable registry in `data/news-source-registry.json`. The homepage “More local news →” link was moved to the bottom of the news card so the card reads headlines first and navigation second.
+
+## v0.12.1 — support-page correction
+
+Corrected the standard footer so the link beneath the non-endorsement language is **Support Norwood.ma**, not Submit an Event. Added a dedicated support page with voluntary-support disclosures and Venmo `@frankpadams`. The prominent Submit an Event action remains on What’s Happening.
+
+## v0.12.0 — community event submissions
+
+Norwood.ma now has a public **Submit an Event** intake path using a Google Form owned by the site administrator. The public form is linked prominently from What’s Happening. Submissions are not auto-published: they enter a private Google Sheets moderation queue and begin in `Pending` status. The intended lifecycle is `Pending` → `Approved` / `Rejected` / `Needs Information` → `Published`.
+
+The public submission form does not accept file uploads. Submitters may optionally provide a public event/source URL. Contact information is for verification and is not intended for publication.
+
+The scheduled content refresh cadence is now every two hours. GitHub Pages remains the public host, with `www.norwood.ma` as the canonical public domain. Approved-submission ingestion into generated event data is the next automation step; until that authenticated bridge is configured, approval in the private Sheet does not by itself publish an event.

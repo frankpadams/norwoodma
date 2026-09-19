@@ -1,5 +1,38 @@
 [
   {
+    "id": "community-event-submissions",
+    "name": "Norwood.ma Community Event Submissions — Approved Feed",
+    "organization": "Norwood.ma",
+    "source_class": "moderated_submission_feed",
+    "authority": "moderated",
+    "coverage": "Norwood community relevance; approved out-of-town items retain municipality labels",
+    "url": "https://script.google.com/macros/s/AKfycbx7-saWBvzP492fspqbrRx6EUxECfbbMXyafVhxuXVWPNGZ-6Z5x7PVe7lWTrqP4BJY/exec",
+    "domain": "script.google.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "community_submission_json",
+      "automation": "live"
+    },
+    "filters": {
+      "moderation_required": true,
+      "dedupe_against_primary_source": true,
+      "preserve_town_label": true
+    },
+    "verification": {
+      "status": "endpoint_verified_by_owner",
+      "verified_at": "2026-09-19",
+      "basis": "Approved test event returned through deployed privacy-safe Apps Script JSON endpoint"
+    },
+    "notes": "Endpoint exposes only allowlisted public event fields from rows whose moderation Status is Approved or Published. Private response Sheet remains private."
+  },
+  {
     "id": "ache-massachusetts-events",
     "name": "ACHE of Massachusetts — Events",
     "organization": "ACHE of Massachusetts",

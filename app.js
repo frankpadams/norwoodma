@@ -6,7 +6,8 @@ async function rotatingHero(){
   try{
     let photos=window.NORWOOD_HERO_PHOTOS||[]; if(!photos.length){try{photos=await (await fetch('data/hero-photos.json')).json()}catch(e){}} if(!photos.length)return;
     let recent=[]; try{recent=JSON.parse(localStorage.getItem('norwoodHeroRecent')||'[]')}catch(e){}
-    let eligible=photos.filter(x=>!recent.includes(x.id)); if(!eligible.length)eligible=photos;
+    let preferred=photos.filter(x=>x.heroPriority==='primary'); if(preferred.length<2)preferred=photos.filter(x=>x.heroPriority!=='supporting'); if(!preferred.length)preferred=photos;
+    let eligible=preferred.filter(x=>!recent.includes(x.id)); if(!eligible.length)eligible=preferred;
     const photo=eligible[Math.floor(Math.random()*eligible.length)];
     el.style.backgroundImage=`url("${photo.url.replace(/"/g,'%22')}")`; el.style.backgroundPosition=photo.position||'center'; el.setAttribute('aria-label',photo.alt);
     const hist=photo.historical?'<span class="historical-badge">HISTORIC IMAGE</span> ':'';
@@ -155,3 +156,13 @@ async function timely(){
    alert.hidden=true;
  }
 } timely();
+
+function featuredCommunity(){
+ const data=window.NORWOOD_FEATURED||null, section=document.querySelector('#featuredCommunity'); if(!data||!section||!data.enabled)return;
+ const today=new Date(); const starts=data.starts?new Date(data.starts+'T00:00:00'):null, expires=data.expires?new Date(data.expires+'T23:59:59'):null;
+ if((starts&&today<starts)||(expires&&today>expires))return;
+ document.querySelector('#featuredEyebrow').textContent=data.eyebrow||'AROUND TOWN';
+ document.querySelector('#featuredTitle').textContent=data.title||''; document.querySelector('#featuredSummary').textContent=data.summary||'';
+ const a=document.querySelector('#featuredLink'); if(data.url){a.href=data.url;a.textContent=(data.link_label||'Learn more')+' →';}else a.hidden=true; section.hidden=false;
+}
+featuredCommunity();

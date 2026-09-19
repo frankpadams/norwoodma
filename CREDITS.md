@@ -36,3 +36,9 @@ OpenStreetMap contributors; Leaflet.
 MBTA V3 API; National Weather Service API.
 
 Norwood.ma is an independent community site and is not affiliated with the Town of Norwood government.
+
+## v0.11.41 hero additions
+- **Aerial view of Norwood, Massachusetts, July 2019** — Pi.1415926535 — 5,184 × 3,457 — CC BY-SA 3.0 — Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Aerial_view_of_Norwood,_Massachusetts,_July_2019.JPG
+- **Oak View from the side, Norwood MA** — John Phelan — 4,032 × 3,024 — CC BY 4.0 — Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Oak_View_from_the_side,_Norwood_MA.jpg
+
+Homepage rotation now prioritizes civic/public architecture, recognized historic landmarks, nature and broad town views. Transit imagery remains available but is intentionally de-emphasized in the homepage hero.
