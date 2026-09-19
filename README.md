@@ -206,8 +206,13 @@ The scheduled content refresh cadence is now every two hours. GitHub Pages remai
 - Added `EVENT-SUBMISSION-SYSTEM.md` as permanent developer documentation for the Google Form → Google Sheet → moderation → event-ingestion architecture.
 - Future releases must retain and update this document whenever the submission/moderation/publication workflow changes.
 
-## v0.12.3 — approved submissions reach the live event pipeline
+## v0.12.4 — approved submissions reach the live event pipeline
 
 The deployed privacy-safe Google Apps Script feed for community submissions is now a first-class automated event source. The scheduled two-hour content refresh reads only the feed's Approved/Published public records, normalizes them into Norwood.ma's event schema, deduplicates them with other sources, applies normal expiration rules, and writes them into `data/events.json` / `data/events-data.js`. The private response spreadsheet is never read by GitHub Actions and remains private.
 
 Approved out-of-town events retain their submitted municipality, and the event UI explicitly labels non-Norwood municipalities (for example, `Framingham, MA`). Software releases are no longer required to add an approved community-submitted event.
+
+
+## v0.12.4 — publication feedback loop
+
+This release makes the production GitHub Actions correction canonical (removing the invalid implicit pip-cache lookup) and adds an authenticated, server-to-server acknowledgment path for community submissions. After an Approved submission is represented in the generated event dataset and changes are pushed, GitHub Actions can notify the private Apps Script moderation backend, which records `Published`, the stable event ID, a verification timestamp, and a successful import state. Setup instructions and the Apps Script extension are in `EVENT-SUBMISSION-SYSTEM.md` and `google-apps-script/publication-acknowledgment.gs`. The public GET feed remains allowlisted and contains no moderation/contact fields.

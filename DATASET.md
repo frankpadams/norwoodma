@@ -84,6 +84,10 @@ Resources: 312 records. Source registry: 225 sources across 94 domains. Added Te
 
 `data/trivia-questions.js` contains 152 launch questions. Each record stores the question, four answer choices, correct-answer index, category, explanatory fact, and a source URL. Current primary sources include the Norwood Historical Society, Morrill Memorial Library local-history archive, Town annual-report material, and Norwood on Film. The target is approximately 200 questions, but additions should be fact-checked and sourced rather than generated to hit a quota. Time-sensitive census/demographic questions must identify their reference year.
 
-## v0.12.3 community-submission source
+## v0.12.4 community-submission source
 
 Approved/Published community submissions are ingested from the deployed privacy-safe Apps Script JSON endpoint registered as `community-event-submissions` in `data/source-registry.json`. The adapter maps allowlisted public fields into the standard event schema before deduplication and expiration. The private Google response spreadsheet and private submitter/moderation fields are not part of the public dataset.
+
+## v0.12.4 publication acknowledgment
+
+Community-submission records represented in `events.json` retain their `submission-…` stable IDs. The scheduled workflow can send those IDs plus public matching fields (title/date/venue) to the authenticated Apps Script acknowledgment endpoint after the generated dataset has been pushed. This acknowledgment contains no submitter contact or reviewer-note data and does not add private moderation data to the public dataset.

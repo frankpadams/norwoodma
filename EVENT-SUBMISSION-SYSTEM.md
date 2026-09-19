@@ -2,7 +2,7 @@
 
 **Introduced:** v0.12.0  
 **Documentation added:** v0.12.2  
-**Status:** Operational end to end. Approved/Published rows are exposed through a privacy-safe Apps Script Web App and imported by the scheduled Norwood.ma event refresh into `events.json`.
+**Status:** Operational end to end. Approved/Published rows are exposed through a privacy-safe Apps Script Web App and imported by the scheduled Norwood.ma event refresh into `events.json`. v0.12.4 adds the optional authenticated publication-acknowledgment loop so successful imports can write publication state back to the private moderation Sheet.
 
 > **Permanent release document:** Keep this file in every future Norwood.ma release and update it whenever the event-submission, moderation, or publication workflow changes.
 
@@ -14,7 +14,7 @@ The intended architecture is:
 
 `Public Google Form → private Google response Sheet → moderation → Approved → Norwood.ma event ingestion → events.json → website`
 
-All stages are now operational. The public Apps Script endpoint was verified with an Approved test event on September 19, 2026, and v0.12.3 connects that endpoint to the scheduled Norwood.ma event ingestion pipeline.
+All stages are now operational. The public Apps Script endpoint was verified with an Approved test event on September 19, 2026, and v0.12.4 connects that endpoint to the scheduled Norwood.ma event ingestion pipeline.
 
 ## Public form
 
@@ -119,7 +119,7 @@ Community submissions are one source feeding the broader What's Happening system
 
 The implemented production path is:
 
-`Google Sheet Approved/Published row → Apps Script allowlisted JSON endpoint → scheduled GitHub content refresh → normalization/deduplication/expiration → events.json → Norwood.ma`
+`Google Sheet Approved/Published row → Apps Script allowlisted JSON endpoint → scheduled GitHub content refresh → normalization/deduplication/expiration → events.json → Git commit/Pages deployment → authenticated acknowledgment → private moderation Sheet`
 
 This operates independently of software releases. Under normal operation, changing a valid submission to `Approved` makes it eligible for the next scheduled two-hour content refresh.
 
@@ -146,3 +146,20 @@ When modifying this system, verify the public form still opens; a submission sti
 ## Historical note
 
 The initial implementation briefly created a separate `Moderation` tab, but the design was corrected to use the Form Responses sheet itself as the moderation queue. Future developers should not reintroduce a second manually synchronized moderation copy unless there is a strong technical reason and reliable synchronization is implemented.
+
+
+## v0.12.4 publication acknowledgment
+
+The website-side acknowledgment client is implemented in `scripts/refresh_content.py --ack-published`. After the refresh has generated the dataset and the workflow has pushed any changed `data/`/`feeds/` files, the workflow posts the community-submission IDs represented in `events.json` back to the same Apps Script Web App.
+
+The write path is authenticated with a high-entropy secret stored in two private locations only: Apps Script **Script Properties** and the GitHub Actions repository secret named `NORWOOD_EVENT_ACK_SECRET`. The secret must never be committed to the repository, placed in `events.json`, embedded in browser JavaScript, or returned by `doGet()`.
+
+The Apps Script extension is preserved in `google-apps-script/publication-acknowledgment.gs`. Add it to the existing production Apps Script project; do not create a new Form, Sheet, or Web App. Run `createPublicationAckSecret()` once, copy the generated value from the execution log, create the GitHub Actions repository secret `NORWOOD_EVENT_ACK_SECRET` with that exact value, then deploy a **new version of the existing Web App deployment**. The `/exec` URL should remain the same.
+
+On an authenticated acknowledgment, Apps Script matches the public submission ID (or the approved row's event name/date/venue on the first acknowledgment) and writes only administrative fields in the private Sheet: `Status = Published`, `Published Event ID = submission-…`, `Last Verified = current timestamp`, and `Import Status = Published successfully`. The public GET sanitizer remains unchanged.
+
+If the GitHub secret has not yet been configured, the scheduled workflow skips acknowledgment rather than failing the event/news refresh. Once configured, acknowledgment errors fail that workflow step so the broken feedback loop is visible in Actions.
+
+### Workflow correction captured in v0.12.4
+
+The production test of v0.12.3 exposed a GitHub Actions configuration defect: `actions/setup-python` had `cache: pip`, which expects a conventional `requirements.txt`/`pyproject.toml` unless a dependency path is supplied. Norwood.ma uses `requirements-automation.txt`. The production repository was manually corrected by removing that cache setting, and v0.12.4 makes that correction canonical so future releases do not restore the broken workflow.

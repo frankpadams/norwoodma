@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 TZ=ZoneInfo('America/New_York')
-UA='Norwood.ma community information bot/0.12.3 (+https://www.norwood.ma)'
+UA='Norwood.ma community information bot/0.12.4 (+https://www.norwood.ma)'
 
 try:
     import requests
@@ -581,8 +581,48 @@ def write_calendar_feeds(events):
     write_json('calendar-feed-status.json',manifest)
     return manifest
 
+
+def acknowledge_published_submissions():
+    """Tell the private moderation sheet which community submissions reached events.json.
+
+    The shared secret is supplied only by GitHub Actions. The public Apps Script
+    GET feed remains read-only and privacy-safe. Missing configuration is treated
+    as a hard failure so the Actions log makes a broken feedback loop visible.
+    """
+    import os
+    if not requests:
+        raise RuntimeError('network dependencies unavailable')
+    secret=os.environ.get('NORWOOD_EVENT_ACK_SECRET','').strip()
+    if not secret:
+        raise RuntimeError('NORWOOD_EVENT_ACK_SECRET GitHub Actions secret is not configured')
+    registry=read_json('source-registry.json',[])
+    src=next((x for x in registry if x.get('ingestion',{}).get('method')=='community_submission_json'),None)
+    if not src or not src.get('url'):
+        raise RuntimeError('community submission source endpoint is not configured')
+    records=[]
+    for e in read_json('events.json',[]):
+        if e.get('source_id')==src.get('id') and str(e.get('id','')).startswith('submission-'):
+            records.append({'id':e['id'],'title':e.get('title'),'date':(e.get('start') or {}).get('date'),'venue':e.get('venue')})
+    payload={
+      'action':'ackPublished',
+      'secret':secret,
+      'events':records,
+      'verifiedAt':now_local().isoformat(),
+      'publisher':'norwood.ma-github-actions'
+    }
+    r=requests.post(src['url'],json=payload,headers={'User-Agent':UA,'Accept':'application/json'},timeout=18)
+    r.raise_for_status()
+    try: result=r.json()
+    except Exception: raise RuntimeError('publication acknowledgment endpoint did not return JSON')
+    if not result.get('ok'):
+        raise RuntimeError('publication acknowledgment rejected: '+clean_text(result.get('error') or result))
+    print(json.dumps({'acknowledged':result.get('updated',0),'events':[x['id'] for x in records]},indent=2))
+    return result
+
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); args=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); ap.add_argument('--ack-published',action='store_true'); args=ap.parse_args()
+    if args.ack_published:
+        acknowledge_published_submissions(); return
     events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); calendar_feeds=write_calendar_feeds(events)
     registry=read_json('source-registry.json',[])
     cov=coverage(registry); write_json('automation-coverage.json',cov)
