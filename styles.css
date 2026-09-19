@@ -335,3 +335,7 @@ p,li{line-height:1.48}.sub,.directory-note{font-size:13px;line-height:1.45}.eyeb
 
 /* Support Norwood.ma */
 .footer-support{margin:.45rem 0 0}.footer-support a{font-weight:700}.support-content{max-width:900px}.support-payment-card{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin:1.5rem 0;padding:1.5rem;border:1px solid var(--line,#d7dde5);border-radius:18px;background:#fff}.support-payment-card h3{margin-top:0}.support-qr{width:180px;height:180px;object-fit:contain}.support-disclosure{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line,#d7dde5)}@media(max-width:640px){.support-payment-card{align-items:flex-start;flex-direction:column}.support-qr{width:160px;height:160px}}
+
+
+/* v0.13.1 — visible deployment/version marker */
+.footer-build-meta{width:100%;margin:.65rem 0 0;padding-top:.65rem;border-top:1px solid rgba(255,255,255,.18);font-size:11px;letter-spacing:.02em;opacity:.82;text-align:center}
