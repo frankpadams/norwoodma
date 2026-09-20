@@ -302,6 +302,8 @@ def canonical_title(s):
     return re.sub(r'[^a-z0-9]+',' ',s).strip()
 
 def dedupe_events(events):
+    # Reject scraper artifacts before deduplication. Generic recurrence labels are not real event titles.
+    events=[e for e in events if canonical_title(e.get('title','')) not in {'recurring','recurrence','all events'}]
     chosen={}
     def score(e):
         v=0
@@ -312,10 +314,24 @@ def dedupe_events(events):
         return v
     for e in events:
         title=canonical_title(e.get('title',''))
+        # Normalize source-added prefixes so the same event is not published twice.
+        title=re.sub(r'^(live in person|live|in person)\s+','',title).strip()
         # Same-day near-identical titles are duplicates even when one source omits/varies the venue.
         key=(title,e.get('start',{}).get('date'))
         if key not in chosen or score(e)>score(chosen[key]): chosen[key]=e
-    return list(chosen.values())
+    vals=list(chosen.values())
+    # Collapse a one-day auto occurrence into a verified multi-day parent when titles substantially match.
+    verified=[e for e in vals if str(e.get('verification_status','')).startswith('web_verified')]
+    out=[]
+    for e in vals:
+        if e in verified: out.append(e); continue
+        et=canonical_title(e.get('title','')); ed=e.get('start',{}).get('date')
+        covered=False
+        for v in verified:
+            vt=canonical_title(v.get('title','')); vs=v.get('start',{}).get('date'); ve=v.get('end',{}).get('date') or vs
+            if ed and vs and ve and vs<=ed<=ve and (et==vt or et in vt or vt in et): covered=True; break
+        if not covered: out.append(e)
+    return out
 
 def current_events(events):
     today=now_local().date()
