@@ -381,5 +381,18 @@
       "prefer_primary_source": true,
       "dedupe_before_publish": true
     }
+  },
+  {
+    "id": "visible-eclipses",
+    "query": "solar lunar eclipse visible Norwood Massachusetts Boston",
+    "purpose": "solar and lunar eclipses actually visible from Norwood, including partial and penumbral events",
+    "cadence": "monthly",
+    "priority": 2,
+    "filters": {
+      "must_be_visible_from_norwood": true,
+      "must_have_date": true,
+      "prefer_authoritative_astronomy_source": true,
+      "dedupe_before_publish": true
+    }
   }
 ]
