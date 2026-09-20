@@ -375,3 +375,6 @@ html[data-high-contrast="true"] .dash-card,html[data-high-contrast="true"] .even
 
 /* Library of Things search discovery */
 .library-things-search-callout{display:block;padding:14px 16px;margin:8px;border:1px solid #d5b14c;border-radius:12px;background:#fffdf4;color:#15283b}.library-things-search-callout .library-things-badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.08em;padding:3px 7px;margin:0 0 7px;border-radius:999px;background:#f4d35e;color:#17324d}.library-things-search-callout>b{display:block;font-size:1rem;margin-bottom:6px}.library-things-search-callout p{margin:5px 0 8px;line-height:1.4}.library-things-search-callout>a{display:inline-block;font-weight:800;text-decoration:underline;margin-bottom:5px}.library-things-search-callout small{display:block;opacity:.75;line-height:1.35}
+
+/* Prevent iOS Safari from auto-zooming when search/form fields receive focus. */
+@media (max-width:700px){input[type="search"],input[type="text"],input[type="email"],input[type="tel"],input[type="url"],input[type="number"],select,textarea{font-size:16px!important}.hero-site-search input[type="search"]{font-size:16px!important}}
