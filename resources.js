@@ -3,7 +3,7 @@
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const topics=[
-['services','Everyday Local Services','Practical local businesses for everyday needs such as laundry, haircuts and personal services.',['laundromat','laundry','barber','haircut','dry cleaning','local service']],
+['services','Everyday Local Services','Practical local businesses for everyday needs such as laundry, haircuts, driving schools and personal services.',['laundromat','laundry','barber','haircut','dry cleaning','local service','driving school','drivers ed','driving lessons']],
 ['kids','Kids, Families & Education','Schools, special education, childcare, youth activities and family support.',['education','school','student','youth','child','family','parent','scholarship','sport','sepac','special education','daycare','preschool']],
 ['youth','Youth Sports & Activities','Local leagues, clubs, classes, scouting, arts and other activities for children and teens.',['youth','sport','league','cheer','cheerleading','gymnastics','lacrosse','baseball','softball','soccer','hockey','basketball','swim','track','field hockey','dance','martial arts','scout','music','skating']],
 ['older','Older Adults & Caregivers','Senior services, meals, transportation, activities, benefits and caregiver support.',['senior','aging','older','caregiver','meals on wheels','medicare','dementia']],
@@ -31,7 +31,7 @@ const tokenAliases={
  rent:['rent','rental','housing','tenant','raft','eviction'],realtor:['realtor','real estate','broker','agent'],evicted:['evicted','eviction','housing','tenant','raft'],
  food:['food','pantry','meal','meals','snap','wic','groceries','hunger'],groceries:['groceries','food','pantry','snap'],hungry:['hungry','hunger','food','pantry','snap'],
  elderly:['elderly','senior','older','aging','caregiver'],old:['older','senior','aging'],wheelchair:['wheelchair','disability','accessible','paratransit'],
- job:['job','jobs','employment','career','masshire'],lawyer:['lawyer','legal','rights'],english:['english','esl','ell','multilingual','language','immigrant'],
+ driver:['driver','driving school','drivers ed','driving lessons','road test'],driving:['driving','driving school','drivers ed','driving lessons','road test'],job:['job','jobs','employment','career','masshire'],lawyer:['lawyer','legal','rights'],english:['english','esl','ell','multilingual','language','immigrant'],
  gay:['gay','lgbtq','queer'],trans:['trans','transgender','lgbtq'],vet:['vet','veterinarian','veterinary','animal hospital','pet','veteran','military'],church:['church','worship','faith','congregation'],synagogue:['synagogue','jewish','worship'],mosque:['mosque','muslim','islam','worship'],temple:['temple','hindu','jewish','worship'],jewish:['jewish','synagogue','temple','worship'],muslim:['muslim','islam','mosque','worship'],hindu:['hindu','temple','mandir','worship'],cheer:['cheer','cheerleading','tumbling'],gymnastics:['gymnastics','gymnastic','tumbling'],lacrosse:['lacrosse','lax'],scouts:['scouts','scouting','cub scouts','girl scouts'],dance:['dance','ballet','acro'],skating:['skating','ice skating','learn to skate'],martial:['martial arts','karate','taekwondo','jiu jitsu']
 };
 const crisisTerms=/\b(suicid(?:e|al)|kill myself|hurt myself|self[- ]?harm|want to die|end my life|mental health crisis|psychiatric crisis|crisis line|crisis hotline)\b/i;
