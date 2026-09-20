@@ -23,7 +23,7 @@
  function items(){
   const out=pages.slice();
   (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
-  (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' ')}));
+  (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
   return out;
  }
@@ -45,7 +45,7 @@
  function render(track=false){
   const raw=input.value.trim(); if(!raw){box.hidden=true;box.innerHTML='';return []}
   const hits=search(raw);
-  box.innerHTML=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
+  box.innerHTML=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.officialTown?' <span class="official-town-badge" title="Official Town of Norwood resource" aria-label="Official Town of Norwood resource"><span aria-hidden="true">◆</span> OFFICIAL TOWN</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   box.hidden=false;if(track)noteSearch(raw,hits.length);return hits;
  }
  input.addEventListener('input',()=>render(false));
