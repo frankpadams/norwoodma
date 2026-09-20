@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T01:00:11.003206-04:00",
+  "generated_at": "2026-09-20T07:33:48.283720-04:00",
   "offline": false,
   "events_published": 122,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 122,
-      "generated_at": "2026-09-20T01:00:10.998035-04:00"
+      "generated_at": "2026-09-20T07:33:48.278355-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 43,
-      "generated_at": "2026-09-20T01:00:10.998911-04:00"
+      "generated_at": "2026-09-20T07:33:48.279261-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 17,
-      "generated_at": "2026-09-20T01:00:10.999698-04:00"
+      "generated_at": "2026-09-20T07:33:48.280130-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-20T01:00:11.000317-04:00"
+      "generated_at": "2026-09-20T07:33:48.280773-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-20T01:00:11.000832-04:00"
+      "generated_at": "2026-09-20T07:33:48.281314-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 6,
-      "generated_at": "2026-09-20T01:00:11.001391-04:00"
+      "generated_at": "2026-09-20T07:33:48.281904-04:00"
     }
   ],
   "event_sources": [
@@ -113,10 +113,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 5,
-      "note": ""
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "source_id": "grace-calendar",
@@ -502,9 +502,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -518,7 +519,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 68,
+      "found": 69,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -526,7 +527,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 69,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -542,7 +543,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 21,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -600,7 +601,7 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 25,
+      "found": 26,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
@@ -616,9 +617,10 @@
         "Inside Norwood": 11,
         "Boston.com": 2,
         "Norwood Public Schools": 1,
-        "The Norwood Record": 44,
+        "The Norwood Record": 43,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
+        "usfigureskating.org": 1,
         "Dignity Memorial": 11,
         "Town of Norwood": 1,
         "Patch": 2,
