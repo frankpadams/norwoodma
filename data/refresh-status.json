@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T12:14:26.635598-04:00",
+  "generated_at": "2026-09-20T14:53:11.812981-04:00",
   "offline": false,
   "events_published": 122,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 122,
-      "generated_at": "2026-09-20T12:14:26.629137-04:00"
+      "generated_at": "2026-09-20T14:53:11.806680-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 43,
-      "generated_at": "2026-09-20T12:14:26.630292-04:00"
+      "generated_at": "2026-09-20T14:53:11.807793-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 17,
-      "generated_at": "2026-09-20T12:14:26.631292-04:00"
+      "generated_at": "2026-09-20T14:53:11.808774-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-20T12:14:26.632080-04:00"
+      "generated_at": "2026-09-20T14:53:11.809535-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-20T12:14:26.632748-04:00"
+      "generated_at": "2026-09-20T14:53:11.810182-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 6,
-      "generated_at": "2026-09-20T12:14:26.633497-04:00"
+      "generated_at": "2026-09-20T14:53:11.810920-04:00"
     }
   ],
   "event_sources": [
@@ -527,7 +527,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 68,
+      "found": 69,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -535,7 +535,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 40,
+      "found": 42,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -601,7 +601,7 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 27,
+      "found": 28,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
@@ -609,6 +609,7 @@
         "Hoodline": 2,
         "Wicked Local": 1,
         "MetroWest Daily News": 1,
+        "metrowestdailynews.com": 1,
         "Legacy obituary": 6,
         "CBS News": 1,
         "MaxPreps": 2,
@@ -617,7 +618,7 @@
         "Inside Norwood": 11,
         "Boston.com": 2,
         "Norwood Public Schools": 1,
-        "The Norwood Record": 41,
+        "The Norwood Record": 40,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
         "usfigureskating.org": 1,
