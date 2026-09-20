@@ -150,6 +150,15 @@ const localRail=(rs.data||[]).filter(x=>/Norwood Central|Norwood Depot|Windsor G
 }
 
 
+async function homeTransitAlerts(){
+ const box=document.querySelector('#homeTransitAlerts');if(!box)return;
+ try{const r=await fetch('https://api-v3.mbta.com/alerts?filter[route]=34E,CR-Franklin');if(!r.ok)throw Error(r.status);const j=await r.json(),alerts=j.data||[];
+  if(!alerts.length){box.hidden=true;box.innerHTML='';return;}
+  const summaries=alerts.slice(0,2).map(x=>{const a=x.attributes||{};return esc(a.short_header||a.header||a.service_effect||a.effect||'MBTA service alert')});
+  box.innerHTML='<span class="home-transit-alert-label">SERVICE ALERT'+(alerts.length===1?'':'S')+'</span>'+summaries.map(s=>'<b>'+s+'</b>').join('')+(alerts.length>2?'<small>+'+(alerts.length-2)+' more alert'+(alerts.length-2===1?'':'s')+' · View details →</small>':'<small>View full alert details →</small>');box.hidden=false;
+ }catch(e){box.hidden=true;}
+}homeTransitAlerts();setInterval(homeTransitAlerts,60000);
+
 document.querySelector('#moreNews')?.addEventListener('click',function(){let feed=document.querySelector('#newsFeed');let open=feed.classList.toggle('expanded');this.textContent=open?'Show fewer headlines ↑':'Show more local headlines ↓'});
 async function timely(){
  const box=document.querySelector('#timelyItems'),alert=document.querySelector('#timelyAlert');
