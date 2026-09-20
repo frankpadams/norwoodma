@@ -357,3 +357,6 @@ html[data-high-contrast="true"] .dash-card,html[data-high-contrast="true"] .even
 
 /* v0.13.3.11 — condensed homepage transit service alerts */
 .home-transit-alerts{display:grid;gap:4px;margin:12px 0;padding:11px 12px;border:1px solid #e0b44a;border-radius:10px;background:#fff7d6;color:#17212b;text-decoration:none}.home-transit-alerts[hidden]{display:none}.home-transit-alert-label{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:#775800}.home-transit-alerts b{display:block;font-size:.9rem;line-height:1.3}.home-transit-alerts small{font-weight:700;color:#003b71}html[data-high-contrast="true"] .home-transit-alerts{background:#050505!important;color:#fff!important;border:2px solid #fff!important}html[data-high-contrast="true"] .home-transit-alert-label,html[data-high-contrast="true"] .home-transit-alerts small{color:#ffeb3b!important}
+
+/* v0.13.3.14 — keep Leaflet/map controls below the sticky site header on iOS */
+.top{isolation:isolate;z-index:5000}.leaflet-container{z-index:0}.leaflet-pane{z-index:400}.leaflet-top,.leaflet-bottom{z-index:800}.top>nav{z-index:5100}
