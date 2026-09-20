@@ -41,7 +41,7 @@
 
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function items(){
-  const out=pages.slice();
+  const out=pages.map(p=>({...p,norwoodPage:true}));
   (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
   (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
@@ -51,7 +51,7 @@
   raw=norm(raw); if(!raw)return [];
   const expanded=norm(raw+' '+(aliases[raw]||''));
   const terms=[...new Set(expanded.split(/\s+/).filter(Boolean))];
-  return items().map(x=>{const name=norm(x.name),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=100;if(name.startsWith(raw))score+=40;if(name.includes(raw))score+=25;if(hay.includes(raw))score+=15;terms.forEach(t=>{if(name.includes(t))score+=8;else if(hay.includes(t))score+=3});return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
+  return items().map(x=>{const name=norm(x.name),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=100;if(name.startsWith(raw))score+=40;if(name.includes(raw))score+=25;if(hay.includes(raw))score+=15;terms.forEach(t=>{if(name.includes(t))score+=8;else if(hay.includes(t))score+=3});/* Prefer our own explanatory pages only when they already match strongly. */if(x.norwoodPage&&score>=15)score+=18;return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
  }
  function noteSearch(query,count){
    try{
@@ -67,7 +67,7 @@
   const hits=search(raw);
   const things=thingMatches(raw);
   const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
-  const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.officialTown?' <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource" style="width:16px;height:16px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
+  const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   box.innerHTML=thingHtml+regularHtml;
   box.hidden=false;if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
