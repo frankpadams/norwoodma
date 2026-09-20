@@ -360,3 +360,6 @@ html[data-high-contrast="true"] .dash-card,html[data-high-contrast="true"] .even
 
 /* v0.13.3.14 — keep Leaflet/map controls below the sticky site header on iOS */
 .top{isolation:isolate;z-index:5000}.leaflet-container{z-index:0}.leaflet-pane{z-index:400}.leaflet-top,.leaflet-bottom{z-index:800}.top>nav{z-index:5100}
+
+/* v0.13.3.15 — reserved Trash & Recycling ad inventory */
+.trash-ad-slot{min-height:92px;margin:26px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:14px;border:1px dashed #aebcc6;border-radius:14px;background:#f8fafb;color:#5f707b;text-align:center}.trash-ad-slot span{font-size:.62rem;font-weight:850;letter-spacing:.14em;color:#778893}.trash-ad-slot b{font-size:.86rem;font-weight:700}html[data-high-contrast="true"] .trash-ad-slot{background:#050505!important;color:#fff!important;border:2px dashed #fff!important}html[data-high-contrast="true"] .trash-ad-slot span{color:#ffeb3b!important}@media(max-width:700px){.trash-ad-slot{min-height:78px;margin:20px 0}}
