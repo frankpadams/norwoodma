@@ -6,47 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sports & active events
 X-WR-CALDESC:Public races\, skating\, sports events and active community programs.
 BEGIN:VEVENT
-UID:2026-09-18-ruth-solomon-symposium@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;VALUE=DATE:20260918
-DTEND;VALUE=DATE:20260920
-SUMMARY:The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating
-LOCATION:The Skating Club of Boston — 750 University Ave\, Norwood\, MA 02062
-DESCRIPTION:Public seminar/program at The Skating Club of Boston\; event runs Sept. 18–19. Registration applies.\nSource: https://scboston.org/event/figure-skating-health-and-performance-conference/
-URL:https://scboston.org/event/figure-skating-health-and-performance-conference/
-END:VEVENT
-BEGIN:VEVENT
-UID:2026-09-19-live-in-person-the-2nd-biennial-ruth-solomon--aeb043c@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20260919T000000
-DTEND;TZID=America/New_York:20260919T235900
-SUMMARY:LIVE In-Person: The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating
-LOCATION:The Skating Club of Boston
-DESCRIPTION:The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes returns September 18 and 19\, presented by Boston Children’s Hospital and Harvard Medical School Teaching Hospital. Hear from Ashley Wagner\, Simon Shnapir\, and Mirai Naga\nSource: https://scboston.org/event/figure-skating-health-and-performance-conference/2026-09-19/
-URL:https://scboston.org/event/figure-skating-health-and-performance-conference/2026-09-19/
-END:VEVENT
-BEGIN:VEVENT
-UID:2026-09-19-recurring-36feca4@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20260919T000000
-SUMMARY:Recurring
-LOCATION:The Skating Club of Boston
-DESCRIPTION:Source: https://scboston.org/event/figure-skating-health-and-performance-conference/all/
-URL:https://scboston.org/event/figure-skating-health-and-performance-conference/all/
-END:VEVENT
-BEGIN:VEVENT
-UID:submission-2817ea8dcba4ba8c@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20260919T073000
-DTEND;TZID=America/New_York:20260919T150000
-SUMMARY:The Learning Center for the Deaf Homecoming (5k\, Games\, and Celebration)
-LOCATION:The Learning Center for the Deaf — 848 Central St
-DESCRIPTION:5k Walk/Run\, Vendor booths\, face painting\, Food & Ice Cream Trucks\, National Lancer's Horses\, and of course watch the games: Volleyball\, Soccer. The general public is welcome\nSource: https://www.tlcdeaf.org/about/tlc-homecoming
-URL:https://www.tlcdeaf.org/about/tlc-homecoming
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-09-23-baby-bop-story-time-5d68494@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20260923T000000
 DTEND;TZID=America/New_York:20260923T000000
 SUMMARY:Baby Bop Story Time
@@ -56,7 +17,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-5
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-28-monday-movie-matinee-7a4ee20@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20260928T000000
 DTEND;TZID=America/New_York:20260928T000000
 SUMMARY:Monday Movie Matinee
@@ -66,7 +27,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/monday-movie-matinee-
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-28-norwood-walk-talk-d2626f7@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20260928T000000
 DTEND;TZID=America/New_York:20260928T000000
 SUMMARY:Norwood Walk & Talk
@@ -76,7 +37,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/norwood-walk-talk-2/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-30-2026-boston-open-nqs-f21ccca@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20260930T000000
 DTEND;TZID=America/New_York:20260930T235900
 SUMMARY:2026 Boston Open NQS
@@ -86,7 +47,7 @@ URL:https://scboston.org/event/2026-boston-open-nqs/2026-09-30/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-30-baby-bop-story-time-a415f73@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20260930T000000
 DTEND;TZID=America/New_York:20260930T000000
 SUMMARY:Baby Bop Story Time
@@ -95,17 +56,8 @@ DESCRIPTION:Newborns\, crawlers\, and pre-walkers&nbsp\;Join Miss Dina on Wednes
 URL:https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-59/
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-09-30-recurring-0206ffc@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20260930T000000
-SUMMARY:Recurring
-LOCATION:The Skating Club of Boston
-DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/all/
-URL:https://scboston.org/event/2026-boston-open-nqs/all/
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-10-01-2026-boston-open-nqs-cfdf5cd@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20261001T000000
 DTEND;TZID=America/New_York:20261001T235900
 SUMMARY:2026 Boston Open NQS
@@ -114,17 +66,8 @@ DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/2026-10-01/
 URL:https://scboston.org/event/2026-boston-open-nqs/2026-10-01/
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-10-01-recurring-a94e791@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20261001T000000
-SUMMARY:Recurring
-LOCATION:The Skating Club of Boston
-DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/all/
-URL:https://scboston.org/event/2026-boston-open-nqs/all/
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-10-02-2026-boston-open-nqs-acbfece@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20261002T000000
 DTEND;TZID=America/New_York:20261002T235900
 SUMMARY:2026 Boston Open NQS
@@ -133,17 +76,8 @@ DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/2026-10-02/
 URL:https://scboston.org/event/2026-boston-open-nqs/2026-10-02/
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-10-02-recurring-62b88b2@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20261002T000000
-SUMMARY:Recurring
-LOCATION:The Skating Club of Boston
-DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/all/
-URL:https://scboston.org/event/2026-boston-open-nqs/all/
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-10-03-2026-boston-open-nqs-5d36de7@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20261003T000000
 DTEND;TZID=America/New_York:20261003T235900
 SUMMARY:2026 Boston Open NQS
@@ -152,17 +86,8 @@ DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/2026-10-03/
 URL:https://scboston.org/event/2026-boston-open-nqs/2026-10-03/
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-10-03-recurring-1de4f91@norwood.ma
-DTSTAMP:20260920T001123Z
-DTSTART;TZID=America/New_York:20261003T000000
-SUMMARY:Recurring
-LOCATION:The Skating Club of Boston
-DESCRIPTION:Source: https://scboston.org/event/2026-boston-open-nqs/all/
-URL:https://scboston.org/event/2026-boston-open-nqs/all/
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-10-04-2026-boston-open-nqs-aff5b7a@norwood.ma
-DTSTAMP:20260920T001123Z
+DTSTAMP:20260920T050011Z
 DTSTART;TZID=America/New_York:20261004T000000
 DTEND;TZID=America/New_York:20261004T235900
 SUMMARY:2026 Boston Open NQS
