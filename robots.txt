@@ -1,5 +1,14 @@
+# Norwood.ma welcomes search and retrieval crawlers to public content.
+# Private/admin and unpublished preview areas remain excluded.
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /moving-to-norwood.html
+
+# OpenAI search retrieval is explicitly welcome; the general rule above also allows it.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /moving-to-norwood.html
+
 Sitemap: https://www.norwood.ma/sitemap.xml
