@@ -8,10 +8,15 @@ async function rotatingHero(){
     let recent=[]; try{recent=JSON.parse(localStorage.getItem('norwoodHeroRecent')||'[]')}catch(e){}
     let preferred=photos.filter(x=>x.heroPriority==='primary'); if(preferred.length<2)preferred=photos.filter(x=>x.heroPriority!=='supporting'); if(!preferred.length)preferred=photos;
     let eligible=preferred.filter(x=>!recent.includes(x.id)); if(!eligible.length)eligible=preferred;
-    const photo=eligible[Math.floor(Math.random()*eligible.length)];
+    // Weighted selection lets seasonal/special images appear less often without removing them from rotation.
+    const weights=eligible.map(x=>Math.max(0,Number(x.weight??1))), totalWeight=weights.reduce((a,b)=>a+b,0);
+    let photo=eligible[Math.floor(Math.random()*eligible.length)];
+    if(totalWeight>0){let pick=Math.random()*totalWeight;for(let i=0;i<eligible.length;i++){pick-=weights[i];if(pick<=0){photo=eligible[i];break;}}}
     el.style.backgroundImage=`url("${photo.url.replace(/"/g,'%22')}")`; el.style.backgroundPosition=photo.position||'center'; el.setAttribute('aria-label',photo.alt);
     const hist=photo.historical?'<span class="historical-badge">HISTORIC IMAGE</span> ':'';
-    info.innerHTML=`${hist}<strong>${esc(photo.title)}</strong><p>${esc(photo.description)}</p><p>${esc(photo.date)} · ${esc(photo.creator)} · ${esc(photo.license)}</p><a href="${photo.source}" target="_blank" rel="noopener">Image source and license ↗</a>`;
+    const meta=photo.license==='Photo: Frank P. Adams' ? 'Photo: Frank P. Adams' : [photo.date,photo.creator,photo.license].filter(Boolean).map(esc).join(' · ');
+    const sourceLink=photo.source ? `<a href="${photo.source}" target="_blank" rel="noopener">Image source and license ↗</a>` : '';
+    info.innerHTML=`${hist}<strong>${esc(photo.title)}</strong><p>${esc(photo.description)}</p><p>${meta}</p>${sourceLink}`;
     recent=[photo.id,...recent.filter(x=>x!==photo.id)].slice(0,Math.min(3,Math.max(1,photos.length-1))); try{localStorage.setItem('norwoodHeroRecent',JSON.stringify(recent))}catch(e){}
     btn.addEventListener('click',()=>{const open=info.hidden;info.hidden=!open;btn.setAttribute('aria-expanded',String(open));});
   }catch(e){ el.setAttribute('aria-label','Norwood, Massachusetts'); }
