@@ -39,7 +39,8 @@
      localStorage.setItem(key,JSON.stringify(data.slice(-100)));
    }catch(e){}
  }
- function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}\n function render(track=false){
+ function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
+ function render(track=false){
   const raw=input.value.trim(); if(!raw){box.hidden=true;box.innerHTML='';return []}
   const hits=search(raw);
   box.innerHTML=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
