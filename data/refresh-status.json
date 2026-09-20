@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:48:33.103178-04:00",
+  "generated_at": "2026-09-19T20:11:23.765863-04:00",
   "offline": false,
   "events_published": 136,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 136,
-      "generated_at": "2026-09-19T16:48:33.096097-04:00"
+      "generated_at": "2026-09-19T20:11:23.761590-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 58,
-      "generated_at": "2026-09-19T16:48:33.097415-04:00"
+      "generated_at": "2026-09-19T20:11:23.762362-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 22,
-      "generated_at": "2026-09-19T16:48:33.098535-04:00"
+      "generated_at": "2026-09-19T20:11:23.763044-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 17,
-      "generated_at": "2026-09-19T16:48:33.099484-04:00"
+      "generated_at": "2026-09-19T20:11:23.763593-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-19T16:48:33.100200-04:00"
+      "generated_at": "2026-09-19T20:11:23.764002-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 10,
-      "generated_at": "2026-09-19T16:48:33.101058-04:00"
+      "generated_at": "2026-09-19T20:11:23.764475-04:00"
     }
   ],
   "event_sources": [
@@ -113,10 +113,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": false,
+      "ok": true,
       "method": "tribe_events",
-      "found": 0,
-      "note": "Expecting value: line 1 column 1 (char 0)"
+      "found": 5,
+      "note": ""
     },
     {
       "source_id": "grace-calendar",
@@ -453,6 +453,27 @@
       "method": "html_page",
       "found": 0,
       "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-veterans-services",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-summer-concerts",
+      "ok": true,
+      "method": "secondary_discovery",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-youth-fundraisers",
+      "ok": false,
+      "method": "secondary_discovery",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] cert"
     }
   ],
   "news_sources": [
@@ -481,10 +502,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -498,7 +518,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -506,7 +526,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -514,7 +534,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 41,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -522,7 +542,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 19,
+      "found": 22,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -588,11 +608,9 @@
         "Hoodline": 2,
         "Wicked Local": 1,
         "MetroWest Daily News": 1,
-        "Legacy obituary": 5,
+        "Legacy obituary": 6,
         "CBS News": 1,
-        "CBS Boston": 1,
         "MaxPreps": 2,
-        "maxpreps.com": 2,
         "Kraw-Kornack Funeral Home": 12,
         "kraw-kornackfuneralhome.com": 12,
         "Inside Norwood": 11,
@@ -600,11 +618,13 @@
         "Norwood Public Schools": 1,
         "The Norwood Record": 44,
         "REBusinessOnline": 1,
+        "U.S. Figure Skating": 1,
         "Dignity Memorial": 11,
         "Town of Norwood": 1,
         "Patch": 2,
         "CurrentObituary.com": 1,
         "NBC Boston": 1,
+        "Chapman Funerals & Cremations": 1,
         "Cartmell Davis Funeral Home": 1,
         "cartmelldavis.com": 1,
         "John Guilfoil Public Relations": 1,
