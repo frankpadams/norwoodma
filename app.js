@@ -86,7 +86,7 @@ function groupEvents(items){
  const sat=new Date(now);const delta=(6-now.getDay()+7)%7;sat.setDate(sat.getDate()+delta);const sun=new Date(sat);sun.setDate(sun.getDate()+1);const satKey=dateKey(sat),sunKey=dateKey(sun);
  const next7=new Date(now);next7.setDate(next7.getDate()+7);const next7Key=dateKey(next7);
  const g={today:[],tomorrow:[],weekend:[],next:[],save:[]};
- for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d<=next7Key)g.next.push(e);else g.save.push(e);}return g;
+ for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}return g;
 }
 function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.registration_url||e.source_url||'events.html')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><span class="event-kind">${esc(eventKind(e.category))}</span><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
 function eventMatchesCalendar(e,key){
