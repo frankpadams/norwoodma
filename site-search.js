@@ -45,7 +45,7 @@
  function render(track=false){
   const raw=input.value.trim(); if(!raw){box.hidden=true;box.innerHTML='';return []}
   const hits=search(raw);
-  box.innerHTML=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.officialTown?' <span class="official-town-badge" title="Official Town of Norwood resource" aria-label="Official Town of Norwood resource"><span aria-hidden="true">◆</span> OFFICIAL TOWN</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
+  box.innerHTML=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.officialTown?' <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="" role="presentation" title="Official Town of Norwood resource" aria-hidden="true" style="width:16px;height:16px;object-fit:contain;vertical-align:-2px;margin-left:5px"><span class="sr-only">Official Town of Norwood resource</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   box.hidden=false;if(track)noteSearch(raw,hits.length);return hits;
  }
  input.addEventListener('input',()=>render(false));
