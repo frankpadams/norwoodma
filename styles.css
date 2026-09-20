@@ -378,3 +378,14 @@ html[data-high-contrast="true"] .dash-card,html[data-high-contrast="true"] .even
 
 /* Prevent iOS Safari from auto-zooming when search/form fields receive focus. */
 @media (max-width:700px){input[type="search"],input[type="text"],input[type="email"],input[type="tel"],input[type="url"],input[type="number"],select,textarea{font-size:16px!important}.hero-site-search input[type="search"]{font-size:16px!important}}
+
+
+/* Accessibility text sizing: scale fixed body/copy text as well as rem-based headings. */
+html[data-text-size="compact"] body{zoom:.9}
+html[data-text-size="standard"] body{zoom:1}
+html[data-text-size="large"] body{zoom:1.133333}
+html[data-text-size] .text-size-controls{zoom:1}
+@supports not (zoom:1){
+  html[data-text-size="compact"] body{font-size:90%}
+  html[data-text-size="large"] body{font-size:113.333%}
+}
