@@ -32,8 +32,13 @@ const tokenAliases={
  food:['food','pantry','meal','meals','snap','wic','groceries','hunger'],groceries:['groceries','food','pantry','snap'],hungry:['hungry','hunger','food','pantry','snap'],
  elderly:['elderly','senior','older','aging','caregiver'],old:['older','senior','aging'],wheelchair:['wheelchair','disability','accessible','paratransit'],
  job:['job','jobs','employment','career','masshire'],lawyer:['lawyer','legal','rights'],english:['english','esl','ell','multilingual','language','immigrant'],
- gay:['gay','lgbtq','queer'],trans:['trans','transgender','lgbtq'],vet:['vet','veteran','military'],church:['church','worship','faith','congregation'],synagogue:['synagogue','jewish','worship'],mosque:['mosque','muslim','islam','worship'],temple:['temple','hindu','jewish','worship'],jewish:['jewish','synagogue','temple','worship'],muslim:['muslim','islam','mosque','worship'],hindu:['hindu','temple','mandir','worship'],cheer:['cheer','cheerleading','tumbling'],gymnastics:['gymnastics','gymnastic','tumbling'],lacrosse:['lacrosse','lax'],scouts:['scouts','scouting','cub scouts','girl scouts'],dance:['dance','ballet','acro'],skating:['skating','ice skating','learn to skate'],martial:['martial arts','karate','taekwondo','jiu jitsu']
+ gay:['gay','lgbtq','queer'],trans:['trans','transgender','lgbtq'],vet:['vet','veterinarian','veterinary','animal hospital','pet'],church:['church','worship','faith','congregation'],synagogue:['synagogue','jewish','worship'],mosque:['mosque','muslim','islam','worship'],temple:['temple','hindu','jewish','worship'],jewish:['jewish','synagogue','temple','worship'],muslim:['muslim','islam','mosque','worship'],hindu:['hindu','temple','mandir','worship'],cheer:['cheer','cheerleading','tumbling'],gymnastics:['gymnastics','gymnastic','tumbling'],lacrosse:['lacrosse','lax'],scouts:['scouts','scouting','cub scouts','girl scouts'],dance:['dance','ballet','acro'],skating:['skating','ice skating','learn to skate'],martial:['martial arts','karate','taekwondo','jiu jitsu']
 };
+const crisisTerms=/\b(suicid(?:e|al)|kill myself|hurt myself|self[- ]?harm|want to die|end my life|mental health crisis|psychiatric crisis|crisis line|crisis hotline)\b/i;
+function crisisHelp(q){
+ if(!crisisTerms.test(q||''))return'';
+ return '<aside class="resource-crisis" role="note"><strong>Need immediate mental-health crisis support?</strong><p>Call or text <a href="tel:988">988</a> for the Suicide & Crisis Lifeline. If there is immediate danger or a life-threatening emergency, call <a href="tel:911">911</a>.</p><a href="https://988lifeline.org/" target="_blank" rel="noopener">988 Suicide & Crisis Lifeline ↗</a></aside>';
+}
 const phraseAliases={
  'electric bill':['electric','utility','energy','fuel assistance'],
  'lost my job':['job','employment','unemployment','benefits'],
@@ -76,7 +81,7 @@ function render(q=''){
    if(nav) nav.hidden=true;
    if(clear) clear.hidden=false;
    if(status) status.textContent=`${rows.length} ${rows.length===1?'resource':'resources'} match “${query}”.`;
-   root.innerHTML=rows.length?`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>${rows.length} ${rows.length===1?'match':'matches'} for “${esc(query)}”</h2><p class="sub">Results are shown once each, with local resources given extra weight.</p><div class="resource-list">${rows.map(card).join('')}</div></section>`:`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>No matches found</h2><p class="sub">Try a shorter phrase or a different description of what you need.</p></section>`;
+   root.innerHTML=crisisHelp(query)+(rows.length?`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>${rows.length} ${rows.length===1?'match':'matches'} for “${esc(query)}”</h2><p class="sub">Results are shown once each, with local resources given extra weight.</p><div class="resource-list">${rows.map(card).join('')}</div></section>`:`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>No matches found</h2><p class="sub">Try a shorter phrase or a different description of what you need.</p></section>`);
    return;
  }
  if(nav) nav.hidden=false;
