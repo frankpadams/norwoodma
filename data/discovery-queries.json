@@ -355,5 +355,18 @@
       "prefer_primary_source": true,
       "dedupe_before_publish": true
     }
+  },
+  {
+    "id": "family-traditions-special-events",
+    "query": "Norwood MA Recreation Breakfast with Santa Special Someone Dance family kids holiday seasonal special event",
+    "purpose": "Recurring family traditions and Recreation special events, including annual dances, breakfasts, holiday programs and similar community events",
+    "cadence": "daily",
+    "priority": 1,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
   }
 ]

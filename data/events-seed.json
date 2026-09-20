@@ -1265,6 +1265,29 @@
     "notes": null
   },
   {
+    "id": "2026-12-05-breakfast-with-santa",
+    "title": "Breakfast with Santa",
+    "start": {
+      "date": "2026-12-05",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": "11:00"
+    },
+    "venue": "Norwood Civic Center",
+    "address": "165 Nahatan St, Norwood, MA 02062",
+    "category": "family",
+    "source_id": "norwood-recreation",
+    "source_url": "https://norwoodma.myrec.com/info/activities/",
+    "cost": "$15 child (ages 12 and under); $5 adult",
+    "public_access": "public",
+    "series": "Norwood Recreation annual special event",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-19",
+    "notes": "Pancake breakfast, crafts and photos with Santa. Current 2026 Norwood Recreation Fall/Winter guide confirms the event."
+  },
+  {
     "id": "2026-12-20-celtic-seisun",
     "title": "Celtic Traditional Open Seisun",
     "start": {
@@ -1286,5 +1309,28 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2027-02-05-special-someone-dance",
+    "title": "Special Someone Dance",
+    "start": {
+      "date": "2027-02-05",
+      "time": null
+    },
+    "end": {
+      "date": "2027-02-05",
+      "time": null
+    },
+    "venue": "Norwood Recreation / Civic Center",
+    "address": "165 Nahatan St, Norwood, MA 02062",
+    "category": "family",
+    "source_id": "norwood-recreation",
+    "source_url": "https://norwoodma.myrec.com/info/activities/",
+    "cost": "$12 per child",
+    "public_access": "public",
+    "series": "Norwood Recreation annual special event",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-19",
+    "notes": "Annual semi-formal dance for ages 3–10 with a special someone; snacks, photo booth and DJ. Time was not stated in the verified Fall/Winter 2026 guide excerpt, so Norwood.ma does not guess it."
   }
 ]
