@@ -55,7 +55,7 @@
       if(spinning||!restaurants.length) return;
       const choice=ignore?'':normalize(food.value);
       const terms=choice?choice.split(' ').filter(Boolean):[];
-      const norwoodOnly=restaurants.filter(r=>{ const a=normalize(r.address||''); const town=normalize(r.municipality||r.city||r.coverage||''); return town==='norwood'||a.includes('norwood ma'); });
+      const norwoodOnly=restaurants.filter(r=>{ const town=normalize(r.municipality||r.city||r.coverage||''); return !town || town==='norwood'; });
       let pool=norwoodOnly.filter(r=>!terms.length||terms.some(t=>searchable(r).includes(t)));
       if(!pool.length){ result.textContent='No exact matches.'; meta.textContent='Try “Anything — surprise me” and spin again.'; links.innerHTML=''; return; }
       spinning=true; spin.disabled=surprise.disabled=true; wheel.classList.add('is-spinning');
