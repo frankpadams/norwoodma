@@ -368,5 +368,18 @@
       "prefer_primary_source": true,
       "dedupe_before_publish": true
     }
+  },
+  {
+    "id": "outdoor-movies-fireworks",
+    "query": "Norwood MA fireworks outdoor movie movie night movies under the stars family movie Town Recreation summer event",
+    "purpose": "Town/community fireworks displays and outdoor or special public movie nights",
+    "cadence": "daily",
+    "priority": 1,
+    "filters": {
+      "must_resolve_to_norwood": true,
+      "must_have_date": true,
+      "prefer_primary_source": true,
+      "dedupe_before_publish": true
+    }
   }
 ]
