@@ -44,13 +44,17 @@ function renderNews(items){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
  let clean=(items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>new Date(b.date)-new Date(a.date));
- // Use the smallest recent window that supplies a useful current-news set. The deeper queue remains available as resilience, not filler.
- const windows=[7,14,21,30,45,60,90,120], target=20; let selected=[], selectedDays=120;
- for(const days of windows){const cutoff=now-days*day, candidate=clean.filter(x=>Date.parse(x.date)>=cutoff);selected=candidate;selectedDays=days;if(candidate.length>=target)break;}
- // Preserve recency first; only diversify within two-day bands so an older item is never promoted far above newer reporting.
- const bands=new Map(); for(const x of selected){const age=Math.max(0,Math.floor((now-Date.parse(x.date))/day)), band=Math.floor(age/2);if(!bands.has(band))bands.set(band,[]);bands.get(band).push(x)}
- const mixed=[]; for(const band of [...bands.keys()].sort((a,b)=>a-b)){const group=bands.get(band), buckets=new Map();for(const x of group){const k=x.source||'Other';if(!buckets.has(k))buckets.set(k,[]);buckets.get(k).push(x)}while([...buckets.values()].some(b=>b.length)){for(const b of buckets.values())if(b.length)mixed.push(b.shift())}}
- selected=mixed;
+ let selected=[], selectedDays;
+ if(isHome){
+  // Homepage stays compact and adapts to the smallest recent window that supplies enough current stories.
+  const windows=[7,14,21,30,45], target=20; selectedDays=45;
+  for(const days of windows){const cutoff=now-days*day, candidate=clean.filter(x=>Date.parse(x.date)>=cutoff);selected=candidate;selectedDays=days;if(candidate.length>=target)break;}
+ }else{
+  // Expanded News page: show all qualifying stories from the past 45 days, strictly newest first.
+  selectedDays=45;
+  const cutoff=now-45*day;
+  selected=clean.filter(x=>Date.parse(x.date)>=cutoff).sort((a,b)=>new Date(b.date)-new Date(a.date));
+ }
  const health=$('#feedHealth'); if(health)health.textContent=selected.length?`Local news from the past ${selectedDays} days · ${selected.length} verified stor${selected.length===1?'y':'ies'}`:'No verified local news is currently available';
  if(!selected.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article>';return;}
  const visibleItems=isHome?selected.slice(0,20):selected.slice(0,60), initialHome=9;
