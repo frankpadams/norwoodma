@@ -591,5 +591,10 @@ window.NORWOOD_BUSINESSES=[
   ["South Norwood Laundromat & Dry Cleaning","Laundry & Dry Cleaning","1239 Washington Street","781-769-4774",""],
   ["Elite Tailor's & Cleaners","Tailoring, Alterations & Dry Cleaning","75 Boston Providence Highway","781-278-9900",""],
   ["Simi Orthodontics","Dental & Orthodontics","269 Walpole Street","781-762-1128","https://www.simiorthodontics.com/"]
+,
+  ["Daisy Tran, CPA","Accounting, Tax & Bookkeeping","661 Washington Street, Suite 310","781-815-7006","https://daisytrancpa.com/"],
+  ["Mike Meuse — Edelman Financial Engines","Financial Planning & Investment Services","720 University Avenue, Suite 230","339-793-2102","https://www.edelmanfinancialengines.com/"],
+  ["Lugten, Morin & Nielson, LLP","Attorneys & Legal Services","100 River Ridge Drive, Suite 200","781-702-6006",""],
+  ["Macchi & Macchi Attorneys at Law","Attorneys & Legal Services","1256 Washington Street","781-762-1700",""]
 
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
