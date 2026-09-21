@@ -87,7 +87,7 @@ function render(q=''){
  if(nav) nav.hidden=false;
  if(clear) clear.hidden=true;
  if(status) status.textContent='Browse by topic below, or search in plain language.';
- root.innerHTML=topics.map(t=>{let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));return `<section class="topic-section" id="${t[0]}"><p class="eyebrow">RESOURCE TOPIC</p><h2>${t[1]} <span class="topic-count">${rows.length}</span></h2><p class="sub">${t[2]}</p><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;}).join('');
+ root.innerHTML=topics.map(t=>{let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));const open=location.hash===`#${t[0]}`?' open':'';return `<details class="topic-section topic-disclosure" id="${t[0]}"${open}><summary><span><small>RESOURCE TOPIC</small><b>${t[1]} <em class="topic-count">${rows.length}</em></b><span>${t[2]}</span></span><i aria-hidden="true">⌄</i></summary><div class="topic-disclosure-body"><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></div></details>`;}).join(''); requestAnimationFrame(()=>{const id=location.hash.slice(1);if(!id)return;const el=document.getElementById(id);if(el){el.open=true;setTimeout(()=>el.scrollIntoView({block:'start'}),0);}});
 }
 function loadResources(d){
  all=Array.isArray(d)?d:[];
@@ -99,5 +99,6 @@ input?.addEventListener('input',e=>render(e.target.value));
 input?.addEventListener('search',e=>render(e.target.value));
 form?.addEventListener('submit',e=>{e.preventDefault();render(input?.value||'');$('#resourceTopics')?.scrollIntoView({behavior:'smooth',block:'start'});});
 clear?.addEventListener('click',()=>{if(input)input.value='';render('');input?.focus();});
+window.addEventListener('hashchange',()=>{if(input?.value)return;const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el){el.open=true;el.scrollIntoView({behavior:'smooth',block:'start'});}});
 if(window.NORWOOD_RESOURCES){loadResources(window.NORWOOD_RESOURCES)}else{fetch('data/resources.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();}).then(loadResources).catch(()=>{const total=$('#resourceCount');if(total)total.textContent='Resource data could not be loaded.';});}
 })();
