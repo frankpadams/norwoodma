@@ -25,6 +25,10 @@ const topics=[
 ['business','Business & Local Economy','Business groups, downtown organizations, entrepreneurs and employment resources.',['business','chamber','downtown','center','entrepreneur','startup']]
 ];
 let all=[];
+const businesses=window.NORWOOD_BUSINESSES||[];
+const businessTopicRules={dental:/dental|orthodont/i,medical:/physical therapy|chiropractic|optometry|audiology|hearing|pharmac|medical|dental|orthodont/i,wellness:/salon|barber|beauty|massage|personal care/i,realestate:/real estate|realtor/i,kids:/childcare|preschool|swim school|martial arts/i,youth:/swim school|martial arts/i,business:/manufacturing|engineering|printing|office|financial|accounting|legal|insurance|computer/i};
+function businessesForTopic(id){const rule=businessTopicRules[id];if(!rule)return[];return businesses.filter(b=>rule.test(`${b.category||''} ${(b.tags||[]).join(' ')}`));}
+function businessResource(b){return {name:b.name,category:b.category,description:[b.address,b.phone].filter(Boolean).join(' · '),url:b.website||'',coverage:'Norwood business',_business:true};}
 const stopWords=new Set(['a','an','and','are','for','from','help','i','in','is','me','my','need','of','on','please','the','to','with']);
 const tokenAliases={
  kid:['kid','kids','child','children','family','youth'],kids:['kid','kids','child','children','family','youth'],child:['child','children','kid','kids','youth'],children:['child','children','kid','kids','youth'],
@@ -92,7 +96,7 @@ function render(q=''){
  if(nav) nav.hidden=false;
  if(clear) clear.hidden=true;
  if(status) status.textContent='Browse by topic below, or search in plain language.';
- root.innerHTML=topics.map(t=>{let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));const open=location.hash===`#${t[0]}`?' open':'';return `<details class="topic-section topic-disclosure" id="${t[0]}"${open}><summary><span><small>RESOURCE TOPIC</small><b>${t[1]} <em class="topic-count">${rows.length}</em></b><span>${t[2]}</span></span><i aria-hidden="true">⌄</i></summary><div class="topic-disclosure-body"><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></div></details>`;}).join(''); requestAnimationFrame(()=>{const id=location.hash.slice(1);if(!id)return;const el=document.getElementById(id);if(el){el.open=true;setTimeout(()=>el.scrollIntoView({block:'start'}),0);}});
+ root.innerHTML=topics.map(t=>{let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));const biz=businessesForTopic(t[0]).map(businessResource);const seen=new Set(rows.map(r=>r.name.toLowerCase()));biz.forEach(b=>{if(!seen.has(b.name.toLowerCase()))rows.push(b);});const open=location.hash===`#${t[0]}`?' open':'';return `<details class="topic-section topic-disclosure" id="${t[0]}"${open}><summary><span><small>RESOURCE TOPIC</small><b>${t[1]} <em class="topic-count">${rows.length}</em></b><span>${t[2]}</span></span><i aria-hidden="true">⌄</i></summary><div class="topic-disclosure-body"><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></div></details>`;}).join(''); requestAnimationFrame(()=>{const id=location.hash.slice(1);if(!id)return;const el=document.getElementById(id);if(el){el.open=true;setTimeout(()=>el.scrollIntoView({block:'start'}),0);}});
 }
 function loadResources(d){
  all=Array.isArray(d)?d:[];
