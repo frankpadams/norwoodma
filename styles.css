@@ -395,3 +395,19 @@ html[data-text-size] .text-size-controls{zoom:1}
 
 /* Search-result source indicators */
 .site-search-results .search-source-icon{width:15px;height:15px;object-fit:contain;vertical-align:-2px;margin-left:5px}.site-search-results .norwoodma-search-icon{border-radius:3px}
+
+
+/* Resource hub: help-first, then comprehensive topic browsing */
+.resource-start{margin:0 0 34px;padding:26px;border:1px solid #dce5ec;border-radius:18px;background:#f7fafc}
+.resource-start h2,.resource-browse h2{font-family:Georgia,serif;font-size:clamp(1.8rem,3vw,2.5rem);margin:.2rem 0 .45rem}
+.resource-start-intro,.resource-browse-intro{max-width:850px;color:var(--muted);line-height:1.55;margin:0 0 18px}
+.resource-help-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.resource-help-grid a{display:block;padding:14px;border:1px solid #dce5ec;border-radius:12px;background:#fff;text-decoration:none;color:inherit}
+.resource-help-grid a>span{font-size:1.15rem;margin-right:5px}.resource-help-grid b{color:var(--blue)}
+.resource-help-grid small{display:block;margin-top:6px;color:var(--muted);line-height:1.35}
+.resource-browse{margin:0 0 24px}.business-directory-card{border-color:#d7b54d!important;background:#fffdf4!important}
+html[data-high-contrast="true"] .resource-start,html[data-high-contrast="true"] .resource-help-grid a,html[data-high-contrast="true"] .business-directory-card{background:#050505!important;color:#fff!important;border-color:#fff!important}
+html[data-high-contrast="true"] .resource-help-grid b{color:#ffeb3b!important}
+html[data-high-contrast="true"] .resource-help-grid small,html[data-high-contrast="true"] .resource-start-intro,html[data-high-contrast="true"] .resource-browse-intro{color:#fff!important}
+@media(max-width:900px){.resource-help-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.resource-start{padding:18px}.resource-help-grid{grid-template-columns:1fr}}
