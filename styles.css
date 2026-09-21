@@ -447,3 +447,14 @@ html[data-high-contrast="true"] .topic-disclosure>summary small,html[data-high-c
 .gf-legend{display:flex;align-items:flex-start;gap:.35rem;flex-wrap:wrap}
 .gf-legend .gf-icon{width:22px;height:22px;margin:0 4px 0 0;vertical-align:middle}
 html[data-high-contrast="true"] .gf-icon{filter:grayscale(1) contrast(1.35)}
+
+/* Compact restaurant controls and guidance */
+.restaurant-tools{padding:14px 16px;gap:12px;border-radius:12px;box-shadow:none}
+.restaurant-tools>div{gap:4px}
+.restaurant-tools input,.restaurant-tools select{min-height:42px}
+.restaurant-guidance{display:grid;grid-template-columns:1.25fr 1fr;gap:0;margin:10px 0 12px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#f4f7f9;color:#53636e;font-size:12px;line-height:1.4}
+.restaurant-guidance .gf-legend,.restaurant-guidance .restaurant-note{margin:0;padding:0;background:transparent;border:0;border-radius:0}
+.restaurant-guidance .gf-legend{padding-right:14px;border-right:1px solid var(--line)}
+.restaurant-guidance .restaurant-note{padding-left:14px}
+.restaurant-summary{margin:12px 0 8px}
+@media(max-width:700px){.restaurant-guidance{grid-template-columns:1fr;gap:8px}.restaurant-guidance .gf-legend{padding:0 0 8px;border-right:0;border-bottom:1px solid var(--line)}.restaurant-guidance .restaurant-note{padding:0}.restaurant-tools{padding:12px}}
