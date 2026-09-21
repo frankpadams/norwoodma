@@ -451,6 +451,33 @@ def news_from_visible_cards(html, source_name, source_url):
         out.append({'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':summary,'localVerified':True,'discovered_by':'scheduled_visible_date'})
     return out
 
+def news_from_link_dates(html, source_name, source_url):
+    """Generic fallback for pages that put dates in link text, nearby text, or YYYY/MM/DD URLs."""
+    if not BeautifulSoup:return []
+    soup=BeautifulSoup(html,'html.parser'); out=[]
+    textual=re.compile(r'\b(?:January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|Sept|October|Oct|November|Nov|December|Dec)\s+\d{1,2},\s+20\d{2}(?:\s+\d{1,2}:\d{2}\s*(?:AM|PM))?\b',re.I)
+    numeric=re.compile(r'\b(?:0?[1-9]|1[0-2])[./-](?:0?[1-9]|[12]\d|3[01])[./-](?:20\d{2}|\d{2})\b')
+    url_date=re.compile(r'/((?:20\d{2})/(?:0[1-9]|1[0-2])/(?:0[1-9]|[12]\d|3[01]))(?:/|$)')
+    for a in soup.find_all('a',href=True):
+        title=clean_text(a.get_text(' '))
+        if len(title)<8 or len(title)>220: continue
+        href=urljoin(source_url,a.get('href'))
+        if not href.startswith(('http://','https://')): continue
+        # Prefer a date carried by the link itself or the URL; otherwise inspect a small nearby container.
+        nearby=' '.join(filter(None,[title,clean_text(a.parent.get_text(' ')) if a.parent else '']))[:800]
+        m=textual.search(nearby) or numeric.search(nearby)
+        d=parse_dt(m.group(0)) if m else None
+        if not d:
+            um=url_date.search(href)
+            if um: d=parse_dt(um.group(1).replace('/','-'))
+        if not d: continue
+        # Strip a leading date from official-town link labels while keeping the actual headline.
+        clean_title=textual.sub('',title,count=1).strip(' ·-|:')
+        clean_title=numeric.sub('',clean_title,count=1).strip(' ·-|:')
+        if len(clean_title)<8: continue
+        out.append({'source':source_name,'title':clean_title,'date':d.astimezone(TZ).isoformat(),'url':href,'summary':'','localVerified':True,'discovered_by':'scheduled_link_date'})
+    return out
+
 def summarize_article(url, fallback=''):
     """Fetch a direct publisher article and derive a short factual 2–3 sentence blurb."""
     if not url or 'news.google.com' in url: return clean_text(fallback)[:420]
@@ -528,7 +555,8 @@ def refresh_news(offline=False):
       ('Town of Norwood','https://www.norwoodma.gov/'),
       ('Norwood Community Media','https://norwoodcommunitymedia.org/'),
       ('Norwood Public Schools','https://www.norwood.k12.ma.us/about/news'),
-      ('Inside Norwood','https://insidenorwood.com/')]
+      ('Inside Norwood','https://insidenorwood.com/'),
+      ('Norwood Town News','https://www.norwoodtownnews.com/')]
     google_queries=['"norwood, ma"','"norwood ma"','norwoodma','"norwood, massachusetts"']
     items=list(old); status=[]
     if not offline:
@@ -543,7 +571,7 @@ def refresh_news(offline=False):
         except Exception as ex: status.append({'source':'Google News','url':url,'ok':False,'found':0,'method':'google_news_rss','query':q,'note':str(ex)[:180]})
       for name,url in pages:
         try:
-            html=request(url).text; got=news_from_jsonld(html,name,url); got.extend(news_from_html_cards(html,name,url)); got.extend(news_from_visible_cards(html,name,url)); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(dedupe_news(got)),'method':'jsonld+semantic_html+visible_dates'})
+            html=request(url).text; got=news_from_jsonld(html,name,url); got.extend(news_from_html_cards(html,name,url)); got.extend(news_from_visible_cards(html,name,url)); got.extend(news_from_link_dates(html,name,url)); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(dedupe_news(got)),'method':'jsonld+semantic_html+visible_dates'})
         except Exception as ex: status.append({'source':name,'url':url,'ok':False,'found':0,'method':'page_parsers','note':str(ex)[:180]})
     items=current_news(items)
     # Enrich thin cards from direct publisher pages. Discovery text is never shown as a summary.
