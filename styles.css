@@ -29,7 +29,7 @@
 :focus-visible{outline:3px solid #F2C100;outline-offset:3px}
 .hero-bg.photo{background-image:none;background-size:cover;background-position:center 54%;transition:opacity .2s ease}
 .photo-credit{position:absolute;right:10px;bottom:8px;color:#fff;background:#061f33dd;border:1px solid #ffffff66;border-radius:5px;padding:5px 8px;font-size:10px;cursor:pointer}
-.photo-info{position:absolute;right:10px;bottom:40px;z-index:4;width:min(360px,calc(100% - 20px));background:#fff;color:#153347;border-radius:8px;padding:12px 14px;box-shadow:0 8px 24px #0005;font-size:12px}.photo-info a{color:#003B71;font-weight:800}.photo-info p{margin:.35rem 0}.historical-badge{display:inline-block;background:#F2C100;color:#173447;border-radius:999px;padding:2px 7px;font-size:9px;font-weight:900;letter-spacing:.5px}
+.photo-info{position:absolute;right:10px;bottom:40px;z-index:1001;width:min(360px,calc(100% - 20px));background:#fff;color:#153347;border-radius:8px;padding:12px 14px;box-shadow:0 8px 24px #0005;font-size:12px}.photo-info a{color:#003B71;font-weight:800}.photo-info p{margin:.35rem 0}.historical-badge{display:inline-block;background:#F2C100;color:#173447;border-radius:999px;padding:2px 7px;font-size:9px;font-weight:900;letter-spacing:.5px}
 .footer-copy{flex:1;max-width:760px}.footer-copy p{margin:.25rem 0}.footer-copy strong{color:#fff}.footer-logo{flex:0 0 auto}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media(max-width:500px){.photo-info{bottom:45px}.photo-credit{font-size:9px}.footer-copy{width:100%}}
@@ -513,3 +513,7 @@ html[data-high-contrast="true"] .spinner-result-link,
 html[data-high-contrast="true"] .support-page .button,
 html[data-high-contrast="true"] .reveal-ad-phone{background:#050505!important;color:#ffeb3b!important;border:2px solid #fff!important;text-decoration:underline!important}
 html[data-high-contrast="true"] .spinner-controls select{background:#050505!important;color:#fff!important;border:2px solid #fff!important}
+
+/* Ensure hero photo attribution always opens above the search UI/results. */
+.hero:has(.photo-info:not([hidden])) .hero-copy{z-index:2}
+.hero:has(.photo-info:not([hidden])) .photo-credit,.hero:has(.photo-info:not([hidden])) .photo-info{z-index:1001}
