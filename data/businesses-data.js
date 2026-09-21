@@ -626,4 +626,8 @@ window.NORWOOD_BUSINESSES=[
   ["Premier Gymnastics Norwood","Gymnastics","","","https://www.premiergymnasticsnorwood.com/"],
   ["Town Common Books","Books & Local Shopping","","","https://www.towncommonbooks.com/"]
 
+,["School of Rock Norwood/Walpole","Music Schools & Lessons","1250 Washington St","781-352-2336","https://www.schoolofrock.com/locations/norwood"]
+,["Norwood Music Studios","Music Schools & Lessons","","","https://norwoodmusicstudios.com/"]
+,["Merry Melody Music Academy","Music Schools & Lessons","","781-929-5192","https://www.merrymelodymusicacademy.com/"]
+,["Music With Sarah","Music Schools & Lessons","95 Prospect St","603-933-9173",""]
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
