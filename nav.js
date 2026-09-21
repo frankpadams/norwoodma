@@ -1,92 +1,31 @@
 (()=>{
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
+  // Keep iOS Home Screen metadata consistent on every page that loads the shared nav.
+  let apple=document.querySelector('link[rel="apple-touch-icon"]');
+  if(!apple){apple=document.createElement('link');apple.rel='apple-touch-icon';document.head.appendChild(apple);}
+  apple.href='assets/apple-touch-icon.png?v=20260921';apple.sizes='1024x1024';
+  let appTitle=document.querySelector('meta[name="apple-mobile-web-app-title"]');
+  if(!appTitle){appTitle=document.createElement('meta');appTitle.name='apple-mobile-web-app-title';document.head.appendChild(appTitle);}
+  appTitle.content='Norwood.ma';
   const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');};
   const open=()=>{nav.classList.add('open');menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation menu');};
   menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
-  // Give mobile/iOS visitors a permanent, discoverable Home Screen option.
-  // iOS does not expose a web API that can invoke Add to Home Screen directly,
-  // so this menu item opens concise native-share instructions.
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
   if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
-    const add=document.createElement('a');
-    add.href='#';
-    add.dataset.addHomeScreen='true';
-    add.className='add-home-screen-link';
-    add.textContent='Add Norwood.ma to Home Screen';
-    add.addEventListener('click',e=>{
-      e.preventDefault(); close();
-      let dlg=document.querySelector('.add-home-screen-dialog');
-      if(dlg){dlg.remove();return;}
-      dlg=document.createElement('aside');
-      dlg.className='add-home-screen-dialog ios-home-prompt';
-      dlg.setAttribute('role','dialog');
-      dlg.setAttribute('aria-modal','true');
-      dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');
-      dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/favicon-approved.png" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';
-      document.body.appendChild(dlg);
-      const done=()=>dlg.remove();
-      dlg.querySelector('.ios-home-close').onclick=done;
-      dlg.querySelector('.ios-home-gotit').onclick=done;
-      dlg.querySelector('.ios-home-close').focus();
-    });
+    const add=document.createElement('a');add.href='#';add.dataset.addHomeScreen='true';add.className='add-home-screen-link';add.textContent='Add Norwood.ma to Home Screen';
+    add.addEventListener('click',e=>{e.preventDefault();close();let dlg=document.querySelector('.add-home-screen-dialog');if(dlg){dlg.remove();return;}dlg=document.createElement('aside');dlg.className='add-home-screen-dialog ios-home-prompt';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';document.body.appendChild(dlg);const done=()=>dlg.remove();dlg.querySelector('.ios-home-close').onclick=done;dlg.querySelector('.ios-home-gotit').onclick=done;dlg.querySelector('.ios-home-close').focus();});
     nav.appendChild(add);
   }
   nav.querySelectorAll('a:not([data-add-home-screen])').forEach(a=>a.addEventListener('click',close));
   document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==menu)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
   window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
-
-  const root=document.documentElement;
-  const saved=localStorage.getItem('norwood-text-size')||'standard';
-  root.dataset.textSize=saved;
-  const contrast=localStorage.getItem('norwood-high-contrast')==='true';
-  root.dataset.highContrast=String(contrast);
-
-  const ctl=document.createElement('div');
-  ctl.className='text-size-controls accessibility-controls';
-  ctl.setAttribute('aria-label','Accessibility display controls');
-  ctl.innerHTML='<span class="sr-only">Display settings</span><button type="button" data-size="compact" aria-label="Smaller text">A−</button><button type="button" data-size="standard" aria-label="Standard text">A</button><button type="button" data-size="large" aria-label="Larger text">A+</button><button type="button" data-contrast aria-label="Toggle high contrast">◐ <span>Contrast</span></button>';
-  document.body.appendChild(ctl);
-
-  const sync=()=>{
-    ctl.querySelectorAll('button[data-size]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.size===(root.dataset.textSize||'standard'))));
-    const cb=ctl.querySelector('[data-contrast]');
-    if(cb)cb.setAttribute('aria-pressed',String(root.dataset.highContrast==='true'));
-  };
-  ctl.addEventListener('click',e=>{
-    const b=e.target.closest('button');
-    if(!b)return;
-    if(b.dataset.size){root.dataset.textSize=b.dataset.size;localStorage.setItem('norwood-text-size',b.dataset.size);}
-    if(b.hasAttribute('data-contrast')){const next=root.dataset.highContrast!=='true';root.dataset.highContrast=String(next);localStorage.setItem('norwood-high-contrast',String(next));}
-    sync();
-  });
-  sync();
-
-  // Always-visible deployment marker: makes it easy to confirm which public build is loaded.
-  const footer=document.querySelector('footer');
-  if(footer){
-    const meta=document.createElement('p');
-    meta.className='footer-build-meta';
-    meta.setAttribute('aria-label','Site version and copyright');
-    meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.4.0';
-    footer.appendChild(meta);
-  }
+  const root=document.documentElement;const saved=localStorage.getItem('norwood-text-size')||'standard';root.dataset.textSize=saved;const contrast=localStorage.getItem('norwood-high-contrast')==='true';root.dataset.highContrast=String(contrast);
+  const ctl=document.createElement('div');ctl.className='text-size-controls accessibility-controls';ctl.setAttribute('aria-label','Accessibility display controls');ctl.innerHTML='<span class="sr-only">Display settings</span><button type="button" data-size="compact" aria-label="Smaller text">A−</button><button type="button" data-size="standard" aria-label="Standard text">A</button><button type="button" data-size="large" aria-label="Larger text">A+</button><button type="button" data-contrast aria-label="Toggle high contrast">◐ <span>Contrast</span></button>';document.body.appendChild(ctl);
+  const sync=()=>{ctl.querySelectorAll('button[data-size]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.size===(root.dataset.textSize||'standard'))));const cb=ctl.querySelector('[data-contrast]');if(cb)cb.setAttribute('aria-pressed',String(root.dataset.highContrast==='true'));};
+  ctl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.size){root.dataset.textSize=b.dataset.size;localStorage.setItem('norwood-text-size',b.dataset.size);}if(b.hasAttribute('data-contrast')){const next=root.dataset.highContrast!=='true';root.dataset.highContrast=String(next);localStorage.setItem('norwood-high-contrast',String(next));}sync();});sync();
+  const footer=document.querySelector('footer');if(footer){const meta=document.createElement('p');meta.className='footer-build-meta';meta.setAttribute('aria-label','Site version and copyright');meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.4.1';footer.appendChild(meta);}
 })();
-(function iosHomePrompt(){
- try{
-  const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
-  const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
-  if(!ios||standalone||localStorage.getItem('norwood-ios-home-dismissed'))return;
-  const today=new Date().toISOString().slice(0,10),last=localStorage.getItem('norwood-ios-last-visit');
-  let visits=Number(localStorage.getItem('norwood-ios-visits')||0);
-  if(last!==today){visits++;localStorage.setItem('norwood-ios-visits',String(visits));localStorage.setItem('norwood-ios-last-visit',today)}
-  if(visits<3)return;
-  const el=document.createElement('aside');el.className='ios-home-prompt';el.setAttribute('role','dialog');el.setAttribute('aria-label','Add Norwood.ma to your Home Screen');
-  el.innerHTML='<button class="ios-home-close" aria-label="Dismiss">×</button><img src="assets/favicon-approved.png" alt=""><div><strong>Keep Norwood.ma handy</strong><p>Add Norwood.ma to your Home Screen for quick access. Tap <b>Share</b> ↑ and choose <b>Add to Home Screen</b>.</p><button class="ios-home-gotit">Got it</button><button class="ios-home-later">Not now</button></div>';
-  document.body.appendChild(el);
-  const dismiss=()=>{localStorage.setItem('norwood-ios-home-dismissed','1');el.remove()};el.querySelector('.ios-home-close').onclick=dismiss;el.querySelector('.ios-home-gotit').onclick=dismiss;
-  el.querySelector('.ios-home-later').onclick=()=>{localStorage.setItem('norwood-ios-visits','0');localStorage.setItem('norwood-ios-last-visit',today);el.remove()};
- }catch(e){}
-})();
+(function iosHomePrompt(){try{const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;if(!ios||standalone||localStorage.getItem('norwood-ios-home-dismissed'))return;const today=new Date().toISOString().slice(0,10),last=localStorage.getItem('norwood-ios-last-visit');let visits=Number(localStorage.getItem('norwood-ios-visits')||0);if(last!==today){visits++;localStorage.setItem('norwood-ios-visits',String(visits));localStorage.setItem('norwood-ios-last-visit',today)}if(visits<3)return;const el=document.createElement('aside');el.className='ios-home-prompt';el.setAttribute('role','dialog');el.setAttribute('aria-label','Add Norwood.ma to your Home Screen');el.innerHTML='<button class="ios-home-close" aria-label="Dismiss">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt=""><div><strong>Keep Norwood.ma handy</strong><p>Add Norwood.ma to your Home Screen for quick access. Tap <b>Share</b> ↑ and choose <b>Add to Home Screen</b>.</p><button class="ios-home-gotit">Got it</button><button class="ios-home-later">Not now</button></div>';document.body.appendChild(el);const dismiss=()=>{localStorage.setItem('norwood-ios-home-dismissed','1');el.remove()};el.querySelector('.ios-home-close').onclick=dismiss;el.querySelector('.ios-home-gotit').onclick=dismiss;el.querySelector('.ios-home-later').onclick=()=>{localStorage.setItem('norwood-ios-visits','0');localStorage.setItem('norwood-ios-last-visit',today);el.remove()};}catch(e){}})();
