@@ -34,4 +34,18 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/ feeds/
           git commit -m "data: automated content refresh"
-          git push
+
+          # The site may be edited while this job is refreshing content. Rebase
+          # the generated data commit onto the latest main branch before pushing
+          # so a concurrent website edit does not cause a non-fast-forward failure.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Push raced with another update; retrying ($attempt/3)..."
+            sleep $((attempt * 2))
+          done
+          echo "Unable to publish refreshed content after 3 attempts."
+          exit 1
