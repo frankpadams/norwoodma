@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T14:58:48.681668-04:00",
+  "generated_at": "2026-09-21T15:34:23.003059-04:00",
   "offline": false,
   "events_published": 116,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 116,
-      "generated_at": "2026-09-21T14:58:48.675741-04:00"
+      "generated_at": "2026-09-21T15:34:22.996778-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-21T14:58:48.676703-04:00"
+      "generated_at": "2026-09-21T15:34:22.997805-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 16,
-      "generated_at": "2026-09-21T14:58:48.677599-04:00"
+      "generated_at": "2026-09-21T15:34:22.998746-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-21T14:58:48.678374-04:00"
+      "generated_at": "2026-09-21T15:34:22.999521-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-21T14:58:48.678977-04:00"
+      "generated_at": "2026-09-21T15:34:23.000166-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 5,
-      "generated_at": "2026-09-21T14:58:48.679617-04:00"
+      "generated_at": "2026-09-21T15:34:23.000853-04:00"
     }
   ],
   "event_sources": [
@@ -78,10 +78,10 @@
     },
     {
       "source_id": "elks-calendar",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "HTTPSConnectionPool(host='www.elks.org', port=443): Max retries exceeded with url: /lodges/lodgeCalendar.cfm?lodgenumber=1124 (Caused by ConnectTimeoutError(<HTTPSConnection(host='"
     },
     {
       "source_id": "emerald-city-plant-shop",
@@ -225,10 +225,10 @@
     },
     {
       "source_id": "norwood-town-news",
-      "ok": true,
+      "ok": false,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
     },
     {
       "source_id": "nps-callahan-pta",
@@ -365,10 +365,10 @@
     },
     {
       "source_id": "town-community-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/residents/holidays_and_community_events/index.php"
     },
     {
       "source_id": "town-conservation",
@@ -386,10 +386,10 @@
     },
     {
       "source_id": "town-farmers-market",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/government/committees_boards/sustainability_commission/farmers_market.php"
     },
     {
       "source_id": "town-fire-page",
@@ -435,10 +435,10 @@
     },
     {
       "source_id": "vfw-discovery",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
     },
     {
       "source_id": "washington-no7-events",
@@ -456,17 +456,17 @@
     },
     {
       "source_id": "norwood-veterans-services",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/veterans_services/index.php"
     },
     {
       "source_id": "norwood-summer-concerts",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/"
     },
     {
       "source_id": "norwood-youth-fundraisers",
@@ -518,7 +518,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 70,
+      "found": 69,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -526,7 +526,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 70,
+      "found": 69,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -534,7 +534,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 41,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -563,9 +563,10 @@
     {
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
-      "ok": true,
-      "found": 17,
-      "method": "jsonld+semantic_html+visible_dates"
+      "ok": false,
+      "found": 0,
+      "method": "page_parsers",
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/"
     },
     {
       "source": "Norwood Community Media",
@@ -592,9 +593,10 @@
     {
       "source": "Norwood Town News",
       "url": "https://www.norwoodtownnews.com/",
-      "ok": true,
-      "found": 14,
-      "method": "jsonld+semantic_html+visible_dates"
+      "ok": false,
+      "found": 0,
+      "method": "page_parsers",
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
     },
     {
       "source": "queue_health",
