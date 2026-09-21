@@ -2,8 +2,11 @@ name: Refresh Norwood.ma content
 
 on:
   schedule:
-    # Every two hours. Minute 17 avoids top-of-hour GitHub Actions congestion.
+    # Primary refresh every two hours. Minute 17 avoids top-of-hour congestion.
     - cron: '17 */2 * * *'
+    # Backup 30 minutes later. It exits immediately when the primary run already
+    # published fresh content, but catches a dropped/delayed primary schedule.
+    - cron: '47 */2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -18,13 +21,55 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check whether backup refresh is needed
+        id: freshness
+        shell: bash
+        run: |
+          # Manual runs and the :17 primary schedule always execute.
+          if [[ "${{ github.event_name }}" != "schedule" || "${{ github.event.schedule }}" != "47 */2 * * *" ]]; then
+            echo "run_refresh=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # The :47 schedule is a watchdog. If refresh-status.json was generated
+          # recently, the :17 run worked and there is nothing to do.
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          p = Path("data/refresh-status.json")
+          needed = True
+          if p.exists():
+              try:
+                  stamp = json.loads(p.read_text()).get("generated_at")
+                  if stamp:
+                      age = datetime.now(timezone.utc) - datetime.fromisoformat(stamp).astimezone(timezone.utc)
+                      needed = age.total_seconds() > 45 * 60
+              except Exception:
+                  needed = True
+
+          with open(__import__("os").environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"run_refresh={'true' if needed else 'false'}\n")
+          print("Backup refresh needed." if needed else "Primary refresh is fresh; backup exits.")
+          PY
+
       - uses: actions/setup-python@v5
+        if: steps.freshness.outputs.run_refresh == 'true'
         with:
           python-version: '3.12'
-      - run: pip install -r requirements-automation.txt
+
+      - name: Install automation dependencies
+        if: steps.freshness.outputs.run_refresh == 'true'
+        run: pip install -r requirements-automation.txt
+
       - name: Refresh events and news
+        if: steps.freshness.outputs.run_refresh == 'true'
         run: python scripts/refresh_content.py
+
       - name: Commit changed data
+        if: steps.freshness.outputs.run_refresh == 'true'
         run: |
           if git diff --quiet -- data/ feeds/; then
             echo "No content changes."
