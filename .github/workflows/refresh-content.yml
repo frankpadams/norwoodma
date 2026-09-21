@@ -1,6 +1,10 @@
 name: Refresh Norwood.ma content
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-content.yml'
   schedule:
     # Primary refresh every two hours. Minute 17 avoids top-of-hour congestion.
     - cron: '17 */2 * * *'
@@ -21,6 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Check whether backup refresh is needed
         id: freshness
@@ -68,29 +75,35 @@ jobs:
         if: steps.freshness.outputs.run_refresh == 'true'
         run: python scripts/refresh_content.py
 
-      - name: Commit changed data
+      - name: Publish refreshed data onto latest main
         if: steps.freshness.outputs.run_refresh == 'true'
+        shell: bash
         run: |
           if git diff --quiet -- data/ feeds/; then
             echo "No content changes."
             exit 0
           fi
+
+          # Preserve the freshly generated files, then move onto the newest main.
+          # This avoids rebase conflicts when site/code edits land while refresh runs.
+          rm -rf /tmp/norwood-refresh
+          mkdir -p /tmp/norwood-refresh
+          cp -a data /tmp/norwood-refresh/data
+          cp -a feeds /tmp/norwood-refresh/feeds
+
+          git fetch origin main
+          git reset --hard origin/main
+          rm -rf data feeds
+          cp -a /tmp/norwood-refresh/data ./data
+          cp -a /tmp/norwood-refresh/feeds ./feeds
+
+          if git diff --quiet -- data/ feeds/; then
+            echo "Latest main already has this refreshed content."
+            exit 0
+          fi
+
           git config user.name "norwood-ma-content-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/ feeds/
           git commit -m "data: automated content refresh"
-
-          # The site may be edited while this job is refreshing content. Rebase
-          # the generated data commit onto the latest main branch before pushing
-          # so a concurrent website edit does not cause a non-fast-forward failure.
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-            echo "Push raced with another update; retrying ($attempt/3)..."
-            sleep $((attempt * 2))
-          done
-          echo "Unable to publish refreshed content after 3 attempts."
-          exit 1
+          git push origin HEAD:main
