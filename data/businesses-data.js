@@ -603,5 +603,11 @@ window.NORWOOD_BUSINESSES=[
   ["PC Overhaul","Computer Repair & Data Recovery","311 Nahatan Street","781-269-1569","https://pcoverhaul.com/"],
   ["NextHome Signature Realty","Real Estate","83 Morse Street, Unit 8Y","781-603-6835","https://www.nexthomesignaturerealty.com/"],
   ["Cedars Landscaping","Landscaping & Landscape Design","31 Short Street","617-510-3727","https://cedarslandscaping.com/"]
+,
+  ["Norwood Animal Hospital","Veterinary & Animal Hospitals","437 Walpole Street","781-769-3011","https://www.thrivepetcare.com/locations/massachusetts/norwood/norwood-animal-hospital"],
+  ["Precision Paws Dog Grooming","Pet Grooming","607 Washington Street","617-580-0720",""],
+  ["The Soggie Doggie","Pet Grooming","1159 Washington Street","781-352-3509","https://thesoggiedoggie.com/"],
+  ["Dirty Dawg Wash, Inc.","Pet Grooming & Self-Serve Dog Wash","1 Wilson Street","781-762-8822","https://dirtydawgwash.com/"],
+  ["Wags N' Whiskers Pet Grooming","Pet Grooming","164 Walpole Street","781-762-8111",""]
 
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
