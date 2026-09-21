@@ -23,7 +23,7 @@ async function rotatingHero(){
 }
 rotatingHero();
 
-const NEWS_BLOCK_PATTERNS=[/\bsponsored\b/i,/\badvertorial\b/i,/\bpartner content\b/i,/\bpaid content\b/i,/\bshopping\b/i,/\bcoupon(s)?\b/i,/\bpromo code\b/i,/\baffiliate\b/i,/\bbest prices?\b/i,/\bdeal(s)? of the day\b/i];
+const NEWS_BLOCK_PATTERNS=[/\bsponsored\b/i,/\badvertorial\b/i,/\bpartner content\b/i,/\bpaid content\b/i,/\bshopping\b/i,/\bcoupon(s)?\b/i,/\bpromo code\b/i,/\baffiliate\b/i,/\bbest prices?\b/i,/\bdeal(s)? of the day\b/i,/\brealtor\.com\b/i,/\bzillow\b/i,/\bredfin\b/i,/\btrulia\b/i,/^posts pagination$/i];
 const OTHER_NORWOODS=[/Norwood,?\s*(Ohio|OH|New Jersey|NJ|Pennsylvania|PA|Colorado|CO|North Carolina|NC|New York|NY|Georgia|GA|Louisiana|LA|Missouri|MO)/i];
 const LOCAL_SIGNALS=/Norwood,?\s*(Massachusetts|Mass\.?|MA)\b|Norfolk County|Norwood (Public Schools|Light|Hospital|Central|Depot|Memorial Airport|Record)|Morrill Memorial Library|Washington Street|Route 1\b/i;
 function newsQuality(x){
@@ -43,7 +43,7 @@ async function weather(){
 function renderNews(items){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
- let clean=(items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok||!String(x.summary||'').trim())return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>new Date(b.date)-new Date(a.date));
+ let clean=(items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>new Date(b.date)-new Date(a.date));
  // Use the smallest recent window that supplies a useful current-news set. The deeper queue remains available as resilience, not filler.
  const windows=[7,14,21,30,45,60,90,120], target=20; let selected=[], selectedDays=120;
  for(const days of windows){const cutoff=now-days*day, candidate=clean.filter(x=>Date.parse(x.date)>=cutoff);selected=candidate;selectedDays=days;if(candidate.length>=target)break;}
