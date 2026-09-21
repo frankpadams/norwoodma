@@ -1,0 +1,65 @@
+name: Build iOS Home Screen icon
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-ios-icon.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Apple touch icon from approved favicon
+        run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image
+          from collections import Counter
+          from pathlib import Path
+
+          src=Image.open("assets/favicon-approved.png").convert("RGBA")
+          px=src.load()
+          # The approved source has a white outer perimeter. Find the exact
+          # bounding rectangle of the existing artwork without redrawing it.
+          points=[]
+          for y in range(src.height):
+              for x in range(src.width):
+                  r,g,b,a=px[x,y]
+                  if a > 8 and not (r >= 245 and g >= 245 and b >= 245):
+                      points.append((x,y))
+          if not points:
+              raise SystemExit("No artwork found")
+          l=min(x for x,y in points); r=max(x for x,y in points)+1
+          t=min(y for x,y in points); b=max(y for x,y in points)+1
+          art=src.crop((l,t,r,b))
+
+          # Preserve aspect ratio. Make a square using the favicon's dominant
+          # edge/background color, then scale once to Apple's 1024px source size.
+          edge=[]
+          for x in range(art.width):
+              edge += [art.getpixel((x,0)), art.getpixel((x,art.height-1))]
+          for y in range(art.height):
+              edge += [art.getpixel((0,y)), art.getpixel((art.width-1,y))]
+          opaque=[p for p in edge if p[3] > 200 and not (p[0]>240 and p[1]>240 and p[2]>240)]
+          blue=Counter(opaque).most_common(1)[0][0] if opaque else (0,59,113,255)
+          side=max(art.size)
+          square=Image.new("RGBA",(side,side),blue)
+          square.alpha_composite(art,((side-art.width)//2,(side-art.height)//2))
+          square=square.resize((1024,1024),Image.Resampling.LANCZOS)
+          # Guarantee no transparent/white perimeter: iOS supplies the rounded mask.
+          out=Image.new("RGBA",square.size,blue)
+          out.alpha_composite(square)
+          out.convert("RGB").save("assets/apple-touch-icon.png","PNG",optimize=True)
+          print("source",src.size,"art bbox",(l,t,r,b),"art",art.size,"background",blue)
+          PY
+      - name: Commit generated icon
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/apple-touch-icon.png
+          git diff --cached --quiet && exit 0
+          git commit -m "Add edge-to-edge iPhone Home Screen icon"
+          git push
