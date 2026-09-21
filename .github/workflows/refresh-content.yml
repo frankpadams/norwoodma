@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/refresh-content.yml'
+      - 'scripts/refresh_content.py'
   schedule:
     # Primary refresh every two hours. Minute 17 avoids top-of-hour congestion.
     - cron: '17 */2 * * *'
