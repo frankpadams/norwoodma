@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T14:50:50.421713-04:00",
+  "generated_at": "2026-09-21T14:58:48.681668-04:00",
   "offline": false,
   "events_published": 116,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 116,
-      "generated_at": "2026-09-21T14:50:50.415641-04:00"
+      "generated_at": "2026-09-21T14:58:48.675741-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-21T14:50:50.416616-04:00"
+      "generated_at": "2026-09-21T14:58:48.676703-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 16,
-      "generated_at": "2026-09-21T14:50:50.417529-04:00"
+      "generated_at": "2026-09-21T14:58:48.677599-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-21T14:50:50.418286-04:00"
+      "generated_at": "2026-09-21T14:58:48.678374-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-21T14:50:50.418886-04:00"
+      "generated_at": "2026-09-21T14:58:48.678977-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 5,
-      "generated_at": "2026-09-21T14:50:50.419576-04:00"
+      "generated_at": "2026-09-21T14:58:48.679617-04:00"
     }
   ],
   "event_sources": [
@@ -518,7 +518,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 69,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -526,7 +526,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 69,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -534,7 +534,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 40,
+      "found": 41,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -557,7 +557,7 @@
       "source": "The Norwood Record — Latest",
       "url": "https://www.norwoodrecord.com/latest",
       "ok": true,
-      "found": 32,
+      "found": 31,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -593,7 +593,7 @@
       "source": "Norwood Town News",
       "url": "https://www.norwoodtownnews.com/",
       "ok": true,
-      "found": 18,
+      "found": 14,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -607,40 +607,28 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 30,
+      "found": 18,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
-        "Patch": 3,
+        "Patch": 6,
         "Realtor.com": 1,
         "hoodline.com": 2,
-        "Hoodline": 2,
-        "Wicked Local": 2,
-        "wickedlocal.com": 2,
-        "MetroWest Daily News": 1,
-        "metrowestdailynews.com": 1,
-        "Legacy obituary": 6,
-        "The Norwood Record": 26,
-        "The Norwood Record — Latest": 12,
+        "Wicked Local": 1,
+        "The Norwood Record": 52,
+        "The Norwood Record — Latest": 11,
         "CBS News": 1,
-        "cbsnews.com": 1,
         "MaxPreps": 2,
-        "maxpreps.com": 1,
-        "Kraw-Kornack Funeral Home": 6,
-        "kraw-kornackfuneralhome.com": 5,
-        "Inside Norwood": 10,
+        "Inside Norwood": 13,
         "Boston.com": 2,
         "Norwood Public Schools": 1,
         "REBusinessOnline": 1,
-        "rebusinessonline.com": 1,
         "U.S. Figure Skating": 1,
-        "usfigureskating.org": 1,
-        "Dignity Memorial": 6,
-        "Town of Norwood": 5,
-        "patch.com": 1,
-        "Norwood Town News": 15,
-        "CurrentObituary.com": 1,
-        "NBC Boston": 1
+        "Town of Norwood": 8,
+        "Norwood Town News": 11,
+        "NBC Boston": 3,
+        "John Guilfoil Public Relations": 3,
+        "WCVB": 1
       },
       "note": null
     }
