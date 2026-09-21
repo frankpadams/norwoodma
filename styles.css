@@ -411,3 +411,21 @@ html[data-high-contrast="true"] .resource-help-grid b{color:#ffeb3b!important}
 html[data-high-contrast="true"] .resource-help-grid small,html[data-high-contrast="true"] .resource-start-intro,html[data-high-contrast="true"] .resource-browse-intro{color:#fff!important}
 @media(max-width:900px){.resource-help-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.resource-start{padding:18px}.resource-help-grid{grid-template-columns:1fr}}
+
+
+/* Resource topic disclosures: keep the long directory visually consistent and scannable. */
+.topic-disclosure{display:block;margin:12px 0;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;scroll-margin-top:110px}
+.topic-disclosure>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 18px;cursor:pointer}
+.topic-disclosure>summary::-webkit-details-marker{display:none}
+.topic-disclosure>summary>span{display:grid;gap:4px}
+.topic-disclosure>summary small{font-size:.62rem;font-weight:900;letter-spacing:.12em;color:#a36b00}
+.topic-disclosure>summary b{font-size:1.05rem;color:var(--blue)}
+.topic-disclosure>summary b em{font-style:normal;font-size:.68rem;margin-left:5px;padding:2px 6px;border-radius:999px;background:#edf3f7;color:#526b7c}
+.topic-disclosure>summary span>span{font-size:.84rem;color:var(--muted)}
+.topic-disclosure>summary>i{font-style:normal;font-size:1.3rem;transition:transform .15s ease}
+.topic-disclosure[open]>summary>i{transform:rotate(180deg)}
+.topic-disclosure[open]>summary{border-bottom:1px solid var(--line);background:#f8fafb}
+.topic-disclosure-body{padding:14px}
+html[data-high-contrast="true"] .topic-disclosure,html[data-high-contrast="true"] .topic-disclosure[open]>summary{background:#050505!important;color:#fff!important;border-color:#fff!important}
+html[data-high-contrast="true"] .topic-disclosure>summary b{color:#ffeb3b!important}
+html[data-high-contrast="true"] .topic-disclosure>summary small,html[data-high-contrast="true"] .topic-disclosure>summary span>span{color:#fff!important}
