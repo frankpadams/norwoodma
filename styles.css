@@ -530,3 +530,16 @@ html[data-high-contrast="true"] .spinner-controls select{background:#050505!impo
 
 /* v0.13.4.8 — hamburger-only links are absent from layout until menu opens */
 #nav .hamburger-only-support[hidden]{display:none!important}
+
+
+/* Trash & recycling — compact utility layout */
+.trash-hero-compact{padding-top:24px!important;padding-bottom:24px!important}
+.trash-hero-compact h1{font-size:clamp(1.9rem,3.5vw,2.8rem)!important;line-height:1.08;margin:.2rem 0 .55rem}
+.trash-top-tools{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.trash-tool-card{display:block;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);text-decoration:none}
+.trash-tool-card h2{font-size:1.18rem;margin:0 0 10px;color:var(--blue)}
+.trash-tool-card p{margin:.45rem 0}
+.trash-calendar-card{display:flex;flex-direction:column;justify-content:center}
+.trash-helpful-top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 20px}
+.trash-helpful-top a{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;text-decoration:none;font-size:.88rem}
+@media(max-width:700px){.trash-top-tools{grid-template-columns:1fr}.trash-helpful-top{grid-template-columns:1fr}.trash-hero-compact{padding-top:18px!important;padding-bottom:18px!important}.trash-hero-compact h1{font-size:1.85rem!important}}
