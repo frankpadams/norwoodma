@@ -478,3 +478,38 @@ html[data-high-contrast="true"] .gf-icon{filter:grayscale(1) contrast(1.35)}
 .support-option h3{margin:.2rem 0 .45rem;color:var(--blue);font-family:Georgia,serif;font-size:1.35rem}
 .ad-phone-output{margin:.75rem 0 0;font-weight:800}.ad-phone-output a{color:var(--blue)}
 @media(max-width:720px){.support-options{grid-template-columns:1fr}}
+
+/* High-contrast coverage: Food & Drink + Support */
+html[data-high-contrast="true"] .page-hero,
+html[data-high-contrast="true"] .dinner-spinner,
+html[data-high-contrast="true"] .spinner-stage,
+html[data-high-contrast="true"] .restaurant-card,
+html[data-high-contrast="true"] .restaurant-list article,
+html[data-high-contrast="true"] .restaurant-ad-slot,
+html[data-high-contrast="true"] .gf-legend,
+html[data-high-contrast="true"] .support-content,
+html[data-high-contrast="true"] .support-option,
+html[data-high-contrast="true"] .support-disclosure{background:#050505!important;background-image:none!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important}
+html[data-high-contrast="true"] .restaurant-ad-slot,
+html[data-high-contrast="true"] .support-option,
+html[data-high-contrast="true"] .support-disclosure{border-width:2px!important}
+html[data-high-contrast="true"] .restaurant-name h3,
+html[data-high-contrast="true"] .restaurant-name h3 a,
+html[data-high-contrast="true"] .spinner-result h3,
+html[data-high-contrast="true"] .support-option h3,
+html[data-high-contrast="true"] .support-payment-card h3,
+html[data-high-contrast="true"] .ad-slot-mark,
+html[data-high-contrast="true"] .ad-rail-label,
+html[data-high-contrast="true"] .eyebrow{color:#ffeb3b!important}
+html[data-high-contrast="true"] .spinner-wheel{background:#050505!important;background-image:none!important;color:#fff!important;border:8px solid #fff!important;outline:3px solid #ffeb3b!important;box-shadow:none!important}
+html[data-high-contrast="true"] .gf-icon{filter:none!important;background:#fff!important;border-radius:50%}
+html[data-high-contrast="true"] .restaurant-ad-slot small,
+html[data-high-contrast="true"] .restaurant-ad-slot strong,
+html[data-high-contrast="true"] .spinner-subtitle,
+html[data-high-contrast="true"] .support-option small{color:#fff!important}
+html[data-high-contrast="true"] .spinner-actions button,
+html[data-high-contrast="true"] .spinner-result button,
+html[data-high-contrast="true"] .spinner-result-link,
+html[data-high-contrast="true"] .support-page .button,
+html[data-high-contrast="true"] .reveal-ad-phone{background:#050505!important;color:#ffeb3b!important;border:2px solid #fff!important;text-decoration:underline!important}
+html[data-high-contrast="true"] .spinner-controls select{background:#050505!important;color:#fff!important;border:2px solid #fff!important}
