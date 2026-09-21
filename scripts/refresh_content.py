@@ -511,21 +511,227 @@ def parse_google_news_rss(xml_text, query):
         out.append({'source':source,'title':title,'date':d.astimezone(TZ).isoformat(),'url':link,'summary':'','localVerified':True,'discovered_by':'scheduled_google_news','discovery_query':query})
     return out
 
+def canonical_news_title(title):
+    """Normalize publisher suffixes/casing/punctuation so syndicated copies collapse."""
+    s=clean_text(title).lower()
+    # Google News commonly appends the publisher after a final dash.
+    s=re.sub(r'\s+[\-–—]\s+[^\-–—]{2,60}def current_news(items):
+    # Keep a deep local-news queue so the dedicated News page is useful even during
+    # quiet weeks. New material is fetched automatically; older items age out after
+    # 120 days rather than being capped to a 30-day window.
+    cutoff=now_local()-timedelta(days=120); latest=now_local()+timedelta(days=1)
+    out=[]
+    for x in items:
+        d=parse_dt(x.get('date'))
+        if not d: continue
+        d=d.astimezone(TZ)
+        if cutoff <= d <= latest: out.append(x)
+    return dedupe_news(out)[:120]
+
+def refresh_news(offline=False):
+    old=read_json('news.json',[])
+    # Explicit source endpoints are kept separate from browser code; failures are harmless.
+    feeds=[
+      ('Norwood Public Schools','https://www.norwood.k12.ma.us/about/news/feed/rss'),
+      ('Inside Norwood','https://insidenorwood.com/feed/'),
+      ('Norwood Community Media','https://norwoodcommunitymedia.org/feed/'),
+      ('Friends of Norwood Center','https://www.norwoodcenter.org/feed/'),
+      ('Norwood Town News','https://www.norwoodtownnews.com/feed/')]
+    pages=[
+      ('The Norwood Record','https://www.norwoodrecord.com/news'),
+      ('The Norwood Record — Latest','https://www.norwoodrecord.com/latest'),
+      ('Town of Norwood','https://www.norwoodma.gov/'),
+      ('Norwood Community Media','https://norwoodcommunitymedia.org/'),
+      ('Norwood Public Schools','https://www.norwood.k12.ma.us/about/news'),
+      ('Inside Norwood','https://insidenorwood.com/'),
+      ('Norwood Town News','https://www.norwoodtownnews.com/')]
+    google_queries=['"norwood, ma"','"norwood ma"','norwoodma','"norwood, massachusetts"']
+    items=list(old); status=[]
+    if not offline:
+      for name,url in feeds:
+        try:
+            got=parse_rss(request(url).text,name); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(got),'method':'rss'})
+        except Exception as ex: status.append({'source':name,'url':url,'ok':False,'found':0,'method':'rss','note':str(ex)[:180]})
+      for q in google_queries:
+        url=f"https://news.google.com/rss/search?q={quote(q+' when:90d')}&hl=en-US&gl=US&ceid=US:en"
+        try:
+            got=parse_google_news_rss(request(url).text,q); items.extend(got); status.append({'source':'Google News','url':url,'ok':True,'found':len(got),'method':'google_news_rss','query':q})
+        except Exception as ex: status.append({'source':'Google News','url':url,'ok':False,'found':0,'method':'google_news_rss','query':q,'note':str(ex)[:180]})
+      for name,url in pages:
+        try:
+            html=request(url).text; got=news_from_jsonld(html,name,url); got.extend(news_from_html_cards(html,name,url)); got.extend(news_from_visible_cards(html,name,url)); got.extend(news_from_link_dates(html,name,url)); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(dedupe_news(got)),'method':'jsonld+semantic_html+visible_dates'})
+        except Exception as ex: status.append({'source':name,'url':url,'ok':False,'found':0,'method':'page_parsers','note':str(ex)[:180]})
+    items=current_news(items)
+    # Enrich thin cards from direct publisher pages. Discovery text is never shown as a summary.
+    for x in items:
+        s=clean_text(x.get('summary'))
+        if not s or s.startswith('Discovered through Google News'):
+            x['summary']=summarize_article(x.get('url'), '')
+        elif len(s)<70 and 'news.google.com' not in x.get('url',''):
+            x['summary']=summarize_article(x.get('url'), s)
+    
+    source_counts={}
+    for x in items: source_counts[x.get('source','Unknown')]=source_counts.get(x.get('source','Unknown'),0)+1
+    diversity_ok=len(source_counts)>=4 and (max(source_counts.values())/max(1,len(items)))<=0.85
+    status.append({'source':'queue_health','ok':len(items)>=50,'found':len(items),'method':'minimum_queue_check','target':50,'note':None if len(items)>=50 else 'Fewer than 50 current items were discoverable; updater preserves real items only and never fabricates filler.'})
+    status.append({'source':'source_diversity_health','ok':diversity_ok,'found':len(source_counts),'method':'source_diversity_check','target_sources':4,'source_counts':source_counts,'note':None if diversity_ok else 'News queue is too concentrated in one publisher; discovery should continue rather than treating volume alone as healthy.'})
+    for x in items: x['localVerified']=bool(x.get('localVerified',True))
+    write_json('news.json',items); write_js('news-data.js','NORWOOD_NEWS',items)
+    return items,status
+
+def coverage(registry):
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}
+    active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
+    attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
+    discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
+    other=[x for x in active if x not in attempted and x not in discovery]
+    return {'generated_at':now_local().isoformat(),'active_event_sources':len(active),'programmatically_checked_each_run':len(attempted),'search_discovery_sources_requiring_search_provider':len(discovery),'other_manual_or_special_adapter_sources':len(other),'note':'Programmatically checked means the updater attempts the source. Some HTML sources may expose no machine-readable events until a source-specific adapter is added.'}
+
+
+def ics_escape(value):
+    return str(value or '').replace('\\','\\\\').replace('\n','\\n').replace(',','\\,').replace(';','\\;')
+
+def ics_stamp():
+    return datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+
+def event_matches_selector(e, selector):
+    selector=selector or {}
+    if selector.get('all'): return True
+    cat=str(e.get('category') or '').lower()
+    text=' '.join(str(e.get(k) or '') for k in ('title','notes','venue','category')).lower()
+    if cat in [str(x).lower() for x in selector.get('categories',[])]: return True
+    if any(str(x).lower() in cat for x in selector.get('category_contains',[])): return True
+    if any(str(x).lower() in text for x in selector.get('keywords',[])): return True
+    return False
+
+def event_ics_lines(e):
+    start=e.get('start') or {}; end=e.get('end') or {}; sd=start.get('date')
+    if not sd: return []
+    uid=f"{e.get('id') or event_id(e.get('title','event'),sd,e.get('venue',''))}@norwood.ma"
+    lines=['BEGIN:VEVENT',f'UID:{ics_escape(uid)}',f'DTSTAMP:{ics_stamp()}']
+    if not start.get('time'):
+        lines.append(f"DTSTART;VALUE=DATE:{sd.replace('-','')}")
+        ed=end.get('date') or sd
+        try: next_day=date.fromisoformat(ed)+timedelta(days=1)
+        except Exception: next_day=date.fromisoformat(sd)+timedelta(days=1)
+        lines.append(f"DTEND;VALUE=DATE:{next_day.strftime('%Y%m%d')}")
+    else:
+        def local_dt(d,t): return d.replace('-','')+'T'+t.replace(':','')+'00'
+        lines.append(f"DTSTART;TZID=America/New_York:{local_dt(sd,start['time'])}")
+        if end.get('time'): lines.append(f"DTEND;TZID=America/New_York:{local_dt(end.get('date') or sd,end['time'])}")
+    lines.append(f"SUMMARY:{ics_escape(e.get('title'))}")
+    loc=' — '.join(x for x in [e.get('venue'),e.get('address')] if x)
+    if loc: lines.append(f"LOCATION:{ics_escape(loc)}")
+    desc='\n'.join(x for x in [e.get('notes'), f"Cost: {e.get('cost')}" if e.get('cost') else None, f"Source: {e.get('source_url')}" if e.get('source_url') else None] if x)
+    if desc: lines.append(f"DESCRIPTION:{ics_escape(desc)}")
+    if e.get('source_url'): lines.append(f"URL:{ics_escape(e.get('source_url'))}")
+    lines.append('END:VEVENT'); return lines
+
+def write_calendar_feeds(events):
+    defs=read_json('calendar-sources.json',[])
+    feeds_dir=ROOT/'feeds'; feeds_dir.mkdir(exist_ok=True)
+    manifest=[]
+    for src in defs:
+        if src.get('kind')!='generated_live' or not src.get('feed_url'): continue
+        chosen=[e for e in events if event_matches_selector(e,src.get('selector'))]
+        chosen.sort(key=lambda e:(e.get('start',{}).get('date') or '9999',e.get('start',{}).get('time') or '99:99',e.get('title','')))
+        lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Norwood.ma//Community Calendar//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',f"X-WR-CALNAME:{ics_escape(src.get('name'))}",f"X-WR-CALDESC:{ics_escape(src.get('description'))}"]
+        for e in chosen: lines.extend(event_ics_lines(e))
+        lines.append('END:VCALENDAR')
+        rel=src['feed_url']; target=ROOT/rel
+        target.parent.mkdir(parents=True,exist_ok=True); target.write_text('\r\n'.join(lines)+'\r\n')
+        manifest.append({'id':src['id'],'name':src['name'],'path':rel,'events':len(chosen),'generated_at':now_local().isoformat()})
+    write_json('calendar-feed-status.json',manifest)
+    return manifest
+
+
+def acknowledge_published_submissions():
+    """Tell the private moderation sheet which community submissions reached events.json.
+
+    The shared secret is supplied only by GitHub Actions. The public Apps Script
+    GET feed remains read-only and privacy-safe. Missing configuration is treated
+    as a hard failure so the Actions log makes a broken feedback loop visible.
+    """
+    import os
+    if not requests:
+        raise RuntimeError('network dependencies unavailable')
+    secret=os.environ.get('NORWOOD_EVENT_ACK_SECRET','').strip()
+    if not secret:
+        raise RuntimeError('NORWOOD_EVENT_ACK_SECRET GitHub Actions secret is not configured')
+    registry=read_json('source-registry.json',[])
+    src=next((x for x in registry if x.get('ingestion',{}).get('method')=='community_submission_json'),None)
+    if not src or not src.get('url'):
+        raise RuntimeError('community submission source endpoint is not configured')
+    records=[]
+    for e in read_json('events.json',[]):
+        if e.get('source_id')==src.get('id') and str(e.get('id','')).startswith('submission-'):
+            records.append({'id':e['id'],'title':e.get('title'),'date':(e.get('start') or {}).get('date'),'venue':e.get('venue')})
+    payload={
+      'action':'ackPublished',
+      'secret':secret,
+      'events':records,
+      'verifiedAt':now_local().isoformat(),
+      'publisher':'norwood.ma-github-actions'
+    }
+    r=requests.post(src['url'],json=payload,headers={'User-Agent':UA,'Accept':'application/json'},timeout=18)
+    r.raise_for_status()
+    try: result=r.json()
+    except Exception: raise RuntimeError('publication acknowledgment endpoint did not return JSON')
+    if not result.get('ok'):
+        raise RuntimeError('publication acknowledgment rejected: '+clean_text(result.get('error') or result))
+    print(json.dumps({'acknowledged':result.get('updated',0),'events':[x['id'] for x in records]},indent=2))
+    return result
+
+def main():
+    ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); ap.add_argument('--ack-published',action='store_true'); args=ap.parse_args()
+    if args.ack_published:
+        acknowledge_published_submissions(); return
+    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); calendar_feeds=write_calendar_feeds(events)
+    registry=read_json('source-registry.json',[])
+    cov=coverage(registry); write_json('automation-coverage.json',cov)
+    report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
+    write_json('refresh-status.json',report)
+    print(json.dumps({'events':len(events),'news':len(news),'coverage':cov},indent=2))
+if __name__=='__main__': main()
+,'',s)
+    s=s.replace('’',"'")
+    s=re.sub(r"'s\b",'',s)
+    s=re.sub(r'\b(?:the|a|an)\b',' ',s)
+    s=re.sub(r'[^a-z0-9]+',' ',s)
+    return re.sub(r'\s+',' ',s).strip()
+
 def dedupe_news(items):
-    """Deduplicate primarily by normalized headline, preferring direct publisher URLs over Google News wrappers."""
-    chosen={}
+    """Collapse exact, syndicated, and near-identical headline variants."""
+    chosen=[]
     def score(x):
         u=x.get('url',''); v=0
         if 'news.google.com' not in u: v+=4
         if x.get('discovered_by')=='seed_web_verified': v+=3
         if x.get('summary'): v+=1
+        if x.get('source')=='The Norwood Record': v+=1
         return v
-    for x in items:
-        key=re.sub(r'\W+',' ',x.get('title','').lower()).strip()
-        if not key: continue
-        cur=chosen.get(key)
-        if cur is None or score(x)>score(cur): chosen[key]=x
-    return sorted(chosen.values(),key=lambda z:z.get('date',''),reverse=True)
+    def same_story(a,b):
+        ua=(a.get('url') or '').split('?')[0].rstrip('/')
+        ub=(b.get('url') or '').split('?')[0].rstrip('/')
+        if ua and ub and ua==ub: return True
+        ca,cb=canonical_news_title(a.get('title','')),canonical_news_title(b.get('title',''))
+        if not ca or not cb: return False
+        if ca==cb: return True
+        ta,tb=set(ca.split()),set(cb.split())
+        if len(ta)<4 or len(tb)<4: return False
+        overlap=len(ta & tb)/max(1,len(ta | tb))
+        # Only fuzzy-collapse strongly overlapping headlines published close together.
+        da,db=parse_dt(a.get('date')),parse_dt(b.get('date'))
+        close=bool(da and db and abs((da-db).total_seconds()) <= 3*24*3600)
+        return close and overlap>=0.78
+    for x in sorted(items,key=lambda z:z.get('date',''),reverse=True):
+        hit=None
+        for i,cur in enumerate(chosen):
+            if same_story(x,cur):
+                hit=i; break
+        if hit is None: chosen.append(x)
+        elif score(x)>score(chosen[hit]): chosen[hit]=x
+    return sorted(chosen,key=lambda z:z.get('date',''),reverse=True)
 
 def current_news(items):
     # Keep a deep local-news queue so the dedicated News page is useful even during
