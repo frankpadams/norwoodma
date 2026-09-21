@@ -556,3 +556,23 @@ html[data-high-contrast="true"] .spinner-controls select{background:#050505!impo
 @media(max-width:700px){.trash-hero-compact h1{font-size:1.65rem!important}.trash-page h2{font-size:1.18rem!important}.trash-page details>summary{font-size:.98rem!important}}
 
 .trash-helpful-top .town-link-seal{width:15px;height:15px;object-fit:contain;vertical-align:-3px;margin-right:4px}
+
+/* High-contrast coverage: Trash, Recycling, Compost & More */
+html[data-high-contrast="true"] .trash-hero,
+html[data-high-contrast="true"] .trash-tool-card,
+html[data-high-contrast="true"] .trash-helpful-top a,
+html[data-high-contrast="true"] .trash-page details,
+html[data-high-contrast="true"] .trash-page details>summary,
+html[data-high-contrast="true"] .trash-docs,
+html[data-high-contrast="true"] .trash-facility{background:#050505!important;background-image:none!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important}
+html[data-high-contrast="true"] .trash-tool-card,
+html[data-high-contrast="true"] .trash-helpful-top a,
+html[data-high-contrast="true"] .trash-page details{border-width:2px!important}
+html[data-high-contrast="true"] .trash-tool-card h2,
+html[data-high-contrast="true"] .trash-page details>summary strong,
+html[data-high-contrast="true"] .trash-page h2,
+html[data-high-contrast="true"] .trash-page h3{color:#fff!important}
+html[data-high-contrast="true"] .trash-page details>summary{outline-offset:3px}
+html[data-high-contrast="true"] .trash-page details>summary:focus-visible{outline:4px solid #00ffff!important}
+html[data-high-contrast="true"] .trash-helpful-top a strong{color:#ffeb3b!important}
+html[data-high-contrast="true"] .trash-helpful-top .town-link-seal{background:#fff!important;border-radius:50%;outline:1px solid #fff}
