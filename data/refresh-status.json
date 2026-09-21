@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T15:34:23.003059-04:00",
+  "generated_at": "2026-09-21T19:22:42.673507-04:00",
   "offline": false,
   "events_published": 116,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 116,
-      "generated_at": "2026-09-21T15:34:22.996778-04:00"
+      "generated_at": "2026-09-21T19:22:42.666644-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-21T15:34:22.997805-04:00"
+      "generated_at": "2026-09-21T19:22:42.667595-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 16,
-      "generated_at": "2026-09-21T15:34:22.998746-04:00"
+      "generated_at": "2026-09-21T19:22:42.668453-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-21T15:34:22.999521-04:00"
+      "generated_at": "2026-09-21T19:22:42.669135-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-21T15:34:23.000166-04:00"
+      "generated_at": "2026-09-21T19:22:42.669693-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 5,
-      "generated_at": "2026-09-21T15:34:23.000853-04:00"
+      "generated_at": "2026-09-21T19:22:42.670329-04:00"
     }
   ],
   "event_sources": [
@@ -57,10 +57,10 @@
     },
     {
       "source_id": "ache-massachusetts-events",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='massache.org', port=443): Max retries exceeded with url: /events/list/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='massache.org', port=443) at 0"
     },
     {
       "source_id": "castle-island-calendar",
@@ -78,10 +78,10 @@
     },
     {
       "source_id": "elks-calendar",
-      "ok": false,
+      "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.elks.org', port=443): Max retries exceeded with url: /lodges/lodgeCalendar.cfm?lodgenumber=1124 (Caused by ConnectTimeoutError(<HTTPSConnection(host='"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "emerald-city-plant-shop",
@@ -113,10 +113,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 5,
-      "note": ""
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "source_id": "grace-calendar",
@@ -225,10 +225,10 @@
     },
     {
       "source_id": "norwood-town-news",
-      "ok": false,
+      "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "nps-callahan-pta",
@@ -365,10 +365,10 @@
     },
     {
       "source_id": "town-community-events",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/residents/holidays_and_community_events/index.php"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "town-conservation",
@@ -386,10 +386,10 @@
     },
     {
       "source_id": "town-farmers-market",
-      "ok": false,
+      "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/government/committees_boards/sustainability_commission/farmers_market.php"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "town-fire-page",
@@ -435,10 +435,10 @@
     },
     {
       "source_id": "vfw-discovery",
-      "ok": false,
+      "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "washington-no7-events",
@@ -456,17 +456,17 @@
     },
     {
       "source_id": "norwood-veterans-services",
-      "ok": false,
+      "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/veterans_services/index.php"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-summer-concerts",
-      "ok": false,
+      "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-youth-fundraisers",
@@ -502,9 +502,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -534,7 +535,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 40,
+      "found": 41,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -542,7 +543,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 21,
+      "found": 22,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -563,10 +564,9 @@
     {
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
-      "ok": false,
-      "found": 0,
-      "method": "page_parsers",
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/"
+      "ok": true,
+      "found": 17,
+      "method": "jsonld+semantic_html+visible_dates"
     },
     {
       "source": "Norwood Community Media",
@@ -593,10 +593,9 @@
     {
       "source": "Norwood Town News",
       "url": "https://www.norwoodtownnews.com/",
-      "ok": false,
-      "found": 0,
-      "method": "page_parsers",
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
+      "ok": true,
+      "found": 14,
+      "method": "jsonld+semantic_html+visible_dates"
     },
     {
       "source": "queue_health",
@@ -609,7 +608,7 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 18,
+      "found": 19,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
@@ -617,10 +616,10 @@
         "Realtor.com": 1,
         "hoodline.com": 2,
         "Wicked Local": 1,
+        "MaxPreps": 3,
         "The Norwood Record": 52,
         "The Norwood Record — Latest": 11,
         "CBS News": 1,
-        "MaxPreps": 2,
         "Inside Norwood": 13,
         "Boston.com": 2,
         "Norwood Public Schools": 1,
@@ -628,9 +627,10 @@
         "U.S. Figure Skating": 1,
         "Town of Norwood": 8,
         "Norwood Town News": 11,
-        "NBC Boston": 3,
-        "John Guilfoil Public Relations": 3,
-        "WCVB": 1
+        "NBC Boston": 2,
+        "John Guilfoil Public Relations": 2,
+        "WCVB": 1,
+        "DailyVoice.com": 1
       },
       "note": null
     }
