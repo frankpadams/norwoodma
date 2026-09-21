@@ -615,5 +615,15 @@ window.NORWOOD_BUSINESSES=[
   ["All Seasons Rent-All","Equipment & Tool Rental","924 Providence Highway","800-924-8440","https://www.allseasonsrentall.com/"],
   ["FedEx Office Print & Ship Center","Printing, Shipping & Business Services","1325 Providence Highway","781-278-0999","https://www.office.fedex.com/"],
   ["Staples — Norwood","Office Supplies, Printing & Technology","991 Providence Highway","781-255-7720","https://stores.staples.com/ma/norwood/991-providence-highway"]
+,
+  ["A&B Driving School","Driving Schools","","", "https://www.norwooddriving.com/"],
+  ["Bodhi Spa","Spas, Salons & Massage","","","https://thebodhispa.com/"],
+  ["Bubbles Up Laundromat","Laundry & Dry Cleaning","50 Central Street","",""],
+  ["Chris & Sam’s Barber Shop","Barbers, Salons & Personal Care","","","https://www.chrisandsamsbarbershop.com/"],
+  ["Gus’s Barber Shop","Barbers, Salons & Personal Care","","","https://barbershopgus.com/"],
+  ["Cheer Advantage","Cheer & Tumbling","","","https://cheeradvantageallstars.com/"],
+  ["Gymnastic Academy of Boston — Norwood","Gymnastics","","","https://gymnasticsacademyofboston.com/norwood/classes/"],
+  ["Premier Gymnastics Norwood","Gymnastics","","","https://www.premiergymnasticsnorwood.com/"],
+  ["Town Common Books","Books & Local Shopping","","","https://www.towncommonbooks.com/"]
 
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
