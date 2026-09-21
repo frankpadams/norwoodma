@@ -428,7 +428,7 @@ def news_from_visible_cards(html, source_name, source_url):
     """Fallback for local pages whose dates are visible text rather than <time>."""
     if not BeautifulSoup:return []
     soup=BeautifulSoup(html,'html.parser'); out=[]
-    date_re=re.compile(r'\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+20\d{2}\b',re.I)
+    date_re=re.compile(r'\b(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|Sept|October|Oct|November|Nov|December|Dec)\s+\d{1,2},\s+20\d{2}\b',re.I)
     for h in soup.find_all(['h2','h3','h4','h5']):
         title=clean_text(h.get_text(' '))
         if not title or len(title)<8 or len(title)>220: continue
