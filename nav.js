@@ -4,7 +4,36 @@
   const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');};
   const open=()=>{nav.classList.add('open');menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation menu');};
   menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  // Give mobile/iOS visitors a permanent, discoverable Home Screen option.
+  // iOS does not expose a web API that can invoke Add to Home Screen directly,
+  // so this menu item opens concise native-share instructions.
+  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
+    const add=document.createElement('a');
+    add.href='#';
+    add.dataset.addHomeScreen='true';
+    add.className='add-home-screen-link';
+    add.textContent='Add Norwood.ma to Home Screen';
+    add.addEventListener('click',e=>{
+      e.preventDefault(); close();
+      let dlg=document.querySelector('.add-home-screen-dialog');
+      if(dlg){dlg.remove();return;}
+      dlg=document.createElement('aside');
+      dlg.className='add-home-screen-dialog ios-home-prompt';
+      dlg.setAttribute('role','dialog');
+      dlg.setAttribute('aria-modal','true');
+      dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');
+      dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/favicon-approved.png" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';
+      document.body.appendChild(dlg);
+      const done=()=>dlg.remove();
+      dlg.querySelector('.ios-home-close').onclick=done;
+      dlg.querySelector('.ios-home-gotit').onclick=done;
+      dlg.querySelector('.ios-home-close').focus();
+    });
+    nav.appendChild(add);
+  }
+  nav.querySelectorAll('a:not([data-add-home-screen])').forEach(a=>a.addEventListener('click',close));
   document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==menu)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
   window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
