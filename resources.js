@@ -26,7 +26,7 @@ const topics=[
 ];
 let all=[];
 const businesses=window.NORWOOD_BUSINESSES||[];
-const businessTopicRules={dental:/dental|orthodont/i,medical:/physical therapy|chiropractic|optometry|audiology|hearing|pharmac|medical|dental|orthodont/i,wellness:/salon|barber|beauty|massage|personal care/i,realestate:/real estate|realtor/i,kids:/childcare|preschool|swim school|martial arts/i,youth:/swim school|martial arts/i,business:/manufacturing|engineering|printing|office|financial|accounting|legal|insurance|computer/i};
+const businessTopicRules={dental:/dental|orthodont/i,medical:/physical therapy|chiropractic|optometry|audiology|hearing|pharmac|medical|dental|orthodont/i,wellness:/salon|barber|beauty|massage|personal care/i,realestate:/real estate|realtor/i,kids:/childcare|preschool|swim school|martial arts|gymnastics|cheer/i,youth:/swim school|martial arts|gymnastics|cheer/i,wellness:/spa|salon|barber|beauty|massage|personal care/i,services:/driving school|laundry|dry cleaning|tailor|computer repair|printing|shipping|rental/i,business:/manufacturing|engineering|printing|office|financial|accounting|legal|insurance|computer/i};
 function businessesForTopic(id){const rule=businessTopicRules[id];if(!rule)return[];return businesses.filter(b=>rule.test(`${b.category||''} ${(b.tags||[]).join(' ')}`));}
 function businessResource(b){return {name:b.name,category:b.category,description:[b.address,b.phone].filter(Boolean).join(' · '),url:b.website||'',coverage:'Norwood business',_business:true};}
 const stopWords=new Set(['a','an','and','are','for','from','help','i','in','is','me','my','need','of','on','please','the','to','with']);
