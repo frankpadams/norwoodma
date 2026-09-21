@@ -596,5 +596,12 @@ window.NORWOOD_BUSINESSES=[
   ["Mike Meuse — Edelman Financial Engines","Financial Planning & Investment Services","720 University Avenue, Suite 230","339-793-2102","https://www.edelmanfinancialengines.com/"],
   ["Lugten, Morin & Nielson, LLP","Attorneys & Legal Services","100 River Ridge Drive, Suite 200","781-702-6006",""],
   ["Macchi & Macchi Attorneys at Law","Attorneys & Legal Services","1256 Washington Street","781-762-1700",""]
+,
+  ["Junk Teens Junk Removal","Junk Removal & Cleanouts","61 Endicott Street","781-818-0686","https://www.junkteens.com/"],
+  ["The Junk Veteran","Junk Removal & Cleanouts","61 Endicott Street","781-867-4195","https://thejunkveteran.com/"],
+  ["Deon's Moving","Moving & Storage","146D Olde Derby Road","781-800-3041","https://deonsmoving.com/"],
+  ["PC Overhaul","Computer Repair & Data Recovery","311 Nahatan Street","781-269-1569","https://pcoverhaul.com/"],
+  ["NextHome Signature Realty","Real Estate","83 Morse Street, Unit 8Y","781-603-6835","https://www.nexthomesignaturerealty.com/"],
+  ["Cedars Landscaping","Landscaping & Landscape Design","31 Short Street","617-510-3727","https://cedarslandscaping.com/"]
 
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
