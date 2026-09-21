@@ -432,3 +432,13 @@ html[data-high-contrast="true"] .topic-disclosure>summary small,html[data-high-c
 
 /* Resource source/review indicators */
 .resource-town-mark{display:inline-flex;align-items:center;vertical-align:-2px;margin-left:3px}.resource-town-mark img{width:14px;height:14px;object-fit:contain}.resource-card-actions{display:inline-flex;align-items:center;gap:7px}.resource-review-links{display:inline-flex;gap:5px}.resource-review-links a{display:grid;place-items:center;width:25px;height:25px;border:1px solid #d7e0e6;border-radius:7px;background:#fff}.resource-review-links img{width:15px;height:15px}.resource-title-row{gap:8px}.resource-card-actions .social-links{margin-left:0}
+
+/* Relevance-first business directory */
+.business-browse{margin:1.1rem 0 1.25rem}
+.business-browse h2{margin:.15rem 0 .75rem}
+.business-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem}
+.business-category-grid button{appearance:none;border:1px solid #d6e0e7;background:#fff;border-radius:12px;padding:.8rem;text-align:left;color:#073b69;cursor:pointer;min-height:70px}
+.business-category-grid button span{font-size:1.2rem;margin-right:.35rem}
+.business-category-grid button:hover,.business-category-grid button:focus-visible,.business-category-grid button.active{border-color:#0b568d;background:#f3f8fc;box-shadow:0 0 0 2px rgba(11,86,141,.08)}
+.business-directory .directory-note{margin:1rem 0}
+@media(max-width:760px){.business-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-tools input,.business-tools select{font-size:16px}}
