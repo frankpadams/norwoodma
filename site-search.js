@@ -44,6 +44,7 @@
   const out=pages.map(p=>({...p,norwoodPage:true}));
   (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
   (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true}));
+  (window.NORWOOD_BUSINESSES||[]).forEach(b=>out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
   return out;
  }
@@ -51,7 +52,7 @@
   raw=norm(raw); if(!raw)return [];
   const expanded=norm(raw+' '+(aliases[raw]||''));
   const terms=[...new Set(expanded.split(/\s+/).filter(Boolean))];
-  return items().map(x=>{const name=norm(x.name),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=100;if(name.startsWith(raw))score+=40;if(name.includes(raw))score+=25;if(hay.includes(raw))score+=15;terms.forEach(t=>{if(name.includes(t))score+=8;else if(hay.includes(t))score+=3});/* Prefer our own explanatory pages only when they already match strongly. */if(x.norwoodPage&&score>=15)score+=18;return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
+  return items().map(x=>{const name=norm(x.name),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=100;if(name.startsWith(raw))score+=40;if(name.includes(raw))score+=25;if(hay.includes(raw))score+=15;terms.forEach(t=>{if(name.includes(t))score+=8;else if(hay.includes(t))score+=3});/* Prefer our own explanatory pages only when they already match strongly. */if(x.norwoodPage&&score>=15)score+=18;if(x.business&&score>=12)score+=6;return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
  }
  function noteSearch(query,count){
    try{
