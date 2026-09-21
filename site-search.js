@@ -49,10 +49,12 @@
   return out;
  }
  function search(raw){
-  raw=norm(raw); if(!raw)return [];
+  const original=String(raw||'').trim();
+  const acronym=/^[A-Z][A-Z0-9&.-]{1,7}$/.test(original);
+  raw=norm(original); if(!raw)return [];
   const expanded=norm(raw+' '+(aliases[raw]||''));
   const terms=[...new Set(expanded.split(/\s+/).filter(Boolean))];
-  return items().map(x=>{const name=norm(x.name),type=norm(x.type),body=norm(x.text),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=120;if(name.startsWith(raw))score+=55;if(name.includes(raw))score+=35;if(type===raw)score+=70;if(type.includes(raw))score+=35;if(body.includes(raw))score+=18;terms.forEach(t=>{if(name===t)score+=30;else if(name.includes(t))score+=14;if(type===t)score+=24;else if(type.includes(t))score+=10;if(body.includes(t))score+=4});/* Geography/source is only a tie-breaker after strong intent relevance. */if(x.norwoodPage&&score>=35)score+=8;if(x.business&&score>=30)score+=3;return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
+  return items().map(x=>{const name=norm(x.name),type=norm(x.type),body=norm(x.text),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=120;if(name.startsWith(raw))score+=55;if(name.includes(raw))score+=35;if(type===raw)score+=70;if(type.includes(raw))score+=35;if(body.includes(raw))score+=18;terms.forEach(t=>{if(name===t)score+=30;else if(name.includes(t))score+=14;if(type===t)score+=24;else if(type.includes(t))score+=10;if(body.includes(t))score+=4});/* Geography/source is only a tie-breaker after strong intent relevance. */if(x.norwoodPage&&score>=35)score+=8;if(x.business&&score>=30)score+=3;if(acronym&&aliases[raw]){const phrase=norm(aliases[raw]);if(name.split(' ').some(w=>w===raw)||type.split(' ').some(w=>w===raw))score+=45;if(phrase.split(' ').some(w=>name.includes(w)||type.includes(w)))score+=12;}return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
  }
  function noteSearch(query,count){
    try{
