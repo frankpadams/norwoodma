@@ -20,7 +20,7 @@
     const q=normalize(search.value||'');
     const cat=category.value||'';
     const terms=q?q.split(' ').filter(Boolean):[];
-    const visible=restaurants.filter(r=>(!cat||r.category===cat)&&((cat!=='Gluten-Free'&&(!cat||r.category===cat))||(cat==='Gluten-Free'&&r.gluten_free))&&terms.every(t=>searchable(r).includes(t)));
+    const visible=restaurants.filter(r=>((!cat)||(cat==='Gluten-Free'?r.gluten_free:r.category===cat))&&terms.every(t=>searchable(r).includes(t)));
     const pieces=[];
     if(q) pieces.push(`matching “${search.value.trim()}”`);
     if(cat) pieces.push(cat==='Gluten-Free'?'with gluten-free options':`in ${cat}`);
