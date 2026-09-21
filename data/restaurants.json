@@ -806,6 +806,18 @@
     "gluten_free": true
   },
   {
+    "id": "the-feisty-greek",
+    "name": "The Feisty Greek",
+    "category": "Middle Eastern",
+    "cuisine": "Greek · Mediterranean",
+    "address": "38 Vanderbilt Ave",
+    "url": "https://www.thefeistygreek.com/menu/",
+    "link_type": "official",
+    "tags": "Greek Mediterranean gyro kebab falafel gluten free gf vegetarian",
+    "gluten_free": true,
+    "verified": "2026-09-21"
+  },
+  {
     "id": "the-panini-press-deli",
     "name": "The Panini Press & Deli",
     "category": "Deli & Sandwiches",
@@ -828,6 +840,17 @@
     "verified": "2026-09-17"
   },
   {
+    "id": "tipico-salvadoreno-2",
+    "name": "Típico Salvadoreño 2",
+    "category": "Mexican & Latin",
+    "cuisine": "Salvadoran · Latin American",
+    "address": "514 Washington St",
+    "url": "https://www.tipicosalvadorenotwo.com/",
+    "link_type": "official",
+    "tags": "pupusas salvadoran tacos burritos breakfast latin",
+    "verified": "2026-09-17"
+  },
+  {
     "id": "to-beirut-bistro",
     "name": "To Beirut Bistro",
     "category": "Middle Eastern",
@@ -839,15 +862,16 @@
     "verified": "2026-09-17"
   },
   {
-    "id": "tipico-salvadoreno-2",
-    "name": "Típico Salvadoreño 2",
-    "category": "Mexican & Latin",
-    "cuisine": "Salvadoran · Latin American",
-    "address": "514 Washington St",
-    "url": "https://www.tipicosalvadorenotwo.com/",
+    "id": "veggie-crust-norwood",
+    "name": "Veggie Crust Norwood",
+    "category": "Pizza & Italian",
+    "cuisine": "Vegetarian · Indian-inspired Pizza · Vegan",
+    "address": "641 Washington St",
+    "url": "https://www.vegcrust.com/menu/norwood/",
     "link_type": "official",
-    "tags": "pupusas salvadoran tacos burritos breakfast latin",
-    "verified": "2026-09-17"
+    "tags": "vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta",
+    "gluten_free": true,
+    "verified": "2026-09-21"
   },
   {
     "id": "vico-ristorante-italiano",
