@@ -3,8 +3,8 @@
   const $=s=>document.querySelector(s);
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-  const form=$('#foodSearchForm'), search=$('#foodSearch'), category=$('#foodCategory'), directory=$('#restaurantDirectory'), count=$('#restaurantCount'), clear=$('#clearFoodFilters');
-  if(!search||!category||!directory||!count||!clear) return;
+  const form=$('#foodSearchForm'), search=$('#foodSearch'), category=$('#foodCategory'), dietary=$('#foodDietary'), directory=$('#restaurantDirectory'), count=$('#restaurantCount'), clear=$('#clearFoodFilters');
+  if(!search||!category||!dietary||!directory||!count||!clear) return;
   let restaurants=Array.isArray(window.NORWOOD_RESTAURANTS)?window.NORWOOD_RESTAURANTS:[];
 
   function searchable(r){
@@ -14,16 +14,18 @@
   function row(r){
     const label=r.link_type==='maps'?'Google Maps':'Website';
     const detail=r.link_type==='maps'?'No verified official website found':'Official restaurant site';
-    return `<article class="restaurant-row"><div class="restaurant-name"><a href="${esc(r.url)}" target="_blank" rel="noopener"><h3>${esc(r.name)}${r.gluten_free?'<span class="gf-badge" title="Gluten-free options available" aria-label="Gluten-free options available">GF</span>':''}</h3></a><span class="restaurant-link-note">${esc(detail)}</span></div><div class="restaurant-cuisine">${esc(r.cuisine||r.category||'')}</div><address>${esc(r.address||'')}<br>Norwood, MA</address><a class="restaurant-outbound" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(r.name)} ${esc(label)}">${esc(label)} <span aria-hidden="true">↗</span></a></article>`;
+    return `<article class="restaurant-row"><div class="restaurant-name"><a href="${esc(r.url)}" target="_blank" rel="noopener"><h3>${esc(r.name)}${r.gluten_free?'<svg class=\"gf-icon\" viewBox=\"0 0 64 64\" role=\"img\" aria-label=\"Gluten-free options available\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"32\" cy=\"32\" r=\"29\" fill=\"#fff\" stroke=\"#155b32\" stroke-width=\"5\"/><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"8\" font-weight=\"700\" fill=\"#155b32\">GLUTEN</text><text x=\"32\" y=\"43\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"29\" font-weight=\"800\" fill=\"#155b32\">GF</text><text x=\"32\" y=\"54\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"8\" font-weight=\"700\" fill=\"#155b32\">FREE</text></svg>':''}</h3></a><span class="restaurant-link-note">${esc(detail)}</span></div><div class="restaurant-cuisine">${esc(r.cuisine||r.category||'')}</div><address>${esc(r.address||'')}<br>Norwood, MA</address><a class="restaurant-outbound" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(r.name)} ${esc(label)}">${esc(label)} <span aria-hidden="true">↗</span></a></article>`;
   }
   function render({focusResults=false}={}){
     const q=normalize(search.value||'');
     const cat=category.value||'';
+    const diet=dietary.value||'';
     const terms=q?q.split(' ').filter(Boolean):[];
-    const visible=restaurants.filter(r=>(!cat||r.category===cat)&&terms.every(t=>searchable(r).includes(t)));
+    const visible=restaurants.filter(r=>(!cat||r.category===cat)&&(!diet||(diet==='gluten-free'&&r.gluten_free))&&terms.every(t=>searchable(r).includes(t)));
     const pieces=[];
     if(q) pieces.push(`matching “${search.value.trim()}”`);
     if(cat) pieces.push(`in ${cat}`);
+    if(diet==='gluten-free') pieces.push('with gluten-free options');
     count.textContent=`${visible.length} ${visible.length===1?'place':'places'} shown${pieces.length?' '+pieces.join(' '):''} · ${restaurants.length} total`;
     if(!visible.length){
       directory.innerHTML='<div class="restaurant-empty"><h2>No matches found</h2><p>Try a broader restaurant name, cuisine, food, or street.</p></div>';
@@ -45,8 +47,9 @@
   search.addEventListener('input',runLive);
   search.addEventListener('search',runLive);
   category.addEventListener('change',runLive);
+  dietary.addEventListener('change',runLive);
   form?.addEventListener('submit',e=>{e.preventDefault();render({focusResults:true});});
-  clear.addEventListener('click',()=>{search.value='';category.value='';render();search.focus();});
+  clear.addEventListener('click',()=>{search.value='';category.value='';dietary.value='';render();search.focus();});
 
   function setupDinnerSpinner(){
     const food=$('#spinnerFood'), spin=$('#spinDinner'), surprise=$('#surpriseDinner'), wheel=$('#spinnerWheel'), result=$('#spinnerResult'), meta=$('#spinnerMeta'), links=$('#spinnerLinks');
