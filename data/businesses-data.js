@@ -609,5 +609,11 @@ window.NORWOOD_BUSINESSES=[
   ["The Soggie Doggie","Pet Grooming","1159 Washington Street","781-352-3509","https://thesoggiedoggie.com/"],
   ["Dirty Dawg Wash, Inc.","Pet Grooming & Self-Serve Dog Wash","1 Wilson Street","781-762-8822","https://dirtydawgwash.com/"],
   ["Wags N' Whiskers Pet Grooming","Pet Grooming","164 Walpole Street","781-762-8111",""]
+,
+  ["Kinderbook, Inc. — Norwood","Childcare & Preschools","100 Buckminster Drive","781-762-6700","https://www.kinderbookchildrenscenter.com/"],
+  ["AIR Graphics","Printing, Copying & Signs","575 University Avenue, Suite D","617-782-3800","https://www.airgraphics.com/"],
+  ["All Seasons Rent-All","Equipment & Tool Rental","924 Providence Highway","800-924-8440","https://www.allseasonsrentall.com/"],
+  ["FedEx Office Print & Ship Center","Printing, Shipping & Business Services","1325 Providence Highway","781-278-0999","https://www.office.fedex.com/"],
+  ["Staples — Norwood","Office Supplies, Printing & Technology","991 Providence Highway","781-255-7720","https://stores.staples.com/ma/norwood/991-providence-highway"]
 
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
