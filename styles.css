@@ -443,7 +443,7 @@ html[data-high-contrast="true"] .topic-disclosure>summary small,html[data-high-c
 .business-directory .directory-note{margin:1rem 0}
 @media(max-width:760px){.business-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-tools input,.business-tools select{font-size:16px}}
 \n\n/* Restaurant dietary markers */
-.gf-icon{width:15px;height:15px;margin-left:10px;vertical-align:-2px;display:inline-block;flex:0 0 auto}
+.restaurant-name h3{display:flex;align-items:center;gap:10px}.restaurant-name h3 .gf-icon{width:15px!important;height:15px!important;min-width:15px!important;max-width:15px!important;min-height:15px!important;max-height:15px!important;margin:0!important;vertical-align:middle;display:inline-block;flex:0 0 15px!important;overflow:hidden}
 .gf-legend{display:flex;align-items:flex-start;gap:.35rem;flex-wrap:wrap}
 .gf-legend .gf-icon{width:22px;height:22px;margin:0 4px 0 0;vertical-align:middle}
 html[data-high-contrast="true"] .gf-icon{filter:grayscale(1) contrast(1.35)}
