@@ -515,11 +515,54 @@ def canonical_news_title(title):
     """Normalize publisher suffixes/casing/punctuation so syndicated copies collapse."""
     s=clean_text(title).lower()
     # Google News commonly appends the publisher after a final dash.
-    s=re.sub(r'\s+[\-–—]\s+[^\-–—]{2,60}def news_is_obituary(x):
+    s=re.sub(r'\s+[\-–—]\s+[^\-–—]{2,60}$','',s)
+    s=s.replace('’',"'")
+    s=re.sub(r"'s\b",'',s)
+    s=re.sub(r'\b(?:the|a|an)\b',' ',s)
+    s=re.sub(r'[^a-z0-9]+',' ',s)
+    return re.sub(r'\s+',' ',s).strip()
+
+def dedupe_news(items):
+    """Collapse exact, syndicated, and near-identical headline variants."""
+    chosen=[]
+    def score(x):
+        u=x.get('url',''); v=0
+        if 'news.google.com' not in u: v+=4
+        if x.get('discovered_by')=='seed_web_verified': v+=3
+        if x.get('summary'): v+=1
+        if x.get('source')=='The Norwood Record': v+=1
+        return v
+    def same_story(a,b):
+        ua=(a.get('url') or '').split('?')[0].rstrip('/')
+        ub=(b.get('url') or '').split('?')[0].rstrip('/')
+        if ua and ub and ua==ub: return True
+        ca,cb=canonical_news_title(a.get('title','')),canonical_news_title(b.get('title',''))
+        if not ca or not cb: return False
+        if ca==cb: return True
+        ta,tb=set(ca.split()),set(cb.split())
+        if len(ta)<4 or len(tb)<4: return False
+        overlap=len(ta & tb)/max(1,len(ta | tb))
+        da,db=parse_dt(a.get('date')),parse_dt(b.get('date'))
+        close=bool(da and db and abs((da-db).total_seconds()) <= 3*24*3600)
+        return close and overlap>=0.78
+    for x in sorted(items,key=lambda z:z.get('date',''),reverse=True):
+        hit=None
+        for i,cur in enumerate(chosen):
+            if same_story(x,cur):
+                hit=i
+                break
+        if hit is None:
+            chosen.append(x)
+        elif score(x)>score(chosen[hit]):
+            chosen[hit]=x
+    return sorted(chosen,key=lambda z:z.get('date',''),reverse=True)
+
+def news_is_obituary(x):
     text=' '.join(str(x.get(k) or '') for k in ('title','summary','source','url')).lower()
     source=str(x.get('source') or '').lower()
     obituary_sources=('legacy obituary','funeral home','funerals','cremation','dignity memorial','currentobituary')
-    if any(s in source for s in obituary_sources): return True
+    if any(s in source for s in obituary_sources):
+        return True
     patterns=[
       r'\bobituar(?:y|ies)\b', r'\bin memoriam\b', r'\bpassed away\b',
       r'\bfuneral (?:home|service|services)\b', r'\bvisitation\b',
@@ -528,16 +571,16 @@ def canonical_news_title(title):
     return any(re.search(p,text,re.I) for p in patterns)
 
 def current_news(items):
-    # Keep a deep local-news queue so the dedicated News page is useful even during
-    # quiet weeks. New material is fetched automatically; older items age out after
-    # 120 days rather than being capped to a 30-day window.
-    cutoff=now_local()-timedelta(days=120); latest=now_local()+timedelta(days=1)
+    cutoff=now_local()-timedelta(days=120)
+    latest=now_local()+timedelta(days=1)
     out=[]
     for x in items:
         d=parse_dt(x.get('date'))
-        if not d: continue
+        if not d:
+            continue
         d=d.astimezone(TZ)
-        if cutoff <= d <= latest and not news_is_obituary(x): out.append(x)
+        if cutoff <= d <= latest and not news_is_obituary(x):
+            out.append(x)
     return dedupe_news(out)[:120]
 
 def refresh_news(offline=False):
