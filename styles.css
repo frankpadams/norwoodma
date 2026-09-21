@@ -554,3 +554,5 @@ html[data-high-contrast="true"] .spinner-controls select{background:#050505!impo
 .trash-hero-compact h1{font-size:clamp(1.65rem,2.6vw,2.25rem)!important}
 .trash-hero-compact p{font-size:1rem!important}
 @media(max-width:700px){.trash-hero-compact h1{font-size:1.65rem!important}.trash-page h2{font-size:1.18rem!important}.trash-page details>summary{font-size:.98rem!important}}
+
+.trash-helpful-top .town-link-seal{width:15px;height:15px;object-fit:contain;vertical-align:-3px;margin-right:4px}
