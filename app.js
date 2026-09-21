@@ -61,7 +61,7 @@ async function news(){
  const feed=$('#newsFeed'); if(!feed)return;
  let items=Array.isArray(window.NORWOOD_NEWS)?window.NORWOOD_NEWS.slice():[];
  if(items.length)renderNews(items);
- try{const r=await fetch('data/news.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh)){items=fresh;renderNews(items);}}}catch(e){}
+ try{const r=await fetch('data/news.json?fresh='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh)){items=fresh;renderNews(items);}}}catch(e){}
  if(!items.length)renderNews([]);
 } news();
 
