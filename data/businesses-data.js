@@ -585,5 +585,11 @@ window.NORWOOD_BUSINESSES=[
   ["Little Sprouts Early Education & Child Care — Norwood","Childcare & Preschools","325 River Ridge Drive","781-352-9090","https://www.littlesprouts.com/locations/norwood/"],
   ["Landry's Bicycles — Norwood","Bicycles, Repair & Outdoor Recreation","1583 Boston-Providence Turnpike","781-440-0310","https://www.landrys.com/"],
   ["AllGreen Lawn Tree & Mosquito","Landscaping, Tree & Pest Services","77 Davis Avenue","781-762-7080","https://www.allgreenma.com/"]
+,
+  ["Norwal Cleaners","Dry Cleaning & Tailoring","1405 Boston-Providence Turnpike","781-762-9898",""],
+  ["Rama Dry Cleaners & Tailor","Dry Cleaning & Tailoring","884 Washington Street","781-769-5549",""],
+  ["South Norwood Laundromat & Dry Cleaning","Laundry & Dry Cleaning","1239 Washington Street","781-769-4774",""],
+  ["Elite Tailor's & Cleaners","Tailoring, Alterations & Dry Cleaning","75 Boston Providence Highway","781-278-9900",""],
+  ["Simi Orthodontics","Dental & Orthodontics","269 Walpole Street","781-762-1128","https://www.simiorthodontics.com/"]
 
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
