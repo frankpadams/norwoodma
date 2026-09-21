@@ -51,7 +51,7 @@ function haystack(r){
  const tags=Array.isArray(r.tags)?r.tags.join(' '):(r.tags||'');
  return `${r.name||''} ${r.description||''} ${tags} ${r.category||''} ${(r.topics||[]).join(' ')} ${r.coverage||''}`.toLowerCase();
 }
-function belongs(r,t){return Array.isArray(r.topics)?r.topics.includes(t[0]):t[3].some(k=>haystack(r).includes(k));}
+function belongs(r,t){return Array.isArray(r.topics)&&r.topics.length?r.topics.includes(t[0]):t[3].some(k=>haystack(r).includes(k));}
 function socialLinks(r){if(!r.social)return'';const labels={facebook:['bi-facebook','Facebook'],instagram:['bi-instagram','Instagram'],youtube:['bi-youtube','YouTube'],linkedin:['bi-linkedin','LinkedIn'],x:['bi-twitter-x','X']};return `<span class="social-links">${Object.entries(r.social).map(([k,u])=>{const v=labels[k]||['bi-link-45deg',k];return `<a href="${esc(u)}" target="_blank" rel="noopener" aria-label="${esc(v[1])}" title="${esc(v[1])}"><i class="bi ${v[0]}"></i></a>`}).join('')}</span>`;}
 function queryGroups(q){
  const raw=q.toLowerCase().trim(); if(!raw)return [];
