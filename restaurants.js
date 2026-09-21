@@ -71,6 +71,21 @@
     }
     spin.addEventListener('click',()=>choose(false)); surprise.addEventListener('click',()=>choose(true));
   }
+  function setupMobileAdRotation(){
+    const rail=document.querySelector('.restaurant-ad-rail');
+    if(!rail) return;
+    const ads=[...rail.querySelectorAll('.restaurant-ad-slot')];
+    if(!ads.length) return;
+    const choose=()=>{
+      ads.forEach(a=>a.classList.remove('mobile-ad-selected'));
+      if(window.matchMedia('(max-width:820px)').matches){
+        ads[Math.floor(Math.random()*ads.length)].classList.add('mobile-ad-selected');
+      }
+    };
+    choose();
+  }
+  setupMobileAdRotation();
+
   if(restaurants.length){
     load(); setupDinnerSpinner();
   }else{
