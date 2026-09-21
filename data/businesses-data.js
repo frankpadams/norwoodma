@@ -579,5 +579,11 @@ window.NORWOOD_BUSINESSES=[
     "51 Morgan Drive",
     "800-667-3220",
     "https://www.admet.com/"
-  ]
+  ],
+  ["Children of America — Norwood","Childcare & Preschools","76 Vanderbilt Avenue","781-253-7499","https://www.childrenofamerica.com/locations-norwood.cfm"],
+  ["BrightPath Norwood Child Care Center","Childcare & Preschools","1210 Providence Highway, Suite E","617-245-8900","https://brightpathkids.com/us/locations/norwood"],
+  ["Little Sprouts Early Education & Child Care — Norwood","Childcare & Preschools","325 River Ridge Drive","781-352-9090","https://www.littlesprouts.com/locations/norwood/"],
+  ["Landry's Bicycles — Norwood","Bicycles, Repair & Outdoor Recreation","1583 Boston-Providence Turnpike","781-440-0310","https://www.landrys.com/"],
+  ["AllGreen Lawn Tree & Mosquito","Landscaping, Tree & Pest Services","77 Davis Avenue","781-762-7080","https://www.allgreenma.com/"]
+
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
