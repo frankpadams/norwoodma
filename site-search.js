@@ -67,7 +67,8 @@
  function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
  function render(track=false){
   const raw=input.value.trim(); if(!raw){box.hidden=true;box.innerHTML='';return []}
-  const hits=search(raw);
+  let hits=search(raw);
+  if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
   const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
