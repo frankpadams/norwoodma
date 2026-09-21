@@ -3,8 +3,8 @@
   const $=s=>document.querySelector(s);
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-  const form=$('#foodSearchForm'), search=$('#foodSearch'), category=$('#foodCategory'), dietary=$('#foodDietary'), directory=$('#restaurantDirectory'), count=$('#restaurantCount'), clear=$('#clearFoodFilters');
-  if(!search||!category||!dietary||!directory||!count||!clear) return;
+  const form=$('#foodSearchForm'), search=$('#foodSearch'), category=$('#foodCategory'), directory=$('#restaurantDirectory'), count=$('#restaurantCount'), clear=$('#clearFoodFilters');
+  if(!search||!category||!directory||!count||!clear) return;
   let restaurants=Array.isArray(window.NORWOOD_RESTAURANTS)?window.NORWOOD_RESTAURANTS:[];
 
   function searchable(r){
@@ -19,13 +19,11 @@
   function render({focusResults=false}={}){
     const q=normalize(search.value||'');
     const cat=category.value||'';
-    const diet=dietary.value||'';
     const terms=q?q.split(' ').filter(Boolean):[];
-    const visible=restaurants.filter(r=>(!cat||r.category===cat)&&(!diet||(diet==='gluten-free'&&r.gluten_free))&&terms.every(t=>searchable(r).includes(t)));
+    const visible=restaurants.filter(r=>(!cat||r.category===cat)&&((cat!=='Gluten-Free'&&(!cat||r.category===cat))||(cat==='Gluten-Free'&&r.gluten_free))&&terms.every(t=>searchable(r).includes(t)));
     const pieces=[];
     if(q) pieces.push(`matching “${search.value.trim()}”`);
-    if(cat) pieces.push(`in ${cat}`);
-    if(diet==='gluten-free') pieces.push('with gluten-free options');
+    if(cat) pieces.push(cat==='Gluten-Free'?'with gluten-free options':`in ${cat}`);
     count.textContent=`${visible.length} ${visible.length===1?'place':'places'} shown${pieces.length?' '+pieces.join(' '):''} · ${restaurants.length} total`;
     if(!visible.length){
       directory.innerHTML='<div class="restaurant-empty"><h2>No matches found</h2><p>Try a broader restaurant name, cuisine, food, or street.</p></div>';
@@ -40,16 +38,15 @@
     const sortName=name=>String(name||'').replace(/^the\s+/i,'');
     restaurants=restaurants.slice().sort((a,b)=>sortName(a.name).localeCompare(sortName(b.name),undefined,{sensitivity:'base'}));
     const categories=[...new Set(restaurants.map(r=>r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-    category.innerHTML='<option value="">All cuisines & types</option>'+categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+    category.innerHTML='<option value="">All cuisines & types</option><option value="Gluten-Free">Gluten-Free</option>'+categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
     render();
   }
   const runLive=()=>render();
   search.addEventListener('input',runLive);
   search.addEventListener('search',runLive);
   category.addEventListener('change',runLive);
-  dietary.addEventListener('change',runLive);
   form?.addEventListener('submit',e=>{e.preventDefault();render({focusResults:true});});
-  clear.addEventListener('click',()=>{search.value='';category.value='';dietary.value='';render();search.focus();});
+  clear.addEventListener('click',()=>{search.value='';category.value='';render();search.focus();});
 
   function setupDinnerSpinner(){
     const food=$('#spinnerFood'), spin=$('#spinDinner'), surprise=$('#surpriseDinner'), wheel=$('#spinnerWheel'), result=$('#spinnerResult'), meta=$('#spinnerMeta'), links=$('#spinnerLinks');
