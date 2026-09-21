@@ -29,13 +29,14 @@
       directory.innerHTML='<div class="restaurant-empty"><h2>No matches found</h2><p>Try a broader restaurant name, cuisine, food, or street.</p></div>';
     }else{
       const groups=new Map();
-      visible.forEach(r=>{const letter=(r.name.match(/[A-Za-z0-9]/)?.[0]||'#').toUpperCase();if(!groups.has(letter))groups.set(letter,[]);groups.get(letter).push(r);});
+      visible.forEach(r=>{const displaySortName=String(r.name||'').replace(/^the\s+/i,'');const letter=(displaySortName.match(/[A-Za-z0-9]/)?.[0]||'#').toUpperCase();if(!groups.has(letter))groups.set(letter,[]);groups.get(letter).push(r);});
       directory.innerHTML=[...groups.entries()].map(([letter,items])=>`<section class="restaurant-letter" aria-labelledby="food-letter-${letter}"><h2 id="food-letter-${letter}">${letter}</h2><div class="restaurant-list">${items.map(row).join('')}</div></section>`).join('');
     }
     if(focusResults) directory.scrollIntoView({behavior:'smooth',block:'start'});
   }
   function load(){
-    restaurants=restaurants.slice().sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:'base'}));
+    const sortName=name=>String(name||'').replace(/^the\s+/i,'');
+    restaurants=restaurants.slice().sort((a,b)=>sortName(a.name).localeCompare(sortName(b.name),undefined,{sensitivity:'base'}));
     const categories=[...new Set(restaurants.map(r=>r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
     category.innerHTML='<option value="">All cuisines & types</option>'+categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
     render();
