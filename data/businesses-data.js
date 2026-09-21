@@ -481,5 +481,103 @@ window.NORWOOD_BUSINESSES=[
     "898B Washington Street",
     "781-269-5850",
     "https://www.movewellpt.com/"
+  ],
+  [
+    "Nucar Toyota of Norwood",
+    "Auto Dealers",
+    "277 Providence Highway",
+    "866-633-0557",
+    "https://www.nucartoyotaofnorwood.com/"
+  ],
+  [
+    "Nucar Honda of Norwood",
+    "Auto Dealers",
+    "279 Providence Highway",
+    "877-657-6352",
+    "https://www.nucarhondanorwood.com/"
+  ],
+  [
+    "McGovern Kia of Norwood",
+    "Auto Dealers",
+    "105 Boston-Providence Turnpike",
+    "781-762-8100",
+    "https://www.mcgovernkiaofnorwood.com/"
+  ],
+  [
+    "BMW of Norwood",
+    "Auto Dealers",
+    "918 Providence Highway",
+    "781-278-1450",
+    "https://www.bmwofnorwood.com/"
+  ],
+  [
+    "Central Chrysler Dodge Jeep Ram Fiat of Norwood",
+    "Auto Dealers",
+    "56 Boston-Providence Turnpike",
+    "781-332-5288",
+    "https://www.centralchryslerjeepdodge.net/"
+  ],
+  [
+    "Norwood Auto Care",
+    "Auto Repair, Inspection & Tires",
+    "236 Pleasant Street",
+    "781-762-4557",
+    ""
+  ],
+  [
+    "O'LYN Roofing",
+    "Roofing",
+    "916 Pleasant Street, Suite 4",
+    "781-725-6795",
+    "https://www.olynroofing.com/"
+  ],
+  [
+    "JumpStart Physical Therapy and Sports Training — Norwood",
+    "Physical Therapy & Rehabilitation",
+    "290 Vanderbilt Avenue, Suite 1",
+    "781-349-8235",
+    "https://jumpstartphysicaltherapy.com/"
+  ],
+  [
+    "Daisy Tran, CPA",
+    "Accounting, Tax & Bookkeeping",
+    "661 Washington Street, Suite 310",
+    "781-815-7006",
+    "https://daisytrancpa.com/"
+  ],
+  [
+    "Precision Paws Dog Grooming",
+    "Pet Grooming",
+    "607 Washington Street",
+    "617-580-0720",
+    ""
+  ],
+  [
+    "BCF / Brian Castellucci Fitness",
+    "Fitness & Personal Training",
+    "83 Morse Street",
+    "",
+    ""
+  ],
+  [
+    "Affinity Dental",
+    "Dental & Orthodontics",
+    "45 Walpole Street, Suite 4",
+    "781-255-1100",
+    ""
+  ],
+  [
+    "Ace Locksmith & Security Systems, Inc.",
+    "Locksmiths & Security",
+    "1182 Washington Street",
+    "781-762-4874",
+    ""
+  ],
+  [
+    "ADMET, Inc.",
+    "Manufacturing, Testing & Engineering",
+    "51 Morgan Drive",
+    "800-667-3220",
+    "https://www.admet.com/"
   ]
 ].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]+", Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
