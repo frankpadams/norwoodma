@@ -1,193 +1,5 @@
 [
   {
-    "id": "2026-09-18-legally-blonde",
-    "title": "Legally Blonde — Norwood High School",
-    "start": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "Norwood High School",
-    "address": "245 Nichols St, Norwood, MA 02062",
-    "category": "school_theatre",
-    "source_id": "nps-fine-arts",
-    "source_url": "https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Public high-school theatrical production; exact performance times should be confirmed before display."
-  },
-  {
-    "id": "2026-09-20-4th-annual-halloween-costume-swap-1b395a6",
-    "title": "4th Annual Halloween Costume Swap",
-    "start": {
-      "date": "2026-09-20",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-20-end-of-summer-90-s-party-de3bcae",
-    "title": "End of Summer 90’s Party",
-    "start": {
-      "date": "2026-09-20",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "17:00"
-    },
-    "venue": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "address": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "category": "arts",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-09-20-guided-tour-of-the-day-house-september-20-202-9decebe",
-    "title": "Guided Tour of the Day House – September 20, 2026",
-    "start": {
-      "date": "2026-09-20",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "15:00"
-    },
-    "venue": "F Holland Day House",
-    "address": "93 Day Street, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "historical-society-events",
-    "source_url": "https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-sept-20-2026/",
-    "cost": "$5",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Step into history with a guided tour of the F. Holland Day House, a stunning Victorian home nestled in Norwood, Massachusetts. Visitors can explore the beautifully preserved rooms, admire period furnishings, and learn about Day’s contribu",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-09-20-not-done-yet",
-    "title": "“Not Done Yet” Free Concert",
-    "start": {
-      "date": "2026-09-20",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": "100 Winter St, Norwood, MA 02062",
-    "category": "music",
-    "source_id": "norwood-record-events",
-    "source_url": "https://www.norwoodrecord.com/events",
-    "cost": "Free",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
-  },
-  {
-    "id": "2026-09-20-celtic-seisun",
-    "title": "Celtic Traditional Open Seisun",
-    "start": {
-      "date": "2026-09-20",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "18:00"
-    },
-    "venue": "Irish Brewing Boston",
-    "address": "83 Morse St, Building 4AB, Norwood, MA 02062",
-    "category": "music_community",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/events/",
-    "cost": "See venue",
-    "public_access": "public",
-    "series": "Third Sunday Celtic Traditional Open Seisun",
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
-  },
-  {
-    "id": "2026-09-20-gay-beer-club-38a5017",
-    "title": "Gay Beer CLub",
-    "start": {
-      "date": "2026-09-20",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": "20:30"
-    },
-    "venue": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "address": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "category": "community",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
-  },
-  {
     "id": "2026-09-21-parachute-playtime-a7e9602",
     "title": "Parachute Playtime",
     "start": {
@@ -275,6 +87,30 @@
     "category": "community",
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-21-boston-single-and-mingle-speed-dating-9d3ef57",
+    "title": "Boston Single and Mingle Speed Dating",
+    "start": {
+      "date": "2026-09-21",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-09-21",
+      "time": "20:30"
+    },
+    "venue": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
+    "address": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
     "public_access": "public",
     "series": null,
@@ -1423,6 +1259,29 @@
     "verification_status": "auto_primary_source",
     "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
     "discovered_by": "scheduled_jsonld"
+  },
+  {
+    "id": "2026-09-30-lpr-flock-community-session",
+    "title": "Community Information Session: License Plate Reader Technology and Cameras",
+    "start": {
+      "date": "2026-09-30",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
+    "category": "civic_public_safety",
+    "source_id": "norwood-police",
+    "source_url": "https://www.facebook.com/norwoodpolice",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "community_notice_verified_2026-09-21",
+    "notes": "Norwood Police Department community information session for Norwood residents about Flock Safety cameras and license plate reader (LPR) technology. Chief Christopher Padden and the department plan to explain what the technology is and is not, why NPD uses it, examples of its use in investigations and public safety, what information is collected, data-retention practices, system access and auditing, restrictions on sharing/use of Norwood data, and department safeguards. An open resident Q&A will follow. The meeting is intended to address public questions about privacy, data retention, information sharing, accountability, and law-enforcement use of LPR systems."
   },
   {
     "id": "2026-10-01-2026-boston-open-nqs-cfdf5cd",
