@@ -429,3 +429,6 @@ html[data-high-contrast="true"] .resource-help-grid small,html[data-high-contras
 html[data-high-contrast="true"] .topic-disclosure,html[data-high-contrast="true"] .topic-disclosure[open]>summary{background:#050505!important;color:#fff!important;border-color:#fff!important}
 html[data-high-contrast="true"] .topic-disclosure>summary b{color:#ffeb3b!important}
 html[data-high-contrast="true"] .topic-disclosure>summary small,html[data-high-contrast="true"] .topic-disclosure>summary span>span{color:#fff!important}
+
+/* Resource source/review indicators */
+.resource-town-mark{display:inline-flex;align-items:center;vertical-align:-2px;margin-left:3px}.resource-town-mark img{width:14px;height:14px;object-fit:contain}.resource-card-actions{display:inline-flex;align-items:center;gap:7px}.resource-review-links{display:inline-flex;gap:5px}.resource-review-links a{display:grid;place-items:center;width:25px;height:25px;border:1px solid #d7e0e6;border-radius:7px;background:#fff}.resource-review-links img{width:15px;height:15px}.resource-title-row{gap:8px}.resource-card-actions .social-links{margin-left:0}
