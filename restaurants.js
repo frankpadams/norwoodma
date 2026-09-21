@@ -9,12 +9,12 @@
 
   function searchable(r){
     const tags=Array.isArray(r.tags)?r.tags.join(' '):(r.tags||'');
-    return normalize([r.name,r.category,r.cuisine,r.address,tags].filter(Boolean).join(' '));
+    return normalize([r.name,r.category,r.cuisine,r.address,tags,r.gluten_free?'gluten free gf':''].filter(Boolean).join(' '));
   }
   function row(r){
     const label=r.link_type==='maps'?'Google Maps':'Website';
     const detail=r.link_type==='maps'?'No verified official website found':'Official restaurant site';
-    return `<article class="restaurant-row"><div class="restaurant-name"><a href="${esc(r.url)}" target="_blank" rel="noopener"><h3>${esc(r.name)}</h3></a><span class="restaurant-link-note">${esc(detail)}</span></div><div class="restaurant-cuisine">${esc(r.cuisine||r.category||'')}</div><address>${esc(r.address||'')}<br>Norwood, MA</address><a class="restaurant-outbound" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(r.name)} ${esc(label)}">${esc(label)} <span aria-hidden="true">↗</span></a></article>`;
+    return `<article class="restaurant-row"><div class="restaurant-name"><a href="${esc(r.url)}" target="_blank" rel="noopener"><h3>${esc(r.name)}${r.gluten_free?'<span class="gf-badge" title="Gluten-free options available" aria-label="Gluten-free options available">GF</span>':''}</h3></a><span class="restaurant-link-note">${esc(detail)}</span></div><div class="restaurant-cuisine">${esc(r.cuisine||r.category||'')}</div><address>${esc(r.address||'')}<br>Norwood, MA</address><a class="restaurant-outbound" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(r.name)} ${esc(label)}">${esc(label)} <span aria-hidden="true">↗</span></a></article>`;
   }
   function render({focusResults=false}={}){
     const q=normalize(search.value||'');
