@@ -524,3 +524,6 @@ html[data-high-contrast="true"] .spinner-controls select{background:#050505!impo
 
 /* v0.13.4.3 — keep Home Screen icon tiny beside its menu label */
 #nav .add-home-screen-link .add-home-screen-icon{width:16px!important;height:16px!important;min-width:16px!important;max-width:16px!important;flex:0 0 16px!important;object-fit:cover!important;border-radius:3px!important;margin:0!important;padding:0!important;display:inline-block!important}
+
+/* v0.13.4.7 — Support link appears only in hamburger navigation */
+.hamburger-only-support{display:none!important}@media(max-width:1100px){#nav.open .hamburger-only-support{display:flex!important}}
