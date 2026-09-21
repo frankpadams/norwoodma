@@ -515,7 +515,19 @@ def canonical_news_title(title):
     """Normalize publisher suffixes/casing/punctuation so syndicated copies collapse."""
     s=clean_text(title).lower()
     # Google News commonly appends the publisher after a final dash.
-    s=re.sub(r'\s+[\-–—]\s+[^\-–—]{2,60}def current_news(items):
+    s=re.sub(r'\s+[\-–—]\s+[^\-–—]{2,60}def news_is_obituary(x):
+    text=' '.join(str(x.get(k) or '') for k in ('title','summary','source','url')).lower()
+    source=str(x.get('source') or '').lower()
+    obituary_sources=('legacy obituary','funeral home','funerals','cremation','dignity memorial','currentobituary')
+    if any(s in source for s in obituary_sources): return True
+    patterns=[
+      r'\bobituar(?:y|ies)\b', r'\bin memoriam\b', r'\bpassed away\b',
+      r'\bfuneral (?:home|service|services)\b', r'\bvisitation\b',
+      r'\bcelebration of life\b', r'\bdeath notice\b'
+    ]
+    return any(re.search(p,text,re.I) for p in patterns)
+
+def current_news(items):
     # Keep a deep local-news queue so the dedicated News page is useful even during
     # quiet weeks. New material is fetched automatically; older items age out after
     # 120 days rather than being capped to a 30-day window.
@@ -525,7 +537,7 @@ def canonical_news_title(title):
         d=parse_dt(x.get('date'))
         if not d: continue
         d=d.astimezone(TZ)
-        if cutoff <= d <= latest: out.append(x)
+        if cutoff <= d <= latest and not news_is_obituary(x): out.append(x)
     return dedupe_news(out)[:120]
 
 def refresh_news(offline=False):
