@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T11:42:08.127530-04:00",
+  "generated_at": "2026-09-21T14:37:42.455241-04:00",
   "offline": false,
   "events_published": 116,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 116,
-      "generated_at": "2026-09-21T11:42:08.121297-04:00"
+      "generated_at": "2026-09-21T14:37:42.450484-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-21T11:42:08.122300-04:00"
+      "generated_at": "2026-09-21T14:37:42.451261-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 16,
-      "generated_at": "2026-09-21T11:42:08.123247-04:00"
+      "generated_at": "2026-09-21T14:37:42.451978-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-21T11:42:08.124013-04:00"
+      "generated_at": "2026-09-21T14:37:42.452560-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-21T11:42:08.124645-04:00"
+      "generated_at": "2026-09-21T14:37:42.453009-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 5,
-      "generated_at": "2026-09-21T11:42:08.125318-04:00"
+      "generated_at": "2026-09-21T14:37:42.453517-04:00"
     }
   ],
   "event_sources": [
@@ -113,10 +113,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": false,
+      "ok": true,
       "method": "tribe_events",
-      "found": 0,
-      "note": "Expecting value: line 1 column 1 (char 0)"
+      "found": 5,
+      "note": ""
     },
     {
       "source_id": "grace-calendar",
@@ -502,10 +502,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -605,10 +604,11 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Patch": 3,
         "Realtor.com": 1,
         "hoodline.com": 2,
         "Hoodline": 2,
-        "Wicked Local": 1,
+        "Wicked Local": 2,
         "wickedlocal.com": 2,
         "MetroWest Daily News": 1,
         "metrowestdailynews.com": 1,
@@ -626,9 +626,8 @@
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
         "usfigureskating.org": 1,
-        "Dignity Memorial": 10,
+        "Dignity Memorial": 8,
         "Town of Norwood": 1,
-        "Patch": 2,
         "patch.com": 2,
         "CurrentObituary.com": 1,
         "NBC Boston": 1,
