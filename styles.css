@@ -706,5 +706,5 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 .site-timely-item:first-child{padding-left:.8rem}
 .site-timely-item:last-child{padding-right:.8rem}
 .site-timely-sep{opacity:.65}
-.site-timely-item.watch-live,.site-timely-item .watch-live{font-weight:850;text-decoration:underline}
+.site-timely-item.watch-live,.site-timely-item .watch-live{font-weight:850;text-decoration:underline}.site-timely-item .watch-live{display:inline;padding:0;margin-left:.25rem;white-space:nowrap}
 @media(max-width:700px){.site-timely-track{justify-content:flex-start;gap:.45rem}.site-timely-item{padding:.38rem 0}.site-timely-sep{font-size:.75em}}
