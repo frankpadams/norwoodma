@@ -576,3 +576,20 @@ html[data-high-contrast="true"] .trash-page details>summary{outline-offset:3px}
 html[data-high-contrast="true"] .trash-page details>summary:focus-visible{outline:4px solid #00ffff!important}
 html[data-high-contrast="true"] .trash-helpful-top a strong{color:#ffeb3b!important}
 html[data-high-contrast="true"] .trash-helpful-top .town-link-seal{background:#fff!important;border-radius:50%;outline:1px solid #fff}
+
+
+/* Trails / Parks / Hiking / Biking — compact expandable lists */
+.outdoor-accordion{display:grid;gap:8px}
+.outdoor-accordion details{border:1px solid var(--line);border-radius:10px;background:#fff;padding:0}
+.outdoor-accordion summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:12px 14px;font-size:.98rem}
+.outdoor-accordion summary::-webkit-details-marker{display:none}
+.outdoor-accordion summary::after{content:"+";font-weight:800;font-size:1.1rem;line-height:1}
+.outdoor-accordion details[open] summary::after{content:"−"}
+.outdoor-accordion summary span{color:var(--muted);font-size:.84rem;font-weight:500;text-align:right}
+.outdoor-accordion details>p{margin:0;padding:0 14px 13px;font-size:.92rem;line-height:1.5;color:var(--muted)}
+html[data-high-contrast="true"] .outdoor-accordion details,
+html[data-high-contrast="true"] .outdoor-accordion summary{background:#050505!important;color:#fff!important;border-color:#fff!important}
+html[data-high-contrast="true"] .outdoor-accordion summary span,
+html[data-high-contrast="true"] .outdoor-accordion details>p{color:#fff!important}
+html[data-high-contrast="true"] .outdoor-accordion summary:focus-visible{outline:4px solid #00ffff!important;outline-offset:3px}
+@media(max-width:700px){.outdoor-accordion summary{display:block}.outdoor-accordion summary span{display:block;text-align:left;margin-top:3px}}
