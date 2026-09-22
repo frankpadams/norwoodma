@@ -127,6 +127,7 @@ def public_candidate(title, description=''):
 def category_from(text):
     t=clean_text(text).lower()
     tests=[
+      ('assistance',['food pantry','food distribution','free meal','community meal','soup kitchen','clothing giveaway','coat drive','diaper distribution','resource fair','benefits assistance','snap assistance','wic assistance']),
       ('fundraiser',['fundraiser','benefit','charity']),('market',['market','craft fair','vendor fair']),
       ('school_theatre',['school play','musical','theatre','theater']),('live_music',['concert','live music','band','open mic','jazz']),
       ('arts',['art','gallery','paint','craft','maker']),('food',['food','dinner','brunch','restaurant']),
@@ -246,6 +247,37 @@ def events_from_ical(url,source):
         if isinstance(c.decoded('dtend',None),date) and not isinstance(c.decoded('dtend',None),datetime): ep['time']=None
         url_prop=clean_text(c.get('url')) or source.get('url')
         out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':url_prop,'cost':None,'public_access':'public','series':None,'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
+    return out
+
+def events_from_norwood_food_pantry(source):
+    """Build the rolling Saturday pantry schedule from the pantry's published service hours."""
+    out=[]
+    start=now_local().date()
+    end=start+timedelta(days=56)
+    d=start
+    while d.weekday()!=5:
+        d+=timedelta(days=1)
+    while d<=end:
+        ds=d.isoformat()
+        out.append({
+          'id':event_id('Norwood Food Pantry — Food Assistance',ds,'Norwood Food Pantry'),
+          'title':'Norwood Food Pantry — Food Assistance',
+          'start':{'date':ds,'time':'09:00'},
+          'end':{'date':ds,'time':'11:40'},
+          'venue':'Norwood Food Pantry',
+          'address':'150 Chapel Street, Norwood, MA 02062',
+          'category':'assistance',
+          'source_id':source['id'],
+          'source_url':source['url'],
+          'cost':'Free',
+          'public_access':'eligibility_applies',
+          'series':'Norwood Food Pantry Saturday Hours',
+          'publish_candidate':True,
+          'verification_status':'official_schedule',
+          'notes':'Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.',
+          'discovered_by':'scheduled_recurring_service'
+        })
+        d+=timedelta(days=7)
     return out
 
 def events_from_tribe(source):
@@ -374,6 +406,7 @@ def refresh_events(offline=False):
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
                 if method=='community_submission_json': got=events_from_community_submission_feed(src)
+                elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
                 elif method=='tribe_events': got=events_from_tribe(src)
                 elif method=='ical':
                     feed=src.get('ingestion',{}).get('feed_url')
