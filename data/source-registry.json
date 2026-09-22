@@ -7576,5 +7576,41 @@
       "basis": "Official Norwood Food Pantry page states Saturday shopping hours 9:00 AM–11:40 AM and new-client signup availability."
     },
     "notes": "Publish the rolling Saturday food-assistance schedule. This is a community assistance service, not a religious event, even though the pantry is located behind Grace Episcopal Church."
+  },
+  {
+    "id": "ncm-school-live-broadcasts",
+    "name": "Norwood Community Media — Schools & Sports Live Broadcasts",
+    "organization": "Norwood Community Media",
+    "source_class": "broadcast_schedule",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodcommunitymedia.org/schedules/",
+    "domain": "norwoodcommunitymedia.org",
+    "produces": [
+      "events",
+      "school_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "ncm_school_broadcasts",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "exclude_from_sitewide_live_alert": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-22",
+      "basis": "Norwood Community Media schedules page includes a Schools & Sports schedule and Live Broadcasts section; school broadcast page provides the live player."
+    },
+    "notes": "Publish NHS/high-school live broadcasts as calendar/events with a Watch/View link. Never use Schools & Sports broadcasts to trigger the sitewide LIVE NOW alert."
   }
 ]
