@@ -22,28 +22,36 @@ const venueAddresses={
 };
 const staticPlaces=[
  {name:'Norwood Town Common',category:'civic',address:'Washington St at Nahatan St, Norwood, MA 02062',lat:42.19455,lng:-71.19955,details:'Town green · gazebo · community events',url:'parks-trails.html'},
- {name:'Norwood Civic Center',category:'civic',address:'165 Nahatan St, Norwood, MA 02062',lat:42.19443,lng:-71.19893,details:'Recreation programs · community activities',url:'sports-recreation.html'},
- {name:'Norwood High School',category:'school',address:'245 Nichols St, Norwood, MA 02062',lat:42.19917,lng:-71.20972,details:'Athletic fields · tennis courts · track',url:'parks-trails.html#tennis-courts'},
- {name:'Coakley Middle School / Ivatts',category:'school',address:'1315 Washington St, Norwood, MA 02062',lat:42.17445,lng:-71.20085,details:'Tennis · baseball · softball · rectangular fields · school recreation facilities',url:'parks-trails.html#tennis-courts'},
- {name:'Balch Elementary School',category:'school',address:'1170 Washington St, Norwood, MA 02062',details:'Playground · outdoor play areas · adjoining athletic fields',url:'https://www.norwood.k12.ma.us/balch'},
- {name:'Callahan Elementary School',category:'school',address:'116 Garfield Ave, Norwood, MA 02062',details:'Playground · outdoor recreation · athletic field',url:'https://www.norwood.k12.ma.us/callahan'},
- {name:'Cleveland Elementary School',category:'school',address:'33 George Willett Pkwy, Norwood, MA 02062',details:'Playground · outdoor recreation · Jean Brown Field and back field',url:'https://www.norwood.k12.ma.us/cleveland'},
- {name:'Oldham Elementary School',category:'school',address:'165 Prospect St, Norwood, MA 02062',details:'Playground · outdoor recreation · Little League and rectangular fields',url:'https://www.norwood.k12.ma.us/oldham/'},
- {name:'Prescott Elementary School',category:'school',address:'66 Richland Rd, Norwood, MA 02062',details:'Playground · basketball · Little League baseball · softball field',url:'https://www.norwood.k12.ma.us/prescott'},
- {name:'Willett Elementary School',category:'school',address:'100 Westover Pkwy, Norwood, MA 02062',details:'Playground · baseball field · outdoor recreation area',url:'https://www.norwood.k12.ma.us/willett/index'},
+ {name:'Norwood Memorial Municipal Building / Town Hall',category:'civic',address:'566 Washington St, Norwood, MA 02062',details:'Town Hall · Town Clerk · Select Board · General Manager · Assessors · Treasurer/Collector · permitting and municipal offices',url:'https://www.norwoodma.gov/'},
+ {name:'Norwood Public Safety Building',category:'civic',address:'135–137 Nahatan St, Norwood, MA 02062',details:'Police Department · Fire Department · public safety services',url:'https://www.norwoodma.gov/'},
+ {name:'Norwood Civic Center',category:'civic',address:'165 Nahatan St, Norwood, MA 02062',lat:42.19443,lng:-71.19893,details:'Recreation Department · gym · programs · community activities',url:'sports-recreation.html'},
+ {name:'Norwood Senior Center',category:'civic',address:'275 Prospect St, Norwood, MA 02062',details:'Council on Aging · senior programs · transportation and support services',url:'resources.html'},
+ {name:'Norwood Public Schools Administration',category:'civic',address:'275 Prospect St, Norwood, MA 02062',details:'School district administration offices',url:'https://www.norwood.k12.ma.us/'},
+ {name:'Norwood Department of Public Works / Engineering',category:'civic',address:'1 Lyman Pl, Norwood, MA 02062',details:'Public Works · engineering · roads · water · sewer · trash and recycling',url:'https://www.norwoodma.gov/departments/public_works/index.php'},
+ {name:'Norwood Light & Broadband',category:'civic',address:'136 Access Rd, Norwood, MA 02062',details:'Municipal electric utility · broadband · billing and customer service',url:'https://norwoodlight.com/'},
+ {name:'Norwood Housing Authority — Administration',category:'civic',address:'40 William Shyne Cir, Norwood, MA 02062',details:'Municipal housing authority administrative offices',url:'https://www.norwoodha.org/'},
+ {name:'Highland Cemetery / Cemetery Department',category:'civic',address:'320 Winter St, Norwood, MA 02062',details:'Town cemetery · cemetery office · St. Gabriel’s Chapel',url:'https://www.norwoodma.gov/'},
+ {name:'Norwood High School',category:'school',also:['civic'],address:'245 Nichols St, Norwood, MA 02062',lat:42.19917,lng:-71.20972,details:'Athletic fields · tennis courts · track',url:'parks-trails.html#tennis-courts'},
+ {name:'Coakley Middle School / Ivatts',category:'school',also:['civic'],address:'1315 Washington St, Norwood, MA 02062',lat:42.17445,lng:-71.20085,details:'Tennis · baseball · softball · rectangular fields · school recreation facilities',url:'parks-trails.html#tennis-courts'},
+ {name:'Balch Elementary School',category:'school',also:['civic'],address:'1170 Washington St, Norwood, MA 02062',details:'Playground · outdoor play areas · adjoining athletic fields',url:'https://www.norwood.k12.ma.us/balch'},
+ {name:'Callahan Elementary School',category:'school',also:['civic'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Playground · outdoor recreation · athletic field',url:'https://www.norwood.k12.ma.us/callahan'},
+ {name:'Cleveland Elementary School',category:'school',also:['civic'],address:'33 George Willett Pkwy, Norwood, MA 02062',details:'Playground · outdoor recreation · Jean Brown Field and back field',url:'https://www.norwood.k12.ma.us/cleveland'},
+ {name:'Oldham Elementary School',category:'school',also:['civic'],address:'165 Prospect St, Norwood, MA 02062',details:'Playground · outdoor recreation · Little League and rectangular fields',url:'https://www.norwood.k12.ma.us/oldham/'},
+ {name:'Prescott Elementary School',category:'school',also:['civic'],address:'66 Richland Rd, Norwood, MA 02062',details:'Playground · basketball · Little League baseball · softball field',url:'https://www.norwood.k12.ma.us/prescott'},
+ {name:'Willett Elementary School',category:'school',also:['civic'],address:'100 Westover Pkwy, Norwood, MA 02062',details:'Playground · baseball field · outdoor recreation area',url:'https://www.norwood.k12.ma.us/willett/index'},
  {name:'Hawes Recreation Area',category:'park',address:'1305 Washington St, Norwood, MA 02062',lat:42.17515,lng:-71.20165,details:'Pool · spray park · playground · tennis · fishing · trails',url:'parks-trails.html'},
  {name:'Father Mac’s / Father McAleer',category:'park',address:'295 Vernon St, Norwood, MA 02062',lat:42.18785,lng:-71.21375,details:'Pool · playground · Little League · soccer',url:'parks-trails.html'},
  {name:'Doherty Park / Doherty Field',category:'park',address:'Brewster Dr, Norwood, MA 02062',details:'Playground · Little League baseball',url:'parks-trails.html'},
  {name:'Ellis Playground & Fields',category:'park',address:'Codman St at Cameron Rd, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
  {name:'Murphy Park & Playground',category:'park',address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League · basketball · walking connection',url:'parks-trails.html'},
  {name:'Prescott Playground & Fields',category:'park',address:'66 Richmond Rd, Norwood, MA 02062',details:'Playground · basketball · baseball · softball',url:'parks-trails.html'},
- {name:'Morrill Memorial Library',category:'culture',address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
+ {name:'Morrill Memorial Library',category:'culture',also:['civic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
  {name:'The Norwood Theatre',category:'culture',address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Live music · theatre · comedy · films',url:'things.html'},
  {name:'Norwood Food Pantry',category:'resource',address:'150 Chapel St, Norwood, MA 02062',lat:42.18262,lng:-71.21230,details:'Food assistance · Saturday pantry hours',url:'resources.html'},
  {name:'Norwood Central',category:'transit',address:'164 Broadway, Norwood, MA 02062',lat:42.18873,lng:-71.19991,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Norwood Depot',category:'transit',address:'Railroad Ave, Norwood, MA 02062',lat:42.19675,lng:-71.19665,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Windsor Gardens',category:'transit',address:'Engamore Ln at Buckminster Dr, Norwood, MA 02062',lat:42.17189,lng:-71.21973,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
- {name:'Norwood Memorial Airport',category:'landmark',address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'}
+ {name:'Norwood Memorial Airport',category:'landmark',also:['civic'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'}
 ];
 function resourceCategory(r){
  const t=norm([r.category,r.tags,(r.topics||[]).join(' ')].join(' '));
@@ -73,7 +81,7 @@ const dynamic=[];
 const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address);if(seen.has(k))return false;seen.add(k);return true});
 function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
 function searchMatch(p,q){return !q||norm([p.name,p.details,p.address,p.category].join(' ')).includes(q)}
-function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter)&&searchMatch(p,q));}
+function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
  const key=norm(p.address);
