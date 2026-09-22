@@ -10,7 +10,7 @@ performed by GitHub Actions; --offline rebuilds browser fallback JS from bundled
 seed/current JSON without network access.
 """
 from __future__ import annotations
-import argparse, json, re, sys, hashlib
+import argparse, json, re, sys, hashlib, subprocess, shutil
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse, urljoin, quote
@@ -763,22 +763,55 @@ def _time_from_text(text):
     if ap=='AM' and h==12:h=0
     return f"{h:02d}:{minute:02d}"
 
-def civic_meetings_from_town_calendar():
+def _render_town_calendar_month(d):
+    """Render a Revize calendar month when its event data is populated client-side."""
+    url=f'https://www.norwoodma.gov/calendar.php?view=month&month={d.month:02d}&day=01&year={d.year}'
+    chrome=next((p for p in ('google-chrome','google-chrome-stable','chromium','chromium-browser') if shutil.which(p)),None)
+    if not chrome:return url,''
+    try:
+        cp=subprocess.run([chrome,'--headless','--disable-gpu','--no-sandbox',
+                           '--virtual-time-budget=8000','--dump-dom',url],
+                          capture_output=True,text=True,timeout=30)
+        return url,cp.stdout if cp.returncode==0 else ''
+    except Exception:
+        return url,''
+
+def civic_meetings_from_town_calendar(months=6):
+    """Read the Town's Revize Master calendar, including its JS-rendered event layer."""
     if not BeautifulSoup:return []
-    url='https://www.norwoodma.gov/calendar.php'
-    html=request(url).text;soup=BeautifulSoup(html,'html.parser');out=[];seen=set()
-    for node in soup.find_all(['article','li','tr','a','div']):
-        text=clean_text(node.get_text(' '))
-        if not text or len(text)>700 or not IMPORTANT_MEETING_RE.search(text):continue
-        d=_date_from_text(text)
-        if not d or d < now_local().date()-timedelta(days=1) or d > now_local().date()+timedelta(days=120):continue
-        mm=IMPORTANT_MEETING_RE.search(text); title=mm.group(1)
-        key=(title.lower(),d.isoformat(),_time_from_text(text))
-        if key in seen:continue
-        seen.add(key)
-        a=node if getattr(node,'name',None)=='a' and node.get('href') else node.find('a',href=True)
-        href=urljoin(url,a.get('href')) if a else url
-        out.append({'kind':'meeting','title':title,'date':d.isoformat(),'start_time':_time_from_text(text),'end_time':None,'url':href,'source':'Town of Norwood Meetings Calendar'})
+    today=now_local().date(); out=[]; seen=set()
+    for offset in range(months):
+        y=today.year+(today.month-1+offset)//12
+        m=(today.month-1+offset)%12+1
+        first=date(y,m,1)
+        url=f'https://www.norwoodma.gov/calendar.php?view=month&month={m:02d}&day=01&year={y}'
+        try: html=request(url).text
+        except Exception: html=''
+        # The Revize page ships an empty #calendar and fills it with JS. Use Chrome on
+        # GitHub's runner when the raw response contains no rendered FullCalendar events.
+        if 'fc-event' not in html:
+            _,rendered=_render_town_calendar_month(first)
+            if rendered:html=rendered
+        if not html:continue
+        soup=BeautifulSoup(html,'html.parser')
+        event_nodes=soup.select('.fc-event, [class*="fc-event"]')
+        for node in event_nodes:
+            text=clean_text(node.get_text(' '))
+            mm=IMPORTANT_MEETING_RE.search(text or '')
+            if not mm:continue
+            day=node.find_parent(attrs={'data-date':True})
+            ds=day.get('data-date') if day else None
+            try:d=date.fromisoformat(ds) if ds else _date_from_text(text)
+            except Exception:d=None
+            if not d or d < today-timedelta(days=1) or d > today+timedelta(days=185):continue
+            tmnode=node.select_one('.fc-time')
+            tm=_time_from_text(clean_text(tmnode.get_text(' '))) if tmnode else _time_from_text(text)
+            title=mm.group(1)
+            key=(title.lower(),d.isoformat(),tm)
+            if key in seen:continue
+            seen.add(key)
+            out.append({'kind':'meeting','title':title,'date':d.isoformat(),'start_time':tm,'end_time':None,
+                        'url':url,'source':'Town of Norwood Master Calendar'})
     return out
 
 
