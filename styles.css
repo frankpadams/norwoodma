@@ -618,3 +618,13 @@ html[data-high-contrast="true"] .outdoor-list-intro{color:#fff!important}
 html[data-high-contrast="true"] .translate-menu{background:#000;color:#fff;border-color:#fff}
 html[data-high-contrast="true"] .translate-menu button:hover,html[data-high-contrast="true"] .translate-menu button:focus{background:#fff;color:#000}
 @media(max-width:620px){.accessibility-controls [data-translate] span{display:none}.translate-menu{min-width:190px}}
+
+
+/* Compact text-size chooser */
+.text-size-menu{position:fixed;z-index:3000;min-width:150px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px;box-shadow:0 12px 34px rgba(0,28,48,.22)}
+.text-size-menu[hidden]{display:none}
+.text-size-menu button{display:block;width:100%;text-align:left;border:0;background:transparent;color:inherit;padding:10px 12px;border-radius:7px;font:inherit;font-size:14px;cursor:pointer}
+.text-size-menu button[aria-checked="true"]{font-weight:800;background:#edf3f6}
+.text-size-menu button:hover,.text-size-menu button:focus{background:#edf3f6}
+html[data-high-contrast="true"] .text-size-menu{background:#000;color:#fff;border-color:#fff}
+html[data-high-contrast="true"] .text-size-menu button[aria-checked="true"],html[data-high-contrast="true"] .text-size-menu button:hover,html[data-high-contrast="true"] .text-size-menu button:focus{background:#fff;color:#000}
