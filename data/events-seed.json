@@ -1,51 +1,5 @@
 [
   {
-    "id": "2026-09-18-legally-blonde",
-    "title": "Legally Blonde — Norwood High School",
-    "start": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "Norwood High School",
-    "address": "245 Nichols St, Norwood, MA 02062",
-    "category": "school_theatre",
-    "source_id": "nps-fine-arts",
-    "source_url": "https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Public high-school theatrical production; exact performance times should be confirmed before display."
-  },
-  {
-    "id": "2026-09-18-ruth-solomon-symposium",
-    "title": "The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating",
-    "start": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-19",
-      "time": null
-    },
-    "venue": "The Skating Club of Boston",
-    "address": "750 University Ave, Norwood, MA 02062",
-    "category": "sports_education",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/figure-skating-health-and-performance-conference/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
-  },
-  {
     "id": "2026-09-18-ballroom-dance",
     "title": "Monthly Ballroom Dance",
     "start": {
@@ -92,6 +46,52 @@
     "notes": null
   },
   {
+    "id": "2026-09-18-legally-blonde",
+    "title": "Legally Blonde — Norwood High School",
+    "start": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": "245 Nichols St, Norwood, MA 02062",
+    "category": "school_theatre",
+    "source_id": "nps-fine-arts",
+    "source_url": "https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Public high-school theatrical production; exact performance times should be confirmed before display."
+  },
+  {
+    "id": "2026-09-18-ruth-solomon-symposium",
+    "title": "The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating",
+    "start": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-19",
+      "time": null
+    },
+    "venue": "The Skating Club of Boston",
+    "address": "750 University Ave, Norwood, MA 02062",
+    "category": "sports_education",
+    "source_id": "skating-club-boston-events",
+    "source_url": "https://scboston.org/event/figure-skating-health-and-performance-conference/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
+  },
+  {
     "id": "2026-09-19-floydian-trip",
     "title": "Floydian Trip: Echoes Through Time",
     "start": {
@@ -113,29 +113,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-20-not-done-yet",
@@ -182,6 +159,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-20-onam-sarva",
+    "title": "Onam Celebration at SARVA Little Venice",
+    "start": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "SARVA Little Venice",
+    "address": "Norwood, MA",
+    "category": "food_culture",
+    "source_id": "sarva-social-feed",
+    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-22-caffeine-connections",
@@ -550,29 +550,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-03-fcc-blessing-pets",
-    "title": "Blessing of the Pets",
-    "start": {
-      "date": "2026-10-03",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "11:00"
-    },
-    "venue": "Norwood Town Common",
-    "address": "Norwood Town Common, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": "Free",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-22",
-    "notes": "First Congregational Church public pet blessing on the Town Common; all leashed animals are welcome. Rain date Sunday, October 4, 1–2 PM."
   },
   {
     "id": "2026-10-03-intro-metalworking",
@@ -1332,29 +1309,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-19",
     "notes": "Pancake breakfast, crafts and photos with Santa. Current 2026 Norwood Recreation Fall/Winter guide confirms the event."
-  },
-  {
-    "id": "2026-12-05-fcc-evergreen-faire",
-    "title": "Evergreen Faire",
-    "start": {
-      "date": "2026-12-05",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-12-05",
-      "time": "14:30"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": "100 Winter St, Norwood, MA 02062",
-    "category": "market_festival",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-22",
-    "notes": "Annual public Evergreen Faire with craft vendors and community activities."
   },
   {
     "id": "2026-12-20-celtic-seisun",
