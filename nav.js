@@ -46,7 +46,7 @@
       let label='NOTICE';
       if(a.kind==='urgent')label=/child abduction|amber/i.test(a.title)?'AMBER ALERT':/silver alert|missing person/i.test(a.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(a.title)?'WEATHER ALERT':'EMERGENCY ALERT';
       if(a.kind==='election')label='ELECTION DAY';
-      if(a.kind==='meeting')label='TODAY';
+      if(a.kind==='meeting')label=a.live?'LIVE NOW':'TODAY';
       const main='<strong>'+label+':</strong> '+esc(a.title);
       if(a.kind==='meeting'&&a.live)return '<span class="site-timely-item">'+main+' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a></span>';
       return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
