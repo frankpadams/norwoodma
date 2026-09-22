@@ -23,6 +23,12 @@
 .map-locate-button{min-height:42px;border:1px solid #d7ad00;border-radius:9px;padding:8px 13px;background:#f2c100;color:#17384d;font:inherit;font-size:.82rem;font-weight:850;cursor:pointer}
 .map-locate-button:hover,.map-locate-button:focus-visible{background:#e3b600}
 .map-progress{display:block;margin-top:4px;color:#876800;font-weight:750}
+.boundary-panel{margin:0 0 14px;border:1px solid #d5e0e6;border-radius:12px;background:#fff}
+.boundary-panel summary{cursor:pointer;padding:11px 13px;font-weight:850;color:#17384d}
+.boundary-options{display:flex;gap:14px;flex-wrap:wrap;padding:0 13px 8px;align-items:center}
+.boundary-options label{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:750;color:#36566c}
+.boundary-link{font-size:.8rem;font-weight:800;color:#003b71}
+.boundary-status{margin:0;padding:0 13px 12px;color:#687983;font-size:.74rem;line-height:1.4}
 .map-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;min-height:620px;border:1px solid #d5e0e6;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(0,42,74,.08)}
 #prototypeMap{min-height:620px}
 .map-list{border-left:1px solid #d5e0e6;overflow:auto;max-height:620px;background:#fbfcfd}
@@ -69,6 +75,15 @@
 <div class="map-filter-field map-filter-search"><label for="mapSearch">Search places</label><input id="mapSearch" type="search" placeholder="Restaurant, park, library, service…" autocomplete="off"></div>
 <button class="locate map-locate-button" id="locateMe">◎ Near me</button>
 </div>
+<details class="boundary-panel">
+<summary>Boundaries &amp; districts</summary>
+<div class="boundary-options">
+<label><input type="checkbox" id="townBoundary"> Town boundary</label>
+<label><input type="checkbox" id="votingPrecincts"> Voting precincts</label>
+<a class="boundary-link" href="https://storymaps.arcgis.com/stories/77587ef7dc81415d86543454341a5039" target="_blank" rel="noopener">Elementary school districts (2026–27) ↗</a>
+</div>
+<p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. The school-district link opens the district’s official interactive redistricting map while we evaluate a direct polygon overlay.</p>
+</details>
 <div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of sample Norwood locations"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div></aside>
@@ -87,6 +102,6 @@
 <script src="data/events-data.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script src="map-test.js?v=0.4"></script>
+<script src="map-test.js?v=0.5"></script>
 </body>
 </html>
