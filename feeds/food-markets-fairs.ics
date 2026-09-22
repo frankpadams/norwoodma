@@ -7,7 +7,7 @@ X-WR-CALNAME:Food\, markets & fairs
 X-WR-CALDESC:Food-centered events\, markets\, fairs and vendor events.
 BEGIN:VEVENT
 UID:2026-09-22-farmers-bushels@norwood.ma
-DTSTAMP:20260922T134500Z
+DTSTAMP:20260922T165513Z
 DTSTART;TZID=America/New_York:20260922T140000
 DTEND;TZID=America/New_York:20260922T180000
 SUMMARY:Norwood Farmers Market: Bushels of Fun
@@ -16,8 +16,18 @@ DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
 URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-09-26-norwood-food-pantry-food-assistance-584b0a3@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20260926T090000
+DTEND;TZID=America/New_York:20260926T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-29-farmers-market@norwood.ma
-DTSTAMP:20260922T134500Z
+DTSTAMP:20260922T165513Z
 DTSTART;TZID=America/New_York:20260929T140000
 DTEND;TZID=America/New_York:20260929T180000
 SUMMARY:Norwood Farmers Market
@@ -26,8 +36,18 @@ DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
 URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-03-norwood-food-pantry-food-assistance-0115cfa@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261003T090000
+DTEND;TZID=America/New_York:20261003T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-06-farmers-pumpkin@norwood.ma
-DTSTAMP:20260922T134500Z
+DTSTAMP:20260922T165513Z
 DTSTART;TZID=America/New_York:20261006T140000
 DTEND;TZID=America/New_York:20261006T180000
 SUMMARY:Norwood Farmers Market: Pumpkin Fest
@@ -36,8 +56,18 @@ DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
 URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-10-norwood-food-pantry-food-assistance-3bb921e@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261010T090000
+DTEND;TZID=America/New_York:20261010T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-13-farmers-market@norwood.ma
-DTSTAMP:20260922T134500Z
+DTSTAMP:20260922T165513Z
 DTSTART;TZID=America/New_York:20261013T140000
 DTEND;TZID=America/New_York:20261013T180000
 SUMMARY:Norwood Farmers Market
@@ -46,13 +76,63 @@ DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
 URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-17-norwood-food-pantry-food-assistance-34f5178@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261017T090000
+DTEND;TZID=America/New_York:20261017T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-20-farmers-closing@norwood.ma
-DTSTAMP:20260922T134500Z
+DTSTAMP:20260922T165513Z
 DTSTART;TZID=America/New_York:20261020T140000
 DTEND;TZID=America/New_York:20261020T180000
 SUMMARY:Norwood Farmers Market: Closing Day
 LOCATION:Norwood Town Common — 580 Washington St\, Norwood\, MA 02062
 DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
 URL:https://www.norwoodcenter.org/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-norwood-food-pantry-food-assistance-5cc2e92@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261024T090000
+DTEND;TZID=America/New_York:20261024T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-norwood-food-pantry-food-assistance-7379ab8@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261031T090000
+DTEND;TZID=America/New_York:20261031T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-07-norwood-food-pantry-food-assistance-348cbe1@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261107T090000
+DTEND;TZID=America/New_York:20261107T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-14-norwood-food-pantry-food-assistance-15e1dab@norwood.ma
+DTSTAMP:20260922T165513Z
+DTSTART;TZID=America/New_York:20261114T090000
+DTEND;TZID=America/New_York:20261114T114000
+SUMMARY:Norwood Food Pantry — Food Assistance
+LOCATION:Norwood Food Pantry — 150 Chapel Street\, Norwood\, MA 02062
+DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new clients may register during pantry hours.\nCost: Free\nSource: https://www.norwoodpantry.org/food
+URL:https://www.norwoodpantry.org/food
 END:VEVENT
 END:VCALENDAR
