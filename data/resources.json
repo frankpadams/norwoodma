@@ -949,6 +949,19 @@
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
+    "name": "HEARTWAP — Heating System Repair & Replacement",
+    "category": "Basic Needs",
+    "description": "Helps eligible low-income homeowners with emergency heating-system repair or replacement, typically through local energy-assistance agencies.",
+    "url": "https://www.mass.gov/info-details/heating-system-repair-replacement-program-heartwap",
+    "tags": "HEARTWAP furnace boiler heating system repair replacement no heat emergency fuel assistance basic needs",
+    "topics": [
+      "housing",
+      "community"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
     "name": "Heritage Baptist Church",
     "category": "Houses of Worship",
     "description": "Baptist church in Norwood offering worship, Bible study and community ministries.",
@@ -1214,13 +1227,15 @@
   },
   {
     "name": "LIHEAP / Fuel Assistance — Massachusetts",
-    "category": "Housing & Utilities",
-    "description": "Income-eligible home heating assistance and energy support for Massachusetts households.",
-    "url": "https://www.mass.gov/info-details/learn-about-home-energy-assistance-liheap",
-    "tags": "LIHEAP fuel heat heating energy bill assistance",
+    "category": "Basic Needs",
+    "description": "Income-eligible home heating assistance for Massachusetts households, helping with winter heating bills and related energy costs.",
+    "url": "https://www.mass.gov/info-details/home-energy-assistance",
+    "tags": "fuel assistance LIHEAP HEAP heat heating oil gas electric energy bill basic needs low income winter utility assistance",
     "topics": [
+      "food",
       "housing",
-      "jobs"
+      "jobs",
+      "community"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1505,13 +1520,15 @@
   },
   {
     "name": "Massachusetts Good Neighbor Energy Fund",
-    "category": "Housing & Utilities",
-    "description": "Energy assistance for qualifying Massachusetts households facing temporary financial difficulty who may not qualify for other fuel programs.",
+    "category": "Basic Needs",
+    "description": "Energy assistance for qualifying Massachusetts households facing temporary financial difficulty who may not qualify for other fuel-assistance programs.",
     "url": "https://www.magoodneighbor.org/",
-    "tags": "fuel heat utility energy bill assistance",
+    "tags": "Good Neighbor Energy Fund fuel heat heating oil gas electric utility bill energy assistance basic needs hardship",
     "topics": [
+      "food",
       "housing",
-      "jobs"
+      "jobs",
+      "community"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -3712,13 +3729,15 @@
   },
   {
     "name": "RAFT Emergency Housing Assistance",
-    "category": "Housing & Utilities",
+    "category": "Basic Needs",
     "description": "Massachusetts Residential Assistance for Families in Transition can help eligible households facing housing instability with rent, utilities and other housing costs.",
     "url": "https://www.mass.gov/how-to/apply-for-raft-emergency-help-for-housing-costs",
-    "tags": "RAFT rent eviction utility housing emergency assistance",
+    "tags": "RAFT rent eviction utility housing emergency assistance basic needs utility shutoff no heat",
     "topics": [
       "housing",
-      "jobs"
+      "jobs",
+      "food",
+      "community"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4377,6 +4396,19 @@
       "kids"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Weatherization Assistance Program — Massachusetts",
+    "category": "Basic Needs",
+    "description": "Provides energy-efficiency improvements such as insulation and air sealing for eligible households to reduce heating costs and improve home comfort.",
+    "url": "https://www.mass.gov/info-details/weatherization-assistance-program-wap",
+    "tags": "weatherization WAP insulation air sealing energy efficiency heating costs utility assistance basic needs",
+    "topics": [
+      "housing",
+      "community"
+    ],
+    "coverage": "Statewide",
     "verified": "2026-09"
   },
   {
