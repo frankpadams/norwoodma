@@ -832,6 +832,35 @@ def refresh_civic_notices(news,offline=False):
     return notices
 
 
+
+def civic_meetings_to_events(notices):
+    """Promote every verified civic meeting notice into the public events/calendar feed."""
+    out=[]
+    for n in notices or []:
+        if n.get('kind')!='meeting' or not n.get('date'): continue
+        ds=n['date']; title=clean_text(n.get('title')) or 'Town Meeting'
+        out.append({
+            'id':event_id(title,ds,'Norwood civic meeting'),
+            'title':title,
+            'start':{'date':ds,'time':n.get('start_time')},
+            'end':{'date':ds,'time':n.get('end_time')},
+            'venue':'Town of Norwood',
+            'address':None,
+            'category':'government',
+            'source_id':'norwood-civic-meetings',
+            'source_url':n.get('url') or 'https://www.norwoodma.gov/',
+            'registration_url':None,
+            'cost':'Free',
+            'public_access':'public',
+            'series':'Norwood Boards & Committees',
+            'publish_candidate':True,
+            'verification_status':'verified_civic_source',
+            'notes':'Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.',
+            'discovered_by':'civic_meeting_monitor'
+        })
+    return out
+
+
 def coverage(registry):
     program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
@@ -939,7 +968,7 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); ap.add_argument('--ack-published',action='store_true'); args=ap.parse_args()
     if args.ack_published:
         acknowledge_published_submissions(); return
-    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline); calendar_feeds=write_calendar_feeds(events)
+    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline); events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices))); write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     registry=read_json('source-registry.json',[])
     cov=coverage(registry); write_json('automation-coverage.json',cov)
     report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
