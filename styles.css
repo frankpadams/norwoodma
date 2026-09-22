@@ -638,3 +638,6 @@ html[data-high-contrast="true"] .text-size-menu button[aria-checked="true"],html
 
 
 html[data-text-size="smallest"],html[data-text-size="compact"],html[data-text-size="standard"],html[data-text-size="large"],html[data-text-size="largest"]{font-size:100%}
+
+/* Paid-admission marker for clearly priced events */
+.event-kind-line{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.paid-admission{display:inline-grid;place-items:center;min-width:1.25rem;height:1.25rem;padding:0 .28rem;border-radius:999px;background:#e8f5ec;color:#15733a;border:1px solid #a9d8b8;font-size:.74rem;font-weight:900;line-height:1;vertical-align:middle}.event-mini b .paid-admission{display:inline-grid;margin-left:4px;transform:translateY(-1px)}
