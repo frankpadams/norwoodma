@@ -4,33 +4,53 @@
   // Site-wide time-sensitive alert strip. Severe weather and public-safety alerts
   // are fetched live from NWS; alerts.json can carry verified local/state emergency notices.
   (async function sitewideTimelyAlerts(){
-    const priority={Extreme:4,Severe:3,Moderate:2,Minor:1,Unknown:0};
+    const priority={Extreme:40,Severe:35,Moderate:30,Minor:25,Unknown:20};
     const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
-    const normalize=a=>({
-      title:String(a.title||a.event||'Emergency alert'),
-      summary:String(a.summary||a.headline||a.description||''),
-      url:String(a.url||a.web||a['@id']||''),
-      severity:String(a.severity||'Unknown'),
-      expires:a.expires||null,
-      source:a.source||'Public alert'
-    });
-    const live=[];
+    const govLive='https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/';
+    const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const easternParts=()=>{
+      const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+      const v=Object.fromEntries(parts.map(p=>[p.type,p.value]));
+      return {date:`${v.year}-${v.month}-${v.day}`,minutes:Number(v.hour)*60+Number(v.minute)};
+    };
+    const normalize=a=>({title:String(a.title||a.event||'Emergency alert'),summary:String(a.summary||a.headline||a.description||''),url:String(a.url||a.web||a['@id']||''),severity:String(a.severity||'Unknown'),expires:a.expires||null,source:a.source||'Public alert',rank:priority[String(a.severity||'Unknown')]||20,kind:'urgent'});
+    const items=[];
     try{
       const r=await fetch('https://api.weather.gov/alerts/active?point=42.1945,-71.1995',{headers:{Accept:'application/geo+json'}});
-      if(r.ok){const j=await r.json();for(const f of (j.features||[])){const p=f.properties||{};if(allowed.test(p.event||''))live.push(normalize({event:p.event,headline:p.headline,description:p.description,severity:p.severity,expires:p.expires,url:f.id,source:p.senderName||'National Weather Service'}));}}
+      if(r.ok){const j=await r.json();for(const f of (j.features||[])){const p=f.properties||{};if(allowed.test(p.event||''))items.push(normalize({event:p.event,headline:p.headline,description:p.description,severity:p.severity,expires:p.expires,url:f.id,source:p.senderName||'National Weather Service'}));}}
     }catch(e){}
     try{
       const r=await fetch('data/alerts.json?fresh='+Date.now(),{cache:'no-store'});
-      if(r.ok){const j=await r.json();for(const a of (Array.isArray(j)?j:[])){const exp=a.expires?Date.parse(a.expires):Infinity;if(a.active!==false&&exp>Date.now()&&allowed.test((a.type||'')+' '+(a.title||'')))live.push(normalize(a));}}
+      if(r.ok){const j=await r.json();for(const a of (Array.isArray(j)?j:[])){const exp=a.expires?Date.parse(a.expires):Infinity;if(a.active!==false&&exp>Date.now()&&allowed.test((a.type||'')+' '+(a.title||'')))items.push(normalize(a));}}
     }catch(e){}
-    if(!live.length)return;
-    const seen=new Set();const alerts=live.filter(a=>{const k=(a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>(priority[b.severity]||0)-(priority[a.severity]||0));
-    const top=alerts[0];
-    const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','alert');strip.setAttribute('aria-live','polite');
-    const label=/child abduction|amber/i.test(top.title)?'AMBER ALERT':/silver alert|missing person/i.test(top.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(top.title)?'WEATHER ALERT':'EMERGENCY ALERT';
-    const count=alerts.length>1?'<span class="site-timely-count">+'+(alerts.length-1)+' more</span>':'';
-    const text='<strong>'+label+':</strong> '+String(top.title).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]))+count;
-    strip.innerHTML=top.url?'<a href="'+top.url.replace(/"/g,'&quot;')+'" target="_blank" rel="noopener">'+text+' <span aria-hidden="true">→</span></a>':'<span>'+text+'</span>';
+    try{
+      const r=await fetch('data/civic-notices.json?fresh='+Date.now(),{cache:'no-store'});
+      if(r.ok){
+        const data=await r.json(), list=Array.isArray(data)?data:(data.notices||[]), now=easternParts();
+        for(const n of list){
+          if(n.kind==='election'){
+            const first=n.show_from||n.start_date, last=n.election_date||n.end_date;
+            if(first&&last&&now.date>=first&&now.date<=last)items.push({kind:'election',rank:15,title:n.title||'Election Day notice',url:n.url||'https://www.norwoodma.gov/',date:last});
+          }else if(n.kind==='meeting'&&n.date===now.date){
+            const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
+            const st=hm(n.start_time), en=hm(n.end_time), live=st!==null&&now.minutes>=st&&now.minutes<=(en!==null?en:st+180);
+            items.push({kind:'meeting',rank:live?18:12,title:n.title||'Public meeting today',url:n.url||'https://www.norwoodma.gov/calendar.php',live});
+          }
+        }
+      }
+    }catch(e){}
+    if(!items.length)return;
+    const seen=new Set();const alerts=items.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
+    const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
+    strip.innerHTML='<div class="site-timely-track">'+alerts.map(a=>{
+      let label='NOTICE';
+      if(a.kind==='urgent')label=/child abduction|amber/i.test(a.title)?'AMBER ALERT':/silver alert|missing person/i.test(a.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(a.title)?'WEATHER ALERT':'EMERGENCY ALERT';
+      if(a.kind==='election')label='ELECTION DAY';
+      if(a.kind==='meeting')label='TODAY';
+      const main='<strong>'+label+':</strong> '+esc(a.title);
+      if(a.kind==='meeting'&&a.live)return '<span class="site-timely-item">'+main+' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a></span>';
+      return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
+    }).join('<span class="site-timely-sep" aria-hidden="true">•</span>')+'</div>';
     const independent=document.querySelector('.independent');
     if(independent)independent.insertAdjacentElement('afterend',strip);else document.body.prepend(strip);
   })();
