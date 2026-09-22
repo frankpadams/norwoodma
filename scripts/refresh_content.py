@@ -781,6 +781,25 @@ def civic_meetings_from_town_calendar():
         out.append({'kind':'meeting','title':title,'date':d.isoformat(),'start_time':_time_from_text(text),'end_time':None,'url':href,'source':'Town of Norwood Meetings Calendar'})
     return out
 
+
+def civic_meetings_from_ncm_live_schedule(days=60):
+    """Cross-check upcoming government broadcasts directly against NCM/Cablecast."""
+    out=[]
+    today=now_local().date()
+    for offset in range(days+1):
+        d=today+timedelta(days=offset)
+        try: rows=ncm_cablecast_schedule(3,d)
+        except Exception: continue
+        for row in rows:
+            m=IMPORTANT_MEETING_RE.search(row.get('title',''))
+            if not m: continue
+            out.append({'kind':'meeting','title':m.group(1),'date':d.isoformat(),
+                        'start_time':row.get('time'),'end_time':None,
+                        'url':'https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/',
+                        'source':'Norwood Community Media / Cablecast Government schedule'})
+    return out
+
+
 def election_notices_from_news(news):
     out=[];today=now_local().date();seen=set()
     for x in news:
@@ -800,6 +819,8 @@ def refresh_civic_notices(news,offline=False):
     notices=list(seed)+election_notices_from_news(news)
     if not offline:
         try:notices.extend(civic_meetings_from_town_calendar())
+        except Exception:pass
+        try:notices.extend(civic_meetings_from_ncm_live_schedule())
         except Exception:pass
     chosen={}
     for n in notices:
