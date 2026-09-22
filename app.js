@@ -100,6 +100,29 @@ function compareEventDisplay(a,b){
  const d=(a.start?.date||'').localeCompare(b.start?.date||'');if(d)return d;
  return (a.start?.time||'99:99').localeCompare(b.start?.time||'99:99');
 }
+function eventSourceKey(e){
+ const combined=[e.source_id,e.organizer,e.venue].filter(Boolean).join(' ').toLowerCase();
+ if(/library|morrill/.test(combined))return'norwood-library';
+ return String(e.organizer||e.source_id||e.venue||'other').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+}
+function diversifySameDayEvents(list){
+ const byDate=new Map();
+ list.forEach(e=>{const d=e.start?.date||'';if(!byDate.has(d))byDate.set(d,[]);byDate.get(d).push(e)});
+ const out=[];
+ [...byDate.keys()].sort().forEach(d=>{
+   const day=byDate.get(d);
+   const queues=new Map();
+   day.slice().sort(compareEventDisplay).forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
+   let last='';
+   while(queues.size){
+     const choices=[...queues.entries()].filter(([k])=>k!==last&&queues.size>1);
+     const pool=choices.length?choices:[...queues.entries()];
+     pool.sort((a,b)=>compareEventDisplay(a[1][0],b[1][0]));
+     const [key,q]=pool[0],e=q.shift();out.push(e);last=key;if(!q.length)queues.delete(key);
+   }
+ });
+ return out;
+}
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
@@ -110,7 +133,7 @@ function groupEvents(items){
  const sat=new Date(now);const delta=(6-now.getDay()+7)%7;sat.setDate(sat.getDate()+delta);const sun=new Date(sat);sun.setDate(sun.getDate()+1);const satKey=dateKey(sat),sunKey=dateKey(sun);
  const next7=new Date(now);next7.setDate(next7.getDate()+7);const next7Key=dateKey(next7);
  const g={today:[],tomorrow:[],weekend:[],next:[],save:[]};
- for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}Object.values(g).forEach(list=>list.sort(compareEventDisplay));return g;
+ for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}Object.keys(g).forEach(k=>{g[k]=diversifySameDayEvents(g[k]);});return g;
 }
 function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.registration_url||e.source_url||'events.html')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
 function eventMatchesCalendar(e,key){
@@ -134,7 +157,7 @@ function renderCalendarView(items){
  const y=calendarCursor.getFullYear(),m=calendarCursor.getMonth(),first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),lead=first.getDay();
  const cells=[];for(let i=0;i<lead;i++)cells.push('<span class="month-empty" aria-hidden="true"></span>');
  for(let day=1;day<=days;day++){const k=dateKey(new Date(y,m,day)),count=(byDate.get(k)||[]).length;cells.push(`<button class="month-day ${k===calendarSelected?'selected':''} ${count?'has-events':''}" data-calendar-date="${k}" aria-pressed="${k===calendarSelected}"><span>${day}</span>${count?`<small>${count} event${count===1?'':'s'}</small>`:''}</button>`)}
- const chosen=(byDate.get(calendarSelected)||[]).slice().sort(compareEventDisplay),selectedDate=parseLocalDate(calendarSelected);
+ const chosen=diversifySameDayEvents((byDate.get(calendarSelected)||[]).slice()),selectedDate=parseLocalDate(calendarSelected);
  return `<section class="month-calendar"><div class="month-nav"><button type="button" data-month-step="-1" aria-label="Previous month">‹</button><h2>${calendarCursor.toLocaleDateString([],{month:'long',year:'numeric'})}</h2><button type="button" data-month-step="1" aria-label="Next month">›</button></div><div class="month-weekdays" aria-hidden="true">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<b>'+x+'</b>').join('')}</div><div class="month-grid">${cells.join('')}</div></section><section class="event-period calendar-selection"><div class="event-period-head"><h2>${selectedDate?selectedDate.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'}):'Select a day'}</h2></div><div class="event-list">${chosen.length?chosen.map(eventRow).join(''):'<p>No events currently listed for this day.</p>'}</div></section>`;
 }
 function renderEventsPage(items){
@@ -152,7 +175,7 @@ function renderEventsPage(items){
  }
  const st=$('#eventsStatus');if(st)st.textContent=`${items.length} upcoming/current events · refreshed every two hours`;
 }
-function renderHomeEvents(items){const host=$('#homeEvents');if(!host)return;const ranked=items.slice().sort((a,b)=>{const d=(a.start?.date||'').localeCompare(b.start?.date||'');if(d)return d;const p=eventPriority(a)-eventPriority(b);if(p)return p;return (a.start?.time||'99:99').localeCompare(b.start?.time||'99:99');});host.innerHTML=ranked.slice(0,5).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';}
+function renderHomeEvents(items){const host=$('#homeEvents');if(!host)return;const ranked=diversifySameDayEvents(items.slice());host.innerHTML=ranked.slice(0,5).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';}
 async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();allEventsForPage=items;renderEventsPage(items);renderHomeEvents(items);
  $('#eventSearch')?.addEventListener('input',()=>renderEventsPage(allEventsForPage));
  document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);})); document.addEventListener('click',e=>{const day=e.target.closest('[data-calendar-date]');if(day){calendarSelected=day.dataset.calendarDate;renderEventsPage(allEventsForPage);return}const step=e.target.closest('[data-month-step]');if(step){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+Number(step.dataset.monthStep),1);calendarSelected=dateKey(calendarCursor);renderEventsPage(allEventsForPage)}});
