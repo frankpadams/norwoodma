@@ -1,50 +1,50 @@
 {
-  "generated_at": "2026-09-21T19:22:42.673507-04:00",
+  "generated_at": "2026-09-22T01:07:32.068070-04:00",
   "offline": false,
-  "events_published": 116,
+  "events_published": 111,
   "news_published": 120,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 116,
-      "generated_at": "2026-09-21T19:22:42.666644-04:00"
+      "events": 111,
+      "generated_at": "2026-09-22T01:07:32.061620-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-21T19:22:42.667595-04:00"
+      "generated_at": "2026-09-22T01:07:32.062717-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 16,
-      "generated_at": "2026-09-21T19:22:42.668453-04:00"
+      "events": 15,
+      "generated_at": "2026-09-22T01:07:32.063668-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-21T19:22:42.669135-04:00"
+      "generated_at": "2026-09-22T01:07:32.064462-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-21T19:22:42.669693-04:00"
+      "generated_at": "2026-09-22T01:07:32.065088-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 5,
-      "generated_at": "2026-09-21T19:22:42.670329-04:00"
+      "generated_at": "2026-09-22T01:07:32.065799-04:00"
     }
   ],
   "event_sources": [
@@ -57,10 +57,10 @@
     },
     {
       "source_id": "ache-massachusetts-events",
-      "ok": false,
+      "ok": true,
       "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='massache.org', port=443): Max retries exceeded with url: /events/list/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='massache.org', port=443) at 0"
+      "found": 2,
+      "note": ""
     },
     {
       "source_id": "castle-island-calendar",
@@ -360,7 +360,7 @@
       "source_id": "st-catherine-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 11,
+      "found": 10,
       "note": ""
     },
     {
@@ -519,7 +519,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 69,
+      "found": 68,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -527,7 +527,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 69,
+      "found": 68,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -535,7 +535,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 41,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -612,8 +612,8 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Realtor.com": 2,
         "Patch": 6,
-        "Realtor.com": 1,
         "hoodline.com": 2,
         "Wicked Local": 1,
         "MaxPreps": 3,
@@ -628,7 +628,7 @@
         "Town of Norwood": 8,
         "Norwood Town News": 11,
         "NBC Boston": 2,
-        "John Guilfoil Public Relations": 2,
+        "John Guilfoil Public Relations": 1,
         "WCVB": 1,
         "DailyVoice.com": 1
       },
