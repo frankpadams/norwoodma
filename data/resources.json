@@ -586,6 +586,19 @@
     "verified": "2026-09"
   },
   {
+    "name": "De Novo Center for Justice and Healing",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Provides free legal and victim-support services to refugees and immigrants, including immigration representation, asylum-related help, family law, counseling and case management.",
+    "url": "https://www.denovo.org/",
+    "tags": "immigration asylum refugee legal aid VAWA T visa U visa SIJ family law counseling victim services attorney",
+    "topics": [
+      "community",
+      "health"
+    ],
+    "coverage": "Regional/State",
+    "verified": "2026-09"
+  },
+  {
     "name": "Dedham Community Theatre",
     "category": "Arts, Recreation & Culture",
     "description": "Independent two-screen neighborhood movie theater in historic Dedham Square.",
@@ -1299,6 +1312,19 @@
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts Access to Counsel Initiative (MACI)",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Statewide immigration legal representation program for eligible Massachusetts residents in removal proceedings, including detained and non-detained cases.",
+    "url": "https://www.mass.gov/info-details/massachusetts-access-to-counsel-initiative-maci",
+    "tags": "immigration lawyer removal deportation detention legal representation asylum immigration court attorney MACI",
+    "topics": [
+      "community"
+    ],
+    "coverage": "Statewide",
+    "phone": "508-505-4588",
+    "verified": "2026-09"
+  },
+  {
     "name": "Massachusetts Animal Fund",
     "category": "Pets & Assistance",
     "description": "State spay/neuter assistance resources for qualifying Massachusetts residents and municipal animals.",
@@ -1603,6 +1629,18 @@
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts Immigration Legal Resources",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Massachusetts legal-information hub with referrals for asylum, refugees, TPS, benefits, legal-aid directories and other immigration-related help.",
+    "url": "https://www.mass.gov/info-details/massachusetts-law-about-immigration",
+    "tags": "immigration asylum refugee TPS legal aid rights benefits lawyer attorney directory",
+    "topics": [
+      "community"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
     "name": "Massachusetts Legal Help — Housing",
     "category": "Legal & Housing",
     "description": "Plain-language Massachusetts legal information about eviction, rent, public housing, utilities and housing rights.",
@@ -1631,13 +1669,17 @@
   },
   {
     "name": "Massachusetts Office for Refugees and Immigrants",
-    "category": "Community Support",
-    "description": "State office coordinating programs and resources for refugees and immigrants in Massachusetts.",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "State office connecting immigrants and refugees with case management, legal help, citizenship support, employment, education, youth, elder and community services through a statewide network.",
     "url": "https://www.mass.gov/orgs/office-for-refugees-and-immigrants",
-    "tags": "immigrant refugee services language",
+    "tags": "immigration immigrant refugee asylum resettlement newcomer legal help citizenship TPS case management employment education language access benefits",
     "topics": [
       "community",
-      "jobs"
+      "jobs",
+      "kids",
+      "older",
+      "housing",
+      "food"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -3565,6 +3607,23 @@
     "verified": "2026-09"
   },
   {
+    "name": "ORI Refugee Community Services",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Bilingual and bicultural support for refugees, including social services, family support, interpretation/translation, benefits referrals, English classes and community orientation.",
+    "url": "https://www.mass.gov/info-details/refugee-community-services-rcs",
+    "tags": "refugee immigrant asylum social services family support translation interpretation ESOL English classes benefits resettlement",
+    "topics": [
+      "community",
+      "food",
+      "housing",
+      "jobs",
+      "kids",
+      "older"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
     "name": "OUT MetroWest",
     "category": "LGBTQ+",
     "description": "Programs and community for LGBTQ+ children, teens and young adults in MetroWest.",
@@ -3788,6 +3847,22 @@
     "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
     "tags": "programs classes youth adult fitness register",
     "coverage": "Regional/State",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Refugee & Immigrant Assistance Center — Boston",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Boston-area refugee and immigrant service agency providing resettlement, case management, cash assistance, citizenship help, elder refugee services and community support.",
+    "url": "https://www.riacboston.org/",
+    "tags": "refugee immigrant asylum resettlement case management cash assistance citizenship social services Arabic Farsi French Somali Swahili",
+    "topics": [
+      "community",
+      "food",
+      "housing",
+      "jobs",
+      "older"
+    ],
+    "coverage": "Regional — Boston",
     "verified": "2026-09"
   },
   {
