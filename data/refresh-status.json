@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T08:32:56.378250-04:00",
+  "generated_at": "2026-09-22T08:34:33.446439-04:00",
   "offline": false,
   "events_published": 132,
   "news_published": 120,
@@ -9,42 +9,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 132,
-      "generated_at": "2026-09-22T08:32:56.371605-04:00"
+      "generated_at": "2026-09-22T08:34:33.439705-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 40,
-      "generated_at": "2026-09-22T08:32:56.372748-04:00"
+      "generated_at": "2026-09-22T08:34:33.440768-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 15,
-      "generated_at": "2026-09-22T08:32:56.373722-04:00"
+      "generated_at": "2026-09-22T08:34:33.441794-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-22T08:32:56.374512-04:00"
+      "generated_at": "2026-09-22T08:34:33.442650-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-22T08:32:56.375180-04:00"
+      "generated_at": "2026-09-22T08:34:33.443420-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 5,
-      "generated_at": "2026-09-22T08:32:56.375919-04:00"
+      "generated_at": "2026-09-22T08:34:33.444196-04:00"
     }
   ],
   "event_sources": [
@@ -66,8 +66,8 @@
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 1,
-      "note": ""
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "citizens-better-norwood-events",
@@ -113,10 +113,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": false,
+      "ok": true,
       "method": "tribe_events",
-      "found": 0,
-      "note": "Expecting value: line 1 column 1 (char 0)"
+      "found": 5,
+      "note": ""
     },
     {
       "source_id": "grace-calendar",
@@ -509,10 +509,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
