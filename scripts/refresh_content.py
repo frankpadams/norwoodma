@@ -2,6 +2,7 @@
 """Refresh Norwood.ma event/news data for a static GitHub Pages site.
 
 # Source registry changes can be force-refreshed by touching this script.
+# 2026-09-22: refresh triggered after adding First Congregational Church events.
 
 The script is deliberately failure-tolerant: one broken source never prevents the
 site from keeping its last known-good, still-current data. Scheduled runs can be
