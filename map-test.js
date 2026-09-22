@@ -6,7 +6,7 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
-const boundaryLayers={town:null,precincts:null,schools:null};
+const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
@@ -179,115 +179,6 @@ async function togglePrecincts(on){
 }
 
 
-function arcgisIds(value){
- const ids=new Set(),walk=v=>{
-  if(typeof v==='string'){for(const m of v.matchAll(/\b[a-f0-9]{32}\b/gi))ids.add(m[0])}
-  else if(Array.isArray(v))v.forEach(walk);
-  else if(v&&typeof v==='object')Object.values(v).forEach(walk);
- };walk(value);return [...ids];
-}
-async function arcgisItem(id){
- const r=await fetch('https://www.arcgis.com/sharing/rest/content/items/'+id+'?f=json');
- if(!r.ok)throw Error(r.status);return r.json();
-}
-async function arcgisItemData(id){
- const r=await fetch('https://www.arcgis.com/sharing/rest/content/items/'+id+'/data?f=json');
- if(!r.ok)throw Error(r.status);return r.json();
-}
-async function mapConcurrent(items,fn,limit=6){
- let i=0;const out=new Array(items.length);
- await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(i<items.length){const n=i++;try{out[n]=await fn(items[n],n)}catch(e){out[n]=null}}}));
- return out;
-}
-function collectOperationalLayers(data,out=[]){
- const visit=v=>{
-  if(!v)return;
-  if(Array.isArray(v)){v.forEach(visit);return}
-  if(typeof v!=='object')return;
-  if(v.url||v.featureCollection)out.push(v);
-  if(v.layers)visit(v.layers);
-  if(v.operationalLayers)visit(v.operationalLayers);
- };
- visit(data?.operationalLayers||data?.layers||[]);
- return out;
-}
-async function queryArcGISGeoJSON(url){
- let service=url.replace(/\/$/,'');
- if(/FeatureServer$/i.test(service)){
-  const meta=await fetch(service+'?f=json').then(r=>r.json());
-  const polygon=(meta.layers||[]).find(x=>String(x.geometryType||'').includes('Polygon'))||(meta.layers||[])[0];
-  if(!polygon)throw Error('No polygon layer');
-  service+='/'+polygon.id;
- }
- const sep=service.includes('?')?'&':'?';
- const q=service+sep+'where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson';
- const r=await fetch(q);if(!r.ok)throw Error(r.status);return r.json();
-}
-async function loadSchoolDistrictGeoJSON(){
- const storyId='77587ef7dc81415d86543454341a5039';
- const story=await arcgisItemData(storyId);
- const ids=arcgisIds(story);
- const metas=await mapConcurrent(ids,id=>arcgisItem(id),8);
- const candidates=metas.filter(x=>x&&x.type==='Web Map').map(x=>({meta:x,score:0}));
- for(const x of candidates){
-   const t=norm([x.meta.title,(x.meta.tags||[]).join(' '),x.meta.description||''].join(' '));
-   if(/scenario 1|scenario one/.test(t))x.score+=8;
-   if(/school|district|redistrict/.test(t))x.score+=4;
-   if(/norwood/.test(t))x.score+=3;
-   try{
-     x.data=await arcgisItemData(x.meta.id);
-     const d=norm(JSON.stringify(x.data));
-     if(/scenario 1|scenario one/.test(d))x.score+=8;
-     if(/willett|balch|callahan|cleveland|oldham|prescott/.test(d))x.score+=5;
-   }catch(e){}
- }
- candidates.sort((a,b)=>b.score-a.score);
- const selected=candidates[0];
- if(!selected||selected.score<5)throw Error('School district web map not found');
- const layers=collectOperationalLayers(selected.data);
- const geo=[];
- for(const l of layers){
-   if(!l.url)continue;
-   const text=norm([l.title,l.id,l.url].join(' '));
-   if(!/district|school|scenario|boundary|component|elementary/.test(text)&&layers.length>2)continue;
-   try{
-     const g=await queryArcGISGeoJSON(l.url);
-     if(g?.features?.length)geo.push(g);
-   }catch(e){}
- }
- if(!geo.length){
-   for(const l of layers){
-     if(!l.url)continue;
-     try{const g=await queryArcGISGeoJSON(l.url);if(g?.features?.length)geo.push(g)}catch(e){}
-   }
- }
- if(!geo.length)throw Error('No school district polygons found');
- return {geo,title:selected.meta.title||'Elementary school districts'};
-}
-function schoolPopup(feature){
- const p=feature.properties||{};
- const school=Object.entries(p).find(([k,v])=>/school|district|name|scenario/i.test(k)&&v)?.[1];
- return '<b>'+esc(school||'Elementary school district')+'</b><br>2026–27 boundary from the Norwood school district ArcGIS source';
-}
-async function toggleSchoolDistricts(on){
- const box=document.querySelector('#boundaryStatus');
- if(!on){if(boundaryLayers.schools){boundaryLayers.schools.forEach(l=>map.removeLayer(l));boundaryLayers.schools=null}return}
- if(boundaryLayers.schools){boundaryLayers.schools.forEach(l=>l.addTo(map));return}
- if(box)box.textContent='Loading elementary school district boundaries from the official ArcGIS StoryMap…';
- try{
-  const result=await loadSchoolDistrictGeoJSON(),layers=[];
-  result.geo.forEach(g=>{
-    const l=L.geoJSON(g,{style:{color:'#8a3ffc',weight:2,fillColor:'#8a3ffc',fillOpacity:.10,opacity:.9},onEachFeature:(f,layer)=>layer.bindPopup(schoolPopup(f))}).addTo(map);
-    layers.push(l);
-  });
-  boundaryLayers.schools=layers;
-  if(box)box.textContent='Elementary school districts shown from the Norwood school district ArcGIS source ('+result.title+').';
- }catch(e){
-  document.querySelector('#schoolDistricts').checked=false;
-  if(box)box.innerHTML='The school-district polygons could not be loaded directly. <a href="https://storymaps.arcgis.com/stories/77587ef7dc81415d86543454341a5039" target="_blank" rel="noopener">Open the official district map ↗</a>';
- }
-}
-
 document.querySelector('#locateMe').addEventListener('click',()=>{
  if(!navigator.geolocation){alert('Location is not available in this browser.');return}
  navigator.geolocation.getCurrentPosition(pos=>{
@@ -298,6 +189,5 @@ document.querySelector('#locateMe').addEventListener('click',()=>{
 });
 document.querySelector('#townBoundary')?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
 document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
-document.querySelector('#schoolDistricts')?.addEventListener('change',e=>toggleSchoolDistricts(e.target.checked));
 render();
 })();
