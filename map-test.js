@@ -38,7 +38,7 @@ const staticPlaces=[
  {name:'Norwood Light & Broadband',category:'civic',address:'136 Access Rd, Norwood, MA 02062',details:'Municipal electric utility · broadband · billing and customer service',url:'https://norwoodlight.com/'},
  {name:'Norwood Housing Authority — Administration',category:'civic',address:'40 William Shyne Cir, Norwood, MA 02062',details:'Municipal housing authority administrative offices',url:'https://www.norwoodha.org/'},
  {name:'Highland Cemetery / Cemetery Department',category:'civic',also:['historic'],address:'320 Winter St, Norwood, MA 02062',details:'Historic town cemetery · cemetery office · St. Gabriel’s Chapel',url:'https://www.norwoodma.gov/'},
- {name:'Norwood High School',category:'school',also:['civic'],address:'245 Nichols St, Norwood, MA 02062',lat:42.19917,lng:-71.20972,details:'Athletic fields · tennis courts · track',url:'parks-trails.html#tennis-courts'},
+ {name:'Norwood High School',category:'school',publicSchool:true,also:['civic'],address:'245 Nichols St, Norwood, MA 02062',lat:42.19917,lng:-71.20972,details:'Athletic fields · tennis courts · track',url:'parks-trails.html#tennis-courts'},
  {name:'FINE Mortuary College',category:'school',address:'150 Kerry Pl, Norwood, MA 02062',details:'Postsecondary funeral-service education · Associate in Applied Science · distance and part-time options',url:'https://fmc.edu/'},
  {name:'Saint Catherine of Siena School',category:'school',address:'249 Nahatan St, Norwood, MA 02062',details:'Private Catholic school · preschool through grade 8',url:'https://www.scsnorwood.org/'},
  {name:'Norwood Montessori School',category:'school',address:'462 Walpole St, Norwood, MA 02062',details:'Private Montessori school · toddler through secondary/high school programs',url:'https://www.norwoodmontessorischool.com/'},
@@ -46,19 +46,26 @@ const staticPlaces=[
  {name:'Norfolk County Agricultural High School',category:'school',address:'400 Main St, Walpole, MA 02081',details:'Public vocational agricultural high school · career and technical education',url:'https://www.norfolkaggie.org/'},
  {name:'Xaverian Brothers High School',category:'school',address:'800 Clapboardtree St, Westwood, MA 02090',details:'Private Catholic college-preparatory school for boys · grades 7–12',url:'https://www.xbhs.com/'},
  {name:'Tri-County Regional Vocational Technical High School',category:'school',address:'147 Pond St, Franklin, MA 02038',details:'Regional vocational-technical high school · career programs and adult/postsecondary education',url:'https://www.tri-county.us/'},
- {name:'Coakley Middle School / Ivatts',category:'school',also:['civic'],address:'1315 Washington St, Norwood, MA 02062',lat:42.17445,lng:-71.20085,details:'Tennis · baseball · softball · rectangular fields · school recreation facilities',url:'parks-trails.html#tennis-courts'},
- {name:'Balch Elementary School',category:'school',also:['civic'],address:'1170 Washington St, Norwood, MA 02062',details:'Playground · outdoor play areas · adjoining athletic fields',url:'https://www.norwood.k12.ma.us/balch'},
- {name:'Callahan Elementary School',category:'school',also:['civic'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Playground · outdoor recreation · athletic field',url:'https://www.norwood.k12.ma.us/callahan'},
- {name:'Cleveland Elementary School',category:'school',also:['civic'],address:'33 George Willett Pkwy, Norwood, MA 02062',details:'Playground · outdoor recreation · Jean Brown Field and back field',url:'https://www.norwood.k12.ma.us/cleveland'},
- {name:'Oldham Elementary School',category:'school',also:['civic'],address:'165 Prospect St, Norwood, MA 02062',details:'Playground · outdoor recreation · Little League and rectangular fields',url:'https://www.norwood.k12.ma.us/oldham/'},
- {name:'Prescott Elementary School',category:'school',also:['civic'],address:'66 Richland Rd, Norwood, MA 02062',details:'Playground · basketball · Little League baseball · softball field',url:'https://www.norwood.k12.ma.us/prescott'},
- {name:'Willett Elementary School',category:'school',also:['civic'],address:'100 Westover Pkwy, Norwood, MA 02062',details:'Playground · baseball field · outdoor recreation area',url:'https://www.norwood.k12.ma.us/willett/index'},
- {name:'Hawes Recreation Area',category:'park',address:'1305 Washington St, Norwood, MA 02062',lat:42.17515,lng:-71.20165,details:'Pool · spray park · playground · tennis · fishing · trails',url:'parks-trails.html'},
- {name:'Father Mac’s / Father McAleer',category:'park',address:'295 Vernon St, Norwood, MA 02062',lat:42.18785,lng:-71.21375,details:'Pool · playground · Little League · soccer',url:'parks-trails.html'},
- {name:'Doherty Park / Doherty Field',category:'park',address:'Brewster Dr, Norwood, MA 02062',details:'Playground · Little League baseball',url:'parks-trails.html'},
- {name:'Ellis Playground & Fields',category:'park',address:'Codman St at Cameron Rd, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
- {name:'Murphy Park & Playground',category:'park',address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League · basketball · walking connection',url:'parks-trails.html'},
- {name:'Prescott Playground & Fields',category:'park',address:'66 Richmond Rd, Norwood, MA 02062',details:'Playground · basketball · baseball · softball',url:'parks-trails.html'},
+ {name:'Coakley Middle School / Ivatts',category:'school',publicSchool:true,also:['civic'],address:'1315 Washington St, Norwood, MA 02062',lat:42.17445,lng:-71.20085,details:'Tennis · baseball · softball · rectangular fields · school recreation facilities',url:'parks-trails.html#tennis-courts'},
+ {name:'Balch Elementary School',category:'school',publicSchool:true,also:['civic'],address:'1170 Washington St, Norwood, MA 02062',details:'Playground · outdoor play areas · adjoining athletic fields',url:'https://www.norwood.k12.ma.us/balch'},
+ {name:'Callahan Elementary School',category:'school',publicSchool:true,also:['civic'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Playground · outdoor recreation · athletic field',url:'https://www.norwood.k12.ma.us/callahan'},
+ {name:'Cleveland Elementary School',category:'school',publicSchool:true,also:['civic'],address:'33 George Willett Pkwy, Norwood, MA 02062',details:'Playground · outdoor recreation · Jean Brown Field and back field',url:'https://www.norwood.k12.ma.us/cleveland'},
+ {name:'Oldham Elementary School',category:'school',publicSchool:true,also:['civic'],address:'165 Prospect St, Norwood, MA 02062',details:'Playground · outdoor recreation · Little League and rectangular fields',url:'https://www.norwood.k12.ma.us/oldham/'},
+ {name:'Prescott Elementary School',category:'school',publicSchool:true,also:['civic'],address:'66 Richland Rd, Norwood, MA 02062',details:'Playground · basketball · Little League baseball · softball field',url:'https://www.norwood.k12.ma.us/prescott'},
+ {name:'Willett Elementary School',category:'school',publicSchool:true,also:['civic'],address:'100 Westover Pkwy, Norwood, MA 02062',details:'Playground · baseball field · outdoor recreation area',url:'https://www.norwood.k12.ma.us/willett/index'},
+ {name:'Norwood High School Athletic Complex',category:'athletic',address:'245 Nichols St, Norwood, MA 02062',details:'Athletic fields · tennis courts · track',url:'parks-trails.html#tennis-courts'},
+ {name:'Coakley / Ivatts Athletic Complex',category:'athletic',address:'1315 Washington St, Norwood, MA 02062',details:'Tennis · baseball · softball · rectangular fields · walking/cross-country route · disc golf',url:'parks-trails.html'},
+ {name:'Balch Fields & Playground',category:'athletic',address:'1170 Washington St, Norwood, MA 02062',details:'Playground · baseball · softball · basketball',url:'parks-trails.html'},
+ {name:'Callahan Fields & Playground',category:'athletic',address:'116 Garfield Ave, Norwood, MA 02062',details:'Playground · rectangular athletic field · basketball',url:'parks-trails.html'},
+ {name:'Cleveland Fields & Playground',category:'athletic',address:'33 George Willett Pkwy, Norwood, MA 02062',details:'Playground · Jean Brown Field · back field · basketball',url:'parks-trails.html'},
+ {name:'Oldham Fields & Playground',category:'athletic',address:'165 Prospect St, Norwood, MA 02062',details:'Playground · Little League baseball · rectangular field',url:'parks-trails.html'},
+ {name:'Prescott Fields & Playground',category:'athletic',address:'66 Richland Rd, Norwood, MA 02062',details:'Playground · basketball · Little League baseball · softball',url:'parks-trails.html'},
+ {name:'Willett Field & Playground',category:'athletic',address:'100 Westover Pkwy, Norwood, MA 02062',details:'Playground · baseball field · outdoor recreation area',url:'parks-trails.html'},
+ {name:'Hawes Recreation Area',category:'athletic',also:['park'],address:'1305 Washington St, Norwood, MA 02062',details:'Pool · spray park · playground · tennis · fishing · trails',url:'parks-trails.html'},
+ {name:'Father Mac’s / Father McAleer Recreation Area',category:'athletic',also:['park'],address:'295 Vernon St, Norwood, MA 02062',details:'Pool · playground · Little League baseball · soccer',url:'parks-trails.html'},
+ {name:'Doherty Park / Doherty Field',category:'athletic',also:['park'],address:'Brewster Dr, Norwood, MA 02062',details:'Playground · Little League baseball',url:'parks-trails.html'},
+ {name:'Ellis Playground & Fields',category:'athletic',also:['park'],address:'Codman St at Cameron Rd, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
+ {name:'Murphy Park & Playground',category:'athletic',also:['park'],address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League baseball · basketball · walking connection',url:'parks-trails.html'},
  {name:'Morrill Memorial Library',category:'culture',also:['civic','historic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
  {name:'The Norwood Theatre',category:'culture',also:['historic'],address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Restored 1927 theatre · live music · theatre · comedy · films',url:'things.html'},
  {name:'Norwood Food Pantry',category:'resource',address:'150 Chapel St, Norwood, MA 02062',lat:42.18262,lng:-71.21230,details:'Food assistance · Saturday pantry hours',url:'resources.html'},
@@ -99,7 +106,8 @@ const dynamic=[];
  if(a)dynamic.push({name:e.title,category:'event',address:a,details:[e.start?.date,e.start?.time,e.venue,e.cost].filter(Boolean).join(' · '),url:e.registration_url||e.source_url||'events.html'});
 });
 const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address);if(seen.has(k))return false;seen.add(k);return true});
-function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
+function publicSchoolMark(p){return p.publicSchool?'<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Norwood Public Schools" title="Norwood Public Schools" style="width:14px;height:14px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}
+function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+publicSchoolMark(p)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
 function searchMatch(p,q){return !q||norm([p.name,p.details,p.address,p.category].join(' ')).includes(q)}
 function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&searchMatch(p,q));}
 async function geocode(p){
@@ -124,7 +132,7 @@ async function render(){
  status.innerHTML='Plotting locations… <span class="map-progress" id="mapProgress">0 of '+shown.length+' mapped</span>';
  const cards=new Map(),markers=[],progress=document.querySelector('#mapProgress');
  shown.forEach((p,i)=>{
-  const b=document.createElement('button');b.className='place-card';b.innerHTML='<b>'+esc(p.name)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
+  const b=document.createElement('button');b.className='place-card';b.innerHTML='<b>'+esc(p.name)+publicSchoolMark(p)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
  });
  let done=0,mapped=0;
  await pooled(shown,async p=>{
