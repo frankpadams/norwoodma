@@ -628,3 +628,10 @@ html[data-high-contrast="true"] .translate-menu button:hover,html[data-high-cont
 .text-size-menu button:hover,.text-size-menu button:focus{background:#edf3f6}
 html[data-high-contrast="true"] .text-size-menu{background:#000;color:#fff;border-color:#fff}
 html[data-high-contrast="true"] .text-size-menu button[aria-checked="true"],html[data-high-contrast="true"] .text-size-menu button:hover,html[data-high-contrast="true"] .text-size-menu button:focus{background:#fff;color:#000}
+
+
+html[data-text-size="smallest"]{font-size:87.5%}
+html[data-text-size="compact"]{font-size:93.75%}
+html[data-text-size="standard"]{font-size:100%}
+html[data-text-size="large"]{font-size:112.5%}
+html[data-text-size="largest"]{font-size:125%}
