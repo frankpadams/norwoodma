@@ -106,7 +106,23 @@ def public_candidate(title, description=''):
       'school committee meeting','zoning board meeting','finance commission meeting',
       'practice','members only','member-only','private event'
     ]
-    return not any(x in t for x in blocked)
+    if any(x in t for x in blocked):
+        return False
+
+    # Vaccine policy: include special, dated public clinics but suppress routine
+    # ongoing retail/pharmacy vaccination availability that would otherwise
+    # flood the community calendar with effectively identical daily entries.
+    vaccine_terms=('vaccine','vaccination','immunization','flu shot','covid shot','covid-19 shot')
+    if any(x in t for x in vaccine_terms):
+        routine_terms=('daily','every day','walk-in anytime','walk in anytime','available daily',
+                       'appointments available','book an appointment','pharmacy hours',
+                       'ongoing vaccination','vaccines available')
+        special_terms=('clinic','town clinic','community clinic','school clinic','senior clinic',
+                       'one-day','one day','pop-up','popup','drive-through','drive through')
+        if any(x in t for x in routine_terms) and not any(x in t for x in special_terms):
+            return False
+
+    return True
 
 def category_from(text):
     t=clean_text(text).lower()
