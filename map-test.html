@@ -44,12 +44,16 @@
 <div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></div>
 <header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav"><a href="index.html">Home</a><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="calendars.html">Calendars</a><a href="resources.html">Local Resources</a></nav></header>
 <main id="main" class="map-prototype">
-<section class="map-prototype-head"><div><p class="eyebrow">UNLINKED PROTOTYPE</p><h1>Explore Norwood on a map</h1><p>This is a test of an optional map view that could sit beside existing lists. Filter places, click a location, or use your location to see what is nearby.</p></div><span class="prototype-note">TEST PAGE · NOT IN SITE NAVIGATION</span></section>
+<section class="map-prototype-head"><div><p class="eyebrow">UNLINKED PROTOTYPE</p><h1>Explore Norwood on a map</h1><p>This is a test of an optional map view that could sit beside existing lists. It now mixes recreation, civic places, schools, arts, library services, community assistance, transit and landmarks. Filter places, click a location, or use your location to see what is nearby.</p></div><span class="prototype-note">TEST PAGE · NOT IN SITE NAVIGATION</span></section>
 <div class="map-tools" aria-label="Map filters">
 <button class="active" data-filter="all">All</button>
 <button data-filter="park">Parks & recreation</button>
 <button data-filter="civic">Civic</button>
 <button data-filter="school">Schools & fields</button>
+<button data-filter="culture">Arts & library</button>
+<button data-filter="assistance">Community assistance</button>
+<button data-filter="transit">Transit</button>
+<button data-filter="landmark">Landmarks</button>
 <button class="locate" id="locateMe">◎ Near me</button>
 </div>
 <div class="map-shell">
@@ -69,10 +73,18 @@
 (()=>{
  const places=[
   {name:"Norwood Town Common",category:"civic",address:"Washington St at Nahatan St",lat:42.19455,lng:-71.19955,amenities:"Town green · gazebo · community events",url:"parks-trails.html"},
+  {name:"Norwood Civic Center",category:"civic",address:"165–167 Nahatan St",lat:42.19443,lng:-71.19893,amenities:"Recreation programs · community activities",url:"sports-recreation.html"},
   {name:"Norwood High School",category:"school",address:"245 Nichols St",lat:42.19917,lng:-71.20972,amenities:"Athletic fields · tennis courts · track",url:"parks-trails.html#tennis-courts"},
   {name:"Coakley Middle School / Ivatts",category:"school",address:"1315 Washington St",lat:42.17445,lng:-71.20085,amenities:"Tennis · baseball · softball · rectangular fields",url:"parks-trails.html#tennis-courts"},
   {name:"Hawes Recreation Area",category:"park",address:"1305 Washington St",lat:42.17515,lng:-71.20165,amenities:"Pool · spray park · playground · tennis · fishing · trails",url:"parks-trails.html"},
-  {name:"Father Mac’s / Father McAleer",category:"park",address:"295 Vernon St",lat:42.18785,lng:-71.21375,amenities:"Pool · playground · Little League · soccer",url:"parks-trails.html"}
+  {name:"Father Mac’s / Father McAleer",category:"park",address:"295 Vernon St",lat:42.18785,lng:-71.21375,amenities:"Pool · playground · Little League · soccer",url:"parks-trails.html"},
+  {name:"Morrill Memorial Library",category:"culture",address:"33 Walpole St",lat:42.19107,lng:-71.20408,amenities:"Library · events · museum passes · Library of Things · study spaces",url:"resources.html"},
+  {name:"The Norwood Theatre",category:"culture",address:"109 Central St",lat:42.19386,lng:-71.19976,amenities:"Live music · theatre · comedy · films",url:"things.html"},
+  {name:"Norwood Food Pantry",category:"assistance",address:"150 Chapel St",lat:42.18262,lng:-71.21230,amenities:"Food assistance · Saturday pantry hours",url:"resources.html"},
+  {name:"Norwood Central",category:"transit",address:"164 Broadway",lat:42.18873,lng:-71.19991,amenities:"MBTA Franklin/Foxboro Line · accessible station",url:"transit.html"},
+  {name:"Norwood Depot",category:"transit",address:"Railroad Ave / downtown Norwood",lat:42.19675,lng:-71.19665,amenities:"MBTA Franklin/Foxboro Line",url:"transit.html"},
+  {name:"Windsor Gardens",category:"transit",address:"Engamore Ln / Buckminster Dr area",lat:42.17189,lng:-71.21973,amenities:"MBTA Franklin/Foxboro Line",url:"transit.html"},
+  {name:"Norwood Memorial Airport",category:"landmark",address:"111 Access Rd",lat:42.19052,lng:-71.17293,amenities:"Public-use municipal airport · aviation businesses",url:"things.html"}
  ];
  const map=L.map("prototypeMap",{scrollWheelZoom:false}).setView([42.190,-71.204],13);
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap contributors"}).addTo(map);
