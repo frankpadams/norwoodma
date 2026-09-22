@@ -6,6 +6,7 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
+const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
@@ -134,6 +135,34 @@ async function render(){
 }
 category?.addEventListener('change',()=>{filter=category.value||'all';render();});
 let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
+
+async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
+function boundaryStyle(kind){return kind==='town'?{color:'#003B71',weight:4,fill:false,opacity:.9}:{color:'#a36d00',weight:2,fillColor:'#f2c100',fillOpacity:.08,opacity:.85}}
+async function toggleTownBoundary(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.town){map.removeLayer(boundaryLayers.town);boundaryLayers.town=null}return}
+ if(boundaryLayers.town){boundaryLayers.town.addTo(map);return}
+ if(box)box.textContent='Loading Norwood town boundary…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Massachusetts_Municipalities_Hosted/FeatureServer/0/query?where="+encodeURIComponent("TOWN='NORWOOD'")+"&outFields=TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  boundaryLayers.town=L.geoJSON(gj,{style:boundaryStyle('town'),onEachFeature:(f,l)=>l.bindPopup('<b>Town of Norwood boundary</b><br>MassGIS municipal boundary')}).addTo(map);
+  if(box)box.textContent='Town boundary shown from MassGIS.';
+ }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
+}
+async function togglePrecincts(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}return}
+ if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
+ if(box)box.textContent='Loading voting precincts…';
+ try{
+  const url="https://services2.arcgis.com/G5vR3cOjh6g2Ed8E/ArcGIS/rest/services/ElectionGeography_public/FeatureServer/1/query?where="+encodeURIComponent("UPPER(name) LIKE '%NORWOOD%'")+"&outFields=precinctid,name,pollingid&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  boundaryLayers.precincts=L.geoJSON(gj,{style:boundaryStyle('precinct'),onEachFeature:(f,l)=>{const a=f.properties||{};l.bindPopup('<b>'+esc(a.name||('Precinct '+(a.precinctid||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  if(box)box.textContent='Voting precincts shown from the public election geography layer.';
+ }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
+}
+
 document.querySelector('#locateMe').addEventListener('click',()=>{
  if(!navigator.geolocation){alert('Location is not available in this browser.');return}
  navigator.geolocation.getCurrentPosition(pos=>{
@@ -142,5 +171,7 @@ document.querySelector('#locateMe').addEventListener('click',()=>{
   userMarker=L.circleMarker(ll,{radius:9,weight:3,color:'#003B71',fillColor:'#F2C100',fillOpacity:1}).addTo(map).bindPopup('<b>Your approximate location</b>').openPopup();map.setView(ll,15);
  },()=>alert('Your location was not shared. You can still browse the map normally.'),{enableHighAccuracy:false,timeout:8000});
 });
+document.querySelector('#townBoundary')?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
+document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
 render();
 })();
