@@ -641,3 +641,18 @@ html[data-text-size="smallest"],html[data-text-size="compact"],html[data-text-si
 
 /* Paid-admission marker for clearly priced events */
 .event-kind-line{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.paid-admission{display:inline-grid;place-items:center;min-width:1.25rem;height:1.25rem;padding:0 .28rem;border-radius:999px;background:#e8f5ec;color:#15733a;border:1px solid #a9d8b8;font-size:.74rem;font-weight:900;line-height:1;vertical-align:middle}.event-mini b .paid-admission{display:inline-grid;margin-left:4px;transform:translateY(-1px)}
+
+/* Dedicated site search results page */
+.search-results-page .search-page{max-width:980px;margin:0 auto;padding:38px 24px 64px}
+.search-results-page .search-page h1{margin:.15rem 0 .45rem;font-size:clamp(30px,4vw,46px);color:#163b56}
+.search-results-page .search-page .search-intro{max-width:760px;color:#5b6c79;margin:0 0 20px}
+.search-results-page .hero-site-search{position:relative;width:min(760px,100%);margin:0}
+.search-results-page .hero-search-line{border:1px solid #cbd7df;box-shadow:0 5px 18px rgba(0,40,80,.08)}
+.search-results-page .site-search-results{position:static;max-height:none;overflow:visible;margin-top:18px;border:1px solid #d9e2e8;border-radius:14px;box-shadow:0 8px 26px rgba(0,40,80,.06);background:#fff}
+.search-results-page .site-search-results a{padding:15px 17px;font-size:15px}
+.search-results-page .site-search-results small{font-size:12.5px;line-height:1.4}
+.search-results-page .site-search-submitted-head{padding:16px 17px;background:#f5f8fa;border-bottom:1px solid #d9e2e8}
+.search-results-page .site-search-submitted-head b{font-size:18px}
+.search-results-page .site-search-submitted-head small{margin-top:3px}
+.search-results-page .library-things-search-callout{margin:14px;border-radius:12px}
+@media(max-width:600px){.search-results-page .search-page{padding:26px 14px 48px}.search-results-page .site-search-results a{padding:13px}.search-results-page .hero-search-line input{font-size:16px}}
