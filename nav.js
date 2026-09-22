@@ -13,6 +13,15 @@
   menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  // Keep the public map visible in the shared primary navigation on every page.
+  if(!nav.querySelector('a[href="map.html"]')){
+    const exploreLink=nav.querySelector('a[href="explore.html"]');
+    const mapLink=document.createElement('a');
+    mapLink.href='map.html';
+    mapLink.textContent='Map';
+    if(/\/map\.html$/i.test(location.pathname))mapLink.setAttribute('aria-current','page');
+    if(exploreLink)exploreLink.insertAdjacentElement('afterend',mapLink);else nav.appendChild(mapLink);
+  }
   // Support belongs in the collapsed hamburger menu only; never in the desktop text navigation.
   if(!nav.querySelector('[data-hamburger-support]')){const support=document.createElement('a');support.href='support.html';support.textContent='Support Norwood.ma';support.dataset.hamburgerSupport='true';support.className='hamburger-only-support';support.hidden=true;nav.appendChild(support);}
   if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
