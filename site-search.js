@@ -1,7 +1,8 @@
 (()=>{
  const input=document.querySelector('#siteSearch'),box=document.querySelector('#siteSearchResults'),form=document.querySelector('#siteSearchForm');
  if(!input||!box||!form)return;
- let submitted=false;
+ const resultsPage=document.body.classList.contains('search-results-page');
+ let submitted=resultsPage;
  const pages=[
   {name:'Things to Do',url:'things.html',type:'Things to Do',text:'activities entertainment explore parks recreation'},
   {name:'Museum passes & discounts',url:'museum-discounts.html',type:'Things to Do',text:'museum pass passes discount discounts free admission cheap attractions library Morrill EBT SNAP WIC ConnectorCare Card to Culture Museums for All Bank of America Museums on Us credit card zoo aquarium science museum MFA ICA'},
@@ -83,8 +84,9 @@
  }
  input.addEventListener('input',()=>{submitted=false;render(false)});
  input.addEventListener('focus',()=>{if(input.value.trim())render(false)});
- form.addEventListener('submit',e=>{e.preventDefault();submitted=true;const hits=render(true);if(hits.length===1&&!box.querySelector('.library-things-search-callout')){location.href=hits[0].x.url;return;}box.setAttribute('tabindex','-1');box.scrollIntoView({behavior:'smooth',block:'nearest'});box.focus({preventScroll:true});});
+ form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;if(!resultsPage){location.href='search.html?q='+encodeURIComponent(q);return;}submitted=true;history.replaceState(null,'','search.html?q='+encodeURIComponent(q));render(true);box.setAttribute('tabindex','-1');box.scrollIntoView({behavior:'smooth',block:'start'});box.focus({preventScroll:true});});
  input.addEventListener('keydown',e=>{if(e.key==='Escape'){box.hidden=true;input.blur()}if(e.key==='ArrowDown'){const a=box.querySelector('a');if(a){e.preventDefault();a.focus()}}});
  box.addEventListener('keydown',e=>{if(e.key==='Escape'){box.hidden=true;input.focus()}});
  document.addEventListener('click',e=>{if(!form.contains(e.target)&&!submitted)box.hidden=true});
+ if(resultsPage){const q=new URLSearchParams(location.search).get('q')||'';if(q){input.value=q;submitted=true;render(true);}else{box.hidden=false;box.innerHTML='<p>Enter a search above to find pages, events, businesses, resources, calendars, restaurants, and Library of Things items.</p>';}}
 })();
