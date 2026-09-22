@@ -33,8 +33,23 @@
             if(first&&last&&now.date>=first&&now.date<=last)items.push({kind:'election',rank:15,title:n.title||'Election Day notice',url:n.url||'https://www.norwoodma.gov/',date:last});
           }else if(n.kind==='meeting'&&n.date===now.date){
             const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
-            const st=hm(n.start_time), en=hm(n.end_time), live=st!==null&&now.minutes>=st&&now.minutes<=(en!==null?en:st+180);
-            items.push({kind:'meeting',rank:live?18:12,title:n.title||'Public meeting today',url:n.url||'https://www.norwoodma.gov/calendar.php',live});
+            const st=hm(n.start_time), en=hm(n.end_time);
+            // A meeting notice is useful before/during the meeting, but should disappear
+            // completely once the scheduled meeting window has ended. When no end time is
+            // available, use the existing 3-hour safety window rather than showing it all day.
+            const cutoff=en!==null?en:(st!==null?st+180:null);
+            if(cutoff!==null&&now.minutes>cutoff)continue;
+            const live=st!==null&&now.minutes>=st&&(cutoff===null||now.minutes<=cutoff);
+            let title=n.title||'Public meeting';
+            if(!/\bmeeting\b/i.test(title))title+=' Meeting';
+            let url=n.url||'https://www.norwoodma.gov/calendar.php';
+            // Never send visitors to Revize's raw JSON/data handler. Use the human-readable
+            // Town calendar page for non-live meeting notices instead.
+            if(/calendar_data_handler\.php/i.test(url)){
+              const d=new Date(n.date+'T12:00:00');
+              url='https://www.norwoodma.gov/calendar.php?view=month&month='+String(d.getMonth()+1).padStart(2,'0')+'&day=01&year='+d.getFullYear();
+            }
+            items.push({kind:'meeting',rank:live?18:12,title,url,live});
           }
         }
       }
