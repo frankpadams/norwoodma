@@ -113,6 +113,18 @@
     "verified": "2026-09-17"
   },
   {
+    "id": "the-chateau-restaurant",
+    "name": "The Chateau Restaurant",
+    "category": "Pizza & Italian",
+    "cuisine": "Italian-American",
+    "address": "404 Boston-Providence Turnpike",
+    "url": "https://chateaurestaurant.com/norwood/",
+    "link_type": "official",
+    "tags": "Italian American pasta ravioli family",
+    "verified": "2026-09-17",
+    "gluten_free": true
+  },
+  {
     "id": "cheff-n-eetinn",
     "name": "Cheff'n & Eetinn",
     "category": "Bakery & Sweets",
@@ -267,6 +279,18 @@
     "link_type": "official",
     "tags": "pizza subs pasta salad",
     "verified": "2026-09-17"
+  },
+  {
+    "id": "the-feisty-greek",
+    "name": "The Feisty Greek",
+    "category": "Middle Eastern",
+    "cuisine": "Greek · Mediterranean",
+    "address": "38 Vanderbilt Ave",
+    "url": "https://www.thefeistygreek.com/menu/",
+    "link_type": "official",
+    "tags": "Greek Mediterranean gyro kebab falafel gluten free gf vegetarian",
+    "gluten_free": true,
+    "verified": "2026-09-21"
   },
   {
     "id": "friendlys-norwood",
@@ -615,6 +639,28 @@
     "gluten_free": true
   },
   {
+    "id": "orange-leaf-frozen-yogurt",
+    "name": "Orange Leaf Frozen Yogurt",
+    "category": "Bakery & Sweets",
+    "cuisine": "Frozen yogurt · Desserts",
+    "address": "38 Vanderbilt Ave",
+    "url": "https://www.orangeleafyogurt.com/",
+    "link_type": "official",
+    "tags": "frozen yogurt froyo dessert toppings ice cream",
+    "verified": "2026-09-22"
+  },
+  {
+    "id": "the-panini-press-deli",
+    "name": "The Panini Press & Deli",
+    "category": "Deli & Sandwiches",
+    "cuisine": "Sandwiches · Deli",
+    "address": "82 Chapel St",
+    "url": "https://www.google.com/maps/search/?api=1&query=The+Panini+Press+%26+Deli%2C+82+Chapel+St",
+    "link_type": "maps",
+    "tags": "panini deli sandwich Italian sub",
+    "verified": "2026-09-17"
+  },
+  {
     "id": "pizza-palace",
     "name": "Pizza Palace",
     "category": "Pizza & Italian",
@@ -727,6 +773,17 @@
     "verified": "2026-09-17"
   },
   {
+    "id": "the-sixties-diner",
+    "name": "The Sixties Diner",
+    "category": "Breakfast & Cafe",
+    "cuisine": "Diner · Breakfast · Brunch",
+    "address": "1210B Providence Hwy",
+    "url": "https://www.thesixtiesdiner.com/",
+    "link_type": "official",
+    "tags": "diner breakfast brunch lunch retro",
+    "verified": "2026-09-17"
+  },
+  {
     "id": "spot",
     "name": "SPoT!",
     "category": "Breakfast & Cafe",
@@ -791,52 +848,6 @@
     "url": "https://www.thaithanifood.com/",
     "link_type": "official",
     "tags": "Thai curry pad thai takeout",
-    "verified": "2026-09-17"
-  },
-  {
-    "id": "the-chateau-restaurant",
-    "name": "The Chateau Restaurant",
-    "category": "Pizza & Italian",
-    "cuisine": "Italian-American",
-    "address": "404 Boston-Providence Turnpike",
-    "url": "https://chateaurestaurant.com/norwood/",
-    "link_type": "official",
-    "tags": "Italian American pasta ravioli family",
-    "verified": "2026-09-17",
-    "gluten_free": true
-  },
-  {
-    "id": "the-feisty-greek",
-    "name": "The Feisty Greek",
-    "category": "Middle Eastern",
-    "cuisine": "Greek · Mediterranean",
-    "address": "38 Vanderbilt Ave",
-    "url": "https://www.thefeistygreek.com/menu/",
-    "link_type": "official",
-    "tags": "Greek Mediterranean gyro kebab falafel gluten free gf vegetarian",
-    "gluten_free": true,
-    "verified": "2026-09-21"
-  },
-  {
-    "id": "the-panini-press-deli",
-    "name": "The Panini Press & Deli",
-    "category": "Deli & Sandwiches",
-    "cuisine": "Sandwiches · Deli",
-    "address": "82 Chapel St",
-    "url": "https://www.google.com/maps/search/?api=1&query=The+Panini+Press+%26+Deli%2C+82+Chapel+St",
-    "link_type": "maps",
-    "tags": "panini deli sandwich Italian sub",
-    "verified": "2026-09-17"
-  },
-  {
-    "id": "the-sixties-diner",
-    "name": "The Sixties Diner",
-    "category": "Breakfast & Cafe",
-    "cuisine": "Diner · Breakfast · Brunch",
-    "address": "1210B Providence Hwy",
-    "url": "https://www.thesixtiesdiner.com/",
-    "link_type": "official",
-    "tags": "diner breakfast brunch lunch retro",
     "verified": "2026-09-17"
   },
   {
