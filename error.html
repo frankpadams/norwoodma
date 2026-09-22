@@ -13,7 +13,17 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></div>
 <header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav"><a href="index.html">Home</a><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="resources.html">Local Resources</a></nav></header>
-<main id="main" class="error-simple"><section class="error-simple-card"><p class="eyebrow">NORWOOD.MA</p><h1>Something went sideways.</h1><p>That part of Norwood.ma didn’t load correctly. Try again, head home, or use search to find another route.</p><div class="error-simple-actions"><a href="">Try again</a><a href="index.html">Home</a><a href="search.html">Search</a><a href="map.html">Explore by Map</a></div></section></main>
+<main id="main" class="error-simple"><section class="error-simple-card"><p class="eyebrow">NORWOOD.MA</p><h1 id="errorTitle">Something went sideways.</h1><p id="errorMessage">That part of Norwood.ma didn’t load correctly. Try again, head home, or use search to find another route.</p><div class="error-simple-actions"><a id="errorRetry" href="">Try again</a><a href="index.html">Home</a><a href="search.html">Search</a><a href="map.html">Explore by Map</a></div></section></main>
 <footer class="old-footer"><a class="footer-logo" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p></div></footer>
 <script src="nav.js?v=0.13.4.17"></script>
+<script>
+(()=>{
+ const q=new URLSearchParams(location.search);
+ const title=q.get('title'),message=q.get('message'),ret=q.get('return');
+ if(title)document.querySelector('#errorTitle').textContent=title;
+ if(message)document.querySelector('#errorMessage').textContent=message;
+ const retry=document.querySelector('#errorRetry');
+ if(ret&&retry){retry.href=ret;}
+})();
+</script>
 </body></html>
