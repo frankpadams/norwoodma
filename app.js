@@ -82,13 +82,14 @@ function monthDayRange(events){
  return `${a.toLocaleDateString([],{month:'short',day:'numeric'}).toUpperCase()} – ${b.toLocaleDateString([],{month:'short',day:'numeric'}).toUpperCase()}`;
 }
 function eventKind(cat='community'){
- const m={live_music:'Live music',music:'Live music',music_community:'Music & community',performance:'Performance',school_theatre:'School theatre',sports_education:'Figure skating',sports:'Sports',food_culture:'Food & culture',food:'Food & drink',market:'Market',business_community:'Local business',workshop:'Workshop',arts:'Arts & making',fundraiser:'Fundraiser',community:'Community'};return m[cat]||String(cat).replaceAll('_',' ');
+ const m={live_music:'Live music',music:'Live music',music_community:'Music & community',performance:'Performance',school_theatre:'School theatre',sports_education:'Figure skating',sports:'Sports',food_culture:'Food & culture',food:'Food & drink',market:'Market',assistance:'Community assistance',business_community:'Local business',workshop:'Workshop',arts:'Arts & making',fundraiser:'Fundraiser',community:'Community'};return m[cat]||String(cat).replaceAll('_',' ');
 }
-function eventClass(cat='community'){if(/music/.test(cat))return'music';if(/arts|theatre|workshop/.test(cat))return'arts';if(/food|market/.test(cat))return'food';if(/sport|skating|race|fitness/.test(cat))return'sports';if(/fund/.test(cat))return'fundraiser';return'community';}
+function eventClass(cat='community'){if(/music/.test(cat))return'music';if(/arts|theatre|workshop/.test(cat))return'arts';if(/assistance/.test(cat))return'community';if(/food|market/.test(cat))return'food';if(/sport|skating|race|fitness/.test(cat))return'sports';if(/fund/.test(cat))return'fundraiser';return'community';}
 function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);return bits.join(' · ')||e.address||'Open source for details.';}
 function eventPriority(e){
  const text=[e.title,e.notes,e.venue,e.address,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
  if(/town common|norwood common|580 washington st/.test(text))return 0;
+ if(e.category==='assistance'||/food pantry|food assistance|food distribution|free meal|community meal|soup kitchen|clothing giveaway|diaper distribution|resource fair/.test(text))return 1;
  const religious=/\b(church|parish|chapel|congregation|temple|synagogue|mosque|mandir|worship|mass|bible|prayer|faith|ministry|saint catherine|st\. catherine|first congregational|grace episcopal|united church)\b/.test(text);
  return religious?2:1;
 }
