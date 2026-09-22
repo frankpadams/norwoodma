@@ -1,6 +1,7 @@
 (()=>{
 'use strict';
-const map=L.map('prototypeMap',{scrollWheelZoom:false}).setView([42.190,-71.204],13);
+const NORWOOD_BOUNDS=L.latLngBounds([[42.1515,-71.2355],[42.2265,-71.1505]]);
+const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
 map.addLayer(cluster);
@@ -145,7 +146,9 @@ async function render(){
  },6);
  if(token!==renderToken)return;
  status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
- if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
+ const q=norm(search.value);
+ if(filter==='all'&&!q){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
+ else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
  else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
 }
 category?.addEventListener('change',()=>{filter=category.value||'all';render();});
