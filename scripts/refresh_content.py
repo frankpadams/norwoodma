@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Refresh Norwood.ma event/news data for a static GitHub Pages site.
 
+# Source registry changes can be force-refreshed by touching this script.
+
 The script is deliberately failure-tolerant: one broken source never prevents the
 site from keeping its last known-good, still-current data. Scheduled runs can be
 performed by GitHub Actions; --offline rebuilds browser fallback JS from bundled
