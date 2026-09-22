@@ -688,3 +688,13 @@ html[data-text-size="smallest"],html[data-text-size="compact"],html[data-text-si
 }
 
 @media(max-width:850px){.dash-stack{grid-template-rows:auto;height:auto}.event-splash .event-mini{flex:initial}}
+
+/* Site-wide time-sensitive emergency / severe-weather alert strip */
+.site-timely-alert{background:#ffd84d;color:#172033;border-bottom:1px solid rgba(0,0,0,.18);font-size:.9rem;font-weight:650;line-height:1.25;text-align:center;position:relative;z-index:1100}
+.site-timely-alert a,.site-timely-alert>span{display:block;color:inherit;text-decoration:none;padding:.48rem .9rem}
+.site-timely-alert a:hover{text-decoration:underline}
+.site-timely-alert strong{font-weight:850;letter-spacing:.02em}
+.site-timely-count{display:inline-block;margin-left:.45rem;padding:.08rem .38rem;border-radius:999px;background:rgba(0,0,0,.12);font-size:.78em;white-space:nowrap}
+html[data-high-contrast="true"] .site-timely-alert{background:#000;color:#fff;border-color:#fff}
+html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:underline}
+@media(max-width:700px){.site-timely-alert{font-size:.78rem}.site-timely-alert a,.site-timely-alert>span{padding:.38rem .55rem}.site-timely-count{font-size:.74em}}
