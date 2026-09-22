@@ -1,6 +1,39 @@
 (()=>{
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
+  // Site-wide time-sensitive alert strip. Severe weather and public-safety alerts
+  // are fetched live from NWS; alerts.json can carry verified local/state emergency notices.
+  (async function sitewideTimelyAlerts(){
+    const priority={Extreme:4,Severe:3,Moderate:2,Minor:1,Unknown:0};
+    const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
+    const normalize=a=>({
+      title:String(a.title||a.event||'Emergency alert'),
+      summary:String(a.summary||a.headline||a.description||''),
+      url:String(a.url||a.web||a['@id']||''),
+      severity:String(a.severity||'Unknown'),
+      expires:a.expires||null,
+      source:a.source||'Public alert'
+    });
+    const live=[];
+    try{
+      const r=await fetch('https://api.weather.gov/alerts/active?point=42.1945,-71.1995',{headers:{Accept:'application/geo+json'}});
+      if(r.ok){const j=await r.json();for(const f of (j.features||[])){const p=f.properties||{};if(allowed.test(p.event||''))live.push(normalize({event:p.event,headline:p.headline,description:p.description,severity:p.severity,expires:p.expires,url:f.id,source:p.senderName||'National Weather Service'}));}}
+    }catch(e){}
+    try{
+      const r=await fetch('data/alerts.json?fresh='+Date.now(),{cache:'no-store'});
+      if(r.ok){const j=await r.json();for(const a of (Array.isArray(j)?j:[])){const exp=a.expires?Date.parse(a.expires):Infinity;if(a.active!==false&&exp>Date.now()&&allowed.test((a.type||'')+' '+(a.title||'')))live.push(normalize(a));}}
+    }catch(e){}
+    if(!live.length)return;
+    const seen=new Set();const alerts=live.filter(a=>{const k=(a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>(priority[b.severity]||0)-(priority[a.severity]||0));
+    const top=alerts[0];
+    const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','alert');strip.setAttribute('aria-live','polite');
+    const label=/child abduction|amber/i.test(top.title)?'AMBER ALERT':/silver alert|missing person/i.test(top.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(top.title)?'WEATHER ALERT':'EMERGENCY ALERT';
+    const count=alerts.length>1?'<span class="site-timely-count">+'+(alerts.length-1)+' more</span>':'';
+    const text='<strong>'+label+':</strong> '+String(top.title).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]))+count;
+    strip.innerHTML=top.url?'<a href="'+top.url.replace(/"/g,'&quot;')+'" target="_blank" rel="noopener">'+text+' <span aria-hidden="true">→</span></a>':'<span>'+text+'</span>';
+    const independent=document.querySelector('.independent');
+    if(independent)independent.insertAdjacentElement('afterend',strip);else document.body.prepend(strip);
+  })();
   // Keep iOS Home Screen metadata consistent on every page that loads the shared nav.
   let apple=document.querySelector('link[rel="apple-touch-icon"]');
   if(!apple){apple=document.createElement('link');apple.rel='apple-touch-icon';document.head.appendChild(apple);}
