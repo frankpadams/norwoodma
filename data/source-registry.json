@@ -1,38 +1,5 @@
 [
   {
-    "id": "community-event-submissions",
-    "name": "Norwood.ma Community Event Submissions — Approved Feed",
-    "organization": "Norwood.ma",
-    "source_class": "moderated_submission_feed",
-    "authority": "moderated",
-    "coverage": "Norwood community relevance; approved out-of-town items retain municipality labels",
-    "url": "https://script.google.com/macros/s/AKfycbx7-saWBvzP492fspqbrRx6EUxECfbbMXyafVhxuXVWPNGZ-6Z5x7PVe7lWTrqP4BJY/exec",
-    "domain": "script.google.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "community_submission_json",
-      "automation": "live"
-    },
-    "filters": {
-      "moderation_required": true,
-      "dedupe_against_primary_source": true,
-      "preserve_town_label": true
-    },
-    "verification": {
-      "status": "endpoint_verified_by_owner",
-      "verified_at": "2026-09-19",
-      "basis": "Approved test event returned through deployed privacy-safe Apps Script JSON endpoint"
-    },
-    "notes": "Endpoint exposes only allowlisted public event fields from rows whose moderation Status is Approved or Published. Private response Sheet remains private."
-  },
-  {
     "id": "ache-massachusetts-events",
     "name": "ACHE of Massachusetts — Events",
     "organization": "ACHE of Massachusetts",
@@ -66,1064 +33,33 @@
     "notes": "Regional professional association. Publish only events physically in Norwood and open to an appropriate public/registrant audience; otherwise discovery only."
   },
   {
-    "id": "castle-island-calendar",
-    "name": "Castle Island Brewing — Calendar",
-    "organization": "Castle Island Brewing",
-    "source_class": "calendar",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://www.castleislandbeer.com/calendar",
-    "domain": "castleislandbeer.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Strictly filter to Norwood Taproom; calendar also contains South Boston events."
-  },
-  {
-    "id": "citizens-better-norwood-events",
-    "name": "Citizens for a Better Norwood — Events",
-    "organization": "Citizens for a Better Norwood",
-    "source_class": "event_listing",
-    "authority": "community",
-    "coverage": "Norwood, MA",
-    "url": "https://citizensforabetternorwoodma.com/events",
-    "domain": "citizensforabetternorwoodma.com",
-    "produces": [
-      "events",
-      "civic_events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "civic_events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Community/civic source; facts should be verified when event has an official source."
-  },
-  {
-    "id": "elks-calendar",
-    "name": "Norwood Elks Lodge 1124 — Calendar",
-    "organization": "Norwood Elks Lodge 1124",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124",
-    "domain": "elks.org",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events."
-  },
-  {
-    "id": "emerald-city-plant-shop",
-    "name": "Emerald City Plant Shop — Events & Workshops",
-    "organization": "Emerald City Plant Shop",
-    "source_class": "event_listing",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://www.emeraldcityplantshop.com/",
-    "domain": "emeraldcityplantshop.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_page",
-      "automation": "preferred",
-      "parser": "jsonld_event_plus_links"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "official website plus current local/business sources confirming workshops and community events"
-    },
-    "notes": "Botanical event space at 702 Washington St. Monitor own site first; supplement with organizer/event listings when an event is hosted here."
-  },
-  {
-    "id": "eventbrite-norwood",
-    "name": "Eventbrite — Norwood discovery",
-    "organization": "Eventbrite",
-    "source_class": "search_aggregator",
-    "authority": "aggregator",
-    "coverage": "External discovery",
-    "url": "https://www.eventbrite.com/",
-    "domain": "eventbrite.com",
-    "produces": [
-      "event_discovery"
-    ],
-    "potential_outputs": [
-      "event_discovery"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "search",
-      "automation": "manual/discovery"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "candidate",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Discovery only. Require Norwood venue and primary/host confirmation before publication."
-  },
-  {
-    "id": "facebook-public-pages",
-    "name": "Facebook public Norwood pages — discovery",
-    "organization": "Multiple",
-    "source_class": "social_search",
-    "authority": "aggregator",
-    "coverage": "External discovery",
-    "url": "https://www.facebook.com/",
-    "domain": "facebook.com",
-    "produces": [
-      "event_discovery"
-    ],
-    "potential_outputs": [
-      "event_discovery"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "manual_social",
-      "automation": "manual/discovery"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "candidate",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Useful for restaurant fundraisers, PTOs, fire/police open houses and small organizations; never use as sole evidence when better source exists."
-  },
-  {
-    "id": "fallout-shelter",
-    "name": "The Fallout Shelter / Extended Play Sessions",
-    "organization": "Greater Roxbury Community Arts Center / Fallout Shelter",
-    "source_class": "event_listing",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.extendedplaysessions.com/",
-    "domain": "extendedplaysessions.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Live music, open mic and fundraiser shows at 61 Endicott St."
-  },
-  {
-    "id": "food-pantry",
-    "name": "Norwood Food Pantry",
-    "organization": "Norwood Food Pantry",
+    "id": "resource-annie-s-closet-norwood",
+    "name": "Annie's Closet Norwood",
+    "organization": "Annie's Closet Norwood",
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodpantry.org/",
-    "domain": "norwoodpantry.org",
+    "url": "https://norwoodlibrary.org/commres-children-families/",
+    "domain": "norwoodlibrary.org",
     "produces": [
-      "events",
-      "fundraisers",
-      "drives"
+      "resources"
     ],
-    "potential_outputs": [
-      "events",
-      "fundraisers",
-      "drives"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch food drives, donation events and community fundraisers."
-  },
-  {
-    "id": "friends-center-blog",
-    "name": "Friends of Norwood Center — Blog",
-    "organization": "Friends of Norwood Center",
-    "source_class": "news_listing",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodcenter.org/blog/",
-    "domain": "norwoodcenter.org",
-    "produces": [
-      "news",
-      "events"
-    ],
-    "potential_outputs": [
-      "news",
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Secondary event discovery and downtown business/community news."
-  },
-  {
-    "id": "friends-center-events",
-    "name": "Friends of Norwood Center — Events",
-    "organization": "Friends of Norwood Center",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodcenter.org/events/",
-    "domain": "norwoodcenter.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "tribe_events",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Excellent aggregator for Town Common traditions, market special days and downtown happenings."
-  },
-  {
-    "id": "google-news-norwood",
-    "name": "Google News — Norwood discovery",
-    "organization": "Google News",
-    "source_class": "news_aggregator",
-    "authority": "aggregator",
-    "coverage": "External discovery",
-    "url": "https://news.google.com/",
-    "domain": "news.google.com",
-    "produces": [
-      "news_discovery"
-    ],
-    "potential_outputs": [
-      "news_discovery"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "google_news_rss",
-      "automation": "scheduled_twice_daily"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "candidate",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Twice-daily Google News discovery using all four Norwood/Massachusetts spelling variants. Results are deduplicated with direct-source feeds; direct publisher links are preferred when already known.",
-    "search_queries": [
-      "\"norwood, ma\"",
-      "\"norwood ma\"",
-      "norwoodma",
-      "\"norwood, massachusetts\""
-    ]
-  },
-  {
-    "id": "grace-calendar",
-    "name": "Grace Episcopal Church — Calendar",
-    "organization": "Grace Episcopal Church",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.gracenor.org/calendar",
-    "domain": "gracenor.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "embedded_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Publish special public/community events, not ordinary worship services by default."
-  },
-  {
-    "id": "historical-society-events",
-    "name": "Norwood Historical Society — Events",
-    "organization": "Norwood Historical Society",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodhistoricalsociety.org/events/list/",
-    "domain": "norwoodhistoricalsociety.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "tribe_events",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Public exhibits, talks, tours and seasonal Day House events."
-  },
-  {
-    "id": "inside-norwood",
-    "name": "Inside Norwood",
-    "organization": "Inside Norwood",
-    "source_class": "local_news",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://insidenorwood.com/",
-    "domain": "insidenorwood.com",
-    "produces": [
-      "news",
-      "events"
-    ],
-    "potential_outputs": [
-      "news",
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Secondary local reporting/discovery source."
-  },
-  {
-    "id": "instagram-public-pages",
-    "name": "Instagram public Norwood pages — discovery",
-    "organization": "Multiple",
-    "source_class": "social_search",
-    "authority": "aggregator",
-    "coverage": "External discovery",
-    "url": "https://www.instagram.com/",
-    "domain": "instagram.com",
-    "produces": [
-      "event_discovery"
-    ],
-    "potential_outputs": [
-      "event_discovery"
-    ],
+    "potential_outputs": [],
     "active_monitor": false,
     "monitor_priority": 5,
     "ingestion": {
-      "method": "manual_social",
-      "automation": "manual/discovery"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "candidate",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Secondary discovery for pop-ups, fundraisers and venue announcements."
-  },
-  {
-    "id": "irish-brewing-events",
-    "name": "Irish Brewing Boston",
-    "organization": "Irish Brewing Boston",
-    "source_class": "event_hub",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://www.irishbrewingboston.com/",
-    "domain": "irishbrewingboston.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Recurring trivia/live music/open mic; collapse routine recurrence where appropriate."
-  },
-  {
-    "id": "junior-womans-club",
-    "name": "Norwood Junior Woman’s Club",
-    "organization": "Norwood Junior Woman’s Club",
-    "source_class": "event_hub",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodjuniorwc.wixsite.com/norwoodjwc",
-    "domain": "norwoodjuniorwc.wixsite.com",
-    "produces": [
-      "events",
-      "fundraisers",
-      "volunteer"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers",
-      "volunteer"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Community service, fundraisers, meetings and social/community events."
-  },
-  {
-    "id": "library-assabet-calendar",
-    "name": "Morrill Memorial Library — Events Calendar",
-    "organization": "Morrill Memorial Library",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodlibrary.assabetinteractive.com/calendar/",
-    "domain": "norwoodlibrary.assabetinteractive.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Very high-yield structured calendar. Filter recurring virtual statewide items if not specifically useful to Norwood residents."
-  },
-  {
-    "id": "library-cfce",
-    "name": "Norwood CFCE",
-    "organization": "Norwood Coordinated Family & Community Engagement",
-    "source_class": "program_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodlibrary.org/norwood-cfce/",
-    "domain": "norwoodlibrary.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
       "method": "discovery_search",
-      "automation": "possible"
+      "automation": "candidate"
     },
     "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "require_norwood_relevance": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "carried_forward",
+      "verified_at": "2026-09",
+      "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Family playgroups and community programs; include when public and dated."
-  },
-  {
-    "id": "library-home",
-    "name": "Morrill Memorial Library — Today’s Programs",
-    "organization": "Morrill Memorial Library",
-    "source_class": "event_hub",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodlibrary.org/",
-    "domain": "norwoodlibrary.org",
-    "produces": [
-      "events",
-      "news"
-    ],
-    "potential_outputs": [
-      "events",
-      "news"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Useful for near-term highlights and event discovery."
-  },
-  {
-    "id": "lions-page",
-    "name": "Norwood Lions Club",
-    "organization": "Norwood Lions Club",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodmalions.com/",
-    "domain": "norwoodmalions.com",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch public fundraisers and service events."
-  },
-  {
-    "id": "magic-room-ticketleap",
-    "name": "Magic Room — Ticketleap",
-    "organization": "Magic Room",
-    "source_class": "ticket_calendar",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://events.ticketleap.com/events/magicroom-7",
-    "domain": "events.ticketleap.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Canonical ticket listing for Magic Room shows; dedupe against Norwood Space Center."
-  },
-  {
-    "id": "mill-forge-events",
-    "name": "Mill Forge Makerspace — Events",
-    "organization": "Mill Forge Makerspace",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://millforge.org/events/list/",
-    "domain": "millforge.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "tribe_events",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Public maker workshops/classes at 61 Endicott St."
-  },
-  {
-    "id": "ncm-community-programs",
-    "name": "NCM — Community Programs",
-    "organization": "Norwood Community Media",
-    "source_class": "media_listing",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodcommunitymedia.org/programs/",
-    "domain": "norwoodcommunitymedia.org",
-    "produces": [
-      "news",
-      "event_discovery"
-    ],
-    "potential_outputs": [
-      "news",
-      "event_discovery"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Useful backward-looking signal for recurring traditions and organizations to add to source registry."
-  },
-  {
-    "id": "ncm-home",
-    "name": "Norwood Community Media",
-    "organization": "Norwood Community Media",
-    "source_class": "media_hub",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodcommunitymedia.org/",
-    "domain": "norwoodcommunitymedia.org",
-    "produces": [
-      "news",
-      "events",
-      "civic_video"
-    ],
-    "potential_outputs": [
-      "news",
-      "events",
-      "civic_video"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Local video/news; can surface recent community events and meetings."
-  },
-  {
-    "id": "norwood-record-events",
-    "name": "The Norwood Record — Events",
-    "organization": "The Norwood Record",
-    "source_class": "event_listing",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodrecord.com/events",
-    "domain": "norwoodrecord.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "High-value curated local calendar; verify details against primary source when available."
-  },
-  {
-    "id": "norwood-record-news",
-    "name": "The Norwood Record — News",
-    "organization": "The Norwood Record",
-    "source_class": "local_news",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodrecord.com/news",
-    "domain": "norwoodrecord.com",
-    "produces": [
-      "news"
-    ],
-    "potential_outputs": [
-      "news"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Primary local newspaper source."
-  },
-  {
-    "id": "norwood-space-center-events",
-    "name": "Norwood Space Center — Events",
-    "organization": "Norwood Space Center",
-    "source_class": "calendar",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodspacecenter.com/events/",
-    "domain": "norwoodspacecenter.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "tribe_events",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Aggregates venue/business events; enforce venue/address filter because some chamber events occur outside Norwood."
-  },
-  {
-    "id": "norwood-theatre-season",
-    "name": "Norwood Theatre — Shows & Events",
-    "organization": "Norwood Theatre",
-    "source_class": "event_listing",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodstage.com/shows-events",
-    "domain": "norwoodstage.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Ticketed public performances in Norwood; canonical source for dates/times."
-  },
-  {
-    "id": "norwood-town-news",
-    "name": "Norwood Town News — Calendar / Local Town Pages",
-    "organization": "Norwood Town News",
-    "source_class": "local_news",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodtownnews.com/",
-    "domain": "norwoodtownnews.com",
-    "produces": [
-      "news",
-      "events"
-    ],
-    "potential_outputs": [
-      "news",
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Useful monthly calendar and community stories; dedupe against primary calendars."
-  },
-  {
-    "id": "nps-athletics",
-    "name": "Norwood High School — Athletics",
-    "organization": "Norwood High School Athletics",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/athletics",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "sports_events"
-    ],
-    "potential_outputs": [
-      "sports_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Only publish spectator-relevant varsity/community events; avoid routine practices/registration notices."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
     "id": "nps-balch-calendar",
@@ -1157,6 +93,71 @@
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Potential fairs, PTO/community events; filter student-only items."
+  },
+  {
+    "id": "resource-band-gig-school-of-music-performance",
+    "name": "Band Gig School of Music & Performance — resource source",
+    "organization": "Band Gig School of Music & Performance",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Local/Regional",
+    "url": "https://www.band-gig.com/",
+    "domain": "band-gig.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [
+      "resources",
+      "event_discovery"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "manual_or_discovery",
+      "automation": "passive"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review for v0.11.6 youth resource expansion"
+    },
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+  },
+  {
+    "id": "resource-baps-shri-swaminarayan-mandir-south-boston-sharon",
+    "name": "BAPS Shri Swaminarayan Mandir — South Boston/Sharon",
+    "organization": "BAPS Shri Swaminarayan Mandir — South Boston/Sharon",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Sharon, MA",
+    "url": "https://www.baps.org/Global-Network/North-America/South-Boston/Visitor-Info.aspx",
+    "domain": "baps.org",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
   },
   {
     "id": "nps-callahan-calendar",
@@ -1227,6 +228,172 @@
     "notes": "Watch public fundraisers, fairs and family/community events."
   },
   {
+    "id": "resource-callahan-elementary-school-parent-teacher-association",
+    "name": "Callahan Elementary School Parent Teacher Association",
+    "organization": "Callahan Elementary School Parent Teacher Association",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/callahan/pta",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "carried_forward",
+      "verified_at": "2026-09",
+      "basis": "v0.11.1 local resource dataset"
+    },
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "castle-island-calendar",
+    "name": "Castle Island Brewing — Calendar",
+    "organization": "Castle Island Brewing",
+    "source_class": "calendar",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://www.castleislandbeer.com/calendar",
+    "domain": "castleislandbeer.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Strictly filter to Norwood Taproom; calendar also contains South Boston events."
+  },
+  {
+    "id": "resource-chabad-jewish-center",
+    "name": "Chabad Jewish Center",
+    "organization": "Chabad Jewish Center",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Needham, MA",
+    "url": "https://www.jewishneedham.com/",
+    "domain": "jewishneedham.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+  },
+  {
+    "id": "resource-cheer-advantage",
+    "name": "Cheer Advantage — resource source",
+    "organization": "Cheer Advantage",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://cheeradvantageallstars.com/",
+    "domain": "cheeradvantageallstars.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [
+      "resources",
+      "event_discovery"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "manual_or_discovery",
+      "automation": "passive"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review for v0.11.6 youth resource expansion"
+    },
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+  },
+  {
+    "id": "citizens-better-norwood-events",
+    "name": "Citizens for a Better Norwood — Events",
+    "organization": "Citizens for a Better Norwood",
+    "source_class": "event_listing",
+    "authority": "community",
+    "coverage": "Norwood, MA",
+    "url": "https://citizensforabetternorwoodma.com/events",
+    "domain": "citizensforabetternorwoodma.com",
+    "produces": [
+      "events",
+      "civic_events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "civic_events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Community/civic source; facts should be verified when event has an official source."
+  },
+  {
     "id": "nps-cleveland-calendar",
     "name": "Cleveland Elementary — Calendar",
     "organization": "Cleveland Elementary School",
@@ -1295,39 +462,35 @@
     "notes": "Watch public fundraisers, fairs and family/community events."
   },
   {
-    "id": "nps-cms-pto",
-    "name": "Coakley Middle School PTO",
-    "organization": "Coakley Middle School PTO",
+    "id": "resource-cleveland-elementary-school-parent-teacher-organization",
+    "name": "Cleveland Elementary School Parent Teacher Organization",
+    "organization": "Cleveland Elementary School Parent Teacher Organization",
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/cms/pto",
+    "url": "https://www.norwood.k12.ma.us/cleveland/pta",
     "domain": "norwood.k12.ma.us",
     "produces": [
-      "events",
-      "fundraisers"
+      "resources"
     ],
     "potential_outputs": [
-      "events",
-      "fundraisers"
+      "events"
     ],
-    "active_monitor": true,
-    "monitor_priority": 3,
+    "active_monitor": false,
+    "monitor_priority": 5,
     "ingestion": {
       "method": "discovery_search",
-      "automation": "possible"
+      "automation": "candidate"
     },
     "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "require_norwood_relevance": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "carried_forward",
+      "verified_at": "2026-09",
+      "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
     "id": "nps-coakley-calendar",
@@ -1363,742 +526,6 @@
     "notes": "Publish only genuinely public/community-accessible events."
   },
   {
-    "id": "nps-district-calendar",
-    "name": "Norwood Public Schools — District Calendar",
-    "organization": "Norwood Public Schools",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/about/calendar",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events",
-      "school_events"
-    ],
-    "potential_outputs": [
-      "events",
-      "school_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Master NPS calendar with selectable sub-calendars."
-  },
-  {
-    "id": "nps-district-ical",
-    "name": "Norwood Public Schools — Subscribe/iCal",
-    "organization": "Norwood Public Schools",
-    "source_class": "ical_feed",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/about/calendar/subscribe",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events",
-      "school_events"
-    ],
-    "potential_outputs": [
-      "events",
-      "school_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "ical",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Preferred structured feed when stable."
-  },
-  {
-    "id": "nps-fine-arts",
-    "name": "Norwood Public Schools — Fine Arts",
-    "organization": "Norwood Public Schools",
-    "source_class": "program_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/curriculum/fine-arts",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Public concerts, drama, band/orchestra, arts festival and performance announcements."
-  },
-  {
-    "id": "nps-news",
-    "name": "Norwood Public Schools — News",
-    "organization": "Norwood Public Schools",
-    "source_class": "news_listing",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/about/news",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "news",
-      "events"
-    ],
-    "potential_outputs": [
-      "news",
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Catches Fine Arts Festival and public school announcements not obvious in calendars."
-  },
-  {
-    "id": "nps-nhs-calendar",
-    "name": "Norwood High School — Calendar",
-    "organization": "Norwood High School",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/calendar",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "school_events"
-    ],
-    "potential_outputs": [
-      "school_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch public plays, concerts, fairs, open houses and community-accessible events."
-  },
-  {
-    "id": "nps-nhs-pto",
-    "name": "Norwood High School PGTO",
-    "organization": "Norwood High School Parent/Guardian Teacher Organization",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch public fundraisers, fairs and family/community events."
-  },
-  {
-    "id": "nps-oldham-calendar",
-    "name": "Oldham Elementary — Calendar",
-    "organization": "Oldham Elementary School",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/oldham/calendar",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "school_events"
-    ],
-    "potential_outputs": [
-      "school_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Potential book fairs/PTO events; filter student-only items."
-  },
-  {
-    "id": "nps-oldham-pto",
-    "name": "Oldham Elementary PTO",
-    "organization": "Oldham Elementary PTO",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/oldham/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch public fundraisers, fairs and family/community events."
-  },
-  {
-    "id": "nps-pma",
-    "name": "Norwood Parent Music Association",
-    "organization": "Norwood Parent Music Association",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodpma.org/",
-    "domain": "norwoodpma.org",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "High-value for marching-band home show, concerts and music fundraising."
-  },
-  {
-    "id": "nps-prescott-calendar",
-    "name": "Prescott Elementary — Calendar",
-    "organization": "Prescott Elementary School",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/prescott/calendar",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "school_events"
-    ],
-    "potential_outputs": [
-      "school_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Potential fairs, PTO/community events; filter student-only items."
-  },
-  {
-    "id": "nps-prescott-pta",
-    "name": "Prescott Elementary PTA",
-    "organization": "Prescott Elementary PTA",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/prescott/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch public fundraisers, fairs and family/community events."
-  },
-  {
-    "id": "nps-willett-calendar",
-    "name": "Willett Early Childhood Center — Calendar",
-    "organization": "Willett Early Childhood Center",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/willett/calendar",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "school_events"
-    ],
-    "potential_outputs": [
-      "school_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Potential family/community events; filter routine school operations."
-  },
-  {
-    "id": "nps-willett-pto",
-    "name": "Willett PTO",
-    "organization": "Willett PTO",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/willett/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch public fundraisers, fairs and family/community events."
-  },
-  {
-    "id": "nrrc-events",
-    "name": "Neponset River Regional Chamber — Events",
-    "organization": "Neponset River Regional Chamber",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.nrrchamber.com/",
-    "domain": "nrrchamber.com",
-    "produces": [
-      "events",
-      "business_news"
-    ],
-    "potential_outputs": [
-      "events",
-      "business_news"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Regional source; publish only events physically in Norwood or strongly Norwood-specific."
-  },
-  {
-    "id": "pcrinc-events",
-    "name": "Promoting Conflict Resolution, Inc. — Events",
-    "organization": "Promoting Conflict Resolution, Inc.",
-    "source_class": "event_hub",
-    "authority": "organization",
-    "coverage": "Regional / Norwood when venue matches",
-    "url": "https://pcrincboston.org/",
-    "domain": "pcrincboston.org",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Regional nonprofit source. Monitor lightly for public fundraisers or programs physically held in Norwood."
-  },
-  {
-    "id": "resource-annie-s-closet-norwood",
-    "name": "Annie's Closet Norwood",
-    "organization": "Annie's Closet Norwood",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
-    "domain": "norwoodlibrary.org",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
-    },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
-  },
-  {
-    "id": "resource-band-gig-school-of-music-performance",
-    "name": "Band Gig School of Music & Performance — resource source",
-    "organization": "Band Gig School of Music & Performance",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Local/Regional",
-    "url": "https://www.band-gig.com/",
-    "domain": "band-gig.com",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "resources",
-      "event_discovery"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
-    },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
-  },
-  {
-    "id": "resource-baps-shri-swaminarayan-mandir-south-boston-sharon",
-    "name": "BAPS Shri Swaminarayan Mandir — South Boston/Sharon",
-    "organization": "BAPS Shri Swaminarayan Mandir — South Boston/Sharon",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Sharon, MA",
-    "url": "https://www.baps.org/Global-Network/North-America/South-Boston/Visitor-Info.aspx",
-    "domain": "baps.org",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
-  },
-  {
-    "id": "resource-callahan-elementary-school-parent-teacher-association",
-    "name": "Callahan Elementary School Parent Teacher Association",
-    "organization": "Callahan Elementary School Parent Teacher Association",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/callahan/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
-    },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
-  },
-  {
-    "id": "resource-chabad-jewish-center",
-    "name": "Chabad Jewish Center",
-    "organization": "Chabad Jewish Center",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Needham, MA",
-    "url": "https://www.jewishneedham.com/",
-    "domain": "jewishneedham.com",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
-  },
-  {
-    "id": "resource-cheer-advantage",
-    "name": "Cheer Advantage — resource source",
-    "organization": "Cheer Advantage",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://cheeradvantageallstars.com/",
-    "domain": "cheeradvantageallstars.com",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "resources",
-      "event_discovery"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
-    },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
-  },
-  {
-    "id": "resource-cleveland-elementary-school-parent-teacher-organization",
-    "name": "Cleveland Elementary School Parent Teacher Organization",
-    "organization": "Cleveland Elementary School Parent Teacher Organization",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/cleveland/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
-    },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
-  },
-  {
     "id": "resource-coakley-middle-school-parent-teacher-organization",
     "name": "Coakley Middle School Parent Teacher Organization",
     "organization": "Coakley Middle School Parent Teacher Organization",
@@ -2128,6 +555,41 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "nps-cms-pto",
+    "name": "Coakley Middle School PTO",
+    "organization": "Coakley Middle School PTO",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/cms/pto",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch public fundraisers, fairs and family/community events."
   },
   {
     "id": "resource-connors-martial-arts-academy",
@@ -2232,6 +694,135 @@
     "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
   },
   {
+    "id": "resource-dedham-community-theatre",
+    "name": "Dedham Community Theatre",
+    "organization": "Dedham Community Theatre",
+    "source_class": "organization_page",
+    "authority": "business",
+    "coverage": "Dedham, MA",
+    "url": "https://dedhamcommunitytheatre.com/",
+    "domain": "dedhamcommunitytheatre.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+  },
+  {
+    "id": "emerald-city-plant-shop",
+    "name": "Emerald City Plant Shop — Events & Workshops",
+    "organization": "Emerald City Plant Shop",
+    "source_class": "event_listing",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://www.emeraldcityplantshop.com/",
+    "domain": "emeraldcityplantshop.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred",
+      "parser": "jsonld_event_plus_links"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "official website plus current local/business sources confirming workshops and community events"
+    },
+    "notes": "Botanical event space at 702 Washington St. Monitor own site first; supplement with organizer/event listings when an event is hosted here."
+  },
+  {
+    "id": "eventbrite-norwood",
+    "name": "Eventbrite — Norwood discovery",
+    "organization": "Eventbrite",
+    "source_class": "search_aggregator",
+    "authority": "aggregator",
+    "coverage": "External discovery",
+    "url": "https://www.eventbrite.com/",
+    "domain": "eventbrite.com",
+    "produces": [
+      "event_discovery"
+    ],
+    "potential_outputs": [
+      "event_discovery"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "search",
+      "automation": "manual/discovery"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "candidate",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Discovery only. Require Norwood venue and primary/host confirmation before publication."
+  },
+  {
+    "id": "facebook-public-pages",
+    "name": "Facebook public Norwood pages — discovery",
+    "organization": "Multiple",
+    "source_class": "social_search",
+    "authority": "aggregator",
+    "coverage": "External discovery",
+    "url": "https://www.facebook.com/",
+    "domain": "facebook.com",
+    "produces": [
+      "event_discovery"
+    ],
+    "potential_outputs": [
+      "event_discovery"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "manual_social",
+      "automation": "manual/discovery"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "candidate",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Useful for restaurant fundraisers, PTOs, fire/police open houses and small organizations; never use as sole evidence when better source exists."
+  },
+  {
     "id": "resource-field-martial-arts-academy",
     "name": "Field Martial Arts Academy — resource source",
     "organization": "Field Martial Arts Academy",
@@ -2328,6 +919,41 @@
     "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
   },
   {
+    "id": "first-congregational-events",
+    "name": "First Congregational Church in Norwood — Events",
+    "organization": "First Congregational Church in Norwood",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.fccnorwood.org/events",
+    "domain": "fccnorwood.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers",
+      "community_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-22",
+      "basis": "Official FCC Norwood events page with dated public events and Google Calendar/ICS links"
+    },
+    "notes": "Publish special public/community events such as fairs, concerts, clothing giveaways, pet blessings and community programs. Do not treat routine worship or closed/internal meetings as general community events by default."
+  },
+  {
     "id": "resource-friends-of-norwood-center",
     "name": "Friends of Norwood Center",
     "organization": "Friends of Norwood Center",
@@ -2357,6 +983,74 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "friends-center-blog",
+    "name": "Friends of Norwood Center — Blog",
+    "organization": "Friends of Norwood Center",
+    "source_class": "news_listing",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodcenter.org/blog/",
+    "domain": "norwoodcenter.org",
+    "produces": [
+      "news",
+      "events"
+    ],
+    "potential_outputs": [
+      "news",
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Secondary event discovery and downtown business/community news."
+  },
+  {
+    "id": "friends-center-events",
+    "name": "Friends of Norwood Center — Events",
+    "organization": "Friends of Norwood Center",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodcenter.org/events/",
+    "domain": "norwoodcenter.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Excellent aggregator for Town Common traditions, market special days and downtown happenings."
   },
   {
     "id": "resource-gillette-stadium",
@@ -2422,6 +1116,45 @@
     "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
   },
   {
+    "id": "google-news-norwood",
+    "name": "Google News — Norwood discovery",
+    "organization": "Google News",
+    "source_class": "news_aggregator",
+    "authority": "aggregator",
+    "coverage": "External discovery",
+    "url": "https://news.google.com/",
+    "domain": "news.google.com",
+    "produces": [
+      "news_discovery"
+    ],
+    "potential_outputs": [
+      "news_discovery"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "google_news_rss",
+      "automation": "scheduled_twice_daily"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "candidate",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Twice-daily Google News discovery using all four Norwood/Massachusetts spelling variants. Results are deduplicated with direct-source feeds; direct publisher links are preferred when already known.",
+    "search_queries": [
+      "\"norwood, ma\"",
+      "\"norwood ma\"",
+      "norwoodma",
+      "\"norwood, massachusetts\""
+    ]
+  },
+  {
     "id": "resource-grace-episcopal-church",
     "name": "Grace Episcopal Church",
     "organization": "Grace Episcopal Church",
@@ -2451,6 +1184,39 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "grace-calendar",
+    "name": "Grace Episcopal Church — Calendar",
+    "organization": "Grace Episcopal Church",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.gracenor.org/calendar",
+    "domain": "gracenor.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "embedded_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Publish special public/community events, not ordinary worship services by default."
   },
   {
     "id": "resource-gymnastic-academy-of-boston-norwood",
@@ -2549,6 +1315,41 @@
     "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
   },
   {
+    "id": "inside-norwood",
+    "name": "Inside Norwood",
+    "organization": "Inside Norwood",
+    "source_class": "local_news",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://insidenorwood.com/",
+    "domain": "insidenorwood.com",
+    "produces": [
+      "news",
+      "events"
+    ],
+    "potential_outputs": [
+      "news",
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Secondary local reporting/discovery source."
+  },
+  {
     "id": "resource-inside-norwood",
     "name": "Inside Norwood",
     "organization": "Inside Norwood",
@@ -2579,6 +1380,72 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "instagram-public-pages",
+    "name": "Instagram public Norwood pages — discovery",
+    "organization": "Multiple",
+    "source_class": "social_search",
+    "authority": "aggregator",
+    "coverage": "External discovery",
+    "url": "https://www.instagram.com/",
+    "domain": "instagram.com",
+    "produces": [
+      "event_discovery"
+    ],
+    "potential_outputs": [
+      "event_discovery"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "manual_social",
+      "automation": "manual/discovery"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "candidate",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Secondary discovery for pop-ups, fundraisers and venue announcements."
+  },
+  {
+    "id": "irish-brewing-events",
+    "name": "Irish Brewing Boston",
+    "organization": "Irish Brewing Boston",
+    "source_class": "event_hub",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://www.irishbrewingboston.com/",
+    "domain": "irishbrewingboston.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Recurring trivia/live music/open mic; collapse routine recurrence where appropriate."
   },
   {
     "id": "resource-islamic-center-of-new-england-sharon-center",
@@ -2797,6 +1664,72 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "magic-room-ticketleap",
+    "name": "Magic Room — Ticketleap",
+    "organization": "Magic Room",
+    "source_class": "ticket_calendar",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://events.ticketleap.com/events/magicroom-7",
+    "domain": "events.ticketleap.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Canonical ticket listing for Magic Room shows; dedupe against Norwood Space Center."
+  },
+  {
+    "id": "mill-forge-events",
+    "name": "Mill Forge Makerspace — Events",
+    "organization": "Mill Forge Makerspace",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://millforge.org/events/list/",
+    "domain": "millforge.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Public maker workshops/classes at 61 Endicott St."
+  },
+  {
     "id": "resource-mini-athletes-norwood",
     "name": "Mini Athletes Norwood — resource source",
     "organization": "Mini Athletes Norwood",
@@ -2831,35 +1764,37 @@
     "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
   },
   {
-    "id": "resource-morrill-memorial-library-literacy-department",
-    "name": "Morrill Memorial Library Literacy Department",
-    "organization": "Morrill Memorial Library Literacy Department",
-    "source_class": "organization_page",
-    "authority": "organization",
+    "id": "library-assabet-calendar",
+    "name": "Morrill Memorial Library — Events Calendar",
+    "organization": "Morrill Memorial Library",
+    "source_class": "calendar",
+    "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://norwoodlibrary.org/commres-refugee-immigr/",
-    "domain": "norwoodlibrary.org",
+    "url": "https://norwoodlibrary.assabetinteractive.com/calendar/",
+    "domain": "norwoodlibrary.assabetinteractive.com",
     "produces": [
-      "resources"
+      "events"
     ],
     "potential_outputs": [
       "events"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 1,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
+      "method": "html_calendar",
+      "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": true
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Very high-yield structured calendar. Filter recurring virtual statewide items if not specifically useful to Norwood residents."
   },
   {
     "id": "resource-morrill-memorial-library-local-history",
@@ -2947,6 +1882,142 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "library-home",
+    "name": "Morrill Memorial Library — Today’s Programs",
+    "organization": "Morrill Memorial Library",
+    "source_class": "event_hub",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodlibrary.org/",
+    "domain": "norwoodlibrary.org",
+    "produces": [
+      "events",
+      "news"
+    ],
+    "potential_outputs": [
+      "events",
+      "news"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Useful for near-term highlights and event discovery."
+  },
+  {
+    "id": "resource-morrill-memorial-library-literacy-department",
+    "name": "Morrill Memorial Library Literacy Department",
+    "organization": "Morrill Memorial Library Literacy Department",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodlibrary.org/commres-refugee-immigr/",
+    "domain": "norwoodlibrary.org",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "carried_forward",
+      "verified_at": "2026-09",
+      "basis": "v0.11.1 local resource dataset"
+    },
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "ncm-community-programs",
+    "name": "NCM — Community Programs",
+    "organization": "Norwood Community Media",
+    "source_class": "media_listing",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodcommunitymedia.org/programs/",
+    "domain": "norwoodcommunitymedia.org",
+    "produces": [
+      "news",
+      "event_discovery"
+    ],
+    "potential_outputs": [
+      "news",
+      "event_discovery"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Useful backward-looking signal for recurring traditions and organizations to add to source registry."
+  },
+  {
+    "id": "nrrc-events",
+    "name": "Neponset River Regional Chamber — Events",
+    "organization": "Neponset River Regional Chamber",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.nrrchamber.com/",
+    "domain": "nrrchamber.com",
+    "produces": [
+      "events",
+      "business_news"
+    ],
+    "potential_outputs": [
+      "events",
+      "business_news"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Regional source; publish only events physically in Norwood or strongly Norwood-specific."
   },
   {
     "id": "resource-neponset-valley-sunrise-rotary-club",
@@ -3316,6 +2387,39 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "library-cfce",
+    "name": "Norwood CFCE",
+    "organization": "Norwood Coordinated Family & Community Engagement",
+    "source_class": "program_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodlibrary.org/norwood-cfce/",
+    "domain": "norwoodlibrary.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Family playgroups and community programs; include when public and dated."
+  },
+  {
     "id": "resource-norwood-challenger-sports",
     "name": "Norwood Challenger Sports — resource source",
     "organization": "Norwood Challenger Sports",
@@ -3406,6 +2510,43 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "ncm-home",
+    "name": "Norwood Community Media",
+    "organization": "Norwood Community Media",
+    "source_class": "media_hub",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodcommunitymedia.org/",
+    "domain": "norwoodcommunitymedia.org",
+    "produces": [
+      "news",
+      "events",
+      "civic_video"
+    ],
+    "potential_outputs": [
+      "news",
+      "events",
+      "civic_video"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Local video/news; can surface recent community events and meetings."
   },
   {
     "id": "resource-norwood-community-media",
@@ -3527,6 +2668,39 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "town-conservation",
+    "name": "Norwood Conservation Commission / Trails",
+    "organization": "Town of Norwood",
+    "source_class": "department_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/conservation/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch nature walks, cleanups, trail events, public environmental programming."
   },
   {
     "id": "resource-norwood-coordinated-family-and-community-engagement",
@@ -3651,6 +2825,41 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "town-cultural-council",
+    "name": "Norwood Cultural Council",
+    "organization": "Norwood Cultural Council",
+    "source_class": "organization_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://massculturalcouncil.org/local-council/norwood/",
+    "domain": "massculturalcouncil.org",
+    "produces": [
+      "events",
+      "grants"
+    ],
+    "potential_outputs": [
+      "events",
+      "grants"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Useful for grant-supported public arts/cultural programming."
+  },
+  {
     "id": "resource-norwood-elections-and-voting",
     "name": "Norwood Elections & Voting",
     "organization": "Norwood Elections & Voting",
@@ -3709,6 +2918,41 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "elks-calendar",
+    "name": "Norwood Elks Lodge 1124 — Calendar",
+    "organization": "Norwood Elks Lodge 1124",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124",
+    "domain": "elks.org",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events."
   },
   {
     "id": "resource-norwood-farmers-market",
@@ -3802,6 +3046,78 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "town-fire-page",
+    "name": "Norwood Fire Department",
+    "organization": "Norwood Fire Department",
+    "source_class": "department_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/fire/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events",
+      "alerts"
+    ],
+    "potential_outputs": [
+      "events",
+      "alerts"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch for open houses, fire-prevention week, community safety events and notices."
+  },
+  {
+    "id": "food-pantry",
+    "name": "Norwood Food Pantry",
+    "organization": "Norwood Food Pantry",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodpantry.org/",
+    "domain": "norwoodpantry.org",
+    "produces": [
+      "events",
+      "fundraisers",
+      "drives"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers",
+      "drives"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch food drives, donation events and community fundraisers."
+  },
+  {
     "id": "resource-norwood-food-pantry",
     "name": "Norwood Food Pantry",
     "organization": "Norwood Food Pantry",
@@ -3893,6 +3209,72 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "nps-athletics",
+    "name": "Norwood High School — Athletics",
+    "organization": "Norwood High School Athletics",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/nhs/athletics",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "sports_events"
+    ],
+    "potential_outputs": [
+      "sports_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Only publish spectator-relevant varsity/community events; avoid routine practices/registration notices."
+  },
+  {
+    "id": "nps-nhs-calendar",
+    "name": "Norwood High School — Calendar",
+    "organization": "Norwood High School",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/nhs/calendar",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "school_events"
+    ],
+    "potential_outputs": [
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch public plays, concerts, fairs, open houses and community-accessible events."
+  },
+  {
     "id": "resource-norwood-high-school-alumni-association",
     "name": "Norwood High School Alumni Association",
     "organization": "Norwood High School Alumni Association",
@@ -3955,6 +3337,41 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "nps-nhs-pto",
+    "name": "Norwood High School PGTO",
+    "organization": "Norwood High School Parent/Guardian Teacher Organization",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/nhs/pta",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch public fundraisers, fairs and family/community events."
+  },
+  {
     "id": "resource-norwood-historical-society",
     "name": "Norwood Historical Society",
     "organization": "Norwood Historical Society",
@@ -3984,6 +3401,39 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "historical-society-events",
+    "name": "Norwood Historical Society — Events",
+    "organization": "Norwood Historical Society",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodhistoricalsociety.org/events/list/",
+    "domain": "norwoodhistoricalsociety.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Public exhibits, talks, tours and seasonal Day House events."
   },
   {
     "id": "resource-norwood-housing-authority",
@@ -4058,6 +3508,72 @@
     "potential_outputs": [
       "events"
     ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "carried_forward",
+      "verified_at": "2026-09",
+      "basis": "v0.11.1 local resource dataset"
+    },
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "junior-womans-club",
+    "name": "Norwood Junior Woman’s Club",
+    "organization": "Norwood Junior Woman’s Club",
+    "source_class": "event_hub",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodjuniorwc.wixsite.com/norwoodjwc",
+    "domain": "norwoodjuniorwc.wixsite.com",
+    "produces": [
+      "events",
+      "fundraisers",
+      "volunteer"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers",
+      "volunteer"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Community service, fundraisers, meetings and social/community events."
+  },
+  {
+    "id": "resource-norwood-light-report-an-outage",
+    "name": "Norwood Light — Report an Outage",
+    "organization": "Norwood Light — Report an Outage",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodlight.com/report-an-outage/",
+    "domain": "norwoodlight.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [],
     "active_monitor": false,
     "monitor_priority": 5,
     "ingestion": {
@@ -4162,33 +3678,39 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
-    "id": "resource-norwood-light-report-an-outage",
-    "name": "Norwood Light — Report an Outage",
-    "organization": "Norwood Light — Report an Outage",
+    "id": "lions-page",
+    "name": "Norwood Lions Club",
+    "organization": "Norwood Lions Club",
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://norwoodlight.com/report-an-outage/",
-    "domain": "norwoodlight.com",
+    "url": "https://www.norwoodmalions.com/",
+    "domain": "norwoodmalions.com",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
-    "potential_outputs": [],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
     "ingestion": {
       "method": "discovery_search",
-      "automation": "candidate"
+      "automation": "possible"
     },
     "filters": {
-      "require_norwood_relevance": true
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Watch public fundraisers and service events."
   },
   {
     "id": "resource-norwood-lions-club",
@@ -4347,6 +3869,41 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "nps-pma",
+    "name": "Norwood Parent Music Association",
+    "organization": "Norwood Parent Music Association",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodpma.org/",
+    "domain": "norwoodpma.org",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "High-value for marching-band home show, concerts and music fundraising."
+  },
+  {
     "id": "resource-norwood-parent-music-association",
     "name": "Norwood Parent Music Association",
     "organization": "Norwood Parent Music Association",
@@ -4438,6 +3995,41 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "town-police-page",
+    "name": "Norwood Police Department",
+    "organization": "Norwood Police Department",
+    "source_class": "department_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/police/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events",
+      "alerts"
+    ],
+    "potential_outputs": [
+      "events",
+      "alerts"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch for National Night Out, community outreach, safety events and public notices."
+  },
+  {
     "id": "resource-norwood-public-records",
     "name": "Norwood Public Records",
     "organization": "Norwood Public Records",
@@ -4496,6 +4088,144 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "nps-district-calendar",
+    "name": "Norwood Public Schools — District Calendar",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/about/calendar",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "school_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Master NPS calendar with selectable sub-calendars."
+  },
+  {
+    "id": "nps-fine-arts",
+    "name": "Norwood Public Schools — Fine Arts",
+    "organization": "Norwood Public Schools",
+    "source_class": "program_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/curriculum/fine-arts",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Public concerts, drama, band/orchestra, arts festival and performance announcements."
+  },
+  {
+    "id": "nps-news",
+    "name": "Norwood Public Schools — News",
+    "organization": "Norwood Public Schools",
+    "source_class": "news_listing",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/about/news",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "news",
+      "events"
+    ],
+    "potential_outputs": [
+      "news",
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Catches Fine Arts Festival and public school announcements not obvious in calendars."
+  },
+  {
+    "id": "nps-district-ical",
+    "name": "Norwood Public Schools — Subscribe/iCal",
+    "organization": "Norwood Public Schools",
+    "source_class": "ical_feed",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/about/calendar/subscribe",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "school_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Preferred structured feed when stable."
   },
   {
     "id": "resource-norwood-public-schools-bus-transportation",
@@ -4866,6 +4596,41 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "town-recreation-programs",
+    "name": "Norwood Recreation — Programs & Memberships",
+    "organization": "Norwood Recreation Department",
+    "source_class": "program_listing",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
+    "domain": "norwoodma.myrec.com",
+    "produces": [
+      "events",
+      "programs"
+    ],
+    "potential_outputs": [
+      "events",
+      "programs"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Filter out registration-only ongoing programs unless there is a dated public event or community celebration."
+  },
+  {
     "id": "resource-norwood-recreation-adaptive-sports",
     "name": "Norwood Recreation Adaptive Sports",
     "organization": "Norwood Recreation Adaptive Sports",
@@ -5123,6 +4888,74 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "scholarship-foundation",
+    "name": "Norwood Scholarship Foundation",
+    "organization": "Norwood Scholarship Foundation",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodscholarshipfoundation.org/",
+    "domain": "norwoodscholarshipfoundation.org",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch scholarship fundraisers and public events."
+  },
+  {
+    "id": "town-senior-newsletter",
+    "name": "Norwood Senior Center — Newsletter & Calendar",
+    "organization": "Norwood Council on Aging",
+    "source_class": "newsletter_calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "newsletter",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Important for dances, bazaars, performances and intergenerational/public senior-center events."
+  },
+  {
     "id": "resource-norwood-senior-center-council-on-aging",
     "name": "Norwood Senior Center / Council on Aging",
     "organization": "Norwood Senior Center / Council on Aging",
@@ -5247,6 +5080,39 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "norwood-space-center-events",
+    "name": "Norwood Space Center — Events",
+    "organization": "Norwood Space Center",
+    "source_class": "calendar",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodspacecenter.com/events/",
+    "domain": "norwoodspacecenter.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Aggregates venue/business events; enforce venue/address filter because some chamber events occur outside Norwood."
+  },
+  {
     "id": "resource-norwood-special-education-parent-advisory-council",
     "name": "Norwood Special Education Parent Advisory Council",
     "organization": "Norwood Special Education Parent Advisory Council",
@@ -5309,6 +5175,38 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "norwood-summer-concerts",
+    "name": "Norwood summer concert discovery",
+    "organization": "Norwood community summer concert series",
+    "source_class": "seasonal_discovery",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "configured",
+      "verified_at": "2026-09-19"
+    },
+    "notes": "Seasonal watch for Norwood's public summer concert series; prefer direct organizer/event links."
+  },
+  {
     "id": "resource-norwood-theatre",
     "name": "Norwood Theatre",
     "organization": "Norwood Theatre",
@@ -5338,6 +5236,39 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "norwood-theatre-season",
+    "name": "Norwood Theatre — Shows & Events",
+    "organization": "Norwood Theatre",
+    "source_class": "event_listing",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodstage.com/shows-events",
+    "domain": "norwoodstage.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Ticketed public performances in Norwood; canonical source for dates/times."
   },
   {
     "id": "resource-norwood-town-news",
@@ -5370,6 +5301,41 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "norwood-town-news",
+    "name": "Norwood Town News — Calendar / Local Town Pages",
+    "organization": "Norwood Town News",
+    "source_class": "local_news",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodtownnews.com/",
+    "domain": "norwoodtownnews.com",
+    "produces": [
+      "news",
+      "events"
+    ],
+    "potential_outputs": [
+      "news",
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Useful monthly calendar and community stories; dedupe against primary calendars."
   },
   {
     "id": "resource-norwood-track-club",
@@ -5548,6 +5514,106 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "town-veterans",
+    "name": "Norwood Veterans Services",
+    "organization": "Norwood Veterans Services",
+    "source_class": "department_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch Memorial Day, Veterans Day and public veteran/community observances."
+  },
+  {
+    "id": "norwood-veterans-services",
+    "name": "Norwood Veterans Services",
+    "organization": "Town of Norwood Veterans Services",
+    "source_class": "official_department",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-19"
+    },
+    "notes": "Watch public veterans ceremonies, observances, benefits events and community programs."
+  },
+  {
+    "id": "vfw-discovery",
+    "name": "Norwood VFW Post 2452 — discovery",
+    "organization": "Norwood VFW Post 2452",
+    "source_class": "community_venue",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodtownnews.com/",
+    "domain": "norwoodtownnews.com",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Known source of public meat raffles, dances, blood drives and community events; primary web presence is inconsistent, so verify each event."
+  },
+  {
     "id": "resource-norwood-wic",
     "name": "Norwood WIC",
     "organization": "Norwood WIC",
@@ -5606,6 +5672,39 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "norwood-youth-fundraisers",
+    "name": "Norwood youth and school fundraiser discovery",
+    "organization": "Norwood youth and school organizations",
+    "source_class": "community_discovery",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "configured",
+      "verified_at": "2026-09-19"
+    },
+    "notes": "Watch public school/youth fundraisers including car washes, fairs and benefits."
   },
   {
     "id": "resource-norwood-youth-cheer",
@@ -5834,6 +5933,107 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "community-event-submissions",
+    "name": "Norwood.ma Community Event Submissions — Approved Feed",
+    "organization": "Norwood.ma",
+    "source_class": "moderated_submission_feed",
+    "authority": "moderated",
+    "coverage": "Norwood community relevance; approved out-of-town items retain municipality labels",
+    "url": "https://script.google.com/macros/s/AKfycbx7-saWBvzP492fspqbrRx6EUxECfbbMXyafVhxuXVWPNGZ-6Z5x7PVe7lWTrqP4BJY/exec",
+    "domain": "script.google.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "community_submission_json",
+      "automation": "live"
+    },
+    "filters": {
+      "moderation_required": true,
+      "dedupe_against_primary_source": true,
+      "preserve_town_label": true
+    },
+    "verification": {
+      "status": "endpoint_verified_by_owner",
+      "verified_at": "2026-09-19",
+      "basis": "Approved test event returned through deployed privacy-safe Apps Script JSON endpoint"
+    },
+    "notes": "Endpoint exposes only allowlisted public event fields from rows whose moderation Status is Approved or Published. Private response Sheet remains private."
+  },
+  {
+    "id": "nps-oldham-calendar",
+    "name": "Oldham Elementary — Calendar",
+    "organization": "Oldham Elementary School",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/oldham/calendar",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "school_events"
+    ],
+    "potential_outputs": [
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Potential book fairs/PTO events; filter student-only items."
+  },
+  {
+    "id": "nps-oldham-pto",
+    "name": "Oldham Elementary PTO",
+    "organization": "Oldham Elementary PTO",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/oldham/pta",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch public fundraisers, fairs and family/community events."
+  },
+  {
     "id": "resource-oldham-elementary-school-parent-teacher-organization",
     "name": "Oldham Elementary School Parent Teacher Organization",
     "organization": "Oldham Elementary School Parent Teacher Organization",
@@ -5863,6 +6063,35 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "resource-phoenix-theatres-patriot-place-foxborough",
+    "name": "Phoenix Theatres Patriot Place — Foxborough",
+    "organization": "Phoenix Theatres Patriot Place — Foxborough",
+    "source_class": "organization_page",
+    "authority": "business",
+    "coverage": "Foxborough, MA",
+    "url": "https://www.phoenixmovies.net/theatres/patriot-place/010",
+    "domain": "phoenixmovies.net",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
   },
   {
     "id": "resource-premier-gymnastics-norwood",
@@ -5899,6 +6128,74 @@
     "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
   },
   {
+    "id": "nps-prescott-calendar",
+    "name": "Prescott Elementary — Calendar",
+    "organization": "Prescott Elementary School",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/prescott/calendar",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "school_events"
+    ],
+    "potential_outputs": [
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Potential fairs, PTO/community events; filter student-only items."
+  },
+  {
+    "id": "nps-prescott-pta",
+    "name": "Prescott Elementary PTA",
+    "organization": "Prescott Elementary PTA",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/prescott/pta",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Watch public fundraisers, fairs and family/community events."
+  },
+  {
     "id": "resource-prescott-elementary-school-parent-teacher-organization",
     "name": "Prescott Elementary School Parent Teacher Organization",
     "organization": "Prescott Elementary School Parent Teacher Organization",
@@ -5930,6 +6227,142 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "pcrinc-events",
+    "name": "Promoting Conflict Resolution, Inc. — Events",
+    "organization": "Promoting Conflict Resolution, Inc.",
+    "source_class": "event_hub",
+    "authority": "organization",
+    "coverage": "Regional / Norwood when venue matches",
+    "url": "https://pcrincboston.org/",
+    "domain": "pcrincboston.org",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Regional nonprofit source. Monitor lightly for public fundraisers or programs physically held in Norwood."
+  },
+  {
+    "id": "rage-zone-norwood",
+    "name": "Rage Zone — Norwood",
+    "organization": "Rage Zone",
+    "source_class": "venue_events",
+    "authority": "organization",
+    "coverage": "Norwood",
+    "url": "https://www.ragezone.us/norwood",
+    "domain": "www.ragezone.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Experience business; monitor for public special events/promotions."
+  },
+  {
+    "id": "rotary-calendar",
+    "name": "Rotary Club of Norwood — Calendar",
+    "organization": "Rotary Club of Norwood",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodrotary.org/events/calendar",
+    "domain": "norwoodrotary.org",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "club_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Club calendar has fundraiser/general event types and subscription support."
+  },
+  {
+    "id": "st-catherine-calendar",
+    "name": "Saint Catherine of Siena — Calendar",
+    "organization": "Saint Catherine of Siena Parish",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://stcatherinenorwood.org/",
+    "domain": "stcatherinenorwood.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Publish special community events; suppress routine masses/devotions unless specifically relevant."
+  },
+  {
     "id": "resource-saint-catherine-of-siena-parish",
     "name": "Saint Catherine of Siena Parish",
     "organization": "Saint Catherine of Siena Parish",
@@ -5959,6 +6392,41 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "sarva-social-feed",
+    "name": "SARVA — Public event/social feed",
+    "organization": "SARVA",
+    "source_class": "social_hub",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+    "domain": "foodbevg.com",
+    "produces": [
+      "events",
+      "food_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "food_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "social_mirror",
+      "automation": "manual/discovery"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Public mirror of SARVA social posts used for event discovery when first-party social content is not directly crawlable. Require a dated Norwood-specific post before publication; prefer an official booking/event page when available."
   },
   {
     "id": "resource-school-of-rock-norwood-walpole",
@@ -6063,6 +6531,35 @@
     "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
   },
   {
+    "id": "resource-showcase-cinema-de-lux-legacy-place-dedham",
+    "name": "Showcase Cinema de Lux Legacy Place — Dedham",
+    "organization": "Showcase Cinema de Lux Legacy Place — Dedham",
+    "source_class": "organization_page",
+    "authority": "business",
+    "coverage": "Dedham, MA",
+    "url": "https://www.showcasecinemas.com/theatre-info/",
+    "domain": "showcasecinemas.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+  },
+  {
     "id": "resource-shree-hari-dham-temple",
     "name": "Shree Hari Dham Temple",
     "organization": "Shree Hari Dham Temple",
@@ -6155,6 +6652,35 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "resource-splitsville-luxury-lanes-and-golf-suites-foxborough",
+    "name": "Splitsville Luxury Lanes & Golf Suites — Foxborough",
+    "organization": "Splitsville Luxury Lanes & Golf Suites — Foxborough",
+    "source_class": "organization_page",
+    "authority": "business",
+    "coverage": "Foxborough, MA",
+    "url": "https://www.howlsplitsville.com/",
+    "domain": "howlsplitsville.com",
+    "produces": [
+      "resources"
+    ],
+    "potential_outputs": [],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
   },
   {
     "id": "resource-st-timothy-church",
@@ -6308,6 +6834,138 @@
     "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
   },
   {
+    "id": "fallout-shelter",
+    "name": "The Fallout Shelter / Extended Play Sessions",
+    "organization": "Greater Roxbury Community Arts Center / Fallout Shelter",
+    "source_class": "event_listing",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.extendedplaysessions.com/",
+    "domain": "extendedplaysessions.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Live music, open mic and fundraiser shows at 61 Endicott St."
+  },
+  {
+    "id": "norwood-record-events",
+    "name": "The Norwood Record — Events",
+    "organization": "The Norwood Record",
+    "source_class": "event_listing",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodrecord.com/events",
+    "domain": "norwoodrecord.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "High-value curated local calendar; verify details against primary source when available."
+  },
+  {
+    "id": "norwood-record-news",
+    "name": "The Norwood Record — News",
+    "organization": "The Norwood Record",
+    "source_class": "local_news",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodrecord.com/news",
+    "domain": "norwoodrecord.com",
+    "produces": [
+      "news"
+    ],
+    "potential_outputs": [
+      "news"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Primary local newspaper source."
+  },
+  {
+    "id": "skating-club-boston-events",
+    "name": "The Skating Club of Boston — Events",
+    "organization": "The Skating Club of Boston",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://scboston.org/events/list/",
+    "domain": "scboston.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Norwood venue with a structured event calendar. Member-only items must be excluded; public events, public skating, competitions, shows, seminars, and public programs are eligible when access rules allow."
+  },
+  {
     "id": "resource-thom-early-intervention",
     "name": "Thom Early Intervention",
     "organization": "Thom Early Intervention",
@@ -6339,6 +6997,140 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "town-farmers-market",
+    "name": "Town of Norwood — Farmers Market",
+    "organization": "Town of Norwood",
+    "source_class": "series_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/government/committees_boards/sustainability_commission/farmers_market.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "2026 market runs Tuesdays June 16–Oct 20; source also links weekly social updates and special events."
+  },
+  {
+    "id": "town-community-events",
+    "name": "Town of Norwood — Holidays & Community Events",
+    "organization": "Town of Norwood",
+    "source_class": "event_hub",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/residents/holidays_and_community_events/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "High-value hub for Norwood Day, Memorial Day, July 4, Veterans Day, tree lighting/Santa parade and concert series."
+  },
+  {
+    "id": "town-home-news",
+    "name": "Town of Norwood — Latest News",
+    "organization": "Town of Norwood",
+    "source_class": "news_listing",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "news",
+      "alerts"
+    ],
+    "potential_outputs": [
+      "news",
+      "alerts"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Official Town homepage Latest News; useful for alerts, closures, elections, hospital/town updates."
+  },
+  {
+    "id": "town-meetings-calendar",
+    "name": "Town of Norwood — Meetings Calendar",
+    "organization": "Town of Norwood",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "civic_events"
+    ],
+    "potential_outputs": [
+      "civic_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Public meetings; keep separate from community-event feed unless intentionally shown as civic items."
+  },
+  {
     "id": "resource-town-of-norwood-official-website",
     "name": "Town of Norwood — Official Website",
     "organization": "Town of Norwood — Official Website",
@@ -6366,6 +7158,43 @@
       "basis": "v0.11.1 local resource dataset"
     },
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "town-social",
+    "name": "Town of Norwood — Social Media",
+    "organization": "Town of Norwood",
+    "source_class": "social_hub",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events",
+      "alerts",
+      "news"
+    ],
+    "potential_outputs": [
+      "events",
+      "alerts",
+      "news"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "social_discovery",
+      "automation": "manual/discovery"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "candidate",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Secondary discovery only; verify event details against primary pages when possible."
   },
   {
     "id": "resource-trinity-community-church",
@@ -6461,6 +7290,39 @@
     "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
   },
   {
+    "id": "united-church-events",
+    "name": "United Church of Norwood — Upcoming Events",
+    "organization": "United Church of Norwood",
+    "source_class": "event_hub",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.unitedchurchofnorwood.org/",
+    "domain": "unitedchurchofnorwood.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_hub",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
+    },
+    "notes": "Publish special community events; suppress routine worship/prayer/Bible study by default."
+  },
+  {
     "id": "resource-urban-air-adventure-park-bellingham",
     "name": "Urban Air Adventure Park — Bellingham",
     "organization": "Urban Air Adventure Park — Bellingham",
@@ -6519,833 +7381,6 @@
     "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
   },
   {
-    "id": "resource-waters-church-norwood",
-    "name": "Waters Church — Norwood",
-    "organization": "Waters Church — Norwood",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://waterschurchnorwood.org/",
-    "domain": "waterschurchnorwood.org",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
-  },
-  {
-    "id": "resource-willett-parent-teacher-organization",
-    "name": "Willett Parent Teacher Organization",
-    "organization": "Willett Parent Teacher Organization",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/willett/pta",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
-    },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
-  },
-  {
-    "id": "rotary-calendar",
-    "name": "Rotary Club of Norwood — Calendar",
-    "organization": "Rotary Club of Norwood",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodrotary.org/events/calendar",
-    "domain": "norwoodrotary.org",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "club_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Club calendar has fundraiser/general event types and subscription support."
-  },
-  {
-    "id": "sarva-social-feed",
-    "name": "SARVA — Public event/social feed",
-    "organization": "SARVA",
-    "source_class": "social_hub",
-    "authority": "business",
-    "coverage": "Norwood, MA",
-    "url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "domain": "foodbevg.com",
-    "produces": [
-      "events",
-      "food_events"
-    ],
-    "potential_outputs": [
-      "events",
-      "food_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "social_mirror",
-      "automation": "manual/discovery"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Public mirror of SARVA social posts used for event discovery when first-party social content is not directly crawlable. Require a dated Norwood-specific post before publication; prefer an official booking/event page when available."
-  },
-  {
-    "id": "scholarship-foundation",
-    "name": "Norwood Scholarship Foundation",
-    "organization": "Norwood Scholarship Foundation",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodscholarshipfoundation.org/",
-    "domain": "norwoodscholarshipfoundation.org",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch scholarship fundraisers and public events."
-  },
-  {
-    "id": "skating-club-boston-events",
-    "name": "The Skating Club of Boston — Events",
-    "organization": "The Skating Club of Boston",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://scboston.org/events/list/",
-    "domain": "scboston.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Norwood venue with a structured event calendar. Member-only items must be excluded; public events, public skating, competitions, shows, seminars, and public programs are eligible when access rules allow."
-  },
-  {
-    "id": "st-catherine-calendar",
-    "name": "Saint Catherine of Siena — Calendar",
-    "organization": "Saint Catherine of Siena Parish",
-    "source_class": "calendar",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://stcatherinenorwood.org/",
-    "domain": "stcatherinenorwood.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Publish special community events; suppress routine masses/devotions unless specifically relevant."
-  },
-  {
-    "id": "town-community-events",
-    "name": "Town of Norwood — Holidays & Community Events",
-    "organization": "Town of Norwood",
-    "source_class": "event_hub",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/residents/holidays_and_community_events/index.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "High-value hub for Norwood Day, Memorial Day, July 4, Veterans Day, tree lighting/Santa parade and concert series."
-  },
-  {
-    "id": "town-conservation",
-    "name": "Norwood Conservation Commission / Trails",
-    "organization": "Town of Norwood",
-    "source_class": "department_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/conservation/index.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch nature walks, cleanups, trail events, public environmental programming."
-  },
-  {
-    "id": "town-cultural-council",
-    "name": "Norwood Cultural Council",
-    "organization": "Norwood Cultural Council",
-    "source_class": "organization_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://massculturalcouncil.org/local-council/norwood/",
-    "domain": "massculturalcouncil.org",
-    "produces": [
-      "events",
-      "grants"
-    ],
-    "potential_outputs": [
-      "events",
-      "grants"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Useful for grant-supported public arts/cultural programming."
-  },
-  {
-    "id": "town-farmers-market",
-    "name": "Town of Norwood — Farmers Market",
-    "organization": "Town of Norwood",
-    "source_class": "series_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/government/committees_boards/sustainability_commission/farmers_market.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_page",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "2026 market runs Tuesdays June 16–Oct 20; source also links weekly social updates and special events."
-  },
-  {
-    "id": "town-fire-page",
-    "name": "Norwood Fire Department",
-    "organization": "Norwood Fire Department",
-    "source_class": "department_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/fire/index.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events",
-      "alerts"
-    ],
-    "potential_outputs": [
-      "events",
-      "alerts"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch for open houses, fire-prevention week, community safety events and notices."
-  },
-  {
-    "id": "town-home-news",
-    "name": "Town of Norwood — Latest News",
-    "organization": "Town of Norwood",
-    "source_class": "news_listing",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "news",
-      "alerts"
-    ],
-    "potential_outputs": [
-      "news",
-      "alerts"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Official Town homepage Latest News; useful for alerts, closures, elections, hospital/town updates."
-  },
-  {
-    "id": "town-meetings-calendar",
-    "name": "Town of Norwood — Meetings Calendar",
-    "organization": "Town of Norwood",
-    "source_class": "calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "civic_events"
-    ],
-    "potential_outputs": [
-      "civic_events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 1,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Public meetings; keep separate from community-event feed unless intentionally shown as civic items."
-  },
-  {
-    "id": "town-police-page",
-    "name": "Norwood Police Department",
-    "organization": "Norwood Police Department",
-    "source_class": "department_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/police/index.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events",
-      "alerts"
-    ],
-    "potential_outputs": [
-      "events",
-      "alerts"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch for National Night Out, community outreach, safety events and public notices."
-  },
-  {
-    "id": "town-recreation-programs",
-    "name": "Norwood Recreation — Programs & Memberships",
-    "organization": "Norwood Recreation Department",
-    "source_class": "program_listing",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
-    "domain": "norwoodma.myrec.com",
-    "produces": [
-      "events",
-      "programs"
-    ],
-    "potential_outputs": [
-      "events",
-      "programs"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "html_list",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Filter out registration-only ongoing programs unless there is a dated public event or community celebration."
-  },
-  {
-    "id": "town-senior-newsletter",
-    "name": "Norwood Senior Center — Newsletter & Calendar",
-    "organization": "Norwood Council on Aging",
-    "source_class": "newsletter_calendar",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "newsletter",
-      "automation": "preferred"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Important for dances, bazaars, performances and intergenerational/public senior-center events."
-  },
-  {
-    "id": "town-social",
-    "name": "Town of Norwood — Social Media",
-    "organization": "Town of Norwood",
-    "source_class": "social_hub",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events",
-      "alerts",
-      "news"
-    ],
-    "potential_outputs": [
-      "events",
-      "alerts",
-      "news"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "social_discovery",
-      "automation": "manual/discovery"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "candidate",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Secondary discovery only; verify event details against primary pages when possible."
-  },
-  {
-    "id": "town-veterans",
-    "name": "Norwood Veterans Services",
-    "organization": "Norwood Veterans Services",
-    "source_class": "department_page",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Watch Memorial Day, Veterans Day and public veteran/community observances."
-  },
-  {
-    "id": "united-church-events",
-    "name": "United Church of Norwood — Upcoming Events",
-    "organization": "United Church of Norwood",
-    "source_class": "event_hub",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.unitedchurchofnorwood.org/",
-    "domain": "unitedchurchofnorwood.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_hub",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Publish special community events; suppress routine worship/prayer/Bible study by default."
-  },
-  {
-    "id": "vfw-discovery",
-    "name": "Norwood VFW Post 2452 — discovery",
-    "organization": "Norwood VFW Post 2452",
-    "source_class": "community_venue",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodtownnews.com/",
-    "domain": "norwoodtownnews.com",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
-    },
-    "notes": "Known source of public meat raffles, dances, blood drives and community events; primary web presence is inconsistent, so verify each event."
-  },
-  {
-    "id": "resource-splitsville-luxury-lanes-and-golf-suites-foxborough",
-    "name": "Splitsville Luxury Lanes & Golf Suites — Foxborough",
-    "organization": "Splitsville Luxury Lanes & Golf Suites — Foxborough",
-    "source_class": "organization_page",
-    "authority": "business",
-    "coverage": "Foxborough, MA",
-    "url": "https://www.howlsplitsville.com/",
-    "domain": "howlsplitsville.com",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
-  },
-  {
-    "id": "resource-showcase-cinema-de-lux-legacy-place-dedham",
-    "name": "Showcase Cinema de Lux Legacy Place — Dedham",
-    "organization": "Showcase Cinema de Lux Legacy Place — Dedham",
-    "source_class": "organization_page",
-    "authority": "business",
-    "coverage": "Dedham, MA",
-    "url": "https://www.showcasecinemas.com/theatre-info/",
-    "domain": "showcasecinemas.com",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
-  },
-  {
-    "id": "resource-dedham-community-theatre",
-    "name": "Dedham Community Theatre",
-    "organization": "Dedham Community Theatre",
-    "source_class": "organization_page",
-    "authority": "business",
-    "coverage": "Dedham, MA",
-    "url": "https://dedhamcommunitytheatre.com/",
-    "domain": "dedhamcommunitytheatre.com",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
-  },
-  {
-    "id": "resource-phoenix-theatres-patriot-place-foxborough",
-    "name": "Phoenix Theatres Patriot Place — Foxborough",
-    "organization": "Phoenix Theatres Patriot Place — Foxborough",
-    "source_class": "organization_page",
-    "authority": "business",
-    "coverage": "Foxborough, MA",
-    "url": "https://www.phoenixmovies.net/theatres/patriot-place/010",
-    "domain": "phoenixmovies.net",
-    "produces": [
-      "resources"
-    ],
-    "potential_outputs": [],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
-    },
-    "filters": {
-      "require_norwood_relevance": true
-    },
-    "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review"
-    },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
-  },
-  {
     "id": "washington-no7-events",
     "name": "Washington No. 7 — Events",
     "organization": "Washington No. 7",
@@ -7379,24 +7414,55 @@
     "notes": "Recurring live music and public events."
   },
   {
-    "id": "rage-zone-norwood",
-    "name": "Rage Zone — Norwood",
-    "organization": "Rage Zone",
-    "source_class": "venue_events",
+    "id": "resource-waters-church-norwood",
+    "name": "Waters Church — Norwood",
+    "organization": "Waters Church — Norwood",
+    "source_class": "organization_page",
     "authority": "organization",
-    "coverage": "Norwood",
-    "url": "https://www.ragezone.us/norwood",
-    "domain": "www.ragezone.us",
+    "coverage": "Norwood, MA",
+    "url": "https://waterschurchnorwood.org/",
+    "domain": "waterschurchnorwood.org",
     "produces": [
-      "events"
+      "resources"
     ],
     "potential_outputs": [
       "events"
     ],
-    "active_monitor": true,
-    "monitor_priority": 2,
+    "active_monitor": false,
+    "monitor_priority": 5,
     "ingestion": {
-      "method": "html_page",
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-17",
+      "basis": "current web review"
+    },
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+  },
+  {
+    "id": "nps-willett-calendar",
+    "name": "Willett Early Childhood Center — Calendar",
+    "organization": "Willett Early Childhood Center",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/willett/calendar",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "school_events"
+    ],
+    "potential_outputs": [
+      "school_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
       "automation": "possible"
     },
     "filters": {
@@ -7407,30 +7473,63 @@
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-17",
-      "basis": "current web review"
+      "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Experience business; monitor for public special events/promotions."
+    "notes": "Potential family/community events; filter routine school operations."
   },
   {
-    "id": "norwood-veterans-services",
-    "name": "Norwood Veterans Services",
-    "organization": "Town of Norwood Veterans Services",
-    "source_class": "official_department",
-    "authority": "official",
+    "id": "resource-willett-parent-teacher-organization",
+    "name": "Willett Parent Teacher Organization",
+    "organization": "Willett Parent Teacher Organization",
+    "source_class": "organization_page",
+    "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
-    "domain": "norwoodma.gov",
+    "url": "https://www.norwood.k12.ma.us/willett/pta",
+    "domain": "norwood.k12.ma.us",
     "produces": [
-      "events"
+      "resources"
     ],
     "potential_outputs": [
       "events"
     ],
-    "active_monitor": true,
-    "monitor_priority": 2,
+    "active_monitor": false,
+    "monitor_priority": 5,
     "ingestion": {
-      "method": "html_page",
-      "automation": "preferred"
+      "method": "discovery_search",
+      "automation": "candidate"
+    },
+    "filters": {
+      "require_norwood_relevance": true
+    },
+    "verification": {
+      "status": "carried_forward",
+      "verified_at": "2026-09",
+      "basis": "v0.11.1 local resource dataset"
+    },
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+  },
+  {
+    "id": "nps-willett-pto",
+    "name": "Willett PTO",
+    "organization": "Willett PTO",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/willett/pta",
+    "domain": "norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -7439,73 +7538,9 @@
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-19"
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public veterans ceremonies, observances, benefits events and community programs."
-  },
-  {
-    "id": "norwood-summer-concerts",
-    "name": "Norwood summer concert discovery",
-    "organization": "Norwood community summer concert series",
-    "source_class": "seasonal_discovery",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "configured",
-      "verified_at": "2026-09-19"
-    },
-    "notes": "Seasonal watch for Norwood's public summer concert series; prefer direct organizer/event links."
-  },
-  {
-    "id": "norwood-youth-fundraisers",
-    "name": "Norwood youth and school fundraiser discovery",
-    "organization": "Norwood youth and school organizations",
-    "source_class": "community_discovery",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/",
-    "domain": "norwood.k12.ma.us",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "possible"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "configured",
-      "verified_at": "2026-09-19"
-    },
-    "notes": "Watch public school/youth fundraisers including car washes, fairs and benefits."
+    "notes": "Watch public fundraisers, fairs and family/community events."
   }
 ]
