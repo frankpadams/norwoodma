@@ -397,6 +397,39 @@ def current_events(events):
     out.sort(key=lambda e:(e.get('start',{}).get('date') or '9999',e.get('start',{}).get('time') or '99:99',e.get('title','')))
     return out
 
+
+def events_from_ncm_school_broadcasts(source):
+    """Publish dated Schools & Sports schedule entries as events with a direct live-view link."""
+    html=request(source['url']).text
+    if not BeautifulSoup:return []
+    soup=BeautifulSoup(html,'html.parser'); out=[]
+    live_url='https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/'
+    # Cablecast schedule markup varies; accept schedule rows/cards only when a real date/time is present.
+    for node in soup.find_all(['article','li','tr','div']):
+        text=clean_text(node.get_text(' '))
+        if not text or len(text)>600: continue
+        low=text.lower()
+        if not any(k in low for k in ('nhs','norwood high','mustang','school','sports')): continue
+        d=_date_from_text(text)
+        tm=_time_from_text(text)
+        if not d or d < now_local().date()-timedelta(days=1) or d > now_local().date()+timedelta(days=120): continue
+        h=node.find(['h1','h2','h3','h4','strong'])
+        title=clean_text(h.get_text(' ') if h else text)
+        title=re.sub(r'\s+',' ',title)[:180]
+        if not title: continue
+        ds=d.isoformat()
+        out.append({
+          'id':event_id(title,ds,'Norwood Community Media'),
+          'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},
+          'venue':'Norwood Community Media — Schools & Sports','address':None,'category':'school',
+          'source_id':source['id'],'source_url':live_url,'registration_url':live_url,'cost':'Free',
+          'public_access':'public','series':'NCM Schools & Sports Live Broadcasts','publish_candidate':True,
+          'verification_status':'auto_primary_source','notes':'Scheduled live school broadcast. Watch online via Norwood Community Media.',
+          'discovered_by':'scheduled_ncm_school_broadcast'
+        })
+    return dedupe_events(out)
+
+
 def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
@@ -405,7 +438,8 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='community_submission_json': got=events_from_community_submission_feed(src)
+                if method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
+                elif method=='community_submission_json': got=events_from_community_submission_feed(src)
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
                 elif method=='tribe_events': got=events_from_tribe(src)
                 elif method=='ical':
