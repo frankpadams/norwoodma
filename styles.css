@@ -607,3 +607,14 @@ html[data-high-contrast="true"] .outdoor-list-panel{background:#050505!important
 html[data-high-contrast="true"] .outdoor-list-panel .outdoor-accordion details,
 html[data-high-contrast="true"] .outdoor-list-heading-secondary{border-color:#fff!important}
 html[data-high-contrast="true"] .outdoor-list-intro{color:#fff!important}
+
+
+/* Sitewide translation controls */
+.accessibility-controls [data-translate]{white-space:nowrap}
+.translate-menu{position:fixed;z-index:3000;min-width:205px;max-height:min(420px,70vh);overflow:auto;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px;box-shadow:0 12px 34px rgba(0,28,48,.22)}
+.translate-menu[hidden]{display:none}
+.translate-menu button{display:block;width:100%;text-align:left;border:0;background:transparent;color:inherit;padding:10px 12px;border-radius:7px;font:inherit;font-size:14px;cursor:pointer}
+.translate-menu button:hover,.translate-menu button:focus{background:#edf3f6;outline:2px solid transparent}
+html[data-high-contrast="true"] .translate-menu{background:#000;color:#fff;border-color:#fff}
+html[data-high-contrast="true"] .translate-menu button:hover,html[data-high-contrast="true"] .translate-menu button:focus{background:#fff;color:#000}
+@media(max-width:620px){.accessibility-controls [data-translate] span{display:none}.translate-menu{min-width:190px}}
