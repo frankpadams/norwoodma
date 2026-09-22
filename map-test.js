@@ -22,7 +22,13 @@ const venueAddresses={
 };
 const staticPlaces=[
  {name:'Norwood Town Common',category:'civic',address:'Washington St at Nahatan St, Norwood, MA 02062',lat:42.19455,lng:-71.19955,details:'Town green · gazebo · community events',url:'parks-trails.html'},
- {name:'Norwood Memorial Municipal Building / Town Hall',category:'civic',address:'566 Washington St, Norwood, MA 02062',details:'Town Hall · Town Clerk · Select Board · General Manager · Assessors · Treasurer/Collector · permitting and municipal offices',url:'https://www.norwoodma.gov/'},
+ {name:'Old Parish Cemetery',category:'historic',address:'Washington St near Town Hall, Norwood, MA 02062',details:'Established 1741 · early South Dedham/Norwood burial ground · historic gravestones',url:'https://norwoodhistoricalsociety.org/happy-birthday-norwood-massachusetts/'},
+ {name:'F. Holland Day House / Norwood Historical Society',category:'historic',address:'93 Day St, Norwood, MA 02062',details:'1859 house · remodeled 1890–1893 · home of photographer and publisher F. Holland Day · National Register site',url:'https://norwoodhistoricalsociety.org/93-day-street-f-holland-day-house/'},
+ {name:'Oakview Mansion',category:'historic',address:'289 Walpole St, Norwood, MA 02062',details:'1868 Second Empire mansion · F.O. Winslow and Governor Frank Allen associations',url:'https://norwoodhistoricalsociety.org/oakview-mansion/'},
+ {name:'Little Red Brick Schoolhouse',category:'historic',address:'93 Day St, Norwood, MA 02062',details:'Former Schoolhouse No. 7 · moved and reconstructed on the historical society grounds',url:'https://norwoodhistoricalsociety.org/a-brief-history-of-norwood-massachusetts/'},
+ {name:'St. Gabriel the Archangel Chapel',category:'historic',address:'320 Winter St, Norwood, MA 02062',details:'Historic 1903 mortuary chapel in Highland Cemetery',url:'https://norwoodhistoricalsociety.org/this-day-in-norwood-history-may-29-1903-highst-gabriels-chapel/'},
+ {name:'Historic Day Street',category:'historic',address:'Day St, Norwood, MA 02062',details:'Historic residential corridor with architecturally significant 19th- and early-20th-century homes',url:'https://norwoodhistoricalsociety.org/day-street/'},
+ {name:'Norwood Memorial Municipal Building / Town Hall',category:'civic',also:['historic'],address:'566 Washington St, Norwood, MA 02062',details:'Historic municipal building · carillon tower · Town Hall offices',url:'https://www.norwoodma.gov/'},
  {name:'Norwood Public Safety Building',category:'civic',address:'135–137 Nahatan St, Norwood, MA 02062',details:'Police Department · Fire Department · public safety services',url:'https://www.norwoodma.gov/'},
  {name:'Norwood Civic Center',category:'civic',address:'165 Nahatan St, Norwood, MA 02062',lat:42.19443,lng:-71.19893,details:'Recreation Department · gym · programs · community activities',url:'sports-recreation.html'},
  {name:'Norwood Senior Center',category:'civic',address:'275 Prospect St, Norwood, MA 02062',details:'Council on Aging · senior programs · transportation and support services',url:'resources.html'},
@@ -30,7 +36,7 @@ const staticPlaces=[
  {name:'Norwood Department of Public Works / Engineering',category:'civic',address:'1 Lyman Pl, Norwood, MA 02062',details:'Public Works · engineering · roads · water · sewer · trash and recycling',url:'https://www.norwoodma.gov/departments/public_works/index.php'},
  {name:'Norwood Light & Broadband',category:'civic',address:'136 Access Rd, Norwood, MA 02062',details:'Municipal electric utility · broadband · billing and customer service',url:'https://norwoodlight.com/'},
  {name:'Norwood Housing Authority — Administration',category:'civic',address:'40 William Shyne Cir, Norwood, MA 02062',details:'Municipal housing authority administrative offices',url:'https://www.norwoodha.org/'},
- {name:'Highland Cemetery / Cemetery Department',category:'civic',address:'320 Winter St, Norwood, MA 02062',details:'Town cemetery · cemetery office · St. Gabriel’s Chapel',url:'https://www.norwoodma.gov/'},
+ {name:'Highland Cemetery / Cemetery Department',category:'civic',also:['historic'],address:'320 Winter St, Norwood, MA 02062',details:'Historic town cemetery · cemetery office · St. Gabriel’s Chapel',url:'https://www.norwoodma.gov/'},
  {name:'Norwood High School',category:'school',also:['civic'],address:'245 Nichols St, Norwood, MA 02062',lat:42.19917,lng:-71.20972,details:'Athletic fields · tennis courts · track',url:'parks-trails.html#tennis-courts'},
  {name:'Coakley Middle School / Ivatts',category:'school',also:['civic'],address:'1315 Washington St, Norwood, MA 02062',lat:42.17445,lng:-71.20085,details:'Tennis · baseball · softball · rectangular fields · school recreation facilities',url:'parks-trails.html#tennis-courts'},
  {name:'Balch Elementary School',category:'school',also:['civic'],address:'1170 Washington St, Norwood, MA 02062',details:'Playground · outdoor play areas · adjoining athletic fields',url:'https://www.norwood.k12.ma.us/balch'},
@@ -45,13 +51,13 @@ const staticPlaces=[
  {name:'Ellis Playground & Fields',category:'park',address:'Codman St at Cameron Rd, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
  {name:'Murphy Park & Playground',category:'park',address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League · basketball · walking connection',url:'parks-trails.html'},
  {name:'Prescott Playground & Fields',category:'park',address:'66 Richmond Rd, Norwood, MA 02062',details:'Playground · basketball · baseball · softball',url:'parks-trails.html'},
- {name:'Morrill Memorial Library',category:'culture',also:['civic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
- {name:'The Norwood Theatre',category:'culture',address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Live music · theatre · comedy · films',url:'things.html'},
+ {name:'Morrill Memorial Library',category:'culture',also:['civic','historic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
+ {name:'The Norwood Theatre',category:'culture',also:['historic'],address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Restored 1927 theatre · live music · theatre · comedy · films',url:'things.html'},
  {name:'Norwood Food Pantry',category:'resource',address:'150 Chapel St, Norwood, MA 02062',lat:42.18262,lng:-71.21230,details:'Food assistance · Saturday pantry hours',url:'resources.html'},
  {name:'Norwood Central',category:'transit',address:'164 Broadway, Norwood, MA 02062',lat:42.18873,lng:-71.19991,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Norwood Depot',category:'transit',address:'Railroad Ave, Norwood, MA 02062',lat:42.19675,lng:-71.19665,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Windsor Gardens',category:'transit',address:'Engamore Ln at Buckminster Dr, Norwood, MA 02062',lat:42.17189,lng:-71.21973,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
- {name:'Norwood Memorial Airport',category:'landmark',also:['civic'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'}
+ {name:'Norwood Memorial Airport',category:'landmark',also:['civic','historic'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'}
 ];
 function resourceCategory(r){
  const t=norm([r.category,r.tags,(r.topics||[]).join(' ')].join(' '));
