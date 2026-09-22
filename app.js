@@ -82,7 +82,7 @@ function monthDayRange(events){
  return `${a.toLocaleDateString([],{month:'short',day:'numeric'}).toUpperCase()} – ${b.toLocaleDateString([],{month:'short',day:'numeric'}).toUpperCase()}`;
 }
 function eventKind(cat='community'){
- const m={live_music:'Live music',music:'Live music',music_community:'Music & community',performance:'Performance',school_theatre:'School theatre',sports_education:'Figure skating',sports:'Sports',food_culture:'Food & culture',food:'Food & drink',market:'Market',assistance:'Community assistance',business_community:'Local business',workshop:'Workshop',arts:'Arts & making',fundraiser:'Fundraiser',community:'Community'};return m[cat]||String(cat).replaceAll('_',' ');
+ const m={live_music:'Live music',music:'Live music',music_community:'Music & community',performance:'Performance',school_theatre:'School theatre',sports_education:'Figure skating',sports:'Sports',food_culture:'Food & culture',food:'Food & drink',market:'Market',assistance:'Community assistance',business_community:'Local business',workshop:'Workshop',arts:'Arts & making',fundraiser:'Fundraiser',community:'Community',civic_meeting:'Town meeting'};return m[cat]||String(cat).replaceAll('_',' ');
 }
 function eventClass(cat='community'){if(/music/.test(cat))return'music';if(/arts|theatre|workshop/.test(cat))return'arts';if(/assistance/.test(cat))return'community';if(/food|market/.test(cat))return'food';if(/sport|skating|race|fitness/.test(cat))return'sports';if(/fund/.test(cat))return'fundraiser';return'community';}
 function eventHasPaidAdmission(e){const cost=String(e.cost||'').trim().toLowerCase();return !!cost&&!/^free\b/.test(cost)&&!/donation|suggested/.test(cost)&&(/\$|admission|ticket|fee|per person|per child|per adult/.test(cost));}
@@ -126,6 +126,34 @@ function diversifySameDayEvents(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // Public board/committee meetings are maintained separately for the time-sensitive
+ // alert system, but they also belong in the community calendar.
+ try{
+   const r=await fetch('data/civic-notices.json?fresh='+Date.now(),{cache:'no-store'});
+   if(r.ok){
+     const data=await r.json(), notices=Array.isArray(data)?data:(data.notices||[]);
+     for(const n of notices){
+       if(n.kind!=='meeting'||!n.date)continue;
+       const id='civic-meeting-'+String(n.date)+'-'+String(n.title||'meeting').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+       if(items.some(e=>e.id===id||(e.start?.date===n.date&&String(e.title||'').toLowerCase()===String(n.title||'').toLowerCase())))continue;
+       items.push({
+         id,
+         title:n.title||'Public meeting',
+         start:{date:n.date,time:n.start_time||null},
+         end:{date:n.date,time:n.end_time||null},
+         venue:n.venue||'Town of Norwood',
+         address:n.address||null,
+         category:'civic_meeting',
+         source_id:'town-civic-meetings',
+         source_url:n.url||'https://www.norwoodma.gov/#section4-anchor',
+         public_access:'public',
+         publish_candidate:true,
+         verification_status:'civic_notice',
+         notes:'Come back to Norwood.ma at meeting time to watch live when a live stream is available.'
+       });
+     }
+   }
+ }catch(e){}
  const today=dateKey(new Date());return items.filter(e=>(e.end?.date||e.start?.date||'')>=today&&e.publish_candidate!==false).sort((a,b)=>(a.start?.date||'').localeCompare(b.start?.date||'')||(a.start?.time||'99:99').localeCompare(b.start?.time||'99:99'));
 }
 function groupEvents(items){
@@ -135,7 +163,7 @@ function groupEvents(items){
  const g={today:[],tomorrow:[],weekend:[],next:[],save:[]};
  for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}Object.keys(g).forEach(k=>{g[k]=diversifySameDayEvents(g[k]);});return g;
 }
-function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.registration_url||e.source_url||'events.html')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p></div><span class="event-arrow">↗</span></a>`;}
+function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'',civic=e.category==='civic_meeting'?'<p class="civic-watch-note">Come back to Norwood.ma at meeting time to watch live.</p>':'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(e.registration_url||e.source_url||'events.html')}" target="_blank" rel="noopener"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3><p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">↗</span></a>`;}
 function eventMatchesCalendar(e,key){
  if(!key||key==='all')return true;
  const cat=String(e.category||'').toLowerCase();
