@@ -593,3 +593,17 @@ html[data-high-contrast="true"] .outdoor-accordion summary span,
 html[data-high-contrast="true"] .outdoor-accordion details>p{color:#fff!important}
 html[data-high-contrast="true"] .outdoor-accordion summary:focus-visible{outline:4px solid #00ffff!important;outline-offset:3px}
 @media(max-width:700px){.outdoor-accordion summary{display:block}.outdoor-accordion summary span{display:block;text-align:left;margin-top:3px}}
+
+
+/* Outdoor guide section panels: match Trash page's grouped expandable-list pattern */
+.outdoor-list-panel{border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px 12px 12px;margin-top:12px}
+.outdoor-list-panel .outdoor-accordion{gap:0}
+.outdoor-list-panel .outdoor-accordion details{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+.outdoor-list-panel .outdoor-accordion details:first-child{border-top:0}
+.outdoor-list-heading{font-size:1rem;margin:2px 2px 6px}
+.outdoor-list-heading-secondary{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.outdoor-list-intro{margin:0 2px 6px;color:var(--muted);font-size:.9rem}
+html[data-high-contrast="true"] .outdoor-list-panel{background:#050505!important;color:#fff!important;border-color:#fff!important}
+html[data-high-contrast="true"] .outdoor-list-panel .outdoor-accordion details,
+html[data-high-contrast="true"] .outdoor-list-heading-secondary{border-color:#fff!important}
+html[data-high-contrast="true"] .outdoor-list-intro{color:#fff!important}
