@@ -7542,5 +7542,39 @@
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Watch public fundraisers, fairs and family/community events."
+  },
+  {
+    "id": "norwood-food-pantry-hours",
+    "name": "Norwood Food Pantry — Saturday Food Assistance",
+    "organization": "Norwood Food Pantry",
+    "source_class": "assistance_schedule",
+    "authority": "organization",
+    "coverage": "Norwood and Westwood, MA",
+    "url": "https://www.norwoodpantry.org/food",
+    "domain": "norwoodpantry.org",
+    "produces": [
+      "events",
+      "assistance_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "assistance_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "recurring_service_schedule",
+      "automation": "live"
+    },
+    "filters": {
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-22",
+      "basis": "Official Norwood Food Pantry page states Saturday shopping hours 9:00 AM–11:40 AM and new-client signup availability."
+    },
+    "notes": "Publish the rolling Saturday food-assistance schedule. This is a community assistance service, not a religious event, even though the pantry is located behind Grace Episcopal Church."
   }
 ]
