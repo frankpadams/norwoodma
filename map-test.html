@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#003B71">
+<title>Norwood.ma Map Prototype</title>
+<link rel="icon" href="assets/favicon-approved.png">
+<link rel="stylesheet" href="styles.css?v=0.13.4.24">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+.map-prototype{max-width:1180px;margin:0 auto;padding:30px 24px 60px}
+.map-prototype-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:18px}
+.map-prototype-head h1{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);margin:.2rem 0 .4rem;color:#153b56}
+.map-prototype-head p{margin:0;max-width:720px;color:#627581}
+.prototype-note{font-size:.75rem;font-weight:850;letter-spacing:.06em;color:#805f00;background:#fff4c8;border:1px solid #e2c357;border-radius:999px;padding:6px 10px;white-space:nowrap}
+.map-tools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.map-tools button{border:1px solid #c9d7e0;background:#fff;color:#073b69;border-radius:999px;padding:8px 12px;font:inherit;font-size:.82rem;font-weight:800;cursor:pointer}
+.map-tools button.active,.map-tools button:hover,.map-tools button:focus-visible{background:#073b69;color:#fff;border-color:#073b69}
+.map-tools .locate{margin-left:auto;background:#f2c100;color:#17384d;border-color:#d7ad00}
+.map-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;min-height:620px;border:1px solid #d5e0e6;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(0,42,74,.08)}
+#prototypeMap{min-height:620px}
+.map-list{border-left:1px solid #d5e0e6;overflow:auto;max-height:620px;background:#fbfcfd}
+.map-list-head{position:sticky;top:0;z-index:2;background:#f3f7f9;border-bottom:1px solid #d5e0e6;padding:14px 16px}
+.map-list-head b{display:block;color:#153b56}.map-list-head small{color:#71808a}
+.place-card{display:block;width:100%;border:0;border-bottom:1px solid #e3eaee;background:#fff;text-align:left;padding:14px 16px;cursor:pointer;color:#17384d}
+.place-card:hover,.place-card:focus-visible{background:#f2f7fa}
+.place-card b{display:block;font-size:.92rem}.place-card span{display:block;margin-top:3px;color:#687983;font-size:.75rem;line-height:1.35}
+.place-card small{display:block;margin-top:7px;font-size:.67rem;font-weight:850;letter-spacing:.04em;color:#8a6800}
+.map-popup h3{margin:.1rem 0 .3rem;font-size:1rem;color:#153b56}.map-popup p{margin:.25rem 0;font-size:.78rem;line-height:1.35}.map-popup a{font-weight:800;color:#003b71}
+.prototype-explainer{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.prototype-explainer div{background:#fff;border:1px solid #d8e1e6;border-radius:12px;padding:14px}
+.prototype-explainer b{display:block;color:#153b56;margin-bottom:4px}.prototype-explainer p{margin:0;color:#657681;font-size:.8rem}
+@media(max-width:760px){
+ .map-prototype{padding:22px 12px 42px}.map-prototype-head{align-items:flex-start;flex-direction:column}.prototype-note{white-space:normal}
+ .map-shell{grid-template-columns:1fr;min-height:0}.map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none}.map-list-head{position:static}
+ #prototypeMap{min-height:54vh}.map-tools .locate{margin-left:0}.prototype-explainer{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></div>
+<header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav"><a href="index.html">Home</a><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="calendars.html">Calendars</a><a href="resources.html">Local Resources</a></nav></header>
+<main id="main" class="map-prototype">
+<section class="map-prototype-head"><div><p class="eyebrow">UNLINKED PROTOTYPE</p><h1>Explore Norwood on a map</h1><p>This is a test of an optional map view that could sit beside existing lists. Filter places, click a location, or use your location to see what is nearby.</p></div><span class="prototype-note">TEST PAGE · NOT IN SITE NAVIGATION</span></section>
+<div class="map-tools" aria-label="Map filters">
+<button class="active" data-filter="all">All</button>
+<button data-filter="park">Parks & recreation</button>
+<button data-filter="civic">Civic</button>
+<button data-filter="school">Schools & fields</button>
+<button class="locate" id="locateMe">◎ Near me</button>
+</div>
+<div class="map-shell">
+<div id="prototypeMap" aria-label="Interactive map of sample Norwood locations"></div>
+<aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Sample locations</b><small>Click a place to center the map.</small></div><div id="placeList"></div></aside>
+</div>
+<section class="prototype-explainer" aria-label="Prototype notes">
+<div><b>Lists stay primary</b><p>The map supplements the existing accessible lists rather than replacing them.</p></div>
+<div><b>Useful across the site</b><p>The same map layer could power parks, food, events, things to do, swimming and other location-based pages.</p></div>
+<div><b>Low-maintenance data</b><p>Norwood.ma can store each known place once with its address, coordinates, category and amenities.</p></div>
+</section>
+</main>
+<footer class="old-footer"><a class="footer-logo" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>This prototype is intentionally unlinked while mapping is evaluated.</p></div><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></footer>
+<script src="nav.js?v=0.13.4.17"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(()=>{
+ const places=[
+  {name:"Norwood Town Common",category:"civic",address:"Washington St at Nahatan St",lat:42.19455,lng:-71.19955,amenities:"Town green · gazebo · community events",url:"parks-trails.html"},
+  {name:"Norwood High School",category:"school",address:"245 Nichols St",lat:42.19917,lng:-71.20972,amenities:"Athletic fields · tennis courts · track",url:"parks-trails.html#tennis-courts"},
+  {name:"Coakley Middle School / Ivatts",category:"school",address:"1315 Washington St",lat:42.17445,lng:-71.20085,amenities:"Tennis · baseball · softball · rectangular fields",url:"parks-trails.html#tennis-courts"},
+  {name:"Hawes Recreation Area",category:"park",address:"1305 Washington St",lat:42.17515,lng:-71.20165,amenities:"Pool · spray park · playground · tennis · fishing · trails",url:"parks-trails.html"},
+  {name:"Father Mac’s / Father McAleer",category:"park",address:"295 Vernon St",lat:42.18785,lng:-71.21375,amenities:"Pool · playground · Little League · soccer",url:"parks-trails.html"}
+ ];
+ const map=L.map("prototypeMap",{scrollWheelZoom:false}).setView([42.190,-71.204],13);
+ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap contributors"}).addTo(map);
+ const markers=new Map(),list=document.querySelector("#placeList"),count=document.querySelector("#placeCount");
+ let filter="all",userMarker=null;
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+'</h3><p>'+esc(p.address)+'</p><p><b>Amenities:</b> '+esc(p.amenities)+'</p><p><a href="'+esc(p.url)+'">Open related Norwood.ma page →</a></p></div>'}
+ function render(){
+  markers.forEach(m=>map.removeLayer(m));markers.clear();list.innerHTML="";
+  const shown=places.filter(p=>filter==="all"||p.category===filter);
+  count.textContent=shown.length+" sample location"+(shown.length===1?"":"s");
+  shown.forEach((p,i)=>{
+   const m=L.marker([p.lat,p.lng]).addTo(map).bindPopup(popup(p));markers.set(p.name,m);
+   const b=document.createElement("button");b.className="place-card";b.innerHTML="<b>"+esc(p.name)+"</b><span>"+esc(p.address)+"</span><small>"+esc(p.amenities)+"</small>";
+   b.addEventListener("click",()=>{map.setView([p.lat,p.lng],16);m.openPopup()});list.appendChild(b);
+  });
+  if(shown.length>1){const g=L.featureGroup([...markers.values()]);map.fitBounds(g.getBounds().pad(.16),{maxZoom:14})}
+  else if(shown.length===1)map.setView([shown[0].lat,shown[0].lng],16);
+ }
+ document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("[data-filter]").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render();
+ }));
+ document.querySelector("#locateMe").addEventListener("click",()=>{
+  if(!navigator.geolocation){alert("Location is not available in this browser.");return}
+  navigator.geolocation.getCurrentPosition(pos=>{
+   const ll=[pos.coords.latitude,pos.coords.longitude];
+   if(userMarker)map.removeLayer(userMarker);
+   userMarker=L.circleMarker(ll,{radius:9,weight:3,color:"#003B71",fillColor:"#F2C100",fillOpacity:1}).addTo(map).bindPopup("<b>Your approximate location</b>").openPopup();
+   map.setView(ll,15);
+  },()=>alert("Your location was not shared. You can still browse the map normally."),{enableHighAccuracy:false,timeout:8000});
+ });
+ render();
+})();
+</script>
+</body>
+</html>
