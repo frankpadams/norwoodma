@@ -763,6 +763,66 @@ def _time_from_text(text):
     if ap=='AM' and h==12:h=0
     return f"{h:02d}:{minute:02d}"
 
+def _town_calendar_data():
+    """Fetch the Revize calendar's underlying public data endpoint directly."""
+    url=('https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php'
+         '?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:')
+    try:
+        r=request(url)
+        data=r.json()
+    except Exception:
+        return []
+
+    rows=[]
+    def walk(v):
+        if isinstance(v,list):
+            for x in v: walk(x)
+        elif isinstance(v,dict):
+            # Revize/FullCalendar payloads expose event-ish dictionaries; keep any
+            # object that has a recognizable title plus a start/date value.
+            title=v.get('title') or v.get('summary') or v.get('name')
+            start=v.get('start') or v.get('start_date') or v.get('date') or v.get('event_start')
+            if title and start: rows.append(v)
+            for x in v.values():
+                if isinstance(x,(list,dict)): walk(x)
+    walk(data)
+    return rows
+
+def civic_meetings_from_town_data(days=185):
+    """Convert Revize's structured Master-calendar feed into civic meeting notices."""
+    today=now_local().date(); out=[]; seen=set()
+    endpoint=('https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php'
+              '?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:')
+    for row in _town_calendar_data():
+        raw_title=clean_text(row.get('title') or row.get('summary') or row.get('name'))
+        m=IMPORTANT_MEETING_RE.search(raw_title or '')
+        if not m: continue
+        raw_start=row.get('start') or row.get('start_date') or row.get('date') or row.get('event_start')
+        raw_end=row.get('end') or row.get('end_date') or row.get('event_end')
+        try:
+            dt=dtparser.parse(str(raw_start)) if dtparser else datetime.fromisoformat(str(raw_start).replace('Z','+00:00'))
+            if dt.tzinfo: dt=dt.astimezone(TZ)
+        except Exception:
+            continue
+        d=dt.date()
+        if d < today-timedelta(days=1) or d > today+timedelta(days=days): continue
+        st=dt.strftime('%H:%M')
+        et=None
+        if raw_end:
+            try:
+                ed=dtparser.parse(str(raw_end)) if dtparser else datetime.fromisoformat(str(raw_end).replace('Z','+00:00'))
+                if ed.tzinfo: ed=ed.astimezone(TZ)
+                et=ed.strftime('%H:%M')
+            except Exception: pass
+        title=m.group(1)
+        key=(title.lower(),d.isoformat(),st)
+        if key in seen: continue
+        seen.add(key)
+        href=row.get('url') or row.get('link') or endpoint
+        out.append({'kind':'meeting','title':title,'date':d.isoformat(),'start_time':st,'end_time':et,
+                    'url':href,'source':'Town of Norwood Master Calendar'})
+    return out
+
 def _render_town_calendar_month(d):
     """Render a Revize calendar month when its event data is populated client-side."""
     url=f'https://www.norwoodma.gov/calendar.php?view=month&month={d.month:02d}&day=01&year={d.year}'
@@ -778,6 +838,8 @@ def _render_town_calendar_month(d):
 
 def civic_meetings_from_town_calendar(months=6):
     """Read the Town's Revize Master calendar, including its JS-rendered event layer."""
+    direct=civic_meetings_from_town_data(days=185)
+    if direct:return direct
     if not BeautifulSoup:return []
     today=now_local().date(); out=[]; seen=set()
     for offset in range(months):
