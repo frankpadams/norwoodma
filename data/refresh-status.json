@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:26:01.900328-04:00",
+  "generated_at": "2026-09-22T18:21:41.673938-04:00",
   "offline": false,
   "events_published": 140,
   "news_published": 120,
@@ -10,51 +10,51 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 140,
-      "generated_at": "2026-09-22T17:26:01.895975-04:00"
+      "generated_at": "2026-09-22T18:21:41.667528-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 40,
-      "generated_at": "2026-09-22T17:26:01.896689-04:00"
+      "generated_at": "2026-09-22T18:21:41.668611-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 15,
-      "generated_at": "2026-09-22T17:26:01.897389-04:00"
+      "generated_at": "2026-09-22T18:21:41.669595-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-22T17:26:01.897982-04:00"
+      "generated_at": "2026-09-22T18:21:41.670393-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-22T17:26:01.898457-04:00"
+      "generated_at": "2026-09-22T18:21:41.671027-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 13,
-      "generated_at": "2026-09-22T17:26:01.899040-04:00"
+      "generated_at": "2026-09-22T18:21:41.671871-04:00"
     }
   ],
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='massache.org', port=443): Max retries exceeded with url: /events/list/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='massache.org', port=443) at 0"
     },
     {
       "source_id": "nps-callahan-pta",
@@ -489,6 +489,13 @@
       "method": "recurring_service_schedule",
       "found": 8,
       "note": ""
+    },
+    {
+      "source_id": "ncm-school-live-broadcasts",
+      "ok": true,
+      "method": "ncm_school_broadcasts",
+      "found": 0,
+      "note": ""
     }
   ],
   "news_sources": [
@@ -517,9 +524,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -549,7 +557,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 39,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
