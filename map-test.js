@@ -57,7 +57,13 @@ const staticPlaces=[
  {name:'Norwood Central',category:'transit',address:'164 Broadway, Norwood, MA 02062',lat:42.18873,lng:-71.19991,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Norwood Depot',category:'transit',address:'Railroad Ave, Norwood, MA 02062',lat:42.19675,lng:-71.19665,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Windsor Gardens',category:'transit',address:'Engamore Ln at Buckminster Dr, Norwood, MA 02062',lat:42.17189,lng:-71.21973,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
- {name:'Norwood Memorial Airport',category:'landmark',also:['civic','historic'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'}
+ {name:'Norwood Memorial Airport',category:'landmark',also:['civic','historic'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'},
+ {name:'Town Hall Public Parking',category:'parking',address:'566 Washington St, Norwood, MA 02062',details:'Public municipal parking serving Town Hall and the town-center area',url:'https://www.norwoodma.gov/'},
+ {name:'Senior Center Public Parking',category:'parking',address:'275 Prospect St, Norwood, MA 02062',details:'Public municipal parking at the Senior Center / municipal complex',url:'https://www.norwoodma.gov/'},
+ {name:'Talbot / Babel’s Municipal Lot',category:'parking',address:'Talbot Ave, Norwood, MA 02062',details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
+ {name:'Central Street / Day Street Municipal Lot',category:'parking',address:'Central St at Day St, Norwood, MA 02062',details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
+ {name:'Nahatan Street / Broadway Municipal Lot',category:'parking',address:'Nahatan St at Broadway, Norwood, MA 02062',details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
+ {name:'Post Office Municipal Lot',category:'parking',address:'Washington St near Norwood Post Office, Norwood, MA 02062',details:'Municipal public parking in the Norwood Center area',url:'https://www.norwoodma.gov/'}
 ];
 function resourceCategory(r){
  const t=norm([r.category,r.tags,(r.topics||[]).join(' ')].join(' '));
