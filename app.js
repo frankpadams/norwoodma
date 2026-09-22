@@ -6,6 +6,7 @@ async function rotatingHero(){
   try{
     let photos=window.NORWOOD_HERO_PHOTOS||[]; if(!photos.length){try{photos=await (await fetch('data/hero-photos.json')).json()}catch(e){}} if(!photos.length)return;
     let recent=[]; try{recent=JSON.parse(localStorage.getItem('norwoodHeroRecent')||'[]')}catch(e){}
+    if(window.matchMedia('(min-width: 768px)').matches) photos=photos.filter(x=>x.desktopEligible!==false);
     let preferred=photos.filter(x=>x.heroPriority==='primary'); if(preferred.length<2)preferred=photos.filter(x=>x.heroPriority!=='supporting'); if(!preferred.length)preferred=photos;
     let eligible=preferred.filter(x=>!recent.includes(x.id)); if(!eligible.length)eligible=preferred;
     // Weighted selection lets seasonal/special images appear less often without removing them from rotation.
