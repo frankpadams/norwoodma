@@ -1,6 +1,7 @@
 (()=>{
  const input=document.querySelector('#siteSearch'),box=document.querySelector('#siteSearchResults'),form=document.querySelector('#siteSearchForm');
  if(!input||!box||!form)return;
+ let submitted=false;
  const pages=[
   {name:'Things to Do',url:'things.html',type:'Things to Do',text:'activities entertainment explore parks recreation'},
   {name:'Museum passes & discounts',url:'museum-discounts.html',type:'Things to Do',text:'museum pass passes discount discounts free admission cheap attractions library Morrill EBT SNAP WIC ConnectorCare Card to Culture Museums for All Bank of America Museums on Us credit card zoo aquarium science museum MFA ICA'},
@@ -70,19 +71,20 @@
  }
  function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
  function render(track=false){
-  const raw=input.value.trim(); if(!raw){box.hidden=true;box.innerHTML='';return []}
+  const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
   let hits=search(raw);
   if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
   const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
-  box.innerHTML=thingHtml+regularHtml;
+  const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length} result${hits.length+things.length===1?'':'s'}</small></div>`:'';
+  box.innerHTML=heading+thingHtml+regularHtml;
   box.hidden=false;if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
- input.addEventListener('input',()=>render(false));
+ input.addEventListener('input',()=>{submitted=false;render(false)});
  input.addEventListener('focus',()=>{if(input.value.trim())render(false)});
- form.addEventListener('submit',e=>{e.preventDefault();const hits=render(true);if(hits.length===1)location.href=hits[0].x.url});
+ form.addEventListener('submit',e=>{e.preventDefault();submitted=true;const hits=render(true);if(hits.length===1&&!box.querySelector('.library-things-search-callout')){location.href=hits[0].x.url;return;}box.setAttribute('tabindex','-1');box.scrollIntoView({behavior:'smooth',block:'nearest'});box.focus({preventScroll:true});});
  input.addEventListener('keydown',e=>{if(e.key==='Escape'){box.hidden=true;input.blur()}if(e.key==='ArrowDown'){const a=box.querySelector('a');if(a){e.preventDefault();a.focus()}}});
  box.addEventListener('keydown',e=>{if(e.key==='Escape'){box.hidden=true;input.focus()}});
- document.addEventListener('click',e=>{if(!form.contains(e.target))box.hidden=true});
+ document.addEventListener('click',e=>{if(!form.contains(e.target)&&!submitted)box.hidden=true});
 })();
