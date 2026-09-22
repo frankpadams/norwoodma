@@ -686,6 +686,82 @@ def refresh_news(offline=False):
     write_json('news.json',items); write_js('news-data.js','NORWOOD_NEWS',items)
     return items,status
 
+
+IMPORTANT_MEETING_RE=re.compile(r'\b(Board of Selectmen|Finance Commission|School Committee|Town Meeting|Planning Board|Zoning Board(?: of Appeals)?|Conservation Commission|Board of Health|Community Preservation Committee|Budget Balancing Committee|Middle School Building Committee)\b',re.I)
+MONTH_DATE_RE=re.compile(r'\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?(?:,\s*(20\d{2}))?\b',re.I)
+SLASH_DATE_RE=re.compile(r'\b(\d{1,2})[/-](\d{1,2})[/-](20\d{2})\b')
+TIME_RE=re.compile(r'\b(\d{1,2}):(\d{2})\s*(AM|PM)\b',re.I)
+
+def _date_from_text(text):
+    m=SLASH_DATE_RE.search(text)
+    if m:
+        try:return date(int(m.group(3)),int(m.group(1)),int(m.group(2)))
+        except Exception:return None
+    m=MONTH_DATE_RE.search(text)
+    if m:
+        year=int(m.group(3) or now_local().year)
+        try:return datetime.strptime(f"{m.group(1)} {m.group(2)} {year}",'%B %d %Y').date()
+        except Exception:
+            try:return datetime.strptime(f"{m.group(1)} {m.group(2)} {year}",'%b %d %Y').date()
+            except Exception:return None
+    return None
+
+def _time_from_text(text):
+    m=TIME_RE.search(text)
+    if not m:return None
+    h=int(m.group(1)); minute=int(m.group(2)); ap=m.group(3).upper()
+    if ap=='PM' and h!=12:h+=12
+    if ap=='AM' and h==12:h=0
+    return f"{h:02d}:{minute:02d}"
+
+def civic_meetings_from_town_calendar():
+    if not BeautifulSoup:return []
+    url='https://www.norwoodma.gov/calendar.php'
+    html=request(url).text;soup=BeautifulSoup(html,'html.parser');out=[];seen=set()
+    for node in soup.find_all(['article','li','tr','a','div']):
+        text=clean_text(node.get_text(' '))
+        if not text or len(text)>700 or not IMPORTANT_MEETING_RE.search(text):continue
+        d=_date_from_text(text)
+        if not d or d < now_local().date()-timedelta(days=1) or d > now_local().date()+timedelta(days=120):continue
+        mm=IMPORTANT_MEETING_RE.search(text); title=mm.group(1)
+        key=(title.lower(),d.isoformat(),_time_from_text(text))
+        if key in seen:continue
+        seen.add(key)
+        a=node if getattr(node,'name',None)=='a' and node.get('href') else node.find('a',href=True)
+        href=urljoin(url,a.get('href')) if a else url
+        out.append({'kind':'meeting','title':title,'date':d.isoformat(),'start_time':_time_from_text(text),'end_time':None,'url':href,'source':'Town of Norwood Meetings Calendar'})
+    return out
+
+def election_notices_from_news(news):
+    out=[];today=now_local().date();seen=set()
+    for x in news:
+        if x.get('source')!='Town of Norwood':continue
+        text=clean_text((x.get('title') or '')+' '+(x.get('summary') or ''))
+        if 'election' not in text.lower() or re.search(r'\b(results?|unofficial|official results)\b',text,re.I):continue
+        d=_date_from_text(text)
+        if not d or d < today or d > today+timedelta(days=370):continue
+        key=d.isoformat()
+        if key in seen:continue
+        seen.add(key)
+        out.append({'kind':'election','title':clean_text(x.get('title')) or f'Election Day — {d.strftime("%B %-d")}', 'election_date':d.isoformat(),'show_from':(d-timedelta(days=5)).isoformat(),'url':x.get('url') or 'https://www.norwoodma.gov/','source':'Town of Norwood'})
+    return out
+
+def refresh_civic_notices(news,offline=False):
+    seed=read_json('civic-notices-seed.json',[])
+    notices=list(seed)+election_notices_from_news(news)
+    if not offline:
+        try:notices.extend(civic_meetings_from_town_calendar())
+        except Exception:pass
+    chosen={}
+    for n in notices:
+        k=(n.get('kind'),n.get('date') or n.get('election_date'),clean_text(n.get('title')).lower())
+        chosen[k]=n
+    notices=list(chosen.values())
+    notices.sort(key=lambda n:(n.get('date') or n.get('election_date') or '9999',n.get('start_time') or '99:99',n.get('title') or ''))
+    write_json('civic-notices.json',notices)
+    return notices
+
+
 def coverage(registry):
     program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
@@ -793,10 +869,10 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); ap.add_argument('--ack-published',action='store_true'); args=ap.parse_args()
     if args.ack_published:
         acknowledge_published_submissions(); return
-    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); calendar_feeds=write_calendar_feeds(events)
+    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline); calendar_feeds=write_calendar_feeds(events)
     registry=read_json('source-registry.json',[])
     cov=coverage(registry); write_json('automation-coverage.json',cov)
-    report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
+    report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
     write_json('refresh-status.json',report)
-    print(json.dumps({'events':len(events),'news':len(news),'coverage':cov},indent=2))
+    print(json.dumps({'events':len(events),'news':len(news),'civic_notices':len(civic_notices),'coverage':cov},indent=2))
 if __name__=='__main__': main()
