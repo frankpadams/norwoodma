@@ -151,6 +151,10 @@
   const translateButton=ctl.querySelector('[data-translate]');
   const closeTranslate=()=>{translateMenu.hidden=true;translateButton&&translateButton.setAttribute('aria-expanded','false');};
   const currentPublicUrl=()=>{const canonical=document.querySelector('link[rel="canonical"]')?.href;if(canonical&&/https?:\/\/(www\.)?norwood\.ma\//i.test(canonical))return canonical;const here=new URL(location.href);if(/(^|\.)norwood\.ma$/i.test(here.hostname))return here.href;return 'https://www.norwood.ma/'+(location.pathname.split('/').pop()||'index.html')+location.search+location.hash;};
+  // Keep the English reset option literally labeled "English" even if a translation service
+  // modifies the surrounding page. It is the stable way to return to the original site language.
+  const englishReset=translateMenu.querySelector('[data-lang="en"]');
+  if(englishReset){englishReset.textContent='English';englishReset.setAttribute('translate','no');englishReset.classList.add('notranslate');}
   const openTranslated=(lang)=>{const page=currentPublicUrl();if(lang==='en'){location.href=page;closeTranslate();return;}const url=lang==='more'?'https://translate.google.com/?sl=auto&u='+encodeURIComponent(page):'https://translate.google.com/translate?sl=auto&tl='+encodeURIComponent(lang)+'&u='+encodeURIComponent(page);window.open(url,'_blank','noopener');closeTranslate();};
   if(translateButton)translateButton.addEventListener('click',e=>{e.stopPropagation();const show=translateMenu.hidden;translateMenu.hidden=!show;translateButton.setAttribute('aria-expanded',String(show));if(show){const r=translateButton.getBoundingClientRect();translateMenu.style.right=Math.max(10,window.innerWidth-r.right)+'px';translateMenu.style.bottom=(window.innerHeight-r.top+8)+'px';const first=translateMenu.querySelector('button');if(first)first.focus();}});
   translateMenu.addEventListener('click',e=>{const b=e.target.closest('[data-lang]');if(b)openTranslated(b.dataset.lang);});
