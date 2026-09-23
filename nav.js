@@ -52,7 +52,14 @@
             // A meeting notice is useful before/during the meeting, but should disappear
             // completely once the scheduled meeting window has ended. When no end time is
             // available, use a 2-hour-from-start safety window rather than showing it all day.
-            const cutoff=st!==null?(en!==null?en+60:st+180):en;
+            const broadcastEnd=hm(n.broadcast_end_time);
+            const scheduledCutoff=st!==null?(en!==null?en+60:st+180):en;
+            // A verified NCM broadcast transition may end LIVE NOW earlier than the
+            // schedule-based grace period. Never infer an early end merely because
+            // broadcast data is missing.
+            const cutoff=broadcastEnd!==null&&st!==null&&broadcastEnd>=st
+              ? Math.min(scheduledCutoff!==null?scheduledCutoff:broadcastEnd,broadcastEnd)
+              : scheduledCutoff;
             if(cutoff!==null&&now.minutes>cutoff)continue;
             const live=st!==null&&now.minutes>=st&&(cutoff===null||now.minutes<=cutoff);
             let title=n.title||'Public meeting';
