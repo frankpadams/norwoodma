@@ -12,8 +12,8 @@ const topics=[
 ['housing','Housing & Utilities','Housing, rent, tenant help, utilities, energy, power and broadband.',['housing','utility','electric','light','broadband','water','tenant','home','rent','eviction','heat']],
 ['realestate','Realtors & Real Estate','Local real-estate professionals and resources for buying or selling a home. This directory will expand as additional listings are added.',['realtor','real estate','broker','home buying','home selling']],
 ['food','Food & Basic Needs','Food assistance, groceries, meals, nutrition and essential-needs support.',['food','pantry','meal','snap','wic','bread','nutrition','grocer','hunger']],
-['health','Health, Disability & Mental Health','Health care, disability, accessibility, recovery and behavioral health resources.',['health','disability','mental','special needs','human services','crisis','autism','deaf','blind','recovery']],
-['medical','Medical Care','Hospitals, urgent care, primary care and other medical services.',['medical','hospital','urgent care','primary care','physician','doctor','clinic']],
+['health','Disability, Mental Health & Addiction','Disability, accessibility, mental-health, crisis, addiction and recovery resources.',['disability','mental','special needs','human services','crisis','autism','deaf','blind','recovery','addiction']],
+['medical','Medical & Health','Hospitals, urgent care, primary care, rehabilitation and other health-care services.',['medical','health care','healthcare','hospital','urgent care','primary care','physician','doctor','clinic','physical therapy','rehab','pharmacy','audiology','vaccin']],
 ['dental','Dental & Orthodontics','Dentists, orthodontists and oral-health services.',['dentist','dental','orthodontist','orthodontics','oral health']],
 ['wellness','Spas, Salons & Massage','Spas, salons, massage and related personal-care and wellness services.',['spa','salon','massage','hair','wellness','halotherapy','salt room']],
 ['transport','Transportation','Bus, commuter rail, accessible transportation and local mobility.',['mbta','transit','transport','airport','rail','bus','ride','paratransit']],
@@ -55,7 +55,19 @@ function haystack(r){
  const tags=Array.isArray(r.tags)?r.tags.join(' '):(r.tags||'');
  return `${r.name||''} ${r.description||''} ${tags} ${r.category||''} ${(r.topics||[]).join(' ')} ${r.coverage||''}`.toLowerCase();
 }
-function belongs(r,t){return Array.isArray(r.topics)&&r.topics.length?r.topics.includes(t[0]):t[3].some(k=>haystack(r).includes(k));}
+function belongs(r,t){
+ const explicit=Array.isArray(r.topics)&&r.topics.length;
+ const hay=haystack(r);
+ if(t[0]==='health'){
+   const disabilityMentalAddiction=/disability|disabled|accessib|mental health|behavioral health|psychiatr|crisis|suicid|addiction|substance|recovery|alcohol|drug|autism|developmental|deaf|hard of hearing|blind|interpreter|paratransit/i;
+   return disabilityMentalAddiction.test(hay);
+ }
+ if(t[0]==='medical'){
+   const medicalHealth=/medical|health care|healthcare|hospital|urgent care|primary care|physician|doctor|clinic|physical therapy|rehab|pharmac|audiolog|hearing aid|vaccin|immuniz|nursing|home health/i;
+   return (explicit&&r.topics.includes('medical'))||medicalHealth.test(hay);
+ }
+ return explicit?r.topics.includes(t[0]):t[3].some(k=>hay.includes(k));
+}
 function socialLinks(r){if(!r.social)return'';const labels={facebook:['bi-facebook','Facebook'],instagram:['bi-instagram','Instagram'],youtube:['bi-youtube','YouTube'],linkedin:['bi-linkedin','LinkedIn'],x:['bi-twitter-x','X']};return `<span class="social-links">${Object.entries(r.social).map(([k,u])=>{const v=labels[k]||['bi-link-45deg',k];return `<a href="${esc(u)}" target="_blank" rel="noopener" aria-label="${esc(v[1])}" title="${esc(v[1])}"><i class="bi ${v[0]}"></i></a>`}).join('')}</span>`;}
 function queryGroups(q){
  const raw=q.toLowerCase().trim(); if(!raw)return [];
