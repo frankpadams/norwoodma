@@ -25,6 +25,7 @@ const topics=[
 ['business','Business & Local Economy','Business groups, downtown organizations, entrepreneurs and employment resources.',['business','chamber','downtown','center','entrepreneur','startup']]
 ];
 let all=[];
+let howDoItems=[];
 const businesses=window.NORWOOD_BUSINESSES||[];
 const businessTopicRules={dental:/dental|orthodont/i,medical:/physical therapy|chiropractic|optometry|audiology|hearing|pharmac|medical|dental|orthodont/i,wellness:/salon|barber|beauty|massage|personal care/i,realestate:/real estate|realtor/i,kids:/childcare|preschool|swim school|martial arts|gymnastics|cheer/i,youth:/swim school|martial arts|gymnastics|cheer/i,wellness:/spa|salon|barber|beauty|massage|personal care/i,services:/driving school|laundry|dry cleaning|tailor|computer repair|printing|shipping|rental/i,business:/manufacturing|engineering|printing|office|financial|accounting|legal|insurance|computer/i};
 function businessesForTopic(id){const rule=businessTopicRules[id];if(!rule)return[];return businesses.filter(b=>rule.test(`${b.category||''} ${(b.tags||[]).join(' ')}`));}
@@ -94,6 +95,14 @@ function globalRelevance(r,q){
  if((r.coverage||'').toLowerCase()==='local')score+=10;
  return score;
 }
+function howDoMatches(q){
+ const terms=queryGroups(q).flat();
+ return howDoItems.map(x=>{const h=(x.title+' '+x.text+' '+x.keywords).toLowerCase();let score=0;if(x.title.toLowerCase().includes(q.toLowerCase()))score+=80;terms.forEach(t=>{if(x.title.toLowerCase().includes(t))score+=24;else if(h.includes(t))score+=8});return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
+}
+function howDoSearchHtml(q){
+ const hits=howDoMatches(q);if(!hits.length)return'';
+ return '<section class="topic-section search-results-section resource-howdo-search-results"><p class="eyebrow">HOW DO I?</p><h2>'+hits.length+' quick answer'+(hits.length===1?'':'s')+'</h2><div class="resource-list">'+hits.map(({x})=>'<article class="resource-item"><div class="resource-meta"><span class="badge">How Do I?</span></div><div class="resource-title-row"><a class="resource-name" href="how-do-i.html#'+esc(x.id)+'"><b>'+esc(x.title)+'</b> <span aria-hidden="true">→</span></a></div><p>'+esc(x.text.slice(0,220))+(x.text.length>220?'…':'')+'</p></article>').join('')+'</div></section>';
+}
 function render(q=''){
  const root=$('#resourceTopics'), nav=$('#topicNav'), status=$('#resourceSearchStatus'), clear=$('#clearResourceSearch');
  if(!root)return;
@@ -103,7 +112,7 @@ function render(q=''){
    if(nav) nav.hidden=true;
    if(clear) clear.hidden=false;
    if(status) status.textContent=`${rows.length} ${rows.length===1?'resource':'resources'} match “${query}”.`;
-   root.innerHTML=crisisHelp(query)+(rows.length?`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>${rows.length} ${rows.length===1?'match':'matches'} for “${esc(query)}”</h2><p class="sub">Results are shown once each, with local resources given extra weight.</p><div class="resource-list">${rows.map(card).join('')}</div></section>`:`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>No matches found</h2><p class="sub">Try a shorter phrase or a different description of what you need.</p></section>`);
+   root.innerHTML=crisisHelp(query)+howDoSearchHtml(query)+(rows.length?`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>${rows.length} ${rows.length===1?'match':'matches'} for “${esc(query)}”</h2><p class="sub">Results are shown once each, with local resources given extra weight.</p><div class="resource-list">${rows.map(card).join('')}</div></section>`:`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>No matches found</h2><p class="sub">Try a shorter phrase or a different description of what you need.</p></section>`);
    return;
  }
  if(nav) nav.hidden=false;
@@ -122,5 +131,6 @@ input?.addEventListener('search',e=>render(e.target.value));
 form?.addEventListener('submit',e=>{e.preventDefault();render(input?.value||'');$('#resourceTopics')?.scrollIntoView({behavior:'smooth',block:'start'});});
 clear?.addEventListener('click',()=>{if(input)input.value='';render('');input?.focus();});
 window.addEventListener('hashchange',()=>{if(input?.value)return;const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el){el.open=true;el.scrollIntoView({behavior:'smooth',block:'start'});}});
+fetch('how-do-i.html',{cache:'no-store'}).then(r=>r.text()).then(html=>{const doc=new DOMParser().parseFromString(html,'text/html');howDoItems=[...doc.querySelectorAll('.howdo-item')].map((el,i)=>{if(!el.id)el.id='howdo-'+(i+1);const summary=el.querySelector('summary');return{id:el.id,title:summary?.textContent.trim()||'',text:el.querySelector('.howdo-answer')?.textContent.replace(/\s+/g,' ').trim()||'',keywords:el.dataset.keywords||''};});render($('#needSearch')?.value||'');}).catch(()=>{});
 if(window.NORWOOD_RESOURCES){loadResources(window.NORWOOD_RESOURCES)}else{fetch('data/resources.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();}).then(loadResources).catch(()=>{const total=$('#resourceCount');if(total)total.textContent='Resource data could not be loaded.';});}
 })();
