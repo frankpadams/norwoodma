@@ -135,7 +135,10 @@ async function loadEvents(){
      for(const n of notices){
        if(n.kind!=='meeting'||!n.date)continue;
        const id='civic-meeting-'+String(n.date)+'-'+String(n.title||'meeting').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-       if(items.some(e=>e.id===id||(e.start?.date===n.date&&String(e.title||'').toLowerCase()===String(n.title||'').toLowerCase())))continue;
+       const civicTitleKey=s=>String(s||'').toLowerCase().replace(/\b(meeting|hearing|session)\b/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
+       // Treat source-title variants such as "Airport Commission" and
+       // "Airport Commission Meeting" as the same civic event.
+       if(items.some(e=>e.id===id||(e.start?.date===n.date&&civicTitleKey(e.title)===civicTitleKey(n.title))))continue;
        items.push({
          id,
          title:n.title||'Public meeting',
