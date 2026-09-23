@@ -644,6 +644,54 @@
     "discovered_by": "scheduled_jsonld"
   },
   {
+    "id": "2026-09-27-adult-bible-study-series-3b447eb",
+    "title": "Adult Bible Study series",
+    "start": {
+      "date": "2026-09-27",
+      "time": "08:15"
+    },
+    "end": {
+      "date": "2026-11-01",
+      "time": "09:15"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-27-bible-sunday-47f5413",
+    "title": "Bible Sunday",
+    "start": {
+      "date": "2026-09-27",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": "11:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-09-27-check-mate",
     "title": "Check Mate — An Evening with Purpose",
     "start": {
@@ -1359,54 +1407,6 @@
     "verification_status": "official_schedule",
     "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
     "discovered_by": "scheduled_recurring_service"
-  },
-  {
-    "id": "2026-10-03-blessing-of-the-pets-017adc7",
-    "title": "Blessing of the Pets",
-    "start": {
-      "date": "2026-10-03",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "11:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
-    "id": "2026-10-03-blessing-of-the-pets-on-norwood-common-484bdb0",
-    "title": "Blessing of the Pets on Norwood Common",
-    "start": {
-      "date": "2026-10-03",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "11:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-03-intro-metalworking",

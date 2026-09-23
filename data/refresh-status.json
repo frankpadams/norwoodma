@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-09-23T11:24:04.278054-04:00",
+  "generated_at": "2026-09-23T13:59:27.468402-04:00",
   "offline": false,
   "events_published": 170,
   "news_published": 120,
-  "civic_notices": 41,
+  "civic_notices": 42,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 170,
-      "generated_at": "2026-09-23T11:24:04.272223-04:00"
+      "generated_at": "2026-09-23T13:59:27.462144-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-23T11:24:04.273134-04:00"
+      "generated_at": "2026-09-23T13:59:27.463154-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 26,
-      "generated_at": "2026-09-23T11:24:04.274100-04:00"
+      "generated_at": "2026-09-23T13:59:27.464283-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-23T11:24:04.274809-04:00"
+      "generated_at": "2026-09-23T13:59:27.465065-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-23T11:24:04.275399-04:00"
+      "generated_at": "2026-09-23T13:59:27.465668-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 12,
-      "generated_at": "2026-09-23T11:24:04.276124-04:00"
+      "generated_at": "2026-09-23T13:59:27.466439-04:00"
     }
   ],
   "event_sources": [
@@ -373,10 +373,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": true,
+      "ok": false,
       "method": "community_submission_json",
-      "found": 1,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='script.googleusercontent.com', port=443): Read timed out. (read timeout=18)"
     },
     {
       "source_id": "nps-oldham-pto",
@@ -564,7 +564,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 19,
+      "found": 20,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -586,7 +586,7 @@
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
       "ok": true,
-      "found": 17,
+      "found": 14,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -629,14 +629,15 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 19,
+      "found": 18,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
         "Norwood Parents Music Association": 1,
         "MaxPreps": 4,
+        "Town of Norwood": 10,
         "Realtor.com": 2,
-        "Patch": 6,
+        "Patch": 5,
         "hoodline.com": 2,
         "Wicked Local": 1,
         "The Norwood Record": 52,
@@ -647,11 +648,9 @@
         "Norwood Public Schools": 1,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
-        "Town of Norwood": 8,
         "Norwood Town News": 11,
         "NBC Boston": 1,
-        "John Guilfoil Public Relations": 1,
-        "WCVB": 1
+        "John Guilfoil Public Relations": 1
       },
       "note": null
     }
