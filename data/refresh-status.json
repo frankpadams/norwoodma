@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T09:42:04.254217-04:00",
+  "generated_at": "2026-09-23T09:44:13.904931-04:00",
   "offline": false,
   "events_published": 172,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 172,
-      "generated_at": "2026-09-23T09:42:04.246976-04:00"
+      "generated_at": "2026-09-23T09:44:13.897790-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 40,
-      "generated_at": "2026-09-23T09:42:04.248171-04:00"
+      "generated_at": "2026-09-23T09:44:13.898982-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 26,
-      "generated_at": "2026-09-23T09:42:04.249392-04:00"
+      "generated_at": "2026-09-23T09:44:13.900252-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-23T09:42:04.250321-04:00"
+      "generated_at": "2026-09-23T09:44:13.901165-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-23T09:42:04.251087-04:00"
+      "generated_at": "2026-09-23T09:44:13.901916-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 12,
-      "generated_at": "2026-09-23T09:42:04.252004-04:00"
+      "generated_at": "2026-09-23T09:44:13.902854-04:00"
     }
   ],
   "event_sources": [
@@ -114,10 +114,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": false,
+      "ok": true,
       "method": "tribe_events",
-      "found": 0,
-      "note": "Expecting value: line 1 column 1 (char 0)"
+      "found": 4,
+      "note": ""
     },
     {
       "source_id": "grace-calendar",
@@ -524,10 +524,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
