@@ -91,7 +91,8 @@
         return '<span class="site-timely-item">'+main+' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a>'+endNote+'</span>';
       }
       if(a.kind==='community_meeting'){
-        return '<span class="site-timely-item"><a href="'+esc(a.url||'events.html')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a> <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">If televised: Watch on NCM →</a></span>';
+        const liveLink=a.today?' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">If televised: Watch on NCM →</a>':'';
+        return '<span class="site-timely-item"><a href="'+esc(a.url||'events.html')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>'+liveLink+'</span>';
       }
       return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
     }).join('<span class="site-timely-sep" aria-hidden="true">•</span>')+'</div>';
