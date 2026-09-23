@@ -100,8 +100,11 @@ function howDoMatches(q){
  return howDoItems.map(x=>{const h=(x.title+' '+x.text+' '+x.keywords).toLowerCase();let score=0;if(x.title.toLowerCase().includes(q.toLowerCase()))score+=80;terms.forEach(t=>{if(x.title.toLowerCase().includes(t))score+=24;else if(h.includes(t))score+=8});return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
 }
 function howDoSearchHtml(q){
- const hits=howDoMatches(q);if(!hits.length)return'';
- return '<section class="topic-section search-results-section resource-howdo-search-results"><p class="eyebrow">HOW DO I?</p><h2>'+hits.length+' quick answer'+(hits.length===1?'':'s')+'</h2><div class="resource-list">'+hits.map(({x})=>'<article class="resource-item"><div class="resource-meta"><span class="badge">How Do I?</span></div><div class="resource-title-row"><a class="resource-name" href="how-do-i.html#'+esc(x.id)+'"><b>'+esc(x.title)+'</b> <span aria-hidden="true">→</span></a></div><p>'+esc(x.text.slice(0,220))+(x.text.length>220?'…':'')+'</p></article>').join('')+'</div></section>';
+ const raw=q.toLowerCase().trim();
+ const gateway=/^how(?:\s|$)|^how\s+do\s+i/.test(raw)?'<div class="library-things-search-callout howdo-search-callout"><span class="library-things-badge">HOW DO I?</span><b>Looking for a quick answer?</b><p>Browse practical answers to common Norwood questions, with direct links to official forms, departments and resources.</p><a href="how-do-i.html">Open How Do I? →</a></div>':'';
+ const hits=howDoMatches(q);
+ if(!hits.length)return gateway;
+ return gateway+'<section class="topic-section search-results-section resource-howdo-search-results"><p class="eyebrow">HOW DO I?</p><h2>'+hits.length+' quick answer'+(hits.length===1?'':'s')+'</h2><div class="resource-list">'+hits.map(({x})=>'<article class="resource-item"><div class="resource-meta"><span class="badge">How Do I?</span></div><div class="resource-title-row"><a class="resource-name" href="how-do-i.html#'+esc(x.id)+'"><b>'+esc(x.title)+'</b> <span aria-hidden="true">→</span></a></div><p>'+esc(x.text.slice(0,220))+(x.text.length>220?'…':'')+'</p></article>').join('')+'</div></section>';
 }
 function render(q=''){
  const root=$('#resourceTopics'), nav=$('#topicNav'), status=$('#resourceSearchStatus'), clear=$('#clearResourceSearch');
