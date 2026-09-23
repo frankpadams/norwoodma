@@ -626,6 +626,11 @@ window.NORWOOD_BUSINESSES=[
   ["Premier Gymnastics Norwood","Gymnastics","","","https://www.premiergymnasticsnorwood.com/"],
   ["Town Common Books","Books & Local Shopping","","","https://www.towncommonbooks.com/"]
 
+,["THELIMO Services","Notary Services","901 Coventry Ln","786-659-3961",""]
+,["1st Choice Mobile Notary Enterprise","Notary Services","1 Central St, Suite 244","781-476-3454",""]
+,["After Hours Notary","Notary Services","7 Hoyle St","508-733-8989",""]
+,["Ghannam Notary Services","Notary Services","100 Hampden Dr","508-333-6192",""]
+
 ,["School of Rock Norwood/Walpole","Music Schools & Lessons","1250 Washington St","781-352-2336","https://www.schoolofrock.com/locations/norwood"]
 ,["Norwood Music Studios","Music Schools & Lessons","","","https://norwoodmusicstudios.com/"]
 ,["Merry Melody Music Academy","Music Schools & Lessons","","781-929-5192","https://www.merrymelodymusicacademy.com/"]
