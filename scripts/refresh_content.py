@@ -902,11 +902,23 @@ def civic_meetings_from_ncm_live_schedule(days=60):
         d=today+timedelta(days=offset)
         try: rows=ncm_cablecast_schedule(3,d)
         except Exception: continue
-        for row in rows:
+        for idx,row in enumerate(rows):
             m=IMPORTANT_MEETING_RE.search(row.get('title',''))
             if not m: continue
+            # If Cablecast shows a later, distinct program on the Government channel,
+            # that transition is positive evidence that this meeting broadcast ended.
+            # Missing/ambiguous schedule data is never treated as an early end.
+            broadcast_end=None
+            for later in rows[idx+1:]:
+                if not later.get('time') or later.get('time') <= (row.get('time') or ''):
+                    continue
+                if canonical_title(later.get('title','')) == canonical_title(row.get('title','')):
+                    continue
+                broadcast_end=later.get('time')
+                break
             out.append({'kind':'meeting','title':m.group(1),'date':d.isoformat(),
                         'start_time':row.get('time'),'end_time':None,
+                        'broadcast_end_time':broadcast_end,
                         'url':'https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/',
                         'source':'Norwood Community Media / Cablecast Government schedule'})
     return out
