@@ -190,9 +190,24 @@ function renderCalendarView(items){
 }
 function renderEventsPage(items){
  const host=$('#eventPeriods'); if(!host)return;
- const calendarKey=new URLSearchParams(location.search).get('calendar')||'all';
+ const params=new URLSearchParams(location.search);
+ const eventId=params.get('event');
+ const calendarKey=params.get('calendar')||'all';
  const q=($('#eventSearch')?.value||'').trim().toLowerCase();
  items=items.filter(e=>eventMatchesCalendar(e,calendarKey)).filter(e=>!q||eventSearchText(e).includes(q));
+ if(eventId){
+   const e=items.find(x=>String(x.id||'')===eventId);
+   if(e){
+     const d=parseLocalDate(e.start?.date);
+     const dateLabel=d?d.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'}):(e.start?.date||'');
+     const timeBits=[];if(e.start?.time)timeBits.push(formatEventTime(e.start.time));if(e.end?.time)timeBits.push(formatEventTime(e.end.time));
+     const where=[e.venue,e.address].filter(Boolean).join(' · ');
+     const source=e.registration_url||e.source_url;
+     host.innerHTML='<section class="event-period"><div class="event-period-head"><p class="eyebrow">Event details</p><h2>'+esc(e.title)+'</h2></div><div class="event-list"><article class="event-row '+eventClass(e.category)+'"><div class="event-date"><small>'+esc(d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'')+'</small><b>'+esc(d?d.getDate():'')+'</b><span>'+esc(d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'')+'</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">'+esc(eventKind(e.category))+'</span>'+paidAdmissionIcon(e)+'</div><h3>'+esc(e.title)+'</h3><p><strong>Date:</strong> '+esc(dateLabel)+'</p>'+(timeBits.length?'<p><strong>Time:</strong> '+esc(timeBits.join('–'))+'</p>':'')+(where?'<p><strong>Place:</strong> '+esc(where)+'</p>':'')+(e.notes?'<p>'+esc(e.notes)+'</p>':'')+(source?'<p><a href="'+esc(source)+'" target="_blank" rel="noopener">Official/source information ↗</a></p>':'')+'</div></article></div></section>';
+     const st=$('#eventsStatus');if(st)st.textContent='Showing full event information';
+     return;
+   }
+ }
  const labels={all:'All community events',arts:'Arts, music & entertainment',family:'Family & kids',sports:'Sports & active events',fundraisers:'Fundraisers & benefits','food-markets':'Food, markets & fairs'};
  const title=document.querySelector('.events-hero h1'), intro=document.querySelector('.events-hero p:not(.eyebrow)');
  if(calendarKey!=='all'&&labels[calendarKey]){if(title)title.textContent=labels[calendarKey];if(intro)intro.textContent='A filtered Norwood.ma calendar view. Use the event link for the latest details.';}
