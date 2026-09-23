@@ -18,6 +18,7 @@
   {name:'What’s Happening',url:'events.html',type:'Events',text:'events calendar music trivia community town common elections school theatre marching band fundraiser'},
   {name:'Calendars',url:'calendars.html',type:'Calendars',text:'town meetings schools community events subscribe calendar'},
   {name:'Local Resources',url:'resources.html',type:'Resources',text:'services organizations health housing youth seniors disability community'},
+  {name:'How Do I?',url:'how-do-i.html',type:'Help & answers',text:'how do i questions answers town services help permits schools safety food housing utilities trash recreation'},
   {name:'Utilities & Home Energy',url:'utilities.html',type:'Home services',text:'utilities electric electricity Norwood Light water sewer natural gas gas internet broadband cable TV heating oil fuel oil prices propane home energy'},
   {name:'Trash & Recycling',url:'trash-recycling.html',type:'Town services',text:'trash garbage rubbish waste recycling recycle pickup collection curbside cart bins red yellow route schedule calendar holiday delay DPW public works WM waste management compost composting food scraps Black Earth Winter Street recycling facility swap shop bulk bulky items hazardous waste household hazardous waste HHW leaves leaf bags brush yard waste Christmas tree trees mattress mattresses styrofoam rigid plastic metal mercury fluorescent bulbs textiles clothing books electronics e-waste television TV batteries paint oil tires construction debris missed pickup cart repair cart replacement additional cart service day disposal dump transfer station'}
  ];
@@ -54,6 +55,7 @@
   (window.NORWOOD_BUSINESSES||[]).forEach(b=>out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true}));
   (window.NORWOOD_CALENDAR_SOURCES||[]).forEach(c=>out.push({name:(c.name||'Calendar')+' calendar',url:c.view_url||'calendars.html',type:'Calendar',text:[c.name,c.description,c.provider,c.group,'calendar schedule dates events school'].join(' '),calendar:true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
+  (window.NORWOOD_HOWDO||[]).forEach(h=>out.push({name:h.title,url:'how-do-i.html#'+h.id,type:'How Do I?',text:[h.text,h.keywords,'question answer help'].join(' '),norwoodPage:true}));
   return out;
  }
  function search(raw){
