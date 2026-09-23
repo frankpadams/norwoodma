@@ -635,4 +635,4 @@ window.NORWOOD_BUSINESSES=[
 ,["Norwood Music Studios","Music Schools & Lessons","","","https://norwoodmusicstudios.com/"]
 ,["Merry Melody Music Academy","Music Schools & Lessons","","781-929-5192","https://www.merrymelodymusicacademy.com/"]
 ,["Music With Sarah","Music Schools & Lessons","95 Prospect St","603-933-9173",""]
-].map((b,i)=>({id:"biz-"+(i+1),name:b[0],category:b[1],address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"}));
+].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:[b[1]];return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"};});
