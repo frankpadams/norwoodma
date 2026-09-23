@@ -25,7 +25,7 @@ jobs:
       - name: Version nav.js references with current commit
         shell: bash
         run: |
-          VERSION="${GITHUB_SHA:0:12}"
+          export VERSION="${GITHUB_SHA:0:12}"
           python - <<'PY'
           import os, re
           from pathlib import Path
@@ -40,8 +40,6 @@ jobs:
                   changed.append(str(p))
           print("Updated:", ", ".join(changed) if changed else "none")
           PY
-        env:
-          VERSION: ${{ env.VERSION }}
 
       - name: Commit cache-busted HTML references
         shell: bash
