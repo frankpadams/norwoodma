@@ -71,7 +71,8 @@
               const d=new Date(n.date+'T12:00:00');
               url='https://www.norwoodma.gov/calendar.php?view=month&month='+String(d.getMonth()+1).padStart(2,'0')+'&day=01&year='+d.getFullYear();
             }
-            items.push({kind:'meeting',rank:live?18:12,title,url,live,scheduledEnd:n.end_time||null,overrun:en!==null&&now.minutes>en});
+            const fmtTime=x=>{const m=String(x||'').match(/^(\d{1,2}):(\d{2})/);if(!m)return '';const h=Number(m[1]),min=m[2],ap=h>=12?'PM':'AM',h12=((h+11)%12)+1;return h12+':'+min+' '+ap;};
+            items.push({kind:'meeting',rank:live?18:12,title,url,live,startTime:fmtTime(n.start_time),scheduledEnd:n.end_time||null,overrun:en!==null&&now.minutes>en});
           }
         }
       }
@@ -85,7 +86,8 @@
       if(a.kind==='election')label='ELECTION DAY';
       if(a.kind==='community_meeting')label=a.today?'TODAY':'UPCOMING';
       if(a.kind==='meeting')label=a.live?'LIVE NOW':'TODAY';
-      const main='<strong>'+label+':</strong> '+esc(a.title);
+      const meetingTime=a.kind==='meeting'&&a.startTime?' — '+esc(a.startTime):'';
+      const main='<strong>'+label+':</strong> '+esc(a.title)+meetingTime;
       if(a.kind==='meeting'&&a.live){
         let endNote='';
         if(a.scheduledEnd){
