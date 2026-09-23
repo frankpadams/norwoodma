@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T13:59:27.468402-04:00",
+  "generated_at": "2026-09-23T14:27:53.580471-04:00",
   "offline": false,
   "events_published": 170,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 170,
-      "generated_at": "2026-09-23T13:59:27.462144-04:00"
+      "generated_at": "2026-09-23T14:27:53.572704-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 38,
-      "generated_at": "2026-09-23T13:59:27.463154-04:00"
+      "generated_at": "2026-09-23T14:27:53.573951-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 26,
-      "generated_at": "2026-09-23T13:59:27.464283-04:00"
+      "generated_at": "2026-09-23T14:27:53.575289-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-23T13:59:27.465065-04:00"
+      "generated_at": "2026-09-23T14:27:53.576309-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-23T13:59:27.465668-04:00"
+      "generated_at": "2026-09-23T14:27:53.577177-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 12,
-      "generated_at": "2026-09-23T13:59:27.466439-04:00"
+      "generated_at": "2026-09-23T14:27:53.578214-04:00"
     }
   ],
   "event_sources": [
@@ -373,10 +373,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": false,
+      "ok": true,
       "method": "community_submission_json",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='script.googleusercontent.com', port=443): Read timed out. (read timeout=18)"
+      "found": 1,
+      "note": ""
     },
     {
       "source_id": "nps-oldham-pto",
@@ -556,7 +556,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 41,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
