@@ -96,30 +96,6 @@
     "discovered_by": "scheduled_jsonld"
   },
   {
-    "id": "2026-09-23-5th-year-anniversary-party-24d4459",
-    "title": "5th year Anniversary Party",
-    "start": {
-      "date": "2026-09-23",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "18:00"
-    },
-    "venue": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "address": "South Boston Taproom, 10 Old Colony Avenue, Boston, Massachusetts, 02127, United States",
-    "category": "arts",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical"
-  },
-  {
     "id": "2026-09-23-airport-commission-3cfd447",
     "title": "Airport Commission",
     "start": {
@@ -3032,30 +3008,6 @@
       "time": "11:00"
     },
     "end": {
-      "date": "2026-11-21",
-      "time": "16:00"
-    },
-    "venue": "Norwood Space Center – Enter through Building 8",
-    "address": "83 Morse Street, Norwood",
-    "category": "arts",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/event/nscs-nov2026-annual-salvage-angels-holiday-stroll-norwood-open-studios/2026-11-21/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "It’s TIME!!! NSC’s Nov2026 Annual Salvage Angel’s Holiday Stroll & Norwood Open Studios! Make a weekend of it at our NSC’s Property-Wide Event, featuring @salvageangel’s Holiday Stroll and The SoNo Art’s Norwood Open Studios. When: Saturday",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-11-22-nsc-s-nov2026-annual-salvage-angel-s-holiday--ee1906b",
-    "title": "NSC’s Nov2026 Annual Salvage Angel’s Holiday Stroll & Norwood Open Studios",
-    "start": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "end": {
       "date": "2026-11-22",
       "time": "16:00"
     },
@@ -3063,7 +3015,7 @@
     "address": "83 Morse Street, Norwood",
     "category": "arts",
     "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/event/nscs-nov2026-annual-salvage-angels-holiday-stroll-norwood-open-studios/2026-11-22/",
+    "source_url": "https://norwoodspacecenter.com/event/nscs-nov2026-annual-salvage-angels-holiday-stroll-norwood-open-studios/",
     "cost": null,
     "public_access": "public",
     "series": null,
