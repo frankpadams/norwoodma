@@ -7,9 +7,11 @@
     const priority={Extreme:40,Severe:35,Moderate:30,Minor:25,Unknown:20};
     const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
     const govLive='https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/';
+    const NORWOOD_TIME_ZONE='America/New_York';
     const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const easternParts=()=>{
-      const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+      // All civic-alert timing follows Norwood, MA local time, regardless of the visitor's device timezone.
+      const parts=new Intl.DateTimeFormat('en-US',{timeZone:NORWOOD_TIME_ZONE,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
       const v=Object.fromEntries(parts.map(p=>[p.type,p.value]));
       return {date:`${v.year}-${v.month}-${v.day}`,minutes:Number(v.hour)*60+Number(v.minute)};
     };
