@@ -708,9 +708,8 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 .site-timely-sep{opacity:.65}
 .site-timely-item.watch-live,.site-timely-item .watch-live{font-weight:850;text-decoration:underline}.site-timely-item .watch-live{display:inline;padding:0;margin-left:.25rem;white-space:nowrap}
 @media(max-width:700px){.site-timely-track{justify-content:flex-start;gap:.45rem}.site-timely-item{padding:.38rem 0}.site-timely-sep{font-size:.75em}}
-/* v0.13.4.25 — functional Norwood Dinner Spinner: blue/gold wheel + white Mustang mark */
-.spinner-wheel{position:relative;overflow:hidden;outline:3px solid var(--blue);background:conic-gradient(var(--blue) 0 25%,var(--gold) 25% 50%,var(--blue) 50% 75%,var(--gold) 75%);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
-.spinner-wheel:before{content:"♞";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:3.25rem;line-height:1;text-shadow:0 2px 3px rgba(0,0,0,.32);transform:scaleX(-1)}
-.spinner-wheel span{position:relative;z-index:1;min-width:38px;padding:3px 5px;border-radius:999px;background:rgba(0,59,113,.88);color:#fff;font-size:.72rem;line-height:1.1;text-align:center}
-.spinner-wheel.is-spinning span{visibility:hidden}
+/* v0.13.4.26 — Dinner Spinner: more wheel slices + running Mustang silhouette */
+.spinner-wheel{position:relative;overflow:hidden;outline:3px solid var(--blue);background:repeating-conic-gradient(from -7.5deg,var(--blue) 0 15deg,var(--gold) 15deg 30deg);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.spinner-wheel:before{content:"";position:absolute;left:50%;top:50%;width:68px;height:42px;transform:translate(-50%,-50%);background:#fff;clip-path:polygon(2% 55%,11% 47%,21% 42%,29% 30%,42% 24%,55% 28%,63% 18%,70% 4%,76% 17%,88% 22%,100% 31%,91% 40%,80% 42%,73% 51%,82% 61%,94% 68%,88% 76%,73% 68%,63% 60%,53% 65%,45% 80%,34% 97%,25% 96%,34% 76%,39% 63%,27% 66%,17% 77%,6% 78%,15% 66%) ;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+.spinner-wheel span{display:none}
 .spinner-wheel.is-spinning:before{opacity:.95}
