@@ -49,8 +49,8 @@
   clear.addEventListener('click',()=>{search.value='';category.value='';render();search.focus();});
 
   function setupDinnerSpinner(){
-    const food=$('#spinnerFood'), spin=$('#spinDinner'), surprise=$('#surpriseDinner'), wheel=$('#spinnerWheel'), result=$('#spinnerResult'), meta=$('#spinnerMeta'), links=$('#spinnerLinks');
-    if(!food||!spin||!surprise||!wheel||!result||!meta||!links) return;
+    const food=$('#spinnerFood'), spin=$('#spinDinner'), wheel=$('#spinnerWheel'), result=$('#spinnerResult'), meta=$('#spinnerMeta'), links=$('#spinnerLinks');
+    if(!food||!spin||!wheel||!result||!meta||!links) return;
     let spinning=false;
     function choose(ignore=false){
       if(spinning||!restaurants.length) return;
@@ -59,17 +59,17 @@
       const norwoodOnly=restaurants.filter(r=>{ const town=normalize(r.municipality||r.city||r.coverage||''); return !town || town==='norwood'; });
       let pool=norwoodOnly.filter(r=>!terms.length||terms.some(t=>searchable(r).includes(t)));
       if(!pool.length){ result.textContent='No exact matches.'; meta.textContent='Try “Anything — surprise me” and spin again.'; links.innerHTML=''; return; }
-      spinning=true; spin.disabled=surprise.disabled=true; wheel.classList.add('is-spinning');
+      spinning=true; spin.disabled=true; wheel.classList.add('is-spinning');
       let ticks=0, last=null;
       const timer=setInterval(()=>{ last=pool[Math.floor(Math.random()*pool.length)]; wheel.querySelector('span').textContent=(last.name||'?').slice(0,2).toUpperCase(); ticks++; if(ticks>=18){
-        clearInterval(timer); wheel.classList.remove('is-spinning'); spinning=false; spin.disabled=surprise.disabled=false;
+        clearInterval(timer); wheel.classList.remove('is-spinning'); spinning=false; spin.disabled=false;
         const pick=pool[Math.floor(Math.random()*pool.length)]; wheel.querySelector('span').textContent='✓'; result.textContent=pick.name; meta.textContent=[pick.cuisine||pick.category,pick.address&&pick.address+', Norwood'].filter(Boolean).join(' · ');
         const label=pick.link_type==='maps'?'Open in Google Maps':'Visit restaurant website';
         links.innerHTML=`<a class="spinner-result-link" href="${esc(pick.url)}" target="_blank" rel="noopener">${esc(label)} ↗</a><button id="spinAgain" type="button">Spin again</button>`;
         $('#spinAgain')?.addEventListener('click',()=>choose(ignore));
       }},75);
     }
-    spin.addEventListener('click',()=>choose(false)); surprise.addEventListener('click',()=>choose(true));
+    spin.addEventListener('click',()=>choose(false));
   }
   function setupMobileAdRotation(){
     const rail=document.querySelector('.restaurant-ad-rail');
