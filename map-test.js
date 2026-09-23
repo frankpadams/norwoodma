@@ -97,7 +97,7 @@ function cleanAddress(a){
 }
 const dynamic=[];
 (window.NORWOOD_RESTAURANTS||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:'food',address:a,details:r.cuisine||r.category||'Restaurant',url:r.url||'restaurants.html'});});
-(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(a)dynamic.push({name:b.name,category:'business',address:a,details:b.category||'Local business',url:b.website||'businesses.html'});});
+(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(a)dynamic.push({name:b.name,category:'business',address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
 (window.NORWOOD_RESOURCES||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:resourceCategory(r),address:a,details:r.description||r.category||'Community resource',url:r.url||'resources.html'});});
 (window.NORWOOD_EVENTS||[]).forEach(e=>{
  if(e.publish_candidate===false)return;
@@ -109,7 +109,7 @@ const dynamic=[];
 const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address);if(seen.has(k))return false;seen.add(k);return true});
 function publicSchoolMark(p){return p.publicSchool?'<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Norwood Public Schools" title="Norwood Public Schools" style="width:14px;height:14px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}
 function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+publicSchoolMark(p)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
-function searchMatch(p,q){return !q||norm([p.name,p.details,p.address,p.category].join(' ')).includes(q)}
+function searchMatch(p,q){return !q||norm([p.name,p.details,p.address,p.category,p.labels,p.tags].join(' ')).includes(q)}
 function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
