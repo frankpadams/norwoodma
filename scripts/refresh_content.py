@@ -94,6 +94,15 @@ def event_id(title, start_date, venue=''):
 
 def local_enough(text, source):
     text=clean_text(text)
+
+    # Castle Island publishes Norwood and South Boston events on one calendar.
+    # For this source, require explicit evidence that the individual event is
+    # at the Norwood taproom; source-level Norwood coverage is not sufficient.
+    if source.get('id') == 'castle-island-calendar':
+        if re.search(r'\b(South Boston|Southie|Old Colony(?: Avenue| Ave)?|02127)\b', text, re.I):
+            return False
+        return bool(re.search(r'\b(Norwood(?: Taproom)?|31\s+Astor(?: Avenue| Ave)?|02062)\b', text, re.I))
+
     if re.search(r'\bNorwood\b',text,re.I): return True
     coverage=source.get('coverage','')
     # Local primary sources are allowed to omit "Norwood" from every event card.
