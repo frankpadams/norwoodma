@@ -35,6 +35,12 @@
           if(n.kind==='election'){
             const first=n.show_from||n.start_date, last=n.election_date||n.end_date;
             if(first&&last&&now.date>=first&&now.date<=last)items.push({kind:'election',rank:15,title:n.title||'Election Day notice',url:n.url||'https://www.norwoodma.gov/',date:last});
+          }else if(n.kind==='community_meeting'&&n.date===now.date){
+            const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
+            const st=hm(n.start_time), en=hm(n.end_time);
+            const cutoff=st!==null?Math.max(en!==null?en:st,st+180):en;
+            if(cutoff!==null&&now.minutes>cutoff)continue;
+            items.push({kind:'community_meeting',rank:13,title:n.title||'Community meeting today',url:n.url||'events.html'});
           }else if(n.kind==='meeting'&&n.date===now.date){
             const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
             const st=hm(n.start_time), en=hm(n.end_time);
@@ -65,6 +71,7 @@
       let label='NOTICE';
       if(a.kind==='urgent')label=/child abduction|amber/i.test(a.title)?'AMBER ALERT':/silver alert|missing person/i.test(a.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(a.title)?'WEATHER ALERT':'EMERGENCY ALERT';
       if(a.kind==='election')label='ELECTION DAY';
+      if(a.kind==='community_meeting')label='TODAY';
       if(a.kind==='meeting')label=a.live?'LIVE NOW':'TODAY';
       const main='<strong>'+label+':</strong> '+esc(a.title);
       if(a.kind==='meeting'&&a.live){
