@@ -38,7 +38,7 @@
           }else if(n.kind==='community_meeting'&&n.date===now.date){
             const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
             const st=hm(n.start_time), en=hm(n.end_time);
-            const cutoff=st!==null?Math.max(en!==null?en:st,st+180):en;
+            const cutoff=st!==null?Math.max(en!==null?en:st,st+120):en;
             if(cutoff!==null&&now.minutes>cutoff)continue;
             items.push({kind:'community_meeting',rank:13,title:n.title||'Community meeting today',url:n.url||'events.html'});
           }else if(n.kind==='meeting'&&n.date===now.date){
@@ -46,7 +46,7 @@
             const st=hm(n.start_time), en=hm(n.end_time);
             // A meeting notice is useful before/during the meeting, but should disappear
             // completely once the scheduled meeting window has ended. When no end time is
-            // available, use the existing 3-hour safety window rather than showing it all day.
+            // available, use a 2-hour-from-start safety window rather than showing it all day.
             const cutoff=st!==null?Math.max(en!==null?en:st,st+180):en;
             if(cutoff!==null&&now.minutes>cutoff)continue;
             const live=st!==null&&now.minutes>=st&&(cutoff===null||now.minutes<=cutoff);
