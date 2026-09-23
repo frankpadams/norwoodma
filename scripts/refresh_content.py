@@ -972,6 +972,11 @@ def civic_meetings_to_events(notices):
     for n in notices or []:
         if n.get('kind')!='meeting' or not n.get('date'): continue
         ds=n['date']; title=clean_text(n.get('title')) or 'Town Meeting'
+        # Calendar entries should be self-explanatory: commission/committee/board
+        # names are meetings, not generic events. Preserve titles that already
+        # say meeting/hearing/session to avoid awkward duplication.
+        if not re.search(r'\b(meeting|hearing|session)\b', title, re.I):
+            title=f"{title} Meeting"
         out.append({
             'id':event_id(title,ds,'Norwood civic meeting'),
             'title':title,
