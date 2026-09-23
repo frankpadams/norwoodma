@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T03:50:45.119656-04:00",
+  "generated_at": "2026-09-23T09:42:04.254217-04:00",
   "offline": false,
   "events_published": 172,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 172,
-      "generated_at": "2026-09-23T03:50:45.112499-04:00"
+      "generated_at": "2026-09-23T09:42:04.246976-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 40,
-      "generated_at": "2026-09-23T03:50:45.113704-04:00"
+      "generated_at": "2026-09-23T09:42:04.248171-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 26,
-      "generated_at": "2026-09-23T03:50:45.114959-04:00"
+      "generated_at": "2026-09-23T09:42:04.249392-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 9,
-      "generated_at": "2026-09-23T03:50:45.115894-04:00"
+      "generated_at": "2026-09-23T09:42:04.250321-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-23T03:50:45.116679-04:00"
+      "generated_at": "2026-09-23T09:42:04.251087-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 12,
-      "generated_at": "2026-09-23T03:50:45.117637-04:00"
+      "generated_at": "2026-09-23T09:42:04.252004-04:00"
     }
   ],
   "event_sources": [
@@ -565,7 +565,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -634,11 +634,12 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Norwood Parents Music Association": 1,
+        "MaxPreps": 4,
         "Realtor.com": 2,
         "Patch": 6,
         "hoodline.com": 2,
         "Wicked Local": 1,
-        "MaxPreps": 3,
         "The Norwood Record": 52,
         "The Norwood Record — Latest": 11,
         "CBS News": 1,
@@ -649,10 +650,9 @@
         "U.S. Figure Skating": 1,
         "Town of Norwood": 8,
         "Norwood Town News": 11,
-        "NBC Boston": 2,
+        "NBC Boston": 1,
         "John Guilfoil Public Relations": 1,
-        "WCVB": 1,
-        "DailyVoice.com": 1
+        "WCVB": 1
       },
       "note": null
     }
