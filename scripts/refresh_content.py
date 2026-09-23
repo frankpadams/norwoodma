@@ -376,6 +376,17 @@ def dedupe_events(events):
         title=canonical_title(e.get('title',''))
         # Normalize source-added prefixes so the same event is not published twice.
         title=re.sub(r'^(live in person|live|in person)\s+','',title).strip()
+        # Civic sources often describe the same item as either "Airport Commission"
+        # or "Airport Commission Meeting". Ignore generic meeting labels when
+        # comparing government/civic entries, while retaining the fuller display title.
+        civic=(
+            e.get('category') in {'government','civic_meeting'} or
+            'civic' in str(e.get('source_id','')).lower() or
+            'board' in str(e.get('series','')).lower()
+        )
+        if civic:
+            title=re.sub(r'\b(meeting|hearing|session)\b',' ',title)
+            title=re.sub(r'\s+',' ',title).strip()
         # Same-day near-identical titles are duplicates even when one source omits/varies the venue.
         key=(title,e.get('start',{}).get('date'))
         if key not in chosen or score(e)>score(chosen[key]): chosen[key]=e
