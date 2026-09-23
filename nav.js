@@ -3,7 +3,9 @@
   if(!menu||!nav)return;
   // Site-wide time-sensitive alert strip. Severe weather and public-safety alerts
   // are fetched live from NWS; alerts.json can carry verified local/state emergency notices.
-  (async function sitewideTimelyAlerts(){
+  async function sitewideTimelyAlerts(){
+    const existing=document.querySelector('.site-timely-alert');
+    if(existing)existing.remove();
     const priority={Extreme:40,Severe:35,Moderate:30,Minor:25,Unknown:20};
     const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
     const govLive='https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/';
@@ -80,7 +82,11 @@
     }).join('<span class="site-timely-sep" aria-hidden="true">•</span>')+'</div>';
     const independent=document.querySelector('.independent');
     if(independent)independent.insertAdjacentElement('afterend',strip);else document.body.prepend(strip);
-  })();
+  }
+  sitewideTimelyAlerts();
+  // Re-check critical alerts on already-open pages. The underlying alert/event fetches
+  // use cache:'no-store' plus a unique timestamp, so each pass asks for current data.
+  setInterval(sitewideTimelyAlerts,60000);
   // Keep iOS Home Screen metadata consistent on every page that loads the shared nav.
   let apple=document.querySelector('link[rel="apple-touch-icon"]');
   if(!apple){apple=document.createElement('link');apple.rel='apple-touch-icon';document.head.appendChild(apple);}
