@@ -80,10 +80,11 @@
   let hits=search(raw);
   if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
+  const howDoHtml=/^how(?:\s|$)|^how\s+do\s+i/i.test(raw)?'<div class="library-things-search-callout howdo-search-callout"><span class="library-things-badge">HOW DO I?</span><b>❓ Looking for a quick answer?</b><p>Browse practical answers to common Norwood questions.</p><a href="how-do-i.html">Open How Do I? →</a></div>':'';
   const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length} result${hits.length+things.length===1?'':'s'}</small></div>`:'';
-  box.innerHTML=heading+thingHtml+regularHtml;
+  box.innerHTML=heading+howDoHtml+thingHtml+regularHtml;
   box.hidden=false;if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
  input.addEventListener('input',()=>{submitted=false;render(false)});
