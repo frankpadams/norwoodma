@@ -202,6 +202,20 @@
     "verified": "2026-09"
   },
   {
+    "name": "Bay State Community Services",
+    "category": "Mental Health & Addiction",
+    "description": "South Shore community-based organization offering behavioral-health services, substance-use recovery supports, child and family services, youth residential programs, peer recovery and overdose-prevention services.",
+    "url": "https://www.baystatecs.org/",
+    "tags": "mental health behavioral health addiction substance use recovery youth family overdose prevention Quincy South Shore",
+    "topics": [
+      "health",
+      "kids"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Bay State Physical Therapy — Norwood",
     "category": "Physical Therapy & Rehabilitation",
     "description": "Norwood physical therapy clinic providing orthopedic and sports rehabilitation, pre- and post-surgical rehab, aquatic therapy, balance and gait care, concussion therapy and other specialty services.",
@@ -514,6 +528,19 @@
     "verified": "2026-09"
   },
   {
+    "name": "Crisis Text Line",
+    "category": "Mental Health Crisis",
+    "description": "Free 24/7 crisis support by text; text HOME to 741741 in the U.S.",
+    "url": "https://www.crisistextline.org/",
+    "tags": "mental health crisis text suicide emotional support 741741",
+    "topics": [
+      "health"
+    ],
+    "coverage": "National",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Cub Scouts Pack 42 Norwood",
     "category": "Scouting & Youth Organizations",
     "description": "Norwood Cub Scout pack for children in grades K–5, with outdoor activities, skills, service and leadership opportunities.",
@@ -772,6 +799,19 @@
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
+    "name": "Gosnold Behavioral Health — Outpatient Services",
+    "category": "Addiction & Recovery",
+    "description": "Outpatient behavioral-health and substance-use treatment, including services accessible from the Greater Boston region.",
+    "url": "https://gosnold.org/outpatient-services/",
+    "tags": "addiction substance use mental health outpatient counseling recovery treatment Stoughton",
+    "topics": [
+      "health"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Grace Episcopal Church",
     "category": "Faith & Community",
     "description": "Norwood faith community with worship, community events, volunteer support and outreach.",
@@ -850,6 +890,20 @@
     ],
     "coverage": "Local",
     "verified": "2026-09"
+  },
+  {
+    "name": "Handhold MA",
+    "category": "Mental Health",
+    "description": "Massachusetts family-focused resource for understanding children’s mental health and finding appropriate services and supports.",
+    "url": "https://handholdma.org/",
+    "tags": "child mental health family behavioral health parent resources Massachusetts",
+    "topics": [
+      "health",
+      "kids"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "Head Start Norwood",
@@ -1170,6 +1224,21 @@
     "verified": "2026-09"
   },
   {
+    "name": "Lifeworks Arc",
+    "category": "Disability",
+    "description": "Norfolk County-area disability services and supports for people with intellectual and developmental disabilities and their families.",
+    "url": "https://lifeworksarc.org/",
+    "tags": "disability intellectual developmental disabilities IDD autism Arc Norfolk County support",
+    "topics": [
+      "health",
+      "kids",
+      "community"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "LIHEAP / Fuel Assistance — Massachusetts",
     "category": "Basic Needs",
     "description": "Income-eligible home heating assistance for Massachusetts households, helping with winter heating bills and related energy costs.",
@@ -1372,6 +1441,20 @@
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts Commission on Deaf and Hard of Hearing",
+    "category": "Disability & Accessibility",
+    "description": "State agency providing communication access, advocacy, information and referral services for deaf and hard-of-hearing people.",
+    "url": "https://www.mass.gov/orgs/massachusetts-commission-for-the-deaf-and-hard-of-hearing",
+    "tags": "Deaf hard of hearing ASL accessibility communication interpreter MCDHH",
+    "topics": [
+      "health",
+      "community"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Massachusetts Community Behavioral Health Centers",
     "category": "Mental Health",
     "description": "Find walk-in and ongoing mental-health and substance-use services, including 24/7 crisis care and mobile crisis services.",
@@ -1385,6 +1468,20 @@
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts Dental Society — Public Resources",
+    "category": "Dental & Orthodontics",
+    "description": "Consumer dental-health information and resources from the Massachusetts Dental Society.",
+    "url": "https://www.massdental.org/for-the-public/",
+    "tags": "dentist dental oral health find dentist Massachusetts",
+    "topics": [
+      "dental",
+      "medical"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Massachusetts Department of Developmental Services",
     "category": "Disability",
     "description": "State services and eligibility information for people with intellectual and developmental disabilities, including autism.",
@@ -1396,6 +1493,19 @@
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Department of Mental Health",
+    "category": "Mental Health",
+    "description": "State mental-health agency providing information, service navigation and supports for people with serious mental-health needs.",
+    "url": "https://www.mass.gov/orgs/massachusetts-department-of-mental-health",
+    "tags": "mental health DMH Massachusetts services serious mental illness support",
+    "topics": [
+      "health"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "Massachusetts Department of Transitional Assistance",
@@ -1885,6 +1995,19 @@
     "verified": "2026-09"
   },
   {
+    "name": "Monte Nido Walden",
+    "category": "Mental Health",
+    "description": "Eating-disorder treatment provider offering inpatient and outpatient services in Massachusetts.",
+    "url": "https://www.waldeneatingdisorders.com/",
+    "tags": "eating disorder treatment inpatient outpatient anorexia bulimia mental health Dedham Waltham",
+    "topics": [
+      "health"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Morrill Adult Services",
     "category": "Library & Learning",
     "description": "Adult library programs and resources.",
@@ -2106,6 +2229,19 @@
     "coverage": "Statewide",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "NAMI Massachusetts Compass Helpline",
+    "category": "Mental Health",
+    "description": "Free information and navigation help for Massachusetts residents trying to understand and access mental-health services and related systems of care.",
+    "url": "https://namimass.org/nami-mass-compass-helpline/",
+    "tags": "NAMI mental health helpline navigation support family Massachusetts Compass",
+    "topics": [
+      "health"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "Narcotics Anonymous — New England Region",
@@ -2391,6 +2527,21 @@
       "kids",
       "todo"
     ]
+  },
+  {
+    "name": "Norwood Behavioral Health",
+    "category": "Mental Health",
+    "description": "Norwood practice providing counseling, psychiatry and neuropsychological services for children, adolescents and adults.",
+    "url": "https://www.norwoodbehavioralhealth.com/",
+    "tags": "Norwood mental health therapy counseling psychiatry neuropsychological testing child adolescent adult",
+    "topics": [
+      "health",
+      "kids"
+    ],
+    "coverage": "Local",
+    "address": "115 Norwood Park South, Suite 110, Norwood, MA 02062",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "Norwood Board of Health",
@@ -3837,6 +3988,33 @@
     "verified": "2026-09"
   },
   {
+    "name": "Riverside Connect2Recovery",
+    "category": "Addiction & Recovery",
+    "description": "Recovery coaching and peer-support services through Riverside Community Care for adults working toward substance-use recovery.",
+    "url": "https://www.riversidecc.org/adult-services/mental-health-substance-use-adults/recovery-coaching-peer-support/",
+    "tags": "addiction recovery peer coaching substance use Riverside Dedham",
+    "topics": [
+      "health"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
+    "name": "Riverside Mobile Crisis Intervention",
+    "category": "Mental Health Crisis",
+    "description": "24/7 mobile and community-based mental-health and substance-use crisis evaluation for youth and adults in the region.",
+    "url": "https://www.riversidecc.org/mobile-crisis-intervention-overview/",
+    "tags": "mental health crisis mobile crisis substance use youth adult Riverside Dedham emergency",
+    "topics": [
+      "health",
+      "kids"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "SAFE Community Diaper Bank",
     "category": "Basic Needs",
     "description": "Diaper assistance program based in Norfolk, with requests coordinated through the SAFE Coalition.",
@@ -3877,6 +4055,20 @@
     ],
     "coverage": "Local",
     "verified": "2026-09"
+  },
+  {
+    "name": "Samaritans Hope",
+    "category": "Mental Health Crisis",
+    "description": "Suicide-prevention and emotional-support services, including a 24/7 helpline and Hey Sam peer support for young people.",
+    "url": "https://samaritanshope.org/our-services/24-7-helpline/",
+    "tags": "suicide prevention crisis helpline emotional support youth Hey Sam",
+    "topics": [
+      "health",
+      "kids"
+    ],
+    "coverage": "Regional/Statewide",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "SAMHSA Treatment Locator",
@@ -4230,6 +4422,21 @@
     "verified": "2026-09"
   },
   {
+    "name": "The Trevor Project",
+    "category": "Mental Health Crisis",
+    "description": "Free confidential crisis support and suicide-prevention services for LGBTQ+ young people by phone, text and chat.",
+    "url": "https://www.thetrevorproject.org/",
+    "tags": "LGBTQ youth mental health crisis suicide prevention Trevor Project gay trans queer",
+    "topics": [
+      "health",
+      "kids",
+      "community"
+    ],
+    "coverage": "National",
+    "verified": "2026-09",
+    "source_note": "Morrill Memorial Library Community Health Resources"
+  },
+  {
     "name": "Therapy Matcher",
     "category": "Mental Health",
     "description": "Referral resource for finding a therapist; intended for non-emergency mental-health needs.",
@@ -4289,6 +4496,21 @@
     "tags": "official town government departments permits meetings",
     "coverage": "Local",
     "verified": "2026-09"
+  },
+  {
+    "name": "Town of Norwood Commission on Disability",
+    "category": "Disability & Accessibility",
+    "description": "Town commission addressing accessibility, disability awareness and issues affecting residents with disabilities in Norwood.",
+    "url": "https://www.norwoodma.gov/government/committees_boards/disability_commission/index.php",
+    "tags": "Norwood disability commission accessibility ADA town official",
+    "topics": [
+      "health",
+      "town"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09",
+    "officialTown": true,
+    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "Transgender Emergency Fund of Massachusetts",
