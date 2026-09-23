@@ -1,0 +1,57 @@
+name: Bust shared nav cache
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nav.js'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: norwood-nav-cache-bust
+  cancel-in-progress: true
+
+jobs:
+  bust-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Version nav.js references with current commit
+        shell: bash
+        run: |
+          VERSION="${GITHUB_SHA:0:12}"
+          python - <<'PY'
+          import os, re
+          from pathlib import Path
+
+          version=os.environ["VERSION"]
+          changed=[]
+          for p in Path(".").glob("*.html"):
+              text=p.read_text()
+              new=re.sub(r'nav\.js\?v=[^"\'<>]+', f'nav.js?v={version}', text)
+              if new != text:
+                  p.write_text(new)
+                  changed.append(str(p))
+          print("Updated:", ", ".join(changed) if changed else "none")
+          PY
+        env:
+          VERSION: ${{ env.VERSION }}
+
+      - name: Commit cache-busted HTML references
+        shell: bash
+        run: |
+          if git diff --quiet -- '*.html'; then
+            echo "No nav.js references needed updating."
+            exit 0
+          fi
+          git config user.name "norwood-ma-cache-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- '*.html'
+          git commit -m "chore: bust nav.js cache"
+          git push origin HEAD:main
