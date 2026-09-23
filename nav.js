@@ -49,7 +49,7 @@
               const d=new Date(n.date+'T12:00:00');
               url='https://www.norwoodma.gov/calendar.php?view=month&month='+String(d.getMonth()+1).padStart(2,'0')+'&day=01&year='+d.getFullYear();
             }
-            items.push({kind:'meeting',rank:live?18:12,title,url,live,scheduledEnd:n.end_time||null,overrun:live&&en!==null&&now.minutes>en});
+            items.push({kind:'meeting',rank:live?18:12,title,url,live,scheduledEnd:n.end_time||null,overrun:en!==null&&now.minutes>en});
           }
         }
       }
@@ -65,9 +65,12 @@
       const main='<strong>'+label+':</strong> '+esc(a.title);
       if(a.kind==='meeting'&&a.live){
         let endNote='';
-        if(a.overrun&&a.scheduledEnd){
+        if(a.scheduledEnd){
           const m=String(a.scheduledEnd).match(/^(\\d{1,2}):(\\d{2})/);
-          if(m){const h=Number(m[1]),min=m[2],ap=h>=12?'PM':'AM',h12=((h+11)%12)+1;endNote=' <span class="meeting-scheduled-end">· Scheduled end: '+h12+':'+min+' '+ap+'</span>';}
+          if(m){
+            const h=Number(m[1]),min=m[2],ap=h>=12?'PM':'AM',h12=((h+11)%12)+1;
+            if(a.overrun)endNote=' <span class="meeting-scheduled-end">(Scheduled end: '+h12+':'+min+' '+ap+')</span>';
+          }
         }
         return '<span class="site-timely-item">'+main+' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a>'+endNote+'</span>';
       }
