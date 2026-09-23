@@ -713,3 +713,5 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 .spinner-wheel:before{content:"";position:absolute;left:50%;top:50%;width:68px;height:42px;transform:translate(-50%,-50%);background:#fff;clip-path:polygon(2% 55%,11% 47%,21% 42%,29% 30%,42% 24%,55% 28%,63% 18%,70% 4%,76% 17%,88% 22%,100% 31%,91% 40%,80% 42%,73% 51%,82% 61%,94% 68%,88% 76%,73% 68%,63% 60%,53% 65%,45% 80%,34% 97%,25% 96%,34% 76%,39% 63%,27% 66%,17% 77%,6% 78%,15% 66%) ;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
 .spinner-wheel span{display:none}
 .spinner-wheel.is-spinning:before{opacity:.95}
+/* v0.13.4.27 — compact Dinner Spinner controls */
+@media(min-width:651px){.dinner-spinner .spinner-controls{grid-template-columns:minmax(210px,330px) auto;align-items:end;column-gap:10px}.dinner-spinner .spinner-actions{grid-column:2;display:flex;flex-wrap:nowrap;align-items:end}.dinner-spinner .spinner-actions button{white-space:nowrap}.dinner-spinner #surpriseDinner{display:none}}
