@@ -52,19 +52,19 @@
   const out=pages.map(p=>({...p,norwoodPage:true}));
   (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
   (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true}));
-  (window.NORWOOD_BUSINESSES||[]).forEach(b=>out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true}));
+  (window.NORWOOD_BUSINESSES||[]).forEach(b=>out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,(b.labels||[]).join(' '),b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true}));
   (window.NORWOOD_CALENDAR_SOURCES||[]).forEach(c=>out.push({name:(c.name||'Calendar')+' calendar',url:c.view_url||'calendars.html',type:'Calendar',text:[c.name,c.description,c.provider,c.group,'calendar schedule dates events school'].join(' '),calendar:true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
   (window.NORWOOD_HOWDO||[]).forEach(h=>out.push({name:h.title,url:'how-do-i.html#'+h.id,type:'How Do I?',text:[h.text,h.keywords,'question answer help'].join(' '),norwoodPage:true}));
   return out;
  }
- function search(raw){
+ function search(raw,limit=12){
   const original=String(raw||'').trim();
   const acronym=/^[A-Z][A-Z0-9&.-]{1,7}$/.test(original);
   raw=norm(original); if(!raw)return [];
   const expanded=norm(raw+' '+(aliases[raw]||''));
   const terms=[...new Set(expanded.split(/\s+/).filter(Boolean))];
-  return items().map(x=>{const name=norm(x.name),type=norm(x.type),body=norm(x.text),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=120;if(name.startsWith(raw))score+=55;if(name.includes(raw))score+=35;if(type===raw)score+=70;if(type.includes(raw))score+=35;if(body.includes(raw))score+=18;terms.forEach(t=>{if(name===t)score+=30;else if(name.includes(t))score+=14;if(type===t)score+=24;else if(type.includes(t))score+=10;if(body.includes(t))score+=4});/* Geography/source is only a tie-breaker after strong intent relevance. */if(x.norwoodPage&&score>=35)score+=8;/* Relevant How Do I guidance should lead individual businesses for service-intent searches (e.g. notary). */if(x.type==='How Do I?'&&score>=18)score+=42;if(x.business&&score>=30)score+=3;if(acronym&&aliases[raw]){const phrase=norm(aliases[raw]);if(name.split(' ').some(w=>w===raw)||type.split(' ').some(w=>w===raw))score+=45;if(phrase.split(' ').some(w=>name.includes(w)||type.includes(w)))score+=12;}return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,12);
+  return items().map(x=>{const name=norm(x.name),type=norm(x.type),body=norm(x.text),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=120;if(name.startsWith(raw))score+=55;if(name.includes(raw))score+=35;if(type===raw)score+=70;if(type.includes(raw))score+=35;if(body.includes(raw))score+=18;terms.forEach(t=>{if(name===t)score+=30;else if(name.includes(t))score+=14;if(type===t)score+=24;else if(type.includes(t))score+=10;if(body.includes(t))score+=4});/* Geography/source is only a tie-breaker after strong intent relevance. */if(x.norwoodPage&&score>=35)score+=8;/* Relevant How Do I guidance should lead individual businesses for service-intent searches (e.g. notary). */if(x.type==='How Do I?'&&score>=18)score+=42;if(x.business&&score>=30)score+=3;if(acronym&&aliases[raw]){const phrase=norm(aliases[raw]);if(name.split(' ').some(w=>w===raw)||type.split(' ').some(w=>w===raw))score+=45;if(phrase.split(' ').some(w=>name.includes(w)||type.includes(w)))score+=12;}return{x,score};}).filter(o=>o.score>0).sort((a,b)=>b.score-a.score||a.x.name.localeCompare(b.x.name)).slice(0,limit);
  }
  function noteSearch(query,count){
    try{
@@ -77,14 +77,19 @@
  function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
  function render(track=false){
   const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
-  let hits=search(raw);
+  const allHits=search(raw,200);
+  const businessHits=allHits.filter(({x})=>x.business);
+  // Autocomplete stays task-focused: individual businesses belong on the full
+  // results page, not in the live dropdown.
+  let hits=(resultsPage?allHits:allHits.filter(({x})=>!x.business)).slice(0,12);
   if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
   const howDoHtml=/^how(?:\s|$)|^how\s+do\s+i/i.test(raw)?'<div class="library-things-search-callout howdo-search-callout"><span class="library-things-badge">HOW DO I?</span><b>❓ Looking for a quick answer?</b><p>Browse practical answers to common Norwood questions.</p><a href="how-do-i.html">Open How Do I? →</a></div>':'';
   const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
+  const businessMoreHtml=!resultsPage&&businessHits.length?`<a href="search.html?q=${encodeURIComponent(raw)}"><b>${businessHits.length} ${esc(raw)} business${businessHits.length===1?'':'es'} found…</b><small>Click for full search results →</small></a>`:'';
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length} result${hits.length+things.length===1?'':'s'}</small></div>`:'';
-  box.innerHTML=heading+howDoHtml+thingHtml+regularHtml;
+  box.innerHTML=heading+howDoHtml+thingHtml+regularHtml+businessMoreHtml;
   box.hidden=false;if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
  input.addEventListener('input',()=>{submitted=false;render(false)});
