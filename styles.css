@@ -708,3 +708,9 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 .site-timely-sep{opacity:.65}
 .site-timely-item.watch-live,.site-timely-item .watch-live{font-weight:850;text-decoration:underline}.site-timely-item .watch-live{display:inline;padding:0;margin-left:.25rem;white-space:nowrap}
 @media(max-width:700px){.site-timely-track{justify-content:flex-start;gap:.45rem}.site-timely-item{padding:.38rem 0}.site-timely-sep{font-size:.75em}}
+/* v0.13.4.25 — functional Norwood Dinner Spinner: blue/gold wheel + white Mustang mark */
+.spinner-wheel{position:relative;overflow:hidden;outline:3px solid var(--blue);background:conic-gradient(var(--blue) 0 25%,var(--gold) 25% 50%,var(--blue) 50% 75%,var(--gold) 75%);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.spinner-wheel:before{content:"♞";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:3.25rem;line-height:1;text-shadow:0 2px 3px rgba(0,0,0,.32);transform:scaleX(-1)}
+.spinner-wheel span{position:relative;z-index:1;min-width:38px;padding:3px 5px;border-radius:999px;background:rgba(0,59,113,.88);color:#fff;font-size:.72rem;line-height:1.1;text-align:center}
+.spinner-wheel.is-spinning span{visibility:hidden}
+.spinner-wheel.is-spinning:before{opacity:.95}
