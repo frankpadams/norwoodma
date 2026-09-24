@@ -487,5 +487,82 @@
     "kind": "monitor_schedule",
     "possible_conflicts": true,
     "verified": true
+  },
+  {
+    "id": "norwood-youth-lacrosse",
+    "group": "possible_conflicts",
+    "name": "Norwood Youth Lacrosse schedule",
+    "description": "Youth lacrosse practices, games and tournament dates.",
+    "view_url": "https://norwoodmalacrosse.com/2026-season",
+    "provider": "Norwood Youth Lacrosse schedule",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "bays-norwood-soccer",
+    "group": "possible_conflicts",
+    "name": "BAYS Norwood Youth Soccer schedules",
+    "description": "Individual Norwood travel soccer games, including home and away.",
+    "view_url": "https://bays.org/club/NYS",
+    "provider": "BAYS Norwood Youth Soccer schedules",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-high-athletics",
+    "group": "possible_conflicts",
+    "name": "Norwood High School Athletics",
+    "description": "NHS varsity/JV sports schedules and major athletics dates.",
+    "view_url": "https://www.norwood.k12.ma.us/nhs/athletics",
+    "provider": "Norwood High School Athletics",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "skating-club-boston-events",
+    "group": "possible_conflicts",
+    "name": "Skating Club of Boston events",
+    "description": "Major competitions, shows and high-attendance events at the Norwood facility.",
+    "view_url": "https://scboston.org/",
+    "provider": "Skating Club of Boston events",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "td-garden-major-events",
+    "group": "possible_conflicts",
+    "name": "TD Garden major events",
+    "description": "Major Boston arena events that may materially compete for attendance.",
+    "view_url": "https://www.tdgarden.com/events",
+    "provider": "TD Garden major events",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "fenway-park-major-events",
+    "group": "possible_conflicts",
+    "name": "Fenway Park major events",
+    "description": "Major Fenway events beyond Red Sox games.",
+    "view_url": "https://www.mlb.com/redsox/tickets/events",
+    "provider": "Fenway Park major events",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "mass-holidays-observances",
+    "group": "possible_conflicts",
+    "name": "Massachusetts and major observances",
+    "description": "Public holidays and major locally relevant observances.",
+    "view_url": "https://www.mass.gov/info-details/massachusetts-legal-holidays",
+    "provider": "Massachusetts and major observances",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
   }
 ]
