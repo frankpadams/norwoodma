@@ -26,7 +26,8 @@
       "community events"
     ],
     "main_calendar_independent": true,
-    "recurring_schedule_note": "Recurring/season-long sports records may represent a known activity window when individual game dates are not exposed. Results should identify this uncertainty rather than imply every date/time is a confirmed game."
+    "recurring_schedule_note": "Recurring/season-long sports records may represent a known activity window when individual game dates are not exposed. Results should identify this uncertainty rather than imply every date/time is a confirmed game.",
+    "religious_observance_rule": "Include major locally relevant religious observances and public holidays as possible conflicts even when there is no discrete public event. For observances beginning at sundown, include the preceding evening when relevant."
   },
   "events": [
     {
@@ -441,6 +442,34 @@
       "main_calendar_eligible": false,
       "verification_status": "verified_schedule_pattern",
       "notes": "Saturday-morning combined practice/game sessions; exact times may vary."
+    },
+    {
+      "id": "christmas-day-2026",
+      "title": "Christmas Day",
+      "start": "2026-12-25",
+      "all_day": true,
+      "organization": "Religious / public holiday",
+      "category": "religious_observance",
+      "location": "Norwood and nationwide",
+      "source_id": "religious-observances",
+      "source_url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "main_calendar_eligible": false,
+      "verification_status": "verified",
+      "notes": "Major Christian observance and federal holiday; likely to affect attendance and business/service availability."
+    },
+    {
+      "id": "christmas-eve-2026",
+      "title": "Christmas Eve",
+      "start": "2026-12-24",
+      "all_day": true,
+      "organization": "Religious observance",
+      "category": "religious_observance",
+      "location": "Norwood and nationwide",
+      "source_id": "religious-observances",
+      "source_url": "https://www.timeanddate.com/holidays/us/christmas-eve",
+      "main_calendar_eligible": false,
+      "verification_status": "verified",
+      "notes": "Widely observed evening before Christmas; likely to affect attendance even though it is not a federal holiday."
     }
   ],
   "ingestion": {
