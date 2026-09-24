@@ -159,10 +159,32 @@ def service_org_public_candidate(text):
     ]
     return any(x in t for x in public_signals)
 
+def local_news_event_candidate(text):
+    """Prevent ordinary news headlines from being misread as calendar events."""
+    t=clean_text(text).lower()
+    reject=[
+      'lottery prize','winning ticket','jackpot','patch am:','police log',
+      'breaking news','obituary','real estate','home sold','weather forecast'
+    ]
+    if any(x in t for x in reject): return False
+    signals=[
+      'fundraiser','fundraising','benefit','raffle','bingo','car wash','craft fair',
+      'vendor fair','fair','festival','concert','performance','show','open house',
+      'blood drive','food drive','toy drive','coat drive','yard sale','tag sale',
+      'bake sale','cookie sale','pancake breakfast','dinner','dance','5k','road race',
+      'walkathon','workshop','class','storytime','book club','farmers market',
+      "farmer's market",'community event','public event','celebration','parade',
+      'tree lighting','menorah lighting','trunk or treat'
+    ]
+    return any(x in t for x in signals)
+
 def source_allows_event(source, title, description=''):
     if not public_candidate(title,description): return False
-    if source.get('filters',{}).get('public_facing_service_events_only'):
+    filters=source.get('filters',{})
+    if filters.get('public_facing_service_events_only'):
         return service_org_public_candidate(f"{title} {description}")
+    if filters.get('require_explicit_event_signal'):
+        return local_news_event_candidate(f"{title} {description}")
     return True
 
 def category_from(text):
