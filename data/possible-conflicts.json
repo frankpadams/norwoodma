@@ -116,6 +116,91 @@
       "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/10",
       "main_calendar_eligible": false,
       "verification_status": "verified"
+    },
+    {
+      "id": "nps-school-committee-2026-09-09",
+      "title": "Norwood School Committee Meeting",
+      "start": "2026-09-09T18:00:00",
+      "organization": "Norwood School Committee",
+      "category": "civic",
+      "location": "Norwood",
+      "source_id": "nps-district",
+      "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/09",
+      "main_calendar_eligible": false,
+      "verification_status": "verified"
+    },
+    {
+      "id": "nps-no-school-pd-2026-09-01",
+      "title": "No School — Professional Development",
+      "start": "2026-09-01",
+      "all_day": true,
+      "organization": "Norwood Public Schools",
+      "category": "school",
+      "location": "Norwood Public Schools",
+      "source_id": "nps-district",
+      "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/09",
+      "main_calendar_eligible": false,
+      "verification_status": "verified"
+    },
+    {
+      "id": "nps-first-day-2026-09-02",
+      "title": "First Day of School — Grades K–12",
+      "start": "2026-09-02",
+      "all_day": true,
+      "organization": "Norwood Public Schools",
+      "category": "school",
+      "location": "Norwood Public Schools",
+      "source_id": "nps-district",
+      "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/09",
+      "main_calendar_eligible": false,
+      "verification_status": "verified"
+    },
+    {
+      "id": "nps-no-school-2026-09-04",
+      "title": "No School — Norwood Public Schools",
+      "start": "2026-09-04",
+      "all_day": true,
+      "organization": "Norwood Public Schools",
+      "category": "school",
+      "location": "Norwood Public Schools",
+      "source_id": "nps-district",
+      "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/09",
+      "main_calendar_eligible": false,
+      "verification_status": "verified"
+    },
+    {
+      "id": "nps-labor-day-2026-09-07",
+      "title": "No School — Labor Day",
+      "start": "2026-09-07",
+      "all_day": true,
+      "organization": "Norwood Public Schools",
+      "category": "school",
+      "location": "Norwood Public Schools",
+      "source_id": "nps-district",
+      "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/09",
+      "main_calendar_eligible": false,
+      "verification_status": "verified"
     }
-  ]
+  ],
+  "ingestion": {
+    "mode": "combined",
+    "note": "Conflict Contraption combines this supplemental file with the full What's Happening dataset at query time. Supplemental source expansion is tracked in calendar-sources.json and source-registry.json.",
+    "source_families": [
+      "Norwood Public Schools district and individual school calendars",
+      "PTO/PTA calendars and discovery",
+      "NHS athletics and school activities",
+      "Town boards and committees",
+      "Morrill Memorial Library",
+      "Norwood Recreation",
+      "Norwood Senior Center / Council on Aging",
+      "Friends of Norwood Center",
+      "Norwood Historical Society",
+      "Norwood Rotary and Neponset Valley Sunrise Rotary",
+      "Norwood Elks Lodge #1124",
+      "Circle of Hope and other local nonprofits/service organizations",
+      "youth sports and school fundraisers",
+      "houses of worship and religious observances",
+      "road closures, construction, parking and transportation disruptions"
+    ]
+  }
 }
