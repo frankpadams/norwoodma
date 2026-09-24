@@ -6,8 +6,78 @@ METHOD:PUBLISH
 X-WR-CALNAME:Family & kids
 X-WR-CALDESC:Family-oriented public programs as they are discovered and verified.
 BEGIN:VEVENT
+UID:2026-09-17-sensory-friendly-lego-club-for-adults-c805c9f@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;TZID=America/New_York:20260917T000000
+DTEND;TZID=America/New_York:20260917T000000
+SUMMARY:Sensory-friendly Lego Club for Adults
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Morrill Memorial Library is excited to partner with the L. E. A. D. program affiliated with Norwood High School to host a Sensory-friendly Lego Club for Adults. Our September club meeting will be held in-person at the library on Thursday Se\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-55/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-55/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-18-legally-blonde@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260921
+SUMMARY:Legally Blonde — Norwood High School
+LOCATION:Norwood High School — 245 Nichols St\, Norwood\, MA 02062
+DESCRIPTION:Public high-school theatrical production\; exact performance times should be confirmed before display.\nSource: https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596
+URL:https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-19-teen-morning-makerspace-c740a38@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;TZID=America/New_York:20260919T000000
+DTEND;TZID=America/New_York:20260919T000000
+SUMMARY:Teen Morning Makerspace
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Teen ProgramChildren's Program RoomGrades 7-12Get crafty and creative at the library with our Morning Makerspace for teens! From 10am to 12pm\, teens are invited to drop in and use our arts and crafts equipment to work on a current project\, \nSource: https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-10/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-21-poirier-village-center-open-play-cb39124@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;TZID=America/New_York:20260921T000000
+DTEND;TZID=America/New_York:20260921T000000
+SUMMARY:Poirier Village Center Open Play
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play\, explore\, and connect. This is an unstructured play opportunity where families\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-5/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-5/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-22-tuesday-pvc-play-and-learn-affcd92@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;TZID=America/New_York:20260922T000000
+DTEND;TZID=America/New_York:20260922T000000
+SUMMARY:Tuesday PVC Play and Learn
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Join us this Fall for Poirier Village Center Play and Learn\, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center\, located at 82 Roosevelt Ave\, for children ages 2–5. This program offers a wonderful introduc\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-18/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-23-paint-nite-for-kids-ca537e5@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;TZID=America/New_York:20260923T000000
+DTEND;TZID=America/New_York:20260923T000000
+SUMMARY:Paint Nite for Kids
+LOCATION:Morrill Memorial Library
+DESCRIPTION:Join Ms. Nicole for a fun paint night! Follow along as we all create a masterpiece to bring home. We will be using acrylic paints\, so please wear appropriate clothing (it stains!)Ages 6 - 12\nSource: https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-3/
+URL:https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-3/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-23-school-committee-meeting-b83251b@norwood.ma
+DTSTAMP:20260924T194520Z
+DTSTART;TZID=America/New_York:20260923T190000
+DTEND;TZID=America/New_York:20260923T203000
+SUMMARY:School Committee Meeting
+LOCATION:Town of Norwood
+DESCRIPTION:Public board/committee meeting. At meeting time\, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.\nCost: Free\nSource: https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:
+URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-09-24-thursday-pvc-play-and-learn-53d4a09@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20260924T000000
 DTEND;TZID=America/New_York:20260924T000000
 SUMMARY:Thursday PVC Play and Learn
@@ -17,7 +87,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-24-wacky-wiggles-and-giggles-87bbfd0@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20260924T000000
 DTEND;TZID=America/New_York:20260924T000000
 SUMMARY:Wacky Wiggles and Giggles
@@ -27,7 +97,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-gig
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-27-musical-sundays-concert-series-musick-of-new--a93a8ae@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20260927T000000
 DTEND;TZID=America/New_York:20260927T000000
 SUMMARY:Musical Sundays Concert Series: Musick of New England’s Revolution
@@ -37,7 +107,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-conce
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-28-poirier-village-center-open-play-a63ebaf@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20260928T000000
 DTEND;TZID=America/New_York:20260928T000000
 SUMMARY:Poirier Village Center Open Play
@@ -47,7 +117,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-cente
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-29-tuesday-pvc-play-and-learn-984da41@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20260929T000000
 DTEND;TZID=America/New_York:20260929T000000
 SUMMARY:Tuesday PVC Play and Learn
@@ -57,7 +127,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-30-teen-anime-movie-night-05e1df7@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20260930T000000
 DTEND;TZID=America/New_York:20260930T000000
 SUMMARY:Teen Anime Movie Night
@@ -67,7 +137,7 @@ URL:https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-movie-nigh
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-05-mondays-with-moms-1c715af@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261005T093000
 DTEND;TZID=America/New_York:20261005T110000
 SUMMARY:Mondays with Moms
@@ -77,7 +147,7 @@ URL:https://stcatherinenorwood.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-07-school-committee-meeting-2d97b19@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261007T190000
 DTEND;TZID=America/New_York:20261007T203000
 SUMMARY:School Committee Meeting
@@ -87,7 +157,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-28-school-committee-meeting-f8165c0@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261028T190000
 DTEND;TZID=America/New_York:20261028T203000
 SUMMARY:School Committee Meeting
@@ -97,7 +167,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-worcester-deaf-club-arts-crafts-bazaar@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T150000
 SUMMARY:Worcester Deaf Club 14th Annual Arts & Crafts Bazaar
@@ -107,7 +177,7 @@ URL:https://massdeaf.org/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-15-dreidels@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261115T100000
 DTEND;TZID=America/New_York:20261115T130000
 SUMMARY:Turn Tops and Dreidels — Craft Gifts from the Heart
@@ -117,7 +187,7 @@ URL:https://millforge.org/events/list/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-18-school-committee-meeting-558a1f2@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261118T190000
 DTEND;TZID=America/New_York:20261118T203000
 SUMMARY:School Committee Meeting
@@ -127,7 +197,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-02-school-committee-meeting-ca5456a@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261202T190000
 DTEND;TZID=America/New_York:20261202T203000
 SUMMARY:School Committee Meeting
@@ -137,7 +207,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-04-dreidels@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261204T180000
 DTEND;TZID=America/New_York:20261204T210000
 SUMMARY:Turn Tops and Dreidels — Craft Gifts from the Heart
@@ -147,7 +217,7 @@ URL:https://millforge.org/events/list/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-05-breakfast-with-santa@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261205T090000
 DTEND;TZID=America/New_York:20261205T110000
 SUMMARY:Breakfast with Santa
@@ -157,7 +227,7 @@ URL:https://norwoodma.myrec.com/info/activities/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-13-personalize-laser-engraved-wood-cutting-board-8dcda72@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261213T100000
 DTEND;TZID=America/New_York:20261213T130000
 SUMMARY:Personalize Laser Engraved Wood Cutting Boards – Craft Gifts from the Heart! (December 2026)
@@ -167,7 +237,7 @@ URL:https://millforge.org/event/personalize-laser-engraved-wood-cutting-boards-c
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-15-carve-spoons-and-cheese-knives-craft-gifts-fr-4f8f511@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261215T180000
 DTEND;TZID=America/New_York:20261215T210000
 SUMMARY:Carve Spoons and Cheese Knives – Craft Gifts from the Heart! (December 2026)
@@ -177,7 +247,7 @@ URL:https://millforge.org/event/carve-spoons-and-cheese-knives-craft-gifts-from-
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-16-school-committee-meeting-33f2956@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20261216T190000
 DTEND;TZID=America/New_York:20261216T203000
 SUMMARY:School Committee Meeting
@@ -187,7 +257,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-13-school-committee-meeting-60af143@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20270113T190000
 DTEND;TZID=America/New_York:20270113T203000
 SUMMARY:School Committee Meeting
@@ -197,7 +267,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-27-school-committee-meeting-7119d43@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20270127T190000
 DTEND;TZID=America/New_York:20270127T203000
 SUMMARY:School Committee Meeting
@@ -207,7 +277,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-05-special-someone-dance@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
 SUMMARY:Special Someone Dance
@@ -217,7 +287,7 @@ URL:https://norwoodma.myrec.com/info/activities/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-10-school-committee-meeting-e787d83@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20270210T190000
 DTEND;TZID=America/New_York:20270210T203000
 SUMMARY:School Committee Meeting
@@ -227,7 +297,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-03-school-committee-meeting-c8f9beb@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20270303T190000
 DTEND;TZID=America/New_York:20270303T203000
 SUMMARY:School Committee Meeting
@@ -237,7 +307,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-17-school-committee-meeting-4348d0d@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20270317T190000
 DTEND;TZID=America/New_York:20270317T203000
 SUMMARY:School Committee Meeting
@@ -247,7 +317,7 @@ URL:https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_hand
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-24-school-committee-meeting-f1aa9e6@norwood.ma
-DTSTAMP:20260924T184212Z
+DTSTAMP:20260924T194520Z
 DTSTART;TZID=America/New_York:20270324T190000
 DTEND;TZID=America/New_York:20270324T203000
 SUMMARY:School Committee Meeting

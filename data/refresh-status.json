@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-24T14:42:12.267677-04:00",
+  "generated_at": "2026-09-24T15:45:20.639167-04:00",
   "offline": false,
-  "events_published": 182,
+  "events_published": 217,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 182,
-      "generated_at": "2026-09-24T14:42:12.258668-04:00"
+      "events": 217,
+      "generated_at": "2026-09-24T15:45:20.633523-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 37,
-      "generated_at": "2026-09-24T14:42:12.259942-04:00"
+      "events": 47,
+      "generated_at": "2026-09-24T15:45:20.634467-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 25,
-      "generated_at": "2026-09-24T14:42:12.261293-04:00"
+      "events": 32,
+      "generated_at": "2026-09-24T15:45:20.635512-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 17,
-      "generated_at": "2026-09-24T14:42:12.262411-04:00"
+      "events": 20,
+      "generated_at": "2026-09-24T15:45:20.636354-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-24T14:42:12.263340-04:00"
+      "generated_at": "2026-09-24T15:45:20.637015-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 13,
-      "generated_at": "2026-09-24T14:42:12.264408-04:00"
+      "events": 16,
+      "generated_at": "2026-09-24T15:45:20.637778-04:00"
     }
   ],
   "event_sources": [
