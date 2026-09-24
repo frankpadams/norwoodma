@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T01:01:55.568418-04:00",
+  "generated_at": "2026-09-24T01:07:03.474198-04:00",
   "offline": false,
   "events_published": 162,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 162,
-      "generated_at": "2026-09-24T01:01:55.561502-04:00"
+      "generated_at": "2026-09-24T01:07:03.467160-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 36,
-      "generated_at": "2026-09-24T01:01:55.562589-04:00"
+      "generated_at": "2026-09-24T01:07:03.468301-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 24,
-      "generated_at": "2026-09-24T01:01:55.563808-04:00"
+      "generated_at": "2026-09-24T01:07:03.469503-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 8,
-      "generated_at": "2026-09-24T01:01:55.564657-04:00"
+      "generated_at": "2026-09-24T01:07:03.470371-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-24T01:01:55.565393-04:00"
+      "generated_at": "2026-09-24T01:07:03.471122-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 12,
-      "generated_at": "2026-09-24T01:01:55.566295-04:00"
+      "generated_at": "2026-09-24T01:07:03.472065-04:00"
     }
   ],
   "event_sources": [
@@ -496,6 +496,13 @@
       "method": "ncm_school_broadcasts",
       "found": 0,
       "note": ""
+    },
+    {
+      "source_id": "town-selectmen-car-washes",
+      "ok": true,
+      "method": "selectmen_car_washes",
+      "found": 0,
+      "note": ""
     }
   ],
   "news_sources": [
@@ -564,7 +571,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
