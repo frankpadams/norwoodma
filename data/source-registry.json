@@ -7747,5 +7747,41 @@
       "basis": "Norwood Girl Scouts are a confirmed local organization; public fundraiser/event dates are typically surfaced through local community calendars rather than a stable Norwood-specific public calendar."
     },
     "notes": "Watch for public Girl Scout cookie booths/sales, drives, fairs and other community fundraisers. Exclude troop meetings, registration activities and member-only events."
+  },
+  {
+    "id": "norwood-portuguese-club",
+    "name": "Norwood Portuguese Club — Public Cultural Events",
+    "organization": "Norwood Portuguese Club",
+    "source_class": "cultural_organization",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodportugueseclub.com/",
+    "domain": "norwoodportugueseclub.com",
+    "produces": [
+      "events",
+      "cultural_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "cultural_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Official organization website confirms cultural programming and community activities."
+    },
+    "notes": "Publish only events explicitly open to the public, such as public cultural celebrations, performances, festivals, dinners, educational programs, and community events. Exclude member meetings, members-only dinners/socials, internal club functions, and invite-only activities."
   }
 ]
