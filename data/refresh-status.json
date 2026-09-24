@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-24T01:59:50.061468-04:00",
+  "generated_at": "2026-09-24T02:03:04.788801-04:00",
   "offline": false,
-  "events_published": 181,
+  "events_published": 180,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 181,
-      "generated_at": "2026-09-24T01:59:50.055707-04:00"
+      "events": 180,
+      "generated_at": "2026-09-24T02:03:04.780869-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 36,
-      "generated_at": "2026-09-24T01:59:50.056606-04:00"
+      "generated_at": "2026-09-24T02:03:04.782103-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 25,
-      "generated_at": "2026-09-24T01:59:50.057625-04:00"
+      "generated_at": "2026-09-24T02:03:04.783446-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 15,
-      "generated_at": "2026-09-24T01:59:50.058416-04:00"
+      "generated_at": "2026-09-24T02:03:04.784573-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-24T01:59:50.059019-04:00"
+      "generated_at": "2026-09-24T02:03:04.785474-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 14,
-      "generated_at": "2026-09-24T01:59:50.059799-04:00"
+      "generated_at": "2026-09-24T02:03:04.786571-04:00"
     }
   ],
   "event_sources": [
@@ -128,10 +128,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 4,
-      "note": ""
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "source_id": "grace-calendar",
@@ -408,10 +408,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": true,
+      "ok": false,
       "method": "community_submission_json",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='script.google.com', port=443): Read timed out. (read timeout=18)"
     },
     {
       "source_id": "nps-oldham-pto",
@@ -608,9 +608,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -632,7 +633,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 62,
+      "found": 61,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -640,7 +641,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 39,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -713,7 +714,7 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 19,
+      "found": 20,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
@@ -733,9 +734,10 @@
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
         "Norwood Town News": 11,
-        "NBC Boston": 2,
+        "NBC Boston": 1,
         "John Guilfoil Public Relations": 1,
-        "WCVB": 1
+        "WCVB": 1,
+        "dailyvoice.com": 1
       },
       "note": null
     }
