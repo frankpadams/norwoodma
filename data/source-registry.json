@@ -5352,7 +5352,8 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "require_explicit_event_signal": true
     },
     "verification": {
       "status": "web_checked",
@@ -6922,7 +6923,8 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "require_explicit_event_signal": true
     },
     "verification": {
       "status": "web_checked",
@@ -7815,7 +7817,8 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "require_explicit_event_signal": true
     },
     "verification": {
       "status": "web_checked",
