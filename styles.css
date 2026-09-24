@@ -742,3 +742,14 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 .events-action-card strong{font-size:1rem;line-height:1.2}
 .events-action-card span{font-size:.82rem;line-height:1.3;font-weight:500;opacity:.88}
 @media(max-width:620px){.events-action-cards{grid-template-columns:1fr}.events-action-card{min-height:72px}}
+
+/* Compact Conflict Contraption controls on phones */
+@media(max-width:680px){
+ .contraption-picker{padding:14px}
+ .contraption-picker h2{margin-bottom:12px}
+ .contraption-date-row{gap:8px}
+ .contraption-date-row label{font-size:.9rem}
+ .contraption-date-row input{min-height:0;height:48px;margin-top:3px;padding:.45rem .7rem;font-size:1rem}
+ .contraption-actions{margin-top:12px}
+ .contraption-actions .button{min-height:46px;padding:.55rem .85rem}
+}
