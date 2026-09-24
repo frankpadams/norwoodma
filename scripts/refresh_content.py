@@ -628,6 +628,58 @@ def events_from_selectmen_car_washes(source):
     return sorted(out,key=lambda e:(e['start']['date'],e['start'].get('time') or '99:99',e['title']))
 
 
+
+def events_from_home_depot_kids_workshops(source):
+    """Publish the Norwood Home Depot's free first-Saturday Kids Workshops."""
+    local_url=source.get('url') or 'https://www.homedepot.com/l/Norwood/MA/Norwood/02062/2681'
+    national_url=source.get('ingestion',{}).get('national_url') or 'https://www.homedepot.com/c/kids-workshop'
+    local_text=''; national_text=''
+    try: local_text=clean_text(request(local_url).text)
+    except Exception: pass
+    try: national_text=clean_text(request(national_url).text)
+    except Exception: pass
+
+    # Require current official evidence that the program is active. The national
+    # page supplies the recurring rule; the Norwood store page anchors the event
+    # to store #2681 rather than assuming participation at an unrelated location.
+    recurring=bool(re.search(r'first\s+Saturday\s+of\s+every\s+month',national_text,re.I))
+    local_confirmed=bool(re.search(r'Home\s+Depot\s+Kids\s+Workshop|Kids\s+Workshop',local_text,re.I))
+    if not recurring or not local_confirmed:
+        return []
+
+    today=now_local().date()
+    out=[]
+    # Keep a short rolling horizon. Each refresh re-validates both official pages.
+    y,m=today.year,today.month
+    for _ in range(4):
+        first=date(y,m,1)
+        d=first+timedelta(days=(5-first.weekday())%7)  # Saturday=5
+        if d >= today-timedelta(days=1):
+            ds=d.isoformat()
+            out.append({
+              'id':event_id('Home Depot Kids Workshop',ds,'The Home Depot — Norwood #2681'),
+              'title':'Home Depot Kids Workshop',
+              'start':{'date':ds,'time':'09:00'},
+              'end':{'date':ds,'time':'12:00'},
+              'venue':'The Home Depot — Norwood #2681',
+              'address':'1415 Boston Providence Hwy, Norwood, MA 02062',
+              'category':'family',
+              'source_id':source['id'],
+              'source_url':local_url,
+              'registration_url':national_url,
+              'cost':'Free',
+              'public_access':'public',
+              'series':'Home Depot Kids Workshops',
+              'publish_candidate':True,
+              'verification_status':'official_recurring_schedule',
+              'notes':'Free in-store kids workshop. Home Depot states Kids Workshops are held from 9:00 AM to noon on the first Saturday of every month, while supplies last.',
+              'discovered_by':'scheduled_home_depot_kids_workshop'
+            })
+        if m==12:y,m=y+1,1
+        else:m+=1
+    return out
+
+
 def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
@@ -636,7 +688,8 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='selectmen_car_washes': got=events_from_selectmen_car_washes(src)
+                if method=='home_depot_kids_workshops': got=events_from_home_depot_kids_workshops(src)
+                elif method=='selectmen_car_washes': got=events_from_selectmen_car_washes(src)
                 elif method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
                 elif method=='community_submission_json': got=events_from_community_submission_feed(src)
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
@@ -1158,7 +1211,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','selectmen_car_washes'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','selectmen_car_washes','home_depot_kids_workshops'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
