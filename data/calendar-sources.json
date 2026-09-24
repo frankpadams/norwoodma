@@ -378,5 +378,48 @@
     "provider": "Circle of Hope",
     "kind": "organization_monitor",
     "possible_conflicts": true
+  },
+  {
+    "id": "norwood-youth-soccer",
+    "group": "possible_conflicts",
+    "name": "Norwood Youth Soccer",
+    "description": "Fall/spring travel and intramural schedules, tournaments, key dates and other youth soccer activity.",
+    "view_url": "https://norwoodsoccer.com/schedules",
+    "provider": "Norwood Youth Soccer",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-rec-facility-schedules",
+    "group": "possible_conflicts",
+    "name": "Norwood Recreation facility schedules",
+    "description": "Facility reservations and field schedules reveal substantial youth-sports activity and major facility use.",
+    "view_url": "https://norwoodma.myrec.com/info/facilities/default.aspx",
+    "provider": "Norwood Recreation Department",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-rec-special-events",
+    "group": "possible_conflicts",
+    "name": "Norwood Recreation special & annual events",
+    "description": "Significant one-time and annual Recreation events, seasonal celebrations, tournaments and other high-attendance programs; routine classes need not be individually surfaced.",
+    "view_url": "https://norwoodma.myrec.com/",
+    "provider": "Norwood Recreation Department",
+    "kind": "monitor_special_events",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-youth-sports-broad",
+    "group": "possible_conflicts",
+    "name": "Norwood youth sports — broad schedule discovery",
+    "description": "Discover schedules and significant dates for local baseball, softball, Babe Ruth, basketball, hockey, football, cheer, lacrosse, swimming and other organized youth sports.",
+    "view_url": "https://www.norwood.ma/sports-recreation.html",
+    "provider": "Norwood.ma source discovery",
+    "kind": "discovery_monitor",
+    "possible_conflicts": true
   }
 ]
