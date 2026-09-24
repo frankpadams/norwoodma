@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T01:11:24.105634-04:00",
+  "generated_at": "2026-09-24T01:19:31.445628-04:00",
   "offline": false,
   "events_published": 162,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 162,
-      "generated_at": "2026-09-24T01:11:24.098249-04:00"
+      "generated_at": "2026-09-24T01:19:31.438409-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 36,
-      "generated_at": "2026-09-24T01:11:24.099419-04:00"
+      "generated_at": "2026-09-24T01:19:31.439543-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 24,
-      "generated_at": "2026-09-24T01:11:24.100643-04:00"
+      "generated_at": "2026-09-24T01:19:31.440753-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 8,
-      "generated_at": "2026-09-24T01:11:24.101556-04:00"
+      "generated_at": "2026-09-24T01:19:31.441654-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-24T01:11:24.102332-04:00"
+      "generated_at": "2026-09-24T01:19:31.442479-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 12,
-      "generated_at": "2026-09-24T01:11:24.103383-04:00"
+      "generated_at": "2026-09-24T01:19:31.443406-04:00"
     }
   ],
   "event_sources": [
@@ -92,6 +92,20 @@
       "note": "method discovery_search requires discovery/manual adapter"
     },
     {
+      "source_id": "resource-cub-scouts-pack-42-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-cub-scouts-pack-49-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
       "source_id": "emerald-city-plant-shop",
       "ok": true,
       "method": "html_page",
@@ -114,10 +128,10 @@
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 4,
-      "note": ""
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "source_id": "grace-calendar",
@@ -137,6 +151,13 @@
       "source_id": "irish-brewing-events",
       "ok": true,
       "method": "html_hub",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-knights-of-columbus-norwood-council",
+      "ok": true,
+      "method": "html_page",
       "found": 0,
       "note": "page checked; no machine-readable Event/ICS found"
     },
@@ -172,6 +193,20 @@
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-neponset-valley-sunrise-rotary-club",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-norwood-american-legion-post-70",
+      "ok": true,
+      "method": "secondary_discovery",
       "found": 0,
       "note": "page checked; no machine-readable Event/ICS found"
     },
@@ -255,9 +290,9 @@
     {
       "source_id": "nps-pma",
       "ok": true,
-      "method": "discovery_search",
+      "method": "html_calendar",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "page checked; no machine-readable Event/ICS found"
     },
     {
       "source_id": "town-police-page",
@@ -428,6 +463,20 @@
       "note": "method social_mirror requires discovery/manual adapter"
     },
     {
+      "source_id": "resource-scouting-america-troop-42-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-scouting-america-troop-49-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
       "source_id": "fallout-shelter",
       "ok": true,
       "method": "html_list",
@@ -510,6 +559,13 @@
       "method": "home_depot_kids_workshops",
       "found": 0,
       "note": ""
+    },
+    {
+      "source_id": "norwood-girl-scouts-public-events",
+      "ok": true,
+      "method": "secondary_discovery",
+      "found": 0,
+      "note": "page checked; no machine-readable Event/ICS found"
     }
   ],
   "news_sources": [
@@ -538,9 +594,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -554,7 +611,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 64,
+      "found": 66,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -562,7 +619,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 64,
+      "found": 65,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -578,7 +635,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 19,
+      "found": 20,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -647,11 +704,11 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "MaxPreps": 5,
         "Norwood Parents Music Association": 1,
-        "MaxPreps": 4,
         "Town of Norwood": 9,
         "Realtor.com": 2,
-        "Patch": 5,
+        "Patch": 4,
         "hoodline.com": 2,
         "Wicked Local": 1,
         "USA Today": 1,
