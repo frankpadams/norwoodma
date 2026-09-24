@@ -113,7 +113,7 @@ function paidAdmissionIcon(e){return eventHasPaidAdmission(e)?'<span class="paid
 function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);return bits.join(' · ')||e.address||'Open source for details.';}
 function eventPriority(e){
  const text=[e.title,e.notes,e.venue,e.address,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
- if(/town common|norwood common|580 washington st/.test(text))return 0;
+ if(/farmers'? market|farmer'?s market|town-farmers-market|town common|norwood common|580 washington st/.test(text))return 0;
  if(e.category==='assistance'||/food pantry|food assistance|food distribution|free meal|community meal|soup kitchen|clothing giveaway|diaper distribution|resource fair/.test(text))return 1;
  const religious=/\b(church|parish|chapel|congregation|temple|synagogue|mosque|mandir|worship|mass|bible|prayer|faith|ministry|saint catherine|st\. catherine|first congregational|grace episcopal|united church)\b/.test(text);
  return religious?2:1;
@@ -134,9 +134,14 @@ function diversifySameDayEvents(list){
  const out=[];
  [...byDate.keys()].sort().forEach(d=>{
    const day=byDate.get(d);
+   const ordered=day.slice().sort(compareEventDisplay);
+   // Town Common events and the Farmers Market always lead their day.
+   const pinned=ordered.filter(e=>eventPriority(e)===0);
+   const remainder=ordered.filter(e=>eventPriority(e)!==0);
+   out.push(...pinned);
    const queues=new Map();
-   day.slice().sort(compareEventDisplay).forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
-   let last='';
+   remainder.forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
+   let last=pinned.length?eventSourceKey(pinned[pinned.length-1]):'';
    while(queues.size){
      const choices=[...queues.entries()].filter(([k])=>k!==last&&queues.size>1);
      const pool=choices.length?choices:[...queues.entries()];
