@@ -138,6 +138,33 @@ def public_candidate(title, description=''):
 
     return True
 
+
+def service_org_public_candidate(text):
+    """Keep public-facing service/scouting events; reject routine internal/member activity."""
+    t=clean_text(text).lower()
+    internal=[
+      'club meeting','lodge meeting','troop meeting','pack meeting','scout meeting',
+      'business meeting','board meeting','committee meeting','monthly meeting',
+      'member meeting','members only','member-only','private event','rehearsal'
+    ]
+    if any(x in t for x in internal): return False
+    public_signals=[
+      'fundraiser','raffle','meat raffle','bingo','blood drive','food drive','toy drive',
+      'coat drive','collection drive','car wash','garage sale','yard sale','tag sale',
+      'bake sale','cookie sale','cookie booth','popcorn sale','pancake breakfast',
+      'breakfast','dinner','dance','fair','festival','craft fair','open house',
+      'community event','public event','tournament','5k','road race','walkathon',
+      'benefit','scholarship','memorial day','veterans day','flag retirement',
+      'trunk or treat','santa','holiday party','community service'
+    ]
+    return any(x in t for x in public_signals)
+
+def source_allows_event(source, title, description=''):
+    if not public_candidate(title,description): return False
+    if source.get('filters',{}).get('public_facing_service_events_only'):
+        return service_org_public_candidate(f"{title} {description}")
+    return True
+
 def category_from(text):
     t=clean_text(text).lower()
     tests=[
@@ -187,7 +214,7 @@ def normalize_jsonld_event(obj, source):
     desc=clean_text(obj.get('description'))
     geo=f"{title} {desc} {venue} {address}"
     if source.get('filters',{}).get('require_norwood_relevance') and not local_enough(geo,source): return None
-    if not public_candidate(title,desc): return None
+    if not source_allows_event(source,title,desc): return None
     startp=date_parts(start); endp=date_parts(end) if end else {'date':startp['date'],'time':None}
     url=obj.get('url') or source.get('url')
     offers=obj.get('offers'); cost=None
@@ -220,7 +247,7 @@ def extract_html_event_cards(html, source):
         title=clean_text(heading.get_text(' ') if heading else (a.get_text(' ') if a else ''))
         if not title or len(title)>180: continue
         text=clean_text(card.get_text(' ')) if hasattr(card,'get_text') else title
-        if not public_candidate(title,text): continue
+        if not source_allows_event(source,title,text): continue
         if source.get('filters',{}).get('require_norwood_relevance') and not local_enough(text,source): continue
         sp=date_parts(st); url=urljoin(source.get('url',''),a.get('href')) if a else source.get('url')
         out.append({'id':event_id(title,sp['date'],source.get('organization') or ''),'title':title,'start':sp,'end':{'date':sp['date'],'time':None},'venue':source.get('organization') or source.get('name'),'address':None,'category':category_from(text),'source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':None,'publish_candidate':True,'verification_status':'auto_source_page','notes':None,'discovered_by':'scheduled_semantic_html'})
@@ -254,7 +281,7 @@ def events_from_ical(url,source):
         loc=clean_text(c.get('location')); desc=clean_text(c.get('description'))
         geo=f"{title} {loc} {desc}"
         if source.get('filters',{}).get('require_norwood_relevance') and not local_enough(geo,source): continue
-        if not public_candidate(title,desc): continue
+        if not source_allows_event(source,title,desc): continue
         sp=date_parts(start); ep=date_parts(end) if end else {'date':sp['date'],'time':None}
         # Preserve all-day semantics.
         if isinstance(start_raw,date) and not isinstance(start_raw,datetime): sp['time']=None
