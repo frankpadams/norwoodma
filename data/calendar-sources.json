@@ -292,5 +292,91 @@
     "provider": "Norwood Public Schools",
     "kind": "browse_only",
     "verified": true
+  },
+  {
+    "id": "norwood-rotary",
+    "group": "possible_conflicts",
+    "name": "Rotary Club of Norwood",
+    "description": "Club meetings, fundraisers, service projects and other scheduled Rotary activity that may affect local attendance or volunteers.",
+    "view_url": "https://www.norwoodrotary.org/events/calendar",
+    "provider": "Rotary Club of Norwood",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-elks-1124",
+    "group": "possible_conflicts",
+    "name": "Norwood Elks Lodge #1124",
+    "description": "Lodge calendar, regular lodge meetings and publicly posted Norwood Elks activities.",
+    "view_url": "https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124",
+    "provider": "Norwood Elks Lodge #1124",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "friends-norwood-center",
+    "group": "possible_conflicts",
+    "name": "Friends of Norwood Center",
+    "description": "Community events and recurring activities listed by Friends of Norwood Center.",
+    "view_url": "https://www.norwoodcenter.org/events/",
+    "provider": "Friends of Norwood Center",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-chamber",
+    "group": "possible_conflicts",
+    "name": "Norwood Chamber of Commerce",
+    "description": "Business and community events published on the Chamber calendar.",
+    "view_url": "https://business.norwoodchamberofcommerce.org/calendar",
+    "provider": "Norwood Chamber of Commerce",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-historical-society",
+    "group": "possible_conflicts",
+    "name": "Norwood Historical Society",
+    "description": "Historical Society events from its public events calendar.",
+    "feed_url": "https://norwoodhistoricalsociety.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+    "view_url": "https://norwoodhistoricalsociety.org/events/",
+    "provider": "Norwood Historical Society",
+    "kind": "external_live",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-local-town-pages-calendar",
+    "group": "possible_conflicts",
+    "name": "Norwood Local Town Pages community calendar",
+    "description": "Secondary discovery source for recurring club meetings, fundraisers and community activities; verify against primary sources when available.",
+    "view_url": "https://www.norwoodtownnews.com/",
+    "provider": "Local Town Pages",
+    "kind": "discovery_monitor",
+    "possible_conflicts": true
+  },
+  {
+    "id": "citizens-better-norwood-events",
+    "group": "possible_conflicts",
+    "name": "Citizens for a Better Norwood events",
+    "description": "Publicly posted local meetings, fundraisers and community activities.",
+    "view_url": "https://citizensforabetternorwoodma.com/events",
+    "provider": "Citizens for a Better Norwood",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true
+  },
+  {
+    "id": "circle-of-hope",
+    "group": "possible_conflicts",
+    "name": "Circle of Hope",
+    "description": "Monitor publicly posted Circle of Hope events and fundraisers for scheduling conflicts.",
+    "view_url": "https://www.norwoodcoh.org/",
+    "provider": "Circle of Hope",
+    "kind": "organization_monitor",
+    "possible_conflicts": true
   }
 ]
