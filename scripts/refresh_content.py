@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse, json, re, sys, hashlib, subprocess, shutil
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
+from io import BytesIO
 from urllib.parse import urlparse, urljoin, quote
 from zoneinfo import ZoneInfo
 
@@ -37,6 +38,10 @@ try:
     from icalendar import Calendar
 except Exception:
     Calendar=None
+try:
+    from pypdf import PdfReader
+except Exception:
+    PdfReader=None
 
 
 def read_json(name, default):
@@ -482,6 +487,147 @@ def events_from_ncm_school_broadcasts(source):
     return dedupe_events(out)
 
 
+
+def _urls_in_calendar_row(row):
+    """Collect public links embedded anywhere in a Revize calendar row."""
+    urls=[]
+    def walk(v):
+        if isinstance(v,dict):
+            for x in v.values(): walk(x)
+        elif isinstance(v,list):
+            for x in v: walk(x)
+        elif isinstance(v,str):
+            text=v.replace('\\/','/')
+            if BeautifulSoup and '<' in text and '>' in text:
+                try:
+                    for a in BeautifulSoup(text,'html.parser').find_all('a',href=True):
+                        urls.append(urljoin('https://www.norwoodma.gov/',a['href']))
+                except Exception:
+                    pass
+            for m in re.findall(r'https?://[^\s"<>\']+|(?:/[^\\s"<>\']+\.pdf(?:\?[^\\s"<>\']*)?)',text,re.I):
+                urls.append(urljoin('https://www.norwoodma.gov/',m.rstrip(').,;')))
+    walk(row)
+    return list(dict.fromkeys(urls))
+
+
+def _pdf_text(url):
+    if not PdfReader or '.pdf' not in url.lower(): return ''
+    try:
+        data=request(url,timeout=25).content
+        reader=PdfReader(BytesIO(data))
+        return '\n'.join((p.extract_text() or '') for p in reader.pages[:80])
+    except Exception:
+        return ''
+
+
+def _selectmen_document_links(row):
+    """Find agenda/minutes/packet PDFs attached to a Board of Selectmen calendar event."""
+    links=_urls_in_calendar_row(row)
+    # A Revize event may link to a detail page that contains the actual attachments.
+    for u in list(links):
+        if '.pdf' in u.lower(): continue
+        try:
+            html=request(u,timeout=18).text
+            if BeautifulSoup:
+                soup=BeautifulSoup(html,'html.parser')
+                for a in soup.find_all('a',href=True):
+                    href=urljoin(u,a['href'])
+                    label=clean_text(a.get_text(' '))
+                    if '.pdf' in href.lower() and re.search(r'\b(agenda|packet|minutes|consent)\b',f'{label} {href}',re.I):
+                        links.append(href)
+        except Exception:
+            pass
+    return list(dict.fromkeys(links))
+
+
+def _car_wash_items_from_text(text, source_url, meeting_date):
+    """Extract municipal-lot fundraising car washes from an official BOS document."""
+    if not text or not re.search(r'\bcar\s*wash\b',text,re.I) or not re.search(r'\bmunicipal\s+lot\b',text,re.I):
+        return []
+    flat=re.sub(r'\s+',' ',text)
+    doc_hint=source_url.lower()
+    is_minutes=bool(re.search(r'minute',doc_hint))
+    out=[]
+    # Headings used by the Board have varied between "Car Wash - X" and
+    # "Car Wash Request: X". Limit the organization capture before request prose.
+    pat=re.compile(r'\bCar\s*Wash(?:\s*Request)?\s*[:\-]\s*(?P<org>.{2,100}?)\s+(?=(?:Submitting|Requesting|Request\s+from|For\s+approval|Approval|Consent|$))',re.I)
+    for m in pat.finditer(flat):
+        org=clean_text(m.group('org')).strip(' -:;,.')
+        if not org: continue
+        window=flat[m.start():m.start()+700]
+        if not re.search(r'\bmunicipal\s+lot\b',window,re.I): continue
+        dm=re.search(r'\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)?\s*,?\s*(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?\s*,?\s*(20\d{2})\b',window,re.I)
+        if not dm: continue
+        try:
+            d=datetime.strptime(f"{dm.group(1)} {dm.group(2)} {dm.group(3)}","%B %d %Y").date()
+        except Exception:
+            continue
+        if d < now_local().date()-timedelta(days=1): continue
+        tm=re.search(r'\bfrom\s+(\d{1,2}(?::\d{2})?\s*[AP]\.?M\.?)\s+(?:until|to|-)\s+(\d{1,2}(?::\d{2})?\s*[AP]\.?M\.?)',window,re.I)
+        def norm_time(v):
+            if not v:return None
+            v=v.replace('.','').upper().replace(' ','')
+            for fmt in ('%I:%M%p','%I%p'):
+                try:return datetime.strptime(v,fmt).strftime('%H:%M')
+                except Exception:pass
+            return None
+        denied=bool(re.search(r'\b(denied|declined|withdrawn|tabled|postponed|not approved)\b',window,re.I))
+        approved=bool(re.search(r'\b(approved|approve|voted|motion\s+(?:carried|passed)|consent\s+agenda\s+(?:approved|passed))\b',window,re.I))
+        confirmed=(is_minutes or approved) and not denied
+        title=f"Municipal Lot Car Wash Fundraiser: {org}" + ("" if confirmed else " - Tentative")
+        out.append({
+          'id':event_id(f"Municipal Lot Car Wash Fundraiser: {org}",d.isoformat(),'Norwood Municipal Lot'),
+          'title':title,
+          'start':{'date':d.isoformat(),'time':norm_time(tm.group(1)) if tm else None},
+          'end':{'date':d.isoformat(),'time':norm_time(tm.group(2)) if tm else None},
+          'venue':'Norwood Municipal Lot',
+          'address':'Norwood, MA 02062',
+          'category':'fundraiser',
+          'source_id':'town-selectmen-car-washes',
+          'source_url':source_url,
+          'cost':None,
+          'public_access':'public',
+          'series':'Municipal Lot Car Wash Fundraisers',
+          'publish_candidate':True,
+          'verification_status':'approved_minutes' if confirmed else 'tentative_agenda',
+          'notes':'Approved by the Board of Selectmen.' if confirmed else 'Tentative; listed on a Board of Selectmen agenda and subject to Board approval.',
+          'discovered_by':'selectmen_agenda_minutes_monitor',
+          '_meeting_date':meeting_date.isoformat() if meeting_date else None,
+          '_confirmed':confirmed
+        })
+    return out
+
+
+def events_from_selectmen_car_washes(source):
+    """Use BOS agendas for early notice and minutes as the later approval check."""
+    candidates={}
+    today=now_local().date()
+    for row in _town_calendar_data():
+        title=clean_text(row.get('title') or row.get('summary') or row.get('name'))
+        if not re.search(r'\b(Board\s+of\s+Selectmen|Selectmen)\b',title,re.I): continue
+        raw_start=row.get('start') or row.get('start_date') or row.get('date') or row.get('event_start')
+        try:
+            md=parse_dt(raw_start).astimezone(TZ).date()
+        except Exception:
+            md=None
+        # Look back far enough for recently posted minutes while also scanning
+        # upcoming meetings whose agendas may contain future fundraiser dates.
+        if md and (md < today-timedelta(days=120) or md > today+timedelta(days=185)): continue
+        for u in _selectmen_document_links(row):
+            if '.pdf' not in u.lower(): continue
+            doc=_pdf_text(u)
+            for e in _car_wash_items_from_text(doc,u,md):
+                key=e['id']
+                old=candidates.get(key)
+                # Confirmed minutes always replace an earlier tentative agenda item.
+                if not old or (e.get('_confirmed') and not old.get('_confirmed')):
+                    candidates[key]=e
+    out=[]
+    for e in candidates.values():
+        e.pop('_meeting_date',None);e.pop('_confirmed',None);out.append(e)
+    return sorted(out,key=lambda e:(e['start']['date'],e['start'].get('time') or '99:99',e['title']))
+
+
 def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
@@ -490,7 +636,8 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
+                if method=='selectmen_car_washes': got=events_from_selectmen_car_washes(src)
+                elif method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
                 elif method=='community_submission_json': got=events_from_community_submission_feed(src)
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
                 elif method=='tribe_events': got=events_from_tribe(src)
@@ -1011,7 +1158,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','selectmen_car_washes'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
