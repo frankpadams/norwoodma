@@ -631,6 +631,7 @@ window.NORWOOD_BUSINESSES=[
 ,["After Hours Notary","Notary Services","7 Hoyle St","508-733-8989",""]
 ,["Ghannam Notary Services","Notary Services","100 Hampden Dr","508-333-6192",""]
 
+,["Emerald City Plant Shop","Plants, Gifts & Workshops","702 Washington Street","","https://www.emeraldcityplantshop.com/"]
 ,["School of Rock Norwood/Walpole","Music Schools & Lessons","1250 Washington St","781-352-2336","https://www.schoolofrock.com/locations/norwood"]
 ,["Norwood Music Studios","Music Schools & Lessons","","","https://norwoodmusicstudios.com/"]
 ,["Merry Melody Music Academy","Music Schools & Lessons","","781-929-5192","https://www.merrymelodymusicacademy.com/"]
