@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T07:57:31.393561-04:00",
+  "generated_at": "2026-09-24T09:49:18.716659-04:00",
   "offline": false,
   "events_published": 182,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 182,
-      "generated_at": "2026-09-24T07:57:31.385449-04:00"
+      "generated_at": "2026-09-24T09:49:18.709742-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 37,
-      "generated_at": "2026-09-24T07:57:31.386699-04:00"
+      "generated_at": "2026-09-24T09:49:18.710828-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 25,
-      "generated_at": "2026-09-24T07:57:31.388115-04:00"
+      "generated_at": "2026-09-24T09:49:18.711992-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 17,
-      "generated_at": "2026-09-24T07:57:31.389253-04:00"
+      "generated_at": "2026-09-24T09:49:18.712951-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-24T07:57:31.390157-04:00"
+      "generated_at": "2026-09-24T09:49:18.713706-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 13,
-      "generated_at": "2026-09-24T07:57:31.391241-04:00"
+      "generated_at": "2026-09-24T09:49:18.714630-04:00"
     }
   ],
   "event_sources": [
@@ -580,6 +580,13 @@
       "method": "html_list",
       "found": 0,
       "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "league-women-voters-norwood",
+      "ok": true,
+      "method": "discovery_search",
+      "found": 0,
+      "note": "method discovery_search requires discovery/manual adapter"
     }
   ],
   "news_sources": [
@@ -624,7 +631,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 60,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -632,7 +639,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 60,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -732,11 +739,11 @@
         "Norwood Public Schools": 1,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
+        "ESPN": 1,
         "Norwood Town News": 11,
         "NBC Boston": 1,
         "John Guilfoil Public Relations": 1,
-        "WCVB": 1,
-        "dailyvoice.com": 1
+        "WCVB": 1
       },
       "note": null
     }
