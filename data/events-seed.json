@@ -1,5 +1,28 @@
 [
   {
+    "id": "2026-08-09-emerald-city-sip-soil",
+    "title": "Sip & Soil",
+    "start": {
+      "date": "2026-08-09",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-08-09",
+      "time": "17:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "$40",
+    "public_access": "ticketed_public",
+    "series": "Sip & Soil",
+    "publish_candidate": false,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Past event retained as source-history evidence: participants chose a Paint N’ Pot, Terrarium, or Succulent Garden activity; light refreshments and free parking advertised."
+  },
+  {
     "id": "2026-09-18-ballroom-dance",
     "title": "Monthly Ballroom Dance",
     "start": {
@@ -437,6 +460,29 @@
     "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
   },
   {
+    "id": "2026-09-27-emerald-city-plant-bingo",
+    "title": "Plant Bingo",
+    "start": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "games_social",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Plant Bingo",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Public Plant Bingo event at Emerald City Plant Shop. Date confirmed directly by Norwood.ma editor; exact time not yet confirmed."
+  },
+  {
     "id": "2026-09-29-farmers-market",
     "title": "Norwood Farmers Market",
     "start": {
@@ -757,6 +803,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-08-emerald-city-silent-book-club",
+    "title": "Silent Book Club",
+    "start": {
+      "date": "2026-10-08",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "19:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Emerald City Silent Book Club — Second Thursday",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading."
   },
   {
     "id": "2026-10-09-claudettes",
@@ -1150,6 +1219,29 @@
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering."
   },
   {
+    "id": "2026-11-01-emerald-city-greenhaus-meditation",
+    "title": "GreenHaus Meditation",
+    "start": {
+      "date": "2026-11-01",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-11-01",
+      "time": "17:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "wellness",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "Free; $10 suggested donation",
+    "public_access": "public",
+    "series": "GreenHaus Meditation",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Meditation in Emerald City's plant-filled space with singing bowls and music translated from plant frequencies. Bring a mat, journal, friend, or use provided seating."
+  },
+  {
     "id": "2026-11-05-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -1171,6 +1263,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-11-12-emerald-city-silent-book-club",
+    "title": "Silent Book Club",
+    "start": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "19:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Emerald City Silent Book Club — Second Thursday",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading."
   },
   {
     "id": "2026-11-14-magic-zeppelin",
@@ -1311,6 +1426,29 @@
     "notes": "Pancake breakfast, crafts and photos with Santa. Current 2026 Norwood Recreation Fall/Winter guide confirms the event."
   },
   {
+    "id": "2026-12-10-emerald-city-silent-book-club",
+    "title": "Silent Book Club",
+    "start": {
+      "date": "2026-12-10",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-12-10",
+      "time": "19:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Emerald City Silent Book Club — Second Thursday",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading."
+  },
+  {
     "id": "2026-12-20-celtic-seisun",
     "title": "Celtic Traditional Open Seisun",
     "start": {
@@ -1332,6 +1470,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-12-20-emerald-city-flow-restore",
+    "title": "Winter Solstice Flow & Restore",
+    "start": {
+      "date": "2026-12-20",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-12-20",
+      "time": "21:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "wellness",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Winter-solstice somatic yoga class led by Squat + Reset instructors at Emerald City, followed by an hour-long water journey at Bodhi Spa Norwood. Bring a mat, water bottle, bathing suit and comfortable clothing; limited spots."
   },
   {
     "id": "2027-02-05-special-someone-dance",
