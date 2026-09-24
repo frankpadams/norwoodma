@@ -421,5 +421,49 @@
     "provider": "Norwood.ma source discovery",
     "kind": "discovery_monitor",
     "possible_conflicts": true
+  },
+  {
+    "id": "boston-red-sox-schedule",
+    "group": "possible_conflicts",
+    "name": "Boston Red Sox schedule",
+    "description": "Red Sox games can materially affect local attendance and Boston-area traffic; ingest regular-season and postseason games when scheduled.",
+    "view_url": "https://www.mlb.com/redsox/schedule",
+    "provider": "Boston Red Sox / MLB",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "new-england-patriots-schedule",
+    "group": "possible_conflicts",
+    "name": "New England Patriots schedule",
+    "description": "Patriots games, especially home games at Gillette Stadium, are significant regional scheduling and traffic conflicts.",
+    "view_url": "https://www.patriots.com/schedule/",
+    "provider": "New England Patriots",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "new-england-revolution-schedule",
+    "group": "possible_conflicts",
+    "name": "New England Revolution schedule",
+    "description": "Revolution games, especially home matches at Gillette Stadium, are regional scheduling conflicts.",
+    "view_url": "https://www.revolutionsoccer.net/schedule/",
+    "provider": "New England Revolution",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "gillette-stadium-events",
+    "group": "possible_conflicts",
+    "name": "Gillette Stadium major events",
+    "description": "Concerts, major sporting events, Monster Jam, Banana Ball and other large Gillette Stadium events that can affect attendance and Route 1 traffic.",
+    "view_url": "https://www.gillettestadium.com/upcoming-events/",
+    "provider": "Gillette Stadium",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true
   }
 ]
