@@ -735,3 +735,10 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 
 /* Homepage events footer link */
 .home-events-all{display:block;text-align:right}
+
+/* Expanded event-page action buttons */
+.events-action-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:stretch}
+.events-action-card{display:flex!important;flex-direction:column;align-items:flex-start;justify-content:center;gap:.25rem;min-height:82px;padding:.8rem 1rem;text-align:left;white-space:normal}
+.events-action-card strong{font-size:1rem;line-height:1.2}
+.events-action-card span{font-size:.82rem;line-height:1.3;font-weight:500;opacity:.88}
+@media(max-width:620px){.events-action-cards{grid-template-columns:1fr}.events-action-card{min-height:72px}}
