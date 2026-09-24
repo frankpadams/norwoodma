@@ -144,6 +144,30 @@
     "discovered_by": "scheduled_jsonld"
   },
   {
+    "id": "2026-09-24-patch-am-5m-lottery-prize-sold-in-norwood-2628694",
+    "title": "🌱 Patch AM: $5M Lottery Prize Sold In Norwood",
+    "start": {
+      "date": "2026-09-24",
+      "time": "01:24"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Patch",
+    "address": null,
+    "category": "market",
+    "source_id": "norwood-patch-fundraisers",
+    "source_url": "https://patch.com/massachusetts/norwood/patch-am-5m-lottery-prize-sold-norwood-nodx-20260924",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html"
+  },
+  {
     "id": "2026-09-24-leadership-on-tap",
     "title": "Leadership on Tap",
     "start": {
@@ -496,6 +520,30 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
+  },
+  {
+    "id": "2026-09-27-emerald-city-plant-bingo",
+    "title": "Plant Bingo",
+    "start": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "games_social",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Plant Bingo",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Public Plant Bingo event at Emerald City Plant Shop. Date confirmed directly by Norwood.ma editor; exact time not yet confirmed.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
     "id": "2026-09-28-cozy-puzzle-night-6bdb279",
@@ -1625,6 +1673,30 @@
     "notes": null
   },
   {
+    "id": "2026-10-08-emerald-city-silent-book-club",
+    "title": "Silent Book Club",
+    "start": {
+      "date": "2026-10-08",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "19:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Emerald City Silent Book Club — Second Thursday",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-10-09-claudettes",
     "title": "The Claudettes",
     "start": {
@@ -1762,6 +1834,30 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-14-emerald-city-plant-parenthood-101",
+    "title": "Plant Parenthood 101",
+    "start": {
+      "date": "2026-10-14",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "19:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "$15",
+    "public_access": "ticketed_public",
+    "series": "Plant Parenthood 101 — Second Wednesday",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Monthly plant-care class covering lighting, watering and repotting, with Q&A and a hands-on repotting demo. Participants receive 10% off in-store purchases, including the Tea Bar.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
     "id": "2026-10-14-irish-brewing-boston-trivia-night-every-wedne-b9341ee",
@@ -2357,6 +2453,30 @@
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering."
   },
   {
+    "id": "2026-11-01-emerald-city-greenhaus-meditation",
+    "title": "GreenHaus Meditation",
+    "start": {
+      "date": "2026-11-01",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-11-01",
+      "time": "17:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "wellness",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "Free; $10 suggested donation",
+    "public_access": "public",
+    "series": "GreenHaus Meditation",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Meditation in Emerald City's plant-filled space with singing bowls and music translated from plant frequencies. Bring a mat, journal, friend, or use provided seating.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-11-02-bible-study-e0b0d02",
     "title": "Bible Study",
     "start": {
@@ -2575,6 +2695,30 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2026-11-11-emerald-city-plant-parenthood-101",
+    "title": "Plant Parenthood 101",
+    "start": {
+      "date": "2026-11-11",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "$15",
+    "public_access": "ticketed_public",
+    "series": "Plant Parenthood 101 — Second Wednesday",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Monthly plant-care class covering lighting, watering and repotting, with Q&A and a hands-on repotting demo. Participants receive 10% off in-store purchases, including the Tea Bar.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-11-11-irish-brewing-boston-trivia-night-every-wedne-d8b3dcf",
     "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
     "start": {
@@ -2599,6 +2743,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-12-emerald-city-silent-book-club",
+    "title": "Silent Book Club",
+    "start": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "19:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Emerald City Silent Book Club — Second Thursday",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-11-14-norwood-food-pantry-food-assistance-15e1dab",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -2621,6 +2789,29 @@
     "verification_status": "official_schedule",
     "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
     "discovered_by": "scheduled_recurring_service"
+  },
+  {
+    "id": "2026-11-14-worcester-deaf-club-arts-crafts-bazaar",
+    "title": "Worcester Deaf Club 14th Annual Arts & Crafts Bazaar",
+    "start": {
+      "date": "2026-11-14",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "15:00"
+    },
+    "venue": "Schwab Athletic Center — The Learning Center for the Deaf",
+    "address": "848 Central St, Framingham, MA 01701",
+    "category": "craft_fair",
+    "source_id": "worcester-deaf-club",
+    "source_url": "https://massdeaf.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Worcester Deaf Club Annual Arts & Crafts Bazaar",
+    "publish_candidate": true,
+    "verification_status": "user_source_verified_2026-09-24",
+    "notes": "14th Annual Arts & Crafts Bazaar. Vendor tables are $30 for an 8-foot table; vendor registration deadline Oct. 30. Out-of-town event in Framingham at The Learning Center for the Deaf; show town indicator."
   },
   {
     "id": "2026-11-14-magic-zeppelin",
@@ -3055,6 +3246,30 @@
     "notes": "Pancake breakfast, crafts and photos with Santa. Current 2026 Norwood Recreation Fall/Winter guide confirms the event."
   },
   {
+    "id": "2026-12-09-emerald-city-plant-parenthood-101",
+    "title": "Plant Parenthood 101",
+    "start": {
+      "date": "2026-12-09",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-12-09",
+      "time": "19:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "$15",
+    "public_access": "ticketed_public",
+    "series": "Plant Parenthood 101 — Second Wednesday",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Monthly plant-care class covering lighting, watering and repotting, with Q&A and a hands-on repotting demo. Participants receive 10% off in-store purchases, including the Tea Bar.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-12-09-conservation-commission-meeting-3804d15",
     "title": "Conservation Commission Meeting",
     "start": {
@@ -3102,6 +3317,30 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-12-10-emerald-city-silent-book-club",
+    "title": "Silent Book Club",
+    "start": {
+      "date": "2026-12-10",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-12-10",
+      "time": "19:30"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Emerald City Silent Book Club — Second Thursday",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
     "id": "2026-12-10-finance-commission-meeting-23a5518",
@@ -3274,6 +3513,30 @@
     "notes": null
   },
   {
+    "id": "2026-12-20-emerald-city-flow-restore",
+    "title": "Winter Solstice Flow & Restore",
+    "start": {
+      "date": "2026-12-20",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-12-20",
+      "time": "21:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "wellness",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-24",
+    "notes": "Winter-solstice somatic yoga class led by Squat + Reset instructors at Emerald City, followed by an hour-long water journey at Bodhi Spa Norwood. Bring a mat, water bottle, bathing suit and comfortable clothing; limited spots.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-12-23-irish-brewing-boston-trivia-night-every-wedne-b1ae0bc",
     "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
     "start": {
@@ -3369,6 +3632,30 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-01-13-emerald-city-plant-parenthood-101",
+    "title": "Plant Parenthood 101",
+    "start": {
+      "date": "2027-01-13",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-01-13",
+      "time": "19:00"
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": "$15",
+    "public_access": "ticketed_public",
+    "series": "Plant Parenthood 101 — Second Wednesday",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Monthly plant-care class covering lighting, watering and repotting, with Q&A and a hands-on repotting demo. Participants receive 10% off in-store purchases, including the Tea Bar.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
     "id": "2027-01-13-school-committee-meeting-60af143",
