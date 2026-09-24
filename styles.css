@@ -753,3 +753,10 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
  .contraption-actions{margin-top:12px}
  .contraption-actions .button{min-height:46px;padding:.55rem .85rem}
 }
+
+/* Keep mobile date controls comfortably narrow instead of full-card width */
+@media(max-width:680px){
+ .contraption-date-row{justify-items:start}
+ .contraption-date-row label{width:min(100%,320px)}
+ .contraption-date-row input{width:100%}
+}
