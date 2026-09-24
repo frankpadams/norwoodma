@@ -7861,5 +7861,39 @@
       "basis": "Wicked Local archive includes the Norwood Transcript & Bulletin collection; useful mainly for historical and occasional fundraiser discovery rather than dependable current event ingestion."
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source."
+  },
+  {
+    "id": "league-women-voters-norwood",
+    "name": "League of Women Voters of Norwood — Public Events",
+    "organization": "League of Women Voters of Norwood",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://my.lwv.org/massachusetts/norwood",
+    "domain": "my.lwv.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_civic_events_only": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Official local League site reviewed; publishes Candidates Night, voter education, registration and public civic forums."
+    },
+    "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing."
   }
 ]
