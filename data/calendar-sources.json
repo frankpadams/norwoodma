@@ -465,5 +465,27 @@
     "kind": "monitor_calendar",
     "possible_conflicts": true,
     "verified": true
+  },
+  {
+    "id": "boston-celtics-schedule",
+    "group": "possible_conflicts",
+    "name": "Boston Celtics schedule",
+    "description": "Celtics games are potential attendance conflicts; preserve home or away status and Eastern Time.",
+    "view_url": "https://www.nba.com/celtics/schedule",
+    "provider": "Boston Celtics / NBA",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "boston-bruins-schedule",
+    "group": "possible_conflicts",
+    "name": "Boston Bruins schedule",
+    "description": "Bruins games are potential attendance conflicts; preserve home or away status and Eastern Time.",
+    "view_url": "https://www.nhl.com/bruins/schedule",
+    "provider": "Boston Bruins / NHL",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
   }
 ]
