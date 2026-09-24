@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-24",
   "purpose": "Source registry and ingestion rules for Norwood.ma local events/news/community data.",
   "whats_happening_include": [
     "Public community traditions and celebrations",
@@ -58,5 +58,13 @@
     "local media",
     "community aggregator",
     "social/discovery platform"
-  ]
+  ],
+  "possible_conflicts": {
+    "purpose": "High-recall planning dataset, broader than What's Happening.",
+    "inclusion_rule": "Retain any legitimate publicly discoverable Norwood-connected event that an event planner may want to consider, including meetings or activities not normally open to the general public.",
+    "filtering_rule": "Do not filter merely because an event is routine, small, registration-based, organization-specific, school-family-specific, or outside Norwood when it involves a Norwood group or audience.",
+    "access_rule": "Do not infer labels such as members-only or private. Preserve explicit access information from the source only when useful.",
+    "sources_rule": "Monitor as many reliable Norwood-connected calendars and public schedules as practical, including schools/PTOs, youth sports, civic groups, houses of worship, clubs, arts groups, town departments, library, recreation, senior center and nonprofits.",
+    "relationship_to_main_calendar": "Possible Conflicts includes all qualifying public calendar events plus supplemental conflict-only records; main-calendar eligibility remains independently curated."
+  }
 }
