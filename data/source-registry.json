@@ -7647,5 +7647,41 @@
       "basis": "Official Board of Selectmen agendas list municipal-lot car wash requests; minutes/official meeting records are used to confirm approval."
     },
     "notes": "Publish agenda-listed municipal-lot car wash fundraisers as 'Municipal Lot Car Wash Fundraiser: [group] - Tentative'. When official minutes/records confirm approval, remove ' - Tentative'. Suppress denied, withdrawn, tabled, postponed, or not-approved requests."
+  },
+  {
+    "id": "home-depot-norwood-kids-workshops",
+    "name": "The Home Depot Norwood — Kids Workshops",
+    "organization": "The Home Depot — Norwood #2681",
+    "source_class": "official_store_event_schedule",
+    "authority": "business",
+    "coverage": "Norwood, MA",
+    "url": "https://www.homedepot.com/l/Norwood/MA/Norwood/02062/2681",
+    "domain": "homedepot.com",
+    "produces": [
+      "events",
+      "family_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "family_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "home_depot_kids_workshops",
+      "automation": "live",
+      "national_url": "https://www.homedepot.com/c/kids-workshop"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Official Norwood Home Depot store page confirms its Kids Workshop and official Home Depot Kids Workshop page states free in-store workshops run 9 AM–noon on the first Saturday of every month."
+    },
+    "notes": "Publish a short rolling schedule of Norwood store Kids Workshops only while both the national official recurring schedule and the Norwood #2681 store page continue to confirm the program."
   }
 ]
