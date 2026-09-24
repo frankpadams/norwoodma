@@ -5335,11 +5335,13 @@
     "domain": "norwoodtownnews.com",
     "produces": [
       "news",
-      "events"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
       "news",
-      "events"
+      "events",
+      "fundraisers"
     ],
     "active_monitor": true,
     "monitor_priority": 2,
@@ -5357,7 +5359,7 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Useful monthly calendar and community stories; dedupe against primary calendars."
+    "notes": "High-value local monthly calendar/community-news source for public events and organization fundraisers. Use as discovery and cross-check against primary organizer sources when available; exclude private/member-only activities."
   },
   {
     "id": "resource-norwood-track-club",
@@ -6904,10 +6906,12 @@
     "url": "https://www.norwoodrecord.com/events",
     "domain": "norwoodrecord.com",
     "produces": [
-      "events"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "events"
+      "events",
+      "fundraisers"
     ],
     "active_monitor": true,
     "monitor_priority": 1,
@@ -6925,7 +6929,7 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "High-value curated local calendar; verify details against primary source when available."
+    "notes": "High-value curated local calendar and fundraiser-discovery source; verify details against primary source when available and exclude private/member-only activities."
   },
   {
     "id": "norwood-record-news",
@@ -7783,5 +7787,76 @@
       "basis": "Official organization website confirms cultural programming and community activities."
     },
     "notes": "Publish only events explicitly open to the public, such as public cultural celebrations, performances, festivals, dinners, educational programs, and community events. Exclude member meetings, members-only dinners/socials, internal club functions, and invite-only activities."
+  },
+  {
+    "id": "norwood-patch-fundraisers",
+    "name": "Norwood Patch — Community Events & Fundraisers",
+    "organization": "Patch",
+    "source_class": "local_news",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://patch.com/massachusetts/norwood",
+    "domain": "patch.com",
+    "produces": [
+      "news",
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_list",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Current Norwood Patch pages regularly surface public calendar events and community fundraiser announcements, including Scout and nonprofit fundraisers."
+    },
+    "notes": "Monitor Norwood Patch local news, Community Corner/Neighbor News and calendar mentions for upcoming public fundraisers. Prefer the organizer's own event page as the final link when one is available."
+  },
+  {
+    "id": "wicked-local-norwood-archive",
+    "name": "Wicked Local / Norwood Transcript & Bulletin Archive",
+    "organization": "Wicked Local",
+    "source_class": "local_news_archive",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://wickedlocal.newsbank.com/search",
+    "domain": "wickedlocal.newsbank.com",
+    "produces": [
+      "news",
+      "fundraiser_discovery"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "discovery_search",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Wicked Local archive includes the Norwood Transcript & Bulletin collection; useful mainly for historical and occasional fundraiser discovery rather than dependable current event ingestion."
+    },
+    "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source."
   }
 ]
