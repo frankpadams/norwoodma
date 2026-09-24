@@ -1885,6 +1885,30 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2026-10-16-adult-skating-seminar-with-sos-led-by-founder-181395d",
+    "title": "Adult Skating Seminar with SOS™ led by founder Mimi Wacholder",
+    "start": {
+      "date": "2026-10-16",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-17",
+      "time": "23:59"
+    },
+    "venue": "The Skating Club of Boston",
+    "address": null,
+    "category": "sports",
+    "source_id": "skating-club-boston-events",
+    "source_url": "https://scboston.org/event/adult-skating-seminar-with-sos-led-by-founder-mimi-wacholder/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Please contact the ACAC at acac@scboston.org .",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-17-norwood-food-pantry-food-assistance-34f5178",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -1907,6 +1931,30 @@
     "verification_status": "official_schedule",
     "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
     "discovered_by": "scheduled_recurring_service"
+  },
+  {
+    "id": "2026-10-17-jac-halloween-party-afda6e8",
+    "title": "JAC Halloween Party",
+    "start": {
+      "date": "2026-10-17",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-17",
+      "time": "20:00"
+    },
+    "venue": "The Skating Club of Boston",
+    "address": null,
+    "category": "arts",
+    "source_id": "skating-club-boston-events",
+    "source_url": "https://scboston.org/event/jac-halloween-party-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "More information coming soon.",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-17-bow-thayer",
