@@ -7612,5 +7612,40 @@
       "basis": "Norwood Community Media schedules page includes a Schools & Sports schedule and Live Broadcasts section; school broadcast page provides the live player."
     },
     "notes": "Publish NHS/high-school live broadcasts as calendar/events with a Watch/View link. Never use Schools & Sports broadcasts to trigger the sitewide LIVE NOW alert."
+  },
+  {
+    "id": "town-selectmen-car-washes",
+    "name": "Town of Norwood — Board of Selectmen Car Wash Requests",
+    "organization": "Town of Norwood Board of Selectmen",
+    "source_class": "official_agenda_minutes",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/calendar.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "selectmen_car_washes",
+      "automation": "live"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Official Board of Selectmen agendas list municipal-lot car wash requests; minutes/official meeting records are used to confirm approval."
+    },
+    "notes": "Publish agenda-listed municipal-lot car wash fundraisers as 'Municipal Lot Car Wash Fundraiser: [group] - Tentative'. When official minutes/records confirm approval, remove ' - Tentative'. Suppress denied, withdrawn, tabled, postponed, or not-approved requests."
   }
 ]
