@@ -25,7 +25,8 @@
       "road races",
       "community events"
     ],
-    "main_calendar_independent": true
+    "main_calendar_independent": true,
+    "recurring_schedule_note": "Recurring/season-long sports records may represent a known activity window when individual game dates are not exposed. Results should identify this uncertainty rather than imply every date/time is a confirmed game."
   },
   "events": [
     {
@@ -180,6 +181,79 @@
       "source_url": "https://www.norwood.k12.ma.us/about/calendar/monthly/2026/09",
       "main_calendar_eligible": false,
       "verification_status": "verified"
+    },
+    {
+      "id": "nys-fall-2026-season",
+      "title": "Norwood Youth Soccer — Fall 2026 Season",
+      "start": "2026-09-11",
+      "end": "2026-11-20",
+      "all_day": true,
+      "organization": "Norwood Youth Soccer",
+      "category": "youth_sports",
+      "location": "Multiple Norwood fields",
+      "source_id": "norwood-youth-soccer",
+      "source_url": "https://norwoodsoccer.com/registration",
+      "main_calendar_eligible": false,
+      "verification_status": "verified",
+      "notes": "Approximately 10-week fall season. Travel practices begin the week of Aug. 31; games begin around Sept. 11. Intramural activity includes Friday evening and Saturday morning games."
+    },
+    {
+      "id": "nys-fall-2026-intramural-fridays",
+      "title": "Norwood Youth Soccer — Intramural Friday Games",
+      "start": "2026-09-11T18:00:00",
+      "end": "2026-11-13T20:00:00",
+      "organization": "Norwood Youth Soccer",
+      "category": "youth_sports",
+      "location": "Coakley Middle School fields",
+      "source_id": "norwood-youth-soccer",
+      "source_url": "https://norwoodsoccer.com/registration",
+      "main_calendar_eligible": false,
+      "verification_status": "verified",
+      "notes": "Grades 1–2 generally play Fridays at 6 or 7 PM during the approximately 10-week fall season; individual dates may change."
+    },
+    {
+      "id": "nys-fall-2026-prekk-saturdays",
+      "title": "Norwood Youth Soccer — Pre-K/K Saturday Sessions",
+      "start": "2026-09-12",
+      "end": "2026-11-14",
+      "all_day": true,
+      "organization": "Norwood Youth Soccer",
+      "category": "youth_sports",
+      "location": "Coakley Middle School fields",
+      "source_id": "norwood-youth-soccer",
+      "source_url": "https://norwoodsoccer.com/registration",
+      "main_calendar_eligible": false,
+      "verification_status": "verified",
+      "notes": "Pre-K and Kindergarten combined practice/game sessions occur Saturday mornings during the fall season."
+    },
+    {
+      "id": "norwood-rec-fall-field-hockey-2026",
+      "title": "Norwood Recreation — Fall Youth Field Hockey",
+      "start": "2026-09-01",
+      "end": "2026-11-15",
+      "all_day": true,
+      "organization": "Norwood Recreation Department",
+      "category": "youth_sports",
+      "location": "Norwood recreation fields",
+      "source_id": "norwood-rec-special-events",
+      "source_url": "https://norwoodma.myrec.com/info/activities/activities.aspx",
+      "main_calendar_eligible": false,
+      "verification_status": "verified_source_program",
+      "notes": "Fall 2026 Recreation offerings include Sunday skills and travel teams for grades 3–8; exact team schedules vary."
+    },
+    {
+      "id": "norwood-rec-community-campout-2026",
+      "title": "Norwood Recreation — Community Camp Out",
+      "start": "2026-01-01",
+      "all_day": true,
+      "organization": "Norwood Recreation Department",
+      "category": "recreation_special_event",
+      "location": "Norwood",
+      "source_id": "norwood-rec-special-events",
+      "source_url": "https://norwoodma.myrec.com/info/activities/activities.aspx",
+      "main_calendar_eligible": false,
+      "verification_status": "date_pending",
+      "notes": "Significant Recreation special event detected in the current program catalog. Do not present as a dated conflict until the event date is verified."
     }
   ],
   "ingestion": {
