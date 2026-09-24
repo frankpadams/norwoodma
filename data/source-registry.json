@@ -635,29 +635,31 @@
     "url": "https://pack42norwood.wordpress.com/",
     "domain": "pack42norwood.wordpress.com",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "resources",
-      "event_discovery"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Watch for public Pack 42 fundraisers and community-facing activities such as sales, drives, fairs and benefit events. Exclude routine pack/den meetings and participant-only activities."
   },
   {
     "id": "resource-cub-scouts-pack-49-norwood",
@@ -669,29 +671,31 @@
     "url": "https://norwoodcubpack49.wixsite.com/mysite",
     "domain": "norwoodcubpack49.wixsite.com",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "resources",
-      "event_discovery"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Watch for public Pack 49 fundraisers and community-facing activities such as sales, drives, fairs and benefit events. Exclude routine pack/den meetings and participant-only activities."
   },
   {
     "id": "resource-dedham-community-theatre",
@@ -1517,26 +1521,31 @@
     "url": "https://www.stcatherinenorwood.org/community",
     "domain": "stcatherinenorwood.org",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "events"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": true
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Watch for public Knights of Columbus fundraisers and community events. Exclude council/member meetings and private functions."
   },
   {
     "id": "resource-launch-norwood",
@@ -2029,26 +2038,31 @@
     "url": "https://www.rotary7910.org/ClubInfo/neponset-valley-sunrise",
     "domain": "rotary7910.org",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "events"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": true
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Watch for public Sunrise Rotary fundraisers and community-service events. Exclude ordinary club meetings."
   },
   {
     "id": "resource-norwood-adult-day-health-center",
@@ -2122,26 +2136,31 @@
     "url": "https://www.legion.org/",
     "domain": "legion.org",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "events"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
+      "method": "secondary_discovery",
+      "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": true
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Watch for public Post 70 fundraisers, veterans/community benefits, dinners, raffles, drives and ceremonies. Exclude routine member meetings."
   },
   {
     "id": "resource-norwood-animal-control",
@@ -2945,14 +2964,15 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events."
+    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
   },
   {
     "id": "resource-norwood-farmers-market",
@@ -3552,14 +3572,15 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Community service, fundraisers, meetings and social/community events."
+    "notes": "Community service, fundraisers, meetings and social/community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
   },
   {
     "id": "resource-norwood-light-report-an-outage",
@@ -3703,14 +3724,15 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers and service events."
+    "notes": "Watch public fundraisers and service events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
   },
   {
     "id": "resource-norwood-lions-club",
@@ -5604,14 +5626,15 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Known source of public meat raffles, dances, blood drives and community events; primary web presence is inconsistent, so verify each event."
+    "notes": "Known source of public meat raffles, dances, blood drives and community events; primary web presence is inconsistent, so verify each event. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
   },
   {
     "id": "resource-norwood-wic",
@@ -6320,14 +6343,15 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Club calendar has fundraiser/general event types and subscription support."
+    "notes": "Club calendar has fundraiser/general event types and subscription support. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
   },
   {
     "id": "st-catherine-calendar",
@@ -6472,29 +6496,31 @@
     "url": "https://www.troop42norwood.com/",
     "domain": "troop42norwood.com",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "resources",
-      "event_discovery"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Watch for public Troop 42 fundraisers and community-facing activities. Exclude routine troop meetings, campouts and participant-only activities."
   },
   {
     "id": "resource-scouting-america-troop-49-norwood",
@@ -6506,29 +6532,31 @@
     "url": "https://www.gracenor.org/groups",
     "domain": "gracenor.org",
     "produces": [
-      "resources"
+      "events",
+      "fundraisers"
     ],
     "potential_outputs": [
-      "resources",
-      "event_discovery"
+      "events",
+      "fundraisers"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 3,
     "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
+      "verified_at": "2026-09-24",
+      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Watch for public Troop 49 fundraisers and community-facing activities. Exclude routine troop meetings, campouts and participant-only activities."
   },
   {
     "id": "resource-showcase-cinema-de-lux-legacy-place-dedham",
@@ -7683,5 +7711,41 @@
       "basis": "Official Norwood Home Depot store page confirms its Kids Workshop and official Home Depot Kids Workshop page states free in-store workshops run 9 AM–noon on the first Saturday of every month."
     },
     "notes": "Publish a short rolling schedule of Norwood store Kids Workshops only while both the national official recurring schedule and the Norwood #2681 store page continue to confirm the program."
+  },
+  {
+    "id": "norwood-girl-scouts-public-events",
+    "name": "Norwood Girl Scouts — Public Fundraiser Discovery",
+    "organization": "Girl Scouts — Norwood / Eastern Massachusetts",
+    "source_class": "secondary_discovery",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodtownnews.com/",
+    "domain": "norwoodtownnews.com",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-09-24",
+      "basis": "Norwood Girl Scouts are a confirmed local organization; public fundraiser/event dates are typically surfaced through local community calendars rather than a stable Norwood-specific public calendar."
+    },
+    "notes": "Watch for public Girl Scout cookie booths/sales, drives, fairs and other community fundraisers. Exclude troop meetings, registration activities and member-only events."
   }
 ]
