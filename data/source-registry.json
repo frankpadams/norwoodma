@@ -5125,14 +5125,15 @@
     "filters": {
       "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "public_facing_sono_arts_events": true
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "verified_at": "2026-09-24",
+      "basis": "Norwood Space Center calendar currently publishes SONO Arts public events; verified examples include free public open studios/exhibitions."
     },
-    "notes": "Aggregates venue/business events; enforce venue/address filter because some chamber events occur outside Norwood."
+    "notes": "Aggregates venue/business events; enforce venue/address filter because some chamber events occur outside Norwood. Include public-facing SONO Arts events such as open studios, art shows and public exhibitions; exclude private/tenant-only activities."
   },
   {
     "id": "resource-norwood-special-education-parent-advisory-council",
