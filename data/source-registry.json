@@ -3870,12 +3870,12 @@
   },
   {
     "id": "nps-pma",
-    "name": "Norwood Parent Music Association",
+    "name": "Norwood Parent Music Association — Calendar",
     "organization": "Norwood Parent Music Association",
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodpma.org/",
+    "url": "https://norwoodpma.org/calendar/",
     "domain": "norwoodpma.org",
     "produces": [
       "events",
@@ -3886,9 +3886,9 @@
       "fundraisers"
     ],
     "active_monitor": true,
-    "monitor_priority": 2,
+    "monitor_priority": 1,
     "ingestion": {
-      "method": "discovery_search",
+      "method": "html_calendar",
       "automation": "preferred"
     },
     "filters": {
@@ -3898,10 +3898,10 @@
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "verified_at": "2026-09-24",
+      "basis": "Official Norwood PMA site has a dedicated calendar page with upcoming music events and links to school fine-arts/marching-band schedules."
     },
-    "notes": "High-value for marching-band home show, concerts and music fundraising."
+    "notes": "Primary PMA calendar source for public Norwood music events, including marching band performances, concerts, competitions/home show, and related fine-arts events. Prefer this dedicated calendar over general site discovery; filter out internal/private rehearsals and member-only activities."
   },
   {
     "id": "resource-norwood-parent-music-association",
