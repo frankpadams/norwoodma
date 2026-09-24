@@ -860,6 +860,19 @@ def summarize_article(url, fallback=''):
     except Exception: pass
     return clean_text(fallback)[:420]
 
+BLOCKED_NEWS_SOURCES={'maxpreps'}
+
+def news_source_blocked(source):
+    return clean_text(source).lower() in BLOCKED_NEWS_SOURCES
+
+def news_is_routine_game_listing(x):
+    text=' '.join(str(x.get(k) or '') for k in ('title','summary','source')).lower()
+    # Routine single-game schedule/result cards are not Norwood.ma news.
+    sports=['soccer','football','basketball','baseball','softball','hockey','volleyball','lacrosse','field hockey','wrestling','tennis','golf']
+    matchup=bool(re.search(r'\b(?:@|vs\.?|versus)\b', text))
+    levels=bool(re.search(r'\b(?:varsity|jv|junior varsity|freshman)\b', text))
+    return matchup and levels and any(sp in text for sp in sports)
+
 def parse_google_news_rss(xml_text, query):
     """Google News RSS is used as broad discovery for exact Norwood, Massachusetts variants."""
     import xml.etree.ElementTree as ET
@@ -871,7 +884,7 @@ def parse_google_news_rss(xml_text, query):
         title=txt('title'); link=txt('link'); pub=txt('pubDate'); desc=txt('description')
         src_node=item.find('source'); source=clean_text(src_node.text if src_node is not None else '') or 'Google News discovery'
         d=parse_dt(pub); combined=f'{title} {desc} {source}'
-        if not title or not link or not d or wrong.search(combined): continue
+        if not title or not link or not d or wrong.search(combined) or news_source_blocked(source): continue
         # The exact-location queries are the main relevance guard. Retain publisher attribution from RSS.
         out.append({'source':source,'title':title,'date':d.astimezone(TZ).isoformat(),'url':link,'summary':'','localVerified':True,'discovered_by':'scheduled_google_news','discovery_query':query})
     return out
@@ -944,7 +957,7 @@ def current_news(items):
         if not d:
             continue
         d=d.astimezone(TZ)
-        if cutoff <= d <= latest and not news_is_obituary(x):
+        if cutoff <= d <= latest and not news_is_obituary(x) and not news_source_blocked(x.get('source')) and not news_is_routine_game_listing(x):
             out.append(x)
     return dedupe_news(out)[:120]
 
