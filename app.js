@@ -41,10 +41,33 @@ async function weather(){
  try{let p=await fetch('https://api.weather.gov/points/42.1945,-71.1995');let pj=await p.json();let f=await fetch(pj.properties.forecast);let j=await f.json(),n=j.properties.periods[0];if(temp)temp.textContent=`${n.temperature}° · ${n.shortForecast}`;if(forecast)forecast.textContent=`${n.name} · ${n.windSpeed}`;}catch(e){if(forecast)forecast.textContent='Live weather temporarily unavailable';}
 } weather();
 
+function newsSourceKey(x){
+ return String(x.source||'Unknown').trim().toLowerCase();
+}
+function diversifyNewsChronologically(items){
+ // Keep the feed fundamentally newest-first, but avoid long same-source runs
+ // when another source has a nearly-as-recent story available.
+ const out=(items||[]).slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
+ const maxGap=36*60*60*1000;
+ for(let i=2;i<out.length;i++){
+  const s0=newsSourceKey(out[i-2]),s1=newsSourceKey(out[i-1]),s2=newsSourceKey(out[i]);
+  if(!(s0===s1&&s1===s2))continue;
+  const anchor=Date.parse(out[i].date);
+  for(let j=i+1;j<out.length;j++){
+   const candidate=Date.parse(out[j].date);
+   if(!Number.isFinite(anchor)||!Number.isFinite(candidate)||anchor-candidate>maxGap)break;
+   if(newsSourceKey(out[j])!==s2){
+    const swap=out[i];out[i]=out[j];out[j]=swap;break;
+   }
+  }
+ }
+ return out;
+}
+
 function renderNews(items){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
- let clean=(items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>new Date(b.date)-new Date(a.date));
+ let clean=diversifyNewsChronologically((items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}));
  let selected=[], selectedDays;
  if(isHome){
   // Homepage stays compact and adapts to the smallest recent window that supplies enough current stories.
@@ -54,7 +77,7 @@ function renderNews(items){
   // Expanded News page: show all qualifying stories from the past 45 days, strictly newest first.
   selectedDays=45;
   const cutoff=now-45*day;
-  selected=clean.filter(x=>Date.parse(x.date)>=cutoff).sort((a,b)=>new Date(b.date)-new Date(a.date));
+  selected=diversifyNewsChronologically(clean.filter(x=>Date.parse(x.date)>=cutoff));
  }
  const health=$('#feedHealth'); if(health)health.textContent=selected.length?`Local news from the past ${selectedDays} days · ${selected.length} verified stor${selected.length===1?'y':'ies'}`:'No verified local news is currently available';
  if(!selected.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article>';return;}
