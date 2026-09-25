@@ -731,6 +731,15 @@ def events_from_home_depot_kids_workshops(source):
     return out
 
 
+def source_allows_master_event(e, source=None):
+    """Master dataset is intentionally broad; presentation layers decide what is shown by default."""
+    if not e or not e.get('start',{}).get('date'): return False
+    access=str(e.get('public_access') or 'public').lower()
+    if access in {'private','members_only','member_only'}: return False
+    title=clean_text(e.get('title'))
+    if not title or canonical_title(title) in {'recurring','recurrence','all events'}: return False
+    return True
+
 def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
@@ -791,6 +800,7 @@ def refresh_events(offline=False):
                     got=dedupe_events(got)
                     if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
                 else: note=f'method {method} requires discovery/manual adapter'
+                got=[e for e in got if source_allows_master_event(e,src)]
                 events.extend(got)
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
