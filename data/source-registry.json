@@ -3375,7 +3375,17 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "fall",
+        "winter",
+        "spring"
+      ]
     }
   },
   {
@@ -8715,7 +8725,16 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "spring",
+        "summer"
+      ]
     }
   },
   {
@@ -8755,7 +8774,15 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "seasonality": {
+      "seasonal": false,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "year_round"
+      ]
     }
   },
   {
@@ -8795,7 +8822,17 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "fall",
+        "winter",
+        "spring"
+      ]
     }
   },
   {
