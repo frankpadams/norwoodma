@@ -3553,15 +3553,9 @@
       "include_practices_for_conflict": true,
       "fallback_sources": [
         "https://www.miaa.net/group/249",
-        "https://www.miaa.net/sites/default/files/2026-09/field-hockey-committed-schedules-2026-final.pdf",
-        "https://www.miaa.net/sites/default/files/2026-09/football-committed-schedules-2026-final.pdf",
-        "https://www.miaa.net/sites/default/files/2026-09/fall-golf-committed-schedules-2026-final.pdf",
-        "https://www.miaa.net/sites/default/files/2026-09/boys-soccer-committed-schedules-2026-final.pdf",
-        "https://www.miaa.net/sites/default/files/2026-09/girls-soccer-committed-schedules-2026-final.pdf",
-        "https://www.miaa.net/sites/default/files/2026-09/fall-volleyball-committed-schedules-2026-final.pdf",
         "https://www.norwood.k12.ma.us/nhs/athletics/announcements"
       ],
-      "strategy": "arbiter_primary_miaa_committed_fallback_official_announcements_for_practices",
+      "strategy": "arbiter_primary_miaa_schedule_fallback_official_announcements_for_practices",
       "sport_scope": {
         "mode": "discover_from_miaa_school_profile",
         "fall": [
@@ -3666,7 +3660,7 @@
     "verification": {
       "status": "verified_active_primary_and_fallbacks",
       "verified_at": "2026-09-25",
-      "basis": "ArbiterSports remains the official live schedule source; MIAA Fall 2026 final committed schedules published September 18 are configured as a deterministic fallback when Arbiter is not machine-readable."
+      "basis": "MIAA states ArbiterSports is the official schedule/results source; MIAA Norwood profile exposes Schedule and MIAA Game Day republishes Arbiter schedule data. NHS official announcements provide current Fall 2026 practice dates/times."
     },
     "notes": "Primary: ArbiterSports; MIAA Game Day is the preferred Arbiter-backed fallback. Discover sports/teams from the MIAA school profile rather than a narrow hard-coded fall list. Include tennis, indoor/outdoor track & field, field hockey, cross country, swim/dive, gymnastics, wrestling, hockey, basketball, baseball, softball, lacrosse, volleyball, golf, football, soccer and any additional Norwood teams exposed by MIAA/Arbiter. NHS announcements remain authoritative for practices. Zero during an active season is a failure.",
     "conflict_profile": "default",
