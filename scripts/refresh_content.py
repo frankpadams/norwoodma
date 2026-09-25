@@ -487,16 +487,21 @@ def dedupe_events(events):
     return out
 
 def current_events(events):
-    """Keep events through seven days after they end, then purge them from generated data."""
+    """Publish current/upcoming events; retain recently ended items only outside What's Happening data."""
     today=now_local().date()
-    purge_before=today-timedelta(days=7)
     out=[]
     for e in events:
         if not e.get('publish_candidate',True): continue
         sd=e.get('start',{}).get('date'); ed=e.get('end',{}).get('date') or sd
-        try: endd=date.fromisoformat(ed)
+        try:
+            startd=date.fromisoformat(sd)
+            endd=date.fromisoformat(ed)
         except Exception: continue
-        if endd < purge_before: continue
+        # A multi-day event remains current through its explicit end date. Once it
+        # has ended, remove it from the public What's Happening dataset immediately.
+        # This prevents old start dates from lingering merely because an event had
+        # a long date range (e.g. a fundraiser/order window).
+        if endd < today: continue
         out.append(e)
     out.sort(key=lambda e:(e.get('start',{}).get('date') or '9999',e.get('start',{}).get('time') or '99:99',e.get('title','')))
     return out
