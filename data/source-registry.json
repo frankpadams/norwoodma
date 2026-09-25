@@ -8500,7 +8500,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "recovery-na",
@@ -8534,7 +8540,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "norwood-little-league",
@@ -8568,7 +8580,13 @@
       "basis": "Official schedule page exposes structured dated game rows, but generic HTML calendar ingestion is insufficient."
     },
     "notes": "Official Posted Schedules page exposes Program, Division, Schedule and Team selectors plus dated game rows. Build a dedicated schedule-table adapter so current program/division/team events enter the master dataset.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "norwood-youth-softball",
@@ -8602,7 +8620,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "norwood-rec-sports",
@@ -8636,7 +8660,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "skating-club-calendar",
@@ -8670,7 +8700,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "faith-temple-sinai-sharon",
@@ -8704,7 +8740,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "faith-temple-beth-david-westwood",
@@ -8738,7 +8780,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "faith-icne-sharon",
@@ -8772,7 +8820,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "faith-shree-hari-dham",
@@ -8806,7 +8860,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "recovery-alanon",
@@ -8840,7 +8900,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "recovery-smart",
@@ -8874,7 +8940,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "parents-cfce",
@@ -8908,7 +8980,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "arts-millforge",
@@ -8942,7 +9020,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "arts-luke-adams",
@@ -8976,7 +9060,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "fitness-rec",
@@ -9010,6 +9100,12 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   }
 ]
