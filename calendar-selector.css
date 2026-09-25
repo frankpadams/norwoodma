@@ -13,3 +13,7 @@
 .calendar-info-actions .button,.calendar-info-actions button{font-size:12px;padding:7px 10px}
 .calendar-org-link{font-size:12px;font-weight:700}
 @media(max-width:650px){.calendar-info-panel{margin-left:0}.calendar-info-actions{align-items:stretch;flex-direction:column}.calendar-info-actions .button,.calendar-info-actions button,.calendar-org-link{text-align:center;width:100%;box-sizing:border-box}}
+
+/* Calendar action emphasis: selection is primary; submission stays neutral. */
+.calendar-picker-toggle{background:var(--gold,#F2C100);border-color:#d5a900;color:#193447}
+.submit-event-card{background:#fff!important;color:#193447!important;border:1px solid #aebdc6!important}
