@@ -732,6 +732,51 @@ def events_from_home_depot_kids_workshops(source):
 
 
 
+
+def events_from_schoolnow(source):
+    """Discover SchoolNow subscription feeds from an official calendar page."""
+    root=source.get('ingestion',{}).get('calendar_root') or source.get('url')
+    html=request(root).text
+    if not BeautifulSoup:return []
+    soup=BeautifulSoup(html,'html.parser'); feeds=[]
+    for a in soup.find_all('a',href=True):
+        href=urljoin(root,a['href'])
+        label=clean_text(a.get_text(' ')).lower()
+        if ('ical' in href.lower() or href.lower().endswith('.ics') or 'subscribe' in label) and href not in feeds:
+            feeds.append(href)
+    # Canonical SchoolNow sites commonly expose /calendar/feed/ical.ics.
+    if '/calendar' in root:
+        guess=root.split('/calendar')[0]+'/calendar/feed/ical.ics'
+        if guess not in feeds: feeds.append(guess)
+    out=[]
+    for feed in feeds[:8]:
+        try: out.extend(events_from_ical(feed,source))
+        except Exception: pass
+    return dedupe_events(out)
+
+def events_from_assabet(source):
+    """Parse Assabet calendar pages, following month/event links and filtering when configured."""
+    url=source.get('ingestion',{}).get('calendar_url') or source.get('url')
+    html=request(url).text
+    extracted,ics=extract_jsonld_events(html,source); out=list(extracted)
+    for feed in ics[:6]:
+        try: out.extend(events_from_ical(feed,source))
+        except Exception: pass
+    if BeautifulSoup:
+        soup=BeautifulSoup(html,'html.parser')
+        for a in soup.find_all('a',href=True):
+            href=urljoin(url,a['href']); label=clean_text(a.get_text(' '))
+            if '/event/' not in href and '/calendar/' not in href: continue
+            d=_date_from_text(label+' '+clean_text(a.parent.get_text(' ') if a.parent else ''))
+            if not d: continue
+            title=label or clean_text(a.parent.get_text(' ') if a.parent else '')
+            if len(title)<3: continue
+            out.append({'id':event_id(title,d.isoformat(),'Morrill Memorial Library'),'title':title,'start':{'date':d.isoformat(),'time':_time_from_text(clean_text(a.parent.get_text(' ') if a.parent else ''))},'end':{'date':d.isoformat(),'time':None},'venue':'Morrill Memorial Library','address':'33 Walpole St, Norwood, MA 02062','category':'library','source_id':source['id'],'source_url':href,'cost':None,'public_access':'public','series':'Morrill Memorial Library','publish_candidate':True,'verification_status':'auto_primary_source','notes':None,'discovered_by':'assabet_calendar'})
+    terms=[str(x).lower() for x in source.get('ingestion',{}).get('match',[])]
+    if terms:
+        out=[e for e in out if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+    return dedupe_events(out)
+
 def events_from_myrec_facilities(source):
     """Parse MyRec facility-area reservation tables into conflict-calendar events."""
     if not BeautifulSoup:return []
@@ -777,7 +822,9 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='myrec_facility_calendar': got=events_from_myrec_facilities(src)
+                if method=='schoolnow_calendar': got=events_from_schoolnow(src)
+                elif method in {'assabet_calendar','assabet_filtered_calendar'}: got=events_from_assabet(src)
+                elif method=='myrec_facility_calendar': got=events_from_myrec_facilities(src)
                 elif method=='home_depot_kids_workshops': got=events_from_home_depot_kids_workshops(src)
                 elif method=='selectmen_car_washes': got=events_from_selectmen_car_washes(src)
                 elif method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
