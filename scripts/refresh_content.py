@@ -1056,6 +1056,7 @@ def events_from_myrec_facilities(source):
     html=request(root).text
     soup=BeautifulSoup(html,'html.parser')
     links=[]
+    # MyRec facility indexes can expose area URLs only after following facility links.
     for a in soup.find_all('a',href=True):
         href=urljoin(root,a['href'])
         if 'area_info.aspx' in href and href not in links:
@@ -1092,12 +1093,37 @@ def events_from_myrec_facilities(source):
             cells=[clean_text(x.get_text(' ')) for x in tr.find_all(['td','th'])]
             if len(cells)<3: continue
             row=' | '.join(cells)
+            # Current MyRec tables are Program | Event | Teams | Date | Time.
+            # Prefer explicit date/time cells, with row-regex fallback.
             dm=re.search(r'\\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s+([A-Z][a-z]+\\s+\\d{1,2},?\\s+20\\d{2})\\b',row)
             if not dm: continue
             d=parse_dt(dm.group(1))
             if not d: continue
             tm=re.search(r'\\b(\\d{1,2}:\\d{2}\\s*[AP]M)\\s*-\\s*(\\d{1,2}:\\d{2}\\s*[AP]M)\\b',row,re.I)
-            title=next((c for c in cells if c and not re.search(r'^(Program|Event|Teams|Date|Time)$',c,re.I) and not re.search(r'\\b20\\d{2}\\b',c) and not re.fullmatch(r'\\d{1,2}:\\d{2}.*',c)),None)
+            title=None
+            # On MyRec reservation rows the event/activity label normally precedes the date cell.
+            date_idx=next((idx for idx,c in enumerate(cells) if re.search(r'\\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s+[A-Z][a-z]+\\s+\\d{1,2},?\\s+20\\d{2}\\b',c)),None)
+            if date_idx is not None:
+                candidates=[c for c in cells[:date_idx] if c and not re.search(r'^(Program|Event|Teams|Date|Time)
+            if not title: continue
+            def nt(v):
+                try: return datetime.strptime(v.upper(),'%I:%M %p').strftime('%H:%M')
+                except Exception: return None
+            ds=d.date().isoformat()
+            out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':nt(tm.group(1)) if tm else None},'end':{'date':ds,'time':nt(tm.group(2)) if tm else None},'venue':venue,'address':address,'category':'facility_reservation','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':'Norwood Recreation facility reservations','publish_candidate':True,'verification_status':'auto_primary_source','notes':'Facility reservation/activity block; included for conflict checking.','discovered_by':'myrec_facility_table'})
+    return dedupe_events(out)
+,c,re.I)]
+                if candidates: title=candidates[-1]
+            if not title:
+                title=next((c for c in cells if c and not re.search(r'^(Program|Event|Teams|Date|Time)
+            if not title: continue
+            def nt(v):
+                try: return datetime.strptime(v.upper(),'%I:%M %p').strftime('%H:%M')
+                except Exception: return None
+            ds=d.date().isoformat()
+            out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':nt(tm.group(1)) if tm else None},'end':{'date':ds,'time':nt(tm.group(2)) if tm else None},'venue':venue,'address':address,'category':'facility_reservation','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':'Norwood Recreation facility reservations','publish_candidate':True,'verification_status':'auto_primary_source','notes':'Facility reservation/activity block; included for conflict checking.','discovered_by':'myrec_facility_table'})
+    return dedupe_events(out)
+,c,re.I) and not re.search(r'\\b20\\d{2}\\b',c) and not re.fullmatch(r'\\d{1,2}:\\d{2}.*',c)),None)
             if not title: continue
             def nt(v):
                 try: return datetime.strptime(v.upper(),'%I:%M %p').strftime('%H:%M')
