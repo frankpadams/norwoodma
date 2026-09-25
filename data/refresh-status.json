@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T14:46:53.848498-04:00",
+  "generated_at": "2026-09-25T14:53:04.003532-04:00",
   "offline": false,
   "events_published": 359,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 359,
-      "generated_at": "2026-09-25T14:46:53.837673-04:00"
+      "generated_at": "2026-09-25T14:53:03.990106-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 86,
-      "generated_at": "2026-09-25T14:46:53.839479-04:00"
+      "generated_at": "2026-09-25T14:53:03.992393-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 108,
-      "generated_at": "2026-09-25T14:46:53.841883-04:00"
+      "generated_at": "2026-09-25T14:53:03.995414-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 20,
-      "generated_at": "2026-09-25T14:46:53.843349-04:00"
+      "generated_at": "2026-09-25T14:53:03.997216-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T14:46:53.844554-04:00"
+      "generated_at": "2026-09-25T14:53:03.998690-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 16,
-      "generated_at": "2026-09-25T14:46:53.845956-04:00"
+      "generated_at": "2026-09-25T14:53:04.000484-04:00"
     }
   ],
   "event_sources": [
@@ -341,7 +341,7 @@
       "ok": true,
       "method": "newsletter_calendar",
       "found": 0,
-      "note": ""
+      "note": "source returned zero events; zero events is configured as a failure"
     },
     {
       "source_id": "norwood-space-center-events",
@@ -572,7 +572,7 @@
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": "source returned zero events; zero events is configured as a failure"
     },
     {
       "source_id": "nps-coakley",
@@ -586,14 +586,14 @@
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": "source returned zero events; zero events is configured as a failure"
     },
     {
       "source_id": "nps-callahan",
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": "source returned zero events; zero events is configured as a failure"
     },
     {
       "source_id": "nps-cleveland",
@@ -733,7 +733,7 @@
       "ok": true,
       "method": "schoolnow_calendar",
       "found": 0,
-      "note": ""
+      "note": "source returned zero events; zero events is configured as a failure"
     },
     {
       "source_id": "norwood-chamber-events",
@@ -918,7 +918,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 60,
+      "found": 59,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
