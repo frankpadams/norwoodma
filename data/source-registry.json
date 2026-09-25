@@ -70,7 +70,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/balch/calendar",
+    "url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -81,8 +81,9 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -90,9 +91,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Potential fairs, PTO/community events; filter student-only items.",
     "conflict_profile": "optional"
@@ -171,7 +172,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/callahan/calendar",
+    "url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -182,8 +183,9 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -191,9 +193,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Potential fairs, PTO/community events; filter student-only items.",
     "conflict_profile": "optional"
@@ -412,7 +414,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/cleveland/calendar",
+    "url": "https://www.norwood.k12.ma.us/cleveland/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -423,8 +425,9 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/cleveland/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -432,9 +435,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Potential fairs, PTO/community events; filter student-only items.",
     "conflict_profile": "optional"
@@ -514,7 +517,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/cms/calendar",
+    "url": "https://www.norwood.k12.ma.us/cms/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -525,8 +528,9 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/cms/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -534,9 +538,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Publish only genuinely public/community-accessible events.",
     "conflict_profile": "optional"
@@ -4248,7 +4252,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/about/calendar",
+    "url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "events",
@@ -4261,8 +4265,9 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -4270,9 +4275,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Master NPS calendar with selectable sub-calendars.",
     "conflict_profile": "optional"
@@ -4354,7 +4359,7 @@
     "source_class": "ical_feed",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/about/calendar/subscribe",
+    "url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "events",
@@ -4368,7 +4373,8 @@
     "monitor_priority": 1,
     "ingestion": {
       "method": "ical",
-      "automation": "preferred"
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6188,7 +6194,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/oldham/calendar",
+    "url": "https://www.norwood.k12.ma.us/oldham/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -6199,8 +6205,9 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/oldham/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6208,9 +6215,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Potential book fairs/PTO events; filter student-only items.",
     "conflict_profile": "optional"
@@ -6355,7 +6362,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/prescott/calendar",
+    "url": "https://www.norwood.k12.ma.us/prescott/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -6366,8 +6373,9 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/prescott/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6375,9 +6383,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Potential fairs, PTO/community events; filter student-only items.",
     "conflict_profile": "optional"
@@ -7721,7 +7729,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/willett/calendar",
+    "url": "https://www.norwood.k12.ma.us/willett/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -7732,8 +7740,9 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "possible"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/willett/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -7741,9 +7750,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured_official_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
     "notes": "Potential family/community events; filter routine school operations.",
     "conflict_profile": "optional"
