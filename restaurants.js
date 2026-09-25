@@ -57,7 +57,9 @@
       const choice=ignore?'':normalize(food.value);
       const terms=choice?choice.split(' ').filter(Boolean):[];
       const norwoodOnly=restaurants.filter(r=>{ const town=normalize(r.municipality||r.city||r.coverage||''); return !town || town==='norwood'; });
-      let pool=norwoodOnly.filter(r=>!terms.length||terms.some(t=>searchable(r).includes(t)));
+      // Dinner Spinner is for places with a food menu; bar-only/drink-only venues stay searchable but are excluded.
+      const dinnerEligible=norwoodOnly.filter(r=>r.dinner_spinner!==false && r.food_menu!==false);
+      let pool=dinnerEligible.filter(r=>!terms.length||terms.some(t=>searchable(r).includes(t)));
       if(!pool.length){ result.textContent='No exact matches.'; meta.textContent='Try “Anything — surprise me” and spin again.'; links.innerHTML=''; return; }
       spinning=true; spin.disabled=true; wheel.classList.add('is-spinning');
       let ticks=0, last=null;
