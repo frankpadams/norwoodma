@@ -735,6 +735,45 @@ def events_from_home_depot_kids_workshops(source):
 
 
 
+
+def events_from_clubrunner(source):
+    """Discover ClubRunner calendar subscription feeds and structured events."""
+    url=source.get('ingestion',{}).get('calendar_url') or source.get('url')
+    html=request(url).text; out=[]
+    extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+    if BeautifulSoup:
+        soup=BeautifulSoup(html,'html.parser')
+        for a in soup.find_all('a',href=True):
+            href=urljoin(url,a['href']); label=clean_text(a.get_text(' ')).lower()
+            if any(k in href.lower() for k in ['ical','ics','calendarfeed']) or 'subscribe' in label:
+                feeds.append(href)
+    for feed in list(dict.fromkeys(feeds))[:10]:
+        try: out.extend(events_from_ical(feed,source))
+        except Exception: pass
+    return dedupe_events(out)
+
+def recurring_candidates(source, months=5):
+    """Generate bounded recurring candidates only for explicitly verified recurrence rules."""
+    rec=source.get('ingestion',{}).get('recurrence') or {}; out=[]
+    if rec.get('frequency')!='monthly': return out
+    weekdays={'MO':0,'TU':1,'WE':2,'TH':3,'FR':4,'SA':5,'SU':6}; wd=weekdays.get(rec.get('byweekday'))
+    if wd is None:return out
+    now=now_local().date()
+    for add in range(months+1):
+        y=now.year+(now.month-1+add)//12; m=(now.month-1+add)%12+1
+        first=date(y,m,1); days=[]
+        d=first
+        while d.month==m:
+            if d.weekday()==wd: days.append(d)
+            d+=timedelta(days=1)
+        for ordinal in rec.get('ordinal',[]):
+            if ordinal>0 and len(days)>=ordinal:
+                day=days[ordinal-1]
+                if day<now-timedelta(days=7): continue
+                title=source.get('name')
+                out.append({'id':event_id(title,day.isoformat(),None),'title':title,'start':{'date':day.isoformat(),'time':None},'end':{'date':day.isoformat(),'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':source.get('url'),'cost':None,'public_access':'public','series':title,'publish_candidate':False,'verification_status':'recurrence_candidate','notes':'Date derived from a verified recurring schedule; venue/time should be confirmed from current listing.','discovered_by':'verified_recurrence'})
+    return out
+
 def events_from_league_schedule(source):
     """Parse public youth-league schedule tables/cards with dates and matchup metadata."""
     url=source.get('url'); html=request(url).text
@@ -893,7 +932,9 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method in {'league_schedule_table','sportsconnect_schedule'}: got=events_from_league_schedule(src)
+                if method=='clubrunner_calendar': got=events_from_clubrunner(src)
+                elif method=='recurring_org_schedule': got=recurring_candidates(src)
+                elif method in {'league_schedule_table','sportsconnect_schedule'}: got=events_from_league_schedule(src)
                 elif method=='pma_calendar_hub': got=events_from_pma_hub(src)
                 elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
                 elif method=='schoolnow_calendar': got=events_from_schoolnow(src)
