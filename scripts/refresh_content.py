@@ -733,6 +733,52 @@ def events_from_home_depot_kids_workshops(source):
 
 
 
+
+def events_from_multi_source_calendar(source):
+    """Merge direct ICS and calendar hubs, then apply configured topic keywords."""
+    ing=source.get('ingestion',{}); out=[]
+    for u in ing.get('sources',[]):
+        if str(u).lower().endswith('.ics') or 'ical' in str(u).lower():
+            try: out.extend(events_from_ical(u,source))
+            except Exception: pass
+        else:
+            try:
+                html=request(u).text; extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+                for feed in feeds[:6]:
+                    try: out.extend(events_from_ical(feed,source))
+                    except Exception: pass
+            except Exception: pass
+    terms=[str(x).lower() for x in ing.get('keywords',[])]
+    if terms: out=[e for e in out if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+    return dedupe_events(out)
+
+def events_from_pma_hub(source):
+    """Discover embedded Google/ICS Fine Arts calendars from the PMA calendar hub."""
+    ing=source.get('ingestion',{}); urls=[ing.get('hub_url') or source.get('url')]
+    for child in ing.get('child_calendars',[]):
+        if isinstance(child,dict) and child.get('url'): urls.append(child['url'])
+    out=[]
+    for u in [x for x in urls if x]:
+        try: html=request(u).text
+        except Exception: continue
+        extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+        if BeautifulSoup:
+            soup=BeautifulSoup(html,'html.parser')
+            for tag in soup.find_all(['iframe','a'],src=True)+soup.find_all('a',href=True):
+                raw=tag.get('src') or tag.get('href')
+                if not raw: continue
+                href=urljoin(u,raw)
+                # Google Calendar embeds expose src=<calendar id>; convert public IDs to ICS.
+                if 'calendar.google.com' in href and 'src=' in href:
+                    from urllib.parse import urlparse,parse_qs,unquote
+                    q=parse_qs(urlparse(href).query); cid=(q.get('src') or [None])[0]
+                    if cid:
+                        feeds.append('https://calendar.google.com/calendar/ical/'+unquote(cid)+'/public/basic.ics')
+        for feed in list(dict.fromkeys(feeds))[:12]:
+            try: out.extend(events_from_ical(feed,source))
+            except Exception: pass
+    return dedupe_events(out)
+
 def events_from_schoolnow(source):
     """Discover SchoolNow subscription feeds from an official calendar page."""
     root=source.get('ingestion',{}).get('calendar_root') or source.get('url')
@@ -822,7 +868,9 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='schoolnow_calendar': got=events_from_schoolnow(src)
+                if method=='pma_calendar_hub': got=events_from_pma_hub(src)
+                elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
+                elif method=='schoolnow_calendar': got=events_from_schoolnow(src)
                 elif method in {'assabet_calendar','assabet_filtered_calendar'}: got=events_from_assabet(src)
                 elif method=='myrec_facility_calendar': got=events_from_myrec_facilities(src)
                 elif method=='home_depot_kids_workshops': got=events_from_home_depot_kids_workshops(src)
