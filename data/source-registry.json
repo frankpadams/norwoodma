@@ -9100,7 +9100,10 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": false,
+      "seasonal": true,
+      "offseason_empty_is_healthy": true
     },
     "seasonality": {
       "seasonal": true,
@@ -9158,7 +9161,9 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "seasonal": true,
+      "offseason_empty_is_healthy": true
     },
     "seasonality": {
       "seasonal": true,
@@ -9219,7 +9224,9 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "seasonal": true,
+      "offseason_empty_is_healthy": true
     },
     "seasonality": {
       "seasonal": false,
