@@ -1050,20 +1050,24 @@ def events_from_arbiterlive(source):
     """Extract Norwood athletic contests from the school-directed ArbiterLive entity page."""
     url=source.get('url'); html=request(url).text
     out=[]; extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+    debug={'entity_url':url,'scripts':[],'calendar_candidates':[],'schedule_candidates':[]}
     # ArbiterLive is client-rendered. Inspect its public script bundles for
     # calendar/schedule URLs that are not present in the initial HTML.
     if BeautifulSoup:
         root_soup=BeautifulSoup(html,'html.parser')
         for tag in root_soup.find_all('script',src=True)[:20]:
             try:
-                js=request(urljoin(url,tag.get('src')),timeout=12).text
+                asset=urljoin(url,tag.get('src')); js=request(asset,timeout=12).text
+                debug['scripts'].append(asset)
             except Exception:
                 continue
             for raw in re.findall(r'https?://[^"\\s<>]+',js,re.I):
                 candidate=raw.replace('\\/','/').rstrip('),;')
                 low=candidate.lower()
                 if ('ical' in low or '.ics' in low) and candidate not in feeds:
-                    feeds.append(candidate)
+                    feeds.append(candidate); debug['calendar_candidates'].append(candidate)
+                if any(k in low for k in ['getgames','getevents','getteams','/api/']):
+                    debug['schedule_candidates'].append(candidate)
     if BeautifulSoup:
         soup=BeautifulSoup(html,'html.parser')
         # Arbiter pages can expose team/schedule links and calendar subscriptions client-side.
@@ -1085,6 +1089,10 @@ def events_from_arbiterlive(source):
                     try: out.extend(events_from_ical(feed,source))
                     except Exception: pass
             except Exception: pass
+    try:
+        Path('data/arbiter-discovery.json').write_text(json.dumps(debug,indent=2) + '\\n')
+    except Exception:
+        pass
     # Prefer direct Arbiter records. If Arbiter is not machine-readable, use
     # MIAA's final committed schedules (generated from Arbiter) before giving up.
     if not out:
