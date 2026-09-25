@@ -78,7 +78,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "ical",
@@ -95,8 +95,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items.",
-    "conflict_profile": "optional"
+    "notes": "Potential fairs, PTO/community events; filter student-only items. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "resource-band-gig-school-of-music-performance",
@@ -180,7 +181,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "ical",
@@ -197,8 +198,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items.",
-    "conflict_profile": "optional"
+    "notes": "Potential fairs, PTO/community events; filter student-only items. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "nps-callahan-pta",
@@ -422,7 +424,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "ical",
@@ -439,8 +441,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items.",
-    "conflict_profile": "optional"
+    "notes": "Potential fairs, PTO/community events; filter student-only items. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "nps-cleveland-pto",
@@ -525,7 +528,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 3,
     "ingestion": {
       "method": "ical",
@@ -542,8 +545,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Publish only genuinely public/community-accessible events.",
-    "conflict_profile": "optional"
+    "notes": "Publish only genuinely public/community-accessible events. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "resource-coakley-middle-school-parent-teacher-organization",
@@ -4262,7 +4266,7 @@
       "events",
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 1,
     "ingestion": {
       "method": "ical",
@@ -4279,8 +4283,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Master NPS calendar with selectable sub-calendars.",
-    "conflict_profile": "optional"
+    "notes": "Master NPS calendar with selectable sub-calendars. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "nps-fine-arts",
@@ -4369,7 +4374,7 @@
       "events",
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 1,
     "ingestion": {
       "method": "ical",
@@ -4386,8 +4391,9 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Preferred structured feed when stable.",
-    "conflict_profile": "optional"
+    "notes": "Preferred structured feed when stable. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "resource-norwood-public-schools-bus-transportation",
@@ -6202,7 +6208,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "ical",
@@ -6219,8 +6225,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Potential book fairs/PTO events; filter student-only items.",
-    "conflict_profile": "optional"
+    "notes": "Potential book fairs/PTO events; filter student-only items. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "nps-oldham-pto",
@@ -6370,7 +6377,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "ical",
@@ -6387,8 +6394,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items.",
-    "conflict_profile": "optional"
+    "notes": "Potential fairs, PTO/community events; filter student-only items. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "nps-prescott-pta",
@@ -7737,7 +7745,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "ical",
@@ -7754,8 +7762,9 @@
       "verified_at": "2026-09-25",
       "basis": "Converted duplicate NPS HTML calendar monitor to the official SchoolNow iCal feed used by the selectable calendar system."
     },
-    "notes": "Potential family/community events; filter routine school operations.",
-    "conflict_profile": "optional"
+    "notes": "Potential family/community events; filter routine school operations. Disabled as a duplicate monitor; canonical NPS iCal source with matching school ID is used for ingestion.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "resource-willett-parent-teacher-organization",
