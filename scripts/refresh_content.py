@@ -1212,6 +1212,44 @@ def source_allows_master_event(e, source=None):
     if not title or canonical_title(title) in {'recurring','recurrence','all events'}: return False
     return True
 
+def legacy_expanded_calendar_events():
+    """Carry forward the broader scheduling dataset into the master event pool.
+
+    possible-conflicts.json predates the unified source registry. Normalize its
+    records here so Check All / Conflict Contraption / search do not lose that
+    coverage while source-specific live adapters replace the legacy records.
+    """
+    raw=read_json('possible-conflicts.json',{})
+    rows=raw.get('events',[]) if isinstance(raw,dict) else (raw if isinstance(raw,list) else [])
+    out=[]
+    for old in rows:
+        if not isinstance(old,dict): continue
+        start=old.get('start'); end=old.get('end')
+        if isinstance(start,str):
+            if 'T' in start: sd,st=start.split('T',1); st=st[:5]
+            else: sd,st=start,None
+            start={'date':sd,'time':st}
+        if isinstance(end,str):
+            if 'T' in end: ed,et=end.split('T',1); et=et[:5]
+            else: ed,et=end,None
+            end={'date':ed,'time':et}
+        if not isinstance(start,dict) or not start.get('date'): continue
+        e={
+          'id':old.get('id') or event_id(old.get('title','event'),start.get('date'),old.get('location','')),
+          'title':old.get('title'), 'start':start, 'end':end or {'date':start.get('date'),'time':None},
+          'venue':old.get('venue') or old.get('location'), 'address':old.get('address'),
+          'category':old.get('category') or 'scheduling', 'source_id':old.get('source_id') or 'expanded-calendar-legacy',
+          'source_url':old.get('source_url'), 'registration_url':old.get('registration_url'),
+          'cost':old.get('cost'), 'public_access':old.get('public_access') or 'unspecified',
+          'series':old.get('organization'), 'publish_candidate':bool(old.get('main_calendar_eligible',False)),
+          'curated_default':bool(old.get('main_calendar_eligible',False)),
+          'verification_status':old.get('verification_status') or 'legacy_verified',
+          'notes':old.get('notes'), 'discovered_by':'expanded_calendar_legacy'
+        }
+        if source_allows_master_event(e): out.append(e)
+    return out
+
+
 def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
@@ -1290,7 +1328,7 @@ def refresh_events(offline=False):
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
                 status.append({'source_id':src['id'],'ok':False,'method':method,'found':0,'note':str(ex)[:180]})
-    events=current_events(dedupe_events(events))
+    events=current_events(dedupe_events(events+legacy_expanded_calendar_events()))
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     if not offline:
         health=[]
