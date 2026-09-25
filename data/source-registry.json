@@ -3620,6 +3620,36 @@
         "merge_same_contest": true,
         "never_publish_duplicate_source_copies": true,
         "live_source_overrides_baseline": true
+      },
+      "schoolnow_crosscheck": {
+        "url": "https://www.norwood.k12.ma.us/nhs/academics/calendar/monthly/2026/09",
+        "calendar_name": "Athletics",
+        "role": "official_crosscheck_and_feed_discovery",
+        "notes": "NPS SchoolNow calendar exposes Athletics as a selectable calendar distinct from NHS and Academics. Discover its calendar identifier/feed rather than assuming the NHS feed contains athletics."
+      },
+      "source_roles": {
+        "arbiter": "canonical_live_schedule",
+        "miaa_game_day": "official_arbiter_backed_fallback",
+        "miaa_committed": "baseline_completeness",
+        "nps_schoolnow_athletics": "official_crosscheck_feed_discovery",
+        "nhs_announcements": "practice_and_team_notice_source"
+      },
+      "dedupe": {
+        "canonical_match": [
+          "sport",
+          "level",
+          "date",
+          "opponent"
+        ],
+        "time_tolerance_minutes": 90,
+        "merge_evidence": true,
+        "prefer": [
+          "arbiter",
+          "miaa_game_day",
+          "nps_schoolnow_athletics",
+          "miaa_committed",
+          "nhs_announcements"
+        ]
       }
     },
     "filters": {
