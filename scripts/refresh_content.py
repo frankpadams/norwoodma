@@ -960,8 +960,7 @@ def events_from_arbiterlive(source):
                     try: out.extend(events_from_ical(feed,source))
                     except Exception: pass
             except Exception: pass
-    for e in out:
-        e['category']='sports'; e['series']='Norwood High School Athletics'
+    # Prefer direct Arbiter records. Only consult MIAA when Arbiter produced nothing, preventing duplicate games.\n    if not out:\n        for fb in source.get('ingestion',{}).get('fallback_sources',[]):\n            if 'miaa.net/group/' not in str(fb): continue\n            try:\n                fh=request(fb).text\n                rows,feds=extract_jsonld_events(fh,source); out.extend(rows)\n                for feed in feds[:8]:\n                    try: out.extend(events_from_ical(feed,source))\n                    except Exception: pass\n            except Exception: pass\n    for e in out:\n        e['category']='sports'; e['series']='Norwood High School Athletics'
     return dedupe_events(out)
 
 def events_from_schoolnow(source):
