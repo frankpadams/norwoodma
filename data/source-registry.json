@@ -9763,5 +9763,46 @@
     },
     "conflict_profile": "optional",
     "notes": "Secondary discovery source. Apply strict Norwood location/relevance filtering and deduplicate against primary organizers; never let nearby regional events leak into Norwood What's Happening."
+  },
+  {
+    "id": "st-timothy-calendar",
+    "name": "St. Timothy Parish Events",
+    "url": "https://iccnorwood.org/events",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "church_events_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://iccnorwood.org/events",
+      "discover_sync_feed": true,
+      "preserve": [
+        "event_type",
+        "start",
+        "end",
+        "public_access"
+      ],
+      "exclude_by_default": [
+        "appointment only",
+        "class",
+        "internal meeting"
+      ]
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official parish Events page exposes current dated events and a Sync to my Calendar action."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Ingest public community-facing parish events. Routine formation classes, appointment-only items and internal meetings remain opt-in/non-curated unless independently community-relevant."
   }
 ]
