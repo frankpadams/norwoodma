@@ -816,6 +816,32 @@ def events_from_secondary_listing(source):
         out.append({'id':event_id(title,ds,None),'title':source.get('name') or title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'secondary_dated_listing','notes':'Concrete dated occurrence found in configured community listing.','discovered_by':'secondary_recurring_discovery'})
     return dedupe_events(out)
 
+def events_from_dated_event_pages(source):
+    """Extract dated events from an official listing and its linked detail pages."""
+    url=source.get('url'); html=request(url).text
+    if not BeautifulSoup: return []
+    soup=BeautifulSoup(html,'html.parser'); out=[]; links=[]
+    for a in soup.find_all('a',href=True):
+        href=urljoin(url,a['href'])
+        if href.startswith(url.split('/shows-events')[0]) and href not in links: links.append(href)
+    for page in [url]+links[:80]:
+        try:
+            ph=html if page==url else request(page).text
+            ps=BeautifulSoup(ph,'html.parser'); txt=clean_text(ps.get_text(' '))
+            d=_date_from_text(txt)
+            if not d: continue
+            title=''
+            h=ps.find(['h1','h2'])
+            if h: title=clean_text(h.get_text(' '))
+            if not title or title.lower() in {'shows & events','events'}:
+                hs=ps.find_all(['h1','h2','h3'])
+                title=next((clean_text(x.get_text(' ')) for x in hs if clean_text(x.get_text(' ')).lower() not in {'shows & events','events'}),'')
+            if not title: continue
+            ds=d.isoformat()
+            out.append({'id':event_id(title,ds,None),'title':title,'start':{'date':ds,'time':_time_from_text(txt)},'end':{'date':ds,'time':None},'venue':source.get('organization') or source.get('name'),'address':None,'category':'arts','source_id':source['id'],'source_url':page,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'official_dated_event_page','notes':'Dated event from the official venue site.','discovered_by':'official_event_page'})
+        except Exception: pass
+    return dedupe_events(out)
+
 def events_from_clubrunner(source):
     """Discover ClubRunner calendar subscription feeds and structured events."""
     url=source.get('ingestion',{}).get('calendar_url') or source.get('url')
@@ -1096,6 +1122,7 @@ def refresh_events(offline=False):
                 elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
                 elif method=='newsletter_calendar': got=events_from_newsletter_index(src)
                 elif method=='clubrunner_calendar': got=events_from_clubrunner(src)
+                elif method=='dated_event_pages': got=events_from_dated_event_pages(src)
                 elif method=='league_schedule_table': got=events_from_league_schedule(src)
                 elif method=='local_town_pages_calendar': got=events_from_secondary_listing(src)
                 elif method=='social_mirror': got=events_from_social_mirror(src)
