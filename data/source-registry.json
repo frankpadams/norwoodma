@@ -9404,5 +9404,36 @@
       "track_consecutive_failures": true,
       "report_stale": true
     }
+  },
+  {
+    "id": "nps-extended-day",
+    "name": "NPS Extended Day",
+    "url": "https://www.norwood.k12.ma.us/extended-day/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "schoolnow_calendar",
+      "automation": "preferred",
+      "calendar_name": "Extended Day",
+      "calendar_root": "https://www.norwood.k12.ma.us/extended-day/calendar",
+      "discover_ical": true
+    },
+    "verification": {
+      "status": "verified_schoolnow_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official NPS Extended Day calendar is a distinct selectable SchoolNow calendar alongside district/school/Athletics calendars."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Distinct NPS calendar useful to families. Keep collapsed under Schools and optional by default; zero events does not mean the source is broken."
   }
 ]
