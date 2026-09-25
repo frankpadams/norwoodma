@@ -1285,7 +1285,13 @@ def refresh_events(offline=False):
             if not src.get('health_policy',{}).get('track_last_checked'): continue
             prev=previous_health.get(sid,{})
             ok=bool(row.get('ok')); found=int(row.get('found') or 0)
-            # A successful HTTP/parse check with zero upcoming events is healthy, but it is not a content update.
+            policy=src.get('health_policy',{})
+            # Some seasonal sources (notably athletics) are expected to be non-empty
+            # while school is in session. Treat an empty parse as an ingestion failure
+            # when the registry explicitly says zero is a failure.
+            if ok and found==0 and policy.get('empty_result_is_failure'):
+                ok=False
+                row['note']=(row.get('note') or 'source returned zero events')+'; zero events is configured as a failure'
             successful=ok and found>0
             failures=0 if ok else int(prev.get('consecutive_failures') or 0)+1
             last_success=checked_at if successful else prev.get('last_successful_update')
