@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T14:56:34.326297-04:00",
+  "generated_at": "2026-09-25T15:31:22.483882-04:00",
   "offline": false,
-  "events_published": 371,
+  "events_published": 719,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 371,
-      "generated_at": "2026-09-25T14:56:34.312548-04:00"
+      "events": 719,
+      "generated_at": "2026-09-25T15:31:22.461990-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 86,
-      "generated_at": "2026-09-25T14:56:34.314897-04:00"
+      "generated_at": "2026-09-25T15:31:22.464612-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 109,
-      "generated_at": "2026-09-25T14:56:34.317990-04:00"
+      "events": 455,
+      "generated_at": "2026-09-25T15:31:22.471107-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 20,
-      "generated_at": "2026-09-25T14:56:34.319835-04:00"
+      "events": 368,
+      "generated_at": "2026-09-25T15:31:22.476424-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T14:56:34.321375-04:00"
+      "generated_at": "2026-09-25T15:31:22.478558-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 16,
-      "generated_at": "2026-09-25T14:56:34.323125-04:00"
+      "generated_at": "2026-09-25T15:31:22.480970-04:00"
     }
   ],
   "event_sources": [
@@ -57,11 +57,18 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "nps-callahan-pta",
+      "source_id": "arts-luke-adams",
       "ok": true,
-      "method": "school_parent_org_composite",
+      "method": "html_calendar",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "arts-millforge",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 3,
+      "note": ""
     },
     {
       "source_id": "castle-island-calendar",
@@ -71,6 +78,13 @@
       "note": ""
     },
     {
+      "source_id": "circle-of-hope-events",
+      "ok": false,
+      "method": "seasonal_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
       "source_id": "citizens-better-norwood-events",
       "ok": false,
       "method": "html_calendar",
@@ -78,30 +92,16 @@
       "note": "403 Client Error: Forbidden for url: https://citizensforabetternorwoodma.com/events"
     },
     {
-      "source_id": "nps-cleveland-pto",
+      "source_id": "community-event-submissions",
       "ok": true,
-      "method": "school_parent_org_composite",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "method": "community_submission_json",
+      "found": 2,
+      "note": ""
     },
     {
-      "source_id": "nps-cms-pto",
+      "source_id": "elks-calendar",
       "ok": true,
-      "method": "school_parent_org_composite",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "resource-cub-scouts-pack-42-norwood",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "resource-cub-scouts-pack-49-norwood",
-      "ok": true,
-      "method": "html_page",
+      "method": "html_calendar",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
@@ -113,11 +113,67 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
+      "source_id": "factory52-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 0,
+      "note": ""
+    },
+    {
+      "source_id": "faith-icne-sharon",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "faith-shree-hari-dham",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "faith-temple-beth-david-westwood",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "faith-temple-sinai-sharon",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "fallout-shelter",
+      "ok": true,
+      "method": "html_list",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
       "source_id": "first-congregational-events",
       "ok": true,
       "method": "squarespace_events",
       "found": 4,
       "note": ""
+    },
+    {
+      "source_id": "fitness-rec",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "food-pantry",
+      "ok": true,
+      "method": "organization_event_discovery",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "friends-center-blog",
@@ -134,11 +190,32 @@
       "note": ""
     },
     {
+      "source_id": "friends-coa-dances",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
       "source_id": "grace-calendar",
       "ok": true,
       "method": "embedded_calendar",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "historical-society-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "home-depot-norwood-kids-workshops",
+      "ok": true,
+      "method": "home_depot_kids_workshops",
+      "found": 0,
+      "note": ""
     },
     {
       "source_id": "inside-norwood",
@@ -155,30 +232,30 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "resource-knights-of-columbus-norwood-council",
+      "source_id": "junior-womans-club",
       "ok": true,
-      "method": "html_page",
+      "method": "html_hub",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "magic-room-ticketleap",
+      "source_id": "league-women-voters-norwood",
       "ok": true,
-      "method": "html_list",
+      "method": "organization_event_discovery",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "mill-forge-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 13,
-      "note": ""
     },
     {
       "source_id": "library-assabet-calendar",
       "ok": true,
       "method": "assabet_calendar",
+      "found": 81,
+      "note": ""
+    },
+    {
+      "source_id": "library-cfce",
+      "ok": true,
+      "method": "assabet_filtered_calendar",
       "found": 81,
       "note": ""
     },
@@ -190,9 +267,779 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
+      "source_id": "lifeworks-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 0,
+      "note": ""
+    },
+    {
+      "source_id": "lions-page",
+      "ok": false,
+      "method": "organization_event_discovery",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodmalions.com', port=4"
+    },
+    {
+      "source_id": "magic-room-ticketleap",
+      "ok": true,
+      "method": "html_list",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "masshire-norwood-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 32,
+      "note": ""
+    },
+    {
+      "source_id": "mill-forge-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 13,
+      "note": ""
+    },
+    {
+      "source_id": "ncm-home",
+      "ok": true,
+      "method": "html_hub",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "ncm-school-live-broadcasts",
+      "ok": true,
+      "method": "ncm_school_broadcasts",
+      "found": 0,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-blood-drives",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-carillon-series",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-chamber-events",
+      "ok": true,
+      "method": "growthzone_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-evening-garden-club",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-food-pantry-hours",
+      "ok": true,
+      "method": "recurring_service_schedule",
+      "found": 8,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-girl-scouts-public-events",
+      "ok": true,
+      "method": "secondary_discovery",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-junior-womans-club",
+      "ok": false,
+      "method": "multi_source_org_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-kofc-events",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-little-league",
+      "ok": true,
+      "method": "league_schedule_table",
+      "found": 8,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-national-night-out",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-patch-fundraisers",
+      "ok": true,
+      "method": "html_list",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-portuguese-club",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-rec-sports",
+      "ok": true,
+      "method": "myrec_facility_calendar",
+      "found": 0,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-record-events",
+      "ok": true,
+      "method": "html_list",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-rotary-calendar",
+      "ok": true,
+      "method": "clubrunner_calendar",
+      "found": 0,
+      "note": "source returned zero events; zero events is configured as a failure"
+    },
+    {
+      "source_id": "norwood-space-center-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 21,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-summer-concerts",
+      "ok": true,
+      "method": "secondary_discovery",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-summerfest-series",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-sunday-concerts",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-theatre-season",
+      "ok": true,
+      "method": "dated_event_pages",
+      "found": 22,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-toastmasters",
+      "ok": false,
+      "method": "recurring_org_schedule",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm"
+    },
+    {
+      "source_id": "norwood-town-news",
+      "ok": true,
+      "method": "html_list",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-town-news-calendar",
+      "ok": false,
+      "method": "local_town_pages_calendar",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-vfw-public-events",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-women-business-networking",
+      "ok": false,
+      "method": "secondary_recurring_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-youth-fundraisers",
+      "ok": true,
+      "method": "secondary_discovery",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-youth-softball",
+      "ok": true,
+      "method": "sportsconnect_schedule",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-freshman-baseball",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-freshman-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 14,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-jv-baseball",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-jv-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 16,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-jv-soccer",
+      "ok": true,
+      "method": "ical",
+      "found": 19,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-ms-cross-country",
+      "ok": true,
+      "method": "ical",
+      "found": 6,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+      "ok": true,
+      "method": "ical",
+      "found": 3,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 19,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-cross-country",
+      "ok": true,
+      "method": "ical",
+      "found": 7,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
+      "ok": true,
+      "method": "ical",
+      "found": 17,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-indoor-track",
+      "ok": true,
+      "method": "ical",
+      "found": 6,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+      "ok": true,
+      "method": "ical",
+      "found": 2,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
+      "ok": true,
+      "method": "ical",
+      "found": 19,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-swimming",
+      "ok": true,
+      "method": "ical",
+      "found": 6,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+      "ok": true,
+      "method": "ical",
+      "found": 2,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-freshman-football",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-froshmore-football",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-freshman-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
+      "ok": true,
+      "method": "ical",
+      "found": 16,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-jv-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 19,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
+      "ok": true,
+      "method": "ical",
+      "found": 19,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-jv-soccer",
+      "ok": true,
+      "method": "ical",
+      "found": 18,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-jv-softball",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
+      "ok": true,
+      "method": "ical",
+      "found": 18,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-ms-cross-country",
+      "ok": true,
+      "method": "ical",
+      "found": 6,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
+      "ok": true,
+      "method": "ical",
+      "found": 12,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 20,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-cross-country",
+      "ok": true,
+      "method": "ical",
+      "found": 7,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
+      "ok": true,
+      "method": "ical",
+      "found": 20,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
+      "ok": true,
+      "method": "ical",
+      "found": 16,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-indoor-track",
+      "ok": true,
+      "method": "ical",
+      "found": 6,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+      "ok": true,
+      "method": "ical",
+      "found": 20,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+      "ok": true,
+      "method": "ical",
+      "found": 3,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
+      "ok": true,
+      "method": "ical",
+      "found": 6,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+      "ok": true,
+      "method": "ical",
+      "found": 2,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
+      "ok": true,
+      "method": "ical",
+      "found": 22,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-jv-football",
+      "ok": true,
+      "method": "ical",
+      "found": 4,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-jv-golf",
+      "ok": true,
+      "method": "ical",
+      "found": 10,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-unified-basketball",
+      "ok": true,
+      "method": "ical",
+      "found": 8,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-varsity-football",
+      "ok": true,
+      "method": "ical",
+      "found": 11,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-varsity-golf",
+      "ok": true,
+      "method": "ical",
+      "found": 19,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-varsity-gymnastics",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-athletics-arbiter-varsity-wrestling",
+      "ok": true,
+      "method": "ical",
+      "found": 11,
+      "note": ""
+    },
+    {
+      "source_id": "nps-balch",
+      "ok": true,
+      "method": "ical",
+      "found": 0,
+      "note": "source returned zero events; zero events is configured as a failure"
+    },
+    {
+      "source_id": "nps-callahan",
+      "ok": true,
+      "method": "ical",
+      "found": 0,
+      "note": "source returned zero events; zero events is configured as a failure"
+    },
+    {
+      "source_id": "nps-callahan-pta",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-cleveland",
+      "ok": true,
+      "method": "ical",
+      "found": 5,
+      "note": ""
+    },
+    {
+      "source_id": "nps-cleveland-pto",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-cms-pto",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-coakley",
+      "ok": true,
+      "method": "ical",
+      "found": 43,
+      "note": ""
+    },
+    {
+      "source_id": "nps-district",
+      "ok": true,
+      "method": "ical",
+      "found": 33,
+      "note": ""
+    },
+    {
+      "source_id": "nps-extended-day",
+      "ok": true,
+      "method": "schoolnow_calendar",
+      "found": 0,
+      "note": "source returned zero events; zero events is configured as a failure"
+    },
+    {
+      "source_id": "nps-fine-arts",
+      "ok": true,
+      "method": "multi_source_calendar",
+      "found": 0,
+      "note": ""
+    },
+    {
+      "source_id": "nps-news",
+      "ok": true,
+      "method": "html_list",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-nhs",
+      "ok": true,
+      "method": "ical",
+      "found": 0,
+      "note": "source returned zero events; zero events is configured as a failure"
+    },
+    {
+      "source_id": "nps-nhs-pto",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-oldham",
+      "ok": true,
+      "method": "ical",
+      "found": 42,
+      "note": ""
+    },
+    {
+      "source_id": "nps-oldham-pto",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-pma",
+      "ok": true,
+      "method": "pma_calendar_hub",
+      "found": 0,
+      "note": ""
+    },
+    {
+      "source_id": "nps-prescott",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-prescott-pta",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-willett",
+      "ok": true,
+      "method": "ical",
+      "found": 1,
+      "note": ""
+    },
+    {
+      "source_id": "nps-willett-pto",
+      "ok": true,
+      "method": "school_parent_org_composite",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "pcrinc-events",
+      "ok": true,
+      "method": "html_hub",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "rage-zone-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "recovery-aa",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "recovery-alanon",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "recovery-na",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/"
+    },
+    {
+      "source_id": "recovery-smart",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/"
+    },
+    {
+      "source_id": "resource-cub-scouts-pack-42-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-cub-scouts-pack-49-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-knights-of-columbus-norwood-council",
+      "ok": true,
+      "method": "html_page",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
@@ -211,14 +1058,56 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "library-cfce",
+      "source_id": "resource-scouting-america-troop-42-norwood",
       "ok": true,
-      "method": "assabet_filtered_calendar",
-      "found": 81,
+      "method": "html_page",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "resource-scouting-america-troop-49-norwood",
+      "ok": true,
+      "method": "html_page",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "sarva-social-feed",
+      "ok": false,
+      "method": "social_mirror",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah"
+    },
+    {
+      "source_id": "scholarship-foundation",
+      "ok": false,
+      "method": "organization_event_discovery",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodschola"
+    },
+    {
+      "source_id": "skating-club-calendar",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 14,
       "note": ""
     },
     {
-      "source_id": "ncm-home",
+      "source_id": "st-catherine-calendar",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 10,
+      "note": ""
+    },
+    {
+      "source_id": "st-timothy-calendar",
+      "ok": true,
+      "method": "church_events_calendar",
+      "found": 40,
+      "note": ""
+    },
+    {
+      "source_id": "town-community-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
@@ -239,9 +1128,9 @@
       "note": "403 Client Error: Forbidden for url: https://massculturalcouncil.org/local-council/norwood/"
     },
     {
-      "source_id": "elks-calendar",
+      "source_id": "town-farmers-market",
       "ok": true,
-      "method": "html_calendar",
+      "method": "html_page",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
@@ -253,72 +1142,9 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "food-pantry",
-      "ok": true,
-      "method": "organization_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-athletics",
-      "ok": true,
-      "method": "arbiterlive_schedule",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
-    },
-    {
-      "source_id": "nps-nhs-pto",
-      "ok": true,
-      "method": "school_parent_org_composite",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "historical-society-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 1,
-      "note": ""
-    },
-    {
-      "source_id": "junior-womans-club",
-      "ok": true,
-      "method": "html_hub",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "lions-page",
-      "ok": false,
-      "method": "organization_event_discovery",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodmalions.com', port=4"
-    },
-    {
-      "source_id": "nps-pma",
-      "ok": true,
-      "method": "pma_calendar_hub",
-      "found": 0,
-      "note": ""
-    },
-    {
       "source_id": "town-police-page",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-fine-arts",
-      "ok": true,
-      "method": "multi_source_calendar",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "nps-news",
-      "ok": true,
-      "method": "html_list",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
@@ -330,11 +1156,11 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "scholarship-foundation",
-      "ok": false,
-      "method": "organization_event_discovery",
+      "source_id": "town-selectmen-car-washes",
+      "ok": true,
+      "method": "selectmen_car_washes",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodschola"
+      "note": ""
     },
     {
       "source_id": "town-senior-newsletter",
@@ -344,142 +1170,9 @@
       "note": "source returned zero events; zero events is configured as a failure"
     },
     {
-      "source_id": "norwood-space-center-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 21,
-      "note": ""
-    },
-    {
-      "source_id": "norwood-summer-concerts",
-      "ok": true,
-      "method": "secondary_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-theatre-season",
-      "ok": true,
-      "method": "dated_event_pages",
-      "found": 22,
-      "note": ""
-    },
-    {
-      "source_id": "norwood-town-news",
-      "ok": true,
-      "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
       "source_id": "town-veterans",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "vfw-discovery",
-      "ok": true,
-      "method": "secondary_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-youth-fundraisers",
-      "ok": true,
-      "method": "secondary_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "community-event-submissions",
-      "ok": true,
-      "method": "community_submission_json",
-      "found": 2,
-      "note": ""
-    },
-    {
-      "source_id": "nps-oldham-pto",
-      "ok": true,
-      "method": "school_parent_org_composite",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-prescott-pta",
-      "ok": true,
-      "method": "school_parent_org_composite",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "pcrinc-events",
-      "ok": true,
-      "method": "html_hub",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "rage-zone-norwood",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "st-catherine-calendar",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 10,
-      "note": ""
-    },
-    {
-      "source_id": "sarva-social-feed",
-      "ok": false,
-      "method": "social_mirror",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah"
-    },
-    {
-      "source_id": "resource-scouting-america-troop-42-norwood",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "resource-scouting-america-troop-49-norwood",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "fallout-shelter",
-      "ok": true,
-      "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-record-events",
-      "ok": true,
-      "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "town-farmers-market",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "town-community-events",
-      "ok": true,
-      "method": "html_hub",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
@@ -491,389 +1184,18 @@
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "washington-no7-events",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-willett-pto",
-      "ok": true,
-      "method": "school_parent_org_composite",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-food-pantry-hours",
-      "ok": true,
-      "method": "recurring_service_schedule",
-      "found": 8,
-      "note": ""
-    },
-    {
-      "source_id": "ncm-school-live-broadcasts",
-      "ok": true,
-      "method": "ncm_school_broadcasts",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "town-selectmen-car-washes",
-      "ok": true,
-      "method": "selectmen_car_washes",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "home-depot-norwood-kids-workshops",
-      "ok": true,
-      "method": "home_depot_kids_workshops",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "norwood-girl-scouts-public-events",
+      "source_id": "vfw-discovery",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
-      "source_id": "norwood-portuguese-club",
+      "source_id": "washington-no7-events",
       "ok": true,
       "method": "html_page",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-patch-fundraisers",
-      "ok": true,
-      "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "league-women-voters-norwood",
-      "ok": true,
-      "method": "organization_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-district",
-      "ok": true,
-      "method": "ical",
-      "found": 33,
-      "note": ""
-    },
-    {
-      "source_id": "nps-nhs",
-      "ok": true,
-      "method": "ical",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
-    },
-    {
-      "source_id": "nps-coakley",
-      "ok": true,
-      "method": "ical",
-      "found": 43,
-      "note": ""
-    },
-    {
-      "source_id": "nps-balch",
-      "ok": true,
-      "method": "ical",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
-    },
-    {
-      "source_id": "nps-callahan",
-      "ok": true,
-      "method": "ical",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
-    },
-    {
-      "source_id": "nps-cleveland",
-      "ok": true,
-      "method": "ical",
-      "found": 5,
-      "note": ""
-    },
-    {
-      "source_id": "nps-oldham",
-      "ok": true,
-      "method": "ical",
-      "found": 42,
-      "note": ""
-    },
-    {
-      "source_id": "nps-prescott",
-      "ok": true,
-      "method": "ical",
-      "found": 1,
-      "note": ""
-    },
-    {
-      "source_id": "nps-willett",
-      "ok": true,
-      "method": "ical",
-      "found": 1,
-      "note": ""
-    },
-    {
-      "source_id": "recovery-aa",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "recovery-na",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/"
-    },
-    {
-      "source_id": "norwood-little-league",
-      "ok": true,
-      "method": "league_schedule_table",
-      "found": 8,
-      "note": ""
-    },
-    {
-      "source_id": "norwood-youth-softball",
-      "ok": true,
-      "method": "sportsconnect_schedule",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-rec-sports",
-      "ok": true,
-      "method": "myrec_facility_calendar",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "skating-club-calendar",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 14,
-      "note": ""
-    },
-    {
-      "source_id": "faith-temple-sinai-sharon",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "faith-temple-beth-david-westwood",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "faith-icne-sharon",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "faith-shree-hari-dham",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "recovery-alanon",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "recovery-smart",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/"
-    },
-    {
-      "source_id": "arts-millforge",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 3,
-      "note": ""
-    },
-    {
-      "source_id": "arts-luke-adams",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "fitness-rec",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-extended-day",
-      "ok": true,
-      "method": "schoolnow_calendar",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
-    },
-    {
-      "source_id": "norwood-chamber-events",
-      "ok": true,
-      "method": "growthzone_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-town-news-calendar",
-      "ok": false,
-      "method": "local_town_pages_calendar",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "st-timothy-calendar",
-      "ok": true,
-      "method": "church_events_calendar",
-      "found": 40,
-      "note": ""
-    },
-    {
-      "source_id": "norwood-toastmasters",
-      "ok": false,
-      "method": "recurring_org_schedule",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm"
-    },
-    {
-      "source_id": "norwood-women-business-networking",
-      "ok": false,
-      "method": "secondary_recurring_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "norwood-rotary-calendar",
-      "ok": true,
-      "method": "clubrunner_calendar",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
-    },
-    {
-      "source_id": "norwood-kofc-events",
-      "ok": false,
-      "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "norwood-junior-womans-club",
-      "ok": false,
-      "method": "multi_source_org_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "circle-of-hope-events",
-      "ok": false,
-      "method": "seasonal_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "norwood-evening-garden-club",
-      "ok": false,
-      "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "norwood-vfw-public-events",
-      "ok": false,
-      "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "norwood-blood-drives",
-      "ok": false,
-      "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
-    },
-    {
-      "source_id": "norwood-national-night-out",
-      "ok": true,
-      "method": "derived_verified_series",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-carillon-series",
-      "ok": true,
-      "method": "derived_verified_series",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-summerfest-series",
-      "ok": true,
-      "method": "derived_verified_series",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "norwood-sunday-concerts",
-      "ok": true,
-      "method": "derived_verified_series",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "friends-coa-dances",
-      "ok": true,
-      "method": "derived_verified_series",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "factory52-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "lifeworks-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 0,
-      "note": ""
-    },
-    {
-      "source_id": "masshire-norwood-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 32,
-      "note": ""
     }
   ],
   "news_sources": [
@@ -926,7 +1248,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 58,
+      "found": 60,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -934,7 +1256,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 37,
+      "found": 44,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -942,7 +1264,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 21,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1012,14 +1334,14 @@
       "source_counts": {
         "newportdispatch.com": 1,
         "WCVB": 1,
+        "The Norwood Record": 54,
         "Norwood Parents Music Association": 1,
-        "Town of Norwood": 10,
+        "Town of Norwood": 9,
         "Realtor.com": 2,
-        "Patch": 5,
+        "Patch": 4,
         "hoodline.com": 2,
         "Wicked Local": 1,
         "USA Today": 1,
-        "The Norwood Record": 52,
         "The Norwood Record — Latest": 11,
         "CBS News": 1,
         "Inside Norwood": 13,
