@@ -6126,7 +6126,7 @@
     "potential_outputs": [
       "events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 2,
     "ingestion": {
       "method": "html_page",
@@ -6138,11 +6138,13 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-19"
+      "status": "superseded_alias",
+      "verified_at": "2026-09-25",
+      "basis": "Same official Veterans Services page is monitored by canonical town-veterans with the newer department-event adapter."
     },
-    "notes": "Watch public veterans ceremonies, observances, benefits events and community programs.",
-    "conflict_profile": "optional"
+    "notes": "Legacy duplicate department monitor retained for provenance only. Disabled to prevent duplicate ingestion; canonical monitor is town-veterans, which uses the dedicated Town department event-discovery adapter and treats an empty current event set as healthy.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "vfw-discovery",
