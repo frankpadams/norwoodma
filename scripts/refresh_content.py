@@ -1088,6 +1088,10 @@ def refresh_events(offline=False):
         health.sort(key=lambda x:str(x.get('source_id') or ''))
         write_json('calendar-source-health.json',health)
         write_js('calendar-source-health-data.js','NORWOOD_CALENDAR_SOURCE_HEALTH',health)
+        # Compact audit makes zero-yield and failing active sources visible without
+        # confusing a healthy empty seasonal calendar with a broken adapter.
+        audit={'generated_at':now_local().isoformat(),'active_sources':len([x for x in registry if x.get('active_monitor') and set(x.get('produces',[])) & {'events','school_events','sports_events','fundraisers'}]),'checked_sources':len(health),'sources_with_events':sum(1 for x in health if int(x.get('found') or 0)>0),'healthy_zero_event_sources':sum(1 for x in health if x.get('ok') and int(x.get('found') or 0)==0),'failing_sources':[{'source_id':x.get('source_id'),'method':x.get('method'),'error':x.get('error') or x.get('note')} for x in health if not x.get('ok')]}
+        write_json('calendar-ingestion-audit.json',audit)
     return events,status
 
 def usable_news_image(url, base_url=''):
