@@ -17,3 +17,7 @@
 /* Calendar action emphasis: selection is primary; submission stays neutral. */
 .calendar-picker-toggle{background:var(--gold,#F2C100);border-color:#d5a900;color:#193447}
 .submit-event-card{background:#fff!important;color:#193447!important;border:1px solid #aebdc6!important}
+
+/* Desktop event toolbar: compact search + calendar chooser on one line. */
+@media(min-width:651px){.events-page .event-tools{flex-wrap:nowrap;justify-content:flex-start}.events-page #eventSearch{flex:0 1 520px;max-width:520px}.events-page .event-tools-calendar-toggle{flex:0 0 auto;white-space:nowrap}.events-page .calendar-picker-wrap>.calendar-picker-toggle{display:none}}
+@media(max-width:650px){.events-page .event-tools-calendar-toggle{display:none}}
