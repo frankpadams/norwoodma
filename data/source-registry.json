@@ -3550,7 +3550,12 @@
       "entity_id": "16671",
       "official_referrer": "https://www.norwood.k12.ma.us/nhs/athletics",
       "include_games": true,
-      "include_practices_for_conflict": true
+      "include_practices_for_conflict": true,
+      "fallback_sources": [
+        "https://www.miaa.net/group/249",
+        "https://www.norwood.k12.ma.us/nhs/athletics/announcements"
+      ],
+      "strategy": "arbiter_primary_miaa_schedule_fallback_official_announcements_for_practices"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3558,18 +3563,18 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_official_schedule_destination",
+      "status": "verified_active_primary_and_fallbacks",
       "verified_at": "2026-09-25",
-      "basis": "NHS materials direct families to ArbiterLive entity 16671 for athletic schedules, scores and rosters; current NHS Athletics page labels its schedule destination Schedule, Scores, Standings, Rosters."
+      "basis": "MIAA states ArbiterSports is the official schedule/results source; MIAA Norwood profile exposes Schedule and MIAA Game Day republishes Arbiter schedule data. NHS official announcements provide current Fall 2026 practice dates/times."
     },
-    "notes": "Primary athletics schedule should come from the school-directed ArbiterLive entity. Public games belong in What's Happening; practices belong in Conflict Contraption. MaxPreps/NFHS may be used only as cross-checks.",
+    "notes": "Primary: ArbiterSports. If public Arbiter extraction fails, ingest Norwood schedule via MIAA Game Day/profile because MIAA says those displays use Arbiter-entered member-school data. NHS Athletics announcements are authoritative fallback for dated practice/sports information. Zero events during an active MIAA season is a failure.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     },
     "seasonality": {
       "seasonal": true,
