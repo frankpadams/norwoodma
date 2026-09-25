@@ -8648,7 +8648,7 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "html_calendar",
+      "method": "league_schedule_table",
       "automation": "preferred"
     },
     "filters": {
@@ -8668,6 +8668,14 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true
+    },
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "spring",
+        "summer"
+      ]
     }
   },
   {
