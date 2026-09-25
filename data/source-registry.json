@@ -10639,5 +10639,41 @@
     },
     "conflict_profile": "optional",
     "notes": "Career-center workshops and seminars are useful opt-in calendars but should not crowd the curated What's Happening default."
+  },
+  {
+    "id": "town-master-calendar",
+    "name": "Town of Norwood — Master Calendar",
+    "organization": "Town of Norwood",
+    "source_class": "calendar",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/calendar.php",
+    "domain": "www.norwoodma.gov",
+    "produces": [
+      "events",
+      "civic_events"
+    ],
+    "potential_outputs": [
+      "events",
+      "civic_events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "revize_master_calendar",
+      "automation": "preferred",
+      "shared_backend": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_structured_backend",
+      "verified_at": "2026-09-25",
+      "basis": "Town Revize calendar uses a shared public structured calendar data handler already used by the civic meeting monitor."
+    },
+    "notes": "Canonical shared Town calendar backend. Department-specific views should filter this source before adding separate scrapers.",
+    "conflict_profile": "optional"
   }
 ]
