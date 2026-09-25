@@ -1075,9 +1075,11 @@ def refresh_events(offline=False):
             if not src.get('health_policy',{}).get('track_last_checked'): continue
             prev=previous_health.get(sid,{})
             ok=bool(row.get('ok')); found=int(row.get('found') or 0)
-            # A successful HTTP/parse check with zero upcoming events is healthy, but it is not a content update.\n            successful=ok and found>0
+            # A successful HTTP/parse check with zero upcoming events is healthy, but it is not a content update.
+            successful=ok and found>0
             failures=0 if ok else int(prev.get('consecutive_failures') or 0)+1
-            last_success=checked_at if successful else prev.get('last_successful_update')\n            last_healthy_check=checked_at if ok else prev.get('last_healthy_check')
+            last_success=checked_at if successful else prev.get('last_successful_update')
+            last_healthy_check=checked_at if ok else prev.get('last_healthy_check')
             stale=False; stale_reason=None
             if failures>=3:
                 stale=True; stale_reason=f'{failures} consecutive refresh failures'
