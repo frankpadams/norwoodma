@@ -318,7 +318,7 @@ def events_from_ical(url,source):
             if end_raw > start_raw:
                 ep['date']=(end_raw-timedelta(days=1)).isoformat()
         url_prop=clean_text(c.get('url')) or source.get('url')
-        out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':url_prop,'cost':None,'organizer':source.get('organization') or source.get('name'),'public_access':'public','series':None,'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
+        out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':url_prop,'cost':None,'organizer':source.get('organization') or source.get('name'),'public_access':'public','series':source.get('ingestion',{}).get('series_label'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
     return out
 
 def events_from_norwood_food_pantry(source):
