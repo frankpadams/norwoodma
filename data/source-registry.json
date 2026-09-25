@@ -443,10 +443,8 @@
     "id": "factory52-events",
     "name": "Factory 52 Events",
     "url": "https://www.factory52.com/calendar-events/",
-    "active_monitor": true,
-    "produces": [
-      "events"
-    ],
+    "active_monitor": false,
+    "produces": [],
     "priority": 2,
     "ingestion": {
       "method": "tribe_events",
@@ -462,9 +460,9 @@
       ]
     },
     "verification": {
-      "status": "verified_live_calendar",
+      "status": "excluded_wrong_norwood",
       "verified_at": "2026-09-25",
-      "basis": "Official Factory 52 calendar currently publishes a populated September 2026 month with recurring trivia, chess and live music."
+      "basis": "Factory 52 is in Norwood, Ohio, not Norwood, Massachusetts."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -474,7 +472,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "High-volume commercial/community calendar. Keep routine promotions and recurring food offers opt-in; public live music, markets and special community events may qualify for curated views."
+    "notes": "Excluded: wrong municipality (Norwood, Ohio / Cincinnati area). Never ingest into Norwood.ma Massachusetts event datasets."
   },
   {
     "id": "faith-icne-sharon",
