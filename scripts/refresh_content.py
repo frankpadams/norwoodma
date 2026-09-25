@@ -352,6 +352,7 @@ def events_from_tribe(source):
     out=[]
     try:
         r=request(api); j=r.json()
+        if not isinstance(j,dict) or 'events' not in j: raise ValueError('Tribe REST response missing events')
     except Exception:
         # Tribe sites often expose a public iCal endpoint even when the REST API is blocked.
         for feed in [source.get('ingestion',{}).get('feed_url'), source.get('url').rstrip('/')+'/?ical=1', base+'/events/?ical=1']:
@@ -367,6 +368,14 @@ def events_from_tribe(source):
             try: extracted.extend(events_from_ical(feed,source))
             except Exception: pass
         return dedupe_events(extracted)
+    # A successful but empty REST response can coexist with a populated public iCal feed.
+    if not j.get('events'):
+        for feed in [source.get('ingestion',{}).get('feed_url'), source.get('url').rstrip('/')+'/?ical=1', base+'/events/?ical=1']:
+            if not feed: continue
+            try:
+                rows=events_from_ical(feed,source)
+                if rows: return dedupe_events(rows)
+            except Exception: pass
     for x in j.get('events',[]):
         title=clean_text(x.get('title')); st=parse_dt(x.get('start_date')); en=parse_dt(x.get('end_date'))
         if not title or not st: continue
@@ -851,8 +860,15 @@ def events_from_clubrunner(source):
         soup=BeautifulSoup(html,'html.parser')
         for a in soup.find_all('a',href=True):
             href=urljoin(url,a['href']); label=clean_text(a.get_text(' ')).lower()
-            if any(k in href.lower() for k in ['ical','ics','calendarfeed']) or 'subscribe' in label:
+            if any(k in href.lower() for k in ['ical','ics','calendarfeed','calendar-feed','subscribe']) or 'subscribe' in label:
                 feeds.append(href)
+        # ClubRunner frequently stores the subscription URL in onclick/data attributes rather than href.
+        for tag in soup.find_all(True):
+            for attr in ['onclick','data-url','data-href','data-calendar-url']:
+                raw=tag.get(attr)
+                if raw:
+                    for m in re.findall(r'https?://[^\\s\"\'<>]+',str(raw)):
+                        if any(k in m.lower() for k in ['ical','ics','calendar','subscribe']): feeds.append(m.replace('&amp;','&'))
     for feed in list(dict.fromkeys(feeds))[:10]:
         try: out.extend(events_from_ical(feed,source))
         except Exception: pass
