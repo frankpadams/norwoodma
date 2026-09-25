@@ -774,3 +774,15 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 html[data-high-contrast="true"] .site-timely-prev,html[data-high-contrast="true"] .site-timely-next{color:#fff}
 @media(max-width:700px){.site-timely-item{padding:.38rem .2rem!important}.site-timely-prev,.site-timely-next{min-width:30px;padding:0 .2rem}}
 @media(prefers-reduced-motion:reduce){.site-timely-track{scroll-behavior:auto}}
+
+/* v0.13.4.30 — compact Good to Know strip */
+.good-to-know-section{padding-top:14px;padding-bottom:0}
+.good-to-know{display:flex;align-items:stretch;border:1px solid rgba(0,59,113,.18);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.good-to-know-label{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#003b71;color:#fff;white-space:nowrap;font-size:.78rem;letter-spacing:.08em}
+.good-to-know-label span{color:#ffd84d;font-size:.7rem}
+.good-to-know-item{display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:11px 15px;color:#17324d;text-decoration:none;line-height:1.35;font-size:.92rem}
+.good-to-know-item>b{margin-left:auto;white-space:nowrap;color:#003b71}
+.good-to-know-item:hover,.good-to-know-item:focus-visible{background:#f4f8fb}
+.good-to-know-item:focus-visible{outline:3px solid #003b71;outline-offset:-3px}
+@media(max-width:700px){.good-to-know-section{padding-top:10px}.good-to-know{display:block}.good-to-know-label{padding:8px 12px}.good-to-know-item{align-items:flex-start;padding:10px 12px;font-size:.86rem}.good-to-know-item>b{display:none}}
+html.high-contrast .good-to-know{border-color:#fff;background:#000}.high-contrast .good-to-know-label{background:#fff;color:#000}.high-contrast .good-to-know-label span{color:#000}.high-contrast .good-to-know-item,.high-contrast .good-to-know-item>b{color:#fff}
