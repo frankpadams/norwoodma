@@ -736,7 +736,8 @@ def refresh_events(offline=False):
     registry=read_json('source-registry.json',[])
     events=list(seeds); status=[]
     if not offline:
-        for src in [x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]:
+        event_outputs={'events','school_events','sports_events','fundraisers'}
+        for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
                 if method=='home_depot_kids_workshops': got=events_from_home_depot_kids_workshops(src)
