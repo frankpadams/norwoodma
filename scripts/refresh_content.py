@@ -1055,7 +1055,7 @@ def events_from_myrec_facilities(source):
     root=source.get('ingestion',{}).get('facility_root') or source.get('url') or 'https://norwoodma.myrec.com/info/facilities/default.aspx'
     html=request(root).text
     soup=BeautifulSoup(html,'html.parser')
-    links=[]
+    links=list(source.get('ingestion',{}).get('seed_area_urls') or [])
     # MyRec facility indexes can expose area URLs only after following facility links.
     for a in soup.find_all('a',href=True):
         href=urljoin(root,a['href'])
