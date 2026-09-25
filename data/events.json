@@ -16,6 +16,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9331879/pto-dominos-slice-the-price-card-fundraiser",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -40,6 +41,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339140/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -64,6 +66,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174368/early-release-all-schools-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -142,6 +145,30 @@
     "verification_status": "auto_primary_source",
     "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
     "discovered_by": "scheduled_jsonld"
+  },
+  {
+    "id": "2026-09-25-oktoberfest-6940c39",
+    "title": "Oktoberfest",
+    "start": {
+      "date": "2026-09-25",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-25",
+      "time": "11:00"
+    },
+    "venue": "4600 Beech Street Suites 100 300",
+    "address": "4600 Beech Street, Suites 100 & 300, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/oktoberfest-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Oktoberfest continues Friday at Braxton Brewing Factory 52 with cold beer, warm pretzels, live music, chicken dancing, and some of Cincinnati’s best-dressed pups. Festivities run from 11 AM – 12 AM. John Keene & Jim Mason Polka Duo will per",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-25-today-friday-september-25-10-30-11-45-am-simo-7a78b81",
@@ -255,6 +282,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -285,6 +313,54 @@
     "verification_status": "official_schedule",
     "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
     "discovered_by": "scheduled_recurring_service"
+  },
+  {
+    "id": "2026-09-26-workout-on-the-lawn-with-body-alive-oakley-a9338f6",
+    "title": "Workout on the Lawn with Body Alive Oakley",
+    "start": {
+      "date": "2026-09-26",
+      "time": "09:30"
+    },
+    "end": {
+      "date": "2026-09-26",
+      "time": "10:30"
+    },
+    "venue": "Factory 52 Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/workout-on-the-lawn-with-body-alive-oakley-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us on the last Saturday of the month for Workout on the Lawn with Body Alive Oakley , a community-driven fitness series at Factory 52 running from April through September . Each class takes place from 9:30 AM to 10:30 AM , followed by ",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-09-26-oktoberfest-6bb89ae",
+    "title": "Oktoberfest",
+    "start": {
+      "date": "2026-09-26",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-26",
+      "time": "11:00"
+    },
+    "venue": "4600 Beech Street Suites 100 300",
+    "address": "4600 Beech Street, Suites 100 & 300, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/oktoberfest-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Saturday brings a full day of Oktoberfest fun to Braxton Brewing Factory 52, including cold beer, warm pretzels, live music, chicken dancing, and friendly competitions. Festivities run from 11 AM – 12 AM. The Festmeisters perform from 11 AM",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-26-miniature-workshop",
@@ -373,6 +449,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -445,6 +522,7 @@
     "source_id": "first-congregational-events",
     "source_url": "https://www.fccnorwood.org/events",
     "cost": null,
+    "organizer": "First Congregational Church in Norwood",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -469,6 +547,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -493,12 +572,61 @@
     "source_id": "first-congregational-events",
     "source_url": "https://www.fccnorwood.org/events",
     "cost": null,
+    "organizer": "First Congregational Church in Norwood",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-27-oktoberfest-3f43f99",
+    "title": "Oktoberfest",
+    "start": {
+      "date": "2026-09-27",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": "21:00"
+    },
+    "venue": "4600 Beech Street Suites 100 300",
+    "address": "4600 Beech Street, Suites 100 & 300, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/oktoberfest-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Close out Oktoberfest at Braxton Brewing Factory 52 with cold beer, warm pretzels, live music, chicken dancing, friendly competition, and Bengals football. Festivities run from 11 AM – 9 PM. Floyd and the Walkmen will perform from 11 AM – 1",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-09-27-bengals-game-dey-giveaways-soft-cooler-2040fd5",
+    "title": "Bengals Game Dey Giveaways: Soft Cooler",
+    "start": {
+      "date": "2026-09-27",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": "17:00"
+    },
+    "venue": "Factory 52 Events",
+    "address": null,
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/bengals-game-dey-giveaways-soft-cooler/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Bengals vs. Steelers is never just another game. Head to Braxton Factory 52 on Sunday, September 27, for the next Game Dey Giveaway and one of the season’s biggest matchups. The giveaway begins at noon, when the first 100 guests in the tapr",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-27-school-of-rock-concert-b245771",
@@ -517,6 +645,7 @@
     "source_id": "castle-island-calendar",
     "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
+    "organizer": "Castle Island Brewing",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -612,6 +741,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -690,6 +820,30 @@
     "verification_status": "auto_primary_source",
     "notes": "Morrill Memorial Library is hosting a Cozy Puzzle Night for adults on the last Monday of every month. September's Puzzle Night will take place on&nbsp;Monday, September 28 starting at 6:30pm in the Simoni Room. Hang out on an autumn night w",
     "discovered_by": "scheduled_jsonld"
+  },
+  {
+    "id": "2026-09-28-monday-kids-eat-free-402280c",
+    "title": "Monday Kids Eat Free 🍽️",
+    "start": {
+      "date": "2026-09-28",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": "23:59"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-09-28/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-28-monday-movie-matinee-7a4ee20",
@@ -1044,6 +1198,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -1315,6 +1470,30 @@
     "discovered_by": "assabet_calendar"
   },
   {
+    "id": "2026-09-29-pop-quiz-trivia-at-fretboard-brewing-03624d4",
+    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "start": {
+      "date": "2026-09-29",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-09-29/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-09-29-tuesday-september-29-6-00-7-00-pm-simoni-room-4e36829",
     "title": "Tuesday, September 29 6:00—7:00 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
     "start": {
@@ -1523,6 +1702,7 @@
     "source_id": "first-congregational-events",
     "source_url": "https://www.fccnorwood.org/events",
     "cost": null,
+    "organizer": "First Congregational Church in Norwood",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -1619,6 +1799,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9162140/cms-open-house",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -1648,6 +1829,54 @@
     "publish_candidate": true,
     "verification_status": "community_notice_verified_2026-09-21",
     "notes": "Norwood Police Department community information session for Norwood residents about Flock Safety cameras and license plate reader (LPR) technology. Chief Christopher Padden and the department plan to explain what the technology is and is not, why NPD uses it, examples of its use in investigations and public safety, what information is collected, data-retention practices, system access and auditing, restrictions on sharing/use of Norwood data, and department safeguards. An open resident Q&A will follow. The meeting is intended to address public questions about privacy, data retention, information sharing, accountability, and law-enforcement use of LPR systems."
+  },
+  {
+    "id": "2026-09-30-chess-knight-b2ffd01",
+    "title": "Chess Knight",
+    "start": {
+      "date": "2026-09-30",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": "18:30"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-09-30/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-09-30-history-of-the-roman-empire-themed-trivia-d0f3b0b",
+    "title": "History of the Roman Empire Themed Trivia",
+    "start": {
+      "date": "2026-09-30",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": "19:00"
+    },
+    "venue": "Factory 52 Events",
+    "address": null,
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/history-of-the-roman-empire-themed-trivia/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Still thinking about the Roman Empire? Put all that ancient history knowledge to good use at Braxton Factory 52 on Wednesday, September 30, at 7 PM. History of the Roman Empire Themed Trivia will cover legendary emperors, epic battles, poli",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-30-conservation-commission-meeting-c4db702",
@@ -1747,6 +1976,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-01-house-of-cards-carnivale-129bf03",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "The cards are back on the table! House of Cards Carnivale returns to Factory 52 for its second year, bigger, better and expanded to 11 days of carnival rides, games, entertainment, local vendors, food, drinks, and fall fun. Opening night be",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-01-managing-your-job-search-step-by-step-approac-04e7b87",
     "title": "Managing Your Job Search: Step-By-Step Approach",
     "start": {
@@ -1795,6 +2048,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-01-hearts-harvest-farmers-market-at-factory-52-f546079",
+    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "start": {
+      "date": "2026-10-01",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "19:00"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-01/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-01-cms-open-house-grades-6-and-7-a2644c4",
     "title": "CMS Open House - Grades 6 and 7",
     "start": {
@@ -1811,12 +2088,37 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9162142/cms-open-house",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-01-live-music-at-fretboard-brewing-9903d0d",
+    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
+    "start": {
+      "date": "2026-10-01",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-01/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-01-mill-sharpening",
@@ -1840,6 +2142,30 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-01-feud-night-w-last-call-trivia-87aa2e4",
+    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "start": {
+      "date": "2026-10-01",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "food",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-01/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-01-finance-commission-meeting-9bd6f55",
@@ -1891,6 +2217,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-02-house-of-cards-carnivale-4572fa2",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-02",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "House of Cards Carnivale is back at Factory 52 for its second year with an expanded 11-day celebration of carnival rides, games, entertainment, local vendors, food, drinks, and fall fun. From classic attractions to something new around ever",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-02-favorite-color-day-come-to-school-wearing-as--e46d62d",
     "title": "Favorite Color Day! Come to school wearing as much of in your favorite color as you can!",
     "start": {
@@ -1907,6 +2257,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274668/favorite-color-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -1931,6 +2282,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2010,6 +2362,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-03-house-of-cards-carnivale-a1b58b8",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-03",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "The cards are back on the table as House of Cards Carnivale returns to Factory 52 for its second year. Now expanded to 11 days, this one-of-a-kind fall celebration fills the campus with carnival rides, games, entertainment, local vendors, f",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-03-first-saturday-devotions-5fc17d9",
     "title": "First Saturday Devotions",
     "start": {
@@ -2026,6 +2402,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2074,6 +2451,7 @@
     "source_id": "first-congregational-events",
     "source_url": "https://www.fccnorwood.org/events",
     "cost": null,
+    "organizer": "First Congregational Church in Norwood",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2144,6 +2522,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2323,6 +2702,30 @@
     "notes": null
   },
   {
+    "id": "2026-10-05-monday-kids-eat-free-ab0e014",
+    "title": "Monday Kids Eat Free 🍽️",
+    "start": {
+      "date": "2026-10-05",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-05",
+      "time": "23:59"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-05-mondays-with-moms-1c715af",
     "title": "Mondays with Moms",
     "start": {
@@ -2339,6 +2742,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2411,6 +2815,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2435,6 +2840,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2531,12 +2937,37 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Confessions Available",
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-06-pop-quiz-trivia-at-fretboard-brewing-684db46",
+    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "start": {
+      "date": "2026-10-06",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-06/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-06-zoning-board-of-appeals-meeting-0a12024",
@@ -2585,6 +3016,30 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, October 7 Time — 10:00 am Platform — Zoom This webinar will review efficient ways to format text in MS Word including changing font style and size, text alignment, inserting bullets, setting up tabs, line spacing, margins,",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-07-chess-knight-dad3e33",
+    "title": "Chess Knight",
+    "start": {
+      "date": "2026-10-07",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "18:30"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-07/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -2660,6 +3115,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-08-house-of-cards-carnivale-8468281",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-8/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "House of Cards Carnivale returns to Factory 52 for its second year, bigger, better and expanded to 11 days of carnival rides, games, live entertainment, local vendors, food, drinks, and fall fun. With something new around every corner, each",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-08-rejuvenate-your-r-sum-f27f1ea",
     "title": "Rejuvenate Your Résumé",
     "start": {
@@ -2681,6 +3160,30 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Thursday, October 8 Time — 10:00 am Platform — Zoom This résumé workshop will explain current trends in résumé writing. Does your résumé include accomplishments? Are you using PAR statements? Are you aware of Applicant Tracking Softw",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-08-hearts-harvest-farmers-market-at-factory-52-02b2d1f",
+    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "start": {
+      "date": "2026-10-08",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "19:00"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-08/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -2707,6 +3210,30 @@
     "notes": null
   },
   {
+    "id": "2026-10-08-live-music-at-fretboard-brewing-edeaa75",
+    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
+    "start": {
+      "date": "2026-10-08",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-08/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-08-emerald-city-silent-book-club",
     "title": "Silent Book Club",
     "start": {
@@ -2731,6 +3258,30 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-10-08-feud-night-w-last-call-trivia-e0b9690",
+    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "start": {
+      "date": "2026-10-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "food",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-08/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-08-october-pto-meeting-fd5c16f",
     "title": "October PTO Meeting",
     "start": {
@@ -2747,12 +3298,37 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309225/october-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-09-house-of-cards-carnivale-d5e1996",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-09",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-9/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "The cards are back on the table! House of Cards Carnivale has returned to Factory 52 for a second year of carnival rides, games, entertainment, local vendors, food, drinks, and fall fun. Expanded to 11 days, this year’s celebration offers e",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-09-claudettes",
@@ -2799,6 +3375,30 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-10-house-of-cards-carnivale-7962bfa",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-10",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-10/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "The final Saturday of House of Cards Carnivale brings one of the biggest days of the celebration to Factory 52. Returning for its second year and expanded to 11 days, Carnivale fills the campus with rides, games, entertainment, local vendor",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-10-norwood-food-pantry-food-assistance-3bb921e",
@@ -2887,12 +3487,37 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9351169/oldham-pto-stuffie-sleep-over-party",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-11-house-of-cards-carnivale-d8efc82",
+    "title": "House of Cards Carnivale",
+    "start": {
+      "date": "2026-10-11",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "23:59"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-11/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "There’s still one more hand to play! House of Cards Carnivale wraps up its second year at Factory 52 with one final afternoon and evening of carnival rides, games, food, drinks and fall fun. This is your last chance to experience the 11-day",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-12-closed-today-83188fb",
@@ -2919,6 +3544,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-12-monday-kids-eat-free-9575800",
+    "title": "Monday Kids Eat Free 🍽️",
+    "start": {
+      "date": "2026-10-12",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-12",
+      "time": "23:59"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-12/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-12-no-school-columbus-indigenous-peoples-day-04dac09",
     "title": "NO SCHOOL - COLUMBUS/INDIGENOUS PEOPLES' DAY",
     "start": {
@@ -2935,6 +3584,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179639/no-school-columbus-indigenous-peoples-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2959,6 +3609,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174369/no-school-holiday-indigenous-peoples-day-columbus-day-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -2983,6 +3634,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181412/lifetouch-picture-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3038,6 +3690,30 @@
     "notes": null
   },
   {
+    "id": "2026-10-13-pop-quiz-trivia-at-fretboard-brewing-67ab5cb",
+    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "start": {
+      "date": "2026-10-13",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-13/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-13-knights-of-columbus-meeting-in-church-hall-a519c35",
     "title": "Knights of Columbus Meeting in Church Hall",
     "start": {
@@ -3054,6 +3730,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3078,6 +3755,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181413/lifetouch-picture-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3134,6 +3812,30 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-10-14-chess-knight-cddf33a",
+    "title": "Chess Knight",
+    "start": {
+      "date": "2026-10-14",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "18:30"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-14/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-14-irish-brewing-boston-trivia-night-every-wedne-b9341ee",
     "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
     "start": {
@@ -3179,6 +3881,78 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Thursday, October 15 Time — 10:00 am Platform — Zoom Are you ready to dive into Excel, the most popular MS Office program? Then this class is for you. We will help you build a strong foundation, using plain language and giving practi",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-15-hearts-harvest-farmers-market-at-factory-52-8f0ace8",
+    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "start": {
+      "date": "2026-10-15",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "19:00"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-15/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-15-live-music-at-fretboard-brewing-3b83448",
+    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
+    "start": {
+      "date": "2026-10-15",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-15/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-15-feud-night-w-last-call-trivia-3da93b5",
+    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "start": {
+      "date": "2026-10-15",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "food",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-15/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -3365,6 +4139,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3396,6 +4171,30 @@
     "notes": null
   },
   {
+    "id": "2026-10-19-monday-kids-eat-free-328ba4a",
+    "title": "Monday Kids Eat Free 🍽️",
+    "start": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "23:59"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-19/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-19-picture-day-053859e",
     "title": "Picture Day!",
     "start": {
@@ -3412,6 +4211,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274667/picture-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3484,6 +4284,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3564,6 +4365,30 @@
     "notes": null
   },
   {
+    "id": "2026-10-20-pop-quiz-trivia-at-fretboard-brewing-733e1a6",
+    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "start": {
+      "date": "2026-10-20",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-20/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-21-job-searching-with-a-large-language-model-ce7889d",
     "title": "Job Searching with a Large Language Model",
     "start": {
@@ -3609,6 +4434,30 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, October 21 Time — 1:00 to 3:00 pm Place — MassHire Norwood Career Center, 128 Carnegie Row, Norwood Launch your next chapter with a company shaping the future — meet General Dynamics Mission Systems and discover where your",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-21-chess-knight-c0d4a73",
+    "title": "Chess Knight",
+    "start": {
+      "date": "2026-10-21",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "18:30"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-21/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -3733,6 +4582,78 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-22-hearts-harvest-farmers-market-at-factory-52-5927661",
+    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "start": {
+      "date": "2026-10-22",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "19:00"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-22/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-22-live-music-at-fretboard-brewing-a6cf0ae",
+    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
+    "start": {
+      "date": "2026-10-22",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-22/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-22-feud-night-w-last-call-trivia-8510f40",
+    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "start": {
+      "date": "2026-10-22",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "food",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-22/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-22-pto-sponsored-halloween-party-time-tba-38dfa8d",
     "title": "PTO Sponsored Halloween Party Time TBA",
     "start": {
@@ -3749,6 +4670,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9351171/pto-sponsored-halloween-party-time-tba",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3828,6 +4750,30 @@
     "discovered_by": "scheduled_recurring_service"
   },
   {
+    "id": "2026-10-24-opera-fest-c9a8297",
+    "title": "Opera Fest",
+    "start": {
+      "date": "2026-10-24",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "18:00"
+    },
+    "venue": "Factory 52 Events",
+    "address": null,
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/opera-fest/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Braxton Factory 52 and The BonBonerie are teaming up for Opera Fest on Saturday, October 24. A one-of-a-kind evening bringing together live music, craft beer and one of Cincinnati’s most beloved desserts. Enjoy a flight of Opera Cream Stout",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-24-magic-heartbreaker",
     "title": "Heartbreaker — Music of Led Zeppelin",
     "start": {
@@ -3890,6 +4836,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -3942,6 +4889,30 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-26-monday-kids-eat-free-0fbb2d8",
+    "title": "Monday Kids Eat Free 🍽️",
+    "start": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "23:59"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-26/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-26-career-planning-session-13a9148",
@@ -4032,6 +5003,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179640/early-release-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4064,6 +5036,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-27-pop-quiz-trivia-at-fretboard-brewing-0640ebf",
+    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "start": {
+      "date": "2026-10-27",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-27/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-10-27-knights-of-columbus-meeting-in-church-hall-49835f0",
     "title": "Knights of Columbus Meeting in Church Hall",
     "start": {
@@ -4080,6 +5076,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4104,6 +5101,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339141/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4128,6 +5126,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174370/early-release-all-schools-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4157,6 +5156,30 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, October 28 Time — 10:00 am Platform — Zoom In this webinar we discuss strengthening your profile, making it easier to be found on LI, researching companies and people, engaging and nurturing your network, and protecting yo",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-28-chess-knight-4df7963",
+    "title": "Chess Knight",
+    "start": {
+      "date": "2026-10-28",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "18:30"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-28/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -4230,6 +5253,78 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Thursday, October 29 Time — 10:00 am Platform — Zoom This is our second webinar in the Excel series. It is built again around a project and demonstrates how to set up more complex formulas; organize, filter, and summarize data in dif",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-29-hearts-harvest-farmers-market-at-factory-52-6a885da",
+    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "start": {
+      "date": "2026-10-29",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "19:00"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-29/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-29-live-music-at-fretboard-brewing-67d396b",
+    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
+    "start": {
+      "date": "2026-10-29",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-29/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-10-29-feud-night-w-last-call-trivia-7e27f55",
+    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "start": {
+      "date": "2026-10-29",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "food",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-29/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -4375,6 +5470,30 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-11-02-monday-kids-eat-free-31f032c",
+    "title": "Monday Kids Eat Free 🍽️",
+    "start": {
+      "date": "2026-11-02",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-11-02",
+      "time": "23:59"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-11-02/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-11-02-bible-study-e0b0d02",
     "title": "Bible Study",
     "start": {
@@ -4391,6 +5510,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4440,12 +5560,37 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179638/no-school-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-03-pop-quiz-trivia-at-fretboard-brewing-9affa39",
+    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "start": {
+      "date": "2026-11-03",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-03",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "community",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-11-03/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
+    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-11-04-community-veterans-job-fair-99025f1",
@@ -4469,6 +5614,30 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, November 4 Time — 10:00 am to 1:00 pm Location — The Verve Hotel, 1360 Worcester St, Natick, MA The Community & Veterans Job Fair is a great opportunity for ALL job seekers to connect directly with employers who are active",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-11-04-chess-knight-a584330",
+    "title": "Chess Knight",
+    "start": {
+      "date": "2026-11-04",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "18:30"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "arts",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-11-04/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -4521,6 +5690,54 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-05-hearts-harvest-farmers-market-at-factory-52-acdaf55",
+    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "start": {
+      "date": "2026-11-05",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "19:00"
+    },
+    "venue": "4600 Beech Street",
+    "address": "4600 Beech Street, Norwood, OH, 45212",
+    "category": "market",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-11-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-11-05-live-music-at-fretboard-brewing-47d914a",
+    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
+    "start": {
+      "date": "2026-11-05",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue Suite O",
+    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "category": "live_music",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-11-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-11-05-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -4544,6 +5761,30 @@
     "notes": null
   },
   {
+    "id": "2026-11-05-feud-night-w-last-call-trivia-82bc3c3",
+    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "start": {
+      "date": "2026-11-05",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "21:00"
+    },
+    "venue": "2750 Park Avenue",
+    "address": "2750 Park Avenue, Norwood, OH, 45212",
+    "category": "food",
+    "source_id": "factory52-events",
+    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-11-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
+    "discovered_by": "scheduled_tribe_api"
+  },
+  {
     "id": "2026-11-06-disney-day-come-to-school-dressed-as-your-fav-b658d83",
     "title": "Disney Day! Come to school dressed as your favorite Disney character!",
     "start": {
@@ -4560,6 +5801,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274669/disney-day-come-to-school-dressed-as-your-favorite-disney-character",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4656,6 +5898,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4680,6 +5923,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4777,6 +6021,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179637/veterans-day-no-school",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4849,6 +6094,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174372/no-school-holiday-veterans-day-observed-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4873,6 +6119,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9123243/parent-teacher-conferences",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4921,6 +6168,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309226/november-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5133,6 +6381,7 @@
     "source_id": "st-catherine-calendar",
     "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5182,6 +6431,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181414/lifetouch-picture-retakes",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5280,6 +6530,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179641/early-release-dismissal-at-12-30-pm-conferences",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5304,6 +6555,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9123244/parent-teacher-conferences",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5328,6 +6580,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339142/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5352,6 +6605,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174373/early-release-all-schools-parent-conferences-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5424,6 +6678,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5496,6 +6751,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179642/early-release-dismissal-at-12-30-pm-thanksgiving-holiday",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5544,6 +6800,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339143/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5568,6 +6825,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174374/early-release-all-schools-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5616,6 +6874,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179643/thanksgiving-holiday-no-school",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5640,6 +6899,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174375/no-school-thanksgiving-break-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5786,6 +7046,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274670/wacky-day-come-to-school-with-a-wacky-hair-style-crazy-hat-and-or-socks",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -5880,6 +7141,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6025,6 +7287,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309227/december-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6171,6 +7434,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339144/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6195,6 +7459,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174376/early-release-all-schools-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6219,6 +7484,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179645/early-release-dismissal-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6316,6 +7582,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6387,6 +7654,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179647/early-release-dismissal-at-12-30-pm-winter-break",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6435,6 +7703,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339145/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6459,6 +7728,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174377/early-release-all-schools-december-break-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6483,6 +7753,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179649/no-school-winter-break",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6579,6 +7850,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174393/first-day-back-from-winter-break-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6652,6 +7924,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274672/dress-to-impress-come-to-school-dressed-to-impress",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6676,6 +7949,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6749,6 +8023,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309228/january-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6797,6 +8072,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179651/no-school-martin-luther-king-jr-holiday",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6821,6 +8097,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174379/no-school-holiday-dr-martin-luther-king-jr-day-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6870,6 +8147,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6918,6 +8196,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -6991,6 +8270,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179654/early-release-dismissal-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7015,6 +8295,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339146/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7039,6 +8320,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174380/early-release-all-schools-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7063,6 +8345,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274949/cms-musical",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7087,6 +8370,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274950/cms-musical",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7135,6 +8419,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7159,6 +8444,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274951/cms-musical",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7183,6 +8469,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274675/team-pride-day-celebrate-your-favorite-athletic-team",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7230,6 +8517,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7303,6 +8591,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7327,6 +8616,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309229/february-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7376,6 +8666,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179656/no-school-february-vacation",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7400,6 +8691,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174381/no-school-february-break-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7424,6 +8716,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7520,6 +8813,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7544,6 +8838,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179657/early-release-dismissal-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7568,6 +8863,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339147/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7592,6 +8888,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174382/early-release-all-schools-clone-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7666,6 +8963,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274676/read-across-america-week-activities-tba",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7690,6 +8988,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7739,6 +9038,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181415/lifetouch-spring-picture-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7763,6 +9063,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181435/lifetouch-spring-picture-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7812,6 +9113,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309231/march-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7836,6 +9138,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7860,6 +9163,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7933,6 +9237,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274714/celebrate-national-downs-syndrome-day-wear-mis-matched-or-silly-socks-to-school",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7957,6 +9262,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -7981,6 +9287,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8030,6 +9337,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179658/early-release-dismissal-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8054,6 +9362,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339148/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8103,6 +9412,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174383/early-release-all-schools-parent-conferences-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8127,6 +9437,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8151,6 +9462,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8175,6 +9487,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8199,6 +9512,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8223,6 +9537,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8247,6 +9562,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8271,6 +9587,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8295,6 +9612,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8319,6 +9637,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8343,6 +9662,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274716/autism-awareness-day-wear-blue-to-school",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8367,6 +9687,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8391,6 +9712,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179659/no-school-election-day",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8415,6 +9737,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174384/school-closed-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8439,6 +9762,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309232/april-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8463,6 +9787,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179660/early-release-dismissal-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8487,6 +9812,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339151/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8511,6 +9837,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174385/early-release-all-schools-clone-clone-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8535,6 +9862,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179661/no-school-april-vacation",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8559,6 +9887,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174386/no-school-april-break-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8583,6 +9912,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8607,6 +9937,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8631,6 +9962,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274722/mis-match-day-come-to-school-in-your-silliest-mismatched-outfit",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8655,6 +9987,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174387/willett-kindergarten-only-no-school-kindergarten-screening-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8679,6 +10012,7 @@
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
+    "organizer": "St. Timothy Parish Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8703,6 +10037,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309233/may-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8727,6 +10062,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179662/early-release-dismissal-at-12-30-pm-professional-development",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8751,6 +10087,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339152/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8775,6 +10112,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174388/early-release-all-schools-clone-clone-clone-clone-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8799,6 +10137,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179663/no-school-memorial-day-holiday",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8823,6 +10162,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174389/no-school-holiday-memorial-day-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8847,6 +10187,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274948/8th-grade-dc-trip",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8871,6 +10212,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274723/hat-day-come-to-school-showing-off-your-favorite-hat",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8895,6 +10237,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309234/june-pto-meeting",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8919,6 +10262,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9321226/8th-grade-dance",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8943,6 +10287,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9321232/8th-grade-promotion",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8967,6 +10312,7 @@
     "source_id": "nps-coakley",
     "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179664/last-day-of-school-if-no-snow-days-early-release-dismissal-at-12-30-pm",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -8991,6 +10337,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174390/180th-school-day-early-release-for-students-only-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -9015,6 +10362,7 @@
     "source_id": "nps-oldham",
     "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339153/early-release-11-40-dismissal",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -9039,6 +10387,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174391/no-school-holiday-juneteenth-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -9063,6 +10412,7 @@
     "source_id": "nps-district",
     "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174392/185th-school-day-additional-5-days-if-needed-clone-clone-clone",
     "cost": null,
+    "organizer": "Norwood Public Schools",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
