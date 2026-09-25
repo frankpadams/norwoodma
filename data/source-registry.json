@@ -3555,7 +3555,7 @@
         "https://www.miaa.net/group/249",
         "https://www.norwood.k12.ma.us/nhs/athletics/announcements"
       ],
-      "strategy": "arbiter_primary_miaa_schedule_fallback_official_announcements_for_practices",
+      "strategy": "schoolnow_and_arbiter_parallel_discovery_with_miaa_baseline",
       "sport_scope": {
         "mode": "discover_from_miaa_school_profile",
         "fall": [
@@ -3650,7 +3650,8 @@
           "miaa_committed",
           "nhs_announcements"
         ]
-      }
+      },
+      "schoolnow_calendar_root": "https://www.norwood.k12.ma.us/nhs/academics/calendar/monthly/2026/09"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3662,7 +3663,7 @@
       "verified_at": "2026-09-25",
       "basis": "MIAA states ArbiterSports is the official schedule/results source; MIAA Norwood profile exposes Schedule and MIAA Game Day republishes Arbiter schedule data. NHS official announcements provide current Fall 2026 practice dates/times."
     },
-    "notes": "Primary: ArbiterSports; MIAA Game Day is the preferred Arbiter-backed fallback. Discover sports/teams from the MIAA school profile rather than a narrow hard-coded fall list. Include tennis, indoor/outdoor track & field, field hockey, cross country, swim/dive, gymnastics, wrestling, hockey, basketball, baseball, softball, lacrosse, volleyball, golf, football, soccer and any additional Norwood teams exposed by MIAA/Arbiter. NHS announcements remain authoritative for practices. Zero during an active season is a failure.",
+    "notes": "Primary: ArbiterSports; MIAA Game Day is the preferred Arbiter-backed fallback. Discover sports/teams from the MIAA school profile rather than a narrow hard-coded fall list. Include tennis, indoor/outdoor track & field, field hockey, cross country, swim/dive, gymnastics, wrestling, hockey, basketball, baseball, softball, lacrosse, volleyball, golf, football, soccer and any additional Norwood teams exposed by MIAA/Arbiter. NHS announcements remain authoritative for practices. Zero during an active season is a failure. The SchoolNow selector is now treated as an independent feed-discovery surface rather than assuming the NHS calendar feed contains athletics.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
