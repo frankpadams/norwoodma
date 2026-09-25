@@ -734,6 +734,31 @@ def events_from_home_depot_kids_workshops(source):
 
 
 
+
+def events_from_league_schedule(source):
+    """Parse public youth-league schedule tables/cards with dates and matchup metadata."""
+    url=source.get('url'); html=request(url).text
+    if not BeautifulSoup:return []
+    soup=BeautifulSoup(html,'html.parser'); out=[]
+    nodes=soup.find_all(['tr','li','article','div'])
+    for node in nodes:
+        text=clean_text(node.get_text(' '))
+        if len(text)<8 or len(text)>600: continue
+        d=_date_from_text(text)
+        if not d: continue
+        tm=_time_from_text(text)
+        title=None
+        cells=node.find_all(['td','th'])
+        if cells:
+            vals=[clean_text(c.get_text(' ')) for c in cells]
+            title=' — '.join(v for v in vals if v and not re.search(r'\b20\d{2}\b',v) and not re.fullmatch(r'\d{1,2}:\d{2}.*',v,re.I))[:180]
+        if not title:
+            h=node.find(['h2','h3','h4','strong']); title=clean_text(h.get_text(' ')) if h else text[:180]
+        if not title: continue
+        ds=d.isoformat()
+        out.append({'id':event_id(title,ds,source.get('name')),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':None,'address':None,'category':'sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':'Youth sports schedule item; confirm with league for late changes.','discovered_by':'league_schedule_table'})
+    return dedupe_events(out)
+
 def events_from_multi_source_calendar(source):
     """Merge direct ICS and calendar hubs, then apply configured topic keywords."""
     ing=source.get('ingestion',{}); out=[]
@@ -868,7 +893,8 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='pma_calendar_hub': got=events_from_pma_hub(src)
+                if method in {'league_schedule_table','sportsconnect_schedule'}: got=events_from_league_schedule(src)
+                elif method=='pma_calendar_hub': got=events_from_pma_hub(src)
                 elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
                 elif method=='schoolnow_calendar': got=events_from_schoolnow(src)
                 elif method in {'assabet_calendar','assabet_filtered_calendar'}: got=events_from_assabet(src)
