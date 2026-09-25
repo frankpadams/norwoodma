@@ -762,3 +762,15 @@ html[data-high-contrast="true"] .site-timely-alert a{color:#fff;text-decoration:
 }
 
 .calendar-primary-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:0 0 1.25rem}.calendar-primary-tools .events-action-card{text-decoration:none}@media(max-width:620px){.calendar-primary-tools{grid-template-columns:1fr}}
+
+
+/* v0.13.4.29 — accessible rotating time-sensitive alert carousel */
+.site-timely-alert{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
+.site-timely-track{display:block;overflow:hidden;min-width:0;white-space:nowrap}
+.site-timely-item{display:none!important;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:.48rem .55rem!important}
+.site-timely-item.is-active{display:block!important}
+.site-timely-prev,.site-timely-next{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-size:1.35rem;font-weight:850;line-height:1;min-width:34px;min-height:34px;padding:0 .35rem;cursor:pointer}
+.site-timely-prev:hover,.site-timely-next:hover,.site-timely-prev:focus-visible,.site-timely-next:focus-visible{background:rgba(0,0,0,.1);outline:2px solid currentColor;outline-offset:-2px}
+html[data-high-contrast="true"] .site-timely-prev,html[data-high-contrast="true"] .site-timely-next{color:#fff}
+@media(max-width:700px){.site-timely-item{padding:.38rem .2rem!important}.site-timely-prev,.site-timely-next{min-width:30px;padding:0 .2rem}}
+@media(prefers-reduced-motion:reduce){.site-timely-track{scroll-behavior:auto}}
