@@ -80,7 +80,7 @@
     if(!items.length)return;
     const seen=new Set();const alerts=items.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
     const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
-    strip.innerHTML='<div class="site-timely-track">'+alerts.map(a=>{
+    strip.innerHTML='<button class="site-timely-prev" type="button" aria-label="Previous alert">‹</button><div class="site-timely-track" tabindex="0">'+alerts.map(a=>{
       let label='NOTICE';
       if(a.kind==='urgent')label=/child abduction|amber/i.test(a.title)?'AMBER ALERT':/silver alert|missing person/i.test(a.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(a.title)?'WEATHER ALERT':'EMERGENCY ALERT';
       if(a.kind==='election')label='ELECTION DAY';
@@ -104,7 +104,29 @@
         return '<span class="site-timely-item"><a href="'+esc(a.url||'events.html')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>'+liveLink+'</span>';
       }
       return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
-    }).join('<span class="site-timely-sep" aria-hidden="true">•</span>')+'</div>';
+    }).join('')+'</div><button class="site-timely-next" type="button" aria-label="Next alert">›</button><span class="site-timely-status sr-only" aria-live="polite"></span>';
+    const track=strip.querySelector('.site-timely-track'), slides=[...strip.querySelectorAll('.site-timely-item')];
+    let current=0,timer=null,paused=false;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const show=(idx,announce=false)=>{
+      if(!slides.length)return;
+      current=(idx+slides.length)%slides.length;
+      slides.forEach((el,i)=>{el.classList.toggle('is-active',i===current);el.setAttribute('aria-hidden',String(i!==current));if(i!==current)el.setAttribute('tabindex','-1');else el.removeAttribute('tabindex');});
+      if(announce&&slides.length>1){const s=strip.querySelector('.site-timely-status');if(s)s.textContent='Alert '+(current+1)+' of '+slides.length;}
+    };
+    const stop=()=>{if(timer){clearInterval(timer);timer=null;}};
+    const start=()=>{stop();if(!reduced&&!paused&&slides.length>1)timer=setInterval(()=>show(current+1),7000);};
+    strip.querySelector('.site-timely-prev').addEventListener('click',()=>{show(current-1,true);start();});
+    strip.querySelector('.site-timely-next').addEventListener('click',()=>{show(current+1,true);start();});
+    strip.addEventListener('mouseenter',()=>{paused=true;stop();});
+    strip.addEventListener('mouseleave',()=>{paused=false;start();});
+    strip.addEventListener('focusin',()=>{paused=true;stop();});
+    strip.addEventListener('focusout',()=>{setTimeout(()=>{if(!strip.contains(document.activeElement)){paused=false;start();}},0);});
+    let touchX=null;
+    track.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;paused=true;stop();},{passive:true});
+    track.addEventListener('touchend',e=>{if(touchX!==null){const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>35)show(current+(dx<0?1:-1),true);}touchX=null;paused=false;start();},{passive:true});
+    if(slides.length<2){strip.querySelector('.site-timely-prev').hidden=true;strip.querySelector('.site-timely-next').hidden=true;}
+    show(0);start();
     const independent=document.querySelector('.independent');
     if(independent)independent.insertAdjacentElement('afterend',strip);else document.body.prepend(strip);
   }
