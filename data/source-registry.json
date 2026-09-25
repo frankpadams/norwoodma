@@ -6970,7 +6970,7 @@
       "events",
       "fundraisers"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 3,
     "ingestion": {
       "method": "club_calendar",
@@ -6983,12 +6983,13 @@
       "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "superseded_alias",
+      "verified_at": "2026-09-25",
+      "basis": "Official Rotary calendar remains live and subscribable; canonical norwood-rotary-calendar uses the dedicated ClubRunner adapter."
     },
-    "notes": "Club calendar has fundraiser/general event types and subscription support. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
-    "conflict_profile": "optional"
+    "notes": "Legacy alias retained for provenance only. Disabled to prevent duplicate ingestion; canonical monitor is norwood-rotary-calendar, which uses the verified ClubRunner subscription-calendar adapter.",
+    "conflict_profile": "optional",
+    "monitor_role": "alias_only"
   },
   {
     "id": "st-catherine-calendar",
