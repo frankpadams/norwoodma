@@ -203,9 +203,11 @@ def category_from(text):
 
 def request(url, *, timeout=18):
     if not requests: raise RuntimeError('network dependencies unavailable')
-    kwargs={'headers':{'User-Agent':UA,'Accept':'text/html,application/json,application/rss+xml,application/xml;q=0.9,*/*;q=0.8'},'timeout':timeout}\n    # The NPS SchoolNow host currently serves a certificate chain that GitHub-hosted\n    # runners do not validate reliably. Scope the compatibility exception to this\n    # one public host; never weaken TLS verification globally.\n    if urlparse(url).hostname=='www.norwood.k12.ma.us': kwargs['verify']=False\n    r=requests.get(url,**kwargs)
+    kwargs={'headers':{'User-Agent':UA,'Accept':'text/html,application/json,application/rss+xml,application/xml;q=0.9,*/*;q=0.8'},'timeout':timeout}
+    # Scoped compatibility exception for the NPS SchoolNow host only.
+    if urlparse(url).hostname=='www.norwood.k12.ma.us': kwargs['verify']=False
+    r=requests.get(url,**kwargs)
     r.raise_for_status(); return r
-
 def walk_jsonld(obj):
     if isinstance(obj,list):
         for x in obj: yield from walk_jsonld(x)
