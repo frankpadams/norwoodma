@@ -3235,7 +3235,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/athletics",
+    "url": "https://www.norwood.k12.ma.us/nhs/athletics/calendar",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "sports_events"
@@ -3247,7 +3247,7 @@
     "monitor_priority": 1,
     "ingestion": {
       "method": "html_calendar",
-      "automation": "possible"
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3257,7 +3257,7 @@
     "verification": {
       "status": "web_checked",
       "verified_at": "2026-09-25",
-      "basis": "Official NHS Athletics page links schedules/scores/standings; configured for public varsity-event ingestion."
+      "basis": "NPS SchoolNow calendar system exposes Athletics as a selectable calendar; monitor the athletics calendar route directly."
     },
     "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items."
   },
@@ -4177,7 +4177,7 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Public concerts, drama, band/orchestra, arts festival and performance announcements."
+    "notes": "Primary NPS Fine Arts discovery source. Public concerts, drama, band/orchestra, visual arts, Fine Arts Festival and performance announcements; cross-check NHS calendar and NPS news."
   },
   {
     "id": "nps-news",
