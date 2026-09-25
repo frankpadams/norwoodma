@@ -3555,7 +3555,47 @@
         "https://www.miaa.net/group/249",
         "https://www.norwood.k12.ma.us/nhs/athletics/announcements"
       ],
-      "strategy": "arbiter_primary_miaa_schedule_fallback_official_announcements_for_practices"
+      "strategy": "arbiter_primary_miaa_schedule_fallback_official_announcements_for_practices",
+      "sport_scope": {
+        "mode": "discover_from_miaa_school_profile",
+        "fall": [
+          "Cross Country",
+          "Field Hockey",
+          "Football",
+          "Golf",
+          "Soccer",
+          "Swim & Dive",
+          "Unified Basketball",
+          "Volleyball",
+          "Cheerleading"
+        ],
+        "winter": [
+          "Basketball",
+          "Gymnastics",
+          "Ice Hockey",
+          "Indoor Track & Field",
+          "Ski",
+          "Swim & Dive",
+          "Wrestling",
+          "Cheerleading"
+        ],
+        "spring": [
+          "Baseball",
+          "Golf",
+          "Lacrosse",
+          "Outdoor Track & Field",
+          "Rugby",
+          "Softball",
+          "Tennis",
+          "Unified Track & Field",
+          "Volleyball"
+        ]
+      },
+      "include_levels": [
+        "varsity",
+        "junior varsity",
+        "freshman"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3567,7 +3607,7 @@
       "verified_at": "2026-09-25",
       "basis": "MIAA states ArbiterSports is the official schedule/results source; MIAA Norwood profile exposes Schedule and MIAA Game Day republishes Arbiter schedule data. NHS official announcements provide current Fall 2026 practice dates/times."
     },
-    "notes": "Primary: ArbiterSports. If public Arbiter extraction fails, ingest Norwood schedule via MIAA Game Day/profile because MIAA says those displays use Arbiter-entered member-school data. NHS Athletics announcements are authoritative fallback for dated practice/sports information. Zero events during an active MIAA season is a failure.",
+    "notes": "Primary: ArbiterSports; MIAA Game Day is the preferred Arbiter-backed fallback. Discover sports/teams from the MIAA school profile rather than a narrow hard-coded fall list. Include tennis, indoor/outdoor track & field, field hockey, cross country, swim/dive, gymnastics, wrestling, hockey, basketball, baseball, softball, lacrosse, volleyball, golf, football, soccer and any additional Norwood teams exposed by MIAA/Arbiter. NHS announcements remain authoritative for practices. Zero during an active season is a failure.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
