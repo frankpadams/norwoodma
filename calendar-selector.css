@@ -2,3 +2,14 @@
 
 /* Homepage: keep calendar chooser compact and flush right in the What's Happening header. */
 .event-splash .home-events-title{display:flex;align-items:center;width:100%;gap:10px}.event-splash .home-events-title .home-calendar-picker-toggle{margin-left:auto;flex:0 0 auto;text-align:right}@media(max-width:650px){.event-splash .home-events-title{flex-wrap:nowrap}.event-splash .home-events-title .home-calendar-picker-toggle{margin-left:auto;padding:6px 9px;font-size:11px;white-space:nowrap}}
+
+.calendar-feed-info{appearance:none;border:1px solid #b8c8d8;background:#fff;color:#003b71;border-radius:50%;width:25px;height:25px;padding:0;font-weight:800;font-family:Georgia,serif;font-style:italic;cursor:pointer;line-height:23px;text-align:center}
+.calendar-feed-info:hover,.calendar-feed-info:focus-visible{background:#eef5fb}
+.calendar-info-panel{grid-column:1/-1;margin:8px 0 2px 32px;padding:12px 14px;border-left:3px solid #e3b23c;background:#f7f9fb;border-radius:6px}
+.calendar-info-panel p{margin:0 0 9px}
+.calendar-info-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:8px 0 12px;font-size:12px}
+.calendar-info-meta div{display:flex;gap:5px}.calendar-info-meta dt{font-weight:700}.calendar-info-meta dd{margin:0}
+.calendar-info-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.calendar-info-actions .button,.calendar-info-actions button{font-size:12px;padding:7px 10px}
+.calendar-org-link{font-size:12px;font-weight:700}
+@media(max-width:650px){.calendar-info-panel{margin-left:0}.calendar-info-actions{align-items:stretch;flex-direction:column}.calendar-info-actions .button,.calendar-info-actions button,.calendar-org-link{text-align:center;width:100%;box-sizing:border-box}}
