@@ -3083,10 +3083,10 @@
       "alerts"
     ],
     "active_monitor": true,
-    "monitor_priority": 3,
+    "monitor_priority": 1,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3094,11 +3094,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured",
+      "verified_at": "2026-09-25",
+      "basis": "Promoted official Fire Department page to primary public-event monitoring."
     },
-    "notes": "Watch for open houses, fire-prevention week, community safety events and notices."
+    "notes": "Publish public-facing Fire Department events including open houses, Fire Prevention Week activities, community safety/education events, demonstrations and other events explicitly open to the public. Exclude internal department activity and routine notices that are not events."
   },
   {
     "id": "food-pantry",
@@ -4034,10 +4034,10 @@
       "alerts"
     ],
     "active_monitor": true,
-    "monitor_priority": 3,
+    "monitor_priority": 1,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "html_page",
+      "automation": "preferred"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -4045,11 +4045,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "configured",
+      "verified_at": "2026-09-25",
+      "basis": "Promoted official Police Department page to primary public-event monitoring."
     },
-    "notes": "Watch for National Night Out, community outreach, safety events and public notices."
+    "notes": "Publish public-facing Police Department events including open houses, National Night Out, community outreach, safety/education events, public presentations and other events explicitly open to the public. Exclude internal department activity and routine notices that are not events."
   },
   {
     "id": "resource-norwood-public-records",
@@ -7896,5 +7896,38 @@
       "basis": "Official local League site reviewed; publishes Candidates Night, voter education, registration and public civic forums."
     },
     "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing."
+  },
+  {
+    "id": "town-manager-public-events",
+    "name": "Norwood Town Manager — Public Events",
+    "organization": "Office of the Town Manager",
+    "source_class": "department_page",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "configured",
+      "verified_at": "2026-09-25",
+      "basis": "Added official Town Manager/town website as a primary source for publicly announced community events."
+    },
+    "notes": "Publish open houses, forums, community events, public presentations, celebrations and other dated events announced by the Office of the Town Manager that are explicitly open to the public. Exclude routine government meetings already handled by civic calendars, internal events and ordinary notices."
   }
 ]
