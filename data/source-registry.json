@@ -9669,5 +9669,76 @@
     },
     "conflict_profile": "optional",
     "notes": "Distinct NPS calendar useful to families. Keep collapsed under Schools and optional by default; zero events does not mean the source is broken."
+  },
+  {
+    "id": "norwood-chamber-events",
+    "name": "Norwood Chamber of Commerce Events",
+    "url": "https://business.norwoodchamberofcommerce.org/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "growthzone_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://business.norwoodchamberofcommerce.org/calendar",
+      "preserve": [
+        "category",
+        "venue",
+        "registration_url",
+        "member_event"
+      ]
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Norwood Chamber calendar currently exposes dated 2026 events with times and registration links."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Official business/community events calendar. Keep business-networking/member events opt-in unless broadly public/community-relevant."
+  },
+  {
+    "id": "norwood-town-news-calendar",
+    "name": "Norwood Local Town Pages Calendar",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "local_town_pages_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://www.norwoodtownnews.com/calendar",
+      "location_filter": "Norwood, MA",
+      "preserve": [
+        "venue",
+        "price",
+        "category",
+        "source_link"
+      ]
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Local Town Pages currently exposes a searchable upcoming-events calendar and monthly Norwood calendar articles."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Secondary discovery source. Apply strict Norwood location/relevance filtering and deduplicate against primary organizers; never let nearby regional events leak into Norwood What's Happening."
   }
 ]
