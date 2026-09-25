@@ -753,7 +753,7 @@ def refresh_events(offline=False):
                     if not feed and src.get('id')=='nps-district-ical': feed='https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics'
                     if feed: got=events_from_ical(feed,src)
                     else: note='no direct feed_url configured'
-                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery'}:
+                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series'}:
                     if '/events/list' in src.get('url',''):
                         try: got.extend(events_from_tribe(src))
                         except Exception: pass
@@ -1382,7 +1382,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','selectmen_car_washes','home_depot_kids_workshops'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','selectmen_car_washes','home_depot_kids_workshops'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
