@@ -953,7 +953,7 @@ def events_from_assabet(source):
 def events_from_myrec_facilities(source):
     """Parse MyRec facility-area reservation tables into conflict-calendar events."""
     if not BeautifulSoup: return []
-    root=source.get('url') or source.get('ingestion',{}).get('facility_root') or 'https://norwoodma.myrec.com/info/facilities/default.aspx'
+    root=source.get('ingestion',{}).get('facility_root') or source.get('url') or 'https://norwoodma.myrec.com/info/facilities/default.aspx'
     html=request(root).text
     soup=BeautifulSoup(html,'html.parser')
     links=[]
