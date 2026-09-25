@@ -1,5 +1,29 @@
 [
   {
+    "id": "2026-09-14-pto-dominos-slice-the-price-card-fundraiser-a70c8e5",
+    "title": "PTO Dominos Slice the Price Card Fundraiser",
+    "start": {
+      "date": "2026-09-14",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": "09:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "fundraiser",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9331879/pto-dominos-slice-the-price-card-fundraiser",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-09-18-beyond-beginner-mah-jongg-ff20235",
     "title": "Beyond Beginner Mah Jongg",
     "start": {
@@ -70,6 +94,78 @@
     "verification_status": "auto_primary_source",
     "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
     "discovered_by": "scheduled_jsonld"
+  },
+  {
+    "id": "2026-09-18-friday-september-18-10-30-11-45-am-simoni-roo-f5c8871",
+    "title": "Friday, September 18 10:30—11:45 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-18",
+      "time": "11:45"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-122/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-18-friday-september-18-1-00-2-00-pm-virtual-53e7da0",
+    "title": "Friday, September 18 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-18",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-589/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-18-friday-september-18-2-00-4-00-pm-simoni-room--01964b9",
+    "title": "Friday, September 18 2:00—4:00 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-18",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-18-ballroom-dance",
@@ -243,6 +339,54 @@
     "discovered_by": "community_submission_feed"
   },
   {
+    "id": "2026-09-19-saturday-september-19-10-00-am-12-00-pm-child-ca38386",
+    "title": "Saturday, September 19 10:00 AM—12:00 PM Children's Program Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-19",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-09-19",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-10/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-19-saturday-september-19-10-00-am-5-00-pm-morril-78ae41b",
+    "title": "Saturday, September 19 10:00 AM—5:00 PM Morrill Memorial Library Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-19",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-09-19",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/homeworks-masssave-pop-up-resource-table/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-19-floydian-trip",
     "title": "Floydian Trip: Echoes Through Time",
     "start": {
@@ -359,6 +503,30 @@
     "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
+    "id": "2026-09-20-sunday-september-20-all-day-morrill-memorial--2a588fc",
+    "title": "Sunday, September 20 All Day Morrill Memorial Library Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-21-parachute-playtime-a7e9602",
     "title": "Parachute Playtime",
     "start": {
@@ -429,6 +597,78 @@
     "verification_status": "auto_primary_source",
     "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
     "discovered_by": "scheduled_jsonld"
+  },
+  {
+    "id": "2026-09-21-monday-september-21-9-30-10-30-am-simoni-room-7eae805",
+    "title": "Monday, September 21 9:30—10:30 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-21",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-09-21",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-18/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-21-monday-september-21-10-00-11-00-am-off-site-m-5836ef3",
+    "title": "Monday, September 21 10:00—11:00 AM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062 Poirier Village Center 82 Roosevelt Ave., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-21",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-21",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-5/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-21-monday-september-21-1-00-2-00-pm-virtual-a46fc9a",
+    "title": "Monday, September 21 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-21",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-21",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-593/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-22-helping-you-age-well-your-way-0a93dc3",
@@ -550,6 +790,54 @@
     "notes": "Neponset River Regional Chamber networking event."
   },
   {
+    "id": "2026-09-22-tuesday-september-22-10-00-10-45-am-simoni-ro-a1e15ed",
+    "title": "Tuesday, September 22 10:00—10:45 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-22",
+      "time": "10:45"
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/alphabits-197/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-22-tuesday-september-22-9-30-11-00-am-off-site-m-31b13a2",
+    "title": "Tuesday, September 22 9:30—11:00 AM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062 Poirier Village Center 82 Roosevelt Ave., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-22",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-18/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-22-farmers-bushels",
     "title": "Norwood Farmers Market: Bushels of Fun",
     "start": {
@@ -573,6 +861,54 @@
     "notes": null
   },
   {
+    "id": "2026-09-22-tuesday-september-22-1-00-2-00-pm-virtual-c67eba3",
+    "title": "Tuesday, September 22 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-22",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-576/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-22-dc-parent-meeting-b99109e",
+    "title": "DC Parent Meeting",
+    "start": {
+      "date": "2026-09-22",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": "19:30"
+    },
+    "venue": "1st Floor Cafeteria",
+    "address": "1st Floor Cafeteria",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9322076/dc-parent-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-09-22-castle-musical-bingo",
     "title": "Musical Bingo",
     "start": {
@@ -594,6 +930,78 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-22-tuesday-september-22-6-30-7-30-pm-simoni-room-705788d",
+    "title": "Tuesday, September 22 6:30—7:30 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-22",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/helping-you-age-well-your-way/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-22-tuesday-september-22-7-30-9-00-pm-off-site-mo-d186c52",
+    "title": "Tuesday, September 22 7:30—9:00 PM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-22",
+      "time": "21:00"
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/titles-on-tap-book-group-74/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-22-learn-more-2ae6327",
+    "title": "Learn More",
+    "start": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/helping-you-age-well-your-way/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-23-baby-bop-story-time-5d68494",
@@ -692,6 +1100,54 @@
     "discovered_by": "scheduled_jsonld"
   },
   {
+    "id": "2026-09-23-wednesday-september-23-10-00-11-00-am-childre-0368b64",
+    "title": "Wednesday, September 23 10:00—11:00 AM Children's Program Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-23",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-23",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-58/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-23-wednesday-september-23-1-00-2-00-pm-virtual-18c4265",
+    "title": "Wednesday, September 23 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-23",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-23",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-581/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-23-airport-commission-meeting-67dc841",
     "title": "Airport Commission Meeting",
     "start": {
@@ -763,6 +1219,54 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2026-09-23-wednesday-september-23-6-30-7-30-pm-children--e3b4445",
+    "title": "Wednesday, September 23 6:30—7:30 PM Children's Program Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-23",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-09-23",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-23-wednesday-september-23-6-30-8-30-pm-simoni-ro-49856e9",
+    "title": "Wednesday, September 23 6:30—8:30 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-23",
+      "time": "20:30"
+    },
+    "end": {
+      "date": "2026-09-23",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/hispanic-heritage-month-movie-series-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-24-board-game-night-18-845f6db",
@@ -909,6 +1413,198 @@
     "discovered_by": "scheduled_jsonld"
   },
   {
+    "id": "2026-09-24-early-release-dismissal-12-30-pm-professional-50f04a3",
+    "title": "Early Release - Dismissal 12:30 PM - Professional Development",
+    "start": {
+      "date": "2026-09-24",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179636/early-release-dismissal-12-30-pm",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-24-thursday-september-24-9-30-10-30-am-simoni-ro-8d34776",
+    "title": "Thursday, September 24 9:30—10:30 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-24",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-giggles-61/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-thursday-september-24-9-30-11-00-am-off-site--2da4402",
+    "title": "Thursday, September 24 9:30—11:00 AM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062 Poirier Village Center 82 Roosevelt Ave., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-24",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-18/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-learn-more-2671e7b",
+    "title": "Learn More",
+    "start": {
+      "date": "2026-09-24",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/communication-without-limits-33/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-thursday-september-24-1-00-2-00-pm-virtual-cc7a375",
+    "title": "Thursday, September 24 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-24",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-586/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-thursday-september-24-1-30-2-30-pm-simoni-roo-4663a49",
+    "title": "Thursday, September 24 1:30—2:30 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-24",
+      "time": "14:30"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/communication-without-limits-33/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-thursday-september-24-3-30-4-30-pm-children-s-88bcd58",
+    "title": "Thursday, September 24 3:30—4:30 PM Children's Program Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-24",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/snack-lab-9/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-oldham-back-to-school-night-6b4e9e2",
+    "title": "Oldham Back to School Night!",
+    "start": {
+      "date": "2026-09-24",
+      "time": "17:30"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": "19:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274664/oldham-back-to-school-night",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-09-24-leadership-on-tap",
     "title": "Leadership on Tap",
     "start": {
@@ -953,6 +1649,78 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-24-thursday-september-24-6-30-8-30-pm-trustees-r-fdcca81",
+    "title": "Thursday, September 24 6:30—8:30 PM Trustees Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-24",
+      "time": "20:30"
+    },
+    "end": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/board-game-night-18-20/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-24-early-release-11-40-dismissal-7741abe",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-25",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339140/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-24-early-release-all-schools-c9050d3",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2026-09-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-25",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174368/early-release-all-schools-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-09-25-beyond-beginner-mah-jongg-56c589c",
@@ -1027,28 +1795,76 @@
     "discovered_by": "scheduled_jsonld"
   },
   {
-    "id": "2026-09-25-oktoberfest-6940c39",
-    "title": "Oktoberfest",
+    "id": "2026-09-25-today-friday-september-25-10-30-11-45-am-simo-7a78b81",
+    "title": "Today Friday, September 25 10:30—11:45 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
     "start": {
       "date": "2026-09-25",
-      "time": "11:00"
+      "time": "11:45"
     },
     "end": {
       "date": "2026-09-25",
-      "time": "11:00"
+      "time": null
     },
-    "venue": "4600 Beech Street Suites 100 300",
-    "address": "4600 Beech Street, Suites 100 & 300, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/oktoberfest-2/",
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-123/",
     "cost": null,
     "public_access": "public",
-    "series": null,
+    "series": "Morrill Memorial Library",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Oktoberfest continues Friday at Braxton Brewing Factory 52 with cold beer, warm pretzels, live music, chicken dancing, and some of Cincinnati’s best-dressed pups. Festivities run from 11 AM – 12 AM. John Keene & Jim Mason Polka Duo will per",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-25-today-friday-september-25-1-00-2-00-pm-virtua-6be84ce",
+    "title": "Today Friday, September 25 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-25",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-25",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-590/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-25-today-friday-september-25-2-00-4-00-pm-simoni-7e6bb9d",
+    "title": "Today Friday, September 25 2:00—4:00 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-25",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-09-25",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-25-magic-room-far-trio",
@@ -1120,54 +1936,6 @@
     "verification_status": "official_schedule",
     "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
     "discovered_by": "scheduled_recurring_service"
-  },
-  {
-    "id": "2026-09-26-workout-on-the-lawn-with-body-alive-oakley-a9338f6",
-    "title": "Workout on the Lawn with Body Alive Oakley",
-    "start": {
-      "date": "2026-09-26",
-      "time": "09:30"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "10:30"
-    },
-    "venue": "Factory 52 Events",
-    "address": null,
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/workout-on-the-lawn-with-body-alive-oakley-4/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us on the last Saturday of the month for Workout on the Lawn with Body Alive Oakley , a community-driven fitness series at Factory 52 running from April through September . Each class takes place from 9:30 AM to 10:30 AM , followed by ",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-09-26-oktoberfest-6bb89ae",
-    "title": "Oktoberfest",
-    "start": {
-      "date": "2026-09-26",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "11:00"
-    },
-    "venue": "4600 Beech Street Suites 100 300",
-    "address": "4600 Beech Street, Suites 100 & 300, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/oktoberfest-3/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Saturday brings a full day of Oktoberfest fun to Braxton Brewing Factory 52, including cold beer, warm pretzels, live music, chicken dancing, and friendly competitions. Festivities run from 11 AM – 12 AM. The Festmeisters perform from 11 AM",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-26-miniature-workshop",
@@ -1360,54 +2128,6 @@
     "discovered_by": "scheduled_ical"
   },
   {
-    "id": "2026-09-27-oktoberfest-3f43f99",
-    "title": "Oktoberfest",
-    "start": {
-      "date": "2026-09-27",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": "21:00"
-    },
-    "venue": "4600 Beech Street Suites 100 300",
-    "address": "4600 Beech Street, Suites 100 & 300, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/oktoberfest-4/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Close out Oktoberfest at Braxton Brewing Factory 52 with cold beer, warm pretzels, live music, chicken dancing, friendly competition, and Bengals football. Festivities run from 11 AM – 9 PM. Floyd and the Walkmen will perform from 11 AM – 1",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-09-27-bengals-game-dey-giveaways-soft-cooler-2040fd5",
-    "title": "Bengals Game Dey Giveaways: Soft Cooler",
-    "start": {
-      "date": "2026-09-27",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": "17:00"
-    },
-    "venue": "Factory 52 Events",
-    "address": null,
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/bengals-game-dey-giveaways-soft-cooler/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Bengals vs. Steelers is never just another game. Head to Braxton Factory 52 on Sunday, September 27, for the next Game Dey Giveaway and one of the season’s biggest matchups. The giveaway begins at noon, when the first 100 guests in the tapr",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-09-27-school-of-rock-concert-b245771",
     "title": "School of Rock concert",
     "start": {
@@ -1432,6 +2152,30 @@
     "discovered_by": "scheduled_ical"
   },
   {
+    "id": "2026-09-27-learn-more-fc1ac64",
+    "title": "Learn More",
+    "start": {
+      "date": "2026-09-27",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-musick-of-new-england-s-revolution/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-27-check-mate",
     "title": "Check Mate — An Evening with Purpose",
     "start": {
@@ -1453,6 +2197,30 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
+  },
+  {
+    "id": "2026-09-27-sunday-september-27-3-00-4-00-pm-simoni-room--97ac1b3",
+    "title": "Sunday, September 27 3:00—4:00 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-27",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-musick-of-new-england-s-revolution/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-27-2nd-fbff-class-6e8b4d3",
@@ -1503,6 +2271,30 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-09-27-sunday-september-27-all-day-morrill-memorial--f29a260",
+    "title": "Sunday, September 27 All Day Morrill Memorial Library Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-28-cozy-puzzle-night-6bdb279",
     "title": "Cozy Puzzle Night",
     "start": {
@@ -1525,30 +2317,6 @@
     "verification_status": "auto_primary_source",
     "notes": "Morrill Memorial Library is hosting a Cozy Puzzle Night for adults on the last Monday of every month. September's Puzzle Night will take place on&nbsp;Monday, September 28 starting at 6:30pm in the Simoni Room. Hang out on an autumn night w",
     "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-28-monday-kids-eat-free-402280c",
-    "title": "Monday Kids Eat Free 🍽️",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "23:59"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-09-28/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-28-monday-movie-matinee-7a4ee20",
@@ -1743,6 +2511,150 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-09-28-monday-september-28-9-30-10-30-am-simoni-room-8e914b8",
+    "title": "Monday, September 28 9:30—10:30 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-28",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-19/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-28-monday-september-28-10-00-11-00-am-off-site-m-56f0ed4",
+    "title": "Monday, September 28 10:00—11:00 AM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062 Poirier Village Center 82 Roosevelt Ave., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-28",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-6/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-28-monday-september-28-1-00-2-00-pm-virtual-2a86c5e",
+    "title": "Monday, September 28 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-28",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-594/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-28-learn-more-77e070d",
+    "title": "Learn More",
+    "start": {
+      "date": "2026-09-28",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/norwood-walk-talk-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-28-monday-september-28-1-00-3-00-pm-simoni-room--79945b8",
+    "title": "Monday, September 28 1:00—3:00 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-28",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/monday-movie-matinee-60/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-28-monday-september-28-3-00-4-30-pm-off-site-mor-6b2ef64",
+    "title": "Monday, September 28 3:00—4:30 PM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-28",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/norwood-walk-talk-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-28-bible-study-310da7b",
     "title": "Bible Study",
     "start": {
@@ -1765,6 +2677,54 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-28-monday-september-28-7-00-8-15-pm-virtual-7afd206",
+    "title": "Monday, September 28 7:00—8:15 PM Virtual",
+    "start": {
+      "date": "2026-09-28",
+      "time": "20:15"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-how-to-avoid-death-on-mount-washington-with-author-randi-minetor/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-28-monday-september-28-6-30-8-30-pm-simoni-room--789734b",
+    "title": "Monday, September 28 6:30—8:30 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-28",
+      "time": "20:30"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/cozy-puzzle-night-15/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-29-great-reads-ma-watch-party-virtual-q-a-with-a-0157e8a",
@@ -1863,6 +2823,54 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-09-29-tuesday-september-29-10-00-10-45-am-simoni-ro-87c178b",
+    "title": "Tuesday, September 29 10:00—10:45 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-29",
+      "time": "10:45"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/alphabits-198/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-29-tuesday-september-29-9-30-11-00-am-off-site-m-fd97d42",
+    "title": "Tuesday, September 29 9:30—11:00 AM Off Site Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062 Poirier Village Center 82 Roosevelt Ave., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-29",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-19/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-29-farmers-market",
     "title": "Norwood Farmers Market",
     "start": {
@@ -1886,28 +2894,76 @@
     "notes": null
   },
   {
-    "id": "2026-09-29-pop-quiz-trivia-at-fretboard-brewing-03624d4",
-    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "id": "2026-09-29-tuesday-september-29-1-00-2-00-pm-virtual-88b043d",
+    "title": "Tuesday, September 29 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-29",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-577/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-29-learn-more-825300c",
+    "title": "Learn More",
+    "start": {
+      "date": "2026-09-29",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/great-reads-ma-watch-party-virtual-q-a-with-author-joseph-lee/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-29-tuesday-september-29-6-00-7-00-pm-simoni-room-4e36829",
+    "title": "Tuesday, September 29 6:00—7:00 PM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
     "start": {
       "date": "2026-09-29",
       "time": "19:00"
     },
     "end": {
       "date": "2026-09-29",
-      "time": "21:00"
+      "time": null
     },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-09-29/",
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/great-reads-ma-watch-party-virtual-q-a-with-author-joseph-lee/",
     "cost": null,
     "public_access": "public",
-    "series": null,
+    "series": "Morrill Memorial Library",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "assabet_calendar"
   },
   {
     "id": "2026-09-30-2026-boston-open-nqs-f21ccca",
@@ -2054,6 +3110,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-09-30-learn-more-a225762",
+    "title": "Learn More",
+    "start": {
+      "date": "2026-09-30",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-54/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-09-30-sacredness-of-your-lifestory-writing-workshop-8c956ac",
     "title": "Sacredness of your Lifestory Writing Workshop",
     "start": {
@@ -2069,6 +3149,102 @@
     "category": "workshop",
     "source_id": "first-congregational-events",
     "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-30-wednesday-september-30-10-00-11-00-am-childre-b035c33",
+    "title": "Wednesday, September 30 10:00—11:00 AM Children's Program Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-30",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-59/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-30-wednesday-september-30-10-30-11-30-am-simoni--8349ba1",
+    "title": "Wednesday, September 30 10:30—11:30 AM Simoni Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-30",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-54/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-30-wednesday-september-30-1-00-2-00-pm-virtual-6fb3075",
+    "title": "Wednesday, September 30 1:00—2:00 PM Virtual",
+    "start": {
+      "date": "2026-09-30",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-582/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
+    "id": "2026-09-30-cms-open-house-grades-5-and-8-3993ade",
+    "title": "CMS Open House - Grades 5 and 8",
+    "start": {
+      "date": "2026-09-30",
+      "time": "17:45"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": "20:00"
+    },
+    "venue": "CMS",
+    "address": "CMS",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9162140/cms-open-house",
     "cost": null,
     "public_access": "public",
     "series": null,
@@ -2099,54 +3275,6 @@
     "publish_candidate": true,
     "verification_status": "community_notice_verified_2026-09-21",
     "notes": "Norwood Police Department community information session for Norwood residents about Flock Safety cameras and license plate reader (LPR) technology. Chief Christopher Padden and the department plan to explain what the technology is and is not, why NPD uses it, examples of its use in investigations and public safety, what information is collected, data-retention practices, system access and auditing, restrictions on sharing/use of Norwood data, and department safeguards. An open resident Q&A will follow. The meeting is intended to address public questions about privacy, data retention, information sharing, accountability, and law-enforcement use of LPR systems."
-  },
-  {
-    "id": "2026-09-30-chess-knight-b2ffd01",
-    "title": "Chess Knight",
-    "start": {
-      "date": "2026-09-30",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:30"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-09-30/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-09-30-history-of-the-roman-empire-themed-trivia-d0f3b0b",
-    "title": "History of the Roman Empire Themed Trivia",
-    "start": {
-      "date": "2026-09-30",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "19:00"
-    },
-    "venue": "Factory 52 Events",
-    "address": null,
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/history-of-the-roman-empire-themed-trivia/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Still thinking about the Roman Empire? Put all that ancient history knowledge to good use at Braxton Factory 52 on Wednesday, September 30, at 7 PM. History of the Roman Empire Themed Trivia will cover legendary emperors, epic battles, poli",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-09-30-conservation-commission-meeting-c4db702",
@@ -2198,6 +3326,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-09-30-wednesday-september-30-6-00-8-00-pm-children--96d8f3b",
+    "title": "Wednesday, September 30 6:00—8:00 PM Children's Program Room Morrill Memorial Library 33 Walpole St., Norwood, MA, 02062",
+    "start": {
+      "date": "2026-09-30",
+      "time": "20:00"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "library",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-movie-night/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Morrill Memorial Library",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "assabet_calendar"
+  },
+  {
     "id": "2026-10-01-2026-boston-open-nqs-cfdf5cd",
     "title": "2026 Boston Open NQS",
     "start": {
@@ -2219,30 +3371,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-01-house-of-cards-carnivale-129bf03",
-    "title": "House of Cards Carnivale",
-    "start": {
-      "date": "2026-10-01",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "23:59"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The cards are back on the table! House of Cards Carnivale returns to Factory 52 for its second year, bigger, better and expanded to 11 days of carnival rides, games, entertainment, local vendors, food, drinks, and fall fun. Opening night be",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -2294,52 +3422,28 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-10-01-hearts-harvest-farmers-market-at-factory-52-f546079",
-    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "id": "2026-10-01-cms-open-house-grades-6-and-7-a2644c4",
+    "title": "CMS Open House - Grades 6 and 7",
     "start": {
       "date": "2026-10-01",
-      "time": "16:00"
+      "time": "17:45"
     },
     "end": {
       "date": "2026-10-01",
-      "time": "19:00"
+      "time": "20:00"
     },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-01/",
+    "venue": "CMS",
+    "address": "CMS",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9162142/cms-open-house",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-01-live-music-at-fretboard-brewing-9903d0d",
-    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
-    "start": {
-      "date": "2026-10-01",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-01",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-01/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-01-mill-sharpening",
@@ -2363,30 +3467,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-01-feud-night-w-last-call-trivia-87aa2e4",
-    "title": "Feud Night w/ Last Call Trivia 🍻",
-    "start": {
-      "date": "2026-10-01",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-01",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "food",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-01/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-01-finance-commission-meeting-9bd6f55",
@@ -2438,28 +3518,28 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-10-02-house-of-cards-carnivale-4572fa2",
-    "title": "House of Cards Carnivale",
+    "id": "2026-10-02-favorite-color-day-come-to-school-wearing-as--e46d62d",
+    "title": "Favorite Color Day! Come to school wearing as much of in your favorite color as you can!",
     "start": {
       "date": "2026-10-02",
-      "time": "00:00"
+      "time": "08:00"
     },
     "end": {
-      "date": "2026-10-11",
-      "time": "23:59"
+      "date": "2026-10-02",
+      "time": "14:00"
     },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-2/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274668/favorite-color-day",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "House of Cards Carnivale is back at Factory 52 for its second year with an expanded 11-day celebration of carnival rides, games, entertainment, local vendors, food, drinks, and fall fun. From classic attractions to something new around ever",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-02-first-friday-adoration-vigil-ddaff01",
@@ -2530,30 +3610,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": null,
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-03-house-of-cards-carnivale-a1b58b8",
-    "title": "House of Cards Carnivale",
-    "start": {
-      "date": "2026-10-03",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "23:59"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-3/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The cards are back on the table as House of Cards Carnivale returns to Factory 52 for its second year. Now expanded to 11 days, this one-of-a-kind fall celebration fills the campus with carnival rides, games, entertainment, local vendors, f",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -2870,30 +3926,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-05-monday-kids-eat-free-ab0e014",
-    "title": "Monday Kids Eat Free 🍽️",
-    "start": {
-      "date": "2026-10-05",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-05",
-      "time": "23:59"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-05/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-05-mondays-with-moms-1c715af",
     "title": "Mondays with Moms",
     "start": {
@@ -3110,30 +4142,6 @@
     "discovered_by": "scheduled_ical"
   },
   {
-    "id": "2026-10-06-pop-quiz-trivia-at-fretboard-brewing-684db46",
-    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
-    "start": {
-      "date": "2026-10-06",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-06",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-06/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-06-zoning-board-of-appeals-meeting-0a12024",
     "title": "Zoning Board of Appeals Meeting",
     "start": {
@@ -3180,30 +4188,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, October 7 Time — 10:00 am Platform — Zoom This webinar will review efficient ways to format text in MS Word including changing font style and size, text alignment, inserting bullets, setting up tabs, line spacing, margins,",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-07-chess-knight-dad3e33",
-    "title": "Chess Knight",
-    "start": {
-      "date": "2026-10-07",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-07",
-      "time": "18:30"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-07/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -3279,30 +4263,6 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-10-08-house-of-cards-carnivale-8468281",
-    "title": "House of Cards Carnivale",
-    "start": {
-      "date": "2026-10-08",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "23:59"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-8/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "House of Cards Carnivale returns to Factory 52 for its second year, bigger, better and expanded to 11 days of carnival rides, games, live entertainment, local vendors, food, drinks, and fall fun. With something new around every corner, each",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-08-rejuvenate-your-r-sum-f27f1ea",
     "title": "Rejuvenate Your Résumé",
     "start": {
@@ -3324,30 +4284,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Thursday, October 8 Time — 10:00 am Platform — Zoom This résumé workshop will explain current trends in résumé writing. Does your résumé include accomplishments? Are you using PAR statements? Are you aware of Applicant Tracking Softw",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-08-hearts-harvest-farmers-market-at-factory-52-02b2d1f",
-    "title": "Hearts & Harvest Farmers Market at Factory 52",
-    "start": {
-      "date": "2026-10-08",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-10-08",
-      "time": "19:00"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-08/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -3374,30 +4310,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-08-live-music-at-fretboard-brewing-edeaa75",
-    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
-    "start": {
-      "date": "2026-10-08",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-08",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-08/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-08-emerald-city-silent-book-club",
     "title": "Silent Book Club",
     "start": {
@@ -3422,52 +4334,28 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
-    "id": "2026-10-08-feud-night-w-last-call-trivia-e0b9690",
-    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "id": "2026-10-08-october-pto-meeting-fd5c16f",
+    "title": "October PTO Meeting",
     "start": {
       "date": "2026-10-08",
       "time": "19:00"
     },
     "end": {
       "date": "2026-10-08",
-      "time": "21:00"
+      "time": "20:00"
     },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "food",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-08/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309225/october-pto-meeting",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-09-house-of-cards-carnivale-d5e1996",
-    "title": "House of Cards Carnivale",
-    "start": {
-      "date": "2026-10-09",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "23:59"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-9/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The cards are back on the table! House of Cards Carnivale has returned to Factory 52 for a second year of carnival rides, games, entertainment, local vendors, food, drinks, and fall fun. Expanded to 11 days, this year’s celebration offers e",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-09-claudettes",
@@ -3514,30 +4402,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-10-house-of-cards-carnivale-7962bfa",
-    "title": "House of Cards Carnivale",
-    "start": {
-      "date": "2026-10-10",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "23:59"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-10/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The final Saturday of House of Cards Carnivale brings one of the biggest days of the celebration to Factory 52. Returning for its second year and expanded to 11 days, Carnivale fills the campus with rides, games, entertainment, local vendor",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-10-norwood-food-pantry-food-assistance-3bb921e",
@@ -3610,28 +4474,28 @@
     "notes": null
   },
   {
-    "id": "2026-10-11-house-of-cards-carnivale-d8efc82",
-    "title": "House of Cards Carnivale",
+    "id": "2026-10-10-oldham-pto-stuffie-sleep-over-party-4b4302a",
+    "title": "Oldham PTO Stuffie Sleep Over Party",
     "start": {
-      "date": "2026-10-11",
-      "time": "00:00"
+      "date": "2026-10-10",
+      "time": null
     },
     "end": {
       "date": "2026-10-11",
-      "time": "23:59"
+      "time": null
     },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/house-of-cards-carnivale-11/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "arts",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9351169/oldham-pto-stuffie-sleep-over-party",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "There’s still one more hand to play! House of Cards Carnivale wraps up its second year at Factory 52 with one final afternoon and evening of carnival rides, games, food, drinks and fall fun. This is your last chance to experience the 11-day",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-12-closed-today-83188fb",
@@ -3658,28 +4522,76 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-10-12-monday-kids-eat-free-9575800",
-    "title": "Monday Kids Eat Free 🍽️",
+    "id": "2026-10-12-no-school-columbus-indigenous-peoples-day-04dac09",
+    "title": "NO SCHOOL - COLUMBUS/INDIGENOUS PEOPLES' DAY",
     "start": {
       "date": "2026-10-12",
-      "time": "00:00"
+      "time": "08:45"
     },
     "end": {
       "date": "2026-10-12",
-      "time": "23:59"
+      "time": "15:20"
     },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-12/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179639/no-school-columbus-indigenous-peoples-day",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-12-no-school-holiday-indigenous-people-s-day-col-96606d1",
+    "title": "No School - Holiday - Indigenous People's Day/Columbus Day",
+    "start": {
+      "date": "2026-10-12",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174369/no-school-holiday-indigenous-peoples-day-columbus-day-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-13-lifetouch-picture-day-grades-5-7-5fd56f1",
+    "title": "Lifetouch Picture Day - Grades 5 & 7",
+    "start": {
+      "date": "2026-10-13",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "14:00"
+    },
+    "venue": "Black Box Theater",
+    "address": "Black Box Theater",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181412/lifetouch-picture-day",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-13-career-center-seminar-794ea39",
@@ -3729,30 +4641,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-13-pop-quiz-trivia-at-fretboard-brewing-67ab5cb",
-    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
-    "start": {
-      "date": "2026-10-13",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-13",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-13/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-13-knights-of-columbus-meeting-in-church-hall-a519c35",
     "title": "Knights of Columbus Meeting in Church Hall",
     "start": {
@@ -3768,6 +4656,30 @@
     "category": "community",
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-14-lifetouch-picture-day-grades-6-and-8-c9ad586",
+    "title": "Lifetouch Picture Day - Grades 6 and 8",
+    "start": {
+      "date": "2026-10-14",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "14:00"
+    },
+    "venue": "Black Box Theater",
+    "address": "Black Box Theater",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181413/lifetouch-picture-day",
     "cost": null,
     "public_access": "public",
     "series": null,
@@ -3825,30 +4737,6 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
-    "id": "2026-10-14-chess-knight-cddf33a",
-    "title": "Chess Knight",
-    "start": {
-      "date": "2026-10-14",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-14",
-      "time": "18:30"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-14/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-14-irish-brewing-boston-trivia-night-every-wedne-b9341ee",
     "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
     "start": {
@@ -3894,78 +4782,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Thursday, October 15 Time — 10:00 am Platform — Zoom Are you ready to dive into Excel, the most popular MS Office program? Then this class is for you. We will help you build a strong foundation, using plain language and giving practi",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-15-hearts-harvest-farmers-market-at-factory-52-8f0ace8",
-    "title": "Hearts & Harvest Farmers Market at Factory 52",
-    "start": {
-      "date": "2026-10-15",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-10-15",
-      "time": "19:00"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-15/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-15-live-music-at-fretboard-brewing-3b83448",
-    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
-    "start": {
-      "date": "2026-10-15",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-15",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-15/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-15-feud-night-w-last-call-trivia-3da93b5",
-    "title": "Feud Night w/ Last Call Trivia 🍻",
-    "start": {
-      "date": "2026-10-15",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-15",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "food",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-15/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -4183,28 +4999,28 @@
     "notes": null
   },
   {
-    "id": "2026-10-19-monday-kids-eat-free-328ba4a",
-    "title": "Monday Kids Eat Free 🍽️",
+    "id": "2026-10-19-picture-day-053859e",
+    "title": "Picture Day!",
     "start": {
       "date": "2026-10-19",
-      "time": "00:00"
+      "time": "08:00"
     },
     "end": {
       "date": "2026-10-19",
-      "time": "23:59"
+      "time": "12:00"
     },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-19/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274667/picture-day",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-19-career-planning-session-111f453",
@@ -4351,30 +5167,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-20-pop-quiz-trivia-at-fretboard-brewing-733e1a6",
-    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
-    "start": {
-      "date": "2026-10-20",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-20",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-20/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-21-job-searching-with-a-large-language-model-ce7889d",
     "title": "Job Searching with a Large Language Model",
     "start": {
@@ -4420,30 +5212,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, October 21 Time — 1:00 to 3:00 pm Place — MassHire Norwood Career Center, 128 Carnegie Row, Norwood Launch your next chapter with a company shaping the future — meet General Dynamics Mission Systems and discover where your",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-21-chess-knight-c0d4a73",
-    "title": "Chess Knight",
-    "start": {
-      "date": "2026-10-21",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-21",
-      "time": "18:30"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-21/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -4568,76 +5336,28 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-10-22-hearts-harvest-farmers-market-at-factory-52-5927661",
-    "title": "Hearts & Harvest Farmers Market at Factory 52",
+    "id": "2026-10-22-pto-sponsored-halloween-party-time-tba-38dfa8d",
+    "title": "PTO Sponsored Halloween Party Time TBA",
     "start": {
       "date": "2026-10-22",
-      "time": "16:00"
+      "time": null
     },
     "end": {
-      "date": "2026-10-22",
-      "time": "19:00"
+      "date": "2026-10-23",
+      "time": null
     },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-22/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "arts",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9351171/pto-sponsored-halloween-party-time-tba",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-22-live-music-at-fretboard-brewing-a6cf0ae",
-    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
-    "start": {
-      "date": "2026-10-22",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-22",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-22/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-22-feud-night-w-last-call-trivia-8510f40",
-    "title": "Feud Night w/ Last Call Trivia 🍻",
-    "start": {
-      "date": "2026-10-22",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-22",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "food",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-22/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-10-23-daybreak",
@@ -4685,30 +5405,6 @@
     "verification_status": "official_schedule",
     "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
     "discovered_by": "scheduled_recurring_service"
-  },
-  {
-    "id": "2026-10-24-opera-fest-c9a8297",
-    "title": "Opera Fest",
-    "start": {
-      "date": "2026-10-24",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-24",
-      "time": "18:00"
-    },
-    "venue": "Factory 52 Events",
-    "address": null,
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/opera-fest/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Braxton Factory 52 and The BonBonerie are teaming up for Opera Fest on Saturday, October 24. A one-of-a-kind evening bringing together live music, craft beer and one of Cincinnati’s most beloved desserts. Enjoy a flight of Opera Cream Stout",
-    "discovered_by": "scheduled_tribe_api"
   },
   {
     "id": "2026-10-24-magic-heartbreaker",
@@ -4827,30 +5523,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-26-monday-kids-eat-free-0fbb2d8",
-    "title": "Monday Kids Eat Free 🍽️",
-    "start": {
-      "date": "2026-10-26",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-26",
-      "time": "23:59"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-10-26/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-26-career-planning-session-13a9148",
     "title": "Career Planning Session",
     "start": {
@@ -4923,6 +5595,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-10-27-early-release-dismissal-at-12-30-pm-professio-1f91164",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2026-10-27",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179640/early-release-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-10-27-career-center-seminar-7bd38c4",
     "title": "Career Center Seminar",
     "start": {
@@ -4947,30 +5643,6 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-10-27-pop-quiz-trivia-at-fretboard-brewing-0640ebf",
-    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
-    "start": {
-      "date": "2026-10-27",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-10-27/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-10-27-knights-of-columbus-meeting-in-church-hall-49835f0",
     "title": "Knights of Columbus Meeting in Church Hall",
     "start": {
@@ -4986,6 +5658,54 @@
     "category": "community",
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-27-early-release-11-40-dismissal-cc2f23e",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2026-10-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339141/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-27-early-release-all-schools-1f1a9a6",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2026-10-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174370/early-release-all-schools-clone-clone-clone-clone",
     "cost": null,
     "public_access": "public",
     "series": null,
@@ -5016,30 +5736,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, October 28 Time — 10:00 am Platform — Zoom In this webinar we discuss strengthening your profile, making it easier to be found on LI, researching companies and people, engaging and nurturing your network, and protecting yo",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-28-chess-knight-4df7963",
-    "title": "Chess Knight",
-    "start": {
-      "date": "2026-10-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-28",
-      "time": "18:30"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-10-28/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -5113,78 +5809,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Thursday, October 29 Time — 10:00 am Platform — Zoom This is our second webinar in the Excel series. It is built again around a project and demonstrates how to set up more complex formulas; organize, filter, and summarize data in dif",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-29-hearts-harvest-farmers-market-at-factory-52-6a885da",
-    "title": "Hearts & Harvest Farmers Market at Factory 52",
-    "start": {
-      "date": "2026-10-29",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-10-29",
-      "time": "19:00"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-10-29/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-29-live-music-at-fretboard-brewing-67d396b",
-    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
-    "start": {
-      "date": "2026-10-29",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-29",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-10-29/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-10-29-feud-night-w-last-call-trivia-7e27f55",
-    "title": "Feud Night w/ Last Call Trivia 🍻",
-    "start": {
-      "date": "2026-10-29",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-29",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "food",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-10-29/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -5330,30 +5954,6 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
-    "id": "2026-11-02-monday-kids-eat-free-31f032c",
-    "title": "Monday Kids Eat Free 🍽️",
-    "start": {
-      "date": "2026-11-02",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-02",
-      "time": "23:59"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/monday-kids-eat-free-%f0%9f%8d%bd%ef%b8%8f/2026-11-02/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Monday Kids Eat Free at The Gatherall! Make Mondays family-friendly at The Gatherall in Factory 52, Norwood’s vibrant mixed-use development. Children aged 12 and under can enjoy complimentary meals at select chef associates’ establishments,",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-11-02-bible-study-e0b0d02",
     "title": "Bible Study",
     "start": {
@@ -5403,28 +6003,28 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
-    "id": "2026-11-03-pop-quiz-trivia-at-fretboard-brewing-9affa39",
-    "title": "Pop Quiz Trivia 🤓 at Fretboard Brewing",
+    "id": "2026-11-03-no-school-professional-development-1b5f5f2",
+    "title": "NO SCHOOL - PROFESSIONAL DEVELOPMENT",
     "start": {
       "date": "2026-11-03",
-      "time": "19:00"
+      "time": "08:45"
     },
     "end": {
       "date": "2026-11-03",
-      "time": "21:00"
+      "time": "15:20"
     },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
+    "venue": "Norwood Public Schools",
+    "address": null,
     "category": "community",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/pop-quiz-trivia-%f0%9f%a4%93-at-fretboard-brewing/2026-11-03/",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179638/no-school-professional-development",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Join us at Fretboard Brewing every Tuesday night for Trivia in the Taproom hosted by Pop Quiz Trivia! Prizes are awarded to the top 3 teams.",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-11-04-community-veterans-job-fair-99025f1",
@@ -5448,30 +6048,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Wednesday, November 4 Time — 10:00 am to 1:00 pm Location — The Verve Hotel, 1360 Worcester St, Natick, MA The Community & Veterans Job Fair is a great opportunity for ALL job seekers to connect directly with employers who are active",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-11-04-chess-knight-a584330",
-    "title": "Chess Knight",
-    "start": {
-      "date": "2026-11-04",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-11-04",
-      "time": "18:30"
-    },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "arts",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/chess-knight/2026-11-04/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Checkmate your midweek slump. Chess Night takes over The Gatherall in Factory 52 every Wednesday at 6:30 PM. Come early, grab a drink, and settle in for casual games, new friends, and a few brilliant moves (or memorable blunders). Boards ar",
     "discovered_by": "scheduled_tribe_api"
   },
   {
@@ -5524,54 +6100,6 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
-    "id": "2026-11-05-hearts-harvest-farmers-market-at-factory-52-acdaf55",
-    "title": "Hearts & Harvest Farmers Market at Factory 52",
-    "start": {
-      "date": "2026-11-05",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-11-05",
-      "time": "19:00"
-    },
-    "venue": "4600 Beech Street",
-    "address": "4600 Beech Street, Norwood, OH, 45212",
-    "category": "market",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/hearts-harvest-farmers-market-at-factory-52/2026-11-05/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join us every Thursday for Hearts & Harvest, a farmers market celebrating the best of the season and the incredible growers, makers, and bakers in our region. Set against the historic backdrop of Factory 52, this weekly market brings togeth",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
-    "id": "2026-11-05-live-music-at-fretboard-brewing-47d914a",
-    "title": "Live Music 🎤 at Fretboard Brewing 🍺",
-    "start": {
-      "date": "2026-11-05",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-11-05",
-      "time": "21:00"
-    },
-    "venue": "2750 Park Avenue Suite O",
-    "address": "2750 Park Avenue, Suite O, Norwood, OH, 45212",
-    "category": "live_music",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/live-music-%f0%9f%8e%a4-at-fretboard-brewing-%f0%9f%8d%ba/2026-11-05/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Thursday Live Music at Fretboard Brewing Join us every Thursday evening at Fretboard Brewing, located within The Gatherall at Factory 52 in Norwood, Ohio. Experience live performances by talented local musicians while savoring our craft bee",
-    "discovered_by": "scheduled_tribe_api"
-  },
-  {
     "id": "2026-11-05-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -5595,28 +6123,28 @@
     "notes": null
   },
   {
-    "id": "2026-11-05-feud-night-w-last-call-trivia-82bc3c3",
-    "title": "Feud Night w/ Last Call Trivia 🍻",
+    "id": "2026-11-06-disney-day-come-to-school-dressed-as-your-fav-b658d83",
+    "title": "Disney Day! Come to school dressed as your favorite Disney character!",
     "start": {
-      "date": "2026-11-05",
-      "time": "19:00"
+      "date": "2026-11-06",
+      "time": "08:00"
     },
     "end": {
-      "date": "2026-11-05",
-      "time": "21:00"
+      "date": "2026-11-06",
+      "time": "14:00"
     },
-    "venue": "2750 Park Avenue",
-    "address": "2750 Park Avenue, Norwood, OH, 45212",
-    "category": "food",
-    "source_id": "factory52-events",
-    "source_url": "https://www.factory52.com/calendar-event/feud-night-w-last-call-trivia-%f0%9f%8d%bb/2026-11-05/",
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274669/disney-day-come-to-school-dressed-as-your-favorite-disney-character",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Thursday Feud Nite at The Gatherall Feeling constantly stumped by your regular trivia nights? Us too. Welcome to FEUD! Way easier, way more fun, same chance to win prizes to your favorite food hall. Join us every Thursday at 7pm for FEUD Ni",
-    "discovered_by": "scheduled_tribe_api"
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-11-07-norwood-food-pantry-food-assistance-348cbe1",
@@ -5764,6 +6292,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-11-veterans-day-no-school-00f0bc3",
+    "title": "VETERANS DAY - NO SCHOOL",
+    "start": {
+      "date": "2026-11-11",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179637/veterans-day-no-school",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-11-11-emerald-city-plant-parenthood-101",
     "title": "Plant Parenthood 101",
     "start": {
@@ -5812,6 +6364,54 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-11-no-school-holiday-veteran-s-day-04d8838",
+    "title": "No School - Holiday - Veteran's Day",
+    "start": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174372/no-school-holiday-veterans-day-observed-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-12-parent-teacher-conferences-352c529",
+    "title": "Parent/Teacher Conferences",
+    "start": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "20:00"
+    },
+    "venue": "All of CMS",
+    "address": "All of CMS",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9123243/parent-teacher-conferences",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-11-12-emerald-city-silent-book-club",
     "title": "Silent Book Club",
     "start": {
@@ -5834,6 +6434,30 @@
     "verification_status": "user_flyer_verified_2026-09-24",
     "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2026-11-12-november-pto-meeting-d87468b",
+    "title": "November PTO Meeting",
+    "start": {
+      "date": "2026-11-12",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309226/november-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-11-13-isu-figure-skating-grand-prix-skate-america-2-9acfe92",
@@ -6025,6 +6649,30 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2026-11-17-lifetouch-picture-retakes-5939eec",
+    "title": "Lifetouch Picture Retakes",
+    "start": {
+      "date": "2026-11-17",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-11-17",
+      "time": "13:00"
+    },
+    "venue": "Black Box Theater",
+    "address": "Black Box Theater",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181414/lifetouch-picture-retakes",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-11-18-school-committee-meeting-558a1f2",
     "title": "School Committee Meeting",
     "start": {
@@ -6099,6 +6747,102 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-19-early-release-dismissal-at-12-30-pm-conferenc-7d43d69",
+    "title": "Early Release - Dismissal at 12:30 PM - Conferences",
+    "start": {
+      "date": "2026-11-19",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179641/early-release-dismissal-at-12-30-pm-conferences",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-19-parent-teacher-conferences-1a47fe9",
+    "title": "Parent/Teacher Conferences",
+    "start": {
+      "date": "2026-11-19",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "15:40"
+    },
+    "venue": "All of CMS",
+    "address": "All of CMS",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9123244/parent-teacher-conferences",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-19-early-release-11-40-dismissal-d12ab17",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2026-11-19",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339142/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-19-early-release-all-schools-parent-conferences-3600e71",
+    "title": "Early Release All Schools - Parent Conferences",
+    "start": {
+      "date": "2026-11-19",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174373/early-release-all-schools-parent-conferences-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-11-21-nsc-s-nov2026-annual-salvage-angel-s-holiday--4b6bdb6",
     "title": "NSC’s Nov2026 Annual Salvage Angel’s Holiday Stroll & Norwood Open Studios",
     "start": {
@@ -6171,6 +6915,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-25-early-release-dismissal-at-12-30-pm-thanksgiv-6884062",
+    "title": "Early Release - Dismissal at 12:30 PM - Thanksgiving Holiday",
+    "start": {
+      "date": "2026-11-25",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-11-25",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179642/early-release-dismissal-at-12-30-pm-thanksgiving-holiday",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-11-25-irish-brewing-boston-trivia-night-every-wedne-b1a96d3",
     "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
     "start": {
@@ -6195,6 +6963,54 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2026-11-25-early-release-11-40-dismissal-22acee3",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2026-11-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-26",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339143/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-25-early-release-all-schools-november-break-343c27f",
+    "title": "Early Release All Schools - November Break",
+    "start": {
+      "date": "2026-11-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-26",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174374/early-release-all-schools-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-11-26-closed-today-ded34ed",
     "title": "CLOSED TODAY",
     "start": {
@@ -6217,6 +7033,54 @@
     "verification_status": "auto_primary_source",
     "notes": "The MassHire Career Centers in Framingham and Norwood will be closed for all services on Thursday, November 26. Regular Friday virtual services will be available on Friday, November 27. All services will resume on Monday, November 30.",
     "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-11-26-thanksgiving-holiday-no-school-2a74629",
+    "title": "THANKSGIVING HOLIDAY - NO SCHOOL",
+    "start": {
+      "date": "2026-11-26",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-11-27",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179643/thanksgiving-holiday-no-school",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-11-26-no-school-thanksgiving-break-8f33bd1",
+    "title": "No School Thanksgiving Break",
+    "start": {
+      "date": "2026-11-26",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174375/no-school-thanksgiving-break-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-11-30-planning-board-meeting-75906f7",
@@ -6339,6 +7203,30 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-12-04-wacky-day-come-to-school-with-a-wacky-hair-st-f8ea91b",
+    "title": "Wacky Day! Come to school with a wacky hair style, crazy hat and/or socks!",
+    "start": {
+      "date": "2026-12-04",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2026-12-04",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274670/wacky-day-come-to-school-with-a-wacky-hair-style-crazy-hat-and-or-socks",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-12-04-dreidels",
@@ -6532,6 +7420,30 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-12-10-december-pto-meeting-48aa170",
+    "title": "December PTO Meeting",
+    "start": {
+      "date": "2026-12-10",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-10",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309227/december-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-12-10-finance-commission-meeting-23a5518",
     "title": "Finance Commission Meeting",
     "start": {
@@ -6628,6 +7540,78 @@
     "verification_status": "auto_primary_source",
     "notes": "@ A perfect date or family night activity to ramp up for the holidays! Have fun learning to carve spoons, cheese knives and more from a variety of woods. You can also try out using a Shinto rasp and the belt sander to make spoons and cheese",
     "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-12-15-early-release-11-40-dismissal-3d55e8f",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2026-12-15",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-16",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339144/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-12-15-early-release-all-schools-6633fd9",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2026-12-15",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-16",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174376/early-release-all-schools-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-12-16-early-release-dismissal-at-12-30-pm-professio-b2e11ee",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2026-12-16",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-12-16",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179645/early-release-dismissal-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-12-16-school-committee-meeting-33f2956",
@@ -6750,6 +7734,30 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-12-23-early-release-dismissal-at-12-30-pm-winter-br-64ea89e",
+    "title": "Early Release - Dismissal at 12:30 PM - Winter Break",
+    "start": {
+      "date": "2026-12-23",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2026-12-23",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179647/early-release-dismissal-at-12-30-pm-winter-break",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2026-12-23-irish-brewing-boston-trivia-night-every-wedne-b1ae0bc",
     "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
     "start": {
@@ -6772,6 +7780,78 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api"
+  },
+  {
+    "id": "2026-12-23-early-release-11-40-dismissal-d9866bb",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2026-12-23",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-24",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339145/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-12-23-early-release-all-schools-december-break-9bbc78f",
+    "title": "Early Release All Schools - December Break",
+    "start": {
+      "date": "2026-12-23",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-24",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174377/early-release-all-schools-december-break-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-12-24-no-school-winter-break-10df772",
+    "title": "NO SCHOOL - WINTER BREAK",
+    "start": {
+      "date": "2026-12-24",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-01-01",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179649/no-school-winter-break",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2026-12-30-irish-brewing-boston-trivia-night-every-wedne-1afebc3",
@@ -6822,6 +7902,30 @@
     "discovered_by": "scheduled_tribe_api"
   },
   {
+    "id": "2027-01-04-first-day-back-from-winter-break-96e4141",
+    "title": "First day back from Winter Break",
+    "start": {
+      "date": "2027-01-04",
+      "time": null
+    },
+    "end": {
+      "date": "2027-01-05",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174393/first-day-back-from-winter-break-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-01-05-2027-prevagen-u-s-figure-skating-championship-408498f",
     "title": "2027 Prevagen U.S. Figure Skating Championships – Salt Lake City, Utah",
     "start": {
@@ -6869,6 +7973,30 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-01-08-dress-to-impress-come-to-school-dressed-to-im-7e444b1",
+    "title": "Dress to Impress! Come to school dressed to impress!",
+    "start": {
+      "date": "2027-01-08",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-01-08",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274672/dress-to-impress-come-to-school-dressed-to-impress",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2027-01-10-9th-fbff-class-bf03964",
@@ -6942,6 +8070,78 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-01-14-january-pto-meeting-2fccb5a",
+    "title": "January PTO Meeting",
+    "start": {
+      "date": "2027-01-14",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-14",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309228/january-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-18-no-school-martin-luther-king-jr-holiday-06a95d0",
+    "title": "NO SCHOOL - MARTIN LUTHER KING JR. HOLIDAY",
+    "start": {
+      "date": "2027-01-18",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-01-18",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "arts",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179651/no-school-martin-luther-king-jr-holiday",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-18-no-school-holiday-dr-martin-luther-king-jr-da-494d603",
+    "title": "No School - Holiday - Dr. Martin Luther King Jr. Day",
+    "start": {
+      "date": "2027-01-18",
+      "time": null
+    },
+    "end": {
+      "date": "2027-01-19",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "arts",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174379/no-school-holiday-dr-martin-luther-king-jr-day-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2027-01-21-finance-commission-meeting-f52acc0",
@@ -7066,6 +8266,126 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2027-01-28-early-release-dismissal-at-12-30-pm-professio-4951f66",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2027-01-28",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-01-28",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179654/early-release-dismissal-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-28-early-release-11-40-dismissal-67965e6",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2027-01-28",
+      "time": null
+    },
+    "end": {
+      "date": "2027-01-29",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339146/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-28-early-release-all-schools-46f7c96",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2027-01-28",
+      "time": null
+    },
+    "end": {
+      "date": "2027-01-29",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174380/early-release-all-schools-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-29-cms-musical-2459036",
+    "title": "CMS Musical",
+    "start": {
+      "date": "2027-01-29",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-29",
+      "time": "21:00"
+    },
+    "venue": "CMS Auditorium",
+    "address": "CMS Auditorium",
+    "category": "school_theatre",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274949/cms-musical",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-30-cms-musical-e673885",
+    "title": "CMS Musical",
+    "start": {
+      "date": "2027-01-30",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-30",
+      "time": "21:00"
+    },
+    "venue": "CMS Auditorium",
+    "address": "CMS Auditorium",
+    "category": "school_theatre",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274950/cms-musical",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-01-31-fbff-snow-date-if-needed-21166ba",
     "title": "FBFF Snow Date if Needed",
     "start": {
@@ -7081,6 +8401,54 @@
     "category": "community",
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-01-31-cms-musical-bb98a93",
+    "title": "CMS Musical",
+    "start": {
+      "date": "2027-01-31",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2027-01-31",
+      "time": "16:00"
+    },
+    "venue": "CMS Auditorium",
+    "address": "CMS Auditorium",
+    "category": "school_theatre",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274951/cms-musical",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-02-05-team-pride-day-celebrate-your-favorite-athlet-02d7669",
+    "title": "Team Pride Day! Celebrate your favorite athletic team!",
+    "start": {
+      "date": "2027-02-05",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-02-05",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274675/team-pride-day-celebrate-your-favorite-athletic-team",
     "cost": null,
     "public_access": "public",
     "series": null,
@@ -7210,6 +8578,30 @@
     "discovered_by": "scheduled_ical"
   },
   {
+    "id": "2027-02-11-february-pto-meeting-fab26d0",
+    "title": "February PTO Meeting",
+    "start": {
+      "date": "2027-02-11",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-02-11",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309229/february-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-02-11-finance-commission-meeting-22dc821",
     "title": "Finance Commission Meeting",
     "start": {
@@ -7233,6 +8625,54 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-02-15-no-school-february-vacation-5adcbd5",
+    "title": "NO SCHOOL - FEBRUARY VACATION",
+    "start": {
+      "date": "2027-02-15",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-02-19",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179656/no-school-february-vacation",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-02-15-no-school-february-break-c23aa44",
+    "title": "No School February Break",
+    "start": {
+      "date": "2027-02-15",
+      "time": null
+    },
+    "end": {
+      "date": "2027-02-20",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174381/no-school-february-break-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2027-02-20-pre-cana-seminar-bf26913",
@@ -7355,6 +8795,78 @@
     "discovered_by": "scheduled_ical"
   },
   {
+    "id": "2027-03-02-early-release-dismissal-at-12-30-pm-professio-bcf9d61",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2027-03-02",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-03-02",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179657/early-release-dismissal-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-03-02-early-release-11-40-dismissal-4d06bb2",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2027-03-02",
+      "time": null
+    },
+    "end": {
+      "date": "2027-03-03",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339147/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-03-02-early-release-all-schools-4ad35dd",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2027-03-02",
+      "time": null
+    },
+    "end": {
+      "date": "2027-03-03",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174382/early-release-all-schools-clone-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-03-03-school-committee-meeting-c8f9beb",
     "title": "School Committee Meeting",
     "start": {
@@ -7403,6 +8915,30 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-03-05-read-across-america-week-activities-tba-288712f",
+    "title": "Read Across America Week! Activities TBA",
+    "start": {
+      "date": "2027-03-05",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-03-05",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274676/read-across-america-week-activities-tba",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2027-03-07-12th-fbff-class-80bee29",
@@ -7454,6 +8990,54 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2027-03-09-lifetouch-spring-picture-day-a840b28",
+    "title": "Lifetouch Spring Picture Day",
+    "start": {
+      "date": "2027-03-09",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-03-09",
+      "time": "14:00"
+    },
+    "venue": "Black Box Theater",
+    "address": "Black Box Theater",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181415/lifetouch-spring-picture-day",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-03-10-lifetouch-spring-picture-day-a3949ec",
+    "title": "Lifetouch Spring Picture Day",
+    "start": {
+      "date": "2027-03-10",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-03-10",
+      "time": "14:00"
+    },
+    "venue": "Black Box Theater",
+    "address": "Black Box Theater",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9181435/lifetouch-spring-picture-day",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-03-11-finance-commission-meeting-9cfb55e",
     "title": "Finance Commission Meeting",
     "start": {
@@ -7477,6 +9061,30 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-03-11-march-pto-meeting-41602a7",
+    "title": "March PTO Meeting",
+    "start": {
+      "date": "2027-03-11",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-03-11",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309231/march-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2027-03-13-1st-reconciliation-for-2nd-grade-b1c1718",
@@ -7576,6 +9184,30 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2027-03-19-celebrate-national-downs-syndrome-day-wear-mi-6905631",
+    "title": "Celebrate National Downs Syndrome Day! Wear mis-matched or silly socks to school.",
+    "start": {
+      "date": "2027-03-19",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-03-19",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274714/celebrate-national-downs-syndrome-day-wear-mis-matched-or-silly-socks-to-school",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-03-21-13th-fbff-class-bb58900",
     "title": "13th FBFF Class",
     "start": {
@@ -7649,6 +9281,54 @@
     "discovered_by": "civic_meeting_monitor"
   },
   {
+    "id": "2027-03-25-early-release-dismissal-at-12-30-pm-professio-840c20b",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2027-03-25",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-03-25",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179658/early-release-dismissal-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-03-25-early-release-11-40-dismissal-d43e885",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2027-03-25",
+      "time": "10:33"
+    },
+    "end": {
+      "date": "2027-03-25",
+      "time": "11:33"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339148/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-03-25-finance-commission-meeting-db5433e",
     "title": "Finance Commission Meeting",
     "start": {
@@ -7672,6 +9352,30 @@
     "verification_status": "verified_civic_source",
     "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
     "discovered_by": "civic_meeting_monitor"
+  },
+  {
+    "id": "2027-03-25-early-release-all-schools-k-4-parent-conferen-d8aed55",
+    "title": "Early Release All Schools - K-4 Parent Conferences, 5-12 Educator PD",
+    "start": {
+      "date": "2027-03-25",
+      "time": null
+    },
+    "end": {
+      "date": "2027-03-26",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174383/early-release-all-schools-parent-conferences-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
   },
   {
     "id": "2027-03-25-holy-thursday-1336569",
@@ -7890,6 +9594,30 @@
     "discovered_by": "scheduled_ical"
   },
   {
+    "id": "2027-04-02-autism-awareness-day-wear-blue-to-school-747a960",
+    "title": "Autism Awareness Day! Wear Blue to School!",
+    "start": {
+      "date": "2027-04-02",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-04-02",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274716/autism-awareness-day-wear-blue-to-school",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-04-03-confirmation-2027-ac3bcfa",
     "title": "Confirmation 2027",
     "start": {
@@ -7905,6 +9633,198 @@
     "category": "community",
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-05-no-school-election-day-94b5543",
+    "title": "NO SCHOOL - ELECTION DAY",
+    "start": {
+      "date": "2027-04-05",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-04-05",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179659/no-school-election-day",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-05-no-school-town-elections-1e9caff",
+    "title": "No School-Town Elections",
+    "start": {
+      "date": "2027-04-05",
+      "time": null
+    },
+    "end": {
+      "date": "2027-04-06",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174384/school-closed-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-08-april-pto-meeting-cbc50eb",
+    "title": "April PTO Meeting",
+    "start": {
+      "date": "2027-04-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-04-08",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309232/april-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-12-early-release-dismissal-at-12-30-pm-professio-63a09b5",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2027-04-12",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-04-12",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179660/early-release-dismissal-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-12-early-release-11-40-dismissal-4166af1",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2027-04-12",
+      "time": null
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339151/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-12-early-release-all-schools-00e8876",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2027-04-12",
+      "time": null
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174385/early-release-all-schools-clone-clone-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-19-no-school-april-vacation-8133f1f",
+    "title": "NO SCHOOL - APRIL VACATION",
+    "start": {
+      "date": "2027-04-19",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-04-23",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179661/no-school-april-vacation",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-04-19-no-school-april-break-bcf31c2",
+    "title": "No School April Break",
+    "start": {
+      "date": "2027-04-19",
+      "time": null
+    },
+    "end": {
+      "date": "2027-04-24",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174386/no-school-april-break-clone-clone-clone",
     "cost": null,
     "public_access": "public",
     "series": null,
@@ -7962,6 +9882,54 @@
     "discovered_by": "scheduled_ical"
   },
   {
+    "id": "2027-05-07-mis-match-day-come-to-school-in-your-silliest-74a7503",
+    "title": "Mis-Match Day! Come to school in your silliest mismatched outfit!",
+    "start": {
+      "date": "2027-05-07",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-05-07",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274722/mis-match-day-come-to-school-in-your-silliest-mismatched-outfit",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-07-kindergarten-only-no-school-kindergarten-scre-60eb676",
+    "title": "KINDERGARTEN ONLY - No School - Kindergarten Screening",
+    "start": {
+      "date": "2027-05-07",
+      "time": null
+    },
+    "end": {
+      "date": "2027-05-09",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "arts",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174387/willett-kindergarten-only-no-school-kindergarten-screening-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
     "id": "2027-05-09-mother-s-day-ae2b51c",
     "title": "MOTHER'S DAY",
     "start": {
@@ -7977,6 +9945,390 @@
     "category": "community",
     "source_id": "st-timothy-calendar",
     "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-13-may-pto-meeting-d36665c",
+    "title": "May PTO Meeting",
+    "start": {
+      "date": "2027-05-13",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-05-13",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309233/may-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-14-early-release-dismissal-at-12-30-pm-professio-4a7b6c8",
+    "title": "Early Release - Dismissal at 12:30 PM - Professional Development",
+    "start": {
+      "date": "2027-05-14",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-05-14",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179662/early-release-dismissal-at-12-30-pm-professional-development",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-14-early-release-11-40-dismissal-20826e2",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2027-05-14",
+      "time": null
+    },
+    "end": {
+      "date": "2027-05-15",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339152/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-14-early-release-all-schools-c42a2ef",
+    "title": "Early Release All Schools",
+    "start": {
+      "date": "2027-05-14",
+      "time": null
+    },
+    "end": {
+      "date": "2027-05-15",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174388/early-release-all-schools-clone-clone-clone-clone-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-31-no-school-memorial-day-holiday-3d90951",
+    "title": "NO SCHOOL - MEMORIAL DAY HOLIDAY",
+    "start": {
+      "date": "2027-05-31",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-05-31",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179663/no-school-memorial-day-holiday",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-05-31-no-school-holiday-memorial-day-bcf46f7",
+    "title": "No School - Holiday - Memorial Day",
+    "start": {
+      "date": "2027-05-31",
+      "time": null
+    },
+    "end": {
+      "date": "2027-06-01",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174389/no-school-holiday-memorial-day-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-01-8th-grade-dc-trip-1316ae3",
+    "title": "8th Grade DC Trip",
+    "start": {
+      "date": "2027-06-01",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-06-04",
+      "time": "15:20"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9274948/8th-grade-dc-trip",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-04-hat-day-come-to-school-showing-off-your-favor-3ea9303",
+    "title": "Hat Day! Come to school showing off your favorite hat!",
+    "start": {
+      "date": "2027-06-04",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2027-06-04",
+      "time": "14:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274723/hat-day-come-to-school-showing-off-your-favorite-hat",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-10-june-pto-meeting-ecb00f4",
+    "title": "June PTO Meeting",
+    "start": {
+      "date": "2027-06-10",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-06-10",
+      "time": "20:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9309234/june-pto-meeting",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-11-8th-grade-dance-f210692",
+    "title": "8th Grade Dance",
+    "start": {
+      "date": "2027-06-11",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-06-11",
+      "time": "20:30"
+    },
+    "venue": "CMS",
+    "address": "CMS",
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9321226/8th-grade-dance",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-15-8th-grade-promotion-cd12f13",
+    "title": "8th Grade Promotion",
+    "start": {
+      "date": "2027-06-15",
+      "time": "09:30"
+    },
+    "end": {
+      "date": "2027-06-15",
+      "time": "12:00"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9321232/8th-grade-promotion",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-17-last-day-of-school-if-no-snow-days-early-rele-3b52936",
+    "title": "LAST DAY OF SCHOOL (IF NO SNOW DAYS) - Early Release - Dismissal at 12:30 PM",
+    "start": {
+      "date": "2027-06-17",
+      "time": "08:45"
+    },
+    "end": {
+      "date": "2027-06-17",
+      "time": "12:30"
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-coakley",
+    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179664/last-day-of-school-if-no-snow-days-early-release-dismissal-at-12-30-pm",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-17-180th-school-day-early-release-for-students-o-e58989c",
+    "title": "180th School Day - Early Release for Students Only",
+    "start": {
+      "date": "2027-06-17",
+      "time": null
+    },
+    "end": {
+      "date": "2027-06-18",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174390/180th-school-day-early-release-for-students-only-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-17-early-release-11-40-dismissal-6b30c70",
+    "title": "Early Release 11:40 Dismissal",
+    "start": {
+      "date": "2027-06-17",
+      "time": null
+    },
+    "end": {
+      "date": "2027-06-18",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9339153/early-release-11-40-dismissal",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-18-no-school-holiday-juneteenth-b11ef6c",
+    "title": "No School - Holiday - Juneteenth",
+    "start": {
+      "date": "2027-06-18",
+      "time": null
+    },
+    "end": {
+      "date": "2027-06-19",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174391/no-school-holiday-juneteenth-clone-clone-clone",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2027-06-25-185th-school-day-additional-5-days-if-needed-6fec2b5",
+    "title": "185th School Day - Additional 5 days if needed",
+    "start": {
+      "date": "2027-06-25",
+      "time": null
+    },
+    "end": {
+      "date": "2027-06-26",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-district",
+    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174392/185th-school-day-additional-5-days-if-needed-clone-clone-clone",
     "cost": null,
     "public_access": "public",
     "series": null,
