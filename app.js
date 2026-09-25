@@ -42,7 +42,7 @@ function rotatingHeroMessage(){
     "From potholes to pad thai, we’ve probably got a link.",
     "Side effects may include knowing what’s happening this weekend.",
     "From school calendars to sushi, somehow it’s all here.",
-    "From voting precincts to Vietnamese food, we’ve looked it up.",
+    "From voting precincts to vindaloo, we’ve looked it up.",
     "From pizza to pickleball — find it here.",
     "Can’t decide where to eat? We literally built a spinner.",
     "Dinner decisions and scheduling collisions. We have tools for that.",
