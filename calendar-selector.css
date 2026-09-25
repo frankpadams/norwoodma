@@ -18,6 +18,6 @@
 .calendar-picker-toggle{background:var(--gold,#F2C100);border-color:#d5a900;color:#193447}
 .submit-event-card{background:#fff!important;color:#193447!important;border:1px solid #aebdc6!important}
 
-/* Desktop event toolbar: compact search + calendar chooser on one line. */
-@media(min-width:651px){.events-page .event-tools{flex-wrap:nowrap;justify-content:flex-start}.events-page #eventSearch{flex:0 1 520px;max-width:520px}.events-page .event-tools-calendar-toggle{flex:0 0 auto;white-space:nowrap}.events-page .calendar-picker-wrap>.calendar-picker-toggle{display:none}}
-@media(max-width:650px){.events-page .event-tools-calendar-toggle{display:none}}
+
+/* Event search stays compact; calendar selector remains on its own row below. */
+.events-page .event-tools{justify-content:flex-start}.event-search-row{display:flex;gap:8px;align-items:stretch;flex:0 1 600px;max-width:600px;width:100%}.events-page .event-search-row #eventSearch{flex:1 1 auto;min-width:0}.event-search-button{border:0;cursor:pointer;min-width:78px}.events-page .calendar-picker-wrap{margin-top:2px}@media(max-width:650px){.event-search-row{max-width:none}.event-search-button{min-width:72px}}
