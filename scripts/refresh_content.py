@@ -737,6 +737,50 @@ def events_from_home_depot_kids_workshops(source):
 
 
 
+
+def events_from_social_mirror(source):
+    """Extract only concrete, Norwood-specific dated events from a public social mirror."""
+    url=source.get('url'); html=request(url).text
+    if not BeautifulSoup:return []
+    soup=BeautifulSoup(html,'html.parser'); out=[]; now=now_local().date()
+    for node in soup.find_all(['article','div','li']):
+        text=clean_text(node.get_text(' '))
+        if len(text)<25 or len(text)>1800: continue
+        if 'norwood' not in text.lower(): continue
+        d=_date_from_text(text)
+        if not d or d < now-timedelta(days=7): continue
+        tm=_time_from_text(text)
+        title=source.get('name','Community event').replace(' — Public event/social feed','')
+        # Prefer a concise event-like sentence over the mirror page title.
+        sentences=re.split(r'(?<=[.!?])\s+',text)
+        candidate=next((x for x in sentences if 8<len(x)<160 and any(k in x.lower() for k in ['join','celebrat','event','festival','dinner','lunch','night','day','sadya'])),None)
+        if candidate:title=candidate
+        ds=d.isoformat()
+        out.append({'id':event_id(title,ds,'Norwood'),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':'Norwood, MA','address':None,'category':'community','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'public_social_mirror','notes':'Dated Norwood-specific public event discovered from a public social mirror; prefer first-party event details when available.','discovered_by':'social_mirror'})
+    return dedupe_events(out)
+
+def events_from_newsletter_index(source):
+    """Discover current Senior Center newsletter/calendar documents without inventing recurrences."""
+    ing=source.get('ingestion',{}); url=ing.get('index_url') or source.get('url'); html=request(url).text
+    out=[]
+    # Some town newsletter indexes expose concrete event text directly.
+    extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+    if BeautifulSoup:
+        soup=BeautifulSoup(html,'html.parser')
+        docs=[]
+        for a in soup.find_all('a',href=True):
+            href=urljoin(url,a['href']); label=clean_text(a.get_text(' '))
+            if any(href.lower().split('?')[0].endswith(x) for x in ['.pdf','.html','.htm']) or 'newsletter' in label.lower() or 'calendar' in label.lower():
+                if href!=url: docs.append((href,label))
+        # HTML issues can be parsed safely. PDFs remain health-checked/discovered
+        # rather than guessed from snippets; a future PDF-text adapter can enrich them.
+        for href,label in docs[:8]:
+            if href.lower().split('?')[0].endswith(('.html','.htm')):
+                try:
+                    body=request(href).text; ev,_=extract_jsonld_events(body,source); out.extend(ev)
+                except Exception: pass
+    return dedupe_events(out)
+
 def events_from_secondary_listing(source):
     """Extract only concrete dated occurrences from a configured secondary community listing."""
     ing=source.get('ingestion',{}); url=ing.get('discovery_url') or source.get('url'); html=request(url).text
@@ -949,7 +993,9 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='secondary_recurring_discovery': got=events_from_secondary_listing(src)
+                if method=='newsletter_calendar': got=events_from_newsletter_index(src)
+                elif method=='social_mirror': got=events_from_social_mirror(src)
+                elif method=='secondary_recurring_discovery': got=events_from_secondary_listing(src)
                 elif method=='clubrunner_calendar': got=events_from_clubrunner(src)
                 elif method=='recurring_org_schedule': got=recurring_candidates(src)
                 elif method in {'league_schedule_table','sportsconnect_schedule'}: got=events_from_league_schedule(src)
