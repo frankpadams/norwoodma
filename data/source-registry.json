@@ -222,8 +222,11 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/callahan/pta",
+      "school_calendar_source_id": "nps-callahan",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -231,12 +234,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-callahan-elementary-school-parent-teacher-association",
@@ -465,8 +475,11 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/cleveland/pta",
+      "school_calendar_source_id": "nps-cleveland",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -474,12 +487,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-cleveland-elementary-school-parent-teacher-organization",
@@ -601,8 +621,11 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/cms/pto",
+      "school_calendar_source_id": "nps-coakley",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -610,12 +633,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-connors-martial-arts-academy",
@@ -3559,8 +3589,11 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/nhs/pta",
+      "school_calendar_source_id": "nps-nhs",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3568,12 +3601,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-historical-society",
@@ -6424,8 +6464,11 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/oldham/pta",
+      "school_calendar_source_id": "nps-oldham",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6433,12 +6476,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-oldham-elementary-school-parent-teacher-organization",
@@ -6593,8 +6643,11 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/prescott/pta",
+      "school_calendar_source_id": "nps-prescott",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6602,12 +6655,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-prescott-elementary-school-parent-teacher-organization",
@@ -7993,8 +8053,11 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/willett/pta",
+      "school_calendar_source_id": "nps-willett",
+      "discover_links": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -8002,12 +8065,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Parent organization page is not assumed to be a calendar feed; combine its public announcements/linked calendars with the school's verified official calendar."
     },
-    "notes": "Watch public fundraisers, fairs and family/community events.",
-    "conflict_profile": "optional"
+    "notes": "Parent-group events should be discovered from the PTA/PTO page and linked public calendars, then cross-checked/deduplicated against the official school calendar. No events is healthy when the group has no current public programming.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "norwood-food-pantry-hours",
