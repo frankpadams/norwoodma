@@ -1018,13 +1018,20 @@ def refresh_events(offline=False):
                 elif method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
                 elif method=='community_submission_json': got=events_from_community_submission_feed(src)
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
-                elif method=='tribe_events': got=events_from_tribe(src)\n                elif method=='schoolnow_calendar': got=events_from_schoolnow(src)\n                elif method=='assabet_calendar': got=events_from_assabet(src)\n                elif method=='assabet_filtered_calendar': got=events_from_assabet(src)\n                elif method=='myrec_facility_calendar': got=events_from_myrec_facilities(src)
+                elif method=='tribe_events': got=events_from_tribe(src)\n                elif method=='schoolnow_calendar': got=events_from_schoolnow(src)
+                elif method=='pma_calendar_hub': got=events_from_pma_hub(src)
+                elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
+                elif method=='newsletter_calendar': got=events_from_newsletter_index(src)
+                elif method=='clubrunner_calendar': got=events_from_clubrunner(src)
+                elif method=='league_schedule_table': got=events_from_league_schedule(src)
+                elif method in {'local_town_pages_calendar'}: got=events_from_secondary_listing(src)
+                elif method=='social_mirror': got=events_from_social_mirror(src)\n                elif method=='assabet_calendar': got=events_from_assabet(src)\n                elif method=='assabet_filtered_calendar': got=events_from_assabet(src)\n                elif method=='myrec_facility_calendar': got=events_from_myrec_facilities(src)
                 elif method=='ical':
                     feed=src.get('ingestion',{}).get('feed_url')
                     if not feed and src.get('id')=='nps-district-ical': feed='https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics'
                     if feed: got=events_from_ical(feed,src)
                     else: note='no direct feed_url configured'
-                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','clubrunner_calendar','league_schedule_table','local_town_pages_calendar' ,'multi_source_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule'}:
+                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','local_town_pages_calendar' ,'recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','sportsconnect_schedule'}:
                     ing=src.get('ingestion',{})
                     # Common adapter metadata uses several URL field names. Feed all
                     # public page URLs through the conservative Event/ICS discovery
@@ -1691,7 +1698,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','local_town_pages_calendar','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
