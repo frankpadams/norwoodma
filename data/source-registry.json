@@ -3335,7 +3335,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/athletics/calendar",
+    "url": "https://www.norwood.k12.ma.us/nhs/athletics/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "sports_events"
@@ -3346,8 +3346,9 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/nhs/athletics/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3355,9 +3356,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
+      "status": "configured_official_feed",
       "verified_at": "2026-09-25",
-      "basis": "NPS SchoolNow calendar system exposes Athletics as a selectable calendar; monitor the athletics calendar route directly."
+      "basis": "NPS SchoolNow calendar uses the same official iCal feed route pattern as the verified district and school calendars; athletics is exposed as a calendar in the NPS calendar system."
     },
     "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items.",
     "conflict_profile": "default"
@@ -3369,7 +3370,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/calendar",
+    "url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "school_events"
@@ -3380,8 +3381,9 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
