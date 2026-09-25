@@ -9804,5 +9804,87 @@
     },
     "conflict_profile": "optional",
     "notes": "Ingest public community-facing parish events. Routine formation classes, appointment-only items and internal meetings remain opt-in/non-curated unless independently community-relevant."
+  },
+  {
+    "id": "norwood-toastmasters",
+    "name": "Norwood Toastmasters",
+    "url": "https://norwoodtoastmaster.toastmastersclubs.org/",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "recurring_org_schedule",
+      "automation": "preferred",
+      "homepage": "https://norwoodtoastmaster.toastmastersclubs.org/",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "TU",
+        "ordinal": [
+          2,
+          4
+        ]
+      },
+      "discover_exceptions": true,
+      "preserve": [
+        "venue",
+        "time",
+        "guest_access"
+      ]
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-25",
+      "basis": "Current Norwood Local Town Pages repeatedly lists Norwood Toastmasters on the second and fourth Tuesdays, with guests welcome; venues may vary and must be refreshed."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Generate recurring candidates only after checking current source/secondary listings for time, venue and exceptions; venue has varied between Norwood and nearby libraries, so never hard-code location."
+  },
+  {
+    "id": "norwood-women-business-networking",
+    "name": "Norwood Women in Business Networking",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "secondary_recurring_discovery",
+      "automation": "preferred",
+      "discovery_url": "https://www.norwoodtownnews.com/calendar",
+      "match": [
+        "Women in Business Networking",
+        "WBN"
+      ],
+      "preserve": [
+        "venue",
+        "time",
+        "public_access"
+      ],
+      "require_concrete_date": true
+    },
+    "verification": {
+      "status": "verified_recurring_secondary_source",
+      "verified_at": "2026-09-25",
+      "basis": "Multiple 2026 Local Town Pages monthly calendars list WBN meetings twice monthly at Norwood Civic Center."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Secondary-source recurring community calendar. Only ingest concrete dated occurrences found in current listings; do not extrapolate indefinitely."
   }
 ]
