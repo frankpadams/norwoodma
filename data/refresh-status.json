@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T11:59:08.405019-04:00",
+  "generated_at": "2026-09-25T12:04:03.011508-04:00",
   "offline": false,
-  "events_published": 487,
+  "events_published": 485,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 487,
-      "generated_at": "2026-09-25T11:59:08.387522-04:00"
+      "events": 485,
+      "generated_at": "2026-09-25T12:04:02.996970-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 106,
-      "generated_at": "2026-09-25T11:59:08.390603-04:00"
+      "generated_at": "2026-09-25T12:04:02.999505-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 138,
-      "generated_at": "2026-09-25T11:59:08.394792-04:00"
+      "generated_at": "2026-09-25T12:04:03.002862-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 25,
-      "generated_at": "2026-09-25T11:59:08.397326-04:00"
+      "events": 24,
+      "generated_at": "2026-09-25T12:04:03.004865-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T11:59:08.399341-04:00"
+      "generated_at": "2026-09-25T12:04:03.006504-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 38,
-      "generated_at": "2026-09-25T11:59:08.401922-04:00"
+      "events": 37,
+      "generated_at": "2026-09-25T12:04:03.008613-04:00"
     }
   ],
   "event_sources": [
@@ -394,10 +394,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": true,
+      "ok": false,
       "method": "community_submission_json",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='script.googleusercontent.com', port=443): Read timed out. (read timeout=18)"
     },
     {
       "source_id": "nps-oldham-pto",
@@ -917,7 +917,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 60,
+      "found": 58,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -925,7 +925,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 60,
+      "found": 58,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -933,7 +933,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 43,
+      "found": 42,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
