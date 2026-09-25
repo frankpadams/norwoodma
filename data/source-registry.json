@@ -3595,7 +3595,32 @@
         "varsity",
         "junior varsity",
         "freshman"
-      ]
+      ],
+      "baseline": {
+        "type": "miaa_committed_schedules",
+        "purpose": "completeness_and_fallback",
+        "use_as_primary": false,
+        "refresh_policy": "discover_current-season final committed schedule documents from MIAA Schedule Commitment page",
+        "freshness_note": "Committed schedules are a baseline; live Arbiter/MIAA data should override later changes.",
+        "dedupe_key": [
+          "sport",
+          "level",
+          "date",
+          "opponent"
+        ],
+        "source_url": "https://www.miaa.net/game-day/tournament-administration/schedule-commitment"
+      },
+      "reconciliation": {
+        "preferred_order": [
+          "arbiter_live",
+          "miaa_game_day",
+          "miaa_committed_schedule",
+          "nhs_official_announcement"
+        ],
+        "merge_same_contest": true,
+        "never_publish_duplicate_source_copies": true,
+        "live_source_overrides_baseline": true
+      }
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3614,7 +3639,10 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": true,
+      "expected_active_season_nonzero": true,
+      "compare_live_count_to_committed_baseline": true,
+      "flag_large_drop": true
     },
     "seasonality": {
       "seasonal": true,
