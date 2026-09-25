@@ -8836,7 +8836,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://scboston.org/schedules/",
+    "url": "https://scboston.org/public-events/",
     "domain": "scboston.org",
     "produces": [
       "events"
@@ -8847,8 +8847,13 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "tribe_events",
+      "automation": "preferred",
+      "calendar_url": "https://scboston.org/public-events/",
+      "secondary_urls": [
+        "https://scboston.org/schedules/"
+      ],
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -8856,11 +8861,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
+      "status": "verified_live_calendar",
       "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "basis": "Official Public Events page exposes current dated event list/month views; schedules page exposes a Live Ice Calendar and Fall 2026 schedule."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Ingest public-facing events from the Club's official Public Events calendar. Keep routine/member-only ice sessions out of What's Happening; schedules/live ice remain optional/conflict-calendar inputs where useful.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -8870,12 +8875,10 @@
       "empty_result_is_failure": false
     },
     "seasonality": {
-      "seasonal": true,
+      "seasonal": false,
       "zero_events_offseason_is_healthy": true,
       "seasons": [
-        "fall",
-        "winter",
-        "spring"
+        "year_round"
       ]
     }
   },
