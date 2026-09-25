@@ -410,8 +410,15 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "html_list",
-      "automation": "possible"
+      "method": "html_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://cbnma.com/events",
+      "preserve": [
+        "venue",
+        "public_access",
+        "ticket_info",
+        "volunteer_info"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -419,12 +426,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official CBN Upcoming Events page publishes concrete dated Norwood public events and meetings."
     },
-    "notes": "Community/civic source; facts should be verified when event has an official source.",
-    "conflict_profile": "optional"
+    "notes": "Secondary civic/community calendar. Ingest dated public events; deduplicate Norwood Day and other major events against primary organizers. Routine organization meetings are optional rather than curated-default.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "nps-cleveland-calendar",
@@ -1015,8 +1029,17 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "squarespace_events",
+      "automation": "preferred",
+      "calendar_url": "https://www.fccnorwood.org/events",
+      "discover_ics": true,
+      "preserve": [
+        "start",
+        "end",
+        "venue",
+        "description",
+        "public_access"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -1024,11 +1047,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-22",
-      "basis": "Official FCC Norwood events page with dated public events and Google Calendar/ICS links"
+      "status": "verified_live_ics_events",
+      "verified_at": "2026-09-25",
+      "basis": "Official Events page publishes dated 2026 events and exposes Google Calendar/ICS actions on event entries."
     },
-    "notes": "Publish special public/community events such as fairs, concerts, clothing giveaways, pet blessings and community programs. Do not treat routine worship or closed/internal meetings as general community events by default.",
+    "notes": "Ingest concrete public-facing events from the official Squarespace Events calendar and use its ICS links when available. Routine worship can remain opt-in; special public events/services may surface in community views.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
