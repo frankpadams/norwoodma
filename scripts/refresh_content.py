@@ -1086,7 +1086,7 @@ def events_from_arbiterlive(source):
                         except Exception: pass
             except Exception: pass
     for e in out:
-        e['category']='sports'; e['series']='Norwood High School Athletics'
+        e['category']='sports'; e['series']='Norwood Public Schools Athletics'
     return dedupe_events(out)
 
 def events_from_schoolnow(source):
