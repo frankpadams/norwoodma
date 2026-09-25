@@ -10070,5 +10070,120 @@
     },
     "conflict_profile": "default",
     "notes": "Monitor for concrete dated public fundraisers/events, especially the annual Town Common luminary event. No current event outside fundraising/holiday periods is healthy."
+  },
+  {
+    "id": "norwood-evening-garden-club",
+    "name": "Norwood Evening Garden Club Events",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "secondary_org_event_discovery",
+      "automation": "preferred",
+      "discovery_urls": [
+        "https://www.norwoodtownnews.com/calendar",
+        "https://www.norwoodcenter.org/events/"
+      ],
+      "match": [
+        "Norwood Evening Garden Club",
+        "Art in Bloom"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "event_type",
+        "price",
+        "public_access"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Secondary discovery for public garden-club events such as Art in Bloom; deduplicate against Library/school sources."
+  },
+  {
+    "id": "norwood-vfw-public-events",
+    "name": "Norwood VFW Post 2452 Public Events",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "secondary_org_event_discovery",
+      "automation": "preferred",
+      "discovery_urls": [
+        "https://www.norwoodtownnews.com/calendar",
+        "https://www.norwoodcenter.org/events/"
+      ],
+      "match": [
+        "VFW",
+        "Post 2452",
+        "193 Dean"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "event_type",
+        "price",
+        "public_access"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Capture only concrete dated public-facing events such as raffles, community events and public fundraisers; do not surface member-only meetings by default."
+  },
+  {
+    "id": "norwood-blood-drives",
+    "name": "Norwood Blood Drives",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "secondary_org_event_discovery",
+      "automation": "preferred",
+      "discovery_urls": [
+        "https://www.norwoodtownnews.com/calendar",
+        "https://www.norwoodcenter.org/events/"
+      ],
+      "match": [
+        "blood drive",
+        "American Red Cross Blood Drive"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "event_type",
+        "price",
+        "public_access"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Secondary discovery calendar for public blood drives in Norwood; deduplicate against host organizations and Red Cross listings when available."
   }
 ]
