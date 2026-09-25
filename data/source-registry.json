@@ -7896,5 +7896,839 @@
       "basis": "Official local League site reviewed; publishes Candidates Night, voter education, registration and public civic forums."
     },
     "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing."
+  },
+  {
+    "id": "nps-district",
+    "name": "Norwood Public Schools — District",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-nhs",
+    "name": "Norwood High School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-coakley",
+    "name": "Coakley Middle School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/cms/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/cms/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-balch",
+    "name": "Balch Elementary School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-callahan",
+    "name": "Callahan Elementary School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-cleveland",
+    "name": "Cleveland Elementary School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/cleveland/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/cleveland/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-oldham",
+    "name": "Oldham Elementary School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/oldham/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/oldham/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-prescott",
+    "name": "Prescott Elementary School",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/prescott/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/prescott/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "nps-willett",
+    "name": "Willett Early Childhood Center",
+    "organization": "Norwood Public Schools",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwood.k12.ma.us/willett/calendar/feed/ical.ics",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "ical",
+      "automation": "preferred",
+      "feed_url": "https://www.norwood.k12.ma.us/willett/calendar/feed/ical.ics"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "recovery-aa",
+    "name": "Alcoholics Anonymous (AA) — Norwood",
+    "organization": "AA Boston Central Service Office",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://aaboston.org/meetings?tsml-region=norwood",
+    "domain": "aaboston.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "recovery-na",
+    "name": "Narcotics Anonymous (NA) — local meeting finder",
+    "organization": "New England Region of Narcotics Anonymous",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://nerna.org/find-a-meeting/",
+    "domain": "nerna.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "norwood-little-league",
+    "name": "Norwood Little League",
+    "organization": "Norwood Little League",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwoodlittleleague.com/Default.aspx?tabid=1696647",
+    "domain": "www.norwoodlittleleague.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "norwood-youth-softball",
+    "name": "Norwood Youth Softball",
+    "organization": "Norwood Youth Softball",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.norwoodyouthsoftball.com/current-programs",
+    "domain": "www.norwoodyouthsoftball.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "norwood-rec-sports",
+    "name": "Norwood Recreation youth sports",
+    "organization": "Norwood Recreation",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://norwoodma.myrec.com/info/default.aspx",
+    "domain": "norwoodma.myrec.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "skating-club-calendar",
+    "name": "Skating Club of Boston — Norwood",
+    "organization": "The Skating Club of Boston",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://scboston.org/schedules/",
+    "domain": "scboston.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "faith-temple-sinai-sharon",
+    "name": "Temple Sinai of Sharon",
+    "organization": "Temple Sinai of Sharon",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.temple-sinai.com/",
+    "domain": "www.temple-sinai.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "faith-temple-beth-david-westwood",
+    "name": "Temple Beth David — Westwood",
+    "organization": "Temple Beth David",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.templebethdavid.net/",
+    "domain": "www.templebethdavid.net",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "faith-icne-sharon",
+    "name": "Islamic Center of New England — Sharon",
+    "organization": "Islamic Center of New England",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://icne.net/",
+    "domain": "icne.net",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "faith-shree-hari-dham",
+    "name": "Shree Hari Dham Temple — Norwood",
+    "organization": "Shree Hari Dham Temple",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.shreeharidham.org/",
+    "domain": "www.shreeharidham.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "recovery-alanon",
+    "name": "Al-Anon / Alateen",
+    "organization": "Al-Anon Family Groups",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/",
+    "domain": "al-anon.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "recovery-smart",
+    "name": "SMART Recovery",
+    "organization": "SMART Recovery",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://meetings.smartrecovery.org/meetings/",
+    "domain": "meetings.smartrecovery.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "parents-cfce",
+    "name": "Norwood CFCE Playgroups & Family Programs",
+    "organization": "Norwood CFCE",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://norwoodlibrary.org/norwood-cfce/",
+    "domain": "norwoodlibrary.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "arts-millforge",
+    "name": "Mill Forge Makerspace",
+    "organization": "Mill Forge Makerspace",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://millforge.org/",
+    "domain": "millforge.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "arts-luke-adams",
+    "name": "Luke Adams Glass Blowing",
+    "organization": "Luke Adams Glass Blowing",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://www.1hotpieceofglass.com/collections/schedule",
+    "domain": "www.1hotpieceofglass.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+  },
+  {
+    "id": "fitness-rec",
+    "name": "Open Recreation & Fitness",
+    "organization": "Norwood Recreation / local providers",
+    "source_class": "calendar",
+    "authority": "organization",
+    "coverage": "Norwood / nearby",
+    "url": "https://norwoodma.myrec.com/",
+    "domain": "norwoodma.myrec.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": false,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
+    },
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
   }
 ]
