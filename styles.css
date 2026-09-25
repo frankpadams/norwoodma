@@ -786,3 +786,6 @@ html[data-high-contrast="true"] .site-timely-prev,html[data-high-contrast="true"
 .good-to-know-item:focus-visible{outline:3px solid #003b71;outline-offset:-3px}
 @media(max-width:700px){.good-to-know-section{padding-top:10px}.good-to-know{display:block}.good-to-know-label{padding:8px 12px}.good-to-know-item{align-items:flex-start;padding:10px 12px;font-size:.86rem}.good-to-know-item>b{display:none}}
 html.high-contrast .good-to-know{border-color:#fff;background:#000}.high-contrast .good-to-know-label{background:#fff;color:#000}.high-contrast .good-to-know-label span{color:#000}.high-contrast .good-to-know-item,.high-contrast .good-to-know-item>b{color:#fff}
+
+/* v0.13.4.34 — compact thumbnails on expanded News page */
+.news-page-grid #newsFeed article.has-thumb{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;align-items:start}.news-page-grid #newsFeed .news-thumb{width:118px;height:78px;object-fit:cover;border-radius:8px;background:#e7ecee}.news-page-grid #newsFeed article.has-thumb>a{min-width:0}@media(max-width:600px){.news-page-grid #newsFeed article.has-thumb{grid-template-columns:82px minmax(0,1fr);gap:10px}.news-page-grid #newsFeed .news-thumb{width:82px;height:58px;border-radius:6px}}
