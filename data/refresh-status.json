@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T12:54:24.961238-04:00",
+  "generated_at": "2026-09-25T12:58:23.534955-04:00",
   "offline": false,
   "events_published": 453,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 453,
-      "generated_at": "2026-09-25T12:54:24.945472-04:00"
+      "generated_at": "2026-09-25T12:58:23.518793-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 96,
-      "generated_at": "2026-09-25T12:54:24.948310-04:00"
+      "generated_at": "2026-09-25T12:58:23.521603-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 125,
-      "generated_at": "2026-09-25T12:54:24.952101-04:00"
+      "generated_at": "2026-09-25T12:58:23.525335-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 23,
-      "generated_at": "2026-09-25T12:54:24.954410-04:00"
+      "generated_at": "2026-09-25T12:58:23.527658-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T12:54:24.956241-04:00"
+      "generated_at": "2026-09-25T12:58:23.529499-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 19,
-      "generated_at": "2026-09-25T12:54:24.958352-04:00"
+      "generated_at": "2026-09-25T12:58:23.531707-04:00"
     }
   ],
   "event_sources": [
@@ -918,7 +918,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 58,
+      "found": 59,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
