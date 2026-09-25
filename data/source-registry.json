@@ -9886,5 +9886,92 @@
     },
     "conflict_profile": "optional",
     "notes": "Secondary-source recurring community calendar. Only ingest concrete dated occurrences found in current listings; do not extrapolate indefinitely."
+  },
+  {
+    "id": "norwood-rotary-calendar",
+    "name": "Rotary Club of Norwood Calendar",
+    "url": "https://www.norwoodrotary.org/events/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "clubrunner_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://www.norwoodrotary.org/events/calendar",
+      "discover_subscription_feed": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "speaker",
+        "public_access"
+      ],
+      "curated_types": [
+        "Fundraiser",
+        "General",
+        "Club Event"
+      ]
+    },
+    "verification": {
+      "status": "verified_subscribable_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Rotary Club of Norwood calendar exposes event-type filtering and a subscription URL for calendar software."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Use the official ClubRunner calendar subscription feed when discovered. Routine club/board/committee meetings remain opt-in; public fundraisers and community events can qualify for What's Happening."
+  },
+  {
+    "id": "norwood-kofc-events",
+    "name": "Norwood Knights of Columbus Events",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "secondary_org_event_discovery",
+      "automation": "preferred",
+      "discovery_urls": [
+        "https://www.norwoodtownnews.com/calendar",
+        "https://www.norwoodcenter.org/events/"
+      ],
+      "match": [
+        "Knights of Columbus",
+        "K of C",
+        "572 Nichols"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "event_type",
+        "price",
+        "public_access"
+      ]
+    },
+    "verification": {
+      "status": "verified_secondary_event_source",
+      "verified_at": "2026-09-25",
+      "basis": "Current Norwood calendars publish concrete Knights of Columbus events at 572 Nichols Street, including dances and blood drives."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Until a reliable first-party public calendar is found, ingest only concrete dated public KofC events from trusted Norwood calendar sources and deduplicate across them."
   }
 ]
