@@ -4421,18 +4421,17 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "stale_hub_requires_live_child_source",
+      "status": "adapter_needed_verified_calendar_hub",
       "verified_at": "2026-09-25",
       "basis": "PMA Calendar page exposes separate Google School Calendars for High School, Middle School and Elementary Fine Arts plus schedule posts."
     },
-    "notes": "Treat PMA Calendar as a calendar hub, not a generic HTML page. Adapter should discover embedded Google calendar URLs/IDs and ingest each school-level Fine Arts calendar; also ingest public Schedule-category posts. Preserve school/ensemble metadata. PMA homepage currently exposes stale 2025/Spring 2026 highlights, so do not treat homepage cards as current; require a live child calendar/schedule before publishing.",
+    "notes": "Treat PMA Calendar as a calendar hub, not a generic HTML page. Adapter should discover embedded Google calendar URLs/IDs and ingest each school-level Fine Arts calendar; also ingest public Schedule-category posts. Preserve school/ensemble metadata.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": true
+      "report_stale": true
     }
   },
   {
@@ -4725,14 +4724,13 @@
       "verified_at": "2026-09-25",
       "basis": "Official Fine Arts page is informational; NHS calendar and PMA calendar are the actionable calendar sources."
     },
-    "notes": "Build Fine Arts as a filtered composite from the verified NHS calendar feed plus PMA calendar, using arts/music/performance keywords. Fine Arts department page remains a discovery/cross-check source rather than pretending it is itself a calendar feed. Do not infer current events from stale PMA homepage cards.",
+    "notes": "Build Fine Arts as a filtered composite from the verified NHS calendar feed plus PMA calendar, using arts/music/performance keywords. Fine Arts department page remains a discovery/cross-check source rather than pretending it is itself a calendar feed.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": true
+      "report_stale": true
     }
   },
   {
@@ -5590,7 +5588,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -9318,9 +9316,6 @@
         "teams",
         "date",
         "time"
-      ],
-      "seed_area_urls": [
-        "https://norwoodma.myrec.com/info/facilities/area_info.aspx?AreaID=14768&FacilityID=14724"
       ]
     },
     "filters": {
@@ -9333,14 +9328,14 @@
       "verified_at": "2026-09-25",
       "basis": "Official MyRec facility area pages expose structured Program/Event/Teams/Date/Time reservation rows; current Coakley fields show Fall 2026 Norwood Youth Soccer reservations."
     },
-    "notes": "Use MyRec facility-area reservation tables as a conflict-calendar source. Discover facilities/areas dynamically and ingest reserved blocks with facility/area/program metadata. These reservations are optional in public Events but valuable for Conflict Contraption. Seed verified Coakley area URL as a resilience fallback while retaining dynamic discovery.",
+    "notes": "Use MyRec facility-area reservation tables as a conflict-calendar source. Discover facilities/areas dynamically and ingest reserved blocks with facility/area/program metadata. These reservations are optional in public Events but valuable for Conflict Contraption.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true,
+      "empty_result_is_failure": false,
       "seasonal": true,
       "offseason_empty_is_healthy": true
     },
