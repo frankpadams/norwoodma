@@ -1866,7 +1866,16 @@
     "monitor_priority": 1,
     "ingestion": {
       "method": "tribe_events",
-      "automation": "preferred"
+      "automation": "preferred",
+      "calendar_url": "https://millforge.org/events/",
+      "discover_ical": true,
+      "preserve": [
+        "venue",
+        "category",
+        "registration",
+        "price",
+        "recurrence"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -1874,12 +1883,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Mill Forge events archive currently lists dated September-December 2026 workshops and community maker events."
     },
-    "notes": "Public maker workshops/classes at 61 Endicott St.",
-    "conflict_profile": "optional"
+    "notes": "Preserve class/workshop pricing and registration metadata. Classes remain opt-in by default; broadly public fairs/open-house style events may qualify for What's Happening.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-mini-athletes-norwood",
@@ -10375,5 +10391,116 @@
     },
     "conflict_profile": "optional",
     "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
+  },
+  {
+    "id": "factory52-events",
+    "name": "Factory 52 Events",
+    "url": "https://www.factory52.com/calendar-events/",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred",
+      "calendar_url": "https://www.factory52.com/calendar-events/",
+      "discover_ical": true,
+      "preserve": [
+        "venue",
+        "category",
+        "registration",
+        "price",
+        "recurrence"
+      ]
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Factory 52 calendar currently publishes a populated September 2026 month with recurring trivia, chess and live music."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "High-volume commercial/community calendar. Keep routine promotions and recurring food offers opt-in; public live music, markets and special community events may qualify for curated views."
+  },
+  {
+    "id": "lifeworks-events",
+    "name": "Lifeworks Events",
+    "url": "https://lifeworksarc.org/events/",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred",
+      "calendar_url": "https://lifeworksarc.org/events/",
+      "discover_ical": true,
+      "preserve": [
+        "venue",
+        "category",
+        "registration",
+        "price",
+        "recurrence"
+      ]
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Lifeworks events archive currently lists dated September-November 2026 programs including Norwood-based events."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Apply Norwood location filtering for the Norwood.ma calendar while retaining nearby disability-community events only when explicitly selected."
+  },
+  {
+    "id": "masshire-norwood-events",
+    "name": "MassHire Norwood Events",
+    "url": "https://masshiremsw.com/events-calendar/category/norwood-event/",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "tribe_events",
+      "automation": "preferred",
+      "calendar_url": "https://masshiremsw.com/events-calendar/category/norwood-event/",
+      "discover_ical": true,
+      "preserve": [
+        "venue",
+        "category",
+        "registration",
+        "price",
+        "recurrence"
+      ]
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official MassHire Metro South/West calendar has a dedicated Norwood Events category with current September 2026 programming."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Career-center workshops and seminars are useful opt-in calendars but should not crowd the curated What's Happening default."
   }
 ]
