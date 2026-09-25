@@ -2536,8 +2536,22 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "assabet_filtered_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://norwoodlibrary.assabetinteractive.com/calendar/",
+      "match": [
+        "CFCE",
+        "Coordinated Family and Community Engagement",
+        "family",
+        "storytime"
+      ],
+      "cross_check_url": "https://norwoodlibrary.org/norwood-cfce/",
+      "preserve": [
+        "age_group",
+        "room",
+        "registration",
+        "off_site"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -2545,12 +2559,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_filter_verified",
+      "verified_at": "2026-09-25",
+      "basis": "CFCE programming is surfaced through Morrill Memorial Library and can be derived from the verified Assabet event calendar, with the CFCE page used as a cross-check."
     },
     "notes": "Family playgroups and community programs; include when public and dated.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-challenger-sports",
