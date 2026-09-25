@@ -735,6 +735,8 @@ def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
     events=list(seeds); status=[]
+    previous_health={x.get('source_id'):x for x in read_json('calendar-source-health.json',[]) if isinstance(x,dict)}
+    checked_at=now_local().isoformat()
     if not offline:
         event_outputs={'events','school_events','sports_events','fundraisers'}
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
@@ -768,6 +770,26 @@ def refresh_events(offline=False):
                 status.append({'source_id':src['id'],'ok':False,'method':method,'found':0,'note':str(ex)[:180]})
     events=current_events(dedupe_events(events))
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
+    if not offline:
+        health=[]
+        by_id={x.get('id'):x for x in registry}
+        for row in status:
+            sid=row.get('source_id'); src=by_id.get(sid,{})
+            if not src.get('health_policy',{}).get('track_last_checked'): continue
+            prev=previous_health.get(sid,{})
+            ok=bool(row.get('ok')); found=int(row.get('found') or 0)
+            successful=ok and (found>0 or row.get('method') in {'ical','tribe_events'})
+            failures=0 if ok else int(prev.get('consecutive_failures') or 0)+1
+            last_success=checked_at if successful else prev.get('last_successful_update')
+            stale=False; stale_reason=None
+            if failures>=3:
+                stale=True; stale_reason=f'{failures} consecutive refresh failures'
+            elif last_success:
+                d=parse_dt(last_success)
+                if d and now_local()-d.astimezone(TZ)>timedelta(days=30):
+                    stale=True; stale_reason='no successful update in 30 days'
+            health.append({'source_id':sid,'last_checked':checked_at,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
+        write_json('calendar-source-health.json',health)
     return events,status
 
 def usable_news_image(url, base_url=''):
