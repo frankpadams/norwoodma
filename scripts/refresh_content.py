@@ -826,6 +826,13 @@ def refresh_events(offline=False):
                 if d and now_local()-d.astimezone(TZ)>timedelta(days=30):
                     stale=True; stale_reason='no successful update in 30 days'
             health.append({'source_id':sid,'last_checked':checked_at,'last_healthy_check':last_healthy_check,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
+        # Preserve tracked sources that were not attempted in this run so one
+        # partial adapter failure does not erase their historical health record.
+        attempted_ids={x.get('source_id') for x in health}
+        for sid,prev in previous_health.items():
+            if sid not in attempted_ids and sid in by_id and by_id[sid].get('active_monitor'):
+                health.append(prev)
+        health.sort(key=lambda x:str(x.get('source_id') or ''))
         write_json('calendar-source-health.json',health)
     return events,status
 
