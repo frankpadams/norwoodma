@@ -1081,7 +1081,15 @@
     "monitor_priority": 1,
     "ingestion": {
       "method": "tribe_events",
-      "automation": "preferred"
+      "automation": "preferred",
+      "calendar_url": "https://www.norwoodcenter.org/events/",
+      "ical_discovery": true,
+      "preserve": [
+        "organizer",
+        "venue",
+        "category",
+        "registration_url"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -1089,12 +1097,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Friends of Norwood Center Events page currently exposes a populated 2026 Tribe Events calendar with 50 events and dated venue/details."
     },
-    "notes": "Excellent aggregator for Town Common traditions, market special days and downtown happenings.",
-    "conflict_profile": "optional"
+    "notes": "High-value community calendar. Ingest the Tribe Events calendar and discover its iCal export when available. Preserve organizer/venue/category and deduplicate against primary organizer feeds (Library, Recreation, Farmers Market, etc.). Empty calendar alone is not a connection failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-gillette-stadium",
