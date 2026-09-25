@@ -1,19 +1,193 @@
 (()=>{
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
-  // Shared navigation additions.
+  // Site-wide time-sensitive alert strip. Severe weather and public-safety alerts
+  // are fetched live from NWS; alerts.json can carry verified local/state emergency notices.
+  async function sitewideTimelyAlerts(){
+    const existing=document.querySelector('.site-timely-alert');
+    if(existing)existing.remove();
+    const priority={Extreme:40,Severe:35,Moderate:30,Minor:25,Unknown:20};
+    const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
+    const govLive='https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/';
+    const NORWOOD_TIME_ZONE='America/New_York';
+    const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const easternParts=()=>{
+      // All civic-alert timing follows Norwood, MA local time, regardless of the visitor's device timezone.
+      const parts=new Intl.DateTimeFormat('en-US',{timeZone:NORWOOD_TIME_ZONE,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+      const v=Object.fromEntries(parts.map(p=>[p.type,p.value]));
+      return {date:`${v.year}-${v.month}-${v.day}`,minutes:Number(v.hour)*60+Number(v.minute)};
+    };
+    const normalize=a=>({title:String(a.title||a.event||'Emergency alert'),summary:String(a.summary||a.headline||a.description||''),url:String(a.url||a.web||a['@id']||''),severity:String(a.severity||'Unknown'),expires:a.expires||null,source:a.source||'Public alert',rank:priority[String(a.severity||'Unknown')]||20,kind:'urgent'});
+    const items=[];
+    try{
+      const r=await fetch('https://api.weather.gov/alerts/active?point=42.1945,-71.1995',{headers:{Accept:'application/geo+json'}});
+      if(r.ok){const j=await r.json();for(const f of (j.features||[])){const p=f.properties||{};if(allowed.test(p.event||''))items.push(normalize({event:p.event,headline:p.headline,description:p.description,severity:p.severity,expires:p.expires,url:f.id,source:p.senderName||'National Weather Service'}));}}
+    }catch(e){}
+    try{
+      const r=await fetch('data/alerts.json?fresh='+Date.now(),{cache:'no-store'});
+      if(r.ok){const j=await r.json();for(const a of (Array.isArray(j)?j:[])){const exp=a.expires?Date.parse(a.expires):Infinity;if(a.active!==false&&exp>Date.now()&&allowed.test((a.type||'')+' '+(a.title||'')))items.push(normalize(a));}}
+    }catch(e){}
+    try{
+      const r=await fetch('data/civic-notices.json?fresh='+Date.now(),{cache:'no-store'});
+      if(r.ok){
+        const data=await r.json(), list=Array.isArray(data)?data:(data.notices||[]), now=easternParts();
+        for(const n of list){
+          if(n.kind==='election'){
+            const first=n.show_from||n.start_date, last=n.election_date||n.end_date;
+            if(first&&last&&now.date>=first&&now.date<=last)items.push({kind:'election',rank:15,title:n.title||'Election Day notice',url:n.url||'https://www.norwoodma.gov/',date:last});
+          }else if(n.kind==='community_meeting'&&n.date){
+            const first=n.show_from||n.date;
+            if(now.date<first||now.date>n.date)continue;
+            const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
+            const st=hm(n.start_time), en=hm(n.end_time);
+            const isToday=now.date===n.date;
+            if(isToday){
+              const cutoff=st!==null?Math.max(en!==null?en:st,st+120):en;
+              if(cutoff!==null&&now.minutes>cutoff)continue;
+            }
+            items.push({kind:'community_meeting',rank:isToday?13:11,title:n.title||'Community meeting',url:n.url||'events.html',today:isToday,date:n.date});
+          }else if(n.kind==='meeting'&&n.date===now.date){
+            const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
+            const st=hm(n.start_time), en=hm(n.end_time);
+            // A meeting notice is useful before/during the meeting, but should disappear
+            // completely once the scheduled meeting window has ended. When no end time is
+            // available, use a 2-hour-from-start safety window rather than showing it all day.
+            const broadcastEnd=hm(n.broadcast_end_time);
+            const scheduledCutoff=st!==null?(en!==null?en+60:st+180):en;
+            // A verified NCM broadcast transition may end LIVE NOW earlier than the
+            // schedule-based grace period. Never infer an early end merely because
+            // broadcast data is missing.
+            const cutoff=broadcastEnd!==null&&st!==null&&broadcastEnd>=st
+              ? Math.min(scheduledCutoff!==null?scheduledCutoff:broadcastEnd,broadcastEnd)
+              : scheduledCutoff;
+            if(cutoff!==null&&now.minutes>cutoff)continue;
+            const live=st!==null&&now.minutes>=st&&(cutoff===null||now.minutes<=cutoff);
+            let title=n.title||'Public meeting';
+            if(!/\bmeeting\b/i.test(title))title+=' Meeting';
+            let url=n.url||'https://www.norwoodma.gov/calendar.php';
+            // Never send visitors to Revize's raw JSON/data handler. Use the human-readable
+            // Town calendar page for non-live meeting notices instead.
+            if(/calendar_data_handler\.php/i.test(url)){
+              const d=new Date(n.date+'T12:00:00');
+              url='https://www.norwoodma.gov/calendar.php?view=month&month='+String(d.getMonth()+1).padStart(2,'0')+'&day=01&year='+d.getFullYear();
+            }
+            const fmtTime=x=>{const m=String(x||'').match(/^(\d{1,2}):(\d{2})/);if(!m)return '';const h=Number(m[1]),min=m[2],ap=h>=12?'PM':'AM',h12=((h+11)%12)+1;return h12+':'+min+' '+ap;};
+            items.push({kind:'meeting',rank:live?18:12,title,url,live,startTime:fmtTime(n.start_time),scheduledEnd:n.end_time||null,overrun:en!==null&&now.minutes>en});
+          }
+        }
+      }
+    }catch(e){}
+    if(!items.length)return;
+    const seen=new Set();const alerts=items.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
+    const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
+    strip.innerHTML='<button class="site-timely-prev" type="button" aria-label="Previous alert">‹</button><div class="site-timely-track" tabindex="0">'+alerts.map(a=>{
+      let label='NOTICE';
+      if(a.kind==='urgent')label=/child abduction|amber/i.test(a.title)?'AMBER ALERT':/silver alert|missing person/i.test(a.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(a.title)?'WEATHER ALERT':'EMERGENCY ALERT';
+      if(a.kind==='election')label='ELECTION DAY';
+      if(a.kind==='community_meeting')label=a.today?'TODAY':'UPCOMING';
+      if(a.kind==='meeting')label=a.live?'LIVE NOW':'TODAY';
+      const meetingTime=a.kind==='meeting'&&a.startTime?' — '+esc(a.startTime):'';
+      const main='<strong>'+label+':</strong> '+esc(a.title)+meetingTime;
+      if(a.kind==='meeting'&&a.live){
+        let endNote='';
+        if(a.scheduledEnd){
+          const m=String(a.scheduledEnd).match(/^(\\d{1,2}):(\\d{2})/);
+          if(m){
+            const h=Number(m[1]),min=m[2],ap=h>=12?'PM':'AM',h12=((h+11)%12)+1;
+            if(a.overrun)endNote=' <span class="meeting-scheduled-end">(Scheduled end: '+h12+':'+min+' '+ap+')</span>';
+          }
+        }
+        return '<span class="site-timely-item">'+main+' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a>'+endNote+'</span>';
+      }
+      if(a.kind==='community_meeting'){
+        const liveLink=a.today?' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">If televised: Watch on NCM →</a>':'';
+        return '<span class="site-timely-item"><a href="'+esc(a.url||'events.html')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>'+liveLink+'</span>';
+      }
+      return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
+    }).join('')+'</div><button class="site-timely-next" type="button" aria-label="Next alert">›</button><span class="site-timely-status sr-only" aria-live="polite"></span>';
+    const track=strip.querySelector('.site-timely-track'), slides=[...strip.querySelectorAll('.site-timely-item')];
+    let current=0,timer=null,paused=false;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const show=(idx,announce=false)=>{
+      if(!slides.length)return;
+      current=(idx+slides.length)%slides.length;
+      slides.forEach((el,i)=>{el.classList.toggle('is-active',i===current);el.setAttribute('aria-hidden',String(i!==current));if(i!==current)el.setAttribute('tabindex','-1');else el.removeAttribute('tabindex');});
+      if(announce&&slides.length>1){const s=strip.querySelector('.site-timely-status');if(s)s.textContent='Alert '+(current+1)+' of '+slides.length;}
+    };
+    const stop=()=>{if(timer){clearInterval(timer);timer=null;}};
+    const start=()=>{stop();if(!reduced&&!paused&&slides.length>1)timer=setInterval(()=>show(current+1),7000);};
+    strip.querySelector('.site-timely-prev').addEventListener('click',()=>{show(current-1,true);start();});
+    strip.querySelector('.site-timely-next').addEventListener('click',()=>{show(current+1,true);start();});
+    strip.addEventListener('mouseenter',()=>{paused=true;stop();});
+    strip.addEventListener('mouseleave',()=>{paused=false;start();});
+    strip.addEventListener('focusin',()=>{paused=true;stop();});
+    strip.addEventListener('focusout',()=>{setTimeout(()=>{if(!strip.contains(document.activeElement)){paused=false;start();}},0);});
+    let touchX=null;
+    track.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;paused=true;stop();},{passive:true});
+    track.addEventListener('touchend',e=>{if(touchX!==null){const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>35)show(current+(dx<0?1:-1),true);}touchX=null;paused=false;start();},{passive:true});
+    if(slides.length<2){strip.querySelector('.site-timely-prev').hidden=true;strip.querySelector('.site-timely-next').hidden=true;}
+    show(0);start();
+    const independent=document.querySelector('.independent');
+    if(independent)independent.insertAdjacentElement('afterend',strip);else document.body.prepend(strip);
+  }
+  sitewideTimelyAlerts();
+  // Re-check critical alerts on already-open pages. The underlying alert/event fetches
+  // use cache:'no-store' plus a unique timestamp, so each pass asks for current data.
+  setInterval(sitewideTimelyAlerts,60000);
+  // Keep iOS Home Screen metadata consistent on every page that loads the shared nav.
+  let apple=document.querySelector('link[rel="apple-touch-icon"]');
+  if(!apple){apple=document.createElement('link');apple.rel='apple-touch-icon';document.head.appendChild(apple);}
+  apple.href='assets/favicon-approved.png?v=0.13.4.4';apple.sizes='1024x1024';
+  let appTitle=document.querySelector('meta[name="apple-mobile-web-app-title"]');
+  if(!appTitle){appTitle=document.createElement('meta');appTitle.name='apple-mobile-web-app-title';document.head.appendChild(appTitle);}
+  appTitle.content='Norwood.ma';
+  const close=()=>{nav.classList.remove('open');const hs=nav.querySelector('[data-hamburger-support]');if(hs)hs.hidden=true;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');};
+  const open=()=>{const hs=nav.querySelector('[data-hamburger-support]');if(hs)hs.hidden=false;nav.classList.add('open');menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation menu');};
+  menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
+  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  // Keep the public map visible in the shared primary navigation on every page.
   if(!nav.querySelector('a[href="map.html"]')){
     const exploreLink=nav.querySelector('a[href="explore.html"]');
     const mapLink=document.createElement('a');
-    mapLink.href='map.html';mapLink.textContent='Map';
+    mapLink.href='map.html';
+    mapLink.textContent='Map';
     if(/\/map\.html$/i.test(location.pathname))mapLink.setAttribute('aria-current','page');
     if(exploreLink)exploreLink.insertAdjacentElement('afterend',mapLink);else nav.appendChild(mapLink);
   }
-  if(!nav.querySelector('a[href="discover.html"]')){
-    const discoverLink=document.createElement('a');
-    discoverLink.href='discover.html';discoverLink.textContent='Discover';
-    if(/\/discover\.html$/i.test(location.pathname))discoverLink.setAttribute('aria-current','page');
-    const mapLink=nav.querySelector('a[href="map.html"]');
-    if(mapLink)mapLink.insertAdjacentElement('afterend',discoverLink);else nav.appendChild(discoverLink);
+  // Support belongs in the collapsed hamburger menu only; never in the desktop text navigation.
+  if(!nav.querySelector('[data-hamburger-support]')){const support=document.createElement('a');support.href='support.html';support.textContent='Support Norwood.ma';support.dataset.hamburgerSupport='true';support.className='hamburger-only-support';support.hidden=true;nav.appendChild(support);}
+  if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
+    const add=document.createElement('a');add.href='#';add.dataset.addHomeScreen='true';add.className='add-home-screen-link';add.innerHTML='<span>Add Norwood.ma to Home Screen</span><img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true">';
+    add.addEventListener('click',e=>{e.preventDefault();close();let dlg=document.querySelector('.add-home-screen-dialog');if(dlg){dlg.remove();return;}dlg=document.createElement('aside');dlg.className='add-home-screen-dialog ios-home-prompt';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';document.body.appendChild(dlg);const done=()=>dlg.remove();dlg.querySelector('.ios-home-close').onclick=done;dlg.querySelector('.ios-home-gotit').onclick=done;dlg.querySelector('.ios-home-close').focus();});
+    nav.appendChild(add);
   }
+  nav.querySelectorAll('a:not([data-add-home-screen])').forEach(a=>a.addEventListener('click',close));
+  document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==menu)close();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
+  window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
+  const root=document.documentElement;const saved=localStorage.getItem('norwood-text-size')||'standard';root.dataset.textSize=saved;const contrast=localStorage.getItem('norwood-high-contrast')==='true';root.dataset.highContrast=String(contrast);
+  const ctl=document.createElement('div');ctl.className='text-size-controls accessibility-controls';ctl.setAttribute('aria-label','Accessibility and language controls');ctl.innerHTML='<span class="sr-only">Display and language settings</span><button type="button" data-text-size-menu aria-haspopup="menu" aria-expanded="false" aria-label="Choose text size">Aa</button><button type="button" data-contrast aria-label="Toggle high contrast">◐</button><button type="button" data-translate aria-haspopup="menu" aria-expanded="false" aria-label="Translate this page">🌐</button>';document.body.appendChild(ctl);
+  const textSizeMenu=document.createElement('div');textSizeMenu.className='text-size-menu';textSizeMenu.hidden=true;textSizeMenu.setAttribute('role','menu');textSizeMenu.setAttribute('aria-label','Choose text size');textSizeMenu.innerHTML='<button type="button" role="menuitemradio" data-size="smallest">Smallest</button><button type="button" role="menuitemradio" data-size="compact">Smaller</button><button type="button" role="menuitemradio" data-size="standard">Standard</button><button type="button" role="menuitemradio" data-size="large">Larger</button><button type="button" role="menuitemradio" data-size="largest">Largest</button>';document.body.appendChild(textSizeMenu);
+  const textSizeButton=ctl.querySelector('[data-text-size-menu]');
+  const closeTextSize=()=>{textSizeMenu.hidden=true;textSizeButton&&textSizeButton.setAttribute('aria-expanded','false');};
+  const translateMenu=document.createElement('div');translateMenu.className='translate-menu';translateMenu.hidden=true;translateMenu.setAttribute('role','menu');translateMenu.setAttribute('aria-label','Translate this page');translateMenu.innerHTML='<button type="button" role="menuitem" data-lang="en">English</button><button type="button" role="menuitem" data-lang="es">Español</button><button type="button" role="menuitem" data-lang="pt">Português</button><button type="button" role="menuitem" data-lang="fr">Français</button><button type="button" role="menuitem" data-lang="zh-CN">中文</button><button type="button" role="menuitem" data-lang="ar">العربية</button><button type="button" role="menuitem" data-lang="ht">Kreyòl ayisyen</button><button type="button" role="menuitem" data-lang="vi">Tiếng Việt</button><button type="button" role="menuitem" data-lang="more">More languages…</button>';document.body.appendChild(translateMenu);
+  const translateButton=ctl.querySelector('[data-translate]');
+  const closeTranslate=()=>{translateMenu.hidden=true;translateButton&&translateButton.setAttribute('aria-expanded','false');};
+  const currentPublicUrl=()=>{const canonical=document.querySelector('link[rel="canonical"]')?.href;if(canonical&&/https?:\/\/(www\.)?norwood\.ma\//i.test(canonical))return canonical;const here=new URL(location.href);if(/(^|\.)norwood\.ma$/i.test(here.hostname))return here.href;return 'https://www.norwood.ma/'+(location.pathname.split('/').pop()||'index.html')+location.search+location.hash;};
+  // Keep the English reset option literally labeled "English" even if a translation service
+  // modifies the surrounding page. It is the stable way to return to the original site language.
+  const englishReset=translateMenu.querySelector('[data-lang="en"]');
+  if(englishReset){englishReset.textContent='English';englishReset.setAttribute('translate','no');englishReset.classList.add('notranslate');}
+  const openTranslated=(lang)=>{const page=currentPublicUrl();if(lang==='en'){location.href=page;closeTranslate();return;}const url=lang==='more'?'https://translate.google.com/?sl=auto&u='+encodeURIComponent(page):'https://translate.google.com/translate?sl=auto&tl='+encodeURIComponent(lang)+'&u='+encodeURIComponent(page);window.open(url,'_blank','noopener');closeTranslate();};
+  if(translateButton)translateButton.addEventListener('click',e=>{e.stopPropagation();const show=translateMenu.hidden;translateMenu.hidden=!show;translateButton.setAttribute('aria-expanded',String(show));if(show){const r=translateButton.getBoundingClientRect();translateMenu.style.right=Math.max(10,window.innerWidth-r.right)+'px';translateMenu.style.bottom=(window.innerHeight-r.top+8)+'px';const first=translateMenu.querySelector('button');if(first)first.focus();}});
+  translateMenu.addEventListener('click',e=>{const b=e.target.closest('[data-lang]');if(b)openTranslated(b.dataset.lang);});
+  document.addEventListener('click',e=>{if(!translateMenu.hidden&&!translateMenu.contains(e.target)&&e.target!==translateButton)closeTranslate();if(!textSizeMenu.hidden&&!textSizeMenu.contains(e.target)&&e.target!==textSizeButton)closeTextSize();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!translateMenu.hidden){closeTranslate();if(translateButton)translateButton.focus();}if(e.key==='Escape'&&!textSizeMenu.hidden){closeTextSize();if(textSizeButton)textSizeButton.focus();}});
+  const sync=()=>{textSizeMenu.querySelectorAll('button[data-size]').forEach(b=>b.setAttribute('aria-checked',String(b.dataset.size===(root.dataset.textSize||'standard'))));const cb=ctl.querySelector('[data-contrast]');if(cb)cb.setAttribute('aria-pressed',String(root.dataset.highContrast==='true'));};
+  if(textSizeButton)textSizeButton.addEventListener('click',e=>{e.stopPropagation();const show=textSizeMenu.hidden;textSizeMenu.hidden=!show;textSizeButton.setAttribute('aria-expanded',String(show));if(show){const r=textSizeButton.getBoundingClientRect();textSizeMenu.style.right=Math.max(10,window.innerWidth-r.right)+'px';textSizeMenu.style.bottom=(window.innerHeight-r.top+8)+'px';const active=textSizeMenu.querySelector('[aria-checked="true"]')||textSizeMenu.querySelector('button');if(active)active.focus();}});
+  textSizeMenu.addEventListener('click',e=>{const b=e.target.closest('button[data-size]');if(!b)return;root.dataset.textSize=b.dataset.size;localStorage.setItem('norwood-text-size',b.dataset.size);sync();closeTextSize();if(textSizeButton)textSizeButton.focus();});
+  ctl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-contrast')){const next=root.dataset.highContrast!=='true';root.dataset.highContrast=String(next);localStorage.setItem('norwood-high-contrast',String(next));sync();}});sync();
+  const footer=document.querySelector('footer');if(footer){const meta=document.createElement('p');meta.className='footer-build-meta';meta.setAttribute('aria-label','Site version and copyright');meta.innerHTML='© 2026 Norwood.ma <span aria-hidden="true">·</span> Version 0.13.4.17';footer.appendChild(meta);}
 })();
+(function iosHomePrompt(){try{const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;if(!ios||standalone||localStorage.getItem('norwood-ios-home-dismissed'))return;const today=new Date().toISOString().slice(0,10),last=localStorage.getItem('norwood-ios-last-visit');let visits=Number(localStorage.getItem('norwood-ios-visits')||0);if(last!==today){visits++;localStorage.setItem('norwood-ios-visits',String(visits));localStorage.setItem('norwood-ios-last-visit',today)}if(visits<3)return;const el=document.createElement('aside');el.className='ios-home-prompt';el.setAttribute('role','dialog');el.setAttribute('aria-label','Add Norwood.ma to your Home Screen');el.innerHTML='<button class="ios-home-close" aria-label="Dismiss">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt=""><div><strong>Keep Norwood.ma handy</strong><p>Add Norwood.ma to your Home Screen for quick access. Tap <b>Share</b> ↑ and choose <b>Add to Home Screen</b>.</p><button class="ios-home-gotit">Got it</button><button class="ios-home-later">Not now</button></div>';document.body.appendChild(el);const dismiss=()=>{localStorage.setItem('norwood-ios-home-dismissed','1');el.remove()};el.querySelector('.ios-home-close').onclick=dismiss;el.querySelector('.ios-home-gotit').onclick=dismiss;el.querySelector('.ios-home-later').onclick=()=>{localStorage.setItem('norwood-ios-visits','0');localStorage.setItem('norwood-ios-last-visit',today);el.remove()};}catch(e){}})();
