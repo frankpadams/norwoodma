@@ -3594,7 +3594,7 @@
     "potential_outputs": [
       "school_events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 1,
     "ingestion": {
       "method": "ical",
@@ -3611,8 +3611,10 @@
       "verified_at": "2026-09-25",
       "basis": "Official NHS calendar confirmed; promoted as a primary public high-school event source."
     },
-    "notes": "Publish genuinely public/community-accessible NHS events, especially plays, concerts, fine-arts performances/exhibits, fairs, open houses and public presentations; exclude routine internal school operations.",
-    "conflict_profile": "default"
+    "notes": "Publish genuinely public/community-accessible NHS events, especially plays, concerts, fine-arts performances/exhibits, fairs, open houses and public presentations; exclude routine internal school operations. Disabled as duplicate alias; canonical ingestion is nps-nhs.",
+    "conflict_profile": "default",
+    "alias_only": true,
+    "canonical_source_id": "nps-nhs"
   },
   {
     "id": "resource-norwood-high-school-alumni-association",
@@ -7639,7 +7641,7 @@
     "potential_outputs": [
       "events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 2,
     "ingestion": {
       "method": "html_calendar",
@@ -7655,8 +7657,10 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Norwood venue with a structured event calendar. Member-only items must be excluded; public events, public skating, competitions, shows, seminars, and public programs are eligible when access rules allow.",
-    "conflict_profile": "optional"
+    "notes": "Norwood venue with a structured event calendar. Member-only items must be excluded; public events, public skating, competitions, shows, seminars, and public programs are eligible when access rules allow. Disabled as duplicate alias; canonical ingestion is skating-club-calendar.",
+    "conflict_profile": "optional",
+    "alias_only": true,
+    "canonical_source_id": "skating-club-calendar"
   },
   {
     "id": "resource-thom-early-intervention",
@@ -9533,7 +9537,7 @@
     "potential_outputs": [
       "events"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 2,
     "ingestion": {
       "method": "html_calendar",
@@ -9549,14 +9553,16 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. Disabled as duplicate alias; canonical ingestion is library-cfce.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true
-    }
+    },
+    "alias_only": true,
+    "canonical_source_id": "library-cfce"
   },
   {
     "id": "arts-millforge",
