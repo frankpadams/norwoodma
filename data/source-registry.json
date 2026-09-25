@@ -3343,7 +3343,7 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/athletics/calendar/feed/ical.ics",
+    "url": "https://www.norwood.k12.ma.us/nhs/athletics",
     "domain": "norwood.k12.ma.us",
     "produces": [
       "sports_events"
@@ -3354,9 +3354,10 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "ical",
+      "method": "schoolnow_calendar",
       "automation": "preferred",
-      "feed_url": "https://www.norwood.k12.ma.us/nhs/athletics/calendar/feed/ical.ics"
+      "calendar_name": "Athletics",
+      "calendar_root": "https://www.norwood.k12.ma.us/nhs/calendar"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3364,11 +3365,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "configured_official_feed",
+      "status": "adapter_needed_verified_source",
       "verified_at": "2026-09-25",
-      "basis": "NPS SchoolNow calendar uses the same official iCal feed route pattern as the verified district and school calendars; athletics is exposed as a calendar in the NPS calendar system."
+      "basis": "Official NPS calendar UI explicitly lists Athletics as a selectable calendar; athletics department links schedules separately."
     },
-    "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items.",
+    "notes": "NPS SchoolNow calendars expose Athletics as a selectable calendar within the official calendar UI. Use a SchoolNow calendar adapter rather than assuming /nhs/athletics/calendar/feed/ical.ics exists. Include public varsity contests/major competitions; retain sport/team metadata for selector filtering.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
