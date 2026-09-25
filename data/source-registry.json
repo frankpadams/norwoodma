@@ -3369,7 +3369,13 @@
       "basis": "NPS SchoolNow calendar uses the same official iCal feed route pattern as the verified district and school calendars; athletics is exposed as a calendar in the NPS calendar system."
     },
     "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items.",
-    "conflict_profile": "default"
+    "conflict_profile": "default",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-nhs-calendar",
@@ -4055,7 +4061,13 @@
       "basis": "Official Norwood PMA site has a dedicated calendar page with upcoming music events and links to school fine-arts/marching-band schedules."
     },
     "notes": "Primary PMA/fine-arts source. Publish public NHS concerts, marching-band performances/home show, drama, art exhibits, Fine Arts Festival and related performances. Filter internal/private rehearsals and member-only activities.",
-    "conflict_profile": "default"
+    "conflict_profile": "default",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "resource-norwood-parent-music-association",
@@ -4319,7 +4331,13 @@
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Primary NPS Fine Arts discovery source. Public concerts, drama, band/orchestra, visual arts, Fine Arts Festival and performance announcements; cross-check NHS calendar and NPS news.",
-    "conflict_profile": "default"
+    "conflict_profile": "default",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-news",
@@ -8195,7 +8213,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-nhs",
@@ -8230,7 +8254,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-coakley",
@@ -8265,7 +8295,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-balch",
@@ -8300,7 +8336,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-callahan",
@@ -8335,7 +8377,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-cleveland",
@@ -8370,7 +8418,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-oldham",
@@ -8405,7 +8459,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-prescott",
@@ -8440,7 +8500,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "nps-willett",
@@ -8475,7 +8541,13 @@
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true
+    }
   },
   {
     "id": "recovery-aa",
