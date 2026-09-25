@@ -8740,8 +8740,17 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "sportsconnect_schedule",
+      "automation": "preferred",
+      "program_url": "https://www.norwoodyouthsoftball.com/current-programs",
+      "discover_schedule_link": true,
+      "preserve": [
+        "program",
+        "division",
+        "team",
+        "home_away",
+        "location"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -8749,11 +8758,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
+      "status": "adapter_needed_verified_active_season",
       "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "basis": "Official Current Programs page shows 2026 Fall Ball active Sep 13-Oct 18 and exposes Game Schedules/Game Locations links."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Use SportsConnect program/schedule structure rather than generic HTML scraping. Current Fall Ball is active through Oct 18, 2026; discover schedule link from official site and preserve program/division/team metadata for selectors. Empty results outside active programs are healthy.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -8767,7 +8776,8 @@
       "zero_events_offseason_is_healthy": true,
       "seasons": [
         "spring",
-        "summer"
+        "summer",
+        "fall"
       ]
     }
   },
