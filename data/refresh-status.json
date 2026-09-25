@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T03:58:20.890114-04:00",
+  "generated_at": "2026-09-25T07:46:17.509781-04:00",
   "offline": false,
   "events_published": 215,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 215,
-      "generated_at": "2026-09-25T03:58:20.882545-04:00"
+      "generated_at": "2026-09-25T07:46:17.497247-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 47,
-      "generated_at": "2026-09-25T03:58:20.883779-04:00"
+      "generated_at": "2026-09-25T07:46:17.498485-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 32,
-      "generated_at": "2026-09-25T03:58:20.885125-04:00"
+      "generated_at": "2026-09-25T07:46:17.499812-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 20,
-      "generated_at": "2026-09-25T03:58:20.886213-04:00"
+      "generated_at": "2026-09-25T07:46:17.500891-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-09-25T03:58:20.887072-04:00"
+      "generated_at": "2026-09-25T07:46:17.504355-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 16,
-      "generated_at": "2026-09-25T03:58:20.888134-04:00"
+      "generated_at": "2026-09-25T07:46:17.507735-04:00"
     }
   ],
   "event_sources": [
@@ -55,6 +55,20 @@
       "method": "html_calendar",
       "found": 0,
       "note": "page checked; no machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-balch-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /balch/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIF"
+    },
+    {
+      "source_id": "nps-callahan-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /callahan/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VE"
     },
     {
       "source_id": "nps-callahan-pta",
@@ -78,11 +92,25 @@
       "note": "403 Client Error: Forbidden for url: https://citizensforabetternorwoodma.com/events"
     },
     {
+      "source_id": "nps-cleveland-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cleveland/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_V"
+    },
+    {
       "source_id": "nps-cleveland-pto",
       "ok": true,
       "method": "discovery_search",
       "found": 0,
       "note": "method discovery_search requires discovery/manual adapter"
+    },
+    {
+      "source_id": "nps-coakley-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cms/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
     },
     {
       "source_id": "nps-cms-pto",
@@ -260,6 +288,20 @@
       "note": "method discovery_search requires discovery/manual adapter"
     },
     {
+      "source_id": "nps-athletics",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /nhs/athletics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY"
+    },
+    {
+      "source_id": "nps-nhs-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /nhs/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
+    },
+    {
       "source_id": "nps-nhs-pto",
       "ok": true,
       "method": "discovery_search",
@@ -414,11 +456,25 @@
       "note": ""
     },
     {
+      "source_id": "nps-oldham-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /oldham/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERI"
+    },
+    {
       "source_id": "nps-oldham-pto",
       "ok": true,
       "method": "discovery_search",
       "found": 0,
       "note": "method discovery_search requires discovery/manual adapter"
+    },
+    {
+      "source_id": "nps-prescott-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /prescott/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VE"
     },
     {
       "source_id": "nps-prescott-pta",
@@ -526,6 +582,13 @@
       "note": "page checked; no machine-readable Event/ICS found"
     },
     {
+      "source_id": "nps-willett-calendar",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /willett/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VER"
+    },
+    {
       "source_id": "nps-willett-pto",
       "ok": true,
       "method": "discovery_search",
@@ -631,7 +694,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 58,
+      "found": 59,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -639,7 +702,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 58,
+      "found": 59,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -647,7 +710,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 44,
+      "found": 43,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
