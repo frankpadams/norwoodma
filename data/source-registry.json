@@ -3308,8 +3308,17 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "organization_event_discovery",
+      "automation": "preferred",
+      "homepage": "https://www.norwoodpantry.org/",
+      "discover_event_pages": true,
+      "discover_dated_posts": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "registration",
+        "public_access"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3321,8 +3330,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch food drives, donation events and community fundraisers.",
-    "conflict_profile": "optional"
+    "notes": "Watch food drives, donation events and community fundraisers. Organization may publish events intermittently rather than maintain a continuous calendar. A successful check with zero current events is healthy; ingest only concrete dated public events.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-food-pantry",
@@ -3966,8 +3982,17 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "organization_event_discovery",
+      "automation": "preferred",
+      "homepage": "https://www.norwoodmalions.com/",
+      "discover_event_pages": true,
+      "discover_dated_posts": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "registration",
+        "public_access"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3980,8 +4005,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers and service events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
-    "conflict_profile": "optional"
+    "notes": "Watch public fundraisers and service events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings. Organization may publish events intermittently rather than maintain a continuous calendar. A successful check with zero current events is healthy; ingest only concrete dated public events.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-lions-club",
@@ -5265,8 +5297,17 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "organization_event_discovery",
+      "automation": "preferred",
+      "homepage": "https://www.norwoodscholarshipfoundation.org/",
+      "discover_event_pages": true,
+      "discover_dated_posts": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "registration",
+        "public_access"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -5278,8 +5319,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch scholarship fundraisers and public events.",
-    "conflict_profile": "optional"
+    "notes": "Watch scholarship fundraisers and public events. Organization may publish events intermittently rather than maintain a continuous calendar. A successful check with zero current events is healthy; ingest only concrete dated public events.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "town-senior-newsletter",
@@ -8390,8 +8438,17 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "preferred"
+      "method": "organization_event_discovery",
+      "automation": "preferred",
+      "homepage": "https://my.lwv.org/massachusetts/norwood",
+      "discover_event_pages": true,
+      "discover_dated_posts": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "registration",
+        "public_access"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -8400,12 +8457,19 @@
       "public_facing_civic_events_only": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-24",
-      "basis": "Official local League site reviewed; publishes Candidates Night, voter education, registration and public civic forums."
+      "status": "verified_dated_event_discovery",
+      "verified_at": "2026-09-25",
+      "basis": "Norwood LWV pages publish concrete dated civic events such as Candidates Night and election-related public programming."
     },
-    "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing.",
-    "conflict_profile": "optional"
+    "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing. Organization may publish events intermittently rather than maintain a continuous calendar. A successful check with zero current events is healthy; ingest only concrete dated public events.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "nps-district",
