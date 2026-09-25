@@ -935,6 +935,35 @@ def events_from_pma_hub(source):
             except Exception: pass
     return dedupe_events(out)
 
+def events_from_arbiterlive(source):
+    """Extract Norwood athletic contests from the school-directed ArbiterLive entity page."""
+    url=source.get('url'); html=request(url).text
+    out=[]; extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+    if BeautifulSoup:
+        soup=BeautifulSoup(html,'html.parser')
+        # Arbiter pages can expose team/schedule links and calendar subscriptions client-side.
+        links=[]
+        for a in soup.find_all('a',href=True):
+            href=urljoin(url,a['href']); label=clean_text(a.get_text(' '))
+            low=(href+' '+label).lower()
+            if any(k in low for k in ['schedule','calendar','ical','.ics','team']) and href not in links:
+                links.append(href)
+            if ('ical' in low or '.ics' in low) and href not in feeds: feeds.append(href)
+        for feed in list(dict.fromkeys(feeds))[:20]:
+            try: out.extend(events_from_ical(feed,source))
+            except Exception: pass
+        # Follow a bounded set of official team/schedule pages and parse structured event data.
+        for page in links[:30]:
+            try:
+                ph=request(page).text; rows,pfeeds=extract_jsonld_events(ph,source); out.extend(rows)
+                for feed in pfeeds[:4]:
+                    try: out.extend(events_from_ical(feed,source))
+                    except Exception: pass
+            except Exception: pass
+    for e in out:
+        e['category']='sports'; e['series']='Norwood High School Athletics'
+    return dedupe_events(out)
+
 def events_from_schoolnow(source):
     """Discover SchoolNow subscription feeds from an official calendar page."""
     root=source.get('ingestion',{}).get('calendar_root') or source.get('url')
@@ -1063,7 +1092,7 @@ def refresh_events(offline=False):
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
                 elif method=='tribe_events': got=events_from_tribe(src)
                 elif method=='schoolnow_calendar': got=events_from_schoolnow(src)
-                elif method=='arbiterlive_schedule': got=events_from_secondary_listing(src)
+                elif method=='arbiterlive_schedule': got=events_from_arbiterlive(src)
                 elif method=='pma_calendar_hub': got=events_from_pma_hub(src)
                 elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
                 elif method=='newsletter_calendar': got=events_from_newsletter_index(src)
