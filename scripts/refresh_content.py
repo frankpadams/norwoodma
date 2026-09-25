@@ -1328,7 +1328,7 @@ def refresh_events(offline=False):
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
                 status.append({'source_id':src['id'],'ok':False,'method':method,'found':0,'note':str(ex)[:180]})
-    events=current_events(dedupe_events(events+legacy_expanded_calendar_events()))
+    events=current_events(dedupe_events(events+legacy_expanded_calendar_events()+([] if offline else town_master_calendar_events())))
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     if not offline:
         health=[]
@@ -1771,6 +1771,47 @@ def _town_calendar_data():
                 if isinstance(x,(list,dict)): walk(x)
     walk(data)
     return rows
+
+def town_master_calendar_events(days=185):
+    """Ingest every public event exposed by the Town's shared Revize Master Calendar.
+
+    Individual Town departments can then be selected/filtered without maintaining
+    separate page scrapers when they publish into the same Town calendar backend.
+    """
+    today=now_local().date(); out=[]
+    endpoint=('https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php'
+              '?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:')
+    for row in _town_calendar_data():
+        title=clean_text(row.get('title') or row.get('summary') or row.get('name'))
+        raw_start=row.get('start') or row.get('start_date') or row.get('date') or row.get('event_start')
+        if not title or not raw_start: continue
+        try:
+            dt=dtparser.parse(str(raw_start)) if dtparser else datetime.fromisoformat(str(raw_start).replace('Z','+00:00'))
+            if dt.tzinfo: dt=dt.astimezone(TZ)
+        except Exception: continue
+        d=dt.date()
+        if d < today-timedelta(days=7) or d > today+timedelta(days=days): continue
+        all_day=not bool(re.search(r'T\\d{1,2}:\\d{2}',str(raw_start)))
+        st=None if all_day else dt.strftime('%H:%M')
+        et=None; edate=d.isoformat()
+        raw_end=row.get('end') or row.get('end_date') or row.get('event_end')
+        if raw_end:
+            try:
+                ed=dtparser.parse(str(raw_end)) if dtparser else datetime.fromisoformat(str(raw_end).replace('Z','+00:00'))
+                if ed.tzinfo: ed=ed.astimezone(TZ)
+                edate=ed.date().isoformat(); et=None if all_day else ed.strftime('%H:%M')
+            except Exception: pass
+        blob=' '.join(clean_text(str(row.get(k) or '')) for k in ('department','category','calendar','group','description','location','venue','title')).lower()
+        dept='Town of Norwood'
+        for needle,label in [('senior','Norwood Senior Center'),('council on aging','Norwood Senior Center'),('recreation','Norwood Recreation'),('police','Norwood Police Department'),('fire','Norwood Fire Department'),('veteran','Norwood Veterans Services'),('public works','Norwood DPW'),('dpw','Norwood DPW'),('conservation','Norwood Conservation'),('library','Morrill Memorial Library')]:
+            if needle in blob: dept=label; break
+        href=row.get('url') or row.get('link') or endpoint
+        out.append({'id':event_id(title,d.isoformat(),dept),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':edate,'time':et},
+                    'venue':clean_text(row.get('location') or row.get('venue')) or None,'address':None,'category':'government' if IMPORTANT_MEETING_RE.search(title) else 'community',
+                    'source_id':'town-master-calendar','source_url':href,'registration_url':None,'cost':None,'public_access':'public','series':dept,
+                    'publish_candidate':True,'verification_status':'verified_town_master_calendar','notes':clean_text(row.get('description')) or None,'discovered_by':'town_revize_master_calendar'})
+    return dedupe_events(out)
+
 
 def civic_meetings_from_town_data(days=185):
     """Convert Revize's structured Master-calendar feed into civic meeting notices."""
