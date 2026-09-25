@@ -6182,7 +6182,7 @@
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://norwoodsoccer.com/",
+    "url": "https://norwoodsoccer.com/schedules",
     "domain": "norwoodsoccer.com",
     "produces": [
       "resources"
@@ -6193,19 +6193,48 @@
     "active_monitor": false,
     "monitor_priority": 5,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "candidate"
+      "method": "nys_multi_schedule",
+      "automation": "preferred",
+      "team_directory_url": "https://norwoodsoccer.com/index.php/teams",
+      "schedule_url": "https://norwoodsoccer.com/schedules",
+      "travel_league_url": "https://bays.org/club/NYS",
+      "components": [
+        "team_directory",
+        "travel_practices",
+        "intramural_games_practices",
+        "bays_travel_games"
+      ],
+      "preserve": [
+        "season",
+        "program",
+        "gender",
+        "grade",
+        "division",
+        "team",
+        "practice_game",
+        "home_away",
+        "field"
+      ],
+      "current_season_discovery": true
     },
     "filters": {
       "require_norwood_relevance": true
     },
     "verification": {
-      "status": "carried_forward",
-      "verified_at": "2026-09",
-      "basis": "v0.11.1 local resource dataset"
+      "status": "verified_multi_source_schedule",
+      "verified_at": "2026-09-25",
+      "basis": "Official NYS site publishes Fall 2026 teams and practice/intramural schedule links; NYS directs travel games to BAYS, whose Norwood club page provides structured game rows."
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
-    "conflict_profile": "optional"
+    "notes": "Combine NYS team directory/practice/intramural schedules with BAYS Norwood club schedule for travel games. Discover current season dynamically and preserve hierarchy for collapsed selector.",
+    "conflict_profile": "optional",
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "spring",
+        "fall"
+      ]
+    }
   },
   {
     "id": "resource-norwood-youth-softball",
