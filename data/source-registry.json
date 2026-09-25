@@ -5807,12 +5807,15 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_current_schedule",
+      "verified_at": "2026-09-25",
+      "basis": "Official Norwood Theatre Shows & Events page currently lists numerous dated Fall/Winter 2026 performances."
     },
-    "notes": "Ticketed public performances in Norwood; canonical source for dates/times.",
-    "conflict_profile": "optional"
+    "notes": "Ticketed public performances in Norwood; canonical source for dates/times. Current official page is populated with Fall/Winter 2026 shows; a zero-event refresh is an extraction failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "empty_result_is_failure": true
+    }
   },
   {
     "id": "resource-norwood-town-news",
@@ -9731,7 +9734,7 @@
     "id": "norwood-chamber-events",
     "name": "Norwood Chamber of Commerce Events",
     "url": "https://business.norwoodchamberofcommerce.org/calendar",
-    "active_monitor": true,
+    "active_monitor": false,
     "produces": [
       "events"
     ],
@@ -9748,9 +9751,9 @@
       ]
     },
     "verification": {
-      "status": "verified_live_calendar",
+      "status": "wrong_geography_disabled",
       "verified_at": "2026-09-25",
-      "basis": "Official Norwood Chamber calendar currently exposes dated 2026 events with times and registration links."
+      "basis": "Configured GrowthZone calendar is the Norwood, Ohio Chamber (Cincinnati-area addresses/513 phone), not Norwood, Massachusetts."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -9760,7 +9763,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Official business/community events calendar. Keep business-networking/member events opt-in unless broadly public/community-relevant."
+    "notes": "DISABLED: wrong Norwood. Do not ingest. Find/verify a Massachusetts Norwood-area chamber source before re-enabling."
   },
   {
     "id": "norwood-town-news-calendar",
