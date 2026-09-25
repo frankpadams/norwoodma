@@ -311,7 +311,7 @@ def events_from_ical(url,source):
         if isinstance(start_raw,date) and not isinstance(start_raw,datetime): sp['time']=None
         if isinstance(c.decoded('dtend',None),date) and not isinstance(c.decoded('dtend',None),datetime): ep['time']=None
         url_prop=clean_text(c.get('url')) or source.get('url')
-        out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':url_prop,'cost':None,'public_access':'public','series':None,'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
+        out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':url_prop,'cost':None,'organizer':source.get('organization') or source.get('name'),'public_access':'public','series':None,'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
     return out
 
 def events_from_norwood_food_pantry(source):
