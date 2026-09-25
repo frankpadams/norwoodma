@@ -754,15 +754,39 @@ def refresh_events(offline=False):
                     if feed: got=events_from_ical(feed,src)
                     else: note='no direct feed_url configured'
                 elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series'}:
-                    if '/events/list' in src.get('url',''):
-                        try: got.extend(events_from_tribe(src))
-                        except Exception: pass
-                    html=request(src['url']).text
-                    extracted,ics=extract_jsonld_events(html,src); got.extend(extracted)
-                    for u in ics[:2]:
-                        try: got.extend(events_from_ical(u,src))
-                        except Exception: pass
-                    if not got: note='page checked; no machine-readable Event/ICS found'
+                    ing=src.get('ingestion',{})
+                    urls=[]
+                    for candidate in [src.get('url'),ing.get('calendar_url'),ing.get('primary_url')]+list(ing.get('discovery_urls') or [])+list(ing.get('secondary_urls') or []):
+                        if candidate and candidate not in urls: urls.append(candidate)
+                    source_ids=ing.get('parent_source_ids') or []
+                    if method=='derived_verified_series' and source_ids:
+                        parents=set(source_ids); terms=[str(x).lower() for x in ing.get('match',[])]
+                        for existing in events:
+                            text=' '.join(str(existing.get(k) or '') for k in ('title','series','notes','venue')).lower()
+                            if existing.get('source_id') in parents and (not terms or any(t in text for t in terms)):
+                                copy=dict(existing); copy['source_id']=src['id']; copy['discovered_by']='derived_verified_series'
+                                got.append(copy)
+                    else:
+                        terms=[str(x).lower() for x in ing.get('match',[])]
+                        for page_url in urls[:6]:
+                            if '/events/list' in page_url:
+                                try:
+                                    temp=dict(src); temp['url']=page_url; got.extend(events_from_tribe(temp))
+                                except Exception: pass
+                            html=request(page_url).text
+                            temp=dict(src); temp['url']=page_url
+                            extracted,ics=extract_jsonld_events(html,temp)
+                            if terms:
+                                extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                            got.extend(extracted)
+                            for u in ics[:4]:
+                                try:
+                                    rows=events_from_ical(u,temp)
+                                    if terms: rows=[e for e in rows if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                                    got.extend(rows)
+                                except Exception: pass
+                    got=dedupe_events(got)
+                    if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
                 else: note=f'method {method} requires discovery/manual adapter'
                 events.extend(got)
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
