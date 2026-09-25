@@ -1050,6 +1050,20 @@ def events_from_arbiterlive(source):
     """Extract Norwood athletic contests from the school-directed ArbiterLive entity page."""
     url=source.get('url'); html=request(url).text
     out=[]; extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+    # ArbiterLive is client-rendered. Inspect its public script bundles for
+    # calendar/schedule URLs that are not present in the initial HTML.
+    if BeautifulSoup:
+        root_soup=BeautifulSoup(html,'html.parser')
+        for tag in root_soup.find_all('script',src=True)[:20]:
+            try:
+                js=request(urljoin(url,tag.get('src')),timeout=12).text
+            except Exception:
+                continue
+            for raw in re.findall(r'https?://[^"\\s<>]+',js,re.I):
+                candidate=raw.replace('\\/','/').rstrip('),;')
+                low=candidate.lower()
+                if ('ical' in low or '.ics' in low) and candidate not in feeds:
+                    feeds.append(candidate)
     if BeautifulSoup:
         soup=BeautifulSoup(html,'html.parser')
         # Arbiter pages can expose team/schedule links and calendar subscriptions client-side.
