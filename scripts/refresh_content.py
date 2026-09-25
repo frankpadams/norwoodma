@@ -1143,23 +1143,16 @@ def events_from_schoolnow(source):
     return dedupe_events(out)
 
 def events_from_assabet(source):
-    """Parse Assabet calendar pages, following month/event links and filtering when configured."""
+    """Use Assabet's structured event records only; page-card scraping created duplicate junk titles."""
     url=source.get('ingestion',{}).get('calendar_url') or source.get('url')
     html=request(url).text
     extracted,ics=extract_jsonld_events(html,source); out=list(extracted)
     for feed in ics[:6]:
         try: out.extend(events_from_ical(feed,source))
         except Exception: pass
-    if BeautifulSoup:
-        soup=BeautifulSoup(html,'html.parser')
-        for a in soup.find_all('a',href=True):
-            href=urljoin(url,a['href']); label=clean_text(a.get_text(' '))
-            if '/event/' not in href and '/calendar/' not in href: continue
-            d=_date_from_text(label+' '+clean_text(a.parent.get_text(' ') if a.parent else ''))
-            if not d: continue
-            title=label or clean_text(a.parent.get_text(' ') if a.parent else '')
-            if len(title)<3: continue
-            out.append({'id':event_id(title,d.isoformat(),'Morrill Memorial Library'),'title':title,'start':{'date':d.isoformat(),'time':_time_from_text(clean_text(a.parent.get_text(' ') if a.parent else ''))},'end':{'date':d.isoformat(),'time':None},'venue':'Morrill Memorial Library','address':'33 Walpole St, Norwood, MA 02062','category':'library','source_id':source['id'],'source_url':href,'cost':None,'public_access':'public','series':'Morrill Memorial Library','publish_candidate':True,'verification_status':'auto_primary_source','notes':None,'discovered_by':'assabet_calendar'})
+    # Event detail pages contain repeated date/time/location CTA cards ("Learn More",
+    # "Monday, September...") that are not event titles. Do not turn those anchors
+    # into separate events. The JSON-LD/ICS record is canonical.
     terms=[str(x).lower() for x in source.get('ingestion',{}).get('match',[])]
     if terms:
         out=[e for e in out if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
