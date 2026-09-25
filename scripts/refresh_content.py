@@ -834,6 +834,7 @@ def refresh_events(offline=False):
                 health.append(prev)
         health.sort(key=lambda x:str(x.get('source_id') or ''))
         write_json('calendar-source-health.json',health)
+        write_js('calendar-source-health-data.js','NORWOOD_CALENDAR_SOURCE_HEALTH',health)
     return events,status
 
 def usable_news_image(url, base_url=''):
