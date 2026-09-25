@@ -1002,26 +1002,48 @@ def events_from_arbiterlive(source):
                     try: out.extend(events_from_ical(feed,source))
                     except Exception: pass
             except Exception: pass
-    # Prefer direct Arbiter records. Only consult MIAA when Arbiter produced nothing, preventing duplicate games.\n    if not out:\n        for fb in source.get('ingestion',{}).get('fallback_sources',[]):\n            if 'miaa.net/group/' not in str(fb): continue\n            try:\n                fh=request(fb).text\n                rows,feds=extract_jsonld_events(fh,source); out.extend(rows)\n                for feed in feds[:8]:\n                    try: out.extend(events_from_ical(feed,source))\n                    except Exception: pass\n            except Exception: pass\n    for e in out:\n        e['category']='sports'; e['series']='Norwood High School Athletics'
+    # Prefer direct Arbiter records. Only consult MIAA when Arbiter produced nothing, preventing duplicate games.
+    if not out:
+        for fb in source.get('ingestion',{}).get('fallback_sources',[]):
+            if 'miaa.net/group/' not in str(fb): continue
+            try:
+                fh=request(fb).text
+                rows,feds=extract_jsonld_events(fh,source); out.extend(rows)
+                for feed in feds[:8]:
+                    try: out.extend(events_from_ical(feed,source))
+                    except Exception: pass
+            except Exception: pass
+    for e in out:
+        e['category']='sports'; e['series']='Norwood High School Athletics'
     return dedupe_events(out)
 
 def events_from_schoolnow(source):
-    """Discover SchoolNow subscription feeds from an official calendar page."""
+    """Discover SchoolNow events and subscription feeds, including selectable calendars."""
     root=source.get('ingestion',{}).get('calendar_root') or source.get('url')
     html=request(root).text
     if not BeautifulSoup:return []
-    soup=BeautifulSoup(html,'html.parser'); feeds=[]
-    for a in soup.find_all('a',href=True):
-        href=urljoin(root,a['href'])
-        label=clean_text(a.get_text(' ')).lower()
-        if ('ical' in href.lower() or href.lower().endswith('.ics') or 'subscribe' in label) and href not in feeds:
-            feeds.append(href)
-    # Canonical SchoolNow sites commonly expose /calendar/feed/ical.ics.
+    soup=BeautifulSoup(html,'html.parser'); feeds=[]; out=[]
+    extracted,xfeeds=extract_jsonld_events(html,source); out.extend(extracted); feeds.extend(xfeeds)
+    for tag in soup.find_all(True):
+        vals=[]
+        if tag.name=='a' and tag.get('href'): vals.append(tag.get('href'))
+        for attr in ['data-url','data-feed','data-ical','data-calendar-url','value','onclick']:
+            if tag.get(attr): vals.append(str(tag.get(attr)))
+        for raw in vals:
+            for candidate in re.findall(r'https?://[^\\s\"\'<>]+|/[^\\s\"\'<>]+',raw):
+                href=urljoin(root,candidate.replace('&amp;','&'))
+                low=href.lower()
+                if any(k in low for k in ['ical','ics','calendar/feed','calendarfeed']) and href not in feeds: feeds.append(href)
+    # Search scripts/source for feed URLs not represented as clickable anchors.
+    for raw in re.findall(r'[^\"\']*(?:ical|ics|calendar/feed)[^\"\']*',html,re.I):
+        raw=raw.strip()
+        if raw.startswith(('http','/')):
+            href=urljoin(root,raw.replace('\\/','/').replace('&amp;','&'))
+            if href not in feeds: feeds.append(href)
     if '/calendar' in root:
         guess=root.split('/calendar')[0]+'/calendar/feed/ical.ics'
         if guess not in feeds: feeds.append(guess)
-    out=[]
-    for feed in feeds[:8]:
+    for feed in feeds[:30]:
         try: out.extend(events_from_ical(feed,source))
         except Exception: pass
     return dedupe_events(out)
