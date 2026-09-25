@@ -155,6 +155,12 @@
     if(/\/map\.html$/i.test(location.pathname))mapLink.setAttribute('aria-current','page');
     if(exploreLink)exploreLink.insertAdjacentElement('afterend',mapLink);else nav.appendChild(mapLink);
   }
+  // Discover is a site-wide primary navigation destination.
+  if(!nav.querySelector('a[href="discover.html"]')){
+    const discover=document.createElement('a');discover.href='discover.html';discover.textContent='Discover';
+    if(/\/discover\.html$/i.test(location.pathname))discover.setAttribute('aria-current','page');
+    nav.appendChild(discover);
+  }
   // Support belongs in the collapsed hamburger menu only; never in the desktop text navigation.
   if(!nav.querySelector('[data-hamburger-support]')){const support=document.createElement('a');support.href='support.html';support.textContent='Support Norwood.ma';support.dataset.hamburgerSupport='true';support.className='hamburger-only-support';support.hidden=true;nav.appendChild(support);}
   if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
