@@ -7,7 +7,7 @@
     const existing=document.querySelector('.site-timely-alert');
     if(existing)existing.remove();
     const priority={Extreme:40,Severe:35,Moderate:30,Minor:25,Unknown:20};
-    const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning|roadwork|road work|lane closure/i;
+    const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
     const govLive='https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/';
     const NORWOOD_TIME_ZONE='America/New_York';
     const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
