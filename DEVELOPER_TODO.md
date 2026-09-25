@@ -1,6 +1,6 @@
 # Norwood.ma Developer To-Do
 
-This is the canonical working list for unfinished development, data-quality issues, and follow-up work. When Frank asks what is on the developer to-do list, review this file first and update it as work is completed or new issues are identified.
+This is a shared working log for unfinished development, data-quality issues, and follow-up work. It is not an authority on what is true: Frank's decisions govern project direction, and automated entries are leads to review rather than conclusions. When Frank asks for the developer to-do list, project work log, outstanding issues, next steps, or similar, review this file as a useful project record and update it as work is completed or new issues are identified.
 
 _Last updated: 2026-09-25_
 
@@ -41,4 +41,4 @@ _Last updated: 2026-09-25_
 
 ## Ongoing Rule
 
-- [ ] **Keep this file current.** Add newly discovered unfinished work here, mark completed work complete, and use this file as the source of truth when asked for next steps or outstanding Norwood.ma development work.
+- [ ] **Keep this file current.** Add newly discovered unfinished work here and mark completed work complete. Automated/site-generated entries must be labeled as system observations requiring review; they do not override Frank's decisions or establish project truth.
