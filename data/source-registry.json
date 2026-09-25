@@ -4328,8 +4328,26 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "preferred"
+      "method": "multi_source_calendar",
+      "automation": "preferred",
+      "sources": [
+        "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics",
+        "https://norwoodpma.org/calendar/"
+      ],
+      "keywords": [
+        "concert",
+        "band",
+        "chorus",
+        "choir",
+        "orchestra",
+        "theatre",
+        "theater",
+        "drama",
+        "musical",
+        "fine arts",
+        "art show",
+        "marching band"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -4337,11 +4355,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "composite_adapter_needed",
+      "verified_at": "2026-09-25",
+      "basis": "Official Fine Arts page is informational; NHS calendar and PMA calendar are the actionable calendar sources."
     },
-    "notes": "Primary NPS Fine Arts discovery source. Public concerts, drama, band/orchestra, visual arts, Fine Arts Festival and performance announcements; cross-check NHS calendar and NPS news.",
+    "notes": "Build Fine Arts as a filtered composite from the verified NHS calendar feed plus PMA calendar, using arts/music/performance keywords. Fine Arts department page remains a discovery/cross-check source rather than pretending it is itself a calendar feed.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
