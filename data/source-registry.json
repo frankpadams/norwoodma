@@ -3529,8 +3529,8 @@
   },
   {
     "id": "nps-athletics",
-    "name": "Norwood High School — Athletics",
-    "organization": "Norwood High School Athletics",
+    "name": "Norwood Public Schools — Athletics",
+    "organization": "Norwood Public Schools Athletics",
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
@@ -3594,7 +3594,8 @@
       "include_levels": [
         "varsity",
         "junior varsity",
-        "freshman"
+        "freshman",
+        "middle school"
       ],
       "baseline": {
         "type": "miaa_committed_schedules",
@@ -3625,7 +3626,9 @@
         "url": "https://www.norwood.k12.ma.us/nhs/academics/calendar/monthly/2026/09",
         "calendar_name": "Athletics",
         "role": "official_crosscheck_and_feed_discovery",
-        "notes": "NPS SchoolNow calendar exposes Athletics as a selectable calendar distinct from NHS and Academics. Discover its calendar identifier/feed rather than assuming the NHS feed contains athletics."
+        "discovery_strategy": "inspect SchoolNow selectable-calendar markup/API and subscription endpoints; do not assume NHS or CMS base feed contains athletics",
+        "confirmed_selectable_calendar": true,
+        "notes": "Official SchoolNow calendar exposes Athletics as a selectable calendar alongside About the District, Coakley Middle School, and Norwood High School."
       },
       "source_roles": {
         "arbiter": "canonical_live_schedule",
@@ -3650,7 +3653,11 @@
           "miaa_committed",
           "nhs_announcements"
         ]
-      }
+      },
+      "include_schools": [
+        "Norwood High School",
+        "Coakley Middle School"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3662,7 +3669,7 @@
       "verified_at": "2026-09-25",
       "basis": "MIAA states ArbiterSports is the official schedule/results source; MIAA Norwood profile exposes Schedule and MIAA Game Day republishes Arbiter schedule data. NHS official announcements provide current Fall 2026 practice dates/times."
     },
-    "notes": "Primary: ArbiterSports; MIAA Game Day is the preferred Arbiter-backed fallback. Discover sports/teams from the MIAA school profile rather than a narrow hard-coded fall list. Include tennis, indoor/outdoor track & field, field hockey, cross country, swim/dive, gymnastics, wrestling, hockey, basketball, baseball, softball, lacrosse, volleyball, golf, football, soccer and any additional Norwood teams exposed by MIAA/Arbiter. NHS announcements remain authoritative for practices. Zero during an active season is a failure.",
+    "notes": "Canonical root is Arbiter entity 16671. Treat as NPS athletics, not NHS-only: include Norwood High and Coakley Middle School teams exposed by Arbiter/official NPS sources. SchoolNow's selectable Athletics calendar is an official cross-check/discovery path. Zero during an active season is a failure.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
