@@ -297,7 +297,7 @@
     "id": "nps-athletics",
     "group": "schools",
     "name": "NPS Athletics",
-    "description": "Athletics dates and schedules from Norwood Public Schools.",
+    "description": "Norwood High and Coakley athletics schedules from direct Arbiter team feeds, including games and practices where subscribed.",
     "view_url": "https://www.norwood.k12.ma.us/nhs/athletics",
     "provider": "Norwood Public Schools",
     "kind": "internal",
@@ -307,6 +307,9 @@
       "source_ids": [
         "nps-athletics",
         "norwood-high-athletics"
+      ],
+      "source_id_prefixes": [
+        "nps-athletics-arbiter-"
       ]
     }
   },
@@ -314,11 +317,18 @@
     "id": "nps-academics",
     "group": "schools",
     "name": "NHS Academics",
-    "description": "Academic dates and events from the Norwood High School academics calendar.",
+    "description": "Norwood High School academic dates and events available in the Norwood.ma calendar.",
     "view_url": "https://www.norwood.k12.ma.us/nhs/academics/calendar",
     "provider": "Norwood Public Schools",
-    "kind": "browse_only",
-    "verified": true
+    "kind": "internal",
+    "verified": true,
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "nps-academics",
+        "nps-nhs"
+      ]
+    }
   },
   {
     "id": "nps-extended-day",
