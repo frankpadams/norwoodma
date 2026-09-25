@@ -7,6 +7,8 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
+const requestedPlace=new URLSearchParams(location.search).get('place')||'';
+if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
 const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,6 +26,17 @@ const venueAddresses={
 };
 const staticPlaces=[
  {name:'Norwood Town Common',category:'civic',address:'Washington St at Nahatan St, Norwood, MA 02062',lat:42.19455,lng:-71.19955,details:'Town green · gazebo · community events',url:'parks-trails.html'},
+ {name:'Bernie Cooper Park',category:'park',address:'Bernie Cooper Park, Norwood, MA 02062',details:'Neponset River · accessible riverfront walking',url:'parks-trails.html'},
+ {name:'Endean Park & Hawes Brook',category:'park',address:'Endean Conservation Land, Norwood, MA 02062',details:'Wooded trails · pond · brook · conservation land',url:'parks-trails.html'},
+ {name:'Ellis Pond & Alevizos Park',category:'park',address:'Ellis Pond, Norwood, MA 02062',details:'Pond · fishing · boating · passive recreation · trail',url:'parks-trails.html'},
+ {name:'Germany Brook',category:'park',address:'Germany Brook, Norwood, MA 02062',details:'Woodland conservation trail',url:'parks-trails.html'},
+ {name:'Hennessey Field & Murphy Park',category:'park',address:'Murphy Park, Pleasant St, Norwood, MA 02062',details:'Neighborhood woods · walking connection',url:'parks-trails.html'},
+ {name:'Meadow Street Conservation Land',category:'park',address:'Meadow St, Norwood, MA 02062',details:'Conservation land · walking route',url:'parks-trails.html'},
+ {name:'Shattuck Park',category:'park',address:'Shattuck Park, Norwood, MA 02062',details:'Wooded walking trails',url:'parks-trails.html'},
+ {name:'Vanderbilt / Pine Tree Forest',category:'park',address:'Vanderbilt Ave, Norwood, MA 02062',details:'Trail loops · mapped 5K route',url:'parks-trails.html'},
+ {name:'Willett / Tiot Trail',category:'park',address:'100 Westover Pkwy, Norwood, MA 02062',details:'School-area trail connection · preliminary Tiot Trail',url:'parks-trails.html'},
+ {name:'Ledgeview Drive',category:'park',address:'Ledgeview Dr, Norwood, MA 02062',details:'Preliminary trail route',url:'parks-trails.html'},
+ {name:'Senior Center walking route',category:'park',address:'275 Prospect St, Norwood, MA 02062',details:'Mapped neighborhood walking loop',url:'parks-trails.html'},
  {name:'Old Parish Cemetery',category:'historic',address:'Washington St near Town Hall, Norwood, MA 02062',details:'Established 1741 · early South Dedham/Norwood burial ground · historic gravestones',url:'https://norwoodhistoricalsociety.org/happy-birthday-norwood-massachusetts/'},
  {name:'F. Holland Day House / Norwood Historical Society',category:'historic',address:'93 Day St, Norwood, MA 02062',details:'1859 house · remodeled 1890–1893 · home of photographer and publisher F. Holland Day · National Register site',url:'https://norwoodhistoricalsociety.org/93-day-street-f-holland-day-house/'},
  {name:'Oakview Mansion',category:'historic',address:'289 Walpole St, Norwood, MA 02062',details:'1868 Second Empire mansion · F.O. Winslow and Governor Frank Allen associations',url:'https://norwoodhistoricalsociety.org/oakview-mansion/'},
@@ -193,5 +206,5 @@ document.querySelector('#locateMe').addEventListener('click',()=>{
 });
 document.querySelector('#townBoundary')?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
 document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
-render();
+render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
 })();
