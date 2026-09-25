@@ -7,7 +7,7 @@ X-WR-CALNAME:Food\, markets & fairs
 X-WR-CALDESC:Food-centered events\, markets\, fairs and vendor events.
 BEGIN:VEVENT
 UID:submission-2817ea8dcba4ba8c@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20260919T073000
 DTEND;TZID=America/New_York:20260919T150000
 SUMMARY:The Learning Center for the Deaf Homecoming (5k\, Games\, and Celebration)
@@ -17,7 +17,7 @@ URL:https://www.tlcdeaf.org/about/tlc-homecoming
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-20-onam-sarva@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:Onam Celebration at SARVA Little Venice
@@ -27,7 +27,7 @@ URL:https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-22-farmers-bushels@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20260922T140000
 DTEND;TZID=America/New_York:20260922T180000
 SUMMARY:Norwood Farmers Market: Bushels of Fun
@@ -37,7 +37,7 @@ URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-26-norwood-food-pantry-food-assistance-584b0a3@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20260926T090000
 DTEND;TZID=America/New_York:20260926T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -47,7 +47,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-29-farmers-market@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20260929T140000
 DTEND;TZID=America/New_York:20260929T180000
 SUMMARY:Norwood Farmers Market
@@ -57,7 +57,7 @@ URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-03-norwood-food-pantry-food-assistance-0115cfa@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261003T090000
 DTEND;TZID=America/New_York:20261003T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -66,8 +66,18 @@ DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new cl
 URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-05-labor-market-research-skills-careers-employme-2810517@norwood.ma
+DTSTAMP:20260925T144840Z
+DTSTART;TZID=America/New_York:20261005T100000
+DTEND;TZID=America/New_York:20261005T100000
+SUMMARY:Labor Market Research – Skills\, Careers\, Employment Outlook
+LOCATION:MassHire Norwood Events
+DESCRIPTION:Date — Monday\, October 5 Time — 10:00 am Platform — Zoom Do you know what Labor Marker Research is and how it can benefit your job search? We answer these questions\, give you tips on how to explore it\, and demonstrate several major on-line \nSource: https://masshiremsw.com/event/lmr-oct-05/
+URL:https://masshiremsw.com/event/lmr-oct-05/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-06-farmers-pumpkin@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261006T140000
 DTEND;TZID=America/New_York:20261006T180000
 SUMMARY:Norwood Farmers Market: Pumpkin Fest
@@ -76,8 +86,18 @@ DESCRIPTION:Cost: Free to attend\nSource: https://www.norwoodcenter.org/events/
 URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-08-rejuvenate-your-r-sum-f27f1ea@norwood.ma
+DTSTAMP:20260925T144840Z
+DTSTART;TZID=America/New_York:20261008T100000
+DTEND;TZID=America/New_York:20261008T100000
+SUMMARY:Rejuvenate Your Résumé
+LOCATION:MassHire Norwood Events
+DESCRIPTION:Date — Thursday\, October 8 Time — 10:00 am Platform — Zoom This résumé workshop will explain current trends in résumé writing. Does your résumé include accomplishments? Are you using PAR statements? Are you aware of Applicant Tracking Softw\nSource: https://masshiremsw.com/event/rejuvenate-oct-08/
+URL:https://masshiremsw.com/event/rejuvenate-oct-08/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-10-norwood-food-pantry-food-assistance-3bb921e@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261010T090000
 DTEND;TZID=America/New_York:20261010T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -87,7 +107,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-13-farmers-market@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261013T140000
 DTEND;TZID=America/New_York:20261013T180000
 SUMMARY:Norwood Farmers Market
@@ -97,7 +117,7 @@ URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-17-norwood-food-pantry-food-assistance-34f5178@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261017T090000
 DTEND;TZID=America/New_York:20261017T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -107,7 +127,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-20-farmers-closing@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261020T140000
 DTEND;TZID=America/New_York:20261020T180000
 SUMMARY:Norwood Farmers Market: Closing Day
@@ -117,7 +137,7 @@ URL:https://www.norwoodcenter.org/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-24-norwood-food-pantry-food-assistance-5cc2e92@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261024T090000
 DTEND;TZID=America/New_York:20261024T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -127,7 +147,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-31-norwood-food-pantry-food-assistance-7379ab8@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261031T090000
 DTEND;TZID=America/New_York:20261031T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -136,8 +156,18 @@ DESCRIPTION:Food assistance for eligible Norwood and Westwood residents\; new cl
 URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-11-04-community-veterans-job-fair-99025f1@norwood.ma
+DTSTAMP:20260925T144840Z
+DTSTART;TZID=America/New_York:20261104T100000
+DTEND;TZID=America/New_York:20261104T130000
+SUMMARY:Community & Veterans Job Fair
+LOCATION:MassHire Norwood Events
+DESCRIPTION:Date — Wednesday\, November 4 Time — 10:00 am to 1:00 pm Location — The Verve Hotel\, 1360 Worcester St\, Natick\, MA The Community & Veterans Job Fair is a great opportunity for ALL job seekers to connect directly with employers who are active\nSource: https://masshiremsw.com/event/job-fair-2026-11-04/
+URL:https://masshiremsw.com/event/job-fair-2026-11-04/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-11-07-norwood-food-pantry-food-assistance-348cbe1@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261107T090000
 DTEND;TZID=America/New_York:20261107T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -147,7 +177,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-norwood-food-pantry-food-assistance-15e1dab@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261114T090000
 DTEND;TZID=America/New_York:20261114T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -157,7 +187,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-worcester-deaf-club-arts-crafts-bazaar@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T150000
 SUMMARY:Worcester Deaf Club 14th Annual Arts & Crafts Bazaar

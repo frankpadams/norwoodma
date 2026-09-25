@@ -7,7 +7,7 @@ X-WR-CALNAME:Fundraisers & benefits
 X-WR-CALDESC:Public fundraisers\, charity events and community benefits.
 BEGIN:VEVENT
 UID:2026-09-27-check-mate@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20260927T160000
 DTEND;TZID=America/New_York:20260927T210000
 SUMMARY:Check Mate — An Evening with Purpose
@@ -16,8 +16,18 @@ DESCRIPTION:Promoting Conflict Resolution\, Inc. fundraiser supporting literacy\
 URL:https://pcrincboston.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-05-labor-market-research-skills-careers-employme-2810517@norwood.ma
+DTSTAMP:20260925T144840Z
+DTSTART;TZID=America/New_York:20261005T100000
+DTEND;TZID=America/New_York:20261005T100000
+SUMMARY:Labor Market Research – Skills\, Careers\, Employment Outlook
+LOCATION:MassHire Norwood Events
+DESCRIPTION:Date — Monday\, October 5 Time — 10:00 am Platform — Zoom Do you know what Labor Marker Research is and how it can benefit your job search? We answer these questions\, give you tips on how to explore it\, and demonstrate several major on-line \nSource: https://masshiremsw.com/event/lmr-oct-05/
+URL:https://masshiremsw.com/event/lmr-oct-05/
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-31-pumpkinpalooza@norwood.ma
-DTSTAMP:20260925T120824Z
+DTSTAMP:20260925T144840Z
 DTSTART;TZID=America/New_York:20261031T190000
 SUMMARY:Pumpkinpalooza Halloween Fundraiser
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA

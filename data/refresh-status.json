@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T08:08:24.716256-04:00",
+  "generated_at": "2026-09-25T10:48:40.655337-04:00",
   "offline": false,
-  "events_published": 215,
+  "events_published": 289,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 215,
-      "generated_at": "2026-09-25T08:08:24.710157-04:00"
+      "events": 289,
+      "generated_at": "2026-09-25T10:48:40.648291-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 47,
-      "generated_at": "2026-09-25T08:08:24.711112-04:00"
+      "events": 72,
+      "generated_at": "2026-09-25T10:48:40.649483-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 32,
-      "generated_at": "2026-09-25T08:08:24.712206-04:00"
+      "generated_at": "2026-09-25T10:48:40.650736-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 20,
-      "generated_at": "2026-09-25T08:08:24.713089-04:00"
+      "events": 23,
+      "generated_at": "2026-09-25T10:48:40.651772-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
-      "events": 2,
-      "generated_at": "2026-09-25T08:08:24.713769-04:00"
+      "events": 3,
+      "generated_at": "2026-09-25T10:48:40.652581-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 16,
-      "generated_at": "2026-09-25T08:08:24.714590-04:00"
+      "events": 19,
+      "generated_at": "2026-09-25T10:48:40.653533-04:00"
     }
   ],
   "event_sources": [
@@ -54,28 +54,14 @@
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-balch-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /balch/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIF"
-    },
-    {
-      "source_id": "nps-callahan-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /callahan/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VE"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "nps-callahan-pta",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /callahan/pta (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
     },
     {
       "source_id": "castle-island-calendar",
@@ -87,64 +73,50 @@
     {
       "source_id": "citizens-better-norwood-events",
       "ok": false,
-      "method": "html_list",
+      "method": "html_calendar",
       "found": 0,
       "note": "403 Client Error: Forbidden for url: https://citizensforabetternorwoodma.com/events"
     },
     {
-      "source_id": "nps-cleveland-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cleveland/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_V"
-    },
-    {
       "source_id": "nps-cleveland-pto",
-      "ok": true,
-      "method": "discovery_search",
-      "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
-    },
-    {
-      "source_id": "nps-coakley-calendar",
       "ok": false,
-      "method": "html_calendar",
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cms/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cleveland/pta (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY"
     },
     {
       "source_id": "nps-cms-pto",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cms/pto (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILE"
     },
     {
       "source_id": "resource-cub-scouts-pack-42-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "resource-cub-scouts-pack-49-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "emerald-city-plant-shop",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "first-congregational-events",
       "ok": true,
-      "method": "html_calendar",
-      "found": 2,
+      "method": "squarespace_events",
+      "found": 4,
       "note": ""
     },
     {
@@ -152,49 +124,49 @@
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 4,
-      "note": ""
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "source_id": "grace-calendar",
       "ok": true,
       "method": "embedded_calendar",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "inside-norwood",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "irish-brewing-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "resource-knights-of-columbus-norwood-council",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "magic-room-ticketleap",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "mill-forge-events",
@@ -206,7 +178,7 @@
     {
       "source_id": "library-assabet-calendar",
       "ok": true,
-      "method": "html_calendar",
+      "method": "assabet_calendar",
       "found": 81,
       "note": ""
     },
@@ -215,98 +187,91 @@
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "resource-neponset-valley-sunrise-rotary-club",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "resource-norwood-american-legion-post-70",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "library-cfce",
       "ok": true,
-      "method": "discovery_search",
-      "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "method": "assabet_filtered_calendar",
+      "found": 81,
+      "note": ""
     },
     {
       "source_id": "ncm-home",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "town-conservation",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "town_department_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "404 Client Error: Not Found for url: https://www.norwoodma.gov/departments/conservation/index.php"
     },
     {
       "source_id": "town-cultural-council",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "town_department_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "403 Client Error: Forbidden for url: https://massculturalcouncil.org/local-council/norwood/"
     },
     {
       "source_id": "elks-calendar",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "town-fire-page",
       "ok": true,
-      "method": "discovery_search",
+      "method": "town_department_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "food-pantry",
       "ok": true,
-      "method": "discovery_search",
+      "method": "organization_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "nps-athletics",
       "ok": false,
-      "method": "html_calendar",
+      "method": "schoolnow_calendar",
       "found": 0,
       "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /nhs/athletics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY"
     },
     {
-      "source_id": "nps-nhs-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /nhs/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
-    },
-    {
       "source_id": "nps-nhs-pto",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /nhs/pta (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILE"
     },
     {
       "source_id": "historical-society-events",
@@ -320,42 +285,35 @@
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "lions-page",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "organization_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodmalions.com', port=4"
     },
     {
       "source_id": "nps-pma",
-      "ok": true,
-      "method": "html_calendar",
+      "ok": false,
+      "method": "pma_calendar_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "No connection adapters were found for \"{'name': 'High School Fine Arts', 'discover_from_hub': True}\""
     },
     {
       "source_id": "town-police-page",
       "ok": true,
-      "method": "discovery_search",
+      "method": "town_department_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
-    },
-    {
-      "source_id": "nps-district-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /about/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIF"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "nps-fine-arts",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "multi_source_calendar",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /curriculum/fine-arts (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE"
     },
     {
       "source_id": "nps-news",
@@ -365,32 +323,25 @@
       "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /about/news (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FA"
     },
     {
-      "source_id": "nps-district-ical",
-      "ok": false,
-      "method": "ical",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /about/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CER"
-    },
-    {
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "scholarship-foundation",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "organization_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodschola"
     },
     {
       "source_id": "town-senior-newsletter",
       "ok": true,
-      "method": "newsletter",
+      "method": "newsletter_calendar",
       "found": 0,
-      "note": "method newsletter requires discovery/manual adapter"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-space-center-events",
@@ -404,42 +355,35 @@
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-theatre-season",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-town-news",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "town-veterans",
       "ok": true,
-      "method": "discovery_search",
+      "method": "town_department_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
-    },
-    {
-      "source_id": "norwood-veterans-services",
-      "ok": true,
-      "method": "html_page",
-      "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "vfw-discovery",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-youth-fundraisers",
@@ -456,53 +400,32 @@
       "note": ""
     },
     {
-      "source_id": "nps-oldham-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /oldham/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERI"
-    },
-    {
       "source_id": "nps-oldham-pto",
-      "ok": true,
-      "method": "discovery_search",
-      "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
-    },
-    {
-      "source_id": "nps-prescott-calendar",
       "ok": false,
-      "method": "html_calendar",
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /prescott/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VE"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /oldham/pta (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FA"
     },
     {
       "source_id": "nps-prescott-pta",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /prescott/pta (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
     },
     {
       "source_id": "pcrinc-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "rage-zone-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "rotary-calendar",
-      "ok": true,
-      "method": "club_calendar",
-      "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "st-catherine-calendar",
@@ -513,87 +436,73 @@
     },
     {
       "source_id": "sarva-social-feed",
-      "ok": true,
+      "ok": false,
       "method": "social_mirror",
       "found": 0,
-      "note": "method social_mirror requires discovery/manual adapter"
+      "note": "403 Client Error: Forbidden for url: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah"
     },
     {
       "source_id": "resource-scouting-america-troop-42-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "resource-scouting-america-troop-49-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "fallout-shelter",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-record-events",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "skating-club-boston-events",
-      "ok": true,
-      "method": "html_calendar",
-      "found": 24,
-      "note": ""
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "town-farmers-market",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "town-community-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "united-church-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "washington-no7-events",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "nps-willett-calendar",
-      "ok": false,
-      "method": "html_calendar",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /willett/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VER"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "nps-willett-pto",
-      "ok": true,
-      "method": "discovery_search",
+      "ok": false,
+      "method": "school_parent_org_composite",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /willett/pta (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_F"
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -628,28 +537,343 @@
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-portuguese-club",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-patch-fundraisers",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "page checked; no machine-readable Event/ICS found"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "league-women-voters-norwood",
       "ok": true,
-      "method": "discovery_search",
+      "method": "organization_event_discovery",
       "found": 0,
-      "note": "method discovery_search requires discovery/manual adapter"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-district",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /about/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CER"
+    },
+    {
+      "source_id": "nps-nhs",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /nhs/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTI"
+    },
+    {
+      "source_id": "nps-coakley",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cms/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTI"
+    },
+    {
+      "source_id": "nps-balch",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /balch/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CER"
+    },
+    {
+      "source_id": "nps-callahan",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /callahan/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: "
+    },
+    {
+      "source_id": "nps-cleveland",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /cleveland/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL:"
+    },
+    {
+      "source_id": "nps-oldham",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /oldham/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CE"
+    },
+    {
+      "source_id": "nps-prescott",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /prescott/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: "
+    },
+    {
+      "source_id": "nps-willett",
+      "ok": false,
+      "method": "ical",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /willett/calendar/feed/ical.ics (Caused by SSLError(SSLCertVerificationError(1, '[SSL: C"
+    },
+    {
+      "source_id": "recovery-aa",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "recovery-na",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/"
+    },
+    {
+      "source_id": "norwood-little-league",
+      "ok": true,
+      "method": "league_schedule_table",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-youth-softball",
+      "ok": true,
+      "method": "sportsconnect_schedule",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-rec-sports",
+      "ok": true,
+      "method": "myrec_facility_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "skating-club-calendar",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 14,
+      "note": ""
+    },
+    {
+      "source_id": "faith-temple-sinai-sharon",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "faith-temple-beth-david-westwood",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "faith-icne-sharon",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "faith-shree-hari-dham",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "recovery-alanon",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "recovery-smart",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/"
+    },
+    {
+      "source_id": "arts-millforge",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 3,
+      "note": ""
+    },
+    {
+      "source_id": "arts-luke-adams",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "fitness-rec",
+      "ok": true,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "nps-extended-day",
+      "ok": false,
+      "method": "schoolnow_calendar",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwood.k12.ma.us', port=443): Max retries exceeded with url: /extended-day/calendar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICAT"
+    },
+    {
+      "source_id": "norwood-chamber-events",
+      "ok": true,
+      "method": "growthzone_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-town-news-calendar",
+      "ok": false,
+      "method": "local_town_pages_calendar",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "st-timothy-calendar",
+      "ok": true,
+      "method": "church_events_calendar",
+      "found": 40,
+      "note": ""
+    },
+    {
+      "source_id": "norwood-toastmasters",
+      "ok": false,
+      "method": "recurring_org_schedule",
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm"
+    },
+    {
+      "source_id": "norwood-women-business-networking",
+      "ok": false,
+      "method": "secondary_recurring_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-rotary-calendar",
+      "ok": true,
+      "method": "clubrunner_calendar",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-kofc-events",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-junior-womans-club",
+      "ok": false,
+      "method": "multi_source_org_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "circle-of-hope-events",
+      "ok": false,
+      "method": "seasonal_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-evening-garden-club",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-vfw-public-events",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-blood-drives",
+      "ok": false,
+      "method": "secondary_org_event_discovery",
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+    },
+    {
+      "source_id": "norwood-national-night-out",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-carillon-series",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-summerfest-series",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "norwood-sunday-concerts",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "friends-coa-dances",
+      "ok": true,
+      "method": "derived_verified_series",
+      "found": 0,
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+    },
+    {
+      "source_id": "factory52-events",
+      "ok": false,
+      "method": "tribe_events",
+      "found": 0,
+      "note": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "source_id": "lifeworks-events",
+      "ok": false,
+      "method": "tribe_events",
+      "found": 0,
+      "note": "404 Client Error: Not Found for url: https://lifeworksarc.org/wp-json/tribe/events/v1/events?start_date=2026-09-25&end_date=2027-03-24&per_page=100"
+    },
+    {
+      "source_id": "masshire-norwood-events",
+      "ok": true,
+      "method": "tribe_events",
+      "found": 32,
+      "note": ""
     }
   ],
   "news_sources": [
@@ -678,9 +902,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -710,7 +935,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 43,
+      "found": 42,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
