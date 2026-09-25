@@ -1979,7 +1979,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -3915,7 +3915,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -5595,7 +5595,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -8811,7 +8811,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
@@ -8893,7 +8894,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
@@ -8934,7 +8936,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
@@ -8975,7 +8978,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
@@ -9057,7 +9061,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
@@ -9098,7 +9103,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
@@ -9835,7 +9841,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     },
     "conflict_profile": "optional",
     "notes": "Distinct NPS calendar useful to families. Keep collapsed under Schools and optional by default; zero events does not mean the source is broken."
