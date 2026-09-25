@@ -1,77 +1,5 @@
 [
   {
-    "id": "2026-09-17-hispanic-heritage-month-movie-series-367aa3b",
-    "title": "Hispanic Heritage Month Movie Series",
-    "start": {
-      "date": "2026-09-17",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-17",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/hispanic-heritage-month-movie-series/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Celebrate Hispanic Heritage Month at the Morrill Memorial Library with a weekly movie screening highlighting stories, cultures, and perspectives from across the Spanish-speaking world and American-Hispanic experiences. &nbsp;Showtimes:&nbsp",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-17-sensory-friendly-lego-club-for-adults-c805c9f",
-    "title": "Sensory-friendly Lego Club for Adults",
-    "start": {
-      "date": "2026-09-17",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-17",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-55/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to partner with the L. E. A. D. program affiliated with Norwood High School to host a Sensory-friendly Lego Club for Adults. Our September club meeting will be held in-person at the library on Thursday Se",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
-    "id": "2026-09-17-zoom-with-a-law-librarian-71d8bf8",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-17",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-17",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-585/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld"
-  },
-  {
     "id": "2026-09-18-beyond-beginner-mah-jongg-ff20235",
     "title": "Beyond Beginner Mah Jongg",
     "start": {
@@ -820,13 +748,13 @@
     },
     "end": {
       "date": "2026-09-23",
-      "time": "20:30"
+      "time": null
     },
     "venue": "Town of Norwood",
     "address": null,
     "category": "government",
     "source_id": "norwood-civic-meetings",
-    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "source_url": "https://www.norwood.k12.ma.us/sc/schedules-minutes",
     "registration_url": null,
     "cost": "Free",
     "public_access": "public",
@@ -1303,6 +1231,30 @@
     "category": "community",
     "source_id": "first-congregational-events",
     "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-09-27-school-of-rock-concert-b245771",
+    "title": "School of Rock concert",
+    "start": {
+      "date": "2026-09-27",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": "19:00"
+    },
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "category": "live_music",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
     "public_access": "public",
     "series": null,
