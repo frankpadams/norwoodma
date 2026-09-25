@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T15:31:22.483882-04:00",
+  "generated_at": "2026-09-25T15:34:54.727422-04:00",
   "offline": false,
-  "events_published": 719,
+  "events_published": 768,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 719,
-      "generated_at": "2026-09-25T15:31:22.461990-04:00"
+      "events": 768,
+      "generated_at": "2026-09-25T15:34:54.698416-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 86,
-      "generated_at": "2026-09-25T15:31:22.464612-04:00"
+      "events": 112,
+      "generated_at": "2026-09-25T15:34:54.702240-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 455,
-      "generated_at": "2026-09-25T15:31:22.471107-04:00"
+      "events": 468,
+      "generated_at": "2026-09-25T15:34:54.710883-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 368,
-      "generated_at": "2026-09-25T15:31:22.476424-04:00"
+      "events": 370,
+      "generated_at": "2026-09-25T15:34:54.717636-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T15:31:22.478558-04:00"
+      "generated_at": "2026-09-25T15:34:54.720454-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 16,
-      "generated_at": "2026-09-25T15:31:22.480970-04:00"
+      "events": 35,
+      "generated_at": "2026-09-25T15:34:54.723874-04:00"
     }
   ],
   "event_sources": [
@@ -93,10 +93,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": true,
+      "ok": false,
       "method": "community_submission_json",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='script.google.com', port=443): Read timed out. (read timeout=18)"
     },
     {
       "source_id": "elks-calendar",
@@ -116,7 +116,7 @@
       "source_id": "factory52-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 0,
+      "found": 50,
       "note": ""
     },
     {
@@ -186,7 +186,7 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 0,
+      "found": 4,
       "note": ""
     },
     {
@@ -1223,10 +1223,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -1256,7 +1255,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 44,
+      "found": 43,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1264,7 +1263,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 21,
+      "found": 22,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
