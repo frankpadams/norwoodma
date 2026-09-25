@@ -5901,7 +5901,7 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "html_list",
+      "method": "dated_event_pages",
       "automation": "preferred"
     },
     "filters": {
@@ -5910,12 +5910,15 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_current_schedule",
+      "verified_at": "2026-09-25",
+      "basis": "Official Norwood Theatre event detail pages expose event title, date and time for current Fall/Winter 2026 shows."
     },
     "notes": "Ticketed public performances in Norwood; canonical source for dates/times.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "empty_result_is_failure": true
+    }
   },
   {
     "id": "resource-norwood-town-news",
@@ -10054,14 +10057,14 @@
     "verification": {
       "status": "verified_subscribable_calendar",
       "verified_at": "2026-09-25",
-      "basis": "Official Rotary Club of Norwood calendar exposes event-type filtering and a subscription URL for calendar software."
+      "basis": "Official ClubRunner calendar exposes event types and a Subscribe to this Calendar URL for Outlook, Google Calendar and Apple Calendar."
     },
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     },
     "conflict_profile": "optional",
     "notes": "Use the official ClubRunner calendar subscription feed when discovered. Routine club/board/committee meetings remain opt-in; public fundraisers and community events can qualify for What's Happening."
