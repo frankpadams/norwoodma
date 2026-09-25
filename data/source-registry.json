@@ -10185,5 +10185,195 @@
     },
     "conflict_profile": "optional",
     "notes": "Secondary discovery calendar for public blood drives in Norwood; deduplicate against host organizations and Red Cross listings when available."
+  },
+  {
+    "id": "norwood-national-night-out",
+    "name": "Norwood National Night Out",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "derived_verified_series",
+      "automation": "preferred",
+      "parent_source_ids": [
+        "town-police-page",
+        "friends-center-events"
+      ],
+      "match": [
+        "National Night Out"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "start",
+        "end",
+        "series",
+        "organizer"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "default",
+    "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
+  },
+  {
+    "id": "norwood-carillon-series",
+    "name": "Norwood Memorial Carillon Concerts",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "derived_verified_series",
+      "automation": "preferred",
+      "parent_source_ids": [
+        "norwood-town-news-calendar",
+        "friends-center-events"
+      ],
+      "match": [
+        "Carillon Concert"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "start",
+        "end",
+        "series",
+        "organizer"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "default",
+    "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
+  },
+  {
+    "id": "norwood-summerfest-series",
+    "name": "Norwood Summerfest Concert Series",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "derived_verified_series",
+      "automation": "preferred",
+      "parent_source_ids": [
+        "norwood-town-news-calendar",
+        "friends-center-events"
+      ],
+      "match": [
+        "Summerfest Concert"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "start",
+        "end",
+        "series",
+        "organizer"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "default",
+    "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
+  },
+  {
+    "id": "norwood-sunday-concerts",
+    "name": "Norwood Sunday Concerts on the Common",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "derived_verified_series",
+      "automation": "preferred",
+      "parent_source_ids": [
+        "norwood-town-news-calendar",
+        "friends-center-events"
+      ],
+      "match": [
+        "Sunday Concerts on the Common"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "start",
+        "end",
+        "series",
+        "organizer"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "default",
+    "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
+  },
+  {
+    "id": "friends-coa-dances",
+    "name": "Friends of Norwood COA Public Events",
+    "url": "https://www.norwoodtownnews.com/calendar",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "derived_verified_series",
+      "automation": "preferred",
+      "parent_source_ids": [
+        "town-senior-newsletter",
+        "friends-center-events"
+      ],
+      "match": [
+        "Friends of the Norwood Council on Aging"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "start",
+        "end",
+        "series",
+        "organizer"
+      ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
   }
 ]
