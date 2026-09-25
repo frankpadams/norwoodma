@@ -878,6 +878,28 @@ def events_from_league_schedule(source):
         out.append({'id':event_id(title,ds,source.get('name')),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':None,'address':None,'category':'sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':'Youth sports schedule item; confirm with league for late changes.','discovered_by':'league_schedule_table'})
     return dedupe_events(out)
 
+def discover_embedded_calendar_feeds(page_url, html):
+    """Find public ICS feeds, including Google Calendar embeds, on a calendar hub."""
+    feeds=[]
+    if not BeautifulSoup: return feeds
+    soup=BeautifulSoup(html,'html.parser')
+    for tag in soup.find_all(['iframe','a']):
+        raw=tag.get('src') or tag.get('href')
+        if not raw: continue
+        href=urljoin(page_url,raw)
+        low=href.lower()
+        if (low.endswith('.ics') or 'ical' in low) and href not in feeds:
+            feeds.append(href)
+        if 'calendar.google.com' in low and 'src=' in href:
+            try:
+                from urllib.parse import urlparse,parse_qs,unquote
+                cid=(parse_qs(urlparse(href).query).get('src') or [None])[0]
+                if cid:
+                    feed='https://calendar.google.com/calendar/ical/'+unquote(cid)+'/public/basic.ics'
+                    if feed not in feeds: feeds.append(feed)
+            except Exception: pass
+    return feeds
+
 def events_from_multi_source_calendar(source):
     """Merge direct ICS and calendar hubs, then apply configured topic keywords."""
     ing=source.get('ingestion',{}); out=[]
@@ -888,7 +910,8 @@ def events_from_multi_source_calendar(source):
         else:
             try:
                 html=request(u).text; extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
-                for feed in feeds[:6]:
+                feeds.extend(discover_embedded_calendar_feeds(u,html))
+                for feed in list(dict.fromkeys(feeds))[:12]:
                     try: out.extend(events_from_ical(feed,source))
                     except Exception: pass
             except Exception: pass
@@ -906,18 +929,7 @@ def events_from_pma_hub(source):
         try: html=request(u).text
         except Exception: continue
         extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
-        if BeautifulSoup:
-            soup=BeautifulSoup(html,'html.parser')
-            for tag in soup.find_all(['iframe','a'],src=True)+soup.find_all('a',href=True):
-                raw=tag.get('src') or tag.get('href')
-                if not raw: continue
-                href=urljoin(u,raw)
-                # Google Calendar embeds expose src=<calendar id>; convert public IDs to ICS.
-                if 'calendar.google.com' in href and 'src=' in href:
-                    from urllib.parse import urlparse,parse_qs,unquote
-                    q=parse_qs(urlparse(href).query); cid=(q.get('src') or [None])[0]
-                    if cid:
-                        feeds.append('https://calendar.google.com/calendar/ical/'+unquote(cid)+'/public/basic.ics')
+        feeds.extend(discover_embedded_calendar_feeds(u,html))
         for feed in list(dict.fromkeys(feeds))[:12]:
             try: out.extend(events_from_ical(feed,source))
             except Exception: pass
