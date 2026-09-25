@@ -24,6 +24,31 @@ async function rotatingHero(){
 }
 rotatingHero();
 
+function rotatingHeroMessage(){
+  const title=$('#hero-title'); if(!title)return;
+  const messages=[
+    "There’s more happening around town than you think.",
+    "Discover something new about the town you already love.",
+    "There’s always more to discover close to home.",
+    "Everything Norwood has to offer, a little easier to find.",
+    "You live here. Might as well know what’s going on.",
+    "Everything Norwood, minus the town Facebook argument.",
+    "Because nobody should need six browser tabs to figure out trash day.",
+    "Local information… without the drama of a comments section.",
+    "We organize Norwood information recreationally. Apparently.",
+    "Not the official town website. That’s kind of the point. Unofficial. Uncomplicated.",
+    "Trash. Trains. Trails. Trivia. We somehow ended up with all of it.",
+    "Town meetings and dinner ideas. Democracy works up an appetite.",
+    "From potholes to pad thai, we’ve probably got a link.",
+    "Side effects may include knowing what’s happening this weekend.",
+    "From school calendars to sushi, somehow it’s all here.",
+    "From voting precincts to Vietnamese food, we’ve looked it up.",
+    "From pizza to pickleball — find it here."
+  ];
+  title.textContent=messages[Math.floor(Math.random()*messages.length)];
+}
+rotatingHeroMessage();
+
 const NEWS_BLOCK_PATTERNS=[/\bobituar(?:y|ies)\b/i,/\bin memoriam\b/i,/\bpassed away\b/i,/\bfuneral (?:home|service|services)\b/i,/\bvisitation\b/i,/\bcelebration of life\b/i,/\bdeath notice\b/i,/\bsponsored\b/i,/\badvertorial\b/i,/\bpartner content\b/i,/\bpaid content\b/i,/\bshopping\b/i,/\bcoupon(s)?\b/i,/\bpromo code\b/i,/\baffiliate\b/i,/\bbest prices?\b/i,/\bdeal(s)? of the day\b/i,/\brealtor\.com\b/i,/\bzillow\b/i,/\bredfin\b/i,/\btrulia\b/i,/^posts pagination$/i];
 const OTHER_NORWOODS=[/Norwood,?\s*(Ohio|OH|New Jersey|NJ|Pennsylvania|PA|Colorado|CO|North Carolina|NC|New York|NY|Georgia|GA|Louisiana|LA|Missouri|MO)/i];
 const LOCAL_SIGNALS=/Norwood,?\s*(Massachusetts|Mass\.?|MA)\b|Norfolk County|Norwood (Public Schools|Light|Hospital|Central|Depot|Memorial Airport|Record)|Morrill Memorial Library|Washington Street|Route 1\b/i;
