@@ -30,7 +30,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Regional professional association. Publish only events physically in Norwood and open to an appropriate public/registrant audience; otherwise discovery only."
+    "notes": "Regional professional association. Publish only events physically in Norwood and open to an appropriate public/registrant audience; otherwise discovery only.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-annie-s-closet-norwood",
@@ -59,7 +60,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-balch-calendar",
@@ -92,7 +94,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items."
+    "notes": "Potential fairs, PTO/community events; filter student-only items.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-band-gig-school-of-music-performance",
@@ -126,7 +129,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-baps-shri-swaminarayan-mandir-south-boston-sharon",
@@ -157,7 +161,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-callahan-calendar",
@@ -190,7 +195,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items."
+    "notes": "Potential fairs, PTO/community events; filter student-only items.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-callahan-pta",
@@ -225,7 +231,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-callahan-elementary-school-parent-teacher-association",
@@ -256,7 +263,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "castle-island-calendar",
@@ -289,7 +297,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Strictly filter to Norwood Taproom; calendar also contains South Boston events."
+    "notes": "Strictly filter to Norwood Taproom; calendar also contains South Boston events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-chabad-jewish-center",
@@ -320,7 +329,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-cheer-advantage",
@@ -354,7 +364,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "citizens-better-norwood-events",
@@ -391,7 +402,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Community/civic source; facts should be verified when event has an official source."
+    "notes": "Community/civic source; facts should be verified when event has an official source.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-cleveland-calendar",
@@ -424,7 +436,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items."
+    "notes": "Potential fairs, PTO/community events; filter student-only items.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-cleveland-pto",
@@ -459,7 +472,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-cleveland-elementary-school-parent-teacher-organization",
@@ -490,7 +504,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-coakley-calendar",
@@ -523,7 +538,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Publish only genuinely public/community-accessible events."
+    "notes": "Publish only genuinely public/community-accessible events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-coakley-middle-school-parent-teacher-organization",
@@ -554,7 +570,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-cms-pto",
@@ -589,7 +606,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-connors-martial-arts-academy",
@@ -623,7 +641,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-cub-scouts-pack-42-norwood",
@@ -659,7 +678,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Pack 42 fundraisers and community-facing activities such as sales, drives, fairs and benefit events. Exclude routine pack/den meetings and participant-only activities."
+    "notes": "Watch for public Pack 42 fundraisers and community-facing activities such as sales, drives, fairs and benefit events. Exclude routine pack/den meetings and participant-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-cub-scouts-pack-49-norwood",
@@ -695,7 +715,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Pack 49 fundraisers and community-facing activities such as sales, drives, fairs and benefit events. Exclude routine pack/den meetings and participant-only activities."
+    "notes": "Watch for public Pack 49 fundraisers and community-facing activities such as sales, drives, fairs and benefit events. Exclude routine pack/den meetings and participant-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-dedham-community-theatre",
@@ -724,7 +745,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "emerald-city-plant-shop",
@@ -758,7 +780,8 @@
       "verified_at": "2026-09-17",
       "basis": "official website plus current local/business sources confirming workshops and community events"
     },
-    "notes": "Botanical event space at 702 Washington St. Monitor own site first; supplement with organizer/event listings when an event is hosted here."
+    "notes": "Botanical event space at 702 Washington St. Monitor own site first; supplement with organizer/event listings when an event is hosted here.",
+    "conflict_profile": "optional"
   },
   {
     "id": "eventbrite-norwood",
@@ -791,7 +814,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Discovery only. Require Norwood venue and primary/host confirmation before publication."
+    "notes": "Discovery only. Require Norwood venue and primary/host confirmation before publication.",
+    "conflict_profile": "optional"
   },
   {
     "id": "facebook-public-pages",
@@ -824,7 +848,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Useful for restaurant fundraisers, PTOs, fire/police open houses and small organizations; never use as sole evidence when better source exists."
+    "notes": "Useful for restaurant fundraisers, PTOs, fire/police open houses and small organizations; never use as sole evidence when better source exists.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-field-martial-arts-academy",
@@ -858,7 +883,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-first-baptist-church-of-norwood",
@@ -889,7 +915,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-first-congregational-church-in-norwood",
@@ -920,7 +947,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "first-congregational-events",
@@ -955,7 +983,8 @@
       "verified_at": "2026-09-22",
       "basis": "Official FCC Norwood events page with dated public events and Google Calendar/ICS links"
     },
-    "notes": "Publish special public/community events such as fairs, concerts, clothing giveaways, pet blessings and community programs. Do not treat routine worship or closed/internal meetings as general community events by default."
+    "notes": "Publish special public/community events such as fairs, concerts, clothing giveaways, pet blessings and community programs. Do not treat routine worship or closed/internal meetings as general community events by default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-friends-of-norwood-center",
@@ -986,7 +1015,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "friends-center-blog",
@@ -1021,7 +1051,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Secondary event discovery and downtown business/community news."
+    "notes": "Secondary event discovery and downtown business/community news.",
+    "conflict_profile": "optional"
   },
   {
     "id": "friends-center-events",
@@ -1054,7 +1085,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Excellent aggregator for Town Common traditions, market special days and downtown happenings."
+    "notes": "Excellent aggregator for Town Common traditions, market special days and downtown happenings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-gillette-stadium",
@@ -1083,7 +1115,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-girl-scouts-norwood-eastern-massachusetts",
@@ -1117,7 +1150,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "google-news-norwood",
@@ -1156,7 +1190,8 @@
       "\"norwood ma\"",
       "norwoodma",
       "\"norwood, massachusetts\""
-    ]
+    ],
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-grace-episcopal-church",
@@ -1187,7 +1222,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "grace-calendar",
@@ -1220,7 +1256,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Publish special public/community events, not ordinary worship services by default."
+    "notes": "Publish special public/community events, not ordinary worship services by default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-gymnastic-academy-of-boston-norwood",
@@ -1254,7 +1291,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-head-start-norwood",
@@ -1285,7 +1323,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-heritage-baptist-church",
@@ -1316,7 +1355,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "inside-norwood",
@@ -1351,7 +1391,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Secondary local reporting/discovery source."
+    "notes": "Secondary local reporting/discovery source.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-inside-norwood",
@@ -1383,7 +1424,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "instagram-public-pages",
@@ -1416,7 +1458,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Secondary discovery for pop-ups, fundraisers and venue announcements."
+    "notes": "Secondary discovery for pop-ups, fundraisers and venue announcements.",
+    "conflict_profile": "optional"
   },
   {
     "id": "irish-brewing-events",
@@ -1449,7 +1492,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Recurring trivia/live music/open mic; collapse routine recurrence where appropriate."
+    "notes": "Recurring trivia/live music/open mic; collapse routine recurrence where appropriate.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-islamic-center-of-new-england-sharon-center",
@@ -1480,7 +1524,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-kings-dining-entertainment-dedham",
@@ -1509,7 +1554,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-knights-of-columbus-norwood-council",
@@ -1545,7 +1591,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Knights of Columbus fundraisers and community events. Exclude council/member meetings and private functions."
+    "notes": "Watch for public Knights of Columbus fundraisers and community events. Exclude council/member meetings and private functions.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-launch-norwood",
@@ -1576,7 +1623,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-legacy-place",
@@ -1605,7 +1653,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-lg-martial-arts",
@@ -1639,7 +1688,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-luke-adams-glassblowing-studio",
@@ -1670,7 +1720,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "magic-room-ticketleap",
@@ -1703,7 +1754,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Canonical ticket listing for Magic Room shows; dedupe against Norwood Space Center."
+    "notes": "Canonical ticket listing for Magic Room shows; dedupe against Norwood Space Center.",
+    "conflict_profile": "optional"
   },
   {
     "id": "mill-forge-events",
@@ -1736,7 +1788,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Public maker workshops/classes at 61 Endicott St."
+    "notes": "Public maker workshops/classes at 61 Endicott St.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-mini-athletes-norwood",
@@ -1770,7 +1823,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "library-assabet-calendar",
@@ -1803,7 +1857,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Very high-yield structured calendar. Filter recurring virtual statewide items if not specifically useful to Norwood residents."
+    "notes": "Very high-yield structured calendar. Filter recurring virtual statewide items if not specifically useful to Norwood residents.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-morrill-memorial-library-local-history",
@@ -1832,7 +1887,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-morrill-memorial-library-museum-passes",
@@ -1861,7 +1917,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-morrill-memorial-library-technology-help",
@@ -1890,7 +1947,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "library-home",
@@ -1925,7 +1983,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Useful for near-term highlights and event discovery."
+    "notes": "Useful for near-term highlights and event discovery.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-morrill-memorial-library-literacy-department",
@@ -1956,7 +2015,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "ncm-community-programs",
@@ -1991,7 +2051,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Useful backward-looking signal for recurring traditions and organizations to add to source registry."
+    "notes": "Useful backward-looking signal for recurring traditions and organizations to add to source registry.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nrrc-events",
@@ -2026,7 +2087,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Regional source; publish only events physically in Norwood or strongly Norwood-specific."
+    "notes": "Regional source; publish only events physically in Norwood or strongly Norwood-specific.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-neponset-valley-sunrise-rotary-club",
@@ -2062,7 +2124,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Sunrise Rotary fundraisers and community-service events. Exclude ordinary club meetings."
+    "notes": "Watch for public Sunrise Rotary fundraisers and community-service events. Exclude ordinary club meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-adult-day-health-center",
@@ -2093,7 +2156,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-american-legion-baseball",
@@ -2124,7 +2188,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-american-legion-post-70",
@@ -2160,7 +2225,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Post 70 fundraisers, veterans/community benefits, dinners, raffles, drives and ceremonies. Exclude routine member meetings."
+    "notes": "Watch for public Post 70 fundraisers, veterans/community benefits, dinners, raffles, drives and ceremonies. Exclude routine member meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-animal-control",
@@ -2189,7 +2255,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-assessor-property-information",
@@ -2218,7 +2285,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-babe-ruth-baseball",
@@ -2249,7 +2317,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-back-stage-boosters",
@@ -2280,7 +2349,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-ballet",
@@ -2314,7 +2384,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-basketball-association",
@@ -2345,7 +2416,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-board-of-health",
@@ -2374,7 +2446,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-building-permits-and-inspections",
@@ -2403,7 +2476,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "library-cfce",
@@ -2436,7 +2510,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Family playgroups and community programs; include when public and dated."
+    "notes": "Family playgroups and community programs; include when public and dated.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-challenger-sports",
@@ -2470,7 +2545,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-commission-on-disability",
@@ -2499,7 +2575,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-community-garden",
@@ -2528,7 +2605,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "ncm-home",
@@ -2565,7 +2643,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Local video/news; can surface recent community events and meetings."
+    "notes": "Local video/news; can surface recent community events and meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-community-media",
@@ -2597,7 +2676,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-community-tennis-association",
@@ -2628,7 +2708,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-conservation-and-environment",
@@ -2657,7 +2738,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-conservation-commission",
@@ -2686,7 +2768,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-conservation",
@@ -2719,7 +2802,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch nature walks, cleanups, trail events, public environmental programming."
+    "notes": "Watch nature walks, cleanups, trail events, public environmental programming.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-coordinated-family-and-community-engagement",
@@ -2748,7 +2832,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-council-on-aging-and-senior-center",
@@ -2779,7 +2864,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-council-on-aging-transportation",
@@ -2810,7 +2896,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-cultural-council",
@@ -2841,7 +2928,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-cultural-council",
@@ -2876,7 +2964,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Useful for grant-supported public arts/cultural programming."
+    "notes": "Useful for grant-supported public arts/cultural programming.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-elections-and-voting",
@@ -2905,7 +2994,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-elks-lodge-1124",
@@ -2936,7 +3026,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "elks-calendar",
@@ -2972,7 +3063,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
+    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-farmers-market",
@@ -3003,7 +3095,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-fine-arts-collaborative-team",
@@ -3034,7 +3127,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-fire-department",
@@ -3063,7 +3157,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-fire-page",
@@ -3098,7 +3193,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch for open houses, fire-prevention week, community safety events and notices."
+    "notes": "Watch for open houses, fire-prevention week, community safety events and notices.",
+    "conflict_profile": "optional"
   },
   {
     "id": "food-pantry",
@@ -3135,7 +3231,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch food drives, donation events and community fundraisers."
+    "notes": "Watch food drives, donation events and community fundraisers.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-food-pantry",
@@ -3164,7 +3261,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-friends-of-visual-arts",
@@ -3195,7 +3293,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-high-school",
@@ -3226,7 +3325,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-athletics",
@@ -3259,7 +3359,8 @@
       "verified_at": "2026-09-25",
       "basis": "NPS SchoolNow calendar system exposes Athletics as a selectable calendar; monitor the athletics calendar route directly."
     },
-    "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items."
+    "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items.",
+    "conflict_profile": "default"
   },
   {
     "id": "nps-nhs-calendar",
@@ -3292,7 +3393,8 @@
       "verified_at": "2026-09-25",
       "basis": "Official NHS calendar confirmed; promoted as a primary public high-school event source."
     },
-    "notes": "Publish genuinely public/community-accessible NHS events, especially plays, concerts, fine-arts performances/exhibits, fairs, open houses and public presentations; exclude routine internal school operations."
+    "notes": "Publish genuinely public/community-accessible NHS events, especially plays, concerts, fine-arts performances/exhibits, fairs, open houses and public presentations; exclude routine internal school operations.",
+    "conflict_profile": "default"
   },
   {
     "id": "resource-norwood-high-school-alumni-association",
@@ -3323,7 +3425,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-high-school-parent-guardian-teacher-organization",
@@ -3354,7 +3457,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-nhs-pto",
@@ -3389,7 +3493,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-historical-society",
@@ -3420,7 +3525,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "historical-society-events",
@@ -3453,7 +3559,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Public exhibits, talks, tours and seasonal Day House events."
+    "notes": "Public exhibits, talks, tours and seasonal Day House events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-housing-authority",
@@ -3482,7 +3589,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-housing-authority-applications",
@@ -3511,7 +3619,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-junior-woman-s-club",
@@ -3542,7 +3651,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "junior-womans-club",
@@ -3580,7 +3690,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Community service, fundraisers, meetings and social/community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
+    "notes": "Community service, fundraisers, meetings and social/community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-light-report-an-outage",
@@ -3609,7 +3720,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-light-broadband",
@@ -3638,7 +3750,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-light-electric",
@@ -3667,7 +3780,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-light-electric-and-broadband",
@@ -3696,7 +3810,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "lions-page",
@@ -3732,7 +3847,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers and service events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
+    "notes": "Watch public fundraisers and service events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-lions-club",
@@ -3763,7 +3879,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-little-league",
@@ -3797,7 +3914,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-memorial-airport",
@@ -3826,7 +3944,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-memory-caf",
@@ -3857,7 +3976,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-memory-caf-inc",
@@ -3888,7 +4008,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-pma",
@@ -3923,7 +4044,8 @@
       "verified_at": "2026-09-24",
       "basis": "Official Norwood PMA site has a dedicated calendar page with upcoming music events and links to school fine-arts/marching-band schedules."
     },
-    "notes": "Primary PMA/fine-arts source. Publish public NHS concerts, marching-band performances/home show, drama, art exhibits, Fine Arts Festival and related performances. Filter internal/private rehearsals and member-only activities."
+    "notes": "Primary PMA/fine-arts source. Publish public NHS concerts, marching-band performances/home show, drama, art exhibits, Fine Arts Festival and related performances. Filter internal/private rehearsals and member-only activities.",
+    "conflict_profile": "default"
   },
   {
     "id": "resource-norwood-parent-music-association",
@@ -3954,7 +4076,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-parks-and-playgrounds",
@@ -3985,7 +4108,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-police-department",
@@ -4014,7 +4138,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-police-page",
@@ -4049,7 +4174,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch for National Night Out, community outreach, safety events and public notices."
+    "notes": "Watch for National Night Out, community outreach, safety events and public notices.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-records",
@@ -4078,7 +4204,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools",
@@ -4109,7 +4236,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-district-calendar",
@@ -4144,7 +4272,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Master NPS calendar with selectable sub-calendars."
+    "notes": "Master NPS calendar with selectable sub-calendars.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-fine-arts",
@@ -4177,7 +4306,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Primary NPS Fine Arts discovery source. Public concerts, drama, band/orchestra, visual arts, Fine Arts Festival and performance announcements; cross-check NHS calendar and NPS news."
+    "notes": "Primary NPS Fine Arts discovery source. Public concerts, drama, band/orchestra, visual arts, Fine Arts Festival and performance announcements; cross-check NHS calendar and NPS news.",
+    "conflict_profile": "default"
   },
   {
     "id": "nps-news",
@@ -4212,7 +4342,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Catches Fine Arts Festival and public school announcements not obvious in calendars."
+    "notes": "Catches Fine Arts Festival and public school announcements not obvious in calendars.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-district-ical",
@@ -4247,7 +4378,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Preferred structured feed when stable."
+    "notes": "Preferred structured feed when stable.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-bus-transportation",
@@ -4278,7 +4410,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-child-find",
@@ -4309,7 +4442,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-english-learner-multilingual-family-resources",
@@ -4340,7 +4474,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-extended-day",
@@ -4371,7 +4506,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-family-resources",
@@ -4402,7 +4538,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-interface-mental-health-referral-helpline",
@@ -4431,7 +4568,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-lunch-menus",
@@ -4462,7 +4600,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-registration",
@@ -4493,7 +4632,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-school-health-services",
@@ -4522,7 +4662,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-special-education-family-resources",
@@ -4553,7 +4694,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-public-schools-student-services",
@@ -4584,7 +4726,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation",
@@ -4615,7 +4758,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-recreation-programs",
@@ -4650,7 +4794,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Filter out registration-only ongoing programs unless there is a dated public event or community celebration."
+    "notes": "Filter out registration-only ongoing programs unless there is a dated public event or community celebration.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation-adaptive-sports",
@@ -4681,7 +4826,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation-adult-programs",
@@ -4712,7 +4858,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation-gymnastics",
@@ -4746,7 +4893,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation-school-of-dance",
@@ -4780,7 +4928,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation-theater-for-kids",
@@ -4814,7 +4963,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-recreation-theater-programs",
@@ -4845,7 +4995,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-rotary-club",
@@ -4876,7 +5027,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-scholarship-foundation",
@@ -4907,7 +5059,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "scholarship-foundation",
@@ -4942,7 +5095,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch scholarship fundraisers and public events."
+    "notes": "Watch scholarship fundraisers and public events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-senior-newsletter",
@@ -4975,7 +5129,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Important for dances, bazaars, performances and intergenerational/public senior-center events."
+    "notes": "Important for dances, bazaars, performances and intergenerational/public senior-center events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-senior-center-council-on-aging",
@@ -5006,7 +5161,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-senior-center-newsletter-and-calendar",
@@ -5037,7 +5193,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-seventh-day-adventist-church",
@@ -5068,7 +5225,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-space-center",
@@ -5099,7 +5257,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-space-center-events",
@@ -5133,7 +5292,8 @@
       "verified_at": "2026-09-24",
       "basis": "Norwood Space Center calendar currently publishes SONO Arts public events; verified examples include free public open studios/exhibitions."
     },
-    "notes": "Aggregates venue/business events; enforce venue/address filter because some chamber events occur outside Norwood. Include public-facing SONO Arts events such as open studios, art shows and public exhibitions; exclude private/tenant-only activities."
+    "notes": "Aggregates venue/business events; enforce venue/address filter because some chamber events occur outside Norwood. Include public-facing SONO Arts events such as open studios, art shows and public exhibitions; exclude private/tenant-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-special-education-parent-advisory-council",
@@ -5164,7 +5324,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-stingrays",
@@ -5195,7 +5356,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-summer-concerts",
@@ -5227,7 +5389,8 @@
       "status": "configured",
       "verified_at": "2026-09-19"
     },
-    "notes": "Seasonal watch for Norwood's public summer concert series; prefer direct organizer/event links."
+    "notes": "Seasonal watch for Norwood's public summer concert series; prefer direct organizer/event links.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-theatre",
@@ -5258,7 +5421,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-theatre-season",
@@ -5291,7 +5455,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Ticketed public performances in Norwood; canonical source for dates/times."
+    "notes": "Ticketed public performances in Norwood; canonical source for dates/times.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-town-news",
@@ -5323,7 +5488,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-town-news",
@@ -5361,7 +5527,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "High-value local monthly calendar/community-news source for public events and organization fundraisers. Use as discovery and cross-check against primary organizer sources when available; exclude private/member-only activities."
+    "notes": "High-value local monthly calendar/community-news source for public events and organization fundraisers. Use as discovery and cross-check against primary organizer sources when available; exclude private/member-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-track-club",
@@ -5392,7 +5559,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-trails-advisory-committee",
@@ -5421,7 +5589,8 @@
       "verified_at": "2026-09-17",
       "basis": "user-provided current Town trails page"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-trash-and-recycling-public-works",
@@ -5450,7 +5619,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-treasurer-collector",
@@ -5479,7 +5649,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-veterans-memorials-and-services",
@@ -5508,7 +5679,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-veterans-services",
@@ -5537,7 +5709,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-veterans",
@@ -5570,7 +5743,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch Memorial Day, Veterans Day and public veteran/community observances."
+    "notes": "Watch Memorial Day, Veterans Day and public veteran/community observances.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-veterans-services",
@@ -5602,7 +5776,8 @@
       "status": "web_checked",
       "verified_at": "2026-09-19"
     },
-    "notes": "Watch public veterans ceremonies, observances, benefits events and community programs."
+    "notes": "Watch public veterans ceremonies, observances, benefits events and community programs.",
+    "conflict_profile": "optional"
   },
   {
     "id": "vfw-discovery",
@@ -5638,7 +5813,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Known source of public meat raffles, dances, blood drives and community events; primary web presence is inconsistent, so verify each event. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
+    "notes": "Known source of public meat raffles, dances, blood drives and community events; primary web presence is inconsistent, so verify each event. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-wic",
@@ -5667,7 +5843,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-women-s-club",
@@ -5698,7 +5875,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-youth-fundraisers",
@@ -5731,7 +5909,8 @@
       "status": "configured",
       "verified_at": "2026-09-19"
     },
-    "notes": "Watch public school/youth fundraisers including car washes, fairs and benefits."
+    "notes": "Watch public school/youth fundraisers including car washes, fairs and benefits.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-cheer",
@@ -5765,7 +5944,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-field-hockey",
@@ -5799,7 +5979,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-football",
@@ -5830,7 +6011,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-hockey-nuggets",
@@ -5861,7 +6043,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-lacrosse",
@@ -5895,7 +6078,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-soccer",
@@ -5926,7 +6110,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-norwood-youth-softball",
@@ -5957,7 +6142,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "community-event-submissions",
@@ -5990,7 +6176,8 @@
       "verified_at": "2026-09-19",
       "basis": "Approved test event returned through deployed privacy-safe Apps Script JSON endpoint"
     },
-    "notes": "Endpoint exposes only allowlisted public event fields from rows whose moderation Status is Approved or Published. Private response Sheet remains private."
+    "notes": "Endpoint exposes only allowlisted public event fields from rows whose moderation Status is Approved or Published. Private response Sheet remains private.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-oldham-calendar",
@@ -6023,7 +6210,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential book fairs/PTO events; filter student-only items."
+    "notes": "Potential book fairs/PTO events; filter student-only items.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-oldham-pto",
@@ -6058,7 +6246,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-oldham-elementary-school-parent-teacher-organization",
@@ -6089,7 +6278,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-phoenix-theatres-patriot-place-foxborough",
@@ -6118,7 +6308,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-premier-gymnastics-norwood",
@@ -6152,7 +6343,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-prescott-calendar",
@@ -6185,7 +6377,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential fairs, PTO/community events; filter student-only items."
+    "notes": "Potential fairs, PTO/community events; filter student-only items.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-prescott-pta",
@@ -6220,7 +6413,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-prescott-elementary-school-parent-teacher-organization",
@@ -6251,7 +6445,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "pcrinc-events",
@@ -6286,7 +6481,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Regional nonprofit source. Monitor lightly for public fundraisers or programs physically held in Norwood."
+    "notes": "Regional nonprofit source. Monitor lightly for public fundraisers or programs physically held in Norwood.",
+    "conflict_profile": "optional"
   },
   {
     "id": "rage-zone-norwood",
@@ -6319,7 +6515,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Experience business; monitor for public special events/promotions."
+    "notes": "Experience business; monitor for public special events/promotions.",
+    "conflict_profile": "optional"
   },
   {
     "id": "rotary-calendar",
@@ -6355,7 +6552,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Club calendar has fundraiser/general event types and subscription support. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings."
+    "notes": "Club calendar has fundraiser/general event types and subscription support. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
+    "conflict_profile": "optional"
   },
   {
     "id": "st-catherine-calendar",
@@ -6388,7 +6586,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Publish special community events; suppress routine masses/devotions unless specifically relevant."
+    "notes": "Publish special community events; suppress routine masses/devotions unless specifically relevant.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-saint-catherine-of-siena-parish",
@@ -6419,7 +6618,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "sarva-social-feed",
@@ -6454,7 +6654,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Public mirror of SARVA social posts used for event discovery when first-party social content is not directly crawlable. Require a dated Norwood-specific post before publication; prefer an official booking/event page when available."
+    "notes": "Public mirror of SARVA social posts used for event discovery when first-party social content is not directly crawlable. Require a dated Norwood-specific post before publication; prefer an official booking/event page when available.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-school-of-rock-norwood-walpole",
@@ -6488,7 +6689,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-scouting-america-troop-42-norwood",
@@ -6524,7 +6726,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Troop 42 fundraisers and community-facing activities. Exclude routine troop meetings, campouts and participant-only activities."
+    "notes": "Watch for public Troop 42 fundraisers and community-facing activities. Exclude routine troop meetings, campouts and participant-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-scouting-america-troop-49-norwood",
@@ -6560,7 +6763,8 @@
       "verified_at": "2026-09-24",
       "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
     },
-    "notes": "Watch for public Troop 49 fundraisers and community-facing activities. Exclude routine troop meetings, campouts and participant-only activities."
+    "notes": "Watch for public Troop 49 fundraisers and community-facing activities. Exclude routine troop meetings, campouts and participant-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-showcase-cinema-de-lux-legacy-place-dedham",
@@ -6589,7 +6793,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-shree-hari-dham-temple",
@@ -6620,7 +6825,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-skating-club-of-boston-norwood-youth-skating",
@@ -6654,7 +6860,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review for v0.11.6 youth resource expansion"
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening."
+    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-snap-and-wic-information-norwood-food-pantry",
@@ -6683,7 +6890,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-splitsville-luxury-lanes-and-golf-suites-foxborough",
@@ -6712,7 +6920,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-st-timothy-church",
@@ -6743,7 +6952,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-supercharged-entertainment",
@@ -6772,7 +6982,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-temple-beth-david",
@@ -6803,7 +7014,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-temple-sinai-of-sharon",
@@ -6834,7 +7046,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby house of worship included to broaden faith traditions available to Norwood residents. Public events remain subject to normal Norwood.ma geographic/relevance rules."
+    "notes": "Nearby house of worship included to broaden faith traditions available to Norwood residents. Public events remain subject to normal Norwood.ma geographic/relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-the-escape-game-dedham",
@@ -6863,7 +7076,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "fallout-shelter",
@@ -6896,7 +7110,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Live music, open mic and fundraiser shows at 61 Endicott St."
+    "notes": "Live music, open mic and fundraiser shows at 61 Endicott St.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-record-events",
@@ -6932,7 +7147,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "High-value curated local calendar and fundraiser-discovery source; verify details against primary source when available and exclude private/member-only activities."
+    "notes": "High-value curated local calendar and fundraiser-discovery source; verify details against primary source when available and exclude private/member-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-record-news",
@@ -6965,7 +7181,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Primary local newspaper source."
+    "notes": "Primary local newspaper source.",
+    "conflict_profile": "optional"
   },
   {
     "id": "skating-club-boston-events",
@@ -6998,7 +7215,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Norwood venue with a structured event calendar. Member-only items must be excluded; public events, public skating, competitions, shows, seminars, and public programs are eligible when access rules allow."
+    "notes": "Norwood venue with a structured event calendar. Member-only items must be excluded; public events, public skating, competitions, shows, seminars, and public programs are eligible when access rules allow.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-thom-early-intervention",
@@ -7029,7 +7247,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-farmers-market",
@@ -7062,7 +7281,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "2026 market runs Tuesdays June 16–Oct 20; source also links weekly social updates and special events."
+    "notes": "2026 market runs Tuesdays June 16–Oct 20; source also links weekly social updates and special events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-community-events",
@@ -7095,7 +7315,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "High-value hub for Norwood Day, Memorial Day, July 4, Veterans Day, tree lighting/Santa parade and concert series."
+    "notes": "High-value hub for Norwood Day, Memorial Day, July 4, Veterans Day, tree lighting/Santa parade and concert series.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-home-news",
@@ -7130,7 +7351,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Official Town homepage Latest News; useful for alerts, closures, elections, hospital/town updates."
+    "notes": "Official Town homepage Latest News; useful for alerts, closures, elections, hospital/town updates.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-meetings-calendar",
@@ -7163,7 +7385,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Public meetings; keep separate from community-event feed unless intentionally shown as civic items."
+    "notes": "Public meetings; keep separate from community-event feed unless intentionally shown as civic items.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-town-of-norwood-official-website",
@@ -7192,7 +7415,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-social",
@@ -7229,7 +7453,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Secondary discovery only; verify event details against primary pages when possible."
+    "notes": "Secondary discovery only; verify event details against primary pages when possible.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-trinity-community-church",
@@ -7260,7 +7485,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-unitarian-church-of-sharon",
@@ -7291,7 +7517,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-united-church-of-norwood",
@@ -7322,7 +7549,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "united-church-events",
@@ -7355,7 +7583,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Publish special community events; suppress routine worship/prayer/Bible study by default."
+    "notes": "Publish special community events; suppress routine worship/prayer/Bible study by default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-urban-air-adventure-park-bellingham",
@@ -7384,7 +7613,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-ward-s-berry-farm",
@@ -7413,7 +7643,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules."
+    "notes": "Nearby destination included in Things to Do; this record does not broaden the What’s Happening feed beyond its existing Norwood relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "washington-no7-events",
@@ -7446,7 +7677,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Recurring live music and public events."
+    "notes": "Recurring live music and public events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-waters-church-norwood",
@@ -7477,7 +7709,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review"
     },
-    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules."
+    "notes": "Resource-directory source. Nearby houses of worship are included to cover faith traditions that may not have a congregation in Norwood; special public events may be considered only under normal Norwood.ma event relevance rules.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-willett-calendar",
@@ -7510,7 +7743,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Potential family/community events; filter routine school operations."
+    "notes": "Potential family/community events; filter routine school operations.",
+    "conflict_profile": "optional"
   },
   {
     "id": "resource-willett-parent-teacher-organization",
@@ -7541,7 +7775,8 @@
       "verified_at": "2026-09",
       "basis": "v0.11.1 local resource dataset"
     },
-    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified."
+    "notes": "Seeded from the existing verified local resource directory; promote to a dedicated monitor channel when a structured calendar, feed, newsletter, or reliable event page is identified.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-willett-pto",
@@ -7576,7 +7811,8 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch public fundraisers, fairs and family/community events."
+    "notes": "Watch public fundraisers, fairs and family/community events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-food-pantry-hours",
@@ -7610,7 +7846,8 @@
       "verified_at": "2026-09-22",
       "basis": "Official Norwood Food Pantry page states Saturday shopping hours 9:00 AM–11:40 AM and new-client signup availability."
     },
-    "notes": "Publish the rolling Saturday food-assistance schedule. This is a community assistance service, not a religious event, even though the pantry is located behind Grace Episcopal Church."
+    "notes": "Publish the rolling Saturday food-assistance schedule. This is a community assistance service, not a religious event, even though the pantry is located behind Grace Episcopal Church.",
+    "conflict_profile": "optional"
   },
   {
     "id": "ncm-school-live-broadcasts",
@@ -7646,7 +7883,8 @@
       "verified_at": "2026-09-22",
       "basis": "Norwood Community Media schedules page includes a Schools & Sports schedule and Live Broadcasts section; school broadcast page provides the live player."
     },
-    "notes": "Publish NHS/high-school live broadcasts as calendar/events with a Watch/View link. Never use Schools & Sports broadcasts to trigger the sitewide LIVE NOW alert."
+    "notes": "Publish NHS/high-school live broadcasts as calendar/events with a Watch/View link. Never use Schools & Sports broadcasts to trigger the sitewide LIVE NOW alert.",
+    "conflict_profile": "optional"
   },
   {
     "id": "town-selectmen-car-washes",
@@ -7681,7 +7919,8 @@
       "verified_at": "2026-09-24",
       "basis": "Official Board of Selectmen agendas list municipal-lot car wash requests; minutes/official meeting records are used to confirm approval."
     },
-    "notes": "Publish agenda-listed municipal-lot car wash fundraisers as 'Municipal Lot Car Wash Fundraiser: [group] - Tentative'. When official minutes/records confirm approval, remove ' - Tentative'. Suppress denied, withdrawn, tabled, postponed, or not-approved requests."
+    "notes": "Publish agenda-listed municipal-lot car wash fundraisers as 'Municipal Lot Car Wash Fundraiser: [group] - Tentative'. When official minutes/records confirm approval, remove ' - Tentative'. Suppress denied, withdrawn, tabled, postponed, or not-approved requests.",
+    "conflict_profile": "optional"
   },
   {
     "id": "home-depot-norwood-kids-workshops",
@@ -7717,7 +7956,8 @@
       "verified_at": "2026-09-24",
       "basis": "Official Norwood Home Depot store page confirms its Kids Workshop and official Home Depot Kids Workshop page states free in-store workshops run 9 AM–noon on the first Saturday of every month."
     },
-    "notes": "Publish a short rolling schedule of Norwood store Kids Workshops only while both the national official recurring schedule and the Norwood #2681 store page continue to confirm the program."
+    "notes": "Publish a short rolling schedule of Norwood store Kids Workshops only while both the national official recurring schedule and the Norwood #2681 store page continue to confirm the program.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-girl-scouts-public-events",
@@ -7753,7 +7993,8 @@
       "verified_at": "2026-09-24",
       "basis": "Norwood Girl Scouts are a confirmed local organization; public fundraiser/event dates are typically surfaced through local community calendars rather than a stable Norwood-specific public calendar."
     },
-    "notes": "Watch for public Girl Scout cookie booths/sales, drives, fairs and other community fundraisers. Exclude troop meetings, registration activities and member-only events."
+    "notes": "Watch for public Girl Scout cookie booths/sales, drives, fairs and other community fundraisers. Exclude troop meetings, registration activities and member-only events.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-portuguese-club",
@@ -7789,7 +8030,8 @@
       "verified_at": "2026-09-24",
       "basis": "Official organization website confirms cultural programming and community activities."
     },
-    "notes": "Publish only events explicitly open to the public, such as public cultural celebrations, performances, festivals, dinners, educational programs, and community events. Exclude member meetings, members-only dinners/socials, internal club functions, and invite-only activities."
+    "notes": "Publish only events explicitly open to the public, such as public cultural celebrations, performances, festivals, dinners, educational programs, and community events. Exclude member meetings, members-only dinners/socials, internal club functions, and invite-only activities.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-patch-fundraisers",
@@ -7826,7 +8068,8 @@
       "verified_at": "2026-09-24",
       "basis": "Current Norwood Patch pages regularly surface public calendar events and community fundraiser announcements, including Scout and nonprofit fundraisers."
     },
-    "notes": "Monitor Norwood Patch local news, Community Corner/Neighbor News and calendar mentions for upcoming public fundraisers. Prefer the organizer's own event page as the final link when one is available."
+    "notes": "Monitor Norwood Patch local news, Community Corner/Neighbor News and calendar mentions for upcoming public fundraisers. Prefer the organizer's own event page as the final link when one is available.",
+    "conflict_profile": "optional"
   },
   {
     "id": "wicked-local-norwood-archive",
@@ -7861,7 +8104,8 @@
       "verified_at": "2026-09-24",
       "basis": "Wicked Local archive includes the Norwood Transcript & Bulletin collection; useful mainly for historical and occasional fundraiser discovery rather than dependable current event ingestion."
     },
-    "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source."
+    "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
+    "conflict_profile": "optional"
   },
   {
     "id": "league-women-voters-norwood",
@@ -7895,7 +8139,8 @@
       "verified_at": "2026-09-24",
       "basis": "Official local League site reviewed; publishes Candidates Night, voter education, registration and public civic forums."
     },
-    "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing."
+    "notes": "Monitor public candidate forums/Candidates Night, voter-registration activities, election-information sessions and public educational/civic programs. Exclude internal board/member meetings. Keep Norwood.ma listings neutral and descriptive; do not reproduce advocacy framing.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-district",
@@ -7929,7 +8174,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-nhs",
@@ -7963,7 +8209,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-coakley",
@@ -7997,7 +8244,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-balch",
@@ -8031,7 +8279,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-callahan",
@@ -8065,7 +8314,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-cleveland",
@@ -8099,7 +8349,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-oldham",
@@ -8133,7 +8384,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-prescott",
@@ -8167,7 +8419,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "nps-willett",
@@ -8201,7 +8454,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "recovery-aa",
@@ -8234,7 +8488,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "recovery-na",
@@ -8267,7 +8522,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-little-league",
@@ -8300,7 +8556,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-youth-softball",
@@ -8333,7 +8590,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "norwood-rec-sports",
@@ -8366,7 +8624,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "skating-club-calendar",
@@ -8399,7 +8658,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "faith-temple-sinai-sharon",
@@ -8432,7 +8692,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "faith-temple-beth-david-westwood",
@@ -8465,7 +8726,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "faith-icne-sharon",
@@ -8498,7 +8760,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "faith-shree-hari-dham",
@@ -8531,7 +8794,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "recovery-alanon",
@@ -8564,7 +8828,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "recovery-smart",
@@ -8597,7 +8862,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "parents-cfce",
@@ -8630,7 +8896,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "arts-millforge",
@@ -8663,7 +8930,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "arts-luke-adams",
@@ -8696,7 +8964,8 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   },
   {
     "id": "fitness-rec",
@@ -8729,6 +8998,7 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default."
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "conflict_profile": "optional"
   }
 ]
