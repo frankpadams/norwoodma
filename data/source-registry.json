@@ -4162,7 +4162,7 @@
       "events"
     ],
     "active_monitor": true,
-    "monitor_priority": 2,
+    "monitor_priority": 1,
     "ingestion": {
       "method": "discovery_search",
       "automation": "preferred"
