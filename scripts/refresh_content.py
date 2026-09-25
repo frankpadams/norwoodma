@@ -349,7 +349,24 @@ def events_from_tribe(source):
     base=f"{urlparse(source['url']).scheme}://{urlparse(source['url']).netloc}"
     start=now_local().date().isoformat(); end=(now_local().date()+timedelta(days=180)).isoformat()
     api=f"{base}/wp-json/tribe/events/v1/events?start_date={start}&end_date={end}&per_page=100"
-    j=request(api).json(); out=[]
+    out=[]
+    try:
+        r=request(api); j=r.json()
+    except Exception:
+        # Tribe sites often expose a public iCal endpoint even when the REST API is blocked.
+        for feed in [source.get('ingestion',{}).get('feed_url'), source.get('url').rstrip('/')+'/?ical=1', base+'/events/?ical=1']:
+            if not feed: continue
+            try:
+                rows=events_from_ical(feed,source)
+                if rows: return dedupe_events(rows)
+            except Exception: pass
+        # Last fallback: parse structured event data from the public listing page.
+        html=request(source.get('url')).text
+        extracted,feeds=extract_jsonld_events(html,source)
+        for feed in feeds:
+            try: extracted.extend(events_from_ical(feed,source))
+            except Exception: pass
+        return dedupe_events(extracted)
     for x in j.get('events',[]):
         title=clean_text(x.get('title')); st=parse_dt(x.get('start_date')); en=parse_dt(x.get('end_date'))
         if not title or not st: continue
@@ -1020,6 +1037,7 @@ def refresh_events(offline=False):
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
                 elif method=='tribe_events': got=events_from_tribe(src)
                 elif method=='schoolnow_calendar': got=events_from_schoolnow(src)
+                elif method=='arbiterlive_schedule': got=events_from_secondary_listing(src)
                 elif method=='pma_calendar_hub': got=events_from_pma_hub(src)
                 elif method=='multi_source_calendar': got=events_from_multi_source_calendar(src)
                 elif method=='newsletter_calendar': got=events_from_newsletter_index(src)
