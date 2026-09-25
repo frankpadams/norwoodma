@@ -78,7 +78,7 @@ const staticPlaces=[
  {name:'Hawes Recreation Area',category:'athletic',also:['park'],address:'1305 Washington St, Norwood, MA 02062',details:'Pool · spray park · playground · tennis · fishing · trails',url:'parks-trails.html'},
  {name:'Father Mac’s / Father McAleer Recreation Area',category:'athletic',also:['park'],address:'295 Vernon St, Norwood, MA 02062',details:'Pool · playground · Little League baseball · soccer',url:'parks-trails.html'},
  {name:'Doherty Park / Doherty Field',category:'athletic',also:['park'],address:'Brewster Dr, Norwood, MA 02062',details:'Playground · Little League baseball',url:'parks-trails.html'},
- {name:'Ellis Playground & Fields',category:'athletic',also:['park'],address:'Codman St at Cameron Rd, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
+ {name:'Ellis Playground & Fields',category:'athletic',also:['park'],address:'Ellis Playground, Codman Road, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
  {name:'Murphy Park & Playground',category:'athletic',also:['park'],address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League baseball · basketball · walking connection',url:'parks-trails.html'},
  {name:'Morrill Memorial Library',category:'culture',also:['civic','historic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
  {name:'The Norwood Theatre',category:'culture',also:['historic'],address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Restored 1927 theatre · live music · theatre · comedy · films',url:'things.html'},
