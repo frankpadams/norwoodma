@@ -6130,7 +6130,7 @@
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodmalacrosse.com/",
+    "url": "https://norwoodmalacrosse.com/2026-season",
     "domain": "norwoodmalacrosse.com",
     "produces": [
       "resources"
@@ -6142,8 +6142,17 @@
     "active_monitor": false,
     "monitor_priority": 5,
     "ingestion": {
-      "method": "manual_or_discovery",
-      "automation": "passive"
+      "method": "season_schedule_page",
+      "automation": "preferred",
+      "season_url": "https://norwoodmalacrosse.com/2026-season",
+      "preserve": [
+        "program",
+        "grade_band",
+        "classic_select",
+        "practice_game",
+        "location"
+      ],
+      "derive_recurring_practices": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6151,12 +6160,20 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review for v0.11.6 youth resource expansion"
+      "status": "verified_structured_season_schedule",
+      "verified_at": "2026-09-25",
+      "basis": "Official 2026 Season page publishes dated preseason practices, recurring spring practice patterns, Classic game dates and Select game dates."
     },
-    "notes": "Youth resource/source seed. Participant-only practices, games and routine classes are not automatically eligible for What’s Happening.",
-    "conflict_profile": "optional"
+    "notes": "Parse the official season page as structured schedule data. Generate dated preseason sessions and league game dates; recurring spring practices may be derived from published weekday/grade/location rules and marked derived so later source changes can replace them.",
+    "conflict_profile": "optional",
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "winter_preseason",
+        "spring"
+      ]
+    }
   },
   {
     "id": "resource-norwood-youth-soccer",
