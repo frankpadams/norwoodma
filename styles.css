@@ -1,1 +1,4 @@
 @import url("https://cdn.jsdelivr.net/gh/frankpadams/norwoodma@906ecb4192e2825fa1d6dc7cbdb9e394e17ad954/styles.css");
+
+/* Sitewide title casing for UI headings and labels. Preserve body copy, descriptions and form inputs. */
+h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.box-title,.outdoor-list-heading,summary b,button:not(.sentence-case),.btn,.button,.chip,.pill,.tag,.filter-label,.amenity-options label,.outdoor-quicklinks a,.text-link,.back-to-things{ text-transform:capitalize; }
