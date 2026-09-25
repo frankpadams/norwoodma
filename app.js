@@ -276,7 +276,7 @@ function renderEventsPage(items){
   const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['weekend','This weekend'],['next','Next few days'],['save','Save the date']];
   host.innerHTML=sections.filter(([k])=>g[k].length).map(([k,label])=>`<section class="event-period ${k==='save'?'save-date':''}"><div class="event-period-head"><p class="eyebrow">${esc(monthDayRange(g[k]))}</p><h2>${label}</h2></div><div class="event-list">${g[k].map(eventRow).join('')}</div></section>`).join('')||'<section class="event-period"><p>No upcoming public events match this search.</p></section>';
  }
- const st=$('#eventsStatus');if(st)st.textContent=`${items.length} upcoming/current events · refreshed every two hours`;
+ const st=$('#eventsStatus');if(st)st.textContent='';
 }
 function renderHomeEvents(items){const host=$('#homeEvents');if(!host)return;const ranked=diversifySameDayEvents(items.slice());const limit=window.matchMedia('(max-width:850px)').matches?5:7;host.innerHTML=ranked.slice(0,limit).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';}
 async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();allEventsForPage=items;renderEventsPage(items);renderHomeEvents(items);
