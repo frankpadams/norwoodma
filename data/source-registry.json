@@ -4058,8 +4058,24 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "pma_calendar_hub",
+      "automation": "preferred",
+      "hub_url": "https://norwoodpma.org/calendar/",
+      "child_calendars": [
+        {
+          "name": "High School Fine Arts",
+          "discover_from_hub": true
+        },
+        {
+          "name": "Middle School Fine Arts",
+          "discover_from_hub": true
+        },
+        {
+          "name": "Elementary Schools Fine Arts",
+          "url": "https://norwoodpma.org/elementary-calendar/"
+        }
+      ],
+      "include_schedule_posts": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -4067,11 +4083,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-24",
-      "basis": "Official Norwood PMA site has a dedicated calendar page with upcoming music events and links to school fine-arts/marching-band schedules."
+      "status": "adapter_needed_verified_calendar_hub",
+      "verified_at": "2026-09-25",
+      "basis": "PMA Calendar page exposes separate Google School Calendars for High School, Middle School and Elementary Fine Arts plus schedule posts."
     },
-    "notes": "Primary PMA/fine-arts source. Publish public NHS concerts, marching-band performances/home show, drama, art exhibits, Fine Arts Festival and related performances. Filter internal/private rehearsals and member-only activities.",
+    "notes": "Treat PMA Calendar as a calendar hub, not a generic HTML page. Adapter should discover embedded Google calendar URLs/IDs and ingest each school-level Fine Arts calendar; also ingest public Schedule-category posts. Preserve school/ensemble metadata.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
