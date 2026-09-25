@@ -203,7 +203,7 @@ def category_from(text):
 
 def request(url, *, timeout=18):
     if not requests: raise RuntimeError('network dependencies unavailable')
-    r=requests.get(url,headers={'User-Agent':UA,'Accept':'text/html,application/json,application/rss+xml,application/xml;q=0.9,*/*;q=0.8'},timeout=timeout)
+    kwargs={'headers':{'User-Agent':UA,'Accept':'text/html,application/json,application/rss+xml,application/xml;q=0.9,*/*;q=0.8'},'timeout':timeout}\n    # The NPS SchoolNow host currently serves a certificate chain that GitHub-hosted\n    # runners do not validate reliably. Scope the compatibility exception to this\n    # one public host; never weaken TLS verification globally.\n    if urlparse(url).hostname=='www.norwood.k12.ma.us': kwargs['verify']=False\n    r=requests.get(url,**kwargs)
     r.raise_for_status(); return r
 
 def walk_jsonld(obj):
@@ -1016,13 +1016,13 @@ def refresh_events(offline=False):
                 elif method=='ncm_school_broadcasts': got=events_from_ncm_school_broadcasts(src)
                 elif method=='community_submission_json': got=events_from_community_submission_feed(src)
                 elif method=='recurring_service_schedule' and src.get('id')=='norwood-food-pantry-hours': got=events_from_norwood_food_pantry(src)
-                elif method=='tribe_events': got=events_from_tribe(src)
+                elif method=='tribe_events': got=events_from_tribe(src)\n                elif method=='schoolnow_calendar': got=events_from_schoolnow(src)\n                elif method=='assabet_calendar': got=events_from_assabet(src)\n                elif method=='assabet_filtered_calendar': got=events_from_assabet(src)\n                elif method=='myrec_facility_calendar': got=events_from_myrec_facilities(src)
                 elif method=='ical':
                     feed=src.get('ingestion',{}).get('feed_url')
                     if not feed and src.get('id')=='nps-district-ical': feed='https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics'
                     if feed: got=events_from_ical(feed,src)
                     else: note='no direct feed_url configured'
-                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','local_town_pages_calendar','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule'}:
+                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','clubrunner_calendar','league_schedule_table','local_town_pages_calendar' ,'multi_source_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule'}:
                     ing=src.get('ingestion',{})
                     # Common adapter metadata uses several URL field names. Feed all
                     # public page URLs through the conservative Event/ICS discovery
