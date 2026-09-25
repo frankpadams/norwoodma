@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T11:52:09.629800-04:00",
+  "generated_at": "2026-09-25T11:55:24.334695-04:00",
   "offline": false,
-  "events_published": 437,
+  "events_published": 435,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 437,
-      "generated_at": "2026-09-25T11:52:09.617741-04:00"
+      "events": 435,
+      "generated_at": "2026-09-25T11:55:24.318850-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 80,
-      "generated_at": "2026-09-25T11:52:09.619767-04:00"
+      "generated_at": "2026-09-25T11:55:24.321424-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 125,
-      "generated_at": "2026-09-25T11:52:09.622309-04:00"
+      "generated_at": "2026-09-25T11:55:24.325089-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 23,
-      "generated_at": "2026-09-25T11:52:09.623998-04:00"
+      "events": 22,
+      "generated_at": "2026-09-25T11:55:24.327341-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T11:52:09.625344-04:00"
+      "generated_at": "2026-09-25T11:55:24.329182-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 19,
-      "generated_at": "2026-09-25T11:52:09.627329-04:00"
+      "events": 18,
+      "generated_at": "2026-09-25T11:55:24.331384-04:00"
     }
   ],
   "event_sources": [
@@ -121,17 +121,17 @@
     },
     {
       "source_id": "friends-center-blog",
-      "ok": false,
+      "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwoodcenter.org', port=443): Max retries exceeded with url: /blog/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.norwoodcenter.org', por"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "friends-center-events",
-      "ok": false,
+      "ok": true,
       "method": "tribe_events",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwoodcenter.org', port=443): Max retries exceeded with url: /events/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.norwoodcenter.org', p"
+      "note": ""
     },
     {
       "source_id": "grace-calendar",
@@ -184,17 +184,17 @@
     },
     {
       "source_id": "library-home",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='norwoodlibrary.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodlibrary.org', port=443) at 0"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "nrrc-events",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.nrrchamber.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nrrchamber.com', port=443) at 0"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "resource-neponset-valley-sunrise-rotary-club",
@@ -394,10 +394,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": true,
+      "ok": false,
       "method": "community_submission_json",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='script.google.com', port=443): Read timed out. (read timeout=18)"
     },
     {
       "source_id": "nps-oldham-pto",
@@ -856,10 +856,10 @@
     },
     {
       "source_id": "factory52-events",
-      "ok": false,
+      "ok": true,
       "method": "tribe_events",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.factory52.com', port=443): Max retries exceeded with url: /calendar-events/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.factory52.com', "
+      "note": ""
     },
     {
       "source_id": "lifeworks-events",
@@ -904,7 +904,7 @@
       "ok": false,
       "found": 0,
       "method": "rss",
-      "note": "HTTPSConnectionPool(host='www.norwoodcenter.org', port=443): Max retries exceeded with url: /feed/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.norwoodcenter.org', por"
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
