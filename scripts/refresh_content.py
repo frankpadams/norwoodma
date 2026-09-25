@@ -736,6 +736,23 @@ def events_from_home_depot_kids_workshops(source):
 
 
 
+
+def events_from_secondary_listing(source):
+    """Extract only concrete dated occurrences from a configured secondary community listing."""
+    ing=source.get('ingestion',{}); url=ing.get('discovery_url') or source.get('url'); html=request(url).text
+    if not BeautifulSoup:return []
+    soup=BeautifulSoup(html,'html.parser'); terms=[str(x).lower() for x in ing.get('match',[])]
+    out=[]
+    for node in soup.find_all(['article','li','tr','p','div']):
+        text=clean_text(node.get_text(' '))
+        if not text or not any(t in text.lower() for t in terms): continue
+        d=_date_from_text(text)
+        if not d: continue
+        tm=_time_from_text(text); title=next((x for x in ing.get('match',[]) if str(x).lower() in text.lower()),source.get('name'))
+        ds=d.isoformat()
+        out.append({'id':event_id(title,ds,None),'title':source.get('name') or title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'secondary_dated_listing','notes':'Concrete dated occurrence found in configured community listing.','discovered_by':'secondary_recurring_discovery'})
+    return dedupe_events(out)
+
 def events_from_clubrunner(source):
     """Discover ClubRunner calendar subscription feeds and structured events."""
     url=source.get('ingestion',{}).get('calendar_url') or source.get('url')
@@ -932,7 +949,8 @@ def refresh_events(offline=False):
         for src in [x for x in registry if x.get('active_monitor') and event_outputs.intersection(x.get('produces',[]))]:
             method=src.get('ingestion',{}).get('method'); got=[]; note=''
             try:
-                if method=='clubrunner_calendar': got=events_from_clubrunner(src)
+                if method=='secondary_recurring_discovery': got=events_from_secondary_listing(src)
+                elif method=='clubrunner_calendar': got=events_from_clubrunner(src)
                 elif method=='recurring_org_schedule': got=recurring_candidates(src)
                 elif method in {'league_schedule_table','sportsconnect_schedule'}: got=events_from_league_schedule(src)
                 elif method=='pma_calendar_hub': got=events_from_pma_hub(src)
