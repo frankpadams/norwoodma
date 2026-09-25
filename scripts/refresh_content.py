@@ -769,6 +769,55 @@ def refresh_events(offline=False):
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     return events,status
 
+def usable_news_image(url, base_url=''):
+    """Return an absolute http(s) image URL, rejecting tiny/data/icon assets."""
+    url=clean_text(url)
+    if not url or url.startswith(('data:','blob:')): return None
+    url=urljoin(base_url,url)
+    if not url.startswith(('http://','https://')): return None
+    low=url.lower()
+    if re.search(r'(favicon|logo|sprite|avatar|icon)(?:[._/-]|$)',low): return None
+    return url
+
+def image_from_soup(soup, base_url=''):
+    """Prefer publisher social/article metadata, then article JSON-LD imagery."""
+    if not soup: return None
+    for attrs in ({'property':'og:image'},{'property':'og:image:url'},{'name':'twitter:image'},{'name':'twitter:image:src'}):
+        tag=soup.find('meta',attrs=attrs)
+        img=usable_news_image(tag.get('content') if tag else '',base_url)
+        if img: return img
+    for tag in soup.find_all('script',attrs={'type':'application/ld+json'}):
+        try: payload=json.loads(tag.string or tag.get_text() or '{}')
+        except Exception: continue
+        for o in walk_jsonld(payload):
+            if not isinstance(o,dict): continue
+            raw=o.get('image')
+            candidates=raw if isinstance(raw,list) else [raw]
+            for candidate in candidates:
+                if isinstance(candidate,dict): candidate=candidate.get('url') or candidate.get('contentUrl')
+                img=usable_news_image(candidate,base_url)
+                if img: return img
+    return None
+
+def image_from_card(card, base_url=''):
+    if not card or not hasattr(card,'find'): return None
+    img=card.find('img')
+    if not img: return None
+    raw=img.get('src') or img.get('data-src') or img.get('data-lazy-src') or img.get('data-original')
+    if not raw and img.get('srcset'):
+        raw=img.get('srcset').split(',')[-1].strip().split(' ')[0]
+    return usable_news_image(raw,base_url)
+
+def enrich_article_image(url):
+    """Fetch a direct publisher page and return its primary article/social image."""
+    if not url or 'news.google.com' in url: return None
+    try:
+        html=request(url,timeout=12).text
+        soup=BeautifulSoup(html,'html.parser') if BeautifulSoup else None
+        return image_from_soup(soup,url)
+    except Exception:
+        return None
+
 def parse_rss(xml_text, source_name):
     import xml.etree.ElementTree as ET
     out=[]
@@ -779,7 +828,21 @@ def parse_rss(xml_text, source_name):
         title=txt('title'); link=txt('link'); pub=txt('pubDate'); desc=txt('description')
         d=parse_dt(pub)
         if title and link and d:
-            out.append({'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':link,'summary':desc[:220],'localVerified':True,'discovered_by':'scheduled_rss'})
+            image=None
+            enc=item.find('enclosure')
+            if enc is not None and str(enc.get('type') or '').startswith('image/'):
+                image=usable_news_image(enc.get('url'),link)
+            if not image:
+                for child in list(item):
+                    tag=str(child.tag).lower()
+                    if tag.endswith('thumbnail') or tag.endswith('content'):
+                        candidate=child.get('url')
+                        if candidate and (tag.endswith('thumbnail') or str(child.get('medium') or '').lower()=='image' or str(child.get('type') or '').lower().startswith('image/')):
+                            image=usable_news_image(candidate,link)
+                            if image: break
+            row={'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':link,'summary':desc[:220],'localVerified':True,'discovered_by':'scheduled_rss'}
+            if image: row['image']=image
+            out.append(row)
     return out
 
 def news_from_jsonld(html, source_name, source_url):
@@ -792,7 +855,14 @@ def news_from_jsonld(html, source_name, source_url):
             typ=o.get('@type'); types=typ if isinstance(typ,list) else [typ]
             if not any(x in {'NewsArticle','Article','BlogPosting'} for x in types): continue
             title=clean_text(o.get('headline') or o.get('name')); d=parse_dt(o.get('datePublished') or o.get('dateModified')); url=o.get('url') or source_url; desc=clean_text(o.get('description'))
-            if title and d and url: out.append({'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':desc[:220],'localVerified':True,'discovered_by':'scheduled_jsonld'})
+            if title and d and url:
+                row={'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':desc[:220],'localVerified':True,'discovered_by':'scheduled_jsonld'}
+                raw=o.get('image'); candidates=raw if isinstance(raw,list) else [raw]
+                for candidate in candidates:
+                    if isinstance(candidate,dict): candidate=candidate.get('url') or candidate.get('contentUrl')
+                    image=usable_news_image(candidate,url)
+                    if image: row['image']=image; break
+                out.append(row)
     return out
 
 def news_from_html_cards(html, source_name, source_url):
@@ -810,7 +880,10 @@ def news_from_html_cards(html, source_name, source_url):
         url=urljoin(source_url,a.get('href')); desc=''
         p=card.find('p')
         if p: desc=clean_text(p.get_text(' '))[:220]
-        out.append({'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':desc,'localVerified':True,'discovered_by':'scheduled_semantic_html'})
+        row={'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':desc,'localVerified':True,'discovered_by':'scheduled_semantic_html'}
+        image=image_from_card(card,source_url)
+        if image: row['image']=image
+        out.append(row)
     return out
 
 def news_from_visible_cards(html, source_name, source_url):
@@ -837,7 +910,10 @@ def news_from_visible_cards(html, source_name, source_url):
         summary=''
         ptag=card.find('p') if hasattr(card,'find') else None
         if ptag: summary=clean_text(ptag.get_text(' '))[:220]
-        out.append({'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':summary,'localVerified':True,'discovered_by':'scheduled_visible_date'})
+        row={'source':source_name,'title':title,'date':d.astimezone(TZ).isoformat(),'url':url,'summary':summary,'localVerified':True,'discovered_by':'scheduled_visible_date'}
+        image=image_from_card(card,source_url)
+        if image: row['image']=image
+        out.append(row)
     return out
 
 def news_from_link_dates(html, source_name, source_url):
@@ -864,7 +940,10 @@ def news_from_link_dates(html, source_name, source_url):
         clean_title=textual.sub('',title,count=1).strip(' ·-|:')
         clean_title=numeric.sub('',clean_title,count=1).strip(' ·-|:')
         if len(clean_title)<8: continue
-        out.append({'source':source_name,'title':clean_title,'date':d.astimezone(TZ).isoformat(),'url':href,'summary':'','localVerified':True,'discovered_by':'scheduled_link_date'})
+        row={'source':source_name,'title':clean_title,'date':d.astimezone(TZ).isoformat(),'url':href,'summary':'','localVerified':True,'discovered_by':'scheduled_link_date'}
+        image=image_from_card(a.parent if a.parent else a,source_url)
+        if image: row['image']=image
+        out.append(row)
     return out
 
 def summarize_article(url, fallback=''):
@@ -932,6 +1011,7 @@ def dedupe_news(items):
         if 'news.google.com' not in u: v+=4
         if x.get('discovered_by')=='seed_web_verified': v+=3
         if x.get('summary'): v+=1
+        if x.get('image'): v+=1
         if x.get('source')=='The Norwood Record': v+=1
         return v
     def same_story(a,b):
@@ -1026,6 +1106,10 @@ def refresh_news(offline=False):
             x['summary']=summarize_article(x.get('url'), '')
         elif len(s)<70 and 'news.google.com' not in x.get('url',''):
             x['summary']=summarize_article(x.get('url'), s)
+        # Backfill thumbnails for existing direct-publisher stories as well as new ones.
+        if not x.get('image') and 'news.google.com' not in x.get('url',''):
+            image=enrich_article_image(x.get('url'))
+            if image: x['image']=image
     
     source_counts={}
     for x in items: source_counts[x.get('source','Unknown')]=source_counts.get(x.get('source','Unknown'),0)+1
