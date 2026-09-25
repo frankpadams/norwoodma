@@ -2893,8 +2893,12 @@
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "town_department_event_discovery",
+      "automation": "preferred",
+      "department_url": "https://www.norwoodma.gov/departments/conservation/index.php",
+      "discover_dated_notices": true,
+      "discover_calendar_links": true,
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -2906,8 +2910,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch nature walks, cleanups, trail events, public environmental programming.",
-    "conflict_profile": "optional"
+    "notes": "Watch nature walks, cleanups, trail events, public environmental programming. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-coordinated-family-and-community-engagement",
@@ -3055,8 +3066,12 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "town_department_event_discovery",
+      "automation": "preferred",
+      "department_url": "https://massculturalcouncil.org/local-council/norwood/",
+      "discover_dated_notices": true,
+      "discover_calendar_links": true,
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3068,8 +3083,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Useful for grant-supported public arts/cultural programming.",
-    "conflict_profile": "optional"
+    "notes": "Useful for grant-supported public arts/cultural programming. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-elections-and-voting",
@@ -3291,8 +3313,12 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "town_department_event_discovery",
+      "automation": "preferred",
+      "department_url": "https://www.norwoodma.gov/departments/fire/index.php",
+      "discover_dated_notices": true,
+      "discover_calendar_links": true,
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3304,8 +3330,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch for open houses, fire-prevention week, community safety events and notices.",
-    "conflict_profile": "optional"
+    "notes": "Watch for open houses, fire-prevention week, community safety events and notices. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "food-pantry",
@@ -4369,8 +4402,12 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "town_department_event_discovery",
+      "automation": "preferred",
+      "department_url": "https://www.norwoodma.gov/departments/police/index.php",
+      "discover_dated_notices": true,
+      "discover_calendar_links": true,
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -4382,8 +4419,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch for National Night Out, community outreach, safety events and public notices.",
-    "conflict_profile": "optional"
+    "notes": "Watch for National Night Out, community outreach, safety events and public notices. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-public-records",
@@ -5999,8 +6043,12 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "discovery_search",
-      "automation": "possible"
+      "method": "town_department_event_discovery",
+      "automation": "preferred",
+      "department_url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
+      "discover_dated_notices": true,
+      "discover_calendar_links": true,
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6012,8 +6060,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Watch Memorial Day, Veterans Day and public veteran/community observances.",
-    "conflict_profile": "optional"
+    "notes": "Watch Memorial Day, Veterans Day and public veteran/community observances. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "norwood-veterans-services",
