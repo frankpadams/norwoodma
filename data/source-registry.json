@@ -8563,11 +8563,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
+      "status": "adapter_needed",
       "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "basis": "Official schedule page exposes structured dated game rows, but generic HTML calendar ingestion is insufficient."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Official Posted Schedules page exposes Program, Division, Schedule and Team selectors plus dated game rows. Build a dedicated schedule-table adapter so current program/division/team events enter the master dataset.",
     "conflict_profile": "optional"
   },
   {
