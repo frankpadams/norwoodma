@@ -110,7 +110,7 @@ function renderNews(items){
  const health=$('#feedHealth'); if(health)health.textContent=selected.length?`Local news from the past ${selectedDays} days · ${selected.length} verified stor${selected.length===1?'y':'ies'}`:'No verified local news is currently available';
  if(!selected.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article>';return;}
  const visibleItems=isHome?selected.slice(0,20):selected.slice(0,60), initialHome=9;
- feed.innerHTML=visibleItems.map((x,i)=>`<article class="${isHome && i>=initialHome?'news-extra':''}"><a href="${esc(x.url)}" target="_blank" rel="noopener"><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original article for details.')}</p></a></article>`).join('');
+ feed.innerHTML=visibleItems.map((x,i)=>{const image=!isHome&&(x.image||x.thumbnail||x.image_url||x.imageUrl);const thumb=image?`<img class="news-thumb" src="${esc(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();this.closest('article')?.classList.remove('has-thumb')">`:'';return `<article class="${isHome && i>=initialHome?'news-extra':''}${image?' has-thumb':''}">${thumb}<a href="${esc(x.url)}" target="_blank" rel="noopener"><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original article for details.')}</p></a></article>`;}).join('');
  const btn=$('#moreNews'); if(btn)btn.hidden=!isHome||selected.length<=initialHome;
 }
 async function news(){
