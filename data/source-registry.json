@@ -3244,7 +3244,7 @@
       "sports_events"
     ],
     "active_monitor": true,
-    "monitor_priority": 4,
+    "monitor_priority": 1,
     "ingestion": {
       "method": "html_calendar",
       "automation": "possible"
@@ -3256,10 +3256,10 @@
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "verified_at": "2026-09-25",
+      "basis": "Official NHS Athletics page links schedules/scores/standings; configured for public varsity-event ingestion."
     },
-    "notes": "Only publish spectator-relevant varsity/community events; avoid routine practices/registration notices."
+    "notes": "Publish public spectator-relevant Norwood High varsity games, meets, matches, tournaments and major invitationals, home or away. Exclude practices, routine team meetings, registration notices, JV/freshman-only events, and results-only items."
   },
   {
     "id": "nps-nhs-calendar",
@@ -3277,7 +3277,7 @@
       "school_events"
     ],
     "active_monitor": true,
-    "monitor_priority": 2,
+    "monitor_priority": 1,
     "ingestion": {
       "method": "html_calendar",
       "automation": "preferred"
@@ -3289,10 +3289,10 @@
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "verified_at": "2026-09-25",
+      "basis": "Official NHS calendar confirmed; promoted as a primary public high-school event source."
     },
-    "notes": "Watch public plays, concerts, fairs, open houses and community-accessible events."
+    "notes": "Publish genuinely public/community-accessible NHS events, especially plays, concerts, fine-arts performances/exhibits, fairs, open houses and public presentations; exclude routine internal school operations."
   },
   {
     "id": "resource-norwood-high-school-alumni-association",
@@ -3923,7 +3923,7 @@
       "verified_at": "2026-09-24",
       "basis": "Official Norwood PMA site has a dedicated calendar page with upcoming music events and links to school fine-arts/marching-band schedules."
     },
-    "notes": "Primary PMA calendar source for public Norwood music events, including marching band performances, concerts, competitions/home show, and related fine-arts events. Prefer this dedicated calendar over general site discovery; filter out internal/private rehearsals and member-only activities."
+    "notes": "Primary PMA/fine-arts source. Publish public NHS concerts, marching-band performances/home show, drama, art exhibits, Fine Arts Festival and related performances. Filter internal/private rehearsals and member-only activities."
   },
   {
     "id": "resource-norwood-parent-music-association",
