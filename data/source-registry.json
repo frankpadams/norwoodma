@@ -9973,5 +9973,102 @@
     },
     "conflict_profile": "optional",
     "notes": "Until a reliable first-party public calendar is found, ingest only concrete dated public KofC events from trusted Norwood calendar sources and deduplicate across them."
+  },
+  {
+    "id": "norwood-junior-womans-club",
+    "name": "Norwood Junior Woman's Club",
+    "url": "https://norwoodjwc.org/",
+    "active_monitor": true,
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "multi_source_org_discovery",
+      "automation": "preferred",
+      "primary_url": "https://norwoodjwc.org/",
+      "secondary_urls": [
+        "https://www.norwoodtownnews.com/calendar"
+      ],
+      "match": [
+        "Norwood Junior Woman's Club",
+        "Norwood Junior Women’s Club",
+        "NJWC"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "public_access",
+        "fundraiser"
+      ]
+    },
+    "verification": {
+      "status": "verified_recurring_secondary_source",
+      "verified_at": "2026-09-25",
+      "basis": "Current 2026 Local Town Pages calendars list the club's monthly second-Wednesday meetings and public/community activities."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Use first-party site when it exposes dated events; supplement with current Norwood calendar listings. Do not extrapolate meetings indefinitely; ingest concrete dates and public fundraisers/community events."
+  },
+  {
+    "id": "circle-of-hope-events",
+    "name": "Norwood Circle of Hope Events",
+    "url": "https://norwoodcoh.org/",
+    "active_monitor": true,
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "seasonal_org_event_discovery",
+      "automation": "preferred",
+      "primary_url": "https://norwoodcoh.org/",
+      "secondary_urls": [
+        "https://www.norwoodrecord.com/",
+        "https://www.norwoodtownnews.com/calendar"
+      ],
+      "match": [
+        "Circle of Hope",
+        "luminary",
+        "luminaries"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "venue",
+        "fundraiser",
+        "public_access"
+      ]
+    },
+    "seasonality": {
+      "seasonal": true,
+      "zero_events_offseason_is_healthy": true,
+      "seasons": [
+        "year_round_with_holiday_peak"
+      ]
+    },
+    "verification": {
+      "status": "verified_recurring_community_event",
+      "verified_at": "2026-09-25",
+      "basis": "Norwood Record documents the annual Circle of Hope Town Common luminary event and directs readers to the organization's website."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "default",
+    "notes": "Monitor for concrete dated public fundraisers/events, especially the annual Town Common luminary event. No current event outside fundraising/holiday periods is healthy."
   }
 ]
