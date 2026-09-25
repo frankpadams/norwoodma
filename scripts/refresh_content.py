@@ -978,8 +978,22 @@ def events_from_myrec_facilities(source):
         href=urljoin(root,a['href'])
         if 'area_info.aspx' in href and href not in links:
             links.append(href)
+        elif ('facilities/details.aspx' in href or 'facility_details' in href.lower()) and href not in links:
+            # Facility index pages often lead to a facility detail page first; follow it below.
+            links.append(href)
+    # Expand facility detail pages into their individual reservable areas.
+    expanded=[]
+    for u in links[:80]:
+        if 'area_info.aspx' in u:
+            expanded.append(u); continue
+        try:
+            fs=BeautifulSoup(request(u).text,'html.parser')
+            for a in fs.find_all('a',href=True):
+                href=urljoin(u,a['href'])
+                if 'area_info.aspx' in href and href not in expanded: expanded.append(href)
+        except Exception: pass
     out=[]
-    for url in links[:80]:
+    for url in expanded[:160]:
         try:
             page=request(url).text
             ps=BeautifulSoup(page,'html.parser')
@@ -996,7 +1010,7 @@ def events_from_myrec_facilities(source):
             cells=[clean_text(x.get_text(' ')) for x in tr.find_all(['td','th'])]
             if len(cells)<3: continue
             row=' | '.join(cells)
-            dm=re.search(r'\\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s+([A-Z][a-z]+\\s+\\d{1,2},\\s+20\\d{2})\\b',row)
+            dm=re.search(r'\\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s+([A-Z][a-z]+\\s+\\d{1,2},?\\s+20\\d{2})\\b',row)
             if not dm: continue
             d=parse_dt(dm.group(1))
             if not d: continue
