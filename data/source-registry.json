@@ -1867,8 +1867,17 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "assabet_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://norwoodlibrary.assabetinteractive.com/calendar/",
+      "preserve": [
+        "age_group",
+        "room",
+        "registration",
+        "virtual",
+        "off_site"
+      ],
+      "month_discovery": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -1876,12 +1885,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Official Assabet calendar publishes structured dated events with times, rooms/off-site locations and registration status."
     },
     "notes": "Very high-yield structured calendar. Filter recurring virtual statewide items if not specifically useful to Norwood residents.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-morrill-memorial-library-local-history",
@@ -3589,7 +3605,14 @@
     "monitor_priority": 2,
     "ingestion": {
       "method": "tribe_events",
-      "automation": "preferred"
+      "automation": "preferred",
+      "calendar_url": "https://norwoodhistoricalsociety.org/events/",
+      "ical_url": "https://norwoodhistoricalsociety.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "preserve": [
+        "venue",
+        "organizer",
+        "category"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3597,12 +3620,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_ical_feed",
+      "verified_at": "2026-09-25",
+      "basis": "Official Historical Society events calendar exposes a Tribe Events iCal export."
     },
     "notes": "Public exhibits, talks, tours and seasonal Day House events.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-housing-authority",
