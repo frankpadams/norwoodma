@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T19:26:03.683772-04:00",
+  "generated_at": "2026-09-25T19:49:34.549798-04:00",
   "offline": false,
-  "events_published": 768,
+  "events_published": 719,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,52 +9,52 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 768,
-      "generated_at": "2026-09-25T19:26:03.651580-04:00"
+      "events": 719,
+      "generated_at": "2026-09-25T19:49:34.522167-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 112,
-      "generated_at": "2026-09-25T19:26:03.656138-04:00"
+      "events": 86,
+      "generated_at": "2026-09-25T19:49:34.525588-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 468,
-      "generated_at": "2026-09-25T19:26:03.666173-04:00"
+      "events": 455,
+      "generated_at": "2026-09-25T19:49:34.533861-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 370,
-      "generated_at": "2026-09-25T19:26:03.673485-04:00"
+      "events": 368,
+      "generated_at": "2026-09-25T19:49:34.540545-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T19:26:03.676547-04:00"
+      "generated_at": "2026-09-25T19:49:34.543200-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 35,
-      "generated_at": "2026-09-25T19:26:03.680203-04:00"
+      "events": 16,
+      "generated_at": "2026-09-25T19:49:34.546202-04:00"
     }
   ],
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
-      "ok": false,
+      "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='massache.org', port=443): Max retries exceeded with url: /events/list/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='massache.org', port=443) at 0"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "arts-luke-adams",
@@ -93,10 +93,10 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": false,
+      "ok": true,
       "method": "community_submission_json",
-      "found": 0,
-      "note": "HTTPSConnectionPool(host='script.googleusercontent.com', port=443): Read timed out. (read timeout=18)"
+      "found": 2,
+      "note": ""
     },
     {
       "source_id": "elks-calendar",
@@ -111,13 +111,6 @@
       "method": "html_page",
       "found": 0,
       "note": "configured pages checked; no matching machine-readable Event/ICS found"
-    },
-    {
-      "source_id": "factory52-events",
-      "ok": true,
-      "method": "tribe_events",
-      "found": 50,
-      "note": ""
     },
     {
       "source_id": "faith-icne-sharon",
@@ -1003,10 +996,10 @@
     },
     {
       "source_id": "recovery-alanon",
-      "ok": false,
+      "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='al-anon.org', port=443): Max retries exceeded with url: /al-anon-meetings/find-an-al-anon-meeting/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='a"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "recovery-na",
@@ -1239,7 +1232,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 63,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1247,7 +1240,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 63,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1255,7 +1248,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 44,
+      "found": 43,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1327,14 +1320,15 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 20,
+      "found": 21,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
         "Norwood Public Schools": 2,
         "newportdispatch.com": 1,
         "WCVB": 1,
-        "The Norwood Record": 51,
+        "maxpreps.com": 2,
+        "The Norwood Record": 49,
         "The Norwood Record — Latest": 15,
         "Norwood Parents Music Association": 1,
         "Town of Norwood": 9,
