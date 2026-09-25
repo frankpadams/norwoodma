@@ -755,8 +755,11 @@ def refresh_events(offline=False):
                     else: note='no direct feed_url configured'
                 elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','local_town_pages_calendar','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule'}:
                     ing=src.get('ingestion',{})
+                    # Common adapter metadata uses several URL field names. Feed all
+                    # public page URLs through the conservative Event/ICS discovery
+                    # path so configured sources are actually checked every refresh.
                     urls=[]
-                    for candidate in [src.get('url'),ing.get('calendar_url'),ing.get('primary_url')]+list(ing.get('discovery_urls') or [])+list(ing.get('secondary_urls') or []):
+                    for candidate in [src.get('url'),ing.get('calendar_url'),ing.get('primary_url'),ing.get('root_url'),ing.get('team_directory'),ing.get('schedule_url'),ing.get('program_url'),ing.get('facility_root'),ing.get('hub_url')]+list(ing.get('discovery_urls') or [])+list(ing.get('secondary_urls') or [])+list(ing.get('sources') or [])+list(ing.get('child_calendars') or []):
                         if candidate and candidate not in urls: urls.append(candidate)
                     source_ids=ing.get('parent_source_ids') or []
                     if method=='derived_verified_series' and source_ids:
