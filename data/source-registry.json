@@ -312,7 +312,14 @@
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Strictly filter to Norwood Taproom; calendar also contains South Boston events.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-chabad-jewish-center",
@@ -1022,7 +1029,14 @@
       "basis": "Official FCC Norwood events page with dated public events and Google Calendar/ICS links"
     },
     "notes": "Publish special public/community events such as fairs, concerts, clothing giveaways, pet blessings and community programs. Do not treat routine worship or closed/internal meetings as general community events by default.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-friends-of-norwood-center",
@@ -3154,7 +3168,14 @@
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-farmers-market",
@@ -5347,8 +5368,18 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "newsletter",
-      "automation": "preferred"
+      "method": "newsletter_calendar",
+      "automation": "preferred",
+      "index_url": "https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
+      "discover_latest_document": true,
+      "extract_dated_events": true,
+      "preserve": [
+        "program",
+        "date",
+        "time",
+        "registration",
+        "recurrence"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -5360,8 +5391,15 @@
       "verified_at": "2026-09-17",
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Important for dances, bazaars, performances and intergenerational/public senior-center events.",
-    "conflict_profile": "optional"
+    "notes": "Monthly newsletter/calendar is an intermittent document source. Discover the latest issue, extract concrete dated public programs, and treat successful retrieval with no future events as healthy rather than stale.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-senior-center-council-on-aging",
@@ -6888,7 +6926,14 @@
       "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Publish special community events; suppress routine masses/devotions unless specifically relevant.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-saint-catherine-of-siena-parish",
