@@ -3534,8 +3534,8 @@
     "source_class": "calendar",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwood.k12.ma.us/nhs/athletics",
-    "domain": "norwood.k12.ma.us",
+    "url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "domain": "arbiterlive.com",
     "produces": [
       "sports_events"
     ],
@@ -3545,10 +3545,12 @@
     "active_monitor": true,
     "monitor_priority": 1,
     "ingestion": {
-      "method": "schoolnow_calendar",
+      "method": "arbiterlive_schedule",
       "automation": "preferred",
-      "calendar_name": "Athletics",
-      "calendar_root": "https://www.norwood.k12.ma.us/nhs/calendar"
+      "entity_id": "16671",
+      "official_referrer": "https://www.norwood.k12.ma.us/nhs/athletics",
+      "include_games": true,
+      "include_practices_for_conflict": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -3556,11 +3558,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "adapter_needed_verified_source",
+      "status": "verified_official_schedule_destination",
       "verified_at": "2026-09-25",
-      "basis": "Official NPS calendar UI explicitly lists Athletics as a selectable calendar; athletics department links schedules separately."
+      "basis": "NHS materials direct families to ArbiterLive entity 16671 for athletic schedules, scores and rosters; current NHS Athletics page labels its schedule destination Schedule, Scores, Standings, Rosters."
     },
-    "notes": "NPS SchoolNow calendars expose Athletics as a selectable calendar within the official calendar UI. Use a SchoolNow calendar adapter rather than assuming /nhs/athletics/calendar/feed/ical.ics exists. Include public varsity contests/major competitions; retain sport/team metadata for selector filtering.",
+    "notes": "Primary athletics schedule should come from the school-directed ArbiterLive entity. Public games belong in What's Happening; practices belong in Conflict Contraption. MaxPreps/NFHS may be used only as cross-checks.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
