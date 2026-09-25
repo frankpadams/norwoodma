@@ -778,9 +778,9 @@ def refresh_events(offline=False):
             if not src.get('health_policy',{}).get('track_last_checked'): continue
             prev=previous_health.get(sid,{})
             ok=bool(row.get('ok')); found=int(row.get('found') or 0)
-            successful=ok and (found>0 or row.get('method') in {'ical','tribe_events'})
+            # A successful HTTP/parse check with zero upcoming events is healthy, but it is not a content update.\n            successful=ok and found>0
             failures=0 if ok else int(prev.get('consecutive_failures') or 0)+1
-            last_success=checked_at if successful else prev.get('last_successful_update')
+            last_success=checked_at if successful else prev.get('last_successful_update')\n            last_healthy_check=checked_at if ok else prev.get('last_healthy_check')
             stale=False; stale_reason=None
             if failures>=3:
                 stale=True; stale_reason=f'{failures} consecutive refresh failures'
@@ -788,7 +788,7 @@ def refresh_events(offline=False):
                 d=parse_dt(last_success)
                 if d and now_local()-d.astimezone(TZ)>timedelta(days=30):
                     stale=True; stale_reason='no successful update in 30 days'
-            health.append({'source_id':sid,'last_checked':checked_at,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
+            health.append({'source_id':sid,'last_checked':checked_at,'last_healthy_check':last_healthy_check,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
         write_json('calendar-source-health.json',health)
     return events,status
 
