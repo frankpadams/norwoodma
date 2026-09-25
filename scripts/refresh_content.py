@@ -989,6 +989,63 @@ def events_from_pma_hub(source):
             except Exception: pass
     return dedupe_events(out)
 
+def events_from_miaa_committed_pdf(url, source):
+    """Extract Norwood's dated varsity opponents from an MIAA committed-schedule grid PDF.
+
+    MIAA's final commitment PDFs are generated from Arbiter. They omit some live
+    details (notably later time/location changes), so this is a fallback only.
+    """
+    if not PdfReader: return []
+    raw=request(url).content
+    reader=PdfReader(BytesIO(raw)); out=[]
+    sport='Athletics'
+    low=url.lower()
+    for key,label in [('field-hockey','Field Hockey'),('football','Football'),('fall-golf','Golf'),
+                      ('boys-soccer','Boys Soccer'),('girls-soccer','Girls Soccer'),
+                      ('fall-volleyball','Girls Volleyball')]:
+        if key in low: sport=label; break
+    for page in reader.pages:
+        try: text=page.extract_text(extraction_mode='layout') or ''
+        except TypeError: text=page.extract_text() or ''
+        lines=text.splitlines()
+        # In the four-column MIAA grid, locate the horizontal span belonging to
+        # the Norwood heading, then read only date/opponent pairs in that column.
+        header_i=None; start_col=None; end_col=None
+        for i,line in enumerate(lines):
+            pos=line.find('Norwood High School')
+            if pos>=0:
+                header_i=i; start_col=pos
+                # Estimate this grid column's right edge from the next school heading.
+                tail=line[pos+len('Norwood High School'):]
+                m=re.search(r'\s{2,}\S',tail)
+                end_col=(pos+len('Norwood High School')+m.start()+2) if m else pos+38
+                break
+        if header_i is None: continue
+        # Schedule rows normally precede or follow the heading depending on the
+        # page break. Scan the whole page but only the Norwood column slice.
+        for line in lines:
+            seg=line[start_col:max(end_col,start_col+28)]
+            m=re.search(r'(?<!\d)(\d{1,2})/(\d{1,2})\s+(.+)',seg)
+            if not m: continue
+            month,day=int(m.group(1)),int(m.group(2))
+            opponent=clean_text(re.split(r'\s{2,}',m.group(3))[0]).strip(' #!^')
+            if not opponent or opponent.lower() in {'tba','(tba)'}: continue
+            try: d=date(2026,month,day)
+            except ValueError: continue
+            ds=d.isoformat(); title=f"Norwood {sport} vs. {opponent}"
+            out.append({
+              'id':event_id(title,ds,'Norwood High School Athletics'),
+              'title':title,'start':{'date':ds,'time':None},'end':{'date':ds,'time':None},
+              'venue':'Norwood High School Athletics','address':None,'category':'sports',
+              'source_id':source['id'],'source_url':url,'cost':None,
+              'organizer':'Norwood High School Athletics','public_access':'public',
+              'series':'Norwood High School Athletics','publish_candidate':True,
+              'verification_status':'official_committed_schedule',
+              'notes':'MIAA final committed schedule; check the live athletics schedule for time, location, and late changes.',
+              'discovered_by':'miaa_committed_schedule'
+            })
+    return dedupe_events(out)
+
 def events_from_arbiterlive(source):
     """Extract Norwood athletic contests from the school-directed ArbiterLive entity page."""
     url=source.get('url'); html=request(url).text
@@ -1014,16 +1071,19 @@ def events_from_arbiterlive(source):
                     try: out.extend(events_from_ical(feed,source))
                     except Exception: pass
             except Exception: pass
-    # Prefer direct Arbiter records. Only consult MIAA when Arbiter produced nothing, preventing duplicate games.
+    # Prefer direct Arbiter records. If Arbiter is not machine-readable, use
+    # MIAA's final committed schedules (generated from Arbiter) before giving up.
     if not out:
         for fb in source.get('ingestion',{}).get('fallback_sources',[]):
-            if 'miaa.net/group/' not in str(fb): continue
             try:
-                fh=request(fb).text
-                rows,feds=extract_jsonld_events(fh,source); out.extend(rows)
-                for feed in feds[:8]:
-                    try: out.extend(events_from_ical(feed,source))
-                    except Exception: pass
+                if str(fb).lower().endswith('.pdf') and 'miaa.net/' in str(fb):
+                    out.extend(events_from_miaa_committed_pdf(fb,source))
+                elif 'miaa.net/group/' in str(fb):
+                    fh=request(fb).text
+                    rows,feds=extract_jsonld_events(fh,source); out.extend(rows)
+                    for feed in feds[:8]:
+                        try: out.extend(events_from_ical(feed,source))
+                        except Exception: pass
             except Exception: pass
     for e in out:
         e['category']='sports'; e['series']='Norwood High School Athletics'
