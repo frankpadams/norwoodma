@@ -8845,8 +8845,19 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
+      "method": "myrec_facility_calendar",
+      "automation": "preferred",
+      "facility_root": "https://norwoodma.myrec.com/info/facilities/default.aspx",
+      "discover_facilities": true,
+      "preserve": [
+        "facility",
+        "area",
+        "program",
+        "event",
+        "teams",
+        "date",
+        "time"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -8854,11 +8865,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
+      "status": "verified_structured_facility_calendar",
       "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "basis": "Official MyRec facility area pages expose structured Program/Event/Teams/Date/Time reservation rows; current Coakley fields show Fall 2026 Norwood Youth Soccer reservations."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Use MyRec facility-area reservation tables as a conflict-calendar source. Discover facilities/areas dynamically and ingest reserved blocks with facility/area/program metadata. These reservations are optional in public Events but valuable for Conflict Contraption.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
