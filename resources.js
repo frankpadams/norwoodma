@@ -13,7 +13,8 @@ const topics=[
 ['realestate','Realtors & Real Estate','Local real-estate professionals and resources for buying or selling a home. This directory will expand as additional listings are added.',['realtor','real estate','broker','home buying','home selling']],
 ['food','Food & Basic Needs','Food assistance, groceries, meals, nutrition and essential-needs support.',['food','pantry','meal','snap','wic','bread','nutrition','grocer','hunger']],
 ['health','Disability, Mental Health & Addiction','Disability, accessibility, mental-health, crisis, addiction and recovery resources.',['disability','mental','special needs','human services','crisis','autism','deaf','blind','recovery','addiction']],
-['medical','Medical & Health','Hospitals, urgent care, primary care, rehabilitation and other health-care services.',['medical','health care','healthcare','hospital','urgent care','primary care','physician','doctor','clinic','physical therapy','rehab','pharmacy','audiology','vaccin']],
+['medical','Medical & Health','Hospitals, urgent care, primary care, rehabilitation and other health-care services. Pregnancy, postpartum and lactation support is also linked in its own section.',['medical','health care','healthcare','hospital','urgent care','primary care','physician','doctor','clinic','physical therapy','rehab','pharmacy','audiology','vaccin']],
+['pregnancy','Pregnancy, Postpartum & Lactation','Prenatal and postpartum support, lactation and infant-feeding help, parent groups, classes and pregnancy-loss resources.',['pregnancy','pregnant','prenatal','perinatal','postpartum','maternity','lactation','breastfeeding','infant feeding','childbirth','doula','newborn','new parent','pregnancy loss','miscarriage','stillbirth']],
 ['dental','Dental & Orthodontics','Dentists, orthodontists and oral-health services.',['dentist','dental','orthodontist','orthodontics','oral health']],
 ['wellness','Spas, Salons & Massage','Spas, salons, massage and related personal-care and wellness services.',['spa','salon','massage','hair','wellness','halotherapy','salt room']],
 ['transport','Transportation','Bus, commuter rail, accessible transportation and local mobility.',['mbta','transit','transport','airport','rail','bus','ride','paratransit']],
@@ -62,6 +63,10 @@ function belongs(r,t){
  if(t[0]==='health'){
    const disabilityMentalAddiction=/disability|disabled|accessib|mental health|behavioral health|psychiatr|crisis|suicid|addiction|substance|recovery|alcohol|drug|autism|developmental|deaf|hard of hearing|blind|interpreter|paratransit/i;
    return disabilityMentalAddiction.test(hay);
+ }
+ if(t[0]==='pregnancy'){
+   const pregnancySupport=/pregnan|prenatal|perinatal|postpartum|maternity|lactat|breastfeed|infant feeding|childbirth|doula|newborn|new parent|miscarriage|stillbirth|pregnancy loss/i;
+   return (explicit&&r.topics.includes('pregnancy'))||pregnancySupport.test(hay);
  }
  if(t[0]==='medical'){
    const medicalHealth=/medical|health care|healthcare|hospital|urgent care|primary care|physician|doctor|clinic|physical therapy|rehab|pharmac|audiolog|hearing aid|vaccin|immuniz|nursing|home health/i;
