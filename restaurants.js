@@ -60,7 +60,7 @@
     function parseClock(v){
       const m=String(v||'').match(/^(\d{1,2}):(\d{2})$/); return m?Number(m[1])*60+Number(m[2]):null;
     }
-    function isOpenNow(r){
+    function isAvailableToday(r){
       const hours=r.hours;
       if(!hours||typeof hours!=='object') return null;
       const {day,minutes}=easternNowParts(), span=hours[day];
@@ -72,8 +72,16 @@
         if(!s||typeof s!=='string'||!s.includes('-')) continue;
         let [a,b]=s.split('-').map(parseClock); if(a===null||b===null) continue;
         known=true;
-        if(b>a && minutes>=a && minutes<b) return true;
-        if(b<=a && (minutes>=a || minutes<b)) return true;
+        // Before opening, while open, or during an overnight service period all count.
+        // Once a same-day service period has ended, only a later period can keep the restaurant eligible.
+        if(b>a){
+          if(minutes<b) return true;
+        }else{
+          // A period such as 16:00-01:00 is available from before opening through midnight.
+          // After midnight it remains available until its overnight close.
+          if(minutes>=a || minutes<b) return true;
+          if(minutes<a) return true;
+        }
       }
       return known?false:null;
     }
@@ -86,16 +94,16 @@
       const dinnerEligible=norwoodOnly.filter(r=>r.dinner_spinner!==false && r.food_menu!==false);
       let pool=dinnerEligible.filter(r=>!terms.length||terms.some(t=>searchable(r).includes(t)));
       if(openNow.checked){
-        // Exclude restaurants confirmed closed. Unknown/unverified hours remain eligible.
-        pool=pool.filter(r=>isOpenNow(r)!==false);
+        // Exclude restaurants whose verified service for today has ended. Unknown/unverified hours remain eligible.
+        pool=pool.filter(r=>isAvailableToday(r)!==false);
       }
-      if(!pool.length){ result.textContent='No exact matches.'; meta.textContent=openNow.checked?'Nothing with matching verified hours appears open right now. Try another category or turn off “Open now.”':'Try “Anything — surprise me” and spin again.'; links.innerHTML=''; return; }
+      if(!pool.length){ result.textContent='No exact matches.'; meta.textContent=openNow.checked?'Nothing with matching verified hours is still available today. Try another category or turn off “Available today.”':'Try “Anything — surprise me” and spin again.'; links.innerHTML=''; return; }
       spinning=true; spin.disabled=true; wheel.classList.add('is-spinning');
       let ticks=0, last=null;
       const timer=setInterval(()=>{ last=pool[Math.floor(Math.random()*pool.length)]; wheel.querySelector('span').textContent=(last.name||'?').slice(0,2).toUpperCase(); ticks++; if(ticks>=18){
         clearInterval(timer); wheel.classList.remove('is-spinning'); spinning=false; spin.disabled=false;
-        const pick=pool[Math.floor(Math.random()*pool.length)]; wheel.querySelector('span').textContent='✓'; result.textContent=pick.name; const openState=isOpenNow(pick);
-        meta.textContent=[pick.cuisine||pick.category,pick.address&&pick.address+', Norwood',openNow.checked?(openState===true?'Open now':'Hours not verified'):''].filter(Boolean).join(' · ');
+        const pick=pool[Math.floor(Math.random()*pool.length)]; wheel.querySelector('span').textContent='✓'; result.textContent=pick.name; const openState=isAvailableToday(pick);
+        meta.textContent=[pick.cuisine||pick.category,pick.address&&pick.address+', Norwood',openNow.checked?(openState===true?'Available today':'Hours not verified'):''].filter(Boolean).join(' · ');
         const label=pick.link_type==='maps'?'Open in Google Maps':'Visit restaurant website';
         links.innerHTML=`<a class="spinner-result-link" href="${esc(pick.url)}" target="_blank" rel="noopener">${esc(label)} ↗</a><button id="spinAgain" type="button">Spin again</button>`;
         $('#spinAgain')?.addEventListener('click',()=>choose(ignore));
