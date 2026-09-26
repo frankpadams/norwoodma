@@ -6823,7 +6823,7 @@
     "organization": "AA Boston Central Service Office",
     "source_class": "calendar",
     "authority": "organization",
-    "coverage": "Norwood / nearby",
+    "coverage": "Norwood + Walpole + nearest 3 surrounding towns with active groups + virtual",
     "url": "https://aaboston.org/meetings?tsml-region=norwood",
     "domain": "aaboston.org",
     "produces": [
@@ -6839,16 +6839,23 @@
       "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": true,
+      "require_norwood_relevance": false,
       "require_public_access_for_whats_happening": false,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "expanded_calendar_only_for_non_norwood": true,
+      "include_virtual": true,
+      "nearby_scope": {
+        "include_town": "Walpole",
+        "additional_nearest_active_group_towns": 3
+      },
+      "label_non_norwood_town": true
     },
     "verification": {
       "status": "backend_registered",
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Opt-in recovery calendar may include verified Norwood, nearby and virtual meetings. Non-Norwood and virtual meetings stay out of the standard What's Happening feed unless specifically curated. Preserve official virtual join URL, meeting ID and password when published.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -6903,7 +6910,7 @@
     "organization": "New England Region of Narcotics Anonymous",
     "source_class": "calendar",
     "authority": "organization",
-    "coverage": "Norwood / nearby",
+    "coverage": "Norwood + Walpole + nearest 3 surrounding towns with active groups + virtual",
     "url": "https://nerna.org/find-a-meeting/",
     "domain": "nerna.org",
     "produces": [
@@ -6919,16 +6926,23 @@
       "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": true,
+      "require_norwood_relevance": false,
       "require_public_access_for_whats_happening": false,
-      "dedupe_against_primary_source": true
+      "dedupe_against_primary_source": true,
+      "expanded_calendar_only_for_non_norwood": true,
+      "include_virtual": true,
+      "nearby_scope": {
+        "include_town": "Walpole",
+        "additional_nearest_active_group_towns": 3
+      },
+      "label_non_norwood_town": true
     },
     "verification": {
       "status": "backend_registered",
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Opt-in recovery calendar may include verified Norwood, nearby and virtual meetings. Non-Norwood and virtual meetings stay out of the standard What's Happening feed unless specifically curated. Preserve official virtual join URL, meeting ID and password when published.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
