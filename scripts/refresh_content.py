@@ -981,10 +981,27 @@ def recurring_candidates(source, months=5):
     return out
 
 def _verified_recurrence_page_check(source):
-    """Confirm the stored recurrence is still supported by the authoritative page."""
-    ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}; url=source.get('url')
+    """Confirm recurrence against its configured authority, with a narrow newspaper fallback."""
+    ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}
+    url=ing.get('revalidation_url') or source.get('url')
     if not url: raise RuntimeError('verified recurrence has no authoritative source URL')
-    html=request(url).text
+    try:
+        html=request(url).text
+    except Exception as ex:
+        # Local newspaper calendars can be authoritative evidence while still blocking
+        # GitHub-hosted automated clients. Permit only recent, explicitly newspaper-
+        # verified schedules, and only for access-denied responses. Other failures
+        # continue to fail closed.
+        note=str(ex)
+        ver=source.get('verification',{})
+        status=str(ver.get('status') or '').lower()
+        verified=parse_dt(ver.get('verified_at'))
+        recent=bool(verified and now_local()-verified.astimezone(TZ)<=timedelta(days=45))
+        newspaper=('newspaper' in status or 'secondary_source' in status) and recent
+        blocked=bool(re.search(r'\\b(?:401|403)\\b|forbidden|unauthorized',note,re.I))
+        if newspaper and blocked:
+            return 'recent_authoritative_newspaper_verification'
+        raise
     text=clean_text(html).lower()
     # Require identifying language plus the configured weekday/time. This deliberately
     # fails closed: a redesigned/ambiguous page stops future generation instead of
@@ -1010,7 +1027,7 @@ def _verified_recurrence_page_check(source):
 
 def events_from_verified_recurrence(source, months=6):
     """Generate bounded occurrences only after live revalidation of the source page."""
-    _verified_recurrence_page_check(source)
+    validation=_verified_recurrence_page_check(source)
     ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}; out=[]
     freq=rec.get('frequency'); weekdays={'MO':0,'TU':1,'WE':2,'TH':3,'FR':4,'SA':5,'SU':6}
     wd=weekdays.get(rec.get('byweekday')); now=now_local().date()
@@ -1030,7 +1047,7 @@ def events_from_verified_recurrence(source, months=6):
             if include:
                 title=ing.get('event_title') or source.get('name')
                 st=ing.get('start_time'); et=ing.get('end_time')
-                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':ing.get('display_url') or ing.get('organization_url') or ing.get('revalidation_url') or source.get('url'),'verification_url':ing.get('revalidation_url') or source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':'live_revalidated_recurrence','notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
+                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':ing.get('display_url') or ing.get('organization_url') or ing.get('revalidation_url') or source.get('url'),'verification_url':ing.get('revalidation_url') or source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':('recent_authoritative_newspaper_verification' if validation=='recent_authoritative_newspaper_verification' else 'live_revalidated_recurrence'),'notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
         d+=timedelta(days=1)
     return out
 
