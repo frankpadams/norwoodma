@@ -2,3 +2,8 @@
 
 /* Sitewide title casing for UI headings and labels. Preserve body copy, descriptions and form inputs. */
 h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.box-title,.outdoor-list-heading,summary b,button:not(.sentence-case),.btn,.button,.chip,.pill,.tag,.filter-label,.amenity-options label,.outdoor-quicklinks a,.text-link,.back-to-things{ text-transform:capitalize; }
+
+/* Calendar feed availability: make usable vs unavailable choices obvious at a glance. */
+.calendar-feed-option.calendar-feed-available input[type="checkbox"]{accent-color:#16803a;outline:2px solid #16803a;outline-offset:1px}
+.calendar-feed-option.calendar-feed-unavailable input[type="checkbox"]{accent-color:#b42318;outline:2px solid #b42318;outline-offset:1px}
+.calendar-feed-option.calendar-feed-unavailable input[type="checkbox"]:not(:checked){background:#fff}
