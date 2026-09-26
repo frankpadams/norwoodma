@@ -2776,8 +2776,7 @@
       "automation": "preferred",
       "discovery_urls": [
         "https://www.norwoodtownnews.com/calendar",
-        "https://www.norwoodrecord.com/events",
-        "https://citizensforabetternorwoodma.com/events"
+        "https://www.norwoodcenter.org/events/"
       ],
       "match": [
         "VFW",
@@ -2790,21 +2789,6 @@
         "event_type",
         "price",
         "public_access"
-      ],
-      "known_public_series": [
-        {
-          "name": "VFW Meat Raffle",
-          "recurrence": {
-            "frequency": "weekly",
-            "byweekday": "SA",
-            "through_month": 5
-          },
-          "start_time": "14:00",
-          "end_time": "17:00",
-          "venue": "VFW Post 2452",
-          "address": "193 Dean St, Norwood, MA 02062",
-          "revalidate": true
-        }
       ]
     },
     "health_policy": {
@@ -2815,12 +2799,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Public-event discovery source. Meat raffle recurrence is strongly corroborated but must still be revalidated each season. Capture other concrete public events (blood drives, dances, fundraisers); exclude member-only VFW meetings from What's Happening.",
-    "verification": {
-      "status": "verified_multi_source_public_schedule",
-      "verified_at": "2026-09-26",
-      "basis": "Multiple 2026 Local Town Pages monthly calendars independently list the public VFW Meat Raffle every Saturday, 2–5 PM, through May; current CBN listings also identify VFW Post 2452 at 193 Dean Street as an active public-event venue."
-    }
+    "notes": "Capture only concrete dated public-facing events such as raffles, community events and public fundraisers; do not surface member-only meetings by default."
   },
   {
     "id": "norwood-women-business-networking",
@@ -13055,124 +13034,5 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
-  },
-  {
-    "id": "orient-lodge-schedule",
-    "name": "Orient Lodge A.F. & A.M. — Norwood",
-    "organization": "Orient Lodge A.F. & A.M.",
-    "source_class": "organization_schedule",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://www.orientlodge.org/",
-    "domain": "orientlodge.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "verified_recurring_schedule",
-      "automation": "preferred",
-      "revalidation_url": "https://www.orientlodge.org/media.html",
-      "recurrence": {
-        "frequency": "monthly",
-        "byweekday": "MO",
-        "ordinal": [
-          2
-        ]
-      },
-      "event_title": "Orient Lodge Communication",
-      "venue": "Orient Lodge",
-      "address": "76 Day St, Norwood, MA 02062",
-      "required_text": [
-        "Second Monday",
-        "76 Day St"
-      ],
-      "series_label": "Orient Lodge",
-      "publish_candidate": false,
-      "notes": "Routine lodge communication is opt-in/conflict-calendar only. Public special events require separate concrete-date discovery and explicit public-access evidence."
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "verified_current_recurring_schedule",
-      "verified_at": "2026-09-26",
-      "basis": "First-party Orient Lodge site identifies 76 Day St, Norwood, MA and states Communication: Second Monday."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "First-party recurring lodge schedule. Do not surface routine lodge communications in curated What's Happening; use for opt-in/conflict coverage. Discover public fundraisers/open houses separately."
-  },
-  {
-    "id": "norwood-sons-of-italy-events",
-    "name": "Norwood Italian Lodge #1235 — Public Events",
-    "organization": "Norwood Italian Lodge #1235",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodsonsofitaly.org/",
-    "domain": "norwoodsonsofitaly.org",
-    "produces": [
-      "events",
-      "fundraisers"
-    ],
-    "potential_outputs": [
-      "events",
-      "fundraisers"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "organization_event_discovery",
-      "automation": "preferred",
-      "homepage": "https://norwoodsonsofitaly.org/",
-      "discover_event_pages": true,
-      "discover_dated_posts": true,
-      "match": [
-        "Trivia Night",
-        "Norwood Sons of Italy",
-        "Norwood Italian Lodge",
-        "Lodge 1235"
-      ],
-      "preserve": [
-        "event_type",
-        "venue",
-        "registration",
-        "public_access"
-      ],
-      "require_concrete_date": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true,
-      "public_facing_service_events_only": true
-    },
-    "verification": {
-      "status": "verified_live_first_party",
-      "verified_at": "2026-09-26",
-      "basis": "Current first-party Norwood Italian Lodge #1235 site is live and advertises lodge activities including Trivia Night; monitor concrete dated public/social events without extrapolating recurrence."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Monitor first-party public/social events and fundraisers. Do not infer recurrence from undated promotional sections; routine member meetings remain opt-in unless explicitly public."
   }
 ]
