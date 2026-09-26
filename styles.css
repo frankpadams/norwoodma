@@ -43,3 +43,15 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .directory-search-line button[type="submit"]{border:0!important;border-radius:7px!important;padding:0 13px!important;background:#f2c100!important;color:#102e42!important;font:inherit;font-size:12px!important;font-weight:850!important;cursor:pointer;min-height:0!important;margin:0!important}
 .directory-search-line:focus-within{box-shadow:0 5px 16px #0003,0 0 0 3px rgba(242,193,0,.22)!important}
 @media(max-width:600px){.directory-search-line{display:flex!important;grid-template-columns:none!important}.directory-search-line input[type="search"]{padding:8px 9px!important;font-size:12px!important}.directory-search-line button[type="submit"]{padding:0 10px!important;font-size:11px!important;min-height:0!important}}
+
+/* Keep the full icon navigation longer before collapsing to hamburger. */
+@media(min-width:821px) and (max-width:1100px){
+  .top{display:grid;grid-template-columns:220px minmax(0,1fr);grid-template-rows:auto auto;column-gap:4px;align-items:center;min-height:94px;padding-left:14px}
+  .top>.brand.approved{grid-column:1;grid-row:1 / span 2;width:220px;max-width:220px;height:68px;min-height:68px}
+  .top>.brand.approved img{width:220px;max-height:64px}
+  .top>#menu{display:none!important}
+  .top>nav{display:flex!important;position:static;grid-column:2;grid-row:1;margin:0;justify-self:end;align-self:end;align-items:center;flex-direction:row;gap:8px;min-height:60px;height:60px;padding:0;background:transparent;border:0;box-shadow:none;white-space:nowrap}
+  .top>nav a{display:inline-flex!important;padding:0 3px;border:0;font-size:12px;min-width:48px}
+  .top .happening{grid-column:2;grid-row:2;order:initial;width:100%;max-width:100%;min-height:25px;margin:0 0 3px;padding:3px 10px;display:flex;align-items:center;justify-content:center}
+  .hamburger-only-support{display:none!important}
+}
