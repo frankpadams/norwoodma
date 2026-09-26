@@ -318,7 +318,8 @@ def events_from_ical(url,source):
             if end_raw > start_raw:
                 ep['date']=(end_raw-timedelta(days=1)).isoformat()
         url_prop=clean_text(c.get('url')) or source.get('url')
-        out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category_from(f"{title} {desc}"),'source_id':source['id'],'source_url':url_prop,'cost':None,'organizer':source.get('organization') or source.get('name'),'public_access':'public','series':source.get('ingestion',{}).get('series_label'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
+        category='sports' if source.get('ingestion',{}).get('parent_source_id')=='nps-athletics' or str(source.get('id','')).startswith('nps-athletics-arbiter-') else category_from(f"{title} {desc}")
+        out.append({'id':event_id(title,sp['date'],loc),'title':title,'start':sp,'end':ep,'venue':loc or source.get('organization') or source.get('name'),'address':loc or None,'category':category,'source_id':source['id'],'source_url':url_prop,'cost':None,'organizer':source.get('organization') or source.get('name'),'public_access':'public','series':source.get('ingestion',{}).get('series_label'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':desc[:240] or None,'discovered_by':'scheduled_ical'})
     return out
 
 def events_from_norwood_food_pantry(source):
@@ -1303,23 +1304,35 @@ def refresh_events(offline=False):
                                 got.append(copy)
                     else:
                         terms=[str(x).lower() for x in ing.get('match',[])]
+                        page_errors=[]
+                        pages_checked=0
                         for page_url in urls[:6]:
-                            if '/events/list' in page_url:
-                                try:
-                                    temp=dict(src); temp['url']=page_url; got.extend(events_from_tribe(temp))
-                                except Exception: pass
-                            html=request(page_url).text
-                            temp=dict(src); temp['url']=page_url
-                            extracted,ics=extract_jsonld_events(html,temp)
-                            if terms:
-                                extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
-                            got.extend(extracted)
-                            for u in ics[:4]:
-                                try:
-                                    rows=events_from_ical(u,temp)
-                                    if terms: rows=[e for e in rows if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
-                                    got.extend(rows)
-                                except Exception: pass
+                            try:
+                                if '/events/list' in page_url:
+                                    try:
+                                        temp=dict(src); temp['url']=page_url; got.extend(events_from_tribe(temp))
+                                    except Exception:
+                                        pass
+                                html=request(page_url).text
+                                pages_checked += 1
+                                temp=dict(src); temp['url']=page_url
+                                extracted,ics=extract_jsonld_events(html,temp)
+                                if terms:
+                                    extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                                got.extend(extracted)
+                                for u in ics[:4]:
+                                    try:
+                                        rows=events_from_ical(u,temp)
+                                        if terms: rows=[e for e in rows if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                                        got.extend(rows)
+                                    except Exception:
+                                        pass
+                            except Exception as page_ex:
+                                page_errors.append(f"{page_url}: {str(page_ex)[:100]}")
+                        if pages_checked==0 and page_errors:
+                            raise RuntimeError('all configured pages failed: '+' | '.join(page_errors[:3]))
+                        if page_errors:
+                            note=f"{len(page_errors)} configured page(s) unavailable; remaining sources checked"
                     got=dedupe_events(got)
                     if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
                 else: note=f'method {method} requires discovery/manual adapter'
