@@ -146,23 +146,20 @@
   menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
-  // Keep the public map visible in the shared primary navigation on every page.
-  if(!nav.querySelector('a[href="map.html"]')){
-    const exploreLink=nav.querySelector('a[href="explore.html"]');
-    const mapLink=document.createElement('a');
-    mapLink.href='map.html';
-    mapLink.textContent='Map';
-    if(/\/map\.html$/i.test(location.pathname))mapLink.setAttribute('aria-current','page');
-    if(exploreLink)exploreLink.insertAdjacentElement('afterend',mapLink);else nav.appendChild(mapLink);
-  }
-  // Discover is a site-wide primary navigation destination.
+  // Normalize the shared primary navigation regardless of older page-level markup.
+  nav.querySelectorAll('a[href="map.html"],a[href="transit.html"],a[href="calendars.html"],a[href*="events.html?calendars"]').forEach(a=>a.remove());
+  nav.querySelectorAll('a[href="discover.html"]').forEach(a=>{a.textContent='More';});
   if(!nav.querySelector('a[href="discover.html"]')){
-    const discover=document.createElement('a');discover.href='discover.html';discover.textContent='Discover';
-    if(/\/discover\.html$/i.test(location.pathname))discover.setAttribute('aria-current','page');
-    nav.appendChild(discover);
+    const more=document.createElement('a');more.href='discover.html';more.textContent='More';
+    if(/\/discover\.html$/i.test(location.pathname))more.setAttribute('aria-current','page');
+    nav.appendChild(more);
   }
-  // Support belongs in the collapsed hamburger menu only; never in the desktop text navigation.
-  if(!nav.querySelector('[data-hamburger-support]')){const support=document.createElement('a');support.href='support.html';support.textContent='Support Norwood.ma';support.dataset.hamburgerSupport='true';support.className='hamburger-only-support';support.hidden=true;nav.appendChild(support);}
+  nav.querySelectorAll('a[href="support.html"]').forEach(a=>a.remove());
+  if(!nav.querySelector('a[href="contact.html"]')){
+    const contact=document.createElement('a');contact.href='contact.html';contact.textContent='Contact';
+    if(/\/contact\.html$/i.test(location.pathname))contact.setAttribute('aria-current','page');
+    nav.appendChild(contact);
+  }
   if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
     const add=document.createElement('a');add.href='#';add.dataset.addHomeScreen='true';add.className='add-home-screen-link';add.innerHTML='<span>Add Norwood.ma to Home Screen</span><img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true">';
     add.addEventListener('click',e=>{e.preventDefault();close();let dlg=document.querySelector('.add-home-screen-dialog');if(dlg){dlg.remove();return;}dlg=document.createElement('aside');dlg.className='add-home-screen-dialog ios-home-prompt';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';document.body.appendChild(dlg);const done=()=>dlg.remove();dlg.querySelector('.ios-home-close').onclick=done;dlg.querySelector('.ios-home-gotit').onclick=done;dlg.querySelector('.ios-home-close').focus();});
