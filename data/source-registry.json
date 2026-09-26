@@ -2785,7 +2785,7 @@
     ],
     "priority": 3,
     "ingestion": {
-      "method": "secondary_recurring_discovery",
+      "method": "verified_recurring_schedule",
       "automation": "preferred",
       "discovery_url": "https://www.norwoodtownnews.com/calendar",
       "match": [
@@ -2797,12 +2797,32 @@
         "time",
         "public_access"
       ],
-      "require_concrete_date": true
+      "require_concrete_date": true,
+      "revalidation_url": "https://www.norwoodtownnews.com/calendar",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "TU",
+        "ordinal": [
+          2,
+          4
+        ]
+      },
+      "event_title": "Women in Business Networking Meeting",
+      "start_time": "08:00",
+      "venue": "Norwood Civic Center",
+      "address": "165 Nahatan St, Norwood, MA 02062",
+      "required_text": [
+        "Women in Business Networking",
+        "two mornings per month"
+      ],
+      "series_label": "Norwood Women in Business Networking",
+      "publish_candidate": true,
+      "notes": "Second and fourth Tuesdays at 8:00 a.m. at Norwood Civic Center, supported by repeated 2026 newspaper calendars. Revalidate current listings for exceptions before generating."
     },
     "verification": {
-      "status": "verified_recurring_secondary_source",
-      "verified_at": "2026-09-25",
-      "basis": "Multiple 2026 Local Town Pages monthly calendars list WBN meetings twice monthly at Norwood Civic Center."
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Local Town Pages dated calendars independently list WBN on Mar. 10/24, Apr. 14/28, May 12/26 and Jul. 14/28 at 8 a.m. at Norwood Civic Center, establishing the second/fourth Tuesday pattern."
     },
     "health_policy": {
       "track_last_checked": true,
