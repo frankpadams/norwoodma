@@ -1030,7 +1030,7 @@ def events_from_verified_recurrence(source, months=6):
             if include:
                 title=ing.get('event_title') or source.get('name')
                 st=ing.get('start_time'); et=ing.get('end_time')
-                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':'live_revalidated_recurrence','notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
+                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':ing.get('display_url') or ing.get('organization_url') or ing.get('revalidation_url') or source.get('url'),'verification_url':ing.get('revalidation_url') or source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':'live_revalidated_recurrence','notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
         d+=timedelta(days=1)
     return out
 
