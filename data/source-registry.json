@@ -2397,7 +2397,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
     "notes": "Use the official ClubRunner calendar subscription feed when discovered. Routine club/board/committee meetings remain opt-in; public fundraisers and community events can qualify for What's Happening."
@@ -6016,7 +6016,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
     "notes": "Distinct NPS calendar useful to families. Keep collapsed under Schools and optional by default; zero events does not mean the source is broken."
@@ -12762,7 +12762,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
