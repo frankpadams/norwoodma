@@ -1977,7 +1977,7 @@
   {
     "id": "norwood-junior-womans-club",
     "name": "Norwood Junior Woman's Club",
-    "url": "https://norwoodjuniorwc.wixsite.com/norwoodjwc",
+    "url": "https://norwoodjwc.org/",
     "active_monitor": true,
     "produces": [
       "events",
@@ -1985,45 +1985,29 @@
     ],
     "priority": 2,
     "ingestion": {
-      "method": "verified_recurring_schedule",
+      "method": "multi_source_org_discovery",
       "automation": "preferred",
-      "revalidation_url": "https://norwoodjuniorwc.wixsite.com/norwoodjwc",
-      "recurrence": {
-        "frequency": "monthly",
-        "byweekday": "WE",
-        "ordinal": [
-          2
-        ],
-        "months": [
-          9,
-          10,
-          11,
-          12,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      },
-      "event_title": "Norwood Junior Woman's Club Monthly Meeting",
-      "start_time": "19:30",
-      "end_time": "21:00",
-      "venue": "Conrad's Restaurant",
-      "address": "728 Washington Street, Norwood, MA 02062",
-      "required_text": [
-        "second Wednesday",
-        "7:30"
+      "primary_url": "https://norwoodjwc.org/",
+      "secondary_urls": [
+        "https://www.norwoodtownnews.com/calendar"
       ],
-      "series_label": "Norwood Junior Woman's Club",
-      "publish_candidate": true,
-      "notes": "Monthly meetings are second Wednesday, September through June. Revalidate the first-party page before generation; current first-party page says 7:30 PM at Conrad's and all are welcome."
+      "match": [
+        "Norwood Junior Woman's Club",
+        "Norwood Junior Women’s Club",
+        "NJWC"
+      ],
+      "require_concrete_date": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "public_access",
+        "fundraiser"
+      ]
     },
     "verification": {
-      "status": "verified_current_recurring_schedule",
-      "verified_at": "2026-09-26",
-      "basis": "First-party NJWC site states meetings are at 7:30 PM on the second Wednesday of each month at Conrad's; Local Town Pages independently documents the September-through-June recurrence."
+      "status": "verified_recurring_secondary_source",
+      "verified_at": "2026-09-25",
+      "basis": "Current 2026 Local Town Pages calendars list the club's monthly second-Wednesday meetings and public/community activities."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -2033,7 +2017,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Generate monthly public meeting candidates only September through June after live first-party revalidation. Continue separate discovery for fundraisers/community events rather than treating them as recurring."
+    "notes": "Use first-party site when it exposes dated events; supplement with current Norwood calendar listings. Do not extrapolate meetings indefinitely; ingest concrete dates and public fundraisers/community events."
   },
   {
     "id": "norwood-kofc-events",
@@ -2801,7 +2785,7 @@
     ],
     "priority": 3,
     "ingestion": {
-      "method": "verified_recurring_schedule",
+      "method": "secondary_recurring_discovery",
       "automation": "preferred",
       "discovery_url": "https://www.norwoodtownnews.com/calendar",
       "match": [
@@ -2813,32 +2797,12 @@
         "time",
         "public_access"
       ],
-      "require_concrete_date": true,
-      "revalidation_url": "https://www.norwoodtownnews.com/calendar",
-      "recurrence": {
-        "frequency": "monthly",
-        "byweekday": "TU",
-        "ordinal": [
-          2,
-          4
-        ]
-      },
-      "event_title": "Women in Business Networking Meeting",
-      "start_time": "08:00",
-      "venue": "Norwood Civic Center",
-      "address": "165 Nahatan St, Norwood, MA 02062",
-      "required_text": [
-        "Women in Business Networking",
-        "two mornings per month"
-      ],
-      "series_label": "Norwood Women in Business Networking",
-      "publish_candidate": true,
-      "notes": "Second and fourth Tuesdays at 8:00 a.m. at Norwood Civic Center, supported by repeated 2026 newspaper calendars. Revalidate current listings for exceptions before generating."
+      "require_concrete_date": true
     },
     "verification": {
-      "status": "verified_recurring_public_schedule",
-      "verified_at": "2026-09-26",
-      "basis": "Local Town Pages dated calendars independently list WBN on Mar. 10/24, Apr. 14/28, May 12/26 and Jul. 14/28 at 8 a.m. at Norwood Civic Center, establishing the second/fourth Tuesday pattern."
+      "status": "verified_recurring_secondary_source",
+      "verified_at": "2026-09-25",
+      "basis": "Multiple 2026 Local Town Pages monthly calendars list WBN meetings twice monthly at Norwood Civic Center."
     },
     "health_policy": {
       "track_last_checked": true,
