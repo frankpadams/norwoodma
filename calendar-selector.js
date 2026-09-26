@@ -31,7 +31,13 @@ function healthForSource(s){
  return matches.find(h=>h.ok)||matches[0];
 }
 function sourceAvailable(s,health){
- if(!!s.feed_url||s.kind==='generated'||s.kind==='internal'||!!s.data_available)return true;
+ const ev=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS:[];
+ // Generated feeds and direct external subscription feeds remain valid even during a
+ // legitimately empty upcoming window. Internal selector-based calendars, however,
+ // should only be selectable when they can actually add at least one current event.
+ if(!!s.feed_url||s.kind==='generated'||s.kind==='generated_live')return true;
+ if((s.kind==='internal'||!!s.data_available)&&s.selector)return ev.some(e=>matchesSource(e,s));
+ if(s.kind==='internal'||!!s.data_available)return true;
  // Monitored calendars count as usable only when the monitor has actually produced
  // current/recent data. A successful zero-event check alone does not turn a source green.
  return !!(health&&health.ok&&(Number(health.last_found||0)>0||!!health.last_successful_update));
