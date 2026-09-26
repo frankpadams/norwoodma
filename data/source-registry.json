@@ -13034,5 +13034,106 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
+  },
+  {
+    "id": "zeffy-norwood-discovery",
+    "name": "Zeffy — Norwood fundraiser/event discovery",
+    "source_class": "event_platform",
+    "authority": "secondary_listing",
+    "coverage": "Norwood, MA",
+    "url": "https://www.zeffy.com/en-US/search",
+    "domain": "zeffy.com",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "event_platform_discovery",
+      "automation": "candidate",
+      "location_gate": {
+        "city": "Norwood",
+        "state": "MA",
+        "zip": "02062"
+      },
+      "require_concrete_date": true,
+      "preserve": [
+        "organizer",
+        "venue",
+        "address",
+        "date",
+        "time",
+        "price",
+        "ticket_url"
+      ],
+      "dedupe_by": [
+        "title",
+        "date",
+        "venue"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_platform_signal",
+      "verified_at": "2026-09-26",
+      "basis": "Current Zeffy results include a concrete 2026 event at 1125 Boston-Providence Turnpike, Norwood, MA 02062. Strict Massachusetts/02062 location validation is required."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Use as supplemental fundraiser/event discovery only. Reject other Norwoods and require explicit Norwood, MA/02062 venue evidence before ingestion."
+  },
+  {
+    "id": "humanitix-norwood-discovery",
+    "name": "Humanitix — Norwood discovery (strict geo gate)",
+    "source_class": "event_platform",
+    "authority": "secondary_listing",
+    "coverage": "Norwood, MA",
+    "url": "https://events.humanitix.com/",
+    "domain": "humanitix.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "event_platform_discovery",
+      "automation": "candidate",
+      "location_gate": {
+        "city": "Norwood",
+        "state": "MA",
+        "zip": "02062",
+        "required": true
+      },
+      "reject_geographies": [
+        "Australia",
+        "South Australia",
+        "SA"
+      ],
+      "require_concrete_date": true
+    },
+    "verification": {
+      "status": "disabled_until_geo_safe",
+      "verified_at": "2026-09-26",
+      "basis": "Generic Humanitix Norwood search is currently dominated by Norwood, South Australia results. Do not activate until ingestion enforces explicit MA/02062 venue validation."
+    },
+    "notes": "Candidate only. Never ingest based on the word Norwood alone; require explicit Massachusetts/02062 location evidence."
   }
 ]
