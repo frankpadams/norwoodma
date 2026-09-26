@@ -1601,10 +1601,14 @@ def summarize_article(url, fallback=''):
     except Exception: pass
     return clean_text(fallback)[:420]
 
-BLOCKED_NEWS_SOURCES={'maxpreps'}
+BLOCKED_NEWS_SOURCES={'maxpreps','maxpreps.com'}
 
 def news_source_blocked(source):
-    return clean_text(source).lower() in BLOCKED_NEWS_SOURCES
+    """Block publishers by normalized name/domain, including Google News attribution variants."""
+    s=clean_text(source).lower().strip()
+    s=re.sub(r'^https?://','',s).split('/')[0]
+    s=s[4:] if s.startswith('www.') else s
+    return s in BLOCKED_NEWS_SOURCES or s.endswith('.maxpreps.com')
 
 def news_is_routine_game_listing(x):
     text=' '.join(str(x.get(k) or '') for k in ('title','summary','source')).lower()
