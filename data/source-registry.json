@@ -13114,5 +13114,65 @@
     },
     "conflict_profile": "optional",
     "notes": "First-party recurring lodge schedule. Do not surface routine lodge communications in curated What's Happening; use for opt-in/conflict coverage. Discover public fundraisers/open houses separately."
+  },
+  {
+    "id": "norwood-sons-of-italy-events",
+    "name": "Norwood Italian Lodge #1235 — Public Events",
+    "organization": "Norwood Italian Lodge #1235",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodsonsofitaly.org/",
+    "domain": "norwoodsonsofitaly.org",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "organization_event_discovery",
+      "automation": "preferred",
+      "homepage": "https://norwoodsonsofitaly.org/",
+      "discover_event_pages": true,
+      "discover_dated_posts": true,
+      "match": [
+        "Trivia Night",
+        "Norwood Sons of Italy",
+        "Norwood Italian Lodge",
+        "Lodge 1235"
+      ],
+      "preserve": [
+        "event_type",
+        "venue",
+        "registration",
+        "public_access"
+      ],
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "public_facing_service_events_only": true
+    },
+    "verification": {
+      "status": "verified_live_first_party",
+      "verified_at": "2026-09-26",
+      "basis": "Current first-party Norwood Italian Lodge #1235 site is live and advertises lodge activities including Trivia Night; monitor concrete dated public/social events without extrapolating recurrence."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor first-party public/social events and fundraisers. Do not infer recurrence from undated promotional sections; routine member meetings remain opt-in unless explicitly public."
   }
 ]
