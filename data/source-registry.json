@@ -5452,19 +5452,18 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_reachable_currently_empty",
-      "verified_at": "2026-09-26",
-      "basis": "Official SchoolNow calendar is reachable; current calendar may legitimately contain zero school-specific events. Empty results must not be classified as ingestion failure."
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Official NPS SchoolNow selectable calendar feed. Zero events is a valid healthy state when the feed is reachable; districtwide events are handled by their own calendar source rather than copied into this school-specific feed.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false,
-      "zero_events_when_feed_reachable_is_healthy": true
+      "empty_result_is_failure": true
     }
   },
   {
@@ -5531,19 +5530,18 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_reachable_currently_empty",
-      "verified_at": "2026-09-26",
-      "basis": "Official SchoolNow calendar is reachable; current calendar may legitimately contain zero school-specific events. Empty results must not be classified as ingestion failure."
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Official NPS SchoolNow selectable calendar feed. Zero events is a valid healthy state when the feed is reachable; districtwide events are handled by their own calendar source rather than copied into this school-specific feed.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false,
-      "zero_events_when_feed_reachable_is_healthy": true
+      "empty_result_is_failure": true
     }
   },
   {
@@ -6145,19 +6143,18 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_reachable_currently_empty",
-      "verified_at": "2026-09-26",
-      "basis": "Official SchoolNow calendar is reachable; current calendar may legitimately contain zero school-specific events. Empty results must not be classified as ingestion failure."
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Official NPS SchoolNow selectable calendar feed. Zero events is a valid healthy state when the feed is reachable; districtwide events are handled by their own calendar source rather than copied into this school-specific feed.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false,
-      "zero_events_when_feed_reachable_is_healthy": true
+      "empty_result_is_failure": true
     }
   },
   {
