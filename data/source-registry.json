@@ -313,7 +313,14 @@
     "monitor_priority": 4,
     "ingestion": {
       "method": "html_calendar",
-      "automation": "possible"
+      "automation": "preferred",
+      "calendar_url": "https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124",
+      "preserve": [
+        "event_type",
+        "venue",
+        "public_access"
+      ],
+      "public_only": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -322,11 +329,11 @@
       "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_official_calendar",
+      "verified_at": "2026-09-26",
+      "basis": "Official Elks.org Lodge #1124 calendar is live and identifies Norwood, MA 1124; use it as the canonical first-party event source."
     },
-    "notes": "Potential public fundraisers/community events; do not publish member-only lodge meetings as community events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings.",
+    "notes": "Official Norwood, Massachusetts Lodge 1124 calendar. Ingest only entries explicitly public-facing or independently corroborated as public; exclude lodge/member meetings and private functions.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -2033,13 +2040,16 @@
       "method": "secondary_org_event_discovery",
       "automation": "preferred",
       "discovery_urls": [
+        "https://iccnorwood.org/events",
         "https://www.norwoodtownnews.com/calendar",
-        "https://www.norwoodcenter.org/events/"
+        "https://www.norwoodrecord.com/events"
       ],
       "match": [
         "Knights of Columbus",
         "K of C",
-        "572 Nichols"
+        "572 Nichols",
+        "Austin Reardon",
+        "Norwood Dance Party"
       ],
       "require_concrete_date": true,
       "preserve": [
@@ -2050,9 +2060,9 @@
       ]
     },
     "verification": {
-      "status": "verified_secondary_event_source",
-      "verified_at": "2026-09-25",
-      "basis": "Current Norwood calendars publish concrete Knights of Columbus events at 572 Nichols Street, including dances and blood drives."
+      "status": "verified_multi_source_event_discovery",
+      "verified_at": "2026-09-26",
+      "basis": "Current Norwood newspaper/event sources publish concrete public events at the Norwood Knights of Columbus hall, including the Oct. 11, 2026 Austin Reardon Memorial 5K; ICC Norwood's live calendar also publishes local Knights meetings. Public event ingestion remains concrete-date only."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -2062,7 +2072,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Until a reliable first-party public calendar is found, ingest only concrete dated public KofC events from trusted Norwood calendar sources and deduplicate across them."
+    "notes": "Use concrete dated public-event discovery rather than recurring generation. The hall hosts both Knights and third-party/community events, so 572 Nichols alone is venue evidence, not organizer evidence; preserve the actual organizer when available."
   },
   {
     "id": "norwood-little-league",
