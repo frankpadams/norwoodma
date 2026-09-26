@@ -12430,18 +12430,20 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_external",
+      "verified_at": "2026-09-26",
+      "basis": "Mass Cultural Council Norwood profile is live and updated; automated runner currently receives 403, so classify access-blocked separately from stale/broken."
     },
-    "notes": "Useful for grant-supported public arts/cultural programming. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
+    "notes": "Useful for grant-supported public arts/cultural programming. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure. Mass Cultural Council's Norwood profile is a valid authoritative discovery page but may reject the refresh runner with HTTP 403; a blocked fetch should not be treated as evidence the source or calendar is stale.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "blocked_fetch_is_failure": false,
+      "blocked_fetch_status": "limited"
     }
   },
   {
