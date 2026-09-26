@@ -1426,14 +1426,15 @@ def events_from_myrec_facilities(source):
                 try: return datetime.strptime(v.upper(),'%I:%M %p').strftime('%H:%M')
                 except Exception: return None
             ds=d.date().isoformat()
-            out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':nt(tm.group(1)) if tm else None},'end':{'date':ds,'time':nt(tm.group(2)) if tm else None},'venue':venue,'address':None,'category':'facility_reservation','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':'Norwood Recreation facility reservations','publish_candidate':True,'verification_status':'auto_primary_source','notes':'Facility reservation/activity block; included for conflict checking.','discovered_by':'myrec_facility_table'})
+            out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':nt(tm.group(1)) if tm else None},'end':{'date':ds,'time':nt(tm.group(2)) if tm else None},'venue':venue,'address':None,'category':'facility_reservation','source_id':source['id'],'source_url':url,'cost':None,'public_access':'unspecified','series':'Norwood Recreation facility reservations','publish_candidate':False,'verification_status':'auto_primary_source','notes':'Facility reservation/activity block; included for conflict checking, not presumed open to the public.','discovered_by':'myrec_facility_table'})
     return dedupe_events(out)
 
 def source_allows_master_event(e, source=None):
     """Master dataset is intentionally broad; presentation layers decide what is shown by default."""
     if not e or not e.get('start',{}).get('date'): return False
-    access=str(e.get('public_access') or 'public').lower()
-    if access in {'private','members_only','member_only'}: return False
+    # The master pool powers conflict checking as well as public presentation,
+    # so restricted/unknown reservations may remain here. publish_candidate and
+    # the access classifier control What's Happening visibility instead.
     title=clean_text(e.get('title'))
     if not title or canonical_title(title) in {'recurring','recurrence','all events'}: return False
     return True
