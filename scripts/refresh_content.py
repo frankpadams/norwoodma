@@ -988,6 +988,8 @@ def events_from_nys_multi_schedule(source):
     for e in out:
         e['source_id']=source['id']; e['category']='youth_sports'; e['publish_candidate']=False
         e['curated_default']=False; e['discovered_by']='nys_multi_schedule'
+        e['field_status_url']='https://norwoodma.myrec.com/info/facilities/default.aspx'
+        if e.get('venue') and not e.get('field'): e['field']=e.get('venue')
     return dedupe_events(out)
 
 def events_from_league_schedule(source):
@@ -1011,7 +1013,12 @@ def events_from_league_schedule(source):
             h=node.find(['h2','h3','h4','strong']); title=clean_text(h.get_text(' ')) if h else text[:180]
         if not title: continue
         ds=d.isoformat()
-        out.append({'id':event_id(title,ds,source.get('name')),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':None,'address':None,'category':'sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':'Youth sports schedule item; confirm with league for late changes.','discovered_by':'league_schedule_table'})
+        field=None
+        # Preserve the published field/site when the league table provides one.
+        for v in (vals if cells else [text]):
+            m=re.search(r'(?:field|location|site)\s*[:\-]?\s*([^|;]{2,80})',v,re.I)
+            if m: field=clean_text(m.group(1)); break
+        out.append({'id':event_id(title,ds,field or source.get('name')),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':field,'field':field,'address':None,'category':'sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'auto_primary_source','notes':'Youth sports schedule item; confirm with league for late changes.','discovered_by':'league_schedule_table'})
     return dedupe_events(out)
 
 def discover_embedded_calendar_feeds(page_url, html):
