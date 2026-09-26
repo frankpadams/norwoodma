@@ -326,3 +326,24 @@ function featuredCommunity(){
  const a=document.querySelector('#featuredLink'); if(data.url){a.href=data.url;a.textContent=(data.link_label||'Learn more')+' →';}else a.hidden=true; section.hidden=false;
 }
 featuredCommunity();
+
+
+/* Rotate Hey, Norwood! notices in pairs every 20 seconds when more than two exist. */
+(function initHeyNorwoodRotation(){
+  const section=document.querySelector('.good-to-know-section .good-to-know');
+  if(!section) return;
+  const items=Array.from(section.querySelectorAll('.good-to-know-item'));
+  if(items.length<=2) return;
+  let start=0;
+  function showPair(){
+    items.forEach((item,index)=>{
+      const offset=(index-start+items.length)%items.length;
+      item.hidden=offset>=2;
+    });
+  }
+  showPair();
+  window.setInterval(()=>{
+    start=(start+2)%items.length;
+    showPair();
+  },20000);
+})();
