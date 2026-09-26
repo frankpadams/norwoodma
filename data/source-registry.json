@@ -2612,26 +2612,16 @@
   {
     "id": "norwood-toastmasters",
     "name": "Norwood Toastmasters",
-    "url": "https://www.norwoodrecord.com/events",
+    "url": "https://norwoodtoastmaster.toastmastersclubs.org/",
     "active_monitor": true,
     "produces": [
       "events"
     ],
     "priority": 3,
     "ingestion": {
-      "method": "verified_recurring_schedule",
+      "method": "recurring_org_schedule",
       "automation": "preferred",
-      "revalidation_url": "https://www.norwoodrecord.com/events",
-      "event_title": "Norwood Toastmasters",
-      "start_time": "19:00",
-      "series_label": "Norwood Toastmasters",
-      "category": "community",
-      "publish_candidate": true,
-      "required_text": [
-        "Norwood Toastmasters",
-        "second and fourth Tuesdays",
-        "Guests are always welcome"
-      ],
+      "homepage": "https://norwoodtoastmaster.toastmastersclubs.org/",
       "recurrence": {
         "frequency": "monthly",
         "byweekday": "TU",
@@ -2649,8 +2639,8 @@
     },
     "verification": {
       "status": "verified_recurring_public_schedule",
-      "verified_at": "2026-09-26",
-      "basis": "Norwood Record current events page explicitly lists Oct. 13 and Oct. 27, 2026 at 7 PM, states meetings are held on the second and fourth Tuesdays, and says guests are always welcome."
+      "verified_at": "2026-09-25",
+      "basis": "Current Norwood Local Town Pages repeatedly lists Norwood Toastmasters on the second and fourth Tuesdays, with guests welcome; venues may vary and must be refreshed."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -2660,7 +2650,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Use the Norwood Record listing as the recurrence authority. Do not depend on the dead Toastmasters site. Venue varies by meeting; dated newspaper listings should supersede generated venue information."
+    "notes": "Generate recurring candidates only after checking current source/secondary listings for time, venue and exceptions; venue has varied between Norwood and nearby libraries, so never hard-code location."
   },
   {
     "id": "norwood-town-news",
