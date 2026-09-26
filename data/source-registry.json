@@ -13055,5 +13055,64 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
+  },
+  {
+    "id": "orient-lodge-schedule",
+    "name": "Orient Lodge A.F. & A.M. — Norwood",
+    "organization": "Orient Lodge A.F. & A.M.",
+    "source_class": "organization_schedule",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.orientlodge.org/",
+    "domain": "orientlodge.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "automation": "preferred",
+      "revalidation_url": "https://www.orientlodge.org/media.html",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "MO",
+        "ordinal": [
+          2
+        ]
+      },
+      "event_title": "Orient Lodge Communication",
+      "venue": "Orient Lodge",
+      "address": "76 Day St, Norwood, MA 02062",
+      "required_text": [
+        "Second Monday",
+        "76 Day St"
+      ],
+      "series_label": "Orient Lodge",
+      "publish_candidate": false,
+      "notes": "Routine lodge communication is opt-in/conflict-calendar only. Public special events require separate concrete-date discovery and explicit public-access evidence."
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_current_recurring_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "First-party Orient Lodge site identifies 76 Day St, Norwood, MA and states Communication: Second Monday."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "First-party recurring lodge schedule. Do not surface routine lodge communications in curated What's Happening; use for opt-in/conflict coverage. Discover public fundraisers/open houses separately."
   }
 ]
