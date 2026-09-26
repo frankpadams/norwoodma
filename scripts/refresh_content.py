@@ -353,6 +353,32 @@ def events_from_norwood_food_pantry(source):
         d+=timedelta(days=7)
     return out
 
+def events_from_vfw_meat_raffle():
+    """Generate the established Norwood VFW Post 2452 Saturday meat raffle season (Sep-May)."""
+    today=now_local().date(); out=[]
+    d=today-timedelta(days=1)
+    d+=timedelta(days=(5-d.weekday())%7)  # Saturday=5
+    horizon=today+timedelta(days=180)
+    while d<=horizon:
+        if d.month in {9,10,11,12,1,2,3,4,5}:
+            ds=d.isoformat()
+            out.append({
+              'id':event_id('VFW Post 2452 Meat Raffle',ds,'14:00'),
+              'title':'VFW Post 2452 Meat Raffle',
+              'start':{'date':ds,'time':'14:00'},'end':{'date':ds,'time':'17:00'},
+              'venue':'Norwood VFW Post 2452','address':'193 Dean St, Norwood, MA 02062',
+              'category':'community','source_id':'vfw-post-2452-meat-raffle',
+              'source_url':'https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026',
+              'cost':'$2 per drawing; $20 pre-buy','public_access':'public',
+              'series':'VFW Post 2452 Meat Raffle','publish_candidate':True,
+              'verification_status':'established_recurring_schedule',
+              'notes':'Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.',
+              'discovered_by':'scheduled_recurring_series'
+            })
+        d+=timedelta(days=7)
+    return out
+
+
 def events_from_tribe(source):
     base=f"{urlparse(source['url']).scheme}://{urlparse(source['url']).netloc}"
     start=now_local().date().isoformat(); end=(now_local().date()+timedelta(days=180)).isoformat()
@@ -1254,7 +1280,7 @@ def legacy_expanded_calendar_events():
 def refresh_events(offline=False):
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
-    events=list(seeds); status=[]
+    events=list(seeds)+events_from_vfw_meat_raffle(); status=[]
     previous_health={x.get('source_id'):x for x in read_json('calendar-source-health.json',[]) if isinstance(x,dict)}
     checked_at=now_local().isoformat()
     if not offline:
