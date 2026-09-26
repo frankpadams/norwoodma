@@ -139,6 +139,49 @@ def public_candidate(title, description=''):
     return True
 
 
+def infer_public_access(event, source=None):
+    """Classify who may attend. Price/registration do not make a public event private."""
+    source=source or {}
+    explicit=clean_text(event.get('public_access')).lower().replace('-','_').replace(' ','_')
+    restricted={'private','private_invite_only','invite_only','members_only','member_only','staff_only','employee_only','team_only','restricted'}
+    public={'public','confirmed_public','inferred_public','paid','registration_required','limited_capacity','free'}
+    if explicit in restricted:
+        return {'status':'confirmed_restricted','access_type':explicit,'evidence':'explicit event access field'}
+    text=clean_text(' '.join(str(event.get(k) or '') for k in ('title','notes','series','venue'))).lower()
+    restricted_terms=[
+      'members only','member-only','members-only','member meeting','members meeting',
+      'staff only','employees only','employee only','coworker','company outing',
+      'invite only','invitation only','private event','private rental',
+      'team only','players only','practice','rehearsal'
+    ]
+    if any(x in text for x in restricted_terms):
+        return {'status':'inferred_restricted','access_type':'restricted','evidence':'restricted-attendance language'}
+    public_terms=[
+      'open to the public','all are welcome','all welcome','everyone welcome',
+      'tickets','ticketed','register','registration','rsvp','fundraiser','raffle',
+      'fair','festival','concert','performance','workshop','open house','blood drive',
+      'food drive','community event','farmers market',"farmer's market",'public event'
+    ]
+    if explicit in public:
+        return {'status':'confirmed_public','access_type':explicit if explicit!='public' else ('paid' if event.get('cost') else 'public'),'evidence':'explicit event access field'}
+    if event.get('registration_url') or event.get('ticket_url') or event.get('cost') or any(x in text for x in public_terms):
+        return {'status':'inferred_public','access_type':('paid' if event.get('cost') else 'registration_required' if event.get('registration_url') else 'public'),'evidence':'public attendance/registration signal'}
+    default_public=bool(source.get('filters',{}).get('public_events_only') or source.get('ingestion',{}).get('public_events_only'))
+    if default_public:
+        return {'status':'inferred_public','access_type':'public','evidence':'source is configured as public-events-only'}
+    return {'status':'unknown','access_type':'unknown','evidence':'no reliable attendance evidence'}
+
+def apply_public_access(event, source=None):
+    result=infer_public_access(event,source)
+    event['public_access_status']=result['status']
+    event['access_type']=result['access_type']
+    event['public_access_evidence']=result['evidence']
+    # Unknown/restricted events remain useful in the broad conflict dataset but
+    # must not enter What's Happening automatically.
+    if result['status'] in {'unknown','inferred_restricted','confirmed_restricted'}:
+        event['publish_candidate']=False
+    return event
+
 def service_org_public_candidate(text):
     """Keep public-facing service/scouting events; reject routine internal/member activity."""
     t=clean_text(text).lower()
@@ -1520,7 +1563,7 @@ def refresh_events(offline=False):
                     got=dedupe_events(got)
                     if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
                 else: note=f'method {method} requires discovery/manual adapter'
-                got=[e for e in got if source_allows_master_event(e,src)]
+                got=[apply_public_access(e,src) for e in got]\n                got=[e for e in got if source_allows_master_event(e,src)]
                 events.extend(got)
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
