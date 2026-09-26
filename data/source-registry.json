@@ -13135,5 +13135,77 @@
       "basis": "Generic Humanitix Norwood search is currently dominated by Norwood, South Australia results. Do not activate until ingestion enforces explicit MA/02062 venue validation."
     },
     "notes": "Candidate only. Never ingest based on the word Norwood alone; require explicit Massachusetts/02062 location evidence."
+  },
+  {
+    "id": "eventbrite-norwood-discovery",
+    "name": "Eventbrite — Norwood event discovery",
+    "source_class": "event_platform",
+    "authority": "secondary_listing",
+    "coverage": "Norwood, MA",
+    "url": "https://www.eventbrite.com/d/ma--norwood/events/",
+    "domain": "eventbrite.com",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "event_platform_discovery",
+      "automation": "preferred",
+      "location": "Norwood, MA",
+      "require_concrete_date": true,
+      "preserve": [
+        "organizer",
+        "venue",
+        "address",
+        "start_time",
+        "end_time",
+        "price",
+        "registration_url",
+        "public_access"
+      ],
+      "dedupe_by": [
+        "title",
+        "date",
+        "venue"
+      ],
+      "follow_organizer_pages": true,
+      "public_access_classification": {
+        "values": [
+          "confirmed_public",
+          "inferred_public",
+          "unknown",
+          "inferred_restricted",
+          "confirmed_restricted"
+        ],
+        "whats_happening_accept": [
+          "confirmed_public",
+          "inferred_public"
+        ],
+        "note": "Paid/ticketed/registration-required events remain eligible. Classify by who may attend, not price."
+      }
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "exclude_membership_internal_events": true,
+      "ticketed_events_allowed": true,
+      "registration_required_allowed": true,
+      "price_is_not_access_restriction": true
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "verification": {
+      "status": "verified_live_platform_with_access_rules",
+      "verified_at": "2026-09-26",
+      "basis": "Current Norwood listings include both open public events and employee/company events, so attendance eligibility is classified separately from ticketing."
+    }
   }
 ]
