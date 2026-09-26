@@ -12359,7 +12359,7 @@
     "source_class": "department_page",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/government/committees_boards/conservation_commission/index.php",
+    "url": "https://www.norwoodma.gov/departments/conservation/index.php",
     "domain": "norwoodma.gov",
     "produces": [
       "events"
@@ -12372,7 +12372,7 @@
     "ingestion": {
       "method": "town_department_event_discovery",
       "automation": "preferred",
-      "department_url": "https://www.norwoodma.gov/government/committees_boards/conservation_commission/index.php",
+      "department_url": "https://www.norwoodma.gov/departments/conservation/index.php",
       "discover_dated_notices": true,
       "discover_calendar_links": true,
       "public_only": true
@@ -12384,8 +12384,8 @@
     },
     "verification": {
       "status": "web_checked",
-      "verified_at": "2026-09-26",
-      "basis": "Updated to current official Conservation Commission path after legacy /departments/conservation/ URL returned 404."
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
     },
     "notes": "Watch nature walks, cleanups, trail events, public environmental programming. Department pages are intermittent event sources. Capture concrete dated public events/notices when present; a healthy page with no current event is not a failure.",
     "conflict_profile": "optional",

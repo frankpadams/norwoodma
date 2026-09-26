@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T14:50:26.811913-04:00",
+  "generated_at": "2026-09-26T16:27:43.943652-04:00",
   "offline": false,
   "events_published": 847,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 847,
-      "generated_at": "2026-09-26T14:50:26.787777-04:00"
+      "generated_at": "2026-09-26T16:27:43.924942-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 84,
-      "generated_at": "2026-09-26T14:50:26.790818-04:00"
+      "generated_at": "2026-09-26T16:27:43.927313-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 448,
-      "generated_at": "2026-09-26T14:50:26.797718-04:00"
+      "generated_at": "2026-09-26T16:27:43.932617-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 471,
-      "generated_at": "2026-09-26T14:50:26.803648-04:00"
+      "generated_at": "2026-09-26T16:27:43.936996-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-26T14:50:26.806169-04:00"
+      "generated_at": "2026-09-26T16:27:43.938939-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 17,
-      "generated_at": "2026-09-26T14:50:26.808943-04:00"
+      "generated_at": "2026-09-26T16:27:43.941004-04:00"
     }
   ],
   "event_sources": [
@@ -831,14 +831,14 @@
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "note": ""
     },
     {
       "source_id": "nps-callahan",
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "note": ""
     },
     {
       "source_id": "nps-callahan-pta",
@@ -908,7 +908,7 @@
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "note": ""
     },
     {
       "source_id": "nps-nhs-pto",
@@ -1231,34 +1231,38 @@
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
-      "ok": true,
-      "found": 62,
+      "ok": false,
+      "found": 0,
       "method": "google_news_rss",
-      "query": "\"norwood, ma\""
+      "query": "\"norwood, ma\"",
+      "note": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
-      "ok": true,
-      "found": 62,
+      "ok": false,
+      "found": 0,
       "method": "google_news_rss",
-      "query": "\"norwood ma\""
+      "query": "\"norwood ma\"",
+      "note": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
-      "ok": true,
-      "found": 42,
+      "ok": false,
+      "found": 0,
       "method": "google_news_rss",
-      "query": "norwoodma"
+      "query": "norwoodma",
+      "note": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
-      "ok": true,
-      "found": 22,
+      "ok": false,
+      "found": 0,
       "method": "google_news_rss",
-      "query": "\"norwood, massachusetts\""
+      "query": "\"norwood, massachusetts\"",
+      "note": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "source": "The Norwood Record",
