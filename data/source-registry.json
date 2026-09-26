@@ -2385,12 +2385,28 @@
         "Fundraiser",
         "General",
         "Club Event"
+      ],
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "WE",
+        "ordinal": [
+          1,
+          3
+        ]
+      },
+      "revalidation_url": "https://rotary7950.com/clubinfo/norwood",
+      "start_time": "19:00",
+      "venue": "Emmanuel Lutheran Church",
+      "address": "24 Berwick Street, Norwood, MA 02062",
+      "required_text": [
+        "1st and 3rd Wednesday",
+        "7:00"
       ]
     },
     "verification": {
-      "status": "verified_subscribable_calendar",
-      "verified_at": "2026-09-25",
-      "basis": "Official ClubRunner calendar exposes event types and a Subscribe to this Calendar URL for Outlook, Google Calendar and Apple Calendar."
+      "status": "verified_live_calendar_and_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official Norwood Rotary calendar is live/subscribable; official District 7950 club profile independently confirms meetings at 7:00 PM on the first and third Wednesdays at Emmanuel Lutheran Church."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -2400,7 +2416,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Use the official ClubRunner calendar subscription feed when discovered. Routine club/board/committee meetings remain opt-in; public fundraisers and community events can qualify for What's Happening."
+    "notes": "Primary ingestion remains the official ClubRunner event calendar/subscription feed. Meeting recurrence is retained as a revalidation/fallback rule only; public fundraisers/community events qualify for What's Happening, while routine club meetings remain opt-in."
   },
   {
     "id": "norwood-space-center-events",
@@ -8128,8 +8144,8 @@
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.rotary7910.org/ClubInfo/neponset-valley-sunrise",
-    "domain": "rotary7910.org",
+    "url": "https://neponsetvalleysunriserotary.org/",
+    "domain": "neponsetvalleysunriserotary.org",
     "produces": [
       "events",
       "fundraisers"
@@ -8141,8 +8157,21 @@
     "active_monitor": true,
     "monitor_priority": 3,
     "ingestion": {
-      "method": "html_page",
-      "automation": "preferred"
+      "method": "clubrunner_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://neponsetvalleysunriserotary.org/events/calendar",
+      "discover_subscription_feed": true,
+      "preserve": [
+        "event_type",
+        "venue",
+        "speaker",
+        "public_access"
+      ],
+      "curated_types": [
+        "Fundraiser",
+        "General",
+        "Club Event"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -8151,12 +8180,19 @@
       "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-24",
-      "basis": "Confirmed local organization presence/public-facing activity; monitor only public fundraisers and community events, not routine member meetings."
+      "status": "verified_live_structured_calendar",
+      "verified_at": "2026-09-26",
+      "basis": "Official club site currently exposes dated upcoming events, including Sep. 2026 meetings/anniversary and Oct. 7/14 meetings at Four Points by Sheraton Norwood."
     },
-    "notes": "Watch for public Sunrise Rotary fundraisers and community-service events. Exclude ordinary club meetings.",
-    "conflict_profile": "optional"
+    "notes": "Use the club's own structured ClubRunner calendar rather than generic page scraping. Ordinary club meetings remain opt-in; public fundraisers, anniversary/community and service events can qualify for What's Happening.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   },
   {
     "id": "resource-norwood-adult-day-health-center",
