@@ -12988,5 +12988,178 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
+  },
+  {
+    "id": "nwh-breastfeeding-virtual",
+    "name": "Newton-Wellesley Virtual Breastfeeding Support Group",
+    "organization": "Newton-Wellesley Hospital",
+    "url": "https://www.nwh.org/maternity/postpartum-mother-baby-care/lactation-breastfeeding-services",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "event_title": "Breastfeeding Support Group — Virtual",
+      "recurrence": {
+        "frequency": "weekly",
+        "byweekday": "TU"
+      },
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "venue": "Online (Zoom)",
+      "category": "pregnancy_postpartum_lactation",
+      "cost": "Free",
+      "series_label": "Newton-Wellesley Virtual Breastfeeding Support Group",
+      "publish_candidate": true,
+      "virtual": {
+        "platform": "Zoom",
+        "meeting_id": "994-8723-8422",
+        "passcode": "129721"
+      },
+      "notes": "Free virtual breastfeeding support led by a Newton-Wellesley lactation consultant. Check official source for current join details and exceptions."
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official lactation services page."
+    }
+  },
+  {
+    "id": "nwh-breastfeeding-inperson",
+    "name": "Newton-Wellesley In-Person Breastfeeding Support Group",
+    "organization": "Newton-Wellesley Hospital",
+    "url": "https://www.nwh.org/maternity/postpartum-mother-baby-care/lactation-breastfeeding-services",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "event_title": "Breastfeeding Support Group — In Person",
+      "recurrence": {
+        "frequency": "weekly",
+        "byweekday": "TH"
+      },
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "venue": "Newton-Wellesley Ambulatory Care Center",
+      "address": "159 Wells Ave, Newton, MA",
+      "category": "pregnancy_postpartum_lactation",
+      "cost": "Free",
+      "series_label": "Newton-Wellesley In-Person Breastfeeding Support Group",
+      "publish_candidate": true,
+      "notes": "Free in-person breastfeeding support. Check official source for current schedule and exceptions."
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official lactation services page."
+    }
+  },
+  {
+    "id": "umass-breastfeeding-support",
+    "name": "UMass Memorial Virtual Breastfeeding Support Group",
+    "organization": "UMass Memorial Health",
+    "url": "https://www.ummhealth.org/events/breastfeeding-support-group-virtual",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "event_title": "Breastfeeding (Lactation) Support Group — Virtual",
+      "recurrence": {
+        "frequency": "weekly",
+        "byweekday": "WE"
+      },
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "venue": "Online (Zoom)",
+      "category": "pregnancy_postpartum_lactation",
+      "cost": "Free",
+      "series_label": "UMass Memorial Virtual Breastfeeding Support Group",
+      "publish_candidate": true,
+      "notes": "Free public group for pregnant and lactating people. Registration required for the Zoom link; check official source for exceptions."
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official UMass Memorial event page."
+    }
+  },
+  {
+    "id": "umass-tiny-tummies",
+    "name": "Tiny Tummies Virtual Parent Support Group",
+    "organization": "UMass Memorial Health",
+    "url": "https://www.ummhealth.org/events/tiny-tummies-virtual-parent-support-group",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "event_title": "Tiny Tummies — Virtual Parent Feeding Support",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "FR",
+        "ordinal": [
+          1
+        ]
+      },
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "venue": "Online (Zoom)",
+      "category": "pregnancy_postpartum_lactation",
+      "cost": "Free",
+      "series_label": "Tiny Tummies Virtual Parent Support Group",
+      "publish_candidate": true,
+      "notes": "Free feeding discussion for breastfeeding or formula-feeding parents and babies. Obtain current join information from official source."
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official UMass Memorial event page."
+    }
+  },
+  {
+    "id": "umass-postpartum-support",
+    "name": "UMass Memorial Virtual Postpartum Parent Support Group",
+    "organization": "UMass Memorial Health",
+    "url": "https://www.ummhealth.org/events",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "event_title": "Postpartum — Virtual Parent Support Group",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "TU",
+        "ordinal": [
+          2,
+          4
+        ]
+      },
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "venue": "Online",
+      "category": "pregnancy_postpartum_lactation",
+      "cost": "Free",
+      "series_label": "UMass Memorial Virtual Postpartum Parent Support Group",
+      "publish_candidate": true,
+      "notes": "Free virtual postpartum discussion/support for parents with babies under 12 months. Check official event calendar for current registration and exceptions."
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official UMass Memorial events calendar."
+    }
   }
 ]
