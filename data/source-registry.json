@@ -1485,7 +1485,7 @@
       "events",
       "fundraisers"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "organization_event_discovery",
@@ -1507,11 +1507,11 @@
       "public_facing_service_events_only": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "disabled_wrong_geography",
+      "verified_at": "2026-09-26",
+      "basis": "The configured norwoodmalions.com endpoint is dead, and current web results for similarly named Norwood Lions sites resolve to Norwood, Ontario, not Norwood, Massachusetts. No sufficiently reliable current Massachusetts club event source was identified, so automated ingestion is disabled rather than risk cross-border false events."
     },
-    "notes": "Watch public fundraisers and service events. Publish only public-facing fundraisers/community events; exclude routine member/club/lodge meetings. Organization may publish events intermittently rather than maintain a continuous calendar. A successful check with zero current events is healthy; ingest only concrete dated public events.",
+    "notes": "Do not ingest from similarly named Norwood Lions pages unless Norwood, Massachusetts identity is explicitly verified. Re-enable only when a current MA club source or reliable Norwood-local dated listing is identified.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -1519,7 +1519,8 @@
       "track_consecutive_failures": true,
       "report_stale": true,
       "empty_result_is_failure": false
-    }
+    },
+    "monitor_role": "disabled_wrong_geography"
   },
   {
     "id": "magic-room-ticketleap",
