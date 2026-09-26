@@ -13002,5 +13002,101 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
+  },
+  {
+    "id": "working-moms-playgroup",
+    "name": "Working Moms Playgroup — Norwood/Walpole",
+    "organization": "Working Moms Playgroup",
+    "url": "https://www.workingmomsplaygroup.org/content.aspx?club_id=940066&page_id=4001",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred"
+    },
+    "verification": {
+      "status": "verified_public_calendar",
+      "verified_at": "2026-09-26",
+      "basis": "Public ClubExpress event calendar publishes dated Norwood/Walpole chapter events."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "notes": "Include publicly visible local parent/baby/playgroup events; do not expose member-private event details."
+  },
+  {
+    "id": "lll-boston",
+    "name": "La Leche League of Boston",
+    "organization": "La Leche League MA/RI/VT",
+    "url": "https://www.lllmarivt.org/lll-of-boston",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 2,
+    "ingestion": {
+      "method": "recurring_org_schedule",
+      "automation": "preferred",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "MO",
+        "ordinal": [
+          1
+        ]
+      },
+      "discover_exceptions": true
+    },
+    "verification": {
+      "status": "verified_recurring_public_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Official LLL Boston page states first Monday monthly at 11:30 AM at Brookline Library Putterham Branch, with holiday adjustments, plus weekly virtual meet-ups."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "notes": "Verify monthly exceptions and discover current weekly virtual meet-up details before publishing join information."
+  },
+  {
+    "id": "over-the-moon-parenting",
+    "name": "Over The Moon Parenting",
+    "organization": "Over The Moon Parenting",
+    "url": "https://overthemoonparenting.com/",
+    "active_monitor": true,
+    "produces": [
+      "events"
+    ],
+    "priority": 3,
+    "ingestion": {
+      "method": "organization_event_discovery",
+      "automation": "preferred",
+      "discovery_urls": [
+        "https://overthemoonparenting.com/",
+        "https://overthemoonparenting.com/partner-hospitals/"
+      ]
+    },
+    "verification": {
+      "status": "verified_program_source",
+      "verified_at": "2026-09-26",
+      "basis": "Official site confirms free weekly drop-in breastfeeding groups and pregnancy/postpartum classes."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "notes": "Publish only concrete current dates/times; monitor Braintree/Framingham partner programming as well as Norwell/Pembroke."
   }
 ]
