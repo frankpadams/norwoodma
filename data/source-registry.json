@@ -5456,14 +5456,14 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. A successful fetch with zero current events is healthy; school pages may legitimately publish no events.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -5534,14 +5534,14 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. A successful fetch with zero current events is healthy; school pages may legitimately publish no events.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -6147,14 +6147,14 @@
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. A successful fetch with zero current events is healthy; school pages may legitimately publish no events.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
