@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T19:49:34.549798-04:00",
+  "generated_at": "2026-09-25T23:41:19.022646-04:00",
   "offline": false,
-  "events_published": 719,
+  "events_published": 721,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 719,
-      "generated_at": "2026-09-25T19:49:34.522167-04:00"
+      "events": 721,
+      "generated_at": "2026-09-25T23:41:19.001382-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 86,
-      "generated_at": "2026-09-25T19:49:34.525588-04:00"
+      "generated_at": "2026-09-25T23:41:19.004039-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 455,
-      "generated_at": "2026-09-25T19:49:34.533861-04:00"
+      "generated_at": "2026-09-25T23:41:19.010541-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 368,
-      "generated_at": "2026-09-25T19:49:34.540545-04:00"
+      "generated_at": "2026-09-25T23:41:19.015168-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-25T19:49:34.543200-04:00"
+      "generated_at": "2026-09-25T23:41:19.017442-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 16,
-      "generated_at": "2026-09-25T19:49:34.546202-04:00"
+      "generated_at": "2026-09-25T23:41:19.019929-04:00"
     }
   ],
   "event_sources": [
@@ -79,17 +79,17 @@
     },
     {
       "source_id": "circle-of-hope-events",
-      "ok": false,
+      "ok": true,
       "method": "seasonal_org_event_discovery",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "citizens-better-norwood-events",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://citizensforabetternorwoodma.com/events"
+      "note": "all configured pages failed: https://citizensforabetternorwoodma.com/events: 403 Client Error: Forbidden for url: https://citizensforabetternorwoodma.com/events | https://cbnma.com"
     },
     {
       "source_id": "community-event-submissions",
@@ -271,7 +271,7 @@
       "ok": false,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodmalions.com', port=4"
+      "note": "all configured pages failed: https://www.norwoodmalions.com/: HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caus"
     },
     {
       "source_id": "magic-room-ticketleap",
@@ -310,10 +310,10 @@
     },
     {
       "source_id": "norwood-blood-drives",
-      "ok": false,
+      "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-carillon-series",
@@ -331,10 +331,10 @@
     },
     {
       "source_id": "norwood-evening-garden-club",
-      "ok": false,
+      "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -352,17 +352,17 @@
     },
     {
       "source_id": "norwood-junior-womans-club",
-      "ok": false,
+      "ok": true,
       "method": "multi_source_org_discovery",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "note": "configured pages checked; no matching machine-readable Event/ICS found"
     },
     {
       "source_id": "norwood-kofc-events",
-      "ok": false,
+      "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-little-league",
@@ -411,7 +411,7 @@
       "ok": true,
       "method": "clubrunner_calendar",
       "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "note": ""
     },
     {
       "source_id": "norwood-space-center-events",
@@ -453,7 +453,7 @@
       "ok": false,
       "method": "recurring_org_schedule",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm"
+      "note": "all configured pages failed: https://norwoodtoastmaster.toastmastersclubs.org/: HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded"
     },
     {
       "source_id": "norwood-town-news",
@@ -471,17 +471,17 @@
     },
     {
       "source_id": "norwood-vfw-public-events",
-      "ok": false,
+      "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-women-business-networking",
       "ok": false,
       "method": "secondary_recurring_discovery",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/calendar: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
     },
     {
       "source_id": "norwood-youth-fundraisers",
@@ -887,7 +887,7 @@
       "ok": true,
       "method": "schoolnow_calendar",
       "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "note": ""
     },
     {
       "source_id": "nps-fine-arts",
@@ -1006,14 +1006,14 @@
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/"
+      "note": "all configured pages failed: https://nerna.org/find-a-meeting/: 403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/"
     },
     {
       "source_id": "recovery-smart",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/"
+      "note": "all configured pages failed: https://meetings.smartrecovery.org/meetings/: 403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/"
     },
     {
       "source_id": "resource-cub-scouts-pack-42-norwood",
@@ -1076,7 +1076,7 @@
       "ok": false,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.norwoodschola"
+      "note": "all configured pages failed: https://www.norwoodscholarshipfoundation.org/: HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded wit"
     },
     {
       "source_id": "skating-club-calendar",
@@ -1111,14 +1111,14 @@
       "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "404 Client Error: Not Found for url: https://www.norwoodma.gov/departments/conservation/index.php"
+      "note": "all configured pages failed: https://www.norwoodma.gov/departments/conservation/index.php: 404 Client Error: Not Found for url: https://www.norwoodma.gov/departments/conservation/i"
     },
     {
       "source_id": "town-cultural-council",
       "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://massculturalcouncil.org/local-council/norwood/"
+      "note": "all configured pages failed: https://massculturalcouncil.org/local-council/norwood/: 403 Client Error: Forbidden for url: https://massculturalcouncil.org/local-council/norwood/"
     },
     {
       "source_id": "town-farmers-market",
@@ -1160,7 +1160,7 @@
       "ok": true,
       "method": "newsletter_calendar",
       "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "note": ""
     },
     {
       "source_id": "town-veterans",
@@ -1232,7 +1232,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 63,
+      "found": 62,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1240,7 +1240,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 63,
+      "found": 62,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1248,7 +1248,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 43,
+      "found": 44,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
