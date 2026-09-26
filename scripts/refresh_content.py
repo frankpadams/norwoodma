@@ -977,7 +977,7 @@ def recurring_candidates(source, months=5):
                 day=days[ordinal-1]
                 if day<now-timedelta(days=7): continue
                 title=source.get('name')
-                out.append({'id':event_id(title,day.isoformat(),None),'title':title,'start':{'date':day.isoformat(),'time':None},'end':{'date':day.isoformat(),'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':source.get('url'),'cost':None,'public_access':'public','series':title,'publish_candidate':False,'verification_status':'recurrence_candidate','notes':'Date derived from a verified recurring schedule; venue/time should be confirmed from current listing.','discovered_by':'verified_recurrence'})
+                out.append({'id':event_id(title,day.isoformat(),None),'title':title,'start':{'date':day.isoformat(),'time':None},'end':{'date':day.isoformat(),'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':ing.get('revalidation_url') or source.get('url'),'cost':None,'public_access':'public','series':title,'publish_candidate':False,'verification_status':'recurrence_candidate','notes':'Date derived from a verified recurring schedule; venue/time should be confirmed from current listing.','discovered_by':'verified_recurrence'})
     return out
 
 def _verified_recurrence_page_check(source):
@@ -1014,6 +1014,7 @@ def events_from_verified_recurrence(source, months=6):
     ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}; out=[]
     freq=rec.get('frequency'); weekdays={'MO':0,'TU':1,'WE':2,'TH':3,'FR':4,'SA':5,'SU':6}
     wd=weekdays.get(rec.get('byweekday')); now=now_local().date()
+    allowed_months={int(x) for x in (rec.get('months') or []) if str(x).isdigit()}
     if wd is None or freq not in {'weekly','monthly'}: return out
     end=(now+timedelta(days=31*months))
     d=now-timedelta(days=7)
@@ -1024,6 +1025,8 @@ def events_from_verified_recurrence(source, months=6):
                 ords=rec.get('ordinal') or []
                 occurrence=((d.day-1)//7)+1
                 include=occurrence in ords
+            if include and allowed_months and d.month not in allowed_months:
+                include=False
             if include:
                 title=ing.get('event_title') or source.get('name')
                 st=ing.get('start_time'); et=ing.get('end_time')
