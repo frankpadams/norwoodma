@@ -355,7 +355,15 @@
     "provider": "Rotary Club of Norwood",
     "kind": "monitor_calendar",
     "possible_conflicts": true,
-    "verified": true
+    "verified": true,
+    "health_source_ids": [
+      "norwood-rotary-calendar"
+    ],
+    "selector": {
+      "source_ids": [
+        "norwood-rotary-calendar"
+      ]
+    }
   },
   {
     "id": "norwood-elks-1124",
@@ -366,7 +374,15 @@
     "provider": "Norwood Elks Lodge #1124",
     "kind": "monitor_calendar",
     "possible_conflicts": true,
-    "verified": true
+    "verified": true,
+    "health_source_ids": [
+      "elks-calendar"
+    ],
+    "selector": {
+      "source_ids": [
+        "elks-calendar"
+      ]
+    }
   },
   {
     "id": "friends-norwood-center",
@@ -377,7 +393,16 @@
     "provider": "Friends of Norwood Center",
     "kind": "monitor_calendar",
     "possible_conflicts": true,
-    "verified": true
+    "verified": true,
+    "health_source_ids": [
+      "friends-center-events"
+    ],
+    "selector": {
+      "source_ids": [
+        "friends-center-events",
+        "friends-center-blog"
+      ]
+    }
   },
   {
     "id": "norwood-chamber",
@@ -388,7 +413,15 @@
     "provider": "Norwood Chamber of Commerce",
     "kind": "monitor_calendar",
     "possible_conflicts": true,
-    "verified": true
+    "verified": true,
+    "health_source_ids": [
+      "norwood-chamber-events"
+    ],
+    "selector": {
+      "source_ids": [
+        "norwood-chamber-events"
+      ]
+    }
   },
   {
     "id": "norwood-historical-society",
@@ -436,7 +469,15 @@
     "view_url": "https://www.norwoodcoh.org/",
     "provider": "Circle of Hope",
     "kind": "organization_monitor",
-    "possible_conflicts": true
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "circle-of-hope-events"
+    ],
+    "selector": {
+      "source_ids": [
+        "circle-of-hope-events"
+      ]
+    }
   },
   {
     "id": "norwood-youth-soccer",
@@ -578,7 +619,15 @@
     "provider": "Norwood High School Athletics",
     "kind": "monitor_schedule",
     "possible_conflicts": true,
-    "verified": true
+    "verified": true,
+    "health_source_prefixes": [
+      "nps-athletics-arbiter-"
+    ],
+    "selector": {
+      "source_id_prefixes": [
+        "nps-athletics-arbiter-"
+      ]
+    }
   },
   {
     "id": "skating-club-boston-events",
@@ -589,7 +638,15 @@
     "provider": "Skating Club of Boston events",
     "kind": "monitor_schedule",
     "possible_conflicts": true,
-    "verified": true
+    "verified": true,
+    "health_source_ids": [
+      "skating-club-calendar"
+    ],
+    "selector": {
+      "source_ids": [
+        "skating-club-calendar"
+      ]
+    }
   },
   {
     "id": "td-garden-major-events",
