@@ -12736,7 +12736,12 @@
     "monitor_priority": 2,
     "ingestion": {
       "method": "html_list",
-      "automation": "preferred"
+      "automation": "preferred",
+      "guide_discovery_pages": [
+        "https://norwoodma.myrec.com/info/default.aspx",
+        "https://norwoodma.myrec.com/info/activities/default.aspx"
+      ],
+      "discover_seasonal_guides": true
     },
     "filters": {
       "require_norwood_relevance": true,
