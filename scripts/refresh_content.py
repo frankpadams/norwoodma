@@ -1516,6 +1516,16 @@ def refresh_events(offline=False):
             prev=previous_health.get(sid,{})
             ok=bool(row.get('ok')); found=int(row.get('found') or 0)
             policy=src.get('health_policy',{})
+            access_limited=False
+            # A source can be live but intentionally reject automated clients (401/403).
+            # When the registry explicitly opts into this policy, report that condition
+            # separately instead of aging a valid source into a false "stale" failure.
+            if not ok and policy.get('blocked_fetch_is_failure') is False:
+                note_text=str(row.get('note') or '')
+                if re.search(r'\\b(?:401|403)\\b|forbidden|unauthorized',note_text,re.I):
+                    ok=True
+                    access_limited=True
+                    row['note']=(note_text+'; automated access blocked — source remains active/limited').strip('; ')
             # Some seasonal sources (notably athletics) are expected to be non-empty
             # while school is in session. Treat an empty parse as an ingestion failure
             # when the registry explicitly says zero is a failure.
@@ -1533,7 +1543,7 @@ def refresh_events(offline=False):
                 d=parse_dt(last_success)
                 if d and now_local()-d.astimezone(TZ)>timedelta(days=30):
                     stale=True; stale_reason='no successful update in 30 days'
-            health.append({'source_id':sid,'last_checked':checked_at,'last_healthy_check':last_healthy_check,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
+            health.append({'source_id':sid,'last_checked':checked_at,'last_healthy_check':last_healthy_check,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'access_limited':access_limited,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
         # Preserve tracked sources that were not attempted in this run so one
         # partial adapter failure does not erase their historical health record.
         attempted_ids={x.get('source_id') for x in health}
