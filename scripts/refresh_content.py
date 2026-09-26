@@ -957,6 +957,39 @@ def events_from_verified_recurrence(source, months=6):
         d+=timedelta(days=1)
     return out
 
+def events_from_nys_multi_schedule(source):
+    """Ingest Norwood Youth Soccer's current team/schedule pages and linked public schedule documents."""
+    ing=source.get('ingestion',{}); urls=[ing.get('schedule_url'),ing.get('team_directory_url')]; out=[]; feeds=[]
+    for url in [u for u in urls if u]:
+        html=request(url).text
+        temp=dict(source); temp['url']=url
+        extracted,ics=extract_jsonld_events(html,temp); out.extend(extracted); feeds.extend(ics)
+        if BeautifulSoup:
+            soup=BeautifulSoup(html,'html.parser')
+            for a in soup.find_all('a',href=True):
+                href=urljoin(url,a.get('href')); label=clean_text(a.get_text(' '))
+                low=(href+' '+label).lower()
+                if any(k in low for k in ['schedule','practice','game','calendar','.ics','.pdf']) and ('norwoodsoccer.com' in href or 'bays.org' in href):
+                    try:
+                        if href.lower().split('?')[0].endswith('.ics'): out.extend(events_from_ical(href,temp))
+                        elif not href.lower().split('?')[0].endswith('.pdf'):
+                            page=request(href).text; rows,_=extract_jsonld_events(page,temp); out.extend(rows)
+                    except Exception:
+                        pass
+    # BAYS is the official travel-game system linked by NYS. Its public club page may
+    # expose structured rows even when NYS itself only links outward.
+    bays=ing.get('travel_league_url')
+    if bays:
+        try:
+            temp=dict(source); temp['url']=bays
+            out.extend(events_from_league_schedule(temp))
+        except Exception:
+            pass
+    for e in out:
+        e['source_id']=source['id']; e['category']='youth_sports'; e['publish_candidate']=False
+        e['curated_default']=False; e['discovered_by']='nys_multi_schedule'
+    return dedupe_events(out)
+
 def events_from_league_schedule(source):
     """Parse public youth-league schedule tables/cards with dates and matchup metadata."""
     url=source.get('url'); html=request(url).text
@@ -1324,6 +1357,7 @@ def refresh_events(offline=False):
                 elif method=='clubrunner_calendar': got=events_from_clubrunner(src)
                 elif method=='dated_event_pages': got=events_from_dated_event_pages(src)
                 elif method=='verified_recurring_schedule': got=events_from_verified_recurrence(src)
+                elif method=='nys_multi_schedule': got=events_from_nys_multi_schedule(src)
                 elif method=='league_schedule_table': got=events_from_league_schedule(src)
                 elif method=='local_town_pages_calendar': got=events_from_secondary_listing(src)
                 elif method=='social_mirror': got=events_from_social_mirror(src)
@@ -2065,7 +2099,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops','verified_recurring_schedule'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops','verified_recurring_schedule','nys_multi_schedule'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
