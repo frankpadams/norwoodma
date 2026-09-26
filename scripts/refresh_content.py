@@ -826,26 +826,71 @@ def events_from_social_mirror(source):
         out.append({'id':event_id(title,ds,'Norwood'),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':'Norwood, MA','address':None,'category':'community','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'public_social_mirror','notes':'Dated Norwood-specific public event discovered from a public social mirror; prefer first-party event details when available.','discovered_by':'social_mirror'})
     return dedupe_events(out)
 
+def _events_from_newsletter_pdf(content, source, source_url):
+    """Conservatively extract explicitly dated items from a newsletter PDF."""
+    if not PdfReader: return []
+    try:
+        reader=PdfReader(BytesIO(content))
+        pages=[(p.extract_text() or '') for p in reader.pages]
+    except Exception:
+        return []
+    out=[]; now=now_local().date()
+    month_re=r'(January|February|March|April|May|June|July|August|September|October|November|December)'
+    # Require a spelled-out month + day. Bare calendar-grid numbers are intentionally
+    # ignored because they cannot safely be associated with a program.
+    date_re=re.compile(r'\\b'+month_re+r'\\s+(\\d{1,2})(?:st|nd|rd|th)?(?:,\\s*(20\\d{2}))?\\b',re.I)
+    time_re=re.compile(r'\\b(\\d{1,2})(?::(\\d{2}))?\\s*(a\\.?m\\.?|p\\.?m\\.?)\\b',re.I)
+    for page in pages:
+        lines=[clean_text(x) for x in page.splitlines() if clean_text(x)]
+        for idx,line in enumerate(lines):
+            m=date_re.search(line)
+            if not m: continue
+            mon=m.group(1); day=int(m.group(2)); year=int(m.group(3) or now.year)
+            try: d=datetime.strptime(f'{mon} {day} {year}','%B %d %Y').date()
+            except Exception: continue
+            if d < now-timedelta(days=7) or d > now+timedelta(days=150): continue
+            context=' '.join(lines[max(0,idx-1):min(len(lines),idx+2)])
+            # A usable event needs descriptive text beyond the date itself.
+            title=date_re.sub('',line).strip(' -–—:|')
+            if len(title)<4 and idx>0: title=lines[idx-1].strip(' -–—:|')
+            if len(title)<4 or title.lower().startswith(('page ','september 2026','october 2026')): continue
+            tm=time_re.search(context); time_value=None
+            if tm:
+                h=int(tm.group(1)); minute=int(tm.group(2) or 0); ap=tm.group(3).lower().replace('.','')
+                if ap=='pm' and h<12:h+=12
+                if ap=='am' and h==12:h=0
+                time_value=f'{h:02d}:{minute:02d}'
+            ds=d.isoformat()
+            out.append({'id':event_id(title,ds,'Norwood Senior Center'),'title':title,'start':{'date':ds,'time':time_value},'end':{'date':ds,'time':None},'venue':'Norwood Senior Center','address':None,'category':'community','source_id':source['id'],'source_url':source_url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'official_newsletter_pdf','notes':'Explicitly dated item extracted from the official Senior Center newsletter. Confirm registration requirements with the Senior Center.','discovered_by':'newsletter_pdf'})
+    return dedupe_events(out)
+
 def events_from_newsletter_index(source):
-    """Discover current Senior Center newsletter/calendar documents without inventing recurrences."""
+    """Discover the newest Senior Center newsletter and extract explicit dated events."""
     ing=source.get('ingestion',{}); url=ing.get('index_url') or source.get('url'); html=request(url).text
     out=[]
-    # Some town newsletter indexes expose concrete event text directly.
     extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
     if BeautifulSoup:
-        soup=BeautifulSoup(html,'html.parser')
-        docs=[]
+        soup=BeautifulSoup(html,'html.parser'); docs=[]
         for a in soup.find_all('a',href=True):
             href=urljoin(url,a['href']); label=clean_text(a.get_text(' '))
+            if href==url: continue
             if any(href.lower().split('?')[0].endswith(x) for x in ['.pdf','.html','.htm']) or 'newsletter' in label.lower() or 'calendar' in label.lower():
-                if href!=url: docs.append((href,label))
-        # HTML issues can be parsed safely. PDFs remain health-checked/discovered
-        # rather than guessed from snippets; a future PDF-text adapter can enrich them.
-        for href,label in docs[:8]:
-            if href.lower().split('?')[0].endswith(('.html','.htm')):
-                try:
+                # Prefer current-year/month documents. The town index is newest-first,
+                # so order is retained as the tie-breaker.
+                score=0; low=(label+' '+href).lower()
+                if str(now_local().year) in low: score+=10
+                if now_local().strftime('%B').lower() in low: score+=5
+                docs.append((score,href,label))
+        docs.sort(key=lambda x:x[0],reverse=True)
+        # Process only the two strongest current documents; avoid years of archives.
+        for _,href,label in docs[:2]:
+            try:
+                if href.lower().split('?')[0].endswith('.pdf'):
+                    r=request(href); out.extend(_events_from_newsletter_pdf(r.content,source,href))
+                else:
                     body=request(href).text; ev,_=extract_jsonld_events(body,source); out.extend(ev)
-                except Exception: pass
+            except Exception:
+                pass
     return dedupe_events(out)
 
 def events_from_secondary_listing(source):
