@@ -11073,13 +11073,13 @@
     "url": "https://norwoodsoccer.com/schedules",
     "domain": "norwoodsoccer.com",
     "produces": [
-      "resources"
+      "sports_events"
     ],
     "potential_outputs": [
-      "events"
+      "sports_events"
     ],
-    "active_monitor": false,
-    "monitor_priority": 5,
+    "active_monitor": true,
+    "monitor_priority": 1,
     "ingestion": {
       "method": "nys_multi_schedule",
       "automation": "preferred",
@@ -11122,6 +11122,13 @@
         "spring",
         "fall"
       ]
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
     }
   },
   {
