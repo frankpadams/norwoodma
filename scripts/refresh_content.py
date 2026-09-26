@@ -1453,7 +1453,7 @@ def refresh_events(offline=False):
                     if not feed and src.get('id')=='nps-district-ical': feed='https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics'
                     if feed: got=events_from_ical(feed,src)
                     else: note='no direct feed_url configured'
-                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','local_town_pages_calendar' ,'recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','sportsconnect_schedule'}:
+                elif method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','event_platform_discovery','structured_registration_discovery','ticketing_calendar','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','local_town_pages_calendar' ,'recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','sportsconnect_schedule'}:
                     ing=src.get('ingestion',{})
                     # Common adapter metadata uses several URL field names. Feed all
                     # public page URLs through the conservative Event/ICS discovery
