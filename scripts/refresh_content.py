@@ -935,6 +935,28 @@ def recurring_candidates(source, months=5):
                 out.append({'id':event_id(title,day.isoformat(),None),'title':title,'start':{'date':day.isoformat(),'time':None},'end':{'date':day.isoformat(),'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':source.get('url'),'cost':None,'public_access':'public','series':title,'publish_candidate':False,'verification_status':'recurrence_candidate','notes':'Date derived from a verified recurring schedule; venue/time should be confirmed from current listing.','discovered_by':'verified_recurrence'})
     return out
 
+def events_from_verified_recurrence(source, months=6):
+    """Generate live bounded occurrences from an explicitly verified schedule in source-registry."""
+    ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}; out=[]
+    freq=rec.get('frequency'); weekdays={'MO':0,'TU':1,'WE':2,'TH':3,'FR':4,'SA':5,'SU':6}
+    wd=weekdays.get(rec.get('byweekday')); now=now_local().date()
+    if wd is None or freq not in {'weekly','monthly'}: return out
+    end=(now+timedelta(days=31*months))
+    d=now-timedelta(days=7)
+    while d<=end:
+        if d.weekday()==wd:
+            include=freq=='weekly'
+            if freq=='monthly':
+                ords=rec.get('ordinal') or []
+                occurrence=((d.day-1)//7)+1
+                include=occurrence in ords
+            if include:
+                title=ing.get('event_title') or source.get('name')
+                st=ing.get('start_time'); et=ing.get('end_time')
+                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':'automated_verified_recurrence','notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
+        d+=timedelta(days=1)
+    return out
+
 def events_from_league_schedule(source):
     """Parse public youth-league schedule tables/cards with dates and matchup metadata."""
     url=source.get('url'); html=request(url).text
@@ -1301,6 +1323,7 @@ def refresh_events(offline=False):
                 elif method=='newsletter_calendar': got=events_from_newsletter_index(src)
                 elif method=='clubrunner_calendar': got=events_from_clubrunner(src)
                 elif method=='dated_event_pages': got=events_from_dated_event_pages(src)
+                elif method=='verified_recurring_schedule': got=events_from_verified_recurrence(src)
                 elif method=='league_schedule_table': got=events_from_league_schedule(src)
                 elif method=='local_town_pages_calendar': got=events_from_secondary_listing(src)
                 elif method=='social_mirror': got=events_from_social_mirror(src)
@@ -2042,7 +2065,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops','verified_recurring_schedule'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']
