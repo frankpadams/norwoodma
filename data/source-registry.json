@@ -2635,7 +2635,9 @@
         "venue",
         "time",
         "guest_access"
-      ]
+      ],
+      "display_url": "https://www.toastmasters.org/Find-a-Club/00003926-norwood-toastmasters-club",
+      "organization_url": "https://www.toastmasters.org/Find-a-Club/00003926-norwood-toastmasters-club"
     },
     "verification": {
       "status": "verified_recurring_public_schedule",
@@ -2650,7 +2652,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Generate recurring candidates only after checking current source/secondary listings for time, venue and exceptions; venue has varied between Norwood and nearby libraries, so never hard-code location."
+    "notes": "Norwood Record is authoritative for dated schedule facts. User-facing link prefers the official Toastmasters International club page when relevant; dated newspaper listings supersede it for date/time/location conflicts."
   },
   {
     "id": "norwood-town-news",
