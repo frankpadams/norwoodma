@@ -1,4 +1,4 @@
-window.NORWOOD_RESOURCES= [
+window.NORWOOD_RESOURCES = [
   {
     "name": "988 Suicide & Crisis Lifeline",
     "category": "Mental Health",
@@ -80,6 +80,20 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Regional",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Sunnyside Up AA — Grace Episcopal Church",
+    "category": "Recovery",
+    "description": "Local open Alcoholics Anonymous meeting at Grace Episcopal Church, 150 Chapel Street, Norwood. Meets weekday mornings, 7:00–8:00 AM. See the linked Grace groups page for the local meeting listing; scheduled occurrences also appear on the Norwood.ma calendar.",
+    "url": "https://www.gracenor.org/groups",
+    "tags": "AA Alcoholics Anonymous Sunnyside Up recovery meeting Grace Episcopal weekday morning 7 AM",
+    "topics": [
+      "health",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09",
+    "source_note": "Grace Episcopal Church Groups page and AA Boston meeting directory"
   },
   {
     "name": "Alzheimer's Association MA/NH 24/7 Helpline",
@@ -3534,18 +3548,17 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Norwood WIC",
-    "category": "Food & Basic Needs",
-    "description": "Local WIC nutrition education and supplemental food/formula program at 275 Prospect Street.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
-    "tags": "wic nutrition baby infant pregnancy food",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Local WIC office providing nutrition support for pregnant and postpartum families, infant feeding guidance, breastfeeding support and access to WIC peer counselors. 275 Prospect St, Room 214, Norwood; 781-551-8083.",
+    "url": "https://www.bamsi.org/bamsi-kids/wic/",
+    "tags": "pregnancy postpartum breastfeeding lactation infant feeding nutrition WIC peer counselor breast pump",
     "topics": [
-      "kids",
-      "food",
-      "health"
+      "pregnancy",
+      "medical",
+      "family"
     ],
     "coverage": "Local",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-09"
   },
   {
     "name": "Norwood Women’s Club",
@@ -4830,6 +4843,117 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Local",
     "address": "100 Winter St, Norwood, MA 02062",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts WIC Breastfeeding Support",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "State WIC breastfeeding support including Mother-to-Mother peer counselors, individual feeding support, breast-pump help and information about prenatal breastfeeding classes and support groups.",
+    "url": "https://www.mass.gov/info-details/get-wic-breastfeeding-support-services",
+    "tags": "breastfeeding lactation pregnancy postpartum WIC peer counselor breast pump",
+    "topics": [
+      "pregnancy",
+      "medical",
+      "family"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Perinatal Mood & Anxiety Disorder Support",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Massachusetts DPH information and support for perinatal mood and anxiety disorders, including the Massachusetts Postpartum Support International warm line and referral information.",
+    "url": "https://www.mass.gov/perinatal-mood-and-anxiety-disorder-pmad-initiative",
+    "tags": "postpartum depression anxiety PMAD pregnancy mental health perinatal PSI warmline",
+    "topics": [
+      "pregnancy",
+      "medical",
+      "mental health",
+      "family"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Pregnancy Loss & Grief Resources",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "State resources for pregnancy loss and bereavement, including support and referral information for parents, partners and families.",
+    "url": "https://www.mass.gov/pregnancy-loss",
+    "tags": "pregnancy loss miscarriage stillbirth infant loss grief bereavement support",
+    "topics": [
+      "pregnancy",
+      "medical",
+      "mental health",
+      "family"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Corvid Community Care — Pregnancy, Birth & Bereavement Support",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Full-spectrum doula and reproductive-health support serving Greater Boston and the South Shore, including bereavement care, classes and a recurring reproductive-grief support group held in Norwood.",
+    "url": "https://www.corviddoulacare.com/classes-groups",
+    "tags": "doula pregnancy birth labor postpartum reproductive grief miscarriage stillbirth infertility class support group Norwood",
+    "topics": [
+      "pregnancy",
+      "family"
+    ],
+    "coverage": "Local / regional",
+    "verified": "2026-09"
+  },
+  {
+    "name": "La Leche League — Boston & Regional Virtual Support",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Volunteer breastfeeding, pumping and combination-feeding support. Boston hosts a monthly in-person meeting and the MA/RI/VT region offers virtual meet-ups every week.",
+    "url": "https://www.lllmarivt.org/lll-of-boston",
+    "tags": "breastfeeding lactation pumping pregnancy La Leche League support group virtual new parent",
+    "topics": [
+      "pregnancy",
+      "family"
+    ],
+    "coverage": "Nearby / virtual",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Newton-Wellesley Childbirth, Parenting & Lactation Support",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Classes and support open to the public, including childbirth preparation, newborn care, breastfeeding preparation, postpartum transition, a postpartum mothers group and recurring virtual and in-person breastfeeding support groups.",
+    "url": "https://www.massgeneralbrigham.org/en/events",
+    "tags": "pregnancy childbirth prenatal postpartum breastfeeding lactation newborn parenting class support group Newton Wellesley",
+    "topics": [
+      "pregnancy",
+      "medical",
+      "family"
+    ],
+    "coverage": "Nearby / virtual",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Infant Feeding Care",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Lactation and infant-feeding care with office and telehealth visits plus in-home visits for eligible young infants in a service area that specifically includes Norwood.",
+    "url": "https://www.infantfeedingcare.com/",
+    "tags": "lactation breastfeeding infant feeding IBCLC home visit Norwood telehealth",
+    "topics": [
+      "pregnancy",
+      "medical",
+      "family"
+    ],
+    "coverage": "Serves Norwood",
+    "verified": "2026-09"
+  },
+  {
+    "name": "UMass Memorial Virtual Breastfeeding Support Group",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Free public virtual breastfeeding/lactation support group for pregnant and lactating people, meeting Wednesdays from 3–4 PM on Zoom; registration provides the meeting link.",
+    "url": "https://www.ummhealth.org/events/breastfeeding-support-group-virtual",
+    "tags": "breastfeeding lactation virtual Zoom support group pregnancy postpartum Wednesday",
+    "topics": [
+      "pregnancy",
+      "family"
+    ],
+    "coverage": "Virtual",
     "verified": "2026-09"
   }
 ];
