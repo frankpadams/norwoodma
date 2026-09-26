@@ -2687,18 +2687,16 @@
       ]
     },
     "verification": {
-      "status": "verified_live_access_limited",
-      "verified_at": "2026-09-26",
-      "basis": "Calendar is live and indexed with upcoming events; direct automated refresh receives 403."
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-25",
+      "basis": "Local Town Pages currently exposes a searchable upcoming-events calendar and monthly Norwood calendar articles."
     },
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false,
-      "blocked_fetch_is_failure": false,
-      "blocked_fetch_status": "limited"
+      "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
     "notes": "Secondary discovery source. Apply strict Norwood location/relevance filtering and deduplicate against primary organizers; never let nearby regional events leak into Norwood What's Happening."
@@ -6926,9 +6924,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_live_access_limited",
-      "verified_at": "2026-09-26",
-      "basis": "NERNA meeting finder and meeting-search pages are live; direct automated refresh receives 403."
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
@@ -6936,9 +6934,7 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true,
-      "blocked_fetch_is_failure": false,
-      "blocked_fetch_status": "limited"
+      "report_stale": true
     }
   },
   {
@@ -6968,9 +6964,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_live_access_limited",
-      "verified_at": "2026-09-26",
-      "basis": "SMART Recovery meeting finder is live and returns Massachusetts meeting results; direct automated refresh receives 403."
+      "status": "backend_registered",
+      "verified_at": "2026-09-25",
+      "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
     "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
@@ -6978,9 +6974,7 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true,
-      "blocked_fetch_is_failure": false,
-      "blocked_fetch_status": "limited"
+      "report_stale": true
     }
   },
   {

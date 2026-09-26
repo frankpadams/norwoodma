@@ -7432,31 +7432,6 @@
     "discovered_by": "scheduled_ical"
   },
   {
-    "id": "2026-10-26-gv-soccer-holliston-high-school-16d3436",
-    "title": "GV Soccer @ Holliston High School",
-    "start": {
-      "date": "2026-10-26",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-10-26",
-      "time": "19:00"
-    },
-    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
-    "address": "370 Hollis Street, Holliston Massachusetts 01746",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Turf)",
-    "discovered_by": "scheduled_ical"
-  },
-  {
     "id": "2026-10-26-girls-varsity-volleyball-vs-holliston-high-sc-0b73f2c",
     "title": "Girls Varsity Volleyball vs Holliston High School",
     "start": {
@@ -7504,6 +7479,31 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical"
+  },
+  {
+    "id": "2026-10-26-gv-soccer-holliston-high-school-16d3436",
+    "title": "GV Soccer @ Holliston High School",
+    "start": {
+      "date": "2026-10-26",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "20:30"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Turf)",
     "discovered_by": "scheduled_ical"
   },
   {
