@@ -7,3 +7,17 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .calendar-feed-option.calendar-feed-available input[type="checkbox"]{accent-color:#16803a;outline:2px solid #16803a;outline-offset:1px}
 .calendar-feed-option.calendar-feed-unavailable input[type="checkbox"]{accent-color:#b42318;outline:2px solid #b42318;outline-offset:1px}
 .calendar-feed-option.calendar-feed-unavailable input[type="checkbox"]:not(:checked){background:#fff}
+
+/* Support & Contact */
+.support-page .support-content{max-width:920px;margin-inline:auto}
+.support-intro{margin:0 0 28px;padding:26px 28px;border:1px solid #dbe3ec;border-radius:18px;background:#fff}
+.support-intro h2{margin:.2rem 0 .75rem}
+.contact-card{padding:26px 28px;border:1px solid #dbe3ec;border-radius:18px;background:#fff;margin-bottom:28px}
+.norwood-contact-form{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.norwood-contact-form label{display:flex;flex-direction:column;gap:7px;font-weight:700;min-width:0}
+.norwood-contact-form label:nth-of-type(3),.norwood-contact-form label:nth-of-type(4){grid-column:1/-1}
+.norwood-contact-form input,.norwood-contact-form select,.norwood-contact-form textarea{box-sizing:border-box;width:100%;font:inherit;color:inherit;background:#fff;border:1px solid #aebdcb;border-radius:10px;padding:12px 13px}
+.norwood-contact-form textarea{resize:vertical;min-height:150px}
+.norwood-contact-form input:focus,.norwood-contact-form select:focus,.norwood-contact-form textarea:focus{outline:3px solid rgba(25,75,125,.18);border-color:#194b7d}
+.norwood-contact-form .button{justify-self:start;grid-column:1/-1;margin-top:2px}
+@media(max-width:680px){.support-intro,.contact-card{padding:20px 18px}.norwood-contact-form{grid-template-columns:1fr}.norwood-contact-form label,.norwood-contact-form label:nth-of-type(3),.norwood-contact-form label:nth-of-type(4){grid-column:1}.norwood-contact-form .button{grid-column:1;width:100%}}
