@@ -1384,6 +1384,35 @@ def events_from_assabet(source):
         out=[e for e in out if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
     return dedupe_events(out)
 
+def discover_recreation_guides(source):
+    """Discover current/future seasonal Recreation guides without hard-coded edition URLs."""
+    if not BeautifulSoup: return []
+    ing=source.get('ingestion',{})
+    pages=ing.get('guide_discovery_pages') or [
+        'https://norwoodma.myrec.com/info/default.aspx',
+        'https://norwoodma.myrec.com/info/activities/default.aspx'
+    ]
+    terms=('program guide','recreation guide','activity guide','seasonal guide','spring/summer','fall/winter')
+    found=[]
+    for page in pages:
+        try: soup=BeautifulSoup(request(page).text,'html.parser')
+        except Exception: continue
+        for a in soup.find_all('a',href=True):
+            label=clean_text(a.get_text(' '))
+            href=urljoin(page,a['href'])
+            hay=(label+' '+href).lower()
+            if not any(t in hay for t in terms): continue
+            if not href.startswith(('http://','https://')): continue
+            season=None
+            for token in ('spring/summer','fall/winter','spring','summer','fall','winter'):
+                if token in hay:
+                    season=token; break
+            years=re.findall(r'20\\d{2}',hay)
+            found.append({'title':label or 'Norwood Recreation seasonal guide','url':href,'season':season,'years':years[-2:],'discovered_from':page})
+    chosen={}
+    for x in found: chosen[x['url']]=x
+    return list(chosen.values())
+
 def events_from_myrec_facilities(source):
     """Parse MyRec facility-area reservation tables into conflict-calendar events."""
     if not BeautifulSoup: return []
