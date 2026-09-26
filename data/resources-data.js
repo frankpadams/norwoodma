@@ -4897,7 +4897,8 @@ window.NORWOOD_RESOURCES = [
     "tags": "doula pregnancy birth labor postpartum reproductive grief miscarriage stillbirth infertility class support group Norwood",
     "topics": [
       "pregnancy",
-      "family"
+      "family",
+      "mental health"
     ],
     "coverage": "Local / regional",
     "verified": "2026-09"
