@@ -2593,7 +2593,7 @@
     ],
     "priority": 3,
     "ingestion": {
-      "method": "recurring_org_schedule",
+      "method": "verified_recurring_schedule",
       "automation": "preferred",
       "homepage": "https://norwoodtoastmaster.toastmastersclubs.org/",
       "recurrence": {
@@ -2609,12 +2609,23 @@
         "venue",
         "time",
         "guest_access"
+      ],
+      "revalidation_url": "https://www.norwoodrecord.com/events",
+      "event_title": "Norwood Toastmasters",
+      "start_time": "19:00",
+      "end_time": "20:30",
+      "series_label": "Norwood Toastmasters",
+      "publish_candidate": true,
+      "notes": "Second and fourth Tuesdays. Current dated newspaper listings control start time and venue; do not assume a fixed room because locations have varied.",
+      "required_text": [
+        "Toastmasters",
+        "second and fourth Tuesdays"
       ]
     },
     "verification": {
-      "status": "verified_recurring_public_schedule",
-      "verified_at": "2026-09-25",
-      "basis": "Current Norwood Local Town Pages repeatedly lists Norwood Toastmasters on the second and fourth Tuesdays, with guests welcome; venues may vary and must be refreshed."
+      "status": "verified_current_dated_schedule",
+      "verified_at": "2026-09-26",
+      "basis": "Norwood Record currently lists Oct. 13 and Oct. 27, 2026 at 7:00 PM and confirms meetings are held on the second and fourth Tuesdays; 2026 Local Town Pages listings independently show the same recurrence across multiple months."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -2624,7 +2635,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Generate recurring candidates only after checking current source/secondary listings for time, venue and exceptions; venue has varied between Norwood and nearby libraries, so never hard-code location."
+    "notes": "Stable second/fourth-Tuesday recurrence confirmed across multiple 2026 newspaper calendars. Venue has varied (Norwood Civic Center rooms and nearby libraries), and older listings used 6:45 p.m.; current Norwood Record dated listings use 7:00 p.m. Treat newspaper listings as the live revalidation source and do not hard-code a room."
   },
   {
     "id": "norwood-town-news",
