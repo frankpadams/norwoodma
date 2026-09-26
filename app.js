@@ -336,9 +336,9 @@ featuredCommunity();
   if(items.length<=2) return;
   let start=0;
   function showPair(){
+    const visible=new Set([start,(start+1)%items.length]);
     items.forEach((item,index)=>{
-      const offset=(index-start+items.length)%items.length;
-      item.hidden=offset>=2;
+      item.hidden=!visible.has(index);
     });
   }
   showPair();
