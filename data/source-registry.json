@@ -213,7 +213,7 @@
     "source_class": "event_listing",
     "authority": "community",
     "coverage": "Norwood, MA",
-    "url": "https://citizensforabetternorwoodma.com/events",
+    "url": "https://cbnma.com/events",
     "domain": "citizensforabetternorwoodma.com",
     "produces": [
       "events",
@@ -245,8 +245,8 @@
     },
     "verification": {
       "status": "verified_live_calendar",
-      "verified_at": "2026-09-25",
-      "basis": "Official CBN Upcoming Events page publishes concrete dated Norwood public events and meetings."
+      "verified_at": "2026-09-26",
+      "basis": "Canonical CBN events page is indexed and publishing dated 2026 Norwood events; normalized monitor to cbnma.com host to avoid prior 403 path."
     },
     "notes": "Secondary civic/community calendar. Ingest dated public events; deduplicate Norwood Day and other major events against primary organizers. Routine organization meetings are optional rather than curated-default.",
     "conflict_profile": "optional",
@@ -12102,8 +12102,8 @@
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodscholarshipfoundation.org/",
-    "domain": "norwoodscholarshipfoundation.org",
+    "url": "https://norwood.dollarsforscholars.org/",
+    "domain": "norwood.dollarsforscholars.org",
     "produces": [
       "events",
       "fundraisers"
@@ -12117,7 +12117,7 @@
     "ingestion": {
       "method": "organization_event_discovery",
       "automation": "preferred",
-      "homepage": "https://www.norwoodscholarshipfoundation.org/",
+      "homepage": "https://norwood.dollarsforscholars.org/",
       "discover_event_pages": true,
       "discover_dated_posts": true,
       "preserve": [
@@ -12133,9 +12133,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_official",
+      "verified_at": "2026-09-26",
+      "basis": "Current Norwood Scholarship Foundation Dollars for Scholars site found; legacy standalone domain is unavailable."
     },
     "notes": "Watch scholarship fundraisers and public events. Organization may publish events intermittently rather than maintain a continuous calendar. A successful check with zero current events is healthy; ingest only concrete dated public events.",
     "conflict_profile": "optional",
