@@ -1,1 +1,718 @@
-window.NORWOOD_CALENDAR_SOURCES=[{"id":"nps-district","group":"schools","name":"Norwood Public Schools — District","description":"Districtwide dates and events from the official NPS calendar.","feed_url":"https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/about/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-nhs","group":"schools","name":"Norwood High School","description":"NHS events and important dates from the official school calendar.","feed_url":"https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/nhs/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-coakley","group":"schools","name":"Coakley Middle School","description":"Coakley events and important dates from the official school calendar.","feed_url":"https://www.norwood.k12.ma.us/cms/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/cms/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-balch","group":"schools","name":"Balch Elementary School","description":"Balch school calendar.","feed_url":"https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/balch/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-callahan","group":"schools","name":"Callahan Elementary School","description":"Callahan school calendar.","feed_url":"https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/callahan/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-cleveland","group":"schools","name":"Cleveland Elementary School","description":"Cleveland school calendar.","feed_url":"https://www.norwood.k12.ma.us/cleveland/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/cleveland/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-oldham","group":"schools","name":"Oldham Elementary School","description":"Oldham school calendar.","feed_url":"https://www.norwood.k12.ma.us/oldham/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/oldham/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-prescott","group":"schools","name":"Prescott Elementary School","description":"Prescott school calendar.","feed_url":"https://www.norwood.k12.ma.us/prescott/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/prescott/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"nps-willett","group":"schools","name":"Willett Early Childhood Center","description":"Willett calendar and family dates.","feed_url":"https://www.norwood.k12.ma.us/willett/calendar/feed/ical.ics","view_url":"https://www.norwood.k12.ma.us/willett/calendar","provider":"Norwood Public Schools","kind":"external_live","verified":true},{"id":"norwood-community","group":"community","name":"All public community events","description":"The full Norwood.ma public-event feed. Updated with the site’s twice-daily event refresh.","feed_url":"feeds/community-events.ics","view_url":"events.html?calendar=all","provider":"Norwood.ma","kind":"generated_live","selector":{"all":true}},{"id":"norwood-arts","group":"community","name":"Arts, music & entertainment","description":"Concerts, performances, theatre, comedy, open mics, arts and cultural events.","feed_url":"feeds/arts-entertainment.ics","view_url":"events.html?calendar=arts","provider":"Norwood.ma","kind":"generated_live","selector":{"categories":["live_music","music_community","performance","school_theatre","music","arts","open_mic","comedy"]}},{"id":"norwood-family","group":"community","name":"Family & kids","description":"Family-oriented public programs as they are discovered and verified.","feed_url":"feeds/family-kids.ics","view_url":"events.html?calendar=family","provider":"Norwood.ma","kind":"generated_live","selector":{"keywords":["family","families","kids","children","child","storytime","teen","youth","school","craft"]}},{"id":"norwood-sports","group":"community","name":"Sports & active events","description":"Public races, skating, sports events and active community programs.","feed_url":"feeds/sports-active.ics","view_url":"events.html?calendar=sports","provider":"Norwood.ma","kind":"generated_live","selector":{"categories":["sports","sports_education"],"keywords":["5k","race","skating","sport","fitness","walk"]}},{"id":"norwood-fundraisers","group":"community","name":"Fundraisers & benefits","description":"Public fundraisers, charity events and community benefits.","feed_url":"feeds/fundraisers-benefits.ics","view_url":"events.html?calendar=fundraisers","provider":"Norwood.ma","kind":"generated_live","selector":{"category_contains":["fundraiser"],"keywords":["fundraiser","fundraising","benefit","charity"]}},{"id":"norwood-food-markets","group":"community","name":"Food, markets & fairs","description":"Food-centered events, markets, fairs and vendor events.","feed_url":"feeds/food-markets-fairs.ics","view_url":"events.html?calendar=food-markets","provider":"Norwood.ma","kind":"generated_live","selector":{"categories":["food","food_culture","market","market_festival"],"keywords":["market","fair","food","dinner","brunch"]}},{"id":"library-calendar","group":"more","name":"Morrill Memorial Library","description":"Browse the library’s very active public-program calendar. A verified global subscription feed has not yet been exposed by the library site.","view_url":"https://norwoodlibrary.assabetinteractive.com/calendar/","provider":"Morrill Memorial Library","kind":"internal","data_available":true,"selector":{"source_ids":["library-assabet-calendar","library-cfce"]}},{"id":"town-meetings","group":"more","name":"Town meetings","description":"Public board and committee meetings on the Town of Norwood calendar.","view_url":"https://www.norwoodma.gov/#section4-anchor","provider":"Town of Norwood","kind":"internal","data_available":true,"selector":{"source_ids":["norwood-civic-meetings","town-meetings-calendar","town-civic"]}},{"id":"recreation-calendar","group":"more","name":"Norwood Recreation","description":"Programs, registration and activity schedules from Norwood Recreation.","view_url":"https://norwoodma.myrec.com/","provider":"Norwood Recreation","kind":"internal","data_available":true,"selector":{"source_ids":["town-recreation-programs","norwood-rec-sports","norwood-rec-facilities"]}},{"id":"senior-calendar","group":"more","name":"Norwood Senior Center","description":"Newsletter and calendar for Senior Center programs and events.","view_url":"https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php","provider":"Norwood Council on Aging","kind":"internal","data_available":true,"selector":{"source_ids":["town-senior-newsletter","friends-coa-dances"]}},{"id":"nps-athletics","group":"schools","name":"NPS Athletics","description":"Norwood High and Coakley athletics schedules from direct Arbiter team feeds, including games and practices where subscribed.","view_url":"https://www.norwood.k12.ma.us/nhs/athletics","provider":"Norwood Public Schools","kind":"internal","verified":true,"data_available":true,"selector":{"source_ids":["nps-athletics","norwood-high-athletics"],"source_id_prefixes":["nps-athletics-arbiter-"]}},{"id":"nps-academics","group":"schools","name":"NHS Academics","description":"Norwood High School academic dates and events available in the Norwood.ma calendar.","view_url":"https://www.norwood.k12.ma.us/nhs/academics/calendar","provider":"Norwood Public Schools","kind":"internal","verified":true,"data_available":true,"selector":{"source_ids":["nps-academics","nps-nhs"]}},{"id":"nps-extended-day","group":"schools","name":"NPS Extended Day","description":"Dates and events for Norwood Public Schools Extended Day.","view_url":"https://www.norwood.k12.ma.us/extended-day/calendar","provider":"Norwood Public Schools","kind":"internal","verified":true,"data_available":true,"selector":{"source_ids":["nps-extended-day"]}},{"id":"norwood-rotary","group":"possible_conflicts","name":"Rotary Club of Norwood","description":"Club meetings, fundraisers, service projects and other scheduled Rotary activity that may affect local attendance or volunteers.","view_url":"https://www.norwoodrotary.org/events/calendar","provider":"Rotary Club of Norwood","kind":"monitor_calendar","possible_conflicts":true,"verified":true,"health_source_ids":["norwood-rotary-calendar"],"selector":{"source_ids":["norwood-rotary-calendar"]}},{"id":"norwood-elks-1124","group":"possible_conflicts","name":"Norwood Elks Lodge #1124","description":"Lodge calendar, regular lodge meetings and publicly posted Norwood Elks activities.","view_url":"https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124","provider":"Norwood Elks Lodge #1124","kind":"monitor_calendar","possible_conflicts":true,"verified":true,"health_source_ids":["elks-calendar"],"selector":{"source_ids":["elks-calendar"]}},{"id":"friends-norwood-center","group":"possible_conflicts","name":"Friends of Norwood Center","description":"Community events and recurring activities listed by Friends of Norwood Center.","view_url":"https://www.norwoodcenter.org/events/","provider":"Friends of Norwood Center","kind":"monitor_calendar","possible_conflicts":true,"verified":true,"health_source_ids":["friends-center-events"],"selector":{"source_ids":["friends-center-events","friends-center-blog"]}},{"id":"norwood-chamber","group":"possible_conflicts","name":"Norwood Chamber of Commerce","description":"Business and community events published on the Chamber calendar.","view_url":"https://business.norwoodchamberofcommerce.org/calendar","provider":"Norwood Chamber of Commerce","kind":"monitor_calendar","possible_conflicts":true,"verified":true,"health_source_ids":["norwood-chamber-events"],"selector":{"source_ids":["norwood-chamber-events"]}},{"id":"norwood-historical-society","group":"possible_conflicts","name":"Norwood Historical Society","description":"Historical Society events from its public events calendar.","feed_url":"https://norwoodhistoricalsociety.org/?post_type=tribe_events&ical=1&eventDisplay=list","view_url":"https://norwoodhistoricalsociety.org/events/","provider":"Norwood Historical Society","kind":"internal","possible_conflicts":true,"verified":true,"data_available":true,"selector":{"source_ids":["historical-society-events"]}},{"id":"norwood-local-town-pages-calendar","group":"possible_conflicts","name":"Norwood Local Town Pages community calendar","description":"Secondary discovery source for recurring club meetings, fundraisers and community activities; verify against primary sources when available.","view_url":"https://www.norwoodtownnews.com/","provider":"Local Town Pages","kind":"discovery_monitor","possible_conflicts":true},{"id":"citizens-better-norwood-events","group":"possible_conflicts","name":"Citizens for a Better Norwood events","description":"Publicly posted local meetings, fundraisers and community activities.","view_url":"https://citizensforabetternorwoodma.com/events","provider":"Citizens for a Better Norwood","kind":"monitor_calendar","possible_conflicts":true},{"id":"circle-of-hope","group":"possible_conflicts","name":"Circle of Hope","description":"Monitor publicly posted Circle of Hope events and fundraisers for scheduling conflicts.","view_url":"https://www.norwoodcoh.org/","provider":"Circle of Hope","kind":"organization_monitor","possible_conflicts":true,"health_source_ids":["circle-of-hope-events"],"selector":{"source_ids":["circle-of-hope-events"]}},{"id":"norwood-youth-soccer","group":"possible_conflicts","name":"Norwood Youth Soccer","description":"Fall/spring travel and intramural schedules, tournaments, key dates and other youth soccer activity.","view_url":"https://norwoodsoccer.com/schedules","provider":"Norwood Youth Soccer","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"norwood-rec-facility-schedules","group":"possible_conflicts","name":"Norwood Recreation facility schedules","description":"Facility reservations and field schedules reveal substantial youth-sports activity and major facility use.","view_url":"https://norwoodma.myrec.com/info/facilities/default.aspx","provider":"Norwood Recreation Department","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"norwood-rec-special-events","group":"possible_conflicts","name":"Norwood Recreation special & annual events","description":"Significant one-time and annual Recreation events, seasonal celebrations, tournaments and other high-attendance programs; routine classes need not be individually surfaced.","view_url":"https://norwoodma.myrec.com/","provider":"Norwood Recreation Department","kind":"monitor_special_events","possible_conflicts":true,"verified":true},{"id":"norwood-youth-sports-broad","group":"possible_conflicts","name":"Norwood youth sports — broad schedule discovery","description":"Discover schedules and significant dates for local baseball, softball, Babe Ruth, basketball, hockey, football, cheer, lacrosse, swimming and other organized youth sports.","view_url":"https://www.norwood.ma/sports-recreation.html","provider":"Norwood.ma source discovery","kind":"discovery_monitor","possible_conflicts":true},{"id":"boston-red-sox-schedule","group":"possible_conflicts","name":"Boston Red Sox schedule","description":"Red Sox games can materially affect local attendance and Boston-area traffic; ingest regular-season and postseason games when scheduled.","view_url":"https://www.mlb.com/redsox/schedule","provider":"Boston Red Sox / MLB","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"new-england-patriots-schedule","group":"possible_conflicts","name":"New England Patriots schedule","description":"Patriots games, especially home games at Gillette Stadium, are significant regional scheduling and traffic conflicts.","view_url":"https://www.patriots.com/schedule/","provider":"New England Patriots","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"new-england-revolution-schedule","group":"possible_conflicts","name":"New England Revolution schedule","description":"Revolution games, especially home matches at Gillette Stadium, are regional scheduling conflicts.","view_url":"https://www.revolutionsoccer.net/schedule/","provider":"New England Revolution","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"gillette-stadium-events","group":"possible_conflicts","name":"Gillette Stadium major events","description":"Concerts, major sporting events, Monster Jam, Banana Ball and other large Gillette Stadium events that can affect attendance and Route 1 traffic.","view_url":"https://www.gillettestadium.com/upcoming-events/","provider":"Gillette Stadium","kind":"monitor_calendar","possible_conflicts":true,"verified":true},{"id":"boston-celtics-schedule","group":"possible_conflicts","name":"Boston Celtics schedule","description":"Celtics games are potential attendance conflicts; preserve home or away status and Eastern Time.","view_url":"https://www.nba.com/celtics/schedule","provider":"Boston Celtics / NBA","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"boston-bruins-schedule","group":"possible_conflicts","name":"Boston Bruins schedule","description":"Bruins games are potential attendance conflicts; preserve home or away status and Eastern Time.","view_url":"https://www.nhl.com/bruins/schedule","provider":"Boston Bruins / NHL","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"norwood-youth-lacrosse","group":"possible_conflicts","name":"Norwood Youth Lacrosse schedule","description":"Youth lacrosse practices, games and tournament dates.","view_url":"https://norwoodmalacrosse.com/2026-season","provider":"Norwood Youth Lacrosse schedule","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"bays-norwood-soccer","group":"possible_conflicts","name":"BAYS Norwood Youth Soccer schedules","description":"Individual Norwood travel soccer games, including home and away.","view_url":"https://bays.org/club/NYS","provider":"BAYS Norwood Youth Soccer schedules","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"norwood-high-athletics","group":"possible_conflicts","name":"Norwood High School Athletics","description":"NHS varsity/JV sports schedules and major athletics dates.","view_url":"https://www.norwood.k12.ma.us/nhs/athletics","provider":"Norwood High School Athletics","kind":"monitor_schedule","possible_conflicts":true,"verified":true,"health_source_prefixes":["nps-athletics-arbiter-"],"selector":{"source_id_prefixes":["nps-athletics-arbiter-"]}},{"id":"skating-club-boston-events","group":"possible_conflicts","name":"Skating Club of Boston events","description":"Major competitions, shows and high-attendance events at the Norwood facility.","view_url":"https://scboston.org/","provider":"Skating Club of Boston events","kind":"monitor_schedule","possible_conflicts":true,"verified":true,"health_source_ids":["skating-club-calendar"],"selector":{"source_ids":["skating-club-calendar"]}},{"id":"td-garden-major-events","group":"possible_conflicts","name":"TD Garden major events","description":"Major Boston arena events that may materially compete for attendance.","view_url":"https://www.tdgarden.com/events","provider":"TD Garden major events","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"fenway-park-major-events","group":"possible_conflicts","name":"Fenway Park major events","description":"Major Fenway events beyond Red Sox games.","view_url":"https://www.mlb.com/redsox/tickets/events","provider":"Fenway Park major events","kind":"monitor_schedule","possible_conflicts":true,"verified":true},{"id":"mass-holidays-observances","group":"possible_conflicts","name":"Massachusetts and major observances","description":"Public holidays and major locally relevant observances.","view_url":"https://www.mass.gov/info-details/massachusetts-legal-holidays","provider":"Massachusetts and major observances","kind":"monitor_schedule","possible_conflicts":true,"verified":true}];
+window.NORWOOD_CALENDAR_SOURCES = [
+  {
+    "id": "nps-district",
+    "group": "schools",
+    "name": "Norwood Public Schools — District",
+    "description": "Districtwide dates and events from the official NPS calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/about/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/about/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-nhs",
+    "group": "schools",
+    "name": "Norwood High School",
+    "description": "NHS events and important dates from the official school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/nhs/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-coakley",
+    "group": "schools",
+    "name": "Coakley Middle School",
+    "description": "Coakley events and important dates from the official school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/cms/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/cms/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-balch",
+    "group": "schools",
+    "name": "Balch Elementary School",
+    "description": "Balch school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/balch/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-callahan",
+    "group": "schools",
+    "name": "Callahan Elementary School",
+    "description": "Callahan school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/callahan/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-cleveland",
+    "group": "schools",
+    "name": "Cleveland Elementary School",
+    "description": "Cleveland school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/cleveland/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/cleveland/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-oldham",
+    "group": "schools",
+    "name": "Oldham Elementary School",
+    "description": "Oldham school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/oldham/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/oldham/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-prescott",
+    "group": "schools",
+    "name": "Prescott Elementary School",
+    "description": "Prescott school calendar.",
+    "feed_url": "https://www.norwood.k12.ma.us/prescott/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/prescott/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "nps-willett",
+    "group": "schools",
+    "name": "Willett Early Childhood Center",
+    "description": "Willett calendar and family dates.",
+    "feed_url": "https://www.norwood.k12.ma.us/willett/calendar/feed/ical.ics",
+    "view_url": "https://www.norwood.k12.ma.us/willett/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "external_live",
+    "verified": true
+  },
+  {
+    "id": "norwood-community",
+    "group": "community",
+    "name": "All public community events",
+    "description": "The full Norwood.ma public-event feed. Updated with the site’s twice-daily event refresh.",
+    "feed_url": "feeds/community-events.ics",
+    "view_url": "events.html?calendar=all",
+    "provider": "Norwood.ma",
+    "kind": "generated_live",
+    "selector": {
+      "all": true
+    }
+  },
+  {
+    "id": "norwood-arts",
+    "group": "community",
+    "name": "Arts, music & entertainment",
+    "description": "Concerts, performances, theatre, comedy, open mics, arts and cultural events.",
+    "feed_url": "feeds/arts-entertainment.ics",
+    "view_url": "events.html?calendar=arts",
+    "provider": "Norwood.ma",
+    "kind": "generated_live",
+    "selector": {
+      "categories": [
+        "live_music",
+        "music_community",
+        "performance",
+        "school_theatre",
+        "music",
+        "arts",
+        "open_mic",
+        "comedy"
+      ]
+    }
+  },
+  {
+    "id": "norwood-family",
+    "group": "community",
+    "name": "Family & kids",
+    "description": "Family-oriented public programs as they are discovered and verified.",
+    "feed_url": "feeds/family-kids.ics",
+    "view_url": "events.html?calendar=family",
+    "provider": "Norwood.ma",
+    "kind": "generated_live",
+    "selector": {
+      "keywords": [
+        "family",
+        "families",
+        "kids",
+        "children",
+        "child",
+        "storytime",
+        "teen",
+        "youth",
+        "school",
+        "craft"
+      ]
+    }
+  },
+  {
+    "id": "norwood-sports",
+    "group": "community",
+    "name": "Sports & active events",
+    "description": "Public races, skating, sports events and active community programs.",
+    "feed_url": "feeds/sports-active.ics",
+    "view_url": "events.html?calendar=sports",
+    "provider": "Norwood.ma",
+    "kind": "generated_live",
+    "selector": {
+      "categories": [
+        "sports",
+        "sports_education"
+      ],
+      "keywords": [
+        "5k",
+        "race",
+        "skating",
+        "sport",
+        "fitness",
+        "walk"
+      ]
+    }
+  },
+  {
+    "id": "norwood-fundraisers",
+    "group": "community",
+    "name": "Fundraisers & benefits",
+    "description": "Public fundraisers, charity events and community benefits.",
+    "feed_url": "feeds/fundraisers-benefits.ics",
+    "view_url": "events.html?calendar=fundraisers",
+    "provider": "Norwood.ma",
+    "kind": "generated_live",
+    "selector": {
+      "category_contains": [
+        "fundraiser"
+      ],
+      "keywords": [
+        "fundraiser",
+        "fundraising",
+        "benefit",
+        "charity"
+      ]
+    }
+  },
+  {
+    "id": "norwood-food-markets",
+    "group": "community",
+    "name": "Food, markets & fairs",
+    "description": "Food-centered events, markets, fairs and vendor events.",
+    "feed_url": "feeds/food-markets-fairs.ics",
+    "view_url": "events.html?calendar=food-markets",
+    "provider": "Norwood.ma",
+    "kind": "generated_live",
+    "selector": {
+      "categories": [
+        "food",
+        "food_culture",
+        "market",
+        "market_festival"
+      ],
+      "keywords": [
+        "market",
+        "fair",
+        "food",
+        "dinner",
+        "brunch"
+      ]
+    }
+  },
+  {
+    "id": "library-calendar",
+    "group": "more",
+    "name": "Morrill Memorial Library",
+    "description": "Browse the library’s very active public-program calendar. A verified global subscription feed has not yet been exposed by the library site.",
+    "view_url": "https://norwoodlibrary.assabetinteractive.com/calendar/",
+    "provider": "Morrill Memorial Library",
+    "kind": "internal",
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "library-assabet-calendar",
+        "library-cfce"
+      ]
+    }
+  },
+  {
+    "id": "town-meetings",
+    "group": "more",
+    "name": "Town meetings",
+    "description": "Public board and committee meetings on the Town of Norwood calendar.",
+    "view_url": "https://www.norwoodma.gov/#section4-anchor",
+    "provider": "Town of Norwood",
+    "kind": "internal",
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "norwood-civic-meetings",
+        "town-meetings-calendar",
+        "town-civic"
+      ]
+    }
+  },
+  {
+    "id": "recreation-calendar",
+    "group": "more",
+    "name": "Norwood Recreation",
+    "description": "Programs, registration and activity schedules from Norwood Recreation.",
+    "view_url": "https://norwoodma.myrec.com/",
+    "provider": "Norwood Recreation",
+    "kind": "internal",
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "town-recreation-programs",
+        "norwood-rec-sports",
+        "norwood-rec-facilities"
+      ]
+    }
+  },
+  {
+    "id": "senior-calendar",
+    "group": "more",
+    "name": "Norwood Senior Center",
+    "description": "Newsletter and calendar for Senior Center programs and events.",
+    "view_url": "https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
+    "provider": "Norwood Council on Aging",
+    "kind": "internal",
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "town-senior-newsletter",
+        "friends-coa-dances"
+      ]
+    }
+  },
+  {
+    "id": "nps-athletics",
+    "group": "schools",
+    "name": "NPS Athletics",
+    "description": "Norwood High and Coakley athletics schedules from direct Arbiter team feeds, including games and practices where subscribed.",
+    "view_url": "https://www.norwood.k12.ma.us/nhs/athletics",
+    "provider": "Norwood Public Schools",
+    "kind": "internal",
+    "verified": true,
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "nps-athletics",
+        "norwood-high-athletics"
+      ],
+      "source_id_prefixes": [
+        "nps-athletics-arbiter-"
+      ]
+    }
+  },
+  {
+    "id": "nps-academics",
+    "group": "schools",
+    "name": "NHS Academics",
+    "description": "Norwood High School academic dates and events available in the Norwood.ma calendar.",
+    "view_url": "https://www.norwood.k12.ma.us/nhs/academics/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "internal",
+    "verified": true,
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "nps-academics",
+        "nps-nhs"
+      ]
+    }
+  },
+  {
+    "id": "nps-extended-day",
+    "group": "schools",
+    "name": "NPS Extended Day",
+    "description": "Dates and events for Norwood Public Schools Extended Day.",
+    "view_url": "https://www.norwood.k12.ma.us/extended-day/calendar",
+    "provider": "Norwood Public Schools",
+    "kind": "internal",
+    "verified": true,
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "nps-extended-day"
+      ]
+    }
+  },
+  {
+    "id": "norwood-rotary",
+    "group": "possible_conflicts",
+    "name": "Rotary Club of Norwood",
+    "description": "Club meetings, fundraisers, service projects and other scheduled Rotary activity that may affect local attendance or volunteers.",
+    "view_url": "https://www.norwoodrotary.org/events/calendar",
+    "provider": "Rotary Club of Norwood",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true,
+    "health_source_ids": [
+      "norwood-rotary-calendar"
+    ],
+    "selector": {
+      "source_ids": [
+        "norwood-rotary-calendar"
+      ]
+    }
+  },
+  {
+    "id": "norwood-elks-1124",
+    "group": "possible_conflicts",
+    "name": "Norwood Elks Lodge #1124",
+    "description": "Lodge calendar, regular lodge meetings and publicly posted Norwood Elks activities.",
+    "view_url": "https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124",
+    "provider": "Norwood Elks Lodge #1124",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true,
+    "health_source_ids": [
+      "elks-calendar"
+    ],
+    "selector": {
+      "source_ids": [
+        "elks-calendar"
+      ]
+    }
+  },
+  {
+    "id": "friends-norwood-center",
+    "group": "possible_conflicts",
+    "name": "Friends of Norwood Center",
+    "description": "Community events and recurring activities listed by Friends of Norwood Center.",
+    "view_url": "https://www.norwoodcenter.org/events/",
+    "provider": "Friends of Norwood Center",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true,
+    "health_source_ids": [
+      "friends-center-events"
+    ],
+    "selector": {
+      "source_ids": [
+        "friends-center-events",
+        "friends-center-blog"
+      ]
+    }
+  },
+  {
+    "id": "norwood-chamber",
+    "group": "possible_conflicts",
+    "name": "Norwood Chamber of Commerce",
+    "description": "Business and community events published on the Chamber calendar.",
+    "view_url": "https://business.norwoodchamberofcommerce.org/calendar",
+    "provider": "Norwood Chamber of Commerce",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true,
+    "health_source_ids": [
+      "norwood-chamber-events"
+    ],
+    "selector": {
+      "source_ids": [
+        "norwood-chamber-events"
+      ]
+    }
+  },
+  {
+    "id": "norwood-historical-society",
+    "group": "possible_conflicts",
+    "name": "Norwood Historical Society",
+    "description": "Historical Society events from its public events calendar.",
+    "feed_url": "https://norwoodhistoricalsociety.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+    "view_url": "https://norwoodhistoricalsociety.org/events/",
+    "provider": "Norwood Historical Society",
+    "kind": "internal",
+    "possible_conflicts": true,
+    "verified": true,
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "historical-society-events"
+      ]
+    }
+  },
+  {
+    "id": "norwood-local-town-pages-calendar",
+    "group": "possible_conflicts",
+    "name": "Norwood Local Town Pages community calendar",
+    "description": "Secondary discovery source for recurring club meetings, fundraisers and community activities; verify against primary sources when available.",
+    "view_url": "https://www.norwoodtownnews.com/",
+    "provider": "Local Town Pages",
+    "kind": "discovery_monitor",
+    "possible_conflicts": true
+  },
+  {
+    "id": "citizens-better-norwood-events",
+    "group": "possible_conflicts",
+    "name": "Citizens for a Better Norwood events",
+    "description": "Publicly posted local meetings, fundraisers and community activities.",
+    "view_url": "https://citizensforabetternorwoodma.com/events",
+    "provider": "Citizens for a Better Norwood",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true
+  },
+  {
+    "id": "circle-of-hope",
+    "group": "possible_conflicts",
+    "name": "Circle of Hope",
+    "description": "Monitor publicly posted Circle of Hope events and fundraisers for scheduling conflicts.",
+    "view_url": "https://www.norwoodcoh.org/",
+    "provider": "Circle of Hope",
+    "kind": "organization_monitor",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "circle-of-hope-events"
+    ],
+    "selector": {
+      "source_ids": [
+        "circle-of-hope-events"
+      ]
+    }
+  },
+  {
+    "id": "norwood-youth-soccer",
+    "group": "possible_conflicts",
+    "name": "Norwood Youth Soccer",
+    "description": "Fall/spring travel and intramural schedules, tournaments, key dates and other youth soccer activity.",
+    "view_url": "https://norwoodsoccer.com/schedules",
+    "provider": "Norwood Youth Soccer",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-rec-facility-schedules",
+    "group": "possible_conflicts",
+    "name": "Norwood Recreation facility schedules",
+    "description": "Facility reservations and field schedules reveal substantial youth-sports activity and major facility use.",
+    "view_url": "https://norwoodma.myrec.com/info/facilities/default.aspx",
+    "provider": "Norwood Recreation Department",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-rec-special-events",
+    "group": "possible_conflicts",
+    "name": "Norwood Recreation special & annual events",
+    "description": "Significant one-time and annual Recreation events, seasonal celebrations, tournaments and other high-attendance programs; routine classes need not be individually surfaced.",
+    "view_url": "https://norwoodma.myrec.com/",
+    "provider": "Norwood Recreation Department",
+    "kind": "monitor_special_events",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-youth-sports-broad",
+    "group": "possible_conflicts",
+    "name": "Norwood youth sports — broad schedule discovery",
+    "description": "Discover schedules and significant dates for local baseball, softball, Babe Ruth, basketball, hockey, football, cheer, lacrosse, swimming and other organized youth sports.",
+    "view_url": "https://www.norwood.ma/sports-recreation.html",
+    "provider": "Norwood.ma source discovery",
+    "kind": "discovery_monitor",
+    "possible_conflicts": true
+  },
+  {
+    "id": "boston-red-sox-schedule",
+    "group": "possible_conflicts",
+    "name": "Boston Red Sox schedule",
+    "description": "Red Sox games can materially affect local attendance and Boston-area traffic; ingest regular-season and postseason games when scheduled.",
+    "view_url": "https://www.mlb.com/redsox/schedule",
+    "provider": "Boston Red Sox / MLB",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "new-england-patriots-schedule",
+    "group": "possible_conflicts",
+    "name": "New England Patriots schedule",
+    "description": "Patriots games, especially home games at Gillette Stadium, are significant regional scheduling and traffic conflicts.",
+    "view_url": "https://www.patriots.com/schedule/",
+    "provider": "New England Patriots",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "new-england-revolution-schedule",
+    "group": "possible_conflicts",
+    "name": "New England Revolution schedule",
+    "description": "Revolution games, especially home matches at Gillette Stadium, are regional scheduling conflicts.",
+    "view_url": "https://www.revolutionsoccer.net/schedule/",
+    "provider": "New England Revolution",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "gillette-stadium-events",
+    "group": "possible_conflicts",
+    "name": "Gillette Stadium major events",
+    "description": "Concerts, major sporting events, Monster Jam, Banana Ball and other large Gillette Stadium events that can affect attendance and Route 1 traffic.",
+    "view_url": "https://www.gillettestadium.com/upcoming-events/",
+    "provider": "Gillette Stadium",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "boston-celtics-schedule",
+    "group": "possible_conflicts",
+    "name": "Boston Celtics schedule",
+    "description": "Celtics games are potential attendance conflicts; preserve home or away status and Eastern Time.",
+    "view_url": "https://www.nba.com/celtics/schedule",
+    "provider": "Boston Celtics / NBA",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "boston-bruins-schedule",
+    "group": "possible_conflicts",
+    "name": "Boston Bruins schedule",
+    "description": "Bruins games are potential attendance conflicts; preserve home or away status and Eastern Time.",
+    "view_url": "https://www.nhl.com/bruins/schedule",
+    "provider": "Boston Bruins / NHL",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-youth-lacrosse",
+    "group": "possible_conflicts",
+    "name": "Norwood Youth Lacrosse schedule",
+    "description": "Youth lacrosse practices, games and tournament dates.",
+    "view_url": "https://norwoodmalacrosse.com/2026-season",
+    "provider": "Norwood Youth Lacrosse schedule",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "bays-norwood-soccer",
+    "group": "possible_conflicts",
+    "name": "BAYS Norwood Youth Soccer schedules",
+    "description": "Individual Norwood travel soccer games, including home and away.",
+    "view_url": "https://bays.org/club/NYS",
+    "provider": "BAYS Norwood Youth Soccer schedules",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "norwood-high-athletics",
+    "group": "possible_conflicts",
+    "name": "Norwood High School Athletics",
+    "description": "NHS varsity/JV sports schedules and major athletics dates.",
+    "view_url": "https://www.norwood.k12.ma.us/nhs/athletics",
+    "provider": "Norwood High School Athletics",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true,
+    "health_source_prefixes": [
+      "nps-athletics-arbiter-"
+    ],
+    "selector": {
+      "source_id_prefixes": [
+        "nps-athletics-arbiter-"
+      ]
+    }
+  },
+  {
+    "id": "skating-club-boston-events",
+    "group": "possible_conflicts",
+    "name": "Skating Club of Boston events",
+    "description": "Major competitions, shows and high-attendance events at the Norwood facility.",
+    "view_url": "https://scboston.org/",
+    "provider": "Skating Club of Boston events",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true,
+    "health_source_ids": [
+      "skating-club-calendar"
+    ],
+    "selector": {
+      "source_ids": [
+        "skating-club-calendar"
+      ]
+    }
+  },
+  {
+    "id": "td-garden-major-events",
+    "group": "possible_conflicts",
+    "name": "TD Garden major events",
+    "description": "Major Boston arena events that may materially compete for attendance.",
+    "view_url": "https://www.tdgarden.com/events",
+    "provider": "TD Garden major events",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "fenway-park-major-events",
+    "group": "possible_conflicts",
+    "name": "Fenway Park major events",
+    "description": "Major Fenway events beyond Red Sox games.",
+    "view_url": "https://www.mlb.com/redsox/tickets/events",
+    "provider": "Fenway Park major events",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "mass-holidays-observances",
+    "group": "possible_conflicts",
+    "name": "Massachusetts and major observances",
+    "description": "Public holidays and major locally relevant observances.",
+    "view_url": "https://www.mass.gov/info-details/massachusetts-legal-holidays",
+    "provider": "Massachusetts and major observances",
+    "kind": "monitor_schedule",
+    "possible_conflicts": true,
+    "verified": true
+  },
+  {
+    "id": "recovery-aa",
+    "group": "more",
+    "name": "Alcoholics Anonymous (AA)",
+    "description": "Opt-in recovery calendar: Norwood AA meetings plus verified virtual meetings and meetings in Walpole and the three nearest surrounding towns with active groups. Nearby entries identify the town; online entries preserve published Zoom details.",
+    "view_url": "https://aaboston.org/meetings?tsml-region=norwood",
+    "provider": "AA Boston Central Service Office",
+    "kind": "monitor_calendar",
+    "health_source_ids": [
+      "recovery-aa"
+    ],
+    "selector": {
+      "source_ids": [
+        "recovery-aa"
+      ]
+    }
+  },
+  {
+    "id": "recovery-na",
+    "group": "more",
+    "name": "Narcotics Anonymous (NA)",
+    "description": "Opt-in recovery calendar: verified Norwood, nearby and virtual NA meetings. Nearby entries identify the town; online entries preserve official join details when published.",
+    "view_url": "https://nerna.org/find-a-meeting/",
+    "provider": "New England Region of Narcotics Anonymous",
+    "kind": "monitor_calendar",
+    "health_source_ids": [
+      "recovery-na"
+    ],
+    "selector": {
+      "source_ids": [
+        "recovery-na"
+      ]
+    }
+  }
+];
