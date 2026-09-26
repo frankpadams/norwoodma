@@ -24,52 +24,6 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
-    "id": "2026-09-18-ballroom-dance",
-    "title": "Monthly Ballroom Dance",
-    "start": {
-      "date": "2026-09-18",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "venue": "Norwood Senior Center",
-    "address": "275 Prospect St, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "norwood-record-events",
-    "source_url": "https://www.norwoodrecord.com/events",
-    "cost": "$12",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
-  },
-  {
-    "id": "2026-09-18-margo-macero",
-    "title": "The Margo Macero Band",
-    "start": {
-      "date": "2026-09-18",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "venue": "The Fallout Shelter",
-    "address": "61 Endicott St, Norwood, MA",
-    "category": "live_music",
-    "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
-  },
-  {
     "id": "2026-09-18-legally-blonde",
     "title": "Legally Blonde — Norwood High School",
     "start": {
@@ -116,6 +70,52 @@
     "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
   },
   {
+    "id": "2026-09-18-ballroom-dance",
+    "title": "Monthly Ballroom Dance",
+    "start": {
+      "date": "2026-09-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-record-events",
+    "source_url": "https://www.norwoodrecord.com/events",
+    "cost": "$12",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
+  },
+  {
+    "id": "2026-09-18-margo-macero",
+    "title": "The Margo Macero Band",
+    "start": {
+      "date": "2026-09-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott St, Norwood, MA",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": null
+  },
+  {
     "id": "2026-09-19-floydian-trip",
     "title": "Floydian Trip: Echoes Through Time",
     "start": {
@@ -137,6 +137,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-20-onam-sarva",
+    "title": "Onam Celebration at SARVA Little Venice",
+    "start": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "SARVA Little Venice",
+    "address": "Norwood, MA",
+    "category": "food_culture",
+    "source_id": "sarva-social-feed",
+    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-20-not-done-yet",
@@ -183,29 +206,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-22-caffeine-connections",
@@ -438,6 +438,30 @@
     "notes": null
   },
   {
+    "id": "2026-09-27-emerald-city-plant-bingo",
+    "title": "Plant Bingo",
+    "start": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Emerald City Plant Shop",
+    "address": "702 Washington St, Norwood, MA 02062",
+    "category": "games_social",
+    "source_id": "emerald-city-plant-shop",
+    "source_url": "https://www.emeraldcityplantshop.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Plant Bingo",
+    "publish_candidate": true,
+    "verification_status": "user_verified_2026-09-24",
+    "notes": "Public Plant Bingo event at Emerald City Plant Shop. Date confirmed directly by Norwood.ma editor; exact time not yet confirmed.",
+    "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
     "id": "2026-09-27-check-mate",
     "title": "Check Mate — An Evening with Purpose",
     "start": {
@@ -461,28 +485,50 @@
     "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
   },
   {
-    "id": "2026-09-27-emerald-city-plant-bingo",
-    "title": "Plant Bingo",
+    "id": "2026-09-28-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
     "start": {
-      "date": "2026-09-27",
-      "time": null
+      "date": "2026-09-28",
+      "time": "07:00"
     },
     "end": {
-      "date": "2026-09-27",
-      "time": null
+      "date": "2026-09-28",
+      "time": "08:00"
     },
-    "venue": "Emerald City Plant Shop",
-    "address": "702 Washington St, Norwood, MA 02062",
-    "category": "games_social",
-    "source_id": "emerald-city-plant-shop",
-    "source_url": "https://www.emeraldcityplantshop.com/",
-    "cost": null,
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
     "public_access": "public",
-    "series": "Plant Bingo",
+    "series": "Sunnyside Up AA",
     "publish_candidate": true,
-    "verification_status": "user_verified_2026-09-24",
-    "notes": "Public Plant Bingo event at Emerald City Plant Shop. Date confirmed directly by Norwood.ma editor; exact time not yet confirmed.",
-    "registration_url": "https://www.emeraldcityplantshop.com/"
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-09-29-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-09-29",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-09-29-farmers-market",
@@ -531,6 +577,29 @@
     "notes": "Routine recurring event; source monitor should retain it, homepage can collapse the series."
   },
   {
+    "id": "2026-09-30-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-09-30",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-09-30",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-09-30-lpr-flock-community-session",
     "title": "Community Information Session: License Plate Reader Technology and Cameras",
     "start": {
@@ -554,6 +623,29 @@
     "notes": "Norwood Police Department community information session for Norwood residents about Flock Safety cameras and license plate reader (LPR) technology. Chief Christopher Padden and the department plan to explain what the technology is and is not, why NPD uses it, examples of its use in investigations and public safety, what information is collected, data-retention practices, system access and auditing, restrictions on sharing/use of Norwood data, and department safeguards. An open resident Q&A will follow. The meeting is intended to address public questions about privacy, data retention, information sharing, accountability, and law-enforcement use of LPR systems."
   },
   {
+    "id": "2026-10-01-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-01",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-10-01-mill-sharpening",
     "title": "Tool and Knife Sharpening Workshop",
     "start": {
@@ -575,6 +667,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-02-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-02",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-02",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-10-02-selwyn-birchwood",
@@ -738,6 +853,52 @@
     "notes": null
   },
   {
+    "id": "2026-10-05-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-05",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-05",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-06-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-06",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-10-06-farmers-pumpkin",
     "title": "Norwood Farmers Market: Pumpkin Fest",
     "start": {
@@ -761,6 +922,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-07-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-07",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-10-07-wednesdave-blues",
     "title": "Dave Limina’s Wednesdave Blues II",
     "start": {
@@ -782,6 +966,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-08-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-08",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-10-08-router-workshop",
@@ -829,6 +1036,29 @@
     "verification_status": "user_flyer_verified_2026-09-24",
     "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2026-10-09-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-09",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-09",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-10-09-claudettes",
@@ -923,6 +1153,52 @@
     "notes": null
   },
   {
+    "id": "2026-10-12-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-12",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-12",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-13-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-13",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-10-13-farmers-market",
     "title": "Norwood Farmers Market",
     "start": {
@@ -944,6 +1220,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-14-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-14",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-10-14-emerald-city-plant-parenthood-101",
@@ -968,6 +1267,52 @@
     "verification_status": "user_verified_2026-09-24",
     "notes": "Monthly plant-care class covering lighting, watering and repotting, with Q&A and a hands-on repotting demo. Participants receive 10% off in-store purchases, including the Tea Bar.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2026-10-15-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-15",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-16-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-16",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-16",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-10-17-bow-thayer",
@@ -1039,6 +1384,52 @@
     "notes": null
   },
   {
+    "id": "2026-10-19-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-19",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-20-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-20",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-10-20-farmers-closing",
     "title": "Norwood Farmers Market: Closing Day",
     "start": {
@@ -1060,6 +1451,75 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-21-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-21",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-22-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-22",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-23-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-23",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-23",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-10-23-daybreak",
@@ -1177,6 +1637,121 @@
     "notes": null
   },
   {
+    "id": "2026-10-26-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-26",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-27-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-27",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-28-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-28",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-29-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-29",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-10-30-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-10-30",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-10-30-no-static",
     "title": "No Static — Steely Dan Tribute",
     "start": {
@@ -1270,6 +1845,98 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-11-02-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-02",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-02",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-03-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-03",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-03",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-04-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-04",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-05-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-05",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-11-05-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -1291,6 +1958,98 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-11-06-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-06",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-09-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-09",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-09",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-10-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-10",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-10",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-11-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-11",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-11-11-emerald-city-plant-parenthood-101",
@@ -1317,6 +2076,29 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-11-12-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-12",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-11-12-emerald-city-silent-book-club",
     "title": "Silent Book Club",
     "start": {
@@ -1339,6 +2121,29 @@
     "verification_status": "user_flyer_verified_2026-09-24",
     "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2026-11-13-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-13",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-13",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-11-14-worcester-deaf-club-arts-crafts-bazaar",
@@ -1433,6 +2238,282 @@
     "notes": null
   },
   {
+    "id": "2026-11-16-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-16",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-17-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-17",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-17",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-18-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-18",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-18",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-19-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-19",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-20-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-20",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-23-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-23",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-23",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-24-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-24",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-24",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-25-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-25",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-25",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-26-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-26",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-26",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-27-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-27",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-27",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-30-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-11-30",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-11-30",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-01-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-01",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-01",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-12-01-charcuterie",
     "title": "Make a Charcuterie Board",
     "start": {
@@ -1454,6 +2535,75 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-12-02-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-02",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-02",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-03-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-03",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-03",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-04-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-04",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-04",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-12-04-dreidels",
@@ -1502,6 +2652,75 @@
     "notes": "Pancake breakfast, crafts and photos with Santa. Current 2026 Norwood Recreation Fall/Winter guide confirms the event."
   },
   {
+    "id": "2026-12-07-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-07",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-07",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-08-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-08",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-08",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-09-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-09",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-09",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-12-09-emerald-city-plant-parenthood-101",
     "title": "Plant Parenthood 101",
     "start": {
@@ -1526,6 +2745,29 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-12-10-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-10",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-10",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2026-12-10-emerald-city-silent-book-club",
     "title": "Silent Book Club",
     "start": {
@@ -1548,6 +2790,144 @@
     "verification_status": "user_flyer_verified_2026-09-24",
     "notes": "Recurring on the second Thursday of every month. 6:00–6:30 PM arrival, mingling and book swap; 6:30–7:30 PM quiet reading.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2026-12-11-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-11",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-11",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-14-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-14",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-14",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-15-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-15",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-15",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-16-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-16",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-16",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-17-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-17",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-17",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-18-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-18",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-18",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2026-12-20-celtic-seisun",
@@ -1597,6 +2977,420 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
+    "id": "2026-12-21-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-21",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-21",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-22-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-22",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-22",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-23-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-23",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-23",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-24-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-24",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-24",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-25-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-25",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-25",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-28-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-28",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-28",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-29-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-29",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-29",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-30-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-30",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-30",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-12-31-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2026-12-31",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2026-12-31",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-01-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-01",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-01",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-04-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-04",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-04",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-05-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-05",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-05",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-06-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-06",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-06",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-07-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-07",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-07",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-08-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-08",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-08",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-11-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-11",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-11",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-12-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-12",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-12",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-13-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-13",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-13",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2027-01-13-emerald-city-plant-parenthood-101",
     "title": "Plant Parenthood 101",
     "start": {
@@ -1619,6 +3413,374 @@
     "verification_status": "user_verified_2026-09-24",
     "notes": "Monthly plant-care class covering lighting, watering and repotting, with Q&A and a hands-on repotting demo. Participants receive 10% off in-store purchases, including the Tea Bar.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2027-01-14-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-14",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-14",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-15-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-15",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-15",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-18-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-18",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-18",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-19-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-19",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-19",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-20-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-20",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-20",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-21-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-21",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-21",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-22-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-22",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-22",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-25-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-25",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-25",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-26-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-26",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-26",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-27-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-27",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-27",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-28-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-28",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-28",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-01-29-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-01-29",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-01-29",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-01-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-01",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-01",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-02-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-02",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-02",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-03-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-03",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-03",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-04-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-04",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-04",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2027-02-05-special-someone-dance",
@@ -1644,6 +3806,259 @@
     "notes": "Annual semi-formal dance for ages 3–10 with a special someone; snacks, photo booth and DJ. Time was not stated in the verified Fall/Winter 2026 guide excerpt, so Norwood.ma does not guess it."
   },
   {
+    "id": "2027-02-05-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-05",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-05",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-08-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-08",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-08",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-09-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-09",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-09",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-10-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-10",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-10",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-11-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-11",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-11",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-12-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-12",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-12",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-15-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-15",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-15",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-16-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-16",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-16",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-17-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-17",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-17",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-18-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-18",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-18",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-19-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-19",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-19",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
     "id": "2027-02-20-penumbral-lunar-eclipse",
     "title": "Penumbral Lunar Eclipse Visible from Norwood",
     "start": {
@@ -1665,6 +4080,121 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-20",
     "notes": "Penumbral lunar eclipse visible from the Boston/Norwood area. Visibility depends on weather and local sky conditions."
+  },
+  {
+    "id": "2027-02-22-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-22",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-22",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-23-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-23",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-23",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-24-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-24",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-24",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-25-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-25",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-25",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-26-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-26",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-26",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2027-08-17-penumbral-lunar-eclipse",
