@@ -935,8 +935,37 @@ def recurring_candidates(source, months=5):
                 out.append({'id':event_id(title,day.isoformat(),None),'title':title,'start':{'date':day.isoformat(),'time':None},'end':{'date':day.isoformat(),'time':None},'venue':None,'address':None,'category':'community','source_id':source['id'],'source_url':source.get('url'),'cost':None,'public_access':'public','series':title,'publish_candidate':False,'verification_status':'recurrence_candidate','notes':'Date derived from a verified recurring schedule; venue/time should be confirmed from current listing.','discovered_by':'verified_recurrence'})
     return out
 
+def _verified_recurrence_page_check(source):
+    """Confirm the stored recurrence is still supported by the authoritative page."""
+    ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}; url=source.get('url')
+    if not url: raise RuntimeError('verified recurrence has no authoritative source URL')
+    html=request(url).text
+    text=clean_text(html).lower()
+    # Require identifying language plus the configured weekday/time. This deliberately
+    # fails closed: a redesigned/ambiguous page stops future generation instead of
+    # silently extending stale dates.
+    terms=[str(x).lower() for x in (ing.get('validation_terms') or []) if x]
+    if terms and not all(t in text for t in terms):
+        raise RuntimeError('authoritative page no longer contains required schedule identity terms')
+    day_names={'MO':['monday','mondays'],'TU':['tuesday','tuesdays'],'WE':['wednesday','wednesdays'],'TH':['thursday','thursdays'],'FR':['friday','fridays'],'SA':['saturday','saturdays'],'SU':['sunday','sundays']}
+    wd=rec.get('byweekday')
+    if wd and not any(x in text for x in day_names.get(wd,[])):
+        raise RuntimeError('authoritative page no longer confirms configured weekday')
+    def time_tokens(t):
+        if not t:return []
+        h,m=map(int,t.split(':')); ap='am' if h<12 else 'pm'; hh=h%12 or 12
+        return [f"{hh}:{m:02d} {ap}",f"{hh}:{m:02d}{ap}",f"{hh} {ap}",f"{hh}{ap}"] if m==0 else [f"{hh}:{m:02d} {ap}",f"{hh}:{m:02d}{ap}"]
+    st=ing.get('start_time')
+    if st and not any(tok in text for tok in time_tokens(st)):
+        raise RuntimeError('authoritative page no longer confirms configured start time')
+    # Explicit cancellation/hiatus language near a source is safer treated as stale.
+    if re.search(r'\b(cancelled|canceled|suspended|on hiatus|no longer meeting|discontinued)\b',text,re.I):
+        raise RuntimeError('authoritative page indicates cancellation or hiatus')
+    return True
+
 def events_from_verified_recurrence(source, months=6):
-    """Generate live bounded occurrences from an explicitly verified schedule in source-registry."""
+    """Generate bounded occurrences only after live revalidation of the source page."""
+    _verified_recurrence_page_check(source)
     ing=source.get('ingestion',{}); rec=ing.get('recurrence') or {}; out=[]
     freq=rec.get('frequency'); weekdays={'MO':0,'TU':1,'WE':2,'TH':3,'FR':4,'SA':5,'SU':6}
     wd=weekdays.get(rec.get('byweekday')); now=now_local().date()
@@ -953,7 +982,7 @@ def events_from_verified_recurrence(source, months=6):
             if include:
                 title=ing.get('event_title') or source.get('name')
                 st=ing.get('start_time'); et=ing.get('end_time')
-                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':'automated_verified_recurrence','notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
+                out.append({'id':event_id(title,d.isoformat(),ing.get('venue')),'title':title,'start':{'date':d.isoformat(),'time':st},'end':{'date':d.isoformat(),'time':et},'venue':ing.get('venue'),'address':ing.get('address'),'category':ing.get('category') or 'community','source_id':source['id'],'source_url':source.get('url'),'cost':ing.get('cost'),'public_access':'public','series':ing.get('series_label') or title,'publish_candidate':bool(ing.get('publish_candidate',True)),'verification_status':'live_revalidated_recurrence','notes':ing.get('notes'),'virtual':ing.get('virtual'),'discovered_by':'scheduled_verified_recurrence'})
         d+=timedelta(days=1)
     return out
 
