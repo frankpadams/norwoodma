@@ -6823,7 +6823,7 @@
     "organization": "AA Boston Central Service Office",
     "source_class": "calendar",
     "authority": "organization",
-    "coverage": "Norwood + Walpole + nearest 3 surrounding towns with active groups + virtual",
+    "coverage": "Norwood / nearby",
     "url": "https://aaboston.org/meetings?tsml-region=norwood",
     "domain": "aaboston.org",
     "produces": [
@@ -6839,23 +6839,16 @@
       "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": false,
+      "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": false,
-      "dedupe_against_primary_source": true,
-      "expanded_calendar_only_for_non_norwood": true,
-      "include_virtual": true,
-      "nearby_scope": {
-        "include_town": "Walpole",
-        "additional_nearest_active_group_towns": 3
-      },
-      "label_non_norwood_town": true
+      "dedupe_against_primary_source": true
     },
     "verification": {
       "status": "backend_registered",
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Opt-in recovery calendar may include verified Norwood, nearby and virtual meetings. Non-Norwood and virtual meetings stay out of the standard What's Happening feed unless specifically curated. Preserve official virtual join URL, meeting ID and password when published.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -6910,7 +6903,7 @@
     "organization": "New England Region of Narcotics Anonymous",
     "source_class": "calendar",
     "authority": "organization",
-    "coverage": "Norwood + Walpole + nearest 3 surrounding towns with active groups + virtual",
+    "coverage": "Norwood / nearby",
     "url": "https://nerna.org/find-a-meeting/",
     "domain": "nerna.org",
     "produces": [
@@ -6926,23 +6919,16 @@
       "automation": "preferred"
     },
     "filters": {
-      "require_norwood_relevance": false,
+      "require_norwood_relevance": true,
       "require_public_access_for_whats_happening": false,
-      "dedupe_against_primary_source": true,
-      "expanded_calendar_only_for_non_norwood": true,
-      "include_virtual": true,
-      "nearby_scope": {
-        "include_town": "Walpole",
-        "additional_nearest_active_group_towns": 3
-      },
-      "label_non_norwood_town": true
+      "dedupe_against_primary_source": true
     },
     "verification": {
       "status": "backend_registered",
       "verified_at": "2026-09-25",
       "basis": "Selectable calendar feed registered for scheduled ingestion."
     },
-    "notes": "Opt-in recovery calendar may include verified Norwood, nearby and virtual meetings. Non-Norwood and virtual meetings stay out of the standard What's Happening feed unless specifically curated. Preserve official virtual join URL, meeting ID and password when published.",
+    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -13002,101 +12988,5 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
-  },
-  {
-    "id": "working-moms-playgroup",
-    "name": "Working Moms Playgroup — Norwood/Walpole",
-    "organization": "Working Moms Playgroup",
-    "url": "https://www.workingmomsplaygroup.org/content.aspx?club_id=940066&page_id=4001",
-    "active_monitor": true,
-    "produces": [
-      "events"
-    ],
-    "priority": 2,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred"
-    },
-    "verification": {
-      "status": "verified_public_calendar",
-      "verified_at": "2026-09-26",
-      "basis": "Public ClubExpress event calendar publishes dated Norwood/Walpole chapter events."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "notes": "Include publicly visible local parent/baby/playgroup events; do not expose member-private event details."
-  },
-  {
-    "id": "lll-boston",
-    "name": "La Leche League of Boston",
-    "organization": "La Leche League MA/RI/VT",
-    "url": "https://www.lllmarivt.org/lll-of-boston",
-    "active_monitor": true,
-    "produces": [
-      "events"
-    ],
-    "priority": 2,
-    "ingestion": {
-      "method": "recurring_org_schedule",
-      "automation": "preferred",
-      "recurrence": {
-        "frequency": "monthly",
-        "byweekday": "MO",
-        "ordinal": [
-          1
-        ]
-      },
-      "discover_exceptions": true
-    },
-    "verification": {
-      "status": "verified_recurring_public_schedule",
-      "verified_at": "2026-09-26",
-      "basis": "Official LLL Boston page states first Monday monthly at 11:30 AM at Brookline Library Putterham Branch, with holiday adjustments, plus weekly virtual meet-ups."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "notes": "Verify monthly exceptions and discover current weekly virtual meet-up details before publishing join information."
-  },
-  {
-    "id": "over-the-moon-parenting",
-    "name": "Over The Moon Parenting",
-    "organization": "Over The Moon Parenting",
-    "url": "https://overthemoonparenting.com/",
-    "active_monitor": true,
-    "produces": [
-      "events"
-    ],
-    "priority": 3,
-    "ingestion": {
-      "method": "organization_event_discovery",
-      "automation": "preferred",
-      "discovery_urls": [
-        "https://overthemoonparenting.com/",
-        "https://overthemoonparenting.com/partner-hospitals/"
-      ]
-    },
-    "verification": {
-      "status": "verified_program_source",
-      "verified_at": "2026-09-26",
-      "basis": "Official site confirms free weekly drop-in breastfeeding groups and pregnancy/postpartum classes."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "notes": "Publish only concrete current dates/times; monitor Braintree/Framingham partner programming as well as Norwell/Pembroke."
   }
 ]
