@@ -2391,6 +2391,20 @@ def main():
         acknowledge_published_submissions(); return
     events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline); events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices))); write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     registry=read_json('source-registry.json',[])
+    guide_source=next((x for x in registry if x.get('id')=='town-recreation-programs'),None)
+    if guide_source and guide_source.get('ingestion',{}).get('discover_seasonal_guides'):
+        try:
+            guides=discover_recreation_guides(guide_source)
+            previous=read_json('recreation-guides.json',[])
+            first_seen={x.get('url'):x.get('first_seen') for x in previous if isinstance(x,dict)}
+            nowstamp=now_local().isoformat()
+            for g in guides:
+                g['first_seen']=first_seen.get(g.get('url')) or nowstamp
+                g['last_seen']=nowstamp
+            write_json('recreation-guides.json',guides)
+            write_js('recreation-guides-data.js','NORWOOD_RECREATION_GUIDES',guides)
+        except Exception as ex:
+            print('Recreation guide discovery warning:',str(ex)[:180])
     cov=coverage(registry); write_json('automation-coverage.json',cov)
     report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
     write_json('refresh-status.json',report)
