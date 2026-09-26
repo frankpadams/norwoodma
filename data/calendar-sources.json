@@ -680,5 +680,39 @@
     "kind": "monitor_schedule",
     "possible_conflicts": true,
     "verified": true
+  },
+  {
+    "id": "recovery-aa",
+    "group": "more",
+    "name": "Alcoholics Anonymous (AA)",
+    "description": "Opt-in recovery calendar: Norwood AA meetings plus verified virtual meetings and meetings in Walpole and the three nearest surrounding towns with active groups. Nearby entries identify the town; online entries preserve published Zoom details.",
+    "view_url": "https://aaboston.org/meetings?tsml-region=norwood",
+    "provider": "AA Boston Central Service Office",
+    "kind": "monitor_calendar",
+    "health_source_ids": [
+      "recovery-aa"
+    ],
+    "selector": {
+      "source_ids": [
+        "recovery-aa"
+      ]
+    }
+  },
+  {
+    "id": "recovery-na",
+    "group": "more",
+    "name": "Narcotics Anonymous (NA)",
+    "description": "Opt-in recovery calendar: verified Norwood, nearby and virtual NA meetings. Nearby entries identify the town; online entries preserve official join details when published.",
+    "view_url": "https://nerna.org/find-a-meeting/",
+    "provider": "New England Region of Narcotics Anonymous",
+    "kind": "monitor_calendar",
+    "health_source_ids": [
+      "recovery-na"
+    ],
+    "selector": {
+      "source_ids": [
+        "recovery-na"
+      ]
+    }
   }
 ]
