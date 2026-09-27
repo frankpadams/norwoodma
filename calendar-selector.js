@@ -39,7 +39,18 @@ function filtered(items){
      if(!set.has('norwood-community')||!isCuratedDefault(e))return false;
      return !all.some(s=>s.id!=='norwood-community'&&excluded.has(s.id)&&matchesSource(e,s));
    }
-   if(tags.some(id=>id!=='norwood-community'&&set.has(id)))return true;
+   // Source-strict calendars must not trust a stale/keyword-generated calendar_id.
+   // Revalidate against the event source before admitting the event.
+   const strictIds=new Set(['town-police-events','town-fire-events']);
+   for(const id of tags){
+     if(id==='norwood-community'||!set.has(id))continue;
+     if(strictIds.has(id)){
+       const src=expandedSources().find(s=>s.id===id);
+       if(src&&matchesSource(e,src))return true;
+       continue;
+     }
+     return true;
+   }
    if(!set.has('norwood-community')||!tags.includes('norwood-community'))return false;
    return !tags.some(id=>id!=='norwood-community'&&excluded.has(id));
  });
