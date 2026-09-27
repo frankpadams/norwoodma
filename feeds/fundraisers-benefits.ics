@@ -7,7 +7,7 @@ X-WR-CALNAME:Fundraisers & benefits
 X-WR-CALDESC:Public fundraisers\, charity events and community benefits.
 BEGIN:VEVENT
 UID:2026-09-14-pto-dominos-slice-the-price-card-fundraiser-a70c8e5@norwood.ma
-DTSTAMP:20260927T231852Z
+DTSTAMP:20260927T233222Z
 DTSTART;TZID=America/New_York:20260914T080000
 DTEND;TZID=America/New_York:20260928T090000
 SUMMARY:PTO Dominos Slice the Price Card Fundraiser
@@ -17,7 +17,7 @@ URL:https://www.norwood.k12.ma.us/oldham/calendar/9331879/pto-dominos-slice-the-
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-09-27-check-mate@norwood.ma
-DTSTAMP:20260927T231852Z
+DTSTAMP:20260927T233222Z
 DTSTART;TZID=America/New_York:20260927T160000
 DTEND;TZID=America/New_York:20260927T210000
 SUMMARY:Check Mate — An Evening with Purpose
@@ -26,8 +26,18 @@ DESCRIPTION:Promoting Conflict Resolution\, Inc. fundraiser supporting literacy\
 URL:https://pcrincboston.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-03-electronics-recycling@norwood.ma
+DTSTAMP:20260927T233222Z
+DTSTART;TZID=America/New_York:20261003T090000
+DTEND;TZID=America/New_York:20261003T140000
+SUMMARY:Electronics Recycling Event
+LOCATION:St. Timothy Church — Parking Lot — 650 Nichols St\, Norwood\, MA 02062
+DESCRIPTION:Community electronics/appliance/battery and reusable bicycle recycling event\; rain or shine. Part of proceeds benefit St. Timothy Parish.\nCost: Most items $5–$40\nSource: https://www.norwoodtownnews.com/events/348199/electronics-recycling-event
+URL:https://www.norwoodtownnews.com/events/348199/electronics-recycling-event
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-05-labor-market-research-skills-careers-employme-2810517@norwood.ma
-DTSTAMP:20260927T231852Z
+DTSTAMP:20260927T233222Z
 DTSTART;TZID=America/New_York:20261005T100000
 DTEND;TZID=America/New_York:20261005T100000
 SUMMARY:Labor Market Research – Skills\, Careers\, Employment Outlook
@@ -36,8 +46,28 @@ DESCRIPTION:Date — Monday\, October 5 Time — 10:00 am Platform — Zoom Do y
 URL:https://masshiremsw.com/event/lmr-oct-05/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-11-ar5k@norwood.ma
+DTSTAMP:20260927T233222Z
+DTSTART;TZID=America/New_York:20261011T100000
+DTEND;TZID=America/New_York:20261011T130000
+SUMMARY:Third Annual AR5K Road Race
+LOCATION:Knights of Columbus — 572 Nichols St\, Norwood\, MA 02062
+DESCRIPTION:Run/walk fundraiser supporting scholarships for Norwood High School students and sock donations to Pine Street Inn.\nCost: See registration\nSource: https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race
+URL:https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-cbn-psychic-medium@norwood.ma
+DTSTAMP:20260927T233222Z
+DTSTART;TZID=America/New_York:20261025T183000
+DTEND;TZID=America/New_York:20261025T203000
+SUMMARY:An Evening with Psychic Medium Cathy Ripley Greene
+LOCATION:Norwood VFW — 193 Dean St\, Norwood\, MA 02062
+DESCRIPTION:Public ticketed event sponsored by Citizens for a Better Norwood\; seating limited.\nCost: $60\; $70 after Oct. 1 if available\nSource: https://cbnma.com/events
+URL:https://cbnma.com/events
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-31-pumpkinpalooza@norwood.ma
-DTSTAMP:20260927T231852Z
+DTSTAMP:20260927T233222Z
 DTSTART;TZID=America/New_York:20261031T190000
 SUMMARY:Pumpkinpalooza Halloween Fundraiser
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
