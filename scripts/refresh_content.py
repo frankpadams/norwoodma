@@ -1126,13 +1126,29 @@ def events_from_verified_recurrence(source, months=6):
 def events_from_nys_practice_pdf(url, source, gender=None):
     """Parse NYS travel-practice PDFs and expand weekly rows through the current fall season."""
     if not PdfReader: return []
-    raw=request(url).content; reader=PdfReader(BytesIO(raw))
+    raw=request(url).content
+    reader=PdfReader(BytesIO(raw))
     text='\n'.join((p.extract_text() or '') for p in reader.pages)
     out=[]; today=now_local().date()
     weekdays={'monday':0,'tuesday':1,'wednesday':2,'thursday':3,'friday':4,'saturday':5,'sunday':6}
-    # NYS fall practices begin in early September and run with the roughly 10-week season.
     season_start=date(today.year,8,31); season_end=date(today.year,11,15)
-    row_re=re.compile(r'^\\s*(\\d(?:\\s*/\\s*\\d)?)\\s+(.+?)\\s+(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s+(\\d{1,2}:\\d{2})\\s*-\\s*(?:(\\d{1,2}:\\d{2})|dusk)\\s+(.+?)\\s*
+    row_re=re.compile(r'^\s*(\d(?:\s*/\s*\d)?)\s+(.+?)\s+(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+(\d{1,2}:\d{2})\s*-\s*(?:(\d{1,2}:\d{2})|dusk)\s+(.+?)\s*$',re.I)
+    for line in text.splitlines():
+        m=row_re.match(clean_text(line))
+        if not m: continue
+        grade=clean_text(m.group(1)).replace(' ',''); team=clean_text(m.group(2)); wd=weekdays[m.group(3).lower()]
+        start_time=m.group(4); end_time=m.group(5); field=clean_text(m.group(6))
+        d=season_start
+        while d.weekday()!=wd: d+=timedelta(days=1)
+        while d<=season_end:
+            if d>=today-timedelta(days=7):
+                label=('Boys ' if gender=='boys' else 'Girls ' if gender=='girls' else '')+('Grades '+grade if '/' in grade else 'Grade '+grade)
+                out.append({'id':event_id(f'{team} practice',d.isoformat(),field),'title':f'{team} practice','start':{'date':d.isoformat(),'time':start_time},'end':{'date':d.isoformat(),'time':end_time},'venue':field,'field':field,'address':None,'category':'youth_sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':'Norwood Youth Soccer','publish_candidate':False,'curated_default':False,'verification_status':'official_nys_practice_pdf','notes':'Recurring Fall 2026 practice from the official NYS practice schedule. Check field status for weather-related changes.','discovered_by':'nys_practice_pdf','team':team,'grade':label,'gender':gender,'program':'Travel','activity':'practice','field_status_url':'https://norwoodsoccer.com/fields'})
+            d+=timedelta(days=7)
+    return dedupe_events(out)
+
+
+def events_from_nys_multi_schedule(source):
     """Ingest Norwood Youth Soccer's current team/schedule pages and linked public schedule documents."""
     ing=source.get('ingestion',{}); urls=[ing.get('schedule_url'),ing.get('team_directory_url')]; out=[]; feeds=[]
     for url in [u for u in urls if u]:
@@ -1146,7 +1162,8 @@ def events_from_nys_practice_pdf(url, source, gender=None):
                 low=(href+' '+label).lower()
                 if any(k in low for k in ['schedule','practice','game','calendar','.ics','.pdf']) and ('norwoodsoccer.com' in href or 'bays.org' in href):
                     try:
-                        if href.lower().split('?')[0].endswith('.ics'): out.extend(events_from_ical(href,temp))
+                        if href.lower().split('?')[0].endswith('.ics'):
+                            out.extend(events_from_ical(href,temp))
                         elif href.lower().split('?')[0].endswith('.pdf'):
                             gender='boys' if 'boys' in low else ('girls' if 'girls' in low else None)
                             if gender: out.extend(events_from_nys_practice_pdf(href,temp,gender))
@@ -1154,8 +1171,6 @@ def events_from_nys_practice_pdf(url, source, gender=None):
                             page=request(href).text; rows,_=extract_jsonld_events(page,temp); out.extend(rows)
                     except Exception:
                         pass
-    # BAYS is the official travel-game system linked by NYS. Its public club page may
-    # expose structured rows even when NYS itself only links outward.
     bays=ing.get('travel_league_url')
     if bays:
         try:
@@ -1165,10 +1180,11 @@ def events_from_nys_practice_pdf(url, source, gender=None):
             pass
     for e in out:
         e['source_id']=source['id']; e['category']='youth_sports'; e['publish_candidate']=False
-        e['curated_default']=False; e['discovered_by']='nys_multi_schedule'
-        e['field_status_url']='https://norwoodma.myrec.com/info/facilities/default.aspx'
+        e['curated_default']=False; e['discovered_by']=e.get('discovered_by') or 'nys_multi_schedule'
+        e['field_status_url']=e.get('field_status_url') or 'https://norwoodsoccer.com/fields'
         if e.get('venue') and not e.get('field'): e['field']=e.get('venue')
     return dedupe_events(out)
+
 
 def events_from_league_schedule(source):
     """Parse public youth-league schedule tables/cards with dates and matchup metadata."""
