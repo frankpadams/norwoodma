@@ -1218,7 +1218,7 @@ def events_from_multi_source_calendar(source):
 
 def events_from_pma_hub(source):
     """Discover embedded Google/ICS Fine Arts calendars from the PMA calendar hub."""
-    ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub]
+    ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[ing.get('events_url'),hub]
     children=ing.get('child_calendars',[])
     for child in children:
         if isinstance(child,dict) and child.get('url'): urls.append(child['url'])
