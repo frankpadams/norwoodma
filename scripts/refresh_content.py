@@ -1387,6 +1387,7 @@ def events_from_assabet(source):
 def classify_recreation_program(section='', title='', description=''):
     text=clean_text(' '.join([section,title,description])).lower()
     if any(x in text for x in ('special event','one day hit','paint night','camp out','recital','ticket')): return 'special_events'
+    if 'drop in' in text or 'drop-in' in text: return 'drop_in'
     if any(x in text for x in ('vacation','summer program','summer playground','extended care','camp')): return 'camps_vacation'
     if any(x in text for x in ('sport','pickleball','softball','basketball','soccer','field hockey','volleyball','tennis','golf','swim','wrestling','cheer')): return 'sports_leagues'
     if any(x in text for x in ('fitness','zumba','yoga','kettlebell','spin class','moms who run')): return 'adult_fitness'
