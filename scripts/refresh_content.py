@@ -2468,12 +2468,51 @@ def ics_stamp():
 def event_matches_selector(e, selector):
     selector=selector or {}
     if selector.get('all'): return True
+    sid=str(e.get('source_id') or '').lower()
+    if sid in [str(x).lower() for x in selector.get('source_ids',[])]: return True
+    if any(sid.startswith(str(x).lower()) for x in selector.get('source_id_prefixes',[])): return True
     cat=str(e.get('category') or '').lower()
-    text=' '.join(str(e.get(k) or '') for k in ('title','notes','venue','category')).lower()
+    text=' '.join(str(e.get(k) or '') for k in ('title','notes','venue','category','organizer','source_id')).lower()
     if cat in [str(x).lower() for x in selector.get('categories',[])]: return True
     if any(str(x).lower() in cat for x in selector.get('category_contains',[])): return True
     if any(str(x).lower() in text for x in selector.get('keywords',[])): return True
     return False
+
+def event_is_curated_default(e):
+    """Match the normal What's Happening default without making broad calendar tags do browser-side inference."""
+    if e.get('curated_default') is True or e.get('whats_happening_default') is True: return True
+    sid=str(e.get('source_id') or '').lower()
+    if sid in ('library-assabet-calendar','library-cfce'): return True
+    access=str(e.get('public_access') or 'public').lower()
+    if access in ('private','members_only'): return False
+    cat=str(e.get('category') or '').lower()
+    text=' '.join(str(e.get(k) or '') for k in ('title','series','notes')).lower()
+    if re.search(r'practice|routine meeting|member meeting|board meeting',text): return False
+    if sid=='recovery-aa' or sid.startswith('recovery-'): return True
+    return cat in ('community','family','arts','festival','fundraiser','government','school','holiday','market','workshop','live_music','performance','comedy','wellness','games_social','music_community') or bool(re.search(r'farmers market|concert|festival|norwood day|tree lighting|menorah|parade|blood drive|5k|open house|town common',text))
+
+def assign_calendar_ids(events):
+    """Precompute multi-calendar membership once during refresh; browser filtering becomes set intersection."""
+    defs=read_json('calendar-sources.json',[])
+    selectable=[s for s in defs if s.get('id')!='norwood-community' and s.get('selector')]
+    for e in events:
+        ids=set(str(x) for x in (e.get('calendar_ids') or []) if x)
+        if event_is_curated_default(e): ids.add('norwood-community')
+        for s in selectable:
+            if event_matches_selector(e,s.get('selector')): ids.add(str(s.get('id')))
+        sid=str(e.get('source_id') or '').lower()
+        cat=str(e.get('category') or '').lower()
+        if sid in ('town-recreation-programs','norwood-recreation'):
+            ids.add('rec-all')
+            rec_map={'special_events':'rec-special-events','youth_programs':'rec-youth','adult_fitness':'rec-adult-fitness','sports_leagues':'rec-sports','drop_in':'rec-drop-in','camps_vacation':'rec-camps'}
+            if cat in rec_map: ids.add(rec_map[cat])
+        if sid=='resource-norwood-youth-soccer':
+            team=str(e.get('team') or '').strip(); grade=str(e.get('grade') or '').strip()
+            if team:
+                key=re.sub(r'[^a-z0-9]+','-',(grade+'|'+team).lower()).strip('-')
+                ids.add('nys-team-'+key)
+        e['calendar_ids']=sorted(ids)
+    return events
 
 def event_ics_lines(e):
     start=e.get('start') or {}; end=e.get('end') or {}; sd=start.get('date')
@@ -2583,6 +2622,7 @@ def main():
             status['found']=len(rec_programs)
             status['note']=f"{len(rec_occurrences)} calendar occurrences generated" if rec_programs else 'No Recreation programs available; last successful snapshot unavailable'
     events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices)+rec_occurrences))
+    events=assign_calendar_ids(events)
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     if guide_source and guide_source.get('ingestion',{}).get('discover_seasonal_guides'):
         try:
