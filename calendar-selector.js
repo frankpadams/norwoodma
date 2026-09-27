@@ -65,16 +65,14 @@ function healthForSource(s){
  return matches.find(h=>h.ok)||matches[0];
 }
 function sourceAvailable(s,health){
- const ev=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS:[];
- // Generated feeds and direct external subscription feeds remain valid even during a
- // legitimately empty upcoming window. Internal selector-based calendars, however,
- // should only be selectable when they can actually add at least one current event.
- if(!!s.feed_url||s.kind==='generated'||s.kind==='generated_live')return true;
- if((s.kind==='internal'||!!s.data_available)&&s.selector){if(s.persistent_selector===true)return true;return ev.some(e=>eventCalendarIds(e).includes(s.id)||(!eventCalendarIds(e).length&&matchesSource(e,s)));}
- if(s.kind==='internal'||!!s.data_available)return true;
- // Monitored calendars count as usable only when the monitor has actually produced
- // current/recent data. A successful zero-event check alone does not turn a source green.
- return !!(health&&health.ok&&(Number(health.last_found||0)>0||!!health.last_successful_update));
+ // A calendar choice represents a filter Norwood.ma knows how to apply. Its checkbox
+ // must not disappear merely because the current refresh returned zero events or a
+ // monitored website is temporarily unhealthy. Source health is diagnostic metadata.
+ // Only explicitly discovery-only/nonselectable entries are disabled.
+ if(s.selectable===false||s.discovery_only===true)return false;
+ if(s.selector||s.feed_url||s.kind==='generated'||s.kind==='generated_live'||s.kind==='internal'||s.data_available===true)return true;
+ // Monitor entries without a selector cannot filter the combined calendar reliably.
+ return false;
 }
 function recreationSelectorSources(){
  const defs=[
