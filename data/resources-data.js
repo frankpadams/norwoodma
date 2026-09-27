@@ -279,6 +279,21 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Boch Toys for Tots — Norwood",
+    "category": "Children & Families",
+    "description": "Annual Norwood Toys for Tots collection and community event hosted by Boch with the Greg Hill Show. Useful for donating new, unwrapped toys and following the annual Norwood collection event; families seeking toys should use the Greater Boston Toys for Tots or Self Help assistance links instead.",
+    "url": "https://www.bochexotics.com/toys-for-tots-at-boch-exotics-norwood-ma.htm",
+    "tags": "Boch Toys for Tots toy drive donate toys holiday community event Greg Hill Norwood Christmas",
+    "topics": [
+      "kids",
+      "community",
+      "volunteer"
+    ],
+    "coverage": "Norwood",
+    "verified": "2026-09",
+    "source_note": "Official Boch event page. This is a donation/event resource, not the family toy-request application."
+  },
+  {
     "name": "Bodhi Spa",
     "category": "Spas, Salons & Massage",
     "description": "Norwood wellness/spa option, listed here rather than as a Things to Do destination.",
@@ -716,6 +731,20 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "First Congregational Church — Blessings Box",
+    "category": "Food Assistance",
+    "description": "Free shelf-stable meal kits in the Blessings Box on the front steps of First Congregational Church, 100 Winter St, Norwood. No registration needed; take a meal kit if you need one.",
+    "url": "https://www.fccnorwood.org/",
+    "tags": "food assistance free meal meals meal kits pantry Blessings Box shelf stable no registration First Congregational Church",
+    "topics": [
+      "food",
+      "community"
+    ],
+    "coverage": "Local",
+    "address": "100 Winter St, Norwood, MA 02062",
+    "verified": "2026-09"
+  },
+  {
     "name": "First Congregational Church in Norwood",
     "category": "Houses of Worship",
     "description": "United Church of Christ congregation in Norwood with worship, faith formation and community programs.",
@@ -880,6 +909,20 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Regional",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Greater Boston Toys for Tots — Request a Toy",
+    "category": "Children & Families",
+    "description": "Official Greater Boston Marine Toys for Tots campaign serving Norfolk County. Families can use the campaign's Request a Toy option for current application information and holiday toy assistance.",
+    "url": "https://boston-ma.toysfortots.org/local-coordinator-sites/lco-sites/default.aspx?nPageID=0&nPreviewInd=0&nRedirectInd=3",
+    "tags": "Toys for Tots request toy holiday gifts children families Norfolk County Norwood Christmas assistance",
+    "topics": [
+      "kids",
+      "assistance"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Official 2026 Greater Boston Marine Toys for Tots campaign; serves Norfolk, Suffolk and North Plymouth counties."
   },
   {
     "name": "Gus’s Barber Shop",
@@ -4233,6 +4276,21 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Self Help Inc. — Holiday Toy & Food Assistance",
+    "category": "Children & Families",
+    "description": "Holiday assistance for eligible families in Norwood and other participating communities. The program provides toys for eligible families with children and is supported in part by Marine Toys for Tots; use the program page for the current application period and eligibility details.",
+    "url": "https://selfhelpinc.org/toy-food-donation-program/",
+    "tags": "holiday assistance Christmas toys gifts children families Norwood Toys for Tots food assistance application",
+    "topics": [
+      "kids",
+      "assistance",
+      "food"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-09",
+    "source_note": "Official Self Help Inc. program page explicitly lists Norwood among the communities served."
+  },
+  {
     "name": "SHINE Medicare Counseling",
     "category": "Older Adults & Health",
     "description": "Free, unbiased Medicare counseling for Massachusetts residents and caregivers through the Serving the Health Insurance Needs of Everyone program.",
@@ -4391,6 +4449,20 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Local",
     "verified": "2026-09"
+  },
+  {
+    "name": "Sunnyside Up AA — Grace Episcopal Church",
+    "category": "Recovery",
+    "description": "Local open Alcoholics Anonymous meeting at Grace Episcopal Church, 150 Chapel Street, Norwood. Meets weekday mornings, 7:00–8:00 AM. See the linked Grace groups page for the local meeting listing; scheduled occurrences also appear on the Norwood.ma calendar.",
+    "url": "https://www.gracenor.org/groups",
+    "tags": "AA Alcoholics Anonymous Sunnyside Up recovery meeting Grace Episcopal weekday morning 7 AM",
+    "topics": [
+      "health",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09",
+    "source_note": "Grace Episcopal Church Groups page and AA Boston meeting directory"
   },
   {
     "name": "Supercharged Entertainment",
@@ -4816,20 +4888,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/government/boards_committees/zoning_board_of_appeals.php",
     "tags": "zoning appeals",
     "coverage": "Regional/State",
-    "verified": "2026-09"
-  },
-  {
-    "name": "First Congregational Church — Blessings Box",
-    "category": "Food Assistance",
-    "description": "Free shelf-stable meal kits in the Blessings Box on the front steps of First Congregational Church, 100 Winter St, Norwood. No registration needed; take a meal kit if you need one.",
-    "url": "https://www.fccnorwood.org/",
-    "tags": "food assistance free meal meals meal kits pantry Blessings Box shelf stable no registration First Congregational Church",
-    "topics": [
-      "food",
-      "community"
-    ],
-    "coverage": "Local",
-    "address": "100 Winter St, Norwood, MA 02062",
     "verified": "2026-09"
   }
 ];
