@@ -73,33 +73,19 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 }
 
 
-/* Stable single-line site alert strip: rotating notices must never shift page layout. */
-.site-timely-alert{height:36px;min-height:36px;max-height:36px;box-sizing:border-box;font-size:.9rem!important;line-height:1.2!important;overflow:hidden}
-.site-timely-track{height:35px;min-height:35px;box-sizing:border-box;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;white-space:nowrap!important}
-.site-timely-item{box-sizing:border-box;width:min(100%,calc(100vw - 86px));max-width:1200px;height:35px!important;min-height:35px!important;padding:0 .65rem!important;line-height:35px!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
-.site-timely-item:not(.is-active){display:none!important}
-.site-timely-item.is-active{display:block!important}
-.site-timely-prev,.site-timely-next{position:absolute;top:0;height:35px;width:36px;z-index:2;border:0;background:transparent;color:inherit;font:inherit;font-size:1.2rem;line-height:35px;cursor:pointer}
-.site-timely-prev{left:4px}.site-timely-next{right:4px}
-.site-timely-item .watch-live{line-height:inherit!important}
+/* Stable top-alert carousel: fixed height with the active message centered on the viewport. */
+.site-timely-alert{height:36px;min-height:36px;max-height:36px;box-sizing:border-box;font-size:.9rem!important;line-height:1.25!important;overflow:hidden}
+.site-timely-track{position:relative!important;width:100%!important;height:35px!important;min-height:35px!important;box-sizing:border-box!important;overflow:hidden!important;white-space:nowrap!important}
+.site-timely-item{display:none!important}
+.site-timely-item.is-active{position:absolute!important;inset:0 42px!important;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;padding:0!important;margin:0!important;text-align:center!important;line-height:1.25!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;color:inherit!important;text-decoration:none!important}
+.site-timely-prev,.site-timely-next{position:absolute!important;top:0!important;height:35px!important;width:36px!important;z-index:2!important;border:0!important;background:transparent!important;color:inherit!important;font:inherit!important;font-size:1.2rem!important;line-height:35px!important;cursor:pointer!important}
+.site-timely-prev{left:4px!important}.site-timely-next{right:4px!important}
+.site-timely-item .watch-live{display:inline!important;padding:0!important;margin-left:.25rem!important;line-height:inherit!important;white-space:nowrap!important}
 @media(max-width:700px){
   .site-timely-alert{height:34px;min-height:34px;max-height:34px;font-size:.78rem!important}
-  .site-timely-track{height:33px;min-height:33px;justify-content:center!important}
-  .site-timely-item{height:33px!important;min-height:33px!important;line-height:33px!important;width:calc(100vw - 76px);padding:0 .35rem!important}
-  .site-timely-prev,.site-timely-next{height:33px;width:32px;line-height:33px}
-}
-
-
-/* Center rotating alert copy without changing the fixed-height layout. */
-.site-timely-item{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
-
-
-/* Exact centering for rotating yellow alert: equal reserved side gutters + flex centering. */
-.site-timely-track{padding-left:42px!important;padding-right:42px!important}
-.site-timely-item.is-active{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;margin:0 auto!important;width:100%!important;max-width:1200px!important;height:35px!important;line-height:1.2!important}
-@media(max-width:700px){
-  .site-timely-track{padding-left:36px!important;padding-right:36px!important}
-  .site-timely-item.is-active{height:33px!important;line-height:1.2!important}
+  .site-timely-track{height:33px!important;min-height:33px!important}
+  .site-timely-item.is-active{inset:0 36px!important}
+  .site-timely-prev,.site-timely-next{height:33px!important;width:32px!important;line-height:33px!important}
 }
 
 /* Hey Norwood: two equal fixed-height notice slots so every rotation occupies the same space. */
