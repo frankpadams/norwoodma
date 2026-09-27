@@ -1224,7 +1224,7 @@ def discover_embedded_calendar_feeds(page_url, html):
         from urllib.parse import unquote,quote
         import base64
         raw=html.replace('\\/','/')
-        candidates=re.findall(r'https?[^"'<>\\s]+',raw)
+        candidates=re.findall(r"https?[^\\\"'<>\\\\s]+",raw)
         for candidate in candidates:
             href=unquote(candidate.replace('\\u0026','&').replace('\\u003d','='))
             low=href.lower()
