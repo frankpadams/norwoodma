@@ -111,34 +111,25 @@ function howDoSearchHtml(q){
  if(!hits.length)return gateway;
  return gateway+'<section class="topic-section search-results-section resource-howdo-search-results"><p class="eyebrow">HOW DO I?</p><h2>'+hits.length+' quick answer'+(hits.length===1?'':'s')+'</h2><div class="resource-list">'+hits.map(({x})=>'<article class="resource-item"><div class="resource-meta"><span class="badge">How Do I?</span></div><div class="resource-title-row"><a class="resource-name" href="how-do-i.html#'+esc(x.id)+'"><b>'+esc(x.title)+'</b> <span aria-hidden="true">→</span></a></div><p>'+esc(x.text.slice(0,220))+(x.text.length>220?'…':'')+'</p></article>').join('')+'</div></section>';
 }
-function render(q=''){
- const root=$('#resourceTopics'), nav=$('#topicNav'), status=$('#resourceSearchStatus'), clear=$('#clearResourceSearch');
+function render(){
+ const root=$('#resourceTopics');
  if(!root)return;
- const query=q.trim();
- if(query){
-   const rows=all.filter(r=>matchesQuery(r,query)).sort((a,b)=>globalRelevance(b,query)-globalRelevance(a,query)||a.name.localeCompare(b.name));
-   if(nav) nav.hidden=true;
-   if(clear) clear.hidden=false;
-   if(status) status.textContent=`${rows.length} ${rows.length===1?'resource':'resources'} match “${query}”.`;
-   root.innerHTML=crisisHelp(query)+howDoSearchHtml(query)+(rows.length?`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>${rows.length} ${rows.length===1?'match':'matches'} for “${esc(query)}”</h2><p class="sub">Results are shown once each, with local resources given extra weight.</p><div class="resource-list">${rows.map(card).join('')}</div></section>`:`<section class="topic-section search-results-section"><p class="eyebrow">SEARCH RESULTS</p><h2>No matches found</h2><p class="sub">Try a shorter phrase or a different description of what you need.</p></section>`);
-   return;
- }
- if(nav) nav.hidden=false;
- if(clear) clear.hidden=true;
- if(status) status.textContent='Browse by topic below, or search in plain language.';
- root.innerHTML=topics.map(t=>{let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));const biz=businessesForTopic(t[0]).map(businessResource);const seen=new Set(rows.map(r=>r.name.toLowerCase()));biz.forEach(b=>{if(!seen.has(b.name.toLowerCase()))rows.push(b);});const open=location.hash===`#${t[0]}`?' open':'';return `<details class="topic-section topic-disclosure" id="${t[0]}"${open}><summary><span><small>RESOURCE TOPIC</small><b>${t[1]} <em class="topic-count">${rows.length}</em></b><span>${t[2]}</span></span><i aria-hidden="true">⌄</i></summary><div class="topic-disclosure-body"><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></div></details>`;}).join(''); requestAnimationFrame(()=>{const id=location.hash.slice(1);if(!id)return;const el=document.getElementById(id);if(el){el.open=true;setTimeout(()=>el.scrollIntoView({block:'start'}),0);}});
+ const id=location.hash.slice(1);
+ const t=topics.find(x=>x[0]===id);
+ if(!t){root.innerHTML='';return;}
+ let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));
+ const biz=businessesForTopic(t[0]).map(businessResource);
+ const seen=new Set(rows.map(r=>r.name.toLowerCase()));
+ biz.forEach(b=>{if(!seen.has(b.name.toLowerCase()))rows.push(b);});
+ root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;
+ root.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});
+ requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
 function loadResources(d){
  all=Array.isArray(d)?d:[];
  const total=$('#resourceCount'); if(total)total.textContent=`${all.length} curated entries in this build.`;
- render($('#needSearch')?.value||'');
+ render();
 }
-const input=$('#needSearch'), form=$('#resourceSearchForm'), clear=$('#clearResourceSearch');
-input?.addEventListener('input',e=>render(e.target.value));
-input?.addEventListener('search',e=>render(e.target.value));
-form?.addEventListener('submit',e=>{e.preventDefault();render(input?.value||'');$('#resourceTopics')?.scrollIntoView({behavior:'smooth',block:'start'});});
-clear?.addEventListener('click',()=>{if(input)input.value='';render('');input?.focus();});
-window.addEventListener('hashchange',()=>{if(input?.value)return;const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el){el.open=true;el.scrollIntoView({behavior:'smooth',block:'start'});}});
-fetch('how-do-i.html',{cache:'no-store'}).then(r=>r.text()).then(html=>{const doc=new DOMParser().parseFromString(html,'text/html');howDoItems=[...doc.querySelectorAll('.howdo-item')].map((el,i)=>{if(!el.id)el.id='howdo-'+(i+1);const summary=el.querySelector('summary');return{id:el.id,title:summary?.textContent.trim()||'',text:el.querySelector('.howdo-answer')?.textContent.replace(/\s+/g,' ').trim()||'',keywords:el.dataset.keywords||''};});render($('#needSearch')?.value||'');}).catch(()=>{});
+window.addEventListener('hashchange',render);
 if(window.NORWOOD_RESOURCES){loadResources(window.NORWOOD_RESOURCES)}else{fetch('data/resources.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();}).then(loadResources).catch(()=>{const total=$('#resourceCount');if(total)total.textContent='Resource data could not be loaded.';});}
 })();
