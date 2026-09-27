@@ -1271,6 +1271,40 @@ def events_from_multi_source_calendar(source):
     if terms: out=[e for e in out if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
     return dedupe_events(out)
 
+def events_from_visible_dated_page(url, source, category='community', series=None):
+    """Conservative fallback for official/organization pages that render dated event cards as HTML."""
+    if not BeautifulSoup: return []
+    html=request(url).text
+    soup=BeautifulSoup(html,'html.parser'); out=[]; today=now_local().date()
+    # Prefer semantic/card-sized containers. Reject giant wrapper/navigation blocks.
+    nodes=soup.find_all(['article','li','tr','section','div'])
+    for node in nodes:
+        text=clean_text(node.get_text(' '))
+        if not text or len(text)<8 or len(text)>1200: continue
+        d=_date_from_text(text)
+        if not d or d < today-timedelta(days=7) or d > today+timedelta(days=370): continue
+        # Avoid wrappers containing several different dates; child cards will be parsed separately.
+        dates=set(re.findall(r'\\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\s+\\d{1,2}\\b',text,re.I))
+        if len(dates)>1: continue
+        h=node.find(['h1','h2','h3','h4','h5','strong'])
+        title=clean_text(h.get_text(' ')) if h else ''
+        if not title:
+            # Use text before the date when it is a compact event-card label.
+            dm=re.search(r'\\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)?[,]?\\s*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\\s+\\d{1,2}',text,re.I)
+            title=clean_text(text[:dm.start()].strip(' -–—:|')) if dm else ''
+        if not title or len(title)<3 or len(title)>180: continue
+        if title.lower() in {'events','calendar','upcoming events','event calendar'}: continue
+        tm=_time_from_text(text); ds=d.isoformat()
+        link=node.find('a',href=True)
+        source_url=urljoin(url,link['href']) if link else url
+        venue=None
+        # Keep location prose when a card labels it explicitly.
+        vm=re.search(r'(?:location|where|venue)\\s*[:\\-]\\s*([^|]{3,120})',text,re.I)
+        if vm: venue=clean_text(vm.group(1))
+        out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':venue,'address':None,'category':category,'source_id':source['id'],'source_url':source_url,'cost':None,'public_access':'public','series':series or source.get('name'),'publish_candidate':True,'verification_status':'official_visible_event_page','notes':text[:500],'discovered_by':'visible_dated_page'})
+    return dedupe_events(out)
+
+
 def events_from_pma_hub(source):
     """Discover PMA's school-level Fine Arts calendars from its authoritative calendar hub."""
     ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub,ing.get('events_url')]
@@ -1293,6 +1327,10 @@ def events_from_pma_hub(source):
         except Exception:
             pass
     out=[]
+    events_url=ing.get('events_url') or source.get('url')
+    if events_url:
+        try: out.extend(events_from_visible_dated_page(events_url,source,category='performance',series='Norwood Parent Music Association'))
+        except Exception: pass
     for u in list(dict.fromkeys(x for x in urls if x)):
         page={'url':u,'feeds':[],'jsonld_events':0}
         try: html=request(u).text
@@ -1809,6 +1847,9 @@ def refresh_events(offline=False):
                                 pages_checked += 1
                                 temp=dict(src); temp['url']=page_url
                                 extracted,ics=extract_jsonld_events(html,temp)
+                                if method=='town_department_event_discovery' and not extracted:
+                                    try: extracted.extend(events_from_visible_dated_page(page_url,temp,category='community',series=src.get('name')))
+                                    except Exception: pass
                                 if terms:
                                     extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
                                 got.extend(extracted)
