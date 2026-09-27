@@ -2804,6 +2804,9 @@ def assign_calendar_ids(events):
             if cat in rec_map: ids.add(rec_map[cat])
         if sid=='resource-norwood-youth-soccer':
             team=str(e.get('team') or '').strip(); grade=str(e.get('grade') or '').strip()
+            if grade:
+                grade_key=re.sub(r'[^a-z0-9]+','-',grade.lower()).strip('-')
+                ids.add('nys-grade-'+grade_key)
             if team:
                 key=re.sub(r'[^a-z0-9]+','-',(grade+'|'+team).lower()).strip('-')
                 ids.add('nys-team-'+key)
