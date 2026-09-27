@@ -1,4 +1,4 @@
-name: Diagnose PMA rendered events
+name: Capture PMA calendar API
 
 on:
   workflow_dispatch:
@@ -11,61 +11,26 @@ permissions:
   contents: write
 
 jobs:
-  diagnose:
+  capture:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Install browser diagnostic
+      - name: Capture public PMA calendar JSON
         run: |
-          pip install playwright
-          python -m playwright install --with-deps chromium
-      - name: Render PMA Events and trace public data requests
-        run: |
-          python - <<'PY'
-          import json, re
-          from pathlib import Path
-          from playwright.sync_api import sync_playwright
-
-          target="https://norwoodpma.org/events"
-          report={"target":target,"requests":[],"responses":[],"calendar_api_json":None,"frames":[],"rendered_text":"","html_excerpt":""}
-          with sync_playwright() as p:
-              browser=p.chromium.launch(headless=True)
-              page=browser.new_page(viewport={"width":1440,"height":1600})
-              def on_request(req):
-                  if req.resource_type in ("xhr","fetch","document","script"):
-                      report["requests"].append({"type":req.resource_type,"method":req.method,"url":req.url})
-              def on_response(resp):
-                  ct=(resp.headers.get("content-type") or "").lower()
-                  if resp.request.resource_type in ("xhr","fetch") or "json" in ct:
-                      report["responses"].append({"status":resp.status,"type":resp.request.resource_type,"content_type":ct,"url":resp.url})\n                      if "/api/website-calendar" in resp.url:\n                          try: report["calendar_api_json"]=resp.json()\n                          except Exception as ex: report["calendar_api_error"]=str(ex)
-              page.on("request",on_request); page.on("response",on_response)
-              page.goto(target,wait_until="domcontentloaded",timeout=60000)
-              page.wait_for_timeout(12000)
-              report["frames"]=[f.url for f in page.frames]
-              report["rendered_text"]=page.locator("body").inner_text()[:50000]
-              html=page.content()
-              # Keep a compact excerpt around known card text, if present.
-              m=re.search(r"(?is).{0,3000}(MICCA|USBANDS|Upcoming events).{0,15000}",html)
-              report["html_excerpt"]=(m.group(0) if m else html[:18000])
-              report["known_card_visible"]=any(x.lower() in report["rendered_text"].lower() for x in ["MICCA Central","USBANDS at King Philip","Home Show"])
-              browser.close()
-          Path("data/pma-browser-diagnostic.json").write_text(json.dumps(report,indent=2)+"\n")
-          print("Known PMA card visible:",report["known_card_visible"])
-          print("Frames:",report["frames"])
-          print("XHR/fetch responses:",len(report["responses"]))
-          PY
+          curl --fail --silent --show-error --location \
+            -H 'Accept: application/json' \
+            'https://app.norwoodpma.org/api/website-calendar' \
+            -o data/pma-calendar-api.json
+          python -m json.tool data/pma-calendar-api.json >/dev/null
       - name: Commit diagnostic
         run: |
           git config user.name "norwood-ma-content-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/pma-browser-diagnostic.json
+          git add data/pma-calendar-api.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "data: PMA rendered-browser diagnostic"
+          git commit -m "data: capture PMA calendar API schema"
           git pull --rebase origin main
           git push origin HEAD:main
