@@ -1148,6 +1148,59 @@ def events_from_nys_practice_pdf(url, source, gender=None):
     return dedupe_events(out)
 
 
+
+def events_from_nys_intramural_pdf(url, source):
+    """Parse the official Fall intramural PDF into dated K and grades 1/2 games."""
+    if not PdfReader: return []
+    raw=request(url).content
+    reader=PdfReader(BytesIO(raw))
+    pages=[p.extract_text() or '' for p in reader.pages]
+    text='\n'.join(pages)
+    team_names={}
+    # The roster page maps the numeric schedule IDs to public team names.
+    for line in text.splitlines():
+        line=clean_text(line)
+        m=re.match(r'^(2[0-7])\s+([A-Za-z][A-Za-z -]+?)(?:\s+[A-Z][a-z]+\s+[A-Z]|\s*$)',line)
+        if m: team_names[m.group(1)]=clean_text(m.group(2))
+        m=re.match(r'^([4-6]\d)\s+([A-Za-z][A-Za-z -]+?)\s+(Monday|Wednesday)\b',line,re.I)
+        if m: team_names[m.group(1)]=clean_text(m.group(2))
+
+    out=[]; year=now_local().year
+    section=None; dates=[]; start_time=None; end_time=None
+    month_num={'sep':9,'oct':10,'nov':11}
+    for raw_line in pages[0].splitlines():
+        line=clean_text(raw_line)
+        low=line.lower()
+        if low.startswith('1st/2nd grade friday'):
+            section='Grades 1 & 2'
+            mt=re.search(r'(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s*pm',line,re.I)
+            if mt:
+                def pm(t):
+                    h,m=map(int,t.split(':'))
+                    if h<12:h+=12
+                    return f'{h:02d}:{m:02d}'
+                start_time,end_time=pm(mt.group(1)),pm(mt.group(2))
+            continue
+        if low.startswith('kindergarten saturday'):
+            section='Kindergarten'; start_time='09:00'; end_time='10:00'; continue
+        if low.startswith('pre-k saturday'):
+            section='Pre-K'; start_time='10:15'; end_time='11:15'; continue
+        if line.startswith('Field ') and section:
+            found=re.findall(r'\b(Sep|Oct|Nov)\s+(\d{1,2})\b',line,re.I)
+            dates=[date(year,month_num[m.lower()],int(d)) for m,d in found]
+            continue
+        if not dates or section=='Pre-K': continue
+        matches=re.findall(r'\b(\d{2})\s+v\s+(\d{2})\b',line,re.I)
+        if not matches: continue
+        field=re.split(r'\s+\d{2}\s+v\s+\d{2}\b',line,maxsplit=1)[0].strip()
+        for i,(a,b) in enumerate(matches[:len(dates)]):
+            d=dates[i]
+            if d < now_local().date()-timedelta(days=7): continue
+            an=team_names.get(a,a); bn=team_names.get(b,b)
+            title=f'{an} vs {bn}'
+            out.append({'id':event_id(title,d.isoformat(),field),'title':title,'start':{'date':d.isoformat(),'time':start_time},'end':{'date':d.isoformat(),'time':end_time},'venue':field,'field':field,'address':None,'category':'youth_sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':'Norwood Youth Soccer — Intramural','publish_candidate':False,'curated_default':False,'verification_status':'official_nys_intramural_pdf','notes':'Official NYS Fall intramural game schedule. Check field status for weather-related changes.','discovered_by':'nys_intramural_pdf','team':an,'opponent':bn,'grade':section,'program':'Intramural','activity':'game','field_status_url':'https://norwoodsoccer.com/fields'})
+    return dedupe_events(out)
+
 def events_from_nys_multi_schedule(source):
     """Ingest Norwood Youth Soccer's current team/schedule pages and linked public schedule documents."""
     ing=source.get('ingestion',{}); urls=[ing.get('schedule_url'),ing.get('team_directory_url')]; out=[]; feeds=[]
@@ -1166,7 +1219,10 @@ def events_from_nys_multi_schedule(source):
                             out.extend(events_from_ical(href,temp))
                         elif href.lower().split('?')[0].endswith('.pdf'):
                             gender='boys' if 'boys' in low else ('girls' if 'girls' in low else None)
-                            if gender: out.extend(events_from_nys_practice_pdf(href,temp,gender))
+                            if gender:
+                                out.extend(events_from_nys_practice_pdf(href,temp,gender))
+                            elif 'intramural' in low:
+                                out.extend(events_from_nys_intramural_pdf(href,temp))
                         else:
                             page=request(href).text; rows,_=extract_jsonld_events(page,temp); out.extend(rows)
                     except Exception:
