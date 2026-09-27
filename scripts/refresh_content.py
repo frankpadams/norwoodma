@@ -1418,7 +1418,7 @@ def events_from_pma_website_api(source):
     for row in rows:
         if not isinstance(row,dict): continue
         title=clean_text(row.get('title') or row.get('name') or row.get('event_name') or '')
-        raw_date=row.get('date') or row.get('event_date') or row.get('start_date') or row.get('startDate') or row.get('start')
+        raw_date=row.get('event_date') or row.get('date') or row.get('start_date') or row.get('startDate') or row.get('start')
         if isinstance(raw_date,dict): raw_date=raw_date.get('date') or raw_date.get('dateTime')
         ds=None
         if raw_date:
@@ -1429,12 +1429,13 @@ def events_from_pma_website_api(source):
                 if d: ds=d.isoformat()
         # Undated/TBA/monthly cards remain on PMA's site but are not calendar occurrences.
         if not title or not ds: continue
-        raw_time=row.get('time') or row.get('start_time') or row.get('startTime')
+        raw_time=row.get('event_time') or row.get('time') or row.get('start_time') or row.get('startTime')
         tm=_time_from_text(str(raw_time)) if raw_time else None
-        status=clean_text(row.get('status') or row.get('state') or '')
+        status=clean_text(row.get('event_status') or row.get('status') or row.get('state') or '')
         venue=clean_text(row.get('location') or row.get('venue') or row.get('place') or '') or None
-        desc=clean_text(row.get('description') or row.get('details') or row.get('notes') or '')
-        link=row.get('url') or row.get('link') or row.get('event_url') or source.get('url')
+        desc=clean_text(row.get('summary') or row.get('description') or row.get('details') or row.get('notes') or '')
+        action=row.get('action_url')
+        link=urljoin(source.get('url') or 'https://norwoodpma.org/events',str(action)) if action else source.get('url')
         notes=' · '.join(x for x in [status.title() if status else '',desc] if x)
         out.append({
           'id':event_id(title,ds,venue),'title':title,
@@ -1444,7 +1445,8 @@ def events_from_pma_website_api(source):
           'public_access':'public','series':'PMA / Fine Arts',
           'publish_candidate':True,'verification_status':'pma_public_website_api',
           'notes':notes[:700],'discovered_by':'pma_website_calendar_api',
-          'status':status or None
+          'status':status or None,'schedule_group':row.get('schedule_group'),
+          'report_time':row.get('report_time'),'source_updated_at':row.get('updated_at')
         })
     return dedupe_events(out)
 
