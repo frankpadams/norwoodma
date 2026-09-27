@@ -16,21 +16,32 @@ let defaultSourceIdsCache=null;
 function groupLabel(g){return ({schools:'Schools','school-athletics':'School Athletics — choose all or individual sports',sports:'Youth & Local Sports',faith:'Faith Organizations',support:'Support Groups',parents:'Parents, Babies & Young Children',disability:'Disability & Neurodiversity',recovery:'Recovery & Addiction',seniors:'Older Adults & Caregivers',artsclasses:'Arts, Classes & Makers',clubs:'Clubs & Community Organizations',fitness:'Fitness & Recreation',volunteer:'Volunteer & Civic Opportunities',nearby:'Near Norwood',community:'Community calendars',recreation:'Norwood Recreation',possible_conflicts:'Conflict & facility schedules',more:'Town & local organizations'}[g]||g);}
 function matchesSelector(e,s){if(!s.selector)return false;if(s.dynamic_selector==='nys_team'&&s.team_key){const blob=[e.team,e.title,e.series,e.notes,e.grade,e.gender,e.program].filter(Boolean).join(' ').toLowerCase();return blob.includes(String(s.team_key).toLowerCase());}if(s.selector.all)return true;const sid=String(e.source_id||'').toLowerCase();if((s.selector.source_ids||[]).some(x=>sid===String(x).toLowerCase()))return true;if((s.selector.source_id_prefixes||[]).some(x=>sid.startsWith(String(x).toLowerCase())))return true;const cat=String(e.category||'').toLowerCase(),text=[e.title,e.notes,e.venue,e.category,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();if((s.selector.categories||[]).includes(cat))return true;if((s.selector.category_contains||[]).some(x=>cat.includes(x)))return true;if((s.selector.keywords||[]).some(x=>text.includes(x)))return true;return false;}
 function matchesSource(e,s){if(s.selector)return matchesSelector(e,s);const id=String(e.source_id||'').trim().toLowerCase();const aliases={'nps-district':['nps-district'],'nps-nhs':['nps-nhs'],'nps-coakley':['nps-coakley'],'nps-balch':['nps-balch'],'nps-callahan':['nps-callahan'],'nps-cleveland':['nps-cleveland'],'nps-oldham':['nps-oldham'],'nps-prescott':['nps-prescott'],'nps-willett':['nps-willett'],'nps-athletics':['nps-athletics','norwood-high-athletics'],'nps-academics':['nps-academics'],'nps-extended-day':['nps-extended-day'],'library-calendar':['library-assabet-calendar','library-cfce'],'town-meetings':['town-civic'],'recreation-calendar':['town-recreation-programs','norwood-rec-sports'],'senior-calendar':['town-senior-newsletter','friends-coa-dances']};return (aliases[s.id]||[String(s.id||'').toLowerCase()]).includes(id);}
-function isCuratedDefault(e){if(e.curated_default===true||e.whats_happening_default===true)return true;const sourceId=String(e.source_id||'').toLowerCase();if(sourceId==='library-assabet-calendar'||sourceId==='library-cfce')return true;const access=String(e.public_access||'public').toLowerCase();if(access==='private'||access==='members_only')return false;const cat=String(e.category||'').toLowerCase();const text=[e.title,e.series,e.notes].filter(Boolean).join(' ').toLowerCase();if(/practice|routine meeting|member meeting|board meeting/.test(text))return false;if(sourceId==='recovery-aa'||sourceId.startsWith('recovery-'))return true;return ['community','family','arts','festival','fundraiser','government','school','holiday','market','workshop','live_music','performance','comedy','wellness','games_social','music_community'].includes(cat)||/farmers market|concert|festival|norwood day|tree lighting|menorah|parade|blood drive|5k|open house|town common/.test(text);}function defaultSourceIds(){
+function isCuratedDefault(e){if(e.curated_default===true||e.whats_happening_default===true)return true;const sourceId=String(e.source_id||'').toLowerCase();if(sourceId==='library-assabet-calendar'||sourceId==='library-cfce')return true;const access=String(e.public_access||'public').toLowerCase();if(access==='private'||access==='members_only')return false;const cat=String(e.category||'').toLowerCase();const text=[e.title,e.series,e.notes].filter(Boolean).join(' ').toLowerCase();if(/practice|routine meeting|member meeting|board meeting/.test(text))return false;if(sourceId==='recovery-aa'||sourceId.startsWith('recovery-'))return true;return ['community','family','arts','festival','fundraiser','government','school','holiday','market','workshop','live_music','performance','comedy','wellness','games_social','music_community'].includes(cat)||/farmers market|concert|festival|norwood day|tree lighting|menorah|parade|blood drive|5k|open house|town common/.test(text);}function eventCalendarIds(e){return Array.isArray(e.calendar_ids)?e.calendar_ids:[];}
+function defaultSourceIds(){
  if(defaultSourceIdsCache)return defaultSourceIdsCache;
- const ev=(Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS:[]).filter(isCuratedDefault);
- const all=expandedSources();
- defaultSourceIdsCache=new Set(all.filter(s=>s.id!=='norwood-community'&&ev.some(e=>matchesSource(e,s))).map(s=>s.id));
+ const ids=new Set();
+ (Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS:[]).forEach(e=>{
+   const tags=eventCalendarIds(e);
+   if(tags.includes('norwood-community'))tags.forEach(id=>{if(id!=='norwood-community')ids.add(id);});
+ });
+ defaultSourceIdsCache=ids;
  return defaultSourceIdsCache;
 }
 function filtered(items){
- const set=selectedSet(),excluded=excludedSet(),all=expandedSources(),chosen=all.filter(s=>set.has(s.id)&&s.id!=='norwood-community');
+ const set=selectedSet(),excluded=excludedSet();
  if(!set.size)return [];
  return items.filter(e=>{
-   if(chosen.some(s=>matchesSource(e,s)))return true;
-   if(!set.has('norwood-community')||!isCuratedDefault(e))return false;
-   const matchingDefaultControls=all.filter(s=>s.id!=='norwood-community'&&matchesSource(e,s)&&defaultSourceIds().has(s.id));
-   return !matchingDefaultControls.some(s=>excluded.has(s.id));
+   const tags=eventCalendarIds(e);
+   // Compatibility fallback for an old/cached event artifact during deployment only.
+   if(!tags.length){
+     const all=expandedSources(),chosen=all.filter(s=>set.has(s.id)&&s.id!=='norwood-community');
+     if(chosen.some(s=>matchesSource(e,s)))return true;
+     if(!set.has('norwood-community')||!isCuratedDefault(e))return false;
+     return !all.some(s=>s.id!=='norwood-community'&&excluded.has(s.id)&&matchesSource(e,s));
+   }
+   if(tags.some(id=>id!=='norwood-community'&&set.has(id)))return true;
+   if(!set.has('norwood-community')||!tags.includes('norwood-community'))return false;
+   return !tags.some(id=>id!=='norwood-community'&&excluded.has(id));
  });
 }
 window.NORWOOD_CALENDAR_FILTER=filtered;
@@ -59,7 +70,7 @@ function sourceAvailable(s,health){
  // legitimately empty upcoming window. Internal selector-based calendars, however,
  // should only be selectable when they can actually add at least one current event.
  if(!!s.feed_url||s.kind==='generated'||s.kind==='generated_live')return true;
- if((s.kind==='internal'||!!s.data_available)&&s.selector)return ev.some(e=>matchesSource(e,s));
+ if((s.kind==='internal'||!!s.data_available)&&s.selector)return ev.some(e=>eventCalendarIds(e).includes(s.id)||(!eventCalendarIds(e).length&&matchesSource(e,s)));
  if(s.kind==='internal'||!!s.data_available)return true;
  // Monitored calendars count as usable only when the monitor has actually produced
  // current/recent data. A successful zero-event check alone does not turn a source green.
