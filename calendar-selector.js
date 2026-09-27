@@ -101,10 +101,11 @@ function expandedSources(){if(expandedSourcesCache)return expandedSourcesCache;c
 function apply(){
  const checked=[...document.querySelectorAll('#calendarFeedChoices input:checked:not(.calendar-unavailable-check)')].map(x=>x.value);
  const defaults=defaultSourceIds();
- const communityWasOn=selected.includes('norwood-community')||checked.includes('norwood-community');
- excludedDefaults=[...defaults].filter(id=>!checked.includes(id));
- selected=checked.filter(id=>id==='norwood-community'||!defaults.has(id)||!communityWasOn);
- if(communityWasOn&&!selected.includes('norwood-community'))selected.unshift('norwood-community');
+ const communityOn=checked.includes('norwood-community');
+ excludedDefaults=communityOn?[...defaults].filter(id=>!checked.includes(id)):[];
+ // The checkboxes are authoritative. In particular, never silently restore
+ // norwood-community after the user explicitly unchecks it.
+ selected=checked.slice();
  try{localStorage.setItem(KEY,JSON.stringify(selected));localStorage.setItem(EXCLUDE_KEY,JSON.stringify(excludedDefaults))}catch(e){};try{if(typeof allEventsForPage!=='undefined'&&allEventsForPage.length){if(document.querySelector('#eventPeriods'))renderEventsPage(filtered(allEventsForPage));if(document.querySelector('#homeEvents'))renderHomeEvents(filtered(allEventsForPage));}}catch(e){};close();}
 function close(){const p=document.querySelector('#calendarPicker'),b=document.querySelector('#calendarPickerToggle');if(p)p.hidden=true;if(b)b.setAttribute('aria-expanded','false');}
 function setup(){const p=document.querySelector('#calendarPicker'),b=document.querySelector('#calendarPickerToggle');if(!p||!b)return;build();const params=new URLSearchParams(location.search);if(params.get('calendars')==='open'||location.hash==='#calendarPicker'){p.hidden=false;b.setAttribute('aria-expanded','true');setTimeout(()=>p.scrollIntoView({behavior:'smooth',block:'start'}),50);}const toggle=()=>{p.hidden=!p.hidden;b.setAttribute('aria-expanded',String(!p.hidden));};b.addEventListener('click',toggle);document.querySelector('.calendar-picker-close')?.addEventListener('click',close);document.querySelector('#calendarApply')?.addEventListener('click',apply);document.querySelector('#calendarSelectAll')?.addEventListener('click',()=>document.querySelectorAll('#calendarFeedChoices input').forEach(x=>x.checked=true));document.querySelector('#calendarClearAll')?.addEventListener('click',()=>document.querySelectorAll('#calendarFeedChoices input').forEach(x=>x.checked=false));document.querySelector('#calendarCurated')?.addEventListener('click',()=>document.querySelectorAll('#calendarFeedChoices input').forEach(x=>x.checked=curatedIds.includes(x.value)));
