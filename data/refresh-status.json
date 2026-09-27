@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-27T18:54:59.029869-04:00",
+  "generated_at": "2026-09-27T19:03:00.719454-04:00",
   "offline": false,
-  "events_published": 2596,
+  "events_published": 2636,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2596,
-      "generated_at": "2026-09-27T18:54:58.199308-04:00"
+      "events": 2636,
+      "generated_at": "2026-09-27T19:03:00.122740-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 96,
-      "generated_at": "2026-09-27T18:54:58.211122-04:00"
+      "generated_at": "2026-09-27T19:03:00.135223-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 953,
-      "generated_at": "2026-09-27T18:54:58.234999-04:00"
+      "events": 954,
+      "generated_at": "2026-09-27T19:03:00.161087-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 853,
-      "generated_at": "2026-09-27T18:54:58.255531-04:00"
+      "generated_at": "2026-09-27T19:03:00.183303-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-27T18:54:58.266703-04:00"
+      "generated_at": "2026-09-27T19:03:00.194967-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 76,
-      "generated_at": "2026-09-27T18:54:58.279436-04:00"
+      "events": 80,
+      "generated_at": "2026-09-27T19:03:00.208554-04:00"
     }
   ],
   "recreation_programs": 174,
@@ -55,15 +55,15 @@
       "source_id": "ache-massachusetts-events",
       "ok": true,
       "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 2,
+      "note": ""
     },
     {
       "source_id": "arts-luke-adams",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "arts-millforge",
@@ -76,15 +76,15 @@
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 1,
+      "found": 43,
       "note": ""
     },
     {
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 15,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "citizens-better-norwood-events",
@@ -102,52 +102,52 @@
     },
     {
       "source_id": "elks-calendar",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "emerald-city-plant-shop",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "faith-icne-sharon",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "faith-shree-hari-dham",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "faith-temple-beth-david-westwood",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "faith-temple-sinai-sharon",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "fallout-shelter",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "first-congregational-events",
@@ -161,21 +161,21 @@
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "food-pantry",
       "ok": true,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "friends-center-blog",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "friends-center-events",
@@ -189,14 +189,14 @@
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "grace-calendar",
       "ok": true,
       "method": "embedded_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "historical-society-events",
@@ -217,28 +217,28 @@
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "irish-brewing-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "junior-womans-club",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "league-women-voters-norwood",
       "ok": true,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "library-assabet-calendar",
@@ -259,7 +259,7 @@
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "lifeworks-events",
@@ -280,7 +280,7 @@
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "masshire-norwood-events",
@@ -301,7 +301,7 @@
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "ncm-school-live-broadcasts",
@@ -315,28 +315,28 @@
       "ok": true,
       "method": "secondary_org_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-carillon-series",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-chamber-events",
       "ok": true,
       "method": "growthzone_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted; zero events is configured as a failure"
     },
     {
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -350,7 +350,7 @@
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-junior-womans-club",
@@ -363,7 +363,7 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 39,
+      "found": 41,
       "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
@@ -378,21 +378,21 @@
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-patch-fundraisers",
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-portuguese-club",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-rec-sports",
@@ -405,8 +405,8 @@
       "source_id": "norwood-record-events",
       "ok": true,
       "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 2,
+      "note": ""
     },
     {
       "source_id": "norwood-rotary-calendar",
@@ -427,21 +427,21 @@
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-summerfest-series",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-sunday-concerts",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-theatre-season",
@@ -462,7 +462,7 @@
       "ok": true,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-town-news-calendar",
@@ -476,7 +476,7 @@
       "ok": true,
       "method": "secondary_org_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-women-business-networking",
@@ -490,7 +490,7 @@
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-youth-softball",
@@ -844,10 +844,10 @@
     },
     {
       "source_id": "nps-callahan-pta",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nps-cleveland",
@@ -858,17 +858,17 @@
     },
     {
       "source_id": "nps-cleveland-pto",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nps-cms-pto",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nps-coakley",
@@ -902,8 +902,8 @@
       "source_id": "nps-news",
       "ok": true,
       "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 2,
+      "note": ""
     },
     {
       "source_id": "nps-nhs",
@@ -914,10 +914,10 @@
     },
     {
       "source_id": "nps-nhs-pto",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nps-oldham",
@@ -928,10 +928,10 @@
     },
     {
       "source_id": "nps-oldham-pto",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nps-pma",
@@ -949,10 +949,10 @@
     },
     {
       "source_id": "nps-prescott-pta",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nps-willett",
@@ -963,45 +963,45 @@
     },
     {
       "source_id": "nps-willett-pto",
-      "ok": true,
+      "ok": false,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "pcrinc-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "rage-zone-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "recovery-aa",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "recovery-alanon",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "recovery-na",
@@ -1022,21 +1022,21 @@
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-cub-scouts-pack-49-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-knights-of-columbus-norwood-council",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-neponset-valley-sunrise-rotary-club",
@@ -1050,7 +1050,7 @@
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-norwood-youth-soccer",
@@ -1064,14 +1064,14 @@
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-scouting-america-troop-49-norwood",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "sarva-social-feed",
@@ -1113,7 +1113,7 @@
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "town-conservation",
@@ -1134,14 +1134,14 @@
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "town-fire-page",
       "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "town-police-page",
@@ -1169,35 +1169,35 @@
       "ok": true,
       "method": "newsletter_calendar",
       "found": 0,
-      "note": ""
+      "note": "source returned zero events; zero events is configured as a failure"
     },
     {
       "source_id": "town-veterans",
       "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "united-church-events",
       "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "vfw-discovery",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "washington-no7-events",
       "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "zeffy-norwood-discovery",
@@ -1263,7 +1263,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 60,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1271,7 +1271,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 60,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1287,7 +1287,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 21,
+      "found": 20,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
