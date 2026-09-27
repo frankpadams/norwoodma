@@ -100,3 +100,10 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
   #heyNorwoodNotices .hey-norwood-slot{height:82px!important;min-height:82px!important;max-height:82px!important}
   #heyNorwoodNotices .good-to-know-item{align-items:center!important}
 }
+
+
+/* Expanded News: keep local-source directory visible while the headline column scrolls. */
+@media (min-width: 801px){
+  .news-page-grid{align-items:start}
+  .news-page-grid .news-sources{position:sticky;top:12px;align-self:start}
+}
