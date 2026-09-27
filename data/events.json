@@ -189,37 +189,6 @@
     ]
   },
   {
-    "id": "2026-09-27-bible-sunday-47f5413",
-    "title": "Bible Sunday",
-    "start": {
-      "date": "2026-09-27",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": "11:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-27-school-of-rock-concert-b245771",
     "title": "School of Rock concert",
     "start": {
@@ -5732,6 +5701,37 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null,
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-world-communion-sunday-09002ea",
+    "title": "World Communion Sunday",
+    "start": {
+      "date": "2026-10-04",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": "11:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
     ]
@@ -44401,6 +44401,40 @@
     ]
   },
   {
+    "id": "2026-12-19-quad-jv-mat-wrestling-weymouth-high-school-0bcdc17",
+    "title": "Quad + JV Mat Wrestling @ Weymouth High School",
+    "start": {
+      "date": "2026-12-19",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": "13:00"
+    },
+    "venue": "1 Wildcat Way, Weymouth Massachusetts 02190",
+    "address": "1 Wildcat Way, Weymouth Massachusetts 02190",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-wrestling",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Wrestling",
+    "public_access": "public",
+    "series": "Norwood Varsity Wrestling",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Wrestling Level: Quad + JV Mat Team: Norwood High School Site: Weymouth HS # 1 Subsite: Weymouth HS # 1",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-612e68cd5d10-2026-12-19",
     "title": "Ballet 1 - Saturdays",
     "start": {
@@ -81406,6 +81440,74 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-03-25-varsity-central-girls-lacrosse-bellingham-hig-cb36480",
+    "title": "Varsity Central Girls Lacrosse @ Bellingham High School",
+    "start": {
+      "date": "2027-03-25",
+      "time": "04:30"
+    },
+    "end": {
+      "date": "2027-03-25",
+      "time": "06:00"
+    },
+    "venue": "60 BLACKSTONE STREET, BELLINGHAM MA 02019",
+    "address": "60 BLACKSTONE STREET, BELLINGHAM MA 02019",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: Varsity Team: Norwood High School Site: Bellingham High School Subsite: Turf field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-03-25-jv-central-girls-lacrosse-bellingham-high-sch-0ac343a",
+    "title": "JV Central Girls Lacrosse @ Bellingham High School",
+    "start": {
+      "date": "2027-03-25",
+      "time": "06:00"
+    },
+    "end": {
+      "date": "2027-03-25",
+      "time": "07:15"
+    },
+    "venue": "60 BLACKSTONE STREET, BELLINGHAM MA 02019",
+    "address": "60 BLACKSTONE STREET, BELLINGHAM MA 02019",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Bellingham High School Subsite: Turf field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
