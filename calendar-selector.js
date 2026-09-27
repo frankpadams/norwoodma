@@ -70,7 +70,7 @@ function sourceAvailable(s,health){
  // legitimately empty upcoming window. Internal selector-based calendars, however,
  // should only be selectable when they can actually add at least one current event.
  if(!!s.feed_url||s.kind==='generated'||s.kind==='generated_live')return true;
- if((s.kind==='internal'||!!s.data_available)&&s.selector)return ev.some(e=>eventCalendarIds(e).includes(s.id)||(!eventCalendarIds(e).length&&matchesSource(e,s)));
+ if((s.kind==='internal'||!!s.data_available)&&s.selector){if(s.persistent_selector===true)return true;return ev.some(e=>eventCalendarIds(e).includes(s.id)||(!eventCalendarIds(e).length&&matchesSource(e,s)));}
  if(s.kind==='internal'||!!s.data_available)return true;
  // Monitored calendars count as usable only when the monitor has actually produced
  // current/recent data. A successful zero-event check alone does not turn a source green.
