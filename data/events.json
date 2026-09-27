@@ -33,545 +33,6 @@
     ]
   },
   {
-    "id": "2026-09-26-men-s-prayer-group-1c34286",
-    "title": "Men's Prayer Group",
-    "start": {
-      "date": "2026-09-26",
-      "time": "07:30"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "08:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "organizer": "Saint Catherine of Siena Parish",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship.",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-ad2c3da06aee-2026-09-26",
-    "title": "Dance and Play - Saturdays",
-    "start": {
-      "date": "2026-09-26",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "09:45"
-    },
-    "venue": "09/12/2026 - 05/08/2027 09:00 AM - 09:45 AM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2027-05-08",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-ad2c3da06aee",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-26-norwood-food-pantry-food-assistance-584b0a3",
-    "title": "Norwood Food Pantry — Food Assistance",
-    "start": {
-      "date": "2026-09-26",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "11:40"
-    },
-    "venue": "Norwood Food Pantry",
-    "address": "150 Chapel Street, Norwood, MA 02062",
-    "category": "assistance",
-    "source_id": "norwood-food-pantry-hours",
-    "source_url": "https://www.norwoodpantry.org/food",
-    "cost": "Free",
-    "public_access": "eligibility_applies",
-    "series": "Norwood Food Pantry Saturday Hours",
-    "publish_candidate": true,
-    "verification_status": "official_schedule",
-    "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
-    "discovered_by": "scheduled_recurring_service",
-    "public_access_status": "inferred_public",
-    "access_type": "paid",
-    "public_access_evidence": "public attendance/registration signal",
-    "calendar_ids": [
-      "norwood-food-markets"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-487ae1c09507-2026-09-26",
-    "title": "Preschool Gymnastics",
-    "start": {
-      "date": "2026-09-26",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "10:00"
-    },
-    "venue": "Preschool Gymnastics",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30910",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30910",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2026-12-12",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-487ae1c09507",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-612e68cd5d10-2026-09-26",
-    "title": "Ballet 1 - Saturdays",
-    "start": {
-      "date": "2026-09-26",
-      "time": "09:50"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "10:35"
-    },
-    "venue": "09/12/2026 - 05/08/2027 09:50 AM - 10:35 AM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2027-05-08",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-612e68cd5d10",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-5cfef8d3a42e-2026-09-26",
-    "title": "Band Gig School of Music and Performance - Fall/Winter Saturdays",
-    "start": {
-      "date": "2026-09-26",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "15:00"
-    },
-    "venue": "Band Gig School of Music and Performance - Fall/Winter Saturdays",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$135.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-05",
-    "session_end": "2027-03-27",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5cfef8d3a42e",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-d723ef03199a-2026-09-26",
-    "title": "Elementary Gymnastics",
-    "start": {
-      "date": "2026-09-26",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "11:00"
-    },
-    "venue": "09/12/2026 - 12/12/2026 10:00 AM - 11:00 AM Norwood Civic Center - Gymnasium",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30910",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30910",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$140.00 Res, $150.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2026-12-12",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-d723ef03199a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-ad028384be8a-2026-09-26",
-    "title": "Tap 1 - Saturdays",
-    "start": {
-      "date": "2026-09-26",
-      "time": "10:40"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "11:25"
-    },
-    "venue": "09/12/2026 - 05/08/2027 10:40 AM - 11:25 AM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2027-05-08",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-ad028384be8a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-efc5b7c62204-2026-09-26",
-    "title": "Intermediate Gymnastics",
-    "start": {
-      "date": "2026-09-26",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "12:00"
-    },
-    "venue": "09/12/2026 - 12/12/2026 11:00 AM - 12:00 PM Norwood Civic Center - Gymnasium",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30910",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30910",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$140.00 Res, $150.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2026-12-12",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-efc5b7c62204",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-90e1c486dffe-2026-09-26",
-    "title": "Acro 1 - Saturdays",
-    "start": {
-      "date": "2026-09-26",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "12:15"
-    },
-    "venue": "09/12/2026 - 05/08/2027 11:30 AM - 12:15 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2027-05-08",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-90e1c486dffe",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-4eefd7ddaaf6-2026-09-26",
-    "title": "Jazz 1 - Saturdays",
-    "start": {
-      "date": "2026-09-26",
-      "time": "12:20"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "13:05"
-    },
-    "venue": "09/12/2026 - 05/08/2027 12:20 PM - 01:05 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-12",
-    "session_end": "2027-05-08",
-    "days": "Sa",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-4eefd7ddaaf6",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-26-miniature-workshop",
-    "title": "Miniature Model & Painting Workshop",
-    "start": {
-      "date": "2026-09-26",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "16:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St, Building 46, Norwood, MA",
-    "category": "workshop",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/events/list/",
-    "cost": "Free–$20",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-26-vfw-post-2452-meat-raffle-d9e16e8",
-    "title": "VFW Post 2452 Meat Raffle",
-    "start": {
-      "date": "2026-09-26",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "17:00"
-    },
-    "venue": "Norwood VFW Post 2452",
-    "address": "193 Dean St, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "vfw-post-2452-meat-raffle",
-    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
-    "cost": "$2 per drawing; $20 pre-buy",
-    "public_access": "public",
-    "series": "VFW Post 2452 Meat Raffle",
-    "publish_candidate": true,
-    "verification_status": "established_recurring_schedule",
-    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
-    "discovered_by": "scheduled_recurring_series",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-26-the-beat-goes-on-cher-tribute-show-dae3c0b",
-    "title": "The Beat Goes On - Cher Tribute Show",
-    "start": {
-      "date": "2026-09-26",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/the-beat-goes-on",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
-    "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-26-magic-room-deadbeat",
-    "title": "DeadBeat — Grateful Dead Tribute",
-    "start": {
-      "date": "2026-09-26",
-      "time": "20:00"
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": "23:00"
-    },
-    "venue": "Magic Room",
-    "address": "83 Morse St Unit 5, Norwood, MA 02062",
-    "category": "live_music",
-    "source_id": "magic-room-ticketleap",
-    "source_url": "https://events.ticketleap.com/events/magicroom-7",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-26-norwood-day-890b667",
-    "title": "Norwood Day",
-    "start": {
-      "date": "2026-09-26",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-26",
-      "time": null
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-27-4th-annual-halloween-costume-swap-922222b",
     "title": "4th Annual Halloween Costume Swap",
     "start": {
@@ -633,6 +94,36 @@
       "norwood-arts",
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-09-27-september-2026-f23215e",
+    "title": "September 2026",
+    "start": {
+      "date": "2026-09-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -5495,6 +4986,37 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-03-men-s-prayer-group-fee3b66",
+    "title": "Men's Prayer Group",
+    "start": {
+      "date": "2026-10-03",
+      "time": "07:30"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "08:30"
+    },
+    "venue": "Saint Catherine of Siena Parish",
+    "address": null,
+    "category": "community",
+    "source_id": "st-catherine-calendar",
+    "source_url": "https://stcatherinenorwood.org/",
+    "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship.",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -20004,6 +19526,36 @@
     ]
   },
   {
+    "id": "2026-10-27-october-2026-b3f480d",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-27-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -29359,6 +28911,36 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-15-all-night-parking-dd3622c",
+    "title": "All-Night Parking",
+    "start": {
+      "date": "2026-11-15",
+      "time": "06:00"
+    },
+    "end": {
+      "date": "2026-11-15",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-police-page",
+    "source_url": "https://www.norwoodma.gov/departments/police/document_center/General Manager/Town of Norwood Traffic Rules & Regulations (rev 2-13-2024).pdf?t=202403141335260",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Police Department",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "All-Night Parking It shall be unlawful for the driver of any vehicle, other than one acting in an emergency, to park said vehicle for a period of time longer than two (2) hours between the hours of 12:00 midnight and 6:00 AM of any day on any street or in or upon any Town-owned off-street parking facility, from November 15 through April 1 of each year without authorization from the Board of Selectmen or their designee. For more information see the Town of Norwood Traffic Rules and Regulations.",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -44766,6 +44348,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-19-miniature-model-painting-workshop-december-20-8be2954",
+    "title": "Miniature Model & Painting Workshop (December 2026)",
+    "start": {
+      "date": "2026-12-19",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": "16:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/miniature-model-painting-workshop-december-2026/",
+    "cost": "Free – $20.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Uplevel your tabletop game experience at Mill Forge Makerspace. Mill Forge is hosting a regular drop-in group event for 3D printing, finishing, and painting mini-figures and DIY game terrain elements. Together, let’s bring your fantasy wo",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
