@@ -217,10 +217,13 @@ async function loadEvents(){
 }
 function groupEvents(items){
  const now=new Date(),today=dateKey(now),tom=new Date(now);tom.setDate(tom.getDate()+1);const tomorrow=dateKey(tom);
- const sat=new Date(now);const delta=(6-now.getDay()+7)%7;sat.setDate(sat.getDate()+delta);const sun=new Date(sat);sun.setDate(sun.getDate()+1);const satKey=dateKey(sat),sunKey=dateKey(sun);
  const next7=new Date(now);next7.setDate(next7.getDate()+7);const next7Key=dateKey(next7);
- const g={today:[],tomorrow:[],weekend:[],next:[],save:[]};
- for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d===satKey||d===sunKey)g.weekend.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}Object.keys(g).forEach(k=>{g[k]=diversifySameDayEvents(g[k]);});return g;
+ // Sections must be contiguous date ranges. Never pull a later Saturday/Sunday
+ // ahead of intervening weekdays merely to create a "This weekend" bucket.
+ const g={today:[],tomorrow:[],next:[],save:[]};
+ for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}
+ Object.keys(g).forEach(k=>{g[k]=diversifySameDayEvents(g[k]);});
+ return g;
 }
 function eventLinks(e){const links=[];const add=(url,label)=>{if(url&&!links.some(x=>x.url===url))links.push({url,label})};add(e.registration_url,'Participate / register');add(e.donation_url,'Donate / support');add(e.purchase_url,'Purchase / order');add(e.source_url,'Official event information');add(e.field_status_url,'Check field status');(Array.isArray(e.links)?e.links:[]).forEach(x=>{if(typeof x==='string')add(x,'More information');else if(x&&x.url)add(x.url,x.label||'More information')});return links;}
 function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'',civic=e.category==='civic_meeting'?'<p class="civic-watch-note">Come back to Norwood.ma at meeting time to watch live.</p>':'',links=eventLinks(e),direct=links.length===1,href=direct?links[0].url:'#',popup=!direct,multi=!!(e.end?.date&&e.start?.date&&e.end.date!==e.start.date),range=multi?`<p class="event-date-range"><strong>${String(e.category||'').toLowerCase().includes('fundraiser')?'Fundraiser runs':'Runs'}:</strong> ${esc(shortDate(e.start.date))}–${esc(shortDate(e.end.date))}</p>`:'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(href)}" ${direct?'target="_blank" rel="noopener"':`data-event-details="${esc(e.id||'')}"`}><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">${direct?'↗':'+'}</span></a>`;}
@@ -273,7 +276,7 @@ function renderEventsPage(items){
  if(calendarKey!=='all'&&labels[calendarKey]){if(title)title.textContent=labels[calendarKey];if(intro)intro.textContent='A filtered Norwood.ma calendar view. Use the event link for the latest details.';}
  if(eventView==='calendar') host.innerHTML=renderCalendarView(items);
  else {
-  const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['weekend','This weekend'],['next','Next few days'],['save','Save the date']];
+  const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['next','Next few days'],['save','Save the date']];
   host.innerHTML=sections.filter(([k])=>g[k].length).map(([k,label])=>`<section class="event-period ${k==='save'?'save-date':''}"><div class="event-period-head"><p class="eyebrow">${esc(monthDayRange(g[k]))}</p><h2>${label}</h2></div><div class="event-list">${g[k].map(eventRow).join('')}</div></section>`).join('')||'<section class="event-period"><p>No upcoming public events match this search.</p></section>';
  }
  const st=$('#eventsStatus');if(st)st.textContent='';
