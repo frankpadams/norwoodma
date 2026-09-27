@@ -340,7 +340,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -1866,7 +1866,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     },
     "conflict_profile": "optional",
     "notes": "Official business/community events calendar. Keep business-networking/member events opt-in unless broadly public/community-relevant."
@@ -5676,7 +5676,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -5800,7 +5800,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -5846,7 +5846,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -6288,7 +6288,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -6411,7 +6411,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -6603,7 +6603,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -6727,7 +6727,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
@@ -12858,7 +12858,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": true
     }
   },
   {
