@@ -130,8 +130,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "clothing clothes family basic needs",
     "topics": [
       "kids",
-      "food",
-      "community"
+      "community",
+      "basic-needs"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -172,7 +172,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/balch",
     "tags": "elementary school",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Band Gig School of Music & Performance",
@@ -239,7 +240,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "benefits government assistance federal financial help food housing healthcare disability unemployment veterans family benefit finder",
     "topics": [
       "jobs",
-      "food",
       "housing",
       "veterans",
       "health"
@@ -267,7 +267,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/health/index.php",
     "tags": "health public health",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Board of Selectmen",
@@ -276,7 +277,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/government/board_of_selectmen/index.php",
     "tags": "selectmen town board",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Boch Toys for Tots — Norwood",
@@ -380,7 +382,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/building/index.php",
     "tags": "building permits inspections",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Callahan Elementary School",
@@ -389,7 +392,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/callahan",
     "tags": "elementary school",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Callahan Elementary School Parent Teacher Association",
@@ -476,7 +480,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/cleveland",
     "tags": "elementary school",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Cleveland Elementary School Parent Teacher Organization",
@@ -498,7 +503,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/cms",
     "tags": "middle school cms students",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Coakley Middle School Parent Teacher Organization",
@@ -533,7 +539,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/government/boards_committees/community_preservation_committee.php",
     "tags": "cpa preservation",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Connors Martial Arts Academy",
@@ -556,7 +563,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior seniors aging transportation programs",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Crisis Text Line",
@@ -633,8 +641,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/commres-children-families/",
     "tags": "period products clothing women basic needs",
     "topics": [
-      "food",
-      "health"
+      "health",
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -661,7 +669,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/engineering/index.php",
     "tags": "engineering infrastructure",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Family TIES of Massachusetts",
@@ -737,8 +746,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.fccnorwood.org/",
     "tags": "food assistance free meal meals meal kits pantry Blessings Box shelf stable no registration First Congregational Church",
     "topics": [
-      "food",
-      "community"
+      "community",
+      "food-assistance"
     ],
     "coverage": "Local",
     "address": "100 Winter St, Norwood, MA 02062",
@@ -764,7 +773,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodcenter.org/",
     "tags": "business downtown center shops restaurants",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Friends of the Morrill Memorial Library",
@@ -773,7 +783,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/friends/",
     "tags": "library friends volunteer",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Gamblers Anonymous",
@@ -876,7 +887,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.gbfb.org/need-food/",
     "tags": "food pantry groceries hunger emergency food",
     "topics": [
-      "food"
+      "food-assistance"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -1056,7 +1067,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "elder senior caregiver aging meals transportation",
     "topics": [
       "older",
-      "food",
       "transport"
     ],
     "coverage": "Regional",
@@ -1070,7 +1080,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "meals on wheels home delivered meals senior nutrition older adult food",
     "topics": [
       "older",
-      "food"
+      "food-assistance"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1124,7 +1134,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://insidenorwood.com/",
     "tags": "news local reporting community",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "International Institute of New England",
@@ -1322,7 +1333,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/info-details/home-energy-assistance",
     "tags": "fuel assistance LIHEAP HEAP heat heating oil gas electric energy bill basic needs low income winter utility assistance",
     "topics": [
-      "food",
       "housing",
       "jobs",
       "community"
@@ -1393,7 +1403,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://mass211.org/",
     "tags": "211 help referral food housing utility childcare health benefits emergency multilingual",
     "topics": [
-      "food",
       "housing",
       "health",
       "jobs",
@@ -1607,9 +1616,9 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/orgs/department-of-transitional-assistance",
     "tags": "DTA SNAP food stamps cash TAFDC EAEDC benefits families assistance",
     "topics": [
-      "food",
       "jobs",
-      "kids"
+      "kids",
+      "food-assistance"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1685,7 +1694,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.magoodneighbor.org/",
     "tags": "Good Neighbor Energy Fund fuel heat heating oil gas electric utility bill energy assistance basic needs hardship",
     "topics": [
-      "food",
       "housing",
       "jobs",
       "community"
@@ -1701,7 +1709,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "benefits food cash housing utilities childcare transportation healthcare veterans assistance",
     "topics": [
       "jobs",
-      "food",
       "housing",
       "kids",
       "veterans",
@@ -1812,8 +1819,7 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "kids",
       "older",
-      "housing",
-      "food"
+      "housing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1878,8 +1884,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/snap-benefits-formerly-food-stamps",
     "tags": "SNAP food stamps EBT groceries benefits",
     "topics": [
-      "food",
-      "jobs"
+      "jobs",
+      "food-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1928,8 +1934,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/wic-information-for-participants",
     "tags": "WIC baby child pregnancy nutrition food benefits",
     "topics": [
-      "food",
-      "kids"
+      "kids",
+      "food-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2006,7 +2012,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mbta.com/schedules/CR-Franklin/line",
     "tags": "commuter rail train franklin foxboro norwood central depot",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "MBTA Route 34E",
@@ -2015,7 +2022,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mbta.com/schedules/34E/line",
     "tags": "bus 34e mbta forest hills walpole transit",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "MBTA Trip Planner",
@@ -2107,7 +2115,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/adults/",
     "tags": "library adults",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Morrill Children’s Services",
@@ -2116,7 +2125,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/children/",
     "tags": "library children",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Morrill Community Resources",
@@ -2125,7 +2135,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/community-resources/",
     "tags": "help assistance food fuel housing rent resources",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Morrill Memorial Library",
@@ -2134,7 +2145,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/",
     "tags": "library books museum passes events study rooms",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Morrill Memorial Library — Children & Family Resources",
@@ -2183,10 +2195,10 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/commres-food-fuel-housing/",
     "tags": "food fuel heating housing shelter rent utilities homeownership help directory",
     "topics": [
-      "food",
       "housing",
       "jobs",
-      "older"
+      "older",
+      "food-assistance"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2265,7 +2277,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/teens/",
     "tags": "library teens",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Move Well Physical Therapy",
@@ -2290,8 +2303,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "furniture food family basic needs",
     "topics": [
       "kids",
-      "food",
-      "housing"
+      "housing",
+      "food-assistance"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -2370,7 +2383,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.riversidecc.org/adult-services/neponset-river-house/",
     "tags": "mental health clubhouse recovery support",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Neponset River Regional Chamber",
@@ -2379,7 +2393,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.nrrchamber.com/",
     "tags": "chamber business directory jobs networking",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Neponset River Regional Chamber — Business Resources",
@@ -2401,7 +2416,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.neponset.org/",
     "tags": "river watershed environment conservation",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Neponset Valley Humane Society",
@@ -2410,7 +2426,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.neponsethumane.org/",
     "tags": "cats animal rescue adoption foster",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Neponset Valley Sunrise Rotary Club",
@@ -2643,7 +2660,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/health/index.php",
     "tags": "health public health inspections",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Building Permits & Inspections",
@@ -2694,7 +2712,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/conservation/community_garden.php",
     "tags": "garden conservation plots",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Community Media",
@@ -2703,7 +2722,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodcommunitymedia.org/",
     "tags": "media video government meetings community news",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Community Tennis Association",
@@ -2738,7 +2758,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/conservation/index.php",
     "tags": "conservation wetlands environment",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Coordinated Family & Community Engagement",
@@ -2789,7 +2810,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://massculturalcouncil.org/local-council/norwood/",
     "tags": "culture arts grants local council",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood dental & orthodontic directory",
@@ -2822,7 +2844,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.elks.org/lodges/home.cfm?lodgenumber=1124",
     "tags": "elks lodge civic veterans community",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Farmers Market",
@@ -2834,7 +2857,8 @@ window.NORWOOD_RESOURCES= [
       "facebook": "https://www.facebook.com/NorwoodMAFarmersMarket"
     },
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Fine Arts Collaborative Team",
@@ -2857,7 +2881,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/fire/index.php",
     "tags": "fire safety emergency prevention",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Food Pantry",
@@ -2866,9 +2891,9 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodpantry.org/food",
     "tags": "food pantry groceries emergency food Norwood Westwood SNAP hunger",
     "topics": [
-      "food",
       "kids",
-      "older"
+      "older",
+      "food-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -2894,7 +2919,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/nhs",
     "tags": "high school nhs students",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood High School Alumni Association",
@@ -2929,7 +2955,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodhistoricalsociety.org/",
     "tags": "history historical museum culture",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Hospital / regional medical care information",
@@ -2979,7 +3006,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodjuniorwc.wixsite.com/norwoodjwc",
     "tags": "women volunteer community service",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Light — Report an Outage",
@@ -2988,7 +3016,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlight.com/report-an-outage/",
     "tags": "outage power electric emergency",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Light Broadband",
@@ -2997,7 +3026,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlight.com/internet/",
     "tags": "internet broadband",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Light Electric",
@@ -3006,7 +3036,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlight.com/",
     "tags": "electric utility outage",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Light Electric & Broadband",
@@ -3015,7 +3046,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlight.com/",
     "tags": "electric power internet broadband utility bill",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Lions Club",
@@ -3051,7 +3083,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/airport/index.php",
     "tags": "airport aviation",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Memory Café",
@@ -3088,7 +3121,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodpma.org/",
     "tags": "music schools band chorus",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Parks & Playgrounds",
@@ -3125,7 +3159,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/police/index.php",
     "tags": "police safety crime non emergency",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Public Records",
@@ -3146,7 +3181,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/",
     "tags": "school education students district",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Public Schools Bus Transportation",
@@ -3230,8 +3266,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/families",
     "tags": "school lunch menu nutrition meals student",
     "topics": [
-      "kids",
-      "food"
+      "kids"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3294,7 +3329,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodma.myrec.com/",
     "tags": "recreation sports classes programs civic center",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Recreation Adaptive Sports",
@@ -3387,7 +3423,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodrotary.org/",
     "tags": "rotary volunteer civic service",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Scholarship Foundation",
@@ -3396,7 +3433,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodscholarshipfoundation.org/",
     "tags": "scholarship education students",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Senior Center / Council on Aging",
@@ -3405,7 +3443,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior aging transportation",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Senior Center Newsletter & Calendar",
@@ -3478,7 +3517,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodstage.com/",
     "tags": "theatre theater shows music events arts",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Town News",
@@ -3487,7 +3527,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodtownnews.com/",
     "tags": "news town local articles",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood Track Club",
@@ -3573,7 +3614,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
     "tags": "veterans benefits",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Norwood WIC",
@@ -3583,8 +3625,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "wic nutrition baby infant pregnancy food",
     "topics": [
       "kids",
-      "food",
-      "health"
+      "health",
+      "food-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -3707,7 +3749,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/nhs/athletics",
     "tags": "athletics school sports",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "NPS District Calendar",
@@ -3716,7 +3759,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/about/calendar",
     "tags": "school calendar events dates",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "NPS Fine Arts",
@@ -3725,7 +3769,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/academics/fine-arts",
     "tags": "music arts school",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "NPS Nutrition",
@@ -3734,7 +3779,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/departments/nutrition",
     "tags": "school meals nutrition",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "NPS Student Services",
@@ -3743,7 +3789,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/departments/student-services",
     "tags": "student services special education",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Oldham Elementary School",
@@ -3752,7 +3799,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/oldham",
     "tags": "elementary school",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Oldham Elementary School Parent Teacher Organization",
@@ -3790,7 +3838,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "refugee immigrant asylum social services family support translation interpretation ESOL English classes benefits resettlement",
     "topics": [
       "community",
-      "food",
       "housing",
       "jobs",
       "kids",
@@ -3916,7 +3963,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/government/boards_committees/planning_board.php",
     "tags": "planning development",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Premier Gymnastics Norwood",
@@ -3939,7 +3987,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/prescott",
     "tags": "elementary school",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Prescott Elementary School Parent Teacher Organization",
@@ -3961,10 +4010,10 @@ window.NORWOOD_RESOURCES= [
     "url": "https://projectbread.org/get-help",
     "tags": "food groceries SNAP hunger meals Project Bread hotline multilingual statewide Massachusetts",
     "topics": [
-      "food",
       "kids",
       "older",
-      "jobs"
+      "jobs",
+      "food-assistance"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -3976,7 +4025,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/public_works/index.php",
     "tags": "dpw trash recycling water sewer roads snow",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Quincy Family Resource Center",
@@ -4001,7 +4051,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "jobs",
-      "food",
       "community"
     ],
     "coverage": "Statewide",
@@ -4014,7 +4063,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodma.myrec.com/info/facilities/default.aspx",
     "tags": "fields parks facilities courts sports",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Recreation Programs",
@@ -4023,7 +4073,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
     "tags": "programs classes youth adult fitness register",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Refugee & Immigrant Assistance Center — Boston",
@@ -4033,7 +4084,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "refugee immigrant asylum resettlement case management cash assistance citizenship social services Arabic Farsi French Somali Swahili",
     "topics": [
       "community",
-      "food",
       "housing",
       "jobs",
       "older"
@@ -4145,7 +4195,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "diapers baby infant family basic needs",
     "topics": [
       "kids",
-      "food"
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4212,8 +4262,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/school-meals",
     "tags": "school meals breakfast lunch child nutrition",
     "topics": [
-      "food",
-      "kids"
+      "kids",
+      "food-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4284,7 +4334,7 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "assistance",
-      "food"
+      "food-assistance"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4349,9 +4399,9 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodpantry.org/snapwic",
     "tags": "SNAP WIC groceries nutrition benefits food stamps families baby child",
     "topics": [
-      "food",
       "kids",
-      "jobs"
+      "jobs",
+      "food-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4378,7 +4428,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "Sophie Sophia Ricci realtor real estate broker agent home buying home selling Century 21 SRG",
     "topics": [
       "realestate",
-      "housing",
       "business"
     ],
     "coverage": "Norwood",
@@ -4622,7 +4671,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/town_clerk/index.php",
     "tags": "elections voting clerk records licenses town meeting",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Town Common Books",
@@ -4647,7 +4697,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/",
     "tags": "official town government departments permits meetings",
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Town of Norwood Commission on Disability",
@@ -4673,8 +4724,7 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "health",
-      "housing",
-      "food"
+      "housing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -4752,7 +4802,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
     "tags": "veterans military benefits assistance",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "VITA Free Tax Preparation Locator",
@@ -4789,8 +4840,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "farm berry berries pick your own PYO hayride kids family farm market Sharon outdoor seasonal",
     "topics": [
       "todo",
-      "kids",
-      "food"
+      "kids"
     ],
     "coverage": "Nearby — Sharon",
     "verified": "2026-09"
@@ -4841,7 +4891,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwood.k12.ma.us/willett",
     "tags": "preschool early childhood",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Willett Parent Teacher Organization",
@@ -4879,7 +4930,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodthriftshop.com/",
     "tags": "wcc thrift shop volunteer community",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   },
   {
     "name": "Zoning Board of Appeals",
@@ -4888,6 +4940,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.norwoodma.gov/government/boards_committees/zoning_board_of_appeals.php",
     "tags": "zoning appeals",
     "coverage": "Regional/State",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "topics": []
   }
 ];
