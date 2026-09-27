@@ -916,6 +916,19 @@ def events_from_newsletter_index(source):
         soup=BeautifulSoup(html,'html.parser'); docs=[]
         for a in soup.find_all('a',href=True):
             href=urljoin(url,a['href']); label=clean_text(a.get_text(' '))
+            # Revize emits document links relative to the department page even when
+            # the real public file lives at the Town root. Normalize duplicated
+            # department prefixes before requesting the document.
+            parsed=urlparse(href)
+            path=parsed.path
+            marker='/departments/council_on_aging/document_center/'
+            if marker in path:
+                path='/document_center/'+path.split(marker,1)[1]
+                href=parsed._replace(path=path).geturl()
+            marker2='/departments/council_on_aging/SeniorCenter/'
+            if marker2 in path:
+                path='/SeniorCenter/'+path.split(marker2,1)[1]
+                href=parsed._replace(path=path).geturl()
             if href==url: continue
             if any(href.lower().split('?')[0].endswith(x) for x in ['.pdf','.html','.htm']) or 'newsletter' in label.lower() or 'calendar' in label.lower():
                 # Prefer current-year/month documents. The town index is newest-first,
@@ -931,7 +944,17 @@ def events_from_newsletter_index(source):
             try:
                 before=len(out)
                 if href.lower().split('?')[0].endswith('.pdf'):
-                    r=request(href); item['bytes']=len(r.content); out.extend(_events_from_newsletter_pdf(r.content,source,href))
+                    try:
+                        r=request(href)
+                    except Exception:
+                        # Some legacy SeniorCenter files remain under the department
+                        # path; retry the Town-root document center form when possible.
+                        p=urlparse(href)
+                        if '/SeniorCenter/' in p.path:
+                            alt=p._replace(path='/departments/council_on_aging'+p.path).geturl()
+                            r=request(alt); href=alt; item['url']=alt
+                        else: raise
+                    item['bytes']=len(r.content); out.extend(_events_from_newsletter_pdf(r.content,source,href))
                 else:
                     body=request(href).text; ev,_=extract_jsonld_events(body,source); out.extend(ev)
                 item['events']=len(out)-before
