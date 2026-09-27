@@ -92,3 +92,24 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 /* Center rotating alert copy without changing the fixed-height layout. */
 .site-timely-item{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+
+
+/* Exact centering for rotating yellow alert: equal reserved side gutters + flex centering. */
+.site-timely-track{padding-left:42px!important;padding-right:42px!important}
+.site-timely-item.is-active{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;margin:0 auto!important;width:100%!important;max-width:1200px!important;height:35px!important;line-height:1.2!important}
+@media(max-width:700px){
+  .site-timely-track{padding-left:36px!important;padding-right:36px!important}
+  .site-timely-item.is-active{height:33px!important;line-height:1.2!important}
+}
+
+/* Hey Norwood: two equal fixed-height notice slots so every rotation occupies the same space. */
+#heyNorwoodNotices{display:grid!important;grid-template-rows:76px 76px!important;height:152px!important;min-height:152px!important;max-height:152px!important;overflow:hidden!important}
+#heyNorwoodNotices .hey-norwood-slot{height:76px!important;min-height:76px!important;max-height:76px!important;overflow:hidden!important;box-sizing:border-box}
+#heyNorwoodNotices .hey-norwood-slot+.hey-norwood-slot{border-top:1px solid rgba(0,59,113,.14)}
+#heyNorwoodNotices .good-to-know-item{height:100%!important;min-height:0!important;overflow:hidden!important}
+#heyNorwoodNotices .good-to-know-item>span:nth-child(2){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+@media(max-width:700px){
+  #heyNorwoodNotices{grid-template-rows:82px 82px!important;height:164px!important;min-height:164px!important;max-height:164px!important}
+  #heyNorwoodNotices .hey-norwood-slot{height:82px!important;min-height:82px!important;max-height:82px!important}
+  #heyNorwoodNotices .good-to-know-item{align-items:center!important}
+}
