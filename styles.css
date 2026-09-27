@@ -88,3 +88,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
   .site-timely-item{height:33px!important;min-height:33px!important;line-height:33px!important;width:calc(100vw - 76px);padding:0 .35rem!important}
   .site-timely-prev,.site-timely-next{height:33px;width:32px;line-height:33px}
 }
+
+
+/* Center rotating alert copy without changing the fixed-height layout. */
+.site-timely-item{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
