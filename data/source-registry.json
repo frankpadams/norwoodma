@@ -6444,19 +6444,25 @@
     "ingestion": {
       "method": "pma_calendar_hub",
       "automation": "preferred",
-      "hub_url": null,
+      "hub_url": "https://norwoodpma.org/calendar/",
       "child_calendars": [
         {
+          "id": "pma-high-school-fine-arts",
           "name": "High School Fine Arts",
-          "discover_from_hub": true
+          "discover_from_hub": true,
+          "series_label": "PMA / Fine Arts — High School"
         },
         {
+          "id": "pma-middle-school-fine-arts",
           "name": "Middle School Fine Arts",
-          "discover_from_hub": true
+          "discover_from_hub": true,
+          "series_label": "PMA / Fine Arts — Middle School"
         },
         {
+          "id": "pma-elementary-fine-arts",
           "name": "Elementary Schools Fine Arts",
-          "url": "https://norwoodpma.org/elementary-calendar/"
+          "url": "https://norwoodpma.org/elementary-calendar/",
+          "series_label": "PMA / Fine Arts — Elementary"
         }
       ],
       "include_schedule_posts": true,
@@ -6470,11 +6476,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_working_events_page",
+      "status": "verified_public_calendar_hub",
       "verified_at": "2026-09-27",
-      "basis": "PMA /events is the working public event listing; ingest visible dated event cards every refresh and use structured/calendar feeds only as supplements."
+      "basis": "PMA public /calendar/ page exposes High School, Middle School, and Elementary Fine Arts calendars plus schedule posts; public calendars are primary, BAND is supplemental for Marching Band."
     },
-    "notes": "PERSISTENT PRIMARY SOURCE: scrape https://norwoodpma.org/events on every automated refresh and retain visible dated public events for the selectable Schools > Parent Music Association/Fine Arts calendar. Do not require or wait for an ICS/Google feed. Structured/ICS discovery is supplemental only. Deduplicate against other school sources and exclude clearly private/internal events.",
+    "notes": "PERSISTENT PRIMARY SOURCE: ingest PMA's public /calendar/ hub and its school-level Fine Arts child calendars every refresh; preserve child calendar identity. Scrape public dated PMA event/schedule posts as supplements. BAND secret, when configured, supplements only Marching Band and is never required for PMA/Fine Arts ingestion.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
