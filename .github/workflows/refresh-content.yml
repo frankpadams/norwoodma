@@ -9,6 +9,7 @@ on:
       - 'data/source-registry.json'
       - 'data/calendar-sources.json'
       - 'data/calendar-sources-data.js'
+      - 'data/events-seed.json'
   schedule:
     # Primary refresh every two hours. Minute 17 avoids top-of-hour congestion.
     - cron: '17 */2 * * *'
