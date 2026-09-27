@@ -2093,6 +2093,16 @@ def refresh_events(offline=False):
                     if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
                 else: note=f'method {method} requires discovery/manual adapter'
                 got=[apply_public_access(e,src) for e in got]
+                # PMA's public website Events page is itself an explicit publication signal.
+                # Its dated cards are intended for public display; do not downgrade them to
+                # unknown merely because an individual card lacks words like tickets/register.
+                if src.get('id')=='nps-pma':
+                    for e in got:
+                        if e.get('discovered_by')=='pma_website_calendar_api':
+                            e['publish_candidate']=True
+                            e['public_access_status']='confirmed_public'
+                            e['access_type']='public'
+                            e['public_access_evidence']='published on PMA public Events page'
                 got=[e for e in got if source_allows_master_event(e,src)]
                 events.extend(got)
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
