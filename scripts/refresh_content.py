@@ -2065,7 +2065,11 @@ def refresh_events(offline=False):
                                 pages_checked += 1
                                 temp=dict(src); temp['url']=page_url
                                 extracted,ics=extract_jsonld_events(html,temp)
-                                if method=='town_department_event_discovery' and not extracted:
+                                # Simple-source fallback: if the public page visibly contains dated
+                                # event cards but no JSON-LD/<time>/ICS, parse those cards directly.
+                                # A successfully downloaded human-readable events page returning zero
+                                # is not proof that the source is empty.
+                                if not extracted and method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','organization_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','local_town_pages_calendar','town_department_event_discovery'}:
                                     try: extracted.extend(events_from_visible_dated_page(page_url,temp,category='community',series=src.get('name')))
                                     except Exception: pass
                                 if terms:
@@ -2090,7 +2094,12 @@ def refresh_events(offline=False):
                         if page_errors:
                             note=f"{len(page_errors)} configured page(s) unavailable; remaining sources checked"
                     got=dedupe_events(got)
-                    if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
+                    if not got:
+                        note='configured pages checked; no dated events extracted'
+                        # Do not label a zero as healthy when an event-oriented source is expected
+                        # to carry public events. This makes silent parser regressions visible.
+                        if method in {'html_calendar','embedded_calendar','school_parent_org_composite','newsletter_calendar'} and src.get('health_policy',{}).get('empty_result_is_failure'):
+                            raise RuntimeError(note)
                 else: note=f'method {method} requires discovery/manual adapter'
                 got=[apply_public_access(e,src) for e in got]
                 # PMA's public website Events page is itself an explicit publication signal.
