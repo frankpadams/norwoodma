@@ -79,6 +79,15 @@ jobs:
         if: steps.freshness.outputs.run_refresh == 'true'
         run: pip install -r requirements-automation.txt
 
+      - name: Download PMA public calendar
+        if: steps.freshness.outputs.run_refresh == 'true'
+        run: |
+          curl --fail --silent --show-error --location \
+            -H 'Accept: application/json' \
+            'https://app.norwoodpma.org/api/website-calendar' \
+            -o data/pma-calendar-api.json
+          python -m json.tool data/pma-calendar-api.json >/dev/null
+
       - name: Refresh events and news
         if: steps.freshness.outputs.run_refresh == 'true'
         env:
