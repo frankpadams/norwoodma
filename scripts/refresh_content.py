@@ -2447,9 +2447,15 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); ap.add_argument('--ack-published',action='store_true'); args=ap.parse_args()
     if args.ack_published:
         acknowledge_published_submissions(); return
-    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline); events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices))); write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
+    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline)
     registry=read_json('source-registry.json',[])
     guide_source=next((x for x in registry if x.get('id')=='town-recreation-programs'),None)
+    rec_programs=[]
+    if guide_source and not args.offline:
+        try: rec_programs=recreation_programs_from_myrec(guide_source)
+        except Exception as ex: print('Recreation program ingestion warning:',str(ex)[:180])
+    elif args.offline: rec_programs=read_json('recreation-programs.json',[])
+    events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices)+recreation_program_events(rec_programs))); write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     if guide_source and guide_source.get('ingestion',{}).get('discover_seasonal_guides'):
         try:
             guides=discover_recreation_guides(guide_source)
@@ -2463,13 +2469,9 @@ def main():
             write_js('recreation-guides-data.js','NORWOOD_RECREATION_GUIDES',guides)
         except Exception as ex:
             print('Recreation guide discovery warning:',str(ex)[:180])
-    if guide_source and not args.offline:
-        try:
-            rec_programs=recreation_programs_from_myrec(guide_source)
-            write_json('recreation-programs.json',rec_programs)
-            write_js('recreation-programs-data.js','NORWOOD_RECREATION_PROGRAMS',rec_programs)
-        except Exception as ex:
-            print('Recreation program ingestion warning:',str(ex)[:180])
+    if rec_programs:
+        write_json('recreation-programs.json',rec_programs)
+        write_js('recreation-programs-data.js','NORWOOD_RECREATION_PROGRAMS',rec_programs)
     cov=coverage(registry); write_json('automation-coverage.json',cov)
     report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
     write_json('refresh-status.json',report)
@@ -3514,6 +3516,28 @@ if __name__=='__main__': main() not in x: venue=x
         if not rows:
             out.append({'id':'rec-'+hashlib.sha1(url.encode()).hexdigest()[:12],'name':program,'program':program,'subcategory':category,'section':section,'description':desc,'registration_url':url,'guide_url':guide_url,'session_based':False,'drop_in':bool(re.search(r'\\bdrop[ -]?in\\b',program+' '+desc,re.I)),'source':'Norwood Recreation Department','searchable':True})
         else: out.extend(rows)
+    return out
+
+def recreation_program_events(programs):
+    """Expand dated MyRec sessions into master-calendar records for selectable Rec calendars."""
+    out=[]
+    for r in programs or []:
+        start=r.get('start_date'); end=r.get('end_date') or start
+        if not start: continue
+        try: a=date.fromisoformat(start); b=date.fromisoformat(end)
+        except Exception: continue
+        # MyRec rows include a weekday column in page text, but until it is captured
+        # reliably, represent a multi-week session as a range rather than inventing
+        # individual meeting dates.
+        e={'id':'rec-session-'+str(r.get('id') or slug(r.get('name'))),'title':r.get('name') or r.get('program'),
+           'start':{'date':start,'time':r.get('start_time')},'end':{'date':end,'time':r.get('end_time')},
+           'venue':r.get('venue'),'category':r.get('subcategory') or 'programs','source_id':'town-recreation-programs',
+           'source_url':r.get('registration_url'),'registration_url':r.get('registration_url'),'guide_url':r.get('guide_url'),
+           'organizer':'Norwood Recreation Department','cost':r.get('fees'),'public_access':'registration_required',
+           'publish_candidate':True,'curated_default':False,'session_based':bool(r.get('session_based')),'drop_in':bool(r.get('drop_in')),
+           'notes':r.get('session_notice') or r.get('description'),'rec_program_id':r.get('id'),'verification_status':'auto_primary_source',
+           'discovered_by':'myrec_program_table'}
+        out.append(e)
     return out
 
 def discover_recreation_guides(source):
