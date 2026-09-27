@@ -102,8 +102,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 }
 
 
-/* Expanded News: keep local-source directory visible while the headline column scrolls. */
+/* Expanded News: align local sources at the top of the right column, but let them scroll naturally with the page. */
 @media (min-width: 801px){
   .news-page-grid{align-items:start}
-  .news-page-grid .news-sources{position:sticky;top:12px;align-self:start}
+  .news-page-grid .news-sources{position:static;top:auto;align-self:start}
 }
