@@ -1348,8 +1348,9 @@ def events_from_pma_hub(source):
         try:
             band_events=events_from_ical(band_url,source)
             for e in band_events:
+                e['source_id']='pma-marching-band'
                 e['source_url']=source.get('url')
-                e['series']='PMA / Fine Arts'
+                e['series']='PMA / Fine Arts — Marching Band'
                 e['discovered_by']='band_private_ical'
                 e['verification_status']='auto_primary_band_calendar'
             out.extend(band_events)
