@@ -217,7 +217,7 @@ def local_news_event_candidate(text):
       'bake sale','cookie sale','pancake breakfast','dinner','dance','5k','road race',
       'walkathon','workshop','class','storytime','book club','farmers market',
       "farmer's market",'community event','public event','celebration','parade',
-      'tree lighting','menorah lighting','trunk or treat'
+      'tree lighting','menorah lighting','trunk or treat','demonstration','demo'
     ]
     return any(x in t for x in signals)
 
@@ -2116,6 +2116,58 @@ def current_news(items):
             out.append(x)
     return dedupe_news(out)[:120]
 
+
+def events_from_local_news(items, offline=False):
+    """Conservatively promote clearly future, public local-event reporting into the calendar."""
+    if offline: return []
+    out=[]; today=now_local().date()
+    for x in items:
+        title=clean_text(x.get('title')); summary=clean_text(x.get('summary')); url=x.get('url') or ''
+        if not title or not url or not local_news_event_candidate(f"{title} {summary}"): continue
+        # Only direct publisher pages are eligible; discovery/aggregator redirects are not authoritative enough.
+        if 'news.google.com' in url: continue
+        try:
+            html=request(url).text
+            if not BeautifulSoup: continue
+            soup=BeautifulSoup(html,'html.parser')
+            for n in soup(['script','style','nav','footer','header']): n.decompose()
+            body=clean_text(soup.get_text(' '))
+        except Exception:
+            continue
+        text=f"{title} {summary} {body}"
+        d=_date_from_text(text); tm=_time_from_text(text)
+        if not d or d < today or d > today+timedelta(days=180) or not tm: continue
+        low=text.lower()
+        # Require an explicit public-event signal and Norwood context before promotion.
+        if 'norwood' not in low: continue
+        venue='Norwood, MA'
+        venue_patterns=[
+          r'\bat (?:the )?(Old Parish Cemetery)\b',
+          r'\bat (?:the )?(Town Common)\b',
+          r'\bat (?:the )?(Morrill Memorial Library)\b',
+          r'\bat (?:the )?(Norwood Senior Center)\b'
+        ]
+        for pat in venue_patterns:
+            m=re.search(pat,text,re.I)
+            if m: venue=clean_text(m.group(1)); break
+        event_title=title
+        # News-style headlines should become concise event labels.
+        if 'stonecut' in low and ('demo' in low or 'demonstration' in low):
+            event_title='Stonecutting Demonstration & Talk'
+        ds=d.isoformat()
+        out.append({
+          'id':event_id(event_title,ds,venue),'title':event_title,
+          'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},
+          'venue':venue,'address':None,'category':category_from(text),
+          'source_id':'local-news-event-discovery','source_url':url,'cost':None,
+          'public_access':'public','series':x.get('source'),'publish_candidate':True,
+          'curated_default':True,'verification_status':'reported_future_public_event',
+          'notes':'Future public event reported by a local news source; follow the linked article for details.',
+          'discovered_by':'local_news_future_event'
+        })
+    return dedupe_events(out)
+
+
 def refresh_news(offline=False):
     old=read_json('news.json',[])
     # Explicit source endpoints are kept separate from browser code; failures are harmless.
@@ -2598,6 +2650,7 @@ def main():
         acknowledge_published_submissions(); return
     events,ev_status=refresh_events(args.offline)
     news,nw_status=refresh_news(args.offline)
+    news_events=events_from_local_news(news,args.offline)
     civic_notices=refresh_civic_notices(news,args.offline)
     registry=read_json('source-registry.json',[])
     guide_source=next((x for x in registry if x.get('id')=='town-recreation-programs'),None)
@@ -2621,7 +2674,7 @@ def main():
             status['method']='myrec_programs'
             status['found']=len(rec_programs)
             status['note']=f"{len(rec_occurrences)} calendar occurrences generated" if rec_programs else 'No Recreation programs available; last successful snapshot unavailable'
-    events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices)+rec_occurrences))
+    events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices)+rec_occurrences+news_events))
     events=assign_calendar_ids(events)
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     if guide_source and guide_source.get('ingestion',{}).get('discover_seasonal_guides'):
