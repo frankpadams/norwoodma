@@ -5,7 +5,8 @@
   // are fetched live from NWS; alerts.json can carry verified local/state emergency notices.
   async function sitewideTimelyAlerts(){
     const existing=document.querySelector('.site-timely-alert');
-    if(existing)existing.remove();
+    // Keep the current strip in place while refreshing. Removing it before the
+    // async fetches complete causes a visible 34–36px layout jump once a minute.
     const priority={Extreme:40,Severe:35,Moderate:30,Minor:25,Unknown:20};
     const allowed=/tornado|severe thunderstorm|flash flood|flood warning|hurricane|tropical storm|winter storm|blizzard|ice storm|snow squall|extreme cold|extreme heat|high wind|red flag|fire warning|civil emergency|evacuation|shelter in place|law enforcement warning|child abduction|amber alert|silver alert|missing person|911 telephone outage|local area emergency|nuclear power plant warning|hazardous materials warning/i;
     const govLive='https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/';
@@ -77,7 +78,7 @@
         }
       }
     }catch(e){}
-    if(!items.length)return;
+    if(!items.length){if(existing)existing.remove();return;}
     const seen=new Set();const alerts=items.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
     const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
     strip.innerHTML='<button class="site-timely-prev" type="button" aria-label="Previous alert">‹</button><div class="site-timely-track" tabindex="0">'+alerts.map(a=>{
@@ -128,7 +129,9 @@
     if(slides.length<2){strip.querySelector('.site-timely-prev').hidden=true;strip.querySelector('.site-timely-next').hidden=true;}
     show(0);start();
     const independent=document.querySelector('.independent');
-    if(independent)independent.insertAdjacentElement('afterend',strip);else document.body.prepend(strip);
+    if(existing)existing.replaceWith(strip);
+    else if(independent)independent.insertAdjacentElement('afterend',strip);
+    else document.body.prepend(strip);
   }
   sitewideTimelyAlerts();
   // Re-check critical alerts on already-open pages. The underlying alert/event fetches
