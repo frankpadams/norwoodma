@@ -1840,7 +1840,7 @@
     "id": "norwood-chamber-events",
     "name": "Norwood Chamber of Commerce Events",
     "url": "https://business.norwoodchamberofcommerce.org/calendar",
-    "active_monitor": true,
+    "active_monitor": false,
     "produces": [
       "events"
     ],
@@ -1857,9 +1857,9 @@
       ]
     },
     "verification": {
-      "status": "verified_live_calendar",
-      "verified_at": "2026-09-25",
-      "basis": "Official Norwood Chamber calendar currently exposes dated 2026 events with times and registration links."
+      "status": "wrong_geography_disabled",
+      "verified_at": "2026-09-27",
+      "basis": "Calendar lists Braxton Brewing and a 513 phone number; official site identifies City of Norwood in Greater Cincinnati."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -1869,7 +1869,7 @@
       "empty_result_is_failure": true
     },
     "conflict_profile": "optional",
-    "notes": "Official business/community events calendar. Keep business-networking/member events opt-in unless broadly public/community-relevant."
+    "notes": "Disabled 2026-09-27: this is Norwood, Ohio (Cincinnati area), not Norwood, Massachusetts. Do not ingest."
   },
   {
     "id": "norwood-evening-garden-club",
@@ -6751,7 +6751,16 @@
     "monitor_priority": 3,
     "ingestion": {
       "method": "html_hub",
-      "automation": "possible"
+      "automation": "preferred",
+      "hub_url": "https://www.nrrchamber.com/",
+      "visible_dated_page": true,
+      "preserve": [
+        "event",
+        "date",
+        "time",
+        "venue",
+        "registration_url"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6759,12 +6768,19 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "web_checked",
-      "verified_at": "2026-09-17",
-      "basis": "current web review and/or existing v0.11.1 verified source"
+      "status": "verified_live_official_events",
+      "verified_at": "2026-09-27",
+      "basis": "Official Neponset River Regional Chamber homepage at 83 Morse Street, Norwood, MA exposes a live Upcoming Events section with dated events."
     },
     "notes": "Regional source; publish only events physically in Norwood or strongly Norwood-specific.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": true
+    }
   },
   {
     "id": "parents-cfce",
