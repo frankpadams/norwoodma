@@ -2515,24 +2515,34 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--offline',action='store_true'); ap.add_argument('--ack-published',action='store_true'); args=ap.parse_args()
     if args.ack_published:
         acknowledge_published_submissions(); return
-    events,ev_status=refresh_events(args.offline); news,nw_status=refresh_news(args.offline); civic_notices=refresh_civic_notices(news,args.offline); events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices))); write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
+    events,ev_status=refresh_events(args.offline)
+    news,nw_status=refresh_news(args.offline)
+    civic_notices=refresh_civic_notices(news,args.offline)
     registry=read_json('source-registry.json',[])
     guide_source=next((x for x in registry if x.get('id')=='town-recreation-programs'),None)
+    rec_programs=[]
+    if guide_source and not args.offline:
+        try: rec_programs=recreation_programs_from_myrec(guide_source)
+        except Exception as ex: print('Recreation program ingestion warning:',str(ex)[:180])
+    elif args.offline:
+        rec_programs=read_json('recreation-programs.json',[])
+    events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices)+recreation_program_events(rec_programs)))
+    write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     if guide_source and guide_source.get('ingestion',{}).get('discover_seasonal_guides'):
         try:
-            guides=discover_recreation_guides(guide_source)
-            previous=read_json('recreation-guides.json',[])
-            first_seen={x.get('url'):x.get('first_seen') for x in previous if isinstance(x,dict)}
+            found=discover_recreation_guides(guide_source); previous=read_json('recreation-guides.json',[])
+            by_url={x.get('url'):dict(x) for x in previous if isinstance(x,dict) and x.get('url')}
             nowstamp=now_local().isoformat()
-            for g in guides:
-                g['first_seen']=first_seen.get(g.get('url')) or nowstamp
-                g['last_seen']=nowstamp
-            write_json('recreation-guides.json',guides)
-            write_js('recreation-guides-data.js','NORWOOD_RECREATION_GUIDES',guides)
-        except Exception as ex:
-            print('Recreation guide discovery warning:',str(ex)[:180])
+            for g in found:
+                old=by_url.get(g.get('url'),{})
+                g['first_seen']=old.get('first_seen') or nowstamp; g['last_seen']=nowstamp; by_url[g.get('url')]=g
+            guides=list(by_url.values())
+            write_json('recreation-guides.json',guides); write_js('recreation-guides-data.js','NORWOOD_RECREATION_GUIDES',guides)
+        except Exception as ex: print('Recreation guide discovery warning:',str(ex)[:180])
+    if rec_programs:
+        write_json('recreation-programs.json',rec_programs); write_js('recreation-programs-data.js','NORWOOD_RECREATION_PROGRAMS',rec_programs)
     cov=coverage(registry); write_json('automation-coverage.json',cov)
-    report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
+    report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'recreation_programs':len(rec_programs),'recreation_occurrences':len([e for e in events if e.get('source_id')=='town-recreation-programs']),'event_sources':ev_status,'news_sources':nw_status}
     write_json('refresh-status.json',report)
-    print(json.dumps({'events':len(events),'news':len(news),'civic_notices':len(civic_notices),'coverage':cov},indent=2))
+    print(json.dumps({'events':len(events),'news':len(news),'civic_notices':len(civic_notices),'recreation_programs':len(rec_programs),'coverage':cov},indent=2))
 if __name__=='__main__': main()
