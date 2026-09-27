@@ -1425,7 +1425,7 @@ def events_from_pma_website_api(source):
         if isinstance(raw_date,dict): raw_date=raw_date.get('date') or raw_date.get('dateTime')
         ds=None
         if raw_date:
-            m=re.search(r'(20\\d{2})-(\\d{2})-(\\d{2})',str(raw_date))
+            m=re.search(r'(20\d{2})-(\d{2})-(\d{2})',str(raw_date))
             if m: ds='-'.join(m.groups())
             else:
                 d=_date_from_text(str(raw_date))
