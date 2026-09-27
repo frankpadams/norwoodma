@@ -2105,6 +2105,10 @@ def refresh_events(offline=False):
                             e['public_access_evidence']='published on PMA public Events page'
                 got=[e for e in got if source_allows_master_event(e,src)]
                 events.extend(got)
+                if src.get('id')=='nps-pma':
+                    write_json('pma-pipeline-trace.json',{
+                      'after_source_filters':[{'title':e.get('title'),'date':(e.get('start') or {}).get('date'),'publish_candidate':e.get('publish_candidate'),'public_access_status':e.get('public_access_status'),'source_id':e.get('source_id'),'discovered_by':e.get('discovered_by')} for e in got]
+                    })
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
                 status.append({'source_id':src['id'],'ok':False,'method':method,'found':0,'note':str(ex)[:180]})
