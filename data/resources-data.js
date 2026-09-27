@@ -1150,7 +1150,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "church Christian Baptist worship congregation faith signed deaf ASL",
     "topics": [
       "worship",
-      "community"
+      "community",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -1682,7 +1683,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "Deaf hard hearing ASL accessibility communication",
     "topics": [
       "health",
-      "disability-support"
+      "disability-support",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1696,7 +1698,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "health",
       "community",
-      "disability-support"
+      "disability-support",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1830,7 +1833,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "telephone equipment disability deaf blind accessibility",
     "topics": [
       "health",
-      "disability-support"
+      "disability-support",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2257,7 +2261,8 @@ window.NORWOOD_RESOURCES= [
       "mental-health",
       "disability-support",
       "education-family",
-      "immigration-language"
+      "immigration-language",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2434,7 +2439,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "mental-health",
       "recovery",
-      "disability-support"
+      "disability-support",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -4242,7 +4248,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "disability-support",
       "education-family",
-      "immigration-language"
+      "immigration-language",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4974,7 +4981,8 @@ window.NORWOOD_RESOURCES= [
       "community",
       "disability-support",
       "education-family",
-      "family-support"
+      "family-support",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Nearby — Framingham",
     "verified": "2026-09"
@@ -4991,7 +4999,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "disability-support",
       "education-family",
-      "immigration-language"
+      "immigration-language",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Regional — MetroWest & beyond",
     "verified": "2026-09"
@@ -5231,7 +5240,8 @@ window.NORWOOD_RESOURCES= [
       "community",
       "mental-health",
       "disability-support",
-      "family-support"
+      "family-support",
+      "deaf-hard-of-hearing"
     ],
     "coverage": "Statewide — offices in Framingham & Springfield",
     "verified": "2026-09"
