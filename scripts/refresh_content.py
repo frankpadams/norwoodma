@@ -905,18 +905,9 @@ def _events_from_newsletter_pdf(content, source, source_url):
                 time_value=f'{h:02d}:{minute:02d}'
             ds=d.isoformat()
             out.append({'id':event_id(title,ds,'Norwood Senior Center'),'title':title,'start':{'date':ds,'time':time_value},'end':{'date':ds,'time':None},'venue':'Norwood Senior Center','address':None,'category':'community','source_id':source['id'],'source_url':source_url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'official_newsletter_pdf','notes':'Explicitly dated item extracted from the official Senior Center newsletter. Confirm registration requirements with the Senior Center.','discovered_by':'newsletter_pdf'})
-    # Newsletter calendar pages frequently use a month grid with bare day numbers,
-    # not prose dates. When a page clearly declares MONTH YEAR, associate each day
-    # number with nearby activity text while remaining conservative about titles.
-    for page in pages:
-        mh=re.search(r'\\b(January|February|March|April|May|June|July|August|September|October|November|December)\\s+(20\\d{2})\\b',page,re.I)
-        if not mh: continue
-        month_name,year=mh.group(1),int(mh.group(2))
-        month_num=datetime.strptime(month_name,'%B').month
-        lines=[clean_text(x) for x in page.splitlines() if clean_text(x)]
-        for i,line in enumerate(lines):
-            # Common extracted PDF grid forms: "27", "27 Yoga 10 AM", or "27 28 29".
-            m=re.match(r'^(\\d{1,2})\\b(?:\\s+(.+))?
+    return dedupe_events(out)
+
+def events_from_newsletter_index(source):
     """Discover the newest Senior Center newsletter and extract explicit dated events."""
     ing=source.get('ingestion',{}); url=ing.get('index_url') or source.get('url'); html=request(url).text
     out=[]; debug={'index_url':url,'documents':[],'selected':[]}
