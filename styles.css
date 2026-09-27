@@ -73,20 +73,16 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 }
 
 
-/* Top alert: fixed three-column layout keeps arrows separate and message truly centered. */
-.site-timely-alert{display:grid!important;grid-template-columns:42px minmax(0,1fr) 42px!important;grid-template-rows:35px!important;align-items:center!important;height:36px!important;min-height:36px!important;max-height:36px!important;box-sizing:border-box!important;overflow:hidden!important;font-size:.9rem!important}
-.site-timely-track{grid-column:2!important;grid-row:1!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:35px!important;min-width:0!important;min-height:35px!important;max-height:35px!important;box-sizing:border-box!important;overflow:hidden!important;white-space:nowrap!important}
+/* Top alert: full-width centered auto-rotating message; no navigation arrows. */
+.site-timely-alert{height:36px!important;min-height:36px!important;max-height:36px!important;box-sizing:border-box!important;overflow:hidden!important;font-size:.9rem!important}
+.site-timely-track{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:35px!important;min-width:0!important;min-height:35px!important;max-height:35px!important;box-sizing:border-box!important;overflow:hidden!important;white-space:nowrap!important}
 .site-timely-item:not(.is-active){display:none!important}
-.site-timely-item.is-active{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;max-width:100%!important;height:35px!important;min-width:0!important;min-height:35px!important;box-sizing:border-box!important;padding:0 8px!important;margin:0!important;text-align:center!important;line-height:1.25!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;color:inherit!important;text-decoration:none!important}
-.site-timely-prev,.site-timely-next{position:static!important;top:auto!important;left:auto!important;right:auto!important;display:block!important;width:42px!important;height:35px!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;color:inherit!important;font:inherit!important;font-size:1.2rem!important;line-height:35px!important;cursor:pointer!important;z-index:auto!important}
-.site-timely-prev{grid-column:1!important;grid-row:1!important}
-.site-timely-next{grid-column:3!important;grid-row:1!important}
+.site-timely-item.is-active{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;max-width:100%!important;height:35px!important;min-width:0!important;min-height:35px!important;box-sizing:border-box!important;padding:0 12px!important;margin:0!important;text-align:center!important;line-height:1.25!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;color:inherit!important;text-decoration:none!important}
 .site-timely-item .watch-live{display:inline!important;padding:0!important;margin-left:.25rem!important;line-height:inherit!important;white-space:nowrap!important}
 @media(max-width:700px){
- .site-timely-alert{grid-template-columns:36px minmax(0,1fr) 36px!important;grid-template-rows:33px!important;height:34px!important;min-height:34px!important;max-height:34px!important;font-size:.78rem!important}
+ .site-timely-alert{height:34px!important;min-height:34px!important;max-height:34px!important;font-size:.78rem!important}
  .site-timely-track{height:33px!important;min-height:33px!important;max-height:33px!important}
- .site-timely-item.is-active{height:33px!important;min-height:33px!important;padding:0 5px!important}
- .site-timely-prev,.site-timely-next{width:36px!important;height:33px!important;line-height:33px!important}
+ .site-timely-item.is-active{height:33px!important;min-height:33px!important;padding:0 8px!important}
 }
 
 /* Hey Norwood: two equal fixed-height notice slots so every rotation occupies the same space. */
