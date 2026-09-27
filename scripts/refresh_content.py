@@ -2539,8 +2539,12 @@ def main():
             guides=list(by_url.values())
             write_json('recreation-guides.json',guides); write_js('recreation-guides-data.js','NORWOOD_RECREATION_GUIDES',guides)
         except Exception as ex: print('Recreation guide discovery warning:',str(ex)[:180])
-    if rec_programs:
-        write_json('recreation-programs.json',rec_programs); write_js('recreation-programs-data.js','NORWOOD_RECREATION_PROGRAMS',rec_programs)
+    # Always publish the Recreation artifacts so pages never reference a missing file.
+    # If a live MyRec fetch temporarily returns no programs, preserve the last known
+    # successful snapshot instead of deleting the calendar/search data.
+    if not rec_programs:
+        rec_programs=read_json('recreation-programs.json',[])
+    write_json('recreation-programs.json',rec_programs); write_js('recreation-programs-data.js','NORWOOD_RECREATION_PROGRAMS',rec_programs)
     cov=coverage(registry); write_json('automation-coverage.json',cov)
     report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'recreation_programs':len(rec_programs),'recreation_occurrences':len([e for e in events if e.get('source_id')=='town-recreation-programs']),'event_sources':ev_status,'news_sources':nw_status}
     write_json('refresh-status.json',report)
