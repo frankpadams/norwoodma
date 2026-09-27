@@ -33,7 +33,7 @@ jobs:
           from playwright.sync_api import sync_playwright
 
           target="https://norwoodpma.org/events"
-          report={"target":target,"requests":[],"responses":[],"frames":[],"rendered_text":"","html_excerpt":""}
+          report={"target":target,"requests":[],"responses":[],"calendar_api_json":None,"frames":[],"rendered_text":"","html_excerpt":""}
           with sync_playwright() as p:
               browser=p.chromium.launch(headless=True)
               page=browser.new_page(viewport={"width":1440,"height":1600})
@@ -43,7 +43,7 @@ jobs:
               def on_response(resp):
                   ct=(resp.headers.get("content-type") or "").lower()
                   if resp.request.resource_type in ("xhr","fetch") or "json" in ct:
-                      report["responses"].append({"status":resp.status,"type":resp.request.resource_type,"content_type":ct,"url":resp.url})
+                      report["responses"].append({"status":resp.status,"type":resp.request.resource_type,"content_type":ct,"url":resp.url})\n                      if "/api/website-calendar" in resp.url:\n                          try: report["calendar_api_json"]=resp.json()\n                          except Exception as ex: report["calendar_api_error"]=str(ex)
               page.on("request",on_request); page.on("response",on_response)
               page.goto(target,wait_until="domcontentloaded",timeout=60000)
               page.wait_for_timeout(12000)
