@@ -1491,7 +1491,10 @@ def recreation_programs_from_myrec(source):
                 if not days: days=next((x for x in cells if re.fullmatch(r'(?:M|Tu|W|Th|F|Sa|Su)(?:\s*[,/&]\s*(?:M|Tu|W|Th|F|Sa|Su))*',x,re.I)),None)
                 if not ages: ages=next((x for x in cells if re.search(r'\d+y|and up|months?',x,re.I)),None)
                 if not fees: fees=next((x for x in cells if '$' in x),None)
-                venue=next((x for x in cells if re.search(r'Civic Center|Park|Pool|Court|Field|School|Center|Street|Ave|Road|Pond',x,re.I) and '
+                venue=next((x for x in cells if re.search(r'Civic Center|Park|Pool|Court|Field|School|Center|Street|Ave|Road|Pond',x,re.I) and '$' not in x),None)
+                if venue:
+                    venue=re.sub(r'^.*?\\b(?:AM|PM)\\s+','',venue,flags=re.I).strip()
+                    venue=re.sub(r'^\\d{1,2}/\\d{1,2}/\\d{4}\\s+','',venue).strip()
                 session_based=bool(end and start and end>start)
                 drop_in=bool(re.search(r'\bdrop[ -]?in\b',program+' '+activity+' '+desc,re.I))
                 rows.append({'id':'rec-'+hashlib.sha1((url+'|'+activity+'|'+str(start)).encode()).hexdigest()[:12],
