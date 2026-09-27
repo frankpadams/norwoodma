@@ -6423,7 +6423,7 @@
     "source_class": "organization_page",
     "authority": "organization",
     "coverage": "Norwood, MA",
-    "url": "https://norwoodpma.org/calendar/",
+    "url": "https://norwoodpma.org/events",
     "domain": "norwoodpma.org",
     "produces": [
       "events",
@@ -6453,7 +6453,9 @@
           "url": "https://norwoodpma.org/elementary-calendar/"
         }
       ],
-      "include_schedule_posts": true
+      "include_schedule_posts": true,
+      "events_url": "https://norwoodpma.org/events",
+      "event_discovery_primary": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6465,7 +6467,7 @@
       "verified_at": "2026-09-25",
       "basis": "PMA Calendar page exposes separate Google School Calendars for High School, Middle School and Elementary Fine Arts plus schedule posts."
     },
-    "notes": "Treat PMA Calendar as a calendar hub, not a generic HTML page. Adapter should discover embedded Google calendar URLs/IDs and ingest each school-level Fine Arts calendar; also ingest public Schedule-category posts. Preserve school/ensemble metadata.",
+    "notes": "Use /events as the primary PMA public-event discovery page. Keep /calendar as the Fine Arts calendar hub for High School, Middle School and Elementary schedule coverage and cross-checking. Preserve school/ensemble metadata and dedupe overlapping records.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
