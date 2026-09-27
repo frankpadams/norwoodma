@@ -1337,6 +1337,13 @@ def events_from_pma_hub(source):
             pass
     out=[]
     events_url=ing.get('events_url') or source.get('url')
+    # PMA publishes an Upcoming Events block on its homepage as well as /events.
+    # Merge both so a redesign/outage of either presentation does not zero the calendar.
+    for fallback_url in [events_url, 'https://norwoodpma.org/']:
+        if not fallback_url: continue
+        try:
+            out.extend(events_from_visible_dated_page(fallback_url,source,category='performance',series='Norwood Parent Music Association'))
+        except Exception: pass
     if events_url:
         try:
             out.extend(events_from_visible_dated_page(events_url,source,category='performance',series='Norwood Parent Music Association'))
