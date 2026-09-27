@@ -3024,6 +3024,21 @@ def main():
             status['found']=len(rec_programs)
             status['note']=f"{len(rec_occurrences)} calendar occurrences generated" if rec_programs else 'No Recreation programs available; last successful snapshot unavailable'
     events=current_events(dedupe_events(events+civic_meetings_to_events(civic_notices)+rec_occurrences+news_events))
+    # Hand-curated seed records are editorial overrides. A later live-source merge or
+    # fuzzy dedupe must never silently erase one from the published calendar.
+    curated_seeds=[
+        e for e in read_json('events-seed.json',[])
+        if e.get('publish_candidate',True) and (e.get('curated_default') or e.get('whats_happening_default'))
+    ]
+    if curated_seeds:
+        curated_ids={e.get('id') for e in curated_seeds if e.get('id')}
+        curated_keys={(canonical_title(e.get('title','')), (e.get('start') or {}).get('date')) for e in curated_seeds}
+        events=[
+            e for e in events
+            if e.get('id') not in curated_ids
+            and (canonical_title(e.get('title','')), (e.get('start') or {}).get('date')) not in curated_keys
+        ]
+        events=current_events(dedupe_events(events+curated_seeds))
     events=assign_calendar_ids(events)
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events); calendar_feeds=write_calendar_feeds(events)
     if guide_source and guide_source.get('ingestion',{}).get('discover_seasonal_guides'):
