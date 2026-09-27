@@ -5484,7 +5484,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://www.norwood.k12.ma.us/balch/calendar",
+    "url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics",
     "domain": "www.norwood.k12.ma.us",
     "produces": [
       "events"
@@ -5495,11 +5495,9 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "schoolnow_calendar",
-      "automation": "preferred",
-      "calendar_name": "Balch Elementary School",
-      "calendar_root": "https://www.norwood.k12.ma.us/balch/calendar",
-      "discover_ical": true
+      "method": "ical",
+      "automation": "direct",
+      "feed_url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -5507,11 +5505,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_schoolnow_calendar_with_page_fallback",
+      "status": "verified_direct_schoolnow_ical",
       "verified_at": "2026-09-27",
-      "basis": "Use the official SchoolNow calendar page to discover structured events/subscription feeds rather than relying on a currently empty hard-coded ICS response."
+      "basis": "Official NPS SchoolNow calendar exposes the standard /calendar/feed/ical.ics subscription endpoint; use the direct feed consistently with other NPS school calendars."
     },
-    "notes": "Official SchoolNow calendar. The two-hour refresh checks the human-readable calendar page, discovers current feed URLs, and merges structured/page data so an empty hard-coded ICS endpoint does not suppress the selectable calendar.",
+    "notes": "Official NPS SchoolNow iCal feed. Keep as a selectable school calendar; a legitimate empty feed may occur when the school has no separately posted events.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -5564,7 +5562,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://www.norwood.k12.ma.us/callahan/calendar",
+    "url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics",
     "domain": "www.norwood.k12.ma.us",
     "produces": [
       "events"
@@ -5575,11 +5573,9 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "schoolnow_calendar",
-      "automation": "preferred",
-      "calendar_name": "Callahan Elementary School",
-      "calendar_root": "https://www.norwood.k12.ma.us/callahan/calendar",
-      "discover_ical": true
+      "method": "ical",
+      "automation": "direct",
+      "feed_url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -5587,11 +5583,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_schoolnow_calendar_with_page_fallback",
+      "status": "verified_direct_schoolnow_ical",
       "verified_at": "2026-09-27",
-      "basis": "Use the official SchoolNow calendar page to discover structured events/subscription feeds rather than relying on a currently empty hard-coded ICS response."
+      "basis": "Official NPS SchoolNow calendar exposes the standard /calendar/feed/ical.ics subscription endpoint; use the direct feed consistently with other NPS school calendars."
     },
-    "notes": "Official SchoolNow calendar. The two-hour refresh checks the human-readable calendar page, discovers current feed URLs, and merges structured/page data so an empty hard-coded ICS endpoint does not suppress the selectable calendar.",
+    "notes": "Official NPS SchoolNow iCal feed. Keep as a selectable school calendar; a legitimate empty feed may occur when the school has no separately posted events.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -6050,23 +6046,21 @@
   {
     "id": "nps-extended-day",
     "name": "NPS Extended Day",
-    "url": "https://www.norwood.k12.ma.us/extended-day/calendar",
+    "url": "https://www.norwood.k12.ma.us/extended-day/calendar/feed/ical.ics",
     "active_monitor": true,
     "produces": [
       "events"
     ],
     "priority": 2,
     "ingestion": {
-      "method": "schoolnow_calendar",
-      "automation": "preferred",
-      "calendar_name": "Extended Day",
-      "calendar_root": "https://www.norwood.k12.ma.us/extended-day/calendar",
-      "discover_ical": true
+      "method": "ical",
+      "automation": "direct",
+      "feed_url": "https://www.norwood.k12.ma.us/extended-day/calendar/feed/ical.ics"
     },
     "verification": {
-      "status": "verified_schoolnow_calendar",
-      "verified_at": "2026-09-25",
-      "basis": "Official NPS Extended Day calendar is a distinct selectable SchoolNow calendar alongside district/school/Athletics calendars."
+      "status": "verified_direct_schoolnow_ical",
+      "verified_at": "2026-09-27",
+      "basis": "Official NPS SchoolNow calendar exposes the standard /calendar/feed/ical.ics subscription endpoint; use the direct feed consistently with other NPS school calendars."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -6076,7 +6070,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Distinct NPS calendar useful to families. Keep collapsed under Schools and optional by default; zero events does not mean the source is broken."
+    "notes": "Official NPS SchoolNow iCal feed. Keep as a selectable school calendar; a legitimate empty feed may occur when the school has no separately posted events."
   },
   {
     "id": "nps-fine-arts",
@@ -6179,7 +6173,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://www.norwood.k12.ma.us/nhs/calendar",
+    "url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics",
     "domain": "www.norwood.k12.ma.us",
     "produces": [
       "events"
@@ -6190,11 +6184,9 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "schoolnow_calendar",
-      "automation": "preferred",
-      "calendar_name": "Norwood High School",
-      "calendar_root": "https://www.norwood.k12.ma.us/nhs/calendar",
-      "discover_ical": true
+      "method": "ical",
+      "automation": "direct",
+      "feed_url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6202,11 +6194,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_schoolnow_calendar_with_page_fallback",
+      "status": "verified_direct_schoolnow_ical",
       "verified_at": "2026-09-27",
-      "basis": "Use the official SchoolNow calendar page to discover structured events/subscription feeds rather than relying on a currently empty hard-coded ICS response."
+      "basis": "Official NPS SchoolNow calendar exposes the standard /calendar/feed/ical.ics subscription endpoint; use the direct feed consistently with other NPS school calendars."
     },
-    "notes": "Official SchoolNow calendar. The two-hour refresh checks the human-readable calendar page, discovers current feed URLs, and merges structured/page data so an empty hard-coded ICS endpoint does not suppress the selectable calendar.",
+    "notes": "Official NPS SchoolNow iCal feed. Keep as a selectable school calendar; a legitimate empty feed may occur when the school has no separately posted events.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
