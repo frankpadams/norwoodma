@@ -1395,7 +1395,7 @@ def events_from_visible_dated_page(url, source, category='community', series=Non
 
 
 def events_from_pma_hub(source):
-    """Ingest PMA/Fine Arts events, preferring the private BAND WebCal subscription."""
+    """Ingest public PMA/Fine Arts calendars; BAND is an optional Marching Band supplement."""
     ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub,ing.get('events_url')]
     debug={'hub_url':hub,'pages':[],'feeds':[],'events_by_feed':{},'band_secret_configured':False,'band_events':0}
     # BAND subscription is stored only in GitHub Actions secrets. Never persist
@@ -1419,8 +1419,10 @@ def events_from_pma_hub(source):
         except Exception as ex:
             debug['band_error']=type(ex).__name__+': '+str(ex).split('?',1)[0][:120]
     children=ing.get('child_calendars',[])
+    child_by_url={}
     for child in children:
-        if isinstance(child,dict) and child.get('url'): urls.append(child['url'])
+        if isinstance(child,dict) and child.get('url'):
+            urls.append(child['url']); child_by_url[child['url']]=child
     # The PMA hub links to school-level Fine Arts calendar pages. Discover those
     # links by their configured names so a site redesign/URL change does not
     # require hard-coding every child URL.
@@ -1433,6 +1435,9 @@ def events_from_pma_hub(source):
                 if any(name in label or label in name for name in wanted if label):
                     href=urljoin(hub,a['href'])
                     if href not in urls: urls.append(href)
+                    for child in children:
+                        if isinstance(child,dict) and child.get('discover_from_hub') and child.get('name') and (clean_text(child.get('name')).lower() in label or label in clean_text(child.get('name')).lower()):
+                            child_by_url[href]=child; break
         except Exception:
             pass
     events_url=ing.get('events_url') or source.get('url')
@@ -1476,13 +1481,21 @@ def events_from_pma_hub(source):
         try: html=request(u).text
         except Exception as ex:
             page['error']=str(ex)[:180]; debug['pages'].append(page); continue
-        extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted); page['jsonld_events']=len(extracted)
+        child=child_by_url.get(u)
+        child_source=dict(source)
+        if child:
+            child_source['id']=child.get('id') or source['id']
+            child_source['name']=child.get('name') or source.get('name')
+            child_source['url']=u
+            child_source['ingestion']=dict(source.get('ingestion',{}))
+            child_source['ingestion']['series_label']=child.get('series_label') or ('PMA / Fine Arts — '+clean_text(child.get('name')))
+        extracted,feeds=extract_jsonld_events(html,child_source); out.extend(extracted); page['jsonld_events']=len(extracted)
         feeds.extend(discover_embedded_calendar_feeds(u,html))
         feeds=list(dict.fromkeys(feeds))[:12]; page['feeds']=feeds
         for feed in feeds:
             if feed not in debug['feeds']: debug['feeds'].append(feed)
             try:
-                got=events_from_ical(feed,source); out.extend(got)
+                got=events_from_ical(feed,child_source); out.extend(got)
                 debug['events_by_feed'][feed]=len(got)
             except Exception as ex:
                 debug['events_by_feed'][feed]={'error':str(ex)[:180]}
