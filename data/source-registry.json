@@ -13278,19 +13278,25 @@
     "ingestion": {
       "method": "verified_recurring_schedule",
       "automation": "preferred",
-      "verification_url": "https://norwoodmemorycafe.com/",
-      "title": "Norwood Memory Cafe",
+      "revalidation_url": "https://norwoodmemorycafe.com/",
+      "organization_url": "https://norwoodmemorycafe.com/",
+      "event_title": "Norwood Memory Cafe",
       "venue": "Norwood Senior Center",
       "address": "275 Prospect Street, Norwood, MA",
       "category": "wellness",
+      "start_time": "13:30",
+      "end_time": "15:00",
+      "cost": "Free",
       "recurrence": {
         "frequency": "monthly",
         "byweekday": "TH",
-        "setpos": 3,
-        "time": "13:30",
-        "duration_minutes": 90
+        "ordinal": [
+          3
+        ]
       },
-      "require_revalidation": true
+      "publish_candidate": true,
+      "series_label": "Norwood Memory Cafe",
+      "notes": "Monthly gathering for individuals, families, and friends of people living with memory changes. Registration requested; see the official site for contact information."
     },
     "filters": {
       "require_norwood_relevance": true,
