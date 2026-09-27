@@ -1218,6 +1218,38 @@ def discover_embedded_calendar_feeds(page_url, html):
                         feed='https://calendar.google.com/calendar/ical/'+quote(cid,safe='')+'/public/basic.ics'
                         if feed not in feeds: feeds.append(feed)
             except Exception: pass
+    # Some WordPress/calendar builders emit calendar URLs only inside script
+    # data rather than as clickable anchors/iframes. Inspect the raw document too.
+    try:
+        from urllib.parse import unquote,quote
+        import base64
+        raw=html.replace('\\/','/')
+        candidates=re.findall(r'https?[^"'<>\\s]+',raw)
+        for candidate in candidates:
+            href=unquote(candidate.replace('\\u0026','&').replace('\\u003d','='))
+            low=href.lower()
+            if ('.ics' in low or '/ical/' in low) and href not in feeds:
+                feeds.append(href)
+            if 'calendar.google.com' in low:
+                try:
+                    qs=parse_qs(urlparse(href).query)
+                    cid=(qs.get('src') or qs.get('cid') or [None])[0]
+                    if cid:
+                        cid=unquote(cid)
+                        if '@' not in cid:
+                            try: cid=base64.b64decode(cid + '='*((4-len(cid)%4)%4)).decode('utf-8')
+                            except Exception: pass
+                        if '@' in cid:
+                            feed='https://calendar.google.com/calendar/ical/'+quote(cid,safe='')+'/public/basic.ics'
+                            if feed not in feeds: feeds.append(feed)
+                except Exception: pass
+        # Also catch bare Google calendar IDs serialized by page builders.
+        for cid in re.findall(r'([A-Za-z0-9_.%+\\-]+%40(?:group\\.)?calendar\\.google\\.com|[A-Za-z0-9_.+\\-]+@(?:group\\.)?calendar\\.google\\.com)',raw,re.I):
+            cid=unquote(cid)
+            feed='https://calendar.google.com/calendar/ical/'+quote(cid,safe='')+'/public/basic.ics'
+            if feed not in feeds: feeds.append(feed)
+    except Exception:
+        pass
     return feeds
 
 def events_from_multi_source_calendar(source):
