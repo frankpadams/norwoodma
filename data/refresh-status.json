@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-27T14:07:20.813197-04:00",
+  "generated_at": "2026-09-27T14:14:47.794404-04:00",
   "offline": false,
-  "events_published": 2592,
+  "events_published": 2594,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2592,
-      "generated_at": "2026-09-27T14:07:20.205257-04:00"
+      "events": 2594,
+      "generated_at": "2026-09-27T14:14:47.306635-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 96,
-      "generated_at": "2026-09-27T14:07:20.215216-04:00"
+      "generated_at": "2026-09-27T14:14:47.315622-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 949,
-      "generated_at": "2026-09-27T14:07:20.229962-04:00"
+      "generated_at": "2026-09-27T14:14:47.334824-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 850,
-      "generated_at": "2026-09-27T14:07:20.242216-04:00"
+      "generated_at": "2026-09-27T14:14:47.350939-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-27T14:07:20.248676-04:00"
+      "generated_at": "2026-09-27T14:14:47.359695-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 76,
-      "generated_at": "2026-09-27T14:07:20.256201-04:00"
+      "generated_at": "2026-09-27T14:14:47.370077-04:00"
     }
   ],
   "recreation_programs": 174,
@@ -60,10 +60,10 @@
     },
     {
       "source_id": "arts-luke-adams",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "note": "all configured pages failed: https://www.1hotpieceofglass.com/collections/schedule: 503 Server Error: Service Unavailable for url: https://www.1hotpieceofglass.com/collections/sche"
     },
     {
       "source_id": "arts-millforge",
@@ -181,7 +181,7 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 0,
+      "found": 4,
       "note": ""
     },
     {
@@ -314,8 +314,8 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-carillon-series",
@@ -335,8 +335,8 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -475,8 +475,8 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no matching machine-readable Event/ICS found"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
       "source_id": "norwood-women-business-networking",
@@ -1239,10 +1239,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -1256,7 +1255,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 62,
+      "found": 61,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1264,7 +1263,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 62,
+      "found": 61,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
