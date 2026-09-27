@@ -750,49 +750,5 @@
         "recovery-na"
       ]
     }
-  },
-  {
-    "id": "town-police-events",
-    "group": "more",
-    "name": "Norwood Police Department",
-    "description": "Public events, open houses, information sessions and community programs published by the Norwood Police Department.",
-    "view_url": "https://www.norwoodma.gov/departments/police/index.php",
-    "provider": "Town of Norwood — Police Department",
-    "kind": "internal",
-    "data_available": true,
-    "persistent_selector": true,
-    "selector": {
-      "source_ids": [
-        "town-police",
-        "norwood-police",
-        "norwood-police-events"
-      ],
-      "source_id_prefixes": [
-        "town-police-",
-        "norwood-police-"
-      ]
-    }
-  },
-  {
-    "id": "town-fire-events",
-    "group": "more",
-    "name": "Norwood Fire Department",
-    "description": "Public events, open houses, safety programs and community events published by the Norwood Fire Department.",
-    "view_url": "https://www.norwoodma.gov/departments/fire/index.php",
-    "provider": "Town of Norwood — Fire Department",
-    "kind": "internal",
-    "data_available": true,
-    "persistent_selector": true,
-    "selector": {
-      "source_ids": [
-        "town-fire",
-        "norwood-fire",
-        "norwood-fire-events"
-      ],
-      "source_id_prefixes": [
-        "town-fire-",
-        "norwood-fire-"
-      ]
-    }
   }
 ]
