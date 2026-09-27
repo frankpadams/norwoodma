@@ -1987,6 +1987,11 @@ def refresh_events(offline=False):
                                     except Exception: pass
                                 if terms:
                                     extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                                # Month headings and archive navigation can carry semantic <time>
+                                # elements but are not events. Sources that require a concrete date
+                                # must also have event-specific content beyond a bare month/year label.
+                                if ing.get('require_concrete_date'):
+                                    extracted=[e for e in extracted if not re.fullmatch(r'(January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\\d{2}',str(e.get('title') or '').strip(),re.I)]
                                 got.extend(extracted)
                                 for u in ics[:4]:
                                     try:
