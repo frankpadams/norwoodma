@@ -55,6 +55,7 @@
   (window.NORWOOD_BUSINESSES||[]).forEach(b=>out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,(b.labels||[]).join(' '),b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true}));
   (window.NORWOOD_CALENDAR_SOURCES||[]).forEach(c=>out.push({name:(c.name||'Calendar')+' calendar',url:c.view_url||'calendars.html',type:'Calendar',text:[c.name,c.description,c.provider,c.group,'calendar schedule dates events school'].join(' '),calendar:true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
+  (window.NORWOOD_RECREATION_PROGRAMS||[]).filter(r=>r.searchable!==false).forEach(r=>out.push({name:r.name||r.program||'Recreation program',url:'events.html?rec='+encodeURIComponent(r.id),type:'Norwood Recreation',date:r.start_date||'',text:[r.program,r.subcategory,r.section,r.description,r.ages,r.venue,r.fees,r.start_date,r.end_date,r.drop_in?'drop in':''].join(' '),recreation:true}));
   (window.NORWOOD_HOWDO||[]).forEach(h=>out.push({name:h.title,url:'how-do-i.html#'+h.id,type:'How Do I?',text:[h.text,h.keywords,'question answer help'].join(' '),norwoodPage:true}));
   return out;
  }
