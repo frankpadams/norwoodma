@@ -4333,5 +4333,189 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-20",
     "notes": "Total lunar eclipse visible from the Boston/Norwood area. Visibility depends on weather and local sky conditions."
+  },
+  {
+    "id": "2026-10-03-pma-micca-central",
+    "title": "MICCA Central",
+    "start": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "venue": "Auburn",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
+    "id": "2026-10-10-pma-usbands-king-philip",
+    "title": "USBANDS at King Philip",
+    "start": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "venue": "King Philip",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
+    "id": "2026-10-18-pma-micca-southeast-home-show",
+    "title": "MICCA Southeast Home Show",
+    "start": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Confirmed. Norwood PMA hosts the MICCA Southeast Home Show."
+  },
+  {
+    "id": "2026-10-24-pma-usbands-dartmouth",
+    "title": "USBANDS at Dartmouth",
+    "start": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": "Dartmouth",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
+    "id": "2026-10-25-pma-micca-state-finals",
+    "title": "MICCA State Finals",
+    "start": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Quincy",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
+    "id": "2026-10-31-pma-usbands-ma-championships",
+    "title": "USBANDS Massachusetts Championships",
+    "start": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": "Stoughton",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
+    "id": "2026-11-11-pma-veterans-day-parade",
+    "title": "Veterans Day Parade",
+    "start": {
+      "date": "2026-11-11",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. PMA notes that the date/weekday should be confirmed."
+  },
+  {
+    "id": "2027-05-31-pma-memorial-day-parade",
+    "title": "Memorial Day Parade",
+    "start": {
+      "date": "2027-05-31",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2027-05-31",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Student report time: 8:00 AM."
   }
 ]
