@@ -4519,5 +4519,74 @@
     "publish_candidate": true,
     "verification_status": "manual_pma_events_2026-09-27",
     "notes": "Tentative. Student report time: 8:00 AM."
+  },
+  {
+    "id": "2026-10-03-electronics-recycling",
+    "title": "Electronics Recycling Event",
+    "start": {
+      "date": "2026-10-03",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "14:00"
+    },
+    "venue": "St. Timothy Church — Parking Lot",
+    "address": "650 Nichols St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/events/348199/electronics-recycling-event",
+    "cost": "Most items $5–$40",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "secondary_listing_verified_2026-09-27",
+    "notes": "Community electronics/appliance/battery and reusable bicycle recycling event; rain or shine. Part of proceeds benefit St. Timothy Parish."
+  },
+  {
+    "id": "2026-10-11-ar5k",
+    "title": "Third Annual AR5K Road Race",
+    "start": {
+      "date": "2026-10-11",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "13:00"
+    },
+    "venue": "Knights of Columbus",
+    "address": "572 Nichols St, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race",
+    "cost": "See registration",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "secondary_listing_verified_2026-09-27",
+    "notes": "Run/walk fundraiser supporting scholarships for Norwood High School students and sock donations to Pine Street Inn."
+  },
+  {
+    "id": "2026-10-25-cbn-psychic-medium",
+    "title": "An Evening with Psychic Medium Cathy Ripley Greene",
+    "start": {
+      "date": "2026-10-25",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": "20:30"
+    },
+    "venue": "Norwood VFW",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "citizens-better-norwood-events",
+    "source_url": "https://cbnma.com/events",
+    "cost": "$60; $70 after Oct. 1 if available",
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "organizer_verified_2026-09-27",
+    "notes": "Public ticketed event sponsored by Citizens for a Better Norwood; seating limited."
   }
 ]
