@@ -10,7 +10,7 @@ performed by GitHub Actions; --offline rebuilds browser fallback JS from bundled
 seed/current JSON without network access.
 """
 from __future__ import annotations
-import argparse, json, re, sys, hashlib, subprocess, shutil
+import argparse, json, re, sys, hashlib, subprocess, shutil, os
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 from io import BytesIO
@@ -1334,9 +1334,28 @@ def events_from_visible_dated_page(url, source, category='community', series=Non
 
 
 def events_from_pma_hub(source):
-    """Discover PMA's school-level Fine Arts calendars from its authoritative calendar hub."""
+    """Ingest PMA/Fine Arts events, preferring the private BAND WebCal subscription."""
     ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub,ing.get('events_url')]
-    debug={'hub_url':hub,'pages':[],'feeds':[],'events_by_feed':{}}
+    debug={'hub_url':hub,'pages':[],'feeds':[],'events_by_feed':{},'band_secret_configured':False,'band_events':0}
+    # BAND subscription is stored only in GitHub Actions secrets. Never persist
+    # the token-bearing URL in diagnostics, source metadata, or generated events.
+    band_url=os.environ.get('BAND_PMA_ICAL_URL','').strip()
+    out=[]
+    if band_url:
+        debug['band_secret_configured']=True
+        if band_url.startswith('webcal://'):
+            band_url='https://'+band_url[len('webcal://'):]
+        try:
+            band_events=events_from_ical(band_url,source)
+            for e in band_events:
+                e['source_url']=source.get('url')
+                e['series']='PMA / Fine Arts'
+                e['discovered_by']='band_private_ical'
+                e['verification_status']='auto_primary_band_calendar'
+            out.extend(band_events)
+            debug['band_events']=len(band_events)
+        except Exception as ex:
+            debug['band_error']=type(ex).__name__+': '+str(ex).split('?',1)[0][:120]
     children=ing.get('child_calendars',[])
     for child in children:
         if isinstance(child,dict) and child.get('url'): urls.append(child['url'])
@@ -1354,7 +1373,6 @@ def events_from_pma_hub(source):
                     if href not in urls: urls.append(href)
         except Exception:
             pass
-    out=[]
     events_url=ing.get('events_url') or source.get('url')
     # PMA publishes an Upcoming Events block on its homepage as well as /events.
     # Merge both so a redesign/outage of either presentation does not zero the calendar.
