@@ -13257,5 +13257,59 @@
       "verified_at": "2026-09-26",
       "basis": "Current Norwood listings include both open public events and employee/company events, so attendance eligibility is classified separately from ticketing."
     }
+  },
+  {
+    "id": "norwood-memory-cafe",
+    "name": "Norwood Memory Cafe",
+    "organization": "Norwood Memory Cafe, Inc.",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodmemorycafe.com/",
+    "domain": "norwoodmemorycafe.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "automation": "preferred",
+      "verification_url": "https://norwoodmemorycafe.com/",
+      "title": "Norwood Memory Cafe",
+      "venue": "Norwood Senior Center",
+      "address": "275 Prospect Street, Norwood, MA",
+      "category": "wellness",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "TH",
+        "setpos": 3,
+        "time": "13:30",
+        "duration_minutes": 90
+      },
+      "require_revalidation": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_current_public_recurrence",
+      "verified_at": "2026-09-27",
+      "basis": "Official Norwood Memory Cafe site states it meets monthly on the third Thursday, 1:30–3:00 PM, at the Norwood Senior Center and asks attendees to register."
+    },
+    "notes": "Free public-facing memory-support social program. Revalidate the recurrence against the official page before generating future occurrences.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": true
+    }
   }
 ]
