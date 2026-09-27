@@ -1400,14 +1400,68 @@ def events_from_visible_dated_page(url, source, category='community', series=Non
     return dedupe_events(out)
 
 
+def events_from_pma_website_api(source):
+    """Ingest PMA's public website calendar API used by the rendered /events page."""
+    api='https://app.norwoodpma.org/api/website-calendar'
+    payload=request(api).json()
+    # Tolerate either a bare list or an object wrapping the event list.
+    if isinstance(payload,list): rows=payload
+    elif isinstance(payload,dict):
+        rows=[]
+        for key in ('events','upcoming','calendar','items','data'):
+            val=payload.get(key)
+            if isinstance(val,list): rows.extend(val)
+        if not rows:
+            rows=[v for v in payload.values() if isinstance(v,dict)]
+    else: rows=[]
+    out=[]
+    for row in rows:
+        if not isinstance(row,dict): continue
+        title=clean_text(row.get('title') or row.get('name') or row.get('event_name') or '')
+        raw_date=row.get('date') or row.get('event_date') or row.get('start_date') or row.get('startDate') or row.get('start')
+        if isinstance(raw_date,dict): raw_date=raw_date.get('date') or raw_date.get('dateTime')
+        ds=None
+        if raw_date:
+            m=re.search(r'(20\\d{2})-(\\d{2})-(\\d{2})',str(raw_date))
+            if m: ds='-'.join(m.groups())
+            else:
+                d=_date_from_text(str(raw_date))
+                if d: ds=d.isoformat()
+        # Undated/TBA/monthly cards remain on PMA's site but are not calendar occurrences.
+        if not title or not ds: continue
+        raw_time=row.get('time') or row.get('start_time') or row.get('startTime')
+        tm=_time_from_text(str(raw_time)) if raw_time else None
+        status=clean_text(row.get('status') or row.get('state') or '')
+        venue=clean_text(row.get('location') or row.get('venue') or row.get('place') or '') or None
+        desc=clean_text(row.get('description') or row.get('details') or row.get('notes') or '')
+        link=row.get('url') or row.get('link') or row.get('event_url') or source.get('url')
+        notes=' · '.join(x for x in [status.title() if status else '',desc] if x)
+        out.append({
+          'id':event_id(title,ds,venue),'title':title,
+          'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},
+          'venue':venue,'address':None,'category':'performance',
+          'source_id':source['id'],'source_url':link,'cost':None,
+          'public_access':'public','series':'PMA / Fine Arts',
+          'publish_candidate':True,'verification_status':'pma_public_website_api',
+          'notes':notes[:700],'discovered_by':'pma_website_calendar_api',
+          'status':status or None
+        })
+    return dedupe_events(out)
+
 def events_from_pma_hub(source):
     """Ingest public PMA/Fine Arts calendars; BAND is an optional Marching Band supplement."""
     ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub,ing.get('events_url')]
-    debug={'hub_url':hub,'pages':[],'feeds':[],'events_by_feed':{},'band_secret_configured':False,'band_events':0}
+    debug={'hub_url':hub,'pages':[],'feeds':[],'events_by_feed':{},'band_secret_configured':False,'band_events':0,'website_api':'https://app.norwoodpma.org/api/website-calendar'}
+    # Primary source: the same public JSON endpoint that populates PMA's rendered Events page.
+    try:
+        out=events_from_pma_website_api(source)
+        debug['website_api_events']=len(out)
+    except Exception as ex:
+        out=[]
+        debug['website_api_error']=type(ex).__name__+': '+str(ex)[:180]
     # BAND subscription is stored only in GitHub Actions secrets. Never persist
     # the token-bearing URL in diagnostics, source metadata, or generated events.
     band_url=os.environ.get('BAND_PMA_ICAL_URL','').strip()
-    out=[]
     if band_url:
         debug['band_secret_configured']=True
         if band_url.startswith('webcal://'):
