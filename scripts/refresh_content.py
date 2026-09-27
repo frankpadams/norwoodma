@@ -1719,7 +1719,8 @@ def refresh_events(offline=False):
                     got=dedupe_events(got)
                     if not got: note='configured pages checked; no matching machine-readable Event/ICS found'
                 else: note=f'method {method} requires discovery/manual adapter'
-                got=[apply_public_access(e,src) for e in got]\n                got=[e for e in got if source_allows_master_event(e,src)]
+                got=[apply_public_access(e,src) for e in got]
+                got=[e for e in got if source_allows_master_event(e,src)]
                 events.extend(got)
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
