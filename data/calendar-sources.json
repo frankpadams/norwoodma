@@ -294,6 +294,22 @@
     }
   },
   {
+    "id": "pma-fine-arts",
+    "group": "schools",
+    "name": "PMA / Fine Arts",
+    "description": "Norwood Public Schools Fine Arts and PMA events from the subscribed BAND calendar.",
+    "view_url": "https://norwoodpma.org/events",
+    "provider": "Norwood Parent Music Association",
+    "kind": "internal",
+    "verified": true,
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "nps-pma"
+      ]
+    }
+  },
+  {
     "id": "nps-athletics",
     "group": "schools",
     "name": "NPS Athletics",
