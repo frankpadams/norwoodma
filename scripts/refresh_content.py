@@ -1203,9 +1203,12 @@ def events_from_nys_intramural_pdf(url, source):
 
 def events_from_nys_multi_schedule(source):
     """Ingest Norwood Youth Soccer's current team/schedule pages and linked public schedule documents."""
-    ing=source.get('ingestion',{}); urls=[ing.get('schedule_url'),ing.get('team_directory_url')]; out=[]; feeds=[]
-    for url in [u for u in urls if u]:
-        html=request(url).text
+    ing=source.get('ingestion',{}); urls=[ing.get('schedule_url'),ing.get('team_directory_url'),ing.get('fallback_hub_url') or 'https://norwoodsoccer.com/']; out=[]; feeds=[]; page_errors=[]; pages_checked=0
+    for url in [u for u in dict.fromkeys(urls) if u]:
+        try:
+            html=request(url).text; pages_checked+=1
+        except Exception as ex:
+            page_errors.append(f'{url}: {str(ex)[:100]}'); continue
         temp=dict(source); temp['url']=url
         extracted,ics=extract_jsonld_events(html,temp); out.extend(extracted); feeds.extend(ics)
         if BeautifulSoup:
@@ -1227,6 +1230,8 @@ def events_from_nys_multi_schedule(source):
                             page=request(href).text; rows,_=extract_jsonld_events(page,temp); out.extend(rows)
                     except Exception:
                         pass
+    if pages_checked==0 and not out:
+        raise RuntimeError('all NYS discovery pages failed: '+' | '.join(page_errors[:3]))
     bays=ing.get('travel_league_url')
     if bays:
         try:
