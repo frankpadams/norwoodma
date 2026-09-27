@@ -910,7 +910,7 @@ def _events_from_newsletter_pdf(content, source, source_url):
 def events_from_newsletter_index(source):
     """Discover the newest Senior Center newsletter and extract explicit dated events."""
     ing=source.get('ingestion',{}); url=ing.get('index_url') or source.get('url'); html=request(url).text
-    out=[]
+    out=[]; debug={'index_url':url,'documents':[],'selected':[]}
     extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
     if BeautifulSoup:
         soup=BeautifulSoup(html,'html.parser'); docs=[]
@@ -923,17 +923,23 @@ def events_from_newsletter_index(source):
                 score=0; low=(label+' '+href).lower()
                 if str(now_local().year) in low: score+=10
                 if now_local().strftime('%B').lower() in low: score+=5
-                docs.append((score,href,label))
+                docs.append((score,href,label)); debug['documents'].append({'score':score,'url':href,'label':label})
         docs.sort(key=lambda x:x[0],reverse=True)
         # Process only the two strongest current documents; avoid years of archives.
-        for _,href,label in docs[:2]:
+        for score,href,label in docs[:2]:
+            item={'score':score,'url':href,'label':label,'events':0}
             try:
+                before=len(out)
                 if href.lower().split('?')[0].endswith('.pdf'):
-                    r=request(href); out.extend(_events_from_newsletter_pdf(r.content,source,href))
+                    r=request(href); item['bytes']=len(r.content); out.extend(_events_from_newsletter_pdf(r.content,source,href))
                 else:
                     body=request(href).text; ev,_=extract_jsonld_events(body,source); out.extend(ev)
-            except Exception:
-                pass
+                item['events']=len(out)-before
+            except Exception as ex:
+                item['error']=str(ex)[:180]
+            debug['selected'].append(item)
+    try: (DATA/'senior-newsletter-discovery.json').write_text(json.dumps(debug,indent=2)+'\\n')
+    except Exception: pass
     return dedupe_events(out)
 
 def events_from_secondary_listing(source):
