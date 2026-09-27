@@ -1,6 +1,11 @@
 {
-  "hub_url": "https://norwoodpma.org/events",
+  "hub_url": "https://norwoodpma.org/calendar/",
   "pages": [
+    {
+      "url": "https://norwoodpma.org/calendar/",
+      "feeds": [],
+      "jsonld_events": 0
+    },
     {
       "url": "https://norwoodpma.org/events",
       "feeds": [],
