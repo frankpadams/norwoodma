@@ -21,7 +21,7 @@
     const items=[];
     try{
       const r=await fetch('https://api.weather.gov/alerts/active?point=42.1945,-71.1995',{headers:{Accept:'application/geo+json'}});
-      if(r.ok){const j=await r.json();for(const f of (j.features||[])){const p=f.properties||{};if(allowed.test(p.event||''))items.push(normalize({event:p.event,headline:p.headline,description:p.description,severity:p.severity,expires:p.expires,url:f.id,source:p.senderName||'National Weather Service'}));}}
+      if(r.ok){const j=await r.json();for(const f of (j.features||[])){const p=f.properties||{};if(allowed.test(p.event||'')){const alertId=String(f.id||'').split('/').pop();const publicUrl=alertId?'https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=BOX&wwa='+encodeURIComponent(p.event||'Weather Alert'):'https://forecast.weather.gov/MapClick.php?lat=42.1945&lon=-71.1995';items.push(normalize({event:p.event,headline:p.headline,description:p.description,severity:p.severity,expires:p.expires,url:publicUrl,source:p.senderName||'National Weather Service'}));}}}
     }catch(e){}
     try{
       const r=await fetch('data/alerts.json?fresh='+Date.now(),{cache:'no-store'});
