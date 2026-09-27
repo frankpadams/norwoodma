@@ -1281,8 +1281,14 @@ def discover_embedded_calendar_feeds(page_url, html):
     feeds=[]
     if not BeautifulSoup: return feeds
     soup=BeautifulSoup(html,'html.parser')
-    for tag in soup.find_all(['iframe','a']):
-        raw=tag.get('src') or tag.get('href')
+    # Calendar builders do not always use a plain <iframe src> or <a href>.
+    # Squarespace/WordPress blocks commonly stash the public Google Calendar URL
+    # in data-* attributes, and lazy-loaded embeds use data-src.
+    for tag in soup.find_all(True):
+        raw=None
+        for attr in ('src','href','data-src','data-url','data-href','data-calendar-url','data-feed','data-ical'):
+            if tag.get(attr):
+                raw=str(tag.get(attr)); break
         if not raw: continue
         href=urljoin(page_url,raw)
         low=href.lower()
