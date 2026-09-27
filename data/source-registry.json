@@ -11156,15 +11156,13 @@
     "url": "https://norwoodsoccer.com/schedules",
     "domain": "norwoodsoccer.com",
     "produces": [
-      "events",
-      "sports_events"
+      "resources"
     ],
     "potential_outputs": [
-      "events",
-      "sports_events"
+      "events"
     ],
-    "active_monitor": true,
-    "monitor_priority": 1,
+    "active_monitor": false,
+    "monitor_priority": 5,
     "ingestion": {
       "method": "nys_multi_schedule",
       "automation": "preferred",
@@ -11198,7 +11196,7 @@
       "verified_at": "2026-09-25",
       "basis": "Official NYS site publishes Fall 2026 teams and practice/intramural schedule links; NYS directs travel games to BAYS, whose Norwood club page provides structured game rows."
     },
-    "notes": "Persistent NYS schedule source. Ingest the current team directory, travel practice schedules, intramural games/practices, and BAYS travel games. Preserve season/program/gender/grade/team/activity/field metadata so calendar filtering can be generated at NYS > grade/gender > individual team level. Include practices in Conflict Contraption and always retain the field-status link.",
+    "notes": "Combine NYS team directory/practice/intramural schedules with BAYS Norwood club schedule for travel games. Discover current season dynamically and preserve hierarchy for collapsed selector.",
     "conflict_profile": "optional",
     "seasonality": {
       "seasonal": true,
@@ -11207,15 +11205,6 @@
         "spring",
         "fall"
       ]
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": true,
-      "seasonal": true,
-      "offseason_empty_is_healthy": true
     }
   },
   {
