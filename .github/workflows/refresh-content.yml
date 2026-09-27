@@ -71,6 +71,10 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Validate automation Python syntax
+        if: steps.freshness.outputs.run_refresh == 'true'
+        run: python -m compileall -q scripts
+
       - name: Install automation dependencies
         if: steps.freshness.outputs.run_refresh == 'true'
         run: pip install -r requirements-automation.txt
