@@ -2463,6 +2463,13 @@ def main():
             write_js('recreation-guides-data.js','NORWOOD_RECREATION_GUIDES',guides)
         except Exception as ex:
             print('Recreation guide discovery warning:',str(ex)[:180])
+    if guide_source and not args.offline:
+        try:
+            rec_programs=recreation_programs_from_myrec(guide_source)
+            write_json('recreation-programs.json',rec_programs)
+            write_js('recreation-programs-data.js','NORWOOD_RECREATION_PROGRAMS',rec_programs)
+        except Exception as ex:
+            print('Recreation program ingestion warning:',str(ex)[:180])
     cov=coverage(registry); write_json('automation-coverage.json',cov)
     report={'generated_at':now_local().isoformat(),'offline':args.offline,'events_published':len(events),'news_published':len(news),'civic_notices':len(civic_notices),'calendar_feeds':calendar_feeds,'event_sources':ev_status,'news_sources':nw_status}
     write_json('refresh-status.json',report)
