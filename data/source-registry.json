@@ -5484,7 +5484,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics",
+    "url": "https://www.norwood.k12.ma.us/balch/calendar",
     "domain": "www.norwood.k12.ma.us",
     "produces": [
       "events"
@@ -5495,9 +5495,11 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "ical",
+      "method": "schoolnow_calendar",
       "automation": "preferred",
-      "feed_url": "https://www.norwood.k12.ma.us/balch/calendar/feed/ical.ics"
+      "calendar_name": "Balch Elementary School",
+      "calendar_root": "https://www.norwood.k12.ma.us/balch/calendar",
+      "discover_ical": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -5505,11 +5507,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
-      "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "status": "verified_schoolnow_calendar_with_page_fallback",
+      "verified_at": "2026-09-27",
+      "basis": "Use the official SchoolNow calendar page to discover structured events/subscription feeds rather than relying on a currently empty hard-coded ICS response."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. A successful fetch with zero current events is healthy; school pages may legitimately publish no events.",
+    "notes": "Official SchoolNow calendar. The two-hour refresh checks the human-readable calendar page, discovers current feed URLs, and merges structured/page data so an empty hard-coded ICS endpoint does not suppress the selectable calendar.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -5562,7 +5564,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics",
+    "url": "https://www.norwood.k12.ma.us/callahan/calendar",
     "domain": "www.norwood.k12.ma.us",
     "produces": [
       "events"
@@ -5573,9 +5575,11 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "ical",
+      "method": "schoolnow_calendar",
       "automation": "preferred",
-      "feed_url": "https://www.norwood.k12.ma.us/callahan/calendar/feed/ical.ics"
+      "calendar_name": "Callahan Elementary School",
+      "calendar_root": "https://www.norwood.k12.ma.us/callahan/calendar",
+      "discover_ical": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -5583,11 +5587,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
-      "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "status": "verified_schoolnow_calendar_with_page_fallback",
+      "verified_at": "2026-09-27",
+      "basis": "Use the official SchoolNow calendar page to discover structured events/subscription feeds rather than relying on a currently empty hard-coded ICS response."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. A successful fetch with zero current events is healthy; school pages may legitimately publish no events.",
+    "notes": "Official SchoolNow calendar. The two-hour refresh checks the human-readable calendar page, discovers current feed URLs, and merges structured/page data so an empty hard-coded ICS endpoint does not suppress the selectable calendar.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -6175,7 +6179,7 @@
     "source_class": "calendar",
     "authority": "organization",
     "coverage": "Norwood / nearby",
-    "url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics",
+    "url": "https://www.norwood.k12.ma.us/nhs/calendar",
     "domain": "www.norwood.k12.ma.us",
     "produces": [
       "events"
@@ -6186,9 +6190,11 @@
     "active_monitor": true,
     "monitor_priority": 2,
     "ingestion": {
-      "method": "ical",
+      "method": "schoolnow_calendar",
       "automation": "preferred",
-      "feed_url": "https://www.norwood.k12.ma.us/nhs/calendar/feed/ical.ics"
+      "calendar_name": "Norwood High School",
+      "calendar_root": "https://www.norwood.k12.ma.us/nhs/calendar",
+      "discover_ical": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6196,11 +6202,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "backend_registered",
-      "verified_at": "2026-09-25",
-      "basis": "Selectable calendar feed registered for scheduled ingestion."
+      "status": "verified_schoolnow_calendar_with_page_fallback",
+      "verified_at": "2026-09-27",
+      "basis": "Use the official SchoolNow calendar page to discover structured events/subscription feeds rather than relying on a currently empty hard-coded ICS response."
     },
-    "notes": "Backend source for selectable calendar feed. Broader opt-in calendar may include events not eligible for curated What's Happening default. A successful fetch with zero current events is healthy; school pages may legitimately publish no events.",
+    "notes": "Official SchoolNow calendar. The two-hour refresh checks the human-readable calendar page, discovers current feed URLs, and merges structured/page data so an empty hard-coded ICS endpoint does not suppress the selectable calendar.",
     "conflict_profile": "optional",
     "health_policy": {
       "track_last_checked": true,
@@ -6438,7 +6444,7 @@
     "ingestion": {
       "method": "pma_calendar_hub",
       "automation": "preferred",
-      "hub_url": "https://norwoodpma.org/calendar/",
+      "hub_url": null,
       "child_calendars": [
         {
           "name": "High School Fine Arts",
@@ -6455,7 +6461,8 @@
       ],
       "include_schedule_posts": true,
       "events_url": "https://norwoodpma.org/events",
-      "event_discovery_primary": true
+      "event_discovery_primary": true,
+      "scrape_visible_dated_events": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -6463,11 +6470,11 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "adapter_needed_verified_calendar_hub",
-      "verified_at": "2026-09-25",
-      "basis": "PMA Calendar page exposes separate Google School Calendars for High School, Middle School and Elementary Fine Arts plus schedule posts."
+      "status": "verified_working_events_page",
+      "verified_at": "2026-09-27",
+      "basis": "PMA /events is the working public event listing; ingest visible dated event cards every refresh and use structured/calendar feeds only as supplements."
     },
-    "notes": "Use /events as the primary PMA public-event discovery page. Keep /calendar as the Fine Arts calendar hub for High School, Middle School and Elementary schedule coverage and cross-checking. Preserve school/ensemble metadata and dedupe overlapping records.",
+    "notes": "Scrape /events every automated refresh as the primary PMA source. Structured/ICS discovery is supplemental. Preserve all dated PMA calendar events for the selectable Schools > Parent Music Association/Fine Arts calendar, subject only to deduplication and clear private/internal exclusions.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
