@@ -97,36 +97,6 @@
     ]
   },
   {
-    "id": "2026-09-27-september-2026-f23215e",
-    "title": "September 2026",
-    "start": {
-      "date": "2026-09-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-27-adult-bible-study-series-3b447eb",
     "title": "Adult Bible Study series",
     "start": {
@@ -5651,6 +5621,42 @@
     ]
   },
   {
+    "id": "2026-10-03-micca-central-6d925eb",
+    "title": "MICCA Central",
+    "start": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "venue": "Auburn",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · Schedule supplied by the marching band; dates and times may change.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-10-04-2026-boston-open-nqs-aff5b7a",
     "title": "2026 Boston Open NQS",
     "start": {
@@ -10164,6 +10170,42 @@
     ]
   },
   {
+    "id": "2026-10-10-usbands-at-king-philip-f03730e",
+    "title": "USBANDS at King Philip",
+    "start": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "venue": "King Philip",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · Schedule supplied by the marching band; dates and times may change.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-aee429bc4313-2026-10-11",
     "title": "Sunday Sandlot Baseball Grades 1-3",
     "start": {
@@ -14602,6 +14644,43 @@
     ]
   },
   {
+    "id": "2026-10-18-micca-southeast-home-show-f7e482f",
+    "title": "MICCA Southeast Home Show",
+    "start": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/programs/micca-southeast-home-show-2026",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Norwood PMA hosts the MICCA Southeast Home Show on October 18, 2026. The digital program will be available on this event page.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-10-19-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -18594,6 +18673,42 @@
     ]
   },
   {
+    "id": "2026-10-24-usbands-at-dartmouth-a5035a8",
+    "title": "USBANDS at Dartmouth",
+    "start": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": "Dartmouth",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · Schedule supplied by the marching band; dates and times may change.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-10-25-4th-fbff-class-93e9de9",
     "title": "4th FBFF Class",
     "start": {
@@ -18787,6 +18902,42 @@
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-25-micca-state-finals-f8b622a",
+    "title": "MICCA State Finals",
+    "start": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Quincy",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · Schedule supplied by the marching band; dates and times may change.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -19523,36 +19674,6 @@
       "rec-adult-fitness",
       "rec-all",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-27-october-2026-b3f480d",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -22740,6 +22861,42 @@
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering.",
     "calendar_ids": [
       "norwood-fundraisers"
+    ]
+  },
+  {
+    "id": "2026-10-31-usbands-massachusetts-championships-c72e9f8",
+    "title": "USBANDS Massachusetts Championships",
+    "start": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": "Stoughton",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · Schedule supplied by the marching band; dates and times may change.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -27030,6 +27187,42 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-11-veterans-day-parade-e0366e5",
+    "title": "Veterans Day Parade",
+    "start": {
+      "date": "2026-11-11",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · The source schedule lists November 11 as Saturday; the date/weekday needs confirmation.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -91092,6 +91285,42 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2027-05-31-memorial-day-parade-ba04b0d",
+    "title": "Memorial Day Parade",
+    "start": {
+      "date": "2027-05-31",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2027-05-31",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Tentative · Schedule supplied by the marching band; dates and times may change.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "tentative",
+    "schedule_group": "marching_band",
+    "report_time": "8:00 AM",
+    "source_updated_at": "2026-09-15 23:38:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
