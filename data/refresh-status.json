@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T17:41:00.723105-04:00",
+  "generated_at": "2026-09-27T18:50:09.672126-04:00",
   "offline": false,
   "events_published": 2598,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2598,
-      "generated_at": "2026-09-27T17:41:00.428514-04:00"
+      "generated_at": "2026-09-27T18:50:09.321393-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 96,
-      "generated_at": "2026-09-27T17:41:00.439540-04:00"
+      "generated_at": "2026-09-27T18:50:09.333822-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 953,
-      "generated_at": "2026-09-27T17:41:00.463142-04:00"
+      "generated_at": "2026-09-27T18:50:09.359018-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 853,
-      "generated_at": "2026-09-27T17:41:00.483807-04:00"
+      "generated_at": "2026-09-27T18:50:09.382887-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-09-27T17:41:00.494474-04:00"
+      "generated_at": "2026-09-27T18:50:09.394011-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 76,
-      "generated_at": "2026-09-27T17:41:00.507173-04:00"
+      "generated_at": "2026-09-27T18:50:09.406829-04:00"
     }
   ],
   "recreation_programs": 174,
@@ -1212,6 +1212,13 @@
       "method": "event_platform_discovery",
       "found": 0,
       "note": "all configured pages failed: https://www.eventbrite.com/d/ma--norwood/events/: 405 Client Error: Not Allowed for url: https://www.eventbrite.com/d/ma--norwood/events/"
+    },
+    {
+      "source_id": "norwood-memory-cafe",
+      "ok": true,
+      "method": "verified_recurring_schedule",
+      "found": 0,
+      "note": "source returned zero events; zero events is configured as a failure"
     }
   ],
   "news_sources": [
@@ -1255,7 +1262,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 61,
+      "found": 60,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
