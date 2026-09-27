@@ -1170,13 +1170,24 @@ def discover_embedded_calendar_feeds(page_url, html):
         low=href.lower()
         if (low.endswith('.ics') or 'ical' in low) and href not in feeds:
             feeds.append(href)
-        if 'calendar.google.com' in low and 'src=' in href:
+        if 'calendar.google.com' in low:
             try:
-                from urllib.parse import urlparse,parse_qs,unquote
-                cid=(parse_qs(urlparse(href).query).get('src') or [None])[0]
+                from urllib.parse import urlparse,parse_qs,unquote,quote
+                import base64
+                qs=parse_qs(urlparse(href).query)
+                cid=(qs.get('src') or qs.get('cid') or [None])[0]
                 if cid:
-                    feed='https://calendar.google.com/calendar/ical/'+unquote(cid)+'/public/basic.ics'
-                    if feed not in feeds: feeds.append(feed)
+                    cid=unquote(cid)
+                    # Calendar share links commonly use cid=<base64 calendar id>,
+                    # while embeds use src=<plain calendar id>.
+                    if '@' not in cid:
+                        try:
+                            cid=base64.b64decode(cid + '='*((4-len(cid)%4)%4)).decode('utf-8')
+                        except Exception:
+                            pass
+                    if '@' in cid:
+                        feed='https://calendar.google.com/calendar/ical/'+quote(cid,safe='')+'/public/basic.ics'
+                        if feed not in feeds: feeds.append(feed)
             except Exception: pass
     return feeds
 
@@ -1201,9 +1212,24 @@ def events_from_multi_source_calendar(source):
 
 def events_from_pma_hub(source):
     """Discover embedded Google/ICS Fine Arts calendars from the PMA calendar hub."""
-    ing=source.get('ingestion',{}); urls=[ing.get('hub_url') or source.get('url')]
-    for child in ing.get('child_calendars',[]):
+    ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub]
+    children=ing.get('child_calendars',[])
+    for child in children:
         if isinstance(child,dict) and child.get('url'): urls.append(child['url'])
+    # The PMA hub links to school-level Fine Arts calendar pages. Discover those
+    # links by their configured names so a site redesign/URL change does not
+    # require hard-coding every child URL.
+    if hub and BeautifulSoup:
+        try:
+            hs=BeautifulSoup(request(hub).text,'html.parser')
+            wanted=[clean_text(x.get('name')).lower() for x in children if isinstance(x,dict) and x.get('discover_from_hub') and x.get('name')]
+            for a in hs.find_all('a',href=True):
+                label=clean_text(a.get_text(' ')).lower()
+                if any(name in label or label in name for name in wanted if label):
+                    href=urljoin(hub,a['href'])
+                    if href not in urls: urls.append(href)
+        except Exception:
+            pass
     out=[]
     for u in [x for x in urls if x]:
         try: html=request(u).text
