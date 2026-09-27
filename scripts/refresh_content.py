@@ -1240,8 +1240,9 @@ def events_from_multi_source_calendar(source):
     return dedupe_events(out)
 
 def events_from_pma_hub(source):
-    """Discover embedded Google/ICS Fine Arts calendars from the PMA calendar hub."""
-    ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[ing.get('events_url'),hub]
+    """Discover PMA's school-level Fine Arts calendars from its authoritative calendar hub."""
+    ing=source.get('ingestion',{}); hub=ing.get('hub_url') or source.get('url'); urls=[hub,ing.get('events_url')]
+    debug={'hub_url':hub,'pages':[],'feeds':[],'events_by_feed':{}}
     children=ing.get('child_calendars',[])
     for child in children:
         if isinstance(child,dict) and child.get('url'): urls.append(child['url'])
@@ -1260,15 +1261,27 @@ def events_from_pma_hub(source):
         except Exception:
             pass
     out=[]
-    for u in [x for x in urls if x]:
+    for u in list(dict.fromkeys(x for x in urls if x)):
+        page={'url':u,'feeds':[],'jsonld_events':0}
         try: html=request(u).text
-        except Exception: continue
-        extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+        except Exception as ex:
+            page['error']=str(ex)[:180]; debug['pages'].append(page); continue
+        extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted); page['jsonld_events']=len(extracted)
         feeds.extend(discover_embedded_calendar_feeds(u,html))
-        for feed in list(dict.fromkeys(feeds))[:12]:
-            try: out.extend(events_from_ical(feed,source))
-            except Exception: pass
-    return dedupe_events(out)
+        feeds=list(dict.fromkeys(feeds))[:12]; page['feeds']=feeds
+        for feed in feeds:
+            if feed not in debug['feeds']: debug['feeds'].append(feed)
+            try:
+                got=events_from_ical(feed,source); out.extend(got)
+                debug['events_by_feed'][feed]=len(got)
+            except Exception as ex:
+                debug['events_by_feed'][feed]={'error':str(ex)[:180]}
+        debug['pages'].append(page)
+    result=dedupe_events(out)
+    debug['events_total']=len(result)
+    try: (DATA/'pma-calendar-discovery.json').write_text(json.dumps(debug,indent=2)+'\\n')
+    except Exception: pass
+    return result
 
 def events_from_miaa_committed_pdf(url, source):
     """Extract Norwood's dated varsity opponents from an MIAA committed-schedule grid PDF.
