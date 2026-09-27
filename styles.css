@@ -113,3 +113,10 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
   #heyNorwoodNotices .hey-norwood-slot{height:82px!important;min-height:82px!important;max-height:82px!important}
   #heyNorwoodNotices .good-to-know-item{align-items:center!important}
 }
+
+
+/* Final alert alignment override: center the actual active alert content, not merely its slide box. */
+.site-timely-alert .site-timely-track{position:relative!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.site-timely-alert .site-timely-item.is-active{box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:0!important;margin:0!important;height:100%!important;min-height:0!important;max-height:none!important;width:100%!important;line-height:1.2!important}
+.site-timely-alert .site-timely-item.is-active>strong,
+.site-timely-alert .site-timely-item.is-active>span{vertical-align:middle}
