@@ -6474,13 +6474,14 @@
       "verified_at": "2026-09-27",
       "basis": "PMA /events is the working public event listing; ingest visible dated event cards every refresh and use structured/calendar feeds only as supplements."
     },
-    "notes": "Scrape /events every automated refresh as the primary PMA source. Structured/ICS discovery is supplemental. Preserve all dated PMA calendar events for the selectable Schools > Parent Music Association/Fine Arts calendar, subject only to deduplication and clear private/internal exclusions.",
+    "notes": "PERSISTENT PRIMARY SOURCE: scrape https://norwoodpma.org/events on every automated refresh and retain visible dated public events for the selectable Schools > Parent Music Association/Fine Arts calendar. Do not require or wait for an ICS/Google feed. Structured/ICS discovery is supplemental only. Deduplicate against other school sources and exclude clearly private/internal events.",
     "conflict_profile": "default",
     "health_policy": {
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "empty_result_is_failure": true
     }
   },
   {
