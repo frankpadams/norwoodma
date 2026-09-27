@@ -1403,7 +1403,10 @@ def events_from_visible_dated_page(url, source, category='community', series=Non
 def events_from_pma_website_api(source):
     """Ingest PMA's public website calendar API used by the rendered /events page."""
     api='https://app.norwoodpma.org/api/website-calendar'
-    payload=request(api).json()
+    local=DATA/'pma-calendar-api.json'
+    if not local.exists():
+        raise RuntimeError('PMA calendar download missing; workflow must fetch '+api)
+    payload=json.loads(local.read_text(encoding='utf-8'))
     # Tolerate either a bare list or an object wrapping the event list.
     if isinstance(payload,list): rows=payload
     elif isinstance(payload,dict):
