@@ -11187,7 +11187,8 @@
         "home_away",
         "field"
       ],
-      "current_season_discovery": true
+      "current_season_discovery": true,
+      "fallback_hub_url": "https://norwoodsoccer.com/"
     },
     "filters": {
       "require_norwood_relevance": true
