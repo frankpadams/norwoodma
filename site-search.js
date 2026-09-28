@@ -140,7 +140,7 @@
   (window.NORWOOD_HOWDO||[]).forEach(h=>out.push({name:h.title,url:'how-do-i.html#'+h.id,type:'How Do I?',text:[h.text,h.keywords,'question answer help'].join(' '),norwoodPage:true}));
   return out.map(x=>({
    ...x,
-   officialTown:x.officialTown===true||/^https?:\/\/(?:www\.)?norwoodma\.gov(?:\/|$)/i.test(String(x.url||''))
+   officialTown:x.officialTown===true||/^https?:\/\/(?:www\.)?(?:norwoodma\.gov|norwoodlight\.com)(?:\/|$)/i.test(String(x.url||''))
   }));
  }
  function search(raw,limit=12){
