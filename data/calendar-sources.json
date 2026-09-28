@@ -750,5 +750,36 @@
         "recovery-na"
       ]
     }
+  },
+  {
+    "id": "boston-parents-paper-norwood",
+    "group": "parents",
+    "name": "Boston Parents Paper — Norwood",
+    "description": "Family events from Boston Parents Paper that are explicitly located in Norwood. Norwood events also flow into the normal community calendar after deduplication.",
+    "view_url": "https://bostonparentspaper.com/family-event-calendar/",
+    "provider": "Boston Parents Paper",
+    "kind": "internal",
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "boston-parents-paper-norwood"
+      ]
+    }
+  },
+  {
+    "id": "boston-parents-paper-greater-boston",
+    "group": "nearby",
+    "name": "Greater Boston Family Events — Boston Parents Paper",
+    "description": "Optional regional family calendar from Boston Parents Paper. Turn this on to see Greater Boston events beyond Norwood; out-of-town events are not part of the default Norwood calendar.",
+    "view_url": "https://bostonparentspaper.com/family-event-calendar/",
+    "provider": "Boston Parents Paper",
+    "kind": "internal",
+    "data_available": true,
+    "selector": {
+      "source_ids": [
+        "boston-parents-paper-norwood",
+        "boston-parents-paper-greater-boston"
+      ]
+    }
   }
 ]
