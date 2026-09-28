@@ -1284,7 +1284,7 @@
   },
   {
     "name": "Immigration Law Office of Carmen Bello",
-    "category": "Immigration, Refugee & Asylum Support",
+    "category": "Private Immigration Attorney",
     "description": "Private immigration law office in Norwood handling immigration and asylum matters, including family-based petitions, permanent residency, citizenship/naturalization and related USCIS processes.",
     "url": "https://www.google.com/maps/search/?api=1&query=Immigration+Law+Office+Carmen+Bello+705+Washington+St+Norwood+MA",
     "tags": "private attorney immigration lawyer Norwood Carmen Bello asylum green card permanent residency citizenship naturalization family immigration USCIS",
@@ -6253,6 +6253,98 @@
       "education-family"
     ],
     "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MIRA Coalition — Immigration Helpline",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Statewide non-emergency immigration helpline for Massachusetts residents offering general immigration information, Know Your Rights information, help locating case/application information, resources and referrals, including what to do after someone is detained by immigration.",
+    "url": "https://www.miracoalition.org/resources/immigration-helpline/",
+    "phone": "508-293-1871",
+    "tags": "immigration ICE helpline Know Your Rights detention deportation immigrant refugee legal referral Massachusetts",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Nonprofit / referral",
+    "verified": "2026-09"
+  },
+  {
+    "name": "PAIR Project — Asylum & Detention Legal Help",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Free immigration legal services focused on asylum seekers and detained immigrants in Massachusetts, including asylum intake, detention legal orientation, bond and removal-defense assistance for eligible clients.",
+    "url": "https://www.pairproject.org/gethelp",
+    "phone": "617-742-9296",
+    "tags": "PAIR asylum ICE detention detained immigrant bond removal defense deportation immigration lawyer free legal aid",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Massachusetts",
+    "provider_type": "Nonprofit legal services",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Legal Representation Fund — ICE Detention Help",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Massachusetts-funded legal assistance for people recently detained by ICE. The state lists separate hotlines for detained people and for family or friends seeking help.",
+    "url": "https://www.mass.gov/info-details/resources-for-immigrants-in-massachusetts",
+    "phone": "617-637-8195",
+    "tags": "ICE detained detention immigration lawyer legal representation fund family hotline deportation Massachusetts",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "State-funded legal assistance",
+    "verified": "2026-09",
+    "source_note": "Detained hotline 617-637-8195; family/friends hotline 617-396-7143."
+  },
+  {
+    "name": "Massachusetts — Resources for Immigrants",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Commonwealth resource hub for immigration legal assistance, detention/removal help, trusted legal referrals and other resources for immigrants in Massachusetts.",
+    "url": "https://www.mass.gov/info-details/resources-for-immigrants-in-massachusetts",
+    "tags": "Massachusetts immigrants ICE detention deportation legal help immigration attorney notario fraud resources",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Government resource",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Law Office of Melanie Shapiro, LLC",
+    "category": "Private Immigration Attorney",
+    "description": "Private immigration law practice in nearby Westwood handling immigration matters including family-based immigration, asylum and immigration-court matters.",
+    "url": "https://www.melanieshapiroesq.com/",
+    "phone": "781-461-0100",
+    "address": "378 Washington St Ste 2, Westwood, MA 02090",
+    "tags": "private attorney immigration lawyer Westwood Norwood area asylum family immigration immigration court",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Nearby — Westwood",
+    "provider_type": "Private legal provider",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Brazen Legal Immigration Law Firm",
+    "category": "Private Immigration Attorney",
+    "description": "Immigration-focused law practice in nearby Randolph handling U.S. immigration matters including removal defense, waivers and other immigration cases.",
+    "url": "https://brazenlegal.com/",
+    "phone": "508-942-7497",
+    "address": "10 Mazzeo Dr Ste 201A, Randolph, MA 02368",
+    "tags": "private attorney immigration lawyer Randolph Norwood area deportation removal defense waiver TPS",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Nearby — Randolph",
+    "provider_type": "Private legal provider",
     "verified": "2026-09"
   }
 ]
