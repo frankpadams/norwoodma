@@ -20,6 +20,7 @@ const topics=[
 ['transport','Transportation','Bus, commuter rail, accessible transportation and local mobility.',['mbta','transit','transport','airport','rail','bus','ride','paratransit']],
 ['employment','Employment','Job search, career development, vocational rehabilitation, workforce training and employment supports.',['job','employment','career','workforce','vocational','resume','masshire']],
 ['financial-assistance','Money, Benefits & Financial Assistance','Benefits, financial assistance, taxes, scholarships and practical financial support.',['benefit','financial','scholarship','unemployment','tax','social security','cash assistance']],
+['domestic-violence','Domestic Violence Support','Confidential help, advocacy, safety planning, shelter and legal resources for people experiencing domestic or partner violence.',['domestic violence','partner violence','abuse','safety planning','shelter','restraining order','DOVE']],
 ['community','Community & Belonging','Civic groups, volunteering, clubs and community connections.',['civic','volunteer','community','rotary','elks','club','immigrant','lgbtq']],
 ['worship','Houses of Worship','Churches, temples, synagogues, mosques and nearby faith communities.',['worship','religious','faith','church','temple','synagogue','mosque','parish','congregation','jewish','muslim','hindu','catholic','baptist','episcopal','unitarian']],
 ['todo','Things to Do','Library, recreation, arts, sports, trails, parks and history.',['library','recreation','arts','culture','theatre','trail','sport','history','park','museum']],
