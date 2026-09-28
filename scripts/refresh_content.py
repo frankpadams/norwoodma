@@ -2889,6 +2889,7 @@ def event_is_curated_default(e):
     """Match the normal What's Happening default without making broad calendar tags do browser-side inference."""
     if e.get('curated_default') is True or e.get('whats_happening_default') is True: return True
     sid=str(e.get('source_id') or '').lower()
+    if sid=='boston-parents-paper-greater-boston': return False
     if sid in ('library-assabet-calendar','library-cfce'): return True
     access=str(e.get('public_access') or 'public').lower()
     if access in ('private','members_only'): return False
