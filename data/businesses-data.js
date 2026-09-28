@@ -8,7 +8,7 @@ window.NORWOOD_BUSINESSES=[
   ],
   [
     "Ajay’s Market",
-    "Groceries",
+    "International Grocers - Irish, British & European",
     "166 Walpole Street",
     "781-762-8788",
     ""
@@ -57,7 +57,7 @@ window.NORWOOD_BUSINESSES=[
   ],
   [
     "Apna Bazar",
-    "Groceries",
+    "International Grocers - Indian & South Asian",
     "989 Providence Highway",
     "781-255-1777",
     "https://www.apnabazar.com/"
