@@ -635,8 +635,8 @@ window.NORWOOD_BUSINESSES=[
 ,["School of Rock Norwood/Walpole","Music Schools & Lessons","1250 Washington St","781-352-2336","https://www.schoolofrock.com/locations/norwood"]
 ,["Norwood Music Studios","Music Schools & Lessons","","","https://norwoodmusicstudios.com/"]
 ,["Merry Melody Music Academy","Music Schools & Lessons","","781-929-5192","https://www.merrymelodymusicacademy.com/"]
-,["Music With Sarah","Music Schools & Lessons","95 Prospect St","603-933-9173",""
-,
+,["Music With Sarah","Music Schools & Lessons","95 Prospect St","603-933-9173",""],
+
   ["Monro Auto Service and Tire Centers","Auto Repair, Tires & Inspection","450 Walpole Street","781-269-2623","https://locations.monro.com/ma/norwood/450-walpole-st"],
   ["RM Car Care","Auto Repair, Tires & Maintenance","1150 Providence Highway","781-769-3901",""],
   ["Norwood Gulf","Auto Repair & Vehicle Inspection","707 Neponset Street","781-255-7368","https://www.norwoodgulf.com/"],
@@ -657,5 +657,22 @@ window.NORWOOD_BUSINESSES=[
   ["Cedar Market","International Grocers - Lebanese & Middle Eastern","13 Cottage Street","781-769-8855",""],
   ["Sayar Market","International Grocers - Middle Eastern, Mediterranean & Halal","568 Boston Providence Highway","978-298-2438",""],
   ["Brazil For You","International Grocers - Brazilian; Prepared Foods & Restaurant","1001 Boston Providence Highway","781-352-8006","https://www.brazilforyou.com/"],
-  ["Golden Bull Norwood","International Grocers - Brazilian & Latin","1068 Washington Street","781-352-4445",""]
+  ["Golden Bull Norwood","International Grocers - Brazilian & Latin","1068 Washington Street","781-352-4445",""],
+["Ashfield Cheyne Veterinary Services","Veterinary & Animal Hospitals","33 Broadway","781-255-5151",""],
+["Bay State Barbershop","Barbers, Salons & Personal Care","1145 Washington Street","781-352-3596",""],
+["Impeccable Barber Co.","Barbers, Salons & Personal Care","599 Washington Street","781-762-9465",""],
+["Romeros Barbershop","Barbers, Salons & Personal Care","520 Washington Street","857-258-4531",""],
+["Charles Barber Shop","Barbers, Salons & Personal Care","635 Washington Street","781-762-8934",""],
+["Art and Craft Salon","Barbers, Salons & Personal Care","50 Central Street, Unit 3","781-352-4442",""],
+["Hair Therapy Spa","Barbers, Salons & Personal Care","54 Cottage Street E","781-686-3083",""],
+["Dellaria Salon","Barbers, Salons & Personal Care","20 Broadway","781-762-8050",""],
+["Robert Way Construction","Contractors & Remodeling","916 Pleasant Street, Unit 5","781-769-1611",""],
+["Barreto Home Improvement Corp","HVAC & Home Improvement","990 Washington Street, Suite 18","781-956-9096",""],
+["TSD Electric LLC","Electrical Contractors","273 Lenox Street, Suite 7","617-553-3454",""],
+["Echo House Painting","Painting & Home Improvement","814 Norwest Drive","781-403-4809",""],
+["Kreate and Print","Printing, Copying & Signs","14 Central Street","781-255-0505","https://kreateandprint.com/"],
+["Vantage Graphics","Printing, Copying & Signs","273 Lenox Street, Suite 8","617-796-9900","https://vangraph.com/"],
+["BluEdge","Business Technology, Printing & IT Services","575 University Avenue","857-383-3700","https://bluedge.com/"],
+["EchoStor Technologies","IT Solutions & Technology Services","220 Norwood Park South, Suite 201","866-818-1313",""],
+["Pinnacle Technology Partners (PTP)","IT, Cloud & Cybersecurity Services","83 Morse Street, Unit 8V","617-297-9670",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
