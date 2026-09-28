@@ -13,10 +13,14 @@ const stations=[
 ];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const root=document.querySelector('#gasStations');
-function priceBox(label,value){return '<div class="gas-price"><span>'+esc(label)+'</span><b>'+(value?('$'+Number(value).toFixed(2)):'—')+'</b></div>';}
+const money=v=>Number.isFinite(Number(v))?'$'+Number(v).toFixed(2):'—';
 function render(prices={}){
- root.innerHTML=stations.map(s=>{const p=prices[s.name]||{};return '<article class="gas-card"><h2>'+esc(s.name)+(s.nearby?' <small>Nearby</small>':'')+'</h2><p>'+esc(s.address)+(s.nearby?', MA':', Norwood, MA')+'</p><div class="gas-prices">'+priceBox('Regular',p.regular)+priceBox('Midgrade',p.midgrade)+priceBox('Premium',p.premium)+priceBox('Diesel',p.diesel)+'</div>'+(p.updated?'<p><small>Price data updated '+esc(p.updated)+'</small></p>':'<p><small>Live price not currently available.</small></p>')+'<div class="gas-actions"><a href="'+esc(s.map)+'" target="_blank" rel="noopener">Directions ↗</a>'+(s.phone?'<a href="tel:'+esc(s.phone)+'">'+esc(s.phone)+'</a>':'')+'</div></article>';}).join('');
+ const rows=stations.map((s,i)=>({s,p:prices[s.name]||{},i})).sort((a,b)=>{
+  const ap=Number(a.p.regular),bp=Number(b.p.regular),ah=Number.isFinite(ap)&&ap>0,bh=Number.isFinite(bp)&&bp>0;
+  if(ah!==bh)return ah?-1:1;if(ah&&ap!==bp)return ap-bp;return a.i-b.i;
+ });
+ root.innerHTML=rows.map(({s,p})=>'<article class="gas-row"><div class="gas-station"><strong>'+esc(s.name)+(s.nearby?' <small>Nearby</small>':'')+'</strong><span>'+esc(s.address)+(s.nearby?', MA':', Norwood, MA')+'</span></div><div class="gas-fuel regular"><span>Regular</span><b>'+money(p.regular)+'</b></div><div class="gas-fuel"><span>Mid</span><b>'+money(p.midgrade)+'</b></div><div class="gas-fuel"><span>Premium</span><b>'+money(p.premium)+'</b></div><div class="gas-fuel"><span>Diesel</span><b>'+money(p.diesel)+'</b></div><div class="gas-links"><a href="'+esc(s.map)+'" target="_blank" rel="noopener">Directions ↗</a>'+(s.phone?'<a href="tel:'+esc(s.phone)+'">'+esc(s.phone)+'</a>':'')+(p.updated?'<small>Updated '+esc(p.updated)+'</small>':'')+'</div></article>').join('');
 }
 render();
-fetch('data/gas-prices.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(d&&d.stations){render(d.stations);const el=document.querySelector('#priceStatus');if(el)el.innerHTML='<strong>Live prices:</strong> Latest available station price data. Check each station’s reported update time; pump prices may change.';}}).catch(()=>{});
+fetch('data/gas-prices.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(d&&d.stations){render(d.stations);const el=document.querySelector('#priceStatus');if(el)el.innerHTML='<strong>Prices:</strong> Sorted lowest to highest by the latest available regular-gas price. Stations without a current regular price appear last.';}}).catch(()=>{});
 })();
