@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-09-28T01:25:46.303663Z",
+  "generated_at": "2026-09-28T07:01:23.746178Z",
   "source": "Google Places API (New)",
   "stations": {
     "BJ's Gas Station": {
       "diesel": 6.1,
-      "premium": 4.94,
-      "regular": 4.14,
-      "updated": "2026-09-26T19:33:43Z"
+      "premium": 5.0,
+      "regular": 4.2,
+      "updated": "2026-09-27T17:26:02Z"
     },
     "CITGO": {
       "diesel": 6.3,
       "midgrade": 5.0,
       "premium": 5.2,
       "regular": 4.2,
-      "updated": "2026-09-26T19:47:55Z"
+      "updated": "2026-09-27T17:22:43Z"
     },
     "Costco Gas \u2014 Sharon": {
-      "premium": 4.93,
+      "premium": 4.94,
       "regular": 4.14,
-      "updated": "2026-09-27T03:34:03Z"
+      "updated": "2026-09-27T18:19:03Z"
     },
     "Mobil / On the Run \u2014 Norwood Center": {
       "midgrade": 5.9,
@@ -29,23 +29,29 @@
     "Mobil \u2014 Route 1": {
       "diesel": 6.3,
       "midgrade": 5.3,
-      "premium": 5.4,
+      "premium": 5.3,
       "regular": 4.2,
-      "updated": "2026-09-26T19:44:21Z"
+      "updated": "2026-09-27T14:30:26Z"
     },
     "Norwood Gulf": {
-      "diesel": 6.3,
+      "diesel": 6.2,
       "midgrade": 4.9,
       "premium": 5.1,
       "regular": 4.4,
-      "updated": "2026-09-26T19:54:26Z"
+      "updated": "2026-09-27T09:07:22Z"
     },
     "Shell \u2014 Pleasant Street": {
       "diesel": 6.5,
       "midgrade": 4.9,
-      "premium": 5.41,
-      "regular": 4.4,
-      "updated": "2026-09-26T07:35:39Z"
+      "premium": 5.3,
+      "regular": 4.26,
+      "updated": "2026-09-27T11:39:31Z"
+    },
+    "Sunoco \u2014 Route 1": {
+      "midgrade": 4.97,
+      "premium": 5.52,
+      "regular": 4.26,
+      "updated": "2026-09-26T19:52:33Z"
     }
   }
 }
