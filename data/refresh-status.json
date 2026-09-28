@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T16:41:50.225880-04:00",
+  "generated_at": "2026-09-28T16:53:12.920241-04:00",
   "offline": false,
   "events_published": 2639,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2639,
-      "generated_at": "2026-09-28T16:41:49.397606-04:00"
+      "generated_at": "2026-09-28T16:53:12.395681-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 94,
-      "generated_at": "2026-09-28T16:41:49.409101-04:00"
+      "generated_at": "2026-09-28T16:53:12.407860-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 956,
-      "generated_at": "2026-09-28T16:41:49.433060-04:00"
+      "generated_at": "2026-09-28T16:53:12.433087-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 861,
-      "generated_at": "2026-09-28T16:41:49.453513-04:00"
+      "generated_at": "2026-09-28T16:53:12.454678-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 6,
-      "generated_at": "2026-09-28T16:41:49.464807-04:00"
+      "generated_at": "2026-09-28T16:53:12.465985-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 79,
-      "generated_at": "2026-09-28T16:41:49.477756-04:00"
+      "generated_at": "2026-09-28T16:53:12.478813-04:00"
     }
   ],
   "recreation_programs": 173,
@@ -1212,6 +1212,20 @@
       "method": "verified_recurring_schedule",
       "found": 0,
       "note": "source returned zero events; zero events is configured as a failure"
+    },
+    {
+      "source_id": "boston-parents-paper-norwood",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/"
+    },
+    {
+      "source_id": "boston-parents-paper-greater-boston",
+      "ok": false,
+      "method": "html_calendar",
+      "found": 0,
+      "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/"
     }
   ],
   "news_sources": [
