@@ -151,6 +151,15 @@
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
   // Normalize the shared primary navigation regardless of older page-level markup.
+  // Every page except the homepage gets a Home link, and it stays first in the menu.
+  const isHomePage=/\/(?:index\.html)?$/i.test(location.pathname);
+  nav.querySelectorAll('a[href="index.html"]').forEach(a=>{if(/^home$/i.test(a.textContent.trim()))a.remove();});
+  if(!isHomePage){
+    const home=document.createElement('a');
+    home.href='index.html';
+    home.textContent='Home';
+    nav.insertBefore(home,nav.firstChild);
+  }
   nav.querySelectorAll('a[href="map.html"],a[href="transit.html"],a[href="calendars.html"],a[href*="events.html?calendars"]').forEach(a=>a.remove());
   nav.querySelectorAll('a[href="discover.html"]').forEach(a=>{a.textContent='More';});
   if(!nav.querySelector('a[href="discover.html"]')){
