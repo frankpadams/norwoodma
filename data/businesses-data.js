@@ -694,7 +694,7 @@ window.NORWOOD_BUSINESSES=[
 ["FM","Insurance, Engineering & Major Employers","1175 Boston-Providence Turnpike","781-255-4934","https://www.fm.com/"],
 ["M.S. Walker","Wholesale Distribution & Major Employers","","","https://mswalker.com/"],
 ["Metropolitan Cabinets & Countertops","Manufacturing, Cabinets & Countertops; Major Employers","505 University Avenue","781-949-8900","https://metcabinet.com/"],
-["CertainTeed","Manufacturing & Major Employers","","","https://www.certainteed.com/"],
+["CertainTeed — Norwood","Roofing Manufacturing & Major Employers","1077 Pleasant Street","781-551-0656","https://www.certainteed.com/"],
 ["Advanced Instruments","Scientific Instruments, Manufacturing & Major Employers","","","https://www.aicompanies.com/"],
 ["GZA GeoEnvironmental","Engineering & Environmental Services; Major Employers","","","https://www.gza.com/"],
 ["National Amusements","Corporate Offices, Entertainment & Major Employers","","","https://www.nationalamusements.com/"],
@@ -741,5 +741,10 @@ window.NORWOOD_BUSINESSES=[
 ["Associates in Internal Medicine — Norwood","Primary Care & Internal Medicine","825 Washington Street, Suite 340","781-762-9010",""],
 ["Brown Health Medical Group Orthopedics — Norwood","Orthopedics & Musculoskeletal Care","1345 Boston-Providence Turnpike","781-769-4660","https://www.brownhealth.org/"],
 ["ADAPS Healthcare","Primary Care & Wellness","520 Boston-Providence Turnpike, Suite 8A","781-829-3300",""],
-["Federal Injury Centers of Boston — Norwood","Injury Rehabilitation & Medical Care","520 Providence Highway","781-786-2716",""]
+["Federal Injury Centers of Boston — Norwood","Injury Rehabilitation & Medical Care","520 Providence Highway","781-786-2716",""],
+["The CCS Companies","Collection Services, Business Services & Major Employers","725 Canton Street","617-965-2000",""],
+["Cohu, Inc.","Semiconductor Test Technology, Engineering & Major Employers","825 University Avenue","781-461-1000","https://www.cohu.com/"],
+["ADMET Materials Testing Systems","Materials Testing Equipment, Manufacturing & Engineering","51 Morgan Drive","781-769-0850","https://www.admet.com/"],
+["Atrius Health — Norwood","Multi-Specialty Medical Care","1177 Providence Highway, Suite 1","781-278-5600","https://www.atriushealth.org/"],
+["Ram Clinic PC","Primary Care & Medical Aesthetics","1200 Providence Highway, Suite 210","781-333-3444",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
