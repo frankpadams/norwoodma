@@ -5436,5 +5436,77 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Statewide",
     "verified": "2026-09",
     "source_note": "Official Massachusetts DDS Deaf Services page."
+  },
+  {
+    "name": "Massachusetts DCF — Disability Coordinator & Regional Disability Liaisons",
+    "category": "Disability & Family",
+    "description": "DCF disability-access resource for parents and caregivers with disabilities. The Statewide Disability Coordinator and Regional Disability Liaisons help with reasonable accommodations, communication aids and disability-related concerns or complaints involving DCF.",
+    "url": "https://www.mass.gov/resources-for-parents-with-disabilities",
+    "tags": "DCF disability coordinator regional disability liaison parent caregiver ADA reasonable accommodation communication access disability rights",
+    "topics": [
+      "disability-support",
+      "family-support",
+      "kids",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Disabled Persons Protection Commission (DPPC)",
+    "category": "Disability Safety & Rights",
+    "description": "Independent Massachusetts state agency that receives and oversees investigations of abuse and neglect involving adults with disabilities. Its abuse-reporting hotline operates statewide.",
+    "url": "https://www.mass.gov/orgs/disabled-persons-protection-commission",
+    "tags": "DPPC disabled persons protection commission abuse neglect disability safety protective services hotline rights",
+    "topics": [
+      "disability-support",
+      "safety-crisis",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Independent Living Centers",
+    "category": "Disability & Independent Living",
+    "description": "Statewide network of disability-led Centers for Independent Living offering information and referral, peer support, independent-living skills, transition assistance and individual/systemic advocacy. Use the state locator to find the center serving your community.",
+    "url": "https://www.mass.gov/independent-living-centers",
+    "tags": "independent living center ILC CIL disability peer support advocacy skills transition housing transportation PCA",
+    "topics": [
+      "disability-support",
+      "community-groups",
+      "housing-assistance",
+      "transport",
+      "employment"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MassAbility — Assistive Technology Services",
+    "category": "Disability & Assistive Technology",
+    "description": "State assistive-technology services including equipment and devices for independent living, device loans, demonstrations and pickup centers, communication devices, mobility equipment and other adaptive technology.",
+    "url": "https://www.mass.gov/info-details/massability-assistive-technology-services",
+    "tags": "MassAbility MRC assistive technology AT device loan wheelchair communication device adaptive equipment REquipment",
+    "topics": [
+      "disability-support",
+      "medical-care",
+      "employment"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MassAccess Accessible Housing Registry",
+    "category": "Disability & Housing",
+    "description": "Accessible-housing resource for people with disabilities, families and advocates, with information about accessible state/federally assisted and private housing and connections to application help through Independent Living Centers.",
+    "url": "https://www.mass.gov/massaccess-housing-program",
+    "tags": "MassAccess accessible housing disability apartment rental homeownership registry wheelchair accessibility housing",
+    "topics": [
+      "disability-support",
+      "housing-assistance"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
   }
 ];
