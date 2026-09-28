@@ -645,4 +645,14 @@ window.NORWOOD_BUSINESSES=[
   ["Nucar Hyundai of Norwood","Auto Dealers, Repair, Tires & Oil Change","1201 Providence Highway","877-469-5380","https://www.nucarhyundainorwood.com/"],
   ["Nucar Chevrolet of Norwood","Auto Dealers, Repair, Tires & Oil Change","381 Providence Highway","781-762-8300","https://www.nucarchevroletnorwood.com/"],
   ["Hertz Car Rental - Norwood","Car & Van Rental","315 Morse Street","781-255-9405","https://www.hertz.com/"]
+,
+  ["ALDI - East Walpole","Supermarkets","70 Boston-Providence Turnpike, East Walpole","855-955-2534","https://stores.aldi.us/ma/walpole/70-boston-providence-turnpike"],
+  ["Wegmans - Westwood","Supermarkets","169 University Avenue, Westwood","781-234-0300","https://www.wegmans.com/stores/westwood-ma/"],
+  ["Trader Joe's - Foxborough","Supermarkets","350 Patriot Place, Foxborough","508-543-1978","https://locations.traderjoes.com/ma/foxborough/"],
+  ["Whole Foods Market - Dedham","Supermarkets","300 Legacy Place, Dedham","781-329-7100","https://www.wholefoodsmarket.com/stores/dedham"],
+  ["Lambert's Fruit - Westwood","Produce Markets & Specialty Groceries","220 Providence Highway, Westwood","781-326-5047","https://www.lambertsfruit.com/"],
+  ["Costco Wholesale - Dedham","Warehouse Clubs","200 Legacy Boulevard, Dedham","781-251-9975","https://www.costco.com/warehouse-locations/dedham-ma-319.html"],
+  ["Costco Wholesale - Sharon","Warehouse Clubs","160 Old Post Road, Sharon","781-253-7640","https://www.costco.com/warehouse-locations/sharon-ma-1704.html"],
+  ["BJ's Wholesale Club - Dedham","Warehouse Clubs","688 Providence Highway, Dedham","","https://www.bjs.com/"],
+  ["BJ's Gas - Norwood","Gas Stations","1415 Boston-Providence Turnpike, Norwood","","https://www.bjs.com/"]
 ];return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"};});
