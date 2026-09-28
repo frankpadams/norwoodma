@@ -636,4 +636,13 @@ window.NORWOOD_BUSINESSES=[
 ,["Norwood Music Studios","Music Schools & Lessons","","","https://norwoodmusicstudios.com/"]
 ,["Merry Melody Music Academy","Music Schools & Lessons","","781-929-5192","https://www.merrymelodymusicacademy.com/"]
 ,["Music With Sarah","Music Schools & Lessons","95 Prospect St","603-933-9173",""]
-].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:[b[1]];return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"};});
+].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:[b[1],
+  ["Jim's Automotive Center","Auto Repair & Mechanics","291 Lenox Street","781-762-9547",""],
+  ["Monro Auto Service and Tire Centers","Auto Repair, Tires & Inspection","450 Walpole Street","781-269-2623","https://locations.monro.com/ma/norwood/450-walpole-st"],
+  ["RM Car Care","Auto Repair, Tires & Maintenance","1150 Providence Highway","781-769-3901",""],
+  ["Norwood Gulf","Auto Repair & Vehicle Inspection","707 Neponset Street","781-255-7368","https://www.norwoodgulf.com/"],
+  ["Clay Subaru","Auto Dealers, Repair, Tires & Oil Change","842 Providence Highway","781-650-5338","https://www.claysubaru.com/"],
+  ["Nucar Hyundai of Norwood","Auto Dealers, Repair, Tires & Oil Change","1201 Providence Highway","877-469-5380","https://www.nucarhyundainorwood.com/"],
+  ["Nucar Chevrolet of Norwood","Auto Dealers, Repair, Tires & Oil Change","381 Providence Highway","781-762-8300","https://www.nucarchevroletnorwood.com/"],
+  ["Hertz Car Rental - Norwood","Car & Van Rental","315 Morse Street","781-255-9405","https://www.hertz.com/"]
+];return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"};});
