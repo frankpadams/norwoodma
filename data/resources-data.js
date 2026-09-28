@@ -5803,5 +5803,19 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
     "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
+    "name": "Planned Parenthood League of Massachusetts",
+    "category": "Medical & Health",
+    "description": "Sexual and reproductive health care and education, including birth control, STI testing and treatment, pregnancy testing and options counseling, abortion care, gender-affirming care and other preventive health services. Find locations and appointments through the Massachusetts affiliate.",
+    "url": "https://www.plannedparenthood.org/planned-parenthood-massachusetts",
+    "tags": "Planned Parenthood PPLM reproductive health sexual health birth control contraception STI STD testing pregnancy testing abortion options counseling gender affirming LGBTQ preventive health",
+    "topics": [
+      "medical",
+      "pregnancy",
+      "lgbtq-support"
+    ],
+    "coverage": "Massachusetts",
+    "verified": "2026-09"
   }
 ];
