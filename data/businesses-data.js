@@ -1194,5 +1194,9 @@ window.NORWOOD_BUSINESSES=[
   ["RS Auto Detail Inc.","Auto Detailing","990 Washington Street","",""],
   ["RS Massage, Inc.","Massage & Wellness","117 Broadway","",""],
   ["Ruma Fruit & Produce Co., Inc.","Produce & Food Distribution","239 Railroad Avenue","",""],
-  ["Laenen & Pilgrim, Inc.","Aviation Services","209 Access Road, Gate 3","",""]
+  ["Laenen & Pilgrim, Inc.","Aviation Services","209 Access Road, Gate 3","",""],
+  ["Puritan Restoration","Water, Fire & Mold Restoration","1504 Providence Highway, Suite 09","781-449-5552","https://puritanrestoration.net/"],
+  ["911 Restoration of Boston","Water, Fire & Mold Restoration","83 Morse Street, Building 6, Unit 6H","617-631-8450",""],
+  ["Pop-A-Lock Locksmith","Locksmith & Emergency Lockout Services","824 Providence Highway","339-219-1700",""],
+  ["SERVPRO of Norwood / West Roxbury","Water, Fire & Mold Restoration","257 Washington Street, Westwood, MA 02090","781-769-9125","https://www.servpro.com/locations/ma/norwood"]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
