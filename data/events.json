@@ -97,36 +97,6 @@
     ]
   },
   {
-    "id": "2026-09-27-september-2026-f23215e",
-    "title": "September 2026",
-    "start": {
-      "date": "2026-09-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-27-adult-bible-study-series-3b447eb",
     "title": "Adult Bible Study series",
     "start": {
@@ -189,7 +159,7 @@
     ]
   },
   {
-    "id": "2026-09-27-school-of-rock-concert-b245771",
+    "id": "2026-09-27-school-of-rock-concert-bb96bec",
     "title": "School of Rock concert",
     "start": {
       "date": "2026-09-27",
@@ -197,26 +167,24 @@
     },
     "end": {
       "date": "2026-09-27",
-      "time": "19:00"
+      "time": null
     },
-    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
-    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
-    "category": "live_music",
+    "venue": null,
+    "address": null,
+    "category": "community",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/school-of-rock-concert",
     "cost": null,
-    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": null,
+    "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
+    "verification_status": "official_visible_event_page",
+    "notes": "Sep 27 School of Rock concert Sunday, September 27, 2026 2:00 PM 7:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
+    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
-      "norwood-arts",
       "norwood-community",
       "norwood-family"
     ]
@@ -12881,7 +12849,7 @@
     ]
   },
   {
-    "id": "2026-10-14-g-jv-soccer-vs-millis-high-school-093f4d3",
+    "id": "2026-10-14-g-jv-soccer-vs-millis-high-school-0eb6d91",
     "title": "G JV Soccer vs Millis High School",
     "start": {
       "date": "2026-10-14",
@@ -12891,8 +12859,8 @@
       "date": "2026-10-14",
       "time": "18:00"
     },
-    "venue": "295 Vernon St, Norwood MA 02062",
-    "address": "295 Vernon St, Norwood MA 02062",
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-jv-soccer",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -12902,7 +12870,7 @@
     "series": "Norwood Girls JV Soccer",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: G JV Team: Norwood High School Site: Norwood-Father Mac's Subsite: #1",
+    "notes": "Sport: Soccer Level: G JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -20781,36 +20749,6 @@
       "rec-adult-fitness",
       "rec-all",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-27-october-2026-b3f480d",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
