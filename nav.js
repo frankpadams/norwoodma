@@ -127,7 +127,7 @@
     let touchX=null;
     track.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;paused=true;stop();},{passive:true});
     track.addEventListener('touchend',e=>{if(touchX!==null){const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>35)show(current+(dx<0?1:-1),true);}touchX=null;paused=false;start();},{passive:true});
-    if(slides.length<2){strip.querySelector('.site-timely-prev').hidden=true;strip.querySelector('.site-timely-next').hidden=true;}
+    if(slides.length<2){strip.querySelector('.site-timely-prev')?.remove();strip.querySelector('.site-timely-next')?.remove();strip.classList.add('site-timely-single');}
     show(0);start();
     const independent=document.querySelector('.independent');
     if(existing)existing.replaceWith(strip);
