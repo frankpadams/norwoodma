@@ -129,7 +129,7 @@ function render(){
  const biz=businessesForTopic(t[0]).map(businessResource);
  const seen=new Set(rows.map(r=>r.name.toLowerCase()));
  biz.forEach(b=>{if(!seen.has(b.name.toLowerCase()))rows.push(b);});
- root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p><div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;
+ const businessGateway=t[0]==='medical'?'<a class="trash-resource-link resource-business-gateway" href="businesses.html#health"><b>Looking for a medical provider?</b><span>Browse local health, dental & wellness businesses →</span></a>':'';\n  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${businessGateway}<div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;
  root.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
