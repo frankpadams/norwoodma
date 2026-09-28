@@ -674,5 +674,17 @@ window.NORWOOD_BUSINESSES=[
 ["Vantage Graphics","Printing, Copying & Signs","273 Lenox Street, Suite 8","617-796-9900","https://vangraph.com/"],
 ["BluEdge","Business Technology, Printing & IT Services","575 University Avenue","857-383-3700","https://bluedge.com/"],
 ["EchoStor Technologies","IT Solutions & Technology Services","220 Norwood Park South, Suite 201","866-818-1313",""],
-["Pinnacle Technology Partners (PTP)","IT, Cloud & Cybersecurity Services","83 Morse Street, Unit 8V","617-297-9670",""]
+["Pinnacle Technology Partners (PTP)","IT, Cloud & Cybersecurity Services","83 Morse Street, Unit 8V","617-297-9670",""],
+["OneLocal Bank","Banks & Financial Services","11 Central Street","781-762-1800","https://www.onelocalbank.com/"],
+["Citizens Bank — Norwood","Banks & Financial Services","134 Nahatan Street","","https://www.citizensbank.com/"],
+["TD Bank — Norwood","Banks & Financial Services","143 Nahatan Street","","https://www.td.com/us/en/personal-banking"],
+["Rockland Trust — Norwood","Banks & Financial Services","61 Lenox Street","781-769-3728","https://www.rocklandtrust.com/"],
+["Santander Bank — Norwood","Banks & Financial Services","153 Nahatan Street","","https://www.santanderbank.com/"],
+["Dedham Savings — Norwood","Banks & Financial Services","185 Central Street","781-762-8500","https://www.dedhamsavings.com/"],
+["Members Plus Credit Union — Norwood","Credit Unions & Financial Services","111 Lenox Street, Unit 101","781-702-5969","https://www.memberspluscu.org/"],
+["Silver & Sage Floral Design","Florists & Gifts","646 Washington Street","781-769-7690",""],
+["Yelenna’s Flowers","Florists & Gifts","842 Washington Street","781-769-2570",""],
+["Mazzola’s Norwood Monumental Works","Monuments & Memorials","943 Washington Street","781-762-1735","https://norwoodmonumental.com/"],
+["Sam’s Appliances & Furniture","Appliances, Furniture & Repair","1232 Washington Street","781-762-4343","https://www.shopsamsappliance.com/"],
+["Wentworth Service Station","Auto Repair & Mechanics","145 Broadway","617-524-3713",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
