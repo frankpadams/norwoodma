@@ -107,3 +107,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
   .news-page-grid{align-items:start}
   .news-page-grid .news-sources{position:static;top:auto;align-self:start}
 }
+
+
+/* Resource directory cards: separate individual resources from the page background. */
+.resource-list .resource-item{background:#fff;}
