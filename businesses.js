@@ -30,11 +30,11 @@ function render(){
  if(!sub){
    const broad=businesses.filter(b=>g.match.test(text(b)));
    const tiles=g.subs.map(s=>{const n=broad.filter(b=>s[2].test(text(b))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
-   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">Choose a more specific category.</p><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div></section>';
+   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">Choose a more specific category. <a class="business-map-link" href="map.html?business='+encodeURIComponent(g.label)+'">View this category on map</a></p><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div></section>';
  } else {
    const s=g.subs.find(x=>x[0]===sub);if(!s){setHash(group);return;}
    const rows=businesses.filter(b=>g.match.test(text(b))&&s[2].test(text(b))).sort((a,b)=>a.name.localeCompare(b.name));
-   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+esc(g.label)+'</button><p class="eyebrow">'+esc(g.label.toUpperCase())+'</p><h2>'+esc(s[1])+'</h2><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';
+   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+esc(g.label)+'</button><p class="eyebrow">'+esc(g.label.toUpperCase())+'</p><h2>'+esc(s[1])+'</h2><p class="sub"><a class="business-map-link" href="map.html?business='+encodeURIComponent(s[1])+'">View these businesses on map</a></p><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';
  }
  document.querySelector('.resource-back')?.addEventListener('click',()=>{if(sub)setHash(group);else{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});}});
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
