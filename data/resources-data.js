@@ -6221,5 +6221,23 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
+  },,
+  {
+    "name": "Clarke Schools for Hearing and Speech — Canton",
+    "category": "Deaf & Hard of Hearing Education — Listening & Spoken Language",
+    "description": "Canton school and family resource for children who are Deaf or hard of hearing. Listening & Spoken Language (oral/aural approach; no sign-language instruction), with early intervention, preschool/early childhood, speech-language therapy, educational audiology and mainstream-school support.",
+    "url": "https://www.clarkeschools.org/canton/",
+    "tags": "Deaf hard of hearing DHH oral aural auditory oral listening spoken language LSL hearing aids cochlear implants early intervention preschool speech audiology mainstream Canton",
+    "topics": [
+      "health",
+      "kids",
+      "community",
+      "disability-support",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Nearby — Canton",
+    "address": "1 Whitman Road, Canton, MA 02021",
+    "verified": "2026-09"
   },
 ];
