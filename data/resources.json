@@ -814,7 +814,8 @@
     "tags": "food assistance free meal meals meal kits pantry Blessings Box shelf stable no registration First Congregational Church",
     "topics": [
       "community",
-      "food-assistance"
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "Local",
     "address": "100 Winter St, Norwood, MA 02062",
@@ -965,7 +966,8 @@
     "url": "https://www.gbfb.org/need-food/",
     "tags": "food pantry groceries hunger emergency food",
     "topics": [
-      "food-assistance"
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -1177,7 +1179,8 @@
     "tags": "meals on wheels home delivered meals senior nutrition older adult food",
     "topics": [
       "older",
-      "food-assistance"
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2081,7 +2084,8 @@
     "topics": [
       "jobs",
       "food-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2422,7 +2426,8 @@
       "older",
       "food-assistance",
       "housing-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2537,7 +2542,8 @@
     "topics": [
       "kids",
       "housing",
-      "food-assistance"
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -3151,7 +3157,8 @@
     "topics": [
       "kids",
       "older",
-      "food-assistance"
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4360,7 +4367,8 @@
       "older",
       "jobs",
       "food-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -4633,7 +4641,8 @@
       "kids",
       "food-assistance",
       "education-family",
-      "family-support"
+      "family-support",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4709,7 +4718,8 @@
       "kids",
       "assistance",
       "food-assistance",
-      "family-support"
+      "family-support",
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4781,7 +4791,8 @@
       "jobs",
       "food-assistance",
       "financial-assistance",
-      "family-support"
+      "family-support",
+      "basic-needs"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -5619,7 +5630,8 @@
       "financial-assistance",
       "housing-assistance",
       "food-assistance",
-      "safety-crisis"
+      "safety-crisis",
+      "basic-needs"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5648,7 +5660,8 @@
     "topics": [
       "food-assistance",
       "family-support",
-      "kids"
+      "kids",
+      "basic-needs"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5662,7 +5675,8 @@
     "tags": "HESSCO — Meals on Wheels Food Assistance",
     "topics": [
       "food-assistance",
-      "older"
+      "older",
+      "basic-needs"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5834,5 +5848,20 @@
     ],
     "coverage": "Massachusetts",
     "verified": "2026-09"
+  },
+  {
+    "name": "Little Free Food Pantry — Railroad Avenue",
+    "category": "Food & Basic Needs",
+    "description": "Outdoor mini food pantry stocked with non-perishable food for neighbors and families in need. Accessible 24/7; take what you need and leave what you can.",
+    "url": "https://www.google.com/maps/search/?api=1&query=280+Railroad+Ave+Norwood+MA",
+    "tags": "little free food pantry mini pantry food assistance emergency groceries nonperishable 24/7 Railroad Avenue Norwood",
+    "topics": [
+      "food-assistance",
+      "basic-needs"
+    ],
+    "coverage": "Norwood",
+    "address": "280 Railroad Ave, Norwood, MA",
+    "verified": "2026-09",
+    "source_note": "Community-provided local food resource."
   }
 ]
