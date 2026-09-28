@@ -1769,7 +1769,8 @@
       "jobs",
       "kids",
       "food-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2134,7 +2135,8 @@
     "topics": [
       "kids",
       "food-assistance",
-      "family-support"
+      "family-support",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2715,13 +2717,14 @@
   },
   {
     "name": "New Life Furniture Bank of Massachusetts",
-    "category": "Basic Needs",
-    "description": "Furniture bank in nearby Walpole providing household furnishings through referring agencies.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
-    "tags": "furniture household basic needs family",
+    "category": "Food & Basic Needs",
+    "description": "Furniture bank providing essential household furnishings to individuals and families transitioning out of homelessness or otherwise in need, through referring partner agencies.",
+    "url": "https://newlifefb.org/",
+    "tags": "furniture household basic needs family furniture household furnishings home essentials basic needs",
     "topics": [
       "kids",
-      "housing"
+      "housing",
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -3933,7 +3936,8 @@
       "health",
       "food-assistance",
       "education-family",
-      "family-support"
+      "family-support",
+      "basic-needs"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -5814,6 +5818,19 @@
       "medical",
       "pregnancy",
       "lgbtq-support"
+    ],
+    "coverage": "Massachusetts",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Fresh Start Furniture Bank",
+    "category": "Food & Basic Needs",
+    "description": "Furniture bank helping people in need obtain essential household furnishings and home goods at no cost through its community assistance program.",
+    "url": "https://freshstartfurniturebank.org/",
+    "tags": "Fresh Start Furniture Bank free furniture household goods furnishings basic needs home essentials",
+    "topics": [
+      "basic-needs",
+      "housing-assistance"
     ],
     "coverage": "Massachusetts",
     "verified": "2026-09"
