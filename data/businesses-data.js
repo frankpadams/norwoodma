@@ -703,5 +703,11 @@ window.NORWOOD_BUSINESSES=[
 ["Amazon DCB4 — Norwood","Distribution & Logistics","750 Everett Street","","https://www.amazon.com/"],
 ["The Home Depot Distribution Center","Distribution & Logistics","625 University Avenue","781-278-9420","https://www.homedepot.com/"],
 ["Siemens","Medical Technology, Engineering & Major Employers","109 Morgan Drive","","https://www.siemens.com/"],
-["Analog Devices","Technology, Engineering & Manufacturing","1 Technology Way","508-222-0168","https://www.analog.com/"]
+["Analog Devices","Technology, Engineering & Manufacturing","1 Technology Way","508-222-0168","https://www.analog.com/"],
+["Bearingstar Insurance — Norwood","Insurance","315 Norwood Park South, Suite 107","508-583-7393","https://www.bearingstar.com/contact-us/locations/norwood/"],
+["Norris, Murray & Peloquin, LLC","Attorneys & Legal Services","315 Norwood Park South","781-762-2229","https://nmplabor.com/"],
+["Town Business Systems","Office Equipment, Printing & Business Technology","170 Kerry Place","781-762-1900","https://www.townbusiness.com/"],
+["Boston Executive FBO","Aviation Services & Fixed-Base Operator","209 Access Road, Gate 3","617-482-6595","https://www.bostonexecutive.com/"],
+["INNOVEX","IT, Office Technology & Digital Marketing","90 Kerry Place, Suite 1","617-903-5300","https://www.innovex.co/"],
+["Boston Physical Therapy & Wellness — Norwood","Physical Therapy & Rehabilitation","576 Pleasant Street","781-874-9294","https://www.bostonptwellness.com/"]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
