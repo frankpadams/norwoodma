@@ -19,8 +19,9 @@
   function render({focusResults=false}={}){
     const q=normalize(search.value||'');
     const cat=category.value||'';
+    const hasFoodTag=(r,term)=>searchable(r).includes(normalize(term));
     const terms=q?q.split(' ').filter(Boolean):[];
-    const visible=restaurants.filter(r=>((!cat)||(cat==='Gluten-Free'?r.gluten_free:r.category===cat))&&terms.every(t=>searchable(r).includes(t)));
+    const visible=restaurants.filter(r=>((!cat)||(cat==='Gluten-Free'?r.gluten_free:cat==='Sushi'?hasFoodTag(r,'sushi'):cat==='Hibachi'?hasFoodTag(r,'hibachi'):r.category===cat))&&terms.every(t=>searchable(r).includes(t)));
     const pieces=[];
     if(q) pieces.push(`matching “${search.value.trim()}”`);
     if(cat) pieces.push(cat==='Gluten-Free'?'with gluten-free options':`in ${cat}`);
@@ -37,7 +38,7 @@
   function load(){
     const sortName=name=>String(name||'').replace(/^the\s+/i,'');
     restaurants=restaurants.slice().sort((a,b)=>sortName(a.name).localeCompare(sortName(b.name),undefined,{sensitivity:'base'}));
-    const categories=[...new Set(restaurants.map(r=>r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    const categories=[...new Set(restaurants.map(r=>r.category).filter(Boolean).concat(['Sushi','Hibachi']))].sort((a,b)=>a.localeCompare(b));
     category.innerHTML='<option value="">All cuisines & types</option><option value="Gluten-Free">Gluten-Free</option>'+categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
     render();
   }
