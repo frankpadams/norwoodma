@@ -709,5 +709,18 @@ window.NORWOOD_BUSINESSES=[
 ["Town Business Systems","Office Equipment, Printing & Business Technology","170 Kerry Place","781-762-1900","https://www.townbusiness.com/"],
 ["Boston Executive FBO","Aviation Services & Fixed-Base Operator","209 Access Road, Gate 3","617-482-6595","https://www.bostonexecutive.com/"],
 ["INNOVEX","IT, Office Technology & Digital Marketing","90 Kerry Place, Suite 1","617-903-5300","https://www.innovex.co/"],
-["Boston Physical Therapy & Wellness — Norwood","Physical Therapy & Rehabilitation","576 Pleasant Street","781-874-9294","https://www.bostonptwellness.com/"]
+["Boston Physical Therapy & Wellness — Norwood","Physical Therapy & Rehabilitation","576 Pleasant Street","781-874-9294","https://www.bostonptwellness.com/"],
+["FlightLevel Aviation","Aviation Services & Fixed-Base Operator","125 Access Road","800-370-8680","https://www.flightlevelaviation.com/"],
+["East Coast Aero Club — Norwood","Flight Schools & Aircraft Rental","106 Access Road","781-278-8800","https://eastcoastaeroclub.com/"],
+["Budget Car Rental — Norwood Airport","Car & Van Rental","125 Access Road","781-551-2712","https://www.budget.com/"],
+["Avis Car Rental — Norwood Airport","Car & Van Rental","125 Access Road","781-762-6505","https://www.avis.com/"],
+["Interstate All Battery Center — Norwood","Batteries, Auto Parts & Commercial Supply","51 Morgan Drive, Unit 5","781-232-5089","https://www.interstatebatteries.com/"],
+["Velocity Sports Performance","Fitness & Personal Training","111 Morgan Drive","781-349-8434",""],
+["Grainger — Norwood","Industrial Supply & Distribution","428 University Avenue","","https://www.grainger.com/"],
+["MSI Boston","Stone, Tile & Building Materials; Distribution & Logistics","1080 University Avenue","","https://www.msisurfaces.com/"],
+["U-Haul Moving & Storage — Norwood","Moving, Storage & Truck Rental","390 Boston Providence Highway","781-769-2240","https://www.uhaul.com/"],
+["Penske Truck Rental — Norwood","Truck Rental & Commercial Transportation","924 Boston Providence Highway","781-255-0466","https://www.pensketruckrental.com/"],
+["The Sign Center","Signs, Printing & Graphics","1400 Providence Highway, Suite 2500","781-278-0150",""],
+["American Taxi — Norwood","Taxi, Airport Shuttle & Transportation","246 Nahatan Street","781-492-4561",""],
+["A Plus Taxi Service","Taxi, Airport Shuttle & Transportation","301 Buckminster Drive","781-249-8837",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
