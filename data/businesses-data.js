@@ -746,5 +746,15 @@ window.NORWOOD_BUSINESSES=[
 ["Cohu, Inc.","Semiconductor Test Technology, Engineering & Major Employers","825 University Avenue","781-461-1000","https://www.cohu.com/"],
 ["ADMET Materials Testing Systems","Materials Testing Equipment, Manufacturing & Engineering","51 Morgan Drive","781-769-0850","https://www.admet.com/"],
 ["Atrius Health — Norwood","Multi-Specialty Medical Care","1177 Providence Highway, Suite 1","781-278-5600","https://www.atriushealth.org/"],
-["Ram Clinic PC","Primary Care & Medical Aesthetics","1200 Providence Highway, Suite 210","781-333-3444",""]
+["Ram Clinic PC","Primary Care & Medical Aesthetics","1200 Providence Highway, Suite 210","781-333-3444",""],
+["American Star Roofing","Roofing, Siding & Gutters","839 Washington Street, Suite 2D","508-561-4572",""],
+["Coyle Construction","Roofing, Gutters & Exterior Construction","","781-760-4771",""],
+["Kilraine & Sons Paint & Roof","Roofing & Painting","85 Vernon Street","781-762-7663",""],
+["Neponset Valley Construction Corporation","Roofing & General Contracting","61 Endicott Street","781-762-1102",""],
+["R&D Roofing & Gutters Corp.","Roofing & Gutters","","781-208-6646",""],
+["W.P. Walsh Associates, Inc.","Roofing & Home Construction","165 Lenox Street","781-551-4442",""],
+["Brooks Bros Aluminum","Roofing, Siding & Windows","106 Access Road","781-762-4962",""],
+["RES Home Improvements","Roofing, Siding & Home Improvements","46 Chatham Road","774-360-3561",""],
+["PAG Contracting","Roofing, Decks & General Contracting","23 Bornwood Drive","781-690-6177",""],
+["A-1 Roofing & Window Co.","Roofing, Siding & Windows","108 Washington Street","781-769-2026",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
