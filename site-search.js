@@ -117,7 +117,16 @@
  ];
  function thingMatches(raw){
    const q=norm(raw),terms=q.split(/\s+/).filter(x=>x.length>2);if(!q||!terms.length)return[];
-   return libraryThings.map(t=>{const h=norm(t.name+' '+t.terms+' '+t.desc);let score=h.includes(q)?30:0;terms.forEach(w=>{if(norm(t.name).includes(w))score+=12;else if(h.includes(w))score+=5});return{...t,score}}).filter(t=>t.score>=10).sort((a,b)=>b.score-a.score).slice(0,4);
+   const generic=new Set(['park','parks','outdoor','outdoors','music','party','game','games','sport','sports','repair','tools','technology','food','home','clean','cleaning','movie','movies','reading','yard','garden']);
+   return libraryThings.map(t=>{
+    const name=norm(t.name),keywords=norm(t.terms),desc=norm(t.desc),h=name+' '+keywords+' '+desc;
+    const exactPhrase=h.includes(q),namePhrase=name.includes(q);
+    let score=namePhrase?45:exactPhrase?24:0,matched=0;
+    terms.forEach(w=>{if(name.split(/\s+/).includes(w)){score+=16;matched++;}else if(keywords.split(/\s+/).includes(w)){score+=7;matched++;}else if(desc.split(/\s+/).includes(w)){score+=3;matched++;}});
+    const singleStrong=terms.length===1&&(name.split(/\s+/).includes(terms[0])||(!generic.has(terms[0])&&keywords.split(/\s+/).includes(terms[0])&&terms[0].length>=5));
+    const multiStrong=terms.length>1&&(namePhrase||exactPhrase||matched>=2);
+    return{...t,score,eligible:singleStrong||multiStrong};
+   }).filter(t=>t.eligible&&t.score>=20).sort((a,b)=>b.score-a.score).slice(0,3);
  }
 
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
