@@ -125,7 +125,13 @@
   const out=pages.map(p=>({...p,norwoodPage:p.norwoodPage!==false}));
   townCanonical.forEach(t=>out.push({...t}));
   (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
-  (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true}));
+  (window.NORWOOD_RESOURCES||[]).forEach(r=>{
+   const rawUrl=String(r.url||'');
+   const libraryGuide=/^https?:\/\/(?:www\.)?norwoodlibrary\.org\/commres-/i.test(rawUrl);
+   const topic=Array.isArray(r.topics)&&r.topics.length?r.topics[0]:'';
+   const listingUrl=topic?'resources.html#'+encodeURIComponent(topic):'resources.html';
+   out.push({name:r.name,url:libraryGuide?listingUrl:(rawUrl||listingUrl),type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true});
+  });
   const businessRows=(window.NORWOOD_BUSINESSES||[]).map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4],labels:[],tags:[]}:b);
   const businessCats={};
   businessRows.forEach(b=>{
