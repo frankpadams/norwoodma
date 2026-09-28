@@ -213,7 +213,7 @@ async function loadEvents(){
      }
    }
  }catch(e){}
- const today=dateKey(new Date());return items.filter(e=>(e.end?.date||e.start?.date||'')>=today&&e.publish_candidate!==false).sort((a,b)=>(a.start?.date||'').localeCompare(b.start?.date||'')||(a.start?.time||'99:99').localeCompare(b.start?.time||'99:99'));
+ const today=dateKey(new Date());return items.filter(e=>{const text=[e.title,e.series,e.notes,e.organizer,e.venue].filter(Boolean).join(' ').toLowerCase();if(/norwood blood drives|september 2026/.test(text)&&/blood/.test(text))return false;return (e.end?.date||e.start?.date||'')>=today&&e.publish_candidate!==false;}).sort((a,b)=>(a.start?.date||'').localeCompare(b.start?.date||'')||(a.start?.time||'99:99').localeCompare(b.start?.time||'99:99'));
 }
 function groupEvents(items){
  const now=new Date(),today=dateKey(now),tom=new Date(now);tom.setDate(tom.getDate()+1);const tomorrow=dateKey(tom);
