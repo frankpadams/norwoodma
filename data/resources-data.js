@@ -3467,11 +3467,23 @@ window.NORWOOD_RESOURCES= [
     ]
   },
   {
-    "name": "Norwood Light Electric & Broadband",
+    "name": "Norwood Light Electric",
     "category": "Utilities",
-    "description": "Municipal electric utility.",
+    "description": "Norwood’s municipal electric utility, including electric service, billing, outages and customer information.",
     "url": "https://norwoodlight.com/",
-    "tags": "electric utility outage power internet broadband bill",
+    "tags": "electric electricity power utility electric bill billing outage outages service municipal",
+    "coverage": "Local",
+    "verified": "2026-09",
+    "topics": [
+      "town"
+    ]
+  },
+  {
+    "name": "Norwood Light Broadband & Internet",
+    "category": "Utilities",
+    "description": "Norwood Light’s municipal broadband and internet service, including service information, plans, billing and customer support.",
+    "url": "https://norwoodlight.com/",
+    "tags": "broadband internet wifi fiber service plans internet bill billing customer support municipal",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
