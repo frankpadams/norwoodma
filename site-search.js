@@ -94,7 +94,7 @@
  const stop=new Set(['a','an','and','are','at','for','from','how','i','in','is','it','me','my','of','on','or','the','to','with']);
  const words=s=>norm(s).split(/\s+/).filter(w=>w&&!stop.has(w));
  const editDistance=(a,b)=>{if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++)cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=cur}return prev[b.length]};
- const closeWord=(q,w)=>{if(q===w)return 1;if(q.length>=3&&w.startsWith(q))return .86;if(w.length>=3&&q.startsWith(w))return .72;if(q.length<4||w.length<4)return 0;const d=editDistance(q,w),m=Math.max(q.length,w.length);return d===1?.72:(d===2&&m>=7?.48:0)};
+ const closeWord=(q,w)=>{if(q===w)return 1;if(q.length>=4&&w.startsWith(q))return .86;if(w.length>=4&&q.startsWith(w)&&q.length-w.length<=3)return .72;if(q.length<5||w.length<5)return 0;const d=editDistance(q,w),m=Math.max(q.length,w.length);return d===1?.72:(d===2&&m>=8?.42:0)};
  const aliasTerms=raw=>{const direct=aliases[raw]||'';const perWord=words(raw).map(w=>aliases[w]||'').join(' ');return norm(direct+' '+perWord)};
 
  const libraryThings=[
@@ -167,8 +167,9 @@
    if(x.business&&score>=30)score+=3;
    if(acronym&&aliasTerms(raw)){if(nameWords.includes(raw)||typeWords.includes(raw))score+=50;}
    let tier=3;
-   if(x.norwoodPage&&!x.business&&!x.calendar&&!x.recreation&&x.type!=='Event'&&score>=18)tier=1;
-   else if(x.canonicalTown&&score>=18)tier=2;
+   const strongCore=matchedCore>0||name===raw||name.startsWith(raw)||name.includes(raw)||body.includes(raw);
+   if(x.norwoodPage&&!x.business&&!x.calendar&&!x.recreation&&x.type!=='Event'&&strongCore&&score>=18)tier=1;
+   else if(x.canonicalTown&&strongCore&&score>=18)tier=2;
    return{x,score,tier,matchedCore};
   }).filter(o=>o.score>7&&(queryWords.length<=1||o.matchedCore>0))
    .sort((a,b)=>a.tier-b.tier||b.score-a.score||a.x.name.localeCompare(b.x.name))
