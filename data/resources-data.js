@@ -6204,5 +6204,22 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
-  }
+  },
+  {
+    "name": "Massachusetts Hands & Voices",
+    "category": "Deaf & Hard of Hearing Family Support",
+    "description": "Parent-driven statewide support for families with children who are Deaf or hard of hearing, including family connections, advocacy, workshops, resources and information across communication approaches.",
+    "url": "https://www.masshv.org/",
+    "tags": "Deaf hard of hearing DHH children family parent support advocacy ASL communication early intervention education Hands Voices",
+    "topics": [
+      "health",
+      "kids",
+      "community",
+      "disability-support",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
 ];
