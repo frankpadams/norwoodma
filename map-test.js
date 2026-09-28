@@ -7,9 +7,10 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
-const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedCategory=params.get('category')||'';
+const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedBusinessGroup=params.get('businessGroup')||'',requestedBusinessSub=params.get('businessSub')||'',requestedCategory=params.get('category')||'';
 if(requestedCategory&&category&&[...category.options].some(o=>o.value===requestedCategory)){filter=requestedCategory;category.value=requestedCategory;}
-if(requestedBusiness&&search){search.value=requestedBusiness;filter='business';if(category)category.value='business';}
+if((requestedBusinessGroup||requestedBusinessSub)&&category){filter='business';category.value='business';if(search)search.value='';}
+else if(requestedBusiness&&search){search.value=requestedBusiness;filter='business';if(category)category.value='business';}
 else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
 const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
@@ -112,7 +113,7 @@ function cleanAddress(a){
 }
 const dynamic=[];
 (window.NORWOOD_RESTAURANTS||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:'food',address:a,details:r.cuisine||r.category||'Restaurant',url:r.url||'restaurants.html'});});
-(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(a)dynamic.push({name:b.name,category:'business',address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
+(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(a)dynamic.push({name:b.name,category:'business',businessText:norm([b.category,b.labels,b.tags].flat().filter(Boolean).join(' ')),address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
 (window.NORWOOD_RESOURCES||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:resourceCategory(r),address:a,details:r.description||r.category||'Community resource',url:r.url||'resources.html'});});
 (window.NORWOOD_EVENTS||[]).forEach(e=>{
  if(e.publish_candidate===false)return;
@@ -124,8 +125,26 @@ const dynamic=[];
 const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address);if(seen.has(k))return false;seen.add(k);return true});
 function publicSchoolMark(p){return p.publicSchool?'<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Norwood Public Schools" title="Norwood Public Schools" style="width:14px;height:14px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}
 function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+publicSchoolMark(p)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
+
+const businessTaxonomy={
+ automotive:{b:/auto|automotive|car wash|vehicle|towing|roadside|collision|tire|truck repair/i,s:{sales:/dealer|sales/i,repair:/repair|mechanic/i,collision:/collision|auto body|detail/i,tires:/tire/i,inspection:/inspection|car wash/i,towing:/towing|roadside/i,rental:/(car|van|truck).*rental|rental.*(car|van|truck)/i}},
+ home:{b:/hvac|plumb|heating|electric|contractor|home improvement|home repair|house cleaning|painting|remodel|garage door|roof|landscap|tree service|pest|pool service|masonry|chimney|gutter|flooring|fence|interior design|hardscap|cabinet|fireplace|glass|mirror|window repair|drywall|plaster|stucco|tile|marble|excavation|paving|restoration/i,s:{'emergency-restoration':/water.*restoration|fire.*restoration|mold.*restoration|restoration.*construction/i,hvac:/hvac|heating|refrigeration/i,plumbing:/plumb/i,electrical:/electric/i,roofing:/roof|siding/i,masonry:/masonry|chimney|hardscap/i,gutters:/gutter/i,'garage-doors':/garage door/i,painting:/painting|painter/i,flooring:/flooring/i,tile:/tile|marble/i,drywall:/drywall|plaster|stucco/i,glass:/glass|mirror|window repair/i,excavation:/excavation|site work|paving/i,contractors:/contractor|remodel|home improvement|home repair|construction/i,cleaning:/house cleaning|residential.*cleaning/i,landscape:/landscap|tree service|garden design/i,pest:/pest/i,interior:/interior design|home staging/i,cabinets:/cabinet|custom woodwork/i,fireplaces:/fireplace|grill|outdoor living/i}},
+ health:{b:/dental|orthodont|oral surgery|endodont|physical therapy|rehabilitation|optometr|eye care|ophthalm|eyewear|audiology|hearing|chiropractic|acupuncture|pharmac|medical|physician|neurolog|psychiatr|mental health|counsel|urgent care|primary care|internal medicine|orthopedic|occupational health|wellness|massage/i},
+ pets:{b:/pet|veterinar|animal hospital|groom|dog walk|pet sit|pet board|dog train/i,s:{veterinary:/veterinar|animal hospital/i,grooming:/groom/i,walking:/dog walk|pet sit/i,boarding:/pet board|dog daycare|dog train|pet daycare/i}},
+ professional:{b:/attorney|legal|account|tax|bookkeep|bank|financial|insurance|notary|real estate|mortgage|appraisal|valuation|mediation|benefit consulting/i},
+ personal:{b:/barber|salon|beauty|spa|massage|personal care|tailor|alteration|dry clean|laundry|nail|lash|wax|skin care|aesthetic/i},
+ fitness:{b:/fitness|personal training|martial arts|gymnast|swim|cheer|tumbling|music school|music.*lesson|dance school|dance.*lesson|yoga|barre|sports training|weightlifting|tutoring|education/i},
+ creative:{b:/artist|creative|photograph|design|gallery|glassblow|media|music|event|wedding|party|function hall|ballroom|conference.*venue|craft|maker|makerspace|workshop|audio production|film production|video production/i,s:{venues:/party.*venue|event venue|function hall|ballroom|conference.*venue|wedding.*venue/i,'kids-parties':/kids party|birthday part|children.*part|indoor play|family entertainment|arcade|mini golf/i,'event-services':/event service|catering|DJ|entertainment|event planning/i,artists:/artist|art studio|creative studio/i,photography:/photograph/i,design:/design|graphic/i,media:/media|audio production|film production|video production/i,makers:/maker|makerspace|craft|glassblow|workshop/i}},
+ lodging:{b:/hotel|lodging|marriott|sheraton|hampton inn|residence inn|holiday inn/i},
+ family:{b:/childcare|preschool|driving school|indoor play|children.*party|family entertainment/i},
+ housing:{b:/apartment|rental housing|assisted living|memory care|home care|senior services|adult day/i},
+ shopping:{b:/grocer|supermarket|produce|warehouse club|international grocer|garden center|nurser|florist|books|shopping|plants|gifts|bicycles|specialty retail|antiques|vintage|jewelry|collectibles|clothing|apparel|sporting goods|department store|beauty supply|musical instrument|home decor|candy|chocolate|convenience store|thrift|wine.*spirit|liquor/i},
+ 'business-services':{b:/printing|shipping|office|computer|technology|telecom|digital marketing|aviation|flight|aircraft|industrial|building materials|sign|manufactur|fabrication|testing|engineering|architecture|automation|aerospace|composite|electronics|sensor|thermal|machinery|equipment|biotechnology|pharmaceutical|collection services|business services|business consulting|semiconductor|materials testing|distribution|logistics|wholesale|corporate|scientific|environmental|marketing|commercial space|office space|food distribution/i},
+ other:{b:/self storage|moving|funeral|cremation|monument|memorial|headstone|grave marker|cemetery lettering|bronze plaque|florist|sympathy flower|funeral flower|locksmith|security|taxi|shuttle|transportation|truck rental|gas station|cleanout|junk removal/i,s:{gas:/gas station/i,storage:/self storage|storage & moving|moving/i,funeral:/funeral|cremation|monument|memorial|headstone|grave marker|cemetery lettering|bronze plaque|engraving|florist|sympathy flower|funeral flower/i,security:/locksmith|security/i,junk:/junk removal|cleanout/i,transportation:/taxi|shuttle|transportation|truck rental/i}}
+};
+function businessTaxonomyMatch(p){if(p.category!=='business'||!requestedBusinessGroup)return true;const g=businessTaxonomy[requestedBusinessGroup];if(!g)return true;const t=p.businessText||norm(p.details||'');if(!g.b.test(t))return false;const sm=requestedBusinessSub&&g.s&&g.s[requestedBusinessSub];return !sm||sm.test(t);}
 function searchMatch(p,q){return !q||norm([p.name,p.details,p.address,p.category,p.labels,p.tags].join(' ')).includes(q)}
-function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&searchMatch(p,q));}
+function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
  const key=norm(p.address);
