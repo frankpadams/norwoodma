@@ -1199,5 +1199,13 @@ window.NORWOOD_BUSINESSES=[
   ["911 Restoration of Boston","Water, Fire & Mold Restoration","83 Morse Street, Building 6, Unit 6H","617-631-8450",""],
   ["Pop-A-Lock Locksmith","Locksmith & Emergency Lockout Services","824 Providence Highway","339-219-1700",""],
   ["SERVPRO of Norwood / West Roxbury","Water, Fire & Mold Restoration","257 Washington Street, Westwood, MA 02090","781-769-9125","https://www.servpro.com/locations/ma/norwood"],
-  ["Norfolk County Veterinary Service","Veterinary & Animal Hospital","1428 Main Street, Suite 7, Walpole, MA 02081","508-668-5088","https://www.norfolkcountyvet.com/"]
+  ["Norfolk County Veterinary Service","Veterinary & Animal Hospital","1428 Main Street, Suite 7, Walpole, MA 02081","508-668-5088","https://www.norfolkcountyvet.com/"],
+  ["Mick Morgan's Camelot Room","Party & Event Venues","434 Providence Highway","781-806-0066","https://mickmorgansnorwood.com/private-event/"],
+  ["Byblos — Al Diwan Function Room","Party & Event Venues","678 Washington Street","781-278-0000","https://byblosrestaurant.com/function-room/"],
+  ["The Tiffany Ballroom at Four Points by Sheraton","Party, Wedding & Event Venues","1125 Providence Highway","781-255-3159",""],
+  ["Norwood Conference Center","Conference & Event Venues","1125 Providence Highway","781-255-3159",""],
+  ["The Skating Club of Boston — Birthday Parties","Kids Party & Event Venues","750 University Avenue","617-782-5900","https://scboston.org/birthday-parties/"],
+  ["Moon Lily Boutique — Parties","Kids Party & Event Venues","101 Central Street","781-501-1017","https://www.moonlilyboutique.com/parties"],
+  ["Workmen's Hall","Function Halls & Event Venues","99 1/2 Wilson Street","781-762-1146",""],
+  ["Norwood Elks Lodge #1124 — Function Hall","Function Halls & Event Venues","152 Winslow Avenue","781-762-9724",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
