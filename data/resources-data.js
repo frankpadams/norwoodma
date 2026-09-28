@@ -131,9 +131,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.google.com/maps/search/?api=1&query=Ann+Pappas+Physical+Therapy+470+Washington+St+Norwood+MA",
     "tags": "physical therapy PT rehab rehabilitation outpatient Norwood",
     "topics": [
-      "health",
-      "community",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "470 Washington St Ste 31, Norwood, MA 02062",
@@ -256,11 +254,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://locations.baystatept.com/ma/norwood/1343-boston-providence-highway",
     "tags": "physical therapy PT rehab sports injury orthopedic aquatic therapy pool balance gait concussion TMJ post surgical Norwood",
     "topics": [
-      "health",
-      "community",
-      "older",
-      "kids",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "1343 Boston Providence Hwy, Norwood, MA 02062",
@@ -399,9 +393,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://bostonptwellness.com/norwood/",
     "tags": "physical therapy PT rehab sports injury orthopedic sports medicine wellness Norwood",
     "topics": [
-      "health",
-      "community",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "576 Pleasant St, Norwood, MA 02062",
@@ -1265,10 +1257,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.highbarhealth.com/locations/norwood-ma/",
     "tags": "physical therapy PT rehab sports injury orthopedic post surgical dry needling Norwood",
     "topics": [
-      "health",
-      "community",
-      "recovery",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "115 Norwood Park S Ste 100, Norwood, MA 02062",
@@ -1383,10 +1372,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.jumpstartpt.com/locations/norwood/",
     "tags": "physical therapy PT rehab sports training sports injury orthopedic athlete return to sport Norwood",
     "topics": [
-      "health",
-      "community",
-      "kids",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "290 Vanderbilt Ave #1, Norwood, MA 02062",
@@ -1554,9 +1540,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.marathonphysicaltherapy.com/Locations/Norwood",
     "tags": "physical therapy PT rehab sports medicine aquatic therapy pelvic floor vestibular sports injury Norwood",
     "topics": [
-      "health",
-      "community",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "99 Vanderbilt Ave, Norwood, MA 02062",
@@ -2656,11 +2640,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://mw-pt.com/",
     "tags": "physical therapy PT rehab rehabilitation pain strength balance one on one Norwood",
     "topics": [
-      "health",
-      "community",
-      "older",
-      "recovery",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "898B Washington St, Norwood, MA 02062",
@@ -3592,9 +3572,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodpt.com/",
     "tags": "physical therapy PT rehab rehabilitation sports injury orthopedic post surgery chronic pain work injury Norwood",
     "topics": [
-      "health",
-      "community",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "49 Walpole St Suite 2, Norwood, MA 02062",
@@ -4528,9 +4506,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://ptandsr.com/locations/norwood",
     "tags": "physical therapy PT rehab sports injury orthopedic TMJ jaw pain dry needling Norwood",
     "topics": [
-      "health",
-      "community",
-      "medical-care"
+"medical-care"
     ],
     "coverage": "Local",
     "address": "32 Day St, Norwood, MA 02062",
