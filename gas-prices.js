@@ -28,7 +28,7 @@ function render(prices={}){
 render();
 fetch('data/gas-prices.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(d&&d.stations){render(d.stations);const el=document.querySelector('#priceStatus');if(el)el.innerHTML='<strong>Prices:</strong> Sorted lowest to highest by the latest available regular-gas price. Stations without a current regular price appear last.';}}).catch(()=>{});
 })();+Number(v).toFixed(2):'—';
-const age=t=>{const d=new Date(t),ms=Date.now()-d.getTime();if(!Number.isFinite(ms)||ms<0)return '';const m=Math.floor(ms/60000);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.floor(m/60);if(h<24)return h+' hr'+(h===1?'':'s')+' ago';const days=Math.floor(h/24);if(days<7)return days+' day'+(days===1?'':'s')+' ago';return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});};
+const age=t=>{const d=new Date(t),ms=Date.now()-d.getTime();if(!Number.isFinite(ms)||ms<0)return '';const m=Math.floor(ms/60000);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.floor(m/60),rm=m%60;if(h<48)return h+' hr'+(h===1?'':'s')+(rm?' '+rm+' min':'')+' ago';const days=Math.floor(h/24);if(days<7)return days+' day'+(days===1?'':'s')+' ago';return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});};
 function render(prices={}){
  const rows=stations.map((s,i)=>({s,p:prices[s.name]||{},i})).sort((a,b)=>{
   const ap=Number(a.p.regular),bp=Number(b.p.regular),ah=Number.isFinite(ap)&&ap>0,bh=Number.isFinite(bp)&&bp>0;
