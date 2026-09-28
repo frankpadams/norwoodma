@@ -733,5 +733,13 @@ window.NORWOOD_BUSINESSES=[
 ["American Holt Corporation","Machinery Parts & Manufacturing","203 Carnegie Row","781-440-9993",""],
 ["Kaufman Company","Industrial Supply & Distribution","19 Walkhill Road","781-255-1000",""],
 ["Advanced Thermal Solutions, Inc.","Thermal Engineering & Electronics","89 Access Road, Suite 27","781-769-2800","https://www.qats.com/"],
-["I&I Sling","Rigging, Lifting & Industrial Supply","1400 Providence Highway","781-575-0600",""]
+["I&I Sling","Rigging, Lifting & Industrial Supply","1400 Providence Highway","781-575-0600",""],
+["The Ellis Rehabilitation and Nursing Center","Skilled Nursing, Rehabilitation & Major Employers","135 Ellis Avenue","781-762-6880","https://www.theellis.com/"],
+["Reliable Respiratory","Home Medical Equipment & Major Employers","1502 Boston Providence Turnpike, Suite 12","781-551-3335","https://reliablerespiratory.com/"],
+["AFC Norwood Urgent Care","Urgent Care & Occupational Health","956 Providence Highway","617-395-4400","https://www.afcurgentcare.com/"],
+["Norwood Medical Associates","Primary Care & Internal Medicine","95 Chapel Street, Suite 3A","781-769-3113",""],
+["Associates in Internal Medicine — Norwood","Primary Care & Internal Medicine","825 Washington Street, Suite 340","781-762-9010",""],
+["Brown Health Medical Group Orthopedics — Norwood","Orthopedics & Musculoskeletal Care","1345 Boston-Providence Turnpike","781-769-4660","https://www.brownhealth.org/"],
+["ADAPS Healthcare","Primary Care & Wellness","520 Boston-Providence Turnpike, Suite 8A","781-829-3300",""],
+["Federal Injury Centers of Boston — Norwood","Injury Rehabilitation & Medical Care","520 Providence Highway","781-786-2716",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
