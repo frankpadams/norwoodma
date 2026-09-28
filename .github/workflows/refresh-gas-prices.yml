@@ -12,19 +12,19 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Fetch current fuel prices
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
         run: python3 scripts/update-gas-prices.py
       - name: Publish changed prices
         run: |
-          if git diff --quiet -- data/gas-prices.json; then
+          git add data/gas-prices.json
+          if git diff --cached --quiet; then
             echo "No gas-price changes."
             exit 0
           fi
           git config user.name "Norwood.ma automation"
           git config user.email "actions@users.noreply.github.com"
-          git add data/gas-prices.json
           git commit -m "Refresh gas prices"
           git push
