@@ -144,3 +144,11 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .old-footer .footer-legal{max-width:none}
 .old-footer>a:last-child{grid-column:2;justify-self:start;text-align:left;margin-top:2px}
 @media(max-width:760px){.old-footer{grid-template-columns:1fr}.old-footer>a:last-child{grid-column:1}}
+
+.old-footer .footer-brand{grid-column:1;grid-row:1;align-self:start}
+.old-footer .footer-meta{margin-top:6px;font-size:.78rem;line-height:1.4;opacity:.82}
+.old-footer .footer-legal{grid-column:2;grid-row:1}
+.old-footer .footer-links{display:flex;flex-wrap:wrap;gap:0 .45rem;align-items:center;margin-top:8px!important}
+.old-footer .footer-links a{font-weight:700}
+.old-footer>a:last-child{display:none}
+@media(max-width:760px){.old-footer .footer-brand,.old-footer .footer-legal{grid-column:1;grid-row:auto}}
