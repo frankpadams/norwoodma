@@ -1,6 +1,7 @@
 (()=>{
  const input=document.querySelector('#siteSearch'),box=document.querySelector('#siteSearchResults'),form=document.querySelector('#siteSearchForm');
  if(!input||!box||!form)return;
+ window.NorwoodSiteSearch=window.NorwoodSiteSearch||{};
  const resultsPage=document.body.classList.contains('search-results-page');
  let submitted=resultsPage;
  const pages=[
@@ -221,6 +222,7 @@
     return !arr.some((p,j)=>j<idx&&p.x.canonicalTown&&(norm(p.x.url)===u||norm(p.x.name)===n));
    }).slice(0,limit);
  }
+ window.NorwoodSiteSearch.search=(raw,limit=12)=>search(raw,limit);
  function noteSearch(query,count){
    try{
      const key='norwood-search-insights',now=new Date().toISOString();
