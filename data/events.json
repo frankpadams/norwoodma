@@ -191,6 +191,36 @@
     ]
   },
   {
+    "id": "2026-09-28-september-2026-a53681f",
+    "title": "September 2026",
+    "start": {
+      "date": "2026-09-28",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-09-28",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-09-28-zoom-with-a-law-librarian-f8a08be",
     "title": "Zoom with a Law Librarian",
     "start": {
@@ -17949,28 +17979,28 @@
     ]
   },
   {
-    "id": "2026-10-22-varsity-field-hockey-vs-holliston-high-school-a0eff86",
-    "title": "Varsity Field Hockey vs Holliston High School",
+    "id": "2026-10-22-junior-varsity-field-hockey-vs-holliston-high-998607a",
+    "title": "Junior Varsity Field Hockey vs Holliston High School",
     "start": {
       "date": "2026-10-22",
       "time": "16:30"
     },
     "end": {
       "date": "2026-10-22",
-      "time": "17:45"
+      "time": "17:30"
     },
     "venue": "245 Nichols St, Norwood MA 02062",
     "address": "245 Nichols St, Norwood MA 02062",
     "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
+    "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
     "cost": null,
-    "organizer": "Norwood Girls Varsity Field Hockey",
+    "organizer": "Norwood Girls JV Field Hockey",
     "public_access": "public",
-    "series": "Norwood Girls Varsity Field Hockey",
+    "series": "Norwood Girls JV Field Hockey",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Field Hockey Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "notes": "Sport: Field Hockey Level: Junior Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -18095,28 +18125,28 @@
     ]
   },
   {
-    "id": "2026-10-22-junior-varsity-field-hockey-vs-holliston-high-998607a",
-    "title": "Junior Varsity Field Hockey vs Holliston High School",
+    "id": "2026-10-22-varsity-field-hockey-vs-holliston-high-school-a0eff86",
+    "title": "Varsity Field Hockey vs Holliston High School",
     "start": {
       "date": "2026-10-22",
       "time": "18:00"
     },
     "end": {
       "date": "2026-10-22",
-      "time": "19:00"
+      "time": "19:15"
     },
     "venue": "245 Nichols St, Norwood MA 02062",
     "address": "245 Nichols St, Norwood MA 02062",
     "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
+    "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
     "cost": null,
-    "organizer": "Norwood Girls JV Field Hockey",
+    "organizer": "Norwood Girls Varsity Field Hockey",
     "public_access": "public",
-    "series": "Norwood Girls JV Field Hockey",
+    "series": "Norwood Girls Varsity Field Hockey",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Field Hockey Level: Junior Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "notes": "Sport: Field Hockey Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -21322,6 +21352,36 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-28-october-2026-773057d",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -70708,40 +70768,6 @@
     ]
   },
   {
-    "id": "2027-02-12-tvl-girls-ice-hockey-vs-dedham-ds-norton-co-o-a93577b",
-    "title": "TVL Girls Ice Hockey vs Dedham/DS/Norton Co-op",
-    "start": {
-      "date": "2027-02-12",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-02-12",
-      "time": "18:15"
-    },
-    "venue": "750 University Avenue, Norwood Massachusetts 02062",
-    "address": "750 University Avenue, Norwood Massachusetts 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Hockey",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Hockey",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Ice Hockey Level: TVL Girls Team: Norwood High School Site: Skating Club of Boston (Norwood) Subsite: East Rink",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-02-12-jv-girls-high-school-archbishop-williams-high-9438ac5",
     "title": "JV Girls High School @ Archbishop Williams High School",
     "start": {
@@ -71094,6 +71120,40 @@
     "discovered_by": "scheduled_recurring_series",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2027-02-13-tvl-girls-ice-hockey-vs-dedham-ds-norton-co-o-c86260e",
+    "title": "TVL Girls Ice Hockey vs Dedham/DS/Norton Co-op",
+    "start": {
+      "date": "2027-02-13",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2027-02-13",
+      "time": "16:45"
+    },
+    "venue": "750 University Avenue, Norwood Massachusetts 02062",
+    "address": "750 University Avenue, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Hockey",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Ice Hockey Level: TVL Girls Team: Norwood High School Site: Skating Club of Boston (Norwood) Subsite: East Rink",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -86350,6 +86410,74 @@
     ]
   },
   {
+    "id": "2027-04-12-varsity-softball-dedham-high-school-db54aa5",
+    "title": "Varsity Softball @ Dedham High School",
+    "start": {
+      "date": "2027-04-12",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-12",
+      "time": "18:30"
+    },
+    "venue": "140 Whiting Ave, Dedham MA 02026",
+    "address": "140 Whiting Ave, Dedham MA 02026",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Dedham High School Subsite: Loewen Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-12-varsity-baseball-dedham-high-school-119fb86",
+    "title": "Varsity baseball @ Dedham High School",
+    "start": {
+      "date": "2027-04-12",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-12",
+      "time": "18:30"
+    },
+    "venue": "Eastern Ave, Dedham MA 02026",
+    "address": "Eastern Ave, Dedham MA 02026",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Dedham Memorial Park Subsite: Heaphy Baseball Field (Front)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-5f99d7665326-2027-04-12",
     "title": "Hard Shoe 3 - Mondays",
     "start": {
@@ -92309,6 +92437,74 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Hopkinton High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-18-varsity-central-girls-lacrosse-hopkinton-high-aeccf00",
+    "title": "Varsity Central Girls Lacrosse @ Hopkinton High School",
+    "start": {
+      "date": "2027-05-18",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-05-18",
+      "time": "17:30"
+    },
+    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: Varsity Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-18-jv-central-girls-lacrosse-hopkinton-high-scho-c9ceecc",
+    "title": "JV Central Girls Lacrosse @ Hopkinton High School",
+    "start": {
+      "date": "2027-05-18",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-05-18",
+      "time": "19:00"
+    },
+    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
