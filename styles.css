@@ -110,4 +110,4 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 
 /* Resource directory cards: separate individual resources from the page background. */
-.resource-list .resource-item{background:#fff;}
+.resource-list .resource-item{background:#fff;padding:16px 18px;box-sizing:border-box;}
