@@ -7,8 +7,9 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
-const requestedPlace=new URLSearchParams(location.search).get('place')||'';
-if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
+const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'';
+if(requestedBusiness&&search){search.value=requestedBusiness;filter='business';if(category)category.value='business';}
+else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
 const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
