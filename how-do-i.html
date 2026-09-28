@@ -83,7 +83,7 @@ document.addEventListener('click',function(e){
     if(!target)return;
     target.open=true;
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      const y=target.getBoundingClientRect().top+window.scrollY-165;
+      const y=target.getBoundingClientRect().top+window.scrollY-161;
       window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
     }));
   }
