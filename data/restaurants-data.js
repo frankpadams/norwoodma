@@ -953,5 +953,16 @@ window.NORWOOD_RESTAURANTS= [
     "dinner_spinner": false,
     "food_menu": true,
     "status": "coming-soon"
+  },
+  {
+    "id": "orange-leaf-frozen-yogurt",
+    "name": "Orange Leaf Frozen Yogurt",
+    "category": "Bakery & Sweets",
+    "cuisine": "Frozen yogurt · Açaí & pitaya bowls · Desserts",
+    "address": "38 Vanderbilt Ave",
+    "url": "https://www.google.com/maps/search/?api=1&query=Orange+Leaf+Frozen+Yogurt%2C+38+Vanderbilt+Ave%2C+Norwood%2C+MA+02062",
+    "link_type": "maps",
+    "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
+    "verified": "2026-09-27"
   }
 ];
