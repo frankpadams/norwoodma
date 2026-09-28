@@ -168,6 +168,13 @@
     add.addEventListener('click',e=>{e.preventDefault();close();let dlg=document.querySelector('.add-home-screen-dialog');if(dlg){dlg.remove();return;}dlg=document.createElement('aside');dlg.className='add-home-screen-dialog ios-home-prompt';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';document.body.appendChild(dlg);const done=()=>dlg.remove();dlg.querySelector('.ios-home-close').onclick=done;dlg.querySelector('.ios-home-gotit').onclick=done;dlg.querySelector('.ios-home-close').focus();});
     nav.appendChild(add);
   }
+  const isAndroid=/Android/i.test(navigator.userAgent||'');
+  if(isAndroid&&!isStandalone&&!nav.querySelector('[data-android-install]')){
+    const install=document.createElement('a');install.href='#';install.dataset.androidInstall='true';install.className='add-home-screen-link';install.innerHTML='<span>Add Norwood.ma to Home Screen</span><img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true">';
+    install.addEventListener('click',async e=>{e.preventDefault();close();if(window.NorwoodPWA?.canInstall()){await window.NorwoodPWA.install();return;}alert('To install Norwood.ma, open your browser menu and choose “Add to Home screen” or “Install app.”');});
+    nav.appendChild(install);
+  }
+  window.addEventListener('norwood-installed',()=>nav.querySelector('[data-android-install]')?.remove());
   nav.querySelectorAll('a:not([data-add-home-screen])').forEach(a=>a.addEventListener('click',close));
   document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==menu)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
