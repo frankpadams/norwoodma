@@ -13427,5 +13427,299 @@
     },
     "conflict_profile": "optional",
     "notes": "Opt-in regional calendar only. These out-of-town events must never enter the default Norwood What's Happening view merely because they are family/community events."
+  },
+  {
+    "id": "progress-norwood-events",
+    "name": "Progress Norwood — Public Events",
+    "organization": "Progress Norwood",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.progressnorwood.org/",
+    "domain": "progressnorwood.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "community_org_events",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor Progress Norwood for concrete dated public Norwood programs and community events; deduplicate against Library, Town, Friends of Norwood Center and local-media listings."
+  },
+  {
+    "id": "womens-business-network-norwood",
+    "name": "Women's Business Network of Norwood — Public Events",
+    "organization": "Women's Business Network of Norwood",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodtownnews.com/",
+    "domain": "norwoodtownnews.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor current local listings for WBN public/community events. Routine member networking meetings should not enter the curated default unless explicitly open to the public."
+  },
+  {
+    "id": "womens-community-committee",
+    "name": "Norwood Women's Community Committee — Public Events",
+    "organization": "Norwood Women's Community Committee",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodthriftshop.com/",
+    "domain": "norwoodthriftshop.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "community_org_events",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor for dated public sales, fundraisers and community events; suppress internal committee business."
+  },
+  {
+    "id": "norwood-art-association-events",
+    "name": "Norwood Art Association — Public Events",
+    "organization": "Norwood Art Association",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodtownnews.com/",
+    "domain": "norwoodtownnews.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor for exhibitions, demonstrations, workshops and other dated public programs; prefer organizer pages when available."
+  },
+  {
+    "id": "together-yes-events",
+    "name": "Together Yes — Public Events",
+    "organization": "Together Yes",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodlibrary.org/",
+    "domain": "norwoodlibrary.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor for concrete dated public sustainability/community programs and deduplicate against Library-hosted listings."
+  },
+  {
+    "id": "norwood-trails-committee-events",
+    "name": "Norwood Trails Committee — Public Events",
+    "organization": "Norwood Trails Committee",
+    "source_class": "community_event_discovery",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "town_department_event_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor official Town/committee sources for public walks, trail work days, meetings or community programs with concrete dates."
+  },
+  {
+    "id": "norwood-sustainability-events",
+    "name": "Norwood Sustainability Committee — Public Events",
+    "organization": "Norwood Sustainability Committee",
+    "source_class": "community_event_discovery",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "town_department_event_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor official Town sources for dated public sustainability programs and community events; deduplicate against Farmers Market and Library listings."
   }
 ]
