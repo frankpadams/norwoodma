@@ -114,3 +114,17 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 /* Trivia night cards */
 .trivia-event-grid .trivia-event{background:#fff;}
+
+
+/* Footer cleanup: compact, organized three-column layout with readable legal copy. */
+.old-footer{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr) minmax(150px,210px);gap:24px;align-items:start;padding:26px max(22px,calc((100% - 1180px)/2));box-sizing:border-box}
+.old-footer .footer-logo{display:block;align-self:start}
+.old-footer .footer-logo img{display:block;max-width:180px;width:100%;height:auto}
+.old-footer .footer-legal{max-width:720px;font-size:.82rem;line-height:1.45}
+.old-footer .footer-legal p{margin:0 0:8px}
+.old-footer .footer-legal p{margin:0 0 8px}
+.old-footer .footer-legal p:first-child{font-size:.9rem;line-height:1.35}
+.old-footer .footer-info-disclaimer{padding-top:9px;margin-top:9px!important;border-top:1px solid rgba(255,255,255,.2);opacity:.88;font-size:.76rem;line-height:1.45}
+.old-footer .footer-support{display:inline-block;margin-right:14px!important}
+.old-footer>a:last-child{justify-self:end;text-align:right;font-weight:700}
+@media(max-width:760px){.old-footer{grid-template-columns:1fr;gap:16px;padding:24px 18px}.old-footer .footer-logo img{max-width:155px}.old-footer .footer-legal{max-width:none}.old-footer>a:last-child{justify-self:start;text-align:left}}
