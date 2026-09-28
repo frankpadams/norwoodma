@@ -137,3 +137,10 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .old-footer .footer-legal p{margin-bottom:6px}
 .old-footer .footer-logo{margin-bottom:0}
 .old-footer .footer-logo img{margin-bottom:4px}
+
+
+/* Footer: two-column desktop layout. */
+.old-footer{grid-template-columns:minmax(170px,220px) minmax(0,1fr);column-gap:26px;row-gap:8px}
+.old-footer .footer-legal{max-width:none}
+.old-footer>a:last-child{grid-column:2;justify-self:start;text-align:left;margin-top:2px}
+@media(max-width:760px){.old-footer{grid-template-columns:1fr}.old-footer>a:last-child{grid-column:1}}
