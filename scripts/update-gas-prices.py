@@ -7,6 +7,10 @@ KEY=os.environ["GOOGLE_PLACES_API_KEY"]
 OUT=Path("data/gas-prices.json")
 stations=[
  ("Norwood Gulf","Norwood Gulf, 707 Neponset St, Norwood MA"),
+ ("Gulf — Broadway","Gulf, 145 Broadway, Norwood MA"),
+ ("Mr. Frank\'s Food Mart","Mr. Frank\'s Food Mart, 917 Washington St, Norwood MA"),
+ ("Sunoco — Route 1","Sunoco, 515 Providence Hwy, Norwood MA"),
+ ("Route 1 Auto Services","Route 1 Auto Services, 305 Boston Providence Turnpike, Norwood MA"),
  ("Mobil — Route 1","Mobil, 971 Providence Hwy, Norwood MA"),
  ("Irving Oil / Rojo","Irving Oil Rojo, 69 Providence Hwy, Norwood MA"),
  ("BJ's Gas Station","BJ's Gas, 1412 Boston Providence Turnpike, Norwood MA"),
