@@ -686,5 +686,22 @@ window.NORWOOD_BUSINESSES=[
 ["Yelenna’s Flowers","Florists & Gifts","842 Washington Street","781-769-2570",""],
 ["Mazzola’s Norwood Monumental Works","Monuments & Memorials","943 Washington Street","781-762-1735","https://norwoodmonumental.com/"],
 ["Sam’s Appliances & Furniture","Appliances, Furniture & Repair","1232 Washington Street","781-762-4343","https://www.shopsamsappliance.com/"],
-["Wentworth Service Station","Auto Repair & Mechanics","145 Broadway","617-524-3713",""]
+["Wentworth Service Station","Auto Repair & Mechanics","145 Broadway","617-524-3713",""],
+["Moderna","Biotechnology, Pharmaceutical Manufacturing & Major Employers","1 Moderna Way","","https://www.modernatx.com/"],
+["United Parcel Service (UPS)","Distribution, Logistics & Major Employers","","","https://www.ups.com/"],
+["Instron","Manufacturing, Testing & Engineering; Major Employers","825 University Avenue","800-877-6674","https://www.instron.com/"],
+["Home Market Foods","Food Manufacturing & Major Employers","140 Morgan Drive","781-948-1500","https://www.homemarketfoods.com/"],
+["FM","Insurance, Engineering & Major Employers","1175 Boston-Providence Turnpike","781-255-4934","https://www.fm.com/"],
+["M.S. Walker","Wholesale Distribution & Major Employers","","","https://mswalker.com/"],
+["Metropolitan Cabinets & Countertops","Manufacturing, Cabinets & Countertops; Major Employers","","","https://metcabinet.com/"],
+["CertainTeed","Manufacturing & Major Employers","","","https://www.certainteed.com/"],
+["Advanced Instruments","Scientific Instruments, Manufacturing & Major Employers","","","https://www.aicompanies.com/"],
+["GZA GeoEnvironmental","Engineering & Environmental Services; Major Employers","","","https://www.gza.com/"],
+["National Amusements","Corporate Offices, Entertainment & Major Employers","","","https://www.nationalamusements.com/"],
+["Subaru of New England","Automotive Distribution & Major Employers","","","https://www.subaruofnewengland.com/"],
+["Cramer","Marketing, Media & Event Production; Major Employers","","","https://www.cramer.com/"],
+["Amazon DCB4 — Norwood","Distribution & Logistics","750 Everett Street","","https://www.amazon.com/"],
+["The Home Depot Distribution Center","Distribution & Logistics","625 University Avenue","781-278-9420","https://www.homedepot.com/"],
+["Siemens","Medical Technology, Engineering & Major Employers","109 Morgan Drive","","https://www.siemens.com/"],
+["Analog Devices","Technology, Engineering & Manufacturing","1 Technology Way","508-222-0168","https://www.analog.com/"]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
