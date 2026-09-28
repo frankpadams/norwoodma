@@ -1269,18 +1269,19 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Jane Doe Inc. — Find Help",
-    "category": "Safety & Family",
-    "description": "Massachusetts coalition directory for sexual assault and domestic violence programs, including services near Norwood.",
-    "url": "https://janedoe.org/find-help/",
-    "tags": "domestic violence sexual assault survivor help",
+    "name": "Jane Doe Inc. — Massachusetts Coalition Against Sexual Assault and Domestic Violence",
+    "category": "Domestic Violence Support",
+    "description": "Statewide coalition working to prevent domestic violence and sexual assault and support survivors. Provides information and connections to local sexual- and domestic-violence programs across Massachusetts.",
+    "url": "https://www.janedoe.org/",
+    "tags": "Jane Doe Inc JDI domestic violence sexual assault survivor advocacy abuse Massachusetts coalition help services",
     "topics": [
-      "health",
-      "kids",
-      "safety-crisis"
+      "domestic-violence",
+      "safety-crisis",
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "source_note": "Statewide Massachusetts sexual assault and domestic violence coalition; also listed by Morrill Memorial Library community resources."
   },
   {
     "name": "Julie Ruth House Adult Day Social Center",
