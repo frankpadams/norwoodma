@@ -1503,21 +1503,16 @@
     "source_note": "Official Marine Toys for Tots local campaign finder."
   },
   {
-    "name": "MassAbility",
-    "category": "Disability",
-    "description": "Massachusetts disability agency offering career and training services, home/community supports, assistive technology, and disability benefits and rights information.",
-    "url": "https://www.mass.gov/orgs/massability",
-    "tags": "disability vocational rehabilitation employment assistive technology independent living benefits rights",
+    "name": "MassAbility — Career Services (Vocational Rehabilitation)",
+    "category": "Employment",
+    "description": "Career and vocational rehabilitation services for Massachusetts residents with disabilities. Services can include career counseling, skills and vocational training, job placement, assistive technology, school-to-work support, interview preparation and workplace communication access.",
+    "url": "https://www.mass.gov/info-details/massability-career-services",
+    "tags": "MassAbility MRC Massachusetts Rehabilitation Commission vocational rehabilitation VR disability employment career job training placement interview assistive technology",
     "topics": [
-      "health",
-      "jobs",
-      "transport",
-      "disability-support",
-      "medical-care",
       "employment",
-      "financial-assistance"
+      "disability-support"
     ],
-    "coverage": "Regional/State",
+    "coverage": "Statewide",
     "verified": "2026-09"
   },
   {
@@ -5522,5 +5517,44 @@
     "email": "NorwoodREACH@gmail.com",
     "verified": "2026-09",
     "source_note": "Description and contact information provided by founder Kristen McQuaid."
+  },
+  {
+    "name": "Massachusetts Unemployment Insurance — Workers",
+    "category": "Employment",
+    "description": "Official Massachusetts unemployment resource for workers. Check eligibility, apply for unemployment insurance, file weekly claims, check claim status, learn about appeals and get help from the Department of Unemployment Assistance.",
+    "url": "https://www.mass.gov/unemployment-insurance-for-workers",
+    "tags": "unemployment unemployment insurance UI benefits DUA laid off lost job weekly claim appeal Massachusetts",
+    "topics": [
+      "employment",
+      "financial-assistance"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MassHire Norwood Career Center",
+    "category": "Employment",
+    "description": "Norwood's state workforce Career Center offering free job-search assistance, career coaching, training programs, hiring events and access to computers, printers and scanners.",
+    "url": "https://www.mass.gov/locations/masshire-norwood-career-center",
+    "tags": "MassHire Norwood Career Center jobs employment career coaching job search resume interview training hiring events JobQuest",
+    "topics": [
+      "employment"
+    ],
+    "coverage": "Norwood & Metro South/West",
+    "address": "128 Carnegie Row, Suite 109, Norwood, MA 02062",
+    "phone": "781-269-5494",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MassHire JobQuest",
+    "category": "Employment",
+    "description": "Free Massachusetts job-search system. Create a jobseeker profile, search job openings, connect your skills with employers, and find workshops, training and hiring events.",
+    "url": "https://www.mass.gov/find-your-next-job-with-masshire-jobquest",
+    "tags": "MassHire JobQuest jobs job search openings resume training workshop hiring event employment Massachusetts",
+    "topics": [
+      "employment"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
   }
 ]
