@@ -655,4 +655,10 @@ window.NORWOOD_BUSINESSES=[
   ["Costco Wholesale - Sharon","Warehouse Clubs","160 Old Post Road, Sharon","781-253-7640","https://www.costco.com/warehouse-locations/sharon-ma-1704.html"],
   ["BJ's Wholesale Club - Dedham","Warehouse Clubs","688 Providence Highway, Dedham","","https://www.bjs.com/"],
   ["BJ's Gas - Norwood","Gas Stations","1415 Boston-Providence Turnpike, Norwood","","https://www.bjs.com/"]
+,
+  ["Shiva Bazaar","International Grocers - Indian & South Asian","111 Lenox Street, Suite 113A","781-278-0848",""],
+  ["Cedar Market","International Grocers - Lebanese & Middle Eastern","13 Cottage Street","781-769-8855",""],
+  ["Sayar Market","International Grocers - Middle Eastern, Mediterranean & Halal","568 Boston Providence Highway","978-298-2438",""],
+  ["Brazil For You","International Grocers - Brazilian","1001 Boston Providence Highway","781-352-8006",""],
+  ["Golden Bull Norwood","International Grocers - Brazilian & Latin","1068 Washington Street","781-352-4445",""]
 ];return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+", Norwood, MA 02062"):"Norwood, MA 02062",phone:b[3],website:b[4],town:"Norwood"};});
