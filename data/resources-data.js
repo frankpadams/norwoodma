@@ -5863,5 +5863,51 @@ window.NORWOOD_RESOURCES= [
     "address": "280 Railroad Ave, Norwood, MA",
     "verified": "2026-09",
     "source_note": "Community-provided local food resource."
+  },
+  {
+    "name": "Massachusetts SUN Bucks (Summer EBT)",
+    "category": "Food & Basic Needs",
+    "description": "Summer food benefit for eligible families with school-aged children. Most eligible families receive benefits automatically; families who need to apply can use DTA Connect. Benefits help buy groceries while school is out.",
+    "url": "https://www.mass.gov/massachusetts-sun-bucks-program",
+    "tags": "SUN Bucks Summer EBT summer food children school groceries DTA SNAP",
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "kids",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts DESE — Food & Nutrition Programs",
+    "category": "Food & Basic Needs",
+    "description": "Official state hub for school breakfast and lunch, after-school meals, child-care nutrition programs and summer meals. Massachusetts provides universal free school meals at participating schools.",
+    "url": "https://www.doe.mass.edu/cnp/",
+    "tags": "DESE food nutrition school meals breakfast lunch universal free meals after school summer food child nutrition",
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "kids",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Summer Eats — Free Summer Meals for Kids & Teens",
+    "category": "Food & Basic Needs",
+    "description": "Free summer meals for children and teens age 18 and under at participating Massachusetts sites. Open meal sites do not require an application or identification; use the meal-site finder to locate nearby options.",
+    "url": "https://www.doe.mass.edu/cnp/nprograms/sfsp/",
+    "tags": "Summer Eats summer meals free food children teens meal sites DESE Project Bread",
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "kids",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
   }
 ];
