@@ -128,3 +128,12 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .old-footer .footer-support{display:inline-block;margin-right:14px!important}
 .old-footer>a:last-child{justify-self:end;text-align:right;font-weight:700}
 @media(max-width:760px){.old-footer{grid-template-columns:1fr;gap:16px;padding:24px 18px}.old-footer .footer-logo img{max-width:155px}.old-footer .footer-legal{max-width:none}.old-footer>a:last-child{justify-self:start;text-align:left}}
+
+
+/* Footer refinement: tighter logo area and unified disclaimer typography. */
+.old-footer{grid-template-columns:minmax(150px,190px) minmax(0,1fr) minmax(150px,190px);gap:18px;padding-top:22px;padding-bottom:22px}
+.old-footer .footer-legal,.old-footer .footer-legal p,.old-footer .footer-legal p:first-child,.old-footer .footer-info-disclaimer{font-size:.82rem;line-height:1.45}
+.old-footer .footer-info-disclaimer{padding-top:0;margin-top:0!important;border-top:0;opacity:1}
+.old-footer .footer-legal p{margin-bottom:6px}
+.old-footer .footer-logo{margin-bottom:0}
+.old-footer .footer-logo img{margin-bottom:4px}
