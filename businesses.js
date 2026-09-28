@@ -29,6 +29,17 @@ const groups={
 }
 const raw=window.NORWOOD_BUSINESSES||[], businesses=raw.map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4]}:b);
 const text=b=>(b.category||'')+' '+(Array.isArray(b.tags)?b.tags.join(' '):(b.tags||''));
+function classifyBusiness(b){
+ const t=text(b),out=[];
+ Object.entries(groups).forEach(([group,g])=>{
+  if(!g.match.test(t))return;
+  const subs=g.subs.filter(s=>s[2].test(t)).map(s=>s[0]);
+  out.push({group,subs});
+ });
+ return out;
+}
+businesses.forEach(b=>{b.taxonomy=classifyBusiness(b);});
+window.NORWOOD_BUSINESS_TAXONOMY=Object.fromEntries(businesses.map(b=>[String(b.name||'').toLowerCase(),b.taxonomy]));
 function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+'</div>'+(details?'<p>'+details+'</p>':'')+'</article>';}
 function parse(){const p=location.hash.slice(1).split('/');return {group:p[0],sub:p[1]};}
 function setHash(h){location.hash=h;}
@@ -36,12 +47,12 @@ function render(){
  const {group,sub}=parse(),g=groups[group],root=$('#businessDirectory');
  if(!g){root.innerHTML='';return;}
  if(!sub){
-   const broad=businesses.filter(b=>g.match.test(text(b)));
-   const tiles=g.subs.map(s=>{const n=broad.filter(b=>s[2].test(text(b))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
+   const broad=businesses.filter(b=>b.taxonomy.some(x=>x.group===group));
+   const tiles=g.subs.map(s=>{const n=broad.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(s[0]))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
    root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">Choose a more specific category. <a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'">View this category on map</a></p><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div></section>';
  } else {
    const s=g.subs.find(x=>x[0]===sub);if(!s){setHash(group);return;}
-   const rows=businesses.filter(b=>g.match.test(text(b))&&s[2].test(text(b))).sort((a,b)=>a.name.localeCompare(b.name));
+   const rows=businesses.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(sub))).sort((a,b)=>a.name.localeCompare(b.name));
    root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+esc(g.label)+'</button><p class="eyebrow">'+esc(g.label.toUpperCase())+'</p><h2>'+esc(s[1])+'</h2><p class="sub"><a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'&businessSub='+encodeURIComponent(sub)+'">View these businesses on map</a></p><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';
  }
  document.querySelector('.resource-back')?.addEventListener('click',()=>{if(sub)setHash(group);else{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});}});
