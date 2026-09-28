@@ -3,6 +3,7 @@
  if(!input||!box||!form)return;
  window.NorwoodSiteSearch=window.NorwoodSiteSearch||{};
  const resultsPage=document.body.classList.contains('search-results-page');
+ const howDoPage=document.body.classList.contains('how-do-page');
  let submitted=resultsPage;
  const pages=[
   {name:'Things to Do',url:'things.html',type:'Things to Do',text:'activities entertainment explore parks recreation'},
@@ -204,7 +205,7 @@
    if(queryWords.length>1){const coverage=matchedCore/queryWords.length;score+=coverage===1?38:coverage>=.67?16:-18;}
    if(url.includes(raw.replace(/ /g,' ')))score+=5;
    if(x.resourceCategory&&score>=18)score+=42;
-   if(x.type==='How Do I?'&&score>=18)score+=34;
+   if(x.type==='How Do I?'&&score>=18)score+=howDoPage?140:34;
    if(x.business&&score>=30)score+=3;
    if(acronym&&aliasTerms(raw)){if(nameWords.includes(raw)||typeWords.includes(raw))score+=50;}
    let tier=3;
@@ -239,6 +240,7 @@
   // Autocomplete stays task-focused: individual businesses belong on the full
   // results page, not in the live dropdown.
   let hits=(resultsPage?allHits:allHits.filter(({x})=>!x.business)).slice(0,12);
+  if(howDoPage)hits=[...hits.filter(({x})=>x.type==='How Do I?'),...hits.filter(({x})=>x.type!=='How Do I?')].slice(0,12);
   if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
   const howDoHtml=/^how(?:\s|$)|^how\s+do\s+i/i.test(raw)?'<div class="library-things-search-callout howdo-search-callout"><span class="library-things-badge">HOW DO I?</span><b>❓ Looking for a quick answer?</b><p>Browse practical answers to common Norwood questions.</p><a href="how-do-i.html">Open How Do I? →</a></div>':'';
