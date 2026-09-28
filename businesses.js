@@ -1,22 +1,43 @@
 (()=>{'use strict';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const groups={
- automotive:/auto|automotive|car wash|vehicle|towing|roadside/i,
- home:/hvac|plumb|heating|electric|contractor|home|repair|cleaning|painting|remodel|garage door|roof|landscap|tree|pest|pool/i,
- health:/dental|orthodont|physical therapy|rehabilitation|optometry|eyewear|audiology|hearing|chiropractic|pharmac|medical/i,
- pets:/pet|veterinar|animal hospital|groom/i,
- professional:/attorney|legal|account|tax|bookkeep|bank|financial|insurance|notary|real estate/i,
- personal:/barber|salon|beauty|spa|massage|personal care|tailor|alteration|dry clean|laundry/i,
- fitness:/fitness|personal training|martial arts|gymnast|swim|cheer|tumbling|music school|lessons/i,
- family:/childcare|preschool|driving school/i,
- shopping:/grocer|garden center|nurser|florist|books|shopping|plants|gifts|bicycles|outdoor recreation/i,
- 'business-services':/printing|shipping|office|computer|technology|manufactur|testing|engineering|equipment|tool rental/i,
- other:/storage|moving|funeral|cremation|locksmith|security|rental/i
+ automotive:{label:'Automotive',match:/auto|automotive|car wash|vehicle|towing|roadside/i,subs:[
+  ['sales','Sales & Dealers',/dealer|sales/i],['repair','Repair & Mechanics',/repair|mechanic|collision/i],['tires','Tires',/tire/i],['inspection','Inspections & Car Wash',/inspection|car wash/i],['towing','Towing & Roadside',/towing|roadside/i],['rental','Car & Van Rental',/rental/i]
+ ]},
+ home:{label:'Home Services & Contractors',match:/hvac|plumb|heating|electric|contractor|home|repair|cleaning|painting|remodel|garage door|roof|landscap|tree|pest|pool/i,subs:[
+  ['hvac','HVAC & Heating',/hvac|heating/i],['plumbing','Plumbing',/plumb/i],['electrical','Electrical',/electric/i],['contractors','Contracting & Remodeling',/contractor|painting|remodel|roof|garage door|home.*repair/i],['cleaning','Cleaning',/house cleaning/i],['landscape','Landscaping, Tree & Pest',/landscap|tree|pest|garden/i]
+ ]},
+ health:{label:'Health, Dental & Wellness',match:/dental|orthodont|physical therapy|rehabilitation|optometry|eyewear|audiology|hearing|chiropractic|pharmac|medical/i,subs:[
+  ['dental','Dental & Orthodontics',/dental|orthodont/i],['rehab','Physical Therapy & Rehabilitation',/physical therapy|rehabilitation/i],['vision','Vision & Eyewear',/optometry|eyewear|vision/i],['hearing','Audiology & Hearing',/audiology|hearing/i],['chiropractic','Chiropractic',/chiropractic/i],['pharmacy','Pharmacies & Medical Supplies',/pharmac|medical supplies/i]
+ ]},
+ pets:{label:'Pets & Veterinary',match:/pet|veterinar|animal hospital|groom/i,subs:[['veterinary','Veterinary & Animal Hospitals',/veterinar|animal hospital/i],['grooming','Pet Grooming',/groom/i]]},
+ professional:{label:'Professional & Financial Services',match:/attorney|legal|account|tax|bookkeep|bank|financial|insurance|notary|real estate/i,subs:[['legal','Attorneys & Legal Services',/attorney|legal/i],['accounting','Accounting & Tax',/account|tax|bookkeep/i],['banking','Banks & Financial Services',/bank|financial planning|investment/i],['insurance','Insurance',/insurance/i],['notary','Notary Services',/notary/i],['real-estate','Real Estate',/real estate/i]]},
+ personal:{label:'Personal Care',match:/barber|salon|beauty|spa|massage|personal care|tailor|alteration|dry clean|laundry/i,subs:[['hair','Barbers & Salons',/barber|salon/i],['beauty','Beauty, Spas & Massage',/beauty|spa|massage|aesthetic/i],['tailoring','Tailoring & Alterations',/tailor|alteration/i],['laundry','Laundry & Dry Cleaning',/laundry|dry clean/i]]},
+ fitness:{label:'Fitness, Sports & Lessons',match:/fitness|personal training|martial arts|gymnast|swim|cheer|tumbling|music school|lessons/i,subs:[['fitness','Fitness & Personal Training',/fitness|personal training/i],['martial','Martial Arts',/martial arts/i],['gymnastics','Gymnastics, Cheer & Tumbling',/gymnast|cheer|tumbling/i],['swim','Swim Schools',/swim/i],['music','Music Schools & Lessons',/music|lessons/i]]},
+ family:{label:'Children & Family Services',match:/childcare|preschool|driving school/i,subs:[['childcare','Childcare & Preschools',/childcare|preschool/i],['driving','Driving Schools',/driving school/i]]},
+ shopping:{label:'Shopping & Specialty Retail',match:/grocer|garden center|nurser|florist|books|shopping|plants|gifts|bicycles|outdoor recreation/i,subs:[['groceries','Groceries',/grocer/i],['garden','Garden, Plants & Florists',/garden|nurser|florist|plants/i],['gifts','Books, Gifts & Specialty Shopping',/books|shopping|gifts/i],['bikes','Bicycles & Outdoor Recreation',/bicycle|outdoor recreation/i]]},
+ 'business-services':{label:'Business & Technology Services',match:/printing|shipping|office|computer|technology|manufactur|testing|engineering|equipment|tool rental/i,subs:[['print','Printing & Shipping',/printing|shipping/i],['tech','Computer & Technology',/computer|technology/i],['engineering','Engineering & Manufacturing',/manufactur|testing|engineering/i],['equipment','Equipment & Tool Rental',/equipment|tool rental/i]]},
+ other:{label:'Other Local Services',match:/storage|moving|funeral|cremation|locksmith|security|rental/i,subs:[['storage','Storage & Moving',/storage|moving/i],['funeral','Funeral & Cremation',/funeral|cremation/i],['security','Locksmiths & Security',/locksmith|security/i]]}
 };
-const raw=window.NORWOOD_BUSINESSES||[];
-const businesses=raw.map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4]}:b);
-function belongs(b,id){const re=groups[id];if(!re)return false;const text=(b.category||'')+' '+(b.tags||[]).join?.(' ');return re.test(text);}
+const raw=window.NORWOOD_BUSINESSES||[], businesses=raw.map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4]}:b);
+const text=b=>(b.category||'')+' '+(Array.isArray(b.tags)?b.tags.join(' '):(b.tags||''));
 function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+'</div>'+(details?'<p>'+details+'</p>':'')+'</article>';}
-function render(){const id=location.hash.slice(1);if(!groups[id]){$('#businessDirectory').innerHTML='';return;}const rows=businesses.filter(b=>belongs(b,id)).sort((a,b)=>a.name.localeCompare(b.name));$('#businessDirectory').innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(document.querySelector('a[href="#'+id+'"] b')?.textContent||'Local businesses')+'</h2><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';$('#businessCount').textContent=businesses.length+' local business listings.';document.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});requestAnimationFrame(()=>$('#businessDirectory').scrollIntoView({behavior:'smooth',block:'start'}));}
+function parse(){const p=location.hash.slice(1).split('/');return {group:p[0],sub:p[1]};}
+function setHash(h){location.hash=h;}
+function render(){
+ const {group,sub}=parse(),g=groups[group],root=$('#businessDirectory');
+ if(!g){root.innerHTML='';return;}
+ if(!sub){
+   const broad=businesses.filter(b=>g.match.test(text(b)));
+   const tiles=g.subs.map(s=>{const n=broad.filter(b=>s[2].test(text(b))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
+   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">Choose a more specific category.</p><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div></section>';
+ } else {
+   const s=g.subs.find(x=>x[0]===sub);if(!s){setHash(group);return;}
+   const rows=businesses.filter(b=>g.match.test(text(b))&&s[2].test(text(b))).sort((a,b)=>a.name.localeCompare(b.name));
+   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+esc(g.label)+'</button><p class="eyebrow">'+esc(g.label.toUpperCase())+'</p><h2>'+esc(s[1])+'</h2><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';
+ }
+ document.querySelector('.resource-back')?.addEventListener('click',()=>{if(sub)setHash(group);else{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});}});
+ requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
+}
 window.addEventListener('hashchange',render);render();if($('#businessCount'))$('#businessCount').textContent=businesses.length+' local business listings.';
 })();
