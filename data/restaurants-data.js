@@ -928,5 +928,30 @@ window.NORWOOD_RESTAURANTS= [
     "link_type": "official",
     "tags": "hibachi sushi Japanese ramen",
     "verified": "2026-09-17"
+  },
+  {
+    "id": "brazil-for-you",
+    "name": "Brazil For You",
+    "category": "Brazilian",
+    "cuisine": "Brazilian · Market · Prepared foods",
+    "address": "1001 Boston Providence Hwy",
+    "url": "https://www.brazilforyou.com/",
+    "link_type": "official",
+    "tags": "brazilian market grocery prepared food hot food breakfast lunch buffet grill bakery coxinha pao de queijo cheese bread imported groceries takeout",
+    "verified": "2026-09-27"
+  },
+  {
+    "id": "smoothie-king-norwood",
+    "name": "Smoothie King — Coming Soon",
+    "category": "Breakfast & Cafe",
+    "cuisine": "Smoothies · Açaí bowls · Quick service",
+    "address": "111 Lenox St, Unit 105",
+    "url": "https://locations.smoothieking.com/ll/us/ma/norwood/111-lenox-street-unit-105/",
+    "link_type": "official",
+    "tags": "coming soon smoothie smoothies juice acai açaí bowl bowls protein healthy breakfast quick service",
+    "verified": "2026-09-27",
+    "dinner_spinner": false,
+    "food_menu": true,
+    "status": "coming-soon"
   }
 ];
