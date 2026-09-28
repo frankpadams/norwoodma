@@ -13327,5 +13327,105 @@
       "report_stale": true,
       "empty_result_is_failure": true
     }
+  },
+  {
+    "id": "boston-parents-paper-norwood",
+    "name": "Boston Parents Paper — Norwood family events",
+    "organization": "Boston Parents Paper",
+    "source_class": "regional_family_calendar",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://bostonparentspaper.com/family-event-calendar/",
+    "domain": "bostonparentspaper.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://bostonparentspaper.com/family-event-calendar/",
+      "preserve": [
+        "venue",
+        "address",
+        "date",
+        "time",
+        "price",
+        "registration_url"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-28",
+      "basis": "Boston Parents Paper publishes a structured Greater Boston family event calendar with venue/city/state filtering; Norwood entries are eligible for the normal Norwood calendar after deduplication."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Automatically ingest only events explicitly located in Norwood, Massachusetts for the normal Norwood calendar. Deduplicate against organizer and other primary feeds."
+  },
+  {
+    "id": "boston-parents-paper-greater-boston",
+    "name": "Boston Parents Paper — Greater Boston family events",
+    "organization": "Boston Parents Paper",
+    "source_class": "regional_family_calendar",
+    "authority": "local_media",
+    "coverage": "Greater Boston / eastern Massachusetts",
+    "url": "https://bostonparentspaper.com/family-event-calendar/",
+    "domain": "bostonparentspaper.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://bostonparentspaper.com/family-event-calendar/",
+      "preserve": [
+        "venue",
+        "address",
+        "date",
+        "time",
+        "price",
+        "registration_url"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": false,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-28",
+      "basis": "Structured Boston Parents Paper family event calendar is suitable as an optional regional calendar source."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Opt-in regional calendar only. These out-of-town events must never enter the default Norwood What's Happening view merely because they are family/community events."
   }
 ]
