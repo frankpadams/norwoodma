@@ -702,8 +702,7 @@ window.NORWOOD_BUSINESSES=[
 ["Cramer","Marketing, Media & Event Production; Major Employers","","","https://www.cramer.com/"],
 ["Amazon DCB4 — Norwood","Distribution & Logistics","750 Everett Street","","https://www.amazon.com/"],
 ["The Home Depot Distribution Center","Distribution & Logistics","625 University Avenue","781-278-9420","https://www.homedepot.com/"],
-["Siemens","Medical Technology, Engineering & Major Employers","109 Morgan Drive","","https://www.siemens.com/"],
-["Analog Devices","Technology, Engineering & Manufacturing","1 Technology Way","508-222-0168","https://www.analog.com/"],
+["Siemens","Medical Technology, Engineering & Major Employers","109 Morgan Drive","","https://www.siemens.com/"],,
 ["Bearingstar Insurance — Norwood","Insurance","315 Norwood Park South, Suite 107","508-583-7393","https://www.bearingstar.com/contact-us/locations/norwood/"],
 ["Norris, Murray & Peloquin, LLC","Attorneys & Legal Services","315 Norwood Park South","781-762-2229","https://nmplabor.com/"],
 ["Town Business Systems","Office Equipment, Printing & Business Technology","170 Kerry Place","781-762-1900","https://www.townbusiness.com/"],
@@ -722,5 +721,17 @@ window.NORWOOD_BUSINESSES=[
 ["Penske Truck Rental — Norwood","Truck Rental & Commercial Transportation","924 Boston Providence Highway","781-255-0466","https://www.pensketruckrental.com/"],
 ["The Sign Center","Signs, Printing & Graphics","1400 Providence Highway, Suite 2500","781-278-0150",""],
 ["American Taxi — Norwood","Taxi, Airport Shuttle & Transportation","246 Nahatan Street","781-492-4561",""],
-["A Plus Taxi Service","Taxi, Airport Shuttle & Transportation","301 Buckminster Drive","781-249-8837",""]
+["A Plus Taxi Service","Taxi, Airport Shuttle & Transportation","301 Buckminster Drive","781-249-8837",""],
+["Mystic Scenic Studios","Scenic Fabrication, Manufacturing & Major Employers","293 Lenox Street","781-329-9006",""],
+["A. S. Thomas, Inc.","Advanced Manufacturing & Engineering","44 Industrial Way","781-329-9200",""],
+["Americad Technology","Plastic Prototyping & Manufacturing","700 Pleasant Street","781-551-8220",""],
+["VIRTEX","Electronics Manufacturing","1400 Boston Providence Highway, Suite 2000","781-881-2400",""],
+["Olympic Adhesives","Industrial Adhesives & Manufacturing","670 Canton Street","800-829-1871",""],
+["Tekscan, Inc.","Sensor Technology & Manufacturing","333 Boston Providence Highway","617-464-4500","https://www.tekscan.com/"],
+["Revolution Composites","Aerospace & Composite Manufacturing","340 Vanderbilt Avenue","781-255-1111",""],
+["Gibson Engineering Co., Inc.","Industrial Automation & Engineering","90 Broadway","800-875-9915",""],
+["American Holt Corporation","Machinery Parts & Manufacturing","203 Carnegie Row","781-440-9993",""],
+["Kaufman Company","Industrial Supply & Distribution","19 Walkhill Road","781-255-1000",""],
+["Advanced Thermal Solutions, Inc.","Thermal Engineering & Electronics","89 Access Road, Suite 27","781-769-2800","https://www.qats.com/"],
+["I&I Sling","Rigging, Lifting & Industrial Supply","1400 Providence Highway","781-575-0600",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
