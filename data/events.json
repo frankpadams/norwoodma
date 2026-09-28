@@ -191,36 +191,6 @@
     ]
   },
   {
-    "id": "2026-09-28-september-2026-a53681f",
-    "title": "September 2026",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-28-zoom-with-a-law-librarian-f8a08be",
     "title": "Zoom with a Law Librarian",
     "start": {
@@ -272,7 +242,7 @@
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "**Please note that this event is postponed due to storm. New date will be announced soon. **Celebrate Good Neighbor Day with the Morrill Memorial Library and the Norwood Trails Committee&nbsp;for a friendly stroll on the Bernie Cooper River",
+    "notes": "**Please note that this event is postponed due to storm. New date is Thursday Octorber 1, 2026. **Celebrate Good Neighbor Day with the Morrill Memorial Library and the Norwood Trails Committee&nbsp;for a friendly stroll on the Bernie Cooper",
     "discovered_by": "scheduled_jsonld",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -5161,40 +5131,6 @@
     ]
   },
   {
-    "id": "2026-10-03-gv-soccer-millis-high-school-14126c8",
-    "title": "GV Soccer @ Millis High School",
-    "start": {
-      "date": "2026-10-03",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "12:30"
-    },
-    "venue": "245 Plain St, Millis MA 02054",
-    "address": "245 Plain St, Millis MA 02054",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Millis High School Subsite: Welch Field (HS)",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-efc5b7c62204-2026-10-03",
     "title": "Intermediate Gymnastics",
     "start": {
@@ -5361,6 +5297,40 @@
     "notes": null,
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-03-gv-soccer-millis-high-school-14126c8",
+    "title": "GV Soccer @ Millis High School",
+    "start": {
+      "date": "2026-10-03",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "15:00"
+    },
+    "venue": "245 Plain St, Millis MA 02054",
+    "address": "245 Plain St, Millis MA 02054",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Millis High School Subsite: Welch Field (HS)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -21432,36 +21402,6 @@
     ]
   },
   {
-    "id": "2026-10-28-october-2026-773057d",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-28",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-28-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -24647,6 +24587,38 @@
     "discovered_by": "civic_meeting_monitor",
     "calendar_ids": [
       "town-meetings"
+    ]
+  },
+  {
+    "id": "2026-11-03-2027-eastern-sectional-singles-and-u-s-pairs--fd7cfa1",
+    "title": "2027 Eastern Sectional Singles and U.S. Pairs Final",
+    "start": {
+      "date": "2026-11-03",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "23:59"
+    },
+    "venue": "The Skating Club of Boston",
+    "address": "1240 Soldiers Field Road, Boston, MA, 01760",
+    "category": "community",
+    "source_id": "skating-club-calendar",
+    "source_url": "https://scboston.org/event/2027-eastern-sectional-singles-and-u-s-pairs-final/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-sports",
+      "skating-club-boston-events"
     ]
   },
   {
