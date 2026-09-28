@@ -47,8 +47,56 @@
   {name:'Norwood Planning Board',url:'https://www.norwoodma.gov/government/boards_committees/planning_board.php',type:'Official Town board',text:'planning board subdivision site plan zoning development'},
   {name:'Norwood Zoning Board of Appeals',url:'https://www.norwoodma.gov/government/boards_committees/zoning_board_of_appeals.php',type:'Official Town board',text:'zoning board appeals zba variance special permit zoning'}
  ].map(x=>({...x,officialTown:true,canonicalTown:true}));
- const aliases={doctor:'medical physician health',dentist:'dental orthodontics',train:'transit commuter rail mbta',volunteer:'get involved civic',kayak:'boating paddling',bike:'biking cycling',pool:'swimming',pizza:'restaurant food',food:'restaurant dining',vote:'election voting',voting:'election poll',trivia:'trivia history game',climbing:'rock climbing recreation',ninja:'obstacle recreation',trash:'trash recycling garbage waste pickup',garbage:'trash recycling waste pickup',recycle:'recycling trash waste',recycling:'recycling trash waste',compost:'composting food scraps trash recycling',composting:'compost food scraps recycling',bulk:'bulk bulky items recycling disposal',mattress:'mattress bulk recycling disposal',styrofoam:'styrofoam recycling Winter Street',paint:'hazardous waste disposal recycling',electronics:'electronics e waste recycling disposal',batteries:'batteries hazardous waste recycling',leaves:'leaf bags brush yard waste Winter Street',brush:'brush yard waste leaves Winter Street',dump:'Winter Street recycling facility disposal',hazardous:'household hazardous waste recycling',christmas:'Christmas tree recycling pickup',museum:'museum passes discounts library',museums:'museum passes discounts library',snap:'EBT Museums for All Card to Culture discounts',ebt:'SNAP Museums for All Card to Culture discounts',wic:'Card to Culture discounts',connectorcare:'Card to Culture discounts',boa:'Bank of America Museums on Us',bank:'Bank of America Museums on Us',pt:'physical therapy physical therapist physiotherapy rehabilitation rehab',ot:'occupational therapy occupational therapist rehabilitation rehab',slp:'speech language pathology speech therapy speech therapist communication swallowing',st:'speech therapy speech therapist speech language pathology',aba:'applied behavior analysis autism behavioral therapy',bcba:'board certified behavior analyst applied behavior analysis autism',ei:'early intervention child development developmental services',pcp:'primary care physician primary care doctor medical',rent:'rent rental housing tenant tenants assistance help RAFT eviction emergency housing',rental:'rent rental housing tenant assistance RAFT',housing:'housing rent rental tenant assistance shelter home',childcare:'childcare preschool daycare early education',dentist:'dental orthodontics dentist',disability:'disability accessibility support services',heating:'heating fuel utility energy assistance LIHEAP',benefits:'benefits assistance financial SNAP MassHealth'};
+ const aliases={
+  doctor:'medical physician primary care health',dentist:'dental orthodontics',train:'transit commuter rail mbta',volunteer:'get involved civic',
+  kayak:'boating paddling canoe',bike:'biking cycling bicycle',pool:'swimming swim',pizza:'restaurant food dining',food:'restaurant dining meals',
+  vote:'election voting voter ballot polling precinct',voting:'election voter ballot polling precinct',trivia:'trivia history game',climbing:'rock climbing recreation',ninja:'obstacle recreation',
+  trash:'trash recycling garbage rubbish waste pickup collection curbside',garbage:'trash recycling rubbish waste pickup',rubbish:'trash garbage waste pickup',
+  recycle:'recycling trash waste',recycling:'recycle trash waste',compost:'composting food scraps organics trash recycling',composting:'compost food scraps organics recycling',
+  bulk:'bulk bulky large item disposal pickup',mattress:'mattress bulk recycling disposal',styrofoam:'styrofoam polystyrene recycling Winter Street',
+  paint:'hazardous waste disposal recycling',electronics:'electronics e waste ewaste recycling disposal',batteries:'batteries hazardous waste recycling',
+  leaves:'leaf leaves brush yard waste Winter Street',brush:'brush yard waste leaves Winter Street',dump:'Winter Street recycling facility disposal transfer station',
+  hazardous:'household hazardous waste hhw recycling disposal',christmas:'Christmas tree recycling pickup',
+  museum:'museum passes discounts library',museums:'museum passes discounts library',snap:'EBT food assistance benefits discounts',ebt:'SNAP food assistance benefits discounts',
+  wic:'food assistance benefits Card to Culture discounts',connectorcare:'health insurance Card to Culture discounts',boa:'Bank of America Museums on Us',
+  pt:'physical therapy physical therapist physiotherapy rehabilitation rehab',ot:'occupational therapy occupational therapist rehabilitation rehab',
+  slp:'speech language pathology speech therapy speech therapist communication swallowing',st:'speech therapy speech therapist speech language pathology',
+  aba:'applied behavior analysis autism behavioral therapy',bcba:'board certified behavior analyst applied behavior analysis autism',
+  ei:'early intervention child development developmental services',pcp:'primary care physician primary care doctor medical',
+  rent:'rent rental housing tenant tenants assistance help RAFT eviction emergency housing',rental:'rent rental housing tenant assistance RAFT',
+  housing:'housing rent rental tenant assistance shelter home',childcare:'childcare child care preschool daycare day care early education',
+  disability:'disability accessibility accessible special needs support services',heating:'heating fuel utility energy assistance LIHEAP',
+  benefits:'benefits assistance financial SNAP MassHealth',dpw:'public works trash recycling roads streets water sewer snow',
+  coa:'council on aging senior center seniors older adults',zba:'zoning board appeals zoning variance special permit',
+  bos:'board of selectmen select board town government',clerk:'town clerk elections voting records licenses certificates',
+  permit:'permits permitting license licensing building energov citizen self service',permits:'permit permitting license licensing building energov citizen self service',
+  pothole:'potholes road street dpw public works repair',potholes:'pothole road street dpw public works repair',
+  sewer:'sewer wastewater drain drainage public works dpw',water:'water utility bill service public works dpw',
+  electric:'electric electricity light power utility norwood light outage',electricity:'electric power light utility norwood light outage',
+  internet:'internet broadband cable wifi norwood light broadband',wifi:'internet broadband wireless',
+  dog:'dog canine pet animal license animal control',dogs:'dog canine pet animal license animal control',
+  playground:'playground park recreation children',field:'athletic field sports recreation',fields:'athletic field sports recreation',
+  cops:'police law enforcement public safety',police:'police law enforcement public safety',fire:'fire department fire prevention emergency ems',
+  ambulance:'ems emergency medical fire department',senior:'senior seniors older adult council aging coa',seniors:'senior older adults council aging coa',
+  tax:'tax taxes assessor collector treasury',taxes:'tax assessor collector treasury',assessment:'assessor property assessment valuation tax',
+  birth:'birth certificate vital records town clerk',marriage:'marriage certificate license vital records town clerk',death:'death certificate vital records town clerk',
+  license:'license licensing permit permits',licence:'license licensing permit permits',registration:'register registration signup',
+  rec:'recreation sports programs parks',recreation:'rec sports programs parks civic center',
+  school:'schools education student district',schools:'school education students district',
+  library:'morrill memorial library books borrow lending',airport:'norwood memorial airport aviation',
+  veterans:'veteran veterans benefits services',veteran:'veterans benefits services',
+  foodpantry:'food pantry food assistance groceries',pantry:'food pantry groceries assistance',
+  notary:'notary public notarize notarization',notarize:'notary public notarization',
+  trainstation:'train station commuter rail mbta transit',parking:'parking lot garage permit ticket',
+  meeting:'meetings board committee town meeting agenda minutes',meetings:'meeting board committee town agenda minutes'
+ };
  const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+ const stop=new Set(['a','an','and','are','at','for','from','how','i','in','is','it','me','my','of','on','or','the','to','with']);
+ const words=s=>norm(s).split(/\s+/).filter(w=>w&&!stop.has(w));
+ const editDistance=(a,b)=>{if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++)cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=cur}return prev[b.length]};
+ const closeWord=(q,w)=>{if(q===w)return 1;if(q.length>=3&&w.startsWith(q))return .86;if(w.length>=3&&q.startsWith(w))return .72;if(q.length<4||w.length<4)return 0;const d=editDistance(q,w),m=Math.max(q.length,w.length);return d===1?.72:(d===2&&m>=7?.48:0)};
+ const aliasTerms=raw=>{const direct=aliases[raw]||'';const perWord=words(raw).map(w=>aliases[w]||'').join(' ');return norm(direct+' '+perWord)};
+
  const libraryThings=[
   {name:'OBD-II diagnostic scanner',terms:'obd obd2 obd ii car auto automobile mechanic mechanical check engine light engine code diagnostic trouble codes vehicle repair scanner',desc:'read vehicle diagnostic trouble codes',url:'https://www.norwoodlibrary.org/wp-content/uploads/2021/05/LOT-Master-List.pdf'},
   {name:'Metal detector',terms:'metal detector treasure hunt lost ring beach yard find metal outdoors',desc:'search for metal objects and lost items',url:'https://norwoodlibrary.org/borrow-a-karaoke-kit/'},
@@ -89,13 +137,46 @@
   const original=String(raw||'').trim();
   const acronym=/^[A-Z][A-Z0-9&.-]{1,7}$/.test(original);
   raw=norm(original); if(!raw)return [];
-  const expanded=norm(raw+' '+(aliases[raw]||''));
-  const terms=[...new Set(expanded.split(/\s+/).filter(Boolean))];
-  return items().map(x=>{const name=norm(x.name),type=norm(x.type),body=norm(x.text),hay=norm([x.name,x.type,x.text].join(' '));let score=0;if(name===raw)score+=120;if(name.startsWith(raw))score+=55;if(name.includes(raw))score+=35;if(type===raw)score+=70;if(type.includes(raw))score+=35;if(body.includes(raw))score+=18;terms.forEach(t=>{if(name===t)score+=30;else if(name.includes(t))score+=14;if(type===t)score+=24;else if(type.includes(t))score+=10;if(body.includes(t))score+=4});/* Tier determines source priority; score determines relevance within that tier. */if(x.resourceCategory&&score>=18)score+=58;if(x.type==='How Do I?'&&score>=18)score+=42;if(x.business&&score>=30)score+=3;if(acronym&&aliases[raw]){const phrase=norm(aliases[raw]);if(name.split(' ').some(w=>w===raw)||type.split(' ').some(w=>w===raw))score+=45;if(phrase.split(' ').some(w=>name.includes(w)||type.includes(w)))score+=12;}let tier=3;if(x.norwoodPage&&!x.business&&!x.calendar&&!x.recreation&&x.type!=='Event'&&score>=18)tier=1;else if(x.canonicalTown&&score>=18)tier=2;return{x,score,tier};}).filter(o=>o.score>0).sort((a,b)=>a.tier-b.tier||b.score-a.score||a.x.name.localeCompare(b.x.name)).filter((o,idx,arr)=>{
-   if(!o.x.officialTown||o.x.canonicalTown)return true;
-   const u=norm(o.x.url),n=norm(o.x.name);
-   return !arr.some((p,j)=>j<idx&&p.x.canonicalTown&&(norm(p.x.url)===u||norm(p.x.name)===n));
-  }).slice(0,limit);
+  const queryWords=words(raw),expanded=norm(raw+' '+aliasTerms(raw)),expandedWords=[...new Set(words(expanded))];
+  return items().map(x=>{
+   const name=norm(x.name),type=norm(x.type),body=norm(x.text),url=norm(x.url),nameWords=words(name),typeWords=words(type),bodyWords=words(body);
+   let score=0,matchedCore=0;
+   if(name===raw)score+=180;else if(name.startsWith(raw))score+=105;else if(name.includes(raw))score+=78;
+   if(type===raw)score+=75;else if(type.includes(raw))score+=34;
+   if(body.includes(raw))score+=32;
+   queryWords.forEach(q=>{
+    let best=0;
+    nameWords.forEach(w=>best=Math.max(best,closeWord(q,w)*30));
+    typeWords.forEach(w=>best=Math.max(best,closeWord(q,w)*20));
+    bodyWords.forEach(w=>best=Math.max(best,closeWord(q,w)*8));
+    if(best>=10)matchedCore++;
+    score+=best;
+   });
+   const related=expandedWords.filter(w=>!queryWords.includes(w));
+   related.forEach(q=>{
+    let best=0;
+    nameWords.forEach(w=>best=Math.max(best,closeWord(q,w)*9));
+    typeWords.forEach(w=>best=Math.max(best,closeWord(q,w)*7));
+    bodyWords.forEach(w=>best=Math.max(best,closeWord(q,w)*3));
+    score+=best;
+   });
+   if(queryWords.length>1){const coverage=matchedCore/queryWords.length;score+=coverage===1?38:coverage>=.67?16:-18;}
+   if(url.includes(raw.replace(/ /g,' ')))score+=5;
+   if(x.resourceCategory&&score>=18)score+=42;
+   if(x.type==='How Do I?'&&score>=18)score+=34;
+   if(x.business&&score>=30)score+=3;
+   if(acronym&&aliasTerms(raw)){if(nameWords.includes(raw)||typeWords.includes(raw))score+=50;}
+   let tier=3;
+   if(x.norwoodPage&&!x.business&&!x.calendar&&!x.recreation&&x.type!=='Event'&&score>=18)tier=1;
+   else if(x.canonicalTown&&score>=18)tier=2;
+   return{x,score,tier,matchedCore};
+  }).filter(o=>o.score>7&&(queryWords.length<=1||o.matchedCore>0))
+   .sort((a,b)=>a.tier-b.tier||b.score-a.score||a.x.name.localeCompare(b.x.name))
+   .filter((o,idx,arr)=>{
+    if(!o.x.officialTown||o.x.canonicalTown)return true;
+    const u=norm(o.x.url),n=norm(o.x.name);
+    return !arr.some((p,j)=>j<idx&&p.x.canonicalTown&&(norm(p.x.url)===u||norm(p.x.name)===n));
+   }).slice(0,limit);
  }
  function noteSearch(query,count){
    try{
