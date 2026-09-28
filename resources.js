@@ -125,11 +125,12 @@ function render(){
  const id=location.hash.slice(1);
  const t=topics.find(x=>x[0]===id);
  if(!t){root.innerHTML='';return;}
- let rows=all.filter(r=>belongs(r,t)).sort((a,b)=>{const ar=relevance(a,t,''),br=relevance(b,t,'');if(Math.abs(br-ar)>25)return br-ar;const localDiff=Number(isLocalResource(b))-Number(isLocalResource(a));return localDiff||br-ar||a.name.localeCompare(b.name);});
+ let rows=all.filter(r=>belongs(r,t)).filter(r=>t[0]!=='medical'||!isBusiness(r)).sort((a,b)=>{const ar=relevance(a,t,''),br=relevance(b,t,'');if(Math.abs(br-ar)>25)return br-ar;const localDiff=Number(isLocalResource(b))-Number(isLocalResource(a));return localDiff||br-ar||a.name.localeCompare(b.name);});
  const biz=businessesForTopic(t[0]).map(businessResource);
  const seen=new Set(rows.map(r=>r.name.toLowerCase()));
  biz.forEach(b=>{if(!seen.has(b.name.toLowerCase()))rows.push(b);});
- const businessGateway=t[0]==='medical'?'<a class="trash-resource-link resource-business-gateway" href="businesses.html#health"><b>Looking for a medical provider?</b><span>Browse local health, dental & wellness businesses →</span></a>':'';\n  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${businessGateway}<div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;
+ const businessGateway=t[0]==='medical'?'<a class="trash-resource-link resource-business-gateway" href="businesses.html#health"><b>Looking for a medical provider?</b><span>Browse local health, dental & wellness businesses →</span></a>':'';
+  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${businessGateway}<div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;
  root.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
