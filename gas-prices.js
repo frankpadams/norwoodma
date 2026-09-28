@@ -1,6 +1,10 @@
 (()=>{'use strict';
 const stations=[
 {name:'Norwood Gulf',address:'707 Neponset St',phone:'781-255-7368',map:'https://www.google.com/maps/search/?api=1&query=Norwood+Gulf+707+Neponset+St+Norwood+MA'},
+{name:'Gulf — Broadway',address:'145 Broadway',map:'https://www.google.com/maps/search/?api=1&query=Gulf+145+Broadway+Norwood+MA'},
+{name:"Mr. Frank's Food Mart",address:'917 Washington St',map:'https://www.google.com/maps/search/?api=1&query=Mr+Franks+Food+Mart+917+Washington+St+Norwood+MA'},
+{name:'Sunoco — Route 1',address:'515 Providence Hwy',phone:'781-762-7380',map:'https://www.google.com/maps/search/?api=1&query=Sunoco+515+Providence+Hwy+Norwood+MA'},
+{name:'Route 1 Auto Services',address:'305 Boston-Providence Turnpike',map:'https://www.google.com/maps/search/?api=1&query=Route+1+Auto+Services+305+Boston+Providence+Turnpike+Norwood+MA'},
 {name:'Mobil — Route 1',address:'971 Providence Hwy',phone:'781-769-8945',map:'https://www.google.com/maps/search/?api=1&query=Mobil+971+Providence+Hwy+Norwood+MA'},
 {name:'Irving Oil / Rojo',address:'69 Providence Hwy',phone:'781-762-8280',map:'https://www.google.com/maps/search/?api=1&query=Irving+Oil+69+Providence+Hwy+Norwood+MA'},
 {name:"BJ's Gas Station",address:'1412–1420 Boston-Providence Turnpike',phone:'781-619-1250',map:'https://www.google.com/maps/search/?api=1&query=BJs+Gas+Norwood+MA'},
