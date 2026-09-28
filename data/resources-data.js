@@ -5512,15 +5512,15 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Norwood REACH",
     "category": "Employment",
-    "description": "Free volunteer help for people in transition who want assistance with their résumé and preparing for job interviews. Contact Norwood REACH by email for help.",
+    "description": "Free volunteer job-search help for people in Norwood, founded by Kristen McQuaid, a Human Resources Director with more than a dozen years of HR experience. Get feedback and tips to strengthen your résumé, or practice with a mock interview before the real thing. Email Norwood REACH to get in touch.",
     "url": "mailto:NorwoodREACH@gmail.com",
-    "tags": "Norwood REACH free resume résumé interview job search employment career transition volunteer coaching",
+    "tags": "Norwood REACH Kristen McQuaid free resume résumé review tips mock interview interview preparation job search employment career transition volunteer HR human resources",
     "topics": [
       "employment"
     ],
     "coverage": "Norwood",
     "email": "NorwoodREACH@gmail.com",
     "verified": "2026-09",
-    "source_note": "Community-provided contact information."
+    "source_note": "Description and contact information provided by founder Kristen McQuaid."
   }
 ];
