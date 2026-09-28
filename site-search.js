@@ -126,7 +126,14 @@
   townCanonical.forEach(t=>out.push({...t}));
   (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
   (window.NORWOOD_RESOURCES||[]).forEach(r=>out.push({name:r.name,url:r.url||'resources.html',type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true}));
-  (window.NORWOOD_BUSINESSES||[]).forEach(b=>out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,(b.labels||[]).join(' '),b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true}));
+  const businessRows=(window.NORWOOD_BUSINESSES||[]).map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4],labels:[],tags:[]}:b);
+  const businessCats={};
+  businessRows.forEach(b=>{
+   const cat=String(b.category||'').trim();if(cat)(businessCats[cat]||(businessCats[cat]=[])).push(b);
+   out.push({name:b.name,url:'business-directory.html?q='+encodeURIComponent(b.name),type:'Local business',text:[b.category,(b.labels||[]).join(' '),b.address,b.phone,(b.tags||[]).join(' ')].join(' '),business:true});
+  });
+  Object.entries(businessCats).forEach(([cat,rows])=>out.push({name:cat,url:'business-directory.html?q='+encodeURIComponent(cat),type:'Business directory',text:cat+' '+rows.map(b=>[b.name,(b.labels||[]).join(' '),(b.tags||[]).join(' ')].join(' ')).join(' '),norwoodPage:true,businessCategory:true}));
+  if(businessRows.some(b=>/roof/i.test([b.category,b.name,(b.labels||[]).join(' '),(b.tags||[]).join(' ')].join(' '))))out.push({name:'Roofers & Roofing Contractors',url:'business-directory.html?q=roof',type:'Business directory',text:'roof roofer roofers roofing contractor contractors home repair exterior shingles gutters',norwoodPage:true,businessCategory:true});
   (window.NORWOOD_CALENDAR_SOURCES||[]).forEach(c=>out.push({name:(c.name||'Calendar')+' calendar',url:c.view_url||'calendars.html',type:'Calendar',text:[c.name,c.description,c.provider,c.group,'calendar schedule dates events school'].join(' '),calendar:true}));
   (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
   (window.NORWOOD_RECREATION_PROGRAMS||[]).filter(r=>r.searchable!==false).forEach(r=>out.push({name:r.name||r.program||'Recreation program',url:'events.html?rec='+encodeURIComponent(r.id),type:'Norwood Recreation',date:r.start_date||'',text:[r.program,r.subcategory,r.section,r.description,r.ages,r.venue,r.fees,r.start_date,r.end_date,r.drop_in?'drop in':''].join(' '),recreation:true}));
