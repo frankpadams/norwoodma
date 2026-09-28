@@ -2,7 +2,18 @@
  const bank=window.NORWOOD_TRIVIA_QUESTIONS||[];
  const $=s=>document.querySelector(s); let round=[],i=0,score=0,answered=false,roundSize=10;
  const shuffle=a=>{a=[...a];for(let n=a.length-1;n>0;n--){const j=Math.floor(Math.random()*(n+1));[a[n],a[j]]=[a[j],a[n]]}return a};
- function start(size){roundSize=Math.min(size,bank.length);round=shuffle(bank).slice(0,roundSize);i=0;score=0;$('#triviaSetup').classList.add('trivia-hidden');$('#triviaResults').classList.add('trivia-hidden');$('#triviaGame').classList.remove('trivia-hidden');render()}
+ function balancedRound(size){
+  const groups={};
+  shuffle(bank).forEach(q=>(groups[q.cat]||(groups[q.cat]=[])).push(q));
+  let cats=shuffle(Object.keys(groups)),out=[];
+  while(out.length<size&&cats.length){
+   const next=[];
+   cats.forEach(cat=>{if(out.length<size&&groups[cat].length)out.push(groups[cat].pop());if(groups[cat].length)next.push(cat)});
+   cats=shuffle(next);
+  }
+  return out;
+ }
+ function start(size){roundSize=Math.min(size,bank.length);round=balancedRound(roundSize);i=0;score=0;$('#triviaSetup').classList.add('trivia-hidden');$('#triviaResults').classList.add('trivia-hidden');$('#triviaGame').classList.remove('trivia-hidden');render()}
  function render(){answered=false;const q=round[i];$('#triviaCount').textContent=`Question ${i+1} of ${round.length}`;$('#triviaScore').textContent=`Score: ${score}`;$('#triviaProgress').style.width=`${((i)/round.length)*100}%`;$('#triviaCategory').textContent=q.cat;$('#triviaQuestion').textContent=q.q;const box=$('#triviaOptions');box.innerHTML='';shuffle(q.a.map((text,index)=>({text,index}))).forEach(o=>{const b=document.createElement('button');b.className='trivia-option';b.textContent=o.text;b.onclick=()=>answer(b,o.index,q);box.appendChild(b)});$('#triviaFeedback').classList.add('trivia-hidden');$('#triviaNext').classList.add('trivia-hidden')}
  function answer(btn,choice,q){if(answered)return;answered=true;document.querySelectorAll('.trivia-option').forEach(b=>b.disabled=true);if(choice===q.c){score++;btn.classList.add('correct')}else{btn.classList.add('wrong');[...document.querySelectorAll('.trivia-option')].find(b=>b.textContent===q.a[q.c])?.classList.add('correct')}$('#triviaScore').textContent=`Score: ${score}`;$('#triviaProgress').style.width=`${((i+1)/round.length)*100}%`;const f=$('#triviaFeedback');f.innerHTML=`<p><strong>${choice===q.c?'Correct!':'The answer is '+q.a[q.c]+'.'}</strong></p><p>${q.fact}</p><p class="trivia-source-note"><a href="${q.src}" target="_blank" rel="noopener">Check the source ↗</a></p>`;f.classList.remove('trivia-hidden');$('#triviaNext').textContent=i===round.length-1?'See my score':'Next question →';$('#triviaNext').classList.remove('trivia-hidden')}
  function next(){if(i<round.length-1){i++;render()}else finish()}
