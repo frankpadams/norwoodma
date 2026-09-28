@@ -22,7 +22,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "services",
       "kids",
-      "education-family"
+      "education-family",
+      "family-support"
     ],
     "coverage": "Norwood",
     "verified": "2026-09",
@@ -39,7 +40,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "community",
       "disability-support",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Norwood",
     "verified": "2026-09",
@@ -53,7 +55,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "addiction detox alcohol drugs treatment",
     "topics": [
       "health",
-      "recovery"
+      "recovery",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -68,7 +72,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "health",
       "community",
-      "recovery"
+      "recovery",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -111,7 +117,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "Alzheimer dementia memory caregiver support",
     "topics": [
       "older",
-      "health"
+      "health",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -140,7 +148,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "community",
-      "basic-needs"
+      "basic-needs",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -173,7 +183,8 @@ window.NORWOOD_RESOURCES= [
       "community",
       "health",
       "family-support",
-      "lgbtq-support"
+      "lgbtq-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -186,7 +197,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "elementary school",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Band Gig School of Music & Performance",
@@ -228,7 +242,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "mental-health",
       "recovery",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -265,7 +280,11 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "housing-assistance",
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "food-assistance",
+      "basic-needs",
+      "education-family",
+      "family-support"
     ],
     "coverage": "National",
     "verified": "2026-09"
@@ -279,7 +298,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "older",
       "jobs",
-      "financial-assistance"
+      "financial-assistance",
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "National",
     "verified": "2026-09"
@@ -292,7 +313,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "health public health",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Board of Selectmen",
@@ -302,7 +325,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "selectmen town board",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Boch Toys for Tots — Norwood",
@@ -314,7 +339,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "community",
       "volunteer",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Norwood",
     "verified": "2026-09",
@@ -358,7 +384,9 @@ window.NORWOOD_RESOURCES= [
       "community",
       "jobs",
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -413,7 +441,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "building permits inspections",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Callahan Elementary School",
@@ -423,7 +453,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "elementary school",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Callahan Elementary School Parent Teacher Association",
@@ -464,7 +497,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "youth",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -507,7 +541,9 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.google.com/maps/search/?api=1&query=Chris+Sam%27s+Barber+Shop+1076+Washington+St+Norwood+MA",
     "tags": "barber haircut grooming",
     "topics": [
-      "services"
+      "services",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -520,7 +556,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "elementary school",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Cleveland Elementary School Parent Teacher Organization",
@@ -546,7 +585,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "middle school cms students",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Coakley Middle School Parent Teacher Organization",
@@ -613,7 +655,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "senior seniors aging transportation programs",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "older"
+    ]
   },
   {
     "name": "Crisis Text Line",
@@ -641,7 +685,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "community",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -657,7 +702,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "community",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -673,7 +719,9 @@ window.NORWOOD_RESOURCES= [
       "health",
       "mental-health",
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -729,7 +777,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "engineering infrastructure",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Family TIES of Massachusetts",
@@ -741,7 +791,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "disability-support",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -757,7 +808,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "disability-support",
       "education-family",
-      "family-support"
+      "family-support",
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -788,7 +840,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "youth",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -852,7 +905,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "library friends volunteer",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Gamblers Anonymous",
@@ -891,7 +946,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "community",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local/Regional",
     "verified": "2026-09"
@@ -908,7 +964,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "mental-health",
       "family-support",
-      "lgbtq-support"
+      "lgbtq-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -983,7 +1040,10 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "community",
       "financial-assistance",
-      "legal-advocacy"
+      "legal-advocacy",
+      "housing-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -999,7 +1059,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "family-support",
-      "lgbtq-support"
+      "lgbtq-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -1014,7 +1075,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "assistance",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -1060,7 +1122,8 @@ window.NORWOOD_RESOURCES= [
       "donations",
       "volunteer",
       "housing-assistance",
-      "community-groups"
+      "community-groups",
+      "basic-needs"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -1078,7 +1141,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "kids",
       "mental-health",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1139,7 +1203,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "community",
-      "housing-assistance"
+      "housing-assistance",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1153,7 +1218,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "worship",
       "community",
-      "deaf-hard-of-hearing"
+      "deaf-hard-of-hearing",
+      "disability-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -1166,7 +1232,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "elder senior caregiver aging meals transportation",
     "topics": [
       "older",
-      "transport"
+      "transport",
+      "financial-assistance"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -1224,7 +1291,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local — Norwood",
     "address": "705 Washington St, Norwood, MA 02062",
@@ -1252,7 +1321,9 @@ window.NORWOOD_RESOURCES= [
       "community",
       "jobs",
       "employment",
-      "immigration-language"
+      "immigration-language",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -1325,7 +1396,9 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "community",
       "employment",
-      "immigration-language"
+      "immigration-language",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -1339,7 +1412,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "bowling arcade games billiards Kings Legacy Place Dedham family entertainment",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Dedham",
     "verified": "2026-09"
@@ -1368,7 +1443,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "todo",
       "kids",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -1380,7 +1456,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "health",
       "community",
-      "recovery"
+      "recovery",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1394,7 +1472,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "Legacy Place Dedham shopping entertainment cinema family dining activities",
     "topics": [
       "todo",
-      "business"
+      "business",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Dedham",
     "verified": "2026-09"
@@ -1409,7 +1489,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "youth",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -1424,7 +1505,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "disability-support",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -1456,7 +1538,8 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "community",
       "housing-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1500,7 +1583,8 @@ window.NORWOOD_RESOURCES= [
       "assistance",
       "volunteer",
       "family-support",
-      "community-groups"
+      "community-groups",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -1514,7 +1598,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "MassAbility MRC Massachusetts Rehabilitation Commission vocational rehabilitation VR disability employment career job training placement interview assistive technology",
     "topics": [
       "employment",
-      "disability-support"
+      "disability-support",
+      "education-family",
+      "family-support",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1535,7 +1622,9 @@ window.NORWOOD_RESOURCES= [
       "housing-assistance",
       "financial-assistance",
       "education-family",
-      "family-support"
+      "family-support",
+      "food-assistance",
+      "basic-needs"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1549,7 +1638,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "mental-health"
     ],
     "coverage": "Statewide",
     "phone": "508-505-4588",
@@ -1562,7 +1652,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/info-details/massachusetts-animal-fund",
     "tags": "pet spay neuter animal assistance",
     "topics": [
-      "community"
+      "community",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1577,7 +1668,8 @@ window.NORWOOD_RESOURCES= [
       "housing",
       "jobs",
       "financial-assistance",
-      "legal-advocacy"
+      "legal-advocacy",
+      "housing-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1622,7 +1714,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "family-support",
-      "safety-crisis"
+      "safety-crisis",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1635,7 +1728,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "homeless shelter housing family youth",
     "topics": [
       "housing",
-      "housing-assistance"
+      "housing-assistance",
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1652,7 +1748,10 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "housing",
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "housing-assistance",
+      "legal-advocacy",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1669,7 +1768,8 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "medical-care",
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1683,7 +1783,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "health",
       "disability-support",
-      "deaf-hard-of-hearing"
+      "deaf-hard-of-hearing",
+      "legal-advocacy",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1698,7 +1800,9 @@ window.NORWOOD_RESOURCES= [
       "health",
       "community",
       "disability-support",
-      "deaf-hard-of-hearing"
+      "deaf-hard-of-hearing",
+      "legal-advocacy",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1743,7 +1847,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "health",
-      "disability-support"
+      "disability-support",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1756,7 +1861,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "mental health DMH Massachusetts services serious mental illness support",
     "topics": [
       "health",
-      "mental-health"
+      "mental-health",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1773,7 +1879,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "food-assistance",
       "financial-assistance",
-      "basic-needs"
+      "basic-needs",
+      "town"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1788,7 +1895,9 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "disability-support",
-      "family-support"
+      "family-support",
+      "legal-advocacy",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1820,7 +1929,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "housing-assistance",
       "family-support",
-      "safety-crisis"
+      "safety-crisis",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1848,7 +1958,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "veterans",
       "jobs",
-      "financial-assistance"
+      "financial-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1864,7 +1976,8 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "community",
       "housing-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1883,7 +1996,10 @@ window.NORWOOD_RESOURCES= [
       "transport",
       "financial-assistance",
       "education-family",
-      "family-support"
+      "family-support",
+      "food-assistance",
+      "basic-needs",
+      "housing-assistance"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1897,7 +2013,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "kids",
-      "housing-assistance"
+      "housing-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1913,7 +2031,9 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "housing-assistance",
       "financial-assistance",
-      "safety-crisis"
+      "safety-crisis",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1927,7 +2047,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "housing-assistance",
-      "legal-advocacy"
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1943,7 +2065,9 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "kids",
       "education-family",
-      "immigration-language"
+      "immigration-language",
+      "legal-advocacy",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1957,7 +2081,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "financial-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1989,7 +2114,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "education-family",
       "family-support",
-      "lgbtq-support"
+      "lgbtq-support",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2024,7 +2150,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "disability rights ADA accessibility",
     "topics": [
       "health",
-      "disability-support"
+      "disability-support",
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2040,7 +2167,9 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2111,7 +2240,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "business certification procurement minority women veteran",
     "topics": [
       "business",
-      "jobs"
+      "jobs",
+      "veterans"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2140,7 +2270,10 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "food-assistance",
       "family-support",
-      "basic-needs"
+      "basic-needs",
+      "financial-assistance",
+      "pregnancy",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2168,7 +2301,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "job employment career training resume unemployment",
     "topics": [
       "jobs",
-      "employment"
+      "employment",
+      "financial-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2224,7 +2358,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "commuter rail train franklin foxboro norwood central depot",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "transport"
+    ]
   },
   {
     "name": "MBTA Route 34E",
@@ -2234,7 +2370,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "bus 34e mbta forest hills walpole transit",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "transport"
+    ]
   },
   {
     "name": "MBTA Trip Planner",
@@ -2264,7 +2402,10 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "education-family",
       "immigration-language",
-      "deaf-hard-of-hearing"
+      "deaf-hard-of-hearing",
+      "employment",
+      "legal-advocacy",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2277,7 +2418,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "eating disorder health counseling support",
     "topics": [
       "health",
-      "mental-health"
+      "mental-health",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -2292,7 +2435,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local — Norwood",
     "address": "991 Providence Hwy #1177, Norwood, MA 02062",
@@ -2348,7 +2493,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "library children",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Morrill Community Resources",
@@ -2358,7 +2506,11 @@ window.NORWOOD_RESOURCES= [
     "tags": "help assistance food fuel housing rent resources",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "housing-assistance"
+    ]
   },
   {
     "name": "Morrill Memorial Library",
@@ -2395,7 +2547,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "jobs",
       "housing",
-      "financial-assistance"
+      "financial-assistance",
+      "legal-advocacy"
     ],
     "coverage": "Local/Regional",
     "verified": "2026-09"
@@ -2409,7 +2562,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "older",
       "health",
-      "housing"
+      "housing",
+      "housing-assistance"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2469,7 +2623,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "museum pass family library things to do",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -2500,7 +2656,9 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "kids",
       "education-family",
-      "immigration-language"
+      "immigration-language",
+      "family-support",
+      "town"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -2543,7 +2701,9 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "housing",
       "food-assistance",
-      "basic-needs"
+      "basic-needs",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -2556,7 +2716,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/commres-food-fuel-housing/",
     "tags": "home buying homeownership mortgage housing",
     "topics": [
-      "housing"
+      "housing",
+      "housing-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -2570,7 +2731,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "mental health nami navigation family support",
     "topics": [
       "health",
-      "mental-health"
+      "mental-health",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -2584,7 +2747,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "NAMI mental health helpline navigation support family Massachusetts Compass",
     "topics": [
       "health",
-      "mental-health"
+      "mental-health",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -2615,7 +2780,9 @@ window.NORWOOD_RESOURCES= [
       "housing",
       "jobs",
       "housing-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2628,7 +2795,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "mental health clubhouse recovery support",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "mental-health",
+      "recovery"
+    ]
   },
   {
     "name": "Neponset River Regional Chamber",
@@ -2648,7 +2818,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "business chamber employer networking",
     "topics": [
       "business",
-      "jobs"
+      "jobs",
+      "legal-advocacy"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -2661,7 +2832,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "river watershed environment conservation",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Neponset Valley Humane Society",
@@ -2671,7 +2845,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "cats animal rescue adoption foster",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Neponset Valley Sunrise Rotary Club",
@@ -2712,7 +2888,8 @@ window.NORWOOD_RESOURCES= [
       "todo",
       "community",
       "youth",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local/Regional",
     "social": {
@@ -2730,7 +2907,10 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "housing",
-      "basic-needs"
+      "basic-needs",
+      "food-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -2744,7 +2924,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "senior wellness call safety elder alone",
     "topics": [
       "older",
-      "health"
+      "health",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -2772,7 +2954,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "driving school driving lessons adult learner driver education learn to drive",
     "topics": [
       "services",
-      "jobs"
+      "jobs",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Norwood",
     "verified": "2026-09"
@@ -2789,7 +2973,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -2843,7 +3028,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -2890,7 +3076,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -2903,7 +3090,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "kids",
       "mental-health",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "address": "115 Norwood Park South, Suite 110, Norwood, MA 02062",
@@ -2918,7 +3106,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "health public health inspections",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Building Permits & Inspections",
@@ -2946,7 +3136,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "community",
       "disability-support",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local/Regional",
     "verified": "2026-09"
@@ -2983,7 +3174,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "media video government meetings community news",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Norwood Community Tennis Association",
@@ -3019,7 +3213,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "conservation wetlands environment",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Coordinated Family & Community Engagement",
@@ -3047,7 +3243,10 @@ window.NORWOOD_RESOURCES= [
       "older",
       "health",
       "transport",
-      "todo"
+      "todo",
+      "food-assistance",
+      "basic-needs",
+      "financial-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3107,7 +3306,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "elks lodge civic veterans community",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Norwood Farmers Market",
@@ -3120,7 +3321,10 @@ window.NORWOOD_RESOURCES= [
     },
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "food-assistance",
+      "basic-needs"
+    ]
   },
   {
     "name": "Norwood Fine Arts Collaborative Team",
@@ -3146,7 +3350,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "fire safety emergency prevention",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Food Pantry",
@@ -3187,7 +3393,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "high school nhs students",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Norwood High School Alumni Association",
@@ -3198,7 +3407,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "kids",
-      "education-family"
+      "education-family",
+      "financial-assistance",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3214,7 +3425,8 @@ window.NORWOOD_RESOURCES= [
       "community",
       "education-family",
       "family-support",
-      "community-groups"
+      "community-groups",
+      "financial-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3283,7 +3495,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "women volunteer community service",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Norwood Light — Report an Outage",
@@ -3303,7 +3517,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "internet broadband",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Light Electric",
@@ -3313,7 +3529,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "electric utility outage",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Light Electric & Broadband",
@@ -3323,7 +3541,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "electric power internet broadband utility bill",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Lions Club",
@@ -3349,7 +3569,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "todo",
       "community",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3400,7 +3621,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "music schools band chorus",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Norwood Parks & Playgrounds",
@@ -3439,7 +3663,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "police safety crime non emergency",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Norwood Public Records",
@@ -3461,7 +3687,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "school education students district",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Norwood Public Schools Bus Transportation",
@@ -3472,7 +3701,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "transport",
-      "education-family"
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3501,7 +3731,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "English learner multilingual ESL ELL language family school",
     "topics": [
       "kids",
-      "education-family"
+      "education-family",
+      "immigration-language",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3529,7 +3761,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "education-family",
-      "family-support"
+      "family-support",
+      "transport"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3558,7 +3791,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "school lunch menu nutrition meals student",
     "topics": [
       "kids",
-      "education-family"
+      "education-family",
+      "food-assistance",
+      "basic-needs",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3571,7 +3807,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "register school enrollment kindergarten preschool new student translated",
     "topics": [
       "kids",
-      "education-family"
+      "education-family",
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3633,7 +3870,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "recreation sports classes programs civic center",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Norwood Recreation Adaptive Sports",
@@ -3646,7 +3885,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "disability-support",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3675,7 +3915,8 @@ window.NORWOOD_RESOURCES= [
       "todo",
       "town",
       "education-family",
-      "family-support"
+      "family-support",
+      "community-groups"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3708,7 +3949,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "todo",
       "town",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3734,7 +3976,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "rotary volunteer civic service",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Norwood Scholarship Foundation",
@@ -3744,7 +3988,11 @@ window.NORWOOD_RESOURCES= [
     "tags": "scholarship education students",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "financial-assistance",
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Norwood Senior Center / Council on Aging",
@@ -3754,7 +4002,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "senior aging transportation",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "older"
+    ]
   },
   {
     "name": "Norwood Senior Center Newsletter & Calendar",
@@ -3790,7 +4040,9 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09",
     "topics": [
       "todo",
-      "business"
+      "business",
+      "food-assistance",
+      "basic-needs"
     ]
   },
   {
@@ -3821,7 +4073,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -3854,7 +4107,9 @@ window.NORWOOD_RESOURCES= [
       "todo",
       "kids",
       "youth",
-      "family-support"
+      "family-support",
+      "education-family",
+      "community-groups"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3917,7 +4172,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "veterans memorial benefits town military",
     "topics": [
       "veterans",
-      "town"
+      "town",
+      "financial-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3930,7 +4186,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "veterans benefits",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "financial-assistance"
+    ]
   },
   {
     "name": "Norwood WIC",
@@ -3944,7 +4202,8 @@ window.NORWOOD_RESOURCES= [
       "food-assistance",
       "education-family",
       "family-support",
-      "basic-needs"
+      "basic-needs",
+      "pregnancy"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -3973,7 +4232,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "youth",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4006,7 +4266,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -4021,7 +4282,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -4034,7 +4296,9 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "youth",
       "todo",
-      "family-support"
+      "family-support",
+      "disability-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4051,7 +4315,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -4066,7 +4331,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "kids",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ]
   },
   {
@@ -4077,7 +4343,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "athletics school sports",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "NPS District Calendar",
@@ -4087,7 +4356,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "school calendar events dates",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "NPS Fine Arts",
@@ -4097,7 +4369,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "music arts school",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "NPS Nutrition",
@@ -4107,7 +4382,12 @@ window.NORWOOD_RESOURCES= [
     "tags": "school meals nutrition",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "NPS Student Services",
@@ -4117,7 +4397,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "student services special education",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Oldham Elementary School",
@@ -4127,7 +4410,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "elementary school",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Oldham Elementary School Parent Teacher Organization",
@@ -4155,7 +4441,10 @@ window.NORWOOD_RESOURCES= [
       "veterans",
       "housing",
       "jobs",
-      "financial-assistance"
+      "financial-assistance",
+      "housing-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "National",
     "verified": "2026-09",
@@ -4175,7 +4464,8 @@ window.NORWOOD_RESOURCES= [
       "older",
       "financial-assistance",
       "family-support",
-      "immigration-language"
+      "immigration-language",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4190,7 +4480,8 @@ window.NORWOOD_RESOURCES= [
       "community",
       "kids",
       "family-support",
-      "lgbtq-support"
+      "lgbtq-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4205,7 +4496,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "jobs",
-      "immigration-language"
+      "immigration-language",
+      "legal-advocacy"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4221,7 +4513,9 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "mental-health",
-      "family-support"
+      "family-support",
+      "older",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -4237,7 +4531,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "education-family",
-      "family-support"
+      "family-support",
+      "older"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -4256,7 +4551,9 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "education-family",
       "immigration-language",
-      "deaf-hard-of-hearing"
+      "deaf-hard-of-hearing",
+      "legal-advocacy",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4271,7 +4568,8 @@ window.NORWOOD_RESOURCES= [
       "health",
       "kids",
       "disability-support",
-      "education-family"
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4338,7 +4636,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "elementary school",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Prescott Elementary School Parent Teacher Organization",
@@ -4381,7 +4682,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "dpw trash recycling water sewer roads snow",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Quincy Family Resource Center",
@@ -4392,7 +4695,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "health",
-      "education-family"
+      "education-family",
+      "family-support"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4409,7 +4713,8 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "community",
       "housing-assistance",
-      "financial-assistance"
+      "financial-assistance",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4432,7 +4737,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "programs classes youth adult fitness register",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Refugee & Immigrant Assistance Center — Boston",
@@ -4489,7 +4797,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "RIAN Immigrant Center Immigration, Language & Newcomer Resources",
     "topics": [
       "immigration-language",
-      "legal-advocacy"
+      "legal-advocacy",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -4547,7 +4857,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "mental-health",
       "recovery",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4562,7 +4873,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "basic-needs",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4577,7 +4889,11 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "health",
       "kids",
-      "safety-crisis"
+      "safety-crisis",
+      "domestic-violence",
+      "housing-assistance",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -4595,7 +4911,8 @@ window.NORWOOD_RESOURCES= [
       "worship",
       "recovery",
       "family-support",
-      "community-groups"
+      "community-groups",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4611,7 +4928,8 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "mental-health",
       "family-support",
-      "safety-crisis"
+      "safety-crisis",
+      "education-family"
     ],
     "coverage": "Regional/Statewide",
     "verified": "2026-09",
@@ -4671,7 +4989,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "small business mentor startup entrepreneur",
     "topics": [
       "business",
-      "jobs"
+      "jobs",
+      "community-groups"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -4687,7 +5006,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "community",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4703,7 +5023,8 @@ window.NORWOOD_RESOURCES= [
       "youth",
       "community",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4719,7 +5040,8 @@ window.NORWOOD_RESOURCES= [
       "assistance",
       "food-assistance",
       "family-support",
-      "basic-needs"
+      "basic-needs",
+      "education-family"
     ],
     "coverage": "Regional",
     "verified": "2026-09",
@@ -4775,7 +5097,9 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "youth",
       "todo",
-      "family-support"
+      "family-support",
+      "education-family",
+      "community-groups"
     ],
     "coverage": "Local/Regional",
     "verified": "2026-09"
@@ -4792,7 +5116,9 @@ window.NORWOOD_RESOURCES= [
       "food-assistance",
       "financial-assistance",
       "family-support",
-      "basic-needs"
+      "basic-needs",
+      "pregnancy",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -4876,7 +5202,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "bowling lanes golf simulator darts shuffleboard entertainment family foxborough patriot place nearby",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Foxborough",
     "verified": "2026-09"
@@ -4917,7 +5245,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "go kart karting arcade ninja wipeout bumper cars virtual reality entertainment Wrentham family",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Wrentham",
     "verified": "2026-09"
@@ -4930,7 +5260,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "Jewish synagogue temple Reform Judaism worship Westwood",
     "topics": [
       "worship",
-      "community"
+      "community",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Westwood",
     "verified": "2026-09"
@@ -4960,7 +5292,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "health",
       "kids",
-      "disability-support"
+      "disability-support",
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -4974,7 +5307,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "escape room puzzles game Legacy Place Dedham family groups entertainment",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Dedham",
     "verified": "2026-09"
@@ -5043,7 +5378,8 @@ window.NORWOOD_RESOURCES= [
       "mental-health",
       "family-support",
       "lgbtq-support",
-      "safety-crisis"
+      "safety-crisis",
+      "education-family"
     ],
     "coverage": "National",
     "verified": "2026-09",
@@ -5087,7 +5423,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "elections voting clerk records licenses town meeting",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Town Common Books",
@@ -5100,7 +5438,9 @@ window.NORWOOD_RESOURCES= [
       "community",
       "business",
       "todo",
-      "community-groups"
+      "community-groups",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Norwood",
     "verified": "2026-09",
@@ -5114,7 +5454,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "official town government departments permits meetings",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Town of Norwood Commission on Disability",
@@ -5142,7 +5484,10 @@ window.NORWOOD_RESOURCES= [
       "community",
       "health",
       "housing",
-      "lgbtq-support"
+      "lgbtq-support",
+      "food-assistance",
+      "basic-needs",
+      "housing-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -5169,7 +5514,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "Unitarian Universalist UU church worship Sharon congregation",
     "topics": [
       "worship",
-      "community"
+      "community",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Sharon",
     "verified": "2026-09"
@@ -5195,7 +5542,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "trampoline adventure park climbing ropes obstacle playground kids family Bellingham indoor",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Bellingham",
     "verified": "2026-09"
@@ -5208,7 +5557,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "VA veteran health medical benefits",
     "topics": [
       "veterans",
-      "health"
+      "health",
+      "financial-assistance",
+      "town"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -5221,7 +5572,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "veterans military benefits assistance",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "financial-assistance",
+      "veterans"
+    ]
   },
   {
     "name": "VITA Free Tax Preparation Locator",
@@ -5233,7 +5587,8 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "older",
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "community-groups"
     ],
     "coverage": "Federal",
     "verified": "2026-09"
@@ -5251,7 +5606,8 @@ window.NORWOOD_RESOURCES= [
       "mental-health",
       "disability-support",
       "family-support",
-      "deaf-hard-of-hearing"
+      "deaf-hard-of-hearing",
+      "education-family"
     ],
     "coverage": "Statewide — offices in Framingham & Springfield",
     "verified": "2026-09"
@@ -5264,7 +5620,11 @@ window.NORWOOD_RESOURCES= [
     "tags": "farm berry berries pick your own PYO hayride kids family farm market Sharon outdoor seasonal",
     "topics": [
       "todo",
-      "kids"
+      "kids",
+      "food-assistance",
+      "basic-needs",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Nearby — Sharon",
     "verified": "2026-09"
@@ -5279,7 +5639,8 @@ window.NORWOOD_RESOURCES= [
       "worship",
       "community",
       "kids",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -5293,7 +5654,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "community",
-      "housing-assistance"
+      "housing-assistance",
+      "basic-needs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5318,7 +5680,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "preschool early childhood",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "education-family",
+      "family-support"
+    ]
   },
   {
     "name": "Willett Parent Teacher Organization",
@@ -5363,7 +5728,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "wcc thrift shop volunteer community",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community-groups"
+    ]
   },
   {
     "name": "Zoning Board of Appeals",
@@ -5373,7 +5740,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "zoning appeals",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "READS Collaborative — Deaf & Hard of Hearing Program",
@@ -5422,7 +5791,8 @@ window.NORWOOD_RESOURCES= [
       "housing-assistance",
       "medical-care",
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "legal-advocacy"
     ],
     "coverage": "Regional — Eastern Massachusetts",
     "address": "50 Hunt Street, Suite 200, Watertown, MA 02472",
@@ -5441,7 +5811,8 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "family-support",
       "kids",
-      "older"
+      "older",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -5457,7 +5828,9 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "family-support",
       "kids",
-      "legal-advocacy"
+      "legal-advocacy",
+      "older",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5471,7 +5844,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "disability-support",
       "safety-crisis",
-      "legal-advocacy"
+      "legal-advocacy",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5487,7 +5861,8 @@ window.NORWOOD_RESOURCES= [
       "community-groups",
       "housing-assistance",
       "transport",
-      "employment"
+      "employment",
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5526,7 +5901,8 @@ window.NORWOOD_RESOURCES= [
     "url": "mailto:NorwoodREACH@gmail.com",
     "tags": "Norwood REACH Kristen McQuaid free resume résumé review tips mock interview interview preparation job search employment career transition volunteer HR human resources",
     "topics": [
-      "employment"
+      "employment",
+      "community-groups"
     ],
     "coverage": "Norwood",
     "email": "NorwoodREACH@gmail.com",
@@ -5541,7 +5917,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "unemployment unemployment insurance UI benefits DUA laid off lost job weekly claim appeal Massachusetts",
     "topics": [
       "employment",
-      "financial-assistance"
+      "financial-assistance",
+      "town"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5581,7 +5958,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "education-family",
       "family-support",
-      "kids"
+      "kids",
+      "financial-assistance",
+      "town"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5645,7 +6024,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "Abundant Hope Pregnancy Resource Center Pregnancy & Family Support",
     "topics": [
       "pregnancy",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5661,7 +6041,8 @@ window.NORWOOD_RESOURCES= [
       "food-assistance",
       "family-support",
       "kids",
-      "basic-needs"
+      "basic-needs",
+      "education-family"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5745,7 +6126,8 @@ window.NORWOOD_RESOURCES= [
     "url": "https://vlpnet.org/",
     "tags": "Volunteer Lawyers Project Legal, Consumer & Advocacy",
     "topics": [
-      "legal-advocacy"
+      "legal-advocacy",
+      "community-groups"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5801,7 +6183,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "Boston Area Rape Crisis Center Safety & Crisis Support",
     "topics": [
       "safety-crisis",
-      "legal-advocacy"
+      "legal-advocacy",
+      "mental-health",
+      "domestic-violence"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5816,7 +6200,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "safety-crisis",
       "housing-assistance",
-      "legal-advocacy"
+      "legal-advocacy",
+      "mental-health",
+      "domestic-violence"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
@@ -5831,7 +6217,9 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "medical",
       "pregnancy",
-      "lgbtq-support"
+      "lgbtq-support",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Massachusetts",
     "verified": "2026-09"
@@ -5844,7 +6232,8 @@ window.NORWOOD_RESOURCES= [
     "tags": "Fresh Start Furniture Bank free furniture household goods furnishings basic needs home essentials",
     "topics": [
       "basic-needs",
-      "housing-assistance"
+      "housing-assistance",
+      "food-assistance"
     ],
     "coverage": "Massachusetts",
     "verified": "2026-09"
@@ -5874,7 +6263,9 @@ window.NORWOOD_RESOURCES= [
       "food-assistance",
       "basic-needs",
       "kids",
-      "family-support"
+      "family-support",
+      "financial-assistance",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5905,7 +6296,8 @@ window.NORWOOD_RESOURCES= [
       "food-assistance",
       "basic-needs",
       "kids",
-      "family-support"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
