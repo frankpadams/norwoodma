@@ -5397,5 +5397,27 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Regional — Greater Boston",
     "verified": "2026-09",
     "source_note": "Current CASE program information verified. Not tagged as Deaf & Hard of Hearing because current CASE program listings do not identify a dedicated DHH program."
+  },
+  {
+    "name": "DEAF, Inc. — Boston Metro",
+    "category": "Deaf & Hard of Hearing",
+    "description": "Deaf-run Massachusetts nonprofit serving Deaf, DeafBlind, Hard of Hearing and Late-Deafened adults. Its ARES program provides free advocacy, information and referrals, skills training and help navigating benefits, housing, health care, communication access and other community services; DBCAN supports DeafBlind adults statewide.",
+    "url": "https://www.deafincma.org/",
+    "tags": "DEAF Inc Deaf DeafBlind hard of hearing late deafened ASL advocacy ARES independent living DBCAN community services Watertown Boston Metro",
+    "topics": [
+      "deaf-hard-of-hearing",
+      "disability-support",
+      "community",
+      "community-groups",
+      "housing-assistance",
+      "medical-care",
+      "employment",
+      "financial-assistance"
+    ],
+    "coverage": "Regional — Eastern Massachusetts",
+    "address": "50 Hunt Street, Suite 200, Watertown, MA 02472",
+    "phone": "617-505-4823",
+    "verified": "2026-09",
+    "source_note": "Official DEAF, Inc. site confirms it is run by and for Deaf people and that ARES serves Deaf, Hard of Hearing and Late-Deafened adults across Eastern Massachusetts."
   }
 ];
