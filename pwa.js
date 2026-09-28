@@ -2,7 +2,7 @@
 'use strict';
 let installPrompt=null;
 const standalone=()=>window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
-function ensureManifest(){if(!document.querySelector('link[rel="manifest"]')){const l=document.createElement('link');l.rel='manifest';l.href='/manifest.webmanifest?v=20260928';document.head.appendChild(l);}}
+function ensureManifest(){if(!document.querySelector('link[rel="manifest"]')){const l=document.createElement('link');l.rel='manifest';l.href='/manifest.webmanifest?v=20260928-rounded2';document.head.appendChild(l);}}
 ensureManifest();
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;window.dispatchEvent(new CustomEvent('norwood-install-ready'));});
 window.addEventListener('appinstalled',()=>{installPrompt=null;window.dispatchEvent(new CustomEvent('norwood-installed'));});
