@@ -306,11 +306,11 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Board of Health",
+    "name": "Norwood Board of Health",
     "category": "Health",
     "description": "Local public health services and information.",
     "url": "https://www.norwoodma.gov/departments/health/index.php",
-    "tags": "health public health",
+    "tags": "health public inspections",
     "coverage": "Regional/State",
     "verified": "2026-09",
     "topics": [
@@ -648,15 +648,21 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Council on Aging / Senior Center",
+    "name": "Norwood Council on Aging & Senior Center",
     "category": "Seniors",
     "description": "Programs, transportation and services for older adults.",
     "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
-    "tags": "senior seniors aging transportation programs",
+    "tags": "senior seniors aging transportation programs older adult caregiver outreach benefits activities council on",
     "coverage": "Regional/State",
     "verified": "2026-09",
     "topics": [
-      "older"
+      "older",
+      "health",
+      "transport",
+      "todo",
+      "food-assistance",
+      "basic-needs",
+      "financial-assistance"
     ]
   },
   {
@@ -1496,36 +1502,21 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Lifeworks / Family Autism Center",
+    "name": "Lifeworks Arc / Family Autism Center",
     "category": "Disability & Family",
     "description": "Regional supports for people with disabilities and autism, including family support, community programs and services.",
     "url": "https://lifeworksarc.org/",
-    "tags": "autism disability respite family developmental services",
+    "tags": "autism disability respite family developmental services intellectual disabilities IDD Arc Norfolk County support",
     "topics": [
       "kids",
       "health",
       "disability-support",
       "family-support",
-      "education-family"
+      "education-family",
+      "community"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
-  },
-  {
-    "name": "Lifeworks Arc",
-    "category": "Disability",
-    "description": "Norfolk County-area disability services and supports for people with intellectual and developmental disabilities and their families.",
-    "url": "https://lifeworksarc.org/",
-    "tags": "disability intellectual developmental disabilities IDD autism Arc Norfolk County support",
-    "topics": [
-      "health",
-      "kids",
-      "community",
-      "disability-support"
-    ],
-    "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "LIHEAP / Fuel Assistance — Massachusetts",
@@ -1611,7 +1602,7 @@ window.NORWOOD_RESOURCES= [
     "category": "Navigation & Basic Needs",
     "description": "Free 24/7 information and referral service for help with food, housing, utilities, health care, child care and other needs.",
     "url": "https://mass211.org/",
-    "tags": "211 help referral food housing utility childcare health benefits emergency multilingual",
+    "tags": "211 help referral food housing utility childcare health benefits emergency multilingual Mass 2-1-1 Community Assistance",
     "topics": [
       "housing",
       "health",
@@ -1624,7 +1615,8 @@ window.NORWOOD_RESOURCES= [
       "education-family",
       "family-support",
       "food-assistance",
-      "basic-needs"
+      "basic-needs",
+      "safety-crisis"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -1779,34 +1771,17 @@ window.NORWOOD_RESOURCES= [
     "category": "Disability & Accessibility",
     "description": "State communication-access, advocacy and referral services for Deaf, hard-of-hearing and late-deafened residents.",
     "url": "https://www.mass.gov/orgs/massachusetts-commission-for-the-deaf-and-hard-of-hearing",
-    "tags": "Deaf hard hearing ASL accessibility communication",
+    "tags": "Deaf hard hearing ASL accessibility communication of interpreter MCDHH",
     "topics": [
       "health",
       "disability-support",
       "deaf-hard-of-hearing",
       "legal-advocacy",
-      "town"
+      "town",
+      "community"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
-  },
-  {
-    "name": "Massachusetts Commission on Deaf and Hard of Hearing",
-    "category": "Disability & Accessibility",
-    "description": "State agency providing communication access, advocacy, information and referral services for deaf and hard-of-hearing people.",
-    "url": "https://www.mass.gov/orgs/massachusetts-commission-for-the-deaf-and-hard-of-hearing",
-    "tags": "Deaf hard of hearing ASL accessibility communication interpreter MCDHH",
-    "topics": [
-      "health",
-      "community",
-      "disability-support",
-      "deaf-hard-of-hearing",
-      "legal-advocacy",
-      "town"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09",
-    "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
     "name": "Massachusetts Community Behavioral Health Centers",
@@ -3099,18 +3074,6 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
-    "name": "Norwood Board of Health",
-    "category": "Health",
-    "description": "Local public health information, inspections and services.",
-    "url": "https://www.norwoodma.gov/departments/health/index.php",
-    "tags": "health public health inspections",
-    "coverage": "Local",
-    "verified": "2026-09",
-    "topics": [
-      "town"
-    ]
-  },
-  {
     "name": "Norwood Building Permits & Inspections",
     "category": "Town Services",
     "description": "Building Department information for permits, inspections and building-related requirements.",
@@ -3229,24 +3192,6 @@ window.NORWOOD_RESOURCES= [
       "todo",
       "education-family",
       "family-support"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Norwood Council on Aging & Senior Center",
-    "category": "Older Adults",
-    "description": "Norwood’s hub for older adults and caregivers, with programs, outreach, activities, benefits guidance and connections to transportation and nutrition services.",
-    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
-    "tags": "senior older adult aging caregiver outreach benefits activities council on aging",
-    "topics": [
-      "older",
-      "health",
-      "transport",
-      "todo",
-      "food-assistance",
-      "basic-needs",
-      "financial-assistance"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -3522,23 +3467,11 @@ window.NORWOOD_RESOURCES= [
     ]
   },
   {
-    "name": "Norwood Light Electric",
+    "name": "Norwood Light Electric & Broadband",
     "category": "Utilities",
     "description": "Municipal electric utility.",
     "url": "https://norwoodlight.com/",
-    "tags": "electric utility outage",
-    "coverage": "Local",
-    "verified": "2026-09",
-    "topics": [
-      "town"
-    ]
-  },
-  {
-    "name": "Norwood Light Electric & Broadband",
-    "category": "Utilities",
-    "description": "Municipal electric and broadband service, billing and customer information.",
-    "url": "https://norwoodlight.com/",
-    "tags": "electric power internet broadband utility bill",
+    "tags": "electric utility outage power internet broadband bill",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
@@ -3995,18 +3928,6 @@ window.NORWOOD_RESOURCES= [
     ]
   },
   {
-    "name": "Norwood Senior Center / Council on Aging",
-    "category": "Seniors",
-    "description": "Programs and services for older residents.",
-    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
-    "tags": "senior aging transportation",
-    "coverage": "Local",
-    "verified": "2026-09",
-    "topics": [
-      "older"
-    ]
-  },
-  {
     "name": "Norwood Senior Center Newsletter & Calendar",
     "description": "Current newsletter and activity calendar from the Norwood Council on Aging / Senior Center.",
     "url": "https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
@@ -4183,11 +4104,12 @@ window.NORWOOD_RESOURCES= [
     "category": "Help & Assistance",
     "description": "Veterans benefits and local assistance.",
     "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
-    "tags": "veterans benefits",
+    "tags": "veterans benefits military assistance",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
-      "financial-assistance"
+      "financial-assistance",
+      "veterans"
     ]
   },
   {
@@ -5565,19 +5487,6 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Veterans Services",
-    "category": "Help & Assistance",
-    "description": "Town veterans benefits, assistance and services.",
-    "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
-    "tags": "veterans military benefits assistance",
-    "coverage": "Regional/State",
-    "verified": "2026-09",
-    "topics": [
-      "financial-assistance",
-      "veterans"
-    ]
-  },
-  {
     "name": "VITA Free Tax Preparation Locator",
     "category": "Jobs & Money",
     "description": "IRS locator for free Volunteer Income Tax Assistance and Tax Counseling for the Elderly sites for eligible taxpayers.",
@@ -5993,24 +5902,6 @@ window.NORWOOD_RESOURCES= [
       "education-family",
       "family-support",
       "kids"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Mass 2-1-1",
-    "category": "Community Assistance",
-    "description": "Free, confidential statewide service connecting Massachusetts residents with local health and human-service resources.",
-    "url": "https://mass211.org/",
-    "tags": "Mass 2-1-1 Community Assistance",
-    "topics": [
-      "family-support",
-      "financial-assistance",
-      "housing-assistance",
-      "food-assistance",
-      "safety-crisis",
-      "basic-needs"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
