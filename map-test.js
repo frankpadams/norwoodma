@@ -7,7 +7,8 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
-const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'';
+const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedCategory=params.get('category')||'';
+if(requestedCategory&&category&&[...category.options].some(o=>o.value===requestedCategory)){filter=requestedCategory;category.value=requestedCategory;}
 if(requestedBusiness&&search){search.value=requestedBusiness;filter='business';if(category)category.value='business';}
 else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
 const boundaryLayers={town:null,precincts:null};
@@ -161,7 +162,7 @@ async function render(){
  if(token!==renderToken)return;
  status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
  const q=norm(search.value);
- if(filter==='all'&&!q){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
+ if((filter==='all'&&!q)||(filter==='gas'&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
  else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
  else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
 }
