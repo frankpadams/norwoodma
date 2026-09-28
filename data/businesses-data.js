@@ -799,5 +799,14 @@ window.NORWOOD_BUSINESSES=[
   ["Conlon Plumbing Co.","Plumbing","51 Devon Road","",""],
   ["Karem Plumbing","Plumbing","21 Irving Street","",""],
   ["Stephen F. Driscoll Plumbing","Plumbing","87 Sunnyside Road","",""],
-  ["R.H. Ivatts Plumbing Co.","Plumbing","26 Folan Avenue","",""]
+  ["R.H. Ivatts Plumbing Co.","Plumbing","26 Folan Avenue","",""],
+  ["Norwood Glass Co","Glass, Mirrors & Window Repair","530 Washington Street","781-762-1809",""],
+  ["Neponset Plastering","Drywall, Plaster & Stucco","64 Croydon Road","781-710-5988",""],
+  ["Keady Pest Control","Pest Control","St George Avenue","781-551-0008",""],
+  ["Marshall Tile & Marble Co.","Tile & Marble Installation","Norwood","","https://marshalltile.com/"],
+  ["Dimitri’s Construction & Masonry","General Contracting, Masonry & Excavation","273 Lenox Street","646-856-6816","https://dimitrisconstruction.com/"],
+  ["S & A General Contracting, Inc.","General Contracting & Remodeling","Norwood","617-291-9951","https://www.sa-generalcontracting.com/"],
+  ["Randall Remodeling LLC","General Contracting & Remodeling","19 David Terrace","617-309-9575",""],
+  ["Vesta Construction Inc","Remodeling, Flooring, Tile & Drywall","Norwood","781-521-0557","https://vestaconstructionma.com/"],
+  ["Century 21 North East — SRG Properties Group","Real Estate","168 Nahatan Street","781-789-2748",""]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
