@@ -2,9 +2,34 @@
  const bank=window.NORWOOD_TRIVIA_QUESTIONS||[];
  const $=s=>document.querySelector(s); let round=[],i=0,score=0,answered=false,roundSize=10;
  const shuffle=a=>{a=[...a];for(let n=a.length-1;n>0;n--){const j=Math.floor(Math.random()*(n+1));[a[n],a[j]]=[a[j],a[n]]}return a};
+ const historyKey='norwoodTriviaAskedV1';
+ const qid=q=>q.q;
+ function loadAsked(){try{const v=JSON.parse(localStorage.getItem(historyKey)||'[]');return Array.isArray(v)?v:[]}catch(e){return []}}
+ function saveAsked(ids){try{localStorage.setItem(historyKey,JSON.stringify(ids))}catch(e){}}
  function balancedRound(size){
+  let asked=loadAsked().filter(id=>bank.some(q=>qid(q)===id));
+  let askedSet=new Set(asked),available=bank.filter(q=>!askedSet.has(qid(q)));
+  // Do not recycle any question until every question in the current bank has been used.
+  if(available.length<size){
+   if(available.length===0){asked=[];askedSet=new Set();available=[...bank]}
+   else{
+    // Finish the remaining unseen questions first; only then begin a fresh cycle.
+    const remainder=balancedFrom(available,available.length);
+    saveAsked([...asked,...remainder.map(qid)]);
+    const needed=size-remainder.length;
+    const usedNow=new Set(remainder.map(qid));
+    const fresh=balancedFrom(bank.filter(q=>!usedNow.has(qid(q))),needed);
+    saveAsked(fresh.map(qid));
+    return [...remainder,...fresh];
+   }
+  }
+  const out=balancedFrom(available,size);
+  saveAsked([...asked,...out.map(qid)]);
+  return out;
+ }
+ function balancedFrom(pool,size){
   const groups={};
-  shuffle(bank).forEach(q=>(groups[q.cat]||(groups[q.cat]=[])).push(q));
+  shuffle(pool).forEach(q=>(groups[q.cat]||(groups[q.cat]=[])).push(q));
   let cats=shuffle(Object.keys(groups)),out=[];
   while(out.length<size&&cats.length){
    const next=[];
