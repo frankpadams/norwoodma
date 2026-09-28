@@ -1207,5 +1207,6 @@ window.NORWOOD_BUSINESSES=[
   ["The Skating Club of Boston — Birthday Parties","Kids Party & Event Venues","750 University Avenue","617-782-5900","https://scboston.org/birthday-parties/"],
   ["Moon Lily Boutique — Parties","Kids Party & Event Venues","101 Central Street","781-501-1017","https://www.moonlilyboutique.com/parties"],
   ["Workmen's Hall","Function Halls & Event Venues","99 1/2 Wilson Street","781-762-1146",""],
-  ["Norwood Elks Lodge #1124 — Function Hall","Function Halls & Event Venues","152 Winslow Avenue","781-762-9724",""]
+  ["Norwood Elks Lodge #1124 — Function Hall","Function Halls & Event Venues","152 Winslow Avenue","781-762-9724",""],
+  ["1947 Norwood — Private Events & Catering","Restaurant Private Events & Party Venue","997 Boston Providence Highway","781-269-5466","https://1947.boston/events"]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address:b[2]?(b[2]+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(b[2])?", MA":", Norwood, MA 02062")):"Norwood, MA 02062",phone:b[3],website:b[4],town:(b[2].match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
