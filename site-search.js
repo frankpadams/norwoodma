@@ -207,7 +207,9 @@
    if(x.business&&score>=30)score+=3;
    if(acronym&&aliasTerms(raw)){if(nameWords.includes(raw)||typeWords.includes(raw))score+=50;}
    let tier=3;
-   const strongCore=matchedCore>0||name===raw||name.startsWith(raw)||name.includes(raw)||body.includes(raw);
+   const phraseMatch=name===raw||name.startsWith(raw)||name.includes(raw)||body.includes(raw);
+   const fullCoreMatch=queryWords.length<=1?matchedCore>0:matchedCore===queryWords.length;
+   const strongCore=phraseMatch||fullCoreMatch;
    if(x.norwoodPage&&!x.business&&!x.calendar&&!x.recreation&&x.type!=='Event'&&strongCore&&score>=18)tier=1;
    else if(x.canonicalTown&&strongCore&&score>=18)tier=2;
    return{x,score,tier,matchedCore};
