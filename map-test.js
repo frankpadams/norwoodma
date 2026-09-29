@@ -99,6 +99,9 @@ const staticPlaces=[
 ];
 function resourceCategory(r){
  const t=norm([r.category,r.tags,(r.topics||[]).join(' ')].join(' '));
+ // Legal and immigration providers are community resources, even when their
+ // metadata also mentions family education or school-related guidance.
+ if(/immigration|immigrant|refugee|asylum|attorney|lawyer|legal|uscis|deportation|detention/.test(t))return'resource';
  if(/health|medical|mental health|physical therapy|disability|senior|older/.test(t))return'health';
  if(/town government|town services|town &|police|fire|veteran|board|commission|clerk|assessor|building department/.test(t))return'civic';
  if(/library|history|museum|arts|music|theatre/.test(t))return'culture';
