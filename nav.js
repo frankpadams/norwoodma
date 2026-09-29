@@ -1,5 +1,5 @@
 (()=>{
-  const SITE_VERSION='1.0.1';
+  const SITE_VERSION='1.0.2';
   if(!document.querySelector('script[data-norwood-pwa]')){const s=document.createElement('script');s.src='/pwa.js?v=20260928-rounded2';s.dataset.norwoodPwa='true';document.head.appendChild(s);}
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
