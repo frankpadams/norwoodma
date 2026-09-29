@@ -20,6 +20,14 @@
 .status.feature-card-test .things-icon{width:36px;height:36px}
 .status.feature-card-test .trivia-icon{margin-right:9px!important;margin-bottom:0!important;display:inline-block;vertical-align:middle}
 .status.feature-card-test .trivia-test>b{display:inline-block;vertical-align:middle}
+
+.status.feature-card-test>a{display:grid!important;grid-template-columns:48px minmax(0,1fr)!important;grid-template-rows:auto auto;column-gap:12px!important;align-content:center!important;text-align:center!important}
+.status.feature-card-test .feature-icon{grid-column:1;grid-row:1 / span 2;width:42px!important;height:42px!important;margin:0!important;align-self:center;justify-self:start}
+.status.feature-card-test>a>b{grid-column:2;grid-row:1;align-self:end}
+.status.feature-card-test>a>small{grid-column:2;grid-row:2;align-self:start}
+.status.feature-card-test .trivia-icon{width:37px!important;height:37px!important;margin:0!important}
+.status.feature-card-test .dinner-spinner-quick .mini-spinner{display:none!important}
+@media(max-width:760px){.status.feature-card-test>a{grid-template-columns:42px minmax(0,1fr)!important;column-gap:8px!important}.status.feature-card-test .feature-icon{width:38px!important;height:38px!important}}
 </style>
 <style>
 /* Test refinements: joined bar, larger sans-serif labels/icons, muted-to-color hover. */
