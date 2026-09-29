@@ -24,52 +24,6 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
-    "id": "2026-09-18-legally-blonde",
-    "title": "Legally Blonde — Norwood High School",
-    "start": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "Norwood High School",
-    "address": "245 Nichols St, Norwood, MA 02062",
-    "category": "school_theatre",
-    "source_id": "nps-fine-arts",
-    "source_url": "https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Public high-school theatrical production; exact performance times should be confirmed before display."
-  },
-  {
-    "id": "2026-09-18-ruth-solomon-symposium",
-    "title": "The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating",
-    "start": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-19",
-      "time": null
-    },
-    "venue": "The Skating Club of Boston",
-    "address": "750 University Ave, Norwood, MA 02062",
-    "category": "sports_education",
-    "source_id": "skating-club-boston-events",
-    "source_url": "https://scboston.org/event/figure-skating-health-and-performance-conference/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
-  },
-  {
     "id": "2026-09-18-ballroom-dance",
     "title": "Monthly Ballroom Dance",
     "start": {
@@ -116,6 +70,52 @@
     "notes": null
   },
   {
+    "id": "2026-09-18-legally-blonde",
+    "title": "Legally Blonde — Norwood High School",
+    "start": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": "245 Nichols St, Norwood, MA 02062",
+    "category": "school_theatre",
+    "source_id": "nps-fine-arts",
+    "source_url": "https://www.broadwayworld.com/boston/regional/Legally-Blonde-4386596",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Public high-school theatrical production; exact performance times should be confirmed before display."
+  },
+  {
+    "id": "2026-09-18-ruth-solomon-symposium",
+    "title": "The 2nd Biennial Ruth Solomon Symposium for Performing Artist Athletes: Figure Skating",
+    "start": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-19",
+      "time": null
+    },
+    "venue": "The Skating Club of Boston",
+    "address": "750 University Ave, Norwood, MA 02062",
+    "category": "sports_education",
+    "source_id": "skating-club-boston-events",
+    "source_url": "https://scboston.org/event/figure-skating-health-and-performance-conference/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
+  },
+  {
     "id": "2026-09-19-floydian-trip",
     "title": "Floydian Trip: Echoes Through Time",
     "start": {
@@ -137,29 +137,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-20-not-done-yet",
@@ -206,6 +183,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-20-onam-sarva",
+    "title": "Onam Celebration at SARVA Little Venice",
+    "start": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "SARVA Little Venice",
+    "address": "Norwood, MA",
+    "category": "food_culture",
+    "source_id": "sarva-social-feed",
+    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-22-caffeine-connections",
@@ -438,6 +438,29 @@
     "notes": null
   },
   {
+    "id": "2026-09-27-check-mate",
+    "title": "Check Mate — An Evening with Purpose",
+    "start": {
+      "date": "2026-09-27",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": "21:00"
+    },
+    "venue": "Four Points by Sheraton Norwood",
+    "address": "1125 Boston-Providence Turnpike, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "pcrinc-events",
+    "source_url": "https://pcrincboston.org/",
+    "cost": null,
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
+  },
+  {
     "id": "2026-09-27-emerald-city-plant-bingo",
     "title": "Plant Bingo",
     "start": {
@@ -460,29 +483,6 @@
     "verification_status": "user_verified_2026-09-24",
     "notes": "Public Plant Bingo event at Emerald City Plant Shop. Date confirmed directly by Norwood.ma editor; exact time not yet confirmed.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
-  },
-  {
-    "id": "2026-09-27-check-mate",
-    "title": "Check Mate — An Evening with Purpose",
-    "start": {
-      "date": "2026-09-27",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": "21:00"
-    },
-    "venue": "Four Points by Sheraton Norwood",
-    "address": "1125 Boston-Providence Turnpike, Norwood, MA 02062",
-    "category": "fundraiser",
-    "source_id": "pcrinc-events",
-    "source_url": "https://pcrincboston.org/",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
   },
   {
     "id": "2026-09-28-sunnyside-up-aa",
@@ -646,6 +646,29 @@
     "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
+    "id": "2026-10-01-norwood-flu-shot-clinic",
+    "title": "Norwood Health Department Flu Shot Clinic",
+    "start": {
+      "date": "2026-10-01",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "12:00"
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
+    "category": "health",
+    "source_id": "town-health-events",
+    "source_url": "https://www.norwoodma.gov/departments/health/index.php",
+    "cost": null,
+    "public_access": "reservation_required",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-29",
+    "notes": "Bring insurance cards. Regular and high-dose 65+ flu vaccines available. Call 781-762-1201 ext. 5 to reserve a spot. If that time does not work, call 781-384-9195."
+  },
+  {
     "id": "2026-10-01-mill-sharpening",
     "title": "Tool and Knife Sharpening Workshop",
     "start": {
@@ -713,6 +736,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-03-electronics-recycling",
+    "title": "Electronics Recycling Event",
+    "start": {
+      "date": "2026-10-03",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "14:00"
+    },
+    "venue": "St. Timothy Church — Parking Lot",
+    "address": "650 Nichols St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/events/348199/electronics-recycling-event",
+    "cost": "Most items $5–$40",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "secondary_listing_verified_2026-09-27",
+    "notes": "Community electronics/appliance/battery and reusable bicycle recycling event; rain or shine. Part of proceeds benefit St. Timothy Parish."
   },
   {
     "id": "2026-10-03-intro-metalworking",
@@ -805,6 +851,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-03-pma-micca-central",
+    "title": "MICCA Central",
+    "start": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "venue": "Auburn",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-10-04-lumber-milling",
@@ -1153,6 +1222,52 @@
     "notes": null
   },
   {
+    "id": "2026-10-10-pma-usbands-king-philip",
+    "title": "USBANDS at King Philip",
+    "start": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "venue": "King Philip",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
+    "id": "2026-10-11-ar5k",
+    "title": "Third Annual AR5K Road Race",
+    "start": {
+      "date": "2026-10-11",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": "13:00"
+    },
+    "venue": "Knights of Columbus",
+    "address": "572 Nichols St, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race",
+    "cost": "See registration",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "secondary_listing_verified_2026-09-27",
+    "notes": "Run/walk fundraiser supporting scholarships for Norwood High School students and sock donations to Pine Street Inn."
+  },
+  {
     "id": "2026-10-12-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -1384,6 +1499,31 @@
     "notes": null
   },
   {
+    "id": "2026-10-18-pma-micca-southeast-home-show",
+    "title": "Norwood High Marching Band Home Show — Open to the Public",
+    "start": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Norwood High School hosts the MICCA Southeast Marching Band Home Show. Come see the Norwood High marching band and other participating bands perform. Open to the public. See the Norwood Parent Music Association event page for current event details and updates.",
+    "curated_default": true,
+    "whats_happening_default": true
+  },
+  {
     "id": "2026-10-19-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -1591,6 +1731,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-24-pma-usbands-dartmouth",
+    "title": "USBANDS at Dartmouth",
+    "start": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": "Dartmouth",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
     "id": "2026-10-25-plywood",
     "title": "Making Cabinets and Bookcases with Plywood",
     "start": {
@@ -1635,6 +1798,52 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-10-25-cbn-psychic-medium",
+    "title": "An Evening with Psychic Medium Cathy Ripley Greene",
+    "start": {
+      "date": "2026-10-25",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": "20:30"
+    },
+    "venue": "Norwood VFW",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "citizens-better-norwood-events",
+    "source_url": "https://cbnma.com/events",
+    "cost": "$60; $70 after Oct. 1 if available",
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "organizer_verified_2026-09-27",
+    "notes": "Public ticketed event sponsored by Citizens for a Better Norwood; seating limited."
+  },
+  {
+    "id": "2026-10-25-pma-micca-state-finals",
+    "title": "MICCA State Finals",
+    "start": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Quincy",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-10-26-sunnyside-up-aa",
@@ -1819,6 +2028,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering."
+  },
+  {
+    "id": "2026-10-31-pma-usbands-ma-championships",
+    "title": "USBANDS Massachusetts Championships",
+    "start": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": "Stoughton",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-11-01-emerald-city-greenhaus-meditation",
@@ -2050,6 +2282,29 @@
     "publish_candidate": true,
     "verification_status": "official_recurring_schedule_verified_2026-09-26",
     "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2026-11-11-pma-veterans-day-parade",
+    "title": "Veterans Day Parade",
+    "start": {
+      "date": "2026-11-11",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. PMA notes that the date/weekday should be confirmed."
   },
   {
     "id": "2026-11-11-emerald-city-plant-parenthood-101",
@@ -3783,29 +4038,6 @@
     "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
-    "id": "2027-02-05-special-someone-dance",
-    "title": "Special Someone Dance",
-    "start": {
-      "date": "2027-02-05",
-      "time": null
-    },
-    "end": {
-      "date": "2027-02-05",
-      "time": null
-    },
-    "venue": "Norwood Recreation / Civic Center",
-    "address": "165 Nahatan St, Norwood, MA 02062",
-    "category": "family",
-    "source_id": "norwood-recreation",
-    "source_url": "https://norwoodma.myrec.com/info/activities/",
-    "cost": "$12 per child",
-    "public_access": "public",
-    "series": "Norwood Recreation annual special event",
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-19",
-    "notes": "Annual semi-formal dance for ages 3–10 with a special someone; snacks, photo booth and DJ. Time was not stated in the verified Fall/Winter 2026 guide excerpt, so Norwood.ma does not guess it."
-  },
-  {
     "id": "2027-02-05-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -3827,6 +4059,29 @@
     "publish_candidate": true,
     "verification_status": "official_recurring_schedule_verified_2026-09-26",
     "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
+  },
+  {
+    "id": "2027-02-05-special-someone-dance",
+    "title": "Special Someone Dance",
+    "start": {
+      "date": "2027-02-05",
+      "time": null
+    },
+    "end": {
+      "date": "2027-02-05",
+      "time": null
+    },
+    "venue": "Norwood Recreation / Civic Center",
+    "address": "165 Nahatan St, Norwood, MA 02062",
+    "category": "family",
+    "source_id": "norwood-recreation",
+    "source_url": "https://norwoodma.myrec.com/info/activities/",
+    "cost": "$12 per child",
+    "public_access": "public",
+    "series": "Norwood Recreation annual special event",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-19",
+    "notes": "Annual semi-formal dance for ages 3–10 with a special someone; snacks, photo booth and DJ. Time was not stated in the verified Fall/Winter 2026 guide excerpt, so Norwood.ma does not guess it."
   },
   {
     "id": "2027-02-08-sunnyside-up-aa",
@@ -4197,6 +4452,29 @@
     "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
+    "id": "2027-05-31-pma-memorial-day-parade",
+    "title": "Memorial Day Parade",
+    "start": {
+      "date": "2027-05-31",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2027-05-31",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Student report time: 8:00 AM."
+  },
+  {
     "id": "2027-08-17-penumbral-lunar-eclipse",
     "title": "Penumbral Lunar Eclipse Visible from Norwood",
     "start": {
@@ -4333,260 +4611,5 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-20",
     "notes": "Total lunar eclipse visible from the Boston/Norwood area. Visibility depends on weather and local sky conditions."
-  },
-  {
-    "id": "2026-10-03-pma-micca-central",
-    "title": "MICCA Central",
-    "start": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "venue": "Auburn",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
-  },
-  {
-    "id": "2026-10-10-pma-usbands-king-philip",
-    "title": "USBANDS at King Philip",
-    "start": {
-      "date": "2026-10-10",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-10",
-      "time": null
-    },
-    "venue": "King Philip",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
-  },
-  {
-    "id": "2026-10-18-pma-micca-southeast-home-show",
-    "title": "Norwood High Marching Band Home Show — Open to the Public",
-    "start": {
-      "date": "2026-10-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-18",
-      "time": null
-    },
-    "venue": "Norwood High School",
-    "address": null,
-    "category": "community",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Norwood High School hosts the MICCA Southeast Marching Band Home Show. Come see the Norwood High marching band and other participating bands perform. Open to the public. See the Norwood Parent Music Association event page for current event details and updates.",
-    "curated_default": true,
-    "whats_happening_default": true
-  },
-  {
-    "id": "2026-10-24-pma-usbands-dartmouth",
-    "title": "USBANDS at Dartmouth",
-    "start": {
-      "date": "2026-10-24",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-24",
-      "time": null
-    },
-    "venue": "Dartmouth",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
-  },
-  {
-    "id": "2026-10-25-pma-micca-state-finals",
-    "title": "MICCA State Finals",
-    "start": {
-      "date": "2026-10-25",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-25",
-      "time": null
-    },
-    "venue": "Quincy",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
-  },
-  {
-    "id": "2026-10-31-pma-usbands-ma-championships",
-    "title": "USBANDS Massachusetts Championships",
-    "start": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "Stoughton",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
-  },
-  {
-    "id": "2026-11-11-pma-veterans-day-parade",
-    "title": "Veterans Day Parade",
-    "start": {
-      "date": "2026-11-11",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-11",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. PMA notes that the date/weekday should be confirmed."
-  },
-  {
-    "id": "2027-05-31-pma-memorial-day-parade",
-    "title": "Memorial Day Parade",
-    "start": {
-      "date": "2027-05-31",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2027-05-31",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Student report time: 8:00 AM."
-  },
-  {
-    "id": "2026-10-03-electronics-recycling",
-    "title": "Electronics Recycling Event",
-    "start": {
-      "date": "2026-10-03",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "14:00"
-    },
-    "venue": "St. Timothy Church — Parking Lot",
-    "address": "650 Nichols St, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "norwood-town-news-calendar",
-    "source_url": "https://www.norwoodtownnews.com/events/348199/electronics-recycling-event",
-    "cost": "Most items $5–$40",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "secondary_listing_verified_2026-09-27",
-    "notes": "Community electronics/appliance/battery and reusable bicycle recycling event; rain or shine. Part of proceeds benefit St. Timothy Parish."
-  },
-  {
-    "id": "2026-10-11-ar5k",
-    "title": "Third Annual AR5K Road Race",
-    "start": {
-      "date": "2026-10-11",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "13:00"
-    },
-    "venue": "Knights of Columbus",
-    "address": "572 Nichols St, Norwood, MA 02062",
-    "category": "fundraiser",
-    "source_id": "norwood-town-news-calendar",
-    "source_url": "https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race",
-    "cost": "See registration",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "secondary_listing_verified_2026-09-27",
-    "notes": "Run/walk fundraiser supporting scholarships for Norwood High School students and sock donations to Pine Street Inn."
-  },
-  {
-    "id": "2026-10-25-cbn-psychic-medium",
-    "title": "An Evening with Psychic Medium Cathy Ripley Greene",
-    "start": {
-      "date": "2026-10-25",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-25",
-      "time": "20:30"
-    },
-    "venue": "Norwood VFW",
-    "address": "193 Dean St, Norwood, MA 02062",
-    "category": "fundraiser",
-    "source_id": "citizens-better-norwood-events",
-    "source_url": "https://cbnma.com/events",
-    "cost": "$60; $70 after Oct. 1 if available",
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "organizer_verified_2026-09-27",
-    "notes": "Public ticketed event sponsored by Citizens for a Better Norwood; seating limited."
   }
 ]
