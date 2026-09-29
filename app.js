@@ -66,7 +66,19 @@ function newsQuality(x){
 
 async function weather(){
  const temp=$('#temp'), forecast=$('#forecast'); if(!temp&&!forecast)return;
- try{let p=await fetch('https://api.weather.gov/points/42.1945,-71.1995');let pj=await p.json();let f=await fetch(pj.properties.forecast);let j=await f.json(),n=j.properties.periods[0];if(temp)temp.textContent=`${n.temperature}° · ${n.shortForecast}`;if(forecast)forecast.textContent=`${n.name} · ${n.windSpeed}`;}catch(e){if(forecast)forecast.textContent='Live weather temporarily unavailable';}
+ try{
+  let p=await fetch('https://api.weather.gov/points/42.1945,-71.1995');
+  let pj=await p.json();
+  let f=await fetch(pj.properties.forecast);
+  let j=await f.json(),n=j.properties.periods[0];
+  if(temp){
+   const label=`${n.temperature}° · ${n.shortForecast}`;
+   temp.textContent=label;
+   temp.classList.toggle('weather-title-long',label.length>24);
+   temp.classList.toggle('weather-title-very-long',label.length>34);
+  }
+  if(forecast)forecast.textContent=`${n.name} · ${n.windSpeed}`;
+ }catch(e){if(forecast)forecast.textContent='Live weather temporarily unavailable';}
 } weather();
 
 function newsSourceKey(x){
