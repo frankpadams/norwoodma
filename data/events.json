@@ -64139,6 +64139,40 @@
     ]
   },
   {
+    "id": "2027-02-01-tvl-boys-ice-hockey-vs-abington-high-school-5532143",
+    "title": "TVL Boys Ice Hockey vs Abington High School",
+    "start": {
+      "date": "2027-02-01",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-02-01",
+      "time": "18:15"
+    },
+    "venue": "750 University Avenue, Norwood Massachusetts 02062",
+    "address": "750 University Avenue, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Hockey",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Ice Hockey Level: TVL Boys Team: Norwood High School Site: Skating Club of Boston (Norwood) Subsite: East Rink",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-5f99d7665326-2027-02-01",
     "title": "Hard Shoe 3 - Mondays",
     "start": {
@@ -82490,74 +82524,6 @@
     ]
   },
   {
-    "id": "2027-03-29-varsity-softball-ashland-high-school-862920b",
-    "title": "Varsity Softball @ Ashland High School",
-    "start": {
-      "date": "2027-03-29",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2027-03-29",
-      "time": "18:45"
-    },
-    "venue": "65 East Union St, Ashland MA 01721",
-    "address": "65 East Union St, Ashland MA 01721",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Ashland HS Subsite: Softball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2027-03-29-varsity-baseball-ashland-high-school-ad03855",
-    "title": "Varsity baseball @ Ashland High School",
-    "start": {
-      "date": "2027-03-29",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2027-03-29",
-      "time": "18:45"
-    },
-    "venue": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
-    "address": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Baseball",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Baseball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Ashland Middle School Subsite: Baseball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-028951c24952-2027-03-29",
     "title": "Irish Step 3 - Mondays",
     "start": {
@@ -83598,6 +83564,74 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-02-varsity-softball-ashland-high-school-6800d2f",
+    "title": "Varsity Softball @ Ashland High School",
+    "start": {
+      "date": "2027-04-02",
+      "time": "16:45"
+    },
+    "end": {
+      "date": "2027-04-02",
+      "time": "18:45"
+    },
+    "venue": "65 East Union St, Ashland MA 01721",
+    "address": "65 East Union St, Ashland MA 01721",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Ashland HS Subsite: Softball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-02-varsity-baseball-ashland-high-school-bee9cb9",
+    "title": "Varsity baseball @ Ashland High School",
+    "start": {
+      "date": "2027-04-02",
+      "time": "16:45"
+    },
+    "end": {
+      "date": "2027-04-02",
+      "time": "18:45"
+    },
+    "venue": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
+    "address": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Ashland Middle School Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -85928,6 +85962,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-14-jv-baseball-hopkinton-high-school-fa52062",
+    "title": "JV baseball @ Hopkinton High School",
+    "start": {
+      "date": "2027-04-14",
+      "time": "16:45"
+    },
+    "end": {
+      "date": "2027-04-14",
+      "time": "18:45"
+    },
+    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys JV Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys JV Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: JV Team: Norwood High School Site: Hopkinton High School Subsite: Field 2",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -90969,6 +91037,74 @@
     ]
   },
   {
+    "id": "2027-05-12-state-semi-finals-softball-hopkinton-high-sch-07b4543",
+    "title": "State Semi Finals Softball @ Hopkinton High School",
+    "start": {
+      "date": "2027-05-12",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-05-12",
+      "time": "19:00"
+    },
+    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: State Semi Finals Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-12-varsity-baseball-hopkinton-high-school-87726a0",
+    "title": "Varsity baseball @ Hopkinton High School",
+    "start": {
+      "date": "2027-05-12",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-05-12",
+      "time": "19:15"
+    },
+    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-4eb0ac558b35-2027-05-12",
     "title": "Modern 3 - Wednesdays",
     "start": {
@@ -91585,6 +91721,74 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-19-9th-baseball-holliston-high-school-3d7e34b",
+    "title": "9th baseball @ Holliston High School",
+    "start": {
+      "date": "2027-05-19",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-19",
+      "time": "18:30"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys JV Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys JV Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: 9th Team: Norwood High School Site: Holliston High School Subsite: HHS Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-19-junior-varsity-softball-holliston-high-school-7b46763",
+    "title": "Junior Varsity Softball @ Holliston High School",
+    "start": {
+      "date": "2027-05-19",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-19",
+      "time": "18:30"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Softball",
+    "public_access": "public",
+    "series": "Norwood Girls JV Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Holliston High School Subsite: HHS Softball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
