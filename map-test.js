@@ -123,6 +123,11 @@ const dynamic=[];
  if(a)dynamic.push({name:e.title,category:'event',address:a,details:[e.start?.date,e.start?.time,e.venue,e.cost].filter(Boolean).join(' · '),url:e.registration_url||e.source_url||'events.html'});
 });
 const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address);if(seen.has(k))return false;seen.add(k);return true});
+// A page may deep-link a named park/facility before it has a dedicated static map record.
+// Keep that interface functional by geocoding the named Norwood place instead of returning an empty map.
+if(requestedPlace&&!places.some(p=>norm(p.name)===norm(requestedPlace))){
+ places.push({name:requestedPlace,category:'park',address:requestedPlace+', Norwood, MA 02062',details:'Norwood park, trail or recreation facility',url:'parks-trails.html'});
+}
 function publicSchoolMark(p){return p.publicSchool?'<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Norwood Public Schools" title="Norwood Public Schools" style="width:14px;height:14px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}
 function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+publicSchoolMark(p)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
 
