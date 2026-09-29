@@ -178,9 +178,18 @@ function eventPriority(e){
 function eventIsSessionProgram(e){
  return e?.session_based===true&&e?.drop_in!==true;
 }
+function eventDisplayTier(e){
+ const p=eventPriority(e);
+ if(p===0)return 0;
+ const religious=p===2;
+ const session=eventIsSessionProgram(e);
+ if(!session&&!religious)return 1;
+ if(!session&&religious)return 2;
+ if(session&&!religious)return 3;
+ return 4;
+}
 function compareEventDisplay(a,b){
- const session=Number(eventIsSessionProgram(a))-Number(eventIsSessionProgram(b));if(session)return session;
- const p=eventPriority(a)-eventPriority(b);if(p)return p;
+ const tier=eventDisplayTier(a)-eventDisplayTier(b);if(tier)return tier;
  const d=(a.start?.date||'').localeCompare(b.start?.date||'');if(d)return d;
  return (a.start?.time||'99:99').localeCompare(b.start?.time||'99:99');
 }
@@ -195,22 +204,13 @@ function diversifySameDayEvents(list){
  const out=[];
  [...byDate.keys()].sort().forEach(d=>{
    const day=byDate.get(d);
-   const ordered=day.slice().sort(compareEventDisplay);
-   // Town Common events and the Farmers Market always lead their day.
-   const pinned=ordered.filter(e=>eventPriority(e)===0);
-   const remainder=ordered.filter(e=>eventPriority(e)!==0);
-   out.push(...pinned);
-   // Discrete/drop-in events always precede multi-week session occurrences.
-   // Diversify sources only inside each tier so source balancing can never
-   // promote a mid-session class above a one-time event on the same date.
-   const tiers=[
-     remainder.filter(e=>!eventIsSessionProgram(e)),
-     remainder.filter(e=>eventIsSessionProgram(e))
-   ];
-   let last=pinned.length?eventSourceKey(pinned[pinned.length-1]):'';
-   for(const tier of tiers){
+   // Fixed same-day hierarchy: Common; non-religious one-time; religious one-time;
+   // non-religious session; religious session. Diversify sources only within a tier.
+   let last='';
+   for(let tier=0;tier<=4;tier++){
+     const members=day.filter(e=>eventDisplayTier(e)===tier).sort(compareEventDisplay);
      const queues=new Map();
-     tier.forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
+     members.forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
      while(queues.size){
        const choices=[...queues.entries()].filter(([k])=>k!==last&&queues.size>1);
        const pool=choices.length?choices:[...queues.entries()];
@@ -350,14 +350,9 @@ function renderHomeEvents(items){
    // Chronology comes first: never let a priority event on a later date jump
    // ahead of ordinary events happening sooner.
    if(aDisplay!==bDisplay)return aDisplay.localeCompare(bDisplay);
-   // On the same date, ordinary/new-start events precede ongoing multi-day items.
+   const aTier=eventDisplayTier(a.e),bTier=eventDisplayTier(b.e);
+   if(aTier!==bTier)return aTier-bTier;
    if(aOngoing!==bOngoing)return Number(aOngoing)-Number(bOngoing);
-   // One-time/drop-in events precede occurrences from multi-week sessions.
-   const aSession=eventIsSessionProgram(a.e),bSession=eventIsSessionProgram(b.e);
-   if(aSession!==bSession)return Number(aSession)-Number(bSession);
-   // Priority only ranks events within the same display date/tier.
-   const aPriority=eventPriority(a.e),bPriority=eventPriority(b.e);
-   if(aPriority!==bPriority)return aPriority-bPriority;
    const t=(a.e.start?.time||'99:99').localeCompare(b.e.start?.time||'99:99');
    return t||a.i-b.i;
  }).map(x=>x.e);
