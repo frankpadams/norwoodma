@@ -138,7 +138,24 @@ function eventKind(cat='community'){
 function eventClass(cat='community'){if(/music/.test(cat))return'music';if(/arts|theatre|workshop/.test(cat))return'arts';if(/assistance/.test(cat))return'community';if(/food|market/.test(cat))return'food';if(/sport|skating|race|fitness/.test(cat))return'sports';if(/fund/.test(cat))return'fundraiser';return'community';}
 function eventHasPaidAdmission(e){const cost=String(e.cost||'').trim().toLowerCase();return !!cost&&!/^free\b/.test(cost)&&!/donation|suggested/.test(cost)&&(/\$|admission|ticket|fee|per person|per child|per adult/.test(cost));}
 function paidAdmissionIcon(e){return eventHasPaidAdmission(e)?'<span class="paid-admission" aria-label="Paid admission" title="Paid admission">$</span>':'';}
-function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);if(String(e.category||'').toLowerCase().includes('fundraiser')&&e.organizer)bits.push(`Benefits: ${e.organizer}`);return bits.join(' · ')||e.address||'Open source for details.';}
+function eventTitleContext(e){
+ const title=String(e.title||''),series=String(e.series||''),source=String(e.source_id||'');
+ const notes=[];
+ const expansions=[
+   [/\bMICCA\b/i,'MICCA is the Massachusetts Instrumental and Choral Conductors Association.'],
+   [/\bNHS\b/,'NHS means Norwood High School.'],
+   [/\bPMA\b/,'PMA means the Norwood Parent Music Association.'],
+   [/\bVFW\b/,'VFW means Veterans of Foreign Wars.'],
+   [/\bDPW\b/,'DPW means Department of Public Works.'],
+   [/\bCOA\b/,'COA means Council on Aging.']
+ ];
+ for(const [re,text] of expansions)if(re.test(title))notes.push(text);
+ if(/marching band/i.test(series)||/nps-pma/i.test(source)||/\bMICCA\b|\bUSBANDS\b/i.test(title)){
+   notes.push('This is a Norwood High School Marching Band event.');
+ }
+ return [...new Set(notes)].join(' ');
+}
+function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);if(String(e.category||'').toLowerCase().includes('fundraiser')&&e.organizer)bits.push(`Benefits: ${e.organizer}`);const context=eventTitleContext(e);if(context)bits.push(context);return bits.join(' · ')||e.address||'Open source for details.';}
 function eventPriority(e){
  const text=[e.title,e.notes,e.venue,e.address,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
  if(/farmers'? market|farmer'?s market|town-farmers-market|town common|norwood common|580 washington st/.test(text))return 0;
@@ -344,7 +361,8 @@ function eventCalendarRange(e){
  return {start:eventCalendarStamp(e.start?.date,e.start?.time),end:eventCalendarStamp(e.end?.date||e.start?.date,e.end?.time||e.start?.time),allDay:false};
 }
 function eventCalendarDescription(e){
- const parts=[];
+ const parts=[],context=eventTitleContext(e);
+ if(context)parts.push(context);
  if(e.notes)parts.push(e.notes);
  if(e.organizer)parts.push('Organizer: '+e.organizer);
  if(e.cost)parts.push('Admission: '+e.cost);
@@ -379,7 +397,7 @@ function openEventDetails(id){
  const maps=q?'<div class="event-popup-actions"><strong>Directions:</strong><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+brandIcon('https://www.google.com/favicon.ico','Google Maps')+' Google</a><a href="https://maps.apple.com/?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+brandIcon('https://www.apple.com/favicon.ico','Apple Maps')+' Apple</a></div>':'';
  const calendars='<div class="event-popup-actions"><strong>Add to Calendar:</strong><a href="'+esc(googleCalendarUrl(e))+'" target="_blank" rel="noopener">'+brandIcon('https://www.google.com/favicon.ico','Google Calendar')+' Google</a><a href="'+esc(appleCalendarHref(e))+'" download="'+esc(String(e.title||'event').replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase()||'event')+'.ics">'+brandIcon('https://www.apple.com/favicon.ico','Apple Calendar')+' Apple</a></div>';
  const websites=links.length?'<div class="event-popup-websites"><strong>More information:</strong>'+links.map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join('')+'</div>':'';
- box.innerHTML=(img?'<img class="event-popup-thumb" src="'+esc(img)+'" alt="" loading="lazy">':'')+'<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><div class="event-popup-facts"><p><strong>Date:</strong> '+esc(eventDateLabel(e))+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Location:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+'</div>'+(e.notes?'<p class="event-popup-notes">'+esc(e.notes)+'</p>':'')+maps+calendars+websites;
+ box.innerHTML=(img?'<img class="event-popup-thumb" src="'+esc(img)+'" alt="" loading="lazy">':'')+'<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><div class="event-popup-facts"><p><strong>Date:</strong> '+esc(eventDateLabel(e))+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Location:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+'</div>'+((eventTitleContext(e)||e.notes)?'<p class="event-popup-notes">'+esc([eventTitleContext(e),e.notes].filter(Boolean).join(' '))+'</p>':'')+maps+calendars+websites;
  dlg.showModal();
 }
 function openRecreationProgramDetails(id){
