@@ -1,4 +1,12 @@
-# Norwood.ma v1.0.1
+# Norwood.ma v1.0.2
+
+## v1.0.2 — event priority and source coverage
+
+- Formalizes same-day What's Happening priority: Town Common/Farmers Market first; non-religious one-time/drop-in events; religious one-time/drop-in events; non-religious session classes; religious session classes.
+- Adds the Oct. 1 Norwood Health Department flu-shot clinic and promotes the Health Department from a passive resource to an actively monitored event source.
+- Confirms the official Norwood Theatre schedule is actively parsed from its dated show pages.
+- Strengthens NPS Fine Arts/theatre discovery with NHS iCal, the official NHS Fine Arts page, NPS news, and PMA sources.
+- Adds a dedicated NHS Theatre / Drama selectable calendar.
 
 ## v1.0.1 — event ordering refinement
 
