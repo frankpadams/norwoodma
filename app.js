@@ -175,7 +175,11 @@ function eventPriority(e){
  const religious=/\b(church|parish|chapel|congregation|temple|synagogue|mosque|mandir|worship|mass|bible|prayer|faith|ministry|saint catherine|st\. catherine|first congregational|grace episcopal|united church)\b/.test(text);
  return religious?2:1;
 }
+function eventIsSessionProgram(e){
+ return e?.session_based===true&&e?.drop_in!==true;
+}
 function compareEventDisplay(a,b){
+ const session=Number(eventIsSessionProgram(a))-Number(eventIsSessionProgram(b));if(session)return session;
  const p=eventPriority(a)-eventPriority(b);if(p)return p;
  const d=(a.start?.date||'').localeCompare(b.start?.date||'');if(d)return d;
  return (a.start?.time||'99:99').localeCompare(b.start?.time||'99:99');
@@ -196,14 +200,23 @@ function diversifySameDayEvents(list){
    const pinned=ordered.filter(e=>eventPriority(e)===0);
    const remainder=ordered.filter(e=>eventPriority(e)!==0);
    out.push(...pinned);
-   const queues=new Map();
-   remainder.forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
+   // Discrete/drop-in events always precede multi-week session occurrences.
+   // Diversify sources only inside each tier so source balancing can never
+   // promote a mid-session class above a one-time event on the same date.
+   const tiers=[
+     remainder.filter(e=>!eventIsSessionProgram(e)),
+     remainder.filter(e=>eventIsSessionProgram(e))
+   ];
    let last=pinned.length?eventSourceKey(pinned[pinned.length-1]):'';
-   while(queues.size){
-     const choices=[...queues.entries()].filter(([k])=>k!==last&&queues.size>1);
-     const pool=choices.length?choices:[...queues.entries()];
-     pool.sort((a,b)=>compareEventDisplay(a[1][0],b[1][0]));
-     const [key,q]=pool[0],e=q.shift();out.push(e);last=key;if(!q.length)queues.delete(key);
+   for(const tier of tiers){
+     const queues=new Map();
+     tier.forEach(e=>{const k=eventSourceKey(e);if(!queues.has(k))queues.set(k,[]);queues.get(k).push(e)});
+     while(queues.size){
+       const choices=[...queues.entries()].filter(([k])=>k!==last&&queues.size>1);
+       const pool=choices.length?choices:[...queues.entries()];
+       pool.sort((a,b)=>compareEventDisplay(a[1][0],b[1][0]));
+       const [key,q]=pool[0],e=q.shift();out.push(e);last=key;if(!q.length)queues.delete(key);
+     }
    }
  });
  return out;
@@ -339,7 +352,10 @@ function renderHomeEvents(items){
    if(aDisplay!==bDisplay)return aDisplay.localeCompare(bDisplay);
    // On the same date, ordinary/new-start events precede ongoing multi-day items.
    if(aOngoing!==bOngoing)return Number(aOngoing)-Number(bOngoing);
-   // Priority only ranks events within the same display date.
+   // One-time/drop-in events precede occurrences from multi-week sessions.
+   const aSession=eventIsSessionProgram(a.e),bSession=eventIsSessionProgram(b.e);
+   if(aSession!==bSession)return Number(aSession)-Number(bSession);
+   // Priority only ranks events within the same display date/tier.
    const aPriority=eventPriority(a.e),bPriority=eventPriority(b.e);
    if(aPriority!==bPriority)return aPriority-bPriority;
    const t=(a.e.start?.time||'99:99').localeCompare(b.e.start?.time||'99:99');
