@@ -1,4 +1,10 @@
-# Norwood.ma v1.0.0
+# Norwood.ma v1.0.1
+
+## v1.0.1 — event ordering refinement
+
+- What's Happening now explicitly ranks one-time and drop-in events ahead of occurrences from multi-week Recreation sessions when they fall on the same date.
+- Session detection uses the event data's `session_based` / `drop_in` metadata rather than guessing from titles.
+- Homepage upcoming events uses the same priority rule, so items such as Mah Jong and trivia are not crowded out by mid-session classes.
 
 
 ## v1.0.0 — first stable release
