@@ -63,6 +63,36 @@
     ]
   },
   {
+    "id": "2026-09-29-september-2026-573826d",
+    "title": "September 2026",
+    "start": {
+      "date": "2026-09-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-09-29-tuesday-pvc-play-and-learn-984da41",
     "title": "Tuesday PVC Play and Learn",
     "start": {
@@ -13744,6 +13774,37 @@
     ]
   },
   {
+    "id": "2026-10-18-repair-caf-october-2026-faf4793",
+    "title": "Repair Café – October 2026",
+    "start": {
+      "date": "2026-10-18",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "17:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/repair-cafe-october-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ The Charles River Repair Coalition & Westwood Environmental Action Committee will cohost their Fall 2026 Repair Café with Mill Forge Makerspace in Norwood! The Repair Café brings together volunteers with particular repair skills and tools",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-aee429bc4313-2026-10-18",
     "title": "Sunday Sandlot Baseball Grades 1-3",
     "start": {
@@ -21022,6 +21083,36 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-29-october-2026-f1484e0",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -64139,40 +64230,6 @@
     ]
   },
   {
-    "id": "2027-02-01-tvl-boys-ice-hockey-vs-abington-high-school-5532143",
-    "title": "TVL Boys Ice Hockey vs Abington High School",
-    "start": {
-      "date": "2027-02-01",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-02-01",
-      "time": "18:15"
-    },
-    "venue": "750 University Avenue, Norwood Massachusetts 02062",
-    "address": "750 University Avenue, Norwood Massachusetts 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Hockey",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Hockey",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Ice Hockey Level: TVL Boys Team: Norwood High School Site: Skating Club of Boston (Norwood) Subsite: East Rink",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-5f99d7665326-2027-02-01",
     "title": "Hard Shoe 3 - Mondays",
     "start": {
@@ -64319,6 +64376,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-02-01-tvl-boys-ice-hockey-vs-abington-high-school-5532143",
+    "title": "TVL Boys Ice Hockey vs Abington High School",
+    "start": {
+      "date": "2027-02-01",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-02-01",
+      "time": "19:45"
+    },
+    "venue": "750 University Avenue, Norwood Massachusetts 02062",
+    "address": "750 University Avenue, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Hockey",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Ice Hockey Level: TVL Boys Team: Norwood High School Site: Skating Club of Boston (Norwood) Subsite: East Rink",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
