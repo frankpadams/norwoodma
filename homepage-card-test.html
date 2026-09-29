@@ -58,6 +58,41 @@
 .status.feature-card-test>a:hover>small{color:#000!important}
 .status.feature-card-test>a:hover .feature-icon{color:#000!important}
 .status.feature-card-test>a:hover .feature-icon svg{stroke:#000!important}
+
+/* Compact mobile feature navigation: one-line title + one-line supporting copy. */
+@media(max-width:680px){
+ .status.feature-card-test{border-radius:14px!important}
+ .status.feature-card-test>a{
+   min-height:0!important;
+   padding:8px 8px!important;
+   grid-template-columns:32px minmax(0,1fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:5px!important
+ }
+ .status.feature-card-test>a:first-child{border-radius:14px 0 0 14px!important}
+ .status.feature-card-test>a:last-child{border-radius:0 14px 14px 0!important}
+ .status.feature-card-test .feature-icon{
+   width:27px!important;height:27px!important;
+   transform:translateX(2px)!important
+ }
+ .status.feature-card-test .trivia-icon{width:25px!important;height:25px!important}
+ .status.feature-card-test>a>b{
+   font-size:.86rem!important;line-height:1!important;
+   white-space:nowrap!important
+ }
+ .status.feature-card-test>a>small{
+   font-size:.61rem!important;line-height:1.05!important;
+   white-space:nowrap!important;width:auto!important;
+   padding:2px 0 0!important
+ }
+ .status.feature-card-test .dinner-spinner-quick>b,
+ .status.feature-card-test .dinner-spinner-quick>small,
+ .status.feature-card-test .things-test>b,
+ .status.feature-card-test .things-test>small,
+ .status.feature-card-test .trivia-test>b,
+ .status.feature-card-test .trivia-test>small{transform:none!important}
+ .status.feature-card-test small br{display:none!important}
+}
 </style>
 <style>
 /* Test refinements: joined bar, larger sans-serif labels/icons, muted-to-color hover. */
