@@ -63,36 +63,6 @@
     ]
   },
   {
-    "id": "2026-09-29-september-2026-573826d",
-    "title": "September 2026",
-    "start": {
-      "date": "2026-09-29",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-29",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-29-tuesday-pvc-play-and-learn-984da41",
     "title": "Tuesday PVC Play and Learn",
     "start": {
@@ -427,40 +397,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-29-boys-varsity-golf-vs-bedford-high-school-31ea345",
-    "title": "Boys Varsity Golf vs Bedford High School",
-    "start": {
-      "date": "2026-09-29",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-29",
-      "time": "18:00"
-    },
-    "venue": "400 Providence Hwy., Norwood MA 02062",
-    "address": "400 Providence Hwy., Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-varsity-golf",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Varsity Golf",
-    "public_access": "public",
-    "series": "Norwood Varsity Golf",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Norwood Country Club Subsite: Norwood Country Club",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -1456,40 +1392,6 @@
       "norwood-community",
       "norwood-family",
       "town-meetings"
-    ]
-  },
-  {
-    "id": "2026-09-30-boys-varsity-golf-hopkinton-high-school-cf0ed97",
-    "title": "Boys Varsity Golf @ Hopkinton High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:30"
-    },
-    "venue": "204 Saddle Hill Rd., Hopkinton MA 01748",
-    "address": "204 Saddle Hill Rd., Hopkinton MA 01748",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-varsity-golf",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Varsity Golf",
-    "public_access": "public",
-    "series": "Norwood Varsity Golf",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Hopkinton Country Club Subsite: Hopkinton Country Club",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -5890,6 +5792,40 @@
       "rec-all",
       "rec-sports",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-06-boys-varsity-golf-millis-high-school-2dc16ab",
+    "title": "Boys Varsity Golf @ Millis High School",
+    "start": {
+      "date": "2026-10-06",
+      "time": "15:45"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": "17:45"
+    },
+    "venue": "212 Prentice St., Holliston MA 01746",
+    "address": "212 Prentice St., Holliston MA 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-golf",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Golf",
+    "public_access": "public",
+    "series": "Norwood Varsity Golf",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Pinecrest Golf Club Subsite: Golf Course",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -21062,36 +20998,6 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-29-october-2026-f1484e0",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-29",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-29",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -84068,6 +83974,74 @@
     ]
   },
   {
+    "id": "2027-04-05-varsity-softball-norton-high-school-a21bd5f",
+    "title": "Varsity Softball @ Norton High School",
+    "start": {
+      "date": "2027-04-05",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-04-05",
+      "time": "19:00"
+    },
+    "venue": "66 W Main Street, Norton MA 02766",
+    "address": "66 W Main Street, Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Norton High School Subsite: Softball Field #1 (HS)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-05-varsity-baseball-norton-high-school-59e7bda",
+    "title": "Varsity baseball @ Norton High School",
+    "start": {
+      "date": "2027-04-05",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-04-05",
+      "time": "19:00"
+    },
+    "venue": "66 W Main Street, Norton MA 02766",
+    "address": "66 W Main Street, Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Norton High School Subsite: Veterans Field (MP)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-028951c24952-2027-04-05",
     "title": "Irish Step 3 - Mondays",
     "start": {
@@ -88144,6 +88118,40 @@
     ]
   },
   {
+    "id": "2027-04-27-boys-varsity-tennis-team-holliston-high-schoo-a7afbb3",
+    "title": "Boys Varsity Tennis - Team @ Holliston High School",
+    "start": {
+      "date": "2027-04-27",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-27",
+      "time": "18:30"
+    },
+    "venue": "37 Green Street, Holliston MA 01746",
+    "address": "37 Green Street, Holliston MA 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Goodwill Park Subsite: Goodwill Park Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-1514c9dfd42c-2027-04-27",
     "title": "Tap 3 - Tuesdays",
     "start": {
@@ -89587,6 +89595,74 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: 9th Team: Norwood High School Site: Bellingham Memorial School Subsite: MS Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-05-boys-track-track-holliston-high-school-e5d7cd4",
+    "title": "Boys Track Track @ Holliston High School",
+    "start": {
+      "date": "2027-05-05",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-05",
+      "time": "18:30"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Track Level: Boys Track Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Track)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-05-girls-track-track-holliston-high-school-bd2dd64",
+    "title": "Girls Track Track @ Holliston High School",
+    "start": {
+      "date": "2027-05-05",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-05",
+      "time": "18:30"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Track Level: Girls Track Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Track)",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",

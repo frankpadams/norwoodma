@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29T09:25:15.717367-04:00",
+  "generated_at": "2026-09-29T12:37:49.346192-04:00",
   "offline": false,
-  "events_published": 2609,
+  "events_published": 2611,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2609,
-      "generated_at": "2026-09-29T09:25:14.844043-04:00"
+      "events": 2611,
+      "generated_at": "2026-09-29T12:37:48.683870-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 90,
-      "generated_at": "2026-09-29T09:25:14.854175-04:00"
+      "generated_at": "2026-09-29T12:37:48.693732-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 944,
-      "generated_at": "2026-09-29T09:25:14.875086-04:00"
+      "events": 948,
+      "generated_at": "2026-09-29T12:37:48.713758-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 848,
-      "generated_at": "2026-09-29T09:25:14.893003-04:00"
+      "events": 852,
+      "generated_at": "2026-09-29T12:37:48.730425-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 5,
-      "generated_at": "2026-09-29T09:25:14.902417-04:00"
+      "generated_at": "2026-09-29T12:37:48.739228-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 79,
-      "generated_at": "2026-09-29T09:25:14.912742-04:00"
+      "generated_at": "2026-09-29T12:37:48.749383-04:00"
     }
   ],
   "recreation_programs": 173,
@@ -181,7 +181,7 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 4,
+      "found": 0,
       "note": ""
     },
     {
@@ -314,8 +314,8 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-carillon-series",
@@ -328,8 +328,8 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -468,8 +468,8 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-women-business-networking",
@@ -538,7 +538,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 5,
       "note": ""
     },
     {
@@ -580,7 +580,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
       "ok": true,
       "method": "ical",
-      "found": 1,
+      "found": 2,
       "note": ""
     },
     {
@@ -601,7 +601,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 2,
+      "found": 3,
       "note": ""
     },
     {
@@ -734,7 +734,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
       "ok": true,
       "method": "ical",
-      "found": 1,
+      "found": 2,
       "note": ""
     },
     {
@@ -748,7 +748,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-softball",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 5,
       "note": ""
     },
     {
@@ -804,7 +804,7 @@
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 16,
       "note": ""
     },
     {
@@ -1302,9 +1302,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
