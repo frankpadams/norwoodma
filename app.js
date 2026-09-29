@@ -290,7 +290,26 @@ function renderEventsPage(items){
  }
  const st=$('#eventsStatus');if(st)st.textContent='';
 }
-function renderHomeEvents(items){const host=$('#homeEvents');if(!host)return;const ranked=diversifySameDayEvents(items.slice());const limit=window.matchMedia('(max-width:850px)').matches?5:7;host.innerHTML=ranked.slice(0,limit).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';}
+function renderHomeEvents(items){
+ const host=$('#homeEvents');if(!host)return;
+ const today=dateKey(new Date());
+ const visible=items.filter(e=>(e.end?.date||e.start?.date||'')>=today);
+ const ranked=visible.map((e,i)=>({e,i})).sort((a,b)=>{
+   const aStart=a.e.start?.date||'',bStart=b.e.start?.date||'';
+   const aEnd=a.e.end?.date||aStart,bEnd=b.e.end?.date||bStart;
+   const aOngoing=aStart<today&&aEnd>=today,bOngoing=bStart<today&&bEnd>=today;
+   // Current single-day/new-start events come before ongoing multi-day events.
+   if(aOngoing!==bOngoing)return Number(aOngoing)-Number(bOngoing);
+   const aPriority=eventPriority(a.e),bPriority=eventPriority(b.e);
+   if(aPriority!==bPriority)return aPriority-bPriority;
+   const aDisplay=aOngoing?today:aStart,bDisplay=bOngoing?today:bStart;
+   if(aDisplay!==bDisplay)return aDisplay.localeCompare(bDisplay);
+   const t=(a.e.start?.time||'99:99').localeCompare(b.e.start?.time||'99:99');
+   return t||a.i-b.i;
+ }).map(x=>x.e);
+ const limit=window.matchMedia('(max-width:850px)').matches?5:7;
+ host.innerHTML=ranked.slice(0,limit).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';
+}
 function openEventDetails(id){const e=allEventsForPage.find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!e||!dlg||!box)return;const d=parseLocalDate(e.start?.date),date=d?d.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'}):(e.start?.date||''),times=[e.start?.time&&formatEventTime(e.start.time),e.end?.time&&formatEventTime(e.end.time)].filter(Boolean).join('–'),where=[e.venue,e.address].filter(Boolean).join(' · '),links=eventLinks(e);box.innerHTML='<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><p><strong>Date:</strong> '+esc(date)+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Place:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+(e.notes?'<p>'+esc(e.notes)+'</p>':'')+(links.length?'<div class="event-detail-links">'+links.map(x=>'<p><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a></p>').join('')+'</div>':'');dlg.showModal();}
 function openRecreationProgramDetails(id){
  const r=(window.NORWOOD_RECREATION_PROGRAMS||[]).find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!r||!dlg||!box)return;
