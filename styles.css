@@ -159,3 +159,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .old-footer .footer-info-disclaimer,
 .old-footer .footer-links{margin:0 0 7px!important;padding:0!important;line-height:1.45!important}
 .old-footer .footer-links{margin-bottom:0!important;margin-top:7px!important}
+
+/* Home-screen install item uses only the Norwood.ma favicon; suppress the generic nav icon. */
+#nav>a.add-home-screen-link::before{display:none!important;content:none!important}
+#nav>a.add-home-screen-link .add-home-screen-icon{display:block;width:18px;height:18px;object-fit:contain;flex:0 0 18px;margin:0}
