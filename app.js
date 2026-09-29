@@ -235,7 +235,13 @@ function groupEvents(items){
  return g;
 }
 function eventLinks(e){const links=[];const add=(url,label)=>{if(url&&!links.some(x=>x.url===url))links.push({url,label})};add(e.registration_url,'Participate / register');add(e.donation_url,'Donate / support');add(e.purchase_url,'Purchase / order');add(e.source_url,'Official event information');add(e.field_status_url,'Check field status');(Array.isArray(e.links)?e.links:[]).forEach(x=>{if(typeof x==='string')add(x,'More information');else if(x&&x.url)add(x.url,x.label||'More information')});return links;}
-function eventRow(e){const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'',civic=e.category==='civic_meeting'?'<p class="civic-watch-note">Come back to Norwood.ma at meeting time to watch live.</p>':'',links=eventLinks(e),direct=links.length===1,href=direct?links[0].url:'#',popup=!direct,multi=!!(e.end?.date&&e.start?.date&&e.end.date!==e.start.date),range=multi?`<p class="event-date-range"><strong>${String(e.category||'').toLowerCase().includes('fundraiser')?'Fundraiser runs':'Runs'}:</strong> ${esc(shortDate(e.start.date))}–${esc(shortDate(e.end.date))}</p>`:'';return `<a class="event-row ${eventClass(e.category)}" href="${esc(href)}" ${direct?'target="_blank" rel="noopener"':`data-event-details="${esc(e.id||'')}"`}><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">${direct?'↗':'+'}</span></a>`;}
+function eventRow(e){
+ const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';
+ const civic=e.category==='civic_meeting'?'<p class="civic-watch-note">Come back to Norwood.ma at meeting time to watch live.</p>':'';
+ const multi=!!(e.end?.date&&e.start?.date&&e.end.date!==e.start.date);
+ const range=multi?`<p class="event-date-range"><strong>${String(e.category||'').toLowerCase().includes('fundraiser')?'Fundraiser runs':'Runs'}:</strong> ${esc(shortDate(e.start.date))}–${esc(shortDate(e.end.date))}</p>`:'';
+ return `<a class="event-row ${eventClass(e.category)}" href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">+</span></a>`;
+}
 function eventMatchesCalendar(e,key){
  if(!key||key==='all')return true;
  const cat=String(e.category||'').toLowerCase();
@@ -311,9 +317,63 @@ function renderHomeEvents(items){
    return t||a.i-b.i;
  }).map(x=>x.e);
  const limit=window.matchMedia('(max-width:850px)').matches?5:7;
- host.innerHTML=ranked.slice(0,limit).map(e=>`<a href="${esc(e.source_url||'events.html')}" target="_blank" rel="noopener"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';
+ host.innerHTML=ranked.slice(0,limit).map(e=>`<a href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';
 }
-function openEventDetails(id){const e=allEventsForPage.find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!e||!dlg||!box)return;const d=parseLocalDate(e.start?.date),date=d?d.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'}):(e.start?.date||''),times=[e.start?.time&&formatEventTime(e.start.time),e.end?.time&&formatEventTime(e.end.time)].filter(Boolean).join('–'),where=[e.venue,e.address].filter(Boolean).join(' · '),links=eventLinks(e);box.innerHTML='<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><p><strong>Date:</strong> '+esc(date)+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Place:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+(e.notes?'<p>'+esc(e.notes)+'</p>':'')+(links.length?'<div class="event-detail-links">'+links.map(x=>'<p><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a></p>').join('')+'</div>':'');dlg.showModal();}
+function eventImageUrl(e){
+ return [e.thumbnail_url,e.thumbnail,e.image_url,e.image,e.photo_url,e.photo,e.flyer_url].find(x=>typeof x==='string'&&/^https?:\/\//i.test(x))||'';
+}
+function eventLocationText(e){return [e.venue,e.address].filter(Boolean).join(' · ');}
+function eventMapQuery(e){return String(e.address||e.venue||'').trim();}
+function eventDateLabel(e){
+ const a=parseLocalDate(e.start?.date),b=parseLocalDate(e.end?.date||e.start?.date);
+ const one=a?a.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'}):(e.start?.date||'');
+ if(!b||!e.end?.date||e.end.date===e.start?.date)return one;
+ return one+' – '+b.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+}
+function eventCalendarStamp(date,time){
+ if(!date)return'';
+ const d=String(date).replaceAll('-','');
+ return time?d+'T'+String(time).replace(':','')+'00':d;
+}
+function eventNextDate(date){
+ const d=parseLocalDate(date);if(!d)return date;d.setDate(d.getDate()+1);return dateKey(d);
+}
+function eventCalendarRange(e){
+ const timed=!!(e.start?.time&&e.start.time!=='00:00');
+ if(!timed)return {start:eventCalendarStamp(e.start?.date),end:eventCalendarStamp(eventNextDate(e.end?.date||e.start?.date)),allDay:true};
+ return {start:eventCalendarStamp(e.start?.date,e.start?.time),end:eventCalendarStamp(e.end?.date||e.start?.date,e.end?.time||e.start?.time),allDay:false};
+}
+function eventCalendarDescription(e){
+ return [e.notes,e.organizer?('Organizer: '+e.organizer):'',e.cost?('Admission: '+e.cost):''].filter(Boolean).join('\n\n');
+}
+function googleCalendarUrl(e){
+ const r=eventCalendarRange(e),p=new URLSearchParams({action:'TEMPLATE',text:e.title||'Norwood event',dates:r.start+'/'+r.end});
+ const where=eventLocationText(e),details=eventCalendarDescription(e);if(where)p.set('location',where);if(details)p.set('details',details);
+ return 'https://calendar.google.com/calendar/render?'+p.toString();
+}
+function appleCalendarHref(e){
+ const r=eventCalendarRange(e),loc=eventLocationText(e),desc=eventCalendarDescription(e);
+ const safe=s=>String(s||'').replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');
+ const dt=r.allDay?';VALUE=DATE:':':';
+ const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Norwood.ma//Events//EN','BEGIN:VEVENT','UID:'+safe((e.id||Date.now())+'@norwood.ma'),'DTSTART'+dt+r.start,'DTEND'+dt+r.end,'SUMMARY:'+safe(e.title),loc?'LOCATION:'+safe(loc):'',desc?'DESCRIPTION:'+safe(desc):'','END:VEVENT','END:VCALENDAR'].filter(Boolean).join('\r\n');
+ return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(ics);
+}
+function eventExternalLinks(e){
+ const links=eventLinks(e),seen=new Set(),out=[];
+ for(const x of links){if(!x.url||seen.has(x.url))continue;seen.add(x.url);out.push(x);if(out.length===2)break}
+ return out;
+}
+function brandIcon(src,alt){return '<img class="event-brand-icon" src="'+src+'" alt="'+alt+'">';}
+function openEventDetails(id){
+ const e=allEventsForPage.find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!e||!dlg||!box)return;
+ const times=[e.start?.time&&e.start.time!=='00:00'&&formatEventTime(e.start.time),e.end?.time&&formatEventTime(e.end.time)].filter(Boolean).join('–');
+ const where=eventLocationText(e),q=eventMapQuery(e),img=eventImageUrl(e),links=eventExternalLinks(e);
+ const maps=q?'<div class="event-popup-actions"><strong>Directions:</strong><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+brandIcon('https://www.google.com/favicon.ico','Google Maps')+' Google</a><a href="https://maps.apple.com/?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+brandIcon('https://www.apple.com/favicon.ico','Apple Maps')+' Apple</a></div>':'';
+ const calendars='<div class="event-popup-actions"><strong>Add to Calendar:</strong><a href="'+esc(googleCalendarUrl(e))+'" target="_blank" rel="noopener">'+brandIcon('https://www.google.com/favicon.ico','Google Calendar')+' Google</a><a href="'+esc(appleCalendarHref(e))+'" download="'+esc(String(e.title||'event').replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase()||'event')+'.ics">'+brandIcon('https://www.apple.com/favicon.ico','Apple Calendar')+' Apple</a></div>';
+ const websites=links.length?'<div class="event-popup-websites"><strong>More information:</strong>'+links.map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join('')+'</div>':'';
+ box.innerHTML=(img?'<img class="event-popup-thumb" src="'+esc(img)+'" alt="" loading="lazy">':'')+'<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><div class="event-popup-facts"><p><strong>Date:</strong> '+esc(eventDateLabel(e))+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Location:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+'</div>'+(e.notes?'<p class="event-popup-notes">'+esc(e.notes)+'</p>':'')+maps+calendars+websites;
+ dlg.showModal();
+}
 function openRecreationProgramDetails(id){
  const r=(window.NORWOOD_RECREATION_PROGRAMS||[]).find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!r||!dlg||!box)return;
  const range=[r.start_date&&shortDate(r.start_date),r.end_date&&r.end_date!==r.start_date&&shortDate(r.end_date)].filter(Boolean).join('–');
