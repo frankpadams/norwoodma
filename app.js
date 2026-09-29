@@ -224,6 +224,26 @@ function diversifySameDayEvents(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // Manually verified 2026 community event: keep visible until the automated source path
+ // reliably discovers it, then this compatibility entry can be removed.
+ if(!items.some(e=>e.id==='2026-10-17-a-craft-affair-norwood')){
+   items.push({
+     id:'2026-10-17-a-craft-affair-norwood',
+     title:'A Craft Affair at Norwood',
+     start:{date:'2026-10-17',time:'09:00'},
+     end:{date:'2026-10-17',time:'14:30'},
+     venue:'Norwood High School',
+     address:'245 Nichols St, Norwood, MA 02062',
+     category:'market',
+     source_id:'norwood-craft-affair',
+     source_url:'https://www.inasnapri.com/events',
+     public_access:'public',
+     publish_candidate:true,
+     curated_default:true,
+     verification_status:'manual_verified_2026-09-29',
+     notes:'Annual public craft fair at Norwood High School.'
+   });
+ }
  // Public board/committee meetings are maintained separately for the time-sensitive
  // alert system, but they also belong in the community calendar.
  try{
