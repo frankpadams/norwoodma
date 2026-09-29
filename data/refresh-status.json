@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29T01:18:39.806418-04:00",
+  "generated_at": "2026-09-29T02:17:08.068335-04:00",
   "offline": false,
-  "events_published": 2609,
+  "events_published": 2607,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2609,
-      "generated_at": "2026-09-29T01:18:39.412084-04:00"
+      "events": 2607,
+      "generated_at": "2026-09-29T02:17:07.770426-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 90,
-      "generated_at": "2026-09-29T01:18:39.422968-04:00"
+      "generated_at": "2026-09-29T02:17:07.781848-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 944,
-      "generated_at": "2026-09-29T01:18:39.446493-04:00"
+      "generated_at": "2026-09-29T02:17:07.806573-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 848,
-      "generated_at": "2026-09-29T01:18:39.466579-04:00"
+      "generated_at": "2026-09-29T02:17:07.827092-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 5,
-      "generated_at": "2026-09-29T01:18:39.477209-04:00"
+      "generated_at": "2026-09-29T02:17:07.838126-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 79,
-      "generated_at": "2026-09-29T01:18:39.489862-04:00"
+      "generated_at": "2026-09-29T02:17:07.851176-04:00"
     }
   ],
   "recreation_programs": 173,
@@ -181,7 +181,7 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 4,
+      "found": 0,
       "note": ""
     },
     {
@@ -314,8 +314,8 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-carillon-series",
@@ -328,8 +328,8 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -468,8 +468,8 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-women-business-networking",
@@ -1302,9 +1302,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
