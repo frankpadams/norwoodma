@@ -116,6 +116,17 @@
  .status.feature-card-test .feature-icon{width:34px;height:34px}
 }
 </style>
+<style>
+/* Keep the approved feature bar at a fixed visual distance from the hero search,
+   independent of hero copy wrapping or viewport-height differences. */
+#home>.hero.hero-compact{padding-bottom:88px!important}
+#home>.hero.hero-compact .hero-site-search{margin-bottom:0!important}
+#home>.status.feature-card-test{margin-top:-58px!important;position:relative;z-index:5}
+@media(max-width:680px){
+ #home>.hero.hero-compact{padding-bottom:62px!important}
+ #home>.status.feature-card-test{margin-top:-42px!important}
+}
+</style>
 </head><body>
 <a class="skip-link" href="#home">Skip to main content</a><div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
 <header class="top"><a class="brand approved" href="index.html"><img alt="Norwood.ma — Our Town. Online." src="assets/logo-dark-approved.png"/></a><button aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu" id="menu">Menu</button><nav id="nav"><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="resources.html">Local Resources</a><a href="discover.html">Discover</a></nav></header>
