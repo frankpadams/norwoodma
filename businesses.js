@@ -40,7 +40,7 @@ function classifyBusiness(b){
 }
 businesses.forEach(b=>{b.taxonomy=classifyBusiness(b);});
 window.NORWOOD_BUSINESS_TAXONOMY=Object.fromEntries(businesses.map(b=>[String(b.name||'').toLowerCase(),b.taxonomy]));
-function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+'</div>'+(details?'<p>'+details+'</p>':'')+'</article>';}
+function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');const mapLink=b.address?'<p class="business-map-item-link"><a href="map.html?business='+encodeURIComponent(b.name)+'">Show on map →</a></p>':'';return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+'</div>'+(details?'<p>'+details+'</p>':'')+mapLink+'</article>';}
 function parse(){const p=location.hash.slice(1).split('/');return {group:p[0],sub:p[1]};}
 function setHash(h){location.hash=h;}
 function render(){
