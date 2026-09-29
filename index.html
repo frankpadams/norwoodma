@@ -59,6 +59,21 @@
 .status.feature-card-test>a:hover .feature-icon{color:#000!important}
 .status.feature-card-test>a:hover .feature-icon svg{stroke:#000!important}
 
+/* Slightly slimmer desktop/tablet feature bar: preserve the four-card design while reducing vertical footprint. */
+@media(min-width:681px){
+ .status.feature-card-test>a{
+   padding:10px 14px!important;
+   grid-template-columns:42px minmax(0,1fr)!important;
+   column-gap:9px!important
+ }
+ .status.feature-card-test .feature-icon{
+   width:36px!important;
+   height:36px!important;
+   transform:translateX(5px)
+ }
+ .status.feature-card-test .trivia-icon{width:33px!important;height:33px!important}
+}
+
 /* Compact mobile feature navigation: one-line title + one-line supporting copy. */
 @media(max-width:680px){
  .status.feature-card-test{border-radius:14px!important}
