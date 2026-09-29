@@ -1,0 +1,73 @@
+{
+  "policy": {
+    "default_lead_days": 90,
+    "minimum_lead_days": 60,
+    "recheck_days_until_confirmed": 7,
+    "purpose": "Begin searching for recurring public Norwood events well before the expected event date so residents have useful notice for tickets, registration, volunteering, or planning.",
+    "rules": [
+      "Never wait until the prior-year event date to begin current-year discovery.",
+      "Start at least 60 days ahead; use 90 days by default and longer for ticketed or high-demand events.",
+      "Recheck repeatedly until the current-year date is confirmed or the expected seasonal window has passed.",
+      "Prefer the organizer or official venue as confirmation, but use secondary calendars and vendor pages as discovery leads.",
+      "Once confirmed, reconcile against events.json to avoid duplicates."
+    ]
+  },
+  "events": [
+    {
+      "id": "a-craft-affair",
+      "name": "A Craft Affair",
+      "expected_month": 10,
+      "lead_days": 120,
+      "search_terms": ["A Craft Affair Norwood MA", "Norwood Junior Woman's Club Craft Affair", "Norwood High School craft fair October"]
+    },
+    {
+      "id": "norwood-day",
+      "name": "Norwood Day",
+      "expected_month": 9,
+      "lead_days": 120,
+      "search_terms": ["Norwood Day Norwood MA", "Norwood Day schedule"]
+    },
+    {
+      "id": "national-night-out",
+      "name": "National Night Out",
+      "expected_month": 8,
+      "lead_days": 90,
+      "search_terms": ["Norwood MA National Night Out", "Norwood Police National Night Out"]
+    },
+    {
+      "id": "july-fourth",
+      "name": "Norwood Fourth of July activities",
+      "expected_month": 7,
+      "lead_days": 120,
+      "search_terms": ["Norwood MA July 4 events", "Norwood Fourth of July celebration"]
+    },
+    {
+      "id": "art-in-bloom",
+      "name": "Art in Bloom",
+      "expected_month": 4,
+      "lead_days": 90,
+      "search_terms": ["Art in Bloom Norwood MA", "Norwood Art in Bloom"]
+    },
+    {
+      "id": "early-childhood-fair",
+      "name": "Early Childhood Fair",
+      "expected_month": 3,
+      "lead_days": 90,
+      "search_terms": ["Norwood MA early childhood fair", "Norwood family early childhood fair"]
+    },
+    {
+      "id": "pumpkinfest",
+      "name": "Pumpkinfest / fall family festival",
+      "expected_month": 10,
+      "lead_days": 90,
+      "search_terms": ["Norwood MA Pumpkinfest", "Norwood fall family festival pumpkin"]
+    },
+    {
+      "id": "tree-lighting",
+      "name": "Holiday tree lighting",
+      "expected_month": 12,
+      "lead_days": 90,
+      "search_terms": ["Norwood MA tree lighting", "Norwood holiday tree lighting"]
+    }
+  ]
+}
