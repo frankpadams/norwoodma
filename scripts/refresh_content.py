@@ -1357,6 +1357,10 @@ def events_from_multi_source_calendar(source):
         else:
             try:
                 html=request(u).text; extracted,feeds=extract_jsonld_events(html,source); out.extend(extracted)
+                # Official NPS/Fine Arts pages can expose dated announcements as
+                # ordinary HTML instead of JSON-LD/iCal. Parse visible dated cards too.
+                try: out.extend(events_from_visible_dated_page(u,source,category='arts',series=source.get('name')))
+                except Exception: pass
                 feeds.extend(discover_embedded_calendar_feeds(u,html))
                 for feed in list(dict.fromkeys(feeds))[:12]:
                     try: out.extend(events_from_ical(feed,source))
@@ -1364,6 +1368,10 @@ def events_from_multi_source_calendar(source):
             except Exception: pass
     terms=[str(x).lower() for x in ing.get('keywords',[])]
     if terms: out=[e for e in out if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+    for e in out:
+        topic=' '.join(str(e.get(k) or '') for k in ('title','notes','series')).lower()
+        if any(x in topic for x in ('theatre','theater','drama','musical','school play')):
+            e['category']='school_theatre'
     return dedupe_events(out)
 
 def events_from_visible_dated_page(url, source, category='community', series=None):
