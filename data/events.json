@@ -2306,6 +2306,30 @@
     ]
   },
   {
+    "id": "2026-10-01-norwood-flu-shot-clinic",
+    "title": "Norwood Health Department Flu Shot Clinic",
+    "start": {
+      "date": "2026-10-01",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "12:00"
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
+    "category": "health",
+    "source_id": "town-health-events",
+    "source_url": "https://www.norwoodma.gov/departments/health/index.php",
+    "cost": null,
+    "public_access": "reservation_required",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-09-29",
+    "notes": "Bring insurance cards. Regular and high-dose 65+ flu vaccines available. Call 781-762-1201 ext. 5 to reserve a spot. If that time does not work, call 781-384-9195.",
+    "calendar_ids": []
+  },
+  {
     "id": "rec-occurrence-rec-2b84e2c8df65-2026-10-01",
     "title": "Pre-School Prep Session 3",
     "start": {
