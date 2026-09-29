@@ -344,7 +344,15 @@ function eventCalendarRange(e){
  return {start:eventCalendarStamp(e.start?.date,e.start?.time),end:eventCalendarStamp(e.end?.date||e.start?.date,e.end?.time||e.start?.time),allDay:false};
 }
 function eventCalendarDescription(e){
- return [e.notes,e.organizer?('Organizer: '+e.organizer):'',e.cost?('Admission: '+e.cost):''].filter(Boolean).join('\n\n');
+ const parts=[];
+ if(e.notes)parts.push(e.notes);
+ if(e.organizer)parts.push('Organizer: '+e.organizer);
+ if(e.cost)parts.push('Admission: '+e.cost);
+ const links=eventExternalLinks(e);
+ if(links.length){
+   parts.push('More information:\n'+links.map(x=>x.label+': '+x.url).join('\n'));
+ }
+ return parts.filter(Boolean).join('\n\n');
 }
 function googleCalendarUrl(e){
  const r=eventCalendarRange(e),p=new URLSearchParams({action:'TEMPLATE',text:e.title||'Norwood event',dates:r.start+'/'+r.end});
