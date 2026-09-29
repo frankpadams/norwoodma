@@ -1279,7 +1279,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Immigration Law Office of Carmen Bello",
-    "category": "Immigration, Refugee & Asylum Support",
+    "category": "Private Immigration Attorney",
     "description": "Private immigration law office in Norwood handling immigration and asylum matters, including family-based petitions, permanent residency, citizenship/naturalization and related USCIS processes.",
     "url": "https://www.google.com/maps/search/?api=1&query=Immigration+Law+Office+Carmen+Bello+705+Washington+St+Norwood+MA",
     "tags": "private attorney immigration lawyer Norwood Carmen Bello asylum green card permanent residency citizenship naturalization family immigration USCIS",
@@ -1287,7 +1287,6 @@ window.NORWOOD_RESOURCES= [
       "community",
       "immigration-language",
       "legal-advocacy",
-      "education-family",
       "family-support"
     ],
     "coverage": "Local — Norwood",
@@ -2387,7 +2386,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "MigrateUSA Immigration Law Firm",
-    "category": "Immigration, Refugee & Asylum Support",
+    "category": "Private Immigration Attorney",
     "description": "Private Norwood immigration law firm focused exclusively on U.S. immigration matters, including visas, work authorization, family-based immigration, green cards, citizenship, asylum and removal/deportation defense.",
     "url": "https://www.migrateusalaw.com/",
     "tags": "private attorney immigration lawyer Norwood asylum removal deportation green card citizenship naturalization visa work authorization family immigration USCIS immigration court",
@@ -2395,7 +2394,6 @@ window.NORWOOD_RESOURCES= [
       "community",
       "immigration-language",
       "legal-advocacy",
-      "education-family",
       "family-support"
     ],
     "coverage": "Local — Norwood",
