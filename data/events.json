@@ -1,38 +1,5 @@
 [
   {
-    "id": "2026-09-14-pto-dominos-slice-the-price-card-fundraiser-a70c8e5",
-    "title": "PTO Dominos Slice the Price Card Fundraiser",
-    "start": {
-      "date": "2026-09-14",
-      "time": "08:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "09:00"
-    },
-    "venue": "Norwood Public Schools",
-    "address": null,
-    "category": "fundraiser",
-    "source_id": "nps-oldham",
-    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9331879/pto-dominos-slice-the-price-card-fundraiser",
-    "cost": null,
-    "organizer": "Norwood Public Schools",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-fundraisers"
-    ]
-  },
-  {
     "id": "2026-09-27-adult-bible-study-series-3b447eb",
     "title": "Adult Bible Study series",
     "start": {
@@ -64,1025 +31,6 @@
     ]
   },
   {
-    "id": "2026-09-28-cozy-puzzle-night-6bdb279",
-    "title": "Cozy Puzzle Night",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/cozy-puzzle-night-15/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is hosting a Cozy Puzzle Night for adults on the last Monday of every month. September's Puzzle Night will take place on&nbsp;Monday, September 28 starting at 6:30pm in the Simoni Room. Hang out on an autumn night w",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-28-monday-movie-matinee-7a4ee20",
-    "title": "Monday Movie Matinee",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "sports",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/monday-movie-matinee-60/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to continue our Monday Movie Matinee film series. The series will run from September -December, 2026. The films will be shown on the 2nd and 4th Monday of the month. &nbsp;Showtime at 1PM. If you love mov",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-09-28-parachute-playtime-e6287e5",
-    "title": "Parachute Playtime",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-19/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Parachute play for toddlers",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-28-poirier-village-center-open-play-a63ebaf",
-    "title": "Poirier Village Center Open Play",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-6/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play, explore, and connect. This is an unstructured play opportunity where families",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-09-28-zoom-with-a-law-librarian-f8a08be",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-594/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-28-postponed-norwood-walk-talk-74d5e6c",
-    "title": "[POSTPONED] Norwood Walk & Talk",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/norwood-walk-talk-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "**Please note that this event is postponed due to storm. New date is Thursday Octorber 1, 2026. **Celebrate Good Neighbor Day with the Morrill Memorial Library and the Norwood Trails Committee&nbsp;for a friendly stroll on the Bernie Cooper",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-09-28-virtual-how-to-avoid-death-on-mount-washingto-abf5f14",
-    "title": "[VIRTUAL] (how to avoid) \"Death on Mount Washington\" with Author Randi Minetor",
-    "start": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-how-to-avoid-death-on-mount-washington-with-author-randi-minetor/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is partnering with Ashland Public Library to host a virtual program called (how to avoid) \"Death on Mount Washington\" with Author Randi Minetor on Zoom. It will be held on September 28, 2026 at 7PM. Join author Rand",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-28-sunnyside-up-aa",
-    "title": "Sunnyside Up AA",
-    "start": {
-      "date": "2026-09-28",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "08:00"
-    },
-    "venue": "Grace Episcopal Church",
-    "address": "150 Chapel St, Norwood, MA 02062",
-    "category": "recovery",
-    "source_id": "recovery-aa",
-    "source_url": "https://www.gracenor.org/groups",
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Sunnyside Up AA",
-    "publish_candidate": true,
-    "verification_status": "official_recurring_schedule_verified_2026-09-26",
-    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2b84e2c8df65-2026-09-28",
-    "title": "Pre-School Prep Session 3",
-    "start": {
-      "date": "2026-09-28",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 3",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-28",
-    "session_end": "2026-10-01",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2b84e2c8df65",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-ed365c66c2b6-2026-09-28",
-    "title": "All Welcome Yoga Session 1",
-    "start": {
-      "date": "2026-09-28",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "11:00"
-    },
-    "venue": "09/14/2026 - 10/26/2026 10:00 AM - 11:00 AM Norwood Civic Center - Dance Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30948",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30948",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2026-10-26",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-ed365c66c2b6",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-28-career-planning-session-100a490",
-    "title": "Career Planning Session",
-    "start": {
-      "date": "2026-09-28",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "10:00"
-    },
-    "venue": "MassHire Norwood Events",
-    "address": null,
-    "category": "arts",
-    "source_id": "masshire-norwood-events",
-    "source_url": "https://masshiremsw.com/event/career-planning-session-sep-28/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Date — Monday, September 28 Time — 10:00 am Platform — Zoom In this session, participants will learn about the eligibility process that is necessary in order to be assigned to a career advisor to explore training opportunities and to receiv",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-28-linkedin-beyond-the-basics-04c3ba8",
-    "title": "LinkedIn Beyond the Basics",
-    "start": {
-      "date": "2026-09-28",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "10:00"
-    },
-    "venue": "MassHire Norwood Events",
-    "address": null,
-    "category": "arts",
-    "source_id": "masshire-norwood-events",
-    "source_url": "https://masshiremsw.com/event/libb-sep-28/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Date — Monday, September 28 Time — 10:00 am Platform — Zoom In this webinar we discuss strengthening your profile, making it easier to be found on LI, researching companies and people, engaging and nurturing your network, and protecting you",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-7fa665258057-2026-09-28",
-    "title": "Tot Fitness Session 1 - Ages 2-4 years",
-    "start": {
-      "date": "2026-09-28",
-      "time": "10:15"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "11:00"
-    },
-    "venue": "09/14/2026 - 10/26/2026 10:15 AM - 11:00 AM Norwood Civic Center - Lydon Suite",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30909",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30909",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$65.00 Res, $75.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2026-10-26",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-7fa665258057",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-7c686bdbe82c-2026-09-28",
-    "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "start": {
-      "date": "2026-09-28",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "20:00"
-    },
-    "venue": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$135.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-07",
-    "session_end": "2027-03-31",
-    "days": "MTuWThF",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-7c686bdbe82c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-1b48558453f9-2026-09-28",
-    "title": "Move and Groove Mondays Session 1",
-    "start": {
-      "date": "2026-09-28",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "14:00"
-    },
-    "venue": "09/21/2026 - 11/02/2026 12:00 PM - 02:00 PM Norwood Civic Center - Kennedy Room",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30923",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30923",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$115.00 Res, $125.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-21",
-    "session_end": "2026-11-02",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-1b48558453f9",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-34986e58276a-2026-09-28",
-    "title": "Irish Step 1 - Mondays",
-    "start": {
-      "date": "2026-09-28",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "15:45"
-    },
-    "venue": "09/14/2026 - 05/10/2027 03:00 PM - 03:45 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2027-05-10",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-34986e58276a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-28-boys-varsity-golf-millis-high-school-5151623",
-    "title": "Boys Varsity Golf @ Millis High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "15:45"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "17:45"
-    },
-    "venue": "212 Prentice St., Holliston MA 01746",
-    "address": "212 Prentice St., Holliston MA 01746",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-varsity-golf",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Varsity Golf",
-    "public_access": "public",
-    "series": "Norwood Varsity Golf",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Pinecrest Golf Club Subsite: Golf Course",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-76ae4e04bca0-2026-09-28",
-    "title": "Irish Step 2 - Mondays",
-    "start": {
-      "date": "2026-09-28",
-      "time": "15:45"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "16:35"
-    },
-    "venue": "09/14/2026 - 05/10/2027 03:45 PM - 04:35 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2027-05-10",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-76ae4e04bca0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-28-g-jv-soccer-vs-norton-high-school-7e1e4f6",
-    "title": "G JV Soccer vs Norton High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "17:30"
-    },
-    "venue": "1315 Washington Street, Norwood Massachusetts 02062",
-    "address": "1315 Washington Street, Norwood Massachusetts 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls JV Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: G JV Team: Norwood High School Site: Coakley Middle School Subsite: Coakley Upper Field (turf)",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-28-gv-soccer-vs-norton-high-school-eb8a006",
-    "title": "GV Soccer vs Norton High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "17:45"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-28-girls-freshman-volleyball-vs-dedham-high-scho-b092975",
-    "title": "Girls Freshman Volleyball vs Dedham High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "17:15"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Freshman Volleyball",
-    "public_access": "public",
-    "series": "Norwood Girls Freshman Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Freshman Team: Norwood High School Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-28-girls-jv-volleyball-vs-dedham-high-school-cb66d14",
-    "title": "Girls JV Volleyball vs Dedham High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "17:15"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Volleyball",
-    "public_access": "public",
-    "series": "Norwood Girls JV Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls JV Team: Norwood High School Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-5f99d7665326-2026-09-28",
-    "title": "Hard Shoe 3 - Mondays",
-    "start": {
-      "date": "2026-09-28",
-      "time": "16:35"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "17:25"
-    },
-    "venue": "09/14/2026 - 05/10/2027 04:35 PM - 05:25 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2027-05-10",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5f99d7665326",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-28-b-jv-soccer-norton-high-school-4c644d6",
-    "title": "B JV Soccer @ Norton High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "18:30"
-    },
-    "venue": "66 W Main Street, Norton MA 02766",
-    "address": "66 W Main Street, Norton MA 02766",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-jv-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys JV Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys JV Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: B JV Team: Norwood High School Site: Norton High School Subsite: Adams Field & Taylor Track",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-28-girls-varsity-volleyball-vs-dedham-high-schoo-831818e",
-    "title": "Girls Varsity Volleyball vs Dedham High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "17:15"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "18:45"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Volleyball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Varsity Team: Norwood High School - Varsity Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-028951c24952-2026-09-28",
-    "title": "Irish Step 3 - Mondays",
-    "start": {
-      "date": "2026-09-28",
-      "time": "17:30"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "18:20"
-    },
-    "venue": "09/14/2026 - 05/10/2027 05:30 PM - 06:20 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2027-05-10",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-028951c24952",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-28-bv-soccer-norton-high-school-aaf28e1",
-    "title": "BV Soccer @ Norton High School",
-    "start": {
-      "date": "2026-09-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "20:30"
-    },
-    "venue": "66 W Main Street, Norton MA 02766",
-    "address": "66 W Main Street, Norton MA 02766",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Norton High School Subsite: Adams Field & Taylor Track",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-28-bible-study-310da7b",
-    "title": "Bible Study",
-    "start": {
-      "date": "2026-09-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "19:30"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "organizer": "Saint Catherine of Siena Parish",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-28-brews-and-laughs-69c3595",
-    "title": "Brews and Laughs",
-    "start": {
-      "date": "2026-09-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/brews-and-laughs-ap5ed-9kr85",
-    "cost": null,
-    "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Sep 28 Brews and Laughs Monday, September 28, 2026 6:30 PM 9:00 PM South Boston Taproom (map) Google Calendar ICS Free Open Mic Comedy Show Hosted Every Other Monday View Event →",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-73dba5c31ddb-2026-09-28",
-    "title": "Zumba Session 1",
-    "start": {
-      "date": "2026-09-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-28",
-      "time": "19:30"
-    },
-    "venue": "09/14/2026 - 11/16/2026 06:30 PM - 07:30 PM Norwood Civic Center - Dance Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30884",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30884",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-14",
-    "session_end": "2026-11-16",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-73dba5c31ddb",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-09-29-great-reads-ma-watch-party-virtual-q-a-with-a-0157e8a",
     "title": "Great Reads MA: Watch Party - Virtual Q&A with Author Joseph Lee",
     "start": {
@@ -1111,6 +59,36 @@
     "calendar_ids": [
       "library-calendar",
       "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-09-29-september-2026-573826d",
+    "title": "September 2026",
+    "start": {
+      "date": "2026-09-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-09-29",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -22084,6 +21062,36 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-29-october-2026-f1484e0",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -82927,6 +81935,38 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2027-03-27-isu-synchro9-world-championships-2027-notting-0279514",
+    "title": "ISU Synchro9 World Championships 2027 – Nottingham / GBR",
+    "start": {
+      "date": "2027-03-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2027-03-28",
+      "time": "23:59"
+    },
+    "venue": "The Skating Club of Boston",
+    "address": null,
+    "category": "community",
+    "source_id": "skating-club-calendar",
+    "source_url": "https://scboston.org/event/isu-synchro9-world-championships-2027-nottingham-gbr/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-sports",
+      "skating-club-boston-events"
     ]
   },
   {

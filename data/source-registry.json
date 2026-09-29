@@ -114,106 +114,6 @@
     }
   },
   {
-    "id": "boston-parents-paper-greater-boston",
-    "name": "Boston Parents Paper — Greater Boston family events",
-    "organization": "Boston Parents Paper",
-    "source_class": "regional_family_calendar",
-    "authority": "local_media",
-    "coverage": "Greater Boston / eastern Massachusetts",
-    "url": "https://bostonparentspaper.com/family-event-calendar/",
-    "domain": "bostonparentspaper.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred",
-      "calendar_url": "https://bostonparentspaper.com/family-event-calendar/",
-      "preserve": [
-        "venue",
-        "address",
-        "date",
-        "time",
-        "price",
-        "registration_url"
-      ]
-    },
-    "filters": {
-      "require_norwood_relevance": false,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "verified_live_calendar",
-      "verified_at": "2026-09-28",
-      "basis": "Structured Boston Parents Paper family event calendar is suitable as an optional regional calendar source."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Opt-in regional calendar only. These out-of-town events must never enter the default Norwood What's Happening view merely because they are family/community events."
-  },
-  {
-    "id": "boston-parents-paper-norwood",
-    "name": "Boston Parents Paper — Norwood family events",
-    "organization": "Boston Parents Paper",
-    "source_class": "regional_family_calendar",
-    "authority": "local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://bostonparentspaper.com/family-event-calendar/",
-    "domain": "bostonparentspaper.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "html_calendar",
-      "automation": "preferred",
-      "calendar_url": "https://bostonparentspaper.com/family-event-calendar/",
-      "preserve": [
-        "venue",
-        "address",
-        "date",
-        "time",
-        "price",
-        "registration_url"
-      ]
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "verified_live_calendar",
-      "verified_at": "2026-09-28",
-      "basis": "Boston Parents Paper publishes a structured Greater Boston family event calendar with venue/city/state filtering; Norwood entries are eligible for the normal Norwood calendar after deduplication."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Automatically ingest only events explicitly located in Norwood, Massachusetts for the normal Norwood calendar. Deduplicate against organizer and other primary feeds."
-  },
-  {
     "id": "castle-island-calendar",
     "name": "Castle Island Brewing — Calendar",
     "organization": "Castle Island Brewing",
@@ -393,45 +293,6 @@
     "conflict_profile": "optional"
   },
   {
-    "id": "craft-affair-vendor-discovery",
-    "name": "Craft Affair at Norwood — vendor discovery",
-    "organization": "Multiple participating vendors",
-    "source_class": "event_discovery",
-    "authority": "secondary",
-    "coverage": "Norwood High School annual Craft Affair",
-    "url": "https://www.inasnapri.com/events",
-    "domain": "inasnapri.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "preferred",
-      "calendar_url": "https://www.inasnapri.com/events",
-      "secondary_urls": [
-        "https://piperandharlow.com/pages/visit-us-in-person",
-        "https://joannescrochet.com/events"
-      ]
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "multi_source_verified",
-      "verified_at": "2026-09-29",
-      "basis": "Multiple participating vendors independently list the 2026 Craft Affair at Norwood High School for Oct. 17, 9:00–2:30."
-    },
-    "notes": "Useful seasonal backstop for Craft Affair and similar vendor fairs. Only ingest events physically in Norwood.",
-    "conflict_profile": "optional"
-  },
-  {
     "id": "elks-calendar",
     "name": "Norwood Elks Lodge 1124 — Calendar",
     "organization": "Norwood Elks Lodge 1124",
@@ -524,7 +385,7 @@
     "source_class": "search_aggregator",
     "authority": "aggregator",
     "coverage": "External discovery",
-    "url": "https://www.eventbrite.com/d/ma--norwood/events/",
+    "url": "https://www.eventbrite.com/",
     "domain": "eventbrite.com",
     "produces": [
       "event_discovery"
@@ -532,12 +393,11 @@
     "potential_outputs": [
       "event_discovery"
     ],
-    "active_monitor": true,
-    "monitor_priority": 3,
+    "active_monitor": false,
+    "monitor_priority": 5,
     "ingestion": {
-      "method": "event_platform_discovery",
-      "automation": "preferred",
-      "calendar_url": "https://www.eventbrite.com/d/ma--norwood/events/"
+      "method": "search",
+      "automation": "manual/discovery"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -545,84 +405,12 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "promoted_after_gap_audit",
-      "verified_at": "2026-09-29",
-      "basis": "Web gap audit found multiple current public Norwood events listed on Eventbrite but absent from the local feed."
+      "status": "candidate",
+      "verified_at": "2026-09-17",
+      "basis": "current web review and/or existing v0.11.1 verified source"
     },
-    "notes": "Discovery monitor. Require a Norwood venue, public access, and dedupe against organizer/primary sources before publication.",
+    "notes": "Discovery only. Require Norwood venue and primary/host confirmation before publication.",
     "conflict_profile": "optional"
-  },
-  {
-    "id": "eventbrite-norwood-discovery",
-    "name": "Eventbrite — Norwood event discovery",
-    "source_class": "event_platform",
-    "authority": "secondary_listing",
-    "coverage": "Norwood, MA",
-    "url": "https://www.eventbrite.com/d/ma--norwood/events/",
-    "domain": "eventbrite.com",
-    "produces": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 3,
-    "ingestion": {
-      "method": "event_platform_discovery",
-      "automation": "preferred",
-      "location": "Norwood, MA",
-      "require_concrete_date": true,
-      "preserve": [
-        "organizer",
-        "venue",
-        "address",
-        "start_time",
-        "end_time",
-        "price",
-        "registration_url",
-        "public_access"
-      ],
-      "dedupe_by": [
-        "title",
-        "date",
-        "venue"
-      ],
-      "follow_organizer_pages": true,
-      "public_access_classification": {
-        "values": [
-          "confirmed_public",
-          "inferred_public",
-          "unknown",
-          "inferred_restricted",
-          "confirmed_restricted"
-        ],
-        "whats_happening_accept": [
-          "confirmed_public",
-          "inferred_public"
-        ],
-        "note": "Paid/ticketed/registration-required events remain eligible. Classify by who may attend, not price."
-      }
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true,
-      "exclude_membership_internal_events": true,
-      "ticketed_events_allowed": true,
-      "registration_required_allowed": true,
-      "price_is_not_access_restriction": true
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "verification": {
-      "status": "verified_live_platform_with_access_rules",
-      "verified_at": "2026-09-26",
-      "basis": "Current Norwood listings include both open public events and employee/company events, so attendance eligibility is classified separately from ticketing."
-    }
   },
   {
     "id": "facebook-public-pages",
@@ -1316,45 +1104,6 @@
     "conflict_profile": "optional"
   },
   {
-    "id": "humanitix-norwood-discovery",
-    "name": "Humanitix — Norwood discovery (strict geo gate)",
-    "source_class": "event_platform",
-    "authority": "secondary_listing",
-    "coverage": "Norwood, MA",
-    "url": "https://events.humanitix.com/",
-    "domain": "humanitix.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": false,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "event_platform_discovery",
-      "automation": "candidate",
-      "location_gate": {
-        "city": "Norwood",
-        "state": "MA",
-        "zip": "02062",
-        "required": true
-      },
-      "reject_geographies": [
-        "Australia",
-        "South Australia",
-        "SA"
-      ],
-      "require_concrete_date": true
-    },
-    "verification": {
-      "status": "disabled_until_geo_safe",
-      "verified_at": "2026-09-26",
-      "basis": "Generic Humanitix Norwood search is currently dominated by Norwood, South Australia results. Do not activate until ingestion enforces explicit MA/02062 venue validation."
-    },
-    "notes": "Candidate only. Never ingest based on the word Norwood alone; require explicit Massachusetts/02062 location evidence."
-  },
-  {
     "id": "inside-norwood",
     "name": "Inside Norwood",
     "organization": "Inside Norwood",
@@ -2012,48 +1761,6 @@
     "conflict_profile": "optional"
   },
   {
-    "id": "norwood-art-association-events",
-    "name": "Norwood Art Association — Public Events",
-    "organization": "Norwood Art Association",
-    "source_class": "community_event_discovery",
-    "authority": "organization_or_local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodtownnews.com/",
-    "domain": "norwoodtownnews.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "possible",
-      "require_concrete_date": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "source_gap_added",
-      "verified_at": "2026-09-28",
-      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Monitor for exhibitions, demonstrations, workshops and other dated public programs; prefer organizer pages when available."
-  },
-  {
     "id": "norwood-blood-drives",
     "name": "Norwood Blood Drives",
     "url": "https://www.norwoodtownnews.com/calendar",
@@ -2434,60 +2141,6 @@
         "spring",
         "summer"
       ]
-    }
-  },
-  {
-    "id": "norwood-memory-cafe",
-    "name": "Norwood Memory Cafe",
-    "organization": "Norwood Memory Cafe, Inc.",
-    "source_class": "organization_page",
-    "authority": "organization",
-    "coverage": "Norwood, MA",
-    "url": "https://norwoodmemorycafe.com/",
-    "domain": "norwoodmemorycafe.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 2,
-    "ingestion": {
-      "method": "verified_recurring_schedule",
-      "automation": "preferred",
-      "verification_url": "https://norwoodmemorycafe.com/",
-      "title": "Norwood Memory Cafe",
-      "venue": "Norwood Senior Center",
-      "address": "275 Prospect Street, Norwood, MA",
-      "category": "wellness",
-      "recurrence": {
-        "frequency": "monthly",
-        "byweekday": "TH",
-        "setpos": 3,
-        "time": "13:30",
-        "duration_minutes": 90
-      },
-      "require_revalidation": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "verified_current_public_recurrence",
-      "verified_at": "2026-09-27",
-      "basis": "Official Norwood Memory Cafe site states it meets monthly on the third Thursday, 1:30–3:00 PM, at the Norwood Senior Center and asks attendees to register."
-    },
-    "notes": "Free public-facing memory-support social program. Revalidate the recurrence against the official page before generating future occurrences.",
-    "conflict_profile": "optional",
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": true
     }
   },
   {
@@ -2938,48 +2591,6 @@
     "notes": "Derived series view over concrete dated events already discovered from verified Norwood calendars. Never generate future dates merely from recurrence; only expose dates present in current source data."
   },
   {
-    "id": "norwood-sustainability-events",
-    "name": "Norwood Sustainability Committee — Public Events",
-    "organization": "Norwood Sustainability Committee",
-    "source_class": "community_event_discovery",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "town_department_event_discovery",
-      "automation": "possible",
-      "require_concrete_date": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "source_gap_added",
-      "verified_at": "2026-09-28",
-      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Monitor official Town sources for dated public sustainability programs and community events; deduplicate against Farmers Market and Library listings."
-  },
-  {
     "id": "norwood-theatre-season",
     "name": "Norwood Theatre — Shows & Events",
     "organization": "Norwood Theatre",
@@ -3133,48 +2744,6 @@
     },
     "conflict_profile": "optional",
     "notes": "Secondary discovery source. Apply strict Norwood location/relevance filtering and deduplicate against primary organizers; never let nearby regional events leak into Norwood What's Happening."
-  },
-  {
-    "id": "norwood-trails-committee-events",
-    "name": "Norwood Trails Committee — Public Events",
-    "organization": "Norwood Trails Committee",
-    "source_class": "community_event_discovery",
-    "authority": "official",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/",
-    "domain": "norwoodma.gov",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "town_department_event_discovery",
-      "automation": "possible",
-      "require_concrete_date": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "source_gap_added",
-      "verified_at": "2026-09-28",
-      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Monitor official Town/committee sources for public walks, trail work days, meetings or community programs with concrete dates."
   },
   {
     "id": "norwood-veterans-services",
@@ -7290,48 +6859,6 @@
     },
     "notes": "Regional nonprofit source. Monitor lightly for public fundraisers or programs physically held in Norwood.",
     "conflict_profile": "optional"
-  },
-  {
-    "id": "progress-norwood-events",
-    "name": "Progress Norwood — Public Events",
-    "organization": "Progress Norwood",
-    "source_class": "community_event_discovery",
-    "authority": "organization_or_local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://www.progressnorwood.org/",
-    "domain": "progressnorwood.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "community_org_events",
-      "automation": "possible",
-      "require_concrete_date": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "source_gap_added",
-      "verified_at": "2026-09-28",
-      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Monitor Progress Norwood for concrete dated public Norwood programs and community events; deduplicate against Library, Town, Friends of Norwood Center and local-media listings."
   },
   {
     "id": "rage-zone-norwood",
@@ -12899,83 +12426,6 @@
     "notes": "Ingest public community-facing parish events. Routine formation classes, appointment-only items and internal meetings remain opt-in/non-curated unless independently community-relevant."
   },
   {
-    "id": "stayhappening-norwood",
-    "name": "StayHappening — Norwood event discovery",
-    "organization": "StayHappening",
-    "source_class": "search_aggregator",
-    "authority": "aggregator",
-    "coverage": "Norwood, MA",
-    "url": "https://stayhappening.com/norwood-ma",
-    "domain": "stayhappening.com",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "preferred",
-      "calendar_url": "https://stayhappening.com/norwood-ma"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "gap_audit_verified",
-      "verified_at": "2026-09-29",
-      "basis": "Current Norwood listing exposed multiple valid public events missing from the feed."
-    },
-    "notes": "Secondary discovery only; prefer organizer or ticketing source when available and reject private/non-Norwood items.",
-    "conflict_profile": "optional"
-  },
-  {
-    "id": "together-yes-events",
-    "name": "Together Yes — Public Events",
-    "organization": "Together Yes",
-    "source_class": "community_event_discovery",
-    "authority": "organization_or_local_media",
-    "coverage": "Norwood, MA",
-    "url": "https://www.norwoodlibrary.org/",
-    "domain": "norwoodlibrary.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 4,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "possible",
-      "require_concrete_date": true
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "source_gap_added",
-      "verified_at": "2026-09-28",
-      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
-    },
-    "health_policy": {
-      "track_last_checked": true,
-      "track_last_successful_update": true,
-      "track_consecutive_failures": true,
-      "report_stale": true,
-      "empty_result_is_failure": false
-    },
-    "conflict_profile": "optional",
-    "notes": "Monitor for concrete dated public sustainability/community programs and deduplicate against Library-hosted listings."
-  },
-  {
     "id": "town-community-events",
     "name": "Town of Norwood — Holidays & Community Events",
     "organization": "Town of Norwood",
@@ -13616,41 +13066,6 @@
     "conflict_profile": "optional"
   },
   {
-    "id": "whofish-norwood",
-    "name": "WhoFish — Norwood event discovery",
-    "organization": "WhoFish",
-    "source_class": "search_aggregator",
-    "authority": "aggregator",
-    "coverage": "Norwood, MA",
-    "url": "https://whofish.org/post-events/massachusetts/ma/default.aspx",
-    "domain": "whofish.org",
-    "produces": [
-      "events"
-    ],
-    "potential_outputs": [
-      "events"
-    ],
-    "active_monitor": true,
-    "monitor_priority": 5,
-    "ingestion": {
-      "method": "secondary_discovery",
-      "automation": "preferred",
-      "calendar_url": "https://whofish.org/post-events/massachusetts/ma/default.aspx"
-    },
-    "filters": {
-      "require_norwood_relevance": true,
-      "require_public_access_for_whats_happening": true,
-      "dedupe_against_primary_source": true
-    },
-    "verification": {
-      "status": "gap_audit_verified",
-      "verified_at": "2026-09-29",
-      "basis": "Current Massachusetts listings surfaced A Craft Affair and other Norwood events."
-    },
-    "notes": "Broad secondary discovery; publish only concrete Norwood, Massachusetts events and dedupe/verify against stronger sources.",
-    "conflict_profile": "optional"
-  },
-  {
     "id": "wicked-local-norwood-archive",
     "name": "Wicked Local / Norwood Transcript & Bulletin Archive",
     "organization": "Wicked Local",
@@ -13685,6 +13100,375 @@
     },
     "notes": "Secondary/archival fundraiser discovery only. Do not publish from archive alone if event timing may be stale; cross-check any prospective event against a current organizer or other current source.",
     "conflict_profile": "optional"
+  },
+  {
+    "id": "zeffy-norwood-discovery",
+    "name": "Zeffy — Norwood fundraiser/event discovery",
+    "source_class": "event_platform",
+    "authority": "secondary_listing",
+    "coverage": "Norwood, MA",
+    "url": "https://www.zeffy.com/en-US/search",
+    "domain": "zeffy.com",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "event_platform_discovery",
+      "automation": "candidate",
+      "location_gate": {
+        "city": "Norwood",
+        "state": "MA",
+        "zip": "02062"
+      },
+      "require_concrete_date": true,
+      "preserve": [
+        "organizer",
+        "venue",
+        "address",
+        "date",
+        "time",
+        "price",
+        "ticket_url"
+      ],
+      "dedupe_by": [
+        "title",
+        "date",
+        "venue"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_platform_signal",
+      "verified_at": "2026-09-26",
+      "basis": "Current Zeffy results include a concrete 2026 event at 1125 Boston-Providence Turnpike, Norwood, MA 02062. Strict Massachusetts/02062 location validation is required."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Use as supplemental fundraiser/event discovery only. Reject other Norwoods and require explicit Norwood, MA/02062 venue evidence before ingestion."
+  },
+  {
+    "id": "humanitix-norwood-discovery",
+    "name": "Humanitix — Norwood discovery (strict geo gate)",
+    "source_class": "event_platform",
+    "authority": "secondary_listing",
+    "coverage": "Norwood, MA",
+    "url": "https://events.humanitix.com/",
+    "domain": "humanitix.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 5,
+    "ingestion": {
+      "method": "event_platform_discovery",
+      "automation": "candidate",
+      "location_gate": {
+        "city": "Norwood",
+        "state": "MA",
+        "zip": "02062",
+        "required": true
+      },
+      "reject_geographies": [
+        "Australia",
+        "South Australia",
+        "SA"
+      ],
+      "require_concrete_date": true
+    },
+    "verification": {
+      "status": "disabled_until_geo_safe",
+      "verified_at": "2026-09-26",
+      "basis": "Generic Humanitix Norwood search is currently dominated by Norwood, South Australia results. Do not activate until ingestion enforces explicit MA/02062 venue validation."
+    },
+    "notes": "Candidate only. Never ingest based on the word Norwood alone; require explicit Massachusetts/02062 location evidence."
+  },
+  {
+    "id": "eventbrite-norwood-discovery",
+    "name": "Eventbrite — Norwood event discovery",
+    "source_class": "event_platform",
+    "authority": "secondary_listing",
+    "coverage": "Norwood, MA",
+    "url": "https://www.eventbrite.com/d/ma--norwood/events/",
+    "domain": "eventbrite.com",
+    "produces": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "event_platform_discovery",
+      "automation": "preferred",
+      "location": "Norwood, MA",
+      "require_concrete_date": true,
+      "preserve": [
+        "organizer",
+        "venue",
+        "address",
+        "start_time",
+        "end_time",
+        "price",
+        "registration_url",
+        "public_access"
+      ],
+      "dedupe_by": [
+        "title",
+        "date",
+        "venue"
+      ],
+      "follow_organizer_pages": true,
+      "public_access_classification": {
+        "values": [
+          "confirmed_public",
+          "inferred_public",
+          "unknown",
+          "inferred_restricted",
+          "confirmed_restricted"
+        ],
+        "whats_happening_accept": [
+          "confirmed_public",
+          "inferred_public"
+        ],
+        "note": "Paid/ticketed/registration-required events remain eligible. Classify by who may attend, not price."
+      }
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true,
+      "exclude_membership_internal_events": true,
+      "ticketed_events_allowed": true,
+      "registration_required_allowed": true,
+      "price_is_not_access_restriction": true
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "verification": {
+      "status": "verified_live_platform_with_access_rules",
+      "verified_at": "2026-09-26",
+      "basis": "Current Norwood listings include both open public events and employee/company events, so attendance eligibility is classified separately from ticketing."
+    }
+  },
+  {
+    "id": "norwood-memory-cafe",
+    "name": "Norwood Memory Cafe",
+    "organization": "Norwood Memory Cafe, Inc.",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://norwoodmemorycafe.com/",
+    "domain": "norwoodmemorycafe.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 2,
+    "ingestion": {
+      "method": "verified_recurring_schedule",
+      "automation": "preferred",
+      "verification_url": "https://norwoodmemorycafe.com/",
+      "title": "Norwood Memory Cafe",
+      "venue": "Norwood Senior Center",
+      "address": "275 Prospect Street, Norwood, MA",
+      "category": "wellness",
+      "recurrence": {
+        "frequency": "monthly",
+        "byweekday": "TH",
+        "setpos": 3,
+        "time": "13:30",
+        "duration_minutes": 90
+      },
+      "require_revalidation": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_current_public_recurrence",
+      "verified_at": "2026-09-27",
+      "basis": "Official Norwood Memory Cafe site states it meets monthly on the third Thursday, 1:30–3:00 PM, at the Norwood Senior Center and asks attendees to register."
+    },
+    "notes": "Free public-facing memory-support social program. Revalidate the recurrence against the official page before generating future occurrences.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": true
+    }
+  },
+  {
+    "id": "boston-parents-paper-norwood",
+    "name": "Boston Parents Paper — Norwood family events",
+    "organization": "Boston Parents Paper",
+    "source_class": "regional_family_calendar",
+    "authority": "local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://bostonparentspaper.com/family-event-calendar/",
+    "domain": "bostonparentspaper.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 3,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://bostonparentspaper.com/family-event-calendar/",
+      "preserve": [
+        "venue",
+        "address",
+        "date",
+        "time",
+        "price",
+        "registration_url"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-28",
+      "basis": "Boston Parents Paper publishes a structured Greater Boston family event calendar with venue/city/state filtering; Norwood entries are eligible for the normal Norwood calendar after deduplication."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Automatically ingest only events explicitly located in Norwood, Massachusetts for the normal Norwood calendar. Deduplicate against organizer and other primary feeds."
+  },
+  {
+    "id": "boston-parents-paper-greater-boston",
+    "name": "Boston Parents Paper — Greater Boston family events",
+    "organization": "Boston Parents Paper",
+    "source_class": "regional_family_calendar",
+    "authority": "local_media",
+    "coverage": "Greater Boston / eastern Massachusetts",
+    "url": "https://bostonparentspaper.com/family-event-calendar/",
+    "domain": "bostonparentspaper.com",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "html_calendar",
+      "automation": "preferred",
+      "calendar_url": "https://bostonparentspaper.com/family-event-calendar/",
+      "preserve": [
+        "venue",
+        "address",
+        "date",
+        "time",
+        "price",
+        "registration_url"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": false,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "verified_live_calendar",
+      "verified_at": "2026-09-28",
+      "basis": "Structured Boston Parents Paper family event calendar is suitable as an optional regional calendar source."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Opt-in regional calendar only. These out-of-town events must never enter the default Norwood What's Happening view merely because they are family/community events."
+  },
+  {
+    "id": "progress-norwood-events",
+    "name": "Progress Norwood — Public Events",
+    "organization": "Progress Norwood",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.progressnorwood.org/",
+    "domain": "progressnorwood.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "community_org_events",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor Progress Norwood for concrete dated public Norwood programs and community events; deduplicate against Library, Town, Friends of Norwood Center and local-media listings."
   },
   {
     "id": "womens-business-network-norwood",
@@ -13771,46 +13555,26 @@
     "notes": "Monitor for dated public sales, fundraisers and community events; suppress internal committee business."
   },
   {
-    "id": "zeffy-norwood-discovery",
-    "name": "Zeffy — Norwood fundraiser/event discovery",
-    "source_class": "event_platform",
-    "authority": "secondary_listing",
+    "id": "norwood-art-association-events",
+    "name": "Norwood Art Association — Public Events",
+    "organization": "Norwood Art Association",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
     "coverage": "Norwood, MA",
-    "url": "https://www.zeffy.com/en-US/search",
-    "domain": "zeffy.com",
+    "url": "https://www.norwoodtownnews.com/",
+    "domain": "norwoodtownnews.com",
     "produces": [
-      "events",
-      "fundraisers"
+      "events"
     ],
     "potential_outputs": [
-      "events",
-      "fundraisers"
+      "events"
     ],
     "active_monitor": true,
     "monitor_priority": 4,
     "ingestion": {
-      "method": "event_platform_discovery",
-      "automation": "candidate",
-      "location_gate": {
-        "city": "Norwood",
-        "state": "MA",
-        "zip": "02062"
-      },
-      "require_concrete_date": true,
-      "preserve": [
-        "organizer",
-        "venue",
-        "address",
-        "date",
-        "time",
-        "price",
-        "ticket_url"
-      ],
-      "dedupe_by": [
-        "title",
-        "date",
-        "venue"
-      ]
+      "method": "secondary_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -13818,9 +13582,9 @@
       "dedupe_against_primary_source": true
     },
     "verification": {
-      "status": "verified_platform_signal",
-      "verified_at": "2026-09-26",
-      "basis": "Current Zeffy results include a concrete 2026 event at 1125 Boston-Providence Turnpike, Norwood, MA 02062. Strict Massachusetts/02062 location validation is required."
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
     },
     "health_policy": {
       "track_last_checked": true,
@@ -13830,6 +13594,132 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Use as supplemental fundraiser/event discovery only. Reject other Norwoods and require explicit Norwood, MA/02062 venue evidence before ingestion."
+    "notes": "Monitor for exhibitions, demonstrations, workshops and other dated public programs; prefer organizer pages when available."
+  },
+  {
+    "id": "together-yes-events",
+    "name": "Together Yes — Public Events",
+    "organization": "Together Yes",
+    "source_class": "community_event_discovery",
+    "authority": "organization_or_local_media",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodlibrary.org/",
+    "domain": "norwoodlibrary.org",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "secondary_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor for concrete dated public sustainability/community programs and deduplicate against Library-hosted listings."
+  },
+  {
+    "id": "norwood-trails-committee-events",
+    "name": "Norwood Trails Committee — Public Events",
+    "organization": "Norwood Trails Committee",
+    "source_class": "community_event_discovery",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "town_department_event_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor official Town/committee sources for public walks, trail work days, meetings or community programs with concrete dates."
+  },
+  {
+    "id": "norwood-sustainability-events",
+    "name": "Norwood Sustainability Committee — Public Events",
+    "organization": "Norwood Sustainability Committee",
+    "source_class": "community_event_discovery",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "town_department_event_discovery",
+      "automation": "possible",
+      "require_concrete_date": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_added",
+      "verified_at": "2026-09-28",
+      "basis": "Cross-check of Norwood civic/community organizations against the active source registry; organization has documented local public/community activity."
+    },
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    },
+    "conflict_profile": "optional",
+    "notes": "Monitor official Town sources for dated public sustainability programs and community events; deduplicate against Farmers Market and Library listings."
   }
 ]
