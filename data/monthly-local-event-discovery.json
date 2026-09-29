@@ -1,0 +1,81 @@
+{
+  "policy": {
+    "cadence": "monthly",
+    "purpose": "Secondary discovery sweep for local public events that may be announced outside the primary calendar feeds, including flyers, news posts, department notices, PTO/parent-group posts, and special-event pages.",
+    "rules": [
+      "Primary live calendars continue to be checked on the normal refresh cadence; this monthly sweep is a backstop, not a replacement.",
+      "Search each source independently so a quiet department or school cannot disappear inside a generic district search.",
+      "Prefer the department, school, district, PTO/parent group, or organizer as confirmation before publication.",
+      "Include only public/community-relevant events; ordinary internal meetings, practices, and private activities are not promoted to What's Happening.",
+      "Cross-post family-oriented discoveries into the Family & Kids calendar when appropriate."
+    ]
+  },
+  "sources": [
+    {
+      "id": "town-health-department-secondary",
+      "name": "Norwood Health Department",
+      "query": "Norwood MA Health Department clinic event flu vaccine health fair public program",
+      "priority": 1
+    },
+    {
+      "id": "town-recreation-secondary",
+      "name": "Norwood Recreation Department",
+      "query": "Norwood MA Recreation special event family program seasonal event registration",
+      "priority": 1
+    },
+    {
+      "id": "nps-district-secondary",
+      "name": "Norwood Public Schools — District",
+      "query": "Norwood Public Schools district public event family night fair open house performance",
+      "priority": 1
+    },
+    {
+      "id": "nps-nhs-secondary",
+      "name": "Norwood High School",
+      "query": "Norwood High School public event performance fundraiser fair open house Norwood MA",
+      "priority": 1
+    },
+    {
+      "id": "nps-coakley-secondary",
+      "name": "Coakley Middle School",
+      "query": "Coakley Middle School Norwood MA public event fundraiser fair performance family",
+      "priority": 1
+    },
+    {
+      "id": "nps-balch-secondary",
+      "name": "Balch Elementary School",
+      "query": "Balch Elementary School Norwood MA public event PTO fundraiser fair family",
+      "priority": 1
+    },
+    {
+      "id": "nps-callahan-secondary",
+      "name": "Callahan Elementary School",
+      "query": "Callahan Elementary School Norwood MA public event PTO fundraiser fair family",
+      "priority": 1
+    },
+    {
+      "id": "nps-cleveland-secondary",
+      "name": "Cleveland Elementary School",
+      "query": "Cleveland Elementary School Norwood MA public event PTO fundraiser fair family",
+      "priority": 1
+    },
+    {
+      "id": "nps-oldham-secondary",
+      "name": "Oldham Elementary School",
+      "query": "Oldham Elementary School Norwood MA public event PTO fundraiser fair family",
+      "priority": 1
+    },
+    {
+      "id": "nps-prescott-secondary",
+      "name": "Prescott Elementary School",
+      "query": "Prescott Elementary School Norwood MA public event PTO fundraiser fair family",
+      "priority": 1
+    },
+    {
+      "id": "nps-willett-secondary",
+      "name": "Willett Early Childhood Center",
+      "query": "Willett Early Childhood Center Norwood MA public event family fair open house",
+      "priority": 1
+    }
+  ]
+}
