@@ -1,4 +1,13 @@
-# Norwood.ma v0.11.42
+# Norwood.ma v1.0.0
+
+
+## v1.0.0 — first stable release
+
+- Declares the current production site the first stable Norwood.ma release.
+- Establishes permanent semantic-style `MAJOR.MINOR.PATCH` release numbering in `VERSIONING.md`.
+- Makes release-documentation synchronization mandatory: VERSIONING, README, matching release note, public footer version, and any affected authoritative subsystem docs.
+- Separates product release numbers from asset/cache-busting query-string versions.
+- Public footer now reports **Version 1.0.0** sitewide.
 
 ## v0.11.42 interactive Norwood trivia
 
