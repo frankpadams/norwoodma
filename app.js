@@ -222,7 +222,16 @@ function groupEvents(items){
  // ahead of intervening weekdays merely to create a "This weekend" bucket.
  const g={today:[],tomorrow:[],next:[],save:[]};
  for(const e of items){const d=e.start?.date||'',end=e.end?.date||d;const activeToday=d<=today&&end>=today;if(activeToday)g.today.push(e);else if(d<today)continue;else if(d===tomorrow)g.tomorrow.push(e);else if(d>today&&d<=next7Key)g.next.push(e);else if(d>next7Key)g.save.push(e);}
- Object.keys(g).forEach(k=>{g[k]=diversifySameDayEvents(g[k]);});
+ Object.keys(g).forEach(k=>{
+  g[k]=diversifySameDayEvents(g[k]);
+  // Within each What's Happening section, ongoing multi-day events follow
+  // the day's ordinary/single-day events so they do not crowd out today's items.
+  g[k]=g[k].map((e,i)=>({e,i})).sort((a,b)=>{
+    const aMulti=!!(a.e.end?.date&&a.e.end.date!==a.e.start?.date);
+    const bMulti=!!(b.e.end?.date&&b.e.end.date!==b.e.start?.date);
+    return Number(aMulti)-Number(bMulti)||a.i-b.i;
+  }).map(x=>x.e);
+});
  return g;
 }
 function eventLinks(e){const links=[];const add=(url,label)=>{if(url&&!links.some(x=>x.url===url))links.push({url,label})};add(e.registration_url,'Participate / register');add(e.donation_url,'Donate / support');add(e.purchase_url,'Purchase / order');add(e.source_url,'Official event information');add(e.field_status_url,'Check field status');(Array.isArray(e.links)?e.links:[]).forEach(x=>{if(typeof x==='string')add(x,'More information');else if(x&&x.url)add(x.url,x.label||'More information')});return links;}
