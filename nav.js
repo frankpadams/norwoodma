@@ -174,13 +174,13 @@
     nav.appendChild(contact);
   }
   if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
-    const add=document.createElement('a');add.href='#';add.dataset.addHomeScreen='true';add.className='add-home-screen-link';add.innerHTML='<span>Add Norwood.ma to Home Screen</span><img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true">';
+    const add=document.createElement('a');add.href='#';add.dataset.addHomeScreen='true';add.className='add-home-screen-link';add.innerHTML='<img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true"><span>Add Norwood.ma to your Home Screen</span>';
     add.addEventListener('click',e=>{e.preventDefault();close();let dlg=document.querySelector('.add-home-screen-dialog');if(dlg){dlg.remove();return;}dlg=document.createElement('aside');dlg.className='add-home-screen-dialog ios-home-prompt';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="assets/apple-touch-icon.png?v=20260921" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';document.body.appendChild(dlg);const done=()=>dlg.remove();dlg.querySelector('.ios-home-close').onclick=done;dlg.querySelector('.ios-home-gotit').onclick=done;dlg.querySelector('.ios-home-close').focus();});
     nav.appendChild(add);
   }
   const isAndroid=/Android/i.test(navigator.userAgent||'');
   if(isAndroid&&!isStandalone&&!nav.querySelector('[data-android-install]')){
-    const install=document.createElement('a');install.href='#';install.dataset.androidInstall='true';install.className='add-home-screen-link';install.innerHTML='<span>Add Norwood.ma to Home Screen</span><img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true">';
+    const install=document.createElement('a');install.href='#';install.dataset.androidInstall='true';install.className='add-home-screen-link';install.innerHTML='<img class="add-home-screen-icon" src="assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true"><span>Add Norwood.ma to your Home Screen</span>';
     install.addEventListener('click',async e=>{e.preventDefault();close();if(window.NorwoodPWA?.canInstall()){await window.NorwoodPWA.install();return;}alert('To install Norwood.ma, open your browser menu and choose “Add to Home screen” or “Install app.”');});
     nav.appendChild(install);
   }
