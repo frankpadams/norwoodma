@@ -298,12 +298,15 @@ function renderHomeEvents(items){
    const aStart=a.e.start?.date||'',bStart=b.e.start?.date||'';
    const aEnd=a.e.end?.date||aStart,bEnd=b.e.end?.date||bStart;
    const aOngoing=aStart<today&&aEnd>=today,bOngoing=bStart<today&&bEnd>=today;
-   // Current single-day/new-start events come before ongoing multi-day events.
+   const aDisplay=aOngoing?today:aStart,bDisplay=bOngoing?today:bStart;
+   // Chronology comes first: never let a priority event on a later date jump
+   // ahead of ordinary events happening sooner.
+   if(aDisplay!==bDisplay)return aDisplay.localeCompare(bDisplay);
+   // On the same date, ordinary/new-start events precede ongoing multi-day items.
    if(aOngoing!==bOngoing)return Number(aOngoing)-Number(bOngoing);
+   // Priority only ranks events within the same display date.
    const aPriority=eventPriority(a.e),bPriority=eventPriority(b.e);
    if(aPriority!==bPriority)return aPriority-bPriority;
-   const aDisplay=aOngoing?today:aStart,bDisplay=bOngoing?today:bStart;
-   if(aDisplay!==bDisplay)return aDisplay.localeCompare(bDisplay);
    const t=(a.e.start?.time||'99:99').localeCompare(b.e.start?.time||'99:99');
    return t||a.i-b.i;
  }).map(x=>x.e);
