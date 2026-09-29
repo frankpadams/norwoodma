@@ -42,3 +42,8 @@ _Last updated: 2026-09-25_
 ## Ongoing Rule
 
 - [ ] **Keep this file current.** Add newly discovered unfinished work here and mark completed work complete. Automated/site-generated entries must be labeled as system observations requiring review; they do not override Frank's decisions or establish project truth.
+
+
+## Release/version hygiene
+
+- [ ] **Keep every product release synchronized.** Follow `VERSIONING.md`: update its current stable release, the README heading/current-release section, matching `RELEASE-vX.Y.Z.md`, the `SITE_VERSION` footer value in `nav.js`, and any authoritative subsystem docs affected by the change.
