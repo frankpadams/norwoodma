@@ -12827,6 +12827,60 @@
     "conflict_profile": "optional"
   },
   {
+    "id": "town-health-events",
+    "name": "Norwood Health Department — Public Clinics & Events",
+    "organization": "Norwood Health Department",
+    "source_class": "official_department_event_discovery",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwoodma.gov/departments/health/index.php",
+    "domain": "norwoodma.gov",
+    "produces": [
+      "events"
+    ],
+    "potential_outputs": [
+      "events",
+      "health_events"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "html_page",
+      "automation": "preferred",
+      "discovery_urls": [
+        "https://www.norwoodma.gov/departments/health/index.php",
+        "https://www.norwoodma.gov/#section4-anchor"
+      ],
+      "preserve": [
+        "title",
+        "date",
+        "time",
+        "venue",
+        "registration",
+        "contact"
+      ]
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "source_gap_promoted_to_active_monitor",
+      "verified_at": "2026-09-29",
+      "basis": "A verified Oct. 1, 2026 Norwood Health Department flu-shot clinic at the Senior Center exposed a gap: the Health Department existed only as a passive resource and was not monitored for one-time public events."
+    },
+    "notes": "Monitor official Health Department/Town pages for vaccination clinics, screenings, public-health programs, workshops and other concrete dated public events. Health Department events may occur at the Senior Center or other Town locations and must not depend solely on the Senior Center newsletter.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
+  },
+  {
     "id": "town-senior-newsletter",
     "name": "Norwood Senior Center — Newsletter & Calendar",
     "organization": "Norwood Council on Aging",
