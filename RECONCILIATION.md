@@ -135,3 +135,10 @@ Homepage Resource Directory naming, redundant resource CTA removal, all-Norwood 
 - Keeps the acknowledgment secret out of source/public data; it lives only in Apps Script Script Properties and GitHub Actions Secrets.
 - A missing acknowledgment secret does not block normal event/news refreshes; once configured, acknowledgment failures are visible as Action failures.
 - Public submission privacy boundary and existing search behavior remain unchanged.
+
+
+## v1.0.0 — stable baseline (September 29, 2026)
+- Declared the current Norwood.ma production experience the first stable release.
+- Added `VERSIONING.md` as the canonical release-numbering and release-documentation policy.
+- Established `MAJOR.MINOR.PATCH` numbering and separated product versions from cache-busting asset identifiers.
+- Required the README, matching release note, public footer version, and affected authoritative subsystem documentation to stay synchronized for future releases.
