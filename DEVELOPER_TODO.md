@@ -2,19 +2,21 @@
 
 This is a shared working log for unfinished development, data-quality issues, and follow-up work. It is not an authority on what is true: Frank's decisions govern project direction, and automated entries are leads to review rather than conclusions. When Frank asks for the developer to-do list, project work log, outstanding issues, next steps, or similar, review this file as a useful project record and update it as work is completed or new issues are identified.
 
-_Last updated: 2026-09-25_
+_Last updated: 2026-09-29_
 
 ## Priority: Calendar / Events Infrastructure
 
 - [ ] **Finish connecting and verifying every calendar source.** A calendar counts as connected only when real events are successfully reaching the master event dataset; a registered URL or selector alone does not count.
 - [ ] **Complete the unified master event dataset.** What's Happening, calendar feeds, and Conflict Contraption should use the same underlying event records, with metadata controlling where events appear.
 - [ ] **Verify NHS Athletics ingestion.** Confirm the NPS/athletics structured calendar route is producing current games/events in the master dataset; support sport/team filtering where data permits.
-- [ ] **Verify NPS Fine Arts ingestion.** Confirm current Fine Arts events are entering the master dataset.
+- [ ] **Verify NPS Fine Arts ingestion.** Multi-source monitoring now checks NHS iCal + official NHS Fine Arts + NPS news + PMA and exposes an NHS Theatre / Drama selector. Confirm the next newly announced theatre/drama event reaches the master dataset automatically.
 - [ ] **Verify NPS Music (PMA) ingestion.** Compact selector label should remain “NPS Music (PMA)”; expanded detail should identify “NPS Parent Music Association.”
 - [ ] **Complete youth-sports adapters.** Prioritize Norwood Youth Soccer and Norwood Little League, then work through remaining youth-sports sources. Generate team-level choices dynamically when practical rather than hard-coding stale team lists.
 - [ ] **Work through zero-event selectable sources.** Continue source-by-source through support/recovery groups, faith organizations, community organizations, recreation, arts/classes, and other selectable calendars.
 - [ ] **Calendar availability UX.** Keep the checkbox-style control for known calendars. If Norwood.ma cannot ingest a live feed, clicking it should explain that no live feed is available and link to the best schedule/calendar page, or the organization website if no schedule page exists. Do not falsely add it to the combined calendar.
 - [ ] **Future calendar submission UX.** When calendar submissions are implemented, add a contextual “Know a calendar feed? Submit it” action to unavailable-feed details.
+
+- [ ] **Health Department event coverage.** A dedicated active source now monitors Norwood Health Department public clinics/events after the Oct. 1 flu clinic exposed a source gap. Confirm future vaccination/screening/public-health events are discovered automatically rather than only through manual flyers or Senior Center materials.
 
 ## Calendar Freshness / Data Quality Safeguards
 
