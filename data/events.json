@@ -2113,7 +2113,7 @@
     ]
   },
   {
-    "id": "2026-10-01-trivia-with-tim-7033a91",
+    "id": "2026-10-01-trivia-with-tim-a9e5704",
     "title": "Trivia With Tim",
     "start": {
       "date": "2026-10-01",
@@ -2121,21 +2121,20 @@
     },
     "end": {
       "date": "2026-10-01",
-      "time": "21:00"
+      "time": null
     },
-    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, MA, 02062, United States",
-    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, MA, 02062, United States",
+    "venue": null,
+    "address": null,
     "category": "community",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/trivia-with-tim-shh72-js58b-gener-wnldt-gxt79-m2afy-ayl6z-344w9-hx9gz-dt8k3-yc5ss-rhh7f-dhd5g-hfa69-5g8ch-d5y99-d5zma-gs5k5-fg7el-5xfma",
     "cost": null,
-    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": null,
+    "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
+    "verification_status": "official_visible_event_page",
+    "notes": "Oct 1 Trivia With Tim Thursday, October 1, 2026 7:00 PM 9:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
+    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -3060,6 +3059,37 @@
     ]
   },
   {
+    "id": "2026-10-03-halfway-to-st-patricks-day-9ebba63",
+    "title": "Halfway to St. Patricks Day",
+    "start": {
+      "date": "2026-10-03",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/halfway-to-st-patricks-day",
+    "cost": null,
+    "public_access": "public",
+    "series": "Castle Island Brewing — Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Oct 3 Halfway to St. Patricks Day Saturday, October 3, 2026 12:00 PM 11:00 PM South Boston Taproom (map) Google Calendar ICS Irish Music, Green Beer, Food Specials...what more can Southie ask for We couldn't wait for the best day of the year...so we are throwing ourselves. If you’re craving wearing green and drinking beer, we’ve got the perfect event for you! It’s the Half-Way to St. Patrick’s Day Party! Enjoy live Irish music, specials from Bardo’s and plenty o’ green beer! All-day event Forfoc",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-food-markets"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-4eefd7ddaaf6-2026-10-03",
     "title": "Jazz 1 - Saturdays",
     "start": {
@@ -3154,37 +3184,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-10-03-halfway-to-st-patricks-day-13179eb",
-    "title": "Halfway to St. Patricks Day",
-    "start": {
-      "date": "2026-10-03",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "21:00"
-    },
-    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
-    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
-    "category": "community",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
-    "cost": null,
-    "organizer": "Castle Island Brewing",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
