@@ -126,36 +126,6 @@
     ]
   },
   {
-    "id": "2026-09-30-september-2026-e3ae21b",
-    "title": "September 2026",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-09-30-teen-anime-movie-night-05e1df7",
     "title": "Teen Anime Movie Night",
     "start": {
@@ -1556,6 +1526,37 @@
     ]
   },
   {
+    "id": "2026-10-01-ticket-policy-02316d7",
+    "title": "Ticket Policy",
+    "start": {
+      "date": "2026-10-01",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": null,
+    "category": "arts",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/ticket-policy",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Theatre — Shows & Events",
+    "publish_candidate": true,
+    "verification_status": "official_dated_event_page",
+    "notes": "Dated event from the official venue site.",
+    "discovered_by": "official_event_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-232c75e8f43a-2026-10-01",
     "title": "Tap 1 - Thursdays",
     "start": {
@@ -2113,7 +2114,7 @@
     ]
   },
   {
-    "id": "2026-10-01-trivia-with-tim-a9e5704",
+    "id": "2026-10-01-trivia-with-tim-7033a91",
     "title": "Trivia With Tim",
     "start": {
       "date": "2026-10-01",
@@ -2121,20 +2122,21 @@
     },
     "end": {
       "date": "2026-10-01",
-      "time": null
+      "time": "21:00"
     },
-    "venue": null,
-    "address": null,
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, MA, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, MA, 02062, United States",
     "category": "community",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/trivia-with-tim-shh72-js58b-gener-wnldt-gxt79-m2afy-ayl6z-344w9-hx9gz-dt8k3-yc5ss-rhh7f-dhd5g-hfa69-5g8ch-d5y99-d5zma-gs5k5-fg7el-5xfma",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
+    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
+    "series": null,
     "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Oct 1 Trivia With Tim Thursday, October 1, 2026 7:00 PM 9:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
-    "discovered_by": "visible_dated_page",
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -2383,40 +2385,6 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-02-girls-middle-school-volleyball-hopkinton-high-bd6c324",
-    "title": "Girls Middle School Volleyball @ Hopkinton High School",
-    "start": {
-      "date": "2026-10-02",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "18:00"
-    },
-    "venue": "88 Hayden Rowe Street, Hopkinton MA 01748",
-    "address": "88 Hayden Rowe Street, Hopkinton MA 01748",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Coakley Girls Middle School Volleyball",
-    "public_access": "public",
-    "series": "Coakley Girls Middle School Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Hopkinton Middle School Subsite: Brown Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -3059,37 +3027,6 @@
     ]
   },
   {
-    "id": "2026-10-03-halfway-to-st-patricks-day-9ebba63",
-    "title": "Halfway to St. Patricks Day",
-    "start": {
-      "date": "2026-10-03",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/halfway-to-st-patricks-day",
-    "cost": null,
-    "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Oct 3 Halfway to St. Patricks Day Saturday, October 3, 2026 12:00 PM 11:00 PM South Boston Taproom (map) Google Calendar ICS Irish Music, Green Beer, Food Specials...what more can Southie ask for We couldn't wait for the best day of the year...so we are throwing ourselves. If you’re craving wearing green and drinking beer, we’ve got the perfect event for you! It’s the Half-Way to St. Patrick’s Day Party! Enjoy live Irish music, specials from Bardo’s and plenty o’ green beer! All-day event Forfoc",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-food-markets"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-4eefd7ddaaf6-2026-10-03",
     "title": "Jazz 1 - Saturdays",
     "start": {
@@ -3184,6 +3121,37 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-03-halfway-to-st-patricks-day-13179eb",
+    "title": "Halfway to St. Patricks Day",
+    "start": {
+      "date": "2026-10-03",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "21:00"
+    },
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar",
+    "cost": null,
+    "organizer": "Castle Island Brewing",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -3429,6 +3397,68 @@
     "source_url": "https://www.fccnorwood.org/events",
     "cost": null,
     "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-divine-mercy-prayers-abbe39b",
+    "title": "Divine Mercy Prayers",
+    "start": {
+      "date": "2026-10-04",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": "12:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-blessing-of-pets-feast-of-st-francis-of-assis-8c582d4",
+    "title": "Blessing of Pets: Feast of St. Francis of Assisi",
+    "start": {
+      "date": "2026-10-04",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": "14:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -4767,6 +4797,40 @@
       "friends-norwood-center",
       "norwood-community",
       "norwood-food-markets"
+    ]
+  },
+  {
+    "id": "2026-10-06-boys-varsity-golf-holliston-high-school-506320a",
+    "title": "Boys Varsity Golf @ Holliston High School",
+    "start": {
+      "date": "2026-10-06",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": "17:30"
+    },
+    "venue": "212 Prentice St., Holliston MA 01746",
+    "address": "212 Prentice St., Holliston MA 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-golf",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Golf",
+    "public_access": "public",
+    "series": "Norwood Varsity Golf",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Pinecrest Golf Club Subsite: Golf Course",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -7544,6 +7608,38 @@
     ]
   },
   {
+    "id": "2026-10-09-finch-bharth-wedding-a70055a",
+    "title": "Finch/Bharth Wedding",
+    "start": {
+      "date": "2026-10-09",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-10-09",
+      "time": "18:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-09-varsity-football-vs-westwood-high-school-8123f13",
     "title": "Varsity Football vs Westwood High School",
     "start": {
@@ -10203,6 +10299,40 @@
     ]
   },
   {
+    "id": "2026-10-14-boys-varsity-golf-hopkinton-high-school-e65d291",
+    "title": "Boys Varsity Golf @ Hopkinton High School",
+    "start": {
+      "date": "2026-10-14",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "17:30"
+    },
+    "venue": "204 Saddle Hill Rd., Hopkinton MA 01748",
+    "address": "204 Saddle Hill Rd., Hopkinton MA 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-golf",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Golf",
+    "public_access": "public",
+    "series": "Norwood Varsity Golf",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Hopkinton Country Club Subsite: Hopkinton Country Club",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2026-10-14-boys-jv-golf-vs-weymouth-high-school-14cd50e",
     "title": "Boys JV Golf vs Weymouth High School",
     "start": {
@@ -12232,6 +12362,39 @@
     ]
   },
   {
+    "id": "2026-10-16-family-promise-walk-in-feeding-tentative-bb33d00",
+    "title": "Family Promise Walk-In-Feeding (Tentative)",
+    "start": {
+      "date": "2026-10-16",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-16",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad2c3da06aee-2026-10-17",
     "title": "Dance and Play - Saturdays",
     "start": {
@@ -12830,6 +12993,37 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-food-markets"
+    ]
+  },
+  {
+    "id": "2026-10-18-fitzgerald-baptism-e8ad01e",
+    "title": "Fitzgerald Baptism",
+    "start": {
+      "date": "2026-10-18",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "14:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -14727,6 +14921,37 @@
     ]
   },
   {
+    "id": "2026-10-20-parish-ministry-council-meeting-223bff6",
+    "title": "Parish Ministry Council Meeting",
+    "start": {
+      "date": "2026-10-20",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "20:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-20-southie-trivia-41991f3",
     "title": "Southie Trivia",
     "start": {
@@ -15567,6 +15792,37 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-21-finance-council-meeting-7e3f496",
+    "title": "Finance Council Meeting",
+    "start": {
+      "date": "2026-10-21",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "20:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -17583,6 +17839,37 @@
     ]
   },
   {
+    "id": "2026-10-25-hospitality-following-all-masses-e89c1e4",
+    "title": "Hospitality Following All Masses",
+    "start": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-25-pma-micca-state-finals",
     "title": "MICCA State Finals",
     "start": {
@@ -17608,6 +17895,37 @@
       "norwood-arts",
       "norwood-community",
       "pma-fine-arts"
+    ]
+  },
+  {
+    "id": "2026-10-25-trunk-or-treat-70c1449",
+    "title": "Trunk or Treat",
+    "start": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Following 10am Mass",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -20142,6 +20460,37 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-28-knights-of-columbus-4th-degree-assembly-72d7370",
+    "title": "Knights of Columbus 4th Degree Assembly",
+    "start": {
+      "date": "2026-10-28",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "20:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -29194,6 +29543,37 @@
     ]
   },
   {
+    "id": "2026-11-17-parish-ministry-council-meeting-8edbc96",
+    "title": "Parish Ministry Council Meeting",
+    "start": {
+      "date": "2026-11-17",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-11-17",
+      "time": "20:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-11-18-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -31067,6 +31447,37 @@
     ]
   },
   {
+    "id": "2026-11-21-fortunat-baptism-0a9d15f",
+    "title": "Fortunat Baptism",
+    "start": {
+      "date": "2026-11-21",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-21",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-11-22-6th-fbff-class-e9df7ad",
     "title": "6th FBFF Class",
     "start": {
@@ -31080,6 +31491,37 @@
     "venue": "Norwood Knights of Columbus Events",
     "address": null,
     "category": "workshop",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-22-advent-wreath-social-51cd520",
+    "title": "Advent Wreath Social",
+    "start": {
+      "date": "2026-11-22",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-22",
+      "time": "12:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
     "source_id": "norwood-kofc-events",
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
@@ -31125,6 +31567,37 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-22-hospitality-following-all-masses-baa82b3",
+    "title": "Hospitality Following All Masses",
+    "start": {
+      "date": "2026-11-22",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-22",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -33582,6 +34055,37 @@
     ]
   },
   {
+    "id": "2026-11-28-church-hall-in-use-e3c1e5e",
+    "title": "Church Hall in Use",
+    "start": {
+      "date": "2026-11-28",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": "16:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-4eefd7ddaaf6-2026-11-28",
     "title": "Jazz 1 - Saturdays",
     "start": {
@@ -33641,6 +34145,68 @@
     "verification_status": "established_recurring_schedule",
     "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
     "discovered_by": "scheduled_recurring_series",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-29-blessing-of-candles-water-salt-devotions-afte-ff8e851",
+    "title": "Blessing of candles, water, salt & Devotions after 10am Mass",
+    "start": {
+      "date": "2026-11-29",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": "12:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-29-giving-tree-donations-begin-58075cf",
+    "title": "Giving Tree Donations Begin",
+    "start": {
+      "date": "2026-11-29",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
     ]
@@ -36568,6 +37134,37 @@
     ]
   },
   {
+    "id": "2026-12-06-immaculate-conception-triduum-90c4e88",
+    "title": "Immaculate Conception Triduum",
+    "start": {
+      "date": "2026-12-06",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-06",
+      "time": "20:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-07-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -37121,6 +37718,37 @@
     ]
   },
   {
+    "id": "2026-12-07-immaculate-conception-triduum-329fe12",
+    "title": "Immaculate Conception Triduum",
+    "start": {
+      "date": "2026-12-07",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-07",
+      "time": "20:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-08-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -37636,6 +38264,37 @@
     ]
   },
   {
+    "id": "2026-12-08-immaculate-conception-triduum-d492689",
+    "title": "Immaculate Conception Triduum",
+    "start": {
+      "date": "2026-12-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-08",
+      "time": "20:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-4695831b6b0f-2026-12-08",
     "title": "Intermediate Session 3",
     "start": {
@@ -37708,6 +38367,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-08-refreshments-for-triduum-following-7pm-mass-d09682c",
+    "title": "Refreshments for Triduum following 7pm Mass",
+    "start": {
+      "date": "2026-12-08",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-12-08",
+      "time": "20:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -41360,6 +42050,37 @@
     ]
   },
   {
+    "id": "2026-12-15-parish-ministry-council-meeting-a0d4b93",
+    "title": "Parish Ministry Council Meeting",
+    "start": {
+      "date": "2026-12-15",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-12-15",
+      "time": "20:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-15-early-release-11-40-dismissal-3d55e8f",
     "title": "Early Release 11:40 Dismissal",
     "start": {
@@ -43247,6 +43968,37 @@
     ]
   },
   {
+    "id": "2026-12-18-simbang-gabi-dinner-dance-42c8943",
+    "title": "Simbang Gabi Dinner/Dance",
+    "start": {
+      "date": "2026-12-18",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-12-18",
+      "time": "19:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "food",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-food-markets"
+    ]
+  },
+  {
     "id": "2026-12-18-varsity-boys-basketball-vs-norton-high-school-26112cf",
     "title": "Varsity Boys Basketball vs Norton High School",
     "start": {
@@ -43346,6 +44098,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-19-decorate-church-for-christmas-5edff04",
+    "title": "Decorate Church for Christmas",
+    "start": {
+      "date": "2026-12-19",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": "10:00"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -46452,6 +47235,37 @@
     ]
   },
   {
+    "id": "2026-12-27-hospitality-following-all-masses-cff77c1",
+    "title": "Hospitality Following All Masses",
+    "start": {
+      "date": "2026-12-27",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-27",
+      "time": null
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-28-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -46888,6 +47702,37 @@
       "rec-adult-fitness",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-28-tentative-parish-ministry-council-meeting-e944b1b",
+    "title": "Tentative Parish Ministry Council Meeting",
+    "start": {
+      "date": "2026-12-28",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-12-28",
+      "time": "20:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -84924,6 +85769,40 @@
     ]
   },
   {
+    "id": "2027-04-13-boys-varsity-tennis-team-norton-high-school-72a0ea8",
+    "title": "Boys Varsity Tennis - Team @ Norton High School",
+    "start": {
+      "date": "2027-04-13",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": "18:30"
+    },
+    "venue": "66 W Main Street, Norton MA 02766",
+    "address": "66 W Main Street, Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norton High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-1514c9dfd42c-2027-04-13",
     "title": "Tap 3 - Tuesdays",
     "start": {
@@ -88087,6 +88966,40 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-30-var-lacrosse-dover-sherborn-high-school-b8a6b36",
+    "title": "Var Lacrosse @ Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-30",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-30",
+      "time": "18:00"
+    },
+    "venue": "9 Junction Street, Dover MA 02030",
+    "address": "9 Junction Street, Dover MA 02030",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Dover-Sherborn HS Subsite: Nora Searle Field (Turf)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {

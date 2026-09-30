@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-30T08:49:58.984944-04:00",
+  "generated_at": "2026-09-30T15:31:47.028871-04:00",
   "offline": false,
-  "events_published": 2595,
+  "events_published": 2624,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2595,
-      "generated_at": "2026-09-30T08:49:58.038543-04:00"
+      "events": 2624,
+      "generated_at": "2026-09-30T15:31:46.491115-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 89,
-      "generated_at": "2026-09-30T08:49:58.050303-04:00"
+      "events": 91,
+      "generated_at": "2026-09-30T15:31:46.499226-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 946,
-      "generated_at": "2026-09-30T08:49:58.074821-04:00"
+      "events": 950,
+      "generated_at": "2026-09-30T15:31:46.516485-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 847,
-      "generated_at": "2026-09-30T08:49:58.095213-04:00"
+      "events": 851,
+      "generated_at": "2026-09-30T15:31:46.531398-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 5,
-      "generated_at": "2026-09-30T08:49:58.106153-04:00"
+      "generated_at": "2026-09-30T15:31:46.539420-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 78,
-      "generated_at": "2026-09-30T08:49:58.118691-04:00"
+      "generated_at": "2026-09-30T15:31:46.548868-04:00"
     }
   ],
   "recreation_programs": 173,
@@ -314,7 +314,7 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
+      "found": 1,
       "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
@@ -328,7 +328,7 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
+      "found": 1,
       "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
@@ -356,7 +356,7 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 39,
+      "found": 65,
       "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
@@ -468,7 +468,7 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 2,
+      "found": 1,
       "note": "1 configured page(s) unavailable; remaining sources checked"
     },
     {
@@ -573,7 +573,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 2,
+      "found": 3,
       "note": ""
     },
     {
@@ -601,7 +601,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 3,
+      "found": 4,
       "note": ""
     },
     {
@@ -685,7 +685,7 @@
       "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 12,
+      "found": 11,
       "note": ""
     },
     {
@@ -804,7 +804,7 @@
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 18,
       "note": ""
     },
     {
@@ -1098,7 +1098,7 @@
       "source_id": "st-timothy-calendar",
       "ok": true,
       "method": "church_events_calendar",
-      "found": 37,
+      "found": 63,
       "note": ""
     },
     {
