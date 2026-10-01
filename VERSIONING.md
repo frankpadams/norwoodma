@@ -46,6 +46,39 @@ The canonical product version must agree in all of these places:
 3. The matching `RELEASE-vX.Y.Z.md` file.
 4. The public footer value defined by `SITE_VERSION` in `nav.js`.
 
+## Documentation scope: structural changes vs. content maintenance
+
+The permanent documentation describes the site's **systems and rules**, not every record that passes through them.
+
+### Structural / organizational changes — document these
+
+A change is structural or organizational when it changes persistent behavior or the way content is organized, discovered, ranked, published, or maintained. Examples include:
+
+- navigation or information architecture;
+- event/news/search ranking or eligibility rules;
+- taxonomy, categories, filters, or directory organization;
+- adding/removing a class of monitored sources or changing source strategy;
+- ingestion, normalization, deduplication, expiration, or freshness behavior;
+- schemas, metadata, generated datasets, or source registries;
+- automation cadence or discovery windows;
+- calendar/feed architecture;
+- alert/notices policy or expiration behavior;
+- mapping rules or directory-to-map relationships;
+- a new reusable UI behavior or major page/tool;
+- privacy, moderation, publication, or administrative workflow changes.
+
+These changes must be reflected in the README's current architecture and in the affected authoritative subsystem document. If they are part of an intentional product release, they also belong in that release note.
+
+### Routine content maintenance — do not document item-by-item
+
+Adding, editing, expiring, or deleting an individual event, notice, article, business, restaurant, resource, gas-price record, or similar content item normally does **not** require a product version bump, README history entry, or release-note entry.
+
+The same applies to deleting an obsolete detail page whose only purpose was to support an expired item.
+
+An individual item **can** reveal a structural problem. In that case, document the general fix rather than memorializing the item. Example: if a missed vaccination clinic causes Health Department pages to become an actively monitored event-source class, document the new Health Department monitoring policy; do not treat the individual clinic as permanent architecture.
+
+Git history remains the detailed audit trail for ordinary content edits.
+
 ## Required release procedure
 
 Every intentional product release must complete all of these steps before it is considered finished:
