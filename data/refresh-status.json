@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-01T09:33:48.092245-04:00",
+  "generated_at": "2026-10-01T15:42:12.278445-04:00",
   "offline": false,
-  "events_published": 2671,
+  "events_published": 2701,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2671,
-      "generated_at": "2026-10-01T09:33:47.395046-04:00"
+      "events": 2701,
+      "generated_at": "2026-10-01T15:42:11.549523-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 114,
-      "generated_at": "2026-10-01T09:33:47.408535-04:00"
+      "generated_at": "2026-10-01T15:42:11.562856-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 966,
-      "generated_at": "2026-10-01T09:33:47.434561-04:00"
+      "events": 995,
+      "generated_at": "2026-10-01T15:42:11.588745-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 845,
-      "generated_at": "2026-10-01T09:33:47.456416-04:00"
+      "events": 878,
+      "generated_at": "2026-10-01T15:42:11.610715-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 5,
-      "generated_at": "2026-10-01T09:33:47.468109-04:00"
+      "generated_at": "2026-10-01T15:42:11.623230-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 77,
-      "generated_at": "2026-10-01T09:33:47.481768-04:00"
+      "generated_at": "2026-10-01T15:42:11.636856-04:00"
     }
   ],
-  "recreation_programs": 173,
-  "recreation_occurrences": 1697,
+  "recreation_programs": 171,
+  "recreation_occurrences": 1691,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -538,7 +538,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
       "ok": true,
       "method": "ical",
-      "found": 6,
+      "found": 10,
       "note": ""
     },
     {
@@ -573,14 +573,14 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 9,
       "note": ""
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
       "ok": true,
       "method": "ical",
-      "found": 2,
+      "found": 5,
       "note": ""
     },
     {
@@ -601,7 +601,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 5,
       "note": ""
     },
     {
@@ -650,7 +650,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 10,
       "note": ""
     },
     {
@@ -727,14 +727,14 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 10,
       "note": ""
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
       "ok": true,
       "method": "ical",
-      "found": 2,
+      "found": 5,
       "note": ""
     },
     {
@@ -748,7 +748,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-softball",
       "ok": true,
       "method": "ical",
-      "found": 6,
+      "found": 10,
       "note": ""
     },
     {
@@ -762,7 +762,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 3,
+      "found": 4,
       "note": ""
     },
     {
@@ -1091,7 +1091,7 @@
       "source_id": "st-catherine-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 9,
+      "found": 10,
       "note": ""
     },
     {
@@ -1147,8 +1147,8 @@
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 173,
-      "note": "1896 calendar occurrences generated"
+      "found": 171,
+      "note": "1890 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1325,7 +1325,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 63,
+      "found": 65,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1333,7 +1333,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 63,
+      "found": 65,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1341,7 +1341,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 39,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1349,7 +1349,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 22,
+      "found": 21,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1371,7 +1371,7 @@
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
       "ok": true,
-      "found": 14,
+      "found": 15,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -1399,7 +1399,7 @@
       "source": "Norwood Town News",
       "url": "https://www.norwoodtownnews.com/",
       "ok": true,
-      "found": 14,
+      "found": 12,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -1417,15 +1417,16 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Town of Norwood": 10,
+        "Norwood Town News": 19,
         "Norwood Public Schools": 2,
         "newportdispatch.com": 1,
         "WCVB": 1,
-        "The Norwood Record": 50,
+        "The Norwood Record": 42,
         "The Norwood Record — Latest": 15,
         "Norwood Parents Music Association": 1,
-        "Town of Norwood": 9,
         "Realtor.com": 2,
-        "Patch": 4,
+        "Patch": 3,
         "hoodline.com": 2,
         "Wicked Local": 1,
         "USA Today": 1,
@@ -1435,7 +1436,6 @@
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
         "ESPN": 1,
-        "Norwood Town News": 11,
         "NBC Boston": 1
       },
       "note": null

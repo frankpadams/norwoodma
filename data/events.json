@@ -822,42 +822,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-1ed222a23059-2026-10-01",
-    "title": "Dot Cakes & Cupcakes",
-    "start": {
-      "date": "2026-10-01",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-01",
-      "time": "19:15"
-    },
-    "venue": "10/01/2026 06:00 PM - 07:15 PM Norwood Civic Center - Kitchen",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30933",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30933",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$25.00 Res, $35.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-01",
-    "session_end": "2026-10-01",
-    "days": "Th",
-    "notes": "Join the viral dot cake dessert trend and decorate some delicious dot cakes and cupcakes. Space is limited.",
-    "rec_program_id": "rec-1ed222a23059",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-4d27bf6eea71-2026-10-01",
     "title": "Fit for You",
     "start": {
@@ -4700,6 +4664,34 @@
     ]
   },
   {
+    "id": "2026-10-06-hennessey-field-stormwater-detention-basin-pr-9264433",
+    "title": "Hennessey Field Stormwater Detention Basin Project Remote Consultation Session",
+    "start": {
+      "date": "2026-10-06",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-07-baby-bop-story-time-35dd4d2",
     "title": "Baby Bop Story Time",
     "start": {
@@ -5795,6 +5787,34 @@
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-07-hennessey-field-stormwater-detention-basin-pr-fc495aa",
+    "title": "Hennessey Field Stormwater Detention Basin Project Site Visit",
+    "start": {
+      "date": "2026-10-07",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": null
+    },
+    "venue": "70 Lenox Avenue, Norwood, MA 02062",
+    "address": null,
+    "category": "community",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
     "calendar_ids": [
       "norwood-community"
     ]
@@ -10826,6 +10846,38 @@
     ]
   },
   {
+    "id": "2026-10-14-youth-group-25927ef",
+    "title": "Youth Group",
+    "start": {
+      "date": "2026-10-14",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "20:00"
+    },
+    "venue": "Saint Catherine of Siena Parish",
+    "address": null,
+    "category": "community",
+    "source_id": "st-catherine-calendar",
+    "source_url": "https://stcatherinenorwood.org/",
+    "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "All students in grades 6-8 are welcome to join us for an evening of fun, faith, and fellowship.",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-b8b250304255-2026-10-14",
     "title": "Adult Tap - Wednesdays",
     "start": {
@@ -13343,8 +13395,8 @@
     ]
   },
   {
-    "id": "2026-10-18-micca-southeast-home-show-f7e482f",
-    "title": "MICCA Southeast Home Show",
+    "id": "2026-10-18-micca-southeast-home-show-2026-0e39e69",
+    "title": "MICCA Southeast Home Show 2026",
     "start": {
       "date": "2026-10-18",
       "time": null
@@ -13368,7 +13420,7 @@
     "status": "confirmed",
     "schedule_group": "marching_band",
     "report_time": null,
-    "source_updated_at": "2026-09-15 23:38:35",
+    "source_updated_at": "2026-10-01 11:26:15",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "published on PMA public Events page",
@@ -14765,6 +14817,40 @@
     ]
   },
   {
+    "id": "2026-10-20-junior-varsity-field-hockey-medfield-senior-h-16661c2",
+    "title": "Junior Varsity Field Hockey @ Medfield Senior High School",
+    "start": {
+      "date": "2026-10-20",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "17:30"
+    },
+    "venue": "93 Pleasant St, Medfield Massachusetts 02052",
+    "address": "93 Pleasant St, Medfield Massachusetts 02052",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Field Hockey",
+    "public_access": "public",
+    "series": "Norwood Girls JV Field Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Field Hockey Level: Junior Varsity Team: Norwood High School Site: Medfield - Metacomet Park Subsite: Metacomet Grass Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2026-10-20-middle-school-boys-cross-country-westwood-hig-ff5fb88",
     "title": "Middle School Boys cross country @ Westwood High School",
     "start": {
@@ -15018,40 +15104,6 @@
       "rec-adult-fitness",
       "rec-all",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-20-junior-varsity-field-hockey-medfield-senior-h-16661c2",
-    "title": "Junior Varsity Field Hockey @ Medfield Senior High School",
-    "start": {
-      "date": "2026-10-20",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-20",
-      "time": "19:00"
-    },
-    "venue": "93 Pleasant St, Medfield Massachusetts 02052",
-    "address": "93 Pleasant St, Medfield Massachusetts 02052",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Field Hockey",
-    "public_access": "public",
-    "series": "Norwood Girls JV Field Hockey",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Field Hockey Level: Junior Varsity Team: Norwood High School Site: Medfield - Metacomet Park Subsite: Metacomet Grass Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -17517,44 +17569,6 @@
     "calendar_ids": [
       "norwood-family",
       "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-77994cfe8981-2026-10-23",
-    "title": "Music with Miss Maura - Preschool Fall 2",
-    "start": {
-      "date": "2026-10-23",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-10-23",
-      "time": "12:15"
-    },
-    "venue": "Music with Miss Maura - Preschool Fall 2",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-11-20",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-77994cfe8981",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -22910,44 +22924,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-77994cfe8981-2026-10-30",
-    "title": "Music with Miss Maura - Preschool Fall 2",
-    "start": {
-      "date": "2026-10-30",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-10-30",
-      "time": "12:15"
-    },
-    "venue": "Music with Miss Maura - Preschool Fall 2",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-11-20",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-77994cfe8981",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-10-30-varsity-football-vs-ashland-high-school-fd6d778",
     "title": "Varsity Football vs Ashland High School",
     "start": {
@@ -26163,44 +26139,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-77994cfe8981-2026-11-06",
-    "title": "Music with Miss Maura - Preschool Fall 2",
-    "start": {
-      "date": "2026-11-06",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-11-06",
-      "time": "12:15"
-    },
-    "venue": "Music with Miss Maura - Preschool Fall 2",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-11-20",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-77994cfe8981",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-e861d336b6fd-2026-11-06",
     "title": "Kids Night Out",
     "start": {
@@ -29258,44 +29196,6 @@
     "calendar_ids": [
       "norwood-family",
       "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-77994cfe8981-2026-11-13",
-    "title": "Music with Miss Maura - Preschool Fall 2",
-    "start": {
-      "date": "2026-11-13",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-11-13",
-      "time": "12:15"
-    },
-    "venue": "Music with Miss Maura - Preschool Fall 2",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-11-20",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-77994cfe8981",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -32429,44 +32329,6 @@
     "calendar_ids": [
       "norwood-family",
       "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-77994cfe8981-2026-11-20",
-    "title": "Music with Miss Maura - Preschool Fall 2",
-    "start": {
-      "date": "2026-11-20",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "12:15"
-    },
-    "venue": "Music with Miss Maura - Preschool Fall 2",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-11-20",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-77994cfe8981",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -82909,6 +82771,40 @@
     ]
   },
   {
+    "id": "2027-03-25-var-lacrosse-vs-bellingham-high-school-0404fa8",
+    "title": "Var Lacrosse vs Bellingham High School",
+    "start": {
+      "date": "2027-03-25",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-03-25",
+      "time": "17:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3c6841bc2f75-2027-03-25",
     "title": "Ballet 2 - Thursdays",
     "start": {
@@ -84211,6 +84107,74 @@
     ]
   },
   {
+    "id": "2027-03-30-var-lacrosse-vs-westwood-high-school-049db6b",
+    "title": "Var Lacrosse vs Westwood High School",
+    "start": {
+      "date": "2027-03-30",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-30",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-03-30-varsity-central-girls-lacrosse-westwood-high--c648ded",
+    "title": "Varsity Central Girls Lacrosse @ Westwood High School",
+    "start": {
+      "date": "2027-03-30",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-30",
+      "time": "17:45"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: Varsity Team: Norwood High School Site: Westwood High School Subsite: Multi-Purpose Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-1514c9dfd42c-2027-03-30",
     "title": "Tap 3 - Tuesdays",
     "start": {
@@ -84282,6 +84246,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-03-30-jv-central-girls-lacrosse-westwood-high-schoo-b1e07d5",
+    "title": "JV Central Girls Lacrosse @ Westwood High School",
+    "start": {
+      "date": "2027-03-30",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-03-30",
+      "time": "19:15"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Westwood High School Subsite: Multi-Purpose Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -84470,6 +84468,74 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-03-31-boys-varsity-outdoor-track-vs-medfield-senior-f463e3f",
+    "title": "Boys Varsity Outdoor Track vs Medfield Senior High School",
+    "start": {
+      "date": "2027-03-31",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-31",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Outdoor Track Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-03-31-girls-varsity-outdoor-track-vs-medfield-senio-1b207d2",
+    "title": "Girls Varsity Outdoor Track vs Medfield Senior High School",
+    "start": {
+      "date": "2027-03-31",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-31",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Outdoor Track Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -85740,6 +85806,40 @@
     ]
   },
   {
+    "id": "2027-04-06-varsity-south-central-girls-lacrosse-m-connol-1fe8238",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Medway High School",
+    "start": {
+      "date": "2027-04-06",
+      "time": "16:15"
+    },
+    "end": {
+      "date": "2027-04-06",
+      "time": "17:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-1514c9dfd42c-2027-04-06",
     "title": "Tap 3 - Tuesdays",
     "start": {
@@ -85845,6 +85945,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-06-jv-north-girl-s-lacrosse-r-georges-vs-medway--ce999e8",
+    "title": "JV North Girl's Lacrosse R Georges vs Medway High School",
+    "start": {
+      "date": "2027-04-06",
+      "time": "17:45"
+    },
+    "end": {
+      "date": "2027-04-06",
+      "time": "18:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -85996,6 +86130,142 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-07-boys-varsity-outdoor-track-vs-hopkinton-high--53264dd",
+    "title": "Boys Varsity Outdoor Track vs Hopkinton High School",
+    "start": {
+      "date": "2027-04-07",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-07",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Outdoor Track Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-07-girls-varsity-outdoor-track-vs-hopkinton-high-aa7d83f",
+    "title": "Girls Varsity Outdoor Track vs Hopkinton High School",
+    "start": {
+      "date": "2027-04-07",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-07",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Outdoor Track Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-07-varsity-softball-vs-millis-high-school-3bb1a71",
+    "title": "Varsity Softball vs Millis High School",
+    "start": {
+      "date": "2027-04-07",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-07",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-07-varsity-baseball-vs-millis-high-school-885cc2e",
+    "title": "Varsity baseball vs Millis High School",
+    "start": {
+      "date": "2027-04-07",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-07",
+      "time": "18:30"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -87165,6 +87435,40 @@
     ]
   },
   {
+    "id": "2027-04-13-varsity-south-central-girls-lacrosse-m-connol-13aa80f",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Norton High School",
+    "start": {
+      "date": "2027-04-13",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": "17:15"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-04-13-boys-varsity-tennis-team-norton-high-school-72a0ea8",
     "title": "Boys Varsity Tennis - Team @ Norton High School",
     "start": {
@@ -87304,6 +87608,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-13-jv-north-girl-s-lacrosse-r-georges-vs-norton--076391f",
+    "title": "JV North Girl's Lacrosse R Georges vs Norton High School",
+    "start": {
+      "date": "2027-04-13",
+      "time": "17:30"
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -87455,6 +87793,142 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-14-boys-varsity-outdoor-track-vs-westwood-high-s-fc38814",
+    "title": "Boys Varsity Outdoor Track vs Westwood High School",
+    "start": {
+      "date": "2027-04-14",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-14",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Outdoor Track Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-14-girls-varsity-outdoor-track-vs-weymouth-high--499e2cd",
+    "title": "Girls Varsity Outdoor Track vs Weymouth High School",
+    "start": {
+      "date": "2027-04-14",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-14",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Outdoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Outdoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Outdoor Track Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-14-varsity-softball-vs-hopkinton-high-school-8879d6a",
+    "title": "Varsity Softball vs Hopkinton High School",
+    "start": {
+      "date": "2027-04-14",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-14",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-14-varsity-baseball-vs-hopkinton-high-school-b614d52",
+    "title": "Varsity baseball vs Hopkinton High School",
+    "start": {
+      "date": "2027-04-14",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-14",
+      "time": "18:30"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -89737,6 +90211,40 @@
     ]
   },
   {
+    "id": "2027-04-27-varsity-south-central-girls-lacrosse-m-connol-eda6f4a",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Holliston High School",
+    "start": {
+      "date": "2027-04-27",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-27",
+      "time": "17:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-1514c9dfd42c-2027-04-27",
     "title": "Tap 3 - Tuesdays",
     "start": {
@@ -89808,6 +90316,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-27-jv-north-girl-s-lacrosse-r-georges-vs-hollist-9da0e3f",
+    "title": "JV North Girl's Lacrosse R Georges vs Holliston High School",
+    "start": {
+      "date": "2027-04-27",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-04-27",
+      "time": "19:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -90212,6 +90754,142 @@
     ]
   },
   {
+    "id": "2027-04-29-boys-varsity-tennis-team-dover-sherborn-high--d6009f2",
+    "title": "Boys Varsity Tennis - Team @ Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:30"
+    },
+    "venue": "9 Junction Street, Dover MA 02030",
+    "address": "9 Junction Street, Dover MA 02030",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Dover-Sherborn HS Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-girls-varsity-tennis-team-vs-dover-sherborn-h-28529d2",
+    "title": "Girls Varsity Tennis - Team vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-varsity-softball-vs-dover-sherborn-high-schoo-bc244a8",
+    "title": "Varsity Softball vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-varsity-baseball-vs-dover-sherborn-high-schoo-6f78e6b",
+    "title": "Varsity baseball vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:30"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3c6841bc2f75-2027-04-29",
     "title": "Ballet 2 - Thursdays",
     "start": {
@@ -90283,6 +90961,74 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-29-jv-north-girl-s-lacrosse-r-georges-vs-dover-s-771953f",
+    "title": "JV North Girl's Lacrosse R Georges vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "19:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-varsity-south-central-girls-lacrosse-m-connol-f61fb75",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "19:15"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -90939,6 +91685,40 @@
     ]
   },
   {
+    "id": "2027-05-04-varsity-south-central-girls-lacrosse-m-connol-e16ba8b",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Ashland High School",
+    "start": {
+      "date": "2027-05-04",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-04",
+      "time": "17:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-1514c9dfd42c-2027-05-04",
     "title": "Tap 3 - Tuesdays",
     "start": {
@@ -91081,6 +91861,40 @@
     ]
   },
   {
+    "id": "2027-05-04-jv-north-girl-s-lacrosse-r-georges-vs-ashland-3c802a0",
+    "title": "JV North Girl's Lacrosse R Georges vs Ashland High School",
+    "start": {
+      "date": "2027-05-04",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-05-04",
+      "time": "19:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-021298089e70-2027-05-04",
     "title": "Jazz 3 - Tuesdays",
     "start": {
@@ -91189,6 +92003,74 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-05-05-varsity-softball-vs-bellingham-high-school-4a61f83",
+    "title": "Varsity Softball vs Bellingham High School",
+    "start": {
+      "date": "2027-05-05",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-05",
+      "time": "18:00"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-05-varsity-baseball-vs-bellingham-high-school-cfec3b5",
+    "title": "Varsity baseball vs Bellingham High School",
+    "start": {
+      "date": "2027-05-05",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-05",
+      "time": "18:00"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -92345,6 +93227,40 @@
     ]
   },
   {
+    "id": "2027-05-11-var-lacrosse-vs-medfield-senior-high-school-cab2fd8",
+    "title": "Var Lacrosse vs Medfield Senior High School",
+    "start": {
+      "date": "2027-05-11",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-05-11",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-f052bb9977eb-2027-05-11",
     "title": "Acro 3 - Tuesdays",
     "start": {
@@ -93158,6 +94074,40 @@
     ]
   },
   {
+    "id": "2027-05-18-var-lacrosse-vs-hopkinton-high-school-60c0efd",
+    "title": "Var Lacrosse vs Hopkinton High School",
+    "start": {
+      "date": "2027-05-18",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-18",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-05-18-girls-varsity-tennis-team-hopkinton-high-scho-c7a291d",
     "title": "Girls Varsity Tennis - Team @ Hopkinton High School",
     "start": {
@@ -93316,6 +94266,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Holliston High School Subsite: HHS Softball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-25-var-lacrosse-vs-dedham-high-school-501869b",
+    "title": "Var Lacrosse vs Dedham High School",
+    "start": {
+      "date": "2027-05-25",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-25",
+      "time": "17:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
