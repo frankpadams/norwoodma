@@ -2,7 +2,7 @@
 
 This is a shared working log for unfinished development, data-quality issues, and follow-up work. It is not an authority on what is true: Frank's decisions govern project direction, and automated entries are leads to review rather than conclusions. When Frank asks for the developer to-do list, project work log, outstanding issues, next steps, or similar, review this file as a useful project record and update it as work is completed or new issues are identified.
 
-_Last updated: 2026-09-29_
+_Last updated: 2026-10-01_
 
 ## Priority: Calendar / Events Infrastructure
 
@@ -40,6 +40,12 @@ _Last updated: 2026-09-29_
 - [ ] **Use sensible defaults rather than selecting every granular feed.** Major community events, school-wide events, significant athletics, performances, fundraisers, facility reservations, roadwork, elections, etc. should generally be on by default; individual teams/practices and other high-volume feeds should generally be optional.
 - [ ] **Add hierarchical filters.** Allow broad categories to be toggled and expanded into increasingly specific feeds (for example Sports → Youth Soccer → division/team) without rendering every team at once.
 - [ ] **Remember Conflict Contraption preferences locally.**
+
+## Documentation / architecture hygiene
+
+- [ ] **Document structural changes, not individual content churn.** When work changes a persistent rule, source class, taxonomy, ranking system, data flow, automation, navigation pattern, or organizational model, update README and the affected authoritative subsystem documentation. Ordinary additions/removals of individual events, notices, businesses, articles, and similar records belong in Git history rather than release documentation.
+- [ ] **Promote systemic lessons from one-off fixes.** If an individual miss/correction reveals a recurring coverage or architecture problem, document and implement the generalized rule rather than recording the one-off item as project architecture.
+- [ ] **Keep README current-state oriented.** Do not append repetitive patch diaries or “current test build” sections to README; historical detail belongs in release notes and Git history.
 
 ## Ongoing Rule
 
