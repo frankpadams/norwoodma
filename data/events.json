@@ -31,302 +31,6 @@
     ]
   },
   {
-    "id": "2026-09-30-2026-boston-open-nqs-f21ccca",
-    "title": "2026 Boston Open NQS",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-calendar",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-09-30/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "skating-club-boston-events"
-    ]
-  },
-  {
-    "id": "2026-09-30-baby-bop-story-time-a415f73",
-    "title": "Baby Bop Story Time",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-59/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-09-30-sensory-friendly-lego-club-for-adults-b00e4fa",
-    "title": "Sensory-friendly Lego Club for Adults",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-54/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is excited to host a Sensory-friendly Lego Club for Adults. Our September club meeting will be held in-person at the library on Wednesday September 30, 2026 from 10:30 am to 11:30 am. Please join us in this creative",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-30-teen-anime-movie-night-05e1df7",
-    "title": "Teen Anime Movie Night",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-movie-night/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Teen ProgramGrades 7-12Children's Program RoomJoin us for a special evening edition of Teen Anime Club, where we will be watching an anime movie and enjoying some popcorn and instant ramen! Space is limited, so please register!This program ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-09-30-zoom-with-a-law-librarian-bc03270",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-582/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-30-sunnyside-up-aa",
-    "title": "Sunnyside Up AA",
-    "start": {
-      "date": "2026-09-30",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "08:00"
-    },
-    "venue": "Grace Episcopal Church",
-    "address": "150 Chapel St, Norwood, MA 02062",
-    "category": "recovery",
-    "source_id": "recovery-aa",
-    "source_url": "https://www.gracenor.org/groups",
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Sunnyside Up AA",
-    "publish_candidate": true,
-    "verification_status": "official_recurring_schedule_verified_2026-09-26",
-    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2b84e2c8df65-2026-09-30",
-    "title": "Pre-School Prep Session 3",
-    "start": {
-      "date": "2026-09-30",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 3",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-28",
-    "session_end": "2026-10-01",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2b84e2c8df65",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-excel-fitness-level-2-04d148f",
-    "title": "Excel Fitness Level 2",
-    "start": {
-      "date": "2026-09-30",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "10:00"
-    },
-    "venue": "MassHire Norwood Events",
-    "address": null,
-    "category": "arts",
-    "source_id": "masshire-norwood-events",
-    "source_url": "https://masshiremsw.com/event/excel-2-sep-30/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Date — Wednesday, September 30 Time — 10:00 am Platform — Zoom This is our second webinar in the Excel series. It is built again around a project and demonstrates how to set up more complex formulas; organize, filter, and summarize data in ",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-0ace3af3a610-2026-09-30",
-    "title": "Indoor Tot Time - Wednesdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "12:00"
-    },
-    "venue": "09/16/2026 - 04/14/2027 10:00 AM - 12:00 PM Norwood Civic Center - Gymnasium",
-    "category": "drop_in",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$75.00 Res, $75.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": true,
-    "session_start": "2026-09-16",
-    "session_end": "2027-04-14",
-    "days": "W",
-    "notes": "Are you looking for fun and safe play for your child during the fall/winter months? Would you like to meet local parents with children similar in age to your child? Look no further! This program will allow your children to explore a large open space and interact with other children. Climbing mats, sports equipment, and play equipment will all be pulled out for the kids to enjoy. Parents/caregivers must accompany their children at all times during this unstructured program. No fee for children under 1 if accompanied by a sibling. $5.00 per day per family (Drop-In) NO FOOD OR DRINKS IN THE GYM PLEASE! NO TOT TIME DURING VACATION WEEKS OR DAYS WHEN CIVIC CENTER IS CLOSED.",
-    "rec_program_id": "rec-0ace3af3a610",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-food-markets",
-      "norwood-sports",
-      "rec-all",
-      "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-09-30-sacredness-of-your-lifestory-writing-workshop-8c956ac",
     "title": "Sacredness of your Lifestory Writing Workshop",
     "start": {
@@ -355,924 +59,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-7c686bdbe82c-2026-09-30",
-    "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "20:00"
-    },
-    "venue": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$135.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-07",
-    "session_end": "2027-03-31",
-    "days": "MTuWThF",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-7c686bdbe82c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-school-committee-meeting-484e6a0",
-    "title": "School Committee Meeting",
-    "start": {
-      "date": "2026-09-30",
-      "time": "12:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "14:00"
-    },
-    "venue": "Town of Norwood",
-    "address": null,
-    "category": "government",
-    "source_id": "norwood-civic-meetings",
-    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
-    "registration_url": null,
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Norwood Boards & Committees",
-    "publish_candidate": true,
-    "verification_status": "verified_civic_source",
-    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
-    "discovered_by": "civic_meeting_monitor",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "town-meetings"
-    ]
-  },
-  {
-    "id": "2026-09-30-boys-jv-golf-vs-millis-high-school-31e37a9",
-    "title": "Boys JV Golf vs Millis High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:30"
-    },
-    "venue": "400 Providence Hwy., Norwood MA 02062",
-    "address": "400 Providence Hwy., Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-jv-golf",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood JV Golf",
-    "public_access": "public",
-    "series": "Norwood JV Golf",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Golf Level: Boys JV Team: Norwood High School Site: Norwood Country Club Subsite: Norwood Country Club",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-30-girls-freshman-volleyball-vs-sharon-high-scho-906d4fe",
-    "title": "Girls Freshman Volleyball vs Sharon High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "15:45"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:00"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Freshman Volleyball",
-    "public_access": "public",
-    "series": "Norwood Girls Freshman Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Freshman Team: Norwood High School Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-30-girls-jv-volleyball-vs-sharon-high-school-e173b03",
-    "title": "Girls JV Volleyball vs Sharon High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "15:45"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:00"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Volleyball",
-    "public_access": "public",
-    "series": "Norwood Girls JV Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls JV Team: Norwood High School Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-ed66b0533f8a-2026-09-30",
-    "title": "A Learning Studio for Children",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:15"
-    },
-    "venue": "09/09/2026 - 11/18/2026 04:00 PM - 05:15 PM Norwood Civic Center - Lydon Suite",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30882",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30882",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$83.00 Res, $93.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-09",
-    "session_end": "2026-11-18",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-ed66b0533f8a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-b-jv-soccer-vs-dedham-high-school-2e19d30",
-    "title": "B JV Soccer vs Dedham High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:45"
-    },
-    "venue": "295 Vernon St, Norwood MA 02062",
-    "address": "295 Vernon St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-jv-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys JV Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys JV Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: B JV Team: Norwood High School Site: Norwood-Father Mac's Subsite: #1",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-30-bv-soccer-vs-dedham-high-school-679d56c",
-    "title": "BV Soccer vs Dedham High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:45"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-787f7addaf61-2026-09-30",
-    "title": "Modern 2 - Wednesdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "16:50"
-    },
-    "venue": "09/09/2026 - 05/12/2027 04:00 PM - 04:50 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-09",
-    "session_end": "2027-05-12",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-787f7addaf61",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-boys-varsity-cross-country-vs-hopkinton-high--7561b32",
-    "title": "Boys Varsity cross country vs Hopkinton High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:00"
-    },
-    "venue": "1315 Washington Street, Norwood Massachusetts 02062",
-    "address": "1315 Washington Street, Norwood Massachusetts 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-cross-country",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Cross Country",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Cross Country",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: cross country Level: Boys Varsity Team: Norwood High School Site: Coakley Middle School Subsite: Cross Country Course",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-30-g-jv-soccer-dedham-high-school-a648a8b",
-    "title": "G JV Soccer @ Dedham High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:15"
-    },
-    "venue": "500 High Street, Dedham Massachusetts 02026",
-    "address": "500 High Street, Dedham Massachusetts 02026",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls JV Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: G JV Team: Norwood High School Site: Dedham-Memorial Gonzalez Subsite: #1",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-30-gv-soccer-dedham-high-school-a44880c",
-    "title": "GV Soccer @ Dedham High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:30"
-    },
-    "venue": "140 Whiting Ave, Dedham MA 02026",
-    "address": "140 Whiting Ave, Dedham MA 02026",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Dedham High School Subsite: Multipurpose Turf Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-09-30-girls-varsity-cross-country-vs-hopkinton-high-6d589a7",
-    "title": "Girls Varsity cross country vs Hopkinton High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:00"
-    },
-    "venue": "1315 Washington Street, Norwood Massachusetts 02062",
-    "address": "1315 Washington Street, Norwood Massachusetts 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-cross-country",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Cross Country",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Cross Country",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: cross country Level: Girls Varsity Team: Norwood High School Site: Coakley Middle School Subsite: Cross Country Course",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-1928b8e0a833-2026-09-30",
-    "title": "Tri Valley Karate - 5-8yr Session 1 (10 week session)",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:30"
-    },
-    "venue": "09/16/2026 - 12/02/2026 04:45 PM - 05:30 PM Norwood Civic Center - Willett Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30931",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30931",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$155.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-16",
-    "session_end": "2026-12-02",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-1928b8e0a833",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-b5af8765bf18-2026-09-30",
-    "title": "Tri Valley Karate - 5-8yr Session 1 (6 week session)",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:30"
-    },
-    "venue": "09/16/2026 - 10/21/2026 04:45 PM - 05:30 PM Norwood Civic Center - Willett Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30931",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30931",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$99.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-16",
-    "session_end": "2026-10-21",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b5af8765bf18",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-d798be0af754-2026-09-30",
-    "title": "Acro 2 - Wednesdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "16:50"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "17:40"
-    },
-    "venue": "09/09/2026 - 05/12/2027 04:50 PM - 05:40 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-09",
-    "session_end": "2027-05-12",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-d798be0af754",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-girls-varsity-volleyball-vs-sharon-high-schoo-0a1e3db",
-    "title": "Girls Varsity Volleyball vs Sharon High School",
-    "start": {
-      "date": "2026-09-30",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:30"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Volleyball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Varsity Team: Norwood High School - Varsity Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-4eb0ac558b35-2026-09-30",
-    "title": "Modern 3 - Wednesdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "17:40"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "18:30"
-    },
-    "venue": "09/09/2026 - 05/12/2027 05:40 PM - 06:30 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-09",
-    "session_end": "2027-05-12",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-4eb0ac558b35",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-cms-open-house-grades-5-and-8-3993ade",
-    "title": "CMS Open House - Grades 5 and 8",
-    "start": {
-      "date": "2026-09-30",
-      "time": "17:45"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "20:00"
-    },
-    "venue": "CMS",
-    "address": "CMS",
-    "category": "community",
-    "source_id": "nps-coakley",
-    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9162140/cms-open-house",
-    "cost": null,
-    "organizer": "Norwood Public Schools",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-09-30-lpr-flock-community-session",
-    "title": "Community Information Session: License Plate Reader Technology and Cameras",
-    "start": {
-      "date": "2026-09-30",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": null
-    },
-    "venue": "Norwood Senior Center",
-    "address": "275 Prospect St, Norwood, MA 02062",
-    "category": "civic_public_safety",
-    "source_id": "norwood-police",
-    "source_url": "https://www.facebook.com/norwoodpolice",
-    "cost": "Free",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "community_notice_verified_2026-09-21",
-    "notes": "Norwood Police Department community information session for Norwood residents about Flock Safety cameras and license plate reader (LPR) technology. Chief Christopher Padden and the department plan to explain what the technology is and is not, why NPD uses it, examples of its use in investigations and public safety, what information is collected, data-retention practices, system access and auditing, restrictions on sharing/use of Norwood data, and department safeguards. An open resident Q&A will follow. The meeting is intended to address public questions about privacy, data retention, information sharing, accountability, and law-enforcement use of LPR systems.",
-    "calendar_ids": []
-  },
-  {
-    "id": "2026-09-30-pensive-pint-82168fe",
-    "title": "Pensive Pint",
-    "start": {
-      "date": "2026-09-30",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/pensive-pint-2",
-    "cost": null,
-    "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Sep 30 Pensive Pint Wednesday, September 30, 2026 6:00 PM 9:00 PM South Boston Taproom (map) Google Calendar ICS Tickets: https://www.eventbrite.com/e/the-pensive-pint-tickets-1999185911879 View Event →",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-ab0ac17fb265-2026-09-30",
-    "title": "Spin Class Session 1",
-    "start": {
-      "date": "2026-09-30",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "19:00"
-    },
-    "venue": "09/16/2026 - 11/18/2026 06:00 PM - 07:00 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30947",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30947",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-16",
-    "session_end": "2026-11-18",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-ab0ac17fb265",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-ce537a672b9e-2026-09-30",
-    "title": "Adult Ballet - Wednesdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "19:20"
-    },
-    "venue": "09/09/2026 - 05/12/2027 06:30 PM - 07:20 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$150.00 Res, $200.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-09",
-    "session_end": "2027-05-12",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-ce537a672b9e",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-b8b250304255-2026-09-30",
-    "title": "Adult Tap - Wednesdays",
-    "start": {
-      "date": "2026-09-30",
-      "time": "19:20"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "20:10"
-    },
-    "venue": "09/09/2026 - 05/12/2027 07:20 PM - 08:10 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$150.00 Res, $200.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-09",
-    "session_end": "2027-05-12",
-    "days": "W",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b8b250304255",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-09-30-conservation-commission-meeting-c4db702",
-    "title": "Conservation Commission Meeting",
-    "start": {
-      "date": "2026-09-30",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": null
-    },
-    "venue": "Town of Norwood",
-    "address": null,
-    "category": "government",
-    "source_id": "norwood-civic-meetings",
-    "source_url": "https://www.norwoodma.gov/government/committees_boards/conservation_commission/hearings_schedule.php",
-    "registration_url": null,
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Norwood Boards & Committees",
-    "publish_candidate": true,
-    "verification_status": "verified_civic_source",
-    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
-    "discovered_by": "civic_meeting_monitor",
-    "calendar_ids": [
-      "norwood-community",
-      "town-meetings"
-    ]
-  },
-  {
-    "id": "2026-09-30-irish-brewing-boston-trivia-night-every-wedne-14a4e58",
-    "title": "Irish Brewing Boston- Trivia Night Every Wednesday",
-    "start": {
-      "date": "2026-09-30",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": "19:30"
-    },
-    "venue": "Irish Brewing Boston",
-    "address": "83 Morse Street - Building 4 AB, Norwood, MA, 02062",
-    "category": "community",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/event/irish-brewing-boston-trivia-night-every-wednesday/2026-09-30/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-09-30-school-committee-meeting-policy-subcommittee-bd4d926",
-    "title": "School Committee Meeting: Policy Subcommittee",
-    "start": {
-      "date": "2026-09-30",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-30",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "government",
-    "source_id": "town-master-calendar",
-    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
-    "registration_url": null,
-    "cost": null,
-    "public_access": "public",
-    "series": "Town of Norwood",
-    "publish_candidate": true,
-    "verification_status": "verified_town_master_calendar",
-    "notes": null,
-    "discovered_by": "town_revize_master_calendar",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
     ]
   },
   {
@@ -1305,6 +91,131 @@
       "norwood-community",
       "norwood-sports",
       "skating-club-boston-events"
+    ]
+  },
+  {
+    "id": "2026-10-01-monthlong-halloween-hunt-begins-73302c3",
+    "title": "Monthlong Halloween Hunt begins!",
+    "start": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/monthlong-halloween-hunt-begins-5/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Our monthlong HALLOWEEN HUNT scavenger challenge begins on Thursday, October 1!Choose a team of up to five players (don't forget to give yourselves an appropriately spooky Team Name!). On Thursday, October 1, our 2026 Halloween Hunt Cards w",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-01-norwood-walk-talk-81f369c",
+    "title": "Norwood Walk & Talk",
+    "start": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/norwood-walk-talk-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "**Please note that this event was postponed due to storm. New date is Thursday Octorber 1, 2026. **Celebrate Good Neighbor Day with the Morrill Memorial Library and the Norwood Trails Committee&nbsp;for a friendly stroll on the Bernie Coope",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-10-01-october-2026-8f999b2",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-01-thursday-pvc-play-and-learn-2c93fd2",
+    "title": "Thursday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-01",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-19/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -2177,6 +1088,37 @@
     ]
   },
   {
+    "id": "2026-10-02-friends-of-the-library-book-sale-friends-only-11b7221",
+    "title": "Friends of the Library Book Sale *FRIENDS ONLY PREVIEW*",
+    "start": {
+      "date": "2026-10-02",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-02",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fol-fall-book-sale-14/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Current members of the Friends of the Library are welcome to preview the book sale items before the sale is opened to the public. New members may sign up to become a Friend at the door. For more information about The Friends of the Library ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-02-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -2540,6 +1482,68 @@
       "norwood-community",
       "norwood-sports",
       "skating-club-boston-events"
+    ]
+  },
+  {
+    "id": "2026-10-03-friends-of-the-library-book-sale-dbf875b",
+    "title": "Friends of the Library Book Sale",
+    "start": {
+      "date": "2026-10-03",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fol-fall-book-sale-15/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Friends of the Library Spring Book Sale: General AdmissionFor more information about the Friends of the Library and their membership rates visit their page here. &nbsp;",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-03-homeworks-masssave-pop-up-resource-table-ba45a98",
+    "title": "HomeWorks/MassSave Pop-up Resource Table",
+    "start": {
+      "date": "2026-10-03",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/homeworks-masssave-pop-up-resource-table-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "A representative from HomeWorks Energy Inc (a MassSave program) will have a resource table in the Library's lobby today. Please stop by with any questions about how the MassSave program works and how you can get a free home energy audit, as",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
     ]
   },
   {
@@ -3354,6 +2358,100 @@
     ]
   },
   {
+    "id": "2026-10-04-4th-annual-halloween-costume-swap-5e492ed",
+    "title": "4th Annual Halloween Costume Swap",
+    "start": {
+      "date": "2026-10-04",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-friends-of-the-library-book-sale-half-price-d-5f3148b",
+    "title": "Friends of the Library Book Sale *HALF PRICE DAY*",
+    "start": {
+      "date": "2026-10-04",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fol-fall-book-sale-16/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Friends of the Library Spring Book Sale: All remaining items are 50% offFor more information about the Friends of the Library and their membership rates visit their page here. &nbsp;",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-we-re-going-on-a-pumpkin-hunt-storywalk-877f104",
+    "title": "We're Going on a Pumpkin Hunt StoryWalk",
+    "start": {
+      "date": "2026-10-04",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/were-going-on-a-pumpkin-hunt-storywalk-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for a festive fall adventure at the South Norwood StoryWalk! Throughout the month of October, enjoy the story We're Going on a Pumpkin Hunt by Goldie Hawk as you walk along the trail. As you read each page, keep your eyes ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "2026-10-04-lumber-milling",
     "title": "Lumber Milling Workshop",
     "start": {
@@ -3707,6 +2805,38 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-05-poirier-village-center-open-play-a3bff9e",
+    "title": "Poirier Village Center Open Play",
+    "start": {
+      "date": "2026-10-05",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-05",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-7/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play, explore, and connect. This is an unstructured play opportunity where families",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -4638,6 +3768,71 @@
     ]
   },
   {
+    "id": "2026-10-06-navigating-your-child-s-anxiety-understanding-5c8b824",
+    "title": "Navigating Your Child's Anxiety: Understanding Anxiety [Virtual]",
+    "start": {
+      "date": "2026-10-06",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parent-lunch-n-learn/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Parents of All Aged ChildrenRegistration Required for Zoom LinkJoin parent coach and licensed social worker Robyn Isman for a three-part virtual workshop series exploring childhood anxiety and how parents can support their children. Learn p",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-06-tuesday-pvc-play-and-learn-3cae301",
+    "title": "Tuesday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-06",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-20/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-06-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -5501,6 +4696,100 @@
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-07-baby-bop-story-time-35dd4d2",
+    "title": "Baby Bop Story Time",
+    "start": {
+      "date": "2026-10-07",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-60/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-10-07-hispanic-heritage-month-movie-series-fb1f59b",
+    "title": "Hispanic Heritage Month Movie Series",
+    "start": {
+      "date": "2026-10-07",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/hispanic-heritage-month-movie-series-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Celebrate Hispanic Heritage Month at the Morrill Memorial Library with a weekly movie screening highlighting stories, cultures, and perspectives from across the Spanish-speaking world and American-Hispanic experiences. &nbsp;Showtimes:&nbsp",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-07-sensory-friendly-wednesday-movie-b0f33e5",
+    "title": "Sensory-friendly Wednesday Movie",
+    "start": {
+      "date": "2026-10-07",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-wednesday-movie-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "The Morrill Memorial Library is offering an in-person sensory-friendly movie on the 1st Wednesday of the month for adults with different levels of cognitive abilities. Join us for our Sensory-friendly Wednesday Movie at the Library! This pr",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
       "norwood-community"
     ]
   },
@@ -6511,6 +5800,132 @@
     ]
   },
   {
+    "id": "2026-10-08-10-steps-to-researching-the-history-of-your-h-9d00792",
+    "title": "10 Steps to Researching the History of Your House",
+    "start": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/10-steps-to-researching-the-history-of-your-house/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is thrilled to host Mariam Pierre- Louis, an educator who specializes in house history research for an informative session on Thursday October 8, 2026 at 7PM in the Simoni Room. &nbsp;Learn how to uncover the past o",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-08-sensory-friendly-thursday-movie-e26b4be",
+    "title": "Sensory-friendly Thursday Movie",
+    "start": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-monthly-movie-23/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "The Morrill Memorial Library is offering an in-person sensory-friendly movie on the 2nd Thursday of the month for adults with different levels of cognitive abilities. Join us for our Sensory-friendly Thursday Movie at the Library! This prog",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-08-thursday-pvc-play-and-learn-172b1bd",
+    "title": "Thursday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-20/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-08-wacky-wiggles-and-giggles-28e38cb",
+    "title": "Wacky Wiggles and Giggles",
+    "start": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-giggles-63/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Babies, Toddlers and PreschoolersNo Registration requiredJoin us for this drop-in storytime for kids of all ages! We will read short stories, sing songs and move around a lot! This story time is geared toward toddlers but all ages are welco",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-08-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -7392,6 +6807,69 @@
     ]
   },
   {
+    "id": "2026-10-09-beyond-beginner-mah-jongg-a43cfc1",
+    "title": "Beyond Beginner Mah Jongg",
+    "start": {
+      "date": "2026-10-09",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-09",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-6/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "To all of the Mahjong enthusiasts out there…. Are you a passionate player of American Mahjong?Are you not a beginner, nor an expert, but somewhere in between?The Morrill Memorial Library is excited to host a weekly Mahjong club designed for",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-09-sensory-friendly-art-classes-for-adults-7621a90",
+    "title": "Sensory-friendly Art Classes for Adults",
+    "start": {
+      "date": "2026-10-09",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-09",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-124/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to partner with Norwood-based Lifeworks Inc to bring a series of art classes called Sensory-friendly Art Classes for Adults to the library. The classes will be held weekly on Fridays from 10:30 am to 11:4",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-09-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -7725,6 +7203,38 @@
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-10-puzzle-race-b33b394",
+    "title": "Puzzle Race!",
+    "start": {
+      "date": "2026-10-10",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "sports",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/puzzle-race-24/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Love doing puzzles? Want to test your speed against others? Come join us for a friendly puzzle face-off against other teams on Saturday October 10, 2026 from 2:30pm - 4pm in the Simoni Room. How does the race work?Up to 8 teams will compete",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
     ]
   },
   {
@@ -8267,6 +7777,69 @@
       "norwood-arts",
       "norwood-community",
       "pma-fine-arts"
+    ]
+  },
+  {
+    "id": "2026-10-11-4th-annual-halloween-costume-swap-0dfbee3",
+    "title": "4th Annual Halloween Costume Swap",
+    "start": {
+      "date": "2026-10-11",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-5/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-11-we-re-going-on-a-pumpkin-hunt-storywalk-ecdd027",
+    "title": "We're Going on a Pumpkin Hunt StoryWalk",
+    "start": {
+      "date": "2026-10-11",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/were-going-on-a-pumpkin-hunt-storywalk-5/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for a festive fall adventure at the South Norwood StoryWalk! Throughout the month of October, enjoy the story We're Going on a Pumpkin Hunt by Goldie Hawk as you walk along the trail. As you read each page, keep your eyes ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
     ]
   },
   {
@@ -8888,6 +8461,102 @@
     "discovered_by": "town_revize_master_calendar",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-13-navigating-your-child-s-anxiety-understanding-2b52e4a",
+    "title": "Navigating Your Child's Anxiety: Understanding Anxiety [Virtual]",
+    "start": {
+      "date": "2026-10-13",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parent-lunch-n-learn-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Parents of All Aged ChildrenRegistration Required for Zoom LinkJoin parent coach and licensed social worker Robyn Isman for a three-part virtual workshop series exploring childhood anxiety and how parents can support their children. Learn p",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-13-strategies-to-help-enhance-your-job-search-d7644b5",
+    "title": "Strategies to Help Enhance Your Job Search",
+    "start": {
+      "date": "2026-10-13",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/strategies-to-help-enhance-your-job-search-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Representatives from AARP will offer a program, Strategies to Help Enhance Your Job Search, at the Morrill Memorial Library on Tuesday, October 13 from 12:00-2:00pm. Discover how to network effectively, hone your interviewing skills and sea",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-13-tuesday-pvc-play-and-learn-f2d9ece",
+    "title": "Tuesday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-13",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-21/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -10093,6 +9762,104 @@
     ]
   },
   {
+    "id": "2026-10-14-baby-bop-story-time-9817095",
+    "title": "Baby Bop Story Time",
+    "start": {
+      "date": "2026-10-14",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-61/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-10-14-music-with-sarah-at-poirier-village-center-8fb8dad",
+    "title": "Music with Sarah at Poirier Village Center",
+    "start": {
+      "date": "2026-10-14",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "school_theatre",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/music-with-sarah-44/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "We’re bringing Music with Sarah to the Poirier Village Center, and weather permitting, we’re taking the party outside! Designed for young children and their caregivers, this interactive program is filled with songs, instruments, movement, a",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-14-paint-night-for-kids-4a44cf6",
+    "title": "Paint Night for Kids",
+    "start": {
+      "date": "2026-10-14",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/paint-nite-for-kids-4/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Ms. Nicole for a fun paint night! Follow along as we create this ghostly jack-o-lantern painting!We will be using acrylic paints, so please wear appropriate clothing (it stains!)Ages 6 - 12",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-14-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -11126,6 +10893,197 @@
     ]
   },
   {
+    "id": "2026-10-15-board-game-night-18-0df2982",
+    "title": "Board Game Night (18+)",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/board-game-night-18-21/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Note, tonight's meeting will take place in the Trustees' Room. Join us for Board Games and fun! If you've been looking for a casual group of fellow board gamers, the Morrill Memorial Library is your spot. This Board Game Night for adults wi",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-15-communication-without-limits-6d5afbc",
+    "title": "Communication Without Limits",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/communication-without-limits-34/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to partner with Lifeworks, Inc to launch a unique program for neurodiverse (ND) adults. &nbsp; We will be hosting a monthly ‘Communication Without Limits’ conversation circle for ND adults. &nbsp;Our Octo",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-15-thursday-pvc-play-and-learn-65dadbb",
+    "title": "Thursday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-21/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-15-wacky-wiggles-and-giggles-ba78919",
+    "title": "Wacky Wiggles and Giggles",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-giggles-64/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Babies, Toddlers and PreschoolersNo Registration requiredJoin us for this drop-in storytime for kids of all ages! We will read short stories, sing songs and move around a lot! This story time is geared toward toddlers but all ages are welco",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-15-wildlife-out-your-window-w-ecologist-brad-tim-00ce9e8",
+    "title": "Wildlife Out Your Window w/ Ecologist Brad Timm",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wildlife-out-your-window-w-ecologist-brad-timm/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to host ecologist Brad Timm for \"Wildlife Out Your Window\" on Thursday, October 15 starting at 6:30pm in the Simoni Room. What if the most fascinating wildlife in New England isn't far away in the wildern",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-15-america-is-wild-an-interactive-wildlife-adven-063bbbe",
+    "title": "“America is Wild!”: An Interactive Wildlife Adventure for Kids",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/america-is-wild-an-interactive-wildlife-adventure-for-kids/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Ages 5-12Registration requiredCalling all wildlife explorers! Join wildlife ecologist and nature author Brad Timm for an exciting, hands-on adventure through the amazing animals and plants of the United States. Inspired by his book America ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-15-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -11854,6 +11812,69 @@
     "calendar_ids": [
       "norwood-sports",
       "skating-club-boston-events"
+    ]
+  },
+  {
+    "id": "2026-10-16-beyond-beginner-mah-jongg-dbd1c95",
+    "title": "Beyond Beginner Mah Jongg",
+    "start": {
+      "date": "2026-10-16",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-16",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-7/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "To all of the Mahjong enthusiasts out there…. Are you a passionate player of American Mahjong?Are you not a beginner, nor an expert, but somewhere in between?The Morrill Memorial Library is excited to host a weekly Mahjong club designed for",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-16-sensory-friendly-art-classes-for-adults-802eb88",
+    "title": "Sensory-friendly Art Classes for Adults",
+    "start": {
+      "date": "2026-10-16",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-16",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-125/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to partner with Norwood-based Lifeworks Inc to bring a series of art classes called Sensory-friendly Art Classes for Adults to the library. The classes will be held weekly on Fridays from 10:30 am to 11:4",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -12934,6 +12955,101 @@
     ]
   },
   {
+    "id": "2026-10-18-4th-annual-halloween-costume-swap-8e9c046",
+    "title": "4th Annual Halloween Costume Swap",
+    "start": {
+      "date": "2026-10-18",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-6/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-18-fall-frolic-in-the-city-grab-and-go-d213d58",
+    "title": "Fall Frolic in the City Grab and Go",
+    "start": {
+      "date": "2026-10-18",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fall-frolic-in-the-city-grab-and-go/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Get ready for a fall adventure with our Grab &amp; Go featuring Fall Frolic in the City by Cathy Goldberg Fishman! In this colorful celebration of autumn, children explore the sights, sounds, and seasonal fun of fall in the city. Families w",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-18-we-re-going-on-a-pumpkin-hunt-storywalk-9a3456e",
+    "title": "We're Going on a Pumpkin Hunt StoryWalk",
+    "start": {
+      "date": "2026-10-18",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/were-going-on-a-pumpkin-hunt-storywalk-6/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for a festive fall adventure at the South Norwood StoryWalk! Throughout the month of October, enjoy the story We're Going on a Pumpkin Hunt by Goldie Hawk as you walk along the trail. As you read each page, keep your eyes ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "2026-10-18-3rd-fbff-class-0bc763c",
     "title": "3rd FBFF Class",
     "start": {
@@ -13291,6 +13407,133 @@
       "norwood-community",
       "norwood-family",
       "pma-fine-arts"
+    ]
+  },
+  {
+    "id": "2026-10-19-parachute-playtime-96134ca",
+    "title": "Parachute Playtime",
+    "start": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-22/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Parachute play for toddlers",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-19-poirier-village-center-open-play-6d90df7",
+    "title": "Poirier Village Center Open Play",
+    "start": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-9/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play, explore, and connect. This is an unstructured play opportunity where families",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-19-reverse-coloring-for-adults-relax-and-create-00049c1",
+    "title": "Reverse Coloring for Adults: Relax and Create",
+    "start": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/reverse-coloring-for-adults-relax-and-create-12/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to bring to you a relaxing evening of adult coloring, but with a twist. &nbsp;Please join us for Reverse Coloring for Adults: Relax &amp; Create on Monday October 19, 2026 at 6:30PM in the Simoni Room. Pr",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-19-virtual-a-book-birthday-with-horror-writer-ro-16c33ca",
+    "title": "[VIRTUAL] A Book Birthday with Horror Writer Robert Ottone in conversation with Lauren Bolger",
+    "start": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-a-book-birthday-with-horror-writer-robert-ottone-in-conversation-with-lauren-bolger/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is partnering with Ashland Public Library to host a virtual author talk titled A Book Birthday with Horror Writer Robert Ottone in conversation with Lauren Bolger on October 19, 2026 on Zoom. To all the horror genre",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -14114,6 +14357,103 @@
     "discovered_by": "civic_meeting_monitor",
     "calendar_ids": [
       "town-meetings"
+    ]
+  },
+  {
+    "id": "2026-10-20-anti-racism-book-club-i-know-why-the-caged-bi-e9c1981",
+    "title": "Anti-Racism Book Club: \"I Know Why the Caged Bird Sings\" by Maya Angelou",
+    "start": {
+      "date": "2026-10-20",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/anti-racism-book-club-i-know-why-the-caged-bird-sings-by-maya-angelou/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join the First Congregational Church in partnership with the Morrill Memorial Library for the autumn session of our Anti-Racism Book Club on Tuesday, October 20 starting at 7:00pm in the Simoni Room. For this session, we are discussing I Kn",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-20-navigating-your-child-s-anxiety-understanding-3870920",
+    "title": "Navigating Your Child's Anxiety: Understanding Anxiety [Virtual]",
+    "start": {
+      "date": "2026-10-20",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parent-lunch-n-learn-3/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Parents of All Aged ChildrenRegistration Required for Zoom LinkJoin parent coach and licensed social worker Robyn Isman for a three-part virtual workshop series exploring childhood anxiety and how parents can support their children. Learn p",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-20-tuesday-pvc-play-and-learn-cd795bd",
+    "title": "Tuesday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-20",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-22/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -14978,6 +15318,163 @@
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-21-baby-bop-story-time-05488c4",
+    "title": "Baby Bop Story Time",
+    "start": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-62/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-10-21-community-connections-the-library-1b2ae8a",
+    "title": "Community Connections @ the Library",
+    "start": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/community-connections-the-library-11/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us on Wednesday, October 21 from 12:00-2:00pm for Community Connections @ the Library, a monthly drop-in gathering hosted by Riverside Community Care on the third Wednesday of each month in the Morrill Memorial Library's Simoni Room. E",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-21-teen-test-kitchen-spooky-snacks-cc8c1d4",
+    "title": "Teen Test Kitchen: Spooky Snacks",
+    "start": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-test-kitchen-spooky-snacks/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Teen ProgramGrades 7-12Simoni RoomLearn how to make some spooky snacks for Halloween! Teens will be provided all the ingredients and tools to make: chocolate pretzel spiderwebs, Halloween mini-pizzas, and graveyard dirt cups. &nbsp;PLEASE N",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-21-turn-the-page-book-group-the-north-woods-3c8241e",
+    "title": "Turn the Page Book Group-The North Woods",
+    "start": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/turn-the-page-book-group-the-north-woods/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do they kn",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-21-virtual-turn-the-page-book-group-the-north-wo-7939adb",
+    "title": "[Virtual] Turn the Page Book Group-The North Woods",
+    "start": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-turn-the-page-book-group-40/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Connect with Patty Bailey and fellow local readers for a friendly and informal virtual conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
       "norwood-community"
     ]
   },
@@ -15922,6 +16419,133 @@
     ]
   },
   {
+    "id": "2026-10-22-literary-monsters-by-shadow-sound-and-spectac-da0c119",
+    "title": "Literary Monsters by Shadow, Sound, and Spectacle",
+    "start": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "live_music",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/literary-monsters/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join the Morrill Memorial Library for a rare evening concert and theatrical show unlike any you've ever seen. The creators of Shadow, Sound, and Spectacle will present Literary Monsters on Thursday, Oct 22 at 6:30pm in the library's Simoni ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-22-snack-lab-cfb36b8",
+    "title": "Snack Lab!",
+    "start": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/snack-lab-10/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Hands-on snacks, no heat required.",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-22-thursday-pvc-play-and-learn-e87fc62",
+    "title": "Thursday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-22/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-22-wacky-wiggles-and-giggles-462eb37",
+    "title": "Wacky Wiggles and Giggles",
+    "start": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-giggles-65/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Babies, Toddlers and PreschoolersNo Registration requiredJoin us for this drop-in storytime for kids of all ages! We will read short stories, sing songs and move around a lot! This story time is geared toward toddlers but all ages are welco",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-22-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -16580,6 +17204,69 @@
     ]
   },
   {
+    "id": "2026-10-23-beyond-beginner-mah-jongg-054047c",
+    "title": "Beyond Beginner Mah Jongg",
+    "start": {
+      "date": "2026-10-23",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-23",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-8/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "To all of the Mahjong enthusiasts out there…. Are you a passionate player of American Mahjong?Are you not a beginner, nor an expert, but somewhere in between?The Morrill Memorial Library is excited to host a weekly Mahjong club designed for",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-23-sensory-friendly-art-classes-for-adults-d0c20f2",
+    "title": "Sensory-friendly Art Classes for Adults",
+    "start": {
+      "date": "2026-10-23",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-23",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-126/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to partner with Norwood-based Lifeworks Inc to bring a series of art classes called Sensory-friendly Art Classes for Adults to the library. The classes will be held weekly on Fridays from 10:30 am to 11:4",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-23-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -17130,6 +17817,39 @@
     ]
   },
   {
+    "id": "2026-10-24-teen-morning-makerspace-fbbec98",
+    "title": "Teen Morning Makerspace",
+    "start": {
+      "date": "2026-10-24",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-morning-makerspace-11/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Teen ProgramSimoni RoomGrades 7-12Get crafty and creative at the library with our Morning Makerspace for teens! From 10am to 12pm, teens are invited to drop in and use our arts and crafts equipment to work on a current project, or to try so",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad2c3da06aee-2026-10-24",
     "title": "Dance and Play - Saturdays",
     "start": {
@@ -17586,6 +18306,102 @@
     ]
   },
   {
+    "id": "2026-10-25-4th-annual-halloween-costume-swap-dadc668",
+    "title": "4th Annual Halloween Costume Swap",
+    "start": {
+      "date": "2026-10-25",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-7/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-25-musical-sundays-series-sean-fullerton-and-the-9bc3824",
+    "title": "Musical Sundays Series: Sean Fullerton and the RIC 12",
+    "start": {
+      "date": "2026-10-25",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "school_theatre",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fall-musical-sundays-series-sean-fullerton-and-the-ric-12/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Calling all guitar enthusiasts and fans of '60s rock:&nbsp; our Fall Musical Sundays Series continues with soloist Sean Fullerton performing \"RIC 12: The Guitar of Jangle Rock\" on Sunday, October 25 at 3:00pm. Registration is required for a",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-25-we-re-going-on-a-pumpkin-hunt-storywalk-d2f24f0",
+    "title": "We're Going on a Pumpkin Hunt StoryWalk",
+    "start": {
+      "date": "2026-10-25",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/were-going-on-a-pumpkin-hunt-storywalk-7/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for a festive fall adventure at the South Norwood StoryWalk! Throughout the month of October, enjoy the story We're Going on a Pumpkin Hunt by Goldie Hawk as you walk along the trail. As you read each page, keep your eyes ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "2026-10-25-4th-fbff-class-93e9de9",
     "title": "4th FBFF Class",
     "start": {
@@ -17926,6 +18742,133 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-26-cozy-puzzle-night-736a078",
+    "title": "Cozy Puzzle Night",
+    "start": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/cozy-puzzle-night-16/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is hosting a Cozy Puzzle Night for adults on the last Monday of every month. October's Puzzle Night will take place on&nbsp;Monday, October 26 starting at 6:30pm in the Simoni Room. Hang out on an autumn night with ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-26-monday-movie-matinee-cd94391",
+    "title": "Monday Movie Matinee",
+    "start": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "sports",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/monday-movie-matinee-61/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to continue our Monday Movie Matinee film series. The series will run from September -December, 2026. The films will be shown on the 2nd and 4th Monday of the month. &nbsp;Showtime at 1PM. If you love mov",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-10-26-parachute-playtime-c98a11a",
+    "title": "Parachute Playtime",
+    "start": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/parachute-playtime-23/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Parachute play for toddlers",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-26-poirier-village-center-open-play-3349d49",
+    "title": "Poirier Village Center Open Play",
+    "start": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/poirier-village-center-open-play-10/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join Norwood CFCE for an open play session at the Poirier Village Center! Families with young children are invited to drop in and enjoy a welcoming space to play, explore, and connect. This is an unstructured play opportunity where families",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -18692,6 +19635,135 @@
       "rec-adult-fitness",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-27-teen-anime-club-6406ae4",
+    "title": "Teen Anime Club",
+    "start": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-club-27/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Simoni RoomGrades 7-12Hang out on a half-day at the library with our Teen Anime Club! We will watch some anime, have some crafts available, and snacks will also be provided. Registration is required.",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-27-titles-on-tap-book-group-the-devil-all-the-ti-967374b",
+    "title": "Titles on Tap Book Group - The Devil All the Time",
+    "start": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/titles-on-tap-book-group-75/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us for our next meeting of Titles on Tap. We'll meet at Napper Tandy's in Norwood, in the left-hand-side bar, on Tuesday 10/27 at 7:30 pm. Our October title will be The Devil All the Time by Donald Ray Pollock. Copies of the book are a",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-27-tuesday-pvc-play-and-learn-3912e6a",
+    "title": "Tuesday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tuesday-pvc-play-and-learn-23/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-27-tween-crafttok-19b3716",
+    "title": "Tween CraftTok",
+    "start": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/tween-tiktok-craft/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Ages 8 - 12Registration requiredWhat’s hot on TikTok? We’re turning those crafty trends into hands-on fun! Join us each month to try a new, TikTok-inspired craft that’s creative, fun, and perfect for ages 8–12. From colorful DIYs to the lat",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -19701,6 +20773,102 @@
     ]
   },
   {
+    "id": "2026-10-28-baby-bop-story-time-5f26a0f",
+    "title": "Baby Bop Story Time",
+    "start": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/baby-bop-story-time-63/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Newborns, crawlers, and pre-walkers&nbsp;Join Miss Dina on Wednesday mornings for stories, songs, and play! Infants and their caregivers are welcome to come for the story time, and stay for the playgroup where the babies get to play and int",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-10-28-sensory-friendly-lego-club-for-adults-8c5258e",
+    "title": "Sensory-friendly Lego Club for Adults",
+    "start": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-56/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to host a Sensory-friendly Lego Club for Adults. Our October club meeting will be held in-person at the library on Wednesday October 28, 2026 from 10:30 am to 11:30 am. Please join us in this creative adv",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-28-teen-craft-movie-night-coraline-1985ba6",
+    "title": "Teen Craft Movie Night: Coraline",
+    "start": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "live_music",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-craft-movie-night-coraline/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Teen ProgramSimoni RoomGrades 7-12Love movies? Love crafting? Come to the library to craft with friends and also watch a movie on the big screen! This month we will be watching \"Coraline\" (PG), and light refreshments will be provided. We wi",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-28-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -20499,6 +21667,169 @@
     ]
   },
   {
+    "id": "2026-10-29-halloween-craft-for-kids-afb4eda",
+    "title": "Halloween Craft for Kids",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/halloween-craft-for-kids/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us for a fun Halloween craft!&nbsp;For kids in Preschool - Grade 4.",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-29-sensory-friendly-lego-club-for-adults-3c6b42a",
+    "title": "Sensory-friendly Lego Club for Adults",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-lego-club-for-adults-59/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to partner with the L. E. A. D. program affiliated with Norwood High School to host a Sensory-friendly Lego Club for Adults. Our September club meeting will be held in-person at the library on Thursday Oc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-29-talking-craft-w-local-author-thomas-bulen-jac-cee2c30",
+    "title": "Talking Craft w/ Local Author Thomas Bulen Jacobs",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/talking-craft-w-local-author-thomas-bulen-jacobs-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to host local author Thomas Bulen Jacobs for \"Talking Craft\" on Thursday, October 29 starting at 7:00pm in the Simoni Room. Enjoy a conversation about the craft of writing with local author Thomas Bulen J",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-29-thursday-pvc-play-and-learn-ff1798b",
+    "title": "Thursday PVC Play and Learn",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/thursday-pvc-play-and-learn-23/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Join us this Fall for Poirier Village Center Play and Learn, a free CFCE caregiver-and-child playgroup held off-site at the Poirier Village Center, located at 82 Roosevelt Ave, for children ages 2–5. This program offers a wonderful introduc",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-29-wacky-wiggles-and-giggles-4d3c30d",
+    "title": "Wacky Wiggles and Giggles",
+    "start": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/wacky-wiggles-and-giggles-66/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Babies, Toddlers and PreschoolersNo Registration requiredJoin us for this drop-in storytime for kids of all ages! We will read short stories, sing songs and move around a lot! This story time is geared toward toddlers but all ages are welco",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-29-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -21264,6 +22595,101 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-30-beyond-beginner-mah-jongg-53b7d86",
+    "title": "Beyond Beginner Mah Jongg",
+    "start": {
+      "date": "2026-10-30",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/beyond-beginner-mahjong-9/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "To all of the Mahjong enthusiasts out there…. Are you a passionate player of American Mahjong?Are you not a beginner, nor an expert, but somewhere in between?The Morrill Memorial Library is excited to host a weekly Mahjong club designed for",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-30-sensory-friendly-art-classes-for-adults-4062fe0",
+    "title": "Sensory-friendly Art Classes for Adults",
+    "start": {
+      "date": "2026-10-30",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/sensory-friendly-art-classes-for-adults-127/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is excited to partner with Norwood-based Lifeworks Inc to bring a series of art classes called Sensory-friendly Art Classes for Adults to the library. The classes will be held weekly on Fridays from 10:30 am to 11:4",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-30-trick-or-treat-with-benchmark-senior-living-a526650",
+    "title": "Trick or Treat with Benchmark Senior Living",
+    "start": {
+      "date": "2026-10-30",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/trick-or-treat-with-benchmark-senior-living/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Celebrate Halloween with Norwood CFCE and our friends at Benchmark Senior Living on Clapboardtree! Families are invited to wear their favorite Halloween costumes and trick-or-treat throughout the building. Children will Halloween smiles alo",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -85807,6 +87233,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-13-var-lacrosse-norton-high-school-3d31139",
+    "title": "Var Lacrosse @ Norton High School",
+    "start": {
+      "date": "2027-04-13",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": "18:00"
+    },
+    "venue": "66 W Main Street, Norton MA 02766",
+    "address": "66 W Main Street, Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norton High School Subsite: Adams Field & Taylor Track",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
