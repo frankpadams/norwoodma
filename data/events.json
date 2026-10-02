@@ -157,36 +157,6 @@
     ]
   },
   {
-    "id": "2026-10-01-october-2026-8f999b2",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-01",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-01",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-01-thursday-pvc-play-and-learn-2c93fd2",
     "title": "Thursday PVC Play and Learn",
     "start": {
@@ -84069,6 +84039,40 @@
     ]
   },
   {
+    "id": "2027-03-30-boys-varsity-tennis-team-vs-westwood-high-sch-47511e2",
+    "title": "Boys Varsity Tennis - Team vs Westwood High School",
+    "start": {
+      "date": "2027-03-30",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-03-30",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-eec0ef73d982-2027-03-30",
     "title": "Theater for Kids Session 3",
     "start": {
@@ -84527,6 +84531,74 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Outdoor Track Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-03-31-varsity-softball-westwood-high-school-17a3538",
+    "title": "Varsity Softball @ Westwood High School",
+    "start": {
+      "date": "2027-03-31",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-31",
+      "time": "17:45"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Westwood High School Subsite: High School Softball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-03-31-varsity-baseball-westwood-high-school-51453de",
+    "title": "Varsity baseball @ Westwood High School",
+    "start": {
+      "date": "2027-03-31",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-31",
+      "time": "18:30"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Westwood High School Subsite: High School Baseball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -85769,6 +85841,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-06-girls-varsity-tennis-team-vs-medway-high-scho-abed053",
+    "title": "Girls Varsity Tennis - Team vs Medway High School",
+    "start": {
+      "date": "2027-04-06",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-06",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -87432,6 +87538,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-13-girls-varsity-tennis-team-vs-norton-high-scho-21e138e",
+    "title": "Girls Varsity Tennis - Team vs Norton High School",
+    "start": {
+      "date": "2027-04-13",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-13",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -90211,6 +90351,40 @@
     ]
   },
   {
+    "id": "2027-04-27-girls-varsity-tennis-team-vs-holliston-high-s-d425127",
+    "title": "Girls Varsity Tennis - Team vs Holliston High School",
+    "start": {
+      "date": "2027-04-27",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-27",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-04-27-varsity-south-central-girls-lacrosse-m-connol-eda6f4a",
     "title": "Varsity South Central Girls Lacrosse M Connolly vs Holliston High School",
     "start": {
@@ -90822,6 +90996,40 @@
     ]
   },
   {
+    "id": "2027-04-29-jv-north-girl-s-lacrosse-r-georges-vs-dover-s-771953f",
+    "title": "JV North Girl's Lacrosse R Georges vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "17:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-04-29-varsity-softball-vs-dover-sherborn-high-schoo-bc244a8",
     "title": "Varsity Softball vs Dover-Sherborn High School",
     "start": {
@@ -90961,40 +91169,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2027-04-29-jv-north-girl-s-lacrosse-r-georges-vs-dover-s-771953f",
-    "title": "JV North Girl's Lacrosse R Georges vs Dover-Sherborn High School",
-    "start": {
-      "date": "2027-04-29",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2027-04-29",
-      "time": "19:00"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Lacrosse",
-    "public_access": "public",
-    "series": "Norwood Girls JV Lacrosse",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -91682,6 +91856,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-05-04-girls-varsity-tennis-team-vs-ashland-high-sch-417ff97",
+    "title": "Girls Varsity Tennis - Team vs Ashland High School",
+    "start": {
+      "date": "2027-05-04",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-04",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -92432,6 +92640,40 @@
     ]
   },
   {
+    "id": "2027-05-06-varsity-softball-vs-ashland-high-school-aa89c69",
+    "title": "Varsity Softball vs Ashland High School",
+    "start": {
+      "date": "2027-05-06",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-06",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3c6841bc2f75-2027-05-06",
     "title": "Ballet 2 - Thursdays",
     "start": {
@@ -92577,6 +92819,40 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-05-06-varsity-baseball-vs-ashland-high-school-f31c050",
+    "title": "Varsity baseball vs Ashland High School",
+    "start": {
+      "date": "2027-05-06",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-05-06",
+      "time": "21:00"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -93008,6 +93284,40 @@
     ]
   },
   {
+    "id": "2027-05-10-varsity-softball-vs-westwood-high-school-781bdd0",
+    "title": "Varsity Softball vs Westwood High School",
+    "start": {
+      "date": "2027-05-10",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-10",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-5f99d7665326-2027-05-10",
     "title": "Hard Shoe 3 - Mondays",
     "start": {
@@ -93082,6 +93392,40 @@
     ]
   },
   {
+    "id": "2027-05-10-varsity-baseball-vs-weymouth-high-school-7860b4a",
+    "title": "Varsity baseball vs Weymouth High School",
+    "start": {
+      "date": "2027-05-10",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-05-10",
+      "time": "21:00"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-b18dca3fbbbb-2027-05-11",
     "title": "Jazz 2 - Tuesdays",
     "start": {
@@ -93153,6 +93497,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-05-11-boys-varsity-tennis-team-vs-medfield-senior-h-505786e",
+    "title": "Boys Varsity Tennis - Team vs Medfield Senior High School",
+    "start": {
+      "date": "2027-05-11",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-11",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -93972,6 +94350,40 @@
     ]
   },
   {
+    "id": "2027-05-17-varsity-baseball-vs-medfield-senior-high-scho-23c7df5",
+    "title": "Varsity baseball vs Medfield Senior High School",
+    "start": {
+      "date": "2027-05-17",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-05-17",
+      "time": "09:00"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-05-17-9th-baseball-medfield-senior-high-school-91a35c9",
     "title": "9th baseball @ Medfield Senior High School",
     "start": {
@@ -94062,6 +94474,74 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Medfield HS Subsite: Schilling Softball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-17-varsity-softball-vs-medfield-senior-high-scho-daf3a3a",
+    "title": "Varsity Softball vs Medfield Senior High School",
+    "start": {
+      "date": "2027-05-17",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-17",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-18-boys-varsity-tennis-team-vs-hopkinton-high-sc-b1d660f",
+    "title": "Boys Varsity Tennis - Team vs Hopkinton High School",
+    "start": {
+      "date": "2027-05-18",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-18",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -94266,6 +94746,108 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Holliston High School Subsite: HHS Softball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-19-varsity-softball-vs-holliston-high-school-e7896f5",
+    "title": "Varsity Softball vs Holliston High School",
+    "start": {
+      "date": "2027-05-19",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-19",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-19-varsity-baseball-vs-holliston-high-school-984a07b",
+    "title": "Varsity baseball vs Holliston High School",
+    "start": {
+      "date": "2027-05-19",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-05-19",
+      "time": "21:00"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-25-boys-varsity-tennis-team-vs-dedham-high-schoo-26b5313",
+    "title": "Boys Varsity Tennis - Team vs Dedham High School",
+    "start": {
+      "date": "2027-05-25",
+      "time": "15:45"
+    },
+    "end": {
+      "date": "2027-05-25",
+      "time": "17:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
