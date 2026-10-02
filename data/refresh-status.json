@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-02T08:51:42.753042-04:00",
+  "generated_at": "2026-10-02T15:26:58.494199-04:00",
   "offline": false,
-  "events_published": 2691,
+  "events_published": 2672,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2691,
-      "generated_at": "2026-10-02T08:51:42.077159-04:00"
+      "events": 2672,
+      "generated_at": "2026-10-02T15:26:58.175333-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 112,
-      "generated_at": "2026-10-02T08:51:42.086786-04:00"
+      "events": 125,
+      "generated_at": "2026-10-02T15:26:58.185265-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1005,
-      "generated_at": "2026-10-02T08:51:42.107003-04:00"
+      "events": 973,
+      "generated_at": "2026-10-02T15:26:58.205234-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 887,
-      "generated_at": "2026-10-02T08:51:42.124613-04:00"
+      "events": 889,
+      "generated_at": "2026-10-02T15:26:58.222066-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
-      "events": 5,
-      "generated_at": "2026-10-02T08:51:42.133834-04:00"
+      "events": 6,
+      "generated_at": "2026-10-02T15:26:58.230836-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 77,
-      "generated_at": "2026-10-02T08:51:42.144613-04:00"
+      "events": 78,
+      "generated_at": "2026-10-02T15:26:58.240987-04:00"
     }
   ],
-  "recreation_programs": 170,
-  "recreation_occurrences": 1681,
+  "recreation_programs": 164,
+  "recreation_occurrences": 1645,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -293,7 +293,7 @@
       "source_id": "mill-forge-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 18,
+      "found": 21,
       "note": ""
     },
     {
@@ -510,7 +510,7 @@
       "source_id": "nps-athletics-arbiter-boys-jv-baseball",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 5,
       "note": ""
     },
     {
@@ -622,7 +622,7 @@
       "source_id": "nps-athletics-arbiter-girls-freshman-basketball",
       "ok": true,
       "method": "ical",
-      "found": 1,
+      "found": 0,
       "note": ""
     },
     {
@@ -664,7 +664,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-softball",
       "ok": true,
       "method": "ical",
-      "found": 2,
+      "found": 3,
       "note": ""
     },
     {
@@ -762,7 +762,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 8,
+      "found": 9,
       "note": ""
     },
     {
@@ -930,7 +930,7 @@
       "source_id": "nps-pma",
       "ok": true,
       "method": "pma_calendar_hub",
-      "found": 24,
+      "found": 33,
       "note": ""
     },
     {
@@ -1147,8 +1147,8 @@
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 170,
-      "note": "1886 calendar occurrences generated"
+      "found": 164,
+      "note": "1850 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1161,8 +1161,8 @@
       "source_id": "town-health-events",
       "ok": true,
       "method": "html_page",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 1,
+      "note": ""
     },
     {
       "source_id": "town-senior-newsletter",
@@ -1273,15 +1273,15 @@
       "source_id": "norwood-trails-committee-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 1,
+      "note": ""
     },
     {
       "source_id": "norwood-sustainability-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 1,
+      "note": ""
     }
   ],
   "news_sources": [
@@ -1325,7 +1325,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 63,
+      "found": 64,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1333,7 +1333,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 63,
+      "found": 64,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1371,7 +1371,7 @@
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
       "ok": true,
-      "found": 15,
+      "found": 16,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -1417,12 +1417,12 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
-        "Town of Norwood": 10,
-        "Norwood Town News": 19,
         "Norwood Public Schools": 2,
+        "Town of Norwood": 11,
+        "Norwood Town News": 19,
         "newportdispatch.com": 1,
         "WCVB": 1,
-        "The Norwood Record": 42,
+        "The Norwood Record": 41,
         "The Norwood Record — Latest": 15,
         "Norwood Parents Music Association": 1,
         "Realtor.com": 2,

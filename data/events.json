@@ -489,6 +489,37 @@
     ]
   },
   {
+    "id": "2026-10-02-norwood-school-news-e7134f7",
+    "title": "Norwood School News",
+    "start": {
+      "date": "2026-10-02",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-02",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "nps-news",
+    "source_url": "https://drive.google.com/file/d/1gtrHy-9U3Vjm1f0hyjywQh0-pvvcmo1d/view?usp=sharing",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Public Schools — News",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Norwood School News October 2, 2026 Check out the news and events from around your Norwood Public Schools community for the week ending 10.02.2026, including, NHS activities, CMS poetry, Character Strong at the Prescott and Callahan, Learning about each other at the LMPA, and more! Read Article",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-03-2026-boston-open-nqs-5d36de7",
     "title": "2026 Boston Open NQS",
     "start": {
@@ -1219,6 +1250,42 @@
     "discovered_by": "scheduled_recurring_series",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-03-micca-central-auburn-e7bb3a3",
+    "title": "MICCA Central @ Auburn",
+    "start": {
+      "date": "2026-10-03",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "venue": "Auburn H.S., 99 Auburn St, Auburn, MA 01501",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Marching Band Week 2",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": "marching_band",
+    "report_time": "10:00 AM",
+    "source_updated_at": "2026-10-02 10:47:19",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -4311,6 +4378,37 @@
     ]
   },
   {
+    "id": "2026-10-07-open-hack-night-october-2026-5ccbc73",
+    "title": "Open Hack Night – October 2026",
+    "start": {
+      "date": "2026-10-07",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/open-hack-night-october-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Mill Forge Makerspace welcomes members, volunteers, friends, and the public to Open Hack Night! Open Hack is a semi-regular informal gathering of the Mill Forge community and is open to the public. Come meet makerspace members, show off a",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-07-boys-varsity-cross-country-ashland-high-schoo-c5ed0da",
     "title": "Boys Varsity cross country @ Ashland High School",
     "start": {
@@ -7037,6 +7135,43 @@
       "rec-all",
       "rec-youth",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-11-madrigals-perform-at-king-richards-faire-fb9543e",
+    "title": "Madrigals Perform at King Richards Faire",
+    "start": {
+      "date": "2026-10-11",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-11",
+      "time": null
+    },
+    "venue": "5 Pine Street Carver, MA 02330",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://www.kingrichardsfaire.net/",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 12:49:56",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-food-markets",
+      "pma-fine-arts"
     ]
   },
   {
@@ -12437,6 +12572,43 @@
     ]
   },
   {
+    "id": "2026-10-18-micca-southeast-home-show-2026-0e39e69",
+    "title": "MICCA Southeast Home Show 2026",
+    "start": {
+      "date": "2026-10-18",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/programs/micca-southeast-home-show-2026",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Norwood PMA hosts the MICCA Southeast Home Show on October 18, 2026. The digital program will be available on this event page.",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": "marching_band",
+    "report_time": null,
+    "source_updated_at": "2026-10-02 12:50:39",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-10-18-gay-beer-club-ba7181a",
     "title": "Gay Beer Club",
     "start": {
@@ -12464,43 +12636,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-18-micca-southeast-home-show-2026-0e39e69",
-    "title": "MICCA Southeast Home Show 2026",
-    "start": {
-      "date": "2026-10-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-18",
-      "time": null
-    },
-    "venue": "Norwood High School",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/programs/micca-southeast-home-show-2026",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts",
-    "publish_candidate": true,
-    "verification_status": "pma_public_website_api",
-    "notes": "Confirmed · Norwood PMA hosts the MICCA Southeast Home Show on October 18, 2026. The digital program will be available on this event page.",
-    "discovered_by": "pma_website_calendar_api",
-    "status": "confirmed",
-    "schedule_group": "marching_band",
-    "report_time": null,
-    "source_updated_at": "2026-10-01 11:26:15",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "published on PMA public Events page",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community",
-      "norwood-family",
-      "pma-fine-arts"
     ]
   },
   {
@@ -18344,8 +18479,8 @@
     ]
   },
   {
-    "id": "2026-10-26-girls-freshman-volleyball-vs-holliston-high-s-de33fae",
-    "title": "Girls Freshman Volleyball vs Holliston High School",
+    "id": "2026-10-26-girls-freshman-volleyball-holliston-high-scho-08a6600",
+    "title": "Girls Freshman Volleyball @ Holliston High School",
     "start": {
       "date": "2026-10-26",
       "time": "16:15"
@@ -18354,8 +18489,8 @@
       "date": "2026-10-26",
       "time": "17:30"
     },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -18365,7 +18500,7 @@
     "series": "Norwood Girls Freshman Volleyball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Freshman Team: Norwood High School Site: Norwood High School Subsite: Gym",
+    "notes": "Sport: Volleyball Level: Girls Freshman Team: Norwood High School Site: Holliston High School Subsite: Rowles Field House",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -18378,8 +18513,8 @@
     ]
   },
   {
-    "id": "2026-10-26-girls-jv-volleyball-vs-holliston-high-school-d2a3475",
-    "title": "Girls JV Volleyball vs Holliston High School",
+    "id": "2026-10-26-girls-jv-volleyball-holliston-high-school-799983e",
+    "title": "Girls JV Volleyball @ Holliston High School",
     "start": {
       "date": "2026-10-26",
       "time": "16:15"
@@ -18388,8 +18523,8 @@
       "date": "2026-10-26",
       "time": "17:30"
     },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -18399,7 +18534,7 @@
     "series": "Norwood Girls JV Volleyball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls JV Team: Norwood High School Site: Norwood High School Subsite: Gym",
+    "notes": "Sport: Volleyball Level: Girls JV Team: Norwood High School Site: Holliston High School Subsite: Rowles Field House",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -18517,8 +18652,8 @@
     ]
   },
   {
-    "id": "2026-10-26-girls-varsity-volleyball-vs-holliston-high-sc-0b73f2c",
-    "title": "Girls Varsity Volleyball vs Holliston High School",
+    "id": "2026-10-26-girls-varsity-volleyball-holliston-high-schoo-5869ef0",
+    "title": "Girls Varsity Volleyball @ Holliston High School",
     "start": {
       "date": "2026-10-26",
       "time": "17:30"
@@ -18527,8 +18662,8 @@
       "date": "2026-10-26",
       "time": "19:00"
     },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -18538,7 +18673,7 @@
     "series": "Norwood Girls Varsity Volleyball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Varsity Team: Norwood High School - Varsity Site: Norwood High School Subsite: Gym",
+    "notes": "Sport: Volleyball Level: Girls Varsity Team: Norwood High School - Varsity Site: Holliston High School Subsite: Rowles Field House",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -23598,44 +23733,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5c0c0ed730d0-2026-11-03",
-    "title": "Intro to Theater Session 1",
-    "start": {
-      "date": "2026-11-03",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2026-11-03",
-      "time": "16:15"
-    },
-    "venue": "11/03/2026 - 12/08/2026 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5c0c0ed730d0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2026-11-03",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -23669,44 +23766,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2cea99f50f9a-2026-11-03",
-    "title": "Theater for Kids Session 1",
-    "start": {
-      "date": "2026-11-03",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-11-03",
-      "time": "17:45"
-    },
-    "venue": "11/03/2026 - 12/08/2026 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2cea99f50f9a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -23932,6 +23991,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-03-latest-news-36a3bbd",
+    "title": "Latest News",
+    "start": {
+      "date": "2026-11-03",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-03",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-health-events",
+    "source_url": "https://www.norwoodma.gov/news_detail_T13_R1168.php",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Health Department — Public Clinics & Events",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "What's Happening Latest News October 02, 2026 11-3-2026 State Election Sample Ballot October 01, 2026 MEETING NOTICE: Hennessey Field Detention Basin Project September 23, 2026 STATE ELECTION - TUESDAY, NOVEMBER 3, 2026 September 23, 2026 PUBLIC MEETING NOTICE: Norwood Conservation Commission on October 8, 2026 July 29, 2026 Norwood Hospital Update July 07, 2026 ​Norwood Hospital Task Force Thanks House for Advancing Hospital Legislation, Urges the State Senate to Help 'Finish the Job' June 22, ",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -26413,44 +26502,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5c0c0ed730d0-2026-11-10",
-    "title": "Intro to Theater Session 1",
-    "start": {
-      "date": "2026-11-10",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2026-11-10",
-      "time": "16:15"
-    },
-    "venue": "11/03/2026 - 12/08/2026 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5c0c0ed730d0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2026-11-10",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -26484,44 +26535,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2cea99f50f9a-2026-11-10",
-    "title": "Theater for Kids Session 1",
-    "start": {
-      "date": "2026-11-10",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-11-10",
-      "time": "17:45"
-    },
-    "venue": "11/03/2026 - 12/08/2026 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2cea99f50f9a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -27083,6 +27096,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-11-open-hack-night-november-2026-660563c",
+    "title": "Open Hack Night – November 2026",
+    "start": {
+      "date": "2026-11-11",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/open-hack-night-november-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Mill Forge Makerspace welcomes members, volunteers, friends, and the public to Open Hack Night! Open Hack is a semi-regular informal gathering of the Mill Forge community and is open to the public. Come meet makerspace members, show off a",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -29536,44 +29580,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5c0c0ed730d0-2026-11-17",
-    "title": "Intro to Theater Session 1",
-    "start": {
-      "date": "2026-11-17",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2026-11-17",
-      "time": "16:15"
-    },
-    "venue": "11/03/2026 - 12/08/2026 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5c0c0ed730d0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2026-11-17",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -29607,44 +29613,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2cea99f50f9a-2026-11-17",
-    "title": "Theater for Kids Session 1",
-    "start": {
-      "date": "2026-11-17",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-11-17",
-      "time": "17:45"
-    },
-    "venue": "11/03/2026 - 12/08/2026 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2cea99f50f9a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -32505,44 +32473,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5c0c0ed730d0-2026-11-24",
-    "title": "Intro to Theater Session 1",
-    "start": {
-      "date": "2026-11-24",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2026-11-24",
-      "time": "16:15"
-    },
-    "venue": "11/03/2026 - 12/08/2026 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5c0c0ed730d0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2026-11-24",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -32576,44 +32506,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2cea99f50f9a-2026-11-24",
-    "title": "Theater for Kids Session 1",
-    "start": {
-      "date": "2026-11-24",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-11-24",
-      "time": "17:45"
-    },
-    "venue": "11/03/2026 - 12/08/2026 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2cea99f50f9a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -35150,44 +35042,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5c0c0ed730d0-2026-12-01",
-    "title": "Intro to Theater Session 1",
-    "start": {
-      "date": "2026-12-01",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2026-12-01",
-      "time": "16:15"
-    },
-    "venue": "11/03/2026 - 12/08/2026 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5c0c0ed730d0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2026-12-01",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -35221,44 +35075,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2cea99f50f9a-2026-12-01",
-    "title": "Theater for Kids Session 1",
-    "start": {
-      "date": "2026-12-01",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-12-01",
-      "time": "17:45"
-    },
-    "venue": "11/03/2026 - 12/08/2026 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2cea99f50f9a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -37053,6 +36869,42 @@
     ]
   },
   {
+    "id": "2026-12-04-madrigals-banquet-3735b65",
+    "title": "Madrigals Banquet",
+    "start": {
+      "date": "2026-12-04",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-04",
+      "time": null
+    },
+    "venue": "Knights of Columbus, Nichols Street",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:30:41",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-6b4bce9c9808-2026-12-05",
     "title": "New York City Shopping Trip",
     "start": {
@@ -38219,44 +38071,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5c0c0ed730d0-2026-12-08",
-    "title": "Intro to Theater Session 1",
-    "start": {
-      "date": "2026-12-08",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2026-12-08",
-      "time": "16:15"
-    },
-    "venue": "11/03/2026 - 12/08/2026 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5c0c0ed730d0",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2026-12-08",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -38326,44 +38140,6 @@
     "discovered_by": "myrec_program_weekday_expansion",
     "calendar_ids": [
       "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2cea99f50f9a-2026-12-08",
-    "title": "Theater for Kids Session 1",
-    "start": {
-      "date": "2026-12-08",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-12-08",
-      "time": "17:45"
-    },
-    "venue": "11/03/2026 - 12/08/2026 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-03",
-    "session_end": "2026-12-08",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2cea99f50f9a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -38981,6 +38757,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-09-open-hack-night-december-2026-1f42a0d",
+    "title": "Open Hack Night – December 2026",
+    "start": {
+      "date": "2026-12-09",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-12-09",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/open-hack-night-december-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Mill Forge Makerspace welcomes members, volunteers, friends, and the public to Open Hack Night! Open Hack is a semi-regular informal gathering of the Mill Forge community and is open to the public. Come meet makerspace members, show off a",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -40101,6 +39908,42 @@
     ]
   },
   {
+    "id": "2026-12-10-nhs-winter-concert-0dcca38",
+    "title": "NHS Winter Concert",
+    "start": {
+      "date": "2026-12-10",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-10",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · NHS Band, Orchestra, Madrigals, Concert Chorale",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:30:55",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-12-10-boys-varsity-track-field-indoor-vs-westwood-h-da61ba1",
     "title": "Boys Varsity Track & Field - Indoor vs Westwood High School",
     "start": {
@@ -41166,6 +41009,42 @@
     ]
   },
   {
+    "id": "2026-12-12-madrigals-perform-at-the-festival-of-lights-0252129",
+    "title": "Madrigals perform at the Festival of Lights",
+    "start": {
+      "date": "2026-12-12",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-12",
+      "time": null
+    },
+    "venue": "5 Pine Street Carver, MA",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Madrigals perform at the Festival of Lights",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:13:48",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-12-13-personalize-laser-engraved-wood-cutting-board-8dcda72",
     "title": "Personalize Laser Engraved Wood Cutting Boards – Craft Gifts from the Heart! (December 2026)",
     "start": {
@@ -41195,6 +41074,42 @@
       "norwood-arts",
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-12-13-madrigals-perform-at-the-day-house-6691709",
+    "title": "Madrigals Perform at the Day House",
+    "start": {
+      "date": "2026-12-13",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-13",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:08:21",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -43286,6 +43201,42 @@
     ]
   },
   {
+    "id": "2026-12-16-cms-5th-7th-grade-winter-concert-fe05b30",
+    "title": "CMS - 5th & 7th Grade Winter Concert",
+    "start": {
+      "date": "2026-12-16",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-16",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · 5th grade: 6:00pm 7th grade: 7:30pm",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:11:53",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2026-12-17-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -43901,6 +43852,42 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-12-17-cms-6th-8th-grade-winter-concert-38400a1",
+    "title": "CMS - 6th & 8th Grade Winter Concert",
+    "start": {
+      "date": "2026-12-17",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-17",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · 6th grade: 6:00pm 8th grade: 7:30pm",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:13:19",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -44770,6 +44757,43 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-12-19-madrigals-caroling-fundraiser-9165d1c",
+    "title": "Madrigals Caroling Fundraiser",
+    "start": {
+      "date": "2026-12-19",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:28:35",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-fundraisers",
+      "pma-fine-arts"
     ]
   },
   {
@@ -45972,6 +45996,43 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-22-madrigals-elementary-school-tour-a24a79a",
+    "title": "Madrigals Elementary School Tour",
+    "start": {
+      "date": "2026-12-22",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-22",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-02 13:28:49",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family",
+      "pma-fine-arts"
     ]
   },
   {
@@ -50934,44 +50995,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-277527c7ec66-2027-01-05",
-    "title": "Intro to Theater Session 2",
-    "start": {
-      "date": "2027-01-05",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-01-05",
-      "time": "16:15"
-    },
-    "venue": "01/05/2027 - 02/09/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-277527c7ec66",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2027-01-05-freshman-boys-basketball-dover-sherborn-high--b100235",
     "title": "Freshman Boys Basketball @ Dover-Sherborn High School",
     "start": {
@@ -51074,44 +51097,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eaea2dbbe47c-2027-01-05",
-    "title": "Theater for Kids Session 2",
-    "start": {
-      "date": "2027-01-05",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-01-05",
-      "time": "17:45"
-    },
-    "venue": "01/05/2027 - 02/09/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eaea2dbbe47c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
     ]
   },
   {
@@ -54455,44 +54440,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-277527c7ec66-2027-01-12",
-    "title": "Intro to Theater Session 2",
-    "start": {
-      "date": "2027-01-12",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-01-12",
-      "time": "16:15"
-    },
-    "venue": "01/05/2027 - 02/09/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-277527c7ec66",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2027-01-12-freshman-boys-basketball-vs-hopkinton-high-sc-8cc1f2a",
     "title": "Freshman Boys Basketball vs Hopkinton High School",
     "start": {
@@ -54560,44 +54507,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eaea2dbbe47c-2027-01-12",
-    "title": "Theater for Kids Session 2",
-    "start": {
-      "date": "2027-01-12",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-01-12",
-      "time": "17:45"
-    },
-    "venue": "01/05/2027 - 02/09/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eaea2dbbe47c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -57895,44 +57804,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-277527c7ec66-2027-01-19",
-    "title": "Intro to Theater Session 2",
-    "start": {
-      "date": "2027-01-19",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-01-19",
-      "time": "16:15"
-    },
-    "venue": "01/05/2027 - 02/09/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-277527c7ec66",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2027-01-19-freshman-boys-basketball-vs-medway-high-schoo-f0980aa",
     "title": "Freshman Boys Basketball vs Medway High School",
     "start": {
@@ -58035,44 +57906,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eaea2dbbe47c-2027-01-19",
-    "title": "Theater for Kids Session 2",
-    "start": {
-      "date": "2027-01-19",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-01-19",
-      "time": "17:45"
-    },
-    "venue": "01/05/2027 - 02/09/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eaea2dbbe47c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
     ]
   },
   {
@@ -61333,44 +61166,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-277527c7ec66-2027-01-26",
-    "title": "Intro to Theater Session 2",
-    "start": {
-      "date": "2027-01-26",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-01-26",
-      "time": "16:15"
-    },
-    "venue": "01/05/2027 - 02/09/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-277527c7ec66",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2027-01-26-freshman-boys-basketball-bellingham-high-scho-50c05e6",
     "title": "Freshman Boys Basketball @ Bellingham High School",
     "start": {
@@ -61473,44 +61268,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eaea2dbbe47c-2027-01-26",
-    "title": "Theater for Kids Session 2",
-    "start": {
-      "date": "2027-01-26",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-01-26",
-      "time": "17:45"
-    },
-    "venue": "01/05/2027 - 02/09/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eaea2dbbe47c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
     ]
   },
   {
@@ -64897,44 +64654,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-277527c7ec66-2027-02-02",
-    "title": "Intro to Theater Session 2",
-    "start": {
-      "date": "2027-02-02",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-02-02",
-      "time": "16:15"
-    },
-    "venue": "01/05/2027 - 02/09/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-277527c7ec66",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2027-02-02-freshman-boys-basketball-medfield-senior-high-8bd1ee8",
     "title": "Freshman Boys Basketball @ Medfield Senior High School",
     "start": {
@@ -65037,44 +64756,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eaea2dbbe47c-2027-02-02",
-    "title": "Theater for Kids Session 2",
-    "start": {
-      "date": "2027-02-02",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-02-02",
-      "time": "17:45"
-    },
-    "venue": "01/05/2027 - 02/09/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eaea2dbbe47c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
     ]
   },
   {
@@ -67832,44 +67513,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-277527c7ec66-2027-02-09",
-    "title": "Intro to Theater Session 2",
-    "start": {
-      "date": "2027-02-09",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-02-09",
-      "time": "16:15"
-    },
-    "venue": "01/05/2027 - 02/09/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-277527c7ec66",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2027-02-09-freshman-boys-basketball-hopkinton-high-schoo-17b8554",
     "title": "Freshman Boys Basketball @ Hopkinton High School",
     "start": {
@@ -67972,44 +67615,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eaea2dbbe47c-2027-02-09",
-    "title": "Theater for Kids Session 2",
-    "start": {
-      "date": "2027-02-09",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-02-09",
-      "time": "17:45"
-    },
-    "venue": "01/05/2027 - 02/09/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-05",
-    "session_end": "2027-02-09",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eaea2dbbe47c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
     ]
   },
   {
@@ -70002,40 +69607,6 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2027-02-12-girls-freshman-basketball-archbishop-williams-c62a87b",
-    "title": "Girls Freshman Basketball @ Archbishop Williams High School",
-    "start": {
-      "date": "2027-02-12",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2027-02-12",
-      "time": "16:45"
-    },
-    "venue": "80 Independence Avenue, Braintree Massachusetts 02184",
-    "address": "80 Independence Avenue, Braintree Massachusetts 02184",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-freshman-basketball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Freshman Basketball",
-    "public_access": "public",
-    "series": "Norwood Girls Freshman Basketball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Basketball Level: Girls Freshman Team: Norwood High School Site: Archbishop Williams Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -72918,44 +72489,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b36f840b9654-2027-02-23",
-    "title": "Intro to Theater Session 3",
-    "start": {
-      "date": "2027-02-23",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-02-23",
-      "time": "16:15"
-    },
-    "venue": "02/23/2027 - 03/30/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b36f840b9654",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2027-02-23",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -72989,44 +72522,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eec0ef73d982-2027-02-23",
-    "title": "Theater for Kids Session 3",
-    "start": {
-      "date": "2027-02-23",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-02-23",
-      "time": "17:45"
-    },
-    "venue": "02/23/2027 - 03/30/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eec0ef73d982",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -75132,44 +74627,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b36f840b9654-2027-03-02",
-    "title": "Intro to Theater Session 3",
-    "start": {
-      "date": "2027-03-02",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-03-02",
-      "time": "16:15"
-    },
-    "venue": "02/23/2027 - 03/30/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b36f840b9654",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2027-03-02",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -75203,44 +74660,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eec0ef73d982-2027-03-02",
-    "title": "Theater for Kids Session 3",
-    "start": {
-      "date": "2027-03-02",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-03-02",
-      "time": "17:45"
-    },
-    "venue": "02/23/2027 - 03/30/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eec0ef73d982",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -77241,44 +76660,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b36f840b9654-2027-03-09",
-    "title": "Intro to Theater Session 3",
-    "start": {
-      "date": "2027-03-09",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-03-09",
-      "time": "16:15"
-    },
-    "venue": "02/23/2027 - 03/30/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b36f840b9654",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2027-03-09",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -77312,44 +76693,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eec0ef73d982-2027-03-09",
-    "title": "Theater for Kids Session 3",
-    "start": {
-      "date": "2027-03-09",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-03-09",
-      "time": "17:45"
-    },
-    "venue": "02/23/2027 - 03/30/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eec0ef73d982",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -79258,44 +78601,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b36f840b9654-2027-03-16",
-    "title": "Intro to Theater Session 3",
-    "start": {
-      "date": "2027-03-16",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-03-16",
-      "time": "16:15"
-    },
-    "venue": "02/23/2027 - 03/30/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b36f840b9654",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2027-03-16",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -79329,44 +78634,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eec0ef73d982-2027-03-16",
-    "title": "Theater for Kids Session 3",
-    "start": {
-      "date": "2027-03-16",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-03-16",
-      "time": "17:45"
-    },
-    "venue": "02/23/2027 - 03/30/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eec0ef73d982",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -81009,44 +80276,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b36f840b9654-2027-03-23",
-    "title": "Intro to Theater Session 3",
-    "start": {
-      "date": "2027-03-23",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-03-23",
-      "time": "16:15"
-    },
-    "venue": "02/23/2027 - 03/30/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b36f840b9654",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2027-03-23",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -81080,44 +80309,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-eec0ef73d982-2027-03-23",
-    "title": "Theater for Kids Session 3",
-    "start": {
-      "date": "2027-03-23",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-03-23",
-      "time": "17:45"
-    },
-    "venue": "02/23/2027 - 03/30/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eec0ef73d982",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
       "recreation-calendar"
     ]
   },
@@ -83066,44 +82257,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b36f840b9654-2027-03-30",
-    "title": "Intro to Theater Session 3",
-    "start": {
-      "date": "2027-03-30",
-      "time": "15:15"
-    },
-    "end": {
-      "date": "2027-03-30",
-      "time": "16:15"
-    },
-    "venue": "02/23/2027 - 03/30/2027 03:15 PM - 04:15 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30913",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$116.00 Res, $136.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b36f840b9654",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed81ecafb4de-2027-03-30",
     "title": "Tap 2 - Tuesdays",
     "start": {
@@ -83175,41 +82328,37 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-eec0ef73d982-2027-03-30",
-    "title": "Theater for Kids Session 3",
+    "id": "2027-03-30-girls-varsity-tennis-team-westwood-high-schoo-0b79e9e",
+    "title": "Girls Varsity Tennis - Team @ Westwood High School",
     "start": {
       "date": "2027-03-30",
-      "time": "16:30"
+      "time": "16:00"
     },
     "end": {
       "date": "2027-03-30",
       "time": "17:45"
     },
-    "venue": "02/23/2027 - 03/30/2027 04:30 PM - 05:45 PM Norwood Civic Center - Willett Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30914",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$136.00 Res, $146.00 Non-Res",
-    "public_access": "registration_required",
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
     "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-23",
-    "session_end": "2027-03-30",
-    "days": "Tu",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-eec0ef73d982",
     "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Westwood High School Subsite: WHS Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -90027,6 +89176,74 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-29-jv-baseball-dover-sherborn-high-school-0cca0f7",
+    "title": "JV baseball @ Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:00"
+    },
+    "venue": "9 Junction Street, Dover MA 02030",
+    "address": "9 Junction Street, Dover MA 02030",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys JV Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys JV Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: JV Team: Norwood High School Site: Dover-Sherborn HS Subsite: Baseball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-junior-varsity-softball-dover-sherborn-high-s-3ff9b0a",
+    "title": "Junior Varsity Softball @ Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:00"
+    },
+    "venue": "9 Junction Street, Dover MA 02030",
+    "address": "9 Junction Street, Dover MA 02030",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Softball",
+    "public_access": "public",
+    "series": "Norwood Girls JV Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Dover-Sherborn HS Subsite: Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {

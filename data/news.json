@@ -1,12 +1,40 @@
 [
   {
+    "source": "Norwood Public Schools",
+    "title": "Norwood School News",
+    "date": "2026-10-02T12:30:00-04:00",
+    "url": "https://www.norwood.k12.ma.us/about/news/1787765/norwood-school-news",
+    "summary": "Check out the news and events from around your Norwood Public Schools community for the week ending 10.02.2026, including, NHS activities, CMS poetry, Character Strong at the Prescott and Callahan, Learning about each ot",
+    "localVerified": true,
+    "discovered_by": "scheduled_rss"
+  },
+  {
     "source": "Town of Norwood",
     "title": "MWRA CSO updated plan",
-    "date": "2026-10-01T00:00:00-04:00",
+    "date": "2026-10-02T00:00:00-04:00",
     "url": "https://www.norwoodma.gov/government/committees_boards/board_of_selectmen/mwra_cso_plan.php",
     "summary": "The Town of Norwood is encouraging residents to review and submit public comments regarding the Massachusetts Water Resources Authority’s (MWRA) proposed $1.3 Billion Draft Updated Combined Sewer Overflow (CSO) Control P",
     "localVerified": true,
     "discovered_by": "scheduled_visible_date"
+  },
+  {
+    "source": "Town of Norwood",
+    "title": "State Election Sample Ballot",
+    "date": "2026-10-02T00:00:00-04:00",
+    "url": "https://www.norwoodma.gov/news_detail_T13_R1168.php",
+    "summary": "",
+    "localVerified": true,
+    "discovered_by": "scheduled_link_date"
+  },
+  {
+    "source": "Town of Norwood",
+    "title": "See News Archive",
+    "date": "2026-10-02T00:00:00-04:00",
+    "url": "https://www.norwoodma.gov/newslist.php",
+    "summary": "",
+    "localVerified": true,
+    "discovered_by": "scheduled_link_date",
+    "image": "https://www.norwoodma.gov/_assets_/images/arrow-left.png"
   },
   {
     "source": "Town of Norwood",
@@ -16,16 +44,6 @@
     "summary": "The Town of Norwood has filed an Expanded Environmental Notification Form (EENF) with the Executive Office of Energy and Environmental Affairs (EEA) for the Norwood Hennessey Field Stormwater Detention Basin Project. This document was filed on September 15, 2026. Comments on this project are due by October 23, 2026. The Massachusetts Environmental Policy Act (MEPA) Office has scheduled the following meetings:",
     "localVerified": true,
     "discovered_by": "scheduled_link_date"
-  },
-  {
-    "source": "Town of Norwood",
-    "title": "See News Archive",
-    "date": "2026-10-01T00:00:00-04:00",
-    "url": "https://www.norwoodma.gov/newslist.php",
-    "summary": "",
-    "localVerified": true,
-    "discovered_by": "scheduled_link_date",
-    "image": "https://www.norwoodma.gov/_assets_/images/arrow-left.png"
   },
   {
     "source": "Norwood Town News",
@@ -115,15 +133,6 @@
     "localVerified": true,
     "discovered_by": "scheduled_link_date",
     "image": "https://cdn0.locable.com/uploads/resource/file/1322819/fill/600x400/beezer.jpg?timestamp=1790883632"
-  },
-  {
-    "source": "Norwood Public Schools",
-    "title": "Norwood School News",
-    "date": "2026-09-25T15:30:00-04:00",
-    "url": "https://www.norwood.k12.ma.us/about/news/1787765/norwood-school-news",
-    "summary": "Check out the news and events from around your Norwood Public Schools community for the week ending 09.25.2026, including, college planning at Norwood High School, Grade 5 science at the Coakley, back to school nights an",
-    "localVerified": true,
-    "discovered_by": "scheduled_rss"
   },
   {
     "source": "newportdispatch.com",
@@ -1171,15 +1180,5 @@
     "localVerified": true,
     "discovered_by": "scheduled_link_date",
     "image": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/article-images/uploads/1786740002544-clean_page1aphoto_hospital_downscale.jpg"
-  },
-  {
-    "source": "The Norwood Record",
-    "title": "Eurofins looking at big fines",
-    "date": "2026-08-13T00:00:00-04:00",
-    "url": "https://www.norwoodrecord.com/article/lenox-street-norwood-eurofins-fines-zoning-board-controversy",
-    "summary": "The property at 349 Lenox St. came under major scrutiny by the Norwood Zoning Board of Appeals (ZBA) last week due to some unique circumstances. Because of what has happened, the owner, Lenox Holdings LLC, which is managed by Hogan Park, is facing tens of thousands of dollars in fines.",
-    "localVerified": true,
-    "discovered_by": "scheduled_link_date",
-    "image": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/article-images/uploads/1786740226728-clean_page1bphoto_zba_downscale.jpg"
   }
 ]
