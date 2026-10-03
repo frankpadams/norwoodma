@@ -21,6 +21,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 TZ=ZoneInfo('America/New_York')
 UA='Norwood.ma community information bot/0.13.2 (+https://www.norwood.ma)'
+FAMILY_CALENDAR_CACHE={}
 
 try:
     import requests
@@ -246,11 +247,15 @@ def category_from(text):
 
 def request(url, *, timeout=18):
     if not requests: raise RuntimeError('network dependencies unavailable')
+    shared_family=urlparse(url).hostname=='bostonparentspaper.com'
+    if shared_family and url in FAMILY_CALENDAR_CACHE: return FAMILY_CALENDAR_CACHE[url]
     kwargs={'headers':{'User-Agent':UA,'Accept':'text/html,application/json,application/rss+xml,application/xml;q=0.9,*/*;q=0.8'},'timeout':timeout}
     # Scoped compatibility exception for the NPS SchoolNow host only.
     if urlparse(url).hostname=='www.norwood.k12.ma.us': kwargs['verify']=False
     r=requests.get(url,**kwargs)
-    r.raise_for_status(); return r
+    r.raise_for_status()
+    if shared_family: FAMILY_CALENDAR_CACHE[url]=r
+    return r
 def walk_jsonld(obj):
     if isinstance(obj,list):
         for x in obj: yield from walk_jsonld(x)
@@ -278,6 +283,8 @@ def normalize_jsonld_event(obj, source):
     if not title or not start: return None
     end=parse_dt(obj.get('endDate'))
     venue,address=location_text(obj.get('location'))
+    if source.get('id') in {'eventbrite-norwood-discovery','boston-parents-paper-norwood'}:
+        if not re.search(r'\bNorwood\b',address,re.I) or not re.search(r'\b(?:MA|Massachusetts|02062)\b',address,re.I): return None
     desc=clean_text(obj.get('description'))
     geo=f"{title} {desc} {venue} {address}"
     if source.get('filters',{}).get('require_norwood_relevance') and not local_enough(geo,source): return None
@@ -321,7 +328,7 @@ def extract_html_event_cards(html, source):
     return out
 
 def extract_jsonld_events(html, source):
-    if not BeautifulSoup: return []
+    if not BeautifulSoup: return [], []
     soup=BeautifulSoup(html,'html.parser'); out=[]
     for tag in soup.find_all('script',attrs={'type':'application/ld+json'}):
         try: payload=json.loads(tag.string or tag.get_text() or '{}')
@@ -568,7 +575,7 @@ def current_events(events):
     today=now_local().date()
     out=[]
     for e in events:
-        if not e.get('publish_candidate',True): continue
+        if not e.get('publish_candidate',True) and not e.get('calendar_only'): continue
         sd=e.get('start',{}).get('date'); ed=e.get('end',{}).get('date') or sd
         try:
             startd=date.fromisoformat(sd)
@@ -881,8 +888,8 @@ def _events_from_newsletter_pdf(content, source, source_url):
     month_re=r'(January|February|March|April|May|June|July|August|September|October|November|December)'
     # Require a spelled-out month + day. Bare calendar-grid numbers are intentionally
     # ignored because they cannot safely be associated with a program.
-    date_re=re.compile(r'\\b'+month_re+r'\\s+(\\d{1,2})(?:st|nd|rd|th)?(?:,\\s*(20\\d{2}))?\\b',re.I)
-    time_re=re.compile(r'\\b(\\d{1,2})(?::(\\d{2}))?\\s*(a\\.?m\\.?|p\\.?m\\.?)\\b',re.I)
+    date_re=re.compile(r'\b'+month_re+r'\s+(\d{1,2})(?:st|nd|rd|th)?(?:,\s*(20\d{2}))?\b',re.I)
+    time_re=re.compile(r'\b(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)\b',re.I)
     for page in pages:
         lines=[clean_text(x) for x in page.splitlines() if clean_text(x)]
         for idx,line in enumerate(lines):
@@ -894,17 +901,30 @@ def _events_from_newsletter_pdf(content, source, source_url):
             if d < now-timedelta(days=7) or d > now+timedelta(days=150): continue
             context=' '.join(lines[max(0,idx-1):min(len(lines),idx+2)])
             # A usable event needs descriptive text beyond the date itself.
-            title=date_re.sub('',line).strip(' -–—:|')
+            title=line[:m.start()].strip(' -–—:|')
+            title=re.sub(r'\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?$', '',title,flags=re.I).strip(' -–—:|')
             if len(title)<4 and idx>0: title=lines[idx-1].strip(' -–—:|')
             if len(title)<4 or title.lower().startswith(('page ','september 2026','october 2026')): continue
-            tm=time_re.search(context); time_value=None
+            # Eligibility/enrollment windows and newsletter prose are not events.
+            if not re.search(r'\b(dance|clinic|chat|workshop|concert|class|trip|party|cafe|fundraiser|sale|lecture|presentation)\b',title,re.I): continue
+            # An offsite fundraiser/trip needs a verified venue; do not silently
+            # assign it to the Senior Center because it appeared in its newsletter.
+            if re.search(r'\bat\s+(?!the senior center|senior center)',title,re.I): continue
+            time_context=' '.join(lines[idx:min(len(lines),idx+4)])
+            tm=time_re.search(time_context); time_value=None; end_time=None
             if tm:
                 h=int(tm.group(1)); minute=int(tm.group(2) or 0); ap=tm.group(3).lower().replace('.','')
                 if ap=='pm' and h<12:h+=12
                 if ap=='am' and h==12:h=0
                 time_value=f'{h:02d}:{minute:02d}'
+            rng=re.search(r'\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)?\s*(?:[-–]|to)\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b',time_context,re.I)
+            if rng:
+                h1,h2=int(rng[1]),int(rng[4]); ap2=rng[6].lower()
+                ap1=(rng[3] or ('am' if ap2=='pm' and h1>h2 and h1<12 else ap2)).lower()
+                def clock(h,minute,ap): return f"{h%12+(12 if ap=='pm' else 0):02d}:{int(minute or 0):02d}"
+                time_value=clock(h1,rng[2],ap1); end_time=clock(h2,rng[5],ap2)
             ds=d.isoformat()
-            out.append({'id':event_id(title,ds,'Norwood Senior Center'),'title':title,'start':{'date':ds,'time':time_value},'end':{'date':ds,'time':None},'venue':'Norwood Senior Center','address':None,'category':'community','source_id':source['id'],'source_url':source_url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'official_newsletter_pdf','notes':'Explicitly dated item extracted from the official Senior Center newsletter. Confirm registration requirements with the Senior Center.','discovered_by':'newsletter_pdf'})
+            out.append({'id':event_id(title,ds,'Norwood Senior Center'),'title':title,'start':{'date':ds,'time':time_value},'end':{'date':ds,'time':end_time},'venue':'Norwood Senior Center','address':'275 Prospect Street, Norwood, MA 02062','category':'community','source_id':source['id'],'source_url':source_url,'cost':None,'public_access':'public','series':source.get('name'),'publish_candidate':True,'verification_status':'official_newsletter_pdf','notes':time_context[:500]+' Confirm registration requirements with the Senior Center.','discovered_by':'newsletter_pdf'})
     return dedupe_events(out)
 
 def events_from_newsletter_index(source):
@@ -964,6 +984,55 @@ def events_from_newsletter_index(source):
     try: (DATA/'senior-newsletter-discovery.json').write_text(json.dumps(debug,indent=2)+'\\n')
     except Exception: pass
     return dedupe_events(out)
+
+def events_from_local_town_pages(source):
+    """Read Locable cards and verify each venue on its linked detail page."""
+    url=source.get('ingestion',{}).get('calendar_url') or source['url']
+    soup=BeautifulSoup(request(url).text,'html.parser'); out=[]; details={}
+    for link in soup.find_all('a',href=re.compile(r'^/events/\d+/')):
+        heading=link.select_one('p.h5')
+        if not heading: continue
+        text=clean_text(link.get_text(' ')); d=_date_from_text(text)
+        if not d: continue
+        event_url=urljoin(url,link['href'])
+        if event_url not in details:
+            html=request(event_url).text
+            details[event_url]=extract_jsonld_events(html,dict(source,url=event_url))[0]
+            if not details[event_url]:
+                page=BeautifulSoup(html,'html.parser'); location=page.select_one('[itemprop="location"]')
+                address=location.select_one('[itemprop="address"]') if location else None
+                name=page.select_one('h1 [itemprop="name"]'); description=page.select_one('[itemprop="description"]')
+                if address and name:
+                    addr=clean_text(address.get_text(' ')); venue=location.select_one('[itemprop="name"]')
+                    details[event_url]=[{'title':clean_text(name.text),'address':addr,'venue':clean_text(venue.text) if venue else None,'notes':clean_text(description.text) if description else None,'source_id':source['id'],'source_url':event_url,'start':{},'end':{},'public_access':'public','publish_candidate':True,'category':category_from(clean_text(name.text))}]
+        # A listing's publisher/ZIP is not evidence of the individual venue.
+        candidates=[e for e in details[event_url] if e.get('address') and re.search(r'\bNorwood\b',e['address'],re.I) and re.search(r'\b(?:MA|Massachusetts|02062)\b',e['address'],re.I)]
+        if not candidates: continue
+        e=dict(candidates[0]); ds=d.isoformat(); times=list(TIME_RE.finditer(text))
+        e['start']={'date':ds,'time':_time_from_text(times[0].group()) if times else None}
+        e['end']={'date':ds,'time':_time_from_text(times[1].group()) if len(times)>1 else None}
+        e['id']=event_id(e['title'],ds,e.get('venue'))
+        e['verification_status']='secondary_dated_listing'; out.append(e)
+    return dedupe_events(out)
+
+
+def events_from_toastmasters(source):
+    """Use dated club meeting cards, with the stated meeting time (not door time)."""
+    ing=source.get('ingestion',{}); url=source['url']
+    soup=BeautifulSoup(request(url).text,'html.parser'); text=clean_text(soup.get_text(' ')).lower()
+    if not all(term.lower() in text for term in ing.get('validation_terms',[])):
+        raise RuntimeError('Toastmasters page no longer confirms meeting time/guest access')
+    out=[]
+    for card in soup.select('.club-card'):
+        dated=card.select_one('[data-local-date-short]')
+        if not dated: continue
+        d=parse_dt(dated.get('data-local-date-short')); paragraphs=card.find_all('p')
+        venue=clean_text(paragraphs[-1].get_text(' ')).split('·')[-1].strip() if paragraphs else ''
+        if not d or not re.search(r'\bNorwood\b',venue,re.I): continue
+        ds=d.date().isoformat(); title='Norwood Toastmasters — Guests Welcome'
+        out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':ing['start_time']},'end':{'date':ds,'time':ing['end_time']},'venue':venue,'address':None,'source_id':source['id'],'source_url':url,'category':'community','public_access':'public','publish_candidate':True,'verification_status':'live_dated_club_schedule','notes':'Guests welcome. Doors open at 6:45 PM; meeting runs 7:00–8:30 PM. Check the club page for room changes.','discovered_by':'toastmasters_meeting_cards'})
+    return dedupe_events(out)
+
 
 def events_from_secondary_listing(source):
     """Extract only concrete dated occurrences from a configured secondary community listing."""
@@ -1074,7 +1143,7 @@ def _verified_recurrence_page_check(source):
         if newspaper and blocked:
             return 'recent_authoritative_newspaper_verification'
         raise
-    text=clean_text(html).lower()
+    text=clean_text(BeautifulSoup(html,'html.parser').get_text(' ') if BeautifulSoup else html).lower()
     # Require identifying language plus the configured weekday/time. This deliberately
     # fails closed: a redesigned/ambiguous page stops future generation instead of
     # silently extending stale dates.
@@ -1090,7 +1159,9 @@ def _verified_recurrence_page_check(source):
         h,m=map(int,t.split(':')); ap='am' if h<12 else 'pm'; hh=h%12 or 12
         return [f"{hh}:{m:02d} {ap}",f"{hh}:{m:02d}{ap}",f"{hh} {ap}",f"{hh}{ap}"] if m==0 else [f"{hh}:{m:02d} {ap}",f"{hh}:{m:02d}{ap}"]
     st=ing.get('start_time')
-    if st and not any(tok in text for tok in time_tokens(st)):
+    bare_range=ing.get('validation_time_range')
+    range_confirmed=bool(bare_range and bare_range.lower() in text)
+    if st and not range_confirmed and not any(tok in text for tok in time_tokens(st)):
         raise RuntimeError('authoritative page no longer confirms configured start time')
     # Explicit cancellation/hiatus language near a source is safer treated as stale.
     if re.search(r'\b(cancelled|canceled|suspended|on hiatus|no longer meeting|discontinued)\b',text,re.I):
@@ -1130,6 +1201,7 @@ def events_from_nys_practice_pdf(url, source, gender=None):
     reader=PdfReader(BytesIO(raw))
     text='\n'.join((p.extract_text() or '') for p in reader.pages)
     out=[]; today=now_local().date()
+    if not re.search(r'\bFALL\s+'+str(today.year)+r'\b',text,re.I): return []
     weekdays={'monday':0,'tuesday':1,'wednesday':2,'thursday':3,'friday':4,'saturday':5,'sunday':6}
     season_start=date(today.year,8,31); season_end=date(today.year,11,15)
     row_re=re.compile(r'^\s*(\d(?:\s*/\s*\d)?)\s+(.+?)\s+(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+(\d{1,2}:\d{2})\s*-\s*(?:(\d{1,2}:\d{2})|dusk)\s+(.+?)\s*$',re.I)
@@ -1137,13 +1209,20 @@ def events_from_nys_practice_pdf(url, source, gender=None):
         m=row_re.match(clean_text(line))
         if not m: continue
         grade=clean_text(m.group(1)).replace(' ',''); team=clean_text(m.group(2)); wd=weekdays[m.group(3).lower()]
-        start_time=m.group(4); end_time=m.group(5); field=clean_text(m.group(6))
+        # These Fall travel rows are weekday after-school practices (4–8 PM).
+        # Normalize their unlabeled afternoon hours before emitting ICS timestamps.
+        def afternoon(value):
+            if not value: return None
+            h,minute=map(int,value.split(':'))
+            return f'{h+12:02d}:{minute:02d}' if 4<=h<=8 else None
+        start_time=afternoon(m.group(4)); end_time=afternoon(m.group(5)); field=clean_text(m.group(6))
+        if not start_time: continue
         d=season_start
         while d.weekday()!=wd: d+=timedelta(days=1)
         while d<=season_end:
             if d>=today-timedelta(days=7):
                 label=('Boys ' if gender=='boys' else 'Girls ' if gender=='girls' else '')+('Grades '+grade if '/' in grade else 'Grade '+grade)
-                out.append({'id':event_id(f'{team} practice',d.isoformat(),field),'title':f'{team} practice','start':{'date':d.isoformat(),'time':start_time},'end':{'date':d.isoformat(),'time':end_time},'venue':field,'field':field,'address':None,'category':'youth_sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'public','series':'Norwood Youth Soccer','publish_candidate':False,'curated_default':False,'verification_status':'official_nys_practice_pdf','notes':'Recurring Fall 2026 practice from the official NYS practice schedule. Check field status for weather-related changes.','discovered_by':'nys_practice_pdf','team':team,'grade':label,'gender':gender,'program':'Travel','activity':'practice','field_status_url':'https://norwoodsoccer.com/fields'})
+                out.append({'id':event_id(f'{team} practice',d.isoformat(),field),'title':f'{team} practice','start':{'date':d.isoformat(),'time':start_time},'end':{'date':d.isoformat(),'time':end_time},'venue':field,'field':field,'address':None,'category':'youth_sports','source_id':source['id'],'source_url':url,'cost':None,'public_access':'team_only','series':'Norwood Youth Soccer','publish_candidate':False,'curated_default':False,'verification_status':'official_nys_practice_pdf','notes':'Recurring Fall 2026 practice from the official NYS practice schedule. Check field status for weather-related changes.','discovered_by':'nys_practice_pdf','team':team,'grade':label,'gender':gender,'program':'Travel','activity':'practice','field_status_url':'https://norwoodsoccer.com/fields'})
             d+=timedelta(days=7)
     return dedupe_events(out)
 
@@ -1204,6 +1283,7 @@ def events_from_nys_intramural_pdf(url, source):
 def events_from_nys_multi_schedule(source):
     """Ingest Norwood Youth Soccer's current team/schedule pages and linked public schedule documents."""
     ing=source.get('ingestion',{}); urls=[ing.get('schedule_url'),ing.get('team_directory_url'),ing.get('fallback_hub_url') or 'https://norwoodsoccer.com/']; out=[]; feeds=[]; page_errors=[]; pages_checked=0
+    seen_documents=set()
     for url in [u for u in dict.fromkeys(urls) if u]:
         try:
             html=request(url).text; pages_checked+=1
@@ -1217,6 +1297,8 @@ def events_from_nys_multi_schedule(source):
                 href=urljoin(url,a.get('href')); label=clean_text(a.get_text(' '))
                 low=(href+' '+label).lower()
                 if any(k in low for k in ['schedule','practice','game','calendar','.ics','.pdf']) and ('norwoodsoccer.com' in href or 'bays.org' in href):
+                    if href in seen_documents or len(seen_documents)>=24: continue
+                    seen_documents.add(href)
                     try:
                         if href.lower().split('?')[0].endswith('.ics'):
                             out.extend(events_from_ical(href,temp))
@@ -1230,17 +1312,18 @@ def events_from_nys_multi_schedule(source):
                             page=request(href).text; rows,_=extract_jsonld_events(page,temp); out.extend(rows)
                     except Exception:
                         pass
-    if pages_checked==0 and not out:
-        raise RuntimeError('all NYS discovery pages failed: '+' | '.join(page_errors[:3]))
     bays=ing.get('travel_league_url')
     if bays:
         try:
             temp=dict(source); temp['url']=bays
             out.extend(events_from_league_schedule(temp))
-        except Exception:
-            pass
+        except Exception as ex:
+            page_errors.append(f'{bays}: {str(ex)[:100]}')
+    if pages_checked==0 and not out:
+        raise RuntimeError('all NYS/BAYS discovery pages failed: '+' | '.join(page_errors[:3]))
     for e in out:
         e['source_id']=source['id']; e['category']='youth_sports'; e['publish_candidate']=False
+        e['calendar_only']=True
         e['curated_default']=False; e['discovered_by']=e.get('discovered_by') or 'nys_multi_schedule'
         e['field_status_url']=e.get('field_status_url') or 'https://norwoodsoccer.com/fields'
         if e.get('venue') and not e.get('field'): e['field']=e.get('venue')
@@ -1252,6 +1335,27 @@ def events_from_league_schedule(source):
     url=source.get('url'); html=request(url).text
     if not BeautifulSoup:return []
     soup=BeautifulSoup(html,'html.parser'); out=[]
+    # BAYS publishes compact cards with month/day, time, grade and team fields.
+    # Parse those fields directly rather than treating the whole card as a title.
+    for card in soup.select('details.as-schedule-card'):
+        meta=card.select_one('.as-schedule-card__meta'); heading=card.select_one('.as-schedule-card__title')
+        if not meta or not heading: continue
+        text=clean_text(meta.get_text(' '))
+        match=re.search(r'\b(\d{1,2})/(\d{1,2})\s+(\d{1,2}:\d{2}\s*[ap]m)\s*•\s*(Boys|Girls)\s+(\d+)',text,re.I)
+        if not match: continue
+        try: d=date(now_local().year,int(match[1]),int(match[2]))
+        except ValueError: continue
+        fields={}
+        for pair in card.select('.as-kv'):
+            label=pair.select_one('.as-kv__label'); value=pair.select_one('.as-kv__value')
+            if label and value: fields[clean_text(label.text)]=clean_text(value.text)
+        home=fields.get('Home Team',''); away=fields.get('Away Team','')
+        team=home if home.startswith('Norwood ') else away if away.startswith('Norwood ') else None
+        if not team: continue
+        title=clean_text(heading.text); ds=d.isoformat(); field=fields.get('Field')
+        tm=datetime.strptime(match[3].replace(' ','').upper(),'%I:%M%p').strftime('%H:%M')
+        out.append({'id':event_id(title,ds,fields.get('Game #')),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':field,'field':field,'grade':match[4].title()+' Grade '+match[5],'gender':match[4].lower(),'team':team,'home_away':'home' if team==home else 'away','category':'youth_sports','source_id':source['id'],'source_url':url,'public_access':'team_only','publish_candidate':False,'calendar_only':True,'discovered_by':'bays_schedule_card','verification_status':'auto_primary_source'})
+    if out: return dedupe_events(out)
     nodes=soup.find_all(['tr','li','article','div'])
     for node in nodes:
         text=clean_text(node.get_text(' '))
@@ -1387,22 +1491,24 @@ def events_from_visible_dated_page(url, source, category='community', series=Non
         d=_date_from_text(text)
         if not d or d < today-timedelta(days=7) or d > today+timedelta(days=370): continue
         # Avoid wrappers containing several different dates; child cards will be parsed separately.
-        dates=set(re.findall(r'\\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\s+\\d{1,2}\\b',text,re.I))
+        dates=set(re.findall(r'\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2}\b',text,re.I))
         if len(dates)>1: continue
         h=node.find(['h1','h2','h3','h4','h5','strong'])
         title=clean_text(h.get_text(' ')) if h else ''
         if not title:
             # Use text before the date when it is a compact event-card label.
-            dm=re.search(r'\\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)?[,]?\\s*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\\s+\\d{1,2}',text,re.I)
+            dm=re.search(r'\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)?[,]?\s*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\s+\d{1,2}',text,re.I)
             title=clean_text(text[:dm.start()].strip(' -–—:|')) if dm else ''
         if not title or len(title)<3 or len(title)>180: continue
         if title.lower() in {'events','calendar','upcoming events','event calendar'}: continue
+        if not source_allows_event(source,title,text): continue
+        if source.get('filters',{}).get('require_norwood_relevance') and not local_enough(text,source): continue
         tm=_time_from_text(text); ds=d.isoformat()
         link=node.find('a',href=True)
         source_url=urljoin(url,link['href']) if link else url
         venue=None
         # Keep location prose when a card labels it explicitly.
-        vm=re.search(r'(?:location|where|venue)\\s*[:\\-]\\s*([^|]{3,120})',text,re.I)
+        vm=re.search(r'(?:location|where|venue)\s*[:\-]\s*([^|]{3,120})',text,re.I)
         if vm: venue=clean_text(vm.group(1))
         out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':venue,'address':None,'category':category,'source_id':source['id'],'source_url':source_url,'cost':None,'public_access':'public','series':series or source.get('name'),'publish_candidate':True,'verification_status':'official_visible_event_page','notes':text[:500],'discovered_by':'visible_dated_page'})
     return dedupe_events(out)
@@ -2005,10 +2111,43 @@ def legacy_expanded_calendar_events():
     return out
 
 
+def calendar_source_health(source, row, previous, checked_at):
+    """Use one final ingestion outcome in both generated health and refresh status."""
+    policy=source.get('health_policy',{}); found=int(row.get('found') or 0)
+    ok=bool(row.get('ok')); note=str(row.get('note') or '')
+    limited=not ok and bool(re.search(r'\b(?:401|403|405)\b|forbidden|unauthorized',note,re.I))
+    outcome='events' if ok and found else 'empty' if ok else 'blocked' if limited else 'failed'
+    if 'requires discovery/manual adapter' in note or 'no direct feed_url configured' in note:
+        ok=False; outcome='unsupported'
+    stamp=parse_dt(checked_at)
+    seasons=source.get('seasonality',{}).get('seasons') or []
+    season={12:'winter',1:'winter',2:'winter',3:'spring',4:'spring',5:'spring',6:'summer',7:'summer',8:'summer',9:'fall',10:'fall',11:'fall'}[stamp.month]
+    offseason=bool(policy.get('offseason_empty_is_healthy') and seasons and season not in seasons)
+    if ok and not found and policy.get('empty_result_is_failure') and not offseason:
+        ok=False; outcome='parser_gap'; note=note or 'Expected calendar returned no events'
+    elif ok and not found and offseason:
+        outcome='offseason_empty'
+    failures=0 if ok else int(previous.get('consecutive_failures') or 0)+1
+    last_success=checked_at if ok and found else previous.get('last_successful_update')
+    stale=failures>=3; reason=f'{failures} consecutive refresh failures' if stale else None
+    max_age=policy.get('max_days_without_events')
+    if ok and not offseason and max_age and last_success:
+        if stamp-parse_dt(last_success)>timedelta(days=int(max_age)):
+            stale=True; reason=f'no events extracted in {max_age} days'
+    row.update(ok=ok,outcome=outcome,access_limited=limited,note=note or None)
+    return {'source_id':row['source_id'],'last_checked':checked_at,
+            'last_healthy_check':checked_at if ok else previous.get('last_healthy_check'),
+            'last_successful_update':last_success,'consecutive_failures':failures,
+            'last_found':found,'ok':ok,'outcome':outcome,'access_limited':limited,
+            'stale':stale,'stale_reason':reason,'note':note or None}
+
+
 def refresh_events(offline=False):
+    FAMILY_CALENDAR_CACHE.clear()
     seeds=read_json('events-seed.json',[])
     registry=read_json('source-registry.json',[])
     events=list(seeds)+events_from_vfw_meat_raffle(); status=[]
+    previous_events=read_json('events.json',[])
     previous_health={x.get('source_id'):x for x in read_json('calendar-source-health.json',[]) if isinstance(x,dict)}
     checked_at=now_local().isoformat()
     if not offline:
@@ -2032,7 +2171,8 @@ def refresh_events(offline=False):
                 elif method=='verified_recurring_schedule': got=events_from_verified_recurrence(src)
                 elif method=='nys_multi_schedule': got=events_from_nys_multi_schedule(src)
                 elif method=='league_schedule_table': got=events_from_league_schedule(src)
-                elif method=='local_town_pages_calendar': got=events_from_secondary_listing(src)
+                elif method=='local_town_pages_calendar': got=events_from_local_town_pages(src)
+                elif method=='toastmasters_meeting_cards': got=events_from_toastmasters(src)
                 elif method=='social_mirror': got=events_from_social_mirror(src)
                 elif method=='assabet_calendar': got=events_from_assabet(src)
                 elif method=='assabet_filtered_calendar': got=events_from_assabet(src)
@@ -2104,10 +2244,6 @@ def refresh_events(offline=False):
                     got=dedupe_events(got)
                     if not got:
                         note='configured pages checked; no dated events extracted'
-                        # Do not label a zero as healthy when an event-oriented source is expected
-                        # to carry public events. This makes silent parser regressions visible.
-                        if method in {'html_calendar','embedded_calendar','school_parent_org_composite','newsletter_calendar'} and src.get('health_policy',{}).get('empty_result_is_failure'):
-                            raise RuntimeError(note)
                 else: note=f'method {method} requires discovery/manual adapter'
                 got=[apply_public_access(e,src) for e in got]
                 # PMA's public website Events page is itself an explicit publication signal.
@@ -2129,8 +2265,6 @@ def refresh_events(offline=False):
                 status.append({'source_id':src['id'],'ok':True,'method':method,'found':len(got),'note':note})
             except Exception as ex:
                 status.append({'source_id':src['id'],'ok':False,'method':method,'found':0,'note':str(ex)[:180]})
-    events=current_events(dedupe_events(events+legacy_expanded_calendar_events()+([] if offline else town_master_calendar_events())))
-    write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     if not offline:
         health=[]
         by_id={x.get('id'):x for x in registry}
@@ -2138,36 +2272,7 @@ def refresh_events(offline=False):
             sid=row.get('source_id'); src=by_id.get(sid,{})
             if not src.get('health_policy',{}).get('track_last_checked'): continue
             prev=previous_health.get(sid,{})
-            ok=bool(row.get('ok')); found=int(row.get('found') or 0)
-            policy=src.get('health_policy',{})
-            access_limited=False
-            # A source can be live but intentionally reject automated clients (401/403).
-            # When the registry explicitly opts into this policy, report that condition
-            # separately instead of aging a valid source into a false "stale" failure.
-            if not ok and policy.get('blocked_fetch_is_failure') is False:
-                note_text=str(row.get('note') or '')
-                if re.search(r'\\b(?:401|403)\\b|forbidden|unauthorized',note_text,re.I):
-                    ok=True
-                    access_limited=True
-                    row['note']=(note_text+'; automated access blocked — source remains active/limited').strip('; ')
-            # Some seasonal sources (notably athletics) are expected to be non-empty
-            # while school is in session. Treat an empty parse as an ingestion failure
-            # when the registry explicitly says zero is a failure.
-            if ok and found==0 and policy.get('empty_result_is_failure'):
-                ok=False
-                row['note']=(row.get('note') or 'source returned zero events')+'; zero events is configured as a failure'
-            successful=ok and found>0
-            failures=0 if ok else int(prev.get('consecutive_failures') or 0)+1
-            last_success=checked_at if successful else prev.get('last_successful_update')
-            last_healthy_check=checked_at if ok else prev.get('last_healthy_check')
-            stale=False; stale_reason=None
-            if failures>=3:
-                stale=True; stale_reason=f'{failures} consecutive refresh failures'
-            elif last_success:
-                d=parse_dt(last_success)
-                if d and now_local()-d.astimezone(TZ)>timedelta(days=30):
-                    stale=True; stale_reason='no successful update in 30 days'
-            health.append({'source_id':sid,'last_checked':checked_at,'last_healthy_check':last_healthy_check,'last_successful_update':last_success,'consecutive_failures':failures,'last_found':found,'ok':ok,'access_limited':access_limited,'stale':stale,'stale_reason':stale_reason,'note':row.get('note') or None})
+            health.append(calendar_source_health(src,row,prev,checked_at))
         # Preserve tracked sources that were not attempted in this run so one
         # partial adapter failure does not erase their historical health record.
         attempted_ids={x.get('source_id') for x in health}
@@ -2177,6 +2282,17 @@ def refresh_events(offline=False):
         health.sort(key=lambda x:str(x.get('source_id') or ''))
         write_json('calendar-source-health.json',health)
         write_js('calendar-source-health-data.js','NORWOOD_CALENDAR_SOURCE_HEALTH',health)
+        # Retain explicitly dated, verified events during fetch/parser failures.
+        # A failed schedule revalidation must still stop recurring generation.
+        for row in status:
+            src=by_id.get(row['source_id'],{})
+            if row['ok'] or src.get('ingestion',{}).get('method')=='verified_recurring_schedule': continue
+            retained=current_events([e for e in previous_events if e.get('source_id')==row['source_id']])
+            events.extend(retained); row['retained_events']=len(retained)
+    else:
+        events.extend(previous_events)
+    events=current_events(dedupe_events(events+legacy_expanded_calendar_events()+([] if offline else town_master_calendar_events())))
+    write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     return events,status
 
 def usable_news_image(url, base_url=''):
@@ -2588,7 +2704,7 @@ def refresh_news(offline=False):
 
 
 IMPORTANT_MEETING_RE=re.compile(r'\b(Board of Selectmen|Finance Commission|School Committee|Town Meeting|Planning Board|Zoning Board(?: of Appeals)?|Conservation Commission|Board of Health|Community Preservation Committee|Budget Balancing Committee|Middle School Building Committee)\b',re.I)
-MONTH_DATE_RE=re.compile(r'\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?(?:,\s*(20\d{2}))?\b',re.I)
+MONTH_DATE_RE=re.compile(r'\b(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{1,2})(?:st|nd|rd|th)?(?:,\s*(20\d{2}))?\b',re.I)
 SLASH_DATE_RE=re.compile(r'\b(\d{1,2})[/-](\d{1,2})[/-](20\d{2})\b')
 TIME_RE=re.compile(r'\b(\d{1,2}):(\d{2})\s*(AM|PM)\b',re.I)
 
@@ -2866,7 +2982,7 @@ def civic_meetings_to_events(notices):
 
 
 def coverage(registry):
-    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops','verified_recurring_schedule','nys_multi_schedule'}
+    program={'community_submission_json','tribe_events','ical','html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','secondary_discovery','church_events_calendar','squarespace_events','growthzone_calendar','organization_event_discovery','town_department_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','derived_verified_series','assabet_calendar','assabet_filtered_calendar','clubrunner_calendar','league_schedule_table','multi_source_calendar','myrec_facility_calendar','newsletter_calendar','pma_calendar_hub','recurring_org_schedule','schoolnow_calendar','secondary_recurring_discovery','social_mirror','sportsconnect_schedule','selectmen_car_washes','home_depot_kids_workshops','verified_recurring_schedule','nys_multi_schedule','local_town_pages_calendar','toastmasters_meeting_cards'}
     active=[x for x in registry if x.get('active_monitor') and 'events' in x.get('produces',[])]
     attempted=[x for x in active if x.get('ingestion',{}).get('method') in program]
     discovery=[x for x in active if x.get('ingestion',{}).get('method')=='discovery_search']

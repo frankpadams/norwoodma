@@ -80,6 +80,10 @@ jobs:
         if: steps.freshness.outputs.run_refresh == 'true'
         run: pip install -r requirements-automation.txt
 
+      - name: Test calendar source behavior
+        if: steps.freshness.outputs.run_refresh == 'true'
+        run: python -m unittest discover -s tests -v
+
       - name: Download PMA public calendar
         if: steps.freshness.outputs.run_refresh == 'true'
         run: |
@@ -104,18 +108,22 @@ jobs:
             exit 0
           fi
 
-          # Preserve the freshly generated files, then move onto the newest main.
-          # This avoids rebase conflicts when site/code edits land while refresh runs.
+          # Preserve only changed generated files. Copying the entire data directory
+          # would revert registry/seed edits that land while a refresh is running.
           rm -rf /tmp/norwood-refresh
           mkdir -p /tmp/norwood-refresh
-          cp -a data /tmp/norwood-refresh/data
-          cp -a feeds /tmp/norwood-refresh/feeds
+          git diff --name-only -z -- data/ feeds/ > /tmp/norwood-refresh/changed
+          while IFS= read -r -d '' path; do
+            mkdir -p "/tmp/norwood-refresh/$(dirname "$path")"
+            cp -a "$path" "/tmp/norwood-refresh/$path"
+          done < /tmp/norwood-refresh/changed
 
           git fetch origin main
           git reset --hard origin/main
-          rm -rf data feeds
-          cp -a /tmp/norwood-refresh/data ./data
-          cp -a /tmp/norwood-refresh/feeds ./feeds
+          while IFS= read -r -d '' path; do
+            mkdir -p "$(dirname "$path")"
+            cp -a "/tmp/norwood-refresh/$path" "$path"
+          done < /tmp/norwood-refresh/changed
 
           if git diff --quiet -- data/ feeds/; then
             echo "Latest main already has this refreshed content."

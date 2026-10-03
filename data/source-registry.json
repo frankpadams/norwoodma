@@ -213,8 +213,8 @@
     "source_class": "event_listing",
     "authority": "community",
     "coverage": "Norwood, MA",
-    "url": "https://citizensforabetternorwoodma.com/events",
-    "domain": "citizensforabetternorwoodma.com",
+    "url": "https://cbnma.com/events",
+    "domain": "cbnma.com",
     "produces": [
       "events",
       "civic_events",
@@ -340,7 +340,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -1525,7 +1525,8 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "blocked_fetch_is_failure": true
     }
   },
   {
@@ -2637,7 +2638,7 @@
     ],
     "priority": 3,
     "ingestion": {
-      "method": "recurring_org_schedule",
+      "method": "toastmasters_meeting_cards",
       "automation": "preferred",
       "homepage": "https://norwoodtoastmaster.toastmastersclubs.org/",
       "recurrence": {
@@ -2653,6 +2654,13 @@
         "venue",
         "time",
         "guest_access"
+      ],
+      "start_time": "19:00",
+      "end_time": "20:30",
+      "validation_terms": [
+        "7:00pm",
+        "8:30pm",
+        "guests"
       ]
     },
     "verification": {
@@ -2668,7 +2676,7 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Generate recurring candidates only after checking current source/secondary listings for time, venue and exceptions; venue has varied between Norwood and nearby libraries, so never hard-code location."
+    "notes": "Read concrete dated meeting cards and current room information from the club website. Doors open at 6:45 PM; the meeting starts at 7 PM. Do not extrapolate dates or venues."
   },
   {
     "id": "norwood-town-news",
@@ -5676,7 +5684,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -5800,7 +5808,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -5846,7 +5854,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -6288,7 +6296,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -6411,7 +6419,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -6603,7 +6611,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -6727,7 +6735,7 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": true
+      "empty_result_is_failure": false
     }
   },
   {
@@ -7011,7 +7019,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "blocked_fetch_is_failure": true
     }
   },
   {
@@ -7051,7 +7060,8 @@
       "track_last_checked": true,
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
-      "report_stale": true
+      "report_stale": true,
+      "blocked_fetch_is_failure": true
     }
   },
   {
@@ -12251,7 +12261,8 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "blocked_fetch_is_failure": true
     }
   },
   {
@@ -12466,7 +12477,7 @@
     "source_class": "department_page",
     "authority": "official",
     "coverage": "Norwood, MA",
-    "url": "https://www.norwoodma.gov/departments/conservation/index.php",
+    "url": "https://www.norwoodma.gov/government/committees_boards/conservation_commission/index.php",
     "domain": "norwoodma.gov",
     "produces": [
       "events"
@@ -12479,7 +12490,7 @@
     "ingestion": {
       "method": "town_department_event_discovery",
       "automation": "preferred",
-      "department_url": "https://www.norwoodma.gov/departments/conservation/index.php",
+      "department_url": "https://www.norwoodma.gov/government/committees_boards/conservation_commission/index.php",
       "discover_dated_notices": true,
       "discover_calendar_links": true,
       "public_only": true
@@ -13171,7 +13182,7 @@
       "events",
       "fundraisers"
     ],
-    "active_monitor": true,
+    "active_monitor": false,
     "monitor_priority": 4,
     "ingestion": {
       "method": "event_platform_discovery",
@@ -13215,7 +13226,11 @@
       "empty_result_is_failure": false
     },
     "conflict_profile": "optional",
-    "notes": "Use as supplemental fundraiser/event discovery only. Reject other Norwoods and require explicit Norwood, MA/02062 venue evidence before ingestion."
+    "notes": "Use as supplemental fundraiser/event discovery only. Reject other Norwoods and require explicit Norwood, MA/02062 venue evidence before ingestion.",
+    "retirement": {
+      "date": "2026-10-03",
+      "reason": "Generic search endpoint returns 404. Retain verified organizer/ticket links through other sources; resume only with a supported discovery endpoint."
+    }
   },
   {
     "id": "humanitix-norwood-discovery",
@@ -13303,7 +13318,11 @@
           "inferred_public"
         ],
         "note": "Paid/ticketed/registration-required events remain eligible. Classify by who may attend, not price."
-      }
+      },
+      "secondary_urls": [
+        "https://www.eventbrite.com/e/cars-coffee-conversation-fall-2026-tickets-1995756227601",
+        "https://www.eventbrite.com/e/make-a-dogs-day-halloween-celebration-at-castle-island-norwood-tickets-2002212173509"
+      ]
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -13319,14 +13338,16 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "blocked_fetch_is_failure": true
     },
     "conflict_profile": "optional",
     "verification": {
       "status": "verified_live_platform_with_access_rules",
       "verified_at": "2026-09-26",
       "basis": "Current Norwood listings include both open public events and employee/company events, so attendance eligibility is classified separately from ticketing."
-    }
+    },
+    "notes": "City discovery is supplemental. Verified organizer ticket pages are independent fallbacks; only explicit Norwood, MA/02062 venues qualify."
   },
   {
     "id": "norwood-memory-cafe",
@@ -13348,19 +13369,29 @@
     "ingestion": {
       "method": "verified_recurring_schedule",
       "automation": "preferred",
-      "verification_url": "https://norwoodmemorycafe.com/",
-      "title": "Norwood Memory Cafe",
       "venue": "Norwood Senior Center",
       "address": "275 Prospect Street, Norwood, MA",
       "category": "wellness",
       "recurrence": {
         "frequency": "monthly",
         "byweekday": "TH",
-        "setpos": 3,
-        "time": "13:30",
-        "duration_minutes": 90
+        "ordinal": [
+          3
+        ]
       },
-      "require_revalidation": true
+      "require_revalidation": true,
+      "event_title": "Norwood Memory Cafe",
+      "revalidation_url": "https://norwoodmemorycafe.com/",
+      "start_time": "13:30",
+      "end_time": "15:00",
+      "validation_terms": [
+        "third Thursday",
+        "senior center",
+        "Norwood"
+      ],
+      "cost": "Free",
+      "notes": "Register with the Memory Cafe before attending. Caregivers should accompany guests who need personal assistance.",
+      "validation_time_range": "1:30-3:00"
     },
     "filters": {
       "require_norwood_relevance": true,
@@ -13427,7 +13458,8 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "blocked_fetch_is_failure": true
     },
     "conflict_profile": "optional",
     "notes": "Automatically ingest only events explicitly located in Norwood, Massachusetts for the normal Norwood calendar. Deduplicate against organizer and other primary feeds."
@@ -13477,7 +13509,8 @@
       "track_last_successful_update": true,
       "track_consecutive_failures": true,
       "report_stale": true,
-      "empty_result_is_failure": false
+      "empty_result_is_failure": false,
+      "blocked_fetch_is_failure": true
     },
     "conflict_profile": "optional",
     "notes": "Opt-in regional calendar only. These out-of-town events must never enter the default Norwood What's Happening view merely because they are family/community events."
