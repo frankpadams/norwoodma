@@ -306,6 +306,9 @@ def normalize_jsonld_event(obj, source):
 def extract_html_event_cards(html, source):
     """Conservative fallback for event lists that use semantic <time> markup."""
     if not BeautifulSoup: return []
+    # These discovery feeds require an explicit individual Massachusetts venue;
+    # semantic time cards do not carry enough address evidence to pass that gate.
+    if source.get('id') in {'eventbrite-norwood-discovery','boston-parents-paper-norwood'}: return []
     soup=BeautifulSoup(html,'html.parser'); out=[]
     for t in soup.find_all('time'):
         raw=t.get('datetime') or clean_text(t.get_text(' '))
@@ -554,7 +557,13 @@ def dedupe_events(events):
             title=re.sub(r'\b(meeting|hearing|session)\b',' ',title)
             title=re.sub(r'\s+',' ',title).strip()
         # Same-day near-identical titles are duplicates even when one source omits/varies the venue.
-        key=(title,e.get('start',{}).get('date'))
+        ticket=None
+        for url in [e.get('registration_url'),e.get('source_url')]:
+            parsed=urlparse(url or '')
+            if parsed.hostname in {'eventbrite.com','www.eventbrite.com'}:
+                match=re.search(r'/e/[^/]+-tickets-(\d+)',parsed.path)
+                if match: ticket=match[1]; break
+        key=(('eventbrite-ticket',ticket) if ticket else title,e.get('start',{}).get('date'))
         if key not in chosen or score(e)>score(chosen[key]): chosen[key]=e
     vals=list(chosen.values())
     # Collapse a one-day auto occurrence into a verified multi-day parent when titles substantially match.

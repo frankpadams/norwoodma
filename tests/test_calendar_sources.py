@@ -87,6 +87,18 @@ class CalendarSourcesTest(unittest.TestCase):
         self.assertEqual(by_title['Coffee Chat']['start']['time'], '09:00')
         self.assertEqual(by_title['Mass Save Clinic']['end']['time'], '13:00')
 
+    def test_eventbrite_ticket_identity_deduplicates_different_titles(self):
+        url='https://www.eventbrite.com/e/dog-party-tickets-2002212173509'
+        raw={'title':'Make A Dog’s Day Halloween Celebration','start':{'date':'2026-10-24'},'source_url':url,'verification_status':'auto_primary_source'}
+        curated={'title':'Subaru Make A Dogs Day','start':{'date':'2026-10-24'},'registration_url':url+'?aff=share','verification_status':'web_verified_2026-10-03'}
+        self.assertEqual(refresh.dedupe_events([raw,curated]),[curated])
+        other=dict(raw,start={'date':'2026-10-25'})
+        self.assertEqual(len(refresh.dedupe_events([raw,curated,other])),2)
+
+    def test_discovery_cards_cannot_bypass_explicit_venue_gate(self):
+        html='<article><h2>Norwood party</h2><time datetime="2026-10-24T13:00:00-04:00">October 24</time></article>'
+        self.assertEqual(refresh.extract_html_event_cards(html,{'id':'eventbrite-norwood-discovery'}),[])
+
     def test_locable_uses_occurrence_date_and_explicit_massachusetts_venue(self):
         listing = '<a href="/events/1/sale"><p class="h5">Sale</p>Oct 23, 2026 09:00 AM – 01:00 PM</a><a href="/events/1/sale"><p class="h5">Sale</p>Oct 24, 2026 09:00 AM – 01:00 PM</a>'
         detail = '<h1><span itemprop="name">Sale</span></h1><span itemprop="location"><strong itemprop="name">Emmanuel</strong><span itemprop="address">24 Berwick Street Norwood 02062 MA US</span></span>'
