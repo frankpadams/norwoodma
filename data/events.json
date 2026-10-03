@@ -630,37 +630,6 @@
     ]
   },
   {
-    "id": "2026-10-03-blessing-of-the-pets-on-norwood-common-484bdb0",
-    "title": "Blessing of the Pets on Norwood Common",
-    "start": {
-      "date": "2026-10-03",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": "11:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-d723ef03199a-2026-10-03",
     "title": "Elementary Gymnastics",
     "start": {
@@ -1913,6 +1882,37 @@
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
     "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-peter-makari-of-common-global-ministries-talk-d6d5a30",
+    "title": "Peter Makari of Common Global Ministries Talk about Middle East",
+    "start": {
+      "date": "2026-10-04",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": "12:30"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
