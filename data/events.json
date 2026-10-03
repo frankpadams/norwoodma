@@ -62,464 +62,6 @@
     ]
   },
   {
-    "id": "2026-10-02-2026-boston-open-nqs-acbfece",
-    "title": "2026 Boston Open NQS",
-    "start": {
-      "date": "2026-10-02",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "23:59"
-    },
-    "venue": "The Skating Club of Boston",
-    "address": null,
-    "category": "community",
-    "source_id": "skating-club-calendar",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-10-02/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "skating-club-boston-events"
-    ]
-  },
-  {
-    "id": "2026-10-02-friends-of-the-library-book-sale-friends-only-11b7221",
-    "title": "Friends of the Library Book Sale *FRIENDS ONLY PREVIEW*",
-    "start": {
-      "date": "2026-10-02",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fol-fall-book-sale-14/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Current members of the Friends of the Library are welcome to preview the book sale items before the sale is opened to the public. New members may sign up to become a Friend at the door. For more information about The Friends of the Library ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-02-october-2026-f18ac33",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-02",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-02-sunnyside-up-aa",
-    "title": "Sunnyside Up AA",
-    "start": {
-      "date": "2026-10-02",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "08:00"
-    },
-    "venue": "Grace Episcopal Church",
-    "address": "150 Chapel St, Norwood, MA 02062",
-    "category": "recovery",
-    "source_id": "recovery-aa",
-    "source_url": "https://www.gracenor.org/groups",
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Sunnyside Up AA",
-    "publish_candidate": true,
-    "verification_status": "official_recurring_schedule_verified_2026-09-26",
-    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "recovery-aa"
-    ]
-  },
-  {
-    "id": "2026-10-02-favorite-color-day-come-to-school-wearing-as--e46d62d",
-    "title": "Favorite Color Day! Come to school wearing as much of in your favorite color as you can!",
-    "start": {
-      "date": "2026-10-02",
-      "time": "08:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "14:00"
-    },
-    "venue": "Norwood Public Schools",
-    "address": null,
-    "category": "community",
-    "source_id": "nps-oldham",
-    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274668/favorite-color-day",
-    "cost": null,
-    "organizer": "Norwood Public Schools",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2436eed56f34-2026-10-02",
-    "title": "Little Scientists Session 1",
-    "start": {
-      "date": "2026-10-02",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "10:00"
-    },
-    "venue": "09/11/2026 - 10/16/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-11",
-    "session_end": "2026-10-16",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2436eed56f34",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-fc27544fe5d5-2026-10-02",
-    "title": "Indoor Tot Time - Fridays",
-    "start": {
-      "date": "2026-10-02",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "12:00"
-    },
-    "venue": "09/18/2026 - 04/16/2027 10:00 AM - 12:00 PM Norwood Civic Center - Gymnasium",
-    "category": "drop_in",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$75.00 Res, $75.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": true,
-    "session_start": "2026-09-18",
-    "session_end": "2027-04-16",
-    "days": "F",
-    "notes": "Are you looking for fun and safe play for your child during the fall/winter months? Would you like to meet local parents with children similar in age to your child? Look no further! This program will allow your children to explore a large open space and interact with other children. Climbing mats, sports equipment, and play equipment will all be pulled out for the kids to enjoy. Parents/caregivers must accompany their children at all times during this unstructured program. No fee for children under 1 if accompanied by a sibling. $5.00 per day per family (Drop-In) NO FOOD OR DRINKS IN THE GYM PLEASE! NO TOT TIME DURING VACATION WEEKS OR DAYS WHEN CIVIC CENTER IS CLOSED.",
-    "rec_program_id": "rec-fc27544fe5d5",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-food-markets",
-      "norwood-sports",
-      "rec-all",
-      "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-41a98aa554ca-2026-10-02",
-    "title": "Music with Miss Maura - Toddlers Fall 1",
-    "start": {
-      "date": "2026-10-02",
-      "time": "10:30"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "11:15"
-    },
-    "venue": "09/11/2026 - 10/09/2026 10:30 AM - 11:15 AM Norwood Civic Center - Dance Room",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30924",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-11",
-    "session_end": "2026-10-09",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-41a98aa554ca",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-7c686bdbe82c-2026-10-02",
-    "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "start": {
-      "date": "2026-10-02",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "20:00"
-    },
-    "venue": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$135.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-07",
-    "session_end": "2027-03-31",
-    "days": "MTuWThF",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-7c686bdbe82c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-02-first-friday-adoration-vigil-ddaff01",
-    "title": "First Friday Adoration Vigil",
-    "start": {
-      "date": "2026-10-02",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "19:00"
-    },
-    "venue": "Saint Catherine of Siena Parish",
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/",
-    "cost": null,
-    "organizer": "Saint Catherine of Siena Parish",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "All Night Vigil begins at Friday at 6 p.m. through Saturday till 6:30 a.m.",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-02-varsity-football-vs-medfield-senior-high-scho-dbe3182",
-    "title": "Varsity Football vs Medfield Senior High School",
-    "start": {
-      "date": "2026-10-02",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": "20:00"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-varsity-football",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Varsity Football",
-    "public_access": "public",
-    "series": "Norwood Varsity Football",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Football Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-10-02-selwyn-birchwood",
-    "title": "Selwyn Birchwood Band",
-    "start": {
-      "date": "2026-10-02",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": null
-    },
-    "venue": "The Fallout Shelter",
-    "address": "61 Endicott St, Norwood, MA",
-    "category": "live_music",
-    "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-02-fantasy-the-earth-wind-fire-experience-cd5503a",
-    "title": "Fantasy: The Earth, Wind & Fire Experience",
-    "start": {
-      "date": "2026-10-02",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/fantasy-earth-wind-and-fire",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
-    "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-02-norwood-school-news-e7134f7",
-    "title": "Norwood School News",
-    "start": {
-      "date": "2026-10-02",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-02",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "nps-news",
-    "source_url": "https://drive.google.com/file/d/1gtrHy-9U3Vjm1f0hyjywQh0-pvvcmo1d/view?usp=sharing",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Public Schools — News",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Norwood School News October 2, 2026 Check out the news and events from around your Norwood Public Schools community for the week ending 10.02.2026, including, NHS activities, CMS poetry, Character Strong at the Prescott and Callahan, Learning about each other at the LMPA, and more! Read Article",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
     "id": "2026-10-03-2026-boston-open-nqs-5d36de7",
     "title": "2026 Boston Open NQS",
     "start": {
@@ -4405,6 +3947,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-07-open-hack-night-october-2026-5ccbc73",
+    "title": "Open Hack Night – October 2026",
+    "start": {
+      "date": "2026-10-07",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/open-hack-night-october-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Mill Forge Makerspace welcomes members, volunteers, friends, and the public to Open Hack Night! Open Hack is a semi-regular informal gathering of the Mill Forge community and is open to the public. Come meet makerspace members, show off a",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -25299,6 +24872,37 @@
     ]
   },
   {
+    "id": "2026-11-06-first-friday-adoration-vigil-57d8196",
+    "title": "First Friday Adoration Vigil",
+    "start": {
+      "date": "2026-11-06",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "19:00"
+    },
+    "venue": "Saint Catherine of Siena Parish",
+    "address": null,
+    "category": "community",
+    "source_id": "st-catherine-calendar",
+    "source_url": "https://stcatherinenorwood.org/",
+    "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "All Night Vigil begins at Friday at 6 p.m. through Saturday till 6:30 a.m.",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-e861d336b6fd-2026-11-06",
     "title": "Kids Night Out",
     "start": {
@@ -27095,6 +26699,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-11-open-hack-night-november-2026-660563c",
+    "title": "Open Hack Night – November 2026",
+    "start": {
+      "date": "2026-11-11",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/open-hack-night-november-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Mill Forge Makerspace welcomes members, volunteers, friends, and the public to Open Hack Night! Open Hack is a semi-regular informal gathering of the Mill Forge community and is open to the public. Come meet makerspace members, show off a",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -34097,6 +33732,36 @@
     ]
   },
   {
+    "id": "2026-11-28-norwood-food-pantry-food-assistance-73b9443",
+    "title": "Norwood Food Pantry — Food Assistance",
+    "start": {
+      "date": "2026-11-28",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": "11:40"
+    },
+    "venue": "Norwood Food Pantry",
+    "address": "150 Chapel Street, Norwood, MA 02062",
+    "category": "assistance",
+    "source_id": "norwood-food-pantry-hours",
+    "source_url": "https://www.norwoodpantry.org/food",
+    "cost": "Free",
+    "public_access": "eligibility_applies",
+    "series": "Norwood Food Pantry Saturday Hours",
+    "publish_candidate": true,
+    "verification_status": "official_schedule",
+    "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
+    "discovered_by": "scheduled_recurring_service",
+    "public_access_status": "inferred_public",
+    "access_type": "paid",
+    "public_access_evidence": "public attendance/registration signal",
+    "calendar_ids": [
+      "norwood-food-markets"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-612e68cd5d10-2026-11-28",
     "title": "Ballet 1 - Saturdays",
     "start": {
@@ -38725,6 +38390,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-09-open-hack-night-december-2026-1f42a0d",
+    "title": "Open Hack Night – December 2026",
+    "start": {
+      "date": "2026-12-09",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-12-09",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St., Building 46, Norwood, MA, 02062",
+    "category": "arts",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/open-hack-night-december-2026/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Mill Forge Makerspace welcomes members, volunteers, friends, and the public to Open Hack Night! Open Hack is a semi-regular informal gathering of the Mill Forge community and is open to the public. Come meet makerspace members, show off a",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -82546,6 +82242,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-03-31-isu-synchronized-skating-junior-world-champio-4e426a8",
+    "title": "ISU Synchronized Skating Junior World Championships 2027 – Nottingham / GBR",
+    "start": {
+      "date": "2027-03-31",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2027-04-01",
+      "time": "23:59"
+    },
+    "venue": "The Skating Club of Boston",
+    "address": null,
+    "category": "sports",
+    "source_id": "skating-club-calendar",
+    "source_url": "https://scboston.org/event/isu-synchronized-skating-junior-world-championships-2027-nottingham-gbr/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-sports",
+      "skating-club-boston-events"
     ]
   },
   {
