@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-03T01:29:05.855973-04:00",
+  "generated_at": "2026-10-03T02:40:34.143776-04:00",
   "offline": false,
-  "events_published": 2662,
+  "events_published": 2810,
   "news_published": 120,
   "civic_notices": 41,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2662,
-      "generated_at": "2026-10-03T01:29:05.487379-04:00"
+      "events": 2810,
+      "generated_at": "2026-10-03T02:40:33.803315-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 123,
-      "generated_at": "2026-10-03T01:29:05.500502-04:00"
+      "generated_at": "2026-10-03T02:40:33.816964-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 967,
-      "generated_at": "2026-10-03T01:29:05.526131-04:00"
+      "events": 1084,
+      "generated_at": "2026-10-03T02:40:33.844450-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 886,
-      "generated_at": "2026-10-03T01:29:05.550485-04:00"
+      "events": 997,
+      "generated_at": "2026-10-03T02:40:33.868367-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
-      "events": 6,
-      "generated_at": "2026-10-03T01:29:05.563408-04:00"
+      "events": 9,
+      "generated_at": "2026-10-03T02:40:33.880626-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 78,
-      "generated_at": "2026-10-03T01:29:05.577564-04:00"
+      "events": 80,
+      "generated_at": "2026-10-03T02:40:33.894590-04:00"
     }
   ],
   "recreation_programs": 164,
@@ -55,43 +55,54 @@
       "source_id": "ache-massachusetts-events",
       "ok": true,
       "method": "html_calendar",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "arts-luke-adams",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "arts-millforge",
       "ok": true,
       "method": "html_calendar",
       "found": 3,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 37,
-      "note": ""
+      "found": 14,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 6,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "citizens-better-norwood-events",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "all configured pages failed: https://citizensforabetternorwoodma.com/events: 403 Client Error: Forbidden for url: https://citizensforabetternorwoodma.com/events | https://cbnma.com"
+      "note": "all configured pages failed: https://cbnma.com/events: 403 Client Error: Forbidden for url: https://cbnma.com/events",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 1
     },
     {
       "source_id": "community-event-submissions",
@@ -102,10 +113,12 @@
     },
     {
       "source_id": "elks-calendar",
-      "ok": false,
+      "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "emerald-city-plant-shop",
@@ -119,56 +132,70 @@
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "faith-shree-hari-dham",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "faith-temple-beth-david-westwood",
       "ok": true,
       "method": "html_calendar",
-      "found": 1,
-      "note": ""
+      "found": 8,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "faith-temple-sinai-sharon",
       "ok": true,
       "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 1,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "fallout-shelter",
       "ok": true,
       "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 18,
+      "note": ""
     },
     {
       "source_id": "first-congregational-events",
       "ok": true,
       "method": "squarespace_events",
       "found": 4,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "fitness-rec",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "food-pantry",
       "ok": true,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "friends-center-blog",
@@ -182,14 +209,18 @@
       "ok": true,
       "method": "tribe_events",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "friends-coa-dances",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "grace-calendar",
@@ -203,7 +234,9 @@
       "ok": true,
       "method": "tribe_events",
       "found": 1,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "home-depot-norwood-kids-workshops",
@@ -238,21 +271,27 @@
       "ok": true,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "library-assabet-calendar",
       "ok": true,
       "method": "assabet_calendar",
       "found": 82,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "library-cfce",
       "ok": true,
       "method": "assabet_filtered_calendar",
       "found": 82,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "library-home",
@@ -266,14 +305,19 @@
       "ok": true,
       "method": "tribe_events",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "lions-page",
       "ok": false,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodmalions.com/: HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caus"
+      "note": "all configured pages failed: https://www.norwoodmalions.com/: HTTPSConnectionPool(host='www.norwoodmalions.com', port=443): Max retries exceeded with url: / (Caus",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "magic-room-ticketleap",
@@ -287,14 +331,18 @@
       "ok": true,
       "method": "tribe_events",
       "found": 26,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "mill-forge-events",
       "ok": true,
       "method": "tribe_events",
       "found": 21,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "ncm-home",
@@ -315,21 +363,27 @@
       "ok": true,
       "method": "secondary_org_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-carillon-series",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -350,28 +404,36 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured weekday"
+      "note": "authoritative page no longer confirms configured weekday",
+      "outcome": "failed",
+      "access_limited": false
     },
     {
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 65,
-      "note": "1 configured page(s) unavailable; remaining sources checked"
+      "found": 82,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "norwood-little-league",
       "ok": true,
       "method": "league_schedule_table",
       "found": 8,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "norwood-national-night-out",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-patch-fundraisers",
@@ -392,21 +454,25 @@
       "ok": true,
       "method": "myrec_facility_calendar",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "offseason_empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-record-events",
       "ok": true,
       "method": "html_list",
-      "found": 2,
-      "note": ""
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-rotary-calendar",
       "ok": true,
       "method": "clubrunner_calendar",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-space-center-events",
@@ -427,14 +493,18 @@
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-sunday-concerts",
       "ok": true,
       "method": "derived_verified_series",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-theatre-season",
@@ -446,37 +516,47 @@
     {
       "source_id": "norwood-toastmasters",
       "ok": false,
-      "method": "recurring_org_schedule",
+      "method": "toastmasters_meeting_cards",
       "found": 0,
-      "note": "all configured pages failed: https://norwoodtoastmaster.toastmastersclubs.org/: HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded"
+      "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-town-news",
       "ok": true,
       "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 2,
+      "note": ""
     },
     {
       "source_id": "norwood-town-news-calendar",
       "ok": false,
       "method": "local_town_pages_calendar",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar"
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 2
     },
     {
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-women-business-networking",
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time"
+      "note": "authoritative page no longer confirms configured start time",
+      "outcome": "failed",
+      "access_limited": false
     },
     {
       "source_id": "norwood-youth-fundraisers",
@@ -490,412 +570,529 @@
       "ok": false,
       "method": "ical",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://tmsdln.com/2138d"
+      "note": "403 Client Error: Forbidden for url: https://tmsdln.com/2138d",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "nps-athletics-arbiter-boys-freshman-baseball",
       "ok": true,
       "method": "ical",
       "found": 2,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-freshman-basketball",
       "ok": true,
       "method": "ical",
       "found": 14,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-jv-baseball",
       "ok": true,
       "method": "ical",
       "found": 5,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-jv-basketball",
       "ok": true,
       "method": "ical",
       "found": 16,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-jv-soccer",
       "ok": true,
       "method": "ical",
       "found": 19,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-ms-cross-country",
       "ok": true,
       "method": "ical",
       "found": 6,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
       "ok": true,
       "method": "ical",
       "found": 15,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-basketball",
       "ok": true,
       "method": "ical",
       "found": 20,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-cross-country",
       "ok": true,
       "method": "ical",
       "found": 7,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
       "ok": true,
       "method": "ical",
       "found": 18,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-indoor-track",
       "ok": true,
       "method": "ical",
       "found": 6,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
       "ok": true,
       "method": "ical",
       "found": 9,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-outdoor-track",
       "ok": true,
       "method": "ical",
       "found": 5,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
       "ok": true,
       "method": "ical",
       "found": 19,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-swimming",
       "ok": true,
       "method": "ical",
       "found": 6,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
       "ok": true,
       "method": "ical",
       "found": 9,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-freshman-football",
       "ok": true,
       "method": "ical",
       "found": 1,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-froshmore-football",
       "ok": true,
       "method": "ical",
       "found": 1,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-freshman-basketball",
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
       "ok": true,
       "method": "ical",
       "found": 16,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-jv-basketball",
       "ok": true,
       "method": "ical",
       "found": 19,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
       "ok": true,
       "method": "ical",
       "found": 19,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
       "ok": true,
       "method": "ical",
       "found": 10,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-jv-soccer",
       "ok": true,
       "method": "ical",
       "found": 18,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-jv-softball",
       "ok": true,
       "method": "ical",
       "found": 3,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
       "ok": true,
       "method": "ical",
       "found": 18,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-ms-cross-country",
       "ok": true,
       "method": "ical",
       "found": 6,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
       "ok": true,
       "method": "ical",
       "found": 11,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-basketball",
       "ok": true,
       "method": "ical",
       "found": 20,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-cross-country",
       "ok": true,
       "method": "ical",
       "found": 7,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
       "ok": true,
       "method": "ical",
       "found": 20,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
       "ok": true,
       "method": "ical",
       "found": 16,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-indoor-track",
       "ok": true,
       "method": "ical",
       "found": 6,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
       "ok": true,
       "method": "ical",
       "found": 10,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-outdoor-track",
       "ok": true,
       "method": "ical",
       "found": 5,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
       "ok": true,
       "method": "ical",
       "found": 20,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-softball",
       "ok": true,
       "method": "ical",
       "found": 15,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
       "ok": true,
       "method": "ical",
       "found": 6,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
       "ok": true,
       "method": "ical",
       "found": 9,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
       "ok": true,
       "method": "ical",
       "found": 22,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-jv-football",
       "ok": true,
       "method": "ical",
       "found": 4,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-jv-golf",
       "ok": true,
       "method": "ical",
       "found": 9,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-unified-basketball",
       "ok": true,
       "method": "ical",
       "found": 8,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-varsity-football",
       "ok": true,
       "method": "ical",
       "found": 11,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
       "found": 18,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-varsity-gymnastics",
       "ok": true,
       "method": "ical",
       "found": 1,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-athletics-arbiter-varsity-wrestling",
       "ok": true,
       "method": "ical",
       "found": 12,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-balch",
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-callahan",
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-callahan-pta",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-cleveland",
       "ok": true,
       "method": "ical",
       "found": 5,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-cleveland-pto",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-cms-pto",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-coakley",
       "ok": true,
       "method": "ical",
       "found": 43,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-district",
       "ok": true,
       "method": "ical",
       "found": 33,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-extended-day",
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-fine-arts",
       "ok": true,
       "method": "multi_source_calendar",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-news",
       "ok": true,
       "method": "html_list",
-      "found": 2,
+      "found": 1,
       "note": ""
     },
     {
@@ -903,70 +1100,91 @@
       "ok": true,
       "method": "ical",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-nhs-pto",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-oldham",
       "ok": true,
       "method": "ical",
       "found": 42,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-oldham-pto",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-pma",
       "ok": true,
       "method": "pma_calendar_hub",
       "found": 33,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-prescott",
       "ok": true,
       "method": "ical",
       "found": 1,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-prescott-pta",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-willett",
       "ok": true,
       "method": "ical",
       "found": 1,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "nps-willett-pto",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted; zero events is configured as a failure"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "parser_gap",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "pcrinc-events",
@@ -987,28 +1205,38 @@
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "recovery-alanon",
       "ok": true,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "recovery-na",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "all configured pages failed: https://nerna.org/find-a-meeting/: 403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/"
+      "note": "all configured pages failed: https://nerna.org/find-a-meeting/: 403 Client Error: Forbidden for url: https://nerna.org/find-a-meeting/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "recovery-smart",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "all configured pages failed: https://meetings.smartrecovery.org/meetings/: 403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/"
+      "note": "all configured pages failed: https://meetings.smartrecovery.org/meetings/: 403 Client Error: Forbidden for url: https://meetings.smartrecovery.org/meetings/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "resource-cub-scouts-pack-42-norwood",
@@ -1036,7 +1264,9 @@
       "ok": true,
       "method": "clubrunner_calendar",
       "found": 0,
-      "note": ""
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "resource-norwood-american-legion-post-70",
@@ -1047,10 +1277,12 @@
     },
     {
       "source_id": "resource-norwood-youth-soccer",
-      "ok": false,
+      "ok": true,
       "method": "nys_multi_schedule",
-      "found": 0,
-      "note": "all NYS discovery pages failed: https://norwoodsoccer.com/schedules: 403 Client Error: Forbidden for url: https://norwoodsoccer.com/schedules | https://norwoodsoccer.com/index.php/"
+      "found": 143,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "resource-scouting-america-troop-42-norwood",
@@ -1071,35 +1303,45 @@
       "ok": false,
       "method": "social_mirror",
       "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah"
+      "note": "403 Client Error: Forbidden for url: https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+      "retained_events": 0
     },
     {
       "source_id": "scholarship-foundation",
       "ok": false,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodscholarshipfoundation.org/: HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded wit"
+      "note": "all configured pages failed: https://www.norwoodscholarshipfoundation.org/: HTTPSConnectionPool(host='www.norwoodscholarshipfoundation.org', port=443): Max retries exceeded wit",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "skating-club-calendar",
       "ok": true,
       "method": "tribe_events",
       "found": 16,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "st-catherine-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 10,
-      "note": ""
+      "found": 20,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "st-timothy-calendar",
       "ok": true,
       "method": "church_events_calendar",
       "found": 63,
-      "note": ""
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "town-community-events",
@@ -1110,17 +1352,22 @@
     },
     {
       "source_id": "town-conservation",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/departments/conservation/index.php: 404 Client Error: Not Found for url: https://www.norwoodma.gov/departments/conservation/i"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "town-cultural-council",
       "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://massculturalcouncil.org/local-council/norwood/: 403 Client Error: Forbidden for url: https://massculturalcouncil.org/local-council/norwood/"
+      "note": "all configured pages failed: https://massculturalcouncil.org/local-council/norwood/: 403 Client Error: Forbidden for url: https://massculturalcouncil.org/local-council/norwood/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "town-farmers-market",
@@ -1134,14 +1381,18 @@
       "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "town-police-page",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 1,
-      "note": ""
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "town-recreation-programs",
@@ -1161,22 +1412,28 @@
       "source_id": "town-health-events",
       "ok": true,
       "method": "html_page",
-      "found": 1,
-      "note": ""
+      "found": 2,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "town-senior-newsletter",
       "ok": true,
       "method": "newsletter_calendar",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "found": 4,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "town-veterans",
       "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "united-church-events",
@@ -1200,88 +1457,107 @@
       "note": "configured pages checked; no dated events extracted"
     },
     {
-      "source_id": "zeffy-norwood-discovery",
-      "ok": false,
-      "method": "event_platform_discovery",
-      "found": 0,
-      "note": "all configured pages failed: https://www.zeffy.com/en-US/search: 404 Client Error: Not Found for url: https://www.zeffy.com/en-US/search"
-    },
-    {
       "source_id": "eventbrite-norwood-discovery",
-      "ok": false,
+      "ok": true,
       "method": "event_platform_discovery",
-      "found": 0,
-      "note": "all configured pages failed: https://www.eventbrite.com/d/ma--norwood/events/: 405 Client Error: Not Allowed for url: https://www.eventbrite.com/d/ma--norwood/events/"
+      "found": 2,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "norwood-memory-cafe",
       "ok": true,
       "method": "verified_recurring_schedule",
-      "found": 0,
-      "note": "source returned zero events; zero events is configured as a failure"
+      "found": 6,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "boston-parents-paper-norwood",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/"
+      "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "boston-parents-paper-greater-boston",
       "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/"
+      "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "progress-norwood-events",
-      "ok": true,
+      "ok": false,
       "method": "community_org_events",
       "found": 0,
-      "note": "method community_org_events requires discovery/manual adapter"
+      "note": "method community_org_events requires discovery/manual adapter",
+      "outcome": "unsupported",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "womens-business-network-norwood",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "womens-community-committee",
-      "ok": true,
+      "ok": false,
       "method": "community_org_events",
       "found": 0,
-      "note": "method community_org_events requires discovery/manual adapter"
+      "note": "method community_org_events requires discovery/manual adapter",
+      "outcome": "unsupported",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-art-association-events",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "together-yes-events",
       "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "norwood-trails-committee-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 1,
-      "note": ""
+      "found": 2,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "norwood-sustainability-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 1,
-      "note": ""
+      "found": 2,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     }
   ],
   "news_sources": [
@@ -1326,7 +1602,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 67,
+      "found": 66,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1334,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 67,
+      "found": 64,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1342,7 +1618,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 42,
+      "found": 40,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1350,7 +1626,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 21,
+      "found": 22,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },

@@ -7,7 +7,7 @@ X-WR-CALNAME:Fundraisers & benefits
 X-WR-CALDESC:Public fundraisers\, charity events and community benefits.
 BEGIN:VEVENT
 UID:2026-10-03-electronics-recycling@norwood.ma
-DTSTAMP:20261003T052905Z
+DTSTAMP:20261003T064033Z
 DTSTART;TZID=America/New_York:20261003T090000
 DTEND;TZID=America/New_York:20261003T140000
 SUMMARY:Electronics Recycling Event
@@ -16,8 +16,18 @@ DESCRIPTION:Community electronics/appliance/battery and reusable bicycle recycli
 URL:https://www.norwoodtownnews.com/events/348199/electronics-recycling-event
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-03-parisot-foundation-dinner-dance-fundraiser-e4e45ab@norwood.ma
+DTSTAMP:20261003T064033Z
+DTSTART;TZID=America/New_York:20261003T190000
+DTEND;TZID=America/New_York:20261003T220000
+SUMMARY:Parisot Foundation Dinner Dance Fundraiser
+LOCATION:Knights of Columbus Hall — 572 Nichols Street\, Norwood\, MA 02062
+DESCRIPTION:Dinner dance and raffles supporting the school in Jacmel\, Haiti. Contact the organizer for tickets.\nCost: $40 per person\; $75 per couple\nSource: https://pwc.church/news/annual-parisot-foundations-fundraiser
+URL:https://pwc.church/news/annual-parisot-foundations-fundraiser
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-05-labor-market-research-skills-careers-employme-2810517@norwood.ma
-DTSTAMP:20261003T052905Z
+DTSTAMP:20261003T064033Z
 DTSTART;TZID=America/New_York:20261005T100000
 DTEND;TZID=America/New_York:20261005T100000
 SUMMARY:Labor Market Research – Skills\, Careers\, Employment Outlook
@@ -27,7 +37,7 @@ URL:https://masshiremsw.com/event/lmr-oct-05/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-11-ar5k@norwood.ma
-DTSTAMP:20261003T052905Z
+DTSTAMP:20261003T064033Z
 DTSTART;TZID=America/New_York:20261011T100000
 DTEND;TZID=America/New_York:20261011T130000
 SUMMARY:Third Annual AR5K Road Race
@@ -36,8 +46,27 @@ DESCRIPTION:Run/walk fundraiser supporting scholarships for Norwood High School 
 URL:https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-17-a-tradition-of-treasures-e87203e@norwood.ma
+DTSTAMP:20261003T064033Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:A Tradition of Treasures
+DESCRIPTION:A Tradition of Treasures Now in its 32nd year\, The Craft Affair fills the Norwood High gym with 80-90 vendors on Sat.\, Oct. 17\, 9 a.m. to 2:30 p.m. It's also one of NHS's biggest fundraisers. Read More »\nSource: https://www.norwoodtownnews.com/2026/10/01/586236/a-tradition-of-treasures
+URL:https://www.norwoodtownnews.com/2026/10/01/586236/a-tradition-of-treasures
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-metrowest-legal-services-quarterly-clinic-9a21ae7@norwood.ma
+DTSTAMP:20261003T064033Z
+DTSTART;TZID=America/New_York:20261019T130000
+DTEND;TZID=America/New_York:20261019T150000
+SUMMARY:Metrowest Legal Services Quarterly Clinic
+LOCATION:Norwood Senior Center — 275 Prospect Street\, Norwood\, MA 02062
+DESCRIPTION:Metrowest Legal Services Quarterly Clinic - Monday\, October 19th\, 1:00pm-3:00pm. Please call me to schedule a 20-minute appointment with Attorney Vera Ochea. Attorney Ochea can discuss the following types of law with you: Housing\, Public Benefits\, SSA\, Durable POA\, HCP\, Simple Probate\, Medicaid\, Nursing Home\, Consumer and Bankruptcy. Confirm registration requirements with the Senior Center.\nSource: https://www.norwoodma.gov/document_center/Senior/Newsletters/20261001N.pdf?t=202609281323560
+URL:https://www.norwoodma.gov/document_center/Senior/Newsletters/20261001N.pdf?t=202609281323560
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-25-cbn-psychic-medium@norwood.ma
-DTSTAMP:20261003T052905Z
+DTSTAMP:20261003T064033Z
 DTSTART;TZID=America/New_York:20261025T183000
 DTEND;TZID=America/New_York:20261025T203000
 SUMMARY:An Evening with Psychic Medium Cathy Ripley Greene
@@ -47,7 +76,7 @@ URL:https://cbnma.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-31-pumpkinpalooza@norwood.ma
-DTSTAMP:20261003T052905Z
+DTSTAMP:20261003T064033Z
 DTSTART;TZID=America/New_York:20261031T190000
 SUMMARY:Pumpkinpalooza Halloween Fundraiser
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -56,7 +85,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-19-madrigals-caroling-fundraiser-9165d1c@norwood.ma
-DTSTAMP:20261003T052905Z
+DTSTAMP:20261003T064033Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Madrigals Caroling Fundraiser
