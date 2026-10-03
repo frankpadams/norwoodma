@@ -1025,10 +1025,36 @@ def events_from_local_town_pages(source):
     return dedupe_events(out)
 
 
+def toastmasters_newspaper_fallback(source):
+    """Use explicitly dated newspaper cards when the club host is unavailable."""
+    url=source.get('ingestion',{}).get('dated_fallback_url')
+    if not url: return []
+    soup=BeautifulSoup(request(url).text,'html.parser'); out=[]
+    for card in soup.find_all('article'):
+        text=clean_text(card.get_text(' ')); heading=card.find('h3')
+        if not heading or 'norwood toastmasters' not in text.lower() or 'guests' not in text.lower(): continue
+        d=_date_from_text(text); paragraphs=card.find_all('p')
+        venue=clean_text(paragraphs[0].text) if paragraphs else ''
+        if not d or not re.search(r'\bNorwood\b',venue,re.I): continue
+        tm=_time_from_text(text)
+        if tm!=source['ingestion']['start_time']: continue
+        link=heading.find_parent('a',href=True)
+        if not link: continue
+        ds=d.isoformat(); title='Norwood Toastmasters — Guests Welcome'
+        out.append({'id':event_id(title,ds,venue),'title':title,'start':{'date':ds,'time':tm},'end':{'date':ds,'time':None},'venue':venue,'address':None,'source_id':source['id'],'source_url':urljoin(url,link['href']),'category':'community','public_access':'public','publish_candidate':True,'verification_status':'secondary_dated_listing','notes':'Guests welcome. Concrete occurrence and room listed by the Norwood Record; check the linked listing for changes.','discovered_by':'toastmasters_newspaper_fallback'})
+    return dedupe_events(out)
+
+
 def events_from_toastmasters(source):
     """Use dated club meeting cards, with the stated meeting time (not door time)."""
     ing=source.get('ingestion',{}); url=source['url']
-    soup=BeautifulSoup(request(url).text,'html.parser'); text=clean_text(soup.get_text(' ')).lower()
+    try:
+        html=request(url).text
+    except Exception:
+        fallback=toastmasters_newspaper_fallback(source)
+        if fallback: return fallback
+        raise
+    soup=BeautifulSoup(html,'html.parser'); text=clean_text(soup.get_text(' ')).lower()
     if not all(term.lower() in text for term in ing.get('validation_terms',[])):
         raise RuntimeError('Toastmasters page no longer confirms meeting time/guest access')
     out=[]
@@ -2181,7 +2207,10 @@ def refresh_events(offline=False):
                 elif method=='nys_multi_schedule': got=events_from_nys_multi_schedule(src)
                 elif method=='league_schedule_table': got=events_from_league_schedule(src)
                 elif method=='local_town_pages_calendar': got=events_from_local_town_pages(src)
-                elif method=='toastmasters_meeting_cards': got=events_from_toastmasters(src)
+                elif method=='toastmasters_meeting_cards':
+                    got=events_from_toastmasters(src)
+                    if any(e.get('discovered_by')=='toastmasters_newspaper_fallback' for e in got):
+                        note='Club host unavailable; concrete dated Norwood Record listings used'
                 elif method=='social_mirror': got=events_from_social_mirror(src)
                 elif method=='assabet_calendar': got=events_from_assabet(src)
                 elif method=='assabet_filtered_calendar': got=events_from_assabet(src)

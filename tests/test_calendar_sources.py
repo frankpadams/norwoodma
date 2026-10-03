@@ -87,6 +87,19 @@ class CalendarSourcesTest(unittest.TestCase):
         self.assertEqual(by_title['Coffee Chat']['start']['time'], '09:00')
         self.assertEqual(by_title['Mass Save Clinic']['end']['time'], '13:00')
 
+    def test_toastmasters_blocked_host_uses_only_dated_guest_cards(self):
+        html='<article><span>Tue, Oct 13, 2026 · 7:00 PM</span><a href="/events/meeting"><h3>Norwood Toastmasters</h3></a><p>Norwood Civic Center - Lydon Suite</p><p>Guests welcome</p></article>'
+        source={'id':'norwood-toastmasters','url':'https://club.example.org/','ingestion':{'dated_fallback_url':'https://paper.example.org/events','start_time':'19:00'}}
+        def request(url):
+            if 'club.example' in url: raise RuntimeError('connection timeout')
+            return SimpleNamespace(text=html)
+        with patch.object(refresh,'request',side_effect=request):
+            rows=refresh.events_from_toastmasters(source)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['start'],{'date':'2026-10-13','time':'19:00'})
+        self.assertEqual(rows[0]['source_url'],'https://paper.example.org/events/meeting')
+        self.assertEqual(rows[0]['end']['time'],None)
+
     def test_eventbrite_ticket_identity_deduplicates_different_titles(self):
         url='https://www.eventbrite.com/e/dog-party-tickets-2002212173509'
         raw={'title':'Make A Dog’s Day Halloween Celebration','start':{'date':'2026-10-24'},'source_url':url,'verification_status':'auto_primary_source'}
