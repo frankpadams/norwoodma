@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-04T11:29:14.759795-04:00",
+  "generated_at": "2026-10-04T12:56:54.865310-04:00",
   "offline": false,
-  "events_published": 2795,
+  "events_published": 2797,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2795,
-      "generated_at": "2026-10-04T11:29:14.116159-04:00"
+      "events": 2797,
+      "generated_at": "2026-10-04T12:56:54.039473-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 119,
-      "generated_at": "2026-10-04T11:29:14.125240-04:00"
+      "generated_at": "2026-10-04T12:56:54.052142-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1063,
-      "generated_at": "2026-10-04T11:29:14.143524-04:00"
+      "events": 1064,
+      "generated_at": "2026-10-04T12:56:54.079383-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 978,
-      "generated_at": "2026-10-04T11:29:14.159365-04:00"
+      "events": 979,
+      "generated_at": "2026-10-04T12:56:54.102258-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-04T11:29:14.167486-04:00"
+      "generated_at": "2026-10-04T12:56:54.114080-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 78,
-      "generated_at": "2026-10-04T11:29:14.176438-04:00"
+      "events": 79,
+      "generated_at": "2026-10-04T12:56:54.127763-04:00"
     }
   ],
   "recreation_programs": 164,
@@ -233,7 +233,7 @@
       "source_id": "historical-society-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 1,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false

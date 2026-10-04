@@ -31611,6 +31611,36 @@
     ]
   },
   {
+    "id": "2026-11-14-norwood-wellness-fair",
+    "title": "3rd Annual Norwood Wellness Fair",
+    "start": {
+      "date": "2026-11-14",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "13:00"
+    },
+    "venue": "Coakley Middle School",
+    "address": "1315 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "nps-health-council",
+    "source_url": "https://www.norwood.k12.ma.us/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Wellness Fair",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-10-04",
+    "organizer": "Norwood Public School Health Council",
+    "notes": "Free and open to everyone. More than 50 wellness-oriented businesses, organizations and community groups; meet local wellness experts; vaccine clinic available.",
+    "registration_url": "https://www.shaws.com/vaccinations/group-clinic/NorwoodVAX",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-food-markets"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-5cfef8d3a42e-2026-11-14",
     "title": "Band Gig School of Music and Performance - Fall/Winter Saturdays",
     "start": {
@@ -45005,6 +45035,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-46fcda9",
+    "title": "A Victorian Christmas with Diane Taraz",
+    "start": {
+      "date": "2026-12-12",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-12-12",
+      "time": "16:00"
+    },
+    "venue": "Norwood Historical Society",
+    "address": null,
+    "category": "sports",
+    "source_id": "historical-society-events",
+    "source_url": "https://norwoodhistoricalsociety.org/event/a-victorian-christmas-with-diane-taraz/",
+    "cost": "$20.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Christmas The Stories Behind the Carols We Still Sing Clad in a hand-sewn 1850s gown and accompanying herself on guitar and dulcimer, Diane Taraz brings to life the beloved carols written or revived in the Victorian era – the age that shape",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-historical-society",
+      "norwood-sports"
     ]
   },
   {
