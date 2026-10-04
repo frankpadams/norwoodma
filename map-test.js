@@ -28,6 +28,11 @@ const venueAddresses={
  'norwood theatre':'109 Central St, Norwood, MA 02062'
 };
 const staticPlaces=[
+ {name:'Little Library / Book Box — East Cross & First',category:'little-library',also:['resource'],address:'East Cross St at First St, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
+ {name:'Little Library / Book Box — Callahan School',category:'little-library',also:['resource'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
+ {name:'Little Library / Book Box — Washington Street',category:'little-library',also:['resource'],address:'169 Washington St, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
+ {name:'Little Library / Book Box — Roosevelt Avenue',category:'little-library',also:['resource'],address:'82 Roosevelt Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
+ {name:'Little Library / Book Box — Belknap & Cranmore',category:'little-library',also:['resource'],address:'Belknap St at Cranmore Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Norwood Town Common',category:'civic',address:'Washington St at Nahatan St, Norwood, MA 02062',lat:42.19455,lng:-71.19955,details:'Town green · gazebo · community events',url:'parks-trails.html'},
  {name:'Bernie Cooper Park',category:'park',address:'Bernie Cooper Park, Norwood, MA 02062',details:'Neponset River · accessible riverfront walking',url:'parks-trails.html'},
  {name:'Endean Park & Hawes Brook',category:'park',address:'Endean Conservation Land, Norwood, MA 02062',details:'Wooded trails · pond · brook · conservation land',url:'parks-trails.html'},
