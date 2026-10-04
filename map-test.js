@@ -28,6 +28,15 @@ const venueAddresses={
  'norwood theatre':'109 Central St, Norwood, MA 02062'
 };
 const staticPlaces=[
+ {name:'Little Library / Book Box — 44 Blossom St',category:'little-library',also:['resource'],address:'44 Blossom St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 19 Crestwood Cir',category:'little-library',also:['resource'],address:'19 Crestwood Cir, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 28 Wilson St',category:'little-library',also:['resource'],address:'28 Wilson St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 12 Westview Dr',category:'little-library',also:['resource'],address:'12 Westview Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 68 Elm St',category:'little-library',also:['resource'],address:'68 Elm St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 310 Railroad Ave',category:'little-library',also:['resource'],address:'310 Railroad Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 22 Shaw St',category:'little-library',also:['resource'],address:'22 Shaw St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 80 Highland St',category:'little-library',also:['resource'],address:'80 Highland St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Meadow St & Azalea Dr',category:'little-library',also:['resource'],address:'Meadow St at Azalea Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — East Cross & First',category:'little-library',also:['resource'],address:'East Cross St at First St, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
  {name:'Little Library / Book Box — Callahan School',category:'little-library',also:['resource'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
  {name:'Little Library / Book Box — Washington Street',category:'little-library',also:['resource'],address:'169 Washington St, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
