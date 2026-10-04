@@ -28,6 +28,7 @@ const venueAddresses={
  'norwood theatre':'109 Central St, Norwood, MA 02062'
 };
 const staticPlaces=[
+ {name:'Little Library / Book Box — 69 Longwood Terrace',category:'little-library',also:['resource'],address:'69 Longwood Terrace, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
  {name:'Little Library / Book Box — 44 Blossom St',category:'little-library',also:['resource'],address:'44 Blossom St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 19 Crestwood Cir',category:'little-library',also:['resource'],address:'19 Crestwood Cir, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 28 Wilson St',category:'little-library',also:['resource'],address:'28 Wilson St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
