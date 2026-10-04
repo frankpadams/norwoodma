@@ -191,3 +191,9 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .ad-slot .home-ad-pair{align-items:start!important}
 .home-ad-image-link{width:100%!important;min-width:0!important;height:auto!important;align-self:start!important;overflow:hidden!important}
 .home-ad-image-link img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important}
+
+/* Hard containment for homepage ads — prevent creative intrinsic size from widening the mobile page. */
+#homeAdSlot,#homeAdSlot .home-ad-pair{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;overflow:hidden!important}
+#homeAdSlot .home-ad-pair>*{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+#homeAdSlot .home-ad-image-link{width:100%!important;max-width:100%!important;min-width:0!important;height:100%!important;min-height:94px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+#homeAdSlot .home-ad-image-link img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:100%!important;min-width:0!important;min-height:0!important;object-fit:contain!important}
