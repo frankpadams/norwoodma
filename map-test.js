@@ -28,7 +28,7 @@ const venueAddresses={
  'norwood theatre':'109 Central St, Norwood, MA 02062'
 };
 const staticPlaces=[
- {name:'Little Library / Book Box — 69 Longwood Terrace',category:'little-library',also:['resource'],address:'69 Longwood Terrace, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
+ {name:'Little Library / Book Box — 69 Longwood Terrace',category:'little-library',also:['resource'],address:'69 Longwood Terrace, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 44 Blossom St',category:'little-library',also:['resource'],address:'44 Blossom St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 19 Crestwood Cir',category:'little-library',also:['resource'],address:'19 Crestwood Cir, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 28 Wilson St',category:'little-library',also:['resource'],address:'28 Wilson St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
@@ -38,13 +38,13 @@ const staticPlaces=[
  {name:'Little Library / Book Box — 22 Shaw St',category:'little-library',also:['resource'],address:'22 Shaw St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 80 Highland St',category:'little-library',also:['resource'],address:'80 Highland St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — Meadow St & Azalea Dr',category:'little-library',also:['resource'],address:'Meadow St at Azalea Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — East Cross & First',category:'little-library',also:['resource'],address:'East Cross St at First St, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
- {name:'Little Library / Book Box — Callahan School',category:'little-library',also:['resource'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
- {name:'Little Library / Book Box — Washington Street',category:'little-library',also:['resource'],address:'169 Washington St, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
- {name:'Little Library / Book Box — Roosevelt Avenue',category:'little-library',also:['resource'],address:'82 Roosevelt Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
+ {name:'Little Library / Book Box — East Cross & First',category:'little-library',also:['resource'],address:'East Cross St at First St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Callahan School',category:'little-library',also:['resource'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Washington Street',category:'little-library',also:['resource'],address:'169 Washington St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Roosevelt Avenue',category:'little-library',also:['resource'],address:'82 Roosevelt Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — Belnap & Cranmore',category:'little-library',also:['resource'],address:'Belnap St at Cranmore Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Father McAleer Playground',category:'little-library',also:['resource'],address:'Father McAleer Playground, Norwood, MA 02062',details:'Neighborhood book-sharing box · community-reported location',url:'resources.html'},
- {name:'Little Library / Book Box — Savage Center / Senior Center property',category:'little-library',also:['resource'],address:'275 Prospect St, Norwood, MA 02062',details:'Community-reported book-sharing box · exact location on the property to be confirmed',url:'resources.html'},
+ {name:'Little Library / Book Box — Father McAleer Playground',category:'little-library',also:['resource'],address:'Father McAleer Playground, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Savage Center / Senior Center property',category:'little-library',also:['resource'],address:'275 Prospect St, Norwood, MA 02062',details:'Neighborhood book-sharing box · exact location on the property to be confirmed',url:'resources.html'},
  {name:'Little Library / Book Box — Dean & Pellana',category:'little-library',also:['resource'],address:'Dean St at Pellana Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Norwood Town Common',category:'civic',address:'Washington St at Nahatan St, Norwood, MA 02062',lat:42.19455,lng:-71.19955,details:'Town green · gazebo · community events',url:'parks-trails.html'},
  {name:'Bernie Cooper Park',category:'park',address:'Bernie Cooper Park, Norwood, MA 02062',details:'Neponset River · accessible riverfront walking',url:'parks-trails.html'},
