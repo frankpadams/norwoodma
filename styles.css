@@ -197,3 +197,9 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #homeAdSlot .home-ad-pair>*{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
 #homeAdSlot .home-ad-image-link{width:100%!important;max-width:100%!important;min-width:0!important;height:100%!important;min-height:94px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
 #homeAdSlot .home-ad-image-link img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:100%!important;min-width:0!important;min-height:0!important;object-fit:contain!important}
+
+/* Mobile ad-slot size lock: match the original two-up advertising boxes exactly. */
+#homeAdSlot .home-ad-pair{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-flow:row!important;align-items:stretch!important}
+#homeAdSlot .home-ad-pair>.home-ad-creative{width:100%!important;max-width:100%!important;min-width:0!important;height:168px!important;min-height:168px!important;max-height:168px!important;box-sizing:border-box!important;overflow:hidden!important}
+#homeAdSlot .home-ad-image-link img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+@media(min-width:521px){#homeAdSlot .home-ad-pair>.home-ad-creative{height:120px!important;min-height:120px!important;max-height:120px!important}}
