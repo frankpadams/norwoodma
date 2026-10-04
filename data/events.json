@@ -156,36 +156,6 @@
     ]
   },
   {
-    "id": "2026-10-03-october-2026-3dcd1df",
-    "title": "October 2026",
-    "start": {
-      "date": "2026-10-03",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "venue": "Norwood Blood Drives",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-blood-drives",
-    "source_url": "https://www.norwoodcenter.org/events/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_source_page",
-    "notes": null,
-    "discovered_by": "scheduled_semantic_html",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-03-first-saturday-devotions-5fc17d9",
     "title": "First Saturday Devotions",
     "start": {
@@ -1802,6 +1772,36 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-04-october-2026-c5efe1a",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-04",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -6569,37 +6569,6 @@
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-08-guild-pond-dam-hearing-change-of-location-ac97782",
-    "title": "Guild Pond Dam Hearing: Change of location",
-    "start": {
-      "date": "2026-10-08",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-08",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "circle-of-hope-events",
-    "source_url": "https://www.norwoodrecord.com/article/guild-pond-nichols-st-dam-hearing-change-location",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Circle of Hope Events",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Guild Pond Dam Hearing: Change of location Feasibility Study hearing on Oct. 8 September 24, 2026 · 0",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "circle-of-hope",
       "norwood-community"
     ]
   },
