@@ -15,7 +15,16 @@
   {name:'Sports & recreation',url:'sports-recreation.html',type:'Things to Do',text:'sports youth adult pickleball golf soccer baseball basketball hockey lacrosse ninja climbing obstacle'},
   {name:'Tennis courts in Norwood',url:'parks-trails.html#tennis-courts',type:'Parks & recreation',text:'tennis tennis courts public courts Norwood High School NHS Coakley Ivatts Hawes Washington Street Nichols Street racket racquet recreation'},
   {name:'Doherty Park & Field',url:'parks-trails.html',type:'Parks & recreation',text:'Doherty Park Doherty Field Brewster Drive playground Little League baseball hardcourt recreation park field'},
-  {name:'Get involved',url:'get-involved.html',type:'Community',text:'volunteer civic poll worker election boards committees run office food pantry'},
+  {name:'Get involved',url:'get-involved.html',type:'Community',text:'volunteer volunteering service hours teen youth civic poll worker election elections boards committees town meeting run for office food pantry trails cleanup community service'},
+  {name:'Living in Norwood — Homes & Real Estate',url:'real-estate.html',type:'Moving & Real Estate',text:'moving move relocate relocation living homes houses real estate homebuyer buyers property recent sales schools elementary school lookup taxes utilities commute transit community culture religion religious houses worship nonprofits organizations events agent realtor mortgage calculator'},
+  {name:'Business Directory',url:'business-directory.html',type:'Businesses',text:'business businesses directory shops stores services contractors trades professional real estate agents groceries supermarkets hotels banks salons automotive local business'},
+  {name:'Restaurants & Food',url:'restaurants.html',type:'Food & Drink',text:'restaurants dining food takeout dinner lunch breakfast brunch pizza italian indian asian mexican gluten free international grocers'},
+  {name:'Explore Norwood by Map',url:'map.html',type:'Map',text:'map explore parks trails athletic fields schools playgrounds government historic restaurants parking businesses resources transit events landmarks voting precincts'},
+  {name:'News',url:'news.html',type:'News',text:'news local news Norwood Record community updates town police public works schools headlines'},
+  {name:'Discover Norwood',url:'discover.html',type:'Explore',text:'discover community guides local places resources Norwood'},
+  {name:'Contact Norwood.ma',url:'contact.html',type:'Norwood.ma',text:'contact submit suggestion correction event organization volunteer opportunity feedback'},
+  {name:'About Norwood.ma',url:'about.html',type:'Norwood.ma',text:'about editorial standards independent community site not town government methodology corrections sources'},
+  {name:'Support Norwood.ma',url:'support.html',type:'Norwood.ma',text:'support donate sponsor sponsorship advertising community site'},
   {name:'Transit',url:'transit.html',type:'Transit',text:'train commuter rail bus MBTA Windsor Gardens Norwood Central Norwood Depot 34E schedules'},
   {name:'What’s Happening',url:'events.html',type:'Events',text:'events calendar music trivia community town common elections school theatre marching band fundraiser'},
   {name:'Calendars',url:'calendars.html',type:'Calendars',text:'town meetings schools community events subscribe calendar'},
@@ -104,7 +113,18 @@
   foodpantry:'food pantry food assistance groceries',pantry:'food pantry groceries assistance',
   notary:'notary public notarize notarization',notarize:'notary public notarization',
   trainstation:'train station commuter rail mbta transit',parking:'parking lot garage permit ticket',
-  meeting:'meetings board committee town meeting agenda minutes',meetings:'meeting board committee town agenda minutes'
+  meeting:'meetings board committee town meeting agenda minutes',meetings:'meeting board committee town agenda minutes',
+  church:'religion religious faith worship house houses congregation parish',churches:'religion religious faith worship houses congregations parishes',
+  religion:'religious faith worship church synagogue mosque temple',religious:'religion faith worship church synagogue mosque temple',
+  synagogue:'jewish judaism religion worship temple',mosque:'muslim islam islamic religion worship',temple:'hindu buddhist jewish religion worship',
+  nonprofit:'nonprofits community organizations clubs charity charitable',nonprofits:'nonprofit community organizations clubs charities',
+  club:'clubs community organizations groups',clubs:'club community organizations groups',organization:'organizations community nonprofit clubs',organizations:'organization community nonprofit clubs',
+  volunteer:'volunteering get involved community service service hours civic',volunteering:'volunteer get involved community service service hours civic',
+  realtor:'real estate agent broker homes property',realtors:'real estate agents brokers homes property',homebuyer:'real estate homes mortgage property moving',
+  moving:'real estate living utilities schools transit community relocation',move:'moving relocation real estate utilities schools transit',
+  event:'events calendar whats happening activities',events:'event calendar whats happening activities',
+  map:'map explore location locations directions parks businesses resources',address:'location map street directions',
+  restaurant:'restaurants food dining dinner lunch',restaurants:'restaurant food dining dinner lunch'
  };
  const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
  const stop=new Set(['a','an','and','are','at','for','from','how','i','in','is','it','me','my','of','on','or','the','to','with']);
@@ -155,7 +175,7 @@
    const libraryGuide=/^https?:\/\/(?:www\.)?norwoodlibrary\.org\/commres-/i.test(rawUrl);
    const topic=Array.isArray(r.topics)&&r.topics.length?r.topics[0]:'';
    const listingUrl=topic?'resources.html#'+encodeURIComponent(topic):'resources.html';
-   out.push({name:r.name,url:libraryGuide?listingUrl:(rawUrl||listingUrl),type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description].join(' '),officialTown:r.officialTown===true});
+   out.push({name:r.name,url:libraryGuide?listingUrl:(rawUrl||listingUrl),type:r.category||'Resource',text:[r.category,r.tags,r.coverage,r.description,(r.topics||[]).join(' '),r.address,r.phone,r.source_note].join(' '),officialTown:r.officialTown===true});
   });
   const businessRows=(window.NORWOOD_BUSINESSES||[]).map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4],labels:[],tags:[]}:b);
   const businessCats={};
@@ -166,8 +186,8 @@
   Object.entries(businessCats).forEach(([cat,rows])=>out.push({name:cat,url:'business-directory.html?q='+encodeURIComponent(cat),type:'Business directory',text:cat+' '+rows.map(b=>[b.name,(b.labels||[]).join(' '),(b.tags||[]).join(' ')].join(' ')).join(' '),norwoodPage:true,businessCategory:true}));
   if(businessRows.some(b=>/roof/i.test([b.category,b.name,(b.labels||[]).join(' '),(b.tags||[]).join(' ')].join(' '))))out.push({name:'Roofers & Roofing Contractors',url:'business-directory.html?q=roof',type:'Business directory',text:'roof roofer roofers roofing contractor contractors home repair exterior shingles gutters',norwoodPage:true,businessCategory:true});
   (window.NORWOOD_CALENDAR_SOURCES||[]).forEach(c=>out.push({name:(c.name||'Calendar')+' calendar',url:c.view_url||'calendars.html',type:'Calendar',text:[c.name,c.description,c.provider,c.group,'calendar schedule dates events school'].join(' '),calendar:true}));
-  (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.start?.date].join(' ')}));
-  (window.NORWOOD_RECREATION_PROGRAMS||[]).filter(r=>r.searchable!==false).forEach(r=>out.push({name:r.name||r.program||'Recreation program',url:'events.html?rec='+encodeURIComponent(r.id),type:'Norwood Recreation',date:r.start_date||'',text:[r.program,r.subcategory,r.section,r.description,r.ages,r.venue,r.fees,r.start_date,r.end_date,r.drop_in?'drop in':''].join(' '),recreation:true}));
+  (window.NORWOOD_EVENTS||[]).forEach(e=>out.push({name:e.title||e.name||'Community event',url:'events.html',type:'Event',date:e.start?.date||'',text:[e.description,e.category,e.venue,e.address,e.town,e.organizer,e.source,e.tags,e.start?.date,e.end?.date].join(' ')}));
+  (window.NORWOOD_RECREATION_PROGRAMS||[]).filter(r=>r.searchable!==false).forEach(r=>out.push({name:r.name||r.program||'Recreation program',url:'events.html?rec='+encodeURIComponent(r.id),type:'Norwood Recreation',date:r.start_date||'',text:[r.program,r.subcategory,r.section,r.description,r.ages,r.grades,r.days,r.venue,r.fees,r.source,r.start_date,r.end_date,r.start_time,r.end_time,r.drop_in?'drop in':''].join(' '),recreation:true}));
   (window.NORWOOD_HOWDO||[]).forEach(h=>out.push({name:h.title,url:'how-do-i.html#'+h.id,type:'How Do I?',text:[h.text,h.keywords,'question answer help'].join(' '),norwoodPage:true}));
   return out.map(x=>({
    ...x,
