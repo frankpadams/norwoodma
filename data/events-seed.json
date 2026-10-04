@@ -24,52 +24,6 @@
     "registration_url": "https://www.emeraldcityplantshop.com/"
   },
   {
-    "id": "2026-09-18-ballroom-dance",
-    "title": "Monthly Ballroom Dance",
-    "start": {
-      "date": "2026-09-18",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "venue": "Norwood Senior Center",
-    "address": "275 Prospect St, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "norwood-record-events",
-    "source_url": "https://www.norwoodrecord.com/events",
-    "cost": "$12",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
-  },
-  {
-    "id": "2026-09-18-margo-macero",
-    "title": "The Margo Macero Band",
-    "start": {
-      "date": "2026-09-18",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-09-18",
-      "time": null
-    },
-    "venue": "The Fallout Shelter",
-    "address": "61 Endicott St, Norwood, MA",
-    "category": "live_music",
-    "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
-  },
-  {
     "id": "2026-09-18-legally-blonde",
     "title": "Legally Blonde — Norwood High School",
     "start": {
@@ -116,6 +70,52 @@
     "notes": "Public seminar/program at The Skating Club of Boston; event runs Sept. 18–19. Registration applies."
   },
   {
+    "id": "2026-09-18-ballroom-dance",
+    "title": "Monthly Ballroom Dance",
+    "start": {
+      "date": "2026-09-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-record-events",
+    "source_url": "https://www.norwoodrecord.com/events",
+    "cost": "$12",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Newcomers of all ages welcome; Friends of the Norwood Council on Aging."
+  },
+  {
+    "id": "2026-09-18-margo-macero",
+    "title": "The Margo Macero Band",
+    "start": {
+      "date": "2026-09-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-09-18",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott St, Norwood, MA",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": null
+  },
+  {
     "id": "2026-09-19-floydian-trip",
     "title": "Floydian Trip: Echoes Through Time",
     "start": {
@@ -137,6 +137,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
+  },
+  {
+    "id": "2026-09-20-onam-sarva",
+    "title": "Onam Celebration at SARVA Little Venice",
+    "start": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-09-20",
+      "time": null
+    },
+    "venue": "SARVA Little Venice",
+    "address": "Norwood, MA",
+    "category": "food_culture",
+    "source_id": "sarva-social-feed",
+    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-20-not-done-yet",
@@ -183,29 +206,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-09-20-onam-sarva",
-    "title": "Onam Celebration at SARVA Little Venice",
-    "start": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-09-20",
-      "time": null
-    },
-    "venue": "SARVA Little Venice",
-    "address": "Norwood, MA",
-    "category": "food_culture",
-    "source_id": "sarva-social-feed",
-    "source_url": "https://www.foodbevg.com/US/Boston/416865211511597/Sarva---Sar-vah",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "SARVA social post announces Onam Sadya at its Little Venice, Norwood location on Sept. 20; reservations/pre-orders were promoted."
   },
   {
     "id": "2026-09-22-caffeine-connections",
@@ -438,29 +438,6 @@
     "notes": null
   },
   {
-    "id": "2026-09-27-check-mate",
-    "title": "Check Mate — An Evening with Purpose",
-    "start": {
-      "date": "2026-09-27",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-09-27",
-      "time": "21:00"
-    },
-    "venue": "Four Points by Sheraton Norwood",
-    "address": "1125 Boston-Providence Turnpike, Norwood, MA 02062",
-    "category": "fundraiser",
-    "source_id": "pcrinc-events",
-    "source_url": "https://pcrincboston.org/",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
-  },
-  {
     "id": "2026-09-27-emerald-city-plant-bingo",
     "title": "Plant Bingo",
     "start": {
@@ -483,6 +460,29 @@
     "verification_status": "user_verified_2026-09-24",
     "notes": "Public Plant Bingo event at Emerald City Plant Shop. Date confirmed directly by Norwood.ma editor; exact time not yet confirmed.",
     "registration_url": "https://www.emeraldcityplantshop.com/"
+  },
+  {
+    "id": "2026-09-27-check-mate",
+    "title": "Check Mate — An Evening with Purpose",
+    "start": {
+      "date": "2026-09-27",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-09-27",
+      "time": "21:00"
+    },
+    "venue": "Four Points by Sheraton Norwood",
+    "address": "1125 Boston-Providence Turnpike, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "pcrinc-events",
+    "source_url": "https://pcrincboston.org/",
+    "cost": null,
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Promoting Conflict Resolution, Inc. fundraiser supporting literacy, mentorship, and conflict-resolution programs."
   },
   {
     "id": "2026-09-28-sunnyside-up-aa",
@@ -738,6 +738,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-03-pma-micca-central",
+    "title": "MICCA Central",
+    "start": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-03",
+      "time": null
+    },
+    "venue": "Auburn",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
     "id": "2026-10-03-electronics-recycling",
     "title": "Electronics Recycling Event",
     "start": {
@@ -875,29 +898,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-03-pma-micca-central",
-    "title": "MICCA Central",
-    "start": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-03",
-      "time": null
-    },
-    "venue": "Auburn",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-10-04-lumber-milling",
@@ -1200,6 +1200,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-10-pma-usbands-king-philip",
+    "title": "USBANDS at King Philip",
+    "start": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": null
+    },
+    "venue": "King Philip",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
     "id": "2026-10-10-cars-coffee-conversation-fall-2026-9ed57e0",
     "title": "Cars, Coffee & Conversation — Fall 2026",
     "start": {
@@ -1268,29 +1291,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": null
-  },
-  {
-    "id": "2026-10-10-pma-usbands-king-philip",
-    "title": "USBANDS at King Philip",
-    "start": {
-      "date": "2026-10-10",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-10",
-      "time": null
-    },
-    "venue": "King Philip",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-10-11-ar5k",
@@ -1574,29 +1574,6 @@
     "notes": null
   },
   {
-    "id": "2026-10-18-celtic-seisun",
-    "title": "Celtic Traditional Open Seisun",
-    "start": {
-      "date": "2026-10-18",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-10-18",
-      "time": "18:00"
-    },
-    "venue": "Irish Brewing Boston",
-    "address": "83 Morse St, Building 4AB, Norwood, MA 02062",
-    "category": "music_community",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/venue/irish-brewing-boston/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Third Sunday Celtic Traditional Open Seisun",
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
-  },
-  {
     "id": "2026-10-18-pma-micca-southeast-home-show",
     "title": "Norwood High Marching Band Home Show — Open to the Public",
     "start": {
@@ -1620,6 +1597,29 @@
     "notes": "Norwood High School hosts the MICCA Southeast Marching Band Home Show. Come see the Norwood High marching band and other participating bands perform. Open to the public. See the Norwood Parent Music Association event page for current event details and updates.",
     "curated_default": true,
     "whats_happening_default": true
+  },
+  {
+    "id": "2026-10-18-celtic-seisun",
+    "title": "Celtic Traditional Open Seisun",
+    "start": {
+      "date": "2026-10-18",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "18:00"
+    },
+    "venue": "Irish Brewing Boston",
+    "address": "83 Morse St, Building 4AB, Norwood, MA 02062",
+    "category": "music_community",
+    "source_id": "norwood-space-center-events",
+    "source_url": "https://norwoodspacecenter.com/venue/irish-brewing-boston/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Third Sunday Celtic Traditional Open Seisun",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": null
   },
   {
     "id": "2026-10-19-sunnyside-up-aa",
@@ -1807,6 +1807,29 @@
     "notes": null
   },
   {
+    "id": "2026-10-24-pma-usbands-dartmouth",
+    "title": "USBANDS at Dartmouth",
+    "start": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": "Dartmouth",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
     "id": "2026-10-24-fall-rummage-sale-october-23-24-1cafc35",
     "title": "Fall Rummage Sale October 23 & 24",
     "start": {
@@ -1901,17 +1924,17 @@
     "notes": null
   },
   {
-    "id": "2026-10-24-pma-usbands-dartmouth",
-    "title": "USBANDS at Dartmouth",
+    "id": "2026-10-25-pma-micca-state-finals",
+    "title": "MICCA State Finals",
     "start": {
-      "date": "2026-10-24",
+      "date": "2026-10-25",
       "time": null
     },
     "end": {
-      "date": "2026-10-24",
+      "date": "2026-10-25",
       "time": null
     },
-    "venue": "Dartmouth",
+    "venue": "Quincy",
     "address": null,
     "category": "performance",
     "source_id": "nps-pma",
@@ -1991,29 +2014,6 @@
     "publish_candidate": true,
     "verification_status": "organizer_verified_2026-09-27",
     "notes": "Public ticketed event sponsored by Citizens for a Better Norwood; seating limited."
-  },
-  {
-    "id": "2026-10-25-pma-micca-state-finals",
-    "title": "MICCA State Finals",
-    "start": {
-      "date": "2026-10-25",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-25",
-      "time": null
-    },
-    "venue": "Quincy",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-10-26-sunnyside-up-aa",
@@ -2154,6 +2154,29 @@
     "notes": "Sold out at time of source check; livestream advertised."
   },
   {
+    "id": "2026-10-31-pma-usbands-ma-championships",
+    "title": "USBANDS Massachusetts Championships",
+    "start": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": "Stoughton",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts — Marching Band",
+    "publish_candidate": true,
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
+  },
+  {
     "id": "2026-10-31-mostly-maiden",
     "title": "Mostly Maiden",
     "start": {
@@ -2198,29 +2221,6 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-17",
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering."
-  },
-  {
-    "id": "2026-10-31-pma-usbands-ma-championships",
-    "title": "USBANDS Massachusetts Championships",
-    "start": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "Stoughton",
-    "address": null,
-    "category": "performance",
-    "source_id": "nps-pma",
-    "source_url": "https://norwoodpma.org/events",
-    "cost": null,
-    "public_access": "public",
-    "series": "PMA / Fine Arts — Marching Band",
-    "publish_candidate": true,
-    "verification_status": "manual_pma_events_2026-09-27",
-    "notes": "Tentative. Schedule supplied by the marching band; dates and times may change."
   },
   {
     "id": "2026-11-01-emerald-city-greenhaus-meditation",
@@ -2592,6 +2592,31 @@
     "publish_candidate": true,
     "verification_status": "user_source_verified_2026-09-24",
     "notes": "14th Annual Arts & Crafts Bazaar. Vendor tables are $30 for an 8-foot table; vendor registration deadline Oct. 30. Out-of-town event in Framingham at The Learning Center for the Deaf; show town indicator."
+  },
+  {
+    "id": "2026-11-14-norwood-wellness-fair",
+    "title": "3rd Annual Norwood Wellness Fair",
+    "start": {
+      "date": "2026-11-14",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "13:00"
+    },
+    "venue": "Coakley Middle School",
+    "address": "1315 Washington St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "nps-health-council",
+    "source_url": "https://www.norwood.k12.ma.us/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Wellness Fair",
+    "publish_candidate": true,
+    "verification_status": "user_flyer_verified_2026-10-04",
+    "organizer": "Norwood Public School Health Council",
+    "notes": "Free and open to everyone. More than 50 wellness-oriented businesses, organizations and community groups; meet local wellness experts; vaccine clinic available.",
+    "registration_url": "https://www.shaws.com/vaccinations/group-clinic/NorwoodVAX"
   },
   {
     "id": "2026-11-14-magic-zeppelin",
@@ -4208,29 +4233,6 @@
     "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
-    "id": "2027-02-05-sunnyside-up-aa",
-    "title": "Sunnyside Up AA",
-    "start": {
-      "date": "2027-02-05",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2027-02-05",
-      "time": "08:00"
-    },
-    "venue": "Grace Episcopal Church",
-    "address": "150 Chapel St, Norwood, MA 02062",
-    "category": "recovery",
-    "source_id": "recovery-aa",
-    "source_url": "https://www.gracenor.org/groups",
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Sunnyside Up AA",
-    "publish_candidate": true,
-    "verification_status": "official_recurring_schedule_verified_2026-09-26",
-    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
-  },
-  {
     "id": "2027-02-05-special-someone-dance",
     "title": "Special Someone Dance",
     "start": {
@@ -4252,6 +4254,29 @@
     "publish_candidate": true,
     "verification_status": "web_verified_2026-09-19",
     "notes": "Annual semi-formal dance for ages 3–10 with a special someone; snacks, photo booth and DJ. Time was not stated in the verified Fall/Winter 2026 guide excerpt, so Norwood.ma does not guess it."
+  },
+  {
+    "id": "2027-02-05-sunnyside-up-aa",
+    "title": "Sunnyside Up AA",
+    "start": {
+      "date": "2027-02-05",
+      "time": "07:00"
+    },
+    "end": {
+      "date": "2027-02-05",
+      "time": "08:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "category": "recovery",
+    "source_id": "recovery-aa",
+    "source_url": "https://www.gracenor.org/groups",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Sunnyside Up AA",
+    "publish_candidate": true,
+    "verification_status": "official_recurring_schedule_verified_2026-09-26",
+    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page."
   },
   {
     "id": "2027-02-08-sunnyside-up-aa",
