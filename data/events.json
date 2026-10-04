@@ -156,6 +156,36 @@
     ]
   },
   {
+    "id": "2026-10-04-october-2026-c5efe1a",
+    "title": "October 2026",
+    "start": {
+      "date": "2026-10-04",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": null
+    },
+    "venue": "Norwood Blood Drives",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_source_page",
+    "notes": null,
+    "discovered_by": "scheduled_semantic_html",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-04-we-re-going-on-a-pumpkin-hunt-storywalk-877f104",
     "title": "We're Going on a Pumpkin Hunt StoryWalk",
     "start": {
@@ -214,37 +244,6 @@
     ]
   },
   {
-    "id": "2026-10-04-world-communion-sunday-09002ea",
-    "title": "World Communion Sunday",
-    "start": {
-      "date": "2026-10-04",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "11:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-04-divine-mercy-prayers-abbe39b",
     "title": "Divine Mercy Prayers",
     "start": {
@@ -262,37 +261,6 @@
     "source_url": "https://iccnorwood.org/events",
     "cost": null,
     "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-peter-makari-of-common-global-ministries-talk-d6d5a30",
-    "title": "Peter Makari of Common Global Ministries Talk about Middle East",
-    "start": {
-      "date": "2026-10-04",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "12:30"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
@@ -572,6 +540,36 @@
     "calendar_ids": [
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-04-police-search-norwood-neighborhood-following--c2ba04e",
+    "title": "Police Search Norwood Neighborhood Following Reported Armed Home Invasion",
+    "start": {
+      "date": "2026-10-04",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-04",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "inside-norwood",
+    "source_url": "https://insidenorwood.com/police-search-neighborhood-following-reported-armed-home-invasion-in-norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Inside Norwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Police & Fire Police Search Norwood Neighborhood Following Reported Armed Home Invasion October 4, 2026 Rob Disario",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -12950,6 +12948,38 @@
     ]
   },
   {
+    "id": "2026-10-18-child-of-god-sunday-50-plus-year-member-celeb-17a31c9",
+    "title": "Child of God Sunday, 50 plus year member celebration and POT LUCK",
+    "start": {
+      "date": "2026-10-18",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "12:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-18-k-pop-market-93dc031",
     "title": "K-Pop Market",
     "start": {
@@ -14552,6 +14582,37 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-20-book-club-f47ddaa",
+    "title": "Book Club",
+    "start": {
+      "date": "2026-10-20",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": "14:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -45052,13 +45113,13 @@
     "address": null,
     "category": "sports",
     "source_id": "historical-society-events",
-    "source_url": "https://norwoodhistoricalsociety.org/event/a-victorian-christmas-with-diane-taraz/",
+    "source_url": "https://norwoodhistoricalsociety.org/event/victorian-christmas-concert/",
     "cost": "$20.00",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Christmas The Stories Behind the Carols We Still Sing Clad in a hand-sewn 1850s gown and accompanying herself on guitar and dulcimer, Diane Taraz brings to life the beloved carols written or revived in the Victorian era – the age that shape",
+    "notes": "Christmas The Stories Behind the Carols We Still Sing @ Clad in a hand-sewn 1850s gown and accompanying herself on guitar and dulcimer, Diane Taraz brings to life the beloved carols written or revived in the Victorian era – the age that sha",
     "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
     "access_type": "paid",

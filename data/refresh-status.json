@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-04T15:46:38.093656-04:00",
+  "generated_at": "2026-10-04T18:01:12.111854-04:00",
   "offline": false,
-  "events_published": 2797,
+  "events_published": 2799,
   "news_published": 120,
   "civic_notices": 42,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2797,
-      "generated_at": "2026-10-04T15:46:37.213033-04:00"
+      "events": 2799,
+      "generated_at": "2026-10-04T18:01:11.536755-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 119,
-      "generated_at": "2026-10-04T15:46:37.225619-04:00"
+      "generated_at": "2026-10-04T18:01:11.543551-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1064,
-      "generated_at": "2026-10-04T15:46:37.251838-04:00"
+      "events": 1065,
+      "generated_at": "2026-10-04T18:01:11.558154-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 979,
-      "generated_at": "2026-10-04T15:46:37.274468-04:00"
+      "generated_at": "2026-10-04T18:01:11.570425-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-04T15:46:37.286070-04:00"
+      "generated_at": "2026-10-04T18:01:11.576956-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 79,
-      "generated_at": "2026-10-04T15:46:37.299900-04:00"
+      "generated_at": "2026-10-04T18:01:11.584512-04:00"
     }
   ],
   "recreation_programs": 164,
@@ -208,9 +208,9 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 0,
+      "found": 3,
       "note": null,
-      "outcome": "empty",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -249,8 +249,8 @@
       "source_id": "inside-norwood",
       "ok": true,
       "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 1,
+      "note": ""
     },
     {
       "source_id": "irish-brewing-events",
@@ -362,9 +362,9 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -380,9 +380,9 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -543,9 +543,9 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -1177,13 +1177,12 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "parser_gap",
-      "access_limited": false,
-      "retained_events": 9
+      "found": 10,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "pcrinc-events",
@@ -1584,10 +1583,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -1601,7 +1599,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 64,
+      "found": 63,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1607,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 64,
+      "found": 63,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1693,8 +1691,9 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Inside Norwood": 11,
         "Norwood Public Schools": 2,
-        "Town of Norwood": 11,
+        "Town of Norwood": 10,
         "Norwood Town News": 19,
         "The Norwood Record": 41,
         "The Norwood Record — Latest": 18,
@@ -1707,7 +1706,6 @@
         "Wicked Local": 1,
         "USA Today": 1,
         "CBS News": 1,
-        "Inside Norwood": 10,
         "Boston.com": 2,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
