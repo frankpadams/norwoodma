@@ -5,7 +5,7 @@ const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
 map.addLayer(cluster);
-const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory');
+const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory'),searchHelp=document.querySelector('#mapSearchHelp');
 let filter=category?.value||'all',userMarker=null,renderToken=0;
 const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedBusinessGroup=params.get('businessGroup')||'',requestedBusinessSub=params.get('businessSub')||'',requestedCategory=params.get('category')||'';
 if(requestedCategory&&category&&[...category.options].some(o=>o.value===requestedCategory)){filter=requestedCategory;category.value=requestedCategory;}
@@ -208,8 +208,13 @@ async function pooled(items,worker,limit=5){
  let i=0;const runners=Array.from({length:Math.min(limit,items.length)},async()=>{while(i<items.length){const idx=i++;await worker(items[idx],idx)}});await Promise.all(runners);
 }
 async function render(){
- const token=++renderToken,shown=currentPlaces();
+ const token=++renderToken,shown=currentPlaces(),q=norm(search.value);
  cluster.clearLayers();list.innerHTML='';
+ if(searchHelp){
+   const lgbtq=/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q);
+   searchHelp.hidden=!lgbtq;
+   searchHelp.innerHTML=lgbtq?'<strong>Looking for LGBTQ+ support?</strong><br>Most LGBTQ+ services in the directory are regional, statewide, or online and do not have a Norwood street address, so they cannot be shown accurately as map pins. <a href="resources.html#lgbtq">See LGBTQ+ Support resources →</a>':'';
+ }
  count.textContent=shown.length+' place'+(shown.length===1?'':'s')+' in this view';
  status.innerHTML='Plotting locations… <span class="map-progress" id="mapProgress">0 of '+shown.length+' mapped</span>';
  const cards=new Map(),markers=[],progress=document.querySelector('#mapProgress');
@@ -227,7 +232,6 @@ async function render(){
  },6);
  if(token!==renderToken)return;
  status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
- const q=norm(search.value);
  if((filter==='all'&&!q)||(filter==='gas'&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
  else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
  else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
