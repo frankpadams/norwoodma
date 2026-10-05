@@ -313,10 +313,10 @@
   },
   {
     "id": "ticketing",
-    "query": "site:eventbrite.com Norwood MA events",
-    "purpose": "ticketed public-event discovery",
+    "query": "site:eventbrite.com Norwood MA events OR tickets",
+    "purpose": "daily ticketed public-event discovery, including Eventbrite Norwood listings and venue events",
     "cadence": "daily",
-    "priority": 4,
+    "priority": 2,
     "filters": {
       "must_resolve_to_norwood": true,
       "must_have_date": true,
