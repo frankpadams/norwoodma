@@ -125,5 +125,11 @@ class CalendarSourcesTest(unittest.TestCase):
             self.assertEqual(refresh.events_from_local_town_pages(source), [])
 
 
+
+def test_public_candidate_rejects_appointment_only_events():
+    assert not refresh_content.public_candidate('Baptism Preparation', 'By appointment only')
+    assert not refresh_content.public_candidate('Monday', 'Baptism preparation by appointment only')
+
+
 if __name__ == '__main__':
     unittest.main()
