@@ -192,37 +192,6 @@
     ]
   },
   {
-    "id": "2026-10-05-mondays-with-moms-monday-a535247",
-    "title": "Mondays with Moms Monday ,",
-    "start": {
-      "date": "2026-10-05",
-      "time": "09:30"
-    },
-    "end": {
-      "date": "2026-10-05",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/events/mondays-with-moms/20261005",
-    "cost": null,
-    "public_access": "public",
-    "series": "Saint Catherine of Siena — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mondays with Moms Monday , October 5 , 9:30 AM - 11:00 AM Moms of all ages are invited to join us on the first Monday of each month in the chapel at 9:30 a.m. for Adoration, confession, and a short reflection followed by time for fellowship. Children are welcome! Read More",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ed365c66c2b6-2026-10-05",
     "title": "All Welcome Yoga Session 1",
     "start": {
@@ -953,36 +922,6 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-05-bible-study-monday-1ba5cb7",
-    "title": "Bible Study Monday ,",
-    "start": {
-      "date": "2026-10-05",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-05",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/events/bible-study-3",
-    "cost": null,
-    "public_access": "public",
-    "series": "Saint Catherine of Siena — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Bible Study Monday , October 5 , 6:30 PM Read More",
-    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -2530,40 +2469,6 @@
     ]
   },
   {
-    "id": "2026-10-07-bv-soccer-vs-medway-high-school-79b6d49",
-    "title": "BV Soccer vs Medway High School",
-    "start": {
-      "date": "2026-10-07",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-10-07",
-      "time": "17:45"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-07-boys-varsity-golf-medfield-senior-high-school-a37b063",
     "title": "Boys Varsity Golf @ Medfield Senior High School",
     "start": {
@@ -2586,6 +2491,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: Ponkapoag Golf Course Subsite: Ponkapoag Golf Course",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-07-bv-soccer-vs-medway-high-school-79b6d49",
+    "title": "BV Soccer vs Medway High School",
+    "start": {
+      "date": "2026-10-07",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "17:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -2734,40 +2673,6 @@
     ]
   },
   {
-    "id": "2026-10-07-gv-soccer-medway-high-school-4e86908",
-    "title": "GV Soccer @ Medway High School",
-    "start": {
-      "date": "2026-10-07",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2026-10-07",
-      "time": "18:15"
-    },
-    "venue": "88 Summer Street, Medway MA 02053",
-    "address": "88 Summer Street, Medway MA 02053",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Medway High School (School Teams) Subsite: Hanlon Turf",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-07-girls-varsity-cross-country-ashland-high-scho-b2c7ced",
     "title": "Girls Varsity cross country @ Ashland High School",
     "start": {
@@ -2790,6 +2695,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: cross country Level: Girls Varsity Team: Norwood High School Site: Ashland State Park Subsite: Ashland State Park",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-07-gv-soccer-medway-high-school-4e86908",
+    "title": "GV Soccer @ Medway High School",
+    "start": {
+      "date": "2026-10-07",
+      "time": "16:45"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "18:15"
+    },
+    "venue": "88 Summer Street, Medway MA 02053",
+    "address": "88 Summer Street, Medway MA 02053",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Medway High School (School Teams) Subsite: Hanlon Turf",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -3469,7 +3408,7 @@
   },
   {
     "id": "2026-10-08-hr-fundamentals-for-small-businesses-thu-69930d1",
-    "title": "HR Fundamentals for Small Businesses Thu",
+    "title": "HR Fundamentals for Small Businesses",
     "start": {
       "date": "2026-10-08",
       "time": "08:30"
@@ -3489,36 +3428,6 @@
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
     "notes": "HR Fundamentals for Small Businesses Thu, Oct 8th @ 8:30 AM",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-08-thu-44d519c",
-    "title": "Thu",
-    "start": {
-      "date": "2026-10-08",
-      "time": "08:30"
-    },
-    "end": {
-      "date": "2026-10-08",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "nrrc-events",
-    "source_url": "https://www.nrrchamber.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Neponset River Regional Chamber — Events",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Thu, Oct 8th @ 8:30 AM",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -4630,38 +4539,6 @@
     ]
   },
   {
-    "id": "2026-10-09-finch-bharth-wedding-a70055a",
-    "title": "Finch/Bharth Wedding",
-    "start": {
-      "date": "2026-10-09",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-10-09",
-      "time": "18:00"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-09-varsity-football-vs-westwood-high-school-8123f13",
     "title": "Varsity Football vs Westwood High School",
     "start": {
@@ -4805,36 +4682,6 @@
     "verification_status": "auto_primary_source",
     "notes": "All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship.",
     "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-10-men-s-prayer-group-saturday-f22e339",
-    "title": "Men's Prayer Group Saturday ,",
-    "start": {
-      "date": "2026-10-10",
-      "time": "07:30"
-    },
-    "end": {
-      "date": "2026-10-10",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/events/mens-prayer-group/20261010",
-    "cost": null,
-    "public_access": "public",
-    "series": "Saint Catherine of Siena — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Men's Prayer Group Saturday , October 10 , 7:30 AM - 8:30 AM All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship. Read More",
-    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -7393,40 +7240,6 @@
     ]
   },
   {
-    "id": "2026-10-13-gv-soccer-walpole-high-school-9dc6c4f",
-    "title": "GV Soccer @ Walpole High School",
-    "start": {
-      "date": "2026-10-13",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-10-13",
-      "time": "18:15"
-    },
-    "venue": "625 Washington,Street, Walpole MA 02032",
-    "address": "625 Washington,Street, Walpole MA 02032",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Walpole Middle School Subsite: Soccer Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-13-girls-middle-school-volleyball-vs-holliston-h-ac84416",
     "title": "Girls Middle School Volleyball vs Holliston High School",
     "start": {
@@ -7449,6 +7262,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Coakley Middle School Subsite: Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-13-gv-soccer-walpole-high-school-9dc6c4f",
+    "title": "GV Soccer @ Walpole High School",
+    "start": {
+      "date": "2026-10-13",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": "18:15"
+    },
+    "venue": "625 Washington,Street, Walpole MA 02032",
+    "address": "625 Washington,Street, Walpole MA 02032",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Walpole Middle School Subsite: Soccer Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -7893,6 +7740,34 @@
     ]
   },
   {
+    "id": "2026-10-13-norwood-toastmasters-guests-welcome-cb0dc73",
+    "title": "Norwood Toastmasters — Guests Welcome",
+    "start": {
+      "date": "2026-10-13",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": null
+    },
+    "venue": "Norwood Civic Center - Lydon Suite",
+    "address": null,
+    "source_id": "norwood-toastmasters",
+    "source_url": "https://www.norwoodrecord.com/events/589df990-e9d9-411f-ad07-782507ae0260",
+    "category": "community",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "secondary_dated_listing",
+    "notes": "Guests welcome. Concrete occurrence and room listed by the Norwood Record; check the linked listing for changes.",
+    "discovered_by": "toastmasters_newspaper_fallback",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-13-norwood-toastmasters-can-improve-your-communi-05b8447",
     "title": "Norwood Toastmasters can improve your communication skills",
     "start": {
@@ -7920,34 +7795,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "circle-of-hope",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-13-norwood-toastmasters-guests-welcome-cb0dc73",
-    "title": "Norwood Toastmasters — Guests Welcome",
-    "start": {
-      "date": "2026-10-13",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-13",
-      "time": null
-    },
-    "venue": "Norwood Civic Center - Lydon Suite",
-    "address": null,
-    "source_id": "norwood-toastmasters",
-    "source_url": "https://www.norwoodrecord.com/events/589df990-e9d9-411f-ad07-782507ae0260",
-    "category": "community",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "secondary_dated_listing",
-    "notes": "Guests welcome. Concrete occurrence and room listed by the Norwood Record; check the linked listing for changes.",
-    "discovered_by": "toastmasters_newspaper_fallback",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -7986,37 +7833,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-13-knights-of-columbus-meeting-in-church-hall-a519c35",
-    "title": "Knights of Columbus Meeting in Church Hall",
-    "start": {
-      "date": "2026-10-13",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-10-13",
-      "time": "20:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -9116,37 +8932,6 @@
     ]
   },
   {
-    "id": "2026-10-14-youth-group-wednesday-8587d97",
-    "title": "Youth Group Wednesday ,",
-    "start": {
-      "date": "2026-10-14",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-14",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/events/youth-group",
-    "cost": null,
-    "public_access": "public",
-    "series": "Saint Catherine of Siena — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Youth Group Wednesday , October 14 , 6:30 PM - 8:00 PM All students in grades 6-8 are welcome to join us for an evening of fun, faith, and fellowship. Read More",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-b8b250304255-2026-10-14",
     "title": "Adult Tap - Wednesdays",
     "start": {
@@ -9241,6 +9026,38 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-15-america-is-wild-an-interactive-wildlife-adven-063bbbe",
+    "title": "“America is Wild!”: An Interactive Wildlife Adventure for Kids",
+    "start": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/america-is-wild-an-interactive-wildlife-adventure-for-kids/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Ages 5-12Registration requiredCalling all wildlife explorers! Join wildlife ecologist and nature author Brad Timm for an exciting, hands-on adventure through the amazing animals and plants of the United States. Inspired by his book America ",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -9400,38 +9217,6 @@
       "library-calendar",
       "norwood-arts",
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-15-america-is-wild-an-interactive-wildlife-adven-063bbbe",
-    "title": "“America is Wild!”: An Interactive Wildlife Adventure for Kids",
-    "start": {
-      "date": "2026-10-15",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-15",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/america-is-wild-an-interactive-wildlife-adventure-for-kids/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Ages 5-12Registration requiredCalling all wildlife explorers! Join wildlife ecologist and nature author Brad Timm for an exciting, hands-on adventure through the amazing animals and plants of the United States. Inspired by his book America ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-family"
     ]
   },
   {
@@ -10834,7 +10619,7 @@
   },
   {
     "id": "2026-10-17-men-s-prayer-group-saturday-eb3fe91",
-    "title": "Men's Prayer Group Saturday ,",
+    "title": "Men's Prayer Group",
     "start": {
       "date": "2026-10-17",
       "time": "07:30"
@@ -11799,8 +11584,35 @@
     ]
   },
   {
+    "id": "2026-10-17-bow-thayer",
+    "title": "The Bow Thayer Large Band — Ninevah Release Show",
+    "start": {
+      "date": "2026-10-17",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-17",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott St, Norwood, MA",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
+    "cost": null,
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-17-the-bow-thayer-large-band-record-release-show-b561e5c",
-    "title": "The Bow Thayer Large Band ​Record Release Show for Ninevah! Sat",
+    "title": "The Bow Thayer Large Band ​Record Release Show for Ninevah!",
     "start": {
       "date": "2026-10-17",
       "time": "19:00"
@@ -11825,33 +11637,6 @@
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-17-bow-thayer",
-    "title": "The Bow Thayer Large Band — Ninevah Release Show",
-    "start": {
-      "date": "2026-10-17",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-17",
-      "time": null
-    },
-    "venue": "The Fallout Shelter",
-    "address": "61 Endicott St, Norwood, MA",
-    "category": "live_music",
-    "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-arts",
       "norwood-community"
     ]
   },
@@ -12163,37 +11948,6 @@
     ]
   },
   {
-    "id": "2026-10-18-fitzgerald-baptism-e8ad01e",
-    "title": "Fitzgerald Baptism",
-    "start": {
-      "date": "2026-10-18",
-      "time": "13:30"
-    },
-    "end": {
-      "date": "2026-10-18",
-      "time": "14:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-18-repair-caf-october-2026-faf4793",
     "title": "Repair Café – October 2026",
     "start": {
@@ -12431,6 +12185,38 @@
     ]
   },
   {
+    "id": "2026-10-19-virtual-a-book-birthday-with-horror-writer-ro-16c33ca",
+    "title": "[VIRTUAL] A Book Birthday with Horror Writer Robert Ottone in conversation with Lauren Bolger",
+    "start": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "arts",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-a-book-birthday-with-horror-writer-robert-ottone-in-conversation-with-lauren-bolger/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Morrill Memorial Library is partnering with Ashland Public Library to host a virtual author talk titled A Book Birthday with Horror Writer Robert Ottone in conversation with Lauren Bolger on October 19, 2026 on Zoom. To all the horror genre",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-19-parachute-playtime-96134ca",
     "title": "Parachute Playtime",
     "start": {
@@ -12515,38 +12301,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Morrill Memorial Library is excited to bring to you a relaxing evening of adult coloring, but with a twist. &nbsp;Please join us for Reverse Coloring for Adults: Relax &amp; Create on Monday October 19, 2026 at 6:30PM in the Simoni Room. Pr",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-19-virtual-a-book-birthday-with-horror-writer-ro-16c33ca",
-    "title": "[VIRTUAL] A Book Birthday with Horror Writer Robert Ottone in conversation with Lauren Bolger",
-    "start": {
-      "date": "2026-10-19",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-19",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-a-book-birthday-with-horror-writer-robert-ottone-in-conversation-with-lauren-bolger/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is partnering with Ashland Public Library to host a virtual author talk titled A Book Birthday with Horror Writer Robert Ottone in conversation with Lauren Bolger on October 19, 2026 on Zoom. To all the horror genre",
     "discovered_by": "scheduled_jsonld",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -13073,40 +12827,6 @@
     ]
   },
   {
-    "id": "2026-10-19-gv-soccer-vs-westwood-high-school-5b79a64",
-    "title": "GV Soccer vs Westwood High School",
-    "start": {
-      "date": "2026-10-19",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-10-19",
-      "time": "18:15"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-19-girls-freshman-volleyball-vs-westwood-high-sc-6e02654",
     "title": "Girls Freshman Volleyball vs Westwood High School",
     "start": {
@@ -13163,6 +12883,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Volleyball Level: Girls JV Team: Norwood High School Site: Norwood High School Subsite: Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-19-gv-soccer-vs-westwood-high-school-5b79a64",
+    "title": "GV Soccer vs Westwood High School",
+    "start": {
+      "date": "2026-10-19",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": "18:15"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -13340,36 +13094,6 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-19-bible-study-monday-64178b7",
-    "title": "Bible Study Monday ,",
-    "start": {
-      "date": "2026-10-19",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-19",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/events/bible-study-4",
-    "cost": null,
-    "public_access": "public",
-    "series": "Saint Catherine of Siena — Calendar",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Bible Study Monday , October 19 , 6:30 PM Read More",
-    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -14408,33 +14132,33 @@
     ]
   },
   {
-    "id": "2026-10-20-parish-ministry-council-meeting-223bff6",
-    "title": "Parish Ministry Council Meeting",
+    "id": "2026-10-21-virtual-turn-the-page-book-group-the-north-wo-7939adb",
+    "title": "[Virtual] Turn the Page Book Group-The North Woods",
     "start": {
-      "date": "2026-10-20",
-      "time": "19:30"
+      "date": "2026-10-21",
+      "time": "00:00"
     },
     "end": {
-      "date": "2026-10-20",
-      "time": "20:30"
+      "date": "2026-10-21",
+      "time": "00:00"
     },
-    "venue": "Norwood Knights of Columbus Events",
+    "venue": "Morrill Memorial Library",
     "address": null,
     "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-turn-the-page-book-group-40/",
     "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
+    "notes": "Connect with Patty Bailey and fellow local readers for a friendly and informal virtual conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do",
+    "discovered_by": "scheduled_jsonld",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
+      "library-calendar",
       "norwood-community"
     ]
   },
@@ -14555,37 +14279,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do they kn",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-21-virtual-turn-the-page-book-group-the-north-wo-7939adb",
-    "title": "[Virtual] Turn the Page Book Group-The North Woods",
-    "start": {
-      "date": "2026-10-21",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-21",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/virtual-turn-the-page-book-group-40/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Connect with Patty Bailey and fellow local readers for a friendly and informal virtual conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do",
     "discovered_by": "scheduled_jsonld",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -14980,40 +14673,6 @@
     ]
   },
   {
-    "id": "2026-10-21-gv-soccer-vs-medfield-senior-high-school-07ae9cc",
-    "title": "GV Soccer vs Medfield Senior High School",
-    "start": {
-      "date": "2026-10-21",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-10-21",
-      "time": "18:15"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-21-girls-middle-school-volleyball-vs-westwood-hi-e664bea",
     "title": "Girls Middle School Volleyball vs Westwood High School",
     "start": {
@@ -15036,6 +14695,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Coakley Middle School Subsite: Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-21-gv-soccer-vs-medfield-senior-high-school-07ae9cc",
+    "title": "GV Soccer vs Medfield Senior High School",
+    "start": {
+      "date": "2026-10-21",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": "18:15"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -15406,37 +15099,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-10-21-finance-council-meeting-7e3f496",
-    "title": "Finance Council Meeting",
-    "start": {
-      "date": "2026-10-21",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-21",
-      "time": "20:00"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -16076,7 +15738,7 @@
   },
   {
     "id": "2026-10-22-chambertalks-thu-e831f84",
-    "title": "ChamberTalks Thu",
+    "title": "ChamberTalks",
     "start": {
       "date": "2026-10-22",
       "time": "17:00"
@@ -16096,36 +15758,6 @@
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
     "notes": "ChamberTalks Thu, Oct 22nd @ 5:00 PM",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-22-thu-790c3a5",
-    "title": "Thu",
-    "start": {
-      "date": "2026-10-22",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-10-22",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "nrrc-events",
-    "source_url": "https://www.nrrchamber.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Neponset River Regional Chamber — Events",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Thu, Oct 22nd @ 5:00 PM",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -18324,7 +17956,7 @@
   },
   {
     "id": "2026-10-25-the-boston-blues-challenge-boston-blues-socie-1bf29e2",
-    "title": "The Boston Blues Challenge Boston Blues Society Live Blues Competition! Sun",
+    "title": "The Boston Blues Challenge Boston Blues Society Live Blues Competition!",
     "start": {
       "date": "2026-10-25",
       "time": "17:00"
@@ -19518,7 +19150,7 @@
   },
   {
     "id": "2026-10-27-caffeine-connections-tue-de17661",
-    "title": "Caffeine & Connections Tue",
+    "title": "Caffeine & Connections",
     "start": {
       "date": "2026-10-27",
       "time": "08:30"
@@ -20333,6 +19965,34 @@
     ]
   },
   {
+    "id": "2026-10-27-norwood-toastmasters-guests-welcome-5908462",
+    "title": "Norwood Toastmasters — Guests Welcome",
+    "start": {
+      "date": "2026-10-27",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": null
+    },
+    "venue": "Norwood Civic Center - Willet Room",
+    "address": null,
+    "source_id": "norwood-toastmasters",
+    "source_url": "https://www.norwoodrecord.com/events/24ff212c-9b77-4f00-b99c-c3bf35171471",
+    "category": "community",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "secondary_dated_listing",
+    "notes": "Guests welcome. Concrete occurrence and room listed by the Norwood Record; check the linked listing for changes.",
+    "discovered_by": "toastmasters_newspaper_fallback",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-27-norwood-toastmasters-can-improve-your-communi-46277ea",
     "title": "Norwood Toastmasters can improve your communication skills",
     "start": {
@@ -20360,34 +20020,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "circle-of-hope",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-27-norwood-toastmasters-guests-welcome-5908462",
-    "title": "Norwood Toastmasters — Guests Welcome",
-    "start": {
-      "date": "2026-10-27",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": null
-    },
-    "venue": "Norwood Civic Center - Willet Room",
-    "address": null,
-    "source_id": "norwood-toastmasters",
-    "source_url": "https://www.norwoodrecord.com/events/24ff212c-9b77-4f00-b99c-c3bf35171471",
-    "category": "community",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "secondary_dated_listing",
-    "notes": "Guests welcome. Concrete occurrence and room listed by the Norwood Record; check the linked listing for changes.",
-    "discovered_by": "toastmasters_newspaper_fallback",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -20426,37 +20058,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-27-knights-of-columbus-meeting-in-church-hall-49835f0",
-    "title": "Knights of Columbus Meeting in Church Hall",
-    "start": {
-      "date": "2026-10-27",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": "20:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -22665,8 +22266,35 @@
     ]
   },
   {
+    "id": "2026-10-30-no-static",
+    "title": "No Static — Steely Dan Tribute",
+    "start": {
+      "date": "2026-10-30",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott St, Norwood, MA",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
+    "cost": null,
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-09-17",
+    "notes": "Sold out at time of source check; livestream advertised.",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-30-no-static-tribute-to-the-music-of-steely-dan--f3d0779",
-    "title": "No Static Tribute To The Music Of Steely Dan!​ Fri",
+    "title": "No Static Tribute To The Music Of Steely Dan!​",
     "start": {
       "date": "2026-10-30",
       "time": "19:00"
@@ -22691,33 +22319,6 @@
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-30-no-static",
-    "title": "No Static — Steely Dan Tribute",
-    "start": {
-      "date": "2026-10-30",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-30",
-      "time": null
-    },
-    "venue": "The Fallout Shelter",
-    "address": "61 Endicott St, Norwood, MA",
-    "category": "live_music",
-    "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": "Sold out at time of source check; livestream advertised.",
-    "calendar_ids": [
-      "norwood-arts",
       "norwood-community"
     ]
   },
@@ -26075,7 +25676,7 @@
   },
   {
     "id": "2026-11-05-jake-la-botz-band-featuring-troy-mercy-thu-510a399",
-    "title": "Jake La Botz Band Featuring Troy Mercy! Thu",
+    "title": "Jake La Botz Band Featuring Troy Mercy!",
     "start": {
       "date": "2026-11-05",
       "time": "19:00"
@@ -27474,7 +27075,7 @@
   },
   {
     "id": "2026-11-07-walter-parks-the-unlawful-assembly-the-magnif-9385c07",
-    "title": "Walter Parks & The Unlawful Assembly The Magnificent Quartet Returns! Sat",
+    "title": "Walter Parks & The Unlawful Assembly The Magnificent Quartet Returns!",
     "start": {
       "date": "2026-11-07",
       "time": "19:00"
@@ -28177,7 +27778,7 @@
   },
   {
     "id": "2026-11-10-connections-at-work-noon-networking-tue-88afa06",
-    "title": "Connections at Work (Noon Networking) Tue",
+    "title": "Connections at Work (Noon Networking)",
     "start": {
       "date": "2026-11-10",
       "time": "12:00"
@@ -28228,36 +27829,6 @@
     "verification_status": "auto_primary_source",
     "notes": "Tuesday, November 10, 2026 12:00 PM thru 01:30 PM Location: TBD Join us for our next Connections at Work (Noon Networking)! Our fun new format will help you expand your network by connecting you with other Chamber members over a delicious l",
     "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-10-tue-741e35e",
-    "title": "Tue",
-    "start": {
-      "date": "2026-11-10",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-11-10",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "nrrc-events",
-    "source_url": "https://www.nrrchamber.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Neponset River Regional Chamber — Events",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Tue, Nov 10th @ 12:00 PM",
-    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -29184,7 +28755,7 @@
   },
   {
     "id": "2026-11-11-dave-limina-s-wednesdave-blues-iii-wed-a718ab6",
-    "title": "Dave Limina's Wednesdave Blues III ​ Wed",
+    "title": "Dave Limina's Wednesdave Blues III ​",
     "start": {
       "date": "2026-11-11",
       "time": "19:00"
@@ -31248,7 +30819,7 @@
   },
   {
     "id": "2026-11-14-goodnight-moonshine-featuring-molly-venter-of-c08d38b",
-    "title": "Goodnight Moonshine Featuring Molly Venter of Red Molly! Sat",
+    "title": "Goodnight Moonshine Featuring Molly Venter of Red Molly!",
     "start": {
       "date": "2026-11-14",
       "time": "19:00"
@@ -32329,37 +31900,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-17-parish-ministry-council-meeting-8edbc96",
-    "title": "Parish Ministry Council Meeting",
-    "start": {
-      "date": "2026-11-17",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-11-17",
-      "time": "20:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -33539,7 +33079,7 @@
   },
   {
     "id": "2026-11-19-seth-walker-the-talented-singer-songwriter-gu-28c9eb1",
-    "title": "Seth Walker The Talented Singer/Songwriter/Guitarist Returns! Thu",
+    "title": "Seth Walker The Talented Singer/Songwriter/Guitarist Returns!",
     "start": {
       "date": "2026-11-19",
       "time": "19:00"
@@ -34231,7 +33771,7 @@
   },
   {
     "id": "2026-11-21-john-n-meth-the-blue-dreamers-blues-legend-re-9f1ad6c",
-    "title": "John Németh & The Blue Dreamers Blues Legend Returns to The Fallout Shelter! Sat",
+    "title": "John Németh & The Blue Dreamers Blues Legend Returns to The Fallout Shelter!",
     "start": {
       "date": "2026-11-21",
       "time": "19:00"
@@ -34287,37 +33827,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-21-fortunat-baptism-0a9d15f",
-    "title": "Fortunat Baptism",
-    "start": {
-      "date": "2026-11-21",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-21",
-      "time": null
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -34877,7 +34386,7 @@
   },
   {
     "id": "2026-11-24-caffeine-connections-tue-4be6785",
-    "title": "Caffeine & Connections Tue",
+    "title": "Caffeine & Connections",
     "start": {
       "date": "2026-11-24",
       "time": "08:30"
@@ -34933,36 +34442,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-24-tue-38553a8",
-    "title": "Tue",
-    "start": {
-      "date": "2026-11-24",
-      "time": "08:30"
-    },
-    "end": {
-      "date": "2026-11-24",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "nrrc-events",
-    "source_url": "https://www.nrrchamber.com/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Neponset River Regional Chamber — Events",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Tue, Nov 24th @ 8:30 AM",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -35851,7 +35330,7 @@
   },
   {
     "id": "2026-11-25-reckoners-thanksgiving-rhythm-blues-blast-wed-6f84aff",
-    "title": "Reckoners Thanksgiving Rhythm & Blues Blast! Wed",
+    "title": "Reckoners Thanksgiving Rhythm & Blues Blast!",
     "start": {
       "date": "2026-11-25",
       "time": "19:00"
@@ -36943,37 +36422,6 @@
     ]
   },
   {
-    "id": "2026-11-28-church-hall-in-use-e3c1e5e",
-    "title": "Church Hall in Use",
-    "start": {
-      "date": "2026-11-28",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-11-28",
-      "time": "16:00"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-4eefd7ddaaf6-2026-11-28",
     "title": "Jazz 1 - Saturdays",
     "start": {
@@ -37039,7 +36487,7 @@
   },
   {
     "id": "2026-11-28-the-mcdonough-band-annual-saturday-after-than-97d7db1",
-    "title": "The McDonough Band Annual Saturday After Thanksgiving Special! Sat",
+    "title": "The McDonough Band Annual Saturday After Thanksgiving Special!",
     "start": {
       "date": "2026-11-28",
       "time": "19:00"
@@ -39890,33 +39338,6 @@
     ]
   },
   {
-    "id": "2026-12-05-vfw-post-2452-meat-raffle-34158e0",
-    "title": "VFW Post 2452 Meat Raffle",
-    "start": {
-      "date": "2026-12-05",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-12-05",
-      "time": "17:00"
-    },
-    "venue": "Norwood VFW Post 2452",
-    "address": "193 Dean St, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "vfw-post-2452-meat-raffle",
-    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
-    "cost": "$2 per drawing; $20 pre-buy",
-    "public_access": "public",
-    "series": "VFW Post 2452 Meat Raffle",
-    "publish_candidate": true,
-    "verification_status": "established_recurring_schedule",
-    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
-    "discovered_by": "scheduled_recurring_series",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-12-05-varsity-basketball-boys-basketball-apponequet-4f49b53",
     "title": "Varsity Basketball Boys Basketball @ Apponequet Regional High School",
     "start": {
@@ -39948,6 +39369,33 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-12-05-vfw-post-2452-meat-raffle-34158e0",
+    "title": "VFW Post 2452 Meat Raffle",
+    "start": {
+      "date": "2026-12-05",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": "17:00"
+    },
+    "venue": "Norwood VFW Post 2452",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "vfw-post-2452-meat-raffle",
+    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
+    "cost": "$2 per drawing; $20 pre-buy",
+    "public_access": "public",
+    "series": "VFW Post 2452 Meat Raffle",
+    "publish_candidate": true,
+    "verification_status": "established_recurring_schedule",
+    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
+    "discovered_by": "scheduled_recurring_series",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -45020,37 +44468,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-12-15-parish-ministry-council-meeting-a0d4b93",
-    "title": "Parish Ministry Council Meeting",
-    "start": {
-      "date": "2026-12-15",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-12-15",
-      "time": "20:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -50856,37 +50273,6 @@
     ]
   },
   {
-    "id": "2026-12-28-tentative-parish-ministry-council-meeting-e944b1b",
-    "title": "Tentative Parish Ministry Council Meeting",
-    "start": {
-      "date": "2026-12-28",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-12-28",
-      "time": "20:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-12-29-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -52637,8 +52023,8 @@
     ]
   },
   {
-    "id": "2027-01-01-town-hall-closure-8997312",
-    "title": "Town Hall Closure",
+    "id": "2027-01-01-demo-event-abd93dd",
+    "title": "demo event",
     "start": {
       "date": "2027-01-01",
       "time": null
@@ -52647,7 +52033,7 @@
       "date": "2027-01-01",
       "time": null
     },
-    "venue": "Norwood Town Hall, 566 Washington Street Norwood, MA 02062",
+    "venue": null,
     "address": null,
     "category": "community",
     "source_id": "town-master-calendar",
@@ -52665,8 +52051,8 @@
     ]
   },
   {
-    "id": "2027-01-01-demo-event-abd93dd",
-    "title": "demo event",
+    "id": "2027-01-01-town-hall-closure-8997312",
+    "title": "Town Hall Closure",
     "start": {
       "date": "2027-01-01",
       "time": null
@@ -52675,7 +52061,7 @@
       "date": "2027-01-01",
       "time": null
     },
-    "venue": null,
+    "venue": "Norwood Town Hall, 566 Washington Street Norwood, MA 02062",
     "address": null,
     "category": "community",
     "source_id": "town-master-calendar",
@@ -85681,40 +85067,6 @@
     ]
   },
   {
-    "id": "2027-03-31-varsity-softball-westwood-high-school-17a3538",
-    "title": "Varsity Softball @ Westwood High School",
-    "start": {
-      "date": "2027-03-31",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-03-31",
-      "time": "17:45"
-    },
-    "venue": "200 Nahatan Street, Westwood MA 02090",
-    "address": "200 Nahatan Street, Westwood MA 02090",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Westwood High School Subsite: High School Softball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-03-31-varsity-baseball-westwood-high-school-51453de",
     "title": "Varsity baseball @ Westwood High School",
     "start": {
@@ -85737,6 +85089,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Westwood High School Subsite: High School Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-03-31-varsity-softball-westwood-high-school-17a3538",
+    "title": "Varsity Softball @ Westwood High School",
+    "start": {
+      "date": "2027-03-31",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-03-31",
+      "time": "17:45"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Westwood High School Subsite: High School Softball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -86268,40 +85654,6 @@
     ]
   },
   {
-    "id": "2027-04-02-varsity-softball-ashland-high-school-6800d2f",
-    "title": "Varsity Softball @ Ashland High School",
-    "start": {
-      "date": "2027-04-02",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2027-04-02",
-      "time": "18:45"
-    },
-    "venue": "65 East Union St, Ashland MA 01721",
-    "address": "65 East Union St, Ashland MA 01721",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Ashland HS Subsite: Softball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-02-varsity-baseball-ashland-high-school-bee9cb9",
     "title": "Varsity baseball @ Ashland High School",
     "start": {
@@ -86324,6 +85676,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Ashland Middle School Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-02-varsity-softball-ashland-high-school-6800d2f",
+    "title": "Varsity Softball @ Ashland High School",
+    "start": {
+      "date": "2027-04-02",
+      "time": "16:45"
+    },
+    "end": {
+      "date": "2027-04-02",
+      "time": "18:45"
+    },
+    "venue": "65 East Union St, Ashland MA 01721",
+    "address": "65 East Union St, Ashland MA 01721",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Ashland HS Subsite: Softball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -86760,40 +86146,6 @@
     ]
   },
   {
-    "id": "2027-04-05-varsity-softball-norton-high-school-a21bd5f",
-    "title": "Varsity Softball @ Norton High School",
-    "start": {
-      "date": "2027-04-05",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2027-04-05",
-      "time": "19:00"
-    },
-    "venue": "66 W Main Street, Norton MA 02766",
-    "address": "66 W Main Street, Norton MA 02766",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Norton High School Subsite: Softball Field #1 (HS)",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-05-varsity-baseball-norton-high-school-59e7bda",
     "title": "Varsity baseball @ Norton High School",
     "start": {
@@ -86816,6 +86168,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Norton High School Subsite: Veterans Field (MP)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-05-varsity-softball-norton-high-school-a21bd5f",
+    "title": "Varsity Softball @ Norton High School",
+    "start": {
+      "date": "2027-04-05",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-04-05",
+      "time": "19:00"
+    },
+    "venue": "66 W Main Street, Norton MA 02766",
+    "address": "66 W Main Street, Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Norton High School Subsite: Softball Field #1 (HS)",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -87472,40 +86858,6 @@
     ]
   },
   {
-    "id": "2027-04-07-varsity-softball-vs-millis-high-school-3bb1a71",
-    "title": "Varsity Softball vs Millis High School",
-    "start": {
-      "date": "2027-04-07",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-04-07",
-      "time": "18:30"
-    },
-    "venue": "33 George Willett Parkway, Norwood MA 02062",
-    "address": "33 George Willett Parkway, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-07-varsity-baseball-vs-millis-high-school-885cc2e",
     "title": "Varsity baseball vs Millis High School",
     "start": {
@@ -87528,6 +86880,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-07-varsity-softball-vs-millis-high-school-3bb1a71",
+    "title": "Varsity Softball vs Millis High School",
+    "start": {
+      "date": "2027-04-07",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-07",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -88447,40 +87833,6 @@
     ]
   },
   {
-    "id": "2027-04-12-varsity-softball-dedham-high-school-db54aa5",
-    "title": "Varsity Softball @ Dedham High School",
-    "start": {
-      "date": "2027-04-12",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-04-12",
-      "time": "18:30"
-    },
-    "venue": "140 Whiting Ave, Dedham MA 02026",
-    "address": "140 Whiting Ave, Dedham MA 02026",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Dedham High School Subsite: Loewen Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-12-varsity-baseball-dedham-high-school-119fb86",
     "title": "Varsity baseball @ Dedham High School",
     "start": {
@@ -88503,6 +87855,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Dedham Memorial Park Subsite: Heaphy Baseball Field (Front)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-12-varsity-softball-dedham-high-school-db54aa5",
+    "title": "Varsity Softball @ Dedham High School",
+    "start": {
+      "date": "2027-04-12",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-12",
+      "time": "18:30"
+    },
+    "venue": "140 Whiting Ave, Dedham MA 02026",
+    "address": "140 Whiting Ave, Dedham MA 02026",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Dedham High School Subsite: Loewen Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -89228,40 +88614,6 @@
     ]
   },
   {
-    "id": "2027-04-14-varsity-softball-vs-hopkinton-high-school-8879d6a",
-    "title": "Varsity Softball vs Hopkinton High School",
-    "start": {
-      "date": "2027-04-14",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-04-14",
-      "time": "18:30"
-    },
-    "venue": "33 George Willett Parkway, Norwood MA 02062",
-    "address": "33 George Willett Parkway, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-14-varsity-baseball-vs-hopkinton-high-school-b614d52",
     "title": "Varsity baseball vs Hopkinton High School",
     "start": {
@@ -89284,6 +88636,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-14-varsity-softball-vs-hopkinton-high-school-8879d6a",
+    "title": "Varsity Softball vs Hopkinton High School",
+    "start": {
+      "date": "2027-04-14",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-14",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -91287,40 +90673,6 @@
     ]
   },
   {
-    "id": "2027-04-26-varsity-softball-medfield-senior-high-school-e2007a9",
-    "title": "Varsity Softball @ Medfield Senior High School",
-    "start": {
-      "date": "2027-04-26",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-04-26",
-      "time": "19:30"
-    },
-    "venue": "88R South St., Medfield MA 02052",
-    "address": "88R South St., Medfield MA 02052",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Medfield HS Subsite: Schilling Softball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-26-varsity-baseball-medfield-senior-high-school-f668cca",
     "title": "Varsity baseball @ Medfield Senior High School",
     "start": {
@@ -91343,6 +90695,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Medfield HS Subsite: Schilling Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-26-varsity-softball-medfield-senior-high-school-e2007a9",
+    "title": "Varsity Softball @ Medfield Senior High School",
+    "start": {
+      "date": "2027-04-26",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-26",
+      "time": "19:30"
+    },
+    "venue": "88R South St., Medfield MA 02052",
+    "address": "88R South St., Medfield MA 02052",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Medfield HS Subsite: Schilling Softball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -92152,40 +91538,6 @@
     ]
   },
   {
-    "id": "2027-04-29-jv-baseball-dover-sherborn-high-school-0cca0f7",
-    "title": "JV baseball @ Dover-Sherborn High School",
-    "start": {
-      "date": "2027-04-29",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2027-04-29",
-      "time": "18:00"
-    },
-    "venue": "9 Junction Street, Dover MA 02030",
-    "address": "9 Junction Street, Dover MA 02030",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys JV Baseball",
-    "public_access": "public",
-    "series": "Norwood Boys JV Baseball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: baseball Level: JV Team: Norwood High School Site: Dover-Sherborn HS Subsite: Baseball Diamond",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-29-junior-varsity-softball-dover-sherborn-high-s-3ff9b0a",
     "title": "Junior Varsity Softball @ Dover-Sherborn High School",
     "start": {
@@ -92208,6 +91560,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Dover-Sherborn HS Subsite: Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-jv-baseball-dover-sherborn-high-school-0cca0f7",
+    "title": "JV baseball @ Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:00"
+    },
+    "venue": "9 Junction Street, Dover MA 02030",
+    "address": "9 Junction Street, Dover MA 02030",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys JV Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys JV Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: JV Team: Norwood High School Site: Dover-Sherborn HS Subsite: Baseball Diamond",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -92322,40 +91708,6 @@
     ]
   },
   {
-    "id": "2027-04-29-varsity-softball-vs-dover-sherborn-high-schoo-bc244a8",
-    "title": "Varsity Softball vs Dover-Sherborn High School",
-    "start": {
-      "date": "2027-04-29",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-04-29",
-      "time": "18:30"
-    },
-    "venue": "33 George Willett Parkway, Norwood MA 02062",
-    "address": "33 George Willett Parkway, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-04-29-varsity-baseball-vs-dover-sherborn-high-schoo-6f78e6b",
     "title": "Varsity baseball vs Dover-Sherborn High School",
     "start": {
@@ -92378,6 +91730,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-29-varsity-softball-vs-dover-sherborn-high-schoo-bc244a8",
+    "title": "Varsity Softball vs Dover-Sherborn High School",
+    "start": {
+      "date": "2027-04-29",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-29",
+      "time": "18:30"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -92972,40 +92358,6 @@
     ]
   },
   {
-    "id": "2027-05-03-varsity-softball-medway-high-school-49543ab",
-    "title": "Varsity Softball @ Medway High School",
-    "start": {
-      "date": "2027-05-03",
-      "time": "16:45"
-    },
-    "end": {
-      "date": "2027-05-03",
-      "time": "19:00"
-    },
-    "venue": "88 Summer Street, Medway MA 02053",
-    "address": "88 Summer Street, Medway MA 02053",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Medway High School (School Teams) Subsite: Lamson Turf",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-05-03-varsity-baseball-medway-high-school-eec79eb",
     "title": "Varsity baseball @ Medway High School",
     "start": {
@@ -93028,6 +92380,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Medway High School (School Teams) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-03-varsity-softball-medway-high-school-49543ab",
+    "title": "Varsity Softball @ Medway High School",
+    "start": {
+      "date": "2027-05-03",
+      "time": "16:45"
+    },
+    "end": {
+      "date": "2027-05-03",
+      "time": "19:00"
+    },
+    "venue": "88 Summer Street, Medway MA 02053",
+    "address": "88 Summer Street, Medway MA 02053",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Medway High School (School Teams) Subsite: Lamson Turf",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -93506,40 +92892,6 @@
     ]
   },
   {
-    "id": "2027-05-05-varsity-softball-vs-bellingham-high-school-4a61f83",
-    "title": "Varsity Softball vs Bellingham High School",
-    "start": {
-      "date": "2027-05-05",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2027-05-05",
-      "time": "18:00"
-    },
-    "venue": "33 George Willett Parkway, Norwood MA 02062",
-    "address": "33 George Willett Parkway, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Softball",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Softball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-05-05-varsity-baseball-vs-bellingham-high-school-cfec3b5",
     "title": "Varsity baseball vs Bellingham High School",
     "start": {
@@ -93562,6 +92914,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-05-varsity-softball-vs-bellingham-high-school-4a61f83",
+    "title": "Varsity Softball vs Bellingham High School",
+    "start": {
+      "date": "2027-05-05",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-05",
+      "time": "18:00"
+    },
+    "venue": "33 George Willett Parkway, Norwood MA 02062",
+    "address": "33 George Willett Parkway, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-softball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Softball",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Softball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -95710,40 +95096,6 @@
     ]
   },
   {
-    "id": "2027-05-17-jv-baseball-medfield-senior-high-school-7acb755",
-    "title": "JV baseball @ Medfield Senior High School",
-    "start": {
-      "date": "2027-05-17",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2027-05-17",
-      "time": "19:30"
-    },
-    "venue": "88R South St., Medfield MA 02052",
-    "address": "88R South St., Medfield MA 02052",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys JV Baseball",
-    "public_access": "public",
-    "series": "Norwood Boys JV Baseball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: baseball Level: JV Team: Norwood High School Site: Medfield HS Subsite: Schilling Baseball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-05-17-junior-varsity-softball-medfield-senior-high--9f158c8",
     "title": "Junior Varsity Softball @ Medfield Senior High School",
     "start": {
@@ -95766,6 +95118,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Softball Level: Junior Varsity Team: Norwood High School Site: Medfield HS Subsite: Schilling Softball Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-17-jv-baseball-medfield-senior-high-school-7acb755",
+    "title": "JV baseball @ Medfield Senior High School",
+    "start": {
+      "date": "2027-05-17",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-17",
+      "time": "19:30"
+    },
+    "venue": "88R South St., Medfield MA 02052",
+    "address": "88R South St., Medfield MA 02052",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-jv-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys JV Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys JV Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: JV Team: Norwood High School Site: Medfield HS Subsite: Schilling Baseball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
