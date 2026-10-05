@@ -9355,40 +9355,6 @@
     ]
   },
   {
-    "id": "2026-10-14-gv-soccer-vs-millis-high-school-488f7c4",
-    "title": "GV Soccer vs Millis High School",
-    "start": {
-      "date": "2026-10-14",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-10-14",
-      "time": "18:15"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-14-girls-varsity-cross-country-vs-westwood-high--ba0ac99",
     "title": "Girls Varsity cross country vs Westwood High School",
     "start": {
@@ -9672,6 +9638,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-14-gv-soccer-vs-millis-high-school-488f7c4",
+    "title": "GV Soccer vs Millis High School",
+    "start": {
+      "date": "2026-10-14",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-14",
+      "time": "19:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: GV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -45069,7 +45069,7 @@
     ]
   },
   {
-    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-46fcda9",
+    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-de04857",
     "title": "A Victorian Christmas with Diane Taraz",
     "start": {
       "date": "2026-12-12",
@@ -45079,8 +45079,8 @@
       "date": "2026-12-12",
       "time": "16:00"
     },
-    "venue": "Norwood Historical Society",
-    "address": null,
+    "venue": "93 Day Street, Norwood, Ma, 02062",
+    "address": "93 Day Street, Norwood, 02062",
     "category": "sports",
     "source_id": "historical-society-events",
     "source_url": "https://norwoodhistoricalsociety.org/event/victorian-christmas-concert/",
