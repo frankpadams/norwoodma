@@ -183,7 +183,14 @@ const businessTaxonomy={
  other:{b:/self storage|moving|funeral|cremation|monument|memorial|headstone|grave marker|cemetery lettering|bronze plaque|florist|sympathy flower|funeral flower|locksmith|security|taxi|shuttle|transportation|truck rental|gas station|cleanout|junk removal/i,s:{gas:/gas station/i,storage:/self storage|storage & moving|moving/i,funeral:/funeral|cremation|monument|memorial|headstone|grave marker|cemetery lettering|bronze plaque|engraving|florist|sympathy flower|funeral flower/i,security:/locksmith|security/i,junk:/junk removal|cleanout/i,transportation:/taxi|shuttle|transportation|truck rental/i}}
 };
 function businessTaxonomyMatch(p){if(p.category!=='business'||!requestedBusinessGroup)return true;const canonical=(p.businessTaxonomy||[]).find(x=>x.group===requestedBusinessGroup);if(canonical)return !requestedBusinessSub||canonical.subs.includes(requestedBusinessSub);const g=businessTaxonomy[requestedBusinessGroup];if(!g)return false;const t=p.businessText||norm(p.details||'');if(!g.b.test(t))return false;const sm=requestedBusinessSub&&g.s&&g.s[requestedBusinessSub];return requestedBusinessSub?!!sm&&sm.test(t):true;}
-function searchMatch(p,q){return !q||norm([p.name,p.details,p.address,p.category,p.labels,p.tags].join(' ')).includes(q)}
+function searchMatch(p,q){
+ if(!q)return true;
+ const hay=norm([p.name,p.details,p.address,p.category,p.labels,p.tags].join(' '));
+ if(/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q)){
+   return /\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(hay);
+ }
+ return hay.includes(q);
+}
 function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
