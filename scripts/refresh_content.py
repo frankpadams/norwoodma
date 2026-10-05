@@ -2642,29 +2642,74 @@ def canonical_news_title(title):
     return re.sub(r'\s+',' ',s).strip()
 
 def dedupe_news(items):
-    """Collapse exact, syndicated, and near-identical headline variants."""
+    """Collapse duplicate/near-duplicate coverage and keep the strongest single story."""
     chosen=[]
+    stop={
+      'the','a','an','and','or','but','for','to','of','in','on','at','by','from','with',
+      'is','are','was','were','be','been','being','this','that','these','those','it','its',
+      'as','after','before','about','into','over','under','new','norwood','ma','massachusetts'
+    }
+
+    def story_words(x):
+        # Headline carries the most weight, but a short summary helps identify two
+        # differently worded headlines that are clearly reporting the same event.
+        title=canonical_news_title(x.get('title',''))
+        summary=clean_text(x.get('summary','')).lower()[:320]
+        text=re.sub(r'[^a-z0-9]+',' ',f"{title} {summary}")
+        return {w for w in text.split() if len(w)>=3 and w not in stop}
+
     def score(x):
-        u=x.get('url',''); v=0
-        if 'news.google.com' not in u: v+=4
-        if x.get('discovered_by')=='seed_web_verified': v+=3
-        if x.get('summary'): v+=1
-        if x.get('image'): v+=1
-        if x.get('source')=='The Norwood Record': v+=1
+        """Prefer the version a reader would actually want to open."""
+        u=str(x.get('url') or '')
+        source=clean_text(x.get('source'))
+        title=clean_text(x.get('title'))
+        summary=clean_text(x.get('summary'))
+        v=0
+        # Direct publisher pages beat discovery/aggregation redirects.
+        if 'news.google.com' not in u: v+=12
+        if x.get('discovered_by')=='seed_web_verified': v+=5
+        if x.get('localVerified'): v+=2
+
+        # Prefer substantive local/original reporting when duplicate coverage exists.
+        if source in {'The Norwood Record','The Norwood Record — Latest','Inside Norwood','Norwood Town News','Norwood Community Media','Town of Norwood','Norwood Public Schools'}:
+            v+=4
+        if source in {'Town of Norwood','Norwood Public Schools'}:
+            v+=2  # primary source for official announcements
+
+        # Better cards have a real, concise headline and useful supporting material.
+        if 12 <= len(title) <= 150: v+=3
+        if re.search(r'\bread more\b',title,re.I): v-=3
+        if len(title)>200: v-=2
+        if len(summary)>=80: v+=3
+        elif summary: v+=1
+        if x.get('image'): v+=2
         return v
+
     def same_story(a,b):
         ua=(a.get('url') or '').split('?')[0].rstrip('/')
         ub=(b.get('url') or '').split('?')[0].rstrip('/')
         if ua and ub and ua==ub: return True
+
         ca,cb=canonical_news_title(a.get('title','')),canonical_news_title(b.get('title',''))
         if not ca or not cb: return False
         if ca==cb: return True
-        ta,tb=set(ca.split()),set(cb.split())
-        if len(ta)<4 or len(tb)<4: return False
-        overlap=len(ta & tb)/max(1,len(ta | tb))
+
         da,db=parse_dt(a.get('date')),parse_dt(b.get('date'))
-        close=bool(da and db and abs((da-db).total_seconds()) <= 3*24*3600)
-        return close and overlap>=0.78
+        close=bool(da and db and abs((da-db).total_seconds()) <= 4*24*3600)
+        if not close: return False
+
+        ta,tb=set(ca.split()),set(cb.split())
+        title_overlap=len(ta & tb)/max(1,len(ta | tb))
+        if len(ta)>=4 and len(tb)>=4 and title_overlap>=0.68:
+            return True
+
+        # Catch same-event coverage with substantially different headlines.
+        wa,wb=story_words(a),story_words(b)
+        shared=wa & wb
+        content_overlap=len(shared)/max(1,min(len(wa),len(wb)))
+        distinctive=[w for w in shared if len(w)>=5]
+        return len(distinctive)>=3 and content_overlap>=0.58
+
     for x in sorted(items,key=lambda z:z.get('date',''),reverse=True):
         hit=None
         for i,cur in enumerate(chosen):
@@ -2673,8 +2718,16 @@ def dedupe_news(items):
                 break
         if hit is None:
             chosen.append(x)
-        elif score(x)>score(chosen[hit]):
-            chosen[hit]=x
+        else:
+            old=chosen[hit]
+            sx,so=score(x),score(old)
+            if sx>so:
+                chosen[hit]=x
+            elif sx==so:
+                # On an otherwise equal choice, prefer the newer item.
+                dx,do=parse_dt(x.get('date')),parse_dt(old.get('date'))
+                if dx and do and dx>do:
+                    chosen[hit]=x
     return sorted(chosen,key=lambda z:z.get('date',''),reverse=True)
 
 def news_is_obituary(x):
