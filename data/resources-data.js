@@ -2,7 +2,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "988 Suicide & Crisis Lifeline",
     "category": "Mental Health",
-    "description": "Call, text or chat 988 for 24/7 crisis support. Available to people in Norwood and nationwide.",
+    "description": "Use for suicidal thoughts, emotional distress, or a mental-health or substance-use crisis. Call or text 988, or use online chat, 24/7. This is crisis counseling and support; call 911 if someone is in immediate physical danger or needs emergency medical response.",
     "url": "https://988lifeline.org/",
     "tags": "suicide crisis mental health hotline 988",
     "topics": [
@@ -660,7 +660,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Crisis Text Line",
     "category": "Mental Health Crisis",
-    "description": "Free 24/7 crisis support by text; text HOME to 741741 in the U.S.",
+    "description": "Use when you want confidential crisis support by text rather than by phone. Text HOME to 741741 for a trained crisis counselor, 24/7. Appropriate for emotional distress, anxiety, depression, self-harm concerns and other crises; call 911 for immediate physical danger.",
     "url": "https://www.crisistextline.org/",
     "tags": "mental health crisis text suicide emotional support 741741",
     "topics": [
@@ -1339,7 +1339,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Jane Doe Inc. — Massachusetts Coalition Against Sexual Assault and Domestic Violence",
     "category": "Domestic Violence Support",
-    "description": "Statewide coalition working to prevent domestic violence and sexual assault and support survivors. Provides information and connections to local sexual- and domestic-violence programs across Massachusetts.",
+    "description": "Use mainly to find the right Massachusetts sexual-assault or domestic-violence program or statewide advocacy information. Jane Doe Inc. is the statewide coalition and referral resource; it is not the primary emergency-response service. For immediate danger call 911; for a domestic-violence hotline use SafeLink; for sexual-violence support use BARCC or another local rape-crisis center.",
     "url": "https://www.janedoe.org/",
     "tags": "Jane Doe Inc JDI domestic violence sexual assault survivor advocacy abuse Massachusetts coalition help services",
     "topics": [
@@ -1583,7 +1583,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Massachusetts 211",
     "category": "Navigation & Basic Needs",
-    "description": "Free 24/7 information and referral service for help with food, housing, utilities, health care, child care and other needs.",
+    "description": "Use when you are not sure which service you need, or need referrals for food, housing, utilities, health care, child care, benefits or other community supports. Massachusetts 211 is an information-and-referral line, not an emergency service; call 911 for immediate danger and 988 for a mental-health or suicide crisis.",
     "url": "https://mass211.org/",
     "tags": "211 help referral food housing utility childcare health benefits emergency multilingual Mass 2-1-1 Community Assistance",
     "topics": [
@@ -1682,7 +1682,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Massachusetts Child-at-Risk Hotline",
     "category": "Kids & Safety",
-    "description": "24/7 Massachusetts hotline for reporting suspected child abuse or neglect.",
+    "description": "Use to report suspected abuse or neglect of a child in Massachusetts. This is a child-protection reporting hotline, not a general family-support or mental-health crisis line. Call 911 first if a child is in immediate danger.",
     "url": "https://www.mass.gov/how-to/report-child-abuse-or-neglect",
     "tags": "DCF child abuse neglect safety hotline",
     "topics": [
@@ -1879,7 +1879,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Massachusetts Emergency Family Shelter",
     "category": "Housing & Utilities",
-    "description": "Official information for families with children or pregnant people who need emergency shelter and housing support.",
+    "description": "Use when a family with children, or a pregnant person, needs emergency shelter or is facing homelessness. This is housing assistance, not a general crisis hotline or emergency-response service.",
     "url": "https://www.mass.gov/emergency-housing-assistance-programs",
     "tags": "homeless shelter family emergency housing",
     "topics": [
@@ -1981,7 +1981,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Massachusetts Housing Assistance",
     "category": "Housing",
-    "description": "State gateway for rental assistance, emergency family shelter, HomeBASE, public housing, vouchers and home-energy assistance.",
+    "description": "Use for housing instability, rent help, emergency family shelter, HomeBASE, public housing, vouchers or home-energy assistance. This is a housing-assistance gateway, not an emergency-response line.",
     "url": "https://www.mass.gov/info-details/housing-assistance-for-massachusetts-residents",
     "tags": "RAFT rent emergency shelter HomeBASE CHAMP voucher housing energy assistance state",
     "topics": [
@@ -4772,7 +4772,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "SafeLink Massachusetts",
     "category": "Safety & Family",
-    "description": "24/7 statewide domestic-violence hotline providing safety planning, support and connections to local services.",
+    "description": "Use for domestic or partner violence, including safety planning, confidential support, shelter connections and help finding local domestic-violence services. Available statewide 24/7. Call 911 if there is immediate danger.",
     "url": "https://www.mass.gov/info-details/massachusetts-safelink-resources",
     "tags": "domestic violence abuse hotline safety shelter",
     "topics": [
@@ -4809,7 +4809,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Samaritans Hope",
     "category": "Mental Health Crisis",
-    "description": "Suicide-prevention and emotional-support services, including a 24/7 helpline and Hey Sam peer support for young people.",
+    "description": "Use for suicide-prevention support, loneliness, emotional distress or when you need someone to talk with. Samaritans provides a 24/7 helpline; Hey Sam offers peer support for young people. Call 911 for immediate physical danger.",
     "url": "https://samaritanshope.org/our-services/24-7-helpline/",
     "tags": "suicide prevention crisis helpline emotional support youth Hey Sam",
     "topics": [
@@ -5257,7 +5257,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "The Trevor Project",
     "category": "Mental Health Crisis",
-    "description": "Free confidential crisis support and suicide-prevention services for LGBTQ+ young people by phone, text and chat.",
+    "description": "Use for LGBTQ+ young people who need confidential crisis support, suicide-prevention help, or someone affirming to talk with by phone, text or chat. This is specialized LGBTQ+ youth crisis support; call 911 for immediate physical danger.",
     "url": "https://www.thetrevorproject.org/",
     "tags": "LGBTQ youth mental health crisis suicide prevention Trevor Project gay trans queer",
     "topics": [
@@ -5714,7 +5714,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Disabled Persons Protection Commission (DPPC)",
     "category": "Disability Safety & Rights",
-    "description": "Independent Massachusetts state agency that receives and oversees investigations of abuse and neglect involving adults with disabilities. Its abuse-reporting hotline operates statewide.",
+    "description": "Use to report suspected abuse, neglect or mistreatment of an adult with a disability in Massachusetts. DPPC is a protective-services and reporting agency, not a general disability-information or mental-health crisis line. Call 911 if the person is in immediate danger.",
     "url": "https://www.mass.gov/orgs/disabled-persons-protection-commission",
     "tags": "DPPC disabled persons protection commission abuse neglect disability safety protective services hotline rights",
     "topics": [
@@ -6022,7 +6022,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Trans Lifeline",
     "category": "LGBTQ+ Support",
-    "description": "Peer-support hotline run by and for trans people, providing confidential support and community resources.",
+    "description": "Use for confidential peer support from trans people for trans and questioning callers, including emotional support and community-resource information. It is not an emergency-response service; call 911 for immediate danger and 988 for an acute suicide or mental-health crisis.",
     "url": "https://translifeline.org/",
     "tags": "Trans Lifeline LGBTQ+ Support",
     "topics": [
@@ -6036,7 +6036,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Boston Area Rape Crisis Center",
     "category": "Safety & Crisis Support",
-    "description": "Free confidential support and services for survivors of sexual violence and their families and communities.",
+    "description": "Use for sexual assault, rape, sexual harassment or other sexual violence. BARCC provides confidential survivor support, counseling, medical and legal advocacy, and help for loved ones. Call 911 if there is immediate danger or urgent medical need.",
     "url": "https://barcc.org/",
     "tags": "Boston Area Rape Crisis Center Safety & Crisis Support",
     "topics": [
@@ -6052,7 +6052,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "DOVE — Domestic Violence Ended",
     "category": "Safety & Crisis Support",
-    "description": "Quincy-based domestic and partner violence organization offering a 24-hour hotline, advocacy, counseling, shelter and related services.",
+    "description": "Use for domestic or partner violence when you need confidential support, safety planning, advocacy, counseling, shelter or related services in the Greater Boston/South Shore area. DOVE has a 24-hour hotline. Call 911 if there is immediate danger.",
     "url": "https://www.dovema.org/",
     "tags": "DOVE — Domestic Violence Ended Safety & Crisis Support",
     "topics": [
