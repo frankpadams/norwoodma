@@ -3064,6 +3064,25 @@ def event_matches_selector(e, selector):
     if any(str(x).lower() in text for x in selector.get('keywords',[])): return True
     return False
 
+def event_is_nhs_varsity_home(e):
+    """Default-calendar rule: only NHS varsity contests with affirmative home/Norwood evidence."""
+    sid=str(e.get('source_id') or '').lower()
+    source_is_nhs=sid in ('nps-athletics','norwood-high-athletics') or sid.startswith('nps-athletics-arbiter-')
+    if not source_is_nhs:
+        return False
+    text=' '.join(str(e.get(k) or '') for k in ('title','series','notes','organizer','venue','address')).lower()
+    if re.search(r'\b(practice|scrimmage|jv|junior varsity|freshman|frosh)\b',text):
+        return False
+    varsity=bool(re.search(r'\bvarsity\b',text)) or e.get('discovered_by')=='miaa_committed_schedule'
+    if not varsity:
+        return False
+    home=bool(re.search(r'\b(home|vs\.?|versus)\b',str(e.get('title') or '').lower()))
+    place=' '.join(str(e.get(k) or '') for k in ('venue','address')).lower()
+    home = home or bool(re.search(r'\bnorwood\b',place))
+    away=bool(re.search(r'\baway\b',text)) or bool(re.search(r'\s@\s',str(e.get('title') or '')))
+    return home and not away
+
+
 def event_is_curated_default(e):
     """Match the normal What's Happening default without making broad calendar tags do browser-side inference."""
     if e.get('curated_default') is True or e.get('whats_happening_default') is True: return True
@@ -3075,6 +3094,8 @@ def event_is_curated_default(e):
     cat=str(e.get('category') or '').lower()
     text=' '.join(str(e.get(k) or '') for k in ('title','series','notes')).lower()
     if re.search(r'practice|routine meeting|member meeting|board meeting',text): return False
+    if cat=='sports' and (sid in ('nps-athletics','norwood-high-athletics') or sid.startswith('nps-athletics-arbiter-')):
+        return event_is_nhs_varsity_home(e)
     if sid=='recovery-aa' or sid.startswith('recovery-'): return True
     return cat in ('community','family','arts','festival','fundraiser','government','school','holiday','market','workshop','live_music','performance','comedy','wellness','games_social','music_community') or bool(re.search(r'farmers market|concert|festival|norwood day|tree lighting|menorah|parade|blood drive|5k|open house|town common',text))
 
