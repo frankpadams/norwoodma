@@ -183,31 +183,82 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .event-popup-websites{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
 @media(max-width:600px){.event-details-dialog{width:94vw}.event-details-dialog #eventDetailsContent{padding:18px}.event-popup-thumb{width:100%;height:120px}}
 
-/* Homepage image ad creative */
-.home-ad-image-link{display:block;overflow:hidden;border-radius:13px;min-width:0;background:#fff}
-.home-ad-image-link img{display:block;width:100%;height:100%;min-height:94px;object-fit:cover}
+/* Homepage advertising: respond to the ad card's available width, not the viewport.
+   Wide cards keep two creatives side-by-side; constrained cards stack them so banner
+   artwork stays legible on mid-size desktop, tablet and mobile layouts. */
+#homeAdSlot{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  overflow:hidden;
+  container-type:inline-size;
+}
+#homeAdSlot .home-ad-pair{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  align-items:stretch;
+}
+#homeAdSlot .home-ad-creative{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  min-height:120px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+#homeAdSlot .home-ad-image-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:13px;
+  background:#fff;
+}
+#homeAdSlot .home-ad-image-link img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  max-height:120px;
+  min-width:0;
+  object-fit:contain;
+}
 
-/* Fix homepage ad pair sizing on narrow screens: keep each creative contained in its own half and preserve banner proportions. */
-.ad-slot .home-ad-pair{align-items:start!important}
-.home-ad-image-link{width:100%!important;min-width:0!important;height:auto!important;align-self:start!important;overflow:hidden!important}
-.home-ad-image-link img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important}
+/* When the ad card itself becomes narrow, give each advertiser the full card width.
+   This catches squeezed desktop columns as well as phones, regardless of screen size. */
+@container (max-width:560px){
+  #homeAdSlot .home-ad-pair{
+    grid-template-columns:minmax(0,1fr);
+    grid-auto-flow:row;
+  }
+  #homeAdSlot .home-ad-creative{
+    min-height:0;
+  }
+  #homeAdSlot .home-ad-image-link{
+    min-height:0;
+  }
+  #homeAdSlot .home-ad-image-link img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+  #homeAdSlot .ad-placeholder{
+    min-height:104px;
+  }
+}
 
-/* Hard containment for homepage ads — prevent creative intrinsic size from widening the mobile page. */
-#homeAdSlot,#homeAdSlot .home-ad-pair{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;overflow:hidden!important}
-#homeAdSlot .home-ad-pair>*{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
-#homeAdSlot .home-ad-image-link{width:100%!important;max-width:100%!important;min-width:0!important;height:100%!important;min-height:94px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
-#homeAdSlot .home-ad-image-link img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:100%!important;min-width:0!important;min-height:0!important;object-fit:contain!important}
-
-/* Mobile ad-slot size lock: match the original two-up advertising boxes exactly. */
-#homeAdSlot .home-ad-pair{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-flow:row!important;align-items:stretch!important}
-#homeAdSlot .home-ad-pair>.home-ad-creative{width:100%!important;max-width:100%!important;min-width:0!important;height:168px!important;min-height:168px!important;max-height:168px!important;box-sizing:border-box!important;overflow:hidden!important}
-#homeAdSlot .home-ad-image-link img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important}
-@media(min-width:521px){#homeAdSlot .home-ad-pair>.home-ad-creative{height:120px!important;min-height:120px!important;max-height:120px!important}}
-
-/* Mobile homepage ads: stack creatives at full card width. */
-@media(max-width:520px){
- #homeAdSlot .home-ad-pair{grid-template-columns:minmax(0,1fr)!important;grid-auto-flow:row!important;gap:8px!important}
- #homeAdSlot .home-ad-pair>.home-ad-creative{width:100%!important;max-width:100%!important;min-width:0!important;height:auto!important;min-height:94px!important;max-height:none!important}
- #homeAdSlot .home-ad-image-link{height:auto!important;min-height:0!important}
- #homeAdSlot .home-ad-image-link img{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important}
+/* Fallback for older browsers without container queries. */
+@supports not (container-type:inline-size){
+  @media(max-width:900px){
+    #homeAdSlot .home-ad-pair{grid-template-columns:minmax(0,1fr)}
+    #homeAdSlot .home-ad-creative{min-height:0}
+    #homeAdSlot .home-ad-image-link img{height:auto;max-height:none}
+    #homeAdSlot .ad-placeholder{min-height:104px}
+  }
 }
