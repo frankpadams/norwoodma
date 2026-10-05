@@ -115,7 +115,19 @@ const staticPlaces=[
  {name:'Talbot / Babel’s Municipal Lot',category:'parking',address:'Talbot Ave, Norwood, MA 02062',details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
  {name:'Central Street / Day Street Municipal Lot',category:'parking',address:'Central St at Day St, Norwood, MA 02062',details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
  {name:'Nahatan Street / Broadway Municipal Lot',category:'parking',address:'Nahatan St at Broadway, Norwood, MA 02062',details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
- {name:'Post Office Municipal Lot',category:'parking',address:'Washington St near Norwood Post Office, Norwood, MA 02062',details:'Municipal public parking in the Norwood Center area',url:'https://www.norwoodma.gov/'}
+ {name:'Post Office Municipal Lot',category:'parking',address:'Washington St near Norwood Post Office, Norwood, MA 02062',details:'Municipal public parking in the Norwood Center area',url:'https://www.norwoodma.gov/'},
+ {name:'Norwood Gulf',category:'gas',also:['business'],address:'707 Neponset Street, Norwood, MA 02062',details:'Gas station · fuel',url:'gas-prices.html'},
+ {name:'Gulf — Broadway',category:'gas',also:['business'],address:'145 Broadway, Norwood, MA 02062',details:'Gas station · fuel',url:'gas-prices.html'},
+ {name:"Mr. Frank's Food Mart",category:'gas',also:['business'],address:'917 Washington Street, Norwood, MA 02062',details:'Gas station · convenience',url:'gas-prices.html'},
+ {name:'Sunoco — Route 1',category:'gas',also:['business'],address:'515 Providence Highway, Norwood, MA 02062',details:'Gas station · fuel',url:'gas-prices.html'},
+ {name:'Route 1 Auto Services',category:'gas',also:['business'],address:'305 Boston-Providence Turnpike, Norwood, MA 02062',details:'Gas station · auto services',url:'gas-prices.html'},
+ {name:'Mobil — Route 1',category:'gas',also:['business'],address:'971 Providence Highway, Norwood, MA 02062',details:'Gas station · convenience',url:'gas-prices.html'},
+ {name:'Irving Oil / Rojo',category:'gas',also:['business'],address:'69 Providence Highway, Norwood, MA 02062',details:'Gas station · fuel',url:'gas-prices.html'},
+ {name:"BJ's Gas Station",category:'gas',also:['business'],address:'1415 Boston-Providence Turnpike, Norwood, MA 02062',details:'Gas station · membership fuel',url:'gas-prices.html'},
+ {name:'CITGO',category:'gas',also:['business'],address:'960 Boston Providence Highway, Norwood, MA 02062',details:'Gas station · fuel',url:'gas-prices.html'},
+ {name:'Shell — Walpole Street',category:'gas',also:['business'],address:'491 Walpole Street, Norwood, MA 02062',details:'Gas station · convenience',url:'gas-prices.html'},
+ {name:'Mobil / On the Run — Norwood Center',category:'gas',also:['business'],address:'499 Washington Street, Norwood, MA 02062',details:'Gas station · convenience',url:'gas-prices.html'},
+ {name:'Shell — Pleasant Street',category:'gas',also:['business'],address:'238 Pleasant Street, Norwood, MA 02062',details:'Gas station · convenience',url:'gas-prices.html'}
 ];
 function resourceCategory(r){
  const t=norm([r.category,r.tags,(r.topics||[]).join(' ')].join(' '));
@@ -136,7 +148,7 @@ function cleanAddress(a){
 }
 const dynamic=[];
 (window.NORWOOD_RESTAURANTS||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:'food',address:a,details:r.cuisine||r.category||'Restaurant',url:r.url||'restaurants.html'});});
-(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(a)dynamic.push({name:b.name,category:'business',businessText:norm([b.category,b.labels,b.tags].flat().filter(Boolean).join(' ')),businessTaxonomy:(window.NORWOOD_BUSINESS_TAXONOMY||{})[String(b.name||'').toLowerCase()]||[],address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
+(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(!a)return;const gasAddress=staticPlaces.some(p=>p.category==='gas'&&norm(p.address)===norm(a));if(gasAddress)return;dynamic.push({name:b.name,category:'business',businessText:norm([b.category,b.labels,b.tags].flat().filter(Boolean).join(' ')),businessTaxonomy:(window.NORWOOD_BUSINESS_TAXONOMY||{})[String(b.name||'').toLowerCase()]||[],address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
 (window.NORWOOD_RESOURCES||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:resourceCategory(r),address:a,details:r.description||r.category||'Community resource',url:r.url||'resources.html'});});
 (window.NORWOOD_EVENTS||[]).forEach(e=>{
  if(e.publish_candidate===false)return;
