@@ -133,6 +133,14 @@ class CalendarSourcesTest(unittest.TestCase):
         self.assertFalse(refresh.event_is_curated_default(jv))
 
 
+    def test_normalize_published_event_title(self):
+        self.assertEqual(refresh.normalize_published_event_title({'title':'Tuesday ,','notes':'Tuesday , October 6 , 2026 , 7:00 PM - 8:00 PM Eucharistic Adoration and Confessions Read More','source_id':'norwood-kofc-events'})['title'],'Eucharistic Adoration and Confessions')
+        self.assertEqual(refresh.normalize_published_event_title({'title':'Bible Study Monday ,','source_id':'st-catherine-calendar'})['title'],'Bible Study')
+        self.assertIsNone(refresh.normalize_published_event_title({'title':'Thu','notes':'Thu, Oct 22nd @ 5:00 PM','source_id':'nrrc-events'}))
+        self.assertIsNone(refresh.normalize_published_event_title({'title':'October 2026','source_id':'norwood-blood-drives'}))
+        self.assertIsNone(refresh.normalize_published_event_title({'title':'Saturday ,','notes':'Saturday , November 21 , 2026 Fortunat Baptism Read More','source_id':'norwood-kofc-events'}))
+
+
 
 
 def test_public_candidate_rejects_appointment_only_events():
