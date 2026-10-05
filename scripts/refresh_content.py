@@ -547,8 +547,33 @@ def canonical_title(s):
     s=re.sub(r'\b20\d{2}\b',' ',s)
     return re.sub(r'[^a-z0-9]+',' ',s).strip()
 
+def normalize_published_event_title(e):
+    """Repair common scraper title artifacts; reject rows that still do not identify an event."""
+    e=dict(e or {})
+    title=clean_text(e.get('title'))
+    sid=str(e.get('source_id') or '')
+    weekday_only=re.compile(r'^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)[\\s,.:;-]*$',re.I)
+    month_only=re.compile(r'^(?:january|february|march|april|may|june|july|august|september|october|november|december)\\s+20\\d{2}$',re.I)
+    junk_only=re.compile(r'^(?:event|events|calendar|schedule|meeting|meetings|program|programs|session|sessions|service|services|class|classes|group|groups|activity|activities|read more|learn more|click here|more information?)$',re.I)
+    if sid in {'st-catherine-calendar','nrrc-events','fallout-shelter'} and not weekday_only.match(title):
+        title=re.sub(r'\\s+(?:Mon|Tue|Tues|Wed|Thu|Thur|Thurs|Fri|Sat|Sun|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s*,?\\s*$','',title,flags=re.I).strip()
+    if weekday_only.match(title):
+        notes=clean_text(e.get('notes'))
+        notes=re.sub(r'^(?:Mon|Tue|Tues|Wed|Thu|Thur|Thurs|Fri|Sat|Sun|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\s*,?\\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\s+\\d{1,2}(?:st|nd|rd|th)?\\s*(?:,\\s*|\\s+)(?:20\\d{2})?\\s*,?\\s*(?:(?:@|·)?\\s*\\d{1,2}:\\d{2}\\s*(?:AM|PM)(?:\\s*-\\s*\\d{1,2}:\\d{2}\\s*(?:AM|PM))?)?\\s*','',notes,flags=re.I)
+        notes=re.sub(r'\\s*Read More\\s*$','',notes,flags=re.I).strip(' ,·@-–—:')
+        if len(notes)<5 or re.fullmatch(r'(?:educational|sports|community|religious|faith)',notes,re.I):
+            return None
+        title=notes
+    if month_only.match(title) or junk_only.match(title):
+        return None
+    if re.search(r'\\b(?:wedding|baptism|church hall in use|knights of columbus meeting|parish ministry council meeting|finance council meeting)\\b',title,re.I):
+        return None
+    e['title']=title
+    return e
+
 def dedupe_events(events):
-    # Reject scraper artifacts before deduplication. Generic recurrence labels are not real event titles.
+    # Repair/reject scraper title artifacts before deduplication.
+    events=[x for x in (normalize_published_event_title(e) for e in events) if x]
     events=[e for e in events if canonical_title(e.get('title','')) not in {'recurring','recurrence','all events'}]
     chosen={}
     def score(e):
