@@ -79,6 +79,7 @@ function belongs(r,t){
    const medicalHealth=/medical|health care|healthcare|hospital|urgent care|primary care|physician|doctor|clinic|physical therapy|rehab|pharmac|audiolog|hearing aid|vaccin|immuniz|nursing|home health/i;
    return (explicit&&r.topics.includes('medical'))||medicalHealth.test(hay);
  }
+ if(explicit&&t[0]==='safety')return r.topics.includes('safety')||r.topics.includes('safety-crisis');
  return explicit?r.topics.includes(t[0]):t[3].some(k=>hay.includes(k));
 }
 function socialLinks(r){if(!r.social)return'';const labels={facebook:['bi-facebook','Facebook'],instagram:['bi-instagram','Instagram'],youtube:['bi-youtube','YouTube'],linkedin:['bi-linkedin','LinkedIn'],x:['bi-twitter-x','X']};return `<span class="social-links">${Object.entries(r.social).map(([k,u])=>{const v=labels[k]||['bi-link-45deg',k];return `<a href="${esc(u)}" target="_blank" rel="noopener" aria-label="${esc(v[1])}" title="${esc(v[1])}"><i class="bi ${v[0]}"></i></a>`}).join('')}</span>`;}
