@@ -124,6 +124,15 @@ class CalendarSourcesTest(unittest.TestCase):
         with patch.object(refresh, 'request', side_effect=lambda u: SimpleNamespace(text=listing if u.endswith('/calendar') else detail.replace('Norwood 02062 MA', 'Norwood OH'))):
             self.assertEqual(refresh.events_from_local_town_pages(source), [])
 
+    def test_nhs_varsity_home_is_curated_default(self):
+        home={'source_id':'nps-athletics-arbiter-football','category':'sports','title':'Varsity Football vs. Milton','venue':'Norwood High School'}
+        away={'source_id':'nps-athletics-arbiter-football','category':'sports','title':'Varsity Football @ Milton','venue':'Milton High School'}
+        jv={'source_id':'nps-athletics-arbiter-football','category':'sports','title':'JV Football vs. Milton','venue':'Norwood High School'}
+        self.assertTrue(refresh.event_is_curated_default(home))
+        self.assertFalse(refresh.event_is_curated_default(away))
+        self.assertFalse(refresh.event_is_curated_default(jv))
+
+
 
 
 def test_public_candidate_rejects_appointment_only_events():
