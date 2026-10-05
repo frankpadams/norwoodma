@@ -119,7 +119,8 @@ def public_candidate(title, description=''):
     blocked=[
       'select board meeting','planning board meeting','conservation commission meeting',
       'school committee meeting','zoning board meeting','finance commission meeting',
-      'practice','members only','member-only','private event'
+      'practice','members only','member-only','private event',
+      'by appointment only','appointment only','appointments only'
     ]
     if any(x in t for x in blocked):
         return False
