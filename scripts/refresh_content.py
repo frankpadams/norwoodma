@@ -114,7 +114,23 @@ def local_enough(text, source):
     # Local primary sources are allowed to omit "Norwood" from every event card.
     return coverage.startswith('Norwood') and source.get('authority') in {'official','organization','business'}
 
+def meaningful_event_title(title):
+    """Reject parser/navigation labels that do not identify an actual event."""
+    raw=clean_text(title)
+    normalized=re.sub(r'[^a-z0-9]+',' ',raw.lower()).strip()
+    if not normalized:
+        return False
+    generic={
+      'monday','tuesday','wednesday','thursday','friday','saturday','sunday',
+      'mon','tue','tues','wed','thu','thur','thurs','fri','sat','sun',
+      'today','tomorrow','event','events','calendar','schedule'
+    }
+    return normalized not in generic
+
+
 def public_candidate(title, description=''):
+    if not meaningful_event_title(title):
+        return False
     t=f"{title} {description}".lower()
     blocked=[
       'select board meeting','planning board meeting','conservation commission meeting',
