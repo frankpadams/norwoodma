@@ -62,509 +62,28 @@
     ]
   },
   {
-    "id": "2026-10-04-2026-boston-open-nqs-aff5b7a",
-    "title": "2026 Boston Open NQS",
+    "id": "2026-10-05-october-2026-53dde9f",
+    "title": "October 2026",
     "start": {
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "time": "00:00"
     },
     "end": {
-      "date": "2026-10-04",
-      "time": "23:59"
+      "date": "2026-10-05",
+      "time": null
     },
-    "venue": "The Skating Club of Boston",
+    "venue": "Norwood Blood Drives",
     "address": null,
     "category": "community",
-    "source_id": "skating-club-calendar",
-    "source_url": "https://scboston.org/event/2026-boston-open-nqs/2026-10-04/",
+    "source_id": "norwood-blood-drives",
+    "source_url": "https://www.norwoodcenter.org/events/",
     "cost": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
+    "verification_status": "auto_source_page",
     "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "skating-club-boston-events"
-    ]
-  },
-  {
-    "id": "2026-10-04-4th-annual-halloween-costume-swap-5e492ed",
-    "title": "4th Annual Halloween Costume Swap",
-    "start": {
-      "date": "2026-10-04",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-4/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-friends-of-the-library-book-sale-half-price-d-5f3148b",
-    "title": "Friends of the Library Book Sale *HALF PRICE DAY*",
-    "start": {
-      "date": "2026-10-04",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/fol-fall-book-sale-16/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Friends of the Library Spring Book Sale: All remaining items are 50% offFor more information about the Friends of the Library and their membership rates visit their page here. &nbsp;",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-we-re-going-on-a-pumpkin-hunt-storywalk-877f104",
-    "title": "We're Going on a Pumpkin Hunt StoryWalk",
-    "start": {
-      "date": "2026-10-04",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/were-going-on-a-pumpkin-hunt-storywalk-4/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join Norwood CFCE for a festive fall adventure at the South Norwood StoryWalk! Throughout the month of October, enjoy the story We're Going on a Pumpkin Hunt by Goldie Hawk as you walk along the trail. As you read each page, keep your eyes ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-10-04-lumber-milling",
-    "title": "Lumber Milling Workshop",
-    "start": {
-      "date": "2026-10-04",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "13:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St, Building 46, Norwood, MA",
-    "category": "workshop",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/events/list/",
-    "cost": null,
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-divine-mercy-prayers-abbe39b",
-    "title": "Divine Mercy Prayers",
-    "start": {
-      "date": "2026-10-04",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "12:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-sunday-9ee9dbf",
-    "title": "Sunday ,",
-    "start": {
-      "date": "2026-10-04",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events/divine-mercy-prayers-2/20261004",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Knights of Columbus Events",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Sunday , October 4 , 2026 , 11:30 AM Divine Mercy Prayers Read More",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-blessing-of-pets-feast-of-st-francis-of-assis-8c582d4",
-    "title": "Blessing of Pets: Feast of St. Francis of Assisi",
-    "start": {
-      "date": "2026-10-04",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "14:00"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "submission-cce3a147fd9a8d2e",
-    "title": "Day House Tour",
-    "start": {
-      "date": "2026-10-04",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "15:00"
-    },
-    "venue": "Norwood Historical Society",
-    "address": "93 Day Street",
-    "town": "Norwood",
-    "category": "community",
-    "source_id": "community-event-submissions",
-    "source_url": "https://norwoodhistoricalsociety.org/events/",
-    "registration_url": null,
-    "cost": "Free, donation appreciated",
-    "accessibility": "Ground floor is wheelchair accessible",
-    "organizer": "Norwood Historical Society",
-    "recurrence": "No — one-time event",
-    "recurrence_details": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "moderator_approved_submission",
-    "notes": "Step into history with a guided tour of the F. Holland Day House, a stunning Victorian home nestled in Norwood, Massachusetts. Visitors can explore the beautifully preserved rooms, admire period furnishings, and learn about Day's contributions to the arts and literature. The house itself, built in 1859, stands as a testament to 19th-century architecture and the cultural richness of the era. We are excited to also share a new exhibit at the Day House, 1776 - What Survives. The focus is on Norwood",
-    "last_verified": null,
-    "discovered_by": "community_submission_feed",
-    "public_access_status": "confirmed_public",
-    "access_type": "paid",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-guided-tour-of-the-day-house-october-4-2026-d116abb",
-    "title": "Guided Tour of the Day House – October 4, 2026",
-    "start": {
-      "date": "2026-10-04",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "15:00"
-    },
-    "venue": "F Holland Day House",
-    "address": "93 Day Street, Norwood, MA, 02062",
-    "category": "arts",
-    "source_id": "historical-society-events",
-    "source_url": "https://norwoodhistoricalsociety.org/event/guided-tour-of-the-day-house-oct-4-2026/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "@ Step into history with a guided tour of the F. Holland Day House, a stunning Victorian home nestled in Norwood, Massachusetts. Visitors can explore the beautifully preserved rooms, admire period furnishings, and learn about Day’s contribu",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community",
-      "norwood-historical-society"
-    ]
-  },
-  {
-    "id": "2026-10-04-woodturning",
-    "title": "Introduction to Woodturning",
-    "start": {
-      "date": "2026-10-04",
-      "time": "13:30"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "17:30"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St, Building 46, Norwood, MA",
-    "category": "workshop",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/events/list/",
-    "cost": "Free–$90",
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-aee429bc4313-2026-10-04",
-    "title": "Sunday Sandlot Baseball Grades 1-3",
-    "start": {
-      "date": "2026-10-04",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "15:15"
-    },
-    "venue": "08/30/2026 - 10/25/2026 02:00 PM - 03:15 PM Kelley Field",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$100.00 Res, $110.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-08-30",
-    "session_end": "2026-10-25",
-    "days": "Su",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-aee429bc4313",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-e9c74b71aacd-2026-10-04",
-    "title": "Sunday Sandlot Baseball Grades 4-6",
-    "start": {
-      "date": "2026-10-04",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "17:00"
-    },
-    "venue": "08/30/2026 - 10/25/2026 03:30 PM - 05:00 PM Kelley Field",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$100.00 Res, $110.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-08-30",
-    "session_end": "2026-10-25",
-    "days": "Su",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-e9c74b71aacd",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c654a2508f64-2026-10-04",
-    "title": "On the Mark Archery - Fall 1 Program",
-    "start": {
-      "date": "2026-10-04",
-      "time": "17:00"
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": "18:00"
-    },
-    "venue": "09/13/2026 - 10/04/2026 05:00 PM - 06:00 PM Pequitside Farm 79 Pleasant Street Canton, MA",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30930",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30930",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$165.00 Res, $165.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-13",
-    "session_end": "2026-10-04",
-    "days": "Su",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c654a2508f64",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-04-police-search-norwood-neighborhood-following--c2ba04e",
-    "title": "Police Search Norwood Neighborhood Following Reported Armed Home Invasion",
-    "start": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "inside-norwood",
-    "source_url": "https://insidenorwood.com/police-search-neighborhood-following-reported-armed-home-invasion-in-norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Inside Norwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Police & Fire Police Search Norwood Neighborhood Following Reported Armed Home Invasion October 4, 2026 Rob Disario",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-04-sun-7f2951e",
-    "title": "Sun",
-    "start": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-04",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Sun, October 4, 2026 23 Tishrei 5787",
-    "discovered_by": "visible_dated_page",
+    "discovered_by": "scheduled_semantic_html",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -1540,37 +1059,6 @@
     ]
   },
   {
-    "id": "2026-10-05-baptism-preparation-by-appointment-only-f93c3b1",
-    "title": "Baptism Preparation (By Appointment Only)",
-    "start": {
-      "date": "2026-10-05",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-10-05",
-      "time": "20:00"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-05-monday-b354d4d",
     "title": "Monday ,",
     "start": {
@@ -1585,13 +1073,13 @@
     "address": null,
     "category": "community",
     "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events/baptism-preparation-by-appointment-only/20261005",
+    "source_url": "https://iccnorwood.org/events",
     "cost": null,
     "public_access": "public",
     "series": "Norwood Knights of Columbus Events",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Monday , October 5 , 2026 , 7:00 PM Baptism Preparation (By Appointment Only) Read More",
+    "notes": "Monday , October 5 , 2026 , 7:00 PM",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -1663,6 +1151,36 @@
     "discovered_by": "civic_meeting_monitor",
     "calendar_ids": [
       "town-meetings"
+    ]
+  },
+  {
+    "id": "2026-10-05-mon-dfeac7f",
+    "title": "Mon",
+    "start": {
+      "date": "2026-10-05",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-05",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mon, October 5, 2026 24 Tishrei 5787",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -11218,6 +10736,32 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-16-temple-grandin-great-minds",
+    "title": "Great Minds Are Not All The Same: By Dr. Temple Grandin",
+    "start": {
+      "date": "2026-10-16",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-10-16",
+      "time": "15:00"
+    },
+    "venue": "Four Points by Sheraton Norwood",
+    "address": "1125 Boston-Providence Turnpike, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "eventbrite",
+    "source_url": "https://www.eventbrite.com/e/great-minds-are-not-all-the-same-by-dr-temple-grandin-tickets-1983455642219",
+    "cost": "See Eventbrite for ticket price",
+    "public_access": "public",
+    "series": "League School for Autism",
+    "publish_candidate": true,
+    "verification_status": "eventbrite_verified_2026-10-04",
+    "notes": "Dr. Temple Grandin shares her perspective on autism and visual thinking. Noon–1 PM arrival, book sales/signing, snacks and beverages; 1–3 PM presentation (90 minutes) followed by a 30-minute Q&A. Free parking. Under 18 with parent or legal guardian.",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -25666,13 +25210,13 @@
     "address": null,
     "category": "community",
     "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events/baptism-preparation-by-appointment-only/20261102",
+    "source_url": "https://iccnorwood.org/events",
     "cost": null,
     "public_access": "public",
     "series": "Norwood Knights of Columbus Events",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Monday , November 2 , 2026 , 7:00 PM Baptism Preparation (By Appointment Only) Read More",
+    "notes": "Monday , November 2 , 2026 , 7:00 PM",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -87980,6 +87524,33 @@
     ]
   },
   {
+    "id": "2027-04-03-vfw-post-2452-meat-raffle-e33664f",
+    "title": "VFW Post 2452 Meat Raffle",
+    "start": {
+      "date": "2027-04-03",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2027-04-03",
+      "time": "17:00"
+    },
+    "venue": "Norwood VFW Post 2452",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "vfw-post-2452-meat-raffle",
+    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
+    "cost": "$2 per drawing; $20 pre-buy",
+    "public_access": "public",
+    "series": "VFW Post 2452 Meat Raffle",
+    "publish_candidate": true,
+    "verification_status": "established_recurring_schedule",
+    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
+    "discovered_by": "scheduled_recurring_series",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2027-04-03-confirmation-2027-ac3bcfa",
     "title": "Confirmation 2027",
     "start": {
@@ -89401,6 +88972,35 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-08-finance-commission-meeting-ccede61",
+    "title": "Finance Commission Meeting",
+    "start": {
+      "date": "2027-04-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-04-08",
+      "time": "20:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
     ]
   },
   {
