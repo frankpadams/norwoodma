@@ -2588,13 +2588,23 @@ def meaningful_news_title(title):
       'skip to content','posts pagination','post pagination','pagination',
       'older posts','newer posts','previous posts','next posts',
       'previous page','next page','previous','next','home','menu','search',
-      'read more','continue reading','categories','tags','archives'
+      'read more','continue reading','categories','tags','archives',
+      'see news archive','newsletter','latest e edition','latest edition'
     }
     if normalized in exact:
         return False
     if re.fullmatch(r'(?:page|posts?)\s+\d+', normalized):
         return False
     return True
+
+def news_is_navigation_item(x):
+    """Reject non-story links that dated-page fallbacks can mistake for articles."""
+    url=str(x.get('url') or '').lower()
+    if re.search(r'(?:/author/|/category/|/tag/|/page/\d+/?$|/subscribe/?$|/newslist\.php(?:$|\?)|/e-editions?/)', url):
+        return True
+    if re.search(r'#(?:content|main|top)(?:$|\?)', url):
+        return True
+    return False
 
 def news_is_routine_game_listing(x):
     text=' '.join(str(x.get(k) or '') for k in ('title','summary','source')).lower()
@@ -2689,7 +2699,7 @@ def current_news(items):
         if not d:
             continue
         d=d.astimezone(TZ)
-        if cutoff <= d <= latest and meaningful_news_title(x.get('title')) and not news_is_obituary(x) and not news_source_blocked(x.get('source')) and not news_is_routine_game_listing(x):
+        if cutoff <= d <= latest and meaningful_news_title(x.get('title')) and not news_is_navigation_item(x) and not news_is_obituary(x) and not news_source_blocked(x.get('source')) and not news_is_routine_game_listing(x):
             out.append(x)
     return dedupe_news(out)[:120]
 
