@@ -3278,11 +3278,11 @@ window.NORWOOD_RESOURCES= [
     ]
   },
   {
-    "name": "Doris J. Dickson Mini-Food Pantry",
+    "name": "Little Free Food Pantry — Railroad Avenue",
     "category": "Food Assistance",
     "description": "Low-barrier neighborhood food assistance at 280 Railroad Ave, including an outdoor mini-food pantry available for pickup at any time. No proof of need or residency is required.",
     "url": "https://www.norwoodtownnews.com/2026/09/02/582781/a-little-pantry-with-a-big-purpose",
-    "tags": "food assistance mini pantry little food pantry groceries no registration no eligibility Railroad Avenue Doris Dickson",
+    "tags": "food assistance mini pantry little food pantry groceries no registration no eligibility Railroad Avenue",
     "topics": ["community","food-assistance","basic-needs"],
     "coverage": "Local",
     "address": "280 Railroad Ave, Norwood, MA 02062",
