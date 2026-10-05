@@ -2553,6 +2553,24 @@ def news_source_blocked(source):
     s=s[4:] if s.startswith('www.') else s
     return s in BLOCKED_NEWS_SOURCES or s.endswith('.maxpreps.com')
 
+def meaningful_news_title(title):
+    """Reject navigation/accessibility labels accidentally scraped as story headlines."""
+    raw=clean_text(title)
+    normalized=re.sub(r'[^a-z0-9]+',' ',raw.lower()).strip()
+    if not normalized:
+        return False
+    exact={
+      'skip to content','posts pagination','post pagination','pagination',
+      'older posts','newer posts','previous posts','next posts',
+      'previous page','next page','previous','next','home','menu','search',
+      'read more','continue reading','categories','tags','archives'
+    }
+    if normalized in exact:
+        return False
+    if re.fullmatch(r'(?:page|posts?)\s+\d+', normalized):
+        return False
+    return True
+
 def news_is_routine_game_listing(x):
     text=' '.join(str(x.get(k) or '') for k in ('title','summary','source')).lower()
     # Routine single-game schedule/result cards are not Norwood.ma news.
@@ -2646,7 +2664,7 @@ def current_news(items):
         if not d:
             continue
         d=d.astimezone(TZ)
-        if cutoff <= d <= latest and not news_is_obituary(x) and not news_source_blocked(x.get('source')) and not news_is_routine_game_listing(x):
+        if cutoff <= d <= latest and meaningful_news_title(x.get('title')) and not news_is_obituary(x) and not news_source_blocked(x.get('source')) and not news_is_routine_game_listing(x):
             out.append(x)
     return dedupe_news(out)[:120]
 
