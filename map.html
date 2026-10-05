@@ -50,7 +50,7 @@
  .map-shell{grid-template-columns:1fr;min-height:0}.map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none}.map-list-head{position:static}
  #prototypeMap{min-height:54vh}.map-control-panel{grid-template-columns:1fr}.prototype-explainer{grid-template-columns:1fr}
 }
-</style>
+.map-search-help{padding:14px 16px;border-top:1px solid #d5e0e6;background:#fff;color:#36566c;font-size:.8rem;line-height:1.45}.map-search-help a{font-weight:800;color:#003b71}\n</style>
 <script src="analytics.js?v=0.13.4.37"></script></head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -94,7 +94,7 @@
 </details>
 <div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of Norwood locations"></div>
-<aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div></aside>
+<aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
 </div>
 <section class="map-disclaimer" aria-label="Map disclaimer"><p><strong>Map disclaimer:</strong> Maps are approximate and based on publicly available data, which may contain errors or become outdated. Norwood.ma is not responsible for decisions made based on map information. Please verify locations, boundaries, districts, parking, amenities, and other map data with an authoritative or independent source before making any consequential decision.</p></section>
 </main>
@@ -106,6 +106,6 @@
 <script src="data/events-data.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script src="map-test.js?v=0.13.4.19"></script>
+<script src="map-test.js?v=0.13.4.21"></script>
 </body>
 </html>
