@@ -21,7 +21,11 @@ _Last updated: October 6, 2026_
 - [ ] Continue meeting-by-meeting review to ensure every article/separately voted motion has a verified outcome and no placeholder text remains.
 - [ ] Complete/verify the 2025 Annual Town Meeting ledger and remove stale wording in the May 15, 2025 Special Town Meeting summary that says exact tallies have not been located where tallies are now present.
 - [ ] Add/verify official warrants, clerk results, budget books, presentations and other relevant Town documents for each meeting where available.
-- [ ] Ensure archive search indexes visible meeting text, article details, reconstructed narratives, document labels/URLs, NCM recordings and related-video metadata.
+- [ ] Make archive search genuinely comprehensive: index visible meeting text, article details, reconstructed narratives, NCM recordings and related-video metadata.
+- [ ] Index the **contents of related source documents** where technically available (warrants, clerk records/results, budgets, presentations, reports and other linked PDFs/documents), not merely each document's link label or URL.
+- [ ] Check NCM video pages/players for captions, subtitle tracks, transcripts or other closed-caption data. If available, ingest that text into the archive's searchable index without requiring the transcript to be visibly displayed on the page.
+- [ ] If an NCM video has no captions/transcript, still index its title, date, description, program/category metadata and its association with the relevant meeting.
+- [ ] Keep extracted document/transcript text out of the visible page unless useful to readers; it may serve as hidden search-index content so searches can surface the correct meeting/article/document/video.
 - [ ] Fix the May 2026 metadata label from “Special + Regular Town Meetings” to “Special + Annual Town Meetings.”
 - [ ] Convert remaining reconstructed-detail `href="#"` links to buttons where appropriate.
 - [ ] Make Escape close the reconstructed-detail modal as well as the other archive modals.
