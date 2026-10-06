@@ -167,12 +167,6 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .old-footer .footer-links{margin:0 0 7px!important;padding:0!important;line-height:1.45!important}
 .old-footer .footer-links{margin-bottom:0!important;margin-top:7px!important}
 
-
-#nav>a[href="transit.html"]::before,
-#nav>a[href="https://www.norwood.ma/transit.html"]::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h10a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4l1.5 2h-2.4l-1.5-2H9.4l-1.5 2H5.5L7 19a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v4h14V6a2 2 0 0 0-2-2zm-2 8v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3zm3 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm8 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h10a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4l1.5 2h-2.4l-1.5-2H9.4l-1.5 2H5.5L7 19a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v4h14V6a2 2 0 0 0-2-2zm-2 8v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3zm3 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm8 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z'/%3E%3C/svg%3E")}
-#nav>a[href="calendars.html"]::before,
-#nav>a[href="https://www.norwood.ma/calendars.html"]::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 2h2v3h8V2h2v3h3v17H3V5h3zm13 9H5v9h14zm-9 2h2v2h-2zm4 0h2v2h-2zm-8 0h2v2H6zm4 4h2v2h-2zm4 0h2v2h-2z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 2h2v3h8V2h2v3h3v17H3V5h3zm13 9H5v9h14zm-9 2h2v2h-2zm4 0h2v2h-2zm-8 0h2v2H6zm4 4h2v2h-2zm4 0h2v2h-2z'/%3E%3C/svg%3E")}
-
 /* Home-screen install item uses only the Norwood.ma favicon; suppress the generic nav icon. */
 #nav>a.add-home-screen-link::before{display:none!important;content:none!important}
 #nav>a.add-home-screen-link .add-home-screen-icon{display:block;width:18px;height:18px;object-fit:contain;flex:0 0 18px;margin:0}
