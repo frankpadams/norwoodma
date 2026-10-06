@@ -6,6 +6,7 @@
  const howDoPage=document.body.classList.contains('how-do-page');
  let submitted=resultsPage;
  const pages=[
+  {name:'Artists, Crafters & Artisans',url:'artists-crafters-artisans.html',type:'Things to Do',text:'artists art crafters crafts artisans makers jewelry jewellery painting painters photography photographers glass textiles fiber handmade SONO Arts Norwood Space Center Winsmith Maple Roots Creative Melissa Adams'},
   {name:'Things to Do',url:'things.html',type:'Things to Do',text:'activities entertainment explore parks recreation'},
   {name:'Museum passes & discounts',url:'museum-discounts.html',type:'Things to Do',text:'museum pass passes discount discounts free admission cheap attractions library Morrill EBT SNAP WIC ConnectorCare Card to Culture Museums for All Bank of America Museums on Us credit card zoo aquarium science museum MFA ICA'},
   {name:'Norwood Trivia',url:'norwood-trivia.html',type:'Explore',text:'trivia history facts notable residents movies filmed local history'},
