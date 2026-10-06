@@ -154,23 +154,29 @@
   // Normalize the shared primary navigation regardless of older page-level markup.
   // Every page except the homepage gets a Home link, and it stays first in the menu.
   const isHomePage=/\/(?:index\.html)?$/i.test(location.pathname);
-  nav.querySelectorAll('a[href="index.html"]').forEach(a=>{if(/^home$/i.test(a.textContent.trim()))a.remove();});
+  const navPath=a=>{try{return new URL(a.getAttribute('href')||'',location.href).pathname}catch(_){return ''}};
+  nav.querySelectorAll('a').forEach(a=>{if(navPath(a)==='/'||/\/index\.html$/i.test(navPath(a))){if(/^home$/i.test(a.textContent.trim()))a.remove();}});
   if(!isHomePage){
     const home=document.createElement('a');
-    home.href='index.html';
+    home.href='https://www.norwood.ma/';
     home.textContent='Home';
     nav.insertBefore(home,nav.firstChild);
   }
-  nav.querySelectorAll('a[href="map.html"],a[href="transit.html"],a[href="calendars.html"],a[href*="events.html?calendars"]').forEach(a=>a.remove());
-  nav.querySelectorAll('a[href="discover.html"]').forEach(a=>{a.textContent='More';});
-  if(!nav.querySelector('a[href="discover.html"]')){
-    const more=document.createElement('a');more.href='discover.html';more.textContent='More';
+  nav.querySelectorAll('a').forEach(a=>{
+    const p=navPath(a),h=a.getAttribute('href')||'';
+    if(/\/(?:map|transit|calendars)\.html$/i.test(p)||(/\/events\.html$/i.test(p)&&/calendars=/i.test(h)))a.remove();
+  });
+  let more=[...nav.querySelectorAll('a')].find(a=>/\/discover\.html$/i.test(navPath(a)));
+  if(more){more.textContent='More';}
+  else{
+    more=document.createElement('a');more.href='https://www.norwood.ma/discover.html';more.textContent='More';
     if(/\/discover\.html$/i.test(location.pathname))more.setAttribute('aria-current','page');
     nav.appendChild(more);
   }
-  nav.querySelectorAll('a[href="support.html"]').forEach(a=>a.remove());
-  if(!nav.querySelector('a[href="contact.html"]')){
-    const contact=document.createElement('a');contact.href='contact.html';contact.textContent='Contact';
+  nav.querySelectorAll('a').forEach(a=>{if(/\/support\.html$/i.test(navPath(a)))a.remove();});
+  let contact=[...nav.querySelectorAll('a')].find(a=>/\/contact\.html$/i.test(navPath(a)));
+  if(!contact){
+    contact=document.createElement('a');contact.href='https://www.norwood.ma/contact.html';contact.textContent='Contact';
     if(/\/contact\.html$/i.test(location.pathname))contact.setAttribute('aria-current','page');
     nav.appendChild(contact);
   }
