@@ -28,7 +28,7 @@ const groups={
  other:{label:'Other Local Services',match:/self storage|moving|funeral|cremation|monument|memorial|headstone|grave marker|cemetery lettering|bronze plaque|florist|sympathy flower|funeral flower|locksmith|security|taxi|shuttle|transportation|truck rental|gas station|cleanout|junk removal/i,subs:[['gas','Gas Stations',/gas station/i],['storage','Storage & Moving',/self storage|storage & moving|moving/i],['funeral','Funeral, Cremation, Memorials & Flowers',/funeral|cremation|monument|memorial|headstone|grave marker|cemetery lettering|bronze plaque|engraving|florist|sympathy flower|funeral flower/i],['security','Locksmiths & Security',/locksmith|security/i],['junk','Junk Removal & Cleanouts',/junk removal|cleanout/i],['transportation','Taxi, Shuttle & Transportation',/taxi|shuttle|transportation|truck rental/i]]}
 }
 const raw=window.NORWOOD_BUSINESSES||[], businesses=raw.map(b=>Array.isArray(b)?{name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4]}:b);
-const text=b=>(b.category||'')+' '+(Array.isArray(b.tags)?b.tags.join(' '):(b.tags||''));
+const text=b=>[b.name,b.category,Array.isArray(b.labels)?b.labels.join(' '):b.labels,Array.isArray(b.tags)?b.tags.join(' '):b.tags].filter(Boolean).join(' ');
 function classifyBusiness(b){
  const t=text(b),out=[];
  Object.entries(groups).forEach(([group,g])=>{
@@ -47,9 +47,11 @@ function render(){
  const {group,sub}=parse(),g=groups[group],root=$('#businessDirectory');
  if(!g){root.innerHTML='';return;}
  if(!sub){
-   const broad=businesses.filter(b=>b.taxonomy.some(x=>x.group===group));
+   const broad=businesses.filter(b=>b.taxonomy.some(x=>x.group===group)).sort((a,b)=>a.name.localeCompare(b.name));
    const tiles=g.subs.map(s=>{const n=broad.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(s[0]))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
-   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">Choose a more specific category. <a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'">View this category on map</a></p><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div></section>';
+   const subcategories=tiles?'<h3 class="business-filter-heading">Narrow this category</h3><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div>':'';
+   const listings=broad.length?broad.map(card).join(''):'<p>No businesses found in this category yet.</p>';
+   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">'+broad.length+' '+(broad.length===1?'business':'businesses')+' in this category. <a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'">View this category on map</a></p>'+subcategories+'<h3 class="business-list-heading">All '+esc(g.label)+' businesses</h3><div class="resource-list">'+listings+'</div></section>';
  } else {
    const s=g.subs.find(x=>x[0]===sub);if(!s){setHash(group);return;}
    const rows=businesses.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(sub))).sort((a,b)=>a.name.localeCompare(b.name));
