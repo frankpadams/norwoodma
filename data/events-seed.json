@@ -5285,5 +5285,29 @@
     "publish_candidate": true,
     "verification_status": "newspaper_calendar_verified_2026-10-06",
     "notes": "Month-long Halloween scavenger hunt with two hunt cards: Cryptkeeper clues on library property and Smoke & Mirrors clues elsewhere in Norwood. Completed cards returned by Oct. 31 qualify for prizes; hunt cards are available through the library."
+  },
+  {
+    "id": "2026-10-07-mill-forge-open-hack-night",
+    "title": "Open Hack Night",
+    "start": {
+      "date": "2026-10-07",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-07",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/events/list/",
+    "cost": "Free",
+    "organizer": "Mill Forge Makerspace",
+    "public_access": "public",
+    "series": "Open Hack Night",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-06",
+    "notes": "Free public maker-community open house/hack night. No RSVP required; visitors can meet local makers, bring or show projects, get help with a project, and exchange ideas. Light refreshments."
   }
 ]
