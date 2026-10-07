@@ -500,9 +500,12 @@ const sourceRegistryReady=fetch('data/town-meeting-sources.json',{cache:'no-cach
       const entry=byId.get(m.dataset.meetingId);
       if(!entry)return;
       m._sourceRegistry=entry;
-      m.dataset.registrySourceIndex=(entry.sources||[]).map(s=>[
-        s.title,s.type,s.text,s.search_text,s.extracted_text,(s.articles||[]).join(' ')
-      ].filter(Boolean).join(' ')).join(' ');
+      m.dataset.registrySourceIndex=[
+        entry.search_text||'',
+        ...(entry.sources||[]).map(s=>[
+          s.title,s.type,s.text,s.search_text,s.extracted_text,(s.articles||[]).join(' ')
+        ].filter(Boolean).join(' '))
+      ].join(' ');
       buildMeetingSearchIndex(m);
     });
     runArchiveSearch();
