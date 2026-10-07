@@ -170,9 +170,9 @@
   {
     "name": "Annie's Closet Norwood",
     "category": "Basic Needs",
-    "description": "Norwood community clothing assistance program providing clothing with dignity and respect.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
-    "tags": "clothing clothes family basic needs",
+    "description": "Local clothing assistance program at 150 Chapel Street offering free clothing in a welcoming setting. Check the direct site for current Saturday opening dates and donation information.",
+    "url": "https://www.anniesclosetnorwood.org/",
+    "tags": "free clothing clothes family basic needs Norwood 150 Chapel Street Saturday",
     "topics": [
       "kids",
       "community",
@@ -181,8 +181,9 @@
       "family-support"
     ],
     "coverage": "Local",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "address": "150 Chapel St, Norwood, MA 02062"
   },
   {
     "name": "Arete Health and Performance",
@@ -1069,17 +1070,16 @@
   },
   {
     "name": "Fresh Start Furniture Bank",
-    "category": "Food & Basic Needs",
-    "description": "Furniture bank helping people in need obtain essential household furnishings and home goods at no cost through its community assistance program.",
+    "category": "Furniture & Household",
+    "description": "Furniture bank providing essential household furnishings and home goods to people in need through partner/referral agencies. Norwood Veterans Services is listed as a Norwood referral partner for eligible veterans.",
     "url": "https://freshstartfurniturebank.org/",
     "tags": "Fresh Start Furniture Bank free furniture household goods furnishings basic needs home essentials",
     "topics": [
       "basic-needs",
-      "housing-assistance",
-      "food-assistance"
+      "housing-assistance"
     ],
     "coverage": "Massachusetts",
-    "verified": "2026-09"
+    "verified": "2026-10"
   },
   {
     "name": "Friends of Norwood Center",
@@ -3127,6 +3127,20 @@
     ]
   },
   {
+    "name": "Morrill Memorial Library — Access to Justice",
+    "category": "Legal Help & Advocacy",
+    "description": "Local access-to-justice service at Morrill Memorial Library offering a private space and technology for remote court participation plus Zoom-based help from Massachusetts Trial Court law librarians for legal research and court information.",
+    "url": "https://norwoodlibrary.org/access-to-justice/",
+    "tags": "legal help law librarian court Zoom access to justice legal research forms remote hearing Morrill Library Norwood",
+    "topics": [
+      "legal-advocacy",
+      "community"
+    ],
+    "coverage": "Local",
+    "provider_type": "Public library / court access support",
+    "verified": "2026-10"
+  },
+  {
     "name": "Morrill Memorial Library — Children & Family Resources",
     "category": "Education & Family",
     "description": "Local and regional resources for children and families, including early childhood, disability and family-support services.",
@@ -3261,8 +3275,7 @@
       "kids",
       "education-family",
       "immigration-language",
-      "family-support",
-      "town"
+      "family-support"
     ],
     "coverage": "Local",
     "verified": "2026-09",
@@ -3477,20 +3490,19 @@
   },
   {
     "name": "New Life Furniture Bank of Massachusetts",
-    "category": "Food & Basic Needs",
-    "description": "Furniture bank providing essential household furnishings to individuals and families transitioning out of homelessness or otherwise in need, through referring partner agencies.",
+    "category": "Furniture & Household",
+    "description": "Furniture bank providing essential household furnishings to people transitioning from homelessness or otherwise in need. Assistance is provided through approved referring agencies rather than direct walk-in requests.",
     "url": "https://newlifefb.org/",
     "tags": "furniture household basic needs family furniture household furnishings home essentials basic needs",
     "topics": [
       "kids",
       "housing",
       "basic-needs",
-      "food-assistance",
       "education-family",
       "family-support"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
+    "verified": "2026-10",
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
@@ -3508,6 +3520,21 @@
     "coverage": "Regional",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Norfolk County RSVP — Rides for Veterans",
+    "category": "Veterans & Transportation",
+    "description": "Free volunteer transportation for eligible Norfolk County veterans, spouses and widows to medical and other important appointments. A useful regional option for Norwood veterans who need a ride.",
+    "url": "https://www.norfolkcounty.org/",
+    "tags": "veterans rides transportation medical appointments Norfolk County RSVP volunteer driver Norwood",
+    "topics": [
+      "veterans",
+      "transport",
+      "community"
+    ],
+    "coverage": "Regional — Norfolk County",
+    "provider_type": "County volunteer transportation",
+    "verified": "2026-10"
   },
   {
     "name": "Norwood Adult Day Health Center",
@@ -3926,7 +3953,7 @@
   {
     "name": "Norwood Food Pantry",
     "category": "Food Assistance",
-    "description": "Food pantry serving eligible Norwood and Westwood residents at 150 Chapel Street; also provides emergency-food guidance.",
+    "description": "Primary local food pantry serving Norwood and Westwood residents at 150 Chapel Street (rear of Grace Episcopal Church). Open Saturdays 9:00–11:40 AM; new clients can register on Saturday mornings. For emergency food assistance, call 781-291-3663.",
     "url": "https://www.norwoodpantry.org/food",
     "tags": "food pantry groceries emergency food Norwood Westwood SNAP hunger",
     "topics": [
@@ -3936,7 +3963,9 @@
       "basic-needs"
     ],
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-10",
+    "phone": "781-291-3663",
+    "address": "150 Chapel St, Norwood, MA 02062"
   },
   {
     "name": "Norwood Friends of Visual Arts",
@@ -4515,7 +4544,6 @@
       "kids",
       "youth",
       "todo",
-      "town",
       "education-family",
       "family-support",
       "community-groups"
@@ -4533,7 +4561,6 @@
       "kids",
       "youth",
       "todo",
-      "town",
       "education-family",
       "family-support"
     ],
@@ -4550,7 +4577,6 @@
       "kids",
       "youth",
       "todo",
-      "town",
       "family-support",
       "education-family"
     ],
