@@ -305,7 +305,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Local public health services and information.",
     "url": "https://www.norwoodma.gov/departments/health/index.php",
     "tags": "health public inspections",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
@@ -317,7 +317,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Town executive board information and meetings.",
     "url": "https://www.norwoodma.gov/government/board_of_selectmen/index.php",
     "tags": "selectmen town board",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
@@ -431,7 +431,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Building permits, inspections and code information.",
     "url": "https://www.norwoodma.gov/departments/building/index.php",
     "tags": "building permits inspections",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
@@ -645,7 +645,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Programs, transportation and services for older adults.",
     "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
     "tags": "senior seniors aging transportation programs older adult caregiver outreach benefits activities council on",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "older",
@@ -773,7 +773,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Engineering, infrastructure and project information.",
     "url": "https://www.norwoodma.gov/departments/engineering/index.php",
     "tags": "engineering infrastructure",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
@@ -3084,20 +3084,6 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Norwood Commission on Disability",
-    "category": "Town & Disability",
-    "description": "Local commission focused on access, inclusion and disability-related concerns in Norwood.",
-    "url": "https://www.norwoodma.gov/",
-    "tags": "disability accessibility ADA town commission",
-    "topics": [
-      "health",
-      "town",
-      "disability-support"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
     "name": "Norwood Community Garden",
     "category": "Environment",
     "description": "Resident community garden at Endean Park.",
@@ -3534,20 +3520,6 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Norwood Memory Café, Inc.",
-    "category": "Community & Older Adults",
-    "description": "Local community connection for people living with memory loss and their care partners.",
-    "url": "https://www.norwoodma.gov/",
-    "tags": "memory cafe dementia caregiver community",
-    "topics": [
-      "older",
-      "community",
-      "health"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
     "name": "Norwood Parent Music Association",
     "category": "Schools & Youth",
     "description": "Support for Norwood school music programs.",
@@ -3960,9 +3932,7 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09",
     "topics": [
       "todo",
-      "business",
-      "food-assistance",
-      "basic-needs"
+      "business"
     ]
   },
   {
@@ -4082,20 +4052,6 @@ window.NORWOOD_RESOURCES= [
       "medical"
     ],
     "coverage": "Norwood",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Norwood Veterans Memorials & Services",
-    "category": "Veterans & Town",
-    "description": "Local veterans-services information, benefits assistance and community observances through the Town of Norwood.",
-    "url": "https://www.norwoodma.gov/",
-    "tags": "veterans memorial benefits town military",
-    "topics": [
-      "veterans",
-      "town",
-      "financial-assistance"
-    ],
-    "coverage": "Local",
     "verified": "2026-09"
   },
   {
@@ -4599,7 +4555,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Roads, water, sewer, trash, recycling, snow and public works information.",
     "url": "https://www.norwoodma.gov/departments/public_works/index.php",
     "tags": "dpw trash recycling water sewer roads snow",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
@@ -5310,7 +5266,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Elections, voting, records, licenses and Town Meeting information.",
     "url": "https://www.norwoodma.gov/departments/town_clerk/index.php",
     "tags": "elections voting clerk records licenses town meeting",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
@@ -5497,8 +5453,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "todo",
       "kids",
-      "food-assistance",
-      "basic-needs",
       "education-family",
       "family-support"
     ],
@@ -5614,7 +5568,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Zoning appeals and public hearings.",
     "url": "https://www.norwoodma.gov/government/boards_committees/zoning_board_of_appeals.php",
     "tags": "zoning appeals",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "town"
