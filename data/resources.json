@@ -220,7 +220,7 @@
   {
     "name": "Balch Elementary School",
     "category": "Schools",
-    "description": "Elementary school information.",
+    "description": "Official Balch Elementary School page with school news, family information, staff links, calendars and resources for students and caregivers.",
     "url": "https://www.norwood.k12.ma.us/balch",
     "tags": "elementary school",
     "coverage": "Local",
@@ -332,7 +332,7 @@
   {
     "name": "Board of Selectmen",
     "category": "Town Government",
-    "description": "Town executive board information and meetings.",
+    "description": "Official Board of Selectmen page with meeting information, agendas, minutes, policies and Town executive-board information.",
     "url": "https://www.norwoodma.gov/government/board_of_selectmen/index.php",
     "tags": "selectmen town board",
     "coverage": "Local",
@@ -478,7 +478,7 @@
   {
     "name": "Building Department",
     "category": "Town Services",
-    "description": "Building permits, inspections and code information.",
+    "description": "Town Building Department information for permits, inspections, building-code requirements and related property or construction questions.",
     "url": "https://www.norwoodma.gov/departments/building/index.php",
     "tags": "building permits inspections",
     "coverage": "Local",
@@ -490,7 +490,7 @@
   {
     "name": "Callahan Elementary School",
     "category": "Schools",
-    "description": "Elementary school information.",
+    "description": "Official Callahan Elementary School page with school news, family information, staff links, calendars and resources for students and caregivers.",
     "url": "https://www.norwood.k12.ma.us/callahan",
     "tags": "elementary school",
     "coverage": "Local",
@@ -613,9 +613,7 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Chris+Sam%27s+Barber+Shop+1076+Washington+St+Norwood+MA",
     "tags": "barber haircut grooming",
     "topics": [
-      "services",
-      "education-family",
-      "family-support"
+      "services"
     ],
     "coverage": "Local",
     "verified": "2026-09"
@@ -641,7 +639,7 @@
   {
     "name": "Cleveland Elementary School",
     "category": "Schools",
-    "description": "Elementary school information.",
+    "description": "Official Cleveland Elementary School page with school news, family information, staff links, calendars and resources for students and caregivers.",
     "url": "https://www.norwood.k12.ma.us/cleveland",
     "tags": "elementary school",
     "coverage": "Local",
@@ -670,7 +668,7 @@
   {
     "name": "Coakley Middle School",
     "category": "Schools",
-    "description": "Coakley Middle School news, calendar and information.",
+    "description": "Official Coakley Middle School page with school news, calendars, staff information, family resources and student information.",
     "url": "https://www.norwood.k12.ma.us/cms",
     "tags": "middle school cms students",
     "coverage": "Local",
@@ -714,7 +712,7 @@
   {
     "name": "Community Preservation Committee",
     "category": "Town Government",
-    "description": "Community Preservation Act projects and meetings.",
+    "description": "Town committee information on Community Preservation Act funding, proposed projects, meetings and local preservation priorities.",
     "url": "https://www.norwoodma.gov/government/boards_committees/community_preservation_committee.php",
     "tags": "cpa preservation",
     "coverage": "Local",
@@ -937,7 +935,7 @@
   {
     "name": "Engineering Department",
     "category": "Town Services",
-    "description": "Engineering, infrastructure and project information.",
+    "description": "Town Engineering Department information on infrastructure, public projects, drainage, streets and engineering-related municipal work.",
     "url": "https://www.norwoodma.gov/departments/engineering/index.php",
     "tags": "engineering infrastructure",
     "coverage": "Local",
@@ -1088,6 +1086,7 @@
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
+      "community",
       "community-groups"
     ]
   },
@@ -3377,8 +3376,8 @@
     "coverage": "Regional/State",
     "verified": "2026-09",
     "topics": [
-      "education-family",
-      "family-support"
+      "community",
+      "todo"
     ]
   },
   {
@@ -3645,7 +3644,7 @@
   {
     "name": "Norwood Board of Health",
     "category": "Health",
-    "description": "Local public health services and information.",
+    "description": "Town public-health department information, including local health services, inspections, permits, public-health guidance and community health resources.",
     "url": "https://www.norwoodma.gov/departments/health/index.php",
     "tags": "health public inspections",
     "coverage": "Local",
@@ -3689,7 +3688,7 @@
   {
     "name": "Norwood Community Garden",
     "category": "Environment",
-    "description": "Resident community garden at Endean Park.",
+    "description": "Town community garden at Endean Park, including local gardening information, plot access and community participation details.",
     "url": "https://www.norwoodma.gov/departments/conservation/community_garden.php",
     "tags": "garden conservation plots",
     "coverage": "Local",
@@ -3708,8 +3707,8 @@
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
-      "education-family",
-      "family-support"
+      "community",
+      "todo"
     ]
   },
   {
@@ -3800,7 +3799,7 @@
   {
     "name": "Norwood Cultural Council",
     "category": "Arts & Culture",
-    "description": "Local arts, humanities and cultural grants.",
+    "description": "Local Cultural Council supporting Norwood arts, humanities and cultural programming through grants and community cultural initiatives.",
     "url": "https://massculturalcouncil.org/local-council/norwood/",
     "tags": "culture arts grants local council",
     "coverage": "Local",
@@ -3849,7 +3848,7 @@
   {
     "name": "Norwood Farmers Market",
     "category": "Food & Community",
-    "description": "Seasonal community farmers market.",
+    "description": "Seasonal Norwood farmers market featuring local and regional vendors, food, community activity and periodic special events.",
     "url": "https://www.norwoodfarmersmarket.com/",
     "tags": "farmers market food local",
     "social": {
@@ -3881,7 +3880,7 @@
   {
     "name": "Norwood Fire Department",
     "category": "Public Safety",
-    "description": "Fire department, prevention and emergency information.",
+    "description": "Official Norwood Fire Department information, including fire prevention, inspections, emergency preparedness and department contacts.",
     "url": "https://www.norwoodma.gov/departments/fire/index.php",
     "tags": "fire safety emergency prevention",
     "coverage": "Local",
@@ -3924,7 +3923,7 @@
   {
     "name": "Norwood High School",
     "category": "Schools",
-    "description": "Norwood High School news, calendar and information.",
+    "description": "Official Norwood High School page with academics, activities, athletics, calendars, student resources and family information.",
     "url": "https://www.norwood.k12.ma.us/nhs",
     "tags": "high school nhs students",
     "coverage": "Local",
@@ -3970,7 +3969,7 @@
   {
     "name": "Norwood Historical Society",
     "category": "Arts & Culture",
-    "description": "Norwood history, collections and community programs.",
+    "description": "Local historical organization preserving and sharing Norwood history through collections, exhibits, programs and community events.",
     "url": "https://norwoodhistoricalsociety.org/",
     "tags": "history historical museum culture",
     "coverage": "Local",
@@ -4041,7 +4040,7 @@
   {
     "name": "Norwood Light — Report an Outage",
     "category": "Utilities",
-    "description": "Power outage reporting and outage information.",
+    "description": "Official Norwood Light outage-reporting information for electric customers, including how to report a power outage and check service information.",
     "url": "https://norwoodlight.com/report-an-outage/",
     "tags": "outage power electric emergency",
     "coverage": "Local",
@@ -4054,7 +4053,7 @@
   {
     "name": "Norwood Light Broadband",
     "category": "Utilities",
-    "description": "Municipal broadband service.",
+    "description": "Municipal broadband service from Norwood Light, with information on residential internet service, plans, support and customer service.",
     "url": "https://norwoodlight.com/internet/",
     "tags": "internet broadband",
     "coverage": "Local",
@@ -4108,7 +4107,7 @@
   {
     "name": "Norwood Memorial Airport",
     "category": "Transportation",
-    "description": "Town-owned public-use airport information.",
+    "description": "Official information for Norwood Memorial Airport, the Town-owned public-use airport, including airport operations and municipal aviation information.",
     "url": "https://www.norwoodma.gov/departments/airport/index.php",
     "tags": "airport aviation",
     "coverage": "Local",
@@ -4141,6 +4140,8 @@
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
+      "kids",
+      "community",
       "education-family",
       "family-support"
     ]
@@ -4175,7 +4176,7 @@
   {
     "name": "Norwood Police Department",
     "category": "Public Safety",
-    "description": "Police information and non-emergency resources.",
+    "description": "Official Norwood Police Department information, including non-emergency contacts, programs, community policing information and public-safety resources.",
     "url": "https://www.norwoodma.gov/departments/police/index.php",
     "tags": "police safety crime non emergency",
     "coverage": "Local",
@@ -4216,7 +4217,7 @@
   {
     "name": "Norwood Public Schools",
     "category": "Schools",
-    "description": "District news, schools, calendars and family information.",
+    "description": "Official Norwood Public Schools district hub for schools, calendars, registration, family information, student services and district news.",
     "url": "https://www.norwood.k12.ma.us/",
     "tags": "school education students district",
     "coverage": "Local",
@@ -4414,13 +4415,15 @@
   {
     "name": "Norwood Recreation",
     "category": "Recreation",
-    "description": "Programs, memberships, facilities and registration.",
+    "description": "Town Recreation Department hub for seasonal programs, youth and adult activities, registration, facilities and recreation information.",
     "url": "https://norwoodma.myrec.com/",
     "tags": "recreation sports classes programs civic center",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
-      "community-groups"
+      "todo",
+      "kids",
+      "community"
     ]
   },
   {
@@ -4615,7 +4618,7 @@
   {
     "name": "Norwood Theatre",
     "category": "Arts & Culture",
-    "description": "Performances and events at the Norwood Theatre.",
+    "description": "Local performing-arts venue presenting live shows, concerts and community entertainment in downtown Norwood.",
     "url": "https://norwoodstage.com/",
     "tags": "theatre theater shows music events arts",
     "coverage": "Local",
@@ -4865,12 +4868,15 @@
   {
     "name": "NPS Athletics",
     "category": "Schools & Youth",
-    "description": "Norwood Public Schools athletics information.",
+    "description": "Official Norwood Public Schools athletics information for teams, schedules, registration, contacts and high-school sports resources.",
     "url": "https://www.norwood.k12.ma.us/nhs/athletics",
     "tags": "athletics school sports",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
+      "kids",
+      "youth",
+      "todo",
       "education-family",
       "family-support"
     ]
@@ -4878,7 +4884,7 @@
   {
     "name": "NPS District Calendar",
     "category": "Schools",
-    "description": "District-wide school calendar and events.",
+    "description": "Official district-wide Norwood Public Schools calendar for school dates, holidays, meetings and other district events.",
     "url": "https://www.norwood.k12.ma.us/about/calendar",
     "tags": "school calendar events dates",
     "coverage": "Local",
@@ -4891,12 +4897,14 @@
   {
     "name": "NPS Fine Arts",
     "category": "Schools & Youth",
-    "description": "District music, visual arts and performing arts information.",
+    "description": "Official Norwood Public Schools information for music, visual arts and performing-arts programs across the district.",
     "url": "https://www.norwood.k12.ma.us/academics/fine-arts",
     "tags": "music arts school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
+      "kids",
+      "todo",
       "education-family",
       "family-support"
     ]
@@ -4904,7 +4912,7 @@
   {
     "name": "NPS Nutrition",
     "category": "Schools",
-    "description": "School meal and nutrition information.",
+    "description": "Official Norwood Public Schools nutrition information, including school meals, menus and food-service resources for families.",
     "url": "https://www.norwood.k12.ma.us/departments/nutrition",
     "tags": "school meals nutrition",
     "coverage": "Local",
@@ -4919,7 +4927,7 @@
   {
     "name": "NPS Student Services",
     "category": "Schools",
-    "description": "Special education and student support information.",
+    "description": "Official Norwood Public Schools Student Services information covering special education and related student-support programs.",
     "url": "https://www.norwood.k12.ma.us/departments/student-services",
     "tags": "student services special education",
     "coverage": "Local",
@@ -4932,7 +4940,7 @@
   {
     "name": "Oldham Elementary School",
     "category": "Schools",
-    "description": "Elementary school information.",
+    "description": "Official Oldham Elementary School page with school news, family information, staff links, calendars and resources for students and caregivers.",
     "url": "https://www.norwood.k12.ma.us/oldham",
     "tags": "elementary school",
     "coverage": "Local",
@@ -5170,7 +5178,7 @@
   {
     "name": "Prescott Elementary School",
     "category": "Schools",
-    "description": "Elementary school information.",
+    "description": "Official Prescott Elementary School page with school news, family information, staff links, calendars and resources for students and caregivers.",
     "url": "https://www.norwood.k12.ma.us/prescott",
     "tags": "elementary school",
     "coverage": "Local",
@@ -5278,7 +5286,7 @@
   {
     "name": "Recreation Facilities",
     "category": "Recreation",
-    "description": "Fields, courts and recreation facility status.",
+    "description": "Town Recreation listings for Norwood fields, courts and facilities, including facility information and current availability or status where provided.",
     "url": "https://norwoodma.myrec.com/info/facilities/default.aspx",
     "tags": "fields parks facilities courts sports",
     "coverage": "Local",
@@ -5291,14 +5299,15 @@
   {
     "name": "Recreation Programs",
     "category": "Recreation",
-    "description": "Current youth, adult, fitness and seasonal programs.",
+    "description": "Current Norwood Recreation offerings for children, teens and adults, including seasonal sports, fitness, arts and other community programs.",
     "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
     "tags": "programs classes youth adult fitness register",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
-      "education-family",
-      "family-support"
+      "todo",
+      "kids",
+      "community"
     ]
   },
   {
