@@ -976,21 +976,6 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
-    "name": "Gosnold Behavioral Health",
-    "category": "Recovery",
-    "description": "Substance-use and behavioral-health treatment with outpatient services in the region.",
-    "url": "https://norwoodlibrary.org/commres-health/",
-    "tags": "addiction counseling recovery substance use",
-    "topics": [
-      "health",
-      "mental-health",
-      "recovery"
-    ],
-    "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
-  },
-  {
     "name": "Gosnold Behavioral Health — Outpatient Services",
     "category": "Addiction & Recovery",
     "description": "Outpatient behavioral-health and substance-use treatment, including services accessible from the Greater Boston region.",
@@ -1582,8 +1567,7 @@ window.NORWOOD_RESOURCES= [
       "employment",
       "disability-support",
       "education-family",
-      "family-support",
-      "town"
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1635,8 +1619,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/info-details/massachusetts-animal-fund",
     "tags": "pet spay neuter animal assistance",
     "topics": [
-      "community",
-      "town"
+      "community"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1733,8 +1716,7 @@ window.NORWOOD_RESOURCES= [
       "employment",
       "financial-assistance",
       "housing-assistance",
-      "legal-advocacy",
-      "town"
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1751,8 +1733,7 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "medical-care",
       "employment",
-      "financial-assistance",
-      "town"
+      "financial-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1768,7 +1749,6 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "deaf-hard-of-hearing",
       "legal-advocacy",
-      "town",
       "community"
     ],
     "coverage": "Statewide",
@@ -1813,8 +1793,7 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "health",
-      "disability-support",
-      "town"
+      "disability-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -1827,8 +1806,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "mental health DMH Massachusetts services serious mental illness support",
     "topics": [
       "health",
-      "mental-health",
-      "town"
+      "mental-health"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1845,8 +1823,7 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "food-assistance",
       "financial-assistance",
-      "basic-needs",
-      "town"
+      "basic-needs"
     ],
     "coverage": "Regional/State",
     "verified": "2026-09"
@@ -2080,8 +2057,7 @@ window.NORWOOD_RESOURCES= [
       "health",
       "education-family",
       "family-support",
-      "lgbtq-support",
-      "town"
+      "lgbtq-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2695,22 +2671,6 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
-    "name": "NAMI Massachusetts Compass",
-    "category": "Mental Health",
-    "description": "Free information and navigation support for people trying to understand Massachusetts mental-health systems and services.",
-    "url": "https://norwoodlibrary.org/commres-health/",
-    "tags": "mental health nami navigation family support",
-    "topics": [
-      "health",
-      "mental-health",
-      "education-family",
-      "family-support"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
-  },
-  {
     "name": "NAMI Massachusetts Compass Helpline",
     "category": "Mental Health",
     "description": "Free information and navigation help for Massachusetts residents trying to understand and access mental-health services and related systems of care.",
@@ -2769,19 +2729,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "mental-health",
       "recovery"
-    ]
-  },
-  {
-    "name": "Neponset River Regional Chamber",
-    "category": "Business & Community",
-    "description": "Local business directory, networking and events.",
-    "url": "https://www.nrrchamber.com/",
-    "tags": "chamber business directory jobs networking",
-    "coverage": "Regional/State",
-    "verified": "2026-09",
-    "topics": [
-      "business",
-      "community"
     ]
   },
   {
@@ -3484,18 +3431,6 @@ window.NORWOOD_RESOURCES= [
     "description": "Norwood’s municipal electric utility, including electric service, billing, outages and customer information.",
     "url": "https://norwoodlight.com/",
     "tags": "electric electricity power utility electric bill billing outage outages service municipal",
-    "coverage": "Local",
-    "verified": "2026-09",
-    "topics": [
-      "town"
-    ]
-  },
-  {
-    "name": "Norwood Light Broadband & Internet",
-    "category": "Utilities",
-    "description": "Norwood Light’s municipal broadband and internet service, including service information, plans, billing and customer support.",
-    "url": "https://norwoodlight.com/",
-    "tags": "broadband internet wifi fiber service plans internet bill billing customer support municipal",
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
@@ -5451,8 +5386,7 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "veterans",
       "health",
-      "financial-assistance",
-      "town"
+      "financial-assistance"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -5689,8 +5623,7 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "family-support",
       "kids",
-      "older",
-      "town"
+      "older"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -5722,8 +5655,7 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "disability-support",
       "safety-crisis",
-      "legal-advocacy",
-      "town"
+      "legal-advocacy"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5795,8 +5727,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "unemployment unemployment insurance UI benefits DUA laid off lost job weekly claim appeal Massachusetts",
     "topics": [
       "employment",
-      "financial-assistance",
-      "town"
+      "financial-assistance"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -5837,8 +5768,7 @@ window.NORWOOD_RESOURCES= [
       "education-family",
       "family-support",
       "kids",
-      "financial-assistance",
-      "town"
+      "financial-assistance"
     ],
     "coverage": "Massachusetts / Greater Boston",
     "verified": "2026-09",
