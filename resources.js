@@ -190,6 +190,12 @@ function topicFilterKind(topicId,r){
    if(/benefit|financial|tax|social security|legal/.test(h))return'benefits';
    return'other';
  }
+ if(topicId==='pregnancy'){
+   if(/pregnancy loss|miscarriage|stillbirth|infant loss|bereavement|grief/.test(h))return'loss';
+   if(/breastfeed|lactat|infant feeding|breast pump/.test(h))return'lactation';
+   if(/postpartum|perinatal mental|postpartum depression|postpartum anxiety|maternal mental health/.test(h))return'postpartum';
+   return'general';
+ }
  return'all';
 }
 function topicFilterDefs(topicId,rows){
@@ -197,7 +203,8 @@ function topicFilterDefs(topicId,rows){
   health:[['all','All'],['mental','Mental Health & Crisis'],['recovery','Addiction & Recovery'],['disability','Disability & Accessibility'],['deaf','Deaf & Hard of Hearing'],['other','Other Support']],
   immigration:[['all','All'],['urgent','ICE / Detention / Know Your Rights'],['legal','Free & Nonprofit Legal Help'],['private','Private Attorneys'],['newcomer','Newcomer & Language Support']],
   housing:[['all','All'],['urgent','Emergency Housing & Eviction'],['affordable','Public & Affordable Housing'],['utility','Utilities & Energy'],['rights','Tenant Rights & Legal Help'],['other','Other Housing Help']],
-  older:[['all','All'],['local','Norwood Senior Services'],['health','Health & Caregiving'],['transport','Transportation'],['food','Meals & Food'],['benefits','Benefits & Legal'],['other','Other Support']]
+  older:[['all','All'],['local','Norwood Senior Services'],['health','Health & Caregiving'],['transport','Transportation'],['food','Meals & Food'],['benefits','Benefits & Legal'],['other','Other Support']],
+  pregnancy:[['all','All'],['general','Pregnancy & General Support'],['postpartum','Postpartum Mental Health'],['lactation','Lactation & Feeding'],['loss','Pregnancy Loss & Grief']]
  };
  const list=defs[topicId]||[];
  return list.filter(([id])=>id==='all'||rows.some(r=>topicFilterKind(topicId,r)===id));
