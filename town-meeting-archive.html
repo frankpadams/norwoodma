@@ -482,7 +482,7 @@ const search=document.getElementById('archiveSearch');
 const meetings=[...document.querySelectorAll('.meeting')];
 const normalizeSearch=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 meetings.forEach(m=>{const links=[...m.querySelectorAll('a')].map(a=>[a.textContent,a.getAttribute('href')].join(' ')).join(' ');const videos=[...m.querySelectorAll('[data-videos]')].map(x=>x.dataset.videos).join(' ');const recon=[...m.querySelectorAll('[data-recon]')].map(x=>reconData[x.dataset.recon]||'').join(' ');const sourceText=m.dataset.sourceIndex||'';m.dataset.searchIndex=normalizeSearch([m.textContent,links,videos,recon,sourceText].join(' '));});
-search.addEventListener('input',()=>{
+function runArchiveSearch(){
   const q=normalizeSearch(search.value);
   meetings.forEach(m=>{
     const d=m.querySelector(':scope > details');
@@ -500,7 +500,10 @@ search.addEventListener('input',()=>{
     if(q&&show) d.open=true;
     if(!q) d.open=false;
   });
-});
+}
+search.addEventListener('input',runArchiveSearch);
+const incomingArchiveQuery=new URLSearchParams(location.search).get('q')||'';
+if(incomingArchiveQuery){search.value=incomingArchiveQuery;runArchiveSearch();requestAnimationFrame(()=>search.scrollIntoView({block:'center'}));}
 const helpModal=document.getElementById('archiveHelpModal');
 const helpOpen=document.getElementById('archiveHelpOpen');
 const helpClose=document.getElementById('archiveHelpClose');
