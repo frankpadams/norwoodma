@@ -211,6 +211,46 @@ function topicFilterKind(topicId,r){
    if(/masshire|job search|employment opportunities|help wanted|career center|find a job/.test(h))return'jobs';
    return'other';
  }
+ if(topicId==='veterans'){
+   if(isLocalResource(r))return'local';
+   if(/va boston|health care|healthcare|medical/.test(h))return'health';
+   if(/housing|homeless|shelter|homefront/.test(h))return'housing';
+   if(/legion|community|peer/.test(h))return'community';
+   return'benefits';
+ }
+ if(topicId==='lgbtq'){
+   if(isLocalResource(r))return'local';
+   if(/transgender|trans lifeline|trans support|nonbinary/.test(h))return'trans';
+   if(topics.includes('safety-crisis')||/crisis|suicid|hotline/.test(h))return'crisis';
+   if(/youth|student|school|family|parent/.test(h))return'youth';
+   if(/health care|healthcare|medical|planned parenthood/.test(h))return'health';
+   return'community';
+ }
+ if(topicId==='transport'){
+   if(/school bus|public schools bus/.test(h))return'school';
+   if(/paratransit|accessib|the ride|disability/.test(h))return'accessible';
+   if(/senior|older adult|council on aging|hessco/.test(h))return'senior';
+   if(/mbta|commuter rail|franklin|foxboro|route 34e|trip planner|bus\b|rail\b/.test(h))return'transit';
+   return'local';
+ }
+ if(topicId==='community'){
+   if(/church|parish|temple|synagogue|mosque|mandir|congregation|worship|faith/.test(h))return'faith';
+   if(/pta|pto|scout|youth|school|student|parent teacher/.test(h))return'youth';
+   if(/news|media|historical|arts|culture|theatre|theater|library|museum|music|visual arts/.test(h))return'culture';
+   if(/volunteer|rotary|lions|elks|women.?s club|junior woman|knights of columbus|community organization|community-groups/.test(h))return'clubs';
+   if(/lgbtq|immigrant|refugee|disability|deaf|recovery|support group|mental health|caregiver/.test(h))return'support';
+   if(isLocalResource(r))return'local';
+   return'other';
+ }
+ if(topicId==='town'){
+   if(/police|fire department|public safety/.test(h))return'safety';
+   if(/light electric|broadband|outage|utility/.test(h))return'utilities';
+   if(/election|voting|public records|town clerk/.test(h))return'records';
+   if(/planning board|zoning|commission|committee|board of selectmen/.test(h))return'boards';
+   if(/park|recreation|field|court|playground/.test(h))return'recreation';
+   if(/assessor|building permit|treasurer|collector|public works|engineering|animal control|board of health/.test(h))return'departments';
+   return'other';
+ }
  return'all';
 }
 function topicFilterDefs(topicId,rows){
@@ -221,7 +261,12 @@ function topicFilterDefs(topicId,rows){
   older:[['all','All'],['local','Norwood Senior Services'],['health','Health & Caregiving'],['transport','Transportation'],['food','Meals & Food'],['benefits','Benefits & Legal'],['other','Other Support']],
   pregnancy:[['all','All'],['general','Pregnancy & General Support'],['postpartum','Postpartum Mental Health'],['lactation','Lactation & Feeding'],['loss','Pregnancy Loss & Grief']],
   legal:[['all','All'],['general','General Legal Help'],['housing','Housing & Tenant'],['immigration','Immigration'],['rights','Disability & Civil Rights'],['safety','Domestic & Sexual Violence']],
-  employment:[['all','All'],['jobs','Job Search'],['training','Training & Career Development'],['benefits','Unemployment & Leave'],['disability','Disability Employment'],['newcomer','Newcomer Employment'],['other','Other Employment Help']]
+  employment:[['all','All'],['jobs','Job Search'],['training','Training & Career Development'],['benefits','Unemployment & Leave'],['disability','Disability Employment'],['newcomer','Newcomer Employment'],['other','Other Employment Help']],
+  veterans:[['all','All'],['local','Norwood Veterans Resources'],['benefits','Benefits & Assistance'],['health','VA & Health Care'],['housing','Housing & Stability'],['community','Community & Peer Support']],
+  lgbtq:[['all','All'],['local','Norwood / School Support'],['youth','Youth & Families'],['trans','Trans & Nonbinary Support'],['health','Health Care'],['crisis','Crisis Support'],['community','Community & Advocacy']],
+  transport:[['all','All'],['transit','Bus & Commuter Rail'],['accessible','Accessible Transportation'],['senior','Older Adult Transportation'],['school','School Transportation'],['local','Other Local Transportation']],
+  community:[['all','All'],['local','Local Community Resources'],['clubs','Clubs & Volunteer Groups'],['youth','Youth & School Groups'],['culture','Arts, Culture & Media'],['faith','Faith Communities'],['support','Support & Identity Groups'],['other','Other Community Resources']],
+  town:[['all','All'],['departments','Town Departments'],['boards','Boards & Committees'],['safety','Public Safety'],['utilities','Utilities'],['records','Elections & Records'],['recreation','Parks & Recreation'],['other','Other Town Resources']]
  };
  const list=defs[topicId]||[];
  return list.filter(([id])=>id==='all'||rows.some(r=>topicFilterKind(topicId,r)===id));
