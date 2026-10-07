@@ -128,16 +128,17 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Alzheimer's Association MA/NH 24/7 Helpline",
     "category": "Older Adults",
-    "description": "24/7 information and support for people living with dementia and their caregivers.",
-    "url": "https://norwoodlibrary.org/commres-eldersrvcs/",
+    "description": "Free 24/7 Alzheimer's Association helpline for people living with dementia, caregivers and families, with emotional support, local-resource navigation, education and crisis assistance.",
+    "url": "https://www.alz.org/manh",
     "tags": "alzheimers dementia caregiver elder senior",
     "topics": [
       "older",
       "health"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "800-272-3900"
   },
   {
     "name": "Alzheimer’s Association Massachusetts/New Hampshire Chapter",
@@ -437,16 +438,17 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Brain Injury Association of Massachusetts",
     "category": "Disability",
-    "description": "Information, help line and support for people with brain injury and their families.",
-    "url": "https://norwoodlibrary.org/commres-health/",
+    "description": "Statewide nonprofit supporting people affected by brain injury, their families and caregivers through a helpline, support groups, recreation, education, advocacy and resource navigation.",
+    "url": "https://biama.org/",
     "tags": "brain injury TBI disability support",
     "topics": [
       "health",
       "disability-support"
     ],
     "coverage": "Statewide",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "800-242-0030"
   },
   {
     "name": "Brazen Legal Immigration Law Firm",
@@ -998,8 +1000,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Fenway Health — LGBTQ+ Care",
     "category": "Health",
-    "description": "LGBTQ+-centered health care and support services in Greater Boston.",
-    "url": "https://norwoodlibrary.org/commres-lgbtq-plus/",
+    "description": "LGBTQIA+-centered health system in Boston offering primary care, transgender health, reproductive care, behavioral health, sexual-health services, dental care and other integrated services.",
+    "url": "https://fenwayhealth.org/care/",
     "tags": "lgbtq health trans medical care",
     "topics": [
       "health",
@@ -1008,8 +1010,9 @@ window.NORWOOD_RESOURCES= [
       "lgbtq-support"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "617-927-6000"
   },
   {
     "name": "Field Martial Arts Academy",
@@ -1233,8 +1236,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Greater Boston PFLAG",
     "category": "LGBTQ+",
-    "description": "Support groups and resources for LGBTQ+ people, parents, caregivers, families and allies.",
-    "url": "https://norwoodlibrary.org/commres-lgbtq-plus/",
+    "description": "Greater Boston chapter supporting LGBTQ+ people, parents, families and allies through peer support, education, resources and advocacy. A parent and caregiver hotline is available.",
+    "url": "https://www.gbpflag.org/",
     "tags": "lgbtq parent family support pflag",
     "topics": [
       "community",
@@ -1245,8 +1248,9 @@ window.NORWOOD_RESOURCES= [
       "education-family"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "866-312-5007"
   },
   {
     "name": "Greater Boston Toys for Tots — Request a Toy",
@@ -3451,8 +3455,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "New England Center and Home for Veterans",
     "category": "Veterans",
-    "description": "Boston-based housing and support services for veterans experiencing or at risk of homelessness.",
-    "url": "https://norwoodlibrary.org/commres-food-fuel-housing/",
+    "description": "Regional veterans organization providing housing, homelessness prevention, employment, training and supportive services for veterans who are homeless or at risk of homelessness. Veterans seeking help can call directly.",
+    "url": "https://nechv.org/",
     "tags": "veteran homeless housing shelter military",
     "topics": [
       "veterans",
@@ -3460,8 +3464,10 @@ window.NORWOOD_RESOURCES= [
       "housing-assistance"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "617-371-1800",
+    "address": "17 Court St, Boston, MA 02108"
   },
   {
     "name": "New England Youth Cycling",
@@ -5098,8 +5104,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "OUT MetroWest",
     "category": "LGBTQ+",
-    "description": "Programs and community for LGBTQ+ children, teens and young adults in MetroWest.",
-    "url": "https://norwoodlibrary.org/commres-lgbtq-plus/",
+    "description": "Framingham-based nonprofit offering free programs and community for LGBTQ+ youth from pre-K through age 29, plus family/community events and LGBTQ+ education programs.",
+    "url": "https://www.outmetrowest.org/",
     "tags": "lgbtq youth teen young adult support",
     "topics": [
       "community",
@@ -5108,8 +5114,8 @@ window.NORWOOD_RESOURCES= [
       "lgbtq-support",
       "education-family"
     ],
-    "coverage": "Regional",
-    "verified": "2026-09",
+    "coverage": "Nearby — Framingham / MetroWest",
+    "verified": "2026-10",
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
