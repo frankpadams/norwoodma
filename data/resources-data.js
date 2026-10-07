@@ -1408,21 +1408,6 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "HESSCO — Meals on Wheels",
-    "category": "Food Assistance",
-    "description": "Home-delivered meals and nutrition support for eligible older adults through the regional Aging Services Access Point serving the Norwood area.",
-    "url": "https://hessco.org/",
-    "tags": "HESSCO — Meals on Wheels Food Assistance",
-    "topics": [
-      "food-assistance",
-      "older",
-      "basic-needs"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
     "name": "HESSCO Elder Services",
     "category": "Older Adults",
     "description": "Aging-services access point for Norwood-area older adults and caregivers, including meals, care options, benefits and support.",
@@ -1439,7 +1424,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "HESSCO Nutrition Services / Meals on Wheels",
     "category": "Older Adults",
-    "description": "Regional nutrition services for older adults, including home-delivered meals, congregate meals and nutrition counseling.",
+    "description": "Regional nutrition program serving older adults in the Norwood area, including home-delivered Meals on Wheels, congregate meals and nutrition counseling.",
     "url": "https://hessco.org/nutrition-program-features/",
     "tags": "meals on wheels home delivered meals senior nutrition older adult food",
     "topics": [
@@ -1447,7 +1432,7 @@ window.NORWOOD_RESOURCES= [
       "food-assistance",
       "basic-needs"
     ],
-    "coverage": "Regional/State",
+    "coverage": "Regional",
     "verified": "2026-09"
   },
   {
@@ -5427,26 +5412,15 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Riverside Community Behavioral Health Center — Norwood",
     "category": "Mental Health",
-    "description": "Community Behavioral Health Center at 190 Lenox Street offering outpatient behavioral health services and 24/7 mobile crisis support for Norwood and surrounding communities.",
+    "description": "Norwood Community Behavioral Health Center at 190 Lenox Street offering outpatient behavioral-health care plus 24/7 mobile crisis intervention for children, teens and adults in Norwood and surrounding communities.",
     "url": "https://www.riversidecc.org/adult-services/mental-health-substance-use-adults/community-behavioral-health-centers/",
     "tags": "Riverside CBHC mental health behavioral health crisis mobile crisis Norwood",
     "topics": [
       "health",
-      "mental-health"
-    ],
-    "coverage": "Local",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Riverside Community Care — Norwood Community Behavioral Health Center",
-    "category": "Mental Health",
-    "description": "Norwood-based Community Behavioral Health Center offering outpatient care and 24/7 mobile crisis services for the surrounding region.",
-    "url": "https://www.mass.gov/locations/riverside-community-care-cbhc-norwood",
-    "tags": "mental health crisis counseling CBHC behavioral health",
-    "topics": [
-      "health",
+      "mental-health",
       "kids",
-      "mental-health"
+      "family-support",
+      "education-family"
     ],
     "coverage": "Local/Regional",
     "verified": "2026-09"
