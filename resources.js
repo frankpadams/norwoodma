@@ -218,6 +218,31 @@ function topicFilterKind(topicId,r){
    if(/masshire|job search|employment opportunities|help wanted|career center|find a job/.test(h))return'jobs';
    return'other';
  }
+ if(topicId==='kids'){
+   if(/special education|sepac|\biep\b|504|child find|disability|early intervention/.test(h))return'special';
+   if(/preschool|childcare|child care|early childhood|extended day|head start|cfce/.test(h))return'early';
+   if(/school|elementary|middle school|high school|district|registration|student services|school health|nutrition/.test(h))return'schools';
+   if(/sport|league|recreation|scout|dance|music|theater|theatre|gymnastics|cheer|skating|martial arts|camp|youth activity/.test(h))return'activities';
+   if(/food|wic|diaper|toy|basic needs|benefit|financial assistance/.test(h))return'needs';
+   return'support';
+ }
+ if(topicId==='financial-assistance'){
+   if(topics.includes('veterans')||/veteran|military|\bva\b/.test(h))return'veterans';
+   if(topics.includes('older')||/senior|older adult|medicare|social security|prescription advantage/.test(h))return'older';
+   if(/scholarship|education|student|college|tuition/.test(h))return'education';
+   if(/snap\b|wic\b|food|meal|nutrition/.test(h))return'food';
+   if(/housing|rent|eviction|utility|fuel|energy|heat|raft|homebase/.test(h))return'housing';
+   if(/unemployment|cash assistance|tax|benefit|income|paid family|medical leave/.test(h))return'income';
+   if(topics.includes('disability-support')||/disability|blind|deaf/.test(h))return'disability';
+   return'other';
+ }
+ if(topicId==='safety'){
+   if(/domestic violence|partner violence|rape|sexual assault|safelink|dove|jane doe/.test(h))return'violence';
+   if(/child-at-risk|child abuse|dppc|disabled persons protection|protective services/.test(h))return'protection';
+   if(/shelter|housing|homeless|emergency family shelter/.test(h))return'housing';
+   if(/immigration|ice\b|detention|deportation|rapid response/.test(h))return'immigration';
+   return'crisis';
+ }
  if(topicId==='veterans'){
    if(isLocalResource(r))return'local';
    if(/va boston|health care|healthcare|medical/.test(h))return'health';
@@ -269,6 +294,9 @@ function topicFilterDefs(topicId,rows){
   pregnancy:[['all','All'],['general','Pregnancy & General Support'],['postpartum','Postpartum Mental Health'],['lactation','Lactation & Feeding'],['loss','Pregnancy Loss & Grief']],
   legal:[['all','All'],['general','General Legal Help'],['housing','Housing & Tenant'],['immigration','Immigration'],['rights','Disability & Civil Rights'],['safety','Domestic & Sexual Violence']],
   employment:[['all','All'],['jobs','Job Search'],['training','Training & Career Development'],['benefits','Unemployment & Leave'],['disability','Disability Employment'],['newcomer','Newcomer Employment'],['other','Other Employment Help']],
+  kids:[['all','All'],['schools','Schools'],['special','Special Education & Disability'],['early','Childcare & Early Childhood'],['support','Family Support'],['activities','Things to Do & Youth Activities'],['needs','Food, Benefits & Basic Needs']],
+  'financial-assistance':[['all','All'],['income','Income, Benefits & Taxes'],['housing','Housing & Utilities'],['food','Food Benefits'],['education','Education & Scholarships'],['older','Older Adults'],['veterans','Veterans'],['disability','Disability Benefits'],['other','Other Financial Help']],
+  safety:[['all','All'],['crisis','Crisis & Immediate Support'],['violence','Domestic & Sexual Violence'],['protection','Child & Vulnerable-Person Safety'],['housing','Emergency Shelter'],['immigration','Immigration / ICE Safety']],
   veterans:[['all','All'],['local','Norwood Veterans Resources'],['benefits','Benefits & Assistance'],['health','VA & Health Care'],['housing','Housing & Stability'],['community','Community & Peer Support']],
   lgbtq:[['all','All'],['local','Norwood / School Support'],['youth','Youth & Families'],['trans','Trans & Nonbinary Support'],['health','Health Care'],['crisis','Crisis Support'],['community','Community & Advocacy']],
   transport:[['all','All'],['transit','Bus & Commuter Rail'],['accessible','Accessible Transportation'],['senior','Older Adult Transportation'],['school','School Transportation'],['local','Other Local Transportation']],
