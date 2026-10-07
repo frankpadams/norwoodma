@@ -96,8 +96,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Al-Anon Family Groups",
     "category": "Recovery",
-    "description": "Peer support for families and friends affected by someone else’s drinking.",
-    "url": "https://norwoodlibrary.org/commres-health/",
+    "description": "Massachusetts Al‑Anon meetings and support for family members and friends affected by someone else's drinking, with in-person and electronic meeting options.",
+    "url": "https://alanonma.org/en/locations/",
     "tags": "alcohol family recovery support group",
     "topics": [
       "health",
@@ -107,14 +107,15 @@ window.NORWOOD_RESOURCES= [
       "family-support"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "508-366-0556"
   },
   {
     "name": "Alcoholics Anonymous — Greater Boston",
     "category": "Recovery",
-    "description": "Peer recovery meetings and support for people seeking help with alcohol use.",
-    "url": "https://norwoodlibrary.org/commres-health/",
+    "description": "Official Eastern Massachusetts AA meeting finder for people seeking peer recovery support for alcohol use, including in-person and online meetings across Greater Boston.",
+    "url": "https://aaboston.org/meetings",
     "tags": "alcohol recovery AA meetings substance use",
     "topics": [
       "health",
@@ -122,8 +123,9 @@ window.NORWOOD_RESOURCES= [
       "recovery"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "617-426-9444"
   },
   {
     "name": "Alzheimer's Association MA/NH 24/7 Helpline",
@@ -1113,16 +1115,17 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Gamblers Anonymous",
     "category": "Recovery",
-    "description": "Peer support for people seeking help with gambling problems.",
-    "url": "https://norwoodlibrary.org/commres-health/",
+    "description": "Official Gamblers Anonymous meeting finder for Massachusetts, with in-person, virtual and telephone meeting options plus a national help line.",
+    "url": "https://gamblersanonymous.org/usa-meetings/?state=massachusetts",
     "tags": "gambling addiction recovery support",
     "topics": [
       "health",
       "recovery"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "855-222-5542"
   },
   {
     "name": "Gillette Stadium",
@@ -6073,16 +6076,17 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Therapy Matcher",
     "category": "Mental Health",
-    "description": "Referral resource for finding a therapist; intended for non-emergency mental-health needs.",
-    "url": "https://norwoodlibrary.org/commres-health/",
+    "description": "Free, confidential Massachusetts referral service that matches people with licensed independent clinical social workers based on needs, location, insurance or fee requirements and therapist preferences. Not an emergency service.",
+    "url": "https://therapymatcher.org/",
     "tags": "therapist counseling mental health referral",
     "topics": [
       "health",
       "mental-health"
     ],
     "coverage": "Statewide",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "800-242-9794"
   },
   {
     "name": "Thom Neponset Valley Early Intervention — Norwood",
