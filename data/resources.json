@@ -195,7 +195,7 @@
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/balch",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -451,7 +451,7 @@
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/callahan",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -554,7 +554,7 @@
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/cleveland",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -583,7 +583,7 @@
     "description": "Coakley Middle School news, calendar and information.",
     "url": "https://www.norwood.k12.ma.us/cms",
     "tags": "middle school cms students",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -627,9 +627,12 @@
     "description": "Community Preservation Act projects and meetings.",
     "url": "https://www.norwoodma.gov/government/boards_committees/community_preservation_committee.php",
     "tags": "cpa preservation",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town",
+      "community"
+    ]
   },
   {
     "name": "Connors Martial Arts Academy",
@@ -895,7 +898,10 @@
     "tags": "business downtown center shops restaurants",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community",
+      "business"
+    ]
   },
   {
     "name": "Friends of the Morrill Memorial Library",
@@ -903,7 +909,7 @@
     "description": "Volunteer support organization for the library.",
     "url": "https://norwoodlibrary.org/friends/",
     "tags": "library friends volunteer",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "community-groups"
@@ -1308,7 +1314,9 @@
     "tags": "news local reporting community",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community"
+    ]
   },
   {
     "name": "International Institute of New England",
@@ -2479,9 +2487,12 @@
     "description": "Adult library programs and resources.",
     "url": "https://norwoodlibrary.org/adults/",
     "tags": "library adults",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Morrill Children’s Services",
@@ -2489,7 +2500,7 @@
     "description": "Children’s library programs and resources.",
     "url": "https://norwoodlibrary.org/children/",
     "tags": "library children",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -2504,7 +2515,10 @@
     "tags": "library books museum passes events study rooms",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Morrill Memorial Library — Children & Family Resources",
@@ -2621,9 +2635,13 @@
     "description": "Teen library programs and resources.",
     "url": "https://norwoodlibrary.org/teens/",
     "tags": "library teens",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "kids",
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Move Well Physical Therapy",
@@ -2759,7 +2777,10 @@
     "tags": "chamber business directory jobs networking",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "business",
+      "community"
+    ]
   },
   {
     "name": "Neponset River Regional Chamber — Business Resources",
@@ -3101,7 +3122,10 @@
     "tags": "garden conservation plots",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood Community Media",
@@ -3209,7 +3233,10 @@
     "tags": "culture arts grants local council",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood dental & orthodontic directory",
@@ -3259,8 +3286,8 @@
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
-      "food-assistance",
-      "basic-needs"
+      "community",
+      "todo"
     ]
   },
   {
@@ -3376,7 +3403,10 @@
     "tags": "history historical museum culture",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood Hospital / regional medical care information",
@@ -3444,7 +3474,10 @@
     "tags": "outage power electric emergency",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town",
+      "housing"
+    ]
   },
   {
     "name": "Norwood Light Broadband",
@@ -3520,7 +3553,10 @@
     "tags": "airport aviation",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "transport",
+      "town"
+    ]
   },
   {
     "name": "Norwood Memory Café",
@@ -4006,7 +4042,10 @@
     "tags": "theatre theater shows music events arts",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood Town News",
@@ -4088,7 +4127,7 @@
   {
     "name": "Norwood Veterans Services",
     "category": "Help & Assistance",
-    "description": "Veterans benefits and local assistance.",
+    "description": "Town Veterans Services office helping Norwood veterans and eligible family members understand and apply for local, state and federal veterans benefits and assistance.",
     "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
     "tags": "veterans benefits",
     "coverage": "Local",
@@ -4248,7 +4287,7 @@
     "description": "Norwood Public Schools athletics information.",
     "url": "https://www.norwood.k12.ma.us/nhs/athletics",
     "tags": "athletics school sports",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4261,7 +4300,7 @@
     "description": "District-wide school calendar and events.",
     "url": "https://www.norwood.k12.ma.us/about/calendar",
     "tags": "school calendar events dates",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4287,7 +4326,7 @@
     "description": "School meal and nutrition information.",
     "url": "https://www.norwood.k12.ma.us/departments/nutrition",
     "tags": "school meals nutrition",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "food-assistance",
@@ -4302,7 +4341,7 @@
     "description": "Special education and student support information.",
     "url": "https://www.norwood.k12.ma.us/departments/student-services",
     "tags": "student services special education",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4315,7 +4354,7 @@
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/oldham",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4515,9 +4554,11 @@
     "description": "Planning, development review and meetings.",
     "url": "https://www.norwoodma.gov/government/boards_committees/planning_board.php",
     "tags": "planning development",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Premier Gymnastics Norwood",
@@ -4541,7 +4582,7 @@
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/prescott",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4632,9 +4673,12 @@
     "description": "Fields, courts and recreation facility status.",
     "url": "https://norwoodma.myrec.com/info/facilities/default.aspx",
     "tags": "fields parks facilities courts sports",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "town"
+    ]
   },
   {
     "name": "Recreation Programs",
@@ -4642,7 +4686,7 @@
     "description": "Current youth, adult, fitness and seasonal programs.",
     "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
     "tags": "programs classes youth adult fitness register",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -5578,12 +5622,12 @@
     "verified": "2026-09"
   },
   {
-    "name": "Willett Early Childhood Center",
+    "name": "Willett Elementary School",
     "category": "Schools",
-    "description": "Early childhood education information.",
+    "description": "Official Willett Elementary School information, including school news, family information, calendar links and school resources.",
     "url": "https://www.norwood.k12.ma.us/willett",
-    "tags": "preschool early childhood",
-    "coverage": "Regional/State",
+    "tags": "Willett elementary school Norwood public schools students families",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
