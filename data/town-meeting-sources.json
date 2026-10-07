@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-07",
+  "description": "Structured provenance registry for Town Meeting Archive source documents. Search text is preserved separately from source URLs so moved documents do not erase archive searchability.",
+  "meetings": [
+    {
+      "meeting_id": "may-11-and-14-2026-special-annual-town-meetings",
+      "title": "May 11 & 14, 2026 — Special + Annual Town Meetings",
+      "sources": [
+        {
+          "id": "2026-record-roundup",
+          "title": "Norwood Record — Town Meeting roundup",
+          "type": "news",
+          "url": "https://www.norwoodrecord.com/article/norwood-town-meeting-roundup",
+          "status": "working",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2026-record-hospital",
+          "title": "Norwood Record — hospital issue discussed",
+          "type": "news",
+          "url": "https://www.norwoodrecord.com/article/norwood-town-meeting-hospital-issue-discussed",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2026-record-override",
+          "title": "Norwood Record — public-safety override",
+          "type": "news",
+          "url": "https://www.norwoodrecord.com/article/norwood-passthrough-override-approved",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2026-record-planning",
+          "title": "Norwood Record — Planning Board citizen petitions",
+          "type": "news",
+          "url": "https://www.norwoodrecord.com/article/norwood-planning-board-hears-citizen-petitions",
+          "status": "working",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2026-nps-fy27",
+          "title": "Norwood Public Schools — FY27 budget information",
+          "type": "budget-support",
+          "url": "https://www.norwood.k12.ma.us/sc/fy27-budget-information",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "meeting_id": "november-13-and-17-2025-special-town-meeting",
+      "title": "November 13 & 17, 2025 — Special Town Meeting",
+      "sources": [
+        {
+          "id": "2025-11-record-results",
+          "title": "Norwood Record — Nov. 2025 results",
+          "type": "news-pdf",
+          "url": "https://norwoodrecord.weebly.com/uploads/1/1/4/8/114832579/norwood_record_pages_1_to_12__20nov2025.pdf",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2025-11-ncm-info",
+          "title": "NCM — Nov. 3 Town Meeting information session",
+          "type": "video",
+          "url": "https://norwoodcommunitymedia.org/programs/show/town-meeting-info-session-11-3-25-3-13852/",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "meeting_id": "may-15-2025-annual-town-meeting",
+      "title": "May 15, 2025 — Annual Town Meeting",
+      "sources": [
+        {
+          "id": "2025-results",
+          "title": "Official 2025 Annual and Special Town Meeting Results",
+          "type": "official-results",
+          "url": "https://cms5.revize.com/revize/norwoodma/2025%20Annual%20and%20Special%20Town%20Meeting%20Results.pdf",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2025-fy26-budget",
+          "title": "Official FY26 Proposed Budget Book / Annual warrant",
+          "type": "official-budget-warrant",
+          "url": "https://cms5.revize.com/revize/norwoodma/Complete%20-%20Final%20FY26%20Proposed%20Budget%20Book.pdf",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "meeting_id": "may-15-2025-special-town-meeting-2",
+      "title": "May 15, 2025 — Special Town Meeting #2",
+      "sources": [
+        {
+          "id": "2025-stm2-warrant",
+          "title": "Official Special Town Meeting #2 warrant",
+          "type": "official-warrant",
+          "url": "https://cms5.revize.com/revize/norwoodma/STM%20Warrant%202%20May%202025.pdf",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2025-results",
+          "title": "Official 2025 Annual and Special Town Meeting Results",
+          "type": "official-results",
+          "url": "https://cms5.revize.com/revize/norwoodma/2025%20Annual%20and%20Special%20Town%20Meeting%20Results.pdf",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2025-stm2-yellow",
+          "title": "STM2 Yellow Sheet",
+          "type": "official-explainer",
+          "url": "https://cms5.revize.com/revize/norwoodma/STM2%20Yellow%20Sheet.pdf",
+          "status": "broken-needs-relocation",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2025-spring-info",
+          "title": "Town Meeting 101 / Land Use 101 / STM2 Articles",
+          "type": "official-presentation",
+          "url": "https://cms5.revize.com/revize/norwoodma/Town%20Meeting%20101%2C%20Land%20Use%20101%2C%20STM%202%20Articles%20%28Spring%202025%29.pdf",
+          "status": "broken-needs-relocation",
+          "last_verified": "2026-10-07"
+        },
+        {
+          "id": "2025-moderator-law",
+          "title": "Massachusetts Acts of 2025, Chapter 98",
+          "type": "state-law",
+          "url": "https://malegislature.gov/Laws/SessionLaws/Acts/2025/Chapter98",
+          "status": "working",
+          "last_verified": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "meeting_id": "may-12-2025-special-town-meeting-1",
+      "title": "May 12, 2025 — Special Town Meeting #1",
+      "sources": [
+        {
+          "id": "2025-05-record",
+          "title": "Norwood Record — May 2025 meeting coverage",
+          "type": "news-pdf",
+          "url": "https://norwoodrecord.weebly.com/uploads/1/1/4/8/114832579/norwood_record_pages_1_to_12__15may2025.pdf",
+          "status": "linked",
+          "last_verified": "2026-10-07"
+        }
+      ]
+    }
+  ]
+}
