@@ -79,8 +79,17 @@ function belongs(r,t){
    const medicalHealth=/medical|health care|healthcare|hospital|urgent care|primary care|physician|doctor|clinic|physical therapy|rehab|pharmac|audiolog|hearing aid|vaccin|immuniz|nursing|home health/i;
    return (explicit&&r.topics.includes('medical'))||medicalHealth.test(hay);
  }
- if(explicit&&t[0]==='safety')return r.topics.includes('safety')||r.topics.includes('safety-crisis');
- return explicit?r.topics.includes(t[0]):t[3].some(k=>hay.includes(k));
+ if(explicit){
+   const aliases={
+     safety:['safety','safety-crisis'],
+     immigration:['immigration','immigration-language'],
+     legal:['legal','legal-advocacy'],
+     lgbtq:['lgbtq','lgbtq-support']
+   };
+   if(aliases[t[0]])return aliases[t[0]].some(id=>r.topics.includes(id));
+   return r.topics.includes(t[0]);
+ }
+ return t[3].some(k=>hay.includes(k));
 }
 function socialLinks(r){if(!r.social)return'';const labels={facebook:['bi-facebook','Facebook'],instagram:['bi-instagram','Instagram'],youtube:['bi-youtube','YouTube'],linkedin:['bi-linkedin','LinkedIn'],x:['bi-twitter-x','X']};return `<span class="social-links">${Object.entries(r.social).map(([k,u])=>{const v=labels[k]||['bi-link-45deg',k];return `<a href="${esc(u)}" target="_blank" rel="noopener" aria-label="${esc(v[1])}" title="${esc(v[1])}"><i class="bi ${v[0]}"></i></a>`}).join('')}</span>`;}
 function queryGroups(q){
@@ -95,7 +104,7 @@ function queryGroups(q){
 function matchesQuery(r,q){const groups=queryGroups(q);if(!groups.length)return true;const hay=haystack(r);return groups.every(group=>group.some(term=>hay.includes(term)));}
 function isTown(r){return !!r.officialTown||/^https?:\/\/([^/]+\.)?norwoodma\.gov\//i.test(r.url||'');}
 function isNorwoodPublicSchool(r){return /^https?:\/\/([^/]+\.)?norwood\.k12\.ma\.us\//i.test(r.url||'')||/^(Norwood High School|Coakley Middle School|Balch Elementary School|Callahan Elementary School|Cleveland Elementary School|Oldham Elementary School|Prescott Elementary School|Willett Elementary School)$/i.test(r.name||'');}
-function isBusiness(r){const h=haystack(r);return (r.topics||[]).includes('services')||(r.topics||[]).includes('realestate')||(r.topics||[]).includes('wellness')||/local service|driving school|realtor|real estate|barber|laundromat|dry clean|spa|salon|massage|dentist|orthodont|martial arts|gymnastics|music school|ice cream|restaurant|veterinar|contractor|plumb|electrician|hvac/i.test(h);}
+function isBusiness(r){const h=haystack(r),provider=(r.provider_type||'').toLowerCase(),cat=(r.category||'').toLowerCase();return /^private\b/.test(provider)||/^private\b/.test(cat)||(r.topics||[]).includes('services')||(r.topics||[]).includes('realestate')||(r.topics||[]).includes('wellness')||/local service|driving school|realtor|real estate|barber|laundromat|dry clean|spa|salon|massage|dentist|orthodont|martial arts|gymnastics|music school|ice cream|restaurant|veterinar|contractor|plumb|electrician|hvac/i.test(h);}
 function reviewLinks(r){if(!isBusiness(r))return'';const links=[];if(r.googleReviews)links.push(`<a href="${esc(r.googleReviews)}" target="_blank" rel="noopener" aria-label="Google reviews" title="Google reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=google.com&sz=32"></a>`);if(r.yelp)links.push(`<a href="${esc(r.yelp)}" target="_blank" rel="noopener" aria-label="Yelp reviews" title="Yelp reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=yelp.com&sz=32"></a>`);if(r.tripadvisor)links.push(`<a href="${esc(r.tripadvisor)}" target="_blank" rel="noopener" aria-label="Tripadvisor reviews" title="Tripadvisor reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=tripadvisor.com&sz=32"></a>`);return links.length?`<span class="resource-review-links" aria-label="Verified review-site listings">${links.join('')}</span>`:'';}
 function townMark(r){const school=isNorwoodPublicSchool(r),town=isTown(r);if(!school&&!town)return'';const label=school?'Official Norwood Public Schools resource':'Official Town of Norwood resource';return '<span class="resource-town-mark" title="'+label+'"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt=""><span class="sr-only">'+label+'</span></span>';}
 function card(r){const title=r.url?`<a class="resource-name" href="${esc(r.url)}" target="_blank" rel="noopener"><b>${esc(r.name)}</b> ${townMark(r)} <span aria-hidden="true">↗</span></a>`:`<span class="resource-name resource-name-no-link"><b>${esc(r.name)}</b> ${townMark(r)}</span>`;return `<article class="resource-item"><div class="resource-meta"><span class="badge">${esc(r.category||'Resource')}</span><span class="coverage">${esc(r.coverage||'')}</span></div><div class="resource-title-row">${title}<span class="resource-card-actions">${reviewLinks(r)}${socialLinks(r)}</span></div><p>${esc(r.description||'')}</p></article>`;}
