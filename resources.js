@@ -84,7 +84,12 @@ function belongs(r,t){
      safety:['safety','safety-crisis'],
      immigration:['immigration','immigration-language'],
      legal:['legal','legal-advocacy'],
-     lgbtq:['lgbtq','lgbtq-support']
+     lgbtq:['lgbtq','lgbtq-support'],
+     housing:['housing','housing-assistance'],
+     employment:['employment','jobs'],
+     kids:['kids','education-family','family-support'],
+     community:['community','community-groups','volunteer'],
+     'basic-needs':['basic-needs','food-assistance']
    };
    if(aliases[t[0]])return aliases[t[0]].some(id=>r.topics.includes(id));
    return r.topics.includes(t[0]);
@@ -155,6 +160,49 @@ function basicNeedsFilters(rows){
  return defs.filter(([id])=>id==='all'||rows.some(r=>basicNeedsKind(r)===id));
 }
 
+function topicFilterKind(topicId,r){
+ const h=haystack(r),topics=Array.isArray(r.topics)?r.topics:[];
+ if(topicId==='health'){
+   if(topics.includes('recovery')||/addiction|substance use|alcohol|narcotics|gambl|recovery|treatment locator/.test(h))return'recovery';
+   if(topics.includes('deaf-hard-of-hearing')||/deaf|hard of hearing|\bmcdhh\b|cart referral|hearing loss/.test(h))return'deaf';
+   if(topics.includes('disability-support')||/disability|disabled|autism|developmental|brain injury|blind|paratransit|accessibility/.test(h))return'disability';
+   if(topics.includes('mental-health')||/mental health|behavioral health|psychiatr|suicid|crisis|therapy|nami|interface/.test(h))return'mental';
+   return'other';
+ }
+ if(topicId==='immigration'){
+   if(/^private\b/i.test(r.provider_type||'')||/private immigration attorney/.test((r.category||'').toLowerCase()))return'private';
+   if(/ice|detain|deport|removal|rapid response|know your rights|family emergency planning|law enforcement/.test(h))return'urgent';
+   if(topics.includes('legal-advocacy')||/legal|lawyer|attorney|asylum|counsel/.test(h))return'legal';
+   return'newcomer';
+ }
+ if(topicId==='housing'){
+   if(/emergency family shelter|homebase|raft|homeless|shelter|eviction/.test(h))return'urgent';
+   if(/housing authority|public housing|affordable housing|champ|housing navigator|masshousing|my mass home/.test(h))return'affordable';
+   if(/utility|energy|fuel|heat|weatherization|heartwap|electric/.test(h))return'utility';
+   if(topics.includes('legal-advocacy')||/tenant|legal|discrimination|consumer/.test(h))return'rights';
+   return'other';
+ }
+ if(topicId==='older'){
+   if(/senior center|council on aging|newsletter|calendar|memory café|adult day/.test(h))return'local';
+   if(/meal|food|nutrition/.test(h))return'food';
+   if(/ride|transport|paratransit/.test(h))return'transport';
+   if(/medicare|prescription|health|dementia|alzheimer|mental health/.test(h))return'health';
+   if(/benefit|financial|tax|social security|legal/.test(h))return'benefits';
+   return'other';
+ }
+ return'all';
+}
+function topicFilterDefs(topicId,rows){
+ const defs={
+  health:[['all','All'],['mental','Mental Health & Crisis'],['recovery','Addiction & Recovery'],['disability','Disability & Accessibility'],['deaf','Deaf & Hard of Hearing'],['other','Other Support']],
+  immigration:[['all','All'],['urgent','ICE / Detention / Know Your Rights'],['legal','Free & Nonprofit Legal Help'],['private','Private Attorneys'],['newcomer','Newcomer & Language Support']],
+  housing:[['all','All'],['urgent','Emergency Housing & Eviction'],['affordable','Public & Affordable Housing'],['utility','Utilities & Energy'],['rights','Tenant Rights & Legal Help'],['other','Other Housing Help']],
+  older:[['all','All'],['local','Norwood Senior Services'],['health','Health & Caregiving'],['transport','Transportation'],['food','Meals & Food'],['benefits','Benefits & Legal'],['other','Other Support']]
+ };
+ const list=defs[topicId]||[];
+ return list.filter(([id])=>id==='all'||rows.some(r=>topicFilterKind(topicId,r)===id));
+}
+
 function relevance(r,t,q){
  const topics=Array.isArray(r.topics)?r.topics:[],hay=haystack(r);
  let s=0;
@@ -208,9 +256,11 @@ function render(){
  const businessGateway=t[0]==='medical'?'<a class="trash-resource-link resource-business-gateway" href="businesses.html#health"><b>Looking for a medical provider?</b><span>Browse local health, dental & wellness businesses →</span></a>':'';
  const basicFilters=t[0]==='basic-needs'?basicNeedsFilters(rows):[];
  const foodControls=t[0]==='basic-needs'?'<div class="resource-basic-needs-tools"><div class="resource-filter-row" role="group" aria-label="Basic needs filters">'+basicFilters.map(([id,label])=>'<button type="button" class="resource-filter'+(id==='food'?' is-active':'')+'" data-basic-filter="'+id+'">'+label+'</button>').join('')+'</div><button type="button" class="resource-mini-pantry-button" data-open-mini-pantries>🥫 Little Food Pantries — locations & map</button></div>':'';
+ const extraFilterDefs=topicFilterDefs(t[0],rows);
+ const extraControls=extraFilterDefs.length?'<div class="resource-basic-needs-tools"><div class="resource-filter-row" role="group" aria-label="'+esc(t[1])+' filters">'+extraFilterDefs.map(([id,label],i)=>'<button type="button" class="resource-filter'+(i===0?' is-active':'')+'" data-topic-filter="'+id+'">'+esc(label)+'</button>').join('')+'</div></div>':'';
  const foodJumpLinks=t[0]==='basic-needs'?'<div class="resource-topic-jumps" aria-label="Related help"><a href="#housing"><b>Housing Help</b><span>Rent, shelter & tenant support →</span></a><a href="#financial-assistance"><b>Benefits & Cash Assistance</b><span>Financial help and public benefits →</span></a><a href="utilities.html"><b>Utilities & Energy</b><span>Electric, heat, water & internet help →</span></a></div>':'';
  const safetyEmergencyNote=t[0]==='safety'?'<div class="resource-crisis" role="note"><strong>If there is an emergency or immediate danger, call <a href="tel:911">911</a> now.</strong><p>The resources below serve different needs. Read each description to choose the service that best matches the situation.</p></div>':'';
-  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${safetyEmergencyNote}${foodControls}${foodJumpLinks}${businessGateway}<div class="resource-list">${rows.map(r=>'<div class="resource-filter-item" data-basic-kind="'+basicNeedsKind(r)+'">'+card(r)+'</div>').join('')||'<p>No nonprofit, public or community resources found in this topic.</p>'}</div>${relatedBusinesses}</section>`;
+  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${safetyEmergencyNote}${foodControls}${extraControls}${foodJumpLinks}${businessGateway}<div class="resource-list">${rows.map(r=>'<div class="resource-filter-item" data-basic-kind="'+basicNeedsKind(r)+'" data-topic-kind="'+topicFilterKind(t[0],r)+'">'+card(r)+'</div>').join('')||'<p>No nonprofit, public or community resources found in this topic.</p>'}</div>${relatedBusinesses}</section>`;
  root.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});
  if(t[0]==='basic-needs'){
    const applyBasicFilter=id=>{
@@ -222,6 +272,13 @@ function render(){
    root.querySelector('[data-open-mini-pantries]')?.addEventListener('click',()=>{
      document.getElementById('miniPantriesOpen')?.click();
    });
+ }
+ if(extraFilterDefs.length){
+   const applyTopicFilter=id=>{
+     root.querySelectorAll('[data-topic-filter]').forEach(btn=>btn.classList.toggle('is-active',btn.dataset.topicFilter===id));
+     root.querySelectorAll('.resource-filter-item').forEach(el=>{el.hidden=id!=='all'&&el.dataset.topicKind!==id;});
+   };
+   root.querySelectorAll('[data-topic-filter]').forEach(btn=>btn.addEventListener('click',()=>applyTopicFilter(btn.dataset.topicFilter)));
  }
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
