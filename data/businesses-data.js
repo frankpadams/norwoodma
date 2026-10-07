@@ -702,7 +702,7 @@ window.NORWOOD_BUSINESSES=[
 ["Cramer","Marketing, Media & Event Production; Major Employers","","","https://www.cramer.com/"],
 ["Amazon DCB4 — Norwood","Distribution & Logistics","750 Everett Street","","https://www.amazon.com/"],
 ["The Home Depot Distribution Center","Distribution & Logistics","625 University Avenue","781-278-9420","https://www.homedepot.com/"],
-["Siemens","Medical Technology, Engineering & Major Employers","109 Morgan Drive","","https://www.siemens.com/"],,
+["Siemens","Medical Technology, Engineering & Major Employers","109 Morgan Drive","","https://www.siemens.com/"],
 ["Bearingstar Insurance — Norwood","Insurance","315 Norwood Park South, Suite 107","508-583-7393","https://www.bearingstar.com/contact-us/locations/norwood/"],
 ["Norris, Murray & Peloquin, LLC","Attorneys & Legal Services","315 Norwood Park South","781-762-2229","https://nmplabor.com/"],
 ["Town Business Systems","Office Equipment, Printing & Business Technology","170 Kerry Place","781-762-1900","https://www.townbusiness.com/"],
