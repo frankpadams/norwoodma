@@ -6161,7 +6161,7 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
-  },,
+  },
   {
     "name": "Clarke Schools for Hearing and Speech — Canton",
     "category": "Deaf & Hard of Hearing Education — Listening & Spoken Language",
