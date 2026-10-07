@@ -269,6 +269,7 @@ function topicFilterKind(topicId,r){
    if(/church|parish|temple|synagogue|mosque|mandir|congregation|worship|faith/.test(h))return'faith';
    if(/pta|pto|scout|youth|school|student|parent teacher/.test(h))return'youth';
    if(/news|media|historical|arts|culture|theatre|theater|library|museum|music|visual arts/.test(h))return'culture';
+   if(/animal|humane|watershed|environment|conservation|garden/.test(h))return'environment';
    if(/volunteer|rotary|lions|elks|women.?s club|junior woman|knights of columbus|community organization|community-groups/.test(h))return'clubs';
    if(/lgbtq|immigrant|refugee|disability|deaf|recovery|support group|mental health|caregiver/.test(h))return'support';
    if(isLocalResource(r))return'local';
@@ -300,7 +301,7 @@ function topicFilterDefs(topicId,rows){
   veterans:[['all','All'],['local','Norwood Veterans Resources'],['benefits','Benefits & Assistance'],['health','VA & Health Care'],['housing','Housing & Stability'],['community','Community & Peer Support']],
   lgbtq:[['all','All'],['local','Norwood / School Support'],['youth','Youth & Families'],['trans','Trans & Nonbinary Support'],['health','Health Care'],['crisis','Crisis Support'],['community','Community & Advocacy']],
   transport:[['all','All'],['transit','Bus & Commuter Rail'],['accessible','Accessible Transportation'],['senior','Older Adult Transportation'],['school','School Transportation'],['local','Other Local Transportation']],
-  community:[['all','All'],['local','Local Community Resources'],['clubs','Clubs & Volunteer Groups'],['youth','Youth & School Groups'],['culture','Arts, Culture & Media'],['faith','Faith Communities'],['support','Support & Identity Groups'],['other','Other Community Resources']],
+  community:[['all','All'],['local','Local Community Resources'],['clubs','Clubs & Volunteer Groups'],['youth','Youth & School Groups'],['culture','Arts, Culture & Media'],['environment','Environment & Animals'],['faith','Faith Communities'],['support','Support & Identity Groups'],['other','Other Community Resources']],
   town:[['all','All'],['departments','Town Departments'],['boards','Boards & Committees'],['safety','Public Safety'],['utilities','Utilities'],['records','Elections & Records'],['recreation','Parks & Recreation'],['other','Other Town Resources']]
  };
  const list=defs[topicId]||[];
