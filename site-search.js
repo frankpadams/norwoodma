@@ -5,6 +5,16 @@
  const resultsPage=document.body.classList.contains('search-results-page');
  const howDoPage=document.body.classList.contains('how-do-page');
  let submitted=resultsPage;
+ let archiveRequest=0;
+ const archiveNorm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+ async function archiveHasMatch(raw){
+  const q=archiveNorm(raw);if(!q)return false;
+  try{const html=await fetch('town-meeting-archive.html',{cache:'no-store'}).then(r=>r.ok?r.text():'');if(!html)return false;const doc=new DOMParser().parseFromString(html,'text/html');return [...doc.querySelectorAll('.meeting')].some(m=>archiveNorm([m.textContent,m.getAttribute('data-source-index')||'',...[...m.querySelectorAll('[data-videos]')].map(x=>x.getAttribute('data-videos')||'')].join(' ')).includes(q));}catch(e){return false;}
+ }
+ function insertArchiveBridge(raw){
+  const request=++archiveRequest;
+  archiveHasMatch(raw).then(hit=>{if(request!==archiveRequest||archiveNorm(input.value)!==archiveNorm(raw)||!hit)return;const links=[...box.querySelectorAll(':scope > a')];if(box.querySelector('.town-meeting-search-bridge'))return;const a=document.createElement('a');a.className='town-meeting-search-bridge';a.href='town-meeting-archive.html?q='+encodeURIComponent(raw);a.innerHTML='<b>Town Meeting Archive</b><small>See Town Meeting Archive results for “'+esc(raw)+'” →</small>';const sixth=links[5];if(sixth)box.insertBefore(a,sixth);else{const google=box.querySelector('.site-search-google');box.insertBefore(a,google||null);}});
+ }
  const pages=[
   {name:'Artists, Crafters & Artisans',url:'artists-crafters-artisans.html',type:'Things to Do',text:'artists art crafters crafts artisans makers jewelry jewellery painting painters photography photographers glass textiles fiber handmade SONO Arts Norwood Space Center Winsmith Maple Roots Creative Melissa Adams'},
   {name:'Things to Do',url:'things.html',type:'Things to Do',text:'activities entertainment explore parks recreation'},
@@ -276,7 +286,7 @@
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}${x.officialSchool?' <img class="search-source-icon school-search-icon" src="https://www.norwood.k12.ma.us/favicon.ico" alt="Official Norwood Public Schools resource" title="Official Norwood Public Schools resource">':''}${x.type==='Event'?' <span class="search-source-icon event-search-icon" aria-label="Event" title="Event">📅</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length} result${hits.length+things.length===1?'':'s'}</small></div>`:'';
   const resultCount=hits.length+things.length; const googleHtml=resultCount<10?`<div class="site-search-google"><a href="https://www.google.com/search?q=${encodeURIComponent(raw+' Norwood MA')}" target="_blank" rel="noopener"><b>Search Google for “${esc(raw)}” →</b><small>Search the wider web for Norwood-related results</small></a></div>`:''; box.innerHTML=heading+howDoHtml+thingHtml+regularHtml+businessMoreHtml+googleHtml;
-  box.hidden=false;if(track)noteSearch(raw,hits.length+things.length);return hits;
+  box.hidden=false;insertArchiveBridge(raw);if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
  input.addEventListener('input',()=>{submitted=false;render(false)});
  input.addEventListener('focus',()=>{if(input.value.trim())render(false)});
