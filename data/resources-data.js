@@ -1221,7 +1221,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "jobs",
-      "community",
       "financial-assistance",
       "legal-advocacy",
       "housing-assistance",
@@ -1385,7 +1384,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "HEARTWAP furnace boiler heating system repair replacement no heat emergency fuel assistance basic needs",
     "topics": [
       "housing",
-      "community",
       "housing-assistance",
       "basic-needs"
     ],
@@ -1746,7 +1744,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "jobs",
-      "community",
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
@@ -2309,7 +2306,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "jobs",
-      "community",
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
@@ -5365,7 +5361,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "housing",
       "jobs",
-      "community",
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
@@ -6346,7 +6341,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "weatherization WAP insulation air sealing energy efficiency heating costs utility assistance basic needs",
     "topics": [
       "housing",
-      "community",
       "housing-assistance",
       "basic-needs"
     ],
