@@ -196,6 +196,21 @@ function topicFilterKind(topicId,r){
    if(/postpartum|perinatal mental|postpartum depression|postpartum anxiety|maternal mental health/.test(h))return'postpartum';
    return'general';
  }
+ if(topicId==='legal'){
+   if(topics.includes('immigration-language')||/immigration|ice\b|asylum|refugee|deport|detention/.test(h))return'immigration';
+   if(topics.includes('housing')||topics.includes('housing-assistance')||/tenant|eviction|housing/.test(h))return'housing';
+   if(topics.includes('domestic-violence')||topics.includes('safety-crisis')||/domestic violence|sexual assault|rape crisis|victim/.test(h))return'safety';
+   if(topics.includes('disability-support')||/disability|discrimination|civil rights|\bada\b/.test(h))return'rights';
+   return'general';
+ }
+ if(topicId==='employment'){
+   if(topics.includes('immigration-language')||/refugee|immigrant|newcomer/.test(h))return'newcomer';
+   if(topics.includes('disability-support')||/vocational rehabilitation|massability|blind|deaf|disability/.test(h))return'disability';
+   if(/unemployment|paid family|medical leave|pfml/.test(h))return'benefits';
+   if(/training|workforce|career development|internship|apprentice|resume|education|vocational/.test(h))return'training';
+   if(/masshire|job search|employment opportunities|help wanted|career center|find a job/.test(h))return'jobs';
+   return'other';
+ }
  return'all';
 }
 function topicFilterDefs(topicId,rows){
@@ -204,7 +219,9 @@ function topicFilterDefs(topicId,rows){
   immigration:[['all','All'],['urgent','ICE / Detention / Know Your Rights'],['legal','Free & Nonprofit Legal Help'],['private','Private Attorneys'],['newcomer','Newcomer & Language Support']],
   housing:[['all','All'],['urgent','Emergency Housing & Eviction'],['affordable','Public & Affordable Housing'],['utility','Utilities & Energy'],['rights','Tenant Rights & Legal Help'],['other','Other Housing Help']],
   older:[['all','All'],['local','Norwood Senior Services'],['health','Health & Caregiving'],['transport','Transportation'],['food','Meals & Food'],['benefits','Benefits & Legal'],['other','Other Support']],
-  pregnancy:[['all','All'],['general','Pregnancy & General Support'],['postpartum','Postpartum Mental Health'],['lactation','Lactation & Feeding'],['loss','Pregnancy Loss & Grief']]
+  pregnancy:[['all','All'],['general','Pregnancy & General Support'],['postpartum','Postpartum Mental Health'],['lactation','Lactation & Feeding'],['loss','Pregnancy Loss & Grief']],
+  legal:[['all','All'],['general','General Legal Help'],['housing','Housing & Tenant'],['immigration','Immigration'],['rights','Disability & Civil Rights'],['safety','Domestic & Sexual Violence']],
+  employment:[['all','All'],['jobs','Job Search'],['training','Training & Career Development'],['benefits','Unemployment & Leave'],['disability','Disability Employment'],['newcomer','Newcomer Employment'],['other','Other Employment Help']]
  };
  const list=defs[topicId]||[];
  return list.filter(([id])=>id==='all'||rows.some(r=>topicFilterKind(topicId,r)===id));
