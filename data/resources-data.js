@@ -3524,8 +3524,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Norfolk County RSVP — Rides for Veterans",
     "category": "Veterans & Transportation",
-    "description": "Free volunteer transportation for eligible Norfolk County veterans, spouses and widows to medical and other important appointments. A useful regional option for Norwood veterans who need a ride.",
-    "url": "https://www.norfolkcounty.org/",
+    "description": "Free volunteer-driver program for Norfolk County veterans traveling to medical appointments and other important destinations. Trips originate in Norfolk County, making it directly relevant to Norwood veterans.",
+    "url": "https://www.mass.gov/info-details/volunteer-driver-programs",
     "tags": "veterans rides transportation medical appointments Norfolk County RSVP volunteer driver Norwood",
     "topics": [
       "veterans",
@@ -3534,6 +3534,21 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Regional — Norfolk County",
     "provider_type": "County volunteer transportation",
+    "verified": "2026-10"
+  },
+  {
+    "name": "Norfolk Law Library — Dedham",
+    "category": "Legal Help & Advocacy",
+    "description": "Public Trial Court law library in nearby Dedham offering help finding legal information, books and materials, free public access to Westlaw and Lexis, and assistance from law librarians. Law librarians provide legal information, not legal advice.",
+    "url": "https://www.mass.gov/locations/norfolk-law-library",
+    "phone": "781-329-1401",
+    "address": "649 High St, Suite 210, Dedham, MA 02026",
+    "tags": "law library legal research Westlaw Lexis court forms legal information Dedham Norfolk County",
+    "topics": [
+      "legal-advocacy"
+    ],
+    "coverage": "Nearby — Dedham",
+    "provider_type": "Massachusetts Trial Court Law Library",
     "verified": "2026-10"
   },
   {
