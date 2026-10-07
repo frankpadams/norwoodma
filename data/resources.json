@@ -2000,6 +2000,21 @@
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts Breastfeeding & Lactation Resources",
+    "category": "Pregnancy, Postpartum & Lactation",
+    "description": "Massachusetts Department of Public Health resource page for breastfeeding and lactation support, including free phone support, local support groups, WIC breastfeeding services and tools for finding lactation help near you.",
+    "url": "https://www.mass.gov/info-details/breastfeeding-resources",
+    "tags": "breastfeeding lactation infant feeding nursing breast pump warmline WIC lactation consultant support group",
+    "topics": [
+      "pregnancy",
+      "health",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Government resource",
+    "verified": "2026-10"
+  },
+  {
     "name": "Massachusetts Child Care Finder",
     "category": "Kids & Family",
     "description": "State tool for finding licensed child care and early education programs, including options serving Norwood families.",
@@ -2630,6 +2645,23 @@
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Postpartum Support International Warmline",
+    "category": "Pregnancy, Postpartum & Mental Health",
+    "description": "Confidential Massachusetts warmline for pregnant and postpartum people and families dealing with depression, anxiety or other perinatal mental-health concerns. Provides support and referrals to local counselors and groups; messages are returned by trained staff or volunteers.",
+    "url": "https://www.mass.gov/info-details/perinatal-mood-anxiety-disorders-pmads-resources-for-pregnant-birthing-families",
+    "phone": "866-472-1897",
+    "tags": "postpartum depression anxiety perinatal mental health pregnancy new parent warmline PSI counselor support group Spanish",
+    "topics": [
+      "pregnancy",
+      "health",
+      "mental-health",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Nonprofit / state-referenced support",
+    "verified": "2026-10"
   },
   {
     "name": "Massachusetts Prescription Advantage",
@@ -5191,6 +5223,22 @@
     "topics": [
       "town"
     ]
+  },
+  {
+    "name": "Pregnancy & Infant Loss Support — Massachusetts",
+    "category": "Pregnancy Loss & Grief",
+    "description": "Massachusetts resource guide for miscarriage, stillbirth, infant loss and related grief, with helplines and support resources for birthing parents, partners, siblings and other family members.",
+    "url": "https://www.mass.gov/info-details/loss-grief-resources",
+    "tags": "pregnancy loss miscarriage stillbirth infant loss grief bereavement partner family postpartum support",
+    "topics": [
+      "pregnancy",
+      "health",
+      "mental-health",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Government resource",
+    "verified": "2026-10"
   },
   {
     "name": "Premier Gymnastics Norwood",
