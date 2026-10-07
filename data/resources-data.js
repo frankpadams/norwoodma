@@ -48,6 +48,36 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Official Above the Clouds site; based at Norwood Memorial Airport, 125 Access Road."
   },
   {
+    "name": "Abundant Hope Pregnancy Resource Center",
+    "category": "Pregnancy & Family Support",
+    "description": "Pregnancy resource center in Attleboro offering pregnancy-related support and services.",
+    "url": "https://abundanthopeprc.org/",
+    "tags": "Abundant Hope Pregnancy Resource Center Pregnancy & Family Support",
+    "topics": [
+      "pregnancy",
+      "family-support",
+      "education-family"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
+    "name": "ACLU of Massachusetts — Know Your Rights: Immigrants",
+    "category": "Immigration — What To Do / Know Your Rights",
+    "description": "Practical guidance for encounters with ICE or police, including questioning, home visits, vehicle stops, family preparedness and multilingual printable Know Your Rights materials.",
+    "url": "https://www.aclum.org/know-your-rights/know-your-rights-if-you-are-questioned-about-your-immigration-status/",
+    "tags": "ICE at door home raid stopped questioned police know your rights warrant red card family plan immigrant",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "safety-crisis"
+    ],
+    "coverage": "Massachusetts",
+    "provider_type": "Civil-rights guidance",
+    "verified": "2026-09"
+  },
+  {
     "name": "AdCare Treatment Center",
     "category": "Recovery",
     "description": "Substance-use treatment services including inpatient, outpatient and family services.",
@@ -300,18 +330,6 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Norwood Board of Health",
-    "category": "Health",
-    "description": "Local public health services and information.",
-    "url": "https://www.norwoodma.gov/departments/health/index.php",
-    "tags": "health public inspections",
-    "coverage": "Local",
-    "verified": "2026-09",
-    "topics": [
-      "town"
-    ]
-  },
-  {
     "name": "Board of Selectmen",
     "category": "Town Government",
     "description": "Town executive board information and meetings.",
@@ -352,6 +370,22 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Norwood",
     "verified": "2026-09"
+  },
+  {
+    "name": "Boston Area Rape Crisis Center",
+    "category": "Safety & Crisis Support",
+    "description": "Use for sexual assault, rape, sexual harassment or other sexual violence. BARCC provides confidential survivor support, counseling, medical and legal advocacy, and help for loved ones. Call 911 if there is immediate danger or urgent medical need.",
+    "url": "https://barcc.org/",
+    "tags": "Boston Area Rape Crisis Center Safety & Crisis Support",
+    "topics": [
+      "safety-crisis",
+      "legal-advocacy",
+      "mental-health",
+      "domestic-violence"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "Boston Area Trans Support",
@@ -414,6 +448,22 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
+    "name": "Brazen Legal Immigration Law Firm",
+    "category": "Private Immigration Attorney",
+    "description": "Immigration-focused law practice in nearby Randolph handling U.S. immigration matters including removal defense, waivers and other immigration cases.",
+    "url": "https://brazenlegal.com/",
+    "phone": "508-942-7497",
+    "address": "10 Mazzeo Dr Ste 201A, Randolph, MA 02368",
+    "tags": "private attorney immigration lawyer Randolph Norwood area deportation removal defense waiver TPS",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Nearby — Randolph",
+    "provider_type": "Private legal provider",
+    "verified": "2026-09"
+  },
+  {
     "name": "Bubbles Up Laundromat",
     "category": "Local Service",
     "description": "Self-service laundromat for everyday laundry and bulky items.",
@@ -467,6 +517,22 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "CASE Collaborative",
+    "category": "Special Education & Disability",
+    "description": "Regional public educational collaborative providing specialized special-education programs, related services, assistive technology, assessments and extended-school-year programming for students with disabilities.",
+    "url": "https://www.casecollaborative.org/",
+    "tags": "CASE Collaborative special education disability IEP assistive technology related services assessment extended school year Greater Boston Concord",
+    "topics": [
+      "disability-support",
+      "education-family",
+      "family-support",
+      "kids"
+    ],
+    "coverage": "Regional — Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Current CASE program information verified. Not tagged as Deaf & Hard of Hearing because current CASE program listings do not identify a dedicated DHH program."
+  },
+  {
     "name": "Chabad Jewish Center",
     "category": "Houses of Worship",
     "description": "Jewish community center serving Needham, Dedham, Dover and Westwood with worship, learning and community programs.",
@@ -478,6 +544,20 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Nearby — Needham",
     "verified": "2026-09"
+  },
+  {
+    "name": "CHAMP — Massachusetts Public Housing Application",
+    "category": "Housing Assistance",
+    "description": "Common Housing Application for Massachusetts Programs, used to apply for state-aided public housing through participating housing authorities.",
+    "url": "https://www.mass.gov/how-to/apply-for-public-housing",
+    "tags": "CHAMP — Massachusetts Public Housing Application Housing Assistance",
+    "topics": [
+      "housing-assistance",
+      "financial-assistance"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "Cheer Advantage",
@@ -538,6 +618,24 @@ window.NORWOOD_RESOURCES= [
       "family-support"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Clarke Schools for Hearing and Speech — Canton",
+    "category": "Deaf & Hard of Hearing Education — Listening & Spoken Language",
+    "description": "Canton school and family resource for children who are Deaf or hard of hearing. Listening & Spoken Language (oral/aural approach; no sign-language instruction), with early intervention, preschool/early childhood, speech-language therapy, educational audiology and mainstream-school support.",
+    "url": "https://www.clarkeschools.org/canton/",
+    "tags": "Deaf hard of hearing DHH oral aural auditory oral listening spoken language LSL hearing aids cochlear implants early intervention preschool speech audiology mainstream Canton",
+    "topics": [
+      "health",
+      "kids",
+      "community",
+      "disability-support",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Nearby — Canton",
+    "address": "1 Whitman Road, Canton, MA 02021",
     "verified": "2026-09"
   },
   {
@@ -643,24 +741,6 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Norwood Council on Aging & Senior Center",
-    "category": "Seniors",
-    "description": "Programs, transportation and services for older adults.",
-    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
-    "tags": "senior seniors aging transportation programs older adult caregiver outreach benefits activities council on",
-    "coverage": "Local",
-    "verified": "2026-09",
-    "topics": [
-      "older",
-      "health",
-      "transport",
-      "todo",
-      "food-assistance",
-      "basic-needs",
-      "financial-assistance"
-    ]
-  },
-  {
     "name": "Crisis Text Line",
     "category": "Mental Health Crisis",
     "description": "Use when you want confidential crisis support by text rather than by phone. Text HOME to 741741 for a trained crisis counselor, 24/7. Appropriate for emotional distress, anxiety, depression, self-harm concerns and other crises; call 911 for immediate physical danger.",
@@ -728,6 +808,29 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "DEAF, Inc. — Boston Metro",
+    "category": "Deaf & Hard of Hearing",
+    "description": "Deaf-run Massachusetts nonprofit serving Deaf, DeafBlind, Hard of Hearing and Late-Deafened adults. Its ARES program provides free advocacy, information and referrals, skills training and help navigating benefits, housing, health care, communication access and other community services; DBCAN supports DeafBlind adults statewide.",
+    "url": "https://www.deafincma.org/",
+    "tags": "DEAF Inc Deaf DeafBlind hard of hearing late deafened ASL advocacy ARES independent living DBCAN community services Watertown Boston Metro",
+    "topics": [
+      "deaf-hard-of-hearing",
+      "disability-support",
+      "community",
+      "community-groups",
+      "housing-assistance",
+      "medical-care",
+      "employment",
+      "financial-assistance",
+      "legal-advocacy"
+    ],
+    "coverage": "Regional — Eastern Massachusetts",
+    "address": "50 Hunt Street, Suite 200, Watertown, MA 02472",
+    "phone": "617-505-4823",
+    "verified": "2026-09",
+    "source_note": "Official DEAF, Inc. site confirms it is run by and for Deaf people and that ARES serves Deaf, Hard of Hearing and Late-Deafened adults across Eastern Massachusetts."
+  },
+  {
     "name": "Dedham Community Theatre",
     "category": "Arts, Recreation & Culture",
     "description": "Independent two-screen neighborhood movie theater in historic Dedham Square.",
@@ -738,6 +841,22 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Nearby — Dedham",
     "verified": "2026-09"
+  },
+  {
+    "name": "Department of Early Education and Care",
+    "category": "Kids, Families & Education",
+    "description": "Massachusetts agency overseeing early education and care, including child-care financial assistance and help finding licensed programs.",
+    "url": "https://www.mass.gov/orgs/department-of-early-education-and-care",
+    "tags": "Department of Early Education and Care Kids, Families & Education",
+    "topics": [
+      "education-family",
+      "family-support",
+      "kids",
+      "financial-assistance"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "Dignity Matters",
@@ -752,6 +871,51 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Regional",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "Disability Law Center",
+    "category": "Legal, Consumer & Advocacy",
+    "description": "Massachusetts protection and advocacy organization providing legal advocacy for people with disabilities.",
+    "url": "https://www.dlc-ma.org/",
+    "tags": "Disability Law Center Legal, Consumer & Advocacy",
+    "topics": [
+      "disability-support",
+      "legal-advocacy"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
+    "name": "Disabled Persons Protection Commission (DPPC)",
+    "category": "Disability Safety & Rights",
+    "description": "Use to report suspected abuse, neglect or mistreatment of an adult with a disability in Massachusetts. DPPC is a protective-services and reporting agency, not a general disability-information or mental-health crisis line. Call 911 if the person is in immediate danger.",
+    "url": "https://www.mass.gov/orgs/disabled-persons-protection-commission",
+    "tags": "DPPC disabled persons protection commission abuse neglect disability safety protective services hotline rights",
+    "topics": [
+      "disability-support",
+      "safety-crisis",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "DOVE — Domestic Violence Ended",
+    "category": "Safety & Crisis Support",
+    "description": "Use for domestic or partner violence when you need confidential support, safety planning, advocacy, counseling, shelter or related services in the Greater Boston/South Shore area. DOVE has a 24-hour hotline. Call 911 if there is immediate danger.",
+    "url": "https://www.dovema.org/",
+    "tags": "DOVE — Domestic Violence Ended Safety & Crisis Support",
+    "topics": [
+      "safety-crisis",
+      "housing-assistance",
+      "legal-advocacy",
+      "mental-health",
+      "domestic-violence"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "Empower Early Intervention",
@@ -886,6 +1050,20 @@ window.NORWOOD_RESOURCES= [
       "community"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Fresh Start Furniture Bank",
+    "category": "Food & Basic Needs",
+    "description": "Furniture bank helping people in need obtain essential household furnishings and home goods at no cost through its community assistance program.",
+    "url": "https://freshstartfurniturebank.org/",
+    "tags": "Fresh Start Furniture Bank free furniture household goods furnishings basic needs home essentials",
+    "topics": [
+      "basic-needs",
+      "housing-assistance",
+      "food-assistance"
+    ],
+    "coverage": "Massachusetts",
     "verified": "2026-09"
   },
   {
@@ -1214,6 +1392,21 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "HESSCO — Meals on Wheels",
+    "category": "Food Assistance",
+    "description": "Home-delivered meals and nutrition support for eligible older adults through the regional Aging Services Access Point serving the Norwood area.",
+    "url": "https://hessco.org/",
+    "tags": "HESSCO — Meals on Wheels Food Assistance",
+    "topics": [
+      "food-assistance",
+      "older",
+      "basic-needs"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
     "name": "HESSCO Elder Services",
     "category": "Older Adults",
     "description": "Aging-services access point for Norwood-area older adults and caregivers, including meals, care options, benefits and support.",
@@ -1345,6 +1538,20 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Statewide Massachusetts sexual assault and domestic violence coalition; also listed by Morrill Memorial Library community resources."
   },
   {
+    "name": "Jewish Vocational Service Boston",
+    "category": "Employment",
+    "description": "Workforce development, career services, vocational training and English-language learning in Greater Boston.",
+    "url": "https://www.jvs-boston.org/",
+    "tags": "Jewish Vocational Service Boston Employment",
+    "topics": [
+      "employment",
+      "immigration-language"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
     "name": "Julie Ruth House Adult Day Social Center",
     "category": "Older Adults",
     "description": "Adult day social program in nearby Westwood.",
@@ -1389,6 +1596,23 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
+    "name": "Keeping Pace with Multiple Miracles — Tiny Table",
+    "category": "Food Assistance",
+    "description": "Infant food pantry at Keeping Pace with Multiple Miracles, available to custodial parents regardless of income, hometown or number of children.",
+    "url": "https://keepingpace.org/",
+    "tags": "Keeping Pace with Multiple Miracles — Tiny Table Food Assistance",
+    "topics": [
+      "food-assistance",
+      "family-support",
+      "kids",
+      "basic-needs",
+      "education-family"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
     "name": "Kings Dining & Entertainment — Dedham",
     "category": "Things to Do",
     "description": "Bowling, games, billiards and dining at Legacy Place in nearby Dedham.",
@@ -1430,6 +1654,22 @@ window.NORWOOD_RESOURCES= [
       "family-support",
       "education-family"
     ]
+  },
+  {
+    "name": "Law Office of Melanie Shapiro, LLC",
+    "category": "Private Immigration Attorney",
+    "description": "Private immigration law practice in nearby Westwood handling immigration matters including family-based immigration, asylum and immigration-court matters.",
+    "url": "https://www.melanieshapiroesq.com/",
+    "phone": "781-461-0100",
+    "address": "378 Washington St Ste 2, Westwood, MA 02090",
+    "tags": "private attorney immigration lawyer Westwood Norwood area asylum family immigration immigration court",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Nearby — Westwood",
+    "provider_type": "Private legal provider",
+    "verified": "2026-09"
   },
   {
     "name": "Learn to Cope",
@@ -1514,6 +1754,37 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Little Free Food Pantry — Railroad Avenue",
+    "category": "Food Assistance",
+    "description": "Low-barrier neighborhood food assistance at 280 Railroad Ave, including an outdoor mini-food pantry available for pickup at any time. No proof of need or residency is required.",
+    "url": "https://www.norwoodtownnews.com/2026/09/02/582781/a-little-pantry-with-a-big-purpose",
+    "tags": "food assistance mini pantry little food pantry groceries no registration no eligibility Railroad Avenue",
+    "topics": [
+      "community",
+      "food-assistance",
+      "basic-needs"
+    ],
+    "coverage": "Local",
+    "address": "280 Railroad Ave, Norwood, MA 02062",
+    "verified": "2026-10"
+  },
+  {
+    "name": "LUCE Immigrant Justice Network — Rapid Response Hotline",
+    "category": "Immigration — Rapid Response / ICE Activity",
+    "description": "Massachusetts rapid-response network for reports of ICE activity. The network verifies reports, provides multilingual information and helps community members exercise their rights.",
+    "url": "https://www.lucemass.org/",
+    "phone": "617-370-5023",
+    "tags": "ICE activity sighting rapid response hotline LUCE Massachusetts immigrant justice multilingual report ICE",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "safety-crisis"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Community rapid-response network",
+    "verified": "2026-09"
+  },
+  {
     "name": "Luke Adams Glassblowing Studio",
     "category": "Arts & Culture",
     "description": "Hands-on glassblowing classes and experiences at the Norwood Space Center.",
@@ -1558,6 +1829,20 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Official Marine Toys for Tots local campaign finder."
   },
   {
+    "name": "MassAbility — Assistive Technology Services",
+    "category": "Disability & Assistive Technology",
+    "description": "State assistive-technology services including equipment and devices for independent living, device loans, demonstrations and pickup centers, communication devices, mobility equipment and other adaptive technology.",
+    "url": "https://www.mass.gov/info-details/massability-assistive-technology-services",
+    "tags": "MassAbility MRC assistive technology AT device loan wheelchair communication device adaptive equipment REquipment",
+    "topics": [
+      "disability-support",
+      "medical-care",
+      "employment"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
     "name": "MassAbility — Career Services (Vocational Rehabilitation)",
     "category": "Employment",
     "description": "Career and vocational rehabilitation services for Massachusetts residents with disabilities. Services can include career counseling, skills and vocational training, job placement, assistive technology, school-to-work support, interview preparation and workplace communication access.",
@@ -1570,6 +1855,48 @@ window.NORWOOD_RESOURCES= [
       "family-support"
     ],
     "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MassAccess Accessible Housing Registry",
+    "category": "Disability & Housing",
+    "description": "Accessible-housing resource for people with disabilities, families and advocates, with information about accessible state/federally assisted and private housing and connections to application help through Independent Living Centers.",
+    "url": "https://www.mass.gov/massaccess-housing-program",
+    "tags": "MassAccess accessible housing disability apartment rental homeownership registry wheelchair accessibility housing",
+    "topics": [
+      "disability-support",
+      "housing-assistance"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts — Protecting People From ICE",
+    "category": "Immigration — Massachusetts Guidance",
+    "description": "Commonwealth hub for residents and institutions on immigration enforcement, including guidance for schools, health care, places of worship and other settings, plus a portal for reporting alleged federal immigration-enforcement misconduct.",
+    "url": "https://www.mass.gov/protecting-people-from-ice",
+    "tags": "Massachusetts ICE guidance school healthcare church worship federal misconduct report immigration enforcement",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "safety-crisis"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Government guidance",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts — Resources for Immigrants",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Commonwealth resource hub for immigration legal assistance, detention/removal help, trusted legal referrals and other resources for immigrants in Massachusetts.",
+    "url": "https://www.mass.gov/info-details/resources-for-immigrants-in-massachusetts",
+    "tags": "Massachusetts immigrants ICE detention deportation legal help immigration attorney notario fraud resources",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Government resource",
     "verified": "2026-09"
   },
   {
@@ -1770,6 +2097,40 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts DCF — Disability Coordinator & Regional Disability Liaisons",
+    "category": "Disability & Family",
+    "description": "DCF disability-access resource for parents and caregivers with disabilities. The Statewide Disability Coordinator and Regional Disability Liaisons help with reasonable accommodations, communication aids and disability-related concerns or complaints involving DCF.",
+    "url": "https://www.mass.gov/resources-for-parents-with-disabilities",
+    "tags": "DCF disability coordinator regional disability liaison parent caregiver ADA reasonable accommodation communication access disability rights",
+    "topics": [
+      "disability-support",
+      "family-support",
+      "kids",
+      "legal-advocacy",
+      "older",
+      "education-family"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts DDS — Deaf Services",
+    "category": "Deaf & Hard of Hearing",
+    "description": "Statewide Department of Developmental Services support for Deaf and hard-of-hearing people with intellectual and developmental disabilities. Provides consultation on communication access and culturally responsive services, support during intake and eligibility, ISP and transition planning, on-site consultation, Deaf cultural training, and communication/environmental assessments.",
+    "url": "https://www.mass.gov/info-details/dds-deaf-services",
+    "tags": "DDS Deaf Services Deaf hard of hearing intellectual developmental disability IDD communication access ISP eligibility transition age 22 assessment Deaf culture",
+    "topics": [
+      "deaf-hard-of-hearing",
+      "disability-support",
+      "family-support",
+      "kids",
+      "older"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09",
+    "source_note": "Official Massachusetts DDS Deaf Services page."
+  },
+  {
     "name": "Massachusetts Dental Society — Public Resources",
     "category": "Dental & Orthodontics",
     "description": "Consumer dental-health information and resources from the Massachusetts Dental Society.",
@@ -1825,6 +2186,22 @@ window.NORWOOD_RESOURCES= [
       "basic-needs"
     ],
     "coverage": "Regional/State",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts DESE — Food & Nutrition Programs",
+    "category": "Food & Basic Needs",
+    "description": "Official state hub for school breakfast and lunch, after-school meals, child-care nutrition programs and summer meals. Massachusetts provides universal free school meals at participating schools.",
+    "url": "https://www.doe.mass.edu/cnp/",
+    "tags": "DESE food nutrition school meals breakfast lunch universal free meals after school summer food child nutrition",
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "kids",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Statewide",
     "verified": "2026-09"
   },
   {
@@ -1920,6 +2297,23 @@ window.NORWOOD_RESOURCES= [
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Hands & Voices",
+    "category": "Deaf & Hard of Hearing Family Support",
+    "description": "Parent-driven statewide support for families with children who are Deaf or hard of hearing, including family connections, advocacy, workshops, resources and information across communication approaches.",
+    "url": "https://www.masshv.org/",
+    "tags": "Deaf hard of hearing DHH children family parent support advocacy ASL communication early intervention education Hands Voices",
+    "topics": [
+      "health",
+      "kids",
+      "community",
+      "disability-support",
+      "education-family",
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2029,6 +2423,39 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts Independent Living Centers",
+    "category": "Disability & Independent Living",
+    "description": "Statewide network of disability-led Centers for Independent Living offering information and referral, peer support, independent-living skills, transition assistance and individual/systemic advocacy. Use the state locator to find the center serving your community.",
+    "url": "https://www.mass.gov/independent-living-centers",
+    "tags": "independent living center ILC CIL disability peer support advocacy skills transition housing transportation PCA",
+    "topics": [
+      "disability-support",
+      "community-groups",
+      "housing-assistance",
+      "transport",
+      "employment",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Legal Help — Family Emergency Planning",
+    "category": "Immigration — Family Preparedness",
+    "description": "Practical family-preparedness guide for immigrant families, including children, emergency contacts, important documents and caregiver planning, with printable materials in multiple languages.",
+    "url": "https://www.masslegalhelp.org/immigration/know-your-rights/planning-family-emergency",
+    "tags": "immigration family emergency plan children caregiver detention deportation documents temporary agent multilingual",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "family-support",
+      "safety-crisis"
+    ],
+    "coverage": "Massachusetts",
+    "provider_type": "Legal information / preparedness",
+    "verified": "2026-09"
+  },
+  {
     "name": "Massachusetts Legal Help — Housing",
     "category": "Legal & Housing",
     "description": "Plain-language Massachusetts legal information about eviction, rent, public housing, utilities and housing rights.",
@@ -2042,6 +2469,66 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Legal Help — If Someone Is Detained by ICE",
+    "category": "Immigration — Detention & Deportation Help",
+    "description": "Guidance for a detained person and their family, including finding where someone is being held, contacting counsel and understanding immigration detention and bond.",
+    "url": "https://www.masslegalhelp.org/immigration/detention-deportation/if-you-are-detained-and-ice-custody",
+    "tags": "ICE detained arrested locate detainee custody bond deportation family member what do I do",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "safety-crisis"
+    ],
+    "coverage": "Massachusetts",
+    "provider_type": "Legal information",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Legal Help — Immigrant Rights & Law Enforcement",
+    "category": "Immigration — What To Do / Know Your Rights",
+    "description": "Step-by-step Massachusetts guidance on interacting with ICE or law enforcement, warrants at the door, remaining silent, lawyers, detention, interpreters and printable red-card resources.",
+    "url": "https://www.masslegalhelp.org/immigration/know-your-rights/immigrant-rights-and-law-enforcement",
+    "tags": "ICE warrant door arrested detained red card remain silent lawyer interpreter know your rights",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "safety-crisis"
+    ],
+    "coverage": "Massachusetts",
+    "provider_type": "Legal information",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Legal Help — Immigration Help Referral List",
+    "category": "Immigration — Free & Nonprofit Legal Help",
+    "description": "Statewide referral list of nonprofit immigration legal-service organizations that may provide free help, plus hotlines for detention, deportation proceedings, accompaniment and general immigration information.",
+    "url": "https://www.masslegalhelp.org/immigration/know-your-rights/immigration-help-referral-list",
+    "tags": "free immigration lawyer nonprofit legal aid Massachusetts referral asylum detention deportation ICE",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Legal-services directory",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Legal Representation Fund — ICE Detention Help",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Massachusetts-funded legal assistance for people recently detained by ICE. The state lists separate hotlines for detained people and for family or friends seeking help.",
+    "url": "https://www.mass.gov/info-details/resources-for-immigrants-in-massachusetts",
+    "phone": "617-637-8195",
+    "tags": "ICE detained detention immigration lawyer legal representation fund family hotline deportation Massachusetts",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "State-funded legal assistance",
+    "verified": "2026-09",
+    "source_note": "Detained hotline 617-637-8195; family/friends hotline 617-396-7143."
   },
   {
     "name": "Massachusetts LGBTQ Youth Commission Resources",
@@ -2079,6 +2566,21 @@ window.NORWOOD_RESOURCES= [
       "legal-advocacy"
     ],
     "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Office for Refugees and Immigrants — Community Resources",
+    "category": "Immigration — Massachusetts Organizations & Resources",
+    "description": "State resource hub connecting immigrant and refugee communities with legal-help directories, community resources, Know Your Rights materials and Massachusetts immigrant-support information.",
+    "url": "https://www.mass.gov/info-details/community-resources",
+    "tags": "Massachusetts Office Refugees Immigrants ORI community organizations refugee legal services immigration help",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "community"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Government resource hub",
     "verified": "2026-09"
   },
   {
@@ -2172,6 +2674,23 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Massachusetts SUN Bucks (Summer EBT)",
+    "category": "Food & Basic Needs",
+    "description": "Summer food benefit for eligible families with school-aged children. Most eligible families receive benefits automatically; families who need to apply can use DTA Connect. Benefits help buy groceries while school is out.",
+    "url": "https://www.mass.gov/massachusetts-sun-bucks-program",
+    "tags": "SUN Bucks Summer EBT summer food children school groceries DTA SNAP",
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "kids",
+      "family-support",
+      "financial-assistance",
+      "education-family"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
     "name": "Massachusetts Supplier Diversity Office",
     "category": "Business",
     "description": "Certification and procurement resources for eligible diverse businesses seeking public contracting opportunities.",
@@ -2192,6 +2711,19 @@ window.NORWOOD_RESOURCES= [
     "tags": "unemployment job lost work benefits",
     "topics": [
       "jobs",
+      "employment",
+      "financial-assistance"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Massachusetts Unemployment Insurance — Workers",
+    "category": "Employment",
+    "description": "Official Massachusetts unemployment resource for workers. Check eligibility, apply for unemployment insurance, file weekly claims, check claim status, learn about appeals and get help from the Department of Unemployment Assistance.",
+    "url": "https://www.mass.gov/unemployment-insurance-for-workers",
+    "tags": "unemployment unemployment insurance UI benefits DUA laid off lost job weekly claim appeal Massachusetts",
+    "topics": [
       "employment",
       "financial-assistance"
     ],
@@ -2246,6 +2778,32 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "MassHire JobQuest",
+    "category": "Employment",
+    "description": "Free Massachusetts job-search system. Create a jobseeker profile, search job openings, connect your skills with employers, and find workshops, training and hiring events.",
+    "url": "https://www.mass.gov/find-your-next-job-with-masshire-jobquest",
+    "tags": "MassHire JobQuest jobs job search openings resume training workshop hiring event employment Massachusetts",
+    "topics": [
+      "employment"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MassHire Norwood Career Center",
+    "category": "Employment",
+    "description": "Norwood's state workforce Career Center offering free job-search assistance, career coaching, training programs, hiring events and access to computers, printers and scanners.",
+    "url": "https://www.mass.gov/locations/masshire-norwood-career-center",
+    "tags": "MassHire Norwood Career Center jobs employment career coaching job search resume interview training hiring events JobQuest",
+    "topics": [
+      "employment"
+    ],
+    "coverage": "Norwood & Metro South/West",
+    "address": "128 Carnegie Row, Suite 109, Norwood, MA 02062",
+    "phone": "781-269-5494",
+    "verified": "2026-09"
+  },
+  {
     "name": "MassHousing",
     "category": "Housing",
     "description": "State housing-finance agency with homebuyer, homeowner and affordable-housing programs.",
@@ -2259,6 +2817,19 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Statewide",
     "verified": "2026-09",
     "source_note": "Current Morrill Memorial Library community-resource guide"
+  },
+  {
+    "name": "MassLegalHelp",
+    "category": "Legal, Consumer & Advocacy",
+    "description": "Free practical information about Massachusetts legal rights and links to legal-aid programs and other help.",
+    "url": "https://www.masslegalhelp.org/",
+    "tags": "MassLegalHelp Legal, Consumer & Advocacy",
+    "topics": [
+      "legal-advocacy"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "MassOptions",
@@ -2363,6 +2934,21 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
+    "name": "MetroWest Legal Services",
+    "category": "Legal, Consumer & Advocacy",
+    "description": "Civil legal aid and advocacy for eligible people with low incomes, older adults and people with disabilities in the MetroWest region.",
+    "url": "https://mwlegal.org/",
+    "tags": "MetroWest Legal Services Legal, Consumer & Advocacy",
+    "topics": [
+      "legal-advocacy",
+      "disability-support",
+      "older"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
     "name": "MigrateUSA Immigration Law Firm",
     "category": "Private Immigration Attorney",
     "description": "Private Norwood immigration law firm focused exclusively on U.S. immigration matters, including visas, work authorization, family-based immigration, green cards, citizenship, asylum and removal/deportation defense.",
@@ -2394,6 +2980,50 @@ window.NORWOOD_RESOURCES= [
       "family-support"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MIRA Coalition",
+    "category": "Immigration, Language & Newcomer Resources",
+    "description": "Massachusetts Immigrant and Refugee Advocacy Coalition provides advocacy, citizenship assistance and resources for immigrants and refugees.",
+    "url": "https://miracoalition.org/",
+    "tags": "MIRA Coalition Immigration, Language & Newcomer Resources",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
+    "name": "MIRA Coalition — Bystander & ICE Rapid-Response Resources",
+    "category": "Immigration — Rapid Response / ICE Activity",
+    "description": "Guidance for bystanders and community organizations during increased ICE activity, including printable multilingual materials and links to Massachusetts rapid-response resources.",
+    "url": "https://miracoalition.org/interacting-with-i-c-e-immigration-customs-enforcement/",
+    "tags": "ICE bystander observer community event rapid response LUCE multilingual immigrant rights",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy",
+      "safety-crisis"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Immigrant advocacy organization",
+    "verified": "2026-09"
+  },
+  {
+    "name": "MIRA Coalition — Immigration Helpline",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Statewide non-emergency immigration helpline for Massachusetts residents offering general immigration information, Know Your Rights information, help locating case/application information, resources and referrals, including what to do after someone is detained by immigration.",
+    "url": "https://www.miracoalition.org/resources/immigration-helpline/",
+    "phone": "508-293-1871",
+    "tags": "immigration ICE helpline Know Your Rights detention deportation immigrant refugee legal referral Massachusetts",
+    "topics": [
+      "immigration-language",
+      "legal-advocacy"
+    ],
+    "coverage": "Statewide",
+    "provider_type": "Nonprofit / referral",
     "verified": "2026-09"
   },
   {
@@ -3013,6 +3643,18 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
+    "name": "Norwood Board of Health",
+    "category": "Health",
+    "description": "Local public health services and information.",
+    "url": "https://www.norwoodma.gov/departments/health/index.php",
+    "tags": "health public inspections",
+    "coverage": "Local",
+    "verified": "2026-09",
+    "topics": [
+      "town"
+    ]
+  },
+  {
     "name": "Norwood Building Permits & Inspections",
     "category": "Town Services",
     "description": "Building Department information for permits, inspections and building-related requirements.",
@@ -3125,6 +3767,24 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Norwood Council on Aging & Senior Center",
+    "category": "Seniors",
+    "description": "Programs, transportation and services for older adults.",
+    "url": "https://www.norwoodma.gov/residents/senior_center/index.php",
+    "tags": "senior seniors aging transportation programs older adult caregiver outreach benefits activities council on",
+    "coverage": "Local",
+    "verified": "2026-09",
+    "topics": [
+      "older",
+      "health",
+      "transport",
+      "todo",
+      "food-assistance",
+      "basic-needs",
+      "financial-assistance"
+    ]
+  },
+  {
     "name": "Norwood Council on Aging Transportation",
     "category": "Transportation & Older Adults",
     "description": "Local transportation information and ride assistance for eligible older Norwood residents through the Senior Center.",
@@ -3229,21 +3889,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "town"
     ]
-  },
-  {
-    "name": "Little Free Food Pantry — Railroad Avenue",
-    "category": "Food Assistance",
-    "description": "Low-barrier neighborhood food assistance at 280 Railroad Ave, including an outdoor mini-food pantry available for pickup at any time. No proof of need or residency is required.",
-    "url": "https://www.norwoodtownnews.com/2026/09/02/582781/a-little-pantry-with-a-big-purpose",
-    "tags": "food assistance mini pantry little food pantry groceries no registration no eligibility Railroad Avenue",
-    "topics": [
-      "community",
-      "food-assistance",
-      "basic-needs"
-    ],
-    "coverage": "Local",
-    "address": "280 Railroad Ave, Norwood, MA 02062",
-    "verified": "2026-10"
   },
   {
     "name": "Norwood Food Pantry",
@@ -3540,6 +4185,23 @@ window.NORWOOD_RESOURCES= [
     ]
   },
   {
+    "name": "Norwood Police Youth Academy",
+    "category": "Camps & Summer Programs",
+    "description": "Summer youth academy offered by the Norwood Police Department, giving local young people an age-appropriate introduction to police work, public safety, teamwork and community service. Check the Police Department for current summer dates, eligibility and registration.",
+    "url": "https://www.norwoodma.gov/departments/police/index.php",
+    "tags": "police youth academy summer camp camps public safety kids teens students community police department",
+    "topics": [
+      "kids",
+      "youth",
+      "todo",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Local",
+    "verified": "2026-09",
+    "source_note": "Official Norwood Police Department resource; program dates and application details vary by summer."
+  },
+  {
     "name": "Norwood Public Records",
     "category": "Town Services",
     "description": "Town information about requesting public records and accessing municipal documents.",
@@ -3733,6 +4395,21 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Local",
     "verified": "2026-09"
+  },
+  {
+    "name": "Norwood REACH",
+    "category": "Employment",
+    "description": "Free volunteer job-search help for people in Norwood, founded by Kristen McQuaid, a Human Resources Director with more than a dozen years of HR experience. Get feedback and tips to strengthen your résumé, or practice with a mock interview before the real thing. Email Norwood REACH to get in touch.",
+    "url": "mailto:NorwoodREACH@gmail.com",
+    "tags": "Norwood REACH Kristen McQuaid free resume résumé review tips mock interview interview preparation job search employment career transition volunteer HR human resources",
+    "topics": [
+      "employment",
+      "community-groups"
+    ],
+    "coverage": "Norwood",
+    "email": "NorwoodREACH@gmail.com",
+    "verified": "2026-09",
+    "source_note": "Description and contact information provided by founder Kristen McQuaid."
   },
   {
     "name": "Norwood Recreation",
@@ -3956,7 +4633,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "news town local articles",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community"
+    ]
   },
   {
     "name": "Norwood Track Club",
@@ -4336,20 +5015,19 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
-    "name": "PAIR Project",
-    "category": "Legal & Immigration",
-    "description": "Free immigration legal services for indigent asylum seekers and detained immigrants.",
-    "url": "https://norwoodlibrary.org/commres-refugee-immigr/",
-    "tags": "immigration asylum legal lawyer refugee",
+    "name": "PAIR Project — Asylum & Detention Legal Help",
+    "category": "Immigration, Refugee & Asylum Support",
+    "description": "Free immigration legal services focused on asylum seekers and detained immigrants in Massachusetts, including asylum intake, detention legal orientation, bond and removal-defense assistance for eligible clients.",
+    "url": "https://www.pairproject.org/gethelp",
+    "phone": "617-742-9296",
+    "tags": "PAIR asylum ICE detention detained immigrant bond removal defense deportation immigration lawyer free legal aid",
     "topics": [
-      "community",
-      "jobs",
       "immigration-language",
       "legal-advocacy"
     ],
-    "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "coverage": "Massachusetts",
+    "provider_type": "Nonprofit legal services",
+    "verified": "2026-09"
   },
   {
     "name": "Parental Stress Line",
@@ -4443,6 +5121,22 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Local",
     "address": "32 Day St, Norwood, MA 02062",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Planned Parenthood League of Massachusetts",
+    "category": "Medical & Health",
+    "description": "Sexual and reproductive health care and education, including birth control, STI testing and treatment, pregnancy testing and options counseling, abortion care, gender-affirming care and other preventive health services. Find locations and appointments through the Massachusetts affiliate.",
+    "url": "https://www.plannedparenthood.org/planned-parenthood-massachusetts",
+    "tags": "Planned Parenthood PPLM reproductive health sexual health birth control contraception STI STD testing pregnancy testing abortion options counseling gender affirming LGBTQ preventive health",
+    "topics": [
+      "medical",
+      "pregnancy",
+      "lgbtq-support",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Massachusetts",
     "verified": "2026-09"
   },
   {
@@ -4563,6 +5257,23 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
+  },
+  {
+    "name": "READS Collaborative — Deaf & Hard of Hearing Program",
+    "category": "Deaf & Hard of Hearing",
+    "description": "Educational program and specialist services for Deaf and hard-of-hearing students from preschool through age 22, including Teachers of the Deaf, educational audiology, EIPA-certified interpreters, speech/language services, consultation and related supports.",
+    "url": "https://www.readscollab.org/page/dhh-program",
+    "tags": "READS Collaborative Deaf hard of hearing DHH education school teacher of the deaf educational audiology ASL interpreter EIPA early intervention preschool student family Norton Middleborough",
+    "topics": [
+      "deaf-hard-of-hearing",
+      "disability-support",
+      "education-family",
+      "family-support",
+      "kids"
+    ],
+    "coverage": "Regional — Southeastern Massachusetts",
+    "verified": "2026-09",
+    "source_note": "Current READS and Massachusetts DESE sources confirm the Deaf and Hard of Hearing Program and specialist services."
   },
   {
     "name": "Recreation Facilities",
@@ -4958,6 +5669,22 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
+    "name": "Society of St. Vincent de Paul — Assistance",
+    "category": "Basic Needs",
+    "description": "Catholic charitable network providing assistance to people in need, which may include food, clothing, housing and other emergency support.",
+    "url": "https://www.svdpboston.org/",
+    "tags": "Society of St. Vincent de Paul — Assistance Basic Needs",
+    "topics": [
+      "basic-needs",
+      "food-assistance",
+      "housing-assistance",
+      "financial-assistance"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
     "name": "Sophia “Sophie” Ricci — SRG Properties Group",
     "category": "Realtor",
     "description": "Norwood-based broker associate and team leader with SRG Properties Group / Century 21 North East. First listing in Norwood.ma’s realtor directory; additional local professionals can be added over time.",
@@ -5038,6 +5765,22 @@ window.NORWOOD_RESOURCES= [
       "community"
     ],
     "coverage": "Local",
+    "verified": "2026-09"
+  },
+  {
+    "name": "Summer Eats — Free Summer Meals for Kids & Teens",
+    "category": "Food & Basic Needs",
+    "description": "Free summer meals for children and teens age 18 and under at participating Massachusetts sites. Open meal sites do not require an application or identification; use the meal-site finder to locate nearby options.",
+    "url": "https://www.doe.mass.edu/cnp/nprograms/sfsp/",
+    "tags": "Summer Eats summer meals free food children teens meal sites DESE Project Bread",
+    "topics": [
+      "food-assistance",
+      "basic-needs",
+      "kids",
+      "family-support",
+      "education-family"
+    ],
+    "coverage": "Statewide",
     "verified": "2026-09"
   },
   {
@@ -5131,6 +5874,22 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Nearby — Dedham",
     "verified": "2026-09"
+  },
+  {
+    "name": "The Lark Center",
+    "category": "Special Education & Disability",
+    "description": "Norwood play and learning center providing therapeutic education, rehabilitation and support for children and teens.",
+    "url": "https://thelarkcenter.com/",
+    "tags": "The Lark Center Special Education & Disability",
+    "topics": [
+      "disability-support",
+      "education-family",
+      "family-support",
+      "kids"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "The Learning Center for the Deaf",
@@ -5292,6 +6051,20 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Morrill Memorial Library Community Health Resources"
   },
   {
+    "name": "Trans Lifeline",
+    "category": "LGBTQ+ Support",
+    "description": "Use for confidential peer support from trans people for trans and questioning callers, including emotional support and community-resource information. It is not an emergency-response service; call 911 for immediate danger and 988 for an acute suicide or mental-health crisis.",
+    "url": "https://translifeline.org/",
+    "tags": "Trans Lifeline LGBTQ+ Support",
+    "topics": [
+      "lgbtq-support",
+      "safety-crisis"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
+  },
+  {
     "name": "Transgender Emergency Fund of Massachusetts",
     "category": "LGBTQ+",
     "description": "Mutual aid for transgender Massachusetts residents facing housing, food, medication or transportation emergencies.",
@@ -5395,6 +6168,20 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Federal",
     "verified": "2026-09"
+  },
+  {
+    "name": "Volunteer Lawyers Project",
+    "category": "Legal, Consumer & Advocacy",
+    "description": "Free civil legal assistance for eligible low-income Massachusetts residents through staff and volunteer attorneys.",
+    "url": "https://vlpnet.org/",
+    "tags": "Volunteer Lawyers Project Legal, Consumer & Advocacy",
+    "topics": [
+      "legal-advocacy",
+      "community-groups"
+    ],
+    "coverage": "Massachusetts / Greater Boston",
+    "verified": "2026-09",
+    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
   },
   {
     "name": "Walden Community Services",
@@ -5544,561 +6331,5 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "town"
     ]
-  },
-  {
-    "name": "READS Collaborative — Deaf & Hard of Hearing Program",
-    "category": "Deaf & Hard of Hearing",
-    "description": "Educational program and specialist services for Deaf and hard-of-hearing students from preschool through age 22, including Teachers of the Deaf, educational audiology, EIPA-certified interpreters, speech/language services, consultation and related supports.",
-    "url": "https://www.readscollab.org/page/dhh-program",
-    "tags": "READS Collaborative Deaf hard of hearing DHH education school teacher of the deaf educational audiology ASL interpreter EIPA early intervention preschool student family Norton Middleborough",
-    "topics": [
-      "deaf-hard-of-hearing",
-      "disability-support",
-      "education-family",
-      "family-support",
-      "kids"
-    ],
-    "coverage": "Regional — Southeastern Massachusetts",
-    "verified": "2026-09",
-    "source_note": "Current READS and Massachusetts DESE sources confirm the Deaf and Hard of Hearing Program and specialist services."
-  },
-  {
-    "name": "CASE Collaborative",
-    "category": "Special Education & Disability",
-    "description": "Regional public educational collaborative providing specialized special-education programs, related services, assistive technology, assessments and extended-school-year programming for students with disabilities.",
-    "url": "https://www.casecollaborative.org/",
-    "tags": "CASE Collaborative special education disability IEP assistive technology related services assessment extended school year Greater Boston Concord",
-    "topics": [
-      "disability-support",
-      "education-family",
-      "family-support",
-      "kids"
-    ],
-    "coverage": "Regional — Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Current CASE program information verified. Not tagged as Deaf & Hard of Hearing because current CASE program listings do not identify a dedicated DHH program."
-  },
-  {
-    "name": "DEAF, Inc. — Boston Metro",
-    "category": "Deaf & Hard of Hearing",
-    "description": "Deaf-run Massachusetts nonprofit serving Deaf, DeafBlind, Hard of Hearing and Late-Deafened adults. Its ARES program provides free advocacy, information and referrals, skills training and help navigating benefits, housing, health care, communication access and other community services; DBCAN supports DeafBlind adults statewide.",
-    "url": "https://www.deafincma.org/",
-    "tags": "DEAF Inc Deaf DeafBlind hard of hearing late deafened ASL advocacy ARES independent living DBCAN community services Watertown Boston Metro",
-    "topics": [
-      "deaf-hard-of-hearing",
-      "disability-support",
-      "community",
-      "community-groups",
-      "housing-assistance",
-      "medical-care",
-      "employment",
-      "financial-assistance",
-      "legal-advocacy"
-    ],
-    "coverage": "Regional — Eastern Massachusetts",
-    "address": "50 Hunt Street, Suite 200, Watertown, MA 02472",
-    "phone": "617-505-4823",
-    "verified": "2026-09",
-    "source_note": "Official DEAF, Inc. site confirms it is run by and for Deaf people and that ARES serves Deaf, Hard of Hearing and Late-Deafened adults across Eastern Massachusetts."
-  },
-  {
-    "name": "Massachusetts DDS — Deaf Services",
-    "category": "Deaf & Hard of Hearing",
-    "description": "Statewide Department of Developmental Services support for Deaf and hard-of-hearing people with intellectual and developmental disabilities. Provides consultation on communication access and culturally responsive services, support during intake and eligibility, ISP and transition planning, on-site consultation, Deaf cultural training, and communication/environmental assessments.",
-    "url": "https://www.mass.gov/info-details/dds-deaf-services",
-    "tags": "DDS Deaf Services Deaf hard of hearing intellectual developmental disability IDD communication access ISP eligibility transition age 22 assessment Deaf culture",
-    "topics": [
-      "deaf-hard-of-hearing",
-      "disability-support",
-      "family-support",
-      "kids",
-      "older"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09",
-    "source_note": "Official Massachusetts DDS Deaf Services page."
-  },
-  {
-    "name": "Massachusetts DCF — Disability Coordinator & Regional Disability Liaisons",
-    "category": "Disability & Family",
-    "description": "DCF disability-access resource for parents and caregivers with disabilities. The Statewide Disability Coordinator and Regional Disability Liaisons help with reasonable accommodations, communication aids and disability-related concerns or complaints involving DCF.",
-    "url": "https://www.mass.gov/resources-for-parents-with-disabilities",
-    "tags": "DCF disability coordinator regional disability liaison parent caregiver ADA reasonable accommodation communication access disability rights",
-    "topics": [
-      "disability-support",
-      "family-support",
-      "kids",
-      "legal-advocacy",
-      "older",
-      "education-family"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Disabled Persons Protection Commission (DPPC)",
-    "category": "Disability Safety & Rights",
-    "description": "Use to report suspected abuse, neglect or mistreatment of an adult with a disability in Massachusetts. DPPC is a protective-services and reporting agency, not a general disability-information or mental-health crisis line. Call 911 if the person is in immediate danger.",
-    "url": "https://www.mass.gov/orgs/disabled-persons-protection-commission",
-    "tags": "DPPC disabled persons protection commission abuse neglect disability safety protective services hotline rights",
-    "topics": [
-      "disability-support",
-      "safety-crisis",
-      "legal-advocacy"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Massachusetts Independent Living Centers",
-    "category": "Disability & Independent Living",
-    "description": "Statewide network of disability-led Centers for Independent Living offering information and referral, peer support, independent-living skills, transition assistance and individual/systemic advocacy. Use the state locator to find the center serving your community.",
-    "url": "https://www.mass.gov/independent-living-centers",
-    "tags": "independent living center ILC CIL disability peer support advocacy skills transition housing transportation PCA",
-    "topics": [
-      "disability-support",
-      "community-groups",
-      "housing-assistance",
-      "transport",
-      "employment",
-      "legal-advocacy"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "MassAbility — Assistive Technology Services",
-    "category": "Disability & Assistive Technology",
-    "description": "State assistive-technology services including equipment and devices for independent living, device loans, demonstrations and pickup centers, communication devices, mobility equipment and other adaptive technology.",
-    "url": "https://www.mass.gov/info-details/massability-assistive-technology-services",
-    "tags": "MassAbility MRC assistive technology AT device loan wheelchair communication device adaptive equipment REquipment",
-    "topics": [
-      "disability-support",
-      "medical-care",
-      "employment"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "MassAccess Accessible Housing Registry",
-    "category": "Disability & Housing",
-    "description": "Accessible-housing resource for people with disabilities, families and advocates, with information about accessible state/federally assisted and private housing and connections to application help through Independent Living Centers.",
-    "url": "https://www.mass.gov/massaccess-housing-program",
-    "tags": "MassAccess accessible housing disability apartment rental homeownership registry wheelchair accessibility housing",
-    "topics": [
-      "disability-support",
-      "housing-assistance"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Norwood REACH",
-    "category": "Employment",
-    "description": "Free volunteer job-search help for people in Norwood, founded by Kristen McQuaid, a Human Resources Director with more than a dozen years of HR experience. Get feedback and tips to strengthen your résumé, or practice with a mock interview before the real thing. Email Norwood REACH to get in touch.",
-    "url": "mailto:NorwoodREACH@gmail.com",
-    "tags": "Norwood REACH Kristen McQuaid free resume résumé review tips mock interview interview preparation job search employment career transition volunteer HR human resources",
-    "topics": [
-      "employment",
-      "community-groups"
-    ],
-    "coverage": "Norwood",
-    "email": "NorwoodREACH@gmail.com",
-    "verified": "2026-09",
-    "source_note": "Description and contact information provided by founder Kristen McQuaid."
-  },
-  {
-    "name": "Massachusetts Unemployment Insurance — Workers",
-    "category": "Employment",
-    "description": "Official Massachusetts unemployment resource for workers. Check eligibility, apply for unemployment insurance, file weekly claims, check claim status, learn about appeals and get help from the Department of Unemployment Assistance.",
-    "url": "https://www.mass.gov/unemployment-insurance-for-workers",
-    "tags": "unemployment unemployment insurance UI benefits DUA laid off lost job weekly claim appeal Massachusetts",
-    "topics": [
-      "employment",
-      "financial-assistance"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "MassHire Norwood Career Center",
-    "category": "Employment",
-    "description": "Norwood's state workforce Career Center offering free job-search assistance, career coaching, training programs, hiring events and access to computers, printers and scanners.",
-    "url": "https://www.mass.gov/locations/masshire-norwood-career-center",
-    "tags": "MassHire Norwood Career Center jobs employment career coaching job search resume interview training hiring events JobQuest",
-    "topics": [
-      "employment"
-    ],
-    "coverage": "Norwood & Metro South/West",
-    "address": "128 Carnegie Row, Suite 109, Norwood, MA 02062",
-    "phone": "781-269-5494",
-    "verified": "2026-09"
-  },
-  {
-    "name": "MassHire JobQuest",
-    "category": "Employment",
-    "description": "Free Massachusetts job-search system. Create a jobseeker profile, search job openings, connect your skills with employers, and find workshops, training and hiring events.",
-    "url": "https://www.mass.gov/find-your-next-job-with-masshire-jobquest",
-    "tags": "MassHire JobQuest jobs job search openings resume training workshop hiring event employment Massachusetts",
-    "topics": [
-      "employment"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Department of Early Education and Care",
-    "category": "Kids, Families & Education",
-    "description": "Massachusetts agency overseeing early education and care, including child-care financial assistance and help finding licensed programs.",
-    "url": "https://www.mass.gov/orgs/department-of-early-education-and-care",
-    "tags": "Department of Early Education and Care Kids, Families & Education",
-    "topics": [
-      "education-family",
-      "family-support",
-      "kids",
-      "financial-assistance"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Society of St. Vincent de Paul — Assistance",
-    "category": "Basic Needs",
-    "description": "Catholic charitable network providing assistance to people in need, which may include food, clothing, housing and other emergency support.",
-    "url": "https://www.svdpboston.org/",
-    "tags": "Society of St. Vincent de Paul — Assistance Basic Needs",
-    "topics": [
-      "basic-needs",
-      "food-assistance",
-      "housing-assistance",
-      "financial-assistance"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "The Lark Center",
-    "category": "Special Education & Disability",
-    "description": "Norwood play and learning center providing therapeutic education, rehabilitation and support for children and teens.",
-    "url": "https://thelarkcenter.com/",
-    "tags": "The Lark Center Special Education & Disability",
-    "topics": [
-      "disability-support",
-      "education-family",
-      "family-support",
-      "kids"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Abundant Hope Pregnancy Resource Center",
-    "category": "Pregnancy & Family Support",
-    "description": "Pregnancy resource center in Attleboro offering pregnancy-related support and services.",
-    "url": "https://abundanthopeprc.org/",
-    "tags": "Abundant Hope Pregnancy Resource Center Pregnancy & Family Support",
-    "topics": [
-      "pregnancy",
-      "family-support",
-      "education-family"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Keeping Pace with Multiple Miracles — Tiny Table",
-    "category": "Food Assistance",
-    "description": "Infant food pantry at Keeping Pace with Multiple Miracles, available to custodial parents regardless of income, hometown or number of children.",
-    "url": "https://keepingpace.org/",
-    "tags": "Keeping Pace with Multiple Miracles — Tiny Table Food Assistance",
-    "topics": [
-      "food-assistance",
-      "family-support",
-      "kids",
-      "basic-needs",
-      "education-family"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "HESSCO — Meals on Wheels",
-    "category": "Food Assistance",
-    "description": "Home-delivered meals and nutrition support for eligible older adults through the regional Aging Services Access Point serving the Norwood area.",
-    "url": "https://hessco.org/",
-    "tags": "HESSCO — Meals on Wheels Food Assistance",
-    "topics": [
-      "food-assistance",
-      "older",
-      "basic-needs"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "CHAMP — Massachusetts Public Housing Application",
-    "category": "Housing Assistance",
-    "description": "Common Housing Application for Massachusetts Programs, used to apply for state-aided public housing through participating housing authorities.",
-    "url": "https://www.mass.gov/how-to/apply-for-public-housing",
-    "tags": "CHAMP — Massachusetts Public Housing Application Housing Assistance",
-    "topics": [
-      "housing-assistance",
-      "financial-assistance"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Disability Law Center",
-    "category": "Legal, Consumer & Advocacy",
-    "description": "Massachusetts protection and advocacy organization providing legal advocacy for people with disabilities.",
-    "url": "https://www.dlc-ma.org/",
-    "tags": "Disability Law Center Legal, Consumer & Advocacy",
-    "topics": [
-      "disability-support",
-      "legal-advocacy"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "MassLegalHelp",
-    "category": "Legal, Consumer & Advocacy",
-    "description": "Free practical information about Massachusetts legal rights and links to legal-aid programs and other help.",
-    "url": "https://www.masslegalhelp.org/",
-    "tags": "MassLegalHelp Legal, Consumer & Advocacy",
-    "topics": [
-      "legal-advocacy"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "MetroWest Legal Services",
-    "category": "Legal, Consumer & Advocacy",
-    "description": "Civil legal aid and advocacy for eligible people with low incomes, older adults and people with disabilities in the MetroWest region.",
-    "url": "https://mwlegal.org/",
-    "tags": "MetroWest Legal Services Legal, Consumer & Advocacy",
-    "topics": [
-      "legal-advocacy",
-      "disability-support",
-      "older"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Volunteer Lawyers Project",
-    "category": "Legal, Consumer & Advocacy",
-    "description": "Free civil legal assistance for eligible low-income Massachusetts residents through staff and volunteer attorneys.",
-    "url": "https://vlpnet.org/",
-    "tags": "Volunteer Lawyers Project Legal, Consumer & Advocacy",
-    "topics": [
-      "legal-advocacy",
-      "community-groups"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Jewish Vocational Service Boston",
-    "category": "Employment",
-    "description": "Workforce development, career services, vocational training and English-language learning in Greater Boston.",
-    "url": "https://www.jvs-boston.org/",
-    "tags": "Jewish Vocational Service Boston Employment",
-    "topics": [
-      "employment",
-      "immigration-language"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "MIRA Coalition",
-    "category": "Immigration, Language & Newcomer Resources",
-    "description": "Massachusetts Immigrant and Refugee Advocacy Coalition provides advocacy, citizenship assistance and resources for immigrants and refugees.",
-    "url": "https://miracoalition.org/",
-    "tags": "MIRA Coalition Immigration, Language & Newcomer Resources",
-    "topics": [
-      "immigration-language",
-      "legal-advocacy"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Trans Lifeline",
-    "category": "LGBTQ+ Support",
-    "description": "Use for confidential peer support from trans people for trans and questioning callers, including emotional support and community-resource information. It is not an emergency-response service; call 911 for immediate danger and 988 for an acute suicide or mental-health crisis.",
-    "url": "https://translifeline.org/",
-    "tags": "Trans Lifeline LGBTQ+ Support",
-    "topics": [
-      "lgbtq-support",
-      "safety-crisis"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Boston Area Rape Crisis Center",
-    "category": "Safety & Crisis Support",
-    "description": "Use for sexual assault, rape, sexual harassment or other sexual violence. BARCC provides confidential survivor support, counseling, medical and legal advocacy, and help for loved ones. Call 911 if there is immediate danger or urgent medical need.",
-    "url": "https://barcc.org/",
-    "tags": "Boston Area Rape Crisis Center Safety & Crisis Support",
-    "topics": [
-      "safety-crisis",
-      "legal-advocacy",
-      "mental-health",
-      "domestic-violence"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "DOVE — Domestic Violence Ended",
-    "category": "Safety & Crisis Support",
-    "description": "Use for domestic or partner violence when you need confidential support, safety planning, advocacy, counseling, shelter or related services in the Greater Boston/South Shore area. DOVE has a 24-hour hotline. Call 911 if there is immediate danger.",
-    "url": "https://www.dovema.org/",
-    "tags": "DOVE — Domestic Violence Ended Safety & Crisis Support",
-    "topics": [
-      "safety-crisis",
-      "housing-assistance",
-      "legal-advocacy",
-      "mental-health",
-      "domestic-violence"
-    ],
-    "coverage": "Massachusetts / Greater Boston",
-    "verified": "2026-09",
-    "source_note": "Included in Morrill Memorial Library Community Resources; reconciled into Norwood.ma directory."
-  },
-  {
-    "name": "Planned Parenthood League of Massachusetts",
-    "category": "Medical & Health",
-    "description": "Sexual and reproductive health care and education, including birth control, STI testing and treatment, pregnancy testing and options counseling, abortion care, gender-affirming care and other preventive health services. Find locations and appointments through the Massachusetts affiliate.",
-    "url": "https://www.plannedparenthood.org/planned-parenthood-massachusetts",
-    "tags": "Planned Parenthood PPLM reproductive health sexual health birth control contraception STI STD testing pregnancy testing abortion options counseling gender affirming LGBTQ preventive health",
-    "topics": [
-      "medical",
-      "pregnancy",
-      "lgbtq-support",
-      "education-family",
-      "family-support"
-    ],
-    "coverage": "Massachusetts",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Fresh Start Furniture Bank",
-    "category": "Food & Basic Needs",
-    "description": "Furniture bank helping people in need obtain essential household furnishings and home goods at no cost through its community assistance program.",
-    "url": "https://freshstartfurniturebank.org/",
-    "tags": "Fresh Start Furniture Bank free furniture household goods furnishings basic needs home essentials",
-    "topics": [
-      "basic-needs",
-      "housing-assistance",
-      "food-assistance"
-    ],
-    "coverage": "Massachusetts",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Massachusetts SUN Bucks (Summer EBT)",
-    "category": "Food & Basic Needs",
-    "description": "Summer food benefit for eligible families with school-aged children. Most eligible families receive benefits automatically; families who need to apply can use DTA Connect. Benefits help buy groceries while school is out.",
-    "url": "https://www.mass.gov/massachusetts-sun-bucks-program",
-    "tags": "SUN Bucks Summer EBT summer food children school groceries DTA SNAP",
-    "topics": [
-      "food-assistance",
-      "basic-needs",
-      "kids",
-      "family-support",
-      "financial-assistance",
-      "education-family"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Massachusetts DESE — Food & Nutrition Programs",
-    "category": "Food & Basic Needs",
-    "description": "Official state hub for school breakfast and lunch, after-school meals, child-care nutrition programs and summer meals. Massachusetts provides universal free school meals at participating schools.",
-    "url": "https://www.doe.mass.edu/cnp/",
-    "tags": "DESE food nutrition school meals breakfast lunch universal free meals after school summer food child nutrition",
-    "topics": [
-      "food-assistance",
-      "basic-needs",
-      "kids",
-      "education-family",
-      "family-support"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Summer Eats — Free Summer Meals for Kids & Teens",
-    "category": "Food & Basic Needs",
-    "description": "Free summer meals for children and teens age 18 and under at participating Massachusetts sites. Open meal sites do not require an application or identification; use the meal-site finder to locate nearby options.",
-    "url": "https://www.doe.mass.edu/cnp/nprograms/sfsp/",
-    "tags": "Summer Eats summer meals free food children teens meal sites DESE Project Bread",
-    "topics": [
-      "food-assistance",
-      "basic-needs",
-      "kids",
-      "family-support",
-      "education-family"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Massachusetts Hands & Voices",
-    "category": "Deaf & Hard of Hearing Family Support",
-    "description": "Parent-driven statewide support for families with children who are Deaf or hard of hearing, including family connections, advocacy, workshops, resources and information across communication approaches.",
-    "url": "https://www.masshv.org/",
-    "tags": "Deaf hard of hearing DHH children family parent support advocacy ASL communication early intervention education Hands Voices",
-    "topics": [
-      "health",
-      "kids",
-      "community",
-      "disability-support",
-      "education-family",
-      "family-support"
-    ],
-    "coverage": "Statewide",
-    "verified": "2026-09"
-  },
-  {
-    "name": "Clarke Schools for Hearing and Speech — Canton",
-    "category": "Deaf & Hard of Hearing Education — Listening & Spoken Language",
-    "description": "Canton school and family resource for children who are Deaf or hard of hearing. Listening & Spoken Language (oral/aural approach; no sign-language instruction), with early intervention, preschool/early childhood, speech-language therapy, educational audiology and mainstream-school support.",
-    "url": "https://www.clarkeschools.org/canton/",
-    "tags": "Deaf hard of hearing DHH oral aural auditory oral listening spoken language LSL hearing aids cochlear implants early intervention preschool speech audiology mainstream Canton",
-    "topics": [
-      "health",
-      "kids",
-      "community",
-      "disability-support",
-      "education-family",
-      "family-support"
-    ],
-    "coverage": "Nearby — Canton",
-    "address": "1 Whitman Road, Canton, MA 02021",
-    "verified": "2026-09"
   }
 ];
