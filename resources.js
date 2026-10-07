@@ -124,6 +124,37 @@ function directHelpRank(r){
  if(/information|guide|directory|finder|lookup|overview|resource list|resources? supporting|commission resources/.test(h))s-=1;
  return s;
 }
+function basicNeedsKind(r){
+ const h=haystack(r);
+ if(/food pantry|little free food|blessings box|foodsource|find food|snap\b|wic\b|school meal|summer eats|sun bucks|summer ebt|meals on wheels|nutrition|hunger|grocer|meal\b|food assistance|food-assistance/.test(h))return'food';
+ if(/diaper|period product|menstrual|hygiene/.test(h))return'hygiene';
+ if(/furniture|household|restore|home goods/.test(h))return'household';
+ if(/clothing|clothes|coat|closet/.test(h))return'clothing';
+ return'other';
+}
+function foodPriority(r){
+ const n=(r.name||'').toLowerCase();
+ if(/^norwood food pantry$/.test(n))return 10000;
+ if(/little free food pantry|blessings box/.test(n))return 9500;
+ if(/^norwood wic$/.test(n))return 9000;
+ if(/snap & wic information — norwood food pantry/.test(n))return 8800;
+ if(/greater boston food bank|project bread/.test(n))return 8200;
+ if(/massachusetts snap|massachusetts wic|school meals|summer eats|sun bucks/.test(n))return 7600;
+ if(basicNeedsKind(r)==='food')return 7000;
+ return 0;
+}
+function basicNeedsFilters(rows){
+ const defs=[
+  ['food','Food'],
+  ['all','All Basic Needs'],
+  ['hygiene','Diapers & Hygiene'],
+  ['clothing','Clothing'],
+  ['household','Furniture & Household'],
+  ['other','Other Essentials']
+ ];
+ return defs.filter(([id])=>id==='all'||rows.some(r=>basicNeedsKind(r)===id));
+}
+
 function relevance(r,t,q){
  const topics=Array.isArray(r.topics)?r.topics:[],hay=haystack(r);
  let s=0;
@@ -163,16 +194,35 @@ function render(){
  const t=topics.find(x=>x[0]===id);
  if(!t){root.innerHTML='';return;}
  const topicRows=all.filter(r=>belongs(r,t));
- let rows=topicRows.filter(r=>!isBusiness(r)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));
+ let rows=topicRows.filter(r=>!isBusiness(r)).sort((a,b)=>{
+   if(t[0]==='basic-needs'){
+     const fp=foodPriority(b)-foodPriority(a);
+     if(fp)return fp;
+   }
+   return relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name);
+ });
  const related=[...topicRows.filter(isBusiness),...businessesForTopic(t[0]).map(businessResource)];
  const seenBiz=new Set();
  const biz=related.filter(b=>{const k=(b.name||'').toLowerCase().trim();if(!k||seenBiz.has(k))return false;seenBiz.add(k);return true;}).sort((a,b)=>a.name.localeCompare(b.name));
  const relatedBusinesses=biz.length?`<details class="resource-related-businesses"><summary><strong>Related Businesses</strong> <span>Local for-profit options (${biz.length})</span></summary><div class="resource-list">${biz.map(card).join('')}</div><p class="resource-related-note"><a href="businesses.html">Browse the full Norwood Business Directory →</a></p></details>`:'';
  const businessGateway=t[0]==='medical'?'<a class="trash-resource-link resource-business-gateway" href="businesses.html#health"><b>Looking for a medical provider?</b><span>Browse local health, dental & wellness businesses →</span></a>':'';
+ const basicFilters=t[0]==='basic-needs'?basicNeedsFilters(rows):[];
+ const foodControls=t[0]==='basic-needs'?'<div class="resource-basic-needs-tools"><div class="resource-filter-row" role="group" aria-label="Basic needs filters">'+basicFilters.map(([id,label])=>'<button type="button" class="resource-filter'+(id==='food'?' is-active':'')+'" data-basic-filter="'+id+'">'+label+'</button>').join('')+'</div><button type="button" class="resource-mini-pantry-button" data-open-mini-pantries>🥫 Little Food Pantries — locations & map</button></div>':'';
  const foodJumpLinks=t[0]==='basic-needs'?'<div class="resource-topic-jumps" aria-label="Related help"><a href="#housing"><b>Housing Help</b><span>Rent, shelter & tenant support →</span></a><a href="#financial-assistance"><b>Benefits & Cash Assistance</b><span>Financial help and public benefits →</span></a><a href="utilities.html"><b>Utilities & Energy</b><span>Electric, heat, water & internet help →</span></a></div>':'';
  const safetyEmergencyNote=t[0]==='safety'?'<div class="resource-crisis" role="note"><strong>If there is an emergency or immediate danger, call <a href="tel:911">911</a> now.</strong><p>The resources below serve different needs. Read each description to choose the service that best matches the situation.</p></div>':'';
-  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${safetyEmergencyNote}${foodJumpLinks}${businessGateway}<div class="resource-list">${rows.map(card).join('')||'<p>No nonprofit, public or community resources found in this topic.</p>'}</div>${relatedBusinesses}</section>`;
+  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${safetyEmergencyNote}${foodControls}${foodJumpLinks}${businessGateway}<div class="resource-list">${rows.map(r=>'<div class="resource-filter-item" data-basic-kind="'+basicNeedsKind(r)+'">'+card(r)+'</div>').join('')||'<p>No nonprofit, public or community resources found in this topic.</p>'}</div>${relatedBusinesses}</section>`;
  root.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});
+ if(t[0]==='basic-needs'){
+   const applyBasicFilter=id=>{
+     root.querySelectorAll('[data-basic-filter]').forEach(btn=>btn.classList.toggle('is-active',btn.dataset.basicFilter===id));
+     root.querySelectorAll('.resource-filter-item').forEach(el=>{el.hidden=id!=='all'&&el.dataset.basicKind!==id;});
+   };
+   root.querySelectorAll('[data-basic-filter]').forEach(btn=>btn.addEventListener('click',()=>applyBasicFilter(btn.dataset.basicFilter)));
+   applyBasicFilter('food');
+   root.querySelector('[data-open-mini-pantries]')?.addEventListener('click',()=>{
+     document.getElementById('miniPantriesOpen')?.click();
+   });
+ }
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
 function loadResources(d){
