@@ -73,7 +73,9 @@ for label,q in stations:
   errors.append((label,str(e)))
   print(f"{label}: {e}")
 
-if not fresh and not oldstations:
+if not fresh:
+ if oldstations:
+  raise SystemExit("No fresh gas-price data could be retrieved; preserving cached prices but failing the refresh so the outage is visible.")
  raise SystemExit("No gas-price data could be retrieved. Failing refresh instead of publishing an empty file.")
 
 results=dict(fresh)
