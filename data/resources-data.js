@@ -131,7 +131,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.google.com/maps/search/?api=1&query=Ann+Pappas+Physical+Therapy+470+Washington+St+Norwood+MA",
     "tags": "physical therapy PT rehab rehabilitation outpatient Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "470 Washington St Ste 31, Norwood, MA 02062",
@@ -193,7 +193,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/balch",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -254,7 +254,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://locations.baystatept.com/ma/norwood/1343-boston-providence-highway",
     "tags": "physical therapy PT rehab sports injury orthopedic aquatic therapy pool balance gait concussion TMJ post surgical Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "1343 Boston Providence Hwy, Norwood, MA 02062",
@@ -393,7 +393,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://bostonptwellness.com/norwood/",
     "tags": "physical therapy PT rehab sports injury orthopedic sports medicine wellness Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "576 Pleasant St, Norwood, MA 02062",
@@ -443,7 +443,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/callahan",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -546,7 +546,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/cleveland",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -575,7 +575,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Coakley Middle School news, calendar and information.",
     "url": "https://www.norwood.k12.ma.us/cms",
     "tags": "middle school cms students",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -619,9 +619,12 @@ window.NORWOOD_RESOURCES= [
     "description": "Community Preservation Act projects and meetings.",
     "url": "https://www.norwoodma.gov/government/boards_committees/community_preservation_committee.php",
     "tags": "cpa preservation",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town",
+      "community"
+    ]
   },
   {
     "name": "Connors Martial Arts Academy",
@@ -893,7 +896,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "business downtown center shops restaurants",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community",
+      "business"
+    ]
   },
   {
     "name": "Friends of the Morrill Memorial Library",
@@ -901,7 +907,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Volunteer support organization for the library.",
     "url": "https://norwoodlibrary.org/friends/",
     "tags": "library friends volunteer",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "community-groups"
@@ -1257,7 +1263,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.highbarhealth.com/locations/norwood-ma/",
     "tags": "physical therapy PT rehab sports injury orthopedic post surgical dry needling Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "115 Norwood Park S Ste 100, Norwood, MA 02062",
@@ -1303,7 +1309,9 @@ window.NORWOOD_RESOURCES= [
     "tags": "news local reporting community",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "community"
+    ]
   },
   {
     "name": "International Institute of New England",
@@ -1371,7 +1379,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.jumpstartpt.com/locations/norwood/",
     "tags": "physical therapy PT rehab sports training sports injury orthopedic athlete return to sport Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "290 Vanderbilt Ave #1, Norwood, MA 02062",
@@ -1539,7 +1547,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.marathonphysicaltherapy.com/Locations/Norwood",
     "tags": "physical therapy PT rehab sports medicine aquatic therapy pelvic floor vestibular sports injury Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "99 Vanderbilt Ave, Norwood, MA 02062",
@@ -2438,9 +2446,12 @@ window.NORWOOD_RESOURCES= [
     "description": "Adult library programs and resources.",
     "url": "https://norwoodlibrary.org/adults/",
     "tags": "library adults",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Morrill Children’s Services",
@@ -2448,7 +2459,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Children’s library programs and resources.",
     "url": "https://norwoodlibrary.org/children/",
     "tags": "library children",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -2477,7 +2488,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "library books museum passes events study rooms",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Morrill Memorial Library — Children & Family Resources",
@@ -2627,9 +2641,13 @@ window.NORWOOD_RESOURCES= [
     "description": "Teen library programs and resources.",
     "url": "https://norwoodlibrary.org/teens/",
     "tags": "library teens",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "kids",
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Move Well Physical Therapy",
@@ -2638,7 +2656,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://mw-pt.com/",
     "tags": "physical therapy PT rehab rehabilitation pain strength balance one on one Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "898B Washington St, Norwood, MA 02062",
@@ -2761,7 +2779,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "chamber business directory jobs networking",
     "coverage": "Regional/State",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "business",
+      "community"
+    ]
   },
   {
     "name": "Neponset River Regional Chamber — Business Resources",
@@ -3091,7 +3112,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "garden conservation plots",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood Community Media",
@@ -3181,7 +3205,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "culture arts grants local council",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood dental & orthodontic directory",
@@ -3231,8 +3258,8 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Local",
     "verified": "2026-09",
     "topics": [
-      "food-assistance",
-      "basic-needs"
+      "community",
+      "todo"
     ]
   },
   {
@@ -3269,7 +3296,11 @@ window.NORWOOD_RESOURCES= [
     "description": "Low-barrier neighborhood food assistance at 280 Railroad Ave, including an outdoor mini-food pantry available for pickup at any time. No proof of need or residency is required.",
     "url": "https://www.norwoodtownnews.com/2026/09/02/582781/a-little-pantry-with-a-big-purpose",
     "tags": "food assistance mini pantry little food pantry groceries no registration no eligibility Railroad Avenue",
-    "topics": ["community","food-assistance","basic-needs"],
+    "topics": [
+      "community",
+      "food-assistance",
+      "basic-needs"
+    ],
     "coverage": "Local",
     "address": "280 Railroad Ave, Norwood, MA 02062",
     "verified": "2026-10"
@@ -3359,7 +3390,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "history historical museum culture",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood Hospital / regional medical care information",
@@ -3427,7 +3461,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "outage power electric emergency",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town",
+      "housing"
+    ]
   },
   {
     "name": "Norwood Light Broadband",
@@ -3503,7 +3540,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "airport aviation",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "transport",
+      "town"
+    ]
   },
   {
     "name": "Norwood Memory Café",
@@ -3553,7 +3593,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodpt.com/",
     "tags": "physical therapy PT rehab rehabilitation sports injury orthopedic post surgery chronic pain work injury Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "49 Walpole St Suite 2, Norwood, MA 02062",
@@ -3975,7 +4015,10 @@ window.NORWOOD_RESOURCES= [
     "tags": "theatre theater shows music events arts",
     "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "community"
+    ]
   },
   {
     "name": "Norwood Town News",
@@ -4057,7 +4100,7 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Norwood Veterans Services",
     "category": "Help & Assistance",
-    "description": "Veterans benefits and local assistance.",
+    "description": "Town Veterans Services office helping Norwood veterans and eligible family members understand and apply for local, state and federal veterans benefits and assistance.",
     "url": "https://www.norwoodma.gov/departments/veterans_services/index.php",
     "tags": "veterans benefits military assistance",
     "coverage": "Local",
@@ -4218,7 +4261,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Norwood Public Schools athletics information.",
     "url": "https://www.norwood.k12.ma.us/nhs/athletics",
     "tags": "athletics school sports",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4231,7 +4274,7 @@ window.NORWOOD_RESOURCES= [
     "description": "District-wide school calendar and events.",
     "url": "https://www.norwood.k12.ma.us/about/calendar",
     "tags": "school calendar events dates",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4257,7 +4300,7 @@ window.NORWOOD_RESOURCES= [
     "description": "School meal and nutrition information.",
     "url": "https://www.norwood.k12.ma.us/departments/nutrition",
     "tags": "school meals nutrition",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "food-assistance",
@@ -4272,7 +4315,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Special education and student support information.",
     "url": "https://www.norwood.k12.ma.us/departments/student-services",
     "tags": "student services special education",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4285,7 +4328,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/oldham",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4471,7 +4514,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://ptandsr.com/locations/norwood",
     "tags": "physical therapy PT rehab sports injury orthopedic TMJ jaw pain dry needling Norwood",
     "topics": [
-"medical-care"
+      "medical-care"
     ],
     "coverage": "Local",
     "address": "32 Day St, Norwood, MA 02062",
@@ -4483,9 +4526,11 @@ window.NORWOOD_RESOURCES= [
     "description": "Planning, development review and meetings.",
     "url": "https://www.norwoodma.gov/government/boards_committees/planning_board.php",
     "tags": "planning development",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "town"
+    ]
   },
   {
     "name": "Premier Gymnastics Norwood",
@@ -4509,7 +4554,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Elementary school information.",
     "url": "https://www.norwood.k12.ma.us/prescott",
     "tags": "elementary school",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -4600,9 +4645,12 @@ window.NORWOOD_RESOURCES= [
     "description": "Fields, courts and recreation facility status.",
     "url": "https://norwoodma.myrec.com/info/facilities/default.aspx",
     "tags": "fields parks facilities courts sports",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
-    "topics": []
+    "topics": [
+      "todo",
+      "town"
+    ]
   },
   {
     "name": "Recreation Programs",
@@ -4610,7 +4658,7 @@ window.NORWOOD_RESOURCES= [
     "description": "Current youth, adult, fitness and seasonal programs.",
     "url": "https://norwoodma.myrec.com/info/activities/default.aspx",
     "tags": "programs classes youth adult fitness register",
-    "coverage": "Regional/State",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -5503,12 +5551,12 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09"
   },
   {
-    "name": "Willett Early Childhood Center",
+    "name": "Willett Elementary School",
     "category": "Schools",
-    "description": "Early childhood education information.",
+    "description": "Official Willett Elementary School information, including school news, family information, calendar links and school resources.",
     "url": "https://www.norwood.k12.ma.us/willett",
-    "tags": "preschool early childhood",
-    "coverage": "Regional/State",
+    "tags": "Willett elementary school Norwood public schools students families",
+    "coverage": "Local",
     "verified": "2026-09",
     "topics": [
       "education-family",
@@ -6133,5 +6181,5 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Nearby — Canton",
     "address": "1 Whitman Road, Canton, MA 02021",
     "verified": "2026-09"
-  },
+  }
 ];
