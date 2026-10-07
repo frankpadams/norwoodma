@@ -1777,8 +1777,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "dentist dental oral health find dentist Massachusetts",
     "topics": [
       "dental",
-      "medical",
-      "legal-advocacy"
+      "medical"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -1974,7 +1973,6 @@ window.NORWOOD_RESOURCES= [
       "jobs",
       "housing-assistance",
       "financial-assistance",
-      "safety-crisis",
       "education-family",
       "family-support"
     ],
@@ -2072,7 +2070,6 @@ window.NORWOOD_RESOURCES= [
       "community",
       "jobs",
       "kids",
-      "older",
       "housing",
       "employment",
       "financial-assistance",
@@ -2182,8 +2179,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "business certification procurement minority women veteran",
     "topics": [
       "business",
-      "jobs",
-      "veterans"
+      "jobs"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2339,11 +2335,9 @@ window.NORWOOD_RESOURCES= [
       "community",
       "kids",
       "older",
-      "veterans",
       "mental-health",
       "disability-support",
       "education-family",
-      "immigration-language",
       "deaf-hard-of-hearing",
       "employment",
       "legal-advocacy",
@@ -2739,8 +2733,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "business chamber employer networking",
     "topics": [
       "business",
-      "jobs",
-      "legal-advocacy"
+      "jobs"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -4369,7 +4362,6 @@ window.NORWOOD_RESOURCES= [
       "health",
       "mental-health",
       "family-support",
-      "older",
       "education-family"
     ],
     "coverage": "Statewide",
@@ -4386,8 +4378,7 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "health",
       "education-family",
-      "family-support",
-      "older"
+      "family-support"
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
@@ -4405,7 +4396,6 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "disability-support",
       "education-family",
-      "immigration-language",
       "deaf-hard-of-hearing",
       "legal-advocacy",
       "family-support"
@@ -5172,7 +5162,6 @@ window.NORWOOD_RESOURCES= [
       "kids",
       "disability-support",
       "education-family",
-      "immigration-language",
       "deaf-hard-of-hearing"
     ],
     "coverage": "Regional — MetroWest & beyond",
