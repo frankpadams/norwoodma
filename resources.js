@@ -99,8 +99,29 @@ function isBusiness(r){const h=haystack(r);return (r.topics||[]).includes('servi
 function reviewLinks(r){if(!isBusiness(r))return'';const links=[];if(r.googleReviews)links.push(`<a href="${esc(r.googleReviews)}" target="_blank" rel="noopener" aria-label="Google reviews" title="Google reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=google.com&sz=32"></a>`);if(r.yelp)links.push(`<a href="${esc(r.yelp)}" target="_blank" rel="noopener" aria-label="Yelp reviews" title="Yelp reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=yelp.com&sz=32"></a>`);if(r.tripadvisor)links.push(`<a href="${esc(r.tripadvisor)}" target="_blank" rel="noopener" aria-label="Tripadvisor reviews" title="Tripadvisor reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=tripadvisor.com&sz=32"></a>`);return links.length?`<span class="resource-review-links" aria-label="Verified review-site listings">${links.join('')}</span>`:'';}
 function townMark(r){const school=isNorwoodPublicSchool(r),town=isTown(r);if(!school&&!town)return'';const label=school?'Official Norwood Public Schools resource':'Official Town of Norwood resource';return '<span class="resource-town-mark" title="'+label+'"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt=""><span class="sr-only">'+label+'</span></span>';}
 function card(r){const title=r.url?`<a class="resource-name" href="${esc(r.url)}" target="_blank" rel="noopener"><b>${esc(r.name)}</b> ${townMark(r)} <span aria-hidden="true">↗</span></a>`:`<span class="resource-name resource-name-no-link"><b>${esc(r.name)}</b> ${townMark(r)}</span>`;return `<article class="resource-item"><div class="resource-meta"><span class="badge">${esc(r.category||'Resource')}</span><span class="coverage">${esc(r.coverage||'')}</span></div><div class="resource-title-row">${title}<span class="resource-card-actions">${reviewLinks(r)}${socialLinks(r)}</span></div><p>${esc(r.description||'')}</p></article>`;}
-function isLocalResource(r){const coverage=(r.coverage||'').toLowerCase(),hay=haystack(r);return coverage==='local'||/\bnorwood\b/.test(coverage)||isTown(r)||isNorwoodPublicSchool(r)||/\bnorwood\b/.test((r.name||'').toLowerCase())||/\bnorwood\b/.test((r.description||'').toLowerCase());}
-function relevance(r,t,q){let s=0,hay=haystack(r);if(t&&(r.topics||[])[0]===t[0])s+=60;if(isLocalResource(r))s+=25;if(t?.[0]==='veterans'&&/veteran|military|\bva\b/i.test(hay))s+=50;if(t?.[0]==='veterans'&&/^Norwood Veterans Services$/i.test(r.name||''))s+=1000;if(t?.[0]==='kids'&&/special education|sepac|\biep\b/i.test(hay)&&!q)s-=25;return s;}
+function isLocalResource(r){const coverage=(r.coverage||'').toLowerCase();return coverage==='local'||/^norwood(?:\b|\/)/i.test(coverage)||isTown(r)||isNorwoodPublicSchool(r)||/^norwood\b/i.test(r.name||'');}
+function geographyRank(r){
+ const coverage=(r.coverage||'').toLowerCase(),name=(r.name||'').toLowerCase();
+ if(isTown(r)||isNorwoodPublicSchool(r)||coverage==='local'||/^norwood(?:\b|\/)/i.test(coverage)||/^norwood\b/.test(name))return 4;
+ if(/nearby|regional|greater boston|metrowest|local\/regional|massachusetts \/ greater boston|south shore|boston area/.test(coverage))return 3;
+ if(/statewide|massachusetts|\bstate\b/.test(coverage))return 2;
+ if(/national|federal|united states|nationwide/.test(coverage))return 1;
+ return 2;
+}
+function directHelpRank(r){
+ const h=haystack(r);
+ let s=0;
+ if(/hotline|helpline|call|text|apply|application|appointment|counsel|treatment|shelter|food pantry|meal|transportation|ride|legal aid|advocacy|benefit|financial assistance|case management|support group|peer support|health care|healthcare|clinic|services?\b/.test(h))s+=2;
+ if(/information|guide|directory|finder|lookup|overview|resource list|resources? supporting|commission resources/.test(h))s-=1;
+ return s;
+}
+function relevance(r,t,q){
+ let s=geographyRank(r)*100+directHelpRank(r)*10,hay=haystack(r);
+ if(t&&(r.topics||[])[0]===t[0])s+=20;
+ if(t?.[0]==='veterans'&&/^Norwood Veterans Services$/i.test(r.name||''))s+=1000;
+ if(t?.[0]==='kids'&&/special education|sepac|\biep\b/i.test(hay)&&!q)s-=25;
+ return s;
+}
 function globalRelevance(r,q){
  const hay=haystack(r); let score=0;
  const raw=q.toLowerCase().trim();
@@ -126,13 +147,16 @@ function render(){
  const id=location.hash.slice(1);
  const t=topics.find(x=>x[0]===id);
  if(!t){root.innerHTML='';return;}
- let rows=all.filter(r=>belongs(r,t)).filter(r=>t[0]!=='medical'||!isBusiness(r)).sort((a,b)=>{const ar=relevance(a,t,''),br=relevance(b,t,'');if(Math.abs(br-ar)>25)return br-ar;const localDiff=Number(isLocalResource(b))-Number(isLocalResource(a));return localDiff||br-ar||a.name.localeCompare(b.name);});
- const biz=businessesForTopic(t[0]).map(businessResource);
- const seen=new Set(rows.map(r=>r.name.toLowerCase()));
- biz.forEach(b=>{if(!seen.has(b.name.toLowerCase()))rows.push(b);});
+ const topicRows=all.filter(r=>belongs(r,t));
+ let rows=topicRows.filter(r=>!isBusiness(r)).sort((a,b)=>relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name));
+ const related=[...topicRows.filter(isBusiness),...businessesForTopic(t[0]).map(businessResource)];
+ const seenBiz=new Set();
+ const biz=related.filter(b=>{const k=(b.name||'').toLowerCase().trim();if(!k||seenBiz.has(k))return false;seenBiz.add(k);return true;}).sort((a,b)=>a.name.localeCompare(b.name));
+ const relatedBusinesses=biz.length?`<details class="resource-related-businesses"><summary><strong>Related Businesses</strong> <span>Local for-profit options (${biz.length})</span></summary><div class="resource-list">${biz.map(card).join('')}</div><p class="resource-related-note"><a href="businesses.html">Browse the full Norwood Business Directory →</a></p></details>`:'';
  const businessGateway=t[0]==='medical'?'<a class="trash-resource-link resource-business-gateway" href="businesses.html#health"><b>Looking for a medical provider?</b><span>Browse local health, dental & wellness businesses →</span></a>':'';
+ const foodJumpLinks=t[0]==='basic-needs'?'<div class="resource-topic-jumps" aria-label="Related help"><a href="#housing"><b>Housing Help</b><span>Rent, shelter & tenant support →</span></a><a href="#financial-assistance"><b>Benefits & Cash Assistance</b><span>Financial help and public benefits →</span></a><a href="utilities.html"><b>Utilities & Energy</b><span>Electric, heat, water & internet help →</span></a></div>':'';
  const safetyEmergencyNote=t[0]==='safety'?'<div class="resource-crisis" role="note"><strong>If there is an emergency or immediate danger, call <a href="tel:911">911</a> now.</strong><p>The resources below serve different needs. Read each description to choose the service that best matches the situation.</p></div>':'';
-  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${safetyEmergencyNote}${businessGateway}<div class="resource-list">${rows.map(card).join('')||'<p>No resources found in this topic.</p>'}</div></section>`;
+  root.innerHTML=`<section class="topic-section selected-resource-topic" id="selected-${esc(t[0])}"><button class="resource-back" type="button">← All resource categories</button><p class="eyebrow">RESOURCE TOPIC</p><h2>${esc(t[1])}</h2><p class="sub">${esc(t[2])}</p>${safetyEmergencyNote}${foodJumpLinks}${businessGateway}<div class="resource-list">${rows.map(card).join('')||'<p>No nonprofit, public or community resources found in this topic.</p>'}</div>${relatedBusinesses}</section>`;
  root.querySelector('.resource-back')?.addEventListener('click',()=>{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});});
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
