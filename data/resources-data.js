@@ -860,15 +860,15 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Dignity Matters",
     "category": "Basic Needs",
-    "description": "Provides menstrual products, bras and underwear to people experiencing hardship in Massachusetts.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
+    "description": "Massachusetts nonprofit distributing free menstrual-care products and underwear through partner shelters, schools, food pantries, clinics and other community organizations.",
+    "url": "https://www.dignity-matters.org/",
     "tags": "period products clothing women basic needs",
     "topics": [
       "health",
       "basic-needs"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
+    "verified": "2026-10",
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
@@ -3504,8 +3504,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Norfolk County “Are You OK?” Program",
     "category": "Older Adults",
-    "description": "Free weekday wellness-call program for Norfolk County residents; missed responses can trigger family or emergency follow-up.",
-    "url": "https://norwoodlibrary.org/commres-eldersrvcs/",
+    "description": "Free Norfolk County Sheriff's Office telephone-reassurance program for seniors and people with disabilities. Enrolled residents receive scheduled weekday morning check-in calls; missed or concerning responses can trigger family or emergency follow-up.",
+    "url": "https://mail.norfolksheriff.com/divisions/senior/areyouok",
     "tags": "senior wellness call safety elder alone",
     "topics": [
       "older",
@@ -3514,8 +3514,9 @@ window.NORWOOD_RESOURCES= [
       "family-support"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "1-866-900-7865"
   },
   {
     "name": "Norfolk County RSVP — Rides for Veterans",
@@ -4810,8 +4811,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Norwood WIC",
     "category": "Food & Basic Needs",
-    "description": "Local WIC nutrition education and supplemental food/formula program at 275 Prospect Street.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
+    "description": "Local WIC program at 275 Prospect Street providing nutrition education, breastfeeding support and supplemental foods for eligible pregnant/postpartum people, infants and young children. Current hours are posted on the official Mass.gov location page.",
+    "url": "https://www.mass.gov/locations/norwood-wic-program",
     "tags": "wic nutrition baby infant pregnancy food",
     "topics": [
       "kids",
@@ -4823,8 +4824,10 @@ window.NORWOOD_RESOURCES= [
       "pregnancy"
     ],
     "coverage": "Local",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "781-551-8083",
+    "address": "275 Prospect St, Room 214, Norwood, MA 02062"
   },
   {
     "name": "Norwood Women’s Club",
@@ -5496,8 +5499,8 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "SAFE Community Diaper Bank",
     "category": "Basic Needs",
-    "description": "Diaper assistance program based in Norfolk, with requests coordinated through the SAFE Coalition.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
+    "description": "Regional diaper bank run by SAFE Coalition providing diapers and other baby supplies to families in need. Families can use the direct request form on SAFE's site; the program is based in Franklin.",
+    "url": "https://www.safecoalitionma.org/diaperbank",
     "tags": "diapers baby infant family basic needs",
     "topics": [
       "kids",
@@ -5506,7 +5509,7 @@ window.NORWOOD_RESOURCES= [
       "education-family"
     ],
     "coverage": "Regional",
-    "verified": "2026-09",
+    "verified": "2026-10",
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
@@ -6076,10 +6079,10 @@ window.NORWOOD_RESOURCES= [
     "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
-    "name": "Thom Early Intervention",
+    "name": "Thom Neponset Valley Early Intervention — Norwood",
     "category": "Education & Family",
-    "description": "Norwood-based early intervention support for children from birth to age three and their families.",
-    "url": "https://norwoodlibrary.org/commres-children-families/",
+    "description": "Norwood-based early-intervention program for children birth to age 3 with developmental delays, disabilities or developmental risk factors. Services are family-centered and can be provided at home, childcare or other community settings.",
+    "url": "https://www.thomchild.org/locations/norwood-early-intervention/",
     "tags": "early intervention child development family infant toddler",
     "topics": [
       "kids",
@@ -6087,9 +6090,11 @@ window.NORWOOD_RESOURCES= [
       "education-family",
       "family-support"
     ],
-    "coverage": "Local",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
+    "coverage": "Local/Regional",
+    "verified": "2026-10",
+    "source_note": "Current Morrill Memorial Library community-resource guide",
+    "phone": "781-551-0405",
+    "address": "101 Vanderbilt Ave, Norwood, MA 02062"
   },
   {
     "name": "Town Clerk",
