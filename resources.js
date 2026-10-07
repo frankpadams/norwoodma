@@ -116,8 +116,14 @@ function directHelpRank(r){
  return s;
 }
 function relevance(r,t,q){
- let s=geographyRank(r)*100+directHelpRank(r)*10,hay=haystack(r);
- if(t&&(r.topics||[])[0]===t[0])s+=20;
+ const topics=Array.isArray(r.topics)?r.topics:[],hay=haystack(r);
+ let s=0;
+ // Relevance is primary. Geography only separates resources of roughly similar usefulness.
+ if(t&&topics[0]===t[0])s+=500;
+ else if(t&&topics.includes(t[0]))s+=340;
+ else if(t&&t[3].some(k=>hay.includes(k)))s+=180;
+ s+=directHelpRank(r)*55;
+ s+=geographyRank(r)*25;
  if(t?.[0]==='veterans'&&/^Norwood Veterans Services$/i.test(r.name||''))s+=1000;
  if(t?.[0]==='kids'&&/special education|sepac|\biep\b/i.test(hay)&&!q)s-=25;
  return s;
