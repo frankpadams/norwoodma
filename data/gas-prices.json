@@ -1,57 +1,58 @@
 {
-  "generated_at": "2026-10-05T07:08:56.671357Z",
-  "source": "Google Places API (New)",
+  "generated_at": "2026-10-07T03:42:00Z",
+  "source": "iExit / OPIS public listings",
+  "source_url": "https://www.iexitapp.com/gasprices/Massachusetts/17/Norwood/14977/Unleaded/3",
+  "note": "Regular prices refreshed from iExit public listings. OPIS is iExit's fuel-price data partner. Individual source prices may be older than the page check time.",
   "stations": {
+    "Norwood Gulf": {
+      "regular": 4.299,
+      "checked": "2026-10-07T03:42:00Z"
+    },
+    "Gulf — Broadway": {
+      "regular": 4.299,
+      "checked": "2026-10-07T03:42:00Z",
+      "stale": true
+    },
+    "Mr. Frank's Food Mart": {
+      "regular": 4.319,
+      "checked": "2026-10-07T03:42:00Z"
+    },
+    "Sunoco — Route 1": {
+      "regular": 4.259,
+      "checked": "2026-10-07T03:42:00Z"
+    },
+    "Mobil — Route 1": {
+      "regular": 4.199,
+      "checked": "2026-10-07T03:42:00Z"
+    },
+    "Irving Oil / Rojo": {
+      "regular": 4.259,
+      "checked": "2026-10-07T03:42:00Z"
+    },
     "BJ's Gas Station": {
-      "diesel": 6.05,
-      "premium": 4.86,
-      "regular": 4.1,
-      "updated": "2026-10-03T13:16:06Z"
+      "regular": 4.159,
+      "checked": "2026-10-07T03:42:00Z"
     },
     "CITGO": {
-      "diesel": 6.3,
-      "midgrade": 5.0,
-      "premium": 5.2,
-      "regular": 4.3,
-      "updated": "2026-10-04T10:04:27Z"
+      "regular": 4.299,
+      "checked": "2026-10-07T03:42:00Z"
     },
-    "Costco Gas \u2014 Sharon": {
-      "premium": 4.86,
-      "regular": 4.1,
-      "updated": "2026-10-04T15:19:15Z"
+    "Shell — Walpole Street": {
+      "regular": 4.199,
+      "checked": "2026-10-07T03:42:00Z"
     },
-    "Mobil / On the Run \u2014 Norwood Center": {
-      "midgrade": 5.9,
-      "premium": 6.3,
-      "regular": 5.0,
-      "updated": "2026-10-04T08:32:51Z"
+    "Mobil / On the Run — Norwood Center": {
+      "regular": 4.999,
+      "checked": "2026-10-07T03:42:00Z"
     },
-    "Mobil \u2014 Route 1": {
-      "diesel": 6.3,
-      "midgrade": 5.2,
-      "premium": 5.3,
-      "regular": 4.2,
-      "updated": "2026-10-04T14:40:28Z"
+    "Shell — Pleasant Street": {
+      "regular": 4.429,
+      "checked": "2026-10-07T03:42:00Z",
+      "stale": true
     },
-    "Norwood Gulf": {
-      "diesel": 6.3,
-      "midgrade": 4.8,
-      "premium": 5.0,
-      "regular": 4.3,
-      "updated": "2026-10-04T10:58:20Z"
-    },
-    "Shell \u2014 Pleasant Street": {
-      "diesel": 6.31,
-      "midgrade": 4.8,
-      "premium": 5.3,
-      "regular": 4.33,
-      "updated": "2026-10-04T11:51:58Z"
-    },
-    "Sunoco \u2014 Route 1": {
-      "midgrade": 4.97,
-      "premium": 5.45,
-      "regular": 4.26,
-      "updated": "2026-10-03T16:22:42Z"
+    "Costco Gas — Dedham": {
+      "regular": 4.059,
+      "checked": "2026-10-07T03:42:00Z"
     }
   }
 }
