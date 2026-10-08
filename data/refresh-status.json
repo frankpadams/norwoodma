@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-10-05T01:06:16.381481-04:00",
+  "generated_at": "2026-10-07T23:07:22.192715-04:00",
   "offline": false,
-  "events_published": 2754,
+  "events_published": 2732,
   "news_published": 120,
-  "civic_notices": 43,
+  "civic_notices": 28,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2754,
-      "generated_at": "2026-10-05T01:06:15.561651-04:00"
+      "events": 2732,
+      "generated_at": "2026-10-07T23:07:21.513230-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 118,
-      "generated_at": "2026-10-05T01:06:15.573481-04:00"
+      "events": 113,
+      "generated_at": "2026-10-07T23:07:21.524742-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1062,
-      "generated_at": "2026-10-05T01:06:15.598902-04:00"
+      "events": 1072,
+      "generated_at": "2026-10-07T23:07:21.549764-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 975,
-      "generated_at": "2026-10-05T01:06:15.620888-04:00"
+      "events": 983,
+      "generated_at": "2026-10-07T23:07:21.570497-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-05T01:06:15.632357-04:00"
+      "generated_at": "2026-10-07T23:07:21.581493-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 79,
-      "generated_at": "2026-10-05T01:06:15.645849-04:00"
+      "generated_at": "2026-10-07T23:07:21.594219-04:00"
     }
   ],
-  "recreation_programs": 163,
-  "recreation_occurrences": 1629,
+  "recreation_programs": 161,
+  "recreation_occurrences": 1603,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -80,7 +80,7 @@
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 13,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -108,7 +108,7 @@
       "source_id": "community-event-submissions",
       "ok": true,
       "method": "community_submission_json",
-      "found": 2,
+      "found": 3,
       "note": ""
     },
     {
@@ -149,7 +149,7 @@
       "source_id": "faith-temple-beth-david-westwood",
       "ok": true,
       "method": "html_calendar",
-      "found": 11,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -158,9 +158,9 @@
       "source_id": "faith-temple-sinai-sharon",
       "ok": true,
       "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": null,
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -208,9 +208,9 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 0,
+      "found": 2,
       "note": null,
-      "outcome": "empty",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -233,7 +233,7 @@
       "source_id": "historical-society-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 1,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -249,7 +249,7 @@
       "source_id": "inside-norwood",
       "ok": true,
       "method": "html_list",
-      "found": 1,
+      "found": 2,
       "note": ""
     },
     {
@@ -279,7 +279,7 @@
       "source_id": "library-assabet-calendar",
       "ok": true,
       "method": "assabet_calendar",
-      "found": 82,
+      "found": 102,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -288,7 +288,7 @@
       "source_id": "library-cfce",
       "ok": true,
       "method": "assabet_filtered_calendar",
-      "found": 82,
+      "found": 102,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -330,7 +330,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 26,
+      "found": 23,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -412,7 +412,7 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 62,
+      "found": 52,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -478,15 +478,16 @@
       "source_id": "norwood-space-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 20,
+      "found": 18,
       "note": ""
     },
     {
       "source_id": "norwood-summer-concerts",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodma.gov/: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/",
+      "retained_events": 0
     },
     {
       "source_id": "norwood-summerfest-series",
@@ -510,7 +511,7 @@
       "source_id": "norwood-theatre-season",
       "ok": true,
       "method": "dated_event_pages",
-      "found": 21,
+      "found": 19,
       "note": ""
     },
     {
@@ -578,7 +579,7 @@
       "source_id": "nps-athletics-arbiter-boys-freshman-baseball",
       "ok": true,
       "method": "ical",
-      "found": 2,
+      "found": 8,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -596,7 +597,7 @@
       "source_id": "nps-athletics-arbiter-boys-jv-baseball",
       "ok": true,
       "method": "ical",
-      "found": 5,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -605,7 +606,7 @@
       "source_id": "nps-athletics-arbiter-boys-jv-basketball",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -632,7 +633,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
       "ok": true,
       "method": "ical",
-      "found": 15,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -641,7 +642,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-basketball",
       "ok": true,
       "method": "ical",
-      "found": 20,
+      "found": 21,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -659,7 +660,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 19,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -677,7 +678,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 9,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -713,7 +714,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 9,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -794,7 +795,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-softball",
       "ok": true,
       "method": "ical",
-      "found": 3,
+      "found": 6,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -803,7 +804,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 19,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -902,7 +903,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-softball",
       "ok": true,
       "method": "ical",
-      "found": 15,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -920,7 +921,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 9,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -929,7 +930,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 22,
+      "found": 21,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -938,7 +939,7 @@
       "source_id": "nps-athletics-arbiter-jv-football",
       "ok": true,
       "method": "ical",
-      "found": 4,
+      "found": 5,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -947,7 +948,7 @@
       "source_id": "nps-athletics-arbiter-jv-golf",
       "ok": true,
       "method": "ical",
-      "found": 9,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -992,7 +993,7 @@
       "source_id": "nps-athletics-arbiter-varsity-wrestling",
       "ok": true,
       "method": "ical",
-      "found": 12,
+      "found": 13,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1055,7 +1056,7 @@
       "source_id": "nps-coakley",
       "ok": true,
       "method": "ical",
-      "found": 43,
+      "found": 44,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1116,7 +1117,7 @@
       "source_id": "nps-oldham",
       "ok": true,
       "method": "ical",
-      "found": 42,
+      "found": 41,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1177,13 +1178,12 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "parser_gap",
-      "access_limited": false,
-      "retained_events": 9
+      "found": 5,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "pcrinc-events",
@@ -1278,7 +1278,7 @@
       "source_id": "resource-norwood-youth-soccer",
       "ok": true,
       "method": "nys_multi_schedule",
-      "found": 143,
+      "found": 145,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1328,7 +1328,7 @@
       "source_id": "st-catherine-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 16,
+      "found": 18,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1337,26 +1337,28 @@
       "source_id": "st-timothy-calendar",
       "ok": true,
       "method": "church_events_calendar",
-      "found": 60,
+      "found": 50,
       "note": null,
       "outcome": "events",
       "access_limited": false
     },
     {
       "source_id": "town-community-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodma.gov/residents/holidays_and_community_events/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/residents/h",
+      "retained_events": 0
     },
     {
       "source_id": "town-conservation",
-      "ok": true,
+      "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodma.gov/government/committees_boards/conservation_commission/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.go",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "town-cultural-council",
@@ -1370,35 +1372,38 @@
     },
     {
       "source_id": "town-farmers-market",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodma.gov/government/committees_boards/sustainability_commission/farmers_market.php: 403 Client Error: Forbidden for url: https://www.n",
+      "retained_events": 0
     },
     {
       "source_id": "town-fire-page",
-      "ok": true,
+      "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodma.gov/departments/fire/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/fire/index.php",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "town-police-page",
-      "ok": true,
+      "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodma.gov/departments/police/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/police/index.php",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 163,
-      "note": "1846 calendar occurrences generated"
+      "found": 161,
+      "note": "1844 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1409,30 +1414,33 @@
     },
     {
       "source_id": "town-health-events",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
-      "found": 2,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodma.gov/departments/health/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/health/index.php | h",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 2
     },
     {
       "source_id": "town-senior-newsletter",
-      "ok": true,
+      "ok": false,
       "method": "newsletter_calendar",
-      "found": 4,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 4
     },
     {
       "source_id": "town-veterans",
-      "ok": true,
+      "ok": false,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodma.gov/departments/veterans_services/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/veterans_",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "united-church-events",
@@ -1542,21 +1550,23 @@
     },
     {
       "source_id": "norwood-trails-committee-events",
-      "ok": true,
+      "ok": false,
       "method": "town_department_event_discovery",
-      "found": 2,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodma.gov/: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-sustainability-events",
-      "ok": true,
+      "ok": false,
       "method": "town_department_event_discovery",
-      "found": 2,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodma.gov/: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     }
   ],
   "news_sources": [
@@ -1584,10 +1594,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -1601,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 62,
+      "found": 71,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1618,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 62,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1617,7 +1626,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 39,
+      "found": 38,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1625,7 +1634,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 22,
+      "found": 20,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1646,9 +1655,10 @@
     {
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
-      "ok": true,
-      "found": 16,
-      "method": "jsonld+semantic_html+visible_dates"
+      "ok": false,
+      "found": 0,
+      "method": "page_parsers",
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/"
     },
     {
       "source": "Norwood Community Media",
@@ -1689,21 +1699,22 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 20,
+      "found": 21,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
-        "Inside Norwood": 11,
+        "Inside Norwood": 10,
+        "Hoodline": 1,
+        "Patch": 5,
         "Norwood Public Schools": 2,
-        "Town of Norwood": 10,
+        "Town of Norwood": 7,
         "Norwood Town News": 19,
-        "The Norwood Record": 41,
+        "The Norwood Record": 42,
         "The Norwood Record — Latest": 18,
         "newportdispatch.com": 1,
         "WCVB": 1,
         "Norwood Parents Music Association": 1,
         "Realtor.com": 2,
-        "Patch": 3,
         "hoodline.com": 2,
         "Wicked Local": 1,
         "USA Today": 1,
