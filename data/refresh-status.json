@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-07T23:07:22.192715-04:00",
+  "generated_at": "2026-10-08T02:19:51.516264-04:00",
   "offline": false,
-  "events_published": 2732,
+  "events_published": 2703,
   "news_published": 120,
   "civic_notices": 28,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2732,
-      "generated_at": "2026-10-07T23:07:21.513230-04:00"
+      "events": 2703,
+      "generated_at": "2026-10-08T02:19:50.862998-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 113,
-      "generated_at": "2026-10-07T23:07:21.524742-04:00"
+      "events": 111,
+      "generated_at": "2026-10-08T02:19:50.875989-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1072,
-      "generated_at": "2026-10-07T23:07:21.549764-04:00"
+      "events": 1054,
+      "generated_at": "2026-10-08T02:19:50.903817-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 983,
-      "generated_at": "2026-10-07T23:07:21.570497-04:00"
+      "events": 970,
+      "generated_at": "2026-10-08T02:19:50.928125-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-07T23:07:21.581493-04:00"
+      "generated_at": "2026-10-08T02:19:50.940899-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 79,
-      "generated_at": "2026-10-07T23:07:21.594219-04:00"
+      "events": 78,
+      "generated_at": "2026-10-08T02:19:50.955356-04:00"
     }
   ],
   "recreation_programs": 161,
-  "recreation_occurrences": 1603,
+  "recreation_occurrences": 1591,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -330,7 +330,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 23,
+      "found": 22,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -339,7 +339,7 @@
       "source_id": "mill-forge-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 18,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -478,7 +478,7 @@
       "source_id": "norwood-space-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 18,
+      "found": 17,
       "note": ""
     },
     {
@@ -1319,7 +1319,7 @@
       "source_id": "skating-club-calendar",
       "ok": true,
       "method": "tribe_events",
-      "found": 14,
+      "found": 20,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
