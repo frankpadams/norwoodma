@@ -2,7 +2,7 @@ name: Refresh gas prices
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17 9 * * *'
 permissions:
   contents: write
 concurrency:
