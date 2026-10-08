@@ -930,7 +930,7 @@ window.NORWOOD_BUSINESSES=[
   ["Residence Inn by Marriott — Norwood","Hotels & Lodging","275 Norwood Park South","781-278-9595","https://www.marriott.com/"],
   ["Restorative Massages & Wellness","Massage & Wellness","714 Washington Street","781-349-6608","https://www.restorativemassages.com/"],
   ["ReThink The Ink","Tattoo Removal & Laser Services","59 Cottage Street East","781-349-8152","https://rethinkthe-ink.com/"],
-  ["ReVive Head & Body Care","Massage & Wellness","52 Broadway","508-454-7447",""],
+  ["ReVive Head & Body Care","Beauty & Personal Care - Spas, Head Spa & Scalp Treatments, Massage & Wellness","52 Broadway","508-454-7447",""],
   ["Rick A. Gershberg, Ph.D.","Mental Health Services","661 Washington Street, Suite 204","781-697-4442",""],
   ["Ruth Balboni, PMHCNS","Mental Health Services","1 Walpole Street, Suite 6","781-551-4455",""],
   ["Sally Beauty — Norwood","Beauty Supply & Specialty Retail","111 Lenox Street","781-551-3555","https://www.sallybeauty.com/"],
