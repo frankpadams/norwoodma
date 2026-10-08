@@ -6619,40 +6619,6 @@
     ]
   },
   {
-    "id": "2026-10-15-girls-middle-school-volleyball-holliston-high-0230f12",
-    "title": "Girls Middle School Volleyball @ Holliston High School",
-    "start": {
-      "date": "2026-10-15",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2026-10-15",
-      "time": "16:00"
-    },
-    "venue": "323 Woodland Street, Holliston Massachusetts 01746",
-    "address": "323 Woodland Street, Holliston Massachusetts 01746",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Coakley Girls Middle School Volleyball",
-    "public_access": "public",
-    "series": "Coakley Girls Middle School Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Holliston (Adams) Middle School (Damigella Field) Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-c9d8d3a12d36-2026-10-15",
     "title": "Ballet 1 - Thursdays",
     "start": {
@@ -6899,6 +6865,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-15-girls-middle-school-volleyball-holliston-high-0230f12",
+    "title": "Girls Middle School Volleyball @ Holliston High School",
+    "start": {
+      "date": "2026-10-15",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "17:30"
+    },
+    "venue": "323 Woodland Street, Holliston Massachusetts 01746",
+    "address": "323 Woodland Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Coakley Girls Middle School Volleyball",
+    "public_access": "public",
+    "series": "Coakley Girls Middle School Volleyball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Holliston (Adams) Middle School (Damigella Field) Subsite: Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -9087,13 +9087,13 @@
     "address": null,
     "category": "community",
     "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shabbat-services---bat-mitzvah-hannah-byers.html",
+    "source_url": "https://www.templebethdavid.net/event/tot-shabbat34.html",
     "cost": null,
     "public_access": "public",
     "series": "Temple Beth David — Westwood",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Saturday , Oct October 17 , 2026 Shabbat Services - Bat Mitzvah Hannah Byers Shabbat, Oct 17th 10:30a to 12:00p MORE INFO",
+    "notes": "Saturday , Oct October 17 , 2026 Tot Shabbat Shabbat, Oct 17th 9:15a to 10:15a MORE INFO",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -11638,36 +11638,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-20-tuesday-oct-acfe023",
-    "title": "Tuesday , Oct",
-    "start": {
-      "date": "2026-10-20",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-20",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning9.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Tuesday , Oct October 20 , 2026 Shorashim Hebrew Learning Tuesday, Oct 20th 3:45p to 5:45p MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -14221,6 +14191,43 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-10-23-norwood-colts-vs-foxboro-warriors-5g-blue-3edb65e",
+    "title": "Norwood Colts vs Foxboro Warriors 5G-Blue",
+    "start": {
+      "date": "2026-10-23",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-10-23",
+      "time": null
+    },
+    "venue": "Coakley Middle School Lower 7",
+    "field": "Coakley Middle School Lower 7",
+    "grade": "Girls Grade 5",
+    "gender": "girls",
+    "team": "Norwood Colts",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-5",
+      "nys-team-girls-grade-5-norwood-colts"
     ]
   },
   {
@@ -18910,6 +18917,43 @@
       "norwood-community",
       "norwood-family",
       "town-meetings"
+    ]
+  },
+  {
+    "id": "2026-10-28-norwood-air-strikers-vs-wayland-strikers-b9cbfc1",
+    "title": "Norwood Air Strikers vs Wayland Strikers",
+    "start": {
+      "date": "2026-10-28",
+      "time": "19:15"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "venue": "Coakley Middle School Lower 7",
+    "field": "Coakley Middle School Lower 7",
+    "grade": "Boys Grade 5",
+    "gender": "boys",
+    "team": "Norwood Air Strikers",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-5",
+      "nys-team-boys-grade-5-norwood-air-strikers"
     ]
   },
   {
@@ -38659,7 +38703,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -39999,7 +40043,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -42477,7 +42521,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -44105,7 +44149,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -46286,7 +46330,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -47646,7 +47690,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -49087,7 +49131,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -50122,7 +50166,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -51694,7 +51738,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -53291,7 +53335,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -55151,7 +55195,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -56673,7 +56717,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -58491,7 +58535,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -59839,7 +59883,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -61897,7 +61941,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
@@ -63342,7 +63386,7 @@
     "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30953",
     "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
     "organizer": "Norwood Recreation Department",
-    "cost": "$110.00 Res, $120.00 Non-Res",
+    "cost": "$100.00 Res, $110.00 Non-Res",
     "public_access": "registration_required",
     "publish_candidate": true,
     "curated_default": false,
