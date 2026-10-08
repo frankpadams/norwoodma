@@ -4,6 +4,10 @@ This is a shared working log for unfinished development, data-quality issues, an
 
 _Last updated: 2026-10-01_
 
+## Highest priority: Secure one-click publishing
+
+- [ ] **Enable secure direct publishing from /admin/.** Authenticate only the authorized Norwood.ma Google account with server-side token validation; store GitHub publishing credentials as backend secrets (never in browser code); provide Publish for events, Hey Norwood, news, alerts, resources, and featured items; validate inputs, commit to correct live data sources, trigger deployment, show success/failure and publication status. Aim for no JSON download or manual GitHub step. Confirm Cloudflare Worker free-tier suitability and protect against unauthorized requests.
+
 ## Priority: Calendar / Events Infrastructure
 
 - [ ] **Finish connecting and verifying every calendar source.** A calendar counts as connected only when real events are successfully reaching the master event dataset; a registered URL or selector alone does not count.
