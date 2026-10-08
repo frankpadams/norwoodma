@@ -1,0 +1,53 @@
+name: Monitor Norwood.ma uptime
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check site with retries
+        id: check
+        shell: bash
+        run: |
+          set +e
+          ok=0
+          for attempt in 1 2 3; do
+            code=$(curl -L -sS -o /tmp/norwood-health.html -w '%{http_code}' --connect-timeout 12 --max-time 25 "https://www.norwood.ma/?healthcheck=${GITHUB_RUN_ID}" || true)
+            if [ "$code" = "200" ] && grep -qi 'Norwood.ma' /tmp/norwood-health.html; then ok=1; break; fi
+            sleep 10
+          done
+          echo "healthy=$ok" >> "$GITHUB_OUTPUT"
+          echo "HTTP status: $code; healthy=$ok" >> "$GITHUB_STEP_SUMMARY"
+      - name: Open or resolve outage issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEALTHY: ${{ steps.check.outputs.healthy }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess
+          def gh(*args):
+              p=subprocess.run(['gh','api',*args],capture_output=True,text=True)
+              if p.returncode: raise RuntimeError(p.stderr)
+              return json.loads(p.stdout) if p.stdout.strip() else {}
+          repo=os.environ['GH_REPO']
+          issues=gh(f'repos/{repo}/issues?state=open&per_page=100')
+          title='[Site monitor] Norwood.ma may be down'
+          existing=next((x for x in issues if x.get('title')==title and 'pull_request' not in x),None)
+          if os.environ['HEALTHY']=='1':
+              if existing:
+                  gh('-X','PATCH',f'repos/{repo}/issues/{existing["number"]}','-f','state=closed')
+                  print('Site recovered; closed alert issue')
+              else: print('Site healthy')
+          elif not existing:
+              body='Three successive homepage checks failed. Verify https://www.norwood.ma/ and GitHub Pages deployment. This monitor runs approximately every 15 minutes; scheduled GitHub Actions can be delayed.\n\nRun: '+os.environ['GITHUB_SERVER_URL']+'/'+repo+'/actions/runs/'+os.environ['GITHUB_RUN_ID']
+              gh('-X','POST',f'repos/{repo}/issues','-f',f'title={title}','-f',f'body={body}')
+              print('Opened outage issue; GitHub issue notifications depend on account settings')
+          else: print('Outage issue already open')
+          PY
