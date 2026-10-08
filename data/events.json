@@ -1096,6 +1096,37 @@
     ]
   },
   {
+    "id": "2026-10-08-draft-school-committee-policies-for-public-in-b213512",
+    "title": "Draft School Committee Policies For Public Input",
+    "start": {
+      "date": "2026-10-08",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-08",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "nps-news",
+    "source_url": "https://www.norwood.k12.ma.us/sc/school-committee-proposed-policy",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Public Schools — News",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Draft School Committee Policies For Public Input October 8, 2026 Please click on the headline for a list of the latest draft school committee policies. If you would like to share input on any of these policies, please contact the Norwood Public Schools superintendent's office by emailing preardon@norwood.k12.ma.us. Read Article",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-08-public-meeting-notice-norwood-conservation-co-ee5cd78",
     "title": "PUBLIC MEETING NOTICE: Norwood Conservation Commission on",
     "start": {
@@ -9524,7 +9555,7 @@
     "status": "confirmed",
     "schedule_group": "marching_band",
     "report_time": null,
-    "source_updated_at": "2026-10-02 12:50:39",
+    "source_updated_at": "2026-10-08 11:22:15",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "published on PMA public Events page",
@@ -34904,6 +34935,42 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-29-holiday-extravaganza-74aee1b",
+    "title": "Holiday Extravaganza",
+    "start": {
+      "date": "2026-11-29",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Marching Band & Color Guard march in parade and madrigals & honor choir will perform",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-08 11:21:46",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
