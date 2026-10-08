@@ -1,0 +1,27 @@
+name: Refresh Clarity analytics
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 10 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: refresh-clarity-analytics
+  cancel-in-progress: true
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Export aggregated Clarity metrics
+        env:
+          CLARITY_API_TOKEN: ${{ secrets.CLARITY_API_TOKEN }}
+        run: python3 scripts/update-clarity-analytics.py
+      - name: Publish safe public summary
+        run: |
+          git add data/clarity-summary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "Norwood.ma automation"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "Refresh public Clarity summary"
+          git push
