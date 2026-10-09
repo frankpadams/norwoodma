@@ -884,7 +884,13 @@
     "url": "https://irishbrewingboston.com/",
     "link_type": "official",
     "tags": "brewery taproom pizza live music beer",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "bar pizza"
+    ],
+    "menu_source": "https://www.irishbrewingboston.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "jake-n-joes",
@@ -1132,7 +1138,22 @@
     "url": "https://mickmorgansnorwood.com/",
     "link_type": "official",
     "tags": "irish pub brunch burgers beer patio american",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "irish chicken curry",
+      "glazed salmon",
+      "honey mustard chicken wrap",
+      "clam chowder",
+      "bbq burger",
+      "chicken tenders",
+      "mozzarella sticks",
+      "potato skins",
+      "pretzel bites",
+      "molten chocolate cake"
+    ],
+    "menu_source": "https://www.grubhub.com/restaurant/mick-morgans-norwood-434-providence-hwy-norwood/2927200",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "third_party_menu"
   },
   {
     "id": "minas-cafe-steakhouse",
@@ -1191,7 +1212,30 @@
     "link_type": "official",
     "tags": "sushi ramen Japanese Chinese bubble tea",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "sushi",
+      "ramen",
+      "spicy salmon roll",
+      "california roll",
+      "chicken teriyaki",
+      "gyoza",
+      "chicken katsu",
+      "sushi deluxe",
+      "snow mountain maki",
+      "crab rangoon",
+      "hibachi fried rice",
+      "poke bowl",
+      "tempura"
+    ],
+    "menu_source": "https://www.mizuyanorwood.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official_and_third_party",
+    "cuisine_tags": [
+      "sushi",
+      "hibachi",
+      "japanese"
+    ]
   },
   {
     "id": "murphs-place",
@@ -1202,7 +1246,8 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Murph%27s+Place%2C+58+Broadway%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "breakfast brunch diner pancakes eggs lunch",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_menu_confirmation"
   },
   {
     "id": "mustang-pizza",
@@ -1213,7 +1258,28 @@
     "url": "https://mustang-pizza.com/",
     "link_type": "official",
     "tags": "pizza sub salad takeout delivery",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "cheese pizza",
+      "hawaiian pizza",
+      "buffalo chicken pizza",
+      "calzone",
+      "stromboli",
+      "chicken parmesan pasta",
+      "eggplant parmesan pasta",
+      "french fries",
+      "curly fries",
+      "waffle fries",
+      "onion rings",
+      "mozzarella sticks",
+      "quesadilla",
+      "steak and cheese sandwich",
+      "italian sub",
+      "turkey club"
+    ],
+    "menu_source": "https://www.mustangpizzanorwood.com/menu.html",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "napper-tandy-s",
@@ -1224,7 +1290,18 @@
     "url": "https://nappertandyspubs.com/location/napper-tandys-norwood",
     "link_type": "official",
     "tags": "irish pub burger fish chips bar",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "arancini",
+      "chicken wings",
+      "chicken tenders",
+      "steak and bleu cheese salad",
+      "apple pecan salad",
+      "cobb salad"
+    ],
+    "menu_source": "https://nappertandyspubs.com/sites/default/files/menu/menu-napper-tandys-norwood.pdf",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "new-england-central-bakery",
@@ -1235,7 +1312,8 @@
     "url": "https://www.google.com/maps/search/?api=1&query=New+England+Central+Bakery%2C+1140+Washington+St",
     "link_type": "maps",
     "tags": "Brazilian bakery bread pastry snack",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_menu_confirmation"
   },
   {
     "id": "new-golden-abacus",
@@ -1246,7 +1324,35 @@
     "url": "https://www.newgoldenabacus02062.com/",
     "link_type": "official",
     "tags": "Chinese Szechuan takeout bar",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "spring roll",
+      "egg roll",
+      "chicken wings",
+      "scallion pancake",
+      "chicken fingers",
+      "chicken teriyaki",
+      "barbecue spareribs",
+      "fried shrimp",
+      "vegetable tempura",
+      "gyoza",
+      "pu pu platter",
+      "french fries",
+      "crab rangoon",
+      "beef teriyaki",
+      "boneless spareribs",
+      "edamame",
+      "shumai",
+      "chicken lettuce wraps",
+      "pad thai",
+      "lo mein",
+      "general gau chicken",
+      "sesame chicken",
+      "chow mein"
+    ],
+    "menu_source": "https://restaurantguru.com/Golden-Abacus-Restaurant-Norwood/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "third_party_menu"
   },
   {
     "id": "norwood-spice",
@@ -1370,7 +1476,32 @@
     "link_type": "official",
     "tags": "american bistro brunch seafood steak",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "salmon fritters",
+      "crabmeat cakes",
+      "calamari",
+      "chicken wings",
+      "shrimp cocktail",
+      "french onion soup",
+      "seafood chowder",
+      "caesar salad",
+      "bistro burger",
+      "grilled pork chop",
+      "chicken parmesan",
+      "fish and chips",
+      "shrimp scampi",
+      "sea scallops",
+      "gnocchi autunno",
+      "salmon",
+      "filet mignon",
+      "steak frites",
+      "short ribs",
+      "meat lovers pizza"
+    ],
+    "menu_source": "https://www.onebistro.com/menu/dinner-restaurant-norwood-ma/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "orange-leaf-frozen-yogurt",
@@ -1411,7 +1542,25 @@
     "url": "https://www.pizzapalacenorwood.com/",
     "link_type": "official",
     "tags": "pizza pasta sub calzone delivery",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "cheese pizza",
+      "pepperoni pizza",
+      "hawaiian pizza",
+      "greek pizza",
+      "meat lovers pizza",
+      "grilled chicken pizza",
+      "buffalo chicken pizza",
+      "barbecue chicken pizza",
+      "calzone",
+      "hot sub",
+      "cold sub",
+      "salad",
+      "pasta"
+    ],
+    "menu_source": "https://pizzapalacenorwood.com/menu.html",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "pizzeria-bruno-s",
@@ -1423,7 +1572,23 @@
     "link_type": "official",
     "tags": "pizza italian sub pasta delivery",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "cheese pizza",
+      "chicken wings",
+      "italian calzone",
+      "meatball and cheese calzone",
+      "steak and cheese calzone",
+      "broccoli spinach and cheese calzone",
+      "buffalo chicken calzone",
+      "grilled chicken garlic broccoli calzone",
+      "salad",
+      "sandwich",
+      "wrap"
+    ],
+    "menu_source": "https://www.pizzeriabrunos.com/online-ordering",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "pokemoto-norwood",
@@ -1701,7 +1866,29 @@
     "url": "https://tobeirut.com/",
     "link_type": "official",
     "tags": "Lebanese Mediterranean halal gyro falafel",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "tabouleh",
+      "fried cauliflower",
+      "fried eggplant",
+      "chicken shawarma",
+      "beef shawarma",
+      "falafel",
+      "lamb gyro",
+      "chicken kabob",
+      "beef kabob",
+      "lamb kabob",
+      "kafta kabob",
+      "hummus",
+      "baba ghanoush",
+      "french fries",
+      "onion rings",
+      "stuffed grape leaves",
+      "baklava"
+    ],
+    "menu_source": "https://restaurantguru.com/To-Beirut-Boston/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "third_party_menu"
   },
   {
     "id": "veggie-crust-norwood",
