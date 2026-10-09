@@ -217,14 +217,14 @@ function eventSourceKey(e){
  return String(e.organizer||e.source_id||e.venue||'other').toLowerCase().replace(/[^a-z0-9]+/g,'-');
 }
 function diversifySameDayEvents(list){
+ // Preserve chronological day order and the established priority tiers.
+ // Within each day/tier, prefer another organizer when one is available.
  const byDate=new Map();
  list.forEach(e=>{const d=e.start?.date||'';if(!byDate.has(d))byDate.set(d,[]);byDate.get(d).push(e)});
  const out=[];
+ let last='';
  [...byDate.keys()].sort().forEach(d=>{
    const day=byDate.get(d);
-   // Fixed same-day hierarchy: Common; non-religious one-time; religious one-time;
-   // non-religious session; religious session. Diversify sources only within a tier.
-   let last='';
    for(let tier=0;tier<=4;tier++){
      const members=day.filter(e=>eventDisplayTier(e)===tier).sort(compareEventDisplay);
      const queues=new Map();
@@ -237,6 +237,23 @@ function diversifySameDayEvents(list){
      }
    }
  });
+ return out;
+}
+function diversifyAdjacentOrganizations(list){
+ // Soft preference only: do not move events across calendar days.
+ const out=[];
+ for(let i=0;i<list.length;){
+   const day=list[i].start?.date||'';
+   let j=i;while(j<list.length&&(list[j].start?.date||'')===day)j++;
+   const pending=list.slice(i,j);
+   while(pending.length){
+     const lastKey=out.length?eventSourceKey(out[out.length-1]):'';
+     let idx=pending.findIndex(e=>eventSourceKey(e)!==lastKey);
+     if(idx<0)idx=0;
+     out.push(pending.splice(idx,1)[0]);
+   }
+   i=j;
+ }
  return out;
 }
 async function loadEvents(){
@@ -395,7 +412,7 @@ function renderHomeEvents(items){
    return t||a.i-b.i;
  }).map(x=>x.e);
  const limit=window.matchMedia('(max-width:850px)').matches?5:7;
- host.innerHTML=ranked.slice(0,limit).map(e=>`<a href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';
+ host.innerHTML=diversifyAdjacentOrganizations(ranked).slice(0,limit).map(e=>`<a href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><b>${esc(shortDate(e.start?.date))} · ${esc(e.title)} ${paidAdmissionIcon(e)}</b><span>${esc(eventSummary(e))}</span></a>`).join('')||'<span class="muted">No upcoming events currently verified.</span>';
 }
 function eventImageUrl(e){
  return [e.thumbnail_url,e.thumbnail,e.image_url,e.image,e.photo_url,e.photo,e.flyer_url].find(x=>typeof x==='string'&&/^https?:\/\//i.test(x))||'';
