@@ -167,7 +167,25 @@ function eventTitleContext(e){
  }
  return [...new Set(notes)].join(' ');
 }
-function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);if(String(e.category||'').toLowerCase().includes('fundraiser')&&e.organizer)bits.push(`Benefits: ${e.organizer}`);const context=eventTitleContext(e);if(context)bits.push(context);return bits.join(' · ')||e.address||'Open source for details.';}
+function eventHasRealTitle(e){
+ const title=String(e.title||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+ if(!title)return false;
+ if(/^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|today|tomorrow|event|events|calendar|schedule)$/.test(title))return false;
+ if(/^(?:(?:mon|tue|wed|thu|fri|sat|sun)(?:day)? )?\\d{1,2}(?:st|nd|rd|th)?$/.test(title))return false;
+ if(/^(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]* (?:\\d{1,2}(?:st|nd|rd|th)?(?: \\d{4})?|\\d{4})$/.test(title))return false;
+ if(/^\\d{1,2}(?:st|nd|rd|th)? (?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*(?: \\d{4})?$/.test(title))return false;
+ return !/^\\d{1,4}(?: \\d{1,4}){1,2}$/.test(title);
+}
+function eventIsLocalBrewery(e){
+ const sid=String(e.source_id||'').toLowerCase();
+ if(sid==='castle-island-calendar'||sid==='irish-brewing-events'){
+   const place=[e.venue,e.address,e.town].filter(Boolean).join(' ');
+   if(/south boston|southie|old colony|02127|boston|seaport/i.test(place)&&!/norwood|02062|31 astor/i.test(place))return false;
+   return /norwood|02062|31 astor/i.test(place);
+ }
+ return true;
+}
+function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.organizer&&String(e.organizer).trim().toLowerCase()!==String(e.venue||'').trim().toLowerCase())bits.push(e.organizer);if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);if(String(e.category||'').toLowerCase().includes('fundraiser')&&e.organizer)bits.push(`Benefits: ${e.organizer}`);const context=eventTitleContext(e);if(context)bits.push(context);return bits.join(' · ')||e.address||'Open source for details.';}
 function eventPriority(e){
  const text=[e.title,e.notes,e.venue,e.address,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
  if(/farmers'? market|farmer'?s market|town-farmers-market|town common|norwood common|580 washington st/.test(text))return 0;
@@ -452,7 +470,7 @@ function openRecreationProgramDetails(id){
  const notice=r.session_notice||((r.session_based&&!r.drop_in)?'This activity is part of a Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.':'');
  box.innerHTML='<p class="eyebrow">Norwood Recreation</p><h2 id="eventDetailsTitle">'+esc(r.name||r.program)+'</h2>'+(r.program&&r.program!==r.name?'<p><strong>Program:</strong> '+esc(r.program)+'</p>':'')+(range?'<p><strong>Session:</strong> '+esc(range)+'</p>':'')+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(r.ages?'<p><strong>Ages:</strong> '+esc(r.ages)+'</p>':'')+(r.venue?'<p><strong>Location:</strong> '+esc(r.venue)+'</p>':'')+(r.fees?'<p><strong>Fee:</strong> '+esc(r.fees)+'</p>':'')+(r.description?'<p>'+esc(r.description)+'</p>':'')+(notice?'<p class="event-session-notice"><strong>Session note:</strong> '+esc(notice)+'</p>':'')+'<div class="event-detail-links">'+(r.guide_url?'<p><a href="'+esc(r.guide_url)+'" target="_blank" rel="noopener">View Recreation Guide ↗</a></p>':'')+(r.registration_url?'<p><a href="'+esc(r.registration_url)+'" target="_blank" rel="noopener">Register / View Program on MyRec ↗</a></p>':'')+'</div>';dlg.showModal();
 }
-async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();allEventsForPage=items;const recId=new URLSearchParams(location.search).get('rec');if(recId)setTimeout(()=>openRecreationProgramDetails(recId),0);renderEventsPage(items);renderHomeEvents(items);
+async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;const items=await loadEvents();items=items.filter(e=>eventHasRealTitle(e)&&eventIsLocalBrewery(e));allEventsForPage=items;const recId=new URLSearchParams(location.search).get('rec');if(recId)setTimeout(()=>openRecreationProgramDetails(recId),0);renderEventsPage(items);renderHomeEvents(items);
  const runEventSearch=()=>renderEventsPage(window.NORWOOD_CALENDAR_FILTER?window.NORWOOD_CALENDAR_FILTER(allEventsForPage):allEventsForPage); $('#eventSearch')?.addEventListener('input',runEventSearch); $('#eventSearchButton')?.addEventListener('click',runEventSearch); $('#eventSearch')?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();runEventSearch();}});
  document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);})); document.addEventListener('click',e=>{const detail=e.target.closest('[data-event-details]');if(detail){e.preventDefault();openEventDetails(detail.dataset.eventDetails);return}const close=e.target.closest('.event-details-close');if(close){$('#eventDetailsDialog')?.close();return}const day=e.target.closest('[data-calendar-date]');if(day){calendarSelected=day.dataset.calendarDate;renderEventsPage(allEventsForPage);return}const step=e.target.closest('[data-month-step]');if(step){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+Number(step.dataset.monthStep),1);calendarSelected=dateKey(calendarCursor);renderEventsPage(allEventsForPage)}});
 }events();
