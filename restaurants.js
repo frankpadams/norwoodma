@@ -142,7 +142,10 @@
     restaurants=restaurants.slice().sort((a,b)=>sortName(a.name).localeCompare(sortName(b.name),undefined,{sensitivity:'base'}));
     const categories=[...new Set(restaurants.map(r=>r.category).filter(Boolean).concat(['Sushi','Hibachi']))].sort((a,b)=>a.localeCompare(b));
     category.innerHTML='<option value="">All cuisines & types</option><option value="Gluten-Free">Gluten-Free</option><option value="Full Bar">Full Bar</option>'+categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+    const incoming=new URLSearchParams(location.search).get('q');
+    if(incoming){ search.value=incoming; }
     render();
+    if(incoming){ document.querySelector('#foodSearchForm')?.scrollIntoView({block:'start'}); }
   }
   // Suggestions are drawn from actual directory names, cuisine labels, and indexed dishes.
   const suggestions=document.createElement('div');
