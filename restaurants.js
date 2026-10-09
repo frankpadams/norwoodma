@@ -53,7 +53,7 @@
     'chicken parm':['chicken parmesan','chicken parmigiana','chicken parm sub','chicken parmigiana sub'],
     'eggplant parm':['eggplant parmesan','eggplant parmigiana'],
     'fries':['french fries','frites'],
-    'subs':['sub','submarine sandwich','hoagie','grinder'],
+    'subs':['sub','submarine sandwich','hoagie','hoagies','grinder','grinders','hero','heroes'],
     'calzone':['calzones'],
     'enchiladas':['enchilada'],
     'quesadilla':['quesadillas'],
@@ -155,20 +155,38 @@
   search.setAttribute('aria-controls',suggestions.id);
   function updateSuggestions(){
     const q=normalize(search.value);
-    if(q.length<2){suggestions.style.display='none';suggestions.innerHTML='';return;}
+    if(q.length<2){suggestions.style.display='none';suggestions.replaceChildren();return;}
     const values=new Map();
-    for(const cuisine of ['Sushi','Hibachi']) values.set(normalize(cuisine),{label:cuisine,type:'Cuisine'});
+    const add=(label,type,priority=0)=>{
+      const key=normalize(label);
+      if(!key)return;
+      const prev=values.get(key);
+      if(!prev||priority>prev.priority)values.set(key,{label,type,priority});
+    };
+    for(const cuisine of ['Sushi','Hibachi'])add(cuisine,'Cuisine',5);
+    // Canonical dish suggestions must be selectable even when the menu uses
+    // a singular form or a more specific dish name (e.g. beef tacos).
+    const popularDishes=['Tacos','Burritos','Quesadillas','Enchiladas','Sushi','Pizza','Subs','Hoagies','Chicken parm','Pad Thai','Gyros','Falafel','Fries','Calzones'];
+    for(const label of popularDishes){
+      if(restaurants.some(r=>dishMatch(r,label)||genericSubMatch(r,label)))add(label,'Food',4);
+    }
     for(const r of restaurants){
-      values.set(normalize(r.name),{label:r.name,type:'Restaurant'});
-      if(Array.isArray(r.dishes))for(const dish of r.dishes)if(!values.has(normalize(dish)))values.set(normalize(dish),{label:dish,type:'Dish'});
-      if(Array.isArray(r.beverages))for(const drink of r.beverages)values.set(normalize(drink),{label:drink,type:'Drink'});
+      add(r.name,'Restaurant',1);
+      if(Array.isArray(r.dishes))for(const dish of r.dishes)add(dish,'Dish',2);
+      if(Array.isArray(r.beverages))for(const drink of r.beverages)add(drink,'Drink',2);
     }
     for(const [canonical,aliases] of Object.entries(dishAliases)){
-      if([...values.values()].some(v=>[canonical,...aliases].map(normalize).includes(normalize(v.label)))){
-        for(const a of [canonical,...aliases])values.set(normalize(a),{label:a,type:Object.hasOwn(beverageAliases,canonical)?'Drink':'Dish'});
+      if(restaurants.some(r=>dishMatch(r,canonical))){
+        for(const alias of [canonical,...aliases])add(alias,'Food',3);
       }
     }
-    const hits=[...values.entries()].filter(([key])=>key.includes(q)||(q.length>=4&&key.split(' ').some(w=>editDistanceAtMostOne(q,w)))).sort((a,b)=>Number(!a[0].startsWith(q))-Number(!b[0].startsWith(q))||a[0].localeCompare(b[0])).slice(0,7);
+    for(const [canonical,aliases] of Object.entries(beverageAliases)){
+      if(restaurants.some(r=>beverageMatch(r,canonical))){
+        for(const alias of [canonical,...aliases])add(alias,'Drink',3);
+      }
+    }
+    const hits=[...values.entries()].filter(([key])=>key.includes(q)||(q.length>=4&&key.split(' ').some(w=>editDistanceAtMostOne(q,w))))
+      .sort((a,b)=>Number(!a[0].startsWith(q))-Number(!b[0].startsWith(q))||b[1].priority-a[1].priority||a[0].localeCompare(b[0])).slice(0,7);
     suggestions.replaceChildren();
     for(const [,v] of hits){
       const b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.textContent=v.label+' · '+v.type;
