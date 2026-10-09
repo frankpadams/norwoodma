@@ -574,7 +574,24 @@
     "url": "https://locations.dunkindonuts.com/en/ma/norwood/141-nahatan-st/301216",
     "link_type": "official",
     "tags": "coffee donuts bagels breakfast cafe",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "coffee",
+      "iced coffee",
+      "cold brew",
+      "latte",
+      "espresso",
+      "donuts",
+      "munchkins",
+      "bagel",
+      "muffin",
+      "breakfast sandwich",
+      "wake up wrap",
+      "hash browns"
+    ],
+    "menu_source": "https://www.dunkindonuts.com/en/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "dunkin-providence-highway",
@@ -585,7 +602,24 @@
     "url": "https://locations.dunkindonuts.com/en/ma/norwood/1202-providence-highway/338716",
     "link_type": "official",
     "tags": "coffee donuts bagels breakfast drive thru cafe",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "coffee",
+      "iced coffee",
+      "cold brew",
+      "latte",
+      "espresso",
+      "donuts",
+      "munchkins",
+      "bagel",
+      "muffin",
+      "breakfast sandwich",
+      "wake up wrap",
+      "hash browns"
+    ],
+    "menu_source": "https://www.dunkindonuts.com/en/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "dunkin-walpole",
@@ -596,7 +630,24 @@
     "url": "https://www.dunkindonuts.com/locations/us/ma/norwood/444-walpole-street/store-363060/",
     "link_type": "official",
     "tags": "coffee donuts bagels breakfast cafe",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "coffee",
+      "iced coffee",
+      "cold brew",
+      "latte",
+      "espresso",
+      "donuts",
+      "munchkins",
+      "bagel",
+      "muffin",
+      "breakfast sandwich",
+      "wake up wrap",
+      "hash browns"
+    ],
+    "menu_source": "https://www.dunkindonuts.com/en/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "express-pizza",
@@ -845,7 +896,17 @@
     "link_type": "official",
     "tags": "sports bar burgers wings american grill patio",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "chicken wings",
+      "tacos",
+      "smashburger",
+      "bar pizza",
+      "chicken parmesan"
+    ],
+    "menu_source": "https://www.jakenjoes.com/locations/norwood/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_menu_or_listing"
   },
   {
     "id": "jersey-mikes-norwood",
@@ -873,7 +934,29 @@
     "url": "https://kwalityicecreamnorwood.com/",
     "link_type": "official",
     "tags": "ice cream kulfi falooda Indian dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "butter pav bhaji",
+      "cheese pav bhaji",
+      "special pav bhaji",
+      "vada pav",
+      "dabeli",
+      "samosa pav",
+      "veg masala kichidi",
+      "corn palak kichidi",
+      "aloo tikki",
+      "aloo tikki chole chaat",
+      "bombay bhel",
+      "dahi sev puri",
+      "ahmedabad masala pizza",
+      "chilli garlic pizza",
+      "desi supreme burger",
+      "mango ice cream",
+      "rajbhog ice cream"
+    ],
+    "menu_source": "https://kwalityicecreamnorwood.com/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_menu_or_listing"
   },
   {
     "id": "la-casita",
@@ -919,7 +1002,34 @@
     "url": "https://www.lewisbarandgrill.com/",
     "link_type": "official",
     "tags": "burger brunch pizza pub bar",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "stuffed quahog",
+      "buffalo chicken dip",
+      "quesadilla",
+      "nachos",
+      "poutine",
+      "chicken wings",
+      "chicken tenders",
+      "clam chowder",
+      "french onion soup",
+      "greek salad",
+      "steak tips",
+      "chicken pesto sandwich",
+      "reuben",
+      "french dip",
+      "birria tacos",
+      "shrimp tacos",
+      "chicken parmigiana",
+      "fish and chips",
+      "mac and cheese",
+      "jambalaya",
+      "lewis burger",
+      "french fries"
+    ],
+    "menu_source": "https://www.lewisbarandgrill.com/menu/dinner-menu/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_menu_or_listing"
   },
   {
     "id": "lunch-box-deli",
@@ -942,7 +1052,14 @@
     "link_type": "official",
     "tags": "juice smoothie acai bowl healthy breakfast lunch",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "smoothie",
+      "juice"
+    ],
+    "menu_source": "https://www.google.com/maps/search/?api=1&query=Maha+Juice+Bar+Norwood+MA",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_menu_or_listing"
   },
   {
     "id": "mak-s-roast-beef-pizza",
@@ -953,7 +1070,31 @@
     "url": "https://maksroastbeefnorwood.com/",
     "link_type": "official",
     "tags": "roast beef sandwich pizza sub",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "cheese pizza",
+      "maks special pizza",
+      "chicken kabob calzone",
+      "roast beef sandwich",
+      "pastrami sandwich",
+      "chicken kabob dinner",
+      "caesar salad",
+      "cheesecake",
+      "garden salad",
+      "chicken wings",
+      "neapolitan pizza",
+      "hawaiian pizza",
+      "buffalo chicken pizza",
+      "french fries",
+      "steak fries",
+      "jalapeno poppers",
+      "mozzarella sticks",
+      "onion rings",
+      "buffalo fingers"
+    ],
+    "menu_source": "https://www.maksroastbeefpizza.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_menu_or_listing"
   },
   {
     "id": "mcdonalds-broadway",
@@ -964,7 +1105,23 @@
     "url": "https://www.mcdonalds.com/us/en-us/location/ma/norwood/32-broadway/1273.html",
     "link_type": "official",
     "tags": "burgers fries breakfast coffee drive thru fast food",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "big mac",
+      "quarter pounder with cheese",
+      "cheeseburger",
+      "hamburger",
+      "chicken mcnuggets",
+      "french fries",
+      "filet o fish",
+      "egg mcmuffin",
+      "sausage mcmuffin",
+      "hotcakes",
+      "mcflurry"
+    ],
+    "menu_source": "https://www.mcdonalds.com/us/en-us/full-menu.html",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "mick-morgans-norwood",
@@ -1224,7 +1381,15 @@
     "url": "https://www.orangeleafyogurt.com/",
     "link_type": "official",
     "tags": "frozen yogurt froyo dessert toppings ice cream",
-    "verified": "2026-09-22"
+    "verified": "2026-09-22",
+    "dishes": [
+      "frozen yogurt",
+      "soft serve",
+      "toppings"
+    ],
+    "menu_source": "https://www.orangeleafyogurt.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "the-panini-press-deli",
