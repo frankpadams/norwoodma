@@ -109,6 +109,50 @@
     category.innerHTML='<option value="">All cuisines & types</option><option value="Gluten-Free">Gluten-Free</option><option value="Full Bar">Full Bar</option>'+categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
     render();
   }
+  // Suggestions are drawn from actual directory names, cuisine labels, and indexed dishes.
+  const suggestions=document.createElement('div');
+  suggestions.id='foodSearchSuggestions';
+  suggestions.setAttribute('role','listbox');
+  suggestions.setAttribute('aria-label','Restaurant and dish suggestions');
+  suggestions.style.cssText='position:absolute;z-index:30;left:0;right:0;top:100%;background:#fff;color:#172b4d;border:1px solid #aeb8c5;border-radius:0 0 10px 10px;box-shadow:0 8px 20px #0002;max-height:260px;overflow-y:auto;display:none';
+  const searchWrap=search.parentElement;
+  if(searchWrap){searchWrap.style.position='relative';searchWrap.appendChild(suggestions);}
+  search.setAttribute('autocomplete','off');
+  search.setAttribute('aria-autocomplete','list');
+  search.setAttribute('aria-controls',suggestions.id);
+  function updateSuggestions(){
+    const q=normalize(search.value);
+    if(q.length<2){suggestions.style.display='none';suggestions.innerHTML='';return;}
+    const values=new Map();
+    for(const r of restaurants){
+      values.set(normalize(r.name),{label:r.name,type:'Restaurant'});
+      if(Array.isArray(r.dishes))for(const dish of r.dishes)values.set(normalize(dish),{label:dish,type:'Dish'});
+    }
+    for(const [canonical,aliases] of Object.entries(dishAliases)){
+      if([...values.values()].some(v=>v.type==='Dish'&&[canonical,...aliases].map(normalize).includes(normalize(v.label)))){
+        for(const a of [canonical,...aliases])values.set(normalize(a),{label:a,type:'Dish'});
+      }
+    }
+    const hits=[...values.entries()].filter(([key])=>key.includes(q)||(q.length>=4&&key.split(' ').some(w=>editDistanceAtMostOne(q,w)))).sort((a,b)=>Number(!a[0].startsWith(q))-Number(!b[0].startsWith(q))||a[0].localeCompare(b[0])).slice(0,7);
+    suggestions.replaceChildren();
+    for(const [,v] of hits){
+      const b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.textContent=v.label+' · '+v.type;
+      b.style.cssText='display:block;width:100%;min-height:44px;padding:11px 14px;text-align:left;background:#fff;color:#172b4d;border:0;border-bottom:1px solid #eee;font:inherit;cursor:pointer';
+      b.addEventListener('pointerdown',e=>e.preventDefault());
+      b.addEventListener('click',()=>{search.value=v.label;suggestions.style.display='none';render({focusResults:true});});
+      suggestions.appendChild(b);
+    }
+    suggestions.style.display=hits.length?'block':'none';
+  }
+  search.addEventListener('input',updateSuggestions);
+  search.addEventListener('keydown',e=>{
+    if(e.key==='Escape')suggestions.style.display='none';
+    if(e.key==='ArrowDown'&&suggestions.style.display!=='none'){
+      e.preventDefault();suggestions.querySelector('button')?.focus();
+    }
+  });
+  suggestions.addEventListener('keydown',e=>{if(e.key==='Escape'){suggestions.style.display='none';search.focus();}});
+  document.addEventListener('click',e=>{if(!searchWrap?.contains(e.target))suggestions.style.display='none';});
   const runLive=()=>render();
   search.addEventListener('input',runLive);
   search.addEventListener('search',runLive);
