@@ -75,6 +75,9 @@
   function matchesQuery(r,q){
     if(!q) return true;
     if(dishMatch(r,q)) return true;
+    // Do not mistake a requested dish for a restaurant's broad cuisine or address.
+    const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
+    if(dishTerms.includes(q)) return false;
     const words=q.split(' ').filter(Boolean);
     return words.every(t=>termMatchesRestaurant(r,t));
   }
@@ -86,8 +89,6 @@
   function render({focusResults=false}={}){
     const q=normalize(search.value||'');
     const cat=category.value||'';
-    const hasFoodTag=(r,term)=>termMatchesRestaurant(r,term);
-    const terms=q?q.split(' ').filter(Boolean):[];
     const visible=restaurants.filter(r=>((!cat)||(cat==='Gluten-Free'?r.gluten_free:cat==='Full Bar'?hasFullBar(r):matchesCuisine(r,cat)))&&matchesQuery(r,q));
     const pieces=[];
     if(q) pieces.push(`matching “${search.value.trim()}”`);
@@ -158,7 +159,7 @@
   search.addEventListener('search',runLive);
   category.addEventListener('change',runLive);
   form?.addEventListener('submit',e=>{e.preventDefault();render({focusResults:true});});
-  clear.addEventListener('click',()=>{search.value='';category.value='';render();search.focus();});
+  clear.addEventListener('click',()=>{search.value='';category.value='';suggestions.style.display='none';render();search.focus();});
 
   function setupDinnerSpinner(){
     const food=$('#spinnerFood'), spin=$('#spinDinner'), wheel=$('#spinnerWheel'), result=$('#spinnerResult'), meta=$('#spinnerMeta'), links=$('#spinnerLinks');
@@ -201,7 +202,7 @@
       if(spinning||!restaurants.length) return;
       const choice=ignore?'':normalize(food.value);
       const wantsFullBar=choice==='full bar';
-      const terms=choice&&!wantsFullBar?choice.split(' ').filter(Boolean):[];
+      
       const norwoodOnly=restaurants.filter(r=>{ const town=normalize(r.municipality||r.city||r.coverage||''); return !town || town==='norwood'; });
       // Dinner Spinner is for places with a food menu; bar-only/drink-only venues stay searchable but are excluded.
       const dinnerEligible=norwoodOnly.filter(r=>r.dinner_spinner!==false && r.food_menu!==false);
