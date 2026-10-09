@@ -595,7 +595,16 @@
     "link_type": "maps",
     "tags": "deli chicken salad sandwich lunch",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification"
+    "menu_review_status": "community_confirmed_items_more_menu_verification_needed",
+    "dishes": [
+      "deli subs",
+      "subs",
+      "chicken salad",
+      "chicken salad sandwich",
+      "meatballs"
+    ],
+    "menu_source_type": "local_community_report",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "daddy-s-dairy",
