@@ -800,7 +800,44 @@
     "url": "https://www.shabulee.com/",
     "link_type": "official",
     "tags": "hot pot shabu sushi Chinese Japanese",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "sushi",
+      "sushi rolls",
+      "california roll",
+      "spicy tuna roll",
+      "spicy salmon roll",
+      "salmon roll",
+      "philly roll",
+      "avocado roll",
+      "cucumber roll",
+      "sweet potato roll",
+      "rainbow roll",
+      "boston roll",
+      "tempura roll",
+      "hot pot",
+      "udon",
+      "ramen",
+      "crab rangoon",
+      "egg rolls",
+      "chicken fingers",
+      "chicken wings",
+      "pork fried rice",
+      "vegetable lo mein",
+      "chicken lo mein",
+      "edamame",
+      "gyoza",
+      "seaweed salad",
+      "beef teriyaki"
+    ],
+    "menu_source": "https://www.shabulee.com/catering.html",
+    "menu_checked": "2026-10-08",
+    "cuisine_tags": [
+      "sushi",
+      "japanese",
+      "chinese",
+      "hot pot"
+    ]
   },
   {
     "id": "siam-lotus",
@@ -812,7 +849,35 @@
     "link_type": "official",
     "tags": "Thai curry noodles pad thai",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "pad thai",
+      "pad see ew",
+      "savory noodle",
+      "chicken satay",
+      "beef satay",
+      "siam rolls",
+      "vegetable rolls",
+      "fresh rolls",
+      "crab rangoon",
+      "chicken wings",
+      "chonburi wings",
+      "fried tofu",
+      "pineapple fried rice",
+      "green curry",
+      "massaman curry",
+      "panang curry",
+      "vegetable curry",
+      "vegetable fried rice",
+      "tofu with eggplant",
+      "gyoza",
+      "shrimp in a blanket"
+    ],
+    "menu_source": "https://order.toasttab.com/online/siamlotus",
+    "menu_checked": "2026-10-08",
+    "cuisine_tags": [
+      "thai"
+    ]
   },
   {
     "id": "sidedoor-cafe",
