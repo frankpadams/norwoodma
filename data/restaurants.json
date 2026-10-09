@@ -595,16 +595,27 @@
     "link_type": "maps",
     "tags": "deli chicken salad sandwich lunch",
     "verified": "2026-09-17",
-    "menu_review_status": "community_confirmed_items_more_menu_verification_needed",
+    "menu_review_status": "third_party_items_reviewed",
     "dishes": [
       "deli subs",
       "subs",
       "chicken salad",
       "chicken salad sandwich",
-      "meatballs"
+      "meatballs",
+      "spicy chicken salad sandwich",
+      "meatball sub",
+      "steak and cheese sub",
+      "italian sub",
+      "potato salad",
+      "clam chowder",
+      "fish chowder",
+      "chicken soup",
+      "pickles",
+      "chocolate chip cannoli"
     ],
-    "menu_source_type": "local_community_report",
-    "menu_checked": "2026-10-08"
+    "menu_source_type": "third_party_customer_reports",
+    "menu_checked": "2026-10-08",
+    "menu_source": "https://www.restaurantji.com/ma/norwood/d-and-g-deli-/"
   },
   {
     "id": "daddy-s-dairy",
@@ -1443,7 +1454,47 @@
     "link_type": "maps",
     "tags": "breakfast brunch diner pancakes eggs lunch",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification"
+    "menu_review_status": "third_party_items_reviewed",
+    "dishes": [
+      "fried egg sandwich",
+      "bacon egg and cheese sandwich",
+      "sausage egg and cheese sandwich",
+      "western sandwich",
+      "steak tips and eggs",
+      "spuds and scrams",
+      "greek salad",
+      "chef salad",
+      "chicken salad sandwich",
+      "tuna salad sandwich",
+      "turkey sandwich",
+      "roast beef sandwich",
+      "blt",
+      "grilled cheese",
+      "cheeseburger",
+      "pancakes",
+      "belgian waffle",
+      "french toast",
+      "irish eggs benedict",
+      "florentine eggs benedict",
+      "western omelette",
+      "veggie omelette",
+      "corned beef hash",
+      "roast beef french dip",
+      "monte cristo",
+      "fish and chips",
+      "chicken tenders",
+      "french fries"
+    ],
+    "menu_source": "https://www.allmenus.com/ma/norwood/395110-murphs-place/menu/",
+    "menu_source_type": "third_party_menu",
+    "menu_checked": "2026-10-08",
+    "beverages": [
+      "coffee",
+      "tea",
+      "iced coffee"
+    ],
+    "beverage_source": "https://www.allmenus.com/ma/norwood/395110-murphs-place/menu/",
+    "beverage_checked": "2026-10-08"
   },
   {
     "id": "mustang-pizza",
@@ -1509,7 +1560,26 @@
     "link_type": "maps",
     "tags": "Brazilian bakery bread pastry snack",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification"
+    "menu_review_status": "third_party_items_reviewed",
+    "dishes": [
+      "pao de queijo",
+      "cheese bread",
+      "cheese rolls",
+      "french rolls",
+      "sweet rolls",
+      "queijada",
+      "chocolate cake",
+      "pastries"
+    ],
+    "menu_source": "https://restaurantguru.com/Padaria-central-Norwood/menu",
+    "menu_source_type": "third_party_menu",
+    "menu_checked": "2026-10-08",
+    "beverages": [
+      "coffee",
+      "juice"
+    ],
+    "beverage_source": "https://restaurantguru.com/Padaria-central-Norwood/menu",
+    "beverage_checked": "2026-10-08"
   },
   {
     "id": "new-golden-abacus",
