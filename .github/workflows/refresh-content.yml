@@ -99,6 +99,21 @@ jobs:
           BAND_PMA_ICAL_URL: ${{ secrets.BAND_PMA_ICAL_URL }}
         run: python scripts/refresh_content.py
 
+      - name: Verify approved community submissions are reaching the importer
+        if: steps.freshness.outputs.run_refresh == 'true'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows = json.loads(Path('data/events.json').read_text())
+          live = [e for e in rows if e.get('discovered_by') == 'community_submission_feed']
+          fallback = [e for e in rows if e.get('discovered_by') == 'approved_submission_fallback']
+          print(f'Approved submission feed: {len(live)} event(s); approved fallback: {len(fallback)} event(s).')
+          if not live:
+              print('::warning title=Community event approvals not importing::No approved events from the moderation feed reached the published calendar. Check the Apps Script GET feed and its status mapping.')
+          PY
+
       - name: Publish refreshed data onto latest main
         if: steps.freshness.outputs.run_refresh == 'true'
         shell: bash
