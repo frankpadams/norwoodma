@@ -101,6 +101,8 @@
   function matchesQuery(r,q){
     if(!q) return true;
     if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;
+    // Cuisine searches should return every relevant restaurant, not only a literal dish entry.
+    if(['sushi','hibachi'].includes(q)) return matchesCuisine(r,q);
     const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
     if(beverageTerms.includes(q)) return false;
     // Do not mistake a requested dish for a restaurant's broad cuisine or address.
@@ -155,9 +157,10 @@
     const q=normalize(search.value);
     if(q.length<2){suggestions.style.display='none';suggestions.innerHTML='';return;}
     const values=new Map();
+    for(const cuisine of ['Sushi','Hibachi']) values.set(normalize(cuisine),{label:cuisine,type:'Cuisine'});
     for(const r of restaurants){
       values.set(normalize(r.name),{label:r.name,type:'Restaurant'});
-      if(Array.isArray(r.dishes))for(const dish of r.dishes)values.set(normalize(dish),{label:dish,type:'Dish'});
+      if(Array.isArray(r.dishes))for(const dish of r.dishes)if(!values.has(normalize(dish)))values.set(normalize(dish),{label:dish,type:'Dish'});
       if(Array.isArray(r.beverages))for(const drink of r.beverages)values.set(normalize(drink),{label:drink,type:'Drink'});
     }
     for(const [canonical,aliases] of Object.entries(dishAliases)){
