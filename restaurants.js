@@ -73,7 +73,7 @@
     const words=q.split(' ').filter(Boolean);
     const styles=['sub','subs','hoagie','hoagies','grinder','grinders','hero','heroes','submarine','sandwich'];
     const fillings=['turkey','italian','ham','roast beef','chicken salad','tuna','salami','pastrami'];
-    return words.some(w=>styles.includes(w))&&fillings.some(f=>q.includes(f));
+    return words.some(w=>styles.includes(w))&&fillings.some(f=>(' '+q+' ').includes(' '+f+' '));
   }
   function matchesCuisine(r,choice){
     const q=normalize(choice);
@@ -87,7 +87,9 @@
     if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;\n    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));\n    if(beverageTerms.includes(q)) return false;
     // Do not mistake a requested dish for a restaurant's broad cuisine or address.
     const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
-    if(dishTerms.includes(q)) return false;
+    const indexedDishes=new Set(restaurants.flatMap(item=>Array.isArray(item.dishes)?item.dishes.map(normalize):[]));
+    const indexedDrinks=new Set(restaurants.flatMap(item=>Array.isArray(item.beverages)?item.beverages.map(normalize):[]));
+    if(dishTerms.includes(q)||indexedDishes.has(q)||indexedDrinks.has(q)) return false;
     const words=q.split(' ').filter(Boolean);
     return words.every(t=>termMatchesRestaurant(r,t));
   }
