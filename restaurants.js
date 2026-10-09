@@ -62,7 +62,9 @@
     'sushi':['sushi rolls','maki','nigiri'],
     'pad thai':['phad thai'],
     'gyro':['gyros'],
-    'falafel':['falafels']
+    'falafel':['falafels'],
+    'burger':['burgers','hamburger','hamburgers','cheeseburger','cheeseburgers'],
+    'ice cream':['ice cream cone','ice cream sundae','sundae','soft serve','soft serve ice cream']
   };
   function dishMatch(r,query){
     const q=normalize(query);
@@ -166,7 +168,7 @@
     for(const cuisine of ['Sushi','Hibachi'])add(cuisine,'Cuisine',5);
     // Canonical dish suggestions must be selectable even when the menu uses
     // a singular form or a more specific dish name (e.g. beef tacos).
-    const popularDishes=['Tacos','Burritos','Quesadillas','Enchiladas','Sushi','Pizza','Subs','Hoagies','Chicken parm','Pad Thai','Gyros','Falafel','Fries','Calzones'];
+    const popularDishes=['Tacos','Burritos','Quesadillas','Enchiladas','Sushi','Pizza','Burger','Cheeseburger','Hamburger','Ice cream','Subs','Hoagies','Chicken parm','Pad Thai','Gyros','Falafel','Fries','Calzones'];
     for(const label of popularDishes){
       if(restaurants.some(r=>dishMatch(r,label)||genericSubMatch(r,label)))add(label,'Food',4);
     }
