@@ -332,12 +332,24 @@ function groupEvents(items){
  return g;
 }
 function eventLinks(e){const links=[];const add=(url,label)=>{if(url&&!links.some(x=>x.url===url))links.push({url,label})};add(e.registration_url,'Participate / register');add(e.donation_url,'Donate / support');add(e.purchase_url,'Purchase / order');add(e.source_url,'Official event information');add(e.field_status_url,'Check field status');(Array.isArray(e.links)?e.links:[]).forEach(x=>{if(typeof x==='string')add(x,'More information');else if(x&&x.url)add(x.url,x.label||'More information')});return links;}
+function eventDateType(e){
+ const start=String(e.start?.date||''),end=String(e.end?.date||'');
+ if(e.recurrence||e.recurring===true||e.schedule_days||e.selected_dates||e.occurrence_dates)return 'recurring';
+ if(end&&start&&end!==start)return 'range';
+ return 'single';
+}
+function eventDateBadge(e){
+ const type=eventDateType(e);
+ const label=type==='recurring'?'Recurring dates':type==='range'?'Multi-day event':'Single-day event';
+ const symbol=type==='recurring'?'▦':type==='range'?'▤':'▣';
+ return '<span class="event-duration-indicator" aria-label="'+label+'" title="'+label+'">'+symbol+'</span>';
+}
 function eventRow(e){
  const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';
  const civic=e.category==='civic_meeting'?'<p class="civic-watch-note">Come back to Norwood.ma at meeting time to watch live.</p>':'';
  const multi=!!(e.end?.date&&e.start?.date&&e.end.date!==e.start.date);
  const range=multi?`<p class="event-date-range"><strong>${String(e.category||'').toLowerCase().includes('fundraiser')?'Fundraiser runs':'Runs'}:</strong> ${esc(shortDate(e.start.date))}–${esc(shortDate(e.end.date))}</p>`:'';
- return `<a class="event-row ${eventClass(e.category)}" href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><div class="event-date"><small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">+</span></a>`;
+ return `<a class="event-row ${eventClass(e.category)}" href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><div class="event-date">${eventDateBadge(e)}<small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">+</span></a>`;
 }
 function eventMatchesCalendar(e,key){
  if(!key||key==='all')return true;
