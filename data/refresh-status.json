@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T02:43:06.759068-04:00",
+  "generated_at": "2026-10-09T05:17:07.470026-04:00",
   "offline": false,
   "events_published": 2692,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2692,
-      "generated_at": "2026-10-09T02:43:06.434139-04:00"
+      "generated_at": "2026-10-09T05:17:06.911972-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 111,
-      "generated_at": "2026-10-09T02:43:06.447430-04:00"
+      "generated_at": "2026-10-09T05:17:06.920187-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 1062,
-      "generated_at": "2026-10-09T02:43:06.474652-04:00"
+      "generated_at": "2026-10-09T05:17:06.937249-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 963,
-      "generated_at": "2026-10-09T02:43:06.497838-04:00"
+      "generated_at": "2026-10-09T05:17:06.954361-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-09T02:43:06.509915-04:00"
+      "generated_at": "2026-10-09T05:17:06.961384-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 76,
-      "generated_at": "2026-10-09T02:43:06.523566-04:00"
+      "generated_at": "2026-10-09T05:17:06.969573-04:00"
     }
   ],
   "recreation_programs": 159,
@@ -1182,7 +1182,7 @@
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
-      "found": 5,
+      "found": 4,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1212,12 +1212,13 @@
     },
     {
       "source_id": "recovery-alanon",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/: HTTPSConnectionPool(host='al-anon.org', port=443): Read timed out. (read timeout=18)",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "recovery-na",
@@ -1628,7 +1629,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 40,
+      "found": 39,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
