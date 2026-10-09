@@ -65,7 +65,17 @@
     }
     return dishes.some(d=>terms.some(t=>(' '+normalize(d)+' ').includes(' '+t+' ')));
   }
-  function beverageMatch(r,query){\n    const q=normalize(query);\n    const beverages=Array.isArray(r.beverages)?r.beverages:[];\n    const family=Object.entries(beverageAliases).find(([key,aliases])=>[key,...aliases].map(normalize).includes(q));\n    const terms=family?[family[0],...family[1]].map(normalize):[q];\n    return beverages.some(b=>terms.some(t=>(' '+normalize(b)+' ').includes(' '+t+' ')));\n  }\n  function matchesCuisine(r,choice){
+  function beverageMatch(r,query){\n    const q=normalize(query);\n    const beverages=Array.isArray(r.beverages)?r.beverages:[];\n    const family=Object.entries(beverageAliases).find(([key,aliases])=>[key,...aliases].map(normalize).includes(q));\n    const terms=family?[family[0],...family[1]].map(normalize):[q];\n    return beverages.some(b=>terms.some(t=>(' '+normalize(b)+' ').includes(' '+t+' ')));\n  }\n  // Generic deli subs imply searchable sub styles, but not a verified specific filling.
+  function genericSubMatch(r,query){
+    const q=normalize(query);
+    const subs=Array.isArray(r.dishes)?r.dishes.map(normalize):[];
+    if(!subs.some(d=>['subs','deli subs','sub','sandwiches','deli sandwiches'].includes(d))) return false;
+    const words=q.split(' ').filter(Boolean);
+    const styles=['sub','subs','hoagie','hoagies','grinder','grinders','hero','heroes','submarine','sandwich'];
+    const fillings=['turkey','italian','ham','roast beef','chicken salad','tuna','salami','pastrami'];
+    return words.some(w=>styles.includes(w))&&fillings.some(f=>q.includes(f));
+  }
+  function matchesCuisine(r,choice){
     const q=normalize(choice);
     if(!q) return true;
     if(q==='sushi') return normalize(r.cuisine).includes('sushi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('sushi'));
@@ -74,7 +84,7 @@
   }
   function matchesQuery(r,q){
     if(!q) return true;
-    if(dishMatch(r,q)||beverageMatch(r,q)) return true;\n    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));\n    if(beverageTerms.includes(q)) return false;
+    if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;\n    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));\n    if(beverageTerms.includes(q)) return false;
     // Do not mistake a requested dish for a restaurant's broad cuisine or address.
     const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
     if(dishTerms.includes(q)) return false;
