@@ -270,6 +270,14 @@
    }catch(e){}
  }
  function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
+ let restaurantIndex=[];
+ fetch('data/restaurants.json').then(r=>r.json()).then(rows=>{restaurantIndex=Array.isArray(rows)?rows:[];if(input.value.trim())render(false);}).catch(()=>{});
+ function restaurantMatchCount(raw){
+  const q=norm(raw);if(q.length<3)return 0;
+  const aliases={fries:['french fries'],burger:['hamburger','cheeseburger'],taco:['tacos'],'street corn':['elote'],sub:['subs','hoagie']};
+  const terms=[q,...Object.entries(aliases).filter(([k,v])=>[k,...v].includes(q)).flatMap(([k,v])=>[k,...v])];
+  return restaurantIndex.filter(r=>[r.name,r.cuisine,r.category,...(r.dishes||[]),...(r.beverages||[])].some(v=>terms.some(t=>norm(v).includes(t)))).length;
+ }
  function render(track=false){
   const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
   const allHits=search(raw,200);
@@ -283,10 +291,8 @@
   const howDoHtml=/^how(?:\s|$)|^how\s+do\s+i/i.test(raw)?'<div class="library-things-search-callout howdo-search-callout"><span class="library-things-badge">HOW DO I?</span><b>❓ Looking for a quick answer?</b><p>Browse practical answers to common Norwood questions.</p><a href="how-do-i.html">Open How Do I? →</a></div>':'';
   const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
   // Keep menu-item searches on the dedicated Food & Drink results page.
-  const foodTerms=['french fries','fries','burger','burgers','hamburger','cheeseburger','ice cream','soft serve','sundae','pizza','tacos','taco','burrito','burritos','quesadilla','quesadillas','enchiladas','sushi','hibachi','street corn','elote','subs','sub','hoagie','chicken parm','wings','pad thai','gyro','falafel'];
-  const normalizedFood=norm(raw);
-  const foodIntent=foodTerms.some(term=>norm(term).startsWith(normalizedFood)||normalizedFood.startsWith(norm(term)))&&normalizedFood.length>=3;
-  const foodMoreHtml=foodIntent?`<a class="restaurant-search-bridge" href="restaurants.html?q=${encodeURIComponent(raw)}"><b>See Restaurant Results →</b><small>Find restaurants serving ${esc(raw)} in Food &amp; Drink</small></a>`:'';
+  const foodIntent=restaurantMatchCount(raw)>0;
+  const foodMoreHtml=foodIntent?`<a class="restaurant-search-bridge" href="restaurants.html?q=${encodeURIComponent(raw)}"><b>See Restaurant Results →</b><small>View matching restaurants in Food &amp; Drink</small></a>`:'';
   const businessMoreHtml=!resultsPage&&businessHits.length?`<a href="search.html?q=${encodeURIComponent(raw)}"><b>${businessHits.length} ${esc(raw)} business${businessHits.length===1?'':'es'} found…</b><small>Click for full search results →</small></a>`:'';
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}${x.officialSchool?' <img class="search-source-icon school-search-icon" src="https://www.norwood.k12.ma.us/favicon.ico" alt="Official Norwood Public Schools resource" title="Official Norwood Public Schools resource">':''}${x.type==='Event'?' <span class="search-source-icon event-search-icon" aria-label="Event" title="Event">📅</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length} result${hits.length+things.length===1?'':'s'}</small></div>`:'';
