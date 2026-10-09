@@ -342,9 +342,42 @@
     "link_type": "official",
     "tags": "bakery bread pastry breakfast lunch catering",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification",
-    "menu_source": "https://cheffneetinn.com/",
-    "menu_checked": "2026-10-08"
+    "menu_review_status": "item_level_verified",
+    "menu_source": "https://order.toasttab.com/online/cheff-n-eetinn-645-washington-st",
+    "menu_checked": "2026-10-08",
+    "dishes": [
+      "the fritay",
+      "pork griot",
+      "hand pies",
+      "haitian hand pies",
+      "spicy beef hand pie",
+      "spicy chicken hand pie",
+      "curry beef hand pie",
+      "curry chicken hand pie",
+      "veggie hand pies",
+      "seafood hand pies",
+      "artisan stuffed burgers",
+      "pistachio cheesecake brownie",
+      "focaccia pizza",
+      "pain levain sourdough",
+      "grilled chicken caesar sandwich",
+      "buffalo chicken sandwich",
+      "grilled cheese",
+      "tuna salad sandwich",
+      "cannoli",
+      "spiced cream of wheat",
+      "eggs and toast"
+    ],
+    "menu_source_type": "published_menu",
+    "beverages": [
+      "coffee",
+      "latte",
+      "tea",
+      "black tea",
+      "green tea"
+    ],
+    "beverage_source": "https://order.toasttab.com/online/cheff-n-eetinn-645-washington-st",
+    "beverage_checked": "2026-10-08"
   },
   {
     "id": "chipotle-mexican-grill",
@@ -508,7 +541,8 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Crushed+Peppers%2C+20+Broadway+%232%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "pizza grill calzone wings subs burgers pasta takeout",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification"
   },
   {
     "id": "d-g-deli",
@@ -519,7 +553,8 @@
     "url": "https://www.google.com/maps/search/?api=1&query=D+%26+G+Deli%2C+301+Nahatan+St",
     "link_type": "maps",
     "tags": "deli chicken salad sandwich lunch",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification"
   },
   {
     "id": "daddy-s-dairy",
@@ -851,9 +886,20 @@
     "link_type": "official",
     "tags": "bakery pastry cake cannoli bread",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification",
+    "menu_review_status": "item_level_verified",
     "menu_source": "https://www.guarinopastryshop.com/",
-    "menu_checked": "2026-10-08"
+    "menu_checked": "2026-10-08",
+    "dishes": [
+      "italian rum cake",
+      "cannoli",
+      "tiramisu",
+      "italian bread",
+      "italian cookies",
+      "american cookies",
+      "pastry trays",
+      "dessert cakes"
+    ],
+    "menu_source_type": "published_menu"
   },
   {
     "id": "gyro-kebab-house",
@@ -1081,9 +1127,35 @@
     "link_type": "official",
     "tags": "sandwich deli lunch catering",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification",
-    "menu_source": "https://lunchboxnorwood.com/",
-    "menu_checked": "2026-10-08"
+    "menu_review_status": "item_level_verified",
+    "menu_source": "https://order.toasttab.com/online/lunchboxdeli",
+    "menu_checked": "2026-10-08",
+    "dishes": [
+      "steak and cheese",
+      "balch tblt",
+      "custom sandwich",
+      "garden salad",
+      "caesar salad",
+      "greek salad",
+      "chef salad",
+      "antipasto salad",
+      "california club",
+      "chicken pesto",
+      "warrior chicken parm",
+      "reuben",
+      "rachel",
+      "prescott",
+      "grilled cheese",
+      "smoked turkey bacon melt",
+      "blt",
+      "tuna melt",
+      "turkey reuben",
+      "turkey rachel",
+      "chicken cutlet sandwich",
+      "clam chowder",
+      "chili"
+    ],
+    "menu_source_type": "published_menu"
   },
   {
     "id": "maha-juice-bar",
@@ -1202,9 +1274,43 @@
     "link_type": "official",
     "tags": "brazilian churrasco steak juice",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_item_level_verification",
-    "menu_source": "https://www.minascaferestaurant.com/",
-    "menu_checked": "2026-10-08"
+    "menu_review_status": "item_level_verified",
+    "menu_source": "https://www.minascaferestaurant.com/menu/",
+    "menu_checked": "2026-10-08",
+    "dishes": [
+      "feijoada",
+      "feijao tropeiro",
+      "rice",
+      "black beans",
+      "brown beans",
+      "roasted chicken with vegetables",
+      "fried fish",
+      "french fries",
+      "farofa",
+      "polenta",
+      "fried chicken",
+      "sweet potatoes",
+      "beef stroganoff",
+      "lasagna",
+      "fried bananas",
+      "salpicao",
+      "potato salad",
+      "pasta salad",
+      "collard greens",
+      "mashed potatoes",
+      "roasted pork with potatoes",
+      "beef with beer sauce"
+    ],
+    "menu_source_type": "published_menu",
+    "beverages": [
+      "cashew juice",
+      "passion fruit juice",
+      "pineapple juice",
+      "acai juice",
+      "cupuacu juice"
+    ],
+    "beverage_source": "https://www.minascaferestaurant.com/menu/",
+    "beverage_checked": "2026-10-08"
   },
   {
     "id": "minerva-indian-cuisine",
@@ -1287,7 +1393,7 @@
     "link_type": "maps",
     "tags": "breakfast brunch diner pancakes eggs lunch",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_menu_confirmation"
+    "menu_review_status": "needs_item_level_verification"
   },
   {
     "id": "mustang-pizza",
@@ -1353,7 +1459,7 @@
     "link_type": "maps",
     "tags": "Brazilian bakery bread pastry snack",
     "verified": "2026-09-17",
-    "menu_review_status": "needs_menu_confirmation"
+    "menu_review_status": "needs_item_level_verification"
   },
   {
     "id": "new-golden-abacus",
