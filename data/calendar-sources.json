@@ -781,5 +781,24 @@
         "boston-parents-paper-greater-boston"
       ]
     }
+  },
+  {
+    "id": "blackhole-comics",
+    "group": "more",
+    "name": "Blackhole Comics",
+    "description": "Recurring Dungeons & Dragons and other approved community gaming events at Blackhole Comics in Norwood.",
+    "view_url": "https://www.facebook.com/groups/1617375796568825",
+    "provider": "Blackhole Comics",
+    "kind": "internal",
+    "data_available": true,
+    "default_checked": true,
+    "selector": {
+      "source_ids": [
+        "community-event-submissions"
+      ],
+      "venue_contains": [
+        "Blackhole Comics"
+      ]
+    }
   }
 ]
