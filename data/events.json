@@ -926,44 +926,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-7897cdfc7512-2026-10-08",
-    "title": "Adult Paint Night with Letiana - Fall Fest 2026",
-    "start": {
-      "date": "2026-10-08",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-08",
-      "time": "20:30"
-    },
-    "venue": null,
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30886",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30886",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$30.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-08",
-    "session_end": "2026-10-08",
-    "days": "Th",
-    "notes": "Join Letiana from Let’s Paint Club for this fun, adults only paint night in the alley at Lewis's. Come alone or bring a friend, have a bite to eat and bring home a masterpiece! Food and drink sold separately. Registration Limited. Open to ages 21+ only.",
-    "rec_program_id": "rec-7897cdfc7512",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-food-markets",
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-10-08-sew-crazy-club-october-2026-f9cc1a9",
     "title": "Sew Crazy Club (October 2026)",
     "start": {
@@ -1155,34 +1117,6 @@
     "calendar_ids": [
       "norwood-community"
     ]
-  },
-  {
-    "id": "2026-10-08-thursday-oct-3d2a473",
-    "title": "Thursday , Oct",
-    "start": {
-      "date": "2026-10-08",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-08",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/brotherhood-board-meeting-on-zoom.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Thursday , Oct October 8 , 2026 Brotherhood Board Meeting on Zoom Thursday, Oct 8th 7:00p MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": []
   },
   {
     "id": "2026-10-09-beyond-beginner-mah-jongg-a43cfc1",
@@ -11669,6 +11603,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-20-tuesday-oct-acfe023",
+    "title": "Tuesday , Oct",
+    "start": {
+      "date": "2026-10-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning9.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Tuesday , Oct October 20 , 2026 Shorashim Hebrew Learning Tuesday, Oct 20th 3:45p to 5:45p MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
