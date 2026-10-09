@@ -1632,7 +1632,40 @@
     "url": "https://royalpizzanorwood.com/",
     "link_type": "official",
     "tags": "pizza pasta subs",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "cheese pizza",
+      "veggie pizza",
+      "meat lovers pizza",
+      "buffalo chicken pizza",
+      "bbq chicken pizza",
+      "chicken bacon ranch pizza",
+      "greek pizza",
+      "steak bomb pizza",
+      "chicken bomb pizza",
+      "gluten free pizza",
+      "three cheese calzone",
+      "meatball calzone",
+      "italian calzone",
+      "buffalo chicken calzone",
+      "chicken parm calzone",
+      "steak bomb calzone",
+      "french fries",
+      "curly fries",
+      "mozzarella sticks",
+      "chicken wings",
+      "chicken fingers",
+      "chicken parmesan pasta",
+      "eggplant parmesan pasta",
+      "lasagna",
+      "cheese ravioli",
+      "fish and chips",
+      "steak tips",
+      "baklava"
+    ],
+    "menu_source": "https://royalpizzanorwood.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "shabu-lee",
@@ -1731,7 +1764,28 @@
     "url": "https://order.toasttab.com/online/sidedoorcafe",
     "link_type": "official",
     "tags": "coffee espresso breakfast pastry sandwich",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "breakfast sandwich",
+      "bacon egg and cheese sandwich",
+      "sausage egg and cheese sandwich",
+      "pesto breakfast sandwich",
+      "latte",
+      "iced latte",
+      "pistachio mocha latte",
+      "lavender white chocolate latte",
+      "matcha",
+      "masala chai",
+      "cortado",
+      "cappuccino",
+      "americano",
+      "espresso tonic",
+      "cold brew",
+      "iced coffee"
+    ],
+    "menu_source": "https://order.toasttab.com/online/sidedoorcafe",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "simple-sweets",
@@ -1742,7 +1796,33 @@
     "url": "https://simplesweetsboba.com/",
     "link_type": "official",
     "tags": "boba tea mochi donut dessert ice cream",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "assam black tea",
+      "jasmine green tea",
+      "oolong tea",
+      "brown sugar milk tea",
+      "classic milk tea",
+      "coconut milk tea",
+      "mango milk tea",
+      "matcha milk tea",
+      "strawberry milk tea",
+      "taro milk tea",
+      "thai tea milk tea",
+      "watermelon milk tea",
+      "oreo milk tea",
+      "mango slush",
+      "durian slush",
+      "blushing matcha",
+      "dragon fruit lemonade",
+      "lychee lemonade",
+      "mango lemonade",
+      "passion fruit lemonade",
+      "green apple kiwi smoothie"
+    ],
+    "menu_source": "https://simplesweetsboba.com/order/simple-sweets-694-washington-st/item-cinema-popcorn_50a33cfa-2731-4e3f-98d3-c9dc94d8113d",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "the-sixties-diner",
@@ -1753,7 +1833,34 @@
     "url": "https://www.thesixtiesdiner.com/",
     "link_type": "official",
     "tags": "diner breakfast brunch lunch retro",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "country biscuits and gravy",
+      "pork belly breakfast tacos",
+      "steak tips and eggs",
+      "ricky ricardo burrito",
+      "meathead omelet",
+      "greek omelet",
+      "eggs benedict",
+      "florentine benedict",
+      "cinnamon roll pancakes",
+      "blueberry pancakes",
+      "chocolate chip pancakes",
+      "french toast",
+      "chicken fingers",
+      "mac and cheese",
+      "greek salad",
+      "chicken avocado chopped salad",
+      "reuben sandwich",
+      "turkey club",
+      "roast beef french dip",
+      "smashburger",
+      "patty melt",
+      "french fries"
+    ],
+    "menu_source": "https://www.thesixtiesdiner.com/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "spot",
@@ -1776,7 +1883,30 @@
     "link_type": "official",
     "tags": "pizza subs wings calzones pasta delivery takeout",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "cheese pizza",
+      "gluten free pizza",
+      "cauliflower pizza",
+      "white pizza",
+      "chicken bacon ranch pizza",
+      "buffalo chicken pizza",
+      "chicken broccoli alfredo pizza",
+      "veggie delight pizza",
+      "bbq chicken pizza",
+      "meat lovers pizza",
+      "fenway pizza",
+      "hawaiian pizza",
+      "eggplant ricotta pizza",
+      "margherita pizza",
+      "greek pizza",
+      "steak and cheese pizza",
+      "prosciutto pizza",
+      "chicken pesto pizza"
+    ],
+    "menu_source": "https://stashsnorwood.com/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "sunrise-breakfast",
@@ -1798,7 +1928,21 @@
     "url": "https://locations.tacobell.com/ma/norwood/958-providence-highway/restaurant.html",
     "link_type": "official",
     "tags": "tacos burritos quesadilla fast food drive thru late night",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "crunchy taco",
+      "soft taco",
+      "burrito",
+      "quesadilla",
+      "crunchwrap supreme",
+      "nachos",
+      "chalupa supreme",
+      "cheesy gordita crunch",
+      "bean burrito"
+    ],
+    "menu_source": "https://www.tacobell.com/food",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "thai-boo-cuisine",
@@ -1844,7 +1988,26 @@
     "url": "https://www.thaithanifood.com/",
     "link_type": "official",
     "tags": "Thai curry pad thai takeout",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pad thai",
+      "drunken noodles",
+      "pad kee mao",
+      "massaman curry",
+      "green curry",
+      "red curry",
+      "yellow curry",
+      "tom yum soup",
+      "tom kha soup",
+      "steamed dumplings",
+      "chicken satay",
+      "golden triangles",
+      "pineapple fried rice",
+      "mango sticky rice"
+    ],
+    "menu_source": "https://www.thaithanifood.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "business_menu_mentions"
   },
   {
     "id": "tipico-salvadoreno-2",
@@ -1855,7 +2018,29 @@
     "url": "https://www.tipicosalvadorenotwo.com/",
     "link_type": "official",
     "tags": "pupusas salvadoran tacos burritos breakfast latin",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "desayuno campestre",
+      "desayuno casero",
+      "desayuno tipico",
+      "baleadas",
+      "tamales de elote",
+      "fried plantains",
+      "yuca con chicharron",
+      "chicken wings",
+      "chicken fingers and fries",
+      "chicken pupusa",
+      "pupusa loca",
+      "loroco pupusa",
+      "pork pupusa",
+      "cheese pupusa",
+      "beans and cheese pupusa",
+      "jalapeno pupusa",
+      "horchata"
+    ],
+    "menu_source": "https://www.tipicosalvadorenotwo.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official"
   },
   {
     "id": "to-beirut-bistro",
@@ -1900,7 +2085,22 @@
     "link_type": "official",
     "tags": "vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta",
     "gluten_free": true,
-    "verified": "2026-09-21"
+    "verified": "2026-09-21",
+    "dishes": [
+      "paneer tikka masala pizza",
+      "paneer tikka bbq pizza",
+      "manchurian pizza",
+      "vegan pepperoni pizza",
+      "paneer tikka biryani",
+      "samosa chaat",
+      "chole bhature",
+      "pav bhaji",
+      "chilli garlic noodles",
+      "creamy tomato pasta"
+    ],
+    "menu_source": "https://www.vegcrust.com/menu/norwood/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "business_menu_mentions"
   },
   {
     "id": "vico-ristorante-italiano",
@@ -2001,7 +2201,23 @@
     "url": "https://trymasahibachi.com/",
     "link_type": "official",
     "tags": "hibachi teppanyaki Japanese sushi Asian fusion Chinese Thai ramen tableside cooking chef show birthday family",
-    "verified": "2026-09-28"
+    "verified": "2026-09-28",
+    "dishes": [
+      "sushi",
+      "sashimi",
+      "nigiri",
+      "maki rolls",
+      "miso soup",
+      "hibachi"
+    ],
+    "menu_source": "https://trymasahibachi.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "official",
+    "cuisine_tags": [
+      "sushi",
+      "hibachi",
+      "japanese"
+    ]
   },
   {
     "id": "mai-kitchen-canton",
