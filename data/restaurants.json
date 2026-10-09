@@ -1968,7 +1968,31 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Q%27Sabor+Latino+Market%2C+1101+Washington+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "pupusas latin salvadoran breakfast takeout market soup",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pupusas",
+      "revueltas pupusa",
+      "tacos",
+      "burritos",
+      "quesadillas",
+      "mojarra frita",
+      "pollo a la plancha",
+      "chicken fajitas",
+      "chiles rellenos",
+      "desayuno casero con chorizo",
+      "fried plantains"
+    ],
+    "beverages": [
+      "horchata",
+      "smoothies",
+      "natural juices"
+    ],
+    "menu_source": "https://www.doordash.com/store/1527550?pickup=true&src=yp",
+    "beverage_source": "https://www.doordash.com/store/1527550?pickup=true&src=yp",
+    "menu_source_type": "third_party_ordering",
+    "menu_checked": "2026-10-08",
+    "beverage_checked": "2026-10-08",
+    "menu_review_status": "third_party_items_reviewed"
   },
   {
     "id": "rincon-caribeno-2",
@@ -1979,7 +2003,37 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Rincon+Caribeno+2%2C+111+Lenox+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "dominican caribbean latin mofongo takeout catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken empanada",
+      "cheese empanada",
+      "beef empanada",
+      "ham and cheese empanada",
+      "vegetable empanada",
+      "spinach and cheese empanada",
+      "shrimp empanada",
+      "lobster empanada",
+      "crab empanada",
+      "fried cheese",
+      "garlic bread",
+      "potato salad",
+      "shrimp gumbo",
+      "seafood paella",
+      "mofongo",
+      "yucafongo",
+      "beef stew",
+      "sancocho",
+      "sweet plantains"
+    ],
+    "beverages": [
+      "smoothies"
+    ],
+    "menu_source": "https://www.beyondmenu.com/61508/norwood/rincon-caribe%C3%B1o-2-norwood-02062.aspx",
+    "beverage_source": "https://www.beyondmenu.com/61508/norwood/rincon-caribe%C3%B1o-2-norwood-02062.aspx",
+    "menu_source_type": "third_party_ordering",
+    "menu_checked": "2026-10-08",
+    "beverage_checked": "2026-10-08",
+    "menu_review_status": "third_party_items_reviewed"
   },
   {
     "id": "royal-pizza",
@@ -2229,7 +2283,29 @@
     "url": "https://www.google.com/maps/search/?api=1&query=SPoT%21%2C+56+Cottage+St+E",
     "link_type": "maps",
     "tags": "bagel breakfast sandwich coffee candy",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "bagels",
+      "everything bagel",
+      "cinnamon raisin bagel",
+      "chocolate chip bagel",
+      "egg and cheese bagel sandwich",
+      "bacon egg and cheese bagel sandwich",
+      "sausage egg and cheese bagel sandwich",
+      "chicken salad sandwich",
+      "bagel with cream cheese",
+      "lox bagel"
+    ],
+    "beverages": [
+      "bottled soda",
+      "orange juice"
+    ],
+    "menu_source": "https://www.google.com/maps/search/?api=1&query=SPoT%21+56+Cottage+St+Norwood+MA",
+    "beverage_source": "https://www.google.com/maps/search/?api=1&query=SPoT%21+56+Cottage+St+Norwood+MA",
+    "menu_source_type": "business_listing",
+    "menu_checked": "2026-10-08",
+    "beverage_checked": "2026-10-08",
+    "menu_review_status": "third_party_items_reviewed"
   },
   {
     "id": "stashs-pizza-norwood",
@@ -2534,7 +2610,50 @@
     "url": "https://washingtonno7.com/",
     "link_type": "official",
     "tags": "american bar pizza cocktail live music",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken wings",
+      "chicken tenders",
+      "mozzarella sticks",
+      "grilled shrimp skewer",
+      "fried cauliflower",
+      "fried pickles",
+      "caesar salad",
+      "mediterranean salad",
+      "onion rings",
+      "french fries",
+      "curly fries",
+      "sweet potato waffle fries",
+      "chicken caesar wrap",
+      "buffalo chicken wrap",
+      "pastrami reuben",
+      "chicken quesadilla",
+      "beef stew",
+      "clam chowder",
+      "mac and cheese",
+      "hummus dip",
+      "loaded fries",
+      "steak and cheese egg rolls",
+      "caprese ciabatta",
+      "labneh dip",
+      "pizza",
+      "burger"
+    ],
+    "beverages": [
+      "craft cocktails",
+      "cocktails",
+      "draft beer",
+      "beer",
+      "mocktails",
+      "nonalcoholic beer"
+    ],
+    "menu_source": "https://washingtonno7.com/menu",
+    "beverage_source": "https://washingtonno7.com/menu",
+    "menu_source_type": "official_menu",
+    "menu_checked": "2026-10-08",
+    "beverage_checked": "2026-10-08",
+    "menu_review_status": "item_level_verified",
+    "full_bar": true
   },
   {
     "id": "wendys-norwood",
