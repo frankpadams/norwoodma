@@ -40,7 +40,7 @@
     return false;
   }
   // Explicit dish aliases only; never infer an individual dish from a broad cuisine.
-  const dishAliases={
+  const beverageAliases={\n    'beer':['draft beer','bottled beer','craft beer','lager','ipa'],\n    'wine':['red wine','white wine','rose','rosé','sparkling wine','prosecco'],\n    'cocktail':['cocktails','mixed drinks'],\n    'mocktail':['mocktails','nonalcoholic cocktails','non alcoholic cocktails'],\n    'soda':['soft drinks','cola'],\n    'coffee':['iced coffee','cold brew','espresso','latte'],\n    'tea':['iced tea','milk tea','chai']\n  };\n  const dishAliases={
     'chicken parm':['chicken parmesan','chicken parmigiana','chicken parm sub','chicken parmigiana sub'],
     'eggplant parm':['eggplant parmesan','eggplant parmigiana'],
     'fries':['french fries','frites'],
@@ -59,13 +59,13 @@
     const q=normalize(query);
     const dishes=Array.isArray(r.dishes)?r.dishes:[];
     const terms=[q];
-    for(const [canonical,aliases] of Object.entries(dishAliases)){
+    for(const [canonical,aliases] of Object.entries({...dishAliases,...beverageAliases})){
       const family=[canonical,...aliases].map(normalize);
       if(family.includes(q)){terms.splice(0,terms.length,...family);break;}
     }
-    return dishes.some(d=>terms.includes(normalize(d)));
+    return dishes.some(d=>terms.some(t=>(' '+normalize(d)+' ').includes(' '+t+' ')));
   }
-  function matchesCuisine(r,choice){
+  function beverageMatch(r,query){\n    const q=normalize(query);\n    const beverages=Array.isArray(r.beverages)?r.beverages:[];\n    const family=Object.entries(beverageAliases).find(([key,aliases])=>[key,...aliases].map(normalize).includes(q));\n    const terms=family?[family[0],...family[1]].map(normalize):[q];\n    return beverages.some(b=>terms.some(t=>(' '+normalize(b)+' ').includes(' '+t+' ')));\n  }\n  function matchesCuisine(r,choice){
     const q=normalize(choice);
     if(!q) return true;
     if(q==='sushi') return normalize(r.cuisine).includes('sushi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('sushi'));
@@ -74,7 +74,7 @@
   }
   function matchesQuery(r,q){
     if(!q) return true;
-    if(dishMatch(r,q)) return true;
+    if(dishMatch(r,q)||beverageMatch(r,q)) return true;\n    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));\n    if(beverageTerms.includes(q)) return false;
     // Do not mistake a requested dish for a restaurant's broad cuisine or address.
     const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
     if(dishTerms.includes(q)) return false;
@@ -127,11 +127,11 @@
     const values=new Map();
     for(const r of restaurants){
       values.set(normalize(r.name),{label:r.name,type:'Restaurant'});
-      if(Array.isArray(r.dishes))for(const dish of r.dishes)values.set(normalize(dish),{label:dish,type:'Dish'});
+      if(Array.isArray(r.dishes))for(const dish of r.dishes)values.set(normalize(dish),{label:dish,type:'Dish'});\n      if(Array.isArray(r.beverages))for(const drink of r.beverages)values.set(normalize(drink),{label:drink,type:'Drink'});
     }
     for(const [canonical,aliases] of Object.entries(dishAliases)){
-      if([...values.values()].some(v=>v.type==='Dish'&&[canonical,...aliases].map(normalize).includes(normalize(v.label)))){
-        for(const a of [canonical,...aliases])values.set(normalize(a),{label:a,type:'Dish'});
+      if([...values.values()].some(v=>[canonical,...aliases].map(normalize).includes(normalize(v.label)))){
+        for(const a of [canonical,...aliases])values.set(normalize(a),{label:a,type:Object.hasOwn(beverageAliases,canonical)?'Drink':'Dish'});
       }
     }
     const hits=[...values.entries()].filter(([key])=>key.includes(q)||(q.length>=4&&key.split(' ').some(w=>editDistanceAtMostOne(q,w)))).sort((a,b)=>Number(!a[0].startsWith(q))-Number(!b[0].startsWith(q))||a[0].localeCompare(b[0])).slice(0,7);
@@ -206,7 +206,7 @@
       const norwoodOnly=restaurants.filter(r=>{ const town=normalize(r.municipality||r.city||r.coverage||''); return !town || town==='norwood'; });
       // Dinner Spinner is for places with a food menu; bar-only/drink-only venues stay searchable but are excluded.
       const dinnerEligible=norwoodOnly.filter(r=>r.dinner_spinner!==false && r.food_menu!==false);
-      let pool=dinnerEligible.filter(r=>wantsFullBar?hasFullBar(r):(!terms.length||matchesCuisine(r,choice)));
+      let pool=dinnerEligible.filter(r=>wantsFullBar?hasFullBar(r):(!choice||matchesCuisine(r,choice)));
       // By default, exclude restaurants whose verified service for today has ended.
       // Unknown/unverified hours remain eligible rather than being falsely treated as closed.
       pool=pool.filter(r=>isAvailableToday(r)!==false);
