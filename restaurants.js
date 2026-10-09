@@ -40,7 +40,16 @@
     return false;
   }
   // Explicit dish aliases only; never infer an individual dish from a broad cuisine.
-  const beverageAliases={\n    'beer':['draft beer','bottled beer','craft beer','lager','ipa'],\n    'wine':['red wine','white wine','rose','rosé','sparkling wine','prosecco'],\n    'cocktail':['cocktails','mixed drinks'],\n    'mocktail':['mocktails','nonalcoholic cocktails','non alcoholic cocktails'],\n    'soda':['soft drinks','cola'],\n    'coffee':['iced coffee','cold brew','espresso','latte'],\n    'tea':['iced tea','milk tea','chai']\n  };\n  const dishAliases={
+  const beverageAliases={
+    'beer':['draft beer','bottled beer','craft beer','lager','ipa'],
+    'wine':['red wine','white wine','rose','rosé','sparkling wine','prosecco'],
+    'cocktail':['cocktails','mixed drinks'],
+    'mocktail':['mocktails','nonalcoholic cocktails','non alcoholic cocktails'],
+    'soda':['soft drinks','cola'],
+    'coffee':['iced coffee','cold brew','espresso','latte'],
+    'tea':['iced tea','milk tea','chai']
+  };
+  const dishAliases={
     'chicken parm':['chicken parmesan','chicken parmigiana','chicken parm sub','chicken parmigiana sub'],
     'eggplant parm':['eggplant parmesan','eggplant parmigiana'],
     'fries':['french fries','frites'],
@@ -65,7 +74,14 @@
     }
     return dishes.some(d=>terms.some(t=>(' '+normalize(d)+' ').includes(' '+t+' ')));
   }
-  function beverageMatch(r,query){\n    const q=normalize(query);\n    const beverages=Array.isArray(r.beverages)?r.beverages:[];\n    const family=Object.entries(beverageAliases).find(([key,aliases])=>[key,...aliases].map(normalize).includes(q));\n    const terms=family?[family[0],...family[1]].map(normalize):[q];\n    return beverages.some(b=>terms.some(t=>(' '+normalize(b)+' ').includes(' '+t+' ')));\n  }\n  // Generic deli subs imply searchable sub styles, but not a verified specific filling.
+  function beverageMatch(r,query){
+    const q=normalize(query);
+    const beverages=Array.isArray(r.beverages)?r.beverages:[];
+    const family=Object.entries(beverageAliases).find(([key,aliases])=>[key,...aliases].map(normalize).includes(q));
+    const terms=family?[family[0],...family[1]].map(normalize):[q];
+    return beverages.some(b=>terms.some(t=>(' '+normalize(b)+' ').includes(' '+t+' ')));
+  }
+  // Generic deli subs imply searchable sub styles, but not a verified specific filling.
   function genericSubMatch(r,query){
     const q=normalize(query);
     const subs=Array.isArray(r.dishes)?r.dishes.map(normalize):[];
@@ -84,7 +100,9 @@
   }
   function matchesQuery(r,q){
     if(!q) return true;
-    if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;\n    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));\n    if(beverageTerms.includes(q)) return false;
+    if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;
+    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
+    if(beverageTerms.includes(q)) return false;
     // Do not mistake a requested dish for a restaurant's broad cuisine or address.
     const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
     const indexedDishes=new Set(restaurants.flatMap(item=>Array.isArray(item.dishes)?item.dishes.map(normalize):[]));
@@ -139,7 +157,8 @@
     const values=new Map();
     for(const r of restaurants){
       values.set(normalize(r.name),{label:r.name,type:'Restaurant'});
-      if(Array.isArray(r.dishes))for(const dish of r.dishes)values.set(normalize(dish),{label:dish,type:'Dish'});\n      if(Array.isArray(r.beverages))for(const drink of r.beverages)values.set(normalize(drink),{label:drink,type:'Drink'});
+      if(Array.isArray(r.dishes))for(const dish of r.dishes)values.set(normalize(dish),{label:dish,type:'Dish'});
+      if(Array.isArray(r.beverages))for(const drink of r.beverages)values.set(normalize(drink),{label:drink,type:'Drink'});
     }
     for(const [canonical,aliases] of Object.entries(dishAliases)){
       if([...values.values()].some(v=>[canonical,...aliases].map(normalize).includes(normalize(v.label)))){
