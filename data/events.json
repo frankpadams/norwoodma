@@ -255,7 +255,7 @@
       "date": "2026-10-09",
       "time": "10:00"
     },
-    "venue": "09/11/2026 - 10/16/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
+    "venue": "09/11/2026 - 10/09/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
     "category": "programs",
     "source_id": "town-recreation-programs",
     "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
@@ -269,7 +269,7 @@
     "session_based": true,
     "drop_in": false,
     "session_start": "2026-09-11",
-    "session_end": "2026-10-16",
+    "session_end": "2026-10-09",
     "days": "F",
     "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
     "rec_program_id": "rec-2436eed56f34",
@@ -6366,42 +6366,6 @@
     "discovered_by": "myrec_program_weekday_expansion",
     "calendar_ids": [
       "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-2436eed56f34-2026-10-16",
-    "title": "Little Scientists Session 1",
-    "start": {
-      "date": "2026-10-16",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-10-16",
-      "time": "10:00"
-    },
-    "venue": "09/11/2026 - 10/16/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-11",
-    "session_end": "2026-10-16",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-2436eed56f34",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
       "rec-all",
       "recreation-calendar"
     ]
@@ -64235,6 +64199,40 @@
     ]
   },
   {
+    "id": "2027-01-30-varsity-wrestling-marshfield-high-school-a673522",
+    "title": "Varsity Wrestling @ Marshfield High School",
+    "start": {
+      "date": "2027-01-30",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2027-01-30",
+      "time": "12:00"
+    },
+    "venue": "167 Forest Street, Marshfield Massachusetts 02050",
+    "address": "167 Forest Street, Marshfield Massachusetts 02050",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-wrestling",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Wrestling",
+    "public_access": "public",
+    "series": "Norwood Varsity Wrestling",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Wrestling Level: Varsity Team: Norwood High School Site: Marshfield HS Subsite: MHS Gymnasium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad028384be8a-2027-01-30",
     "title": "Tap 1 - Saturdays",
     "start": {
@@ -83795,6 +83793,41 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-01-boys-varsity-tennis-team-vs-stoughton-high-sc-f975c41",
+    "title": "Boys Varsity Tennis - Team vs Stoughton High School",
+    "start": {
+      "date": "2027-04-01",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-01",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
