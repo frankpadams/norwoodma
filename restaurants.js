@@ -33,10 +33,10 @@
     const q=normalize(term);
     if(!q) return true;
     const hay=searchable(r);
-    if(hay.includes(q)) return true;
+    if((' '+hay+' ').includes(' '+q+' ')) return true;
     const words=hay.split(' ').filter(Boolean);
-    if(q.length>=4&&words.some(w=>w.startsWith(q)||q.startsWith(w))) return true;
-    if(q.length>=5&&words.some(w=>editDistanceAtMostOne(q,w))) return true;
+    if(q.length>=4&&words.some(w=>w.startsWith(q)&&w.length-q.length<=2)) return true;
+    if(q.length>=5&&words.some(w=>w.length>=5&&editDistanceAtMostOne(q,w))) return true;
     return false;
   }
   function row(r){
@@ -139,6 +139,11 @@
       }},75);
     }
     spin.addEventListener('click',()=>choose(false));
+    wheel.setAttribute('role','button');
+    wheel.setAttribute('tabindex','0');
+    wheel.setAttribute('aria-label','Spin the dinner wheel');
+    wheel.addEventListener('click',()=>choose(false));
+    wheel.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(false);}});
   }
   function setupMobileAdRotation(){
     const rail=document.querySelector('.restaurant-ad-rail');
