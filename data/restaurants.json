@@ -179,7 +179,28 @@
     "url": "https://www.crazytacobar.com/",
     "link_type": "official",
     "tags": "tacos burritos quesadillas breakfast",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "enchiladas",
+      "cheese enchiladas",
+      "grilled chicken enchiladas",
+      "chicken tinga enchiladas",
+      "carnitas enchiladas",
+      "carne asada enchiladas",
+      "ground beef enchiladas",
+      "veggie enchiladas",
+      "tacos",
+      "quesadillas",
+      "cheese quesadilla",
+      "grilled chicken quesadilla",
+      "burritos",
+      "chimichangas",
+      "tortas",
+      "tostadas",
+      "quesabirria"
+    ],
+    "menu_source": "https://order.toasttab.com/online/crazy-taco-bar-grill-new/item-cheese-quesadilla_28d59fb2-cfd5-4abf-800d-471e31e1ec86",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "crushed-peppers",
@@ -612,7 +633,19 @@
     "url": "https://www.google.com/maps/search/?api=1&query=El+Valle+Mexican+and+American+Cuisine%2C+487+Washington+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "Mexican American tacos burritos quesadillas nachos enchiladas fajitas rice beans kids family",
-    "verified": "2026-09-26"
+    "verified": "2026-09-26",
+    "dishes": [
+      "tortas",
+      "carne asada torta",
+      "grilled chicken sandwich",
+      "salmon plate",
+      "truffle fries",
+      "fries",
+      "churros",
+      "horchata"
+    ],
+    "menu_source": "https://elvallemexicanamericancuisine0837.s4shops.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "olivadi",
@@ -927,7 +960,27 @@
     "url": "https://yamatonorwoodma.com/",
     "link_type": "official",
     "tags": "hibachi teppanyaki Japanese steakhouse sushi tableside cooking chef show birthday family",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "sushi",
+      "sushi rolls",
+      "sashimi",
+      "hibachi",
+      "hibachi chicken",
+      "hibachi steak",
+      "hibachi shrimp",
+      "california roll",
+      "dragon roll",
+      "rainbow roll",
+      "green dragon roll",
+      "norwood roll",
+      "miso soup",
+      "tempura",
+      "udon",
+      "fried rice"
+    ],
+    "menu_source": "https://yamatonorwoodma.com/-food-menu",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "masa-hibachi-asian-cuisine",
