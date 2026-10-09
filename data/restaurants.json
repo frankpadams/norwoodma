@@ -98,7 +98,28 @@
     "url": "https://www.thebostontavern.com/",
     "link_type": "official",
     "tags": "pub burgers seafood wings bar",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "boneless wings",
+      "chicken wings",
+      "chicken quesadilla",
+      "nachos",
+      "mozzarella sticks",
+      "steak frites",
+      "baked rigatoni",
+      "fish and chips",
+      "chicken parm torpedo",
+      "chicken parm sub",
+      "steak and cheese egg rolls",
+      "shepherds pie",
+      "french fries",
+      "onion rings",
+      "turkey club",
+      "clam chowder",
+      "steak tips"
+    ],
+    "menu_source": "https://www.thebostontavern.com/norwood-menu",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "brookside-cafe",
@@ -109,7 +130,18 @@
     "url": "https://www.brooksidecafeofnorwood.com/",
     "link_type": "official",
     "tags": "breakfast lunch diner brunch",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "popeye benedict",
+      "patriot waffle",
+      "turkey club",
+      "chicken broccoli alfredo",
+      "homemade hash and eggs",
+      "boston cream pie",
+      "apple pie"
+    ],
+    "menu_source": "https://www.brooksidecafeofnorwood.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "buffalo-s-pizza-subs",
@@ -121,7 +153,29 @@
     "link_type": "official",
     "tags": "pizza subs calzone delivery",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "cheese pizza",
+      "meat lovers pizza",
+      "spinach and mushrooms pizza",
+      "french fries",
+      "curly fries",
+      "buffalo chicken calzone",
+      "chicken parmesan calzone",
+      "eggplant parmesan calzone",
+      "chicken parmesan sub",
+      "eggplant parmesan sub",
+      "steak and cheese sub",
+      "meatball sub",
+      "gyro",
+      "lasagna",
+      "cheese ravioli",
+      "chicken broccoli alfredo pasta",
+      "chicken wings",
+      "mozzarella sticks"
+    ],
+    "menu_source": "https://www.buffalospizzasubs.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "burger-king-norwood",
@@ -239,7 +293,18 @@
     "url": "https://locations.chipotle.com/ma/norwood/1415-boston-providence-highway",
     "link_type": "official",
     "tags": "burrito bowl taco chain quick service",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burrito",
+      "burrito bowl",
+      "quesadilla",
+      "salad",
+      "tacos",
+      "chips",
+      "guacamole"
+    ],
+    "menu_source": "https://www.chipotle.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "conrad-s-restaurant",
@@ -362,7 +427,27 @@
     "url": "https://www.dilli-delights.com/",
     "link_type": "official",
     "tags": "chaat biryani curry kebab Indian",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "matar paneer",
+      "shahi paneer",
+      "palak paneer",
+      "malai kofta",
+      "aloo gobi",
+      "dal makhani",
+      "butter chicken",
+      "chicken tikka",
+      "chicken biryani",
+      "mutton biryani",
+      "samosa",
+      "samosa chaat",
+      "onion pakora",
+      "gulab jamun",
+      "jalebi",
+      "kheer"
+    ],
+    "menu_source": "https://www.dilli-delights.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "domino-s-pizza",
@@ -417,7 +502,20 @@
     "url": "https://www.expresspizzanorwood.com/",
     "link_type": "official",
     "tags": "pizza subs pasta salad",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "alfredo with chicken",
+      "spaghetti with meat sauce",
+      "ziti with meat sauce",
+      "pasta with meatballs",
+      "penne marinara",
+      "ravioli marinara",
+      "pizza",
+      "subs",
+      "salads"
+    ],
+    "menu_source": "https://www.expresspizzanorwood.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "the-feisty-greek",
@@ -475,7 +573,17 @@
     "url": "https://fuegoburritos.com/order/fuego-norwood-643-washington-st",
     "link_type": "official",
     "tags": "burrito bowl tacos quesadilla mexican fast casual vegetarian",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burrito",
+      "burrito bowl",
+      "quesadilla",
+      "tacos",
+      "salad",
+      "chips"
+    ],
+    "menu_source": "https://fuegoburritos.com/menu/fuego-norwood-643-washington-st",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "furlong-s-candies-ice-cream",
@@ -549,7 +657,23 @@
     "url": "https://gyrokebabhouse.com/",
     "link_type": "official",
     "tags": "turkish gyro kebab falafel halal",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken shish plate",
+      "chicken gyro plate",
+      "mixed grill",
+      "meat gyro plate",
+      "chicken gyro wrap",
+      "greek salad",
+      "falafel",
+      "chicken mixed grill",
+      "cheese pastry roll",
+      "french fries",
+      "mozzarella sticks",
+      "stuffed grape leaves"
+    ],
+    "menu_source": "https://gyrokebabhouse.com/menu?dialogState=orderDetails",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "ihop-norwood",
@@ -594,7 +718,13 @@
     "url": "https://www.jerseymikes.com/16047/norwood-ma",
     "link_type": "official",
     "tags": "subs sandwiches cheesesteak deli takeout catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "sub",
+      "sandwich"
+    ],
+    "menu_source": "https://www.jerseymikes.com/16047/norwood-ma",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "kwality-norwood",
@@ -616,7 +746,31 @@
     "url": "https://lacasitanorwood.com/",
     "link_type": "official",
     "tags": "pupusas birria tacos burritos salvadoran mexican latin",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "steak tacos",
+      "chicken tacos",
+      "birria tacos",
+      "shrimp tacos",
+      "steak quesadilla",
+      "chicken quesadilla",
+      "birria quesadilla",
+      "shrimp quesadilla",
+      "steak burrito",
+      "chicken burrito",
+      "birria burrito",
+      "chicken bowl",
+      "shrimp bowl",
+      "cheese pupusa",
+      "pork pupusa",
+      "chicken pupusa",
+      "shrimp pupusa",
+      "steak torta",
+      "chicken torta",
+      "smash burger"
+    ],
+    "menu_source": "https://lacasitanorwood.com/menu/la-casalita-1147-washington-street",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "lewis-restaurant-grille",
