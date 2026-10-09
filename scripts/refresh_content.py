@@ -125,7 +125,18 @@ def meaningful_event_title(title):
       'mon','tue','tues','wed','thu','thur','thurs','fri','sat','sun',
       'today','tomorrow','event','events','calendar','schedule'
     }
-    return normalized not in generic
+    if normalized in generic: return False
+    # Calendar widgets sometimes expose a day/month/year as the event title.
+    # Those are navigation labels, not event names.
+    date_only_patterns = [
+      r'(?:mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)(?:day)?\\s+\\d{1,2}(?:st|nd|rd|th)?',
+      r'(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\\s+\\d{1,2}(?:st|nd|rd|th)?(?:\\s+\\d{4})?',
+      r'\\d{1,2}(?:st|nd|rd|th)?\\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*(?:\\s+\\d{4})?',
+      r'\\d{4}\\s+\\d{1,2}\\s+\\d{1,2}',
+      r'\\d{1,2}\\s+\\d{1,2}(?:\\s+\\d{2,4})?',
+      r'(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*(?:\\s+\\d{4})?',
+    ]
+    return not any(re.fullmatch(p, normalized) for p in date_only_patterns)
 
 
 def public_candidate(title, description=''):
