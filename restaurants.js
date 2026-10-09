@@ -58,13 +58,25 @@
   function dishMatch(r,query){
     const q=normalize(query);
     const dishes=Array.isArray(r.dishes)?r.dishes:[];
-    const tags=normalize(Array.isArray(r.tags)?r.tags.join(' '):r.tags||'');
-    const known=[...dishes.map(normalize),...tags.split(' ')];
+    const terms=[q];
     for(const [canonical,aliases] of Object.entries(dishAliases)){
-      const terms=[canonical,...aliases].map(normalize);
-      if(terms.includes(q)) return known.some(item=>terms.includes(item)||(' '+tags+' ').includes(' '+item+' ')&&terms.includes(item));
+      const family=[canonical,...aliases].map(normalize);
+      if(family.includes(q)){terms.splice(0,terms.length,...family);break;}
     }
-    return false;
+    return dishes.some(d=>terms.includes(normalize(d)));
+  }
+  function matchesCuisine(r,choice){
+    const q=normalize(choice);
+    if(!q) return true;
+    if(q==='sushi') return normalize(r.cuisine).includes('sushi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('sushi'));
+    if(q==='hibachi') return normalize(r.cuisine).includes('hibachi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('hibachi'));
+    return normalize(r.category)===q || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.some(t=>normalize(t)===q));
+  }
+  function matchesQuery(r,q){
+    if(!q) return true;
+    if(dishMatch(r,q)) return true;
+    const words=q.split(' ').filter(Boolean);
+    return words.every(t=>termMatchesRestaurant(r,t));
   }
   function row(r){
     const label=r.link_type==='maps'?'Google Maps':'Website';
@@ -76,7 +88,7 @@
     const cat=category.value||'';
     const hasFoodTag=(r,term)=>termMatchesRestaurant(r,term);
     const terms=q?q.split(' ').filter(Boolean):[];
-    const visible=restaurants.filter(r=>((!cat)||(cat==='Gluten-Free'?r.gluten_free:cat==='Full Bar'?hasFullBar(r):cat==='Sushi'?hasFoodTag(r,'sushi'):cat==='Hibachi'?hasFoodTag(r,'hibachi'):r.category===cat))&&terms.every(t=>termMatchesRestaurant(r,t)));
+    const visible=restaurants.filter(r=>((!cat)||(cat==='Gluten-Free'?r.gluten_free:cat==='Full Bar'?hasFullBar(r):matchesCuisine(r,cat)))&&matchesQuery(r,q));
     const pieces=[];
     if(q) pieces.push(`matching “${search.value.trim()}”`);
     if(cat) pieces.push(cat==='Gluten-Free'?'with gluten-free options':cat==='Full Bar'?'with a full bar':`in ${cat}`);
@@ -149,7 +161,7 @@
       const norwoodOnly=restaurants.filter(r=>{ const town=normalize(r.municipality||r.city||r.coverage||''); return !town || town==='norwood'; });
       // Dinner Spinner is for places with a food menu; bar-only/drink-only venues stay searchable but are excluded.
       const dinnerEligible=norwoodOnly.filter(r=>r.dinner_spinner!==false && r.food_menu!==false);
-      let pool=dinnerEligible.filter(r=>wantsFullBar?hasFullBar(r):(!terms.length||terms.some(t=>termMatchesRestaurant(r,t))));
+      let pool=dinnerEligible.filter(r=>wantsFullBar?hasFullBar(r):(!terms.length||matchesCuisine(r,choice)));
       // By default, exclude restaurants whose verified service for today has ended.
       // Unknown/unverified hours remain eligible rather than being falsely treated as closed.
       pool=pool.filter(r=>isAvailableToday(r)!==false);
