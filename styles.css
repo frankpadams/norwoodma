@@ -294,3 +294,20 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
     font-size: 16px !important;
   }
 }
+
+/* Compact Food & Drink filters: search, cuisine and GF guidance share a desktop row. */
+@media (min-width: 900px) {
+  #foodSearchForm.restaurant-tools {
+    display: grid !important;
+    grid-template-columns: minmax(250px, 1.5fr) minmax(165px, .8fr) minmax(220px, 1.1fr) !important;
+    align-items: end !important;
+    gap: 12px !important;
+  }
+  #foodSearchForm > div { min-width: 0; }
+  #foodSearchForm .restaurant-guidance { align-self: center; }
+  #foodSearchForm .gf-legend { font-size: 12px; line-height: 1.35; }
+}
+@media (max-width: 899px) {
+  #foodSearchForm.restaurant-tools { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 12px !important; }
+  #foodSearchForm > div { min-width: 0; }
+}
