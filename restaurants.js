@@ -39,6 +39,33 @@
     if(q.length>=5&&words.some(w=>w.length>=5&&editDistanceAtMostOne(q,w))) return true;
     return false;
   }
+  // Explicit dish aliases only; never infer an individual dish from a broad cuisine.
+  const dishAliases={
+    'chicken parm':['chicken parmesan','chicken parmigiana','chicken parm sub','chicken parmigiana sub'],
+    'eggplant parm':['eggplant parmesan','eggplant parmigiana'],
+    'fries':['french fries','frites'],
+    'subs':['sub','submarine sandwich','hoagie','grinder'],
+    'calzone':['calzones'],
+    'enchiladas':['enchilada'],
+    'quesadilla':['quesadillas'],
+    'burrito':['burritos'],
+    'taco':['tacos'],
+    'sushi':['sushi rolls','maki','nigiri'],
+    'pad thai':['phad thai'],
+    'gyro':['gyros'],
+    'falafel':['falafels']
+  };
+  function dishMatch(r,query){
+    const q=normalize(query);
+    const dishes=Array.isArray(r.dishes)?r.dishes:[];
+    const tags=normalize(Array.isArray(r.tags)?r.tags.join(' '):r.tags||'');
+    const known=[...dishes.map(normalize),...tags.split(' ')];
+    for(const [canonical,aliases] of Object.entries(dishAliases)){
+      const terms=[canonical,...aliases].map(normalize);
+      if(terms.includes(q)) return known.some(item=>terms.includes(item)||(' '+tags+' ').includes(' '+item+' ')&&terms.includes(item));
+    }
+    return false;
+  }
   function row(r){
     const label=r.link_type==='maps'?'Google Maps':'Website';
     const detail=r.link_type==='maps'?'No verified official website found':'Official restaurant site';
