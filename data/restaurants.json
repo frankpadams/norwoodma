@@ -323,7 +323,14 @@
       "cheese pizza"
     ],
     "menu_source": "https://chateaurestaurant.com/wp-content/uploads/2026/02/Chateau-Dinner.pdf",
-    "menu_checked": "2026-10-08"
+    "menu_checked": "2026-10-08",
+    "beverages": [
+      "beer",
+      "cocktails"
+    ],
+    "beverage_source": "https://chateaurestaurant.com/norwood/",
+    "beverage_checked": "2026-10-08",
+    "full_bar": true
   },
   {
     "id": "cheff-n-eetinn",
@@ -399,7 +406,28 @@
     ],
     "menu_source": "https://conradsrestaurant.com/norwood-menu/",
     "menu_checked": "2026-10-08",
-    "menu_source_type": "restaurant_or_brand_site"
+    "menu_source_type": "restaurant_or_brand_site",
+    "beverages": [
+      "beer",
+      "draft beer",
+      "bottled beer",
+      "wine",
+      "red wine",
+      "white wine",
+      "rosé",
+      "prosecco",
+      "cocktails",
+      "margarita",
+      "moscow mule",
+      "sangria",
+      "mocktails",
+      "nonalcoholic beer",
+      "lemonade",
+      "iced tea"
+    ],
+    "beverage_source": "https://conradsrestaurant.com/norwood-menu/",
+    "beverage_checked": "2026-10-08",
+    "full_bar": true
   },
   {
     "id": "crave",
@@ -1501,7 +1529,22 @@
     ],
     "menu_source": "https://www.onebistro.com/menu/dinner-restaurant-norwood-ma/",
     "menu_checked": "2026-10-08",
-    "menu_source_type": "official"
+    "menu_source_type": "official",
+    "beverages": [
+      "beer",
+      "draft beer",
+      "bottled beer",
+      "wine",
+      "red wine",
+      "white wine",
+      "cocktails",
+      "spirits",
+      "after dinner drinks",
+      "coffee"
+    ],
+    "beverage_source": "https://www.onebistro.com/beverages/",
+    "beverage_checked": "2026-10-08",
+    "full_bar": true
   },
   {
     "id": "orange-leaf-frozen-yogurt",
