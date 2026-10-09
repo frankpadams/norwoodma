@@ -284,3 +284,13 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .explore-moving-card b{margin-top:6px;color:#17365d}
 .explore-moving-card:hover,.explore-moving-card:focus-visible{transform:translateY(-1px);box-shadow:0 14px 32px rgba(15,23,42,.12)}
 @media(max-width:760px){.explore-feature-row{grid-template-columns:1fr}.explore-feature-row .explore-map-card,.explore-moving-card{min-height:150px}.explore-moving-card{padding:16px 18px}.explore-map-card-compact .explore-map-content{padding:16px 18px}}
+
+/* Prevent iOS Safari auto-zoom on focus; preserve responsive layouts and pinch zoom. */
+@media (max-width: 760px) {
+  .directory-search-line input[type="search"],
+  .restaurant-tools input,
+  .restaurant-tools select,
+  .restaurant-tools textarea {
+    font-size: 16px !important;
+  }
+}
