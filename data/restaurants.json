@@ -341,7 +341,10 @@
     "url": "https://cheffneetinn.com/",
     "link_type": "official",
     "tags": "bakery bread pastry breakfast lunch catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://cheffneetinn.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "chipotle-mexican-grill",
@@ -847,7 +850,10 @@
     "url": "https://www.guarinopastryshop.com/",
     "link_type": "official",
     "tags": "bakery pastry cake cannoli bread",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://www.guarinopastryshop.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "gyro-kebab-house",
@@ -1074,7 +1080,10 @@
     "url": "https://lunchboxnorwood.com/",
     "link_type": "official",
     "tags": "sandwich deli lunch catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://lunchboxnorwood.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "maha-juice-bar",
@@ -1192,7 +1201,10 @@
     "url": "https://www.minascaferestaurant.com/",
     "link_type": "official",
     "tags": "brazilian churrasco steak juice",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://www.minascaferestaurant.com/",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "minerva-indian-cuisine",
@@ -1434,7 +1446,10 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Norwood+Town+Square+Diner%2C+164+Nahatan+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "diner breakfast lunch pancakes omelettes classic",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://www.google.com/maps/search/?api=1&query=Norwood+Town+Square+Diner+Norwood+MA",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "el-valle-mexican-american-cuisine",
@@ -1574,7 +1589,10 @@
     "url": "https://www.google.com/maps/search/?api=1&query=The+Panini+Press+%26+Deli%2C+82+Chapel+St",
     "link_type": "maps",
     "tags": "panini deli sandwich Italian sub",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://www.google.com/maps/search/?api=1&query=The+Panini+Press+%26+Deli+Norwood+MA",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "pizza-palace",
@@ -1642,7 +1660,23 @@
     "url": "https://pokemoto.order.online/store/28595114",
     "link_type": "official",
     "tags": "poke sushi bowl seafood tofu boba healthy hawaiian",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "poke bowl",
+      "hawaiian poke bowl",
+      "salmon poke bowl",
+      "tuna poke bowl",
+      "chicken poke bowl",
+      "tofu poke bowl",
+      "build your own poke bowl",
+      "rice bowl",
+      "seaweed salad",
+      "edamame",
+      "miso soup"
+    ],
+    "menu_source": "https://pokemoto.order.online/store/28595114",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "ordering_site"
   },
   {
     "id": "q-sabor-latino-market",
@@ -1960,7 +1994,10 @@
     "url": "https://www.google.com/maps/search/?api=1&query=Sunrise+Breakfast%2C+528+Washington+St",
     "link_type": "maps",
     "tags": "breakfast brunch diner Irish breakfast",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://www.google.com/maps/search/?api=1&query=Sunrise+Breakfast+Norwood+MA",
+    "menu_checked": "2026-10-08"
   },
   {
     "id": "taco-bell-norwood",
@@ -2202,7 +2239,24 @@
     "url": "https://locations.wendys.com/united-states/ma/norwood/1412-boston-providence-turnpike",
     "link_type": "official",
     "tags": "burgers fries chicken breakfast drive thru fast food",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "daves single",
+      "daves double",
+      "baconator",
+      "jr bacon cheeseburger",
+      "spicy chicken sandwich",
+      "classic chicken sandwich",
+      "chicken nuggets",
+      "french fries",
+      "chili",
+      "baked potato",
+      "frosty",
+      "breakfast baconator"
+    ],
+    "menu_source": "https://www.wendys.com/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "brand_menu_general"
   },
   {
     "id": "yamato-hibachi-sushi-bar",
@@ -2276,6 +2330,9 @@
     "delivery_to_norwood": true,
     "dinner_spinner": true,
     "food_menu": true,
-    "verified": "2026-09-28"
+    "verified": "2026-09-28",
+    "menu_review_status": "needs_item_level_verification",
+    "menu_source": "https://www.maikitchenrestaurant.com/",
+    "menu_checked": "2026-10-08"
   }
 ]
