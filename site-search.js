@@ -272,12 +272,119 @@
  function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
  let restaurantIndex=[];
  fetch('data/restaurants.json').then(r=>r.json()).then(rows=>{restaurantIndex=Array.isArray(rows)?rows:[];if(input.value.trim())render(false);}).catch(()=>{});
- function restaurantMatchCount(raw){
-  const q=norm(raw);if(q.length<3)return 0;
-  const aliases={fries:['french fries'],burger:['hamburger','cheeseburger'],taco:['tacos'],'street corn':['elote'],sub:['subs','hoagie']};
-  const terms=[q,...Object.entries(aliases).filter(([k,v])=>[k,...v].includes(q)).flatMap(([k,v])=>[k,...v])];
-  return restaurantIndex.filter(r=>[r.name,r.cuisine,r.category,...(r.dishes||[]),...(r.beverages||[])].some(v=>terms.some(t=>norm(v).includes(t)))).length;
- }
+  const normalize=norm;
+  function searchable(r){
+    const tags=Array.isArray(r.tags)?r.tags.join(' '):(r.tags||'');
+    return normalize([r.name,r.category,r.cuisine,r.address,tags,r.gluten_free?'gluten free gf':'',hasFullBar(r)?'full bar cocktails liquor drinks':''].filter(Boolean).join(' '));
+  }
+  function hasFullBar(r){
+    if(r?.full_bar===true) return true;
+    const tags=' '+normalize(Array.isArray(r?.tags)?r.tags.join(' '):(r?.tags||''))+' ';
+    return tags.includes(' cocktails ')&&tags.includes(' beer ')&&tags.includes(' wine ')&&tags.includes(' full ');
+  }
+  function editDistanceAtMostOne(a,b){
+    if(a===b) return true;
+    if(Math.abs(a.length-b.length)>1) return false;
+    let i=0,j=0,edits=0;
+    while(i<a.length&&j<b.length){
+      if(a[i]===b[j]){i++;j++;continue;}
+      if(++edits>1) return false;
+      if(a.length>b.length)i++;
+      else if(b.length>a.length)j++;
+      else{i++;j++;}
+    }
+    return edits+(i<a.length||j<b.length?1:0)<=1;
+  }
+  function termMatchesRestaurant(r,term){
+    const q=normalize(term);
+    if(!q) return true;
+    const hay=searchable(r);
+    if((' '+hay+' ').includes(' '+q+' ')) return true;
+    const words=hay.split(' ').filter(Boolean);
+    if(q.length>=4&&words.some(w=>w.startsWith(q)&&w.length-q.length<=2)) return true;
+    if(q.length>=5&&words.some(w=>w.length>=5&&editDistanceAtMostOne(q,w))) return true;
+    return false;
+  }
+  // Explicit dish aliases only; never infer an individual dish from a broad cuisine.
+  const beverageAliases={
+    'beer':['draft beer','bottled beer','craft beer','lager','ipa'],
+    'wine':['red wine','white wine','rose','rosé','sparkling wine','prosecco'],
+    'cocktail':['cocktails','mixed drinks'],
+    'mocktail':['mocktails','nonalcoholic cocktails','non alcoholic cocktails'],
+    'soda':['soft drinks','cola'],
+    'coffee':['iced coffee','cold brew','espresso','latte'],
+    'tea':['iced tea','milk tea','chai']
+  };
+  const dishAliases={
+    'chicken parm':['chicken parmesan','chicken parmigiana','chicken parm sub','chicken parmigiana sub'],
+    'eggplant parm':['eggplant parmesan','eggplant parmigiana'],
+    'fries':['french fries','frites'],
+    'subs':['sub','submarine sandwich','hoagie','hoagies','grinder','grinders','hero','heroes'],
+    'calzone':['calzones'],
+    'enchiladas':['enchilada'],
+    'quesadilla':['quesadillas'],
+    'burrito':['burritos'],
+    'taco':['tacos'],
+    'sushi':['sushi rolls','maki','nigiri'],
+    'pad thai':['phad thai'],
+    'gyro':['gyros'],
+    'falafel':['falafels'],
+    'burger':['burgers','hamburger','hamburgers','cheeseburger','cheeseburgers'],
+    'ice cream':['ice cream cone','ice cream sundae','sundae','soft serve','soft serve ice cream']
+  };
+  function dishMatch(r,query){
+    const q=normalize(query);
+    const dishes=Array.isArray(r.dishes)?r.dishes:[];
+    const terms=[q];
+    for(const [canonical,aliases] of Object.entries({...dishAliases,...beverageAliases})){
+      const family=[canonical,...aliases].map(normalize);
+      if(family.includes(q)){terms.splice(0,terms.length,...family);break;}
+    }
+    return dishes.some(d=>terms.some(t=>(' '+normalize(d)+' ').includes(' '+t+' ')));
+  }
+  function beverageMatch(r,query){
+    const q=normalize(query);
+    const beverages=Array.isArray(r.beverages)?r.beverages:[];
+    const family=Object.entries(beverageAliases).find(([key,aliases])=>[key,...aliases].map(normalize).includes(q));
+    const terms=family?[family[0],...family[1]].map(normalize):[q];
+    return beverages.some(b=>terms.some(t=>(' '+normalize(b)+' ').includes(' '+t+' ')));
+  }
+  // Generic deli subs imply searchable sub styles, but not a verified specific filling.
+  function genericSubMatch(r,query){
+    const q=normalize(query);
+    const subs=Array.isArray(r.dishes)?r.dishes.map(normalize):[];
+    if(!subs.some(d=>['subs','deli subs','sub','sandwiches','deli sandwiches'].includes(d))) return false;
+    const words=q.split(' ').filter(Boolean);
+    const styles=['sub','subs','hoagie','hoagies','grinder','grinders','hero','heroes','submarine','sandwich'];
+    const fillings=['turkey','italian','ham','roast beef','chicken salad','tuna','salami','pastrami'];
+    return words.some(w=>styles.includes(w))&&fillings.some(f=>(' '+q+' ').includes(' '+f+' '));
+  }
+  function matchesCuisine(r,choice){
+    const q=normalize(choice);
+    if(!q) return true;
+    if(q==='sushi') return normalize(r.cuisine).includes('sushi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('sushi'));
+    if(q==='hibachi') return normalize(r.cuisine).includes('hibachi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('hibachi'));
+    return normalize(r.category)===q || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.some(t=>normalize(t)===q));
+  }
+  function matchesQuery(r,q){
+    if(!q) return true;
+    if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;
+    // Cuisine searches should return every relevant restaurant, not only a literal dish entry.
+    if(['sushi','hibachi'].includes(q)) return matchesCuisine(r,q);
+    const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
+    if(beverageTerms.includes(q)) return false;
+    // Do not mistake a requested dish for a restaurant's broad cuisine or address.
+    const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
+    const indexedDishes=new Set(restaurants.flatMap(item=>Array.isArray(item.dishes)?item.dishes.map(normalize):[]));
+    const indexedDrinks=new Set(restaurants.flatMap(item=>Array.isArray(item.beverages)?item.beverages.map(normalize):[]));
+    if(dishTerms.includes(q)||indexedDishes.has(q)||indexedDrinks.has(q)) return false;
+    const words=q.split(' ').filter(Boolean);
+    return words.every(t=>termMatchesRestaurant(r,t));
+  }
+  function restaurantMatchCount(raw){
+    const q=normalize(raw);
+    return q.length<3?0:restaurantIndex.filter(r=>matchesQuery(r,q)).length;
+  }
  function render(track=false){
   const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
   const allHits=search(raw,200);
