@@ -98,7 +98,16 @@
     if(!q) return true;
     if(q==='sushi') return normalize(r.cuisine).includes('sushi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('sushi'));
     if(q==='hibachi') return normalize(r.cuisine).includes('hibachi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('hibachi'));
-    return normalize(r.category)===q || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.some(t=>normalize(t)===q));
+    const category=normalize(r.category), cuisine=normalize(r.cuisine), tags=normalize(Array.isArray(r.tags)?r.tags.join(' '):(r.tags||''));
+    const cuisineTags=Array.isArray(r.cuisine_tags)?r.cuisine_tags.map(normalize):[];
+    if(category===q || cuisineTags.includes(q)) return true;
+    // Spinner choices describe foods, not necessarily the directory's broader category names.
+    const words=' '+[category,cuisine,tags].join(' ')+' ';
+    if(q==='pizza') return /\\bpizza\\b/.test(words);
+    if(q==='italian') return /\\bitalian\\b/.test(words) || category==='pizza italian';
+    if(q==='american pub burgers') return /\\b(american|pub|burger|burgers|tavern)\\b/.test(words);
+    if(q==='asian sushi') return /\\b(asian|sushi|japanese|chinese|thai|korean|vietnamese|hibachi)\\b/.test(words);
+    return words.includes(' '+q+' ');
   }
   function matchesQuery(r,q){
     if(!q) return true;
