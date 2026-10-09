@@ -318,3 +318,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
     grid-template-columns: minmax(165px, .8fr) minmax(250px, 1.5fr) minmax(220px, 1.1fr) !important;
   }
 }
+
+/* Date tile indicators: one day, continuous range, or recurring dates */
+.event-date{position:relative}
+.event-duration-indicator{position:absolute;top:2px;right:3px;font-size:12px;line-height:1;font-weight:700;opacity:.85;pointer-events:none}
+@media(max-width:600px){.event-duration-indicator{top:2px;right:2px;font-size:11px}}
