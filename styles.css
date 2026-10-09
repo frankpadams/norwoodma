@@ -311,3 +311,10 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
   #foodSearchForm.restaurant-tools { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 12px !important; }
   #foodSearchForm > div { min-width: 0; }
 }
+
+/* Browse-first ordering: narrow cuisine, then search dishes or names. */
+@media (min-width: 900px) {
+  #foodSearchForm.restaurant-tools {
+    grid-template-columns: minmax(165px, .8fr) minmax(250px, 1.5fr) minmax(220px, 1.1fr) !important;
+  }
+}
