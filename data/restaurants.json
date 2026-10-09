@@ -87,7 +87,22 @@
     "url": "https://betweenthebunz.us/",
     "link_type": "official",
     "tags": "smash burger chicken fries lobster roll",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "crispy crinkle fries",
+      "whoppah",
+      "buttah burger",
+      "the og",
+      "plain cheeseburger",
+      "chili cheese fries",
+      "cheesy fries",
+      "classic chic",
+      "lobster roll",
+      "hot honey chicken sandwich"
+    ],
+    "menu_source": "https://www.doordash.com/store/between-the-bunz-norwood-norwood-34730771/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "third_party_menu"
   },
   {
     "id": "boston-tavern",
@@ -186,7 +201,18 @@
     "url": "https://www.bk.com/store-locator/store/restaurant_2749",
     "link_type": "official",
     "tags": "burgers fries chicken breakfast drive thru fast food",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "whopper",
+      "cheeseburger",
+      "hamburger",
+      "french fries",
+      "chicken fries",
+      "chicken sandwich"
+    ],
+    "menu_source": "https://www.bk.com/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "byblos-restaurant",
@@ -227,7 +253,24 @@
     "url": "https://www.cafefreshbagelsnorwood.com/",
     "link_type": "official",
     "tags": "bagel breakfast sandwich coffee",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "egg white and cheese",
+      "egg and cheese",
+      "ham egg and cheese",
+      "bacon egg and cheese",
+      "sausage egg and cheese",
+      "omelette",
+      "everything bagel",
+      "cinnamon raisin bagel",
+      "blueberry bagel",
+      "chicken salad sandwich",
+      "grilled chicken sandwich",
+      "tuna salad sandwich"
+    ],
+    "menu_source": "https://www.allmenus.com/ma/norwood/805482-fresh-bagel-cafe/menu/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "third_party_menu"
   },
   {
     "id": "cafe-k-streets",
@@ -238,7 +281,17 @@
     "url": "https://www.cafekstreets-norwood.com/",
     "link_type": "official",
     "tags": "coffee croffle Korean breakfast latte dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "croffle",
+      "waffles",
+      "coffee",
+      "latte",
+      "korean corn dog"
+    ],
+    "menu_source": "https://www.cafekstreets-norwood.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "the-chateau-restaurant",
@@ -316,7 +369,37 @@
     "link_type": "official",
     "tags": "american pub steak tips bar",
     "verified": "2026-09-17",
-    "gluten_free": true
+    "gluten_free": true,
+    "dishes": [
+      "clam chowder",
+      "onion rings",
+      "chicken quesadilla",
+      "chicken fingers",
+      "fried pickles",
+      "fried mozzarella",
+      "nachos",
+      "spinach artichoke dip",
+      "chicken wings",
+      "french onion soup",
+      "calamari",
+      "greek salad",
+      "cobb salad",
+      "conrads burger",
+      "turkey burger",
+      "meatball sub",
+      "chicken parmesan sandwich",
+      "chicken marsala",
+      "chicken piccata",
+      "fish and chips",
+      "baked stuffed shrimp",
+      "cheese pizza",
+      "buffalo chicken pizza",
+      "chicken parm calzone",
+      "french fries"
+    ],
+    "menu_source": "https://conradsrestaurant.com/norwood-menu/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "crave",
@@ -416,7 +499,15 @@
     "url": "https://www.daddysdairy.net/",
     "link_type": "official",
     "tags": "ice cream sundae frozen yogurt dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "ice cream",
+      "sundae",
+      "frozen yogurt"
+    ],
+    "menu_source": "https://www.daddysdairy.net/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "dilli-delights",
@@ -458,7 +549,21 @@
     "url": "https://pizza.dominos.com/massachusetts/norwood/1023-washington-st",
     "link_type": "official",
     "tags": "pizza delivery chain",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "build your own pizza",
+      "specialty pizza",
+      "wings",
+      "boneless chicken",
+      "oven baked pasta",
+      "oven baked sandwich",
+      "bread",
+      "salad",
+      "dessert"
+    ],
+    "menu_source": "https://pizza.dominos.com/massachusetts/norwood/1023-washington-st",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "dunkin-nahatan",
@@ -562,7 +667,17 @@
     "url": "https://locations.friendlysrestaurants.com/ll/us/ma/norwood/1469-providence-highway/",
     "link_type": "official",
     "tags": "burgers family diner ice cream sundaes kids",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burger",
+      "salad",
+      "ice cream",
+      "sundae",
+      "supermelt"
+    ],
+    "menu_source": "https://locations.friendlysrestaurants.com/ll/us/ma/norwood/1469-providence-highway/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "fuego-burritos-bowls",
@@ -594,7 +709,14 @@
     "url": "https://furlongscandies.com/",
     "link_type": "official",
     "tags": "candy chocolate ice cream dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "ice cream",
+      "candy"
+    ],
+    "menu_source": "https://furlongscandies.com/",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "gemma-kitchen-bar",
@@ -684,7 +806,23 @@
     "url": "https://restaurants.ihop.com/en-us/ma/norwood/breakfast-1378-boston-providence-highway-4689",
     "link_type": "official",
     "tags": "breakfast pancakes waffles omelettes diner family",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "buttermilk pancakes",
+      "french toast",
+      "waffle",
+      "breakfast sampler",
+      "omelette",
+      "eggs benedict",
+      "breakfast burrito",
+      "chicken and waffles",
+      "strawberry banana pancakes",
+      "chocolate chip pancakes",
+      "steakburger"
+    ],
+    "menu_source": "https://www.ihop.com/en/menu",
+    "menu_checked": "2026-10-08",
+    "menu_source_type": "restaurant_or_brand_site"
   },
   {
     "id": "irish-brewing-boston",
