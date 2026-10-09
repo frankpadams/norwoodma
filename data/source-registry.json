@@ -290,7 +290,10 @@
       "basis": "Approved test event returned through deployed privacy-safe Apps Script JSON endpoint"
     },
     "notes": "Endpoint exposes only allowlisted public event fields from rows whose moderation Status is Approved or Published. Private response Sheet remains private.",
-    "conflict_profile": "optional"
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true
+    }
   },
   {
     "id": "elks-calendar",
