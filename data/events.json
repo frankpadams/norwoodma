@@ -106,7 +106,7 @@
     "category": "holiday",
     "source_id": "wards-berry-farm",
     "source_url": "https://www.wardsberryfarm.com/hauntedcornmaze",
-    "cost": "Paid admission — see ticket prices",
+    "cost": "$45–$55",
     "public_access": "ticketed_public",
     "series": "Halloween haunted attraction",
     "recurrence": "Thursday–Saturday evenings",
@@ -13925,6 +13925,60 @@
     ]
   },
   {
+    "id": "2026-10-24-walpole-halloween-main",
+    "title": "Halloween on Main Street",
+    "start": {
+      "date": "2026-10-24",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "11:00"
+    },
+    "venue": "Downtown Walpole",
+    "address": "Main Street, Walpole, MA",
+    "town": "Walpole",
+    "category": "holiday",
+    "source_id": "fall-halloween-2026",
+    "source_url": "https://walpoledowntown.org/events/halloween-on-main-ww22l-cf43e",
+    "cost": "Free; registration required",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "published_2026_schedule_verified_2026-10-09",
+    "notes": "OUT OF TOWN — Walpole, MA. Children's costume parade and trick-or-treating at participating downtown businesses.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-24-norwood-trunk-or-treat",
+    "title": "15th Annual Norwood Trunk or Treat",
+    "start": {
+      "date": "2026-10-24",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "12:00"
+    },
+    "venue": "Norwood Town Hall parking lot",
+    "address": "566 Washington St, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "holiday",
+    "source_id": "fall-halloween-2026",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "$1 or canned/dry food donation",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "published_2026_schedule_verified_2026-10-09",
+    "notes": "Costume-friendly event supporting Norwood Food Pantry.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-food-markets"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad028384be8a-2026-10-24",
     "title": "Tap 1 - Saturdays",
     "start": {
@@ -13959,6 +14013,32 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-24-walpole-falloween",
+    "title": "Falloween Fall Festival",
+    "start": {
+      "date": "2026-10-24",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "14:00"
+    },
+    "venue": "Downtown Walpole",
+    "address": "Main Street, Walpole, MA",
+    "town": "Walpole",
+    "category": "holiday",
+    "source_id": "fall-halloween-2026",
+    "source_url": "https://walpoledowntown.org/events",
+    "cost": "Admission not confirmed",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "published_2026_schedule_verified_2026-10-09",
+    "notes": "OUT OF TOWN — Walpole, MA. Fall festival following Halloween on Main Street; check organizer for details.",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -14181,6 +14261,33 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-24-hale-o-ween",
+    "title": "Hale-o-ween 2026",
+    "start": {
+      "date": "2026-10-24",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "18:00"
+    },
+    "venue": "Hale Education",
+    "address": "80 Carby St, Westwood, MA 02090",
+    "town": "Westwood",
+    "category": "holiday",
+    "source_id": "fall-halloween-2026",
+    "source_url": "https://hale.education/event/hale-o-ween-2026/",
+    "cost": "Free; registration required",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "published_2026_schedule_verified_2026-10-09",
+    "notes": "OUT OF TOWN — Westwood, MA. Choose a 1–3 PM or 4–6 PM session. Family Halloween nature activities, haunted cabin, spooky science, crafts and s'mores. Best for ages 3–12.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -19450,6 +19557,32 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-30-norwood-cfce-benchmark-trick-or-treat",
+    "title": "Norwood CFCE Trick or Treat at Benchmark",
+    "start": {
+      "date": "2026-10-30",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": null
+    },
+    "venue": "Benchmark Senior Living",
+    "address": "40 Clapboardtree St, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "holiday",
+    "source_id": "fall-halloween-2026",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free; registration required",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "published_2026_schedule_verified_2026-10-09",
+    "notes": "Intergenerational Halloween trick-or-treating. Register through the library before visiting; do not arrive without registration.",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
