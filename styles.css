@@ -323,3 +323,13 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .event-date{position:relative}
 .event-duration-indicator{position:absolute;top:2px;right:3px;font-size:12px;line-height:1;font-weight:700;opacity:.85;pointer-events:none}
 @media(max-width:600px){.event-duration-indicator{top:2px;right:2px;font-size:11px}}
+
+/* Responsive sitewide navigation: a compact, overlaying dropdown when links won't fit. */
+.top.norwood-menu-collapsed{position:relative!important;overflow:visible!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;min-height:72px!important;padding:10px 16px!important}
+.top.norwood-menu-collapsed>.brand.approved{flex:0 1 220px!important;grid-column:auto!important;grid-row:auto!important;width:min(220px,65vw)!important;max-width:65vw!important;height:auto!important;min-height:0!important}
+.top.norwood-menu-collapsed>.brand.approved img{width:100%!important;max-width:100%!important;height:auto!important}
+.top.norwood-menu-collapsed>#menu{display:inline-flex!important;position:relative!important;flex:0 0 44px!important;order:2!important;align-items:center!important;justify-content:center!important;width:44px!important;max-width:44px!important;min-height:44px!important;margin:0 0 0 auto!important;padding:8px!important;box-sizing:border-box!important;cursor:pointer!important}
+.top.norwood-menu-collapsed>#nav{display:none!important;position:absolute!important;top:calc(100% - 1px)!important;right:12px!important;left:auto!important;bottom:auto!important;z-index:1000!important;grid-column:auto!important;grid-row:auto!important;order:initial!important;flex:none!important;width:max-content!important;min-width:210px!important;max-width:calc(100vw - 24px)!important;height:auto!important;min-height:0!important;max-height:70vh!important;overflow-y:auto!important;margin:0!important;padding:6px!important;box-sizing:border-box!important;background:#fff!important;border:1px solid #ccd6e3!important;border-radius:12px!important;box-shadow:0 12px 28px rgba(0,24,55,.18)!important;white-space:normal!important}
+.top.norwood-menu-collapsed>#nav.open{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:2px!important}
+.top.norwood-menu-collapsed>#nav>a{display:flex!important;flex:0 0 auto!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;min-width:0!important;min-height:44px!important;padding:10px 12px!important;font-size:1rem!important;text-align:left!important}
+.top.norwood-menu-collapsed>#nav>a::before{flex:0 0 18px!important;width:18px!important;height:18px!important}
