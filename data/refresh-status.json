@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T08:45:18.925039-04:00",
+  "generated_at": "2026-10-10T14:44:52.381812-04:00",
   "offline": false,
   "events_published": 2708,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2708,
-      "generated_at": "2026-10-10T08:45:18.464394-04:00"
+      "generated_at": "2026-10-10T14:44:52.067316-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 108,
-      "generated_at": "2026-10-10T08:45:18.472328-04:00"
+      "generated_at": "2026-10-10T14:44:52.078146-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 1068,
-      "generated_at": "2026-10-10T08:45:18.489406-04:00"
+      "generated_at": "2026-10-10T14:44:52.099766-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 954,
-      "generated_at": "2026-10-10T08:45:18.503266-04:00"
+      "generated_at": "2026-10-10T14:44:52.118880-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-10T08:45:18.511206-04:00"
+      "generated_at": "2026-10-10T14:44:52.129367-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 77,
-      "generated_at": "2026-10-10T08:45:18.520065-04:00"
+      "generated_at": "2026-10-10T14:44:52.140531-04:00"
     }
   ],
   "recreation_programs": 156,
@@ -89,7 +89,7 @@
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 2,
+      "found": 10,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -210,9 +210,9 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 2,
+      "found": 0,
       "note": null,
-      "outcome": "events",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -1180,12 +1180,13 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
-      "found": 4,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "parser_gap",
+      "access_limited": false,
+      "retained_events": 4
     },
     {
       "source_id": "pcrinc-events",
@@ -1576,7 +1577,7 @@
       "source": "Norwood Public Schools",
       "url": "https://www.norwood.k12.ma.us/about/news/feed/rss",
       "ok": true,
-      "found": 14,
+      "found": 13,
       "method": "rss"
     },
     {
@@ -1596,9 +1597,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -1636,7 +1638,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 21,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1701,18 +1703,18 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 21,
+      "found": 20,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
         "Hoodline": 2,
-        "Inside Norwood": 10,
-        "Patch": 5,
+        "The Norwood Record": 42,
+        "The Norwood Record — Latest": 20,
+        "Inside Norwood": 9,
+        "Patch": 4,
         "Norwood Public Schools": 2,
         "Town of Norwood": 7,
         "Norwood Town News": 19,
-        "The Norwood Record": 41,
-        "The Norwood Record — Latest": 18,
         "newportdispatch.com": 1,
         "WCVB": 1,
         "Norwood Parents Music Association": 1,
@@ -1724,8 +1726,7 @@
         "Boston.com": 2,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
-        "ESPN": 1,
-        "NBC Boston": 1
+        "ESPN": 1
       },
       "note": null
     }
