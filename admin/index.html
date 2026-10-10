@@ -2,117 +2,9 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Norwood.ma Admin</title><link rel="stylesheet" href="../styles.css"><style>
 .ops{max-width:1080px;margin:auto;padding:24px 16px 64px}.ops-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.ops-card{border:1px solid #ccd6e3;border-radius:12px;padding:18px;background:#fff;color:#18283e}.ops-card h2{font-size:1.05rem;margin:0 0 10px}.ops-muted{color:#53647a}.ops-state{font-size:1.5rem;font-weight:700}.ops-note{background:#fff5df;border-left:4px solid #bb8726;padding:14px;margin:20px 0}.ops-list{padding-left:22px}.ops-list li{margin:8px 0}.ops a{overflow-wrap:anywhere}.ops-header{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
 
-/* Admin header: match the site's compact navigation on tablets and phones.
-   Avoid the desktop links overflowing on iPad widths. */
-@media (max-width: 1100px) {
-  body > header.top {
-    display:flex!important; flex-wrap:wrap!important; align-items:center!important;
-    justify-content:space-between!important; min-height:0!important;
-    padding:10px 16px!important; gap:10px!important;
-  }
-  body > header.top > .brand.approved {
-    display:block!important; flex:0 1 220px!important; width:min(220px,65vw)!important;
-    height:auto!important; min-height:0!important; max-width:65vw!important;
-  }
-  body > header.top > .brand.approved img {width:100%!important;height:auto!important;max-width:100%!important}
-  body > header.top > #menu {
-    display:inline-flex!important; position:relative!important; align-items:center!important;
-    justify-content:center!important; min-width:44px!important; min-height:44px!important;
-    margin-left:auto!important; cursor:pointer!important;
-  }
-  body > header.top > #nav {
-    display:none!important; flex:1 0 100%!important; width:100%!important;
-    height:auto!important; min-height:0!important; position:static!important;
-    white-space:normal!important; flex-direction:column!important;
-    align-items:stretch!important; padding:8px 0!important; gap:2px!important;
-  }
-  body > header.top > #nav.open,
-  body > header.top > #nav.show,
-  body > header.top > #nav.active,
-  body > header.top > #nav[aria-hidden="false"] {display:flex!important}
-  body > header.top > #nav a {display:block!important; padding:12px!important; font-size:1rem!important; min-height:44px!important}
-}
-
-/* Keep the hamburger a compact icon button, never a full-width row. */
-@media (max-width:1100px) {
- body > header.top > #menu {
-   flex:0 0 44px!important; width:44px!important; max-width:44px!important;
-   padding:8px!important; font-size:0!important; line-height:1!important;
-   border-radius:9px!important; box-sizing:border-box!important;
- }
- body > header.top > #menu::before {
-   content:"☰"; font-size:24px!important; line-height:1!important;
-   font-weight:400!important;
- }
- body > header.top > #menu[aria-expanded="true"]::before {content:"✕";}
-}
-/* Same navigation icon presentation as the rest of Norwood.ma. */
-
-/* Admin: use the same SVG-mask navigation icons as the main site. */
-@media(max-width:1100px){
- body > header.top {justify-content:flex-start!important}
- body > header.top > #menu {
-   margin-left:0!important; margin-right:auto!important;
-   flex:0 0 44px!important; width:44px!important; max-width:44px!important;
-   align-self:center!important;
- }
- body > header.top > #nav.open {
-   flex:0 1 auto!important; width:max-content!important; max-width:100%!important;
-   min-width:210px!important; align-items:stretch!important;
-   margin:0!important; padding:6px!important;
-   border-radius:12px!important;
- }
- body > header.top > #nav.open > a {
-   display:flex!important; flex-direction:row!important; align-items:center!important;
-   justify-content:flex-start!important; gap:10px!important;
-   width:auto!important; text-align:left!important;
- }
- body > header.top > #nav.open > a::before {
-   display:block!important; flex:0 0 18px!important;
-   width:18px!important; height:18px!important;
- }
-}
-
-/* Admin responsive navigation: button right, dropdown items left. */
-@media(max-width:1100px){
- body > header.top {justify-content:space-between!important}
- body > header.top > #menu {
-   margin-left:auto!important; margin-right:0!important;
-   order:2!important; justify-self:end!important;
-   flex:0 0 44px!important; width:44px!important; max-width:44px!important;
- }
- body > header.top > .brand.approved {order:1!important}
- body > header.top > #nav {order:3!important}
- body > header.top > #nav.open {
-   margin-left:auto!important; margin-right:0!important;
-   flex:0 0 auto!important; width:max-content!important; max-width:calc(100vw - 32px)!important;
-   min-width:210px!important;
- }
- body > header.top > #nav.open > a {
-   text-align:left!important; justify-content:flex-start!important;
- }
-}
-
-/* Dropdown overlays content rather than creating a new header row. */
-@media(max-width:1100px){
- body > header.top {position:relative!important; overflow:visible!important}
- body > header.top > #nav,
- body > header.top > #nav.open {
-   position:absolute!important; top:calc(100% - 1px)!important; right:12px!important;
-   left:auto!important; bottom:auto!important;
-   z-index:1000!important; order:initial!important;
-   margin:0!important; padding:6px!important;
-   flex:none!important; width:max-content!important;
-   max-width:calc(100vw - 24px)!important; min-width:210px!important;
-   height:auto!important; max-height:min(70vh,600px)!important; overflow-y:auto!important;
-   box-sizing:border-box!important; background:#fff!important;
-   border:1px solid #ccd6e3!important; border-radius:12px!important;
-   box-shadow:0 12px 28px rgba(0,24,55,.18)!important;
- }
- body > header.top > #nav:not(.open) {display:none!important}
- body > header.top > #nav.open {display:flex!important; flex-direction:column!important}
- body > header.top > #nav.open > a {flex:0 0 auto!important; width:100%!important; box-sizing:border-box!important}
-}
+/* Presentation-only admin gate; GitHub Pages content remains public in source. */
+body:not(.admin-authorized) main.ops > :not(#signin){display:none!important}
+body:not(.admin-authorized) #signin{max-width:520px;margin:36px auto!important}
 </style><link rel="icon" type="image/png" href="/assets/favicon-approved.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/assets/apple-touch-icon.png?v=20260921"><meta name="theme-color" content="#003B71"></head><body><div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div><header class="top"><a class="brand approved" href="/index.html"><img alt="Norwood.ma — Our Town. Online." src="/assets/logo-dark-approved.png"/></a><button aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu" id="menu">Menu</button><nav id="nav"><a href="https://www.norwood.ma/events.html">What’s Happening</a><a href="https://www.norwood.ma/news.html">News</a><a href="https://www.norwood.ma/explore.html">Explore</a><a href="https://www.norwood.ma/transit.html">Transit</a><a href="https://www.norwood.ma/resources.html">Local Resources</a><a href="https://www.norwood.ma/discover.html">Discover</a></nav></header>
 <main class="ops" id="main"><div class="ops-header"><div><p class="eyebrow">SITE ADMINISTRATION</p><h1>Norwood.ma Admin</h1><p class="ops-muted">Reliability · Content accuracy · Usability · Growth</p></div></div>
 <section class="ops-card" id="signin" style="margin-bottom:18px"><h2>Google account</h2><p class="ops-muted">Sign in with norwooddotma@gmail.com. Private dashboard data will remain unavailable until server-side authorization is connected.</p><div id="googleButton"></div><p id="authState" role="status" aria-live="polite">Not signed in</p><button id="signout" type="button" hidden>Sign out</button></section><div class="ops-note"><strong>Setup in progress.</strong> This page is publicly served by GitHub Pages. Private metrics and administrative controls are deliberately disabled until Google authentication and authorized data access are configured. Do not enter credentials here.</div>
@@ -140,16 +32,16 @@
 (()=>{'use strict';
 const CLIENT_ID='1019242610802-3apelijv6vmiiulj6mb3bkif7m6k2aen.apps.googleusercontent.com';
 const state=document.getElementById('authState'),out=document.getElementById('signout');
-function signout(){state.textContent='Not signed in';out.hidden=true;if(window.google?.accounts?.id)google.accounts.id.disableAutoSelect();}
+function signout(){document.body.classList.remove('admin-authorized');state.textContent='Not signed in';out.hidden=true;if(window.google?.accounts?.id)google.accounts.id.disableAutoSelect();}
 out.addEventListener('click',signout);
 function init(){if(!window.google?.accounts?.id){state.textContent='Google sign-in could not load. Check your connection.';return;}
 google.accounts.id.initialize({client_id:CLIENT_ID,callback:response=>{
 // This client-side result is informational ONLY. Do not trust it for private API access.
 // Backend must independently validate token signature, audience, expiry and allowed identity.
 try{const body=response.credential.split('.')[1];const payload=JSON.parse(atob(body.replace(/-/g,'+').replace(/_/g,'/')));
-if(payload.email==='norwooddotma@gmail.com'&&payload.email_verified===true){state.textContent='Signed in as '+payload.email+'. Private data connections are not yet enabled.';out.hidden=false;}
-else{state.textContent='This dashboard is reserved for norwooddotma@gmail.com.';out.hidden=true;}}
-catch(e){state.textContent='Sign-in response could not be read.';}
+if(payload.email==='norwooddotma@gmail.com'&&payload.email_verified===true&&payload.exp*1000>Date.now()){document.body.classList.add('admin-authorized');state.textContent='Signed in as '+payload.email+'. Private data connections are not yet enabled.';out.hidden=false;}
+else{document.body.classList.remove('admin-authorized');state.textContent='This dashboard is reserved for norwooddotma@gmail.com.';out.hidden=true;}}
+catch(e){document.body.classList.remove('admin-authorized');state.textContent='Sign-in response could not be read.';}
 }});
 google.accounts.id.renderButton(document.getElementById('googleButton'),{theme:'outline',size:'large',text:'signin_with',width:260});}
 window.addEventListener('load',init);
