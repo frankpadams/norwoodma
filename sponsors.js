@@ -1,7 +1,7 @@
 (()=>{'use strict';
 const first=document.getElementById('homeAdSlot'),calendar=document.querySelector('.dashboard-grid .dash-stack'),transit=document.querySelector('.dashboard-grid .transit-preview');
 if(!first||!calendar||!transit)return;
-const grid=calendar.closest('.dashboard-grid'),second=first.cloneNode(true);
+const grid=calendar.closest('.dashboard-grid'),rightStack=document.createElement('div');rightStack.className='dash-stack';transit.parentNode.insertBefore(rightStack,transit);rightStack.append(transit);const second=first.cloneNode(true);
 second.id='homeAdSlotSecondary';second.querySelector('#sponsorNext').id='sponsorNextSecondary';second.querySelector('#sponsorCreative').id='sponsorCreativeSecondary';second.hidden=true;
 const slots=[first,second],views=slots.map(s=>s.querySelector('[id^="sponsorCreative"]')),buttons=slots.map(s=>s.querySelector('[id^="sponsorNext"]'));
 let sponsors=[],indices=[-1,-1],turns=[0,0],paused=[0,0],timers=[null,null],positioning=false;
@@ -25,8 +25,8 @@ function advance(n,manual){if(indices[n]<0)return;turns[n]++;indices[n]=choose(n
 buttons.forEach((b,n)=>b.addEventListener('click',()=>advance(n,true)));
 function layout(){if(positioning)return;positioning=true;
 requestAnimationFrame(()=>{positioning=false;const narrow=window.matchMedia('(max-width:760px)').matches;
-const left=calendar.querySelector('.event-splash'),lh=left?.getBoundingClientRect().height||0,rh=transit.getBoundingClientRect().height-(first.parentElement===transit&&!first.hidden?first.getBoundingClientRect().height:0)-(second.parentElement===transit&&!second.hidden?second.getBoundingClientRect().height:0);
-const shorter=lh<=rh?calendar:transit,longer=shorter===calendar?transit:calendar;
+const left=calendar.querySelector('.event-splash'),lh=left?.getBoundingClientRect().height||0,rh=transit.getBoundingClientRect().height-(first.parentElement===rightStack&&!first.hidden?first.getBoundingClientRect().height:0)-(second.parentElement===rightStack&&!second.hidden?second.getBoundingClientRect().height:0);
+const shorter=lh<=rh?calendar:rightStack,longer=shorter===calendar?rightStack:calendar;
 if(first.parentElement!==shorter)shorter.append(first);
 const two=!narrow&&Math.abs(lh-rh)<=100&&sponsors.length>=2;
 if(two){if(second.parentElement!==longer)longer.append(second);if(indices[1]<0||indices[1]===indices[0]){indices[1]=choose(1);render(1);schedule(1)}}
