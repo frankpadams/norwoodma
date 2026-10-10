@@ -296,6 +296,20 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   }
   const candidates=(data.features||[]).filter(f=>f.geometry&&['LineString','MultiLineString'].includes(f.geometry.type));
   const overlay=L.geoJSON({type:'FeatureCollection',features:candidates},{style:{color:'#c05b00',weight:4,opacity:.85,dashArray:'7 5'},onEachFeature:(feature,layer)=>{const p=feature.properties||{};const name=p.TRAIL_NAME||p.ALT_NAME||p.SITE_NAME||'Unnamed candidate trail';const div=document.createElement('div');const title=document.createElement('strong');title.textContent=name;div.append(title);const note=document.createElement('p');note.textContent='Unverified MassGIS trail line. Do not use for navigation.';div.append(note);layer.bindPopup(div)}}).addTo(map);
+  // Optional second source: OSM footways and paths, visually distinct and never asserted as approved trails.
+  const osmButton=document.createElement('button');osmButton.type='button';osmButton.textContent='Compare OpenStreetMap candidate paths';osmButton.style.margin='0 8px';osmButton.addEventListener('click',async()=>{
+    osmButton.disabled=true;osmButton.textContent='Checking OpenStreetMap…';
+    try{
+      const q='[out:json][timeout:25];(way[highway~"^(path|footway|bridleway|track)$"](42.1515,-71.2355,42.2265,-71.1505););out geom;';
+      const res=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',body:new URLSearchParams({data:q}),signal:AbortSignal.timeout(30000)});
+      if(!res.ok)throw Error('OSM service unavailable');const json=await res.json();
+      const features=(json.elements||[]).filter(w=>w.type==='way'&&w.geometry?.length>1&&w.tags?.access!=='private'&&w.tags?.access!=='no'&&w.tags?.foot!=='no'&&w.tags?.highway!=='track').map(w=>({type:'Feature',properties:w.tags||{},geometry:{type:'LineString',coordinates:w.geometry.map(p=>[p.lon,p.lat])}}));
+      const osm=L.geoJSON({type:'FeatureCollection',features},{style:{color:'#6e4a9e',weight:3,opacity:.7,dashArray:'2 7'},onEachFeature:(f,l)=>l.bindPopup('Unverified OpenStreetMap candidate path — NOT approved for navigation')}).addTo(map);
+      const label=document.createElement('label');const check=document.createElement('input');check.type='checkbox';check.checked=true;check.addEventListener('change',()=>check.checked?map.addLayer(osm):map.removeLayer(osm));label.append(check,document.createTextNode(' '+features.length+' OSM candidate paths (purple dots)'));output.append(label);
+      osmButton.remove();
+    }catch(err){osmButton.disabled=false;osmButton.textContent='Retry OpenStreetMap comparison';output.append(document.createTextNode(' OSM comparison unavailable: '+err.message))}
+  });
+  output.append(osmButton);
   const shown=overlay.getLayers().length;
   output.textContent=shown+' candidate MassGIS trail segments displayed as dashed orange lines. NOT checked against town brochures, entrances, closures, or on-the-ground conditions. Official trail maps remain in Parks & Trails. Do not navigate with this draft.';
   const toggle=document.createElement('label');toggle.style.marginLeft='12px';const check=document.createElement('input');check.type='checkbox';check.checked=true;check.addEventListener('change',()=>check.checked?map.addLayer(overlay):map.removeLayer(overlay));toggle.append(check,document.createTextNode(' Show unverified trails'));output.append(toggle);
