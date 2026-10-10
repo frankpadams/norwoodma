@@ -25,17 +25,17 @@ function advance(n,manual){if(indices[n]<0)return;turns[n]++;indices[n]=choose(n
 buttons.forEach((b,n)=>b.addEventListener('click',()=>advance(n,true)));
 function layout(){if(positioning)return;positioning=true;
 requestAnimationFrame(()=>{positioning=false;const narrow=window.matchMedia('(max-width:760px)').matches;
-const left=calendar.querySelector('.event-splash'),lh=left?.getBoundingClientRect().height||0,rh=transit.getBoundingClientRect().height;
+const left=calendar.querySelector('.event-splash'),lh=left?.getBoundingClientRect().height||0,rh=transit.getBoundingClientRect().height-(first.parentElement===transit&&!first.hidden?first.getBoundingClientRect().height:0)-(second.parentElement===transit&&!second.hidden?second.getBoundingClientRect().height:0);
 const shorter=lh<=rh?calendar:transit,longer=shorter===calendar?transit:calendar;
 if(first.parentElement!==shorter)shorter.append(first);
 const two=!narrow&&Math.abs(lh-rh)<=100&&sponsors.length>=2;
-if(two){if(second.parentElement!==longer)longer.append(second);if(indices[1]<0||indices[1]===indices[0])indices[1]=choose(1);render(1);schedule(1)}
+if(two){if(second.parentElement!==longer)longer.append(second);if(indices[1]<0||indices[1]===indices[0]){indices[1]=choose(1);render(1);schedule(1)}}
 else{clearTimeout(timers[1]);second.hidden=true;indices[1]=-1;if(second.parentElement)second.remove()}
-if(indices[0]>=0){render(0);schedule(0)}
+if(indices[0]>=0&&first.hidden){render(0);schedule(0)}
 })}
 let layoutTimer;const relayout=()=>{clearTimeout(layoutTimer);layoutTimer=setTimeout(layout,120)};
 const observer=new ResizeObserver(relayout);observer.observe(calendar.querySelector('.event-splash'));observer.observe(transit);
 window.addEventListener('resize',relayout,{passive:true});
-fetch('/data/sponsors.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);layout()}).catch(()=>{buttons[0].hidden=true});
+fetch('/data/sponsors.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{buttons[0].hidden=true});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)slots.forEach((s,n)=>schedule(n))});
 })();
