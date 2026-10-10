@@ -964,5 +964,16 @@ window.NORWOOD_RESTAURANTS= [
     "link_type": "maps",
     "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
     "verified": "2026-09-27"
+  },
+  {
+    "id": "colonial-ale-house",
+    "name": "The Colonial Ale House",
+    "category": "American & Pub",
+    "cuisine": "American · Neighborhood pub · Italian-American",
+    "address": "33 Savin Ave",
+    "url": "https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House%2C+33+Savin+Ave%2C+Norwood%2C+MA+02062",
+    "link_type": "maps",
+    "tags": "pub tavern bar american italian pizza pasta chicken parm burger prime rib steak seafood sandwiches full bar cocktails",
+    "verified": "2026-10-10"
   }
 ];

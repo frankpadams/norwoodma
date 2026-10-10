@@ -1531,7 +1531,7 @@
   },
   {
     "id": "2026-10-13-farmers-market",
-    "title": "Norwood Farmers Market",
+    "title": "Norwood Farmers Market: Pumpkinfest",
     "start": {
       "date": "2026-10-13",
       "time": "14:00"
@@ -1549,8 +1549,8 @@
     "public_access": "public",
     "series": "2026 Norwood Farmers Market",
     "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
+    "verification_status": "newspaper_2026_schedule_verified_2026-10-10",
+    "notes": "October 13 Pumpkinfest theme confirmed by October 2026 Norwood Town News community calendar."
   },
   {
     "id": "2026-10-14-sunnyside-up-aa",
@@ -5360,28 +5360,28 @@
     "notes": "Holiday thrift-shop event with baking dishes, new gift items, clothing, jewelry, shoes, boots, books and more."
   },
   {
-    "id": "2026-10-25-howl-o-ween-doggie-parade",
+    "id": "2026-10-24-howl-o-ween-doggie-parade",
     "title": "2nd Annual Howl-O-Ween Doggie Parade",
     "start": {
-      "date": "2026-10-25",
+      "date": "2026-10-24",
       "time": "12:30"
     },
     "end": {
-      "date": "2026-10-25",
+      "date": "2026-10-24",
       "time": "14:30"
     },
     "venue": "Norwood Town Common",
     "address": "580 Washington St, Norwood, MA 02062",
     "category": "family",
-    "source_id": "norwood-record-calendar",
-    "source_url": "https://locable-assets-production.s3.amazonaws.com/uploads/resource/file/1322784/Norwood_20-_20OCT_202026.pdf?timestamp=1790863222",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
     "cost": "Free",
     "organizer": null,
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "newspaper_calendar_verified_2026-10-06",
-    "notes": "Bring your four-legged friend in costume. Doggie treats provided."
+    "verification_status": "newspaper_2026_schedule_verified_2026-10-10",
+    "notes": "Bring your dog in costume; doggie treats provided. Date corrected from Oct. 25 to Oct. 24 based on October 2026 Norwood Town News community calendar."
   },
   {
     "id": "2026-10-26-irenas-vow-movie-matinee",
@@ -6543,5 +6543,419 @@
     "publish_candidate": true,
     "verification_status": "flyer_only_unverified_2026-10-09",
     "notes": "OUT OF TOWN — Norfolk, MA. Listed on Norfolk County Halloween Happenings flyer; confirm details with organizer before attending. Organizer event link and admission not independently verified."
+  },
+  {
+    "id": "2026-10-10-morrill-library-puzzle-race",
+    "title": "Puzzle Race! — Team Jigsaw Competition",
+    "start": {
+      "date": "2026-10-10",
+      "time": "14:30"
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": "16:00"
+    },
+    "venue": "Morrill Memorial Library — Simoni Room",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "family",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free; registration required",
+    "public_access": "public",
+    "series": "Puzzle Race",
+    "publish_candidate": true,
+    "verification_status": "newspaper_and_organizer_listing_verified_2026-10-09",
+    "notes": "Teams of up to four compete to complete identical 500-piece puzzles; families welcome. Registration required, one registration per team. Arrive by 2:20 PM."
+  },
+  {
+    "id": "2026-10-17-luke-adams-fall-pumpkin-glass-signing",
+    "title": "Fall Pumpkin Glass Event & Luke Adams Signing",
+    "start": {
+      "date": "2026-10-17",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-17",
+      "time": "12:00"
+    },
+    "venue": "Luke Adams Glass Studio — Norwood Space Center",
+    "address": "83 Morse St, Norwood, MA 02062",
+    "category": "arts",
+    "source_id": "norwood-space-center-events",
+    "source_url": "https://norwoodspacecenter.com/event/fall-pumpkin-glass-event-luke-adams-signing/",
+    "cost": "Free to attend; purchases optional",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "official_venue_verified_2026-10-09",
+    "notes": "Special glass pumpkin sale and Luke Adams signing with fall beverages and shopping specials. Norwood Space Center Building 6 or 8."
+  },
+  {
+    "id": "2026-10-18-mill-forge-repair-cafe",
+    "title": "Free Repair Café at Mill Forge Makerspace",
+    "start": {
+      "date": "2026-10-18",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "17:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/repair-cafe-october-2026/",
+    "cost": "Free; replacement parts may cost extra",
+    "public_access": "public",
+    "series": "Repair Café",
+    "publish_candidate": true,
+    "verification_status": "official_organizer_verified_2026-10-09",
+    "notes": "Bring broken bicycles, clothing, jewelry, lamps, small furniture or small appliances for volunteer repair help. Walk-ins welcome; repairs not guaranteed; replacement parts may cost extra."
+  },
+  {
+    "id": "2026-11-11-mill-forge-open-hack-night",
+    "title": "Open Hack Night at Mill Forge Makerspace",
+    "start": {
+      "date": "2026-11-11",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/events/list/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Open Hack Night",
+    "publish_candidate": true,
+    "verification_status": "official_venue_verified_2026-10-09",
+    "notes": "Free public informal makerspace meetup. Meet makers, show or discuss projects, and get help with a challenge. No RSVP required."
+  },
+  {
+    "id": "2026-10-24-mill-forge-miniature-painting",
+    "title": "Miniature Model & Painting Workshop",
+    "start": {
+      "date": "2026-10-24",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "16:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/miniature-model-painting-workshop-october-2026/",
+    "cost": "$20 drop-in; free for members",
+    "public_access": "ticketed_public",
+    "series": "Miniature Model & Painting Workshops",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Public drop-in to paint tabletop miniatures and game terrain; some materials extra for nonmembers."
+  },
+  {
+    "id": "2026-11-21-mill-forge-miniature-painting",
+    "title": "Miniature Model & Painting Workshop",
+    "start": {
+      "date": "2026-11-21",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-21",
+      "time": "16:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "workshop",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/miniature-model-painting-workshop-november-2026/",
+    "cost": "$20 drop-in; free for members",
+    "public_access": "ticketed_public",
+    "series": "Miniature Model & Painting Workshops",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Public drop-in to paint tabletop miniatures and game terrain; some materials extra for nonmembers."
+  },
+  {
+    "id": "2026-11-21-nsc-holiday-stroll-open-studios",
+    "title": "Holiday Stroll & Norwood Open Studios",
+    "start": {
+      "date": "2026-11-21",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-22",
+      "time": "16:00"
+    },
+    "venue": "Norwood Space Center — Building 8 entrance",
+    "address": "83 Morse St, Norwood, MA 02062",
+    "category": "arts",
+    "source_id": "norwood-space-center-events",
+    "source_url": "https://norwoodspacecenter.com/events/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Property-wide Salvage Angel's Holiday Stroll and SoNo Arts' Norwood Open Studios. Saturday and Sunday, 11 AM–4 PM. Enter through Building 8."
+  },
+  {
+    "id": "2026-11-24-nrrc-caffeine-conversations",
+    "title": "Caffeine & Conversations — Chamber Networking",
+    "start": {
+      "date": "2026-11-24",
+      "time": "08:30"
+    },
+    "end": {
+      "date": "2026-11-24",
+      "time": "09:30"
+    },
+    "venue": "Norwood Space Center — Building 6 Café",
+    "address": "83 Morse St, Building 6, Norwood, MA 02062",
+    "category": "business_community",
+    "source_id": "norwood-space-center-events",
+    "source_url": "https://norwoodspacecenter.com/events/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Caffeine & Conversations",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Monthly public small-business networking event."
+  },
+  {
+    "id": "2026-10-13-norwood-toastmasters",
+    "title": "Norwood Toastmasters — Guests Welcome",
+    "start": {
+      "date": "2026-10-13",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": null
+    },
+    "venue": "Norwood Civic Center — Willett Room",
+    "address": "165 Nahatan St, Norwood, MA 02062",
+    "category": "educational",
+    "source_id": "norwood-toastmasters",
+    "source_url": "https://www.toastmasters.org/Find-a-Club/00003926-norwood-toastmasters-club",
+    "cost": "Free guest visit",
+    "public_access": "public",
+    "series": "Norwood Toastmasters Club",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Open club meeting to practice public speaking and leadership; meets second and fourth Tuesdays."
+  },
+  {
+    "id": "2026-10-27-norwood-toastmasters",
+    "title": "Norwood Toastmasters — Guests Welcome",
+    "start": {
+      "date": "2026-10-27",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": null
+    },
+    "venue": "Norwood Civic Center — Willett Room",
+    "address": "165 Nahatan St, Norwood, MA 02062",
+    "category": "educational",
+    "source_id": "norwood-toastmasters",
+    "source_url": "https://www.toastmasters.org/Find-a-Club/00003926-norwood-toastmasters-club",
+    "cost": "Free guest visit",
+    "public_access": "public",
+    "series": "Norwood Toastmasters Club",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Open club meeting to practice public speaking and leadership; meets second and fourth Tuesdays."
+  },
+  {
+    "id": "2026-10-13-child-anxiety-session-2",
+    "title": "Navigating Your Child’s Anxiety — Accommodations & De-escalation",
+    "start": {
+      "date": "2026-10-13",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-10-13",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library — Virtual",
+    "address": null,
+    "category": "education",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Navigating Your Child’s Anxiety",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Parent education session 2: practical strategies for responding to anxiety; library registration."
+  },
+  {
+    "id": "2026-10-19-reverse-coloring",
+    "title": "Reverse Coloring for Adults",
+    "start": {
+      "date": "2026-10-19",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "arts",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Create outlines on watercolor-style backgrounds; supplies provided; library registration."
+  },
+  {
+    "id": "2026-10-19-robert-ottone-book-birthday",
+    "title": "A Book Birthday with Horror Writer Robert Ottone",
+    "start": {
+      "date": "2026-10-19",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library — Virtual",
+    "address": null,
+    "category": "arts",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Virtual author talk about Amityville Awakens, with Lauren Bolger; library registration."
+  },
+  {
+    "id": "2026-10-20-child-anxiety-session-3",
+    "title": "Navigating Your Child’s Anxiety — Implement Change",
+    "start": {
+      "date": "2026-10-20",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-10-20",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library — see event details",
+    "address": null,
+    "category": "education",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Navigating Your Child’s Anxiety",
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Parent education session 3: plan for gradual changes and supporting confidence; confirm virtual access with library."
+  },
+  {
+    "id": "2026-10-22-literary-monsters",
+    "title": "Literary Monsters — Shadow, Sound & Spectacle",
+    "start": {
+      "date": "2026-10-22",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "performance",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Queer reinterpretations of Poe, Shelley, Irving and Dickinson in a multimedia performance with rock music and shadow puppetry."
+  },
+  {
+    "id": "2026-10-25-musical-sundays-sean-fullerton",
+    "title": "Musical Sundays: Sean Fullerton & the RIC 12",
+    "start": {
+      "date": "2026-10-25",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "music",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Live concert exploring the folk-rock sound of the Rickenbacker 12-string guitar."
+  },
+  {
+    "id": "2026-10-26-cozy-puzzle-night",
+    "title": "Cozy Puzzle Night",
+    "start": {
+      "date": "2026-10-26",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-26",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Noncompetitive jigsaw puzzles with refreshments and lo-fi music; registration encouraged."
+  },
+  {
+    "id": "2026-10-29-thomas-bulen-jacobs-author",
+    "title": "Talking Craft with Local Author Thomas Bulen Jacobs",
+    "start": {
+      "date": "2026-10-29",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": null
+    },
+    "venue": "Morrill Memorial Library",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "arts",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "web_verified_2026-10-10",
+    "notes": "Norwood author discusses writing his debut cyberpunk novella Cyberscion, with Q&A and book sales."
   }
 ]
