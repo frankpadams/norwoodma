@@ -196,6 +196,25 @@
   document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==menu)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
   window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
+
+  // Collapse only when the navigation would overflow the available header width.
+  // Recheck on resize and after font loading; the dropdown overlays rather than stretches the header.
+  const header=menu.closest('header.top');
+  if(header){
+    const updateMenuFit=()=>{
+      const brand=header.querySelector('.brand');
+      const brandWidth=brand?Math.min(brand.getBoundingClientRect().width||220,220):220;
+      const links=[...nav.querySelectorAll('a')].filter(a=>!a.hasAttribute('data-add-home-screen')&&!a.hasAttribute('data-android-install'));
+      // Main-site icons and labels require roughly 68-100px each plus gaps.
+      const needed=links.reduce((total,a)=>total+Math.max(68,Math.min(140,(a.textContent||'').trim().length*7+30)),0)+Math.max(brandWidth,180)+90;
+      const collapse=window.innerWidth<=820||header.clientWidth<needed;
+      header.classList.toggle('norwood-menu-collapsed',collapse);
+      if(!collapse&&nav.classList.contains('open'))close();
+    };
+    updateMenuFit();
+    window.addEventListener('resize',updateMenuFit,{passive:true});
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(updateMenuFit);
+  }
   const root=document.documentElement;const saved=localStorage.getItem('norwood-text-size')||'standard';root.dataset.textSize=saved;const contrast=localStorage.getItem('norwood-high-contrast')==='true';root.dataset.highContrast=String(contrast);
   const ctl=document.createElement('div');ctl.className='text-size-controls accessibility-controls';ctl.setAttribute('aria-label','Accessibility and language controls');ctl.innerHTML='<span class="sr-only">Display and language settings</span><button type="button" data-text-size-menu aria-haspopup="menu" aria-expanded="false" aria-label="Choose text size">Aa</button><button type="button" data-contrast aria-label="Toggle high contrast">◐</button><button type="button" data-translate aria-haspopup="menu" aria-expanded="false" aria-label="Translate this page">🌐</button>';document.body.appendChild(ctl);
   const textSizeMenu=document.createElement('div');textSizeMenu.className='text-size-menu';textSizeMenu.hidden=true;textSizeMenu.setAttribute('role','menu');textSizeMenu.setAttribute('aria-label','Choose text size');textSizeMenu.innerHTML='<button type="button" role="menuitemradio" data-size="smallest">Smallest</button><button type="button" role="menuitemradio" data-size="compact">Smaller</button><button type="button" role="menuitemradio" data-size="standard">Standard</button><button type="button" role="menuitemradio" data-size="large">Larger</button><button type="button" role="menuitemradio" data-size="largest">Largest</button>';document.body.appendChild(textSizeMenu);
