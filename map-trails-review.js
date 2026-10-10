@@ -280,6 +280,16 @@ document.querySelector('#townBoundary')?.addEventListener('change',e=>toggleTown
 document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
 render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
 
+/* Geographic alignment aids for committee: coordinates are park reference points, NOT trail vertices. */
+(()=>{
+ const references=[
+  {name:'Shattuck Park reference point',lat:42.19283,lon:-71.21099,source:'OpenStreetMap park geometry',note:'Compare Winter, Nichols, Bond and Bellevue streets with the brochure.'},
+  {name:'Bernie Cooper Riverfront Park reference point',lat:42.17478,lon:-71.20465,source:'OpenStreetMap park geometry',note:'Align with Saint Joseph Avenue, Balch School, Hawes Brook and Neponset River.'}
+ ];
+ const anchors=L.layerGroup(references.map(p=>L.circleMarker([p.lat,p.lon],{radius:7,color:'#17384d',weight:2,fillColor:'#fff',fillOpacity:1}).bindPopup('<strong>'+p.name+'</strong><p>'+p.note+'</p><small>'+p.source+' — location anchor only, not a trail point</small>'))).addTo(map);
+ const panel=document.getElementById('trailTestStatus');
+ if(panel){const label=document.createElement('label');label.style.marginLeft='10px';const check=document.createElement('input');check.type='checkbox';check.checked=true;check.addEventListener('change',()=>check.checked?map.addLayer(anchors):map.removeLayer(anchors));label.append(check,document.createTextNode(' Show geographic alignment anchors (blue rings)'));panel.append(label);}
+})();
 /* REVIEW ONLY: publicly distributable MassGIS 911 hiking trails, not validated routes. */
 (async()=>{
  const output=document.getElementById('trailTestStatus');if(!output)return;
