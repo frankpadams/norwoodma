@@ -207,7 +207,7 @@
       const links=[...nav.querySelectorAll('a')].filter(a=>!a.hasAttribute('data-add-home-screen')&&!a.hasAttribute('data-android-install'));
       // Main-site icons and labels require roughly 68-100px each plus gaps.
       const needed=links.reduce((total,a)=>total+Math.max(68,Math.min(140,(a.textContent||'').trim().length*7+30)),0)+Math.max(brandWidth,180)+90;
-      const collapse=window.innerWidth<=820||header.clientWidth<needed;
+      const collapse=window.innerWidth<=1200||header.clientWidth<needed;
       header.classList.toggle('norwood-menu-collapsed',collapse);
       if(!collapse&&nav.classList.contains('open'))close();
     };
