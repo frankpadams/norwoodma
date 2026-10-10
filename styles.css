@@ -333,3 +333,12 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .top.norwood-menu-collapsed>#nav.open{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:2px!important}
 .top.norwood-menu-collapsed>#nav>a{display:flex!important;flex:0 0 auto!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;min-width:0!important;min-height:44px!important;padding:10px 12px!important;font-size:1rem!important;text-align:left!important}
 .top.norwood-menu-collapsed>#nav>a::before{flex:0 0 18px!important;width:18px!important;height:18px!important}
+
+/* Single sponsor placement: full-width creative and one forward arrow. */
+#homeAdSlot .ad-slot-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#homeAdSlot #sponsorNext{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #ccd6e3;border-radius:50%;background:#fff;color:#003b71;font-size:28px;line-height:1;cursor:pointer}
+#homeAdSlot #sponsorNext[hidden]{display:none}
+#homeAdSlot #sponsorCreative{width:100%;min-width:0}
+#homeAdSlot #sponsorCreative>a{display:flex;width:100%;min-height:120px;align-items:center;justify-content:center;box-sizing:border-box;text-align:center}
+#homeAdSlot #sponsorCreative img{display:block;width:100%;max-width:100%;max-height:220px;height:auto;object-fit:contain}
+#homeAdSlot #sponsorCreative .ad-placeholder{flex-direction:column;gap:8px}
