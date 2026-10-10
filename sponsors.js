@@ -36,6 +36,18 @@ if(indices[0]>=0&&first.hidden){render(0);schedule(0)}
 let layoutTimer;const relayout=()=>{clearTimeout(layoutTimer);layoutTimer=setTimeout(layout,120)};
 const observer=new ResizeObserver(relayout);observer.observe(calendar.querySelector('.event-splash'));observer.observe(transit);
 window.addEventListener('resize',relayout,{passive:true});
-fetch('/data/sponsors.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{buttons[0].hidden=true});
+// Do not request sponsor data or images until the main calendar and transit widgets have populated.
+function waitForContent(){return new Promise(resolve=>{
+ const events=document.getElementById('homeEvents'),status=document.getElementById('mapUpdated');
+ const ready=()=>{const eventReady=!events||!/Loading upcoming events/i.test(events.textContent||'');const transitReady=!status||!/CONNECTING/i.test(status.textContent||'');return eventReady&&transitReady};
+ if(ready()){resolve();return}
+ let done=false;const observers=[];
+ const finish=()=>{if(done)return;done=true;observers.forEach(o=>o.disconnect());clearTimeout(limit);resolve()};
+ const check=()=>{if(ready())finish()};
+ [events,status].filter(Boolean).forEach(el=>{const o=new MutationObserver(check);o.observe(el,{childList:true,subtree:true,characterData:true});observers.push(o)});
+ // Network failures should not prevent sponsorship indefinitely.
+ const limit=setTimeout(finish,8000);check();
+})}
+waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{buttons[0].hidden=true});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)slots.forEach((s,n)=>schedule(n))});
 })();
