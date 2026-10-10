@@ -310,6 +310,8 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
     }catch(err){osmButton.disabled=false;osmButton.textContent='Retry OpenStreetMap comparison';output.append(document.createTextNode(' OSM comparison unavailable: '+err.message))}
   });
   output.append(osmButton);
+  // Load OSM candidate geometries automatically for committee review; button remains for retry.
+  osmButton.click();
   const shown=overlay.getLayers().length;
   output.textContent=shown+' candidate MassGIS trail segments displayed as dashed orange lines. NOT checked against town brochures, entrances, closures, or on-the-ground conditions. Official trail maps remain in Parks & Trails. Do not navigate with this draft.';
   const toggle=document.createElement('label');toggle.style.marginLeft='12px';const check=document.createElement('input');check.type='checkbox';check.checked=true;check.addEventListener('change',()=>check.checked?map.addLayer(overlay):map.removeLayer(overlay));toggle.append(check,document.createTextNode(' Show unverified trails'));output.append(toggle);
