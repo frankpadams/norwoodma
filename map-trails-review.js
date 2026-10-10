@@ -6,7 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,att
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory'),searchHelp=document.querySelector('#mapSearchHelp');
-let filter=category?.value||'all',userMarker=null,renderToken=0;
+let filter=category?.value??'',userMarker=null,renderToken=0;
 const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedBusinessGroup=params.get('businessGroup')||'',requestedBusinessSub=params.get('businessSub')||'',requestedCategory=params.get('category')||'';
 if(requestedCategory&&category&&[...category.options].some(o=>o.value===requestedCategory)){filter=requestedCategory;category.value=requestedCategory;}
 if((requestedBusinessGroup||requestedBusinessSub)&&category){filter='business';category.value='business';if(search)search.value='';}
@@ -14,7 +14,7 @@ else if(requestedBusiness&&search){search.value=requestedBusiness;filter='busine
 else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
 // On ordinary page loads, force Show All even if the browser restores an old select value.
 // Explicit deep-link categories, business searches and place searches take precedence.
-if(!requestedCategory&&!requestedBusinessGroup&&!requestedBusinessSub&&!requestedBusiness&&!requestedPlace&&category){filter='park';category.value='park';}
+if(!requestedCategory&&!requestedBusinessGroup&&!requestedBusinessSub&&!requestedBusiness&&!requestedPlace&&category){filter='';category.value='';}
 const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -194,7 +194,7 @@ function searchMatch(p,q){
  }
  return hay.includes(q);
 }
-function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter)))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
+function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter!==''&&(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
  const key=norm(p.address);
@@ -239,7 +239,7 @@ async function render(){
  else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
  else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
 }
-category?.addEventListener('change',()=>{filter=category.value||'all';render();});
+category?.addEventListener('change',()=>{filter=category.value;render();});
 let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
 
 async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
