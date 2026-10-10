@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "rotationSeconds": 20,
+  "manualPauseSeconds": 60,
+  "placements": [
+    {
+      "id": "home-primary",
+      "label": "Homepage sponsor box"
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "boston-mobile-tire",
+      "name": "Boston Mobile Tire",
+      "image": "/assets/ads/wide_rectangular_advertising_banner_for_a_mobile_t.png",
+      "url": "https://bostonmobiletire.com",
+      "alt": "Boston Mobile Tire — Tires installed, mounted and balanced at your work or home.",
+      "placements": [
+        "home-primary"
+      ],
+      "active": true
+    },
+    {
+      "id": "advertise",
+      "name": "Advertise on Norwood.ma",
+      "image": "",
+      "url": "/support.html#advertise",
+      "alt": "Local advertising space",
+      "placements": [
+        "home-primary"
+      ],
+      "active": true
+    }
+  ]
+}
