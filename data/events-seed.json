@@ -1531,7 +1531,7 @@
   },
   {
     "id": "2026-10-13-farmers-market",
-    "title": "Norwood Farmers Market",
+    "title": "Norwood Farmers Market: Pumpkinfest",
     "start": {
       "date": "2026-10-13",
       "time": "14:00"
@@ -1549,8 +1549,8 @@
     "public_access": "public",
     "series": "2026 Norwood Farmers Market",
     "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null
+    "verification_status": "market_and_newspaper_calendar_verified_2026-10-09",
+    "notes": "Pumpkinfest with fall harvest vendors and seasonal children's activities; market runs 2–6 PM."
   },
   {
     "id": "2026-10-14-sunnyside-up-aa",
@@ -6543,5 +6543,97 @@
     "publish_candidate": true,
     "verification_status": "flyer_only_unverified_2026-10-09",
     "notes": "OUT OF TOWN — Norfolk, MA. Listed on Norfolk County Halloween Happenings flyer; confirm details with organizer before attending. Organizer event link and admission not independently verified."
+  },
+  {
+    "id": "2026-10-10-morrill-library-puzzle-race",
+    "title": "Puzzle Race! — Team Jigsaw Competition",
+    "start": {
+      "date": "2026-10-10",
+      "time": "14:30"
+    },
+    "end": {
+      "date": "2026-10-10",
+      "time": "16:00"
+    },
+    "venue": "Morrill Memorial Library — Simoni Room",
+    "address": "33 Walpole St, Norwood, MA 02062",
+    "category": "family",
+    "source_id": "norwood-town-news-calendar",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586246/community-calendar",
+    "cost": "Free; registration required",
+    "public_access": "public",
+    "series": "Puzzle Race",
+    "publish_candidate": true,
+    "verification_status": "newspaper_and_organizer_listing_verified_2026-10-09",
+    "notes": "Teams of up to four compete to complete identical 500-piece puzzles; families welcome. Registration required, one registration per team. Arrive by 2:20 PM."
+  },
+  {
+    "id": "2026-10-17-luke-adams-fall-pumpkin-glass-signing",
+    "title": "Fall Pumpkin Glass Event & Luke Adams Signing",
+    "start": {
+      "date": "2026-10-17",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-10-17",
+      "time": "12:00"
+    },
+    "venue": "Luke Adams Glass Studio — Norwood Space Center",
+    "address": "83 Morse St, Norwood, MA 02062",
+    "category": "arts",
+    "source_id": "norwood-space-center-events",
+    "source_url": "https://norwoodspacecenter.com/event/fall-pumpkin-glass-event-luke-adams-signing/",
+    "cost": "Free to attend; purchases optional",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "official_venue_verified_2026-10-09",
+    "notes": "Special glass pumpkin sale and Luke Adams signing with fall beverages and shopping specials. Norwood Space Center Building 6 or 8."
+  },
+  {
+    "id": "2026-10-18-mill-forge-repair-cafe",
+    "title": "Free Repair Café at Mill Forge Makerspace",
+    "start": {
+      "date": "2026-10-18",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-10-18",
+      "time": "17:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/event/repair-cafe-october-2026/",
+    "cost": "Free; replacement parts may cost extra",
+    "public_access": "public",
+    "series": "Repair Café",
+    "publish_candidate": true,
+    "verification_status": "official_organizer_verified_2026-10-09",
+    "notes": "Bring broken bicycles, clothing, jewelry, lamps, small furniture or small appliances for volunteer repair help. Walk-ins welcome; repairs not guaranteed; replacement parts may cost extra."
+  },
+  {
+    "id": "2026-11-11-mill-forge-open-hack-night",
+    "title": "Open Hack Night at Mill Forge Makerspace",
+    "start": {
+      "date": "2026-11-11",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "venue": "Mill Forge Makerspace",
+    "address": "61 Endicott St, Building 46, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "mill-forge-events",
+    "source_url": "https://millforge.org/events/list/",
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Open Hack Night",
+    "publish_candidate": true,
+    "verification_status": "official_venue_verified_2026-10-09",
+    "notes": "Free public informal makerspace meetup. Meet makers, show or discuss projects, and get help with a challenge. No RSVP required."
   }
 ]
