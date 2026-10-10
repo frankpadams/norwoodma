@@ -283,6 +283,30 @@ document.querySelector('#townBoundary')?.addEventListener('change',e=>toggleTown
 document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
 render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
 
+/* Trail system selection is a research index until brochure-aligned geometries exist.
+   Do not filter unnamed regional GIS lines by proximity and mislabel them as town trails. */
+(()=>{
+ const select=document.getElementById('trailSystemSelect');
+ const status=document.getElementById('trailSystemSelectionStatus');
+ const descriptions={
+  all:'All town trail systems selected. Candidate GIS lines are separate, unverified overlays; brochure-aligned routes are still being traced.',
+  shattuck:'Shattuck Park: Winter / Nichols / Bond streets; Bellevue Avenue parking. Route geometry pending alignment.',
+  germany:'Germany Brook: Savage Center loop, Winter Street crossing, Willett School connection and landfill spur. Geometry pending.',
+  endean:'Endean / Hawes Brook: interconnected trails and five community-walk loops. Geometry pending.',
+  'ellis-pond':'Ellis Pond: north, east and south shores; Walpole Street and Nichols Street access. Geometry pending.',
+  'ellis-playground':'Ellis Playground: boardwalk trails off Codman Road. Geometry pending.',
+  cooper:'Bernie Cooper Park: winding paths at Hawes Brook / Neponset River confluence. Geometry pending.',
+  hennessey:'Hennessey Field: wooded trails by Pleasant Street and Lenox Avenue. Geometry pending.',
+  meadow:'Meadow Street: riverside trail network near Fortune Drive. Geometry pending.',
+  vanderbilt:'Vanderbilt / Pine Tree Forest: outer and inner loops, Tiot Trail and secondary colored branches. Geometry pending.',
+  willett:'Willett / Tiot: 0.37-mile trail leg from easement to Westover Parkway. Geometry pending.',
+  ledgeview:'PROPOSED ONLY: Ledgeview loop is contingent on land acquisition. Not an open public trail.'
+ };
+ select?.addEventListener('change',()=>{
+  const v=select.value;
+  if(status)status.textContent=v?(descriptions[v]||'Trail geometry pending.'):'Select a trail system to see its mapping status.';
+ });
+})();
 /* Geographic alignment aids for committee: coordinates are park reference points, NOT trail vertices. */
 (()=>{
  const references=[
