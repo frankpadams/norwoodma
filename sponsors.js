@@ -46,7 +46,7 @@ function waitForContent(){return new Promise(resolve=>{
  const check=()=>{if(ready())finish()};
  [events,status].filter(Boolean).forEach(el=>{const o=new MutationObserver(check);o.observe(el,{childList:true,subtree:true,characterData:true});observers.push(o)});
  // Network failures should not prevent sponsorship indefinitely.
- const limit=setTimeout(finish,8000);check();
+ const limit=setTimeout(finish,4000);check();
 })}
 waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{buttons[0].hidden=true});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)slots.forEach((s,n)=>schedule(n))});
