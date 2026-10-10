@@ -283,9 +283,9 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
 /* REVIEW ONLY: publicly distributable MassGIS 911 hiking trails, not validated routes. */
 (async()=>{
  const output=document.getElementById('trailTestStatus');if(!output)return;
- const bounds=map.getBounds(),bbox=[bounds.getWest(),bounds.getSouth(),bounds.getEast(),bounds.getNorth()];
+ // Use a spatial envelope: town-name attributes are often missing or inconsistent.
  const base='https://services.arcgis.com/2gdL2gxYNFY2TOUb/ArcGIS/rest/services/Trails40miBuffer/FeatureServer/18/query';
- const args=new URLSearchParams({where:"TOWN = 'Norwood'",outFields:'OBJECTID,TRAIL_NAME,ALT_NAME,SITE_NAME,SRC_DATA,GPS_DATE,TOWN',returnGeometry:'true',outSR:'4326',f:'geojson',resultRecordCount:'2000'});
+ const args=new URLSearchParams({where:'1=1',geometry:JSON.stringify({xmin:-71.2355,ymin:42.1515,xmax:-71.1505,ymax:42.2265,spatialReference:{wkid:4326}}),geometryType:'esriGeometryEnvelope',spatialRel:'esriSpatialRelIntersects',inSR:'4326',outFields:'*',returnGeometry:'true',outSR:'4326',f:'geojson',resultRecordCount:'2000'});
  try{
   let response=await fetch(base+'?'+args,{signal:AbortSignal.timeout(12000)});
   let data=await response.json();
