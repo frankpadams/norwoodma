@@ -336,7 +336,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 /* Single sponsor placement: full-width creative and one forward arrow. */
 #homeAdSlot .ad-slot-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
-#homeAdSlot #sponsorNext{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #ccd6e3;border-radius:50%;background:#fff;color:#003b71;font-size:28px;line-height:1;cursor:pointer}
+#homeAdSlot #sponsorNext{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;padding:0;border:1px solid rgba(0,59,113,.22);border-radius:6px;background:#fff;color:#003b71;font-size:20px;line-height:1;cursor:pointer}
 #homeAdSlot #sponsorNext[hidden]{display:none}
 #homeAdSlot #sponsorCreative{width:100%;min-width:0}
 #homeAdSlot #sponsorCreative>a{display:flex;width:100%;min-height:120px;align-items:center;justify-content:center;box-sizing:border-box;text-align:center}
