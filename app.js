@@ -375,6 +375,44 @@ function renderCalendarView(items){
  const chosen=diversifySameDayEvents((byDate.get(calendarSelected)||[]).slice()),selectedDate=parseLocalDate(calendarSelected);
  return `<section class="month-calendar"><div class="month-nav"><button type="button" data-month-step="-1" aria-label="Previous month">‹</button><h2>${calendarCursor.toLocaleDateString([],{month:'long',year:'numeric'})}</h2><button type="button" data-month-step="1" aria-label="Next month">›</button></div><div class="month-weekdays" aria-hidden="true">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<b>'+x+'</b>').join('')}</div><div class="month-grid">${cells.join('')}</div></section><section class="event-period calendar-selection"><div class="event-period-head"><h2>${selectedDate?selectedDate.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'}):'Select a day'}</h2></div><div class="event-list">${chosen.length?chosen.map(eventRow).join(''):'<p>No events currently listed for this day.</p>'}</div></section>`;
 }
+// Combine Temple Beth David's individual feed entries into one day-level listing.
+const templeBethDavidGroups=new Map();
+function isTempleBethDavidEvent(e){
+ const source=String(e.source_id||'').toLowerCase();
+ const org=[e.organizer,e.venue].filter(Boolean).join(' ').toLowerCase();
+ return /temple[-_ ]beth[-_ ]david|beth[-_ ]david/.test(source)||/temple beth david/.test(org);
+}
+function consolidateTempleBethDavid(items){
+ templeBethDavidGroups.clear();
+ const result=[];
+ for(const e of items){
+  if(!isTempleBethDavidEvent(e)||!e.start?.date){result.push(e);continue;}
+  const date=e.start.date,id='temple-beth-david-day-'+date;
+  if(!templeBethDavidGroups.has(id)){
+   templeBethDavidGroups.set(id,[]);
+   result.push({...e,id,title:'Temple Beth David event',start:{date},end:{date},notes:'Select to see Temple Beth David events and links for this day.',cost:null,recurrence:null,recurring:false,calendar_ids:e.calendar_ids});
+  }
+  templeBethDavidGroups.get(id).push(e);
+ }
+ return result;
+}
+function openTempleBethDavidDetails(id){
+ const events=templeBethDavidGroups.get(id),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');
+ if(!events?.length||!dlg||!box)return false;
+ const date=events[0].start.date;
+ const dateLabel=parseLocalDate(date)?.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'})||date;
+ box.innerHTML='<p class="eyebrow">Temple Beth David</p><h2 id="eventDetailsTitle">Events for '+esc(dateLabel)+'</h2>'+
+ events.map(e=>{
+  const times=[e.start?.time&&formatEventTime(e.start.time),e.end?.time&&formatEventTime(e.end.time)].filter(Boolean).join('–');
+  const links=eventLinks(e);
+  return '<section class="event-popup-facts"><h3>'+esc(e.title||'Event')+'</h3>'+
+   (times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+
+   (e.venue?'<p><strong>Location:</strong> '+esc(e.venue)+'</p>':'')+
+   (e.notes?'<p>'+esc(e.notes)+'</p>':'')+
+   (links.length?'<div class="event-popup-websites">'+links.map(l=>'<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' ↗</a>').join('')+'</div>':'')+'</section>';
+ }).join('');
+ dlg.showModal();return true;
+}
 function renderEventsPage(items){
  const host=$('#eventPeriods'); if(!host)return;
  const params=new URLSearchParams(location.search);
@@ -382,6 +420,7 @@ function renderEventsPage(items){
  const calendarKey=params.get('calendar')||'all';
  const q=($('#eventSearch')?.value||'').trim().toLowerCase();
  items=items.filter(e=>eventMatchesCalendar(e,calendarKey)).filter(e=>!q||eventSearchText(e).includes(q));
+ items=consolidateTempleBethDavid(items);
  if(eventId){
    const e=items.find(x=>String(x.id||'')===eventId);
    if(e){
@@ -481,6 +520,7 @@ function eventExternalLinks(e){
 }
 function brandIcon(src,alt){return '<img class="event-brand-icon" src="'+src+'" alt="'+alt+'">';}
 function openEventDetails(id){
+ if(openTempleBethDavidDetails(id))return;
  const e=allEventsForPage.find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!e||!dlg||!box)return;
  const times=[e.start?.time&&e.start.time!=='00:00'&&formatEventTime(e.start.time),e.end?.time&&formatEventTime(e.end.time)].filter(Boolean).join('–');
  const where=eventLocationText(e),q=eventMapQuery(e),img=eventImageUrl(e),links=eventExternalLinks(e);
