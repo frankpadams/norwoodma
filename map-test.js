@@ -12,6 +12,9 @@ if(requestedCategory&&category&&[...category.options].some(o=>o.value===requeste
 if((requestedBusinessGroup||requestedBusinessSub)&&category){filter='business';category.value='business';if(search)search.value='';}
 else if(requestedBusiness&&search){search.value=requestedBusiness;filter='business';if(category)category.value='business';}
 else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
+// On ordinary page loads, force Show All even if the browser restores an old select value.
+// Explicit deep-link categories, business searches and place searches take precedence.
+if(!requestedCategory&&!requestedBusinessGroup&&!requestedBusinessSub&&!requestedBusiness&&!requestedPlace&&category){filter='all';category.value='all';}
 const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
