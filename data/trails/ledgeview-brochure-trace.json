@@ -1,0 +1,166 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "mixed-existing-and-proposed-not-georeferenced",
+  "source": {
+    "title": "Ledgeview Drive Proposed Loop Trail",
+    "page": 1
+  },
+  "imageWidth": 595,
+  "imageHeight": 842,
+  "trails": [
+    {
+      "id": "existing-blue",
+      "name": "Existing blue trail from manhole toward river",
+      "status": "existing",
+      "points": [
+        [
+          330,
+          344
+        ],
+        [
+          313,
+          341
+        ],
+        [
+          300,
+          336
+        ],
+        [
+          283,
+          342
+        ],
+        [
+          270,
+          341
+        ],
+        [
+          259,
+          347
+        ],
+        [
+          249,
+          340
+        ],
+        [
+          237,
+          329
+        ],
+        [
+          223,
+          322
+        ],
+        [
+          210,
+          331
+        ]
+      ]
+    },
+    {
+      "id": "proposed-loop",
+      "name": "Proposed loop dependent on land acquisition",
+      "status": "proposed",
+      "points": [
+        [
+          210,
+          331
+        ],
+        [
+          198,
+          341
+        ],
+        [
+          186,
+          353
+        ],
+        [
+          174,
+          371
+        ],
+        [
+          165,
+          389
+        ],
+        [
+          164,
+          414
+        ],
+        [
+          172,
+          432
+        ],
+        [
+          189,
+          443
+        ],
+        [
+          210,
+          449
+        ],
+        [
+          233,
+          458
+        ],
+        [
+          254,
+          461
+        ],
+        [
+          273,
+          456
+        ],
+        [
+          286,
+          448
+        ],
+        [
+          295,
+          437
+        ],
+        [
+          293,
+          417
+        ],
+        [
+          285,
+          396
+        ],
+        [
+          279,
+          384
+        ],
+        [
+          288,
+          387
+        ],
+        [
+          299,
+          409
+        ],
+        [
+          300,
+          436
+        ],
+        [
+          316,
+          414
+        ],
+        [
+          318,
+          387
+        ],
+        [
+          321,
+          370
+        ],
+        [
+          330,
+          351
+        ],
+        [
+          330,
+          344
+        ]
+      ]
+    }
+  ]
+}
