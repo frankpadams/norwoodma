@@ -299,11 +299,11 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   endean:'Endean / Hawes Brook: interconnected trails and five community-walk loops. Geometry pending.',
   'ellis-pond':'Ellis Pond: north, east and south shores; Walpole Street and Nichols Street access. Geometry pending.',
   'ellis-playground':'Ellis Playground: boardwalk trails off Codman Road. Geometry pending.',
-  cooper:'Bernie Cooper Park: winding paths at Hawes Brook / Neponset River confluence. Geometry pending.',
+  cooper:'Bernie Cooper Park: existing public trails, opened 2025, dawn to dusk; geometry alignment pending.',
   hennessey:'Hennessey Field: wooded trails by Pleasant Street and Lenox Avenue. Geometry pending.',
-  meadow:'Meadow Street: riverside trail network near Fortune Drive. Geometry pending.',
+  meadow:'Meadow Street: brochure confirms existing public walking paths, open dawn to dusk; crossings can flood. Geometry alignment pending.',
   vanderbilt:'Vanderbilt / Pine Tree Forest: outer and inner loops, Tiot Trail and secondary colored branches. Geometry pending.',
-  willett:'Willett / Tiot: 0.37-mile trail leg from easement to Westover Parkway. Geometry pending.',
+  willett:'Willett / Tiot: 0.37-mile trail leg depicted in 2026 brochure; current public access is not established by that document.',
   ledgeview:'Ledgeview: brochure identifies an existing blue trail toward the river, but the full ~1-mile loop is contingent on land acquisition. Public access to individual sections is not confirmed.'
  };
  select?.addEventListener('change',()=>{
