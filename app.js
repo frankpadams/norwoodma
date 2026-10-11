@@ -279,6 +279,19 @@ async function loadEvents(){
      notes:'Annual public craft fair at Norwood High School.'
    });
  }
+ // Flyer-verified Backstage Boosters performances; guard against duplicates from feeds.
+ if(!items.some(e=>e.id==='fantasy-footsteps-2026-10-17'||(e.start?.date==='2026-10-17'&&/fantasy footsteps/i.test(e.title||'')))){
+  items.push({id:'fantasy-footsteps-2026-10-17',title:'Fantasy Footsteps',start:{date:'2026-10-17',time:'18:00'},end:{date:'2026-10-17',time:'19:30'},venue:'Norwood High School',address:'245 Nichols St, Norwood, MA 02062',category:'arts',organizer:'Backstage Boosters',source_id:'backstage-boosters-flyer',public_access:'public',publish_candidate:true,curated_default:true,verification_status:'flyer_verified_2026-10-11',price:'$10 per person (cash only)',notes:'Family-friendly, stroller-friendly interactive fairy-tale theater. Wear your favorite costume and tour the sparkling halls while enjoying six original live skits. $10 per person; cash only.'});
+ }
+ if(!items.some(e=>e.id==='fantasy-footsteps-2026-10-18'||(e.start?.date==='2026-10-18'&&/fantasy footsteps/i.test(e.title||'')))){
+  items.push({id:'fantasy-footsteps-2026-10-18',title:'Fantasy Footsteps',start:{date:'2026-10-18',time:'17:30'},end:{date:'2026-10-18',time:'18:30'},venue:'Norwood High School',address:'245 Nichols St, Norwood, MA 02062',category:'arts',organizer:'Backstage Boosters',source_id:'backstage-boosters-flyer',public_access:'public',publish_candidate:true,curated_default:true,verification_status:'flyer_verified_2026-10-11',price:'$10 per person (cash only)',notes:'Family-friendly, stroller-friendly interactive fairy-tale theater. Wear your favorite costume and tour the sparkling halls while enjoying six original live skits. $10 per person; cash only.'});
+ }
+ if(!items.some(e=>e.id==='fantasy-footsteps-2026-10-24'||(e.start?.date==='2026-10-24'&&/fantasy footsteps/i.test(e.title||'')))){
+  items.push({id:'fantasy-footsteps-2026-10-24',title:'Fantasy Footsteps',start:{date:'2026-10-24',time:'18:00'},end:{date:'2026-10-24',time:'19:30'},venue:'Norwood High School',address:'245 Nichols St, Norwood, MA 02062',category:'arts',organizer:'Backstage Boosters',source_id:'backstage-boosters-flyer',public_access:'public',publish_candidate:true,curated_default:true,verification_status:'flyer_verified_2026-10-11',price:'$10 per person (cash only)',notes:'Family-friendly, stroller-friendly interactive fairy-tale theater. Wear your favorite costume and tour the sparkling halls while enjoying six original live skits. $10 per person; cash only.'});
+ }
+ if(!items.some(e=>e.id==='fantasy-footsteps-2026-10-25'||(e.start?.date==='2026-10-25'&&/fantasy footsteps/i.test(e.title||'')))){
+  items.push({id:'fantasy-footsteps-2026-10-25',title:'Fantasy Footsteps',start:{date:'2026-10-25',time:'17:30'},end:{date:'2026-10-25',time:'18:30'},venue:'Norwood High School',address:'245 Nichols St, Norwood, MA 02062',category:'arts',organizer:'Backstage Boosters',source_id:'backstage-boosters-flyer',public_access:'public',publish_candidate:true,curated_default:true,verification_status:'flyer_verified_2026-10-11',price:'$10 per person (cash only)',notes:'Family-friendly, stroller-friendly interactive fairy-tale theater. Wear your favorite costume and tour the sparkling halls while enjoying six original live skits. $10 per person; cash only.'});
+ }
  // Public board/committee meetings are maintained separately for the time-sensitive
  // alert system, but they also belong in the community calendar.
  try{
