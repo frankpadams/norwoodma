@@ -304,7 +304,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   meadow:'Meadow Street: riverside trail network near Fortune Drive. Geometry pending.',
   vanderbilt:'Vanderbilt / Pine Tree Forest: outer and inner loops, Tiot Trail and secondary colored branches. Geometry pending.',
   willett:'Willett / Tiot: 0.37-mile trail leg from easement to Westover Parkway. Geometry pending.',
-  ledgeview:'PROPOSED ONLY: Ledgeview loop is contingent on land acquisition. Not an open public trail.'
+  ledgeview:'Ledgeview: brochure identifies an existing blue trail toward the river, but the full ~1-mile loop is contingent on land acquisition. Public access to individual sections is not confirmed.'
  };
  select?.addEventListener('change',()=>{
   const v=select.value;
@@ -405,7 +405,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  async function update(){
   const token=++serial;clear();const selection=picker.value;
   if(!selection)return;
-  if(selection==='ledgeview'){status.textContent='Ledgeview is PROPOSED ONLY; existing OSM footways are not evidence the planned alignment is open.';return}
+  if(selection==='ledgeview'){status.textContent='Ledgeview brochure: blue trail from easement manhole toward the river is depicted; proposed full loop depends on land acquisition. Public access not confirmed. Candidate OSM lines are not proof of an open route.';return}
   status.textContent='Loading approximate mapped footpaths for '+(selection==='all'?'all areas':selection)+'…';
   try{
    const ways=await load();if(token!==serial)return;
