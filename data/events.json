@@ -22980,6 +22980,43 @@
     ]
   },
   {
+    "id": "2026-11-07-norwood-blue-dogs-vs-canton-boys-grade-6-bull-879e2c4",
+    "title": "Norwood Blue Dogs vs Canton Boys Grade 6 Bulldogs",
+    "start": {
+      "date": "2026-11-07",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": null
+    },
+    "venue": "Callahan 12",
+    "field": "Callahan 12",
+    "grade": "Boys Grade 6",
+    "gender": "boys",
+    "team": "Norwood Blue Dogs",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-6",
+      "nys-team-boys-grade-6-norwood-blue-dogs"
+    ]
+  },
+  {
     "id": "2026-11-07-norwood-bolts-vs-dedham-strikers-8g-ee0c9f9",
     "title": "Norwood Bolts vs Dedham Strikers 8G",
     "start": {
@@ -23565,43 +23602,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-07-norwood-blue-dogs-vs-canton-boys-grade-6-bull-879e2c4",
-    "title": "Norwood Blue Dogs vs Canton Boys Grade 6 Bulldogs",
-    "start": {
-      "date": "2026-11-07",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-07",
-      "time": null
-    },
-    "venue": "Callahan 12",
-    "field": "Callahan 12",
-    "grade": "Boys Grade 6",
-    "gender": "boys",
-    "team": "Norwood Blue Dogs",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-6",
-      "nys-team-boys-grade-6-norwood-blue-dogs"
     ]
   },
   {
