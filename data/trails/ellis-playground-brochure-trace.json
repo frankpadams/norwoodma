@@ -1,0 +1,86 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "rough-source-image-diagram-not-georeferenced",
+  "source": {
+    "title": "Ellis Playground Trails",
+    "page": 2
+  },
+  "imageWidth": 612,
+  "imageHeight": 472,
+  "trails": [
+    {
+      "id": "south",
+      "name": "Southern route",
+      "points": [
+        [
+          85,
+          380
+        ],
+        [
+          203,
+          363
+        ],
+        [
+          310,
+          327
+        ],
+        [
+          373,
+          267
+        ],
+        [
+          428,
+          207
+        ],
+        [
+          473,
+          175
+        ]
+      ]
+    },
+    {
+      "id": "east",
+      "name": "Eastern route",
+      "points": [
+        [
+          310,
+          327
+        ],
+        [
+          390,
+          302
+        ],
+        [
+          460,
+          239
+        ],
+        [
+          473,
+          175
+        ]
+      ]
+    },
+    {
+      "id": "cross",
+      "name": "Northwest connector",
+      "points": [
+        [
+          171,
+          178
+        ],
+        [
+          254,
+          258
+        ],
+        [
+          310,
+          299
+        ],
+        [
+          350,
+          324
+        ]
+      ]
+    }
+  ]
+}
