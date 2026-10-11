@@ -426,6 +426,45 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  }
  picker.addEventListener('change',()=>{if(['endean','all'].includes(picker.value))show();else if(layer)map.removeLayer(layer)});
 })();
+/* Source-described trail access areas. Geocode street-level reference only;
+   never label an address result as the exact woodland entrance. */
+(()=>{
+ const picker=document.getElementById('trailSystemSelect');
+ const status=document.getElementById('trailSystemSelectionStatus');
+ if(!picker||!status)return;
+ const access=[
+  {system:'shattuck',name:'Shattuck Park — Bellevue Avenue parking',query:'Bellevue Avenue, Norwood, Massachusetts',source:'Town of Norwood Shattuck Park brochure',url:'https://cms5.revize.com/revize/norwoodma/document_center/Trails%20Committee/2023.03.24%20ShattuckPark_Trails_MAP_BROCHURE.pdf'},
+  {system:'vanderbilt',name:'Vanderbilt / Pine Tree Forest — end of Vanderbilt Avenue',query:'Vanderbilt Avenue, Norwood, Massachusetts',source:'Neponset River Watershed Association recreation guide',url:'https://neponset.org/recreation/'},
+  {system:'ellis-pond',name:'Ellis Pond — Walpole Street near Endicott Street',query:'Walpole Street and Endicott Street, Norwood, Massachusetts',source:'Neponset River Watershed Association recreation guide',url:'https://neponset.org/recreation/'},
+  {system:'meadow',name:'Meadow Street riverside trails — end of Meadow Street',query:'Meadow Street, Norwood, Massachusetts',source:'Neponset River Watershed Association recreation guide',url:'https://neponset.org/recreation/'}
+ ];
+ const group=L.layerGroup(),cache=new Map();let serial=0;
+ async function lookup(item){
+  if(cache.has(item.query))return cache.get(item.query);
+  const u='https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q='+encodeURIComponent(item.query);
+  const res=await fetch(u);if(!res.ok)throw Error('Geocoding unavailable');const data=await res.json();
+  const first=data[0];if(!first)return null;
+  const ll=[Number(first.lat),Number(first.lon)];
+  if(ll[0]<42.14||ll[0]>42.23||ll[1]<-71.25||ll[1]>-71.14)return null;
+  cache.set(item.query,ll);return ll;
+ }
+ async function refresh(){
+  const token=++serial;group.clearLayers();if(!picker.value)return;
+  const selected=access.filter(x=>picker.value==='all'||x.system===picker.value);
+  for(const item of selected){
+   try{
+    const ll=await lookup(item);if(token!==serial)return;if(!ll)continue;
+    const popup=document.createElement('div');
+    const strong=document.createElement('strong');strong.textContent=item.name;popup.append(strong);
+    const p=document.createElement('p');p.textContent='Approximate access area based on street-level geocoding, NOT a surveyed trailhead. Look for trail signage and the actual path entrance.';popup.append(p);
+    const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener';link.textContent='Access information source: '+item.source;popup.append(link);
+    L.circleMarker(ll,{radius:9,color:'#b66b00',weight:3,fillColor:'#ffe8a3',fillOpacity:.95}).bindPopup(popup).addTo(group);
+   }catch(e){if(token===serial)status.textContent='Approximate access locator temporarily unavailable: '+e.message}
+  }
+  if(token===serial&&group.getLayers().length)group.addTo(map);
+ }
+ picker.addEventListener('change',refresh);
+})();
 /* Endean landmark registration guide from Norwood's 2023 official trail brochure.
    Features are anchors for locating entrances, not claimed GPS entrance coordinates. */
 (()=>{
