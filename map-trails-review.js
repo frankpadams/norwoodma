@@ -601,9 +601,20 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  const selectedDot=document.createElementNS('http://www.w3.org/2000/svg','circle');
  selectedDot.setAttribute('r','12');selectedDot.setAttribute('fill','#f9d423');selectedDot.setAttribute('stroke','#172b4d');selectedDot.setAttribute('stroke-width','4');selectedDot.style.display='none';
  sourceSvg.appendChild(selectedDot);
+ // Fixed, brochure-identifiable anchor: start/finish at the power-line entrance
+ // off the end of Vanderbilt Avenue. This is an image pixel landmark only.
+ const startAnchor=document.createElementNS('http://www.w3.org/2000/svg','circle');
+ startAnchor.setAttribute('cx','546');startAnchor.setAttribute('cy','397');startAnchor.setAttribute('r','13');
+ startAnchor.setAttribute('fill','#ffe600');startAnchor.setAttribute('stroke','#1c334b');startAnchor.setAttribute('stroke-width','4');
+ sourceSvg.appendChild(startAnchor);
+ const startLabel=document.createElementNS('http://www.w3.org/2000/svg','text');
+ startLabel.setAttribute('x','570');startLabel.setAttribute('y','385');startLabel.setAttribute('font-size','26');
+ startLabel.setAttribute('font-weight','bold');startLabel.setAttribute('fill','#102f4d');
+ startLabel.textContent='Start / finish';
+ sourceSvg.appendChild(startLabel);
  const sourceCaption=document.createElement('p');
  sourceCaption.style.cssText='font-size:.8rem;line-height:1.4;margin:5px 0';
- sourceCaption.textContent='Click the traced loops to populate image X/Y. This preview contains only traced lines, not the PDF basemap. Compare the original PDF for landmark identification; then click the corresponding geographic location.';
+ sourceCaption.textContent='Yellow marker = brochure start/finish, at the power-line entrance off Vanderbilt Avenue (source image 546,397). Click the trace to populate image X/Y. The preview does not include the PDF basemap; compare the original PDF for other landmarks before matching geographic coordinates.';
  sourcePreview.append(sourceSvg,sourceCaption);
  panel.insertBefore(sourcePreview,panel.querySelector('#trailCalResults'));
  sourceSvg.addEventListener('click',event=>{
