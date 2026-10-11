@@ -577,7 +577,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  let source;
  try{const response=await fetch('data/trails/vanderbilt-5k-brochure-trace.json');if(!response.ok)throw Error('source unavailable');source=await response.json()}catch(e){host.textContent='Vanderbilt source geometry could not load';return}
  const panel=document.createElement('div');panel.style.cssText='margin:12px 0;padding:12px;border:1px solid #aab8c1;border-radius:8px;background:#fff';
- panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least three widely spaced, independent landmarks. The first two fit rotation and scale; additional points reveal alignment error.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button> <button type="button" id="trailCalExport" disabled>Export provisional GeoJSON</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
+ panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least four widely spaced, independent landmarks. Four or more points allow a leave-one-out alignment check; exports require that check to be within 20 feet.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button> <button type="button" id="trailCalExport" disabled>Export provisional GeoJSON</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
  host.insertAdjacentElement('afterend',panel);
  const result=panel.querySelector('#trailCalResults');
  const cpLayer=L.layerGroup().addTo(map);
@@ -587,8 +587,16 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  try{controls=JSON.parse(localStorage.getItem('norwood-vanderbilt-control-points')||'[]');if(!Array.isArray(controls))controls=[]}catch(e){}
  const project=ll=>L.CRS.EPSG3857.project(L.latLng(ll));
  function solve(){
+  panel.dataset.export='';
+  const exportControl=panel.querySelector('#trailCalExport');if(exportControl)exportControl.disabled=true;
+  controls=controls.filter(p=>p&&[p.x,p.y,p.lat,p.lon].every(Number.isFinite)&&p.x>=0&&p.x<=1088&&p.y>=0&&p.y<=1408&&p.lat>=42.14&&p.lat<=42.24&&p.lon>=-71.26&&p.lon<=-71.13);
   redrawControls();if(controls.length<4){result.textContent=controls.length+' matched landmarks. At least four geographically distinct control points are required before displaying a provisional brochure alignment, so leave-one-out validation is possible.';if(layer)map.removeLayer(layer);const exportBtn=panel.querySelector('#trailCalExport');if(exportBtn)exportBtn.disabled=true;return}
   const n=controls.length;
+  const sourceSpread=Math.max(...controls.map(p=>p.x))-Math.min(...controls.map(p=>p.x));
+  const sourceHeight=Math.max(...controls.map(p=>p.y))-Math.min(...controls.map(p=>p.y));
+  const geographicSpread=Math.max(...controls.map(p=>p.lat))-Math.min(...controls.map(p=>p.lat));
+  const geographicWidth=Math.max(...controls.map(p=>p.lon))-Math.min(...controls.map(p=>p.lon));
+  if(sourceSpread<100||sourceHeight<100||geographicSpread<0.0003||geographicWidth<0.0003){result.textContent='Control points are too clustered for a reliable alignment. Select at least four landmarks spread across both axes of the source image and geographic map.';if(layer)map.removeLayer(layer);return}
   const mx=controls.reduce((s,p)=>s+p.x,0)/n,my=controls.reduce((s,p)=>s+p.y,0)/n;
   const targets=controls.map(p=>project([p.lat,p.lon]));
   const me=targets.reduce((s,p)=>s+p.x,0)/n,mn=targets.reduce((s,p)=>s+p.y,0)/n;
