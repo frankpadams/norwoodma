@@ -3,6 +3,10 @@
 const NORWOOD_BOUNDS=L.latLngBounds([[42.1515,-71.2355],[42.2265,-71.1505]]);
 const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+/* Aerial imagery is useful for aligning fixed landmarks independently of street-map cartography. */
+const aerial=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Imagery © Esri and providers'});
+const aerialToggle=L.control({position:'topright'});
+aerialToggle.onAdd=()=>{const el=L.DomUtil.create('div','leaflet-bar');el.style.cssText='background:white;padding:7px 9px;font:13px sans-serif';const label=document.createElement('label');const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.addEventListener('change',()=>checkbox.checked?aerial.addTo(map):map.removeLayer(aerial));label.append(checkbox,document.createTextNode(' Satellite imagery'));el.append(label);L.DomEvent.disableClickPropagation(el);return el};aerialToggle.addTo(map);
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory'),searchHelp=document.querySelector('#mapSearchHelp');
@@ -367,11 +371,14 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least three widely spaced, independent landmarks. The first two fit rotation and scale; additional points reveal alignment error.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button> <button type="button" id="trailCalExport" disabled>Export provisional GeoJSON</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
  host.insertAdjacentElement('afterend',panel);
  const result=panel.querySelector('#trailCalResults');
+ const cpLayer=L.layerGroup().addTo(map);
+ function redrawControls(){cpLayer.clearLayers();controls.forEach((p,i)=>L.circleMarker([p.lat,p.lon],{radius:7,color:'#0a5175',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip('Control '+(i+1)+': source '+p.x+','+p.y).addTo(cpLayer))}
+
  let controls=[],awaiting=false,layer=null;
  try{controls=JSON.parse(localStorage.getItem('norwood-vanderbilt-control-points')||'[]');if(!Array.isArray(controls))controls=[]}catch(e){}
  const project=ll=>L.CRS.EPSG3857.project(L.latLng(ll));
  function solve(){
-  if(controls.length<2){result.textContent=controls.length+' control points. At least two required; three or more recommended.';if(layer)map.removeLayer(layer);return}
+  redrawControls();if(controls.length<2){result.textContent=controls.length+' control points. At least two required; three or more recommended.';if(layer)map.removeLayer(layer);return}
   const n=controls.length;
   const mx=controls.reduce((s,p)=>s+p.x,0)/n,my=controls.reduce((s,p)=>s+p.y,0)/n;
   const targets=controls.map(p=>project([p.lat,p.lon]));
@@ -408,7 +415,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  panel.querySelector('#trailCalAdd').addEventListener('click',()=>{awaiting=true;result.textContent='Click the corresponding landmark on the geographic map.'});
  panel.querySelector('#trailCalExport').addEventListener('click',()=>{if(!panel.dataset.export)return;const blob=new Blob([panel.dataset.export],{type:'application/geo+json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='vanderbilt-provisional-trails.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
  panel.querySelector('#trailCalClear').addEventListener('click',()=>{controls=[];localStorage.removeItem('norwood-vanderbilt-control-points');solve()});
- map.on('click',e=>{if(!awaiting)return;awaiting=false;const x=Number(panel.querySelector('#trailCalX').value),y=Number(panel.querySelector('#trailCalY').value);if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<0||x>1088||y>1408){result.textContent='Enter valid image X and Y first';return}controls.push({x,y,lat:e.latlng.lat,lon:e.latlng.lng});localStorage.setItem('norwood-vanderbilt-control-points',JSON.stringify(controls));solve()});
+ map.on('click',e=>{if(!awaiting)return;awaiting=false;const rawX=panel.querySelector('#trailCalX').value,rawY=panel.querySelector('#trailCalY').value;const x=Number(rawX),y=Number(rawY);if(!rawX||!rawY||!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<0||x>1088||y>1408){result.textContent='Enter valid image X and Y first';return}controls.push({x,y,lat:e.latlng.lat,lon:e.latlng.lng});localStorage.setItem('norwood-vanderbilt-control-points',JSON.stringify(controls));solve()});
  picker.addEventListener('change',()=>{if(layer){if(picker.value==='vanderbilt'||picker.value==='all')layer.addTo(map);else map.removeLayer(layer)}});
  solve();
 })();
