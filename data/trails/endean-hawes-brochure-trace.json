@@ -1,0 +1,198 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "preliminary-source-image-not-georeferenced",
+  "source": {
+    "title": "Endean Park and Hawes Brook",
+    "page": 2
+  },
+  "imageWidth": 792,
+  "imageHeight": 612,
+  "trails": [
+    {
+      "id": "north",
+      "name": "Northern natural trail",
+      "points": [
+        [
+          320,
+          299
+        ],
+        [
+          357,
+          269
+        ],
+        [
+          393,
+          234
+        ],
+        [
+          443,
+          202
+        ],
+        [
+          489,
+          206
+        ],
+        [
+          532,
+          220
+        ],
+        [
+          579,
+          211
+        ],
+        [
+          633,
+          208
+        ],
+        [
+          678,
+          201
+        ]
+      ]
+    },
+    {
+      "id": "west",
+      "name": "Western wooded paths",
+      "points": [
+        [
+          320,
+          299
+        ],
+        [
+          344,
+          287
+        ],
+        [
+          363,
+          297
+        ],
+        [
+          385,
+          288
+        ],
+        [
+          404,
+          300
+        ],
+        [
+          428,
+          287
+        ],
+        [
+          431,
+          260
+        ],
+        [
+          420,
+          239
+        ]
+      ]
+    },
+    {
+      "id": "center",
+      "name": "Central woodland crossing",
+      "points": [
+        [
+          320,
+          299
+        ],
+        [
+          371,
+          327
+        ],
+        [
+          422,
+          328
+        ],
+        [
+          470,
+          306
+        ],
+        [
+          503,
+          265
+        ],
+        [
+          537,
+          251
+        ],
+        [
+          580,
+          241
+        ],
+        [
+          630,
+          240
+        ]
+      ]
+    },
+    {
+      "id": "south",
+      "name": "Southern connectors",
+      "points": [
+        [
+          420,
+          328
+        ],
+        [
+          439,
+          380
+        ],
+        [
+          477,
+          401
+        ],
+        [
+          521,
+          428
+        ],
+        [
+          521,
+          473
+        ],
+        [
+          568,
+          459
+        ],
+        [
+          593,
+          435
+        ]
+      ]
+    },
+    {
+      "id": "east",
+      "name": "Eastern recreation paths",
+      "points": [
+        [
+          532,
+          220
+        ],
+        [
+          556,
+          250
+        ],
+        [
+          586,
+          284
+        ],
+        [
+          634,
+          302
+        ],
+        [
+          659,
+          283
+        ],
+        [
+          647,
+          248
+        ],
+        [
+          633,
+          208
+        ]
+      ]
+    }
+  ]
+}
