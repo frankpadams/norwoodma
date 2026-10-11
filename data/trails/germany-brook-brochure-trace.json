@@ -1,0 +1,202 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "manual-source-image-traces-not-georeferenced",
+  "imageWidth": 1188,
+  "imageHeight": 918,
+  "source": {
+    "title": "Germany Brook Trails Map",
+    "page": 2
+  },
+  "trails": [
+    {
+      "id": "savage-winter",
+      "name": "Savage Center to Winter Street",
+      "points": [
+        [
+          237,
+          712
+        ],
+        [
+          271,
+          687
+        ],
+        [
+          295,
+          647
+        ],
+        [
+          320,
+          602
+        ],
+        [
+          346,
+          556
+        ],
+        [
+          329,
+          502
+        ],
+        [
+          323,
+          459
+        ],
+        [
+          334,
+          417
+        ],
+        [
+          357,
+          372
+        ],
+        [
+          386,
+          333
+        ],
+        [
+          418,
+          298
+        ],
+        [
+          452,
+          262
+        ],
+        [
+          485,
+          220
+        ],
+        [
+          529,
+          176
+        ],
+        [
+          554,
+          163
+        ]
+      ]
+    },
+    {
+      "id": "overlook-spur",
+      "name": "Landfill overlook spur",
+      "points": [
+        [
+          328,
+          502
+        ],
+        [
+          338,
+          458
+        ],
+        [
+          363,
+          408
+        ],
+        [
+          397,
+          366
+        ],
+        [
+          430,
+          328
+        ],
+        [
+          461,
+          325
+        ]
+      ]
+    },
+    {
+      "id": "winter-fields",
+      "name": "Winter Street to fields",
+      "points": [
+        [
+          554,
+          163
+        ],
+        [
+          603,
+          148
+        ],
+        [
+          657,
+          131
+        ],
+        [
+          697,
+          153
+        ],
+        [
+          738,
+          168
+        ],
+        [
+          775,
+          186
+        ],
+        [
+          817,
+          199
+        ],
+        [
+          858,
+          230
+        ],
+        [
+          888,
+          262
+        ]
+      ]
+    },
+    {
+      "id": "field-loop",
+      "name": "Field-side path",
+      "points": [
+        [
+          888,
+          262
+        ],
+        [
+          917,
+          232
+        ],
+        [
+          946,
+          246
+        ],
+        [
+          958,
+          274
+        ],
+        [
+          958,
+          302
+        ],
+        [
+          968,
+          308
+        ]
+      ]
+    },
+    {
+      "id": "savage-access",
+      "name": "Savage Center access",
+      "points": [
+        [
+          237,
+          712
+        ],
+        [
+          259,
+          704
+        ],
+        [
+          281,
+          705
+        ],
+        [
+          299,
+          715
+        ]
+      ]
+    }
+  ]
+}
