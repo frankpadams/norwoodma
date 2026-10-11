@@ -1,5 +1,18 @@
 (()=>{
 'use strict';
+const hints={
+'Meadow Street':'Look for the Meadow Street dead end, Fortune Drive, Neponset River bends, Traphole Brook and the railroad crossing. Prefer a street junction or bridge over a tree.',
+'Bernie Cooper Riverfront Park':'Match Saint Joseph Avenue and the park entrances at Saint John and Saint Paul streets. The Neponset River and Hawes Brook help confirm orientation.',
+'Vanderbilt / Pine Tree Forest':'Start at Vanderbilt Avenue. Look for the power-line corridor, nearby storage facility and sewer easement; choose stable crossings.',
+'Shattuck Park':'Use the intersections around Winter, Nichols and Bond streets and the Bellevue Avenue parking access.',
+'Germany Brook':'Find the Savage Center, Winter Street and Willett School. The landfill overlook is a secondary reference.',
+'Ellis Playground':'Find Codman Road and the playground entrance; the boardwalk is useful as a secondary check.',
+'Hennessey Field / Murphy Park':'Use Pleasant Street and Lenox Avenue, plus corners of athletic fields.',
+'Ellis Pond / Alevizos Park':'Find Walpole Street, Nichols Street and the Ellis Pond dam. Use road intersections for A and B.',
+'Endean Park / Hawes Brook':'Use Hawes Pool and its parking area, Washington Street and the middle-school grounds.',
+'Ledgeview Drive':'Start at Ledgeview Drive access. Keep the existing blue trail separate from the proposed extension.',
+'Willett / Tiot Trail':'Use Willett School and Westover Parkway. This leg may be planned rather than publicly open.'
+};
 const sites=[
 ['Meadow Street','meadow-street-brochure-trace.json','1u1MtJmXcGFB3NRXDAlsmGkPwTM53QUXF','Meadow Street, Norwood, Massachusetts'],
 ['Bernie Cooper Riverfront Park','bernie-cooper-brochure-trace.json','1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V','Saint Joseph Avenue, Norwood, Massachusetts'],
@@ -40,7 +53,7 @@ map.on('click',e=>{if(!pending)return;const p={...pending,lat:e.latlng.lat,lon:e
 $('reset').onclick=clear;
 $('save').onclick=()=>download({system:sites[siteIndex][0],source:sites[siteIndex][1],created:new Date().toISOString(),controlPoints:pairs,warning:'Preliminary; verify against independent geographic landmarks before publication'},'trail-'+siteIndex+'-landmarks.json');
 $('export').onclick=()=>{if(pairs.length<2||!data)return;const geo=window.TrailRegistration.convert(data,pairs.slice(0,2));geo.properties.controlPoints=pairs;geo.properties.thirdPointIsIndependentCheck=pairs.length>=3;window.TrailRegistration.download(geo,'trail-'+siteIndex+'-UNVERIFIED')};
-async function load(){const id=++request;siteIndex=Number(select.value);const s=sites[siteIndex];clear();data=null;img.removeAttribute('src');img.alt='Loading '+s[0]+' official brochure map';$('source').href='https://drive.google.com/file/d/'+s[2]+'/view';msg.textContent='Loading '+s[0]+'…';try{const r=await fetch('data/trails/'+s[1]);if(!r.ok)throw Error('Trace data unavailable');const d=await r.json();if(id!==request)return;data=d;refresh()}catch(e){msg.textContent=e.message}
+async function load(){const id=++request;siteIndex=Number(select.value);const s=sites[siteIndex];clear();data=null;img.removeAttribute('src');img.alt='Loading '+s[0]+' official brochure map';$('source').href='https://drive.google.com/file/d/'+s[2]+'/view';msg.textContent='Loading '+s[0]+'…';$('clues').textContent=hints[s[0]]||'Choose fixed road intersections or bridges visible on both maps.';try{const r=await fetch('data/trails/'+s[1]);if(!r.ok)throw Error('Trace data unavailable');const d=await r.json();if(id!==request)return;data=d;refresh()}catch(e){msg.textContent=e.message}
 img.src='https://drive.google.com/thumbnail?id='+encodeURIComponent(s[2])+'&sz=w1800';
 img.onerror=()=>{img.alt='The brochure image could not load. Open the source brochure link. Pin matching is unavailable until an image is hosted locally.';msg.textContent='Brochure image unavailable from Google Drive. Use source link; a locally hosted brochure image is needed for matching.'};
 try{const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q='+encodeURIComponent(s[3]));const found=await r.json();if(id!==request)return;if(found.length){const p=[+found[0].lat,+found[0].lon];if(p[0]>42.14&&p[0]<42.24&&p[1]>-71.25&&p[1]<-71.14)map.setView(p,16)}}catch(e){}setTimeout(()=>map.invalidateSize(),100)}
