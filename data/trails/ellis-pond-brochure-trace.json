@@ -1,0 +1,82 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "preliminary-source-image-not-georeferenced",
+  "source": {
+    "title": "Ellis Pond and Alevizos Park",
+    "page": 2
+  },
+  "imageWidth": 792,
+  "imageHeight": 612,
+  "trails": [
+    {
+      "id": "north",
+      "name": "Northern pond access",
+      "points": [
+        [
+          320,
+          87
+        ],
+        [
+          325,
+          129
+        ],
+        [
+          328,
+          160
+        ],
+        [
+          339,
+          197
+        ]
+      ]
+    },
+    {
+      "id": "east",
+      "name": "Eastern pond-side trail",
+      "points": [
+        [
+          578,
+          341
+        ],
+        [
+          596,
+          315
+        ],
+        [
+          609,
+          285
+        ],
+        [
+          606,
+          248
+        ],
+        [
+          606,
+          227
+        ]
+      ]
+    },
+    {
+      "id": "south",
+      "name": "South/east access from Walpole Street",
+      "points": [
+        [
+          486,
+          346
+        ],
+        [
+          512,
+          353
+        ],
+        [
+          540,
+          347
+        ],
+        [
+          578,
+          341
+        ]
+      ]
+    }
+  ]
+}
