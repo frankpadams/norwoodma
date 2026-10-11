@@ -304,7 +304,8 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   meadow:'Meadow Street: brochure confirms existing public walking paths, open dawn to dusk; crossings can flood. Geometry alignment pending.',
   vanderbilt:'Vanderbilt / Pine Tree Forest: outer and inner loops, Tiot Trail and secondary colored branches. Geometry pending.',
   willett:'Willett / Tiot: 0.37-mile trail leg depicted in 2026 brochure; current public access is not established by that document.',
-  ledgeview:'Ledgeview: brochure identifies an existing blue trail toward the river, but the full ~1-mile loop is contingent on land acquisition. Public access to individual sections is not confirmed.'
+  ledgeview:'Ledgeview: brochure identifies an existing blue trail toward the river, but the full ~1-mile loop is contingent on land acquisition. Public access to individual sections is not confirmed.',
+  senior:'Norwood Senior Center walking route: separate route document; review walking alignment and sidewalk crossings before publishing as a trail.'
  };
  select?.addEventListener('change',()=>{
   const v=select.value;
