@@ -1,5 +1,6 @@
 (()=>{
 'use strict';
+const imageIds=["1LTFHiaNK-irpnXX7PVg-HnArK9QTTnVy","1o-znte0aru_y-Jwvi5SRsebiZTydrVxS","1SPPh5GLn_TRBuePsKxDdAa_FPSO8-bT7","11FxfLvFjTO0E3nOpumVntaSpMI4JteXB","1BCe24Nz1DxNpgWPwGkRJ9P4CBOEVhMyK","1iEKTbxJdFGfTxB0krAi0Er8sD5zUstXn","1ozIsPozZ4TpxKChqNiDCnO3CqQFK1Jfz","1HWFBoj6MPfAxLVhxtG_VfEptOUoktKTq","1eN7kzf_KgTZE9IAOg_zXxW1yHJu9mQMu","13K6uTc2sP-uCt7XovfgokIcAJtvaG1oH","1vhXsZz_7i16wuQ-nk_1d8Owf5WyM_nez"];
 const hints={
 'Meadow Street':'Look for the Meadow Street dead end, Fortune Drive, Neponset River bends, Traphole Brook and the railroad crossing. Prefer a street junction or bridge over a tree.',
 'Bernie Cooper Riverfront Park':'Match Saint Joseph Avenue and the park entrances at Saint John and Saint Paul streets. The Neponset River and Hawes Brook help confirm orientation.',
@@ -54,7 +55,7 @@ $('reset').onclick=clear;
 $('save').onclick=()=>download({system:sites[siteIndex][0],source:sites[siteIndex][1],created:new Date().toISOString(),controlPoints:pairs,warning:'Preliminary; verify against independent geographic landmarks before publication'},'trail-'+siteIndex+'-landmarks.json');
 $('export').onclick=()=>{if(pairs.length<2||!data)return;const geo=window.TrailRegistration.convert(data,pairs.slice(0,2));geo.properties.controlPoints=pairs;geo.properties.thirdPointIsIndependentCheck=pairs.length>=3;window.TrailRegistration.download(geo,'trail-'+siteIndex+'-UNVERIFIED')};
 async function load(){const id=++request;siteIndex=Number(select.value);const s=sites[siteIndex];clear();data=null;img.removeAttribute('src');img.alt='Loading '+s[0]+' official brochure map';$('source').href='https://drive.google.com/file/d/'+s[2]+'/view';msg.textContent='Loading '+s[0]+'…';$('clues').textContent=hints[s[0]]||'Choose fixed road intersections or bridges visible on both maps.';try{const r=await fetch('data/trails/'+s[1]);if(!r.ok)throw Error('Trace data unavailable');const d=await r.json();if(id!==request)return;data=d;refresh()}catch(e){msg.textContent=e.message}
-img.src='https://drive.google.com/thumbnail?id='+encodeURIComponent(s[2])+'&sz=w1800';
+img.src='https://drive.google.com/thumbnail?id='+encodeURIComponent(imageIds[siteIndex])+'&sz=w1800';
 img.onerror=()=>{img.alt='The brochure image could not load. Open the source brochure link. Pin matching is unavailable until an image is hosted locally.';msg.textContent='Brochure image unavailable from Google Drive. Use source link; a locally hosted brochure image is needed for matching.'};
 try{const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q='+encodeURIComponent(s[3]));const found=await r.json();if(id!==request)return;if(found.length){const p=[+found[0].lat,+found[0].lon];if(p[0]>42.14&&p[0]<42.24&&p[1]>-71.25&&p[1]<-71.14)map.setView(p,16)}}catch(e){}setTimeout(()=>map.invalidateSize(),100)}
 select.onchange=load;load();
