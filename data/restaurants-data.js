@@ -591,18 +591,6 @@ window.NORWOOD_RESTAURANTS= [
     "verified": "2026-09-26"
   },
   {
-    "id": "olivadi",
-    "gluten_free": true,
-    "name": "Olivadi",
-    "category": "Pizza & Italian",
-    "cuisine": "Italian",
-    "address": "32 Guild St",
-    "url": "https://www.olivadirestaurant.com/",
-    "link_type": "official",
-    "tags": "Italian pasta pizza seafood dinner spaghetti chicken parm parmigiana rigatoni risotto meatballs salmon swordfish chicken parmigiana scallops filet veal milanese cannoli rock shrimp limone olivadi burger angus sea affogato kids tenders cheese pepperoni octopus mussels arancini burrata calamari onion soup oysters eggplant caesar bolognese carbonara gnocchi nduja pappardelle linguine scampi margherita prosciutto sausage broccolini",
-    "verified": "2026-09-17"
-  },
-  {
     "id": "one-bistro",
     "gluten_free": true,
     "name": "One Bistro",
@@ -964,5 +952,16 @@ window.NORWOOD_RESTAURANTS= [
     "link_type": "maps",
     "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
     "verified": "2026-09-27"
+  },
+  {
+    "id": "colonial-ale-house",
+    "name": "The Colonial Ale House",
+    "category": "American & Pub",
+    "cuisine": "American · Neighborhood pub · Italian-American",
+    "address": "33 Savin Ave",
+    "url": "https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House%2C+33+Savin+Ave%2C+Norwood%2C+MA+02062",
+    "link_type": "maps",
+    "tags": "pub tavern bar american italian pizza pasta chicken parm burger prime rib steak seafood sandwiches full bar cocktails",
+    "verified": "2026-10-10"
   }
 ];
