@@ -359,6 +359,36 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  }catch(err){output.textContent='Trail overlay unavailable ('+err.message+'). The regular map remains usable. No routes have been verified.'}
 })();
 
+/* Source-specific OSM line comparison for Ellis Pond: only named ways, no guessed geometry. */
+(async()=>{
+ const picker=document.getElementById('trailSystemSelect');
+ const status=document.getElementById('trailSystemSelectionStatus');
+ if(!picker||!status)return;
+ let lines=null,heads=null,loaded=false;
+ async function load(){
+  if(loaded)return;loaded=true;
+  try{
+   const q='[out:json][timeout:20];way["highway"="path"]["name"="Ellis Pond Trail"](42.17,-71.25,42.21,-71.19);out geom;';
+   const res=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',body:new URLSearchParams({data:q}),signal:AbortSignal.timeout(25000)});
+   if(!res.ok)throw Error('OSM unavailable');
+   const json=await res.json();
+   const ways=(json.elements||[]).filter(w=>w.geometry?.length>1);
+   if(!ways.length)throw Error('No named trail lines returned');
+   lines=L.layerGroup();heads=L.layerGroup();
+   ways.forEach(w=>{
+    const points=w.geometry.map(p=>[p.lat,p.lon]);
+    L.polyline(points,{color:'#087f5b',weight:5,opacity:.85}).bindPopup('<b>Ellis Pond Trail</b><br>OpenStreetMap mapped path, not independently checked against the town brochure.').addTo(lines);
+    [points[0],points[points.length-1]].forEach((ll,i)=>L.circleMarker(ll,{radius:6,color:'#087f5b',weight:2,fillColor:'#fff',fillOpacity:1}).bindPopup('<b>OSM path endpoint candidate</b><br>Not confirmed as a public trail entrance.').addTo(heads));
+   });
+   if(['all','ellis-pond'].includes(picker.value)){lines.addTo(map);heads.addTo(map);map.fitBounds(lines.getBounds?lines.getBounds():L.featureGroup(lines.getLayers()).getBounds().pad(.15))}
+   status.textContent='Ellis Pond: '+ways.length+' named OSM path segments loaded. Endpoint candidates are NOT verified public entrances.';
+  }catch(e){loaded=false;status.textContent='Ellis Pond mapped path unavailable: '+e.message}
+ }
+ picker.addEventListener('change',()=>{
+  if(['all','ellis-pond'].includes(picker.value)){load().then(()=>{if(lines){lines.addTo(map);heads.addTo(map)}})}
+  else {if(lines)map.removeLayer(lines);if(heads)map.removeLayer(heads)}
+ });
+})();
 /* Entrance-first mapping: trailhead positions are separate from approximate route geometry.
    Add confirmed coordinates only; never substitute park centroid for access. */
 (()=>{
