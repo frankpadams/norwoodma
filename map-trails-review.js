@@ -359,6 +359,74 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  }catch(err){output.textContent='Trail overlay unavailable ('+err.message+'). The regular map remains usable. No routes have been verified.'}
 })();
 
+/* Trail-system candidate line conversion. Every source area can display real
+   mapped OSM footway geometry, clipped to a conservative reference envelope.
+   These are candidates, not a digitization of the official PDFs. */
+(()=>{
+ const picker=document.getElementById('trailSystemSelect');
+ const status=document.getElementById('trailSystemSelectionStatus');
+ if(!picker||!status)return;
+ const areas={
+  shattuck:[42.19283,-71.21099,.008],
+  germany:[42.188,-71.221,.010],
+  endean:[42.17425,-71.2123,.009],
+  'ellis-pond':[42.189,-71.217,.009],
+  'ellis-playground':[42.201,-71.223,.008],
+  cooper:[42.17478,-71.20465,.008],
+  hennessey:[42.207,-71.187,.009],
+  meadow:[42.169,-71.207,.009],
+  vanderbilt:[42.209,-71.221,.011],
+  willett:[42.183,-71.219,.008],
+  ledgeview:[42.195,-71.222,.007],
+  senior:[42.197,-71.203,.008]
+ };
+ const layer=L.layerGroup();let cache=null,request=null,serial=0;
+ function clear(){layer.clearLayers();map.removeLayer(layer)}
+ async function load(){
+  if(cache)return cache;
+  if(request)return request;
+  request=(async()=>{
+   const q='[out:json][timeout:35];way["highway"~"^(path|footway)$"](42.1515,-71.2355,42.2265,-71.1505);out geom;';
+   const endpoints=['https://overpass.kumi.systems/api/interpreter','https://overpass-api.de/api/interpreter'];
+   for(const endpoint of endpoints){
+    try{
+     const response=await fetch(endpoint,{method:'POST',body:new URLSearchParams({data:q}),signal:AbortSignal.timeout(35000)});
+     if(!response.ok)continue;
+     const json=await response.json();
+     cache=(json.elements||[]).filter(w=>w.geometry?.length>1&&w.tags?.access!=='private'&&w.tags?.access!=='no'&&w.tags?.foot!=='no');
+     return cache;
+    }catch(e){}
+   }
+   throw Error('Mapped path service unavailable');
+  })();
+  try{return await request}finally{request=null}
+ }
+ function inside(p,area){const [lat,lon,r]=area;return Math.abs(p.lat-lat)<r&&Math.abs(p.lon-lon)<r}
+ async function update(){
+  const token=++serial;clear();const selection=picker.value;
+  if(!selection)return;
+  if(selection==='ledgeview'){status.textContent='Ledgeview is PROPOSED ONLY; existing OSM footways are not evidence the planned alignment is open.';return}
+  status.textContent='Loading approximate mapped footpaths for '+(selection==='all'?'all areas':selection)+'…';
+  try{
+   const ways=await load();if(token!==serial)return;
+   let count=0;
+   for(const [id,area] of Object.entries(areas)){
+    if(id==='ledgeview'||(selection!=='all'&&selection!==id))continue;
+    const matches=ways.filter(w=>w.geometry.some(p=>inside(p,area)));
+    for(const w of matches){
+     const coords=w.geometry.map(p=>[p.lat,p.lon]);
+     L.polyline(coords,{color:'#0b806b',weight:3,opacity:.75,dashArray:'7 5'})
+      .bindPopup('<strong>'+id+'</strong><br>Approximate OSM footpath candidate, selected by proximity. Not traced or verified against the source brochure. Do not use for navigation.')
+      .addTo(layer);
+     count++;
+    }
+   }
+   layer.addTo(map);
+   status.textContent=count+' approximate OSM footpath candidates shown. They are NOT converted brochure alignments, may include unrelated paths, and must be reviewed.';
+  }catch(e){if(token===serial)status.textContent='Candidate path lines unavailable: '+e.message}
+ }
+ picker.addEventListener('change',update);
+})();
 /* Source-specific OSM line comparison for Ellis Pond: only named ways, no guessed geometry. */
 (async()=>{
  const picker=document.getElementById('trailSystemSelect');
