@@ -373,9 +373,9 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   endean:[42.17425,-71.2123,.009],
   'ellis-pond':[42.189,-71.217,.009],
   'ellis-playground':[42.201,-71.223,.008],
-  cooper:[42.17478,-71.20465,.008],
+  cooper:[42.17478,-71.20465,.0025],
   hennessey:[42.207,-71.187,.009],
-  meadow:[42.169,-71.207,.009],
+  meadow:[42.169,-71.207,.0035],
   vanderbilt:[42.209,-71.221,.011],
   willett:[42.183,-71.219,.008],
   ledgeview:[42.195,-71.222,.007],
@@ -413,11 +413,11 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
    let count=0;
    for(const [id,area] of Object.entries(areas)){
     if(id==='ledgeview'||(selection!=='all'&&selection!==id))continue;
-    const matches=ways.filter(w=>w.geometry.some(p=>inside(p,area)));
+    const matches=ways.filter(w=>w.geometry.some(p=>inside(p,area))&&w.geometry.every(p=>inside(p,[area[0],area[1],area[2]*1.5])));
     for(const w of matches){
      const coords=w.geometry.map(p=>[p.lat,p.lon]);
      L.polyline(coords,{color:'#0b806b',weight:3,opacity:.75,dashArray:'7 5'})
-      .bindPopup('<strong>'+id+'</strong><br>Approximate OSM footpath candidate, selected by proximity. Not traced or verified against the source brochure. Do not use for navigation.')
+      .bindPopup('<strong>'+id+'</strong><br>OpenStreetMap way '+w.id+' (candidate only). Geographic envelope match, not a brochure trace. Verify against source PDF before accepting. Not for navigation.')
       .addTo(layer);
      count++;
     }
