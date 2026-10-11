@@ -1,0 +1,82 @@
+# Norwood trail mapping — durable handoff and working notes
+Updated 2026-10-11. This file is a project handoff for subsequent ChatGPT sessions. READ THIS BEFORE EDITING TRAILS.
+
+## User objective and constraints
+- Show real trail path lines overlaid on an interactive OpenStreetMap/satellite basemap, on a **private review/test page**.
+- Cover **all Norwood trail systems**, not just one; useful provisional placement is acceptable, but never disguise guessed lines as accurate.
+- Use the original official PDF brochure maps to find recognizable landmarks (road intersections, bridges, parking, waterways, fields, railroad, power lines), match those to geographic basemaps, solve image-pixel-to-geographic registration, and independently test additional control points.
+- DO NOT change the public `map.html` until explicitly approved. Maintain mobile usability and `noindex` for review pages.
+- User wants work performed directly in repo, not instructions requiring them to manually enter coordinates. User is worried about chat context running out; preserve progress here on every substantive step.
+
+## Repository and pages
+Repo: `frankpadams/norwoodma`.
+- `trails-preliminary-diagrams.html`: 11 system cards, Leaflet OSM maps, purple dashed OSM path candidates fetched from Overpass, provisional red brochure lines for Bernie Cooper, expandable raw trace SVG, two-landmark manual registration control, GeoJSON export. Direct Google Drive iframe previews FAILED with HTTP 400 on iPhone; removed. Original brochure PDF links remain. IMPORTANT: current OSM Nominatim/Overpass runtime requests may fail or be throttled; test in browser. Some geocode names may not resolve.
+- `trails-review-2026.html`: original private geographic review workbench. Loads `map-trails-review.js`; contains GIS candidates and Vanderbilt landmark-registration workbench with leave-one-out accuracy checking. Prefer consolidating instead of duplicating alignment UI.
+- `trail-registration-provisional.js`: two-point similarity transform and GeoJSON export utility. Two landmarks alone are NOT independent accuracy verification.
+- `map-trails-review.js`: existing Leaflet map, GIS/OSM candidates, satellite toggle and Vanderbilt registration controls.
+- Public `map.html`: KEEP UNCHANGED.
+
+## Latest implementation and caveats
+- Commit `cf4eb9b9df5162464e03fbf4d957ac9960da05c9`: Bernie Cooper brochure linework shown as red dashed paths over Leaflet basemap, using approximate center lat 42.17478 lon -71.20465, assumed brochure pixel [525,495], 0.423 meters/pixel and assumed north-up orientation. **These assumptions were NOT matched to independently verified brochure control points. The overlay may be seriously wrong.** Treat only as a visible prototype and replace ASAP with genuine registration. The park center coordinate was presented as approximate, not independently reverified in this session.
+- Commit `cfa832d4a07660624466bd4472e856e579f4a529`: purple dashed actual OSM path candidates within 420m of geocoded area. Candidates are not confirmed brochure matches.
+- Commit `7f047bb007fe5206b24128eb2cf43bb873ec9865`: after manual two-anchor entry, red dashed registered lines appear over Leaflet map and GeoJSON downloads.
+- Commit `0fca2e07eb552c93380e4f08239ac8c3e1657ac1`: Nominatim geocoding for each trail area.
+- Commit `54506f3a32690dba60ac27938e33b0cf0f4d9910`: replaced broken Google PDF embeds with Leaflet map.
+- Commit `70aa00b72c4a036a2e4cb61337c4d3e9b5ff0762`: broken Drive iframe attempt; subsequently removed.
+- Commit `b2af421c5fdcdfb47fd3838db604cfcbaef10024`: manual registration controls.
+
+## Eleven provisional brochure-image traces (many UNVERIFIED / guessed)
+Each JSON holds `trails[].points` in brochure render pixel coordinates; `source.renderWidth/renderHeight` or `imageWidth/imageHeight` describes dimensions.
+1. `data/trails/meadow-street-brochure-trace.json` — Meadow Street; `Broc_MeadowStProp_D5Alt_20250807.pdf`, 1188x918
+2. `data/trails/bernie-cooper-brochure-trace.json` — Bernie Cooper Riverfront Park; `Broc_Cooper_D1_20250812.pdf`, 1188x918
+3. `data/trails/vanderbilt-5k-brochure-trace.json` — Vanderbilt/Pine Tree Forest 5K; `VanderbiltPTFInnerAndOuterLoops5KMap.pdf`, 1088x1408
+4. `data/trails/shattuck-park-brochure-trace.json` — Shattuck Park; `2023.03.24 ShattuckPark_Trails_MAP_BROCHURE.pdf`, 1188x918
+5. `data/trails/germany-brook-brochure-trace.json` — Germany Brook; `2023.03.24 GermanyBk_MAP_BROCHURE.pdf`, 1188x918
+6. `data/trails/ellis-playground-brochure-trace.json` — Ellis Playground; `2023.03.24 EllisPlayground_ MAP_BROCHURE.pdf`, 612x472
+7. `data/trails/hennessey-murphy-brochure-trace.json` — Hennessey/Murphy; `2023.03.24 HennesseyField and MurphyPark_Trails_MAP_BROCHURE.pdf`, 612x472
+8. `data/trails/ellis-pond-brochure-trace.json` — Ellis Pond/Alevizos; `2023.03.24 EllisPond_Alevizos Park_MAP_BROCHURE.pdf`, 792x612
+9. `data/trails/endean-hawes-brochure-trace.json` — Endean/Hawes Brook; `2023.02.21 EndeanHawesBrTr_MAP_BROCHURE.pdf`, 792x612
+10. `data/trails/ledgeview-brochure-trace.json` — Ledgeview Drive; `LedgeviewDriveMap.pdf`, 595x842. Distinguish existing 0.3mi blue trail from **proposed** loop contingent on acquisition.
+11. `data/trails/willett-tiot-brochure-trace.json` — Willett/Tiot; `WillettTiotTrailLegMap.pdf`, 595x842; ~0.37mi planned leg; public access uncertain.
+
+**Critical: eight or more of these traces were manually guessed and not carefully traced from actual PDF map lines.** Even the Meadow/Cooper/Vanderbilt drawings are not independently validated. First overlay each JSON trace on a raster render of its original brochure to find and correct mismatches. Avoid presenting them as surveyed or accurate.
+
+## Original PDF source storage
+Google Drive folder: https://drive.google.com/drive/folders/1RTjkk-Ckrmgwtd3L3N13O8AI5i8N8oAh
+Google Drive file IDs:
+- Cooper: `1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V`
+- Meadow: `1u1MtJmXcGFB3NRXDAlsmGkPwTM53QUXF`
+- Vanderbilt 5K: `1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0`
+- Shattuck: `1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw`
+- Germany: `1X-mPJgOAaNFPAF_jxQHyPPiwcpqv9--1`
+- Ellis Playground: `1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp`
+- Hennessey/Murphy: `1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q`
+- Ellis Pond: `1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX`
+- Endean: `1WwtpOYWhmyOCY1-L9RdgvQ4v-Yj8J3Sz`
+- Ledgeview: `1XtBbNiYSEFR1R6i1udUzjPr1Hv_mC20o`
+- Willett: `1i3uG3TOsoQ2OeCiyV_-mpyKqjwjxlVKL`
+Many PDFs and renders were available in the prior chat working container under `/mnt/data`, but **do not assume these paths persist across new sessions**. Use Google Drive connector or files library if necessary.
+
+## Geographic landmark leads (NOT all verified control points)
+- Bernie Cooper: Saint Joseph Ave (approx center 42.17478,-71.20465); Saint John and Saint Paul street entrances; Neponset River.
+- Meadow Street: Meadow St terminus, Fortune Drive, Neponset River and Traphole Brook; railroad bridge at approximately 42.174249,-71.212308 from prior conversation, MUST verify.
+- Vanderbilt/Pine Tree Forest: Vanderbilt Avenue, power lines, storage facility, sewer easement.
+- Endean: Hawes Pool, pool parking, Washington Street, middle school, community garden/orchard.
+- Germany Brook: Savage Center, Winter Street, Willett School and landfill overlook spur.
+- Shattuck: Winter/Nichols/Bond streets, Bellevue Avenue parking.
+- Ellis Playground: Codman Road, boardwalk.
+- Ellis Pond: Walpole Street, Nichols Street, dam.
+- Hennessey/Murphy: Pleasant Street, Lenox Avenue.
+- Ledgeview: Ledgeview Drive.
+- Willett/Tiot: Willett School, Westover Parkway easement.
+
+## Correct next workflow
+1. Read this file and fetch latest repo pages/JSON before editing. Inspect the **actual brochure map image**, not just source notes.
+2. Rasterize the PDF at consistent dimensions; superimpose JSON points on the raster; correct badly guessed traces. If available, use PDF vector path extraction (`fitz.get_drawings()`) to capture real colored route geometry.
+3. Match 3–5 widely spaced visible landmarks between brochure and satellite/OSM map; record source pixel coords, verified lat/lon, how matched, and independent residuals in per-trail registration JSON. Reject poor fit; avoid made-up control points.
+4. Apply similarity/affine transformation and export provisional geographic GeoJSON. Compare with OSM actual paths. Mark proposed routes separately. Show route lines directly on Leaflet with toggles and explicit confidence.
+5. Test mobile viewport, network failures, map tile display and geometry alignment; preserve `noindex` and public map unchanged.
+6. After each system, update this handoff with exact control points, quality measures, changed paths and commit SHA.
+
+## User-facing truthfulness
+Never say that a brochure is aligned just because a marker was geocoded or arbitrary center/scale used. The user has explicitly rejected blank SVG diagrams and broken Google Drive iframe previews. Avoid promising invisible background work. Commit actual code and provide exact SHA when available.
