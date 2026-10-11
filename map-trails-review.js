@@ -389,6 +389,17 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   else {if(lines)map.removeLayer(lines);if(heads)map.removeLayer(heads)}
  });
 })();
+/* Independently published geographic reference: Neponset River Watershed
+   Association Hawes Brook sampling station HAB006, not a trailhead. */
+(()=>{
+ const select=document.getElementById('trailSystemSelect');
+ const refLayer=L.layerGroup([
+  L.circleMarker([42.174249,-71.212308],{radius:7,color:'#7c3aed',weight:2,fillColor:'#fff',fillOpacity:1})
+   .bindPopup('<strong>Hawes Brook / Endean reference point</strong><br>Neponset River Watershed Association sampling station HAB006, at the railroad bridge near a foot path. <b>NOT a verified trail entrance.</b><br><a target="_blank" rel="noopener" href="https://neponset.org/wp-content/uploads/2023/08/2023-CWMN-Site-Manual-June-Update-2.pdf">Source: watershed sampling-site manual</a>')
+ ]);
+ const update=()=>{if(select?.value==='endean'||select?.value==='all')refLayer.addTo(map);else map.removeLayer(refLayer)};
+ select?.addEventListener('change',update);update();
+})();
 /* Endean landmark registration guide from Norwood's 2023 official trail brochure.
    Features are anchors for locating entrances, not claimed GPS entrance coordinates. */
 (()=>{
