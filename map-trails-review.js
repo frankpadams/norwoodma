@@ -359,6 +359,26 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  }catch(err){output.textContent='Trail overlay unavailable ('+err.message+'). The regular map remains usable. No routes have been verified.'}
 })();
 
+/* Entrance-first mapping: trailhead positions are separate from approximate route geometry.
+   Add confirmed coordinates only; never substitute park centroid for access. */
+(()=>{
+ const select=document.getElementById('trailSystemSelect');
+ const note=document.getElementById('trailSystemSelectionStatus');
+ if(!select||!note)return;
+ const heads=L.layerGroup().addTo(map);
+ const entries=[]; // Populated only after entrance location is independently checked.
+ const draw=()=>{
+  heads.clearLayers();
+  if(!select.value)return;
+  entries.filter(e=>select.value==='all'||e.system===select.value).forEach(e=>{
+   L.circleMarker([e.lat,e.lon],{radius:8,color:'#004f7a',weight:3,fillColor:'#ffcf32',fillOpacity:1})
+    .bindPopup('<strong>'+e.name+'</strong><br>Verified entrance location<br><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(e.lat+','+e.lon)+'">Directions to entrance</a>')
+    .addTo(heads);
+  });
+ };
+ select.addEventListener('change',draw);
+ draw();
+})();
 /* Vanderbilt brochure georeferencing workbench: reviewer must supply map control points.
    Never publish transformed paths as accurate without independent validation. */
 (async()=>{
