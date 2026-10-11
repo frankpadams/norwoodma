@@ -86,3 +86,9 @@ Never say that a brochure is aligned just because a marker was geocoded or arbit
 - The existing Bernie Cooper automatic red-line overlay uses **0.423 m/pixel and a guessed pixel center**. This is a visualization prototype, **NOT a trustworthy geographic alignment**. Remove or supersede that placement as soon as landmark-anchored routes exist; keep conspicuous warning meanwhile.
 - Use multiple recognizable, independently located control points distributed across each trail system. Check held-out landmarks and local distortion. Where a global affine/similarity transform fits poorly, use piecewise/local registration or trace against georeferenced aerial/OSM path features, with manual review and explicit uncertainty.
 - Never use an image-space trace's apparent length to claim an actual trail length. Preserve the distinction between existing, planned and proposed trails.
+
+## Practical registration refinement (user clarification, 2026-10-11)
+- Begin with **two widely separated, identifiable fixed landmarks** (e.g. road intersections) to solve uniform scale, rotation, and translation, *if* the brochure is approximately similarity-transformable.
+- Use a **third independently identified landmark** as a check. If the third point deviates significantly, the brochure may be distorted, not to scale, or the matching point may be wrong. Investigate before accepting.
+- Three non-collinear landmarks can also fit an affine transform (including shear/nonuniform scale), but an independent fourth landmark is then needed to test it. Do not confuse fitting controls with independent validation.
+- For locally distorted schematic maps, use additional local controls and segment-specific tracing against satellite imagery or verified mapped footpaths. Do not require dozens of landmarks when two or three suffice for a useful first approximation.
