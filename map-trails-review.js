@@ -354,4 +354,43 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   const toggle=document.createElement('label');toggle.style.marginLeft='12px';const check=document.createElement('input');check.type='checkbox';check.checked=true;check.addEventListener('change',()=>check.checked?map.addLayer(overlay):map.removeLayer(overlay));toggle.append(check,document.createTextNode(' Show unverified trails'));output.append(toggle);
  }catch(err){output.textContent='Trail overlay unavailable ('+err.message+'). The regular map remains usable. No routes have been verified.'}
 })();
+
+/* Vanderbilt brochure georeferencing workbench: reviewer must supply map control points.
+   Never publish transformed paths as accurate without independent validation. */
+(async()=>{
+ const host=document.getElementById('trailSystemSelectionStatus');
+ const picker=document.getElementById('trailSystemSelect');
+ if(!host||!picker)return;
+ let source;
+ try{const response=await fetch('data/trails/vanderbilt-5k-brochure-trace.json');if(!response.ok)throw Error('source unavailable');source=await response.json()}catch(e){host.textContent='Vanderbilt source geometry could not load';return}
+ const panel=document.createElement('div');panel.style.cssText='margin:12px 0;padding:12px;border:1px solid #aab8c1;border-radius:8px;background:#fff';
+ panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least three widely spaced, independent landmarks. The first two fit rotation and scale; additional points reveal alignment error.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
+ host.insertAdjacentElement('afterend',panel);
+ const result=panel.querySelector('#trailCalResults');
+ let controls=[],awaiting=false,layer=null;
+ try{controls=JSON.parse(localStorage.getItem('norwood-vanderbilt-control-points')||'[]');if(!Array.isArray(controls))controls=[]}catch(e){}
+ const project=ll=>L.CRS.EPSG3857.project(L.latLng(ll));
+ function solve(){
+  if(controls.length<2){result.textContent=controls.length+' control points. At least two required; three or more recommended.';if(layer)map.removeLayer(layer);return}
+  const n=controls.length;
+  const mx=controls.reduce((s,p)=>s+p.x,0)/n,my=controls.reduce((s,p)=>s+p.y,0)/n;
+  const targets=controls.map(p=>project([p.lat,p.lon]));
+  const me=targets.reduce((s,p)=>s+p.x,0)/n,mn=targets.reduce((s,p)=>s+p.y,0)/n;
+  let a=0,b=0,den=0;
+  controls.forEach((p,i)=>{const x=p.x-mx,y=p.y-my,u=targets[i].x-me,v=targets[i].y-mn;a+=x*u+y*v;b+=x*v-y*u;den+=x*x+y*y});
+  if(den<1){result.textContent='Control points must have distinct image positions';return}
+  a/=den;b/=den;
+  const geo=(x,y)=>{const xy=L.point(me+a*(x-mx)-b*(y-my),mn+b*(x-mx)+a*(y-my));const ll=L.CRS.EPSG3857.unproject(xy);return [ll.lat,ll.lng]};
+  const errors=controls.map((p,i)=>{const xy=project(geo(p.x,p.y));return Math.hypot(xy.x-targets[i].x,xy.y-targets[i].y)*Math.cos(p.lat*Math.PI/180)});
+  const rms=Math.sqrt(errors.reduce((s,v)=>s+v*v,0)/n);
+  if(layer)map.removeLayer(layer);
+  layer=L.layerGroup(source.trails.map(t=>L.polyline(t.points.map(p=>geo(p[0],p[1])),{color:t.color,weight:4,opacity:.8,dashArray:'7 5'}).bindPopup('<b>'+t.name+'</b><br>PROVISIONAL brochure alignment; not independently validated.'))).addTo(map);
+  result.textContent=n+' matched landmarks; fitted RMS error '+rms.toFixed(1)+' m (on fitted controls, NOT independent accuracy). Rotation '+(Math.atan2(b,a)*180/Math.PI).toFixed(1)+'°. Lines are provisional and should not be used for navigation.';
+ }
+ panel.querySelector('#trailCalAdd').addEventListener('click',()=>{awaiting=true;result.textContent='Click the corresponding landmark on the geographic map.'});
+ panel.querySelector('#trailCalClear').addEventListener('click',()=>{controls=[];localStorage.removeItem('norwood-vanderbilt-control-points');solve()});
+ map.on('click',e=>{if(!awaiting)return;awaiting=false;const x=Number(panel.querySelector('#trailCalX').value),y=Number(panel.querySelector('#trailCalY').value);if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<0||x>1088||y>1408){result.textContent='Enter valid image X and Y first';return}controls.push({x,y,lat:e.latlng.lat,lon:e.latlng.lng});localStorage.setItem('norwood-vanderbilt-control-points',JSON.stringify(controls));solve()});
+ picker.addEventListener('change',()=>{if(layer){if(picker.value==='vanderbilt'||picker.value==='all')layer.addTo(map);else map.removeLayer(layer)}});
+ solve();
+})();
 })();
