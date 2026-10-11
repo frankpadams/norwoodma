@@ -364,7 +364,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  let source;
  try{const response=await fetch('data/trails/vanderbilt-5k-brochure-trace.json');if(!response.ok)throw Error('source unavailable');source=await response.json()}catch(e){host.textContent='Vanderbilt source geometry could not load';return}
  const panel=document.createElement('div');panel.style.cssText='margin:12px 0;padding:12px;border:1px solid #aab8c1;border-radius:8px;background:#fff';
- panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least three widely spaced, independent landmarks. The first two fit rotation and scale; additional points reveal alignment error.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
+ panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least three widely spaced, independent landmarks. The first two fit rotation and scale; additional points reveal alignment error.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button> <button type="button" id="trailCalExport" disabled>Export provisional GeoJSON</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
  host.insertAdjacentElement('afterend',panel);
  const result=panel.querySelector('#trailCalResults');
  let controls=[],awaiting=false,layer=null;
@@ -383,11 +383,30 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   const geo=(x,y)=>{const xy=L.point(me+a*(x-mx)-b*(y-my),mn+b*(x-mx)+a*(y-my));const ll=L.CRS.EPSG3857.unproject(xy);return [ll.lat,ll.lng]};
   const errors=controls.map((p,i)=>{const xy=project(geo(p.x,p.y));return Math.hypot(xy.x-targets[i].x,xy.y-targets[i].y)*Math.cos(p.lat*Math.PI/180)});
   const rms=Math.sqrt(errors.reduce((s,v)=>s+v*v,0)/n);
+  // Leave-one-out residuals provide an independent prediction test rather than training error.
+  const holdout=[];
+  if(n>=4)for(let excluded=0;excluded<n;excluded++){
+   const others=controls.filter((_,i)=>i!==excluded),m=others.length;
+   const ox=others.reduce((s,p)=>s+p.x,0)/m,oy=others.reduce((s,p)=>s+p.y,0)/m;
+   const xy=others.map(p=>project([p.lat,p.lon]));
+   const ex=xy.reduce((s,p)=>s+p.x,0)/m,ey=xy.reduce((s,p)=>s+p.y,0)/m;
+   let aa=0,bb=0,dd=0;
+   others.forEach((p,i)=>{const x=p.x-ox,y=p.y-oy,u=xy[i].x-ex,v=xy[i].y-ey;aa+=x*u+y*v;bb+=x*v-y*u;dd+=x*x+y*y});
+   if(dd<1)continue;aa/=dd;bb/=dd;
+   const p=controls[excluded],actual=project([p.lat,p.lon]);
+   const predicted=L.point(ex+aa*(p.x-ox)-bb*(p.y-oy),ey+bb*(p.x-ox)+aa*(p.y-oy));
+   holdout.push(Math.hypot(predicted.x-actual.x,predicted.y-actual.y)*Math.cos(p.lat*Math.PI/180));
+  }
+  const independent=holdout.length?Math.sqrt(holdout.reduce((s,v)=>s+v*v,0)/holdout.length):null;
   if(layer)map.removeLayer(layer);
   layer=L.layerGroup(source.trails.map(t=>L.polyline(t.points.map(p=>geo(p[0],p[1])),{color:t.color,weight:4,opacity:.8,dashArray:'7 5'}).bindPopup('<b>'+t.name+'</b><br>PROVISIONAL brochure alignment; not independently validated.'))).addTo(map);
-  result.textContent=n+' matched landmarks; fitted RMS error '+rms.toFixed(1)+' m (on fitted controls, NOT independent accuracy). Rotation '+(Math.atan2(b,a)*180/Math.PI).toFixed(1)+'°. Lines are provisional and should not be used for navigation.';
+  result.textContent=n+' matched landmarks; fitted RMS '+rms.toFixed(1)+' m; '+(independent===null?'independent validation requires at least four control points.':'leave-one-out RMS '+independent.toFixed(1)+' m ('+(independent<=6.1?'within 20-foot check on sampled landmarks':'exceeds 20-foot target')+').')+' Rotation '+(Math.atan2(b,a)*180/Math.PI).toFixed(1)+'°. Source tracing and landmarks still require human review. NOT navigation-ready.';
+  const exportBtn=panel.querySelector('#trailCalExport');
+  if(exportBtn)exportBtn.disabled=independent===null;
+  panel.dataset.export=JSON.stringify({type:'FeatureCollection',properties:{status:'provisional-georeferencing',fittedRmsMeters:rms,holdoutRmsMeters:independent,controlPoints:controls,source:source.source},features:source.trails.map(t=>({type:'Feature',properties:{id:t.id,name:t.name,status:'unverified',source:'official brochure pixel trace'},geometry:{type:'LineString',coordinates:t.points.map(p=>{const ll=geo(p[0],p[1]);return [ll[1],ll[0]]})}}))});
  }
  panel.querySelector('#trailCalAdd').addEventListener('click',()=>{awaiting=true;result.textContent='Click the corresponding landmark on the geographic map.'});
+ panel.querySelector('#trailCalExport').addEventListener('click',()=>{if(!panel.dataset.export)return;const blob=new Blob([panel.dataset.export],{type:'application/geo+json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='vanderbilt-provisional-trails.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
  panel.querySelector('#trailCalClear').addEventListener('click',()=>{controls=[];localStorage.removeItem('norwood-vanderbilt-control-points');solve()});
  map.on('click',e=>{if(!awaiting)return;awaiting=false;const x=Number(panel.querySelector('#trailCalX').value),y=Number(panel.querySelector('#trailCalY').value);if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<0||x>1088||y>1408){result.textContent='Enter valid image X and Y first';return}controls.push({x,y,lat:e.latlng.lat,lon:e.latlng.lng});localStorage.setItem('norwood-vanderbilt-control-points',JSON.stringify(controls));solve()});
  picker.addEventListener('change',()=>{if(layer){if(picker.value==='vanderbilt'||picker.value==='all')layer.addTo(map);else map.removeLayer(layer)}});
