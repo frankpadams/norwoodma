@@ -1,0 +1,102 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "rough-source-image-diagram-not-georeferenced",
+  "source": {
+    "title": "Hennessey Field and Murphy Park Trails",
+    "page": 2
+  },
+  "imageWidth": 612,
+  "imageHeight": 472,
+  "trails": [
+    {
+      "id": "field",
+      "name": "Field entrance",
+      "points": [
+        [
+          274,
+          100
+        ],
+        [
+          282,
+          129
+        ],
+        [
+          285,
+          157
+        ],
+        [
+          300,
+          185
+        ],
+        [
+          315,
+          215
+        ],
+        [
+          332,
+          232
+        ]
+      ]
+    },
+    {
+      "id": "woodland",
+      "name": "Woodland loop",
+      "points": [
+        [
+          310,
+          255
+        ],
+        [
+          337,
+          246
+        ],
+        [
+          355,
+          230
+        ],
+        [
+          370,
+          205
+        ],
+        [
+          371,
+          171
+        ],
+        [
+          358,
+          185
+        ],
+        [
+          333,
+          207
+        ],
+        [
+          310,
+          255
+        ]
+      ]
+    },
+    {
+      "id": "east",
+      "name": "Eastern connector",
+      "points": [
+        [
+          370,
+          205
+        ],
+        [
+          384,
+          219
+        ],
+        [
+          395,
+          249
+        ],
+        [
+          418,
+          265
+        ]
+      ]
+    }
+  ]
+}
