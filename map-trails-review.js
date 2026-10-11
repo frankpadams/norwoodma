@@ -579,6 +579,41 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  const panel=document.createElement('div');panel.style.cssText='margin:12px 0;padding:12px;border:1px solid #aab8c1;border-radius:8px;background:#fff';
  panel.innerHTML='<strong>Vanderbilt georeferencing workbench (committee only)</strong><p style="margin:6px 0">Open the <a href="https://drive.google.com/file/d/1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0/view" target="_blank" rel="noopener">official source map</a>. Enter its image pixel X/Y (1088 × 1408 reference image), then click the corresponding location on this geographic map. Use at least four widely spaced, independent landmarks. Four or more points allow a leave-one-out alignment check; exports require that check to be within 20 feet.</p><label>Source X <input id="trailCalX" type="number" min="0" max="1088" style="width:80px"></label> <label>Y <input id="trailCalY" type="number" min="0" max="1408" style="width:80px"></label> <button type="button" id="trailCalAdd">Click map to match this pixel</button> <button type="button" id="trailCalClear">Clear calibration</button> <button type="button" id="trailCalExport" disabled>Export provisional GeoJSON</button><div id="trailCalResults" role="status" style="margin-top:8px"></div>';
  host.insertAdjacentElement('afterend',panel);
+ // Render the source's existing pixel-space trace for precise point selection.
+ // This is an image-coordinate preview, NOT a geographic map.
+ const sourcePreview=document.createElement('div');
+ sourcePreview.style.cssText='margin:10px 0;max-width:440px';
+ const sourceSvg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+ sourceSvg.setAttribute('viewBox','0 0 1088 1408');
+ sourceSvg.setAttribute('role','img');
+ sourceSvg.setAttribute('aria-label','Source image coordinate preview of red and black Vanderbilt loops; click to choose an image coordinate');
+ sourceSvg.style.cssText='width:100%;height:auto;display:block;background:#f3f6f1;border:1px solid #aab8c1;touch-action:manipulation;cursor:crosshair';
+ for(const trail of source.trails){
+  const line=document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  line.setAttribute('points',trail.points.map(p=>p.join(',')).join(' '));
+  line.setAttribute('fill','none');
+  line.setAttribute('stroke',trail.color);
+  line.setAttribute('stroke-width','7');
+  line.setAttribute('stroke-linecap','round');
+  line.setAttribute('stroke-linejoin','round');
+  sourceSvg.appendChild(line);
+ }
+ const selectedDot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+ selectedDot.setAttribute('r','12');selectedDot.setAttribute('fill','#f9d423');selectedDot.setAttribute('stroke','#172b4d');selectedDot.setAttribute('stroke-width','4');selectedDot.style.display='none';
+ sourceSvg.appendChild(selectedDot);
+ const sourceCaption=document.createElement('p');
+ sourceCaption.style.cssText='font-size:.8rem;line-height:1.4;margin:5px 0';
+ sourceCaption.textContent='Click the traced loops to populate image X/Y. This preview contains only traced lines, not the PDF basemap. Compare the original PDF for landmark identification; then click the corresponding geographic location.';
+ sourcePreview.append(sourceSvg,sourceCaption);
+ panel.insertBefore(sourcePreview,panel.querySelector('#trailCalResults'));
+ sourceSvg.addEventListener('click',event=>{
+  const bounds=sourceSvg.getBoundingClientRect();
+  const x=Math.max(0,Math.min(1088,Math.round((event.clientX-bounds.left)*1088/bounds.width)));
+  const y=Math.max(0,Math.min(1408,Math.round((event.clientY-bounds.top)*1408/bounds.height)));
+  panel.querySelector('#trailCalX').value=x;panel.querySelector('#trailCalY').value=y;
+  selectedDot.setAttribute('cx',String(x));selectedDot.setAttribute('cy',String(y));selectedDot.style.display='';
+ });
+
  const result=panel.querySelector('#trailCalResults');
  const cpLayer=L.layerGroup().addTo(map);
  function redrawControls(){cpLayer.clearLayers();controls.forEach((p,i)=>L.circleMarker([p.lat,p.lon],{radius:7,color:'#0a5175',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip('Control '+(i+1)+': source '+p.x+','+p.y).addTo(cpLayer))}
