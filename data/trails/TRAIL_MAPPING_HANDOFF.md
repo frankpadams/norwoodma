@@ -80,3 +80,9 @@ Many PDFs and renders were available in the prior chat working container under `
 
 ## User-facing truthfulness
 Never say that a brochure is aligned just because a marker was geocoded or arbitrary center/scale used. The user has explicitly rejected blank SVG diagrams and broken Google Drive iframe previews. Avoid promising invisible background work. Commit actual code and provide exact SHA when available.
+
+## Critical cartographic warning — brochure maps may NOT be to scale (user clarification 2026-10-11)
+- Do NOT infer real trail distance or geometry from the brochure's printed scale bar, north arrow, or one uniform meters-per-pixel transform without checking. Brochures may be schematic, stretched, distorted or have different local scales.
+- The existing Bernie Cooper automatic red-line overlay uses **0.423 m/pixel and a guessed pixel center**. This is a visualization prototype, **NOT a trustworthy geographic alignment**. Remove or supersede that placement as soon as landmark-anchored routes exist; keep conspicuous warning meanwhile.
+- Use multiple recognizable, independently located control points distributed across each trail system. Check held-out landmarks and local distortion. Where a global affine/similarity transform fits poorly, use piecewise/local registration or trace against georeferenced aerial/OSM path features, with manual review and explicit uncertainty.
+- Never use an image-space trace's apparent length to claim an actual trail length. Preserve the distinction between existing, planned and proposed trails.
