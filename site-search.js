@@ -224,7 +224,7 @@
   const vetQuery=/^(vet|vets)$/.test(raw);
   const vetChoices=vetQuery?[
    {name:'Veterans Services',url:'resources.html#veterans',type:'Search category',text:'veterans military benefits assistance',norwoodPage:true},
-   {name:'Veterinarians & Animal Hospitals',url:'businesses.html',type:'Search category',text:'veterinary veterinarian animal hospital pets',norwoodPage:true}
+   {name:'Veterinarians & Animal Hospitals',url:'business-directory.html?q=Veterinary',type:'Search category',text:'veterinary veterinarian animal hospital pets',norwoodPage:true}
   ]:[];
   return [...vetChoices,...items()].map(x=>{
    const name=norm(x.name),type=norm(x.type),body=norm(x.text),url=norm(x.url),nameWords=words(name),typeWords=words(type),bodyWords=words(body);
@@ -241,13 +241,17 @@
     score+=best;
    });
    const related=expandedWords.filter(w=>!queryWords.includes(w));
+   let matchedRelated=0;
    related.forEach(q=>{
     let best=0;
     nameWords.forEach(w=>best=Math.max(best,closeWord(q,w)*9));
     typeWords.forEach(w=>best=Math.max(best,closeWord(q,w)*7));
     bodyWords.forEach(w=>best=Math.max(best,closeWord(q,w)*3));
+    if(best>=3)matchedRelated++;
     score+=best;
    });
+   // Synonyms must identify an actual result, not merely inflate unrelated matches.
+   if(matchedCore===0&&matchedRelated===0&&!(vetQuery&&x.type==='Search category'))score=0;
    if(queryWords.length>1){const coverage=matchedCore/queryWords.length;score+=coverage===1?38:coverage>=.67?16:-18;}
    if(url.includes(raw.replace(/ /g,' ')))score+=5;
    if(x.resourceCategory&&score>=18)score+=42;
