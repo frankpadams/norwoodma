@@ -388,8 +388,8 @@
     if(beverageTerms.includes(q)) return false;
     // Do not mistake a requested dish for a restaurant's broad cuisine or address.
     const dishTerms=Object.entries(dishAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
-    const indexedDishes=new Set(restaurants.flatMap(item=>Array.isArray(item.dishes)?item.dishes.map(normalize):[]));
-    const indexedDrinks=new Set(restaurants.flatMap(item=>Array.isArray(item.beverages)?item.beverages.map(normalize):[]));
+    const indexedDishes=new Set(restaurantIndex.flatMap(item=>Array.isArray(item.dishes)?item.dishes.map(normalize):[]));
+    const indexedDrinks=new Set(restaurantIndex.flatMap(item=>Array.isArray(item.beverages)?item.beverages.map(normalize):[]));
     if(dishTerms.includes(q)||indexedDishes.has(q)||indexedDrinks.has(q)) return false;
     const words=q.split(' ').filter(Boolean);
     return words.every(t=>termMatchesRestaurant(r,t));
