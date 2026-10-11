@@ -587,7 +587,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  try{controls=JSON.parse(localStorage.getItem('norwood-vanderbilt-control-points')||'[]');if(!Array.isArray(controls))controls=[]}catch(e){}
  const project=ll=>L.CRS.EPSG3857.project(L.latLng(ll));
  function solve(){
-  redrawControls();if(controls.length<2){result.textContent=controls.length+' control points. At least two required; three or more recommended.';if(layer)map.removeLayer(layer);return}
+  redrawControls();if(controls.length<4){result.textContent=controls.length+' matched landmarks. At least four geographically distinct control points are required before displaying a provisional brochure alignment, so leave-one-out validation is possible.';if(layer)map.removeLayer(layer);const exportBtn=panel.querySelector('#trailCalExport');if(exportBtn)exportBtn.disabled=true;return}
   const n=controls.length;
   const mx=controls.reduce((s,p)=>s+p.x,0)/n,my=controls.reduce((s,p)=>s+p.y,0)/n;
   const targets=controls.map(p=>project([p.lat,p.lon]));
@@ -633,7 +633,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   layer=L.layerGroup(source.trails.map(t=>L.polyline(t.points.map(p=>geo(p[0],p[1])),{color:t.color,weight:4,opacity:.8,dashArray:'7 5'}).bindPopup('<b>'+t.name+'</b><br>PROVISIONAL brochure alignment; not independently validated.'))).addTo(map);
   result.textContent=n+' matched landmarks; fitted RMS '+rms.toFixed(1)+' m; '+(independent===null?'independent validation requires at least four control points.':'leave-one-out RMS '+independent.toFixed(1)+' m ('+(independent<=6.1?'within 20-foot check on sampled landmarks':'exceeds 20-foot target')+').')+' Rotation '+(Math.atan2(b,a)*180/Math.PI).toFixed(1)+'°. Affine fitted RMS '+(affineRms===null?'n/a':affineRms.toFixed(1)+' m')+'; affine leave-one-out '+(affineIndependent===null?'needs 5+ landmarks':affineIndependent.toFixed(1)+' m')+'. Affine results are diagnostic only; no rubber-sheet warping is applied. Source tracing and landmarks still require human review. NOT navigation-ready.';
   const exportBtn=panel.querySelector('#trailCalExport');
-  if(exportBtn)exportBtn.disabled=independent===null;
+  if(exportBtn)exportBtn.disabled=independent===null||independent>6.1;
   panel.dataset.export=JSON.stringify({type:'FeatureCollection',properties:{status:'provisional-georeferencing',fittedRmsMeters:rms,holdoutRmsMeters:independent,controlPoints:controls,source:source.source},features:source.trails.map(t=>({type:'Feature',properties:{id:t.id,name:t.name,status:'unverified',source:'official brochure pixel trace'},geometry:{type:'LineString',coordinates:t.points.map(p=>{const ll=geo(p[0],p[1]);return [ll[1],ll[0]]})}}))});
  }
  panel.querySelector('#trailCalAdd').addEventListener('click',()=>{awaiting=true;result.textContent='Click the corresponding landmark on the geographic map.'});
