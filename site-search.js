@@ -254,8 +254,8 @@
    if(matchedCore===0&&matchedRelated===0&&!(vetQuery&&x.type==='Search category'))score=0;
    if(queryWords.length>1){const coverage=matchedCore/queryWords.length;score+=coverage===1?38:coverage>=.67?16:-18;}
    if(url.includes(raw.replace(/ /g,' ')))score+=5;
-   if(x.resourceCategory&&score>=18)score+=42;
-   if(x.type==='How Do I?'&&score>=18)score+=howDoPage?140:34;
+   if(x.resourceCategory&&matchedCore>0&&score>=18)score+=42;
+   if(x.type==='How Do I?'&&matchedCore>0&&score>=18)score+=howDoPage?140:34;
    if(x.business&&score>=30)score+=3;
    if(acronym&&aliasTerms(raw)){if(nameWords.includes(raw)||typeWords.includes(raw))score+=50;}
    let tier=3;
