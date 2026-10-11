@@ -1,0 +1,103 @@
+{
+  "schema": "norwood-trails-brochure-trace-v1",
+  "status": "preliminary-proposed-route-not-georeferenced",
+  "source": {
+    "title": "Willett Tiot Trail Leg March 2026",
+    "page": 1
+  },
+  "imageWidth": 595,
+  "imageHeight": 842,
+  "trails": [
+    {
+      "id": "tiot-leg",
+      "name": "Willett School Tiot Trail leg (0.37 mile)",
+      "status": "planned",
+      "points": [
+        [
+          189,
+          192
+        ],
+        [
+          202,
+          197
+        ],
+        [
+          221,
+          207
+        ],
+        [
+          243,
+          218
+        ],
+        [
+          260,
+          230
+        ],
+        [
+          274,
+          226
+        ],
+        [
+          286,
+          244
+        ],
+        [
+          293,
+          264
+        ],
+        [
+          281,
+          281
+        ],
+        [
+          272,
+          302
+        ],
+        [
+          268,
+          324
+        ],
+        [
+          258,
+          337
+        ],
+        [
+          270,
+          349
+        ],
+        [
+          276,
+          371
+        ],
+        [
+          292,
+          392
+        ],
+        [
+          288,
+          404
+        ],
+        [
+          266,
+          412
+        ],
+        [
+          242,
+          416
+        ],
+        [
+          220,
+          422
+        ],
+        [
+          198,
+          430
+        ],
+        [
+          185,
+          435
+        ]
+      ]
+    }
+  ]
+}
