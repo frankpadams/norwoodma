@@ -389,6 +389,20 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   else {if(lines)map.removeLayer(lines);if(heads)map.removeLayer(heads)}
  });
 })();
+/* Endean landmark registration guide from Norwood's 2023 official trail brochure.
+   Features are anchors for locating entrances, not claimed GPS entrance coordinates. */
+(()=>{
+ const picker=document.getElementById('trailSystemSelect');
+ const status=document.getElementById('trailSystemSelectionStatus');
+ if(!picker||!status)return;
+ const panel=document.createElement('div');
+ panel.id='endeanLandmarkGuide';
+ panel.style.cssText='display:none;margin:10px 0;padding:12px;border:1px solid #b6c5cf;border-radius:8px;background:#fff';
+ panel.innerHTML='<strong>Endean / Hawes Brook — entrance alignment</strong><p>Use the <a href="https://cms5.revize.com/revize/norwoodma/2023.02.21%20EndeanHawesBrTr_MAP_BROCHURE.pdf" target="_blank" rel="noopener">official 2023 trail brochure</a> and switch on satellite imagery. Match Hawes Pool, tennis-court corners and the Little League baseball diamond/backstop. These are landmarks, not trailhead markers.</p><p>Find the gravel path leading from the pool parking area toward the woods. Confirm the actual point where the public trail enters the wooded area before placing a directions pin. Cross-check the brook, rail corridor and Washington Street crossing before drawing connecting paths.</p><p><strong>Status:</strong> Entrances and trail geometry not yet independently located. Do not provide navigation directions to unverified pins.</p>';
+ status.insertAdjacentElement('afterend',panel);
+ function update(){panel.style.display=picker.value==='endean'||picker.value==='all'?'block':'none'}
+ picker.addEventListener('change',update);update();
+})();
 /* Entrance-first mapping: trailhead positions are separate from approximate route geometry.
    Add confirmed coordinates only; never substitute park centroid for access. */
 (()=>{
