@@ -190,7 +190,7 @@
  function items(){
   const out=pages.map(p=>({...p,norwoodPage:p.norwoodPage!==false}));
   townCanonical.forEach(t=>out.push({...t}));
-  (window.NORWOOD_RESTAURANTS||[]).forEach(r=>out.push({name:r.name,url:r.url||'restaurants.html',type:'Restaurant',text:[r.category,r.cuisine,r.address,r.tags].join(' ')}));
+  // Individual restaurants are discoverable through Food & Drink, not duplicated in sitewide results.
   (window.NORWOOD_RESOURCES||[]).forEach(r=>{
    const rawUrl=String(r.url||'');
    const libraryGuide=/^https?:\/\/(?:www\.)?norwoodlibrary\.org\/commres-/i.test(rawUrl);
