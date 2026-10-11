@@ -400,6 +400,32 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  const update=()=>{if(select?.value==='endean'||select?.value==='all')refLayer.addTo(map);else map.removeLayer(refLayer)};
  select?.addEventListener('change',update);update();
 })();
+/* Named OSM Endean footpath geometry, separated from official brochure geometry.
+   This is an approximate review layer; endpoints are not verified access points. */
+(async()=>{
+ const picker=document.getElementById('trailSystemSelect');
+ const status=document.getElementById('trailSystemSelectionStatus');
+ if(!picker||!status)return;
+ let layer=null,loading=false;
+ async function show(){
+  if(layer){layer.addTo(map);return}
+  if(loading)return;loading=true;
+  try{
+   const query='[out:json][timeout:25];way["highway"~"^(path|footway)$"]["name"="Endean Conservation Land Path"](42.165,-71.225,42.183,-71.201);out geom;';
+   const res=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',body:new URLSearchParams({data:query}),signal:AbortSignal.timeout(30000)});
+   if(!res.ok)throw Error('OSM service unavailable');
+   const data=await res.json();
+   const ways=(data.elements||[]).filter(w=>w.geometry?.length>1);
+   if(!ways.length)throw Error('No named Endean paths returned');
+   layer=L.layerGroup(ways.map(w=>L.polyline(w.geometry.map(p=>[p.lat,p.lon]),{color:'#00896b',weight:5,opacity:.85})
+     .bindPopup('<b>Endean Conservation Land Path</b><br>Approximate OpenStreetMap line. Not a verified official trail alignment or navigation route.')));
+   if(['endean','all'].includes(picker.value))layer.addTo(map);
+   status.textContent=ways.length+' Endean named OSM path segments available for review. Hawes Pool and athletic facilities are alignment references; access points are approximate.';
+  }catch(e){status.textContent='Endean path overlay unavailable: '+e.message}
+  finally{loading=false}
+ }
+ picker.addEventListener('change',()=>{if(['endean','all'].includes(picker.value))show();else if(layer)map.removeLayer(layer)});
+})();
 /* Endean landmark registration guide from Norwood's 2023 official trail brochure.
    Features are anchors for locating entrances, not claimed GPS entrance coordinates. */
 (()=>{
