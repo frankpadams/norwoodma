@@ -388,6 +388,21 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   if(den<1){result.textContent='Control points must have distinct image positions';return}
   a/=den;b/=den;
   const geo=(x,y)=>{const xy=L.point(me+a*(x-mx)-b*(y-my),mn+b*(x-mx)+a*(y-my));const ll=L.CRS.EPSG3857.unproject(xy);return [ll.lat,ll.lng]};
+  // Detect source-map anisotropy with a six-parameter affine fit, but do not
+  // automatically warp routes: a distorted brochure can overfit landmarks.
+  function affineFit(samples){
+   if(samples.length<3)return null;
+   const A=[],B=[];
+   samples.forEach(p=>{const t=project([p.lat,p.lon]);A.push([p.x,p.y,1,0,0,0],[0,0,0,p.x,p.y,1]);B.push(t.x,t.y)});
+   const M=Array.from({length:6},(_,i)=>Array.from({length:7},(_,j)=>j===6?A.reduce((s,row,k)=>s+row[i]*B[k],0):A.reduce((s,row)=>s+row[i]*row[j],0)));
+   for(let i=0;i<6;i++){let best=i;for(let j=i+1;j<6;j++)if(Math.abs(M[j][i])>Math.abs(M[best][i]))best=j;if(Math.abs(M[best][i])<1e-8)return null;[M[i],M[best]]=[M[best],M[i]];const d=M[i][i];for(let k=i;k<7;k++)M[i][k]/=d;for(let j=0;j<6;j++)if(j!==i){const f=M[j][i];for(let k=i;k<7;k++)M[j][k]-=f*M[i][k]}}
+   const z=M.map(row=>row[6]);return p=>L.point(z[0]*p.x+z[1]*p.y+z[2],z[3]*p.x+z[4]*p.y+z[5]);
+  }
+  const affine=affineFit(controls);
+  const affineRms=affine?Math.sqrt(controls.reduce((s,p)=>{const a=affine(p),t=project([p.lat,p.lon]);return s+Math.pow(Math.hypot(a.x-t.x,a.y-t.y)*Math.cos(p.lat*Math.PI/180),2)},0)/n):null;
+  const affineHoldout=[];
+  if(n>=5)controls.forEach((p,i)=>{const fit=affineFit(controls.filter((_,j)=>i!==j));if(!fit)return;const a=fit(p),t=project([p.lat,p.lon]);affineHoldout.push(Math.hypot(a.x-t.x,a.y-t.y)*Math.cos(p.lat*Math.PI/180))});
+  const affineIndependent=affineHoldout.length?Math.sqrt(affineHoldout.reduce((s,e)=>s+e*e,0)/affineHoldout.length):null;
   const errors=controls.map((p,i)=>{const xy=project(geo(p.x,p.y));return Math.hypot(xy.x-targets[i].x,xy.y-targets[i].y)*Math.cos(p.lat*Math.PI/180)});
   const rms=Math.sqrt(errors.reduce((s,v)=>s+v*v,0)/n);
   // Leave-one-out residuals provide an independent prediction test rather than training error.
@@ -407,7 +422,7 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
   const independent=holdout.length?Math.sqrt(holdout.reduce((s,v)=>s+v*v,0)/holdout.length):null;
   if(layer)map.removeLayer(layer);
   layer=L.layerGroup(source.trails.map(t=>L.polyline(t.points.map(p=>geo(p[0],p[1])),{color:t.color,weight:4,opacity:.8,dashArray:'7 5'}).bindPopup('<b>'+t.name+'</b><br>PROVISIONAL brochure alignment; not independently validated.'))).addTo(map);
-  result.textContent=n+' matched landmarks; fitted RMS '+rms.toFixed(1)+' m; '+(independent===null?'independent validation requires at least four control points.':'leave-one-out RMS '+independent.toFixed(1)+' m ('+(independent<=6.1?'within 20-foot check on sampled landmarks':'exceeds 20-foot target')+').')+' Rotation '+(Math.atan2(b,a)*180/Math.PI).toFixed(1)+'°. Source tracing and landmarks still require human review. NOT navigation-ready.';
+  result.textContent=n+' matched landmarks; fitted RMS '+rms.toFixed(1)+' m; '+(independent===null?'independent validation requires at least four control points.':'leave-one-out RMS '+independent.toFixed(1)+' m ('+(independent<=6.1?'within 20-foot check on sampled landmarks':'exceeds 20-foot target')+').')+' Rotation '+(Math.atan2(b,a)*180/Math.PI).toFixed(1)+'°. Affine fitted RMS '+(affineRms===null?'n/a':affineRms.toFixed(1)+' m')+'; affine leave-one-out '+(affineIndependent===null?'needs 5+ landmarks':affineIndependent.toFixed(1)+' m')+'. Affine results are diagnostic only; no rubber-sheet warping is applied.' Source tracing and landmarks still require human review. NOT navigation-ready.';
   const exportBtn=panel.querySelector('#trailCalExport');
   if(exportBtn)exportBtn.disabled=independent===null;
   panel.dataset.export=JSON.stringify({type:'FeatureCollection',properties:{status:'provisional-georeferencing',fittedRmsMeters:rms,holdoutRmsMeters:independent,controlPoints:controls,source:source.source},features:source.trails.map(t=>({type:'Feature',properties:{id:t.id,name:t.name,status:'unverified',source:'official brochure pixel trace'},geometry:{type:'LineString',coordinates:t.points.map(p=>{const ll=geo(p[0],p[1]);return [ll[1],ll[0]]})}}))});
