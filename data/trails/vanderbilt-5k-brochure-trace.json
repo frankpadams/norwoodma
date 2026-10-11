@@ -7,7 +7,7 @@
     "page": 1,
     "renderWidth": 1088,
     "renderHeight": 1408,
-    "notes": "Revised image-space polylines by visual inspection of the red/black routes in source image. NOT geographically referenced; requires landmark registration and independent residual tests."
+    "notes": "Revised image-space polylines by visual inspection of the red/black routes in source image. NOT geographically referenced; requires landmark registration and independent residual tests. Both loops now explicitly return to the marked start/finish in pixel space; final closing segments still require visual confirmation against the source PDF."
   },
   "trails": [
     {
@@ -231,8 +231,14 @@
         [
           597,
           392
+        ],
+        [
+          546,
+          397
         ]
-      ]
+      ],
+      "closedLoop": true,
+      "geometryReview": "Pixel-space route closed at the marked start/finish. Closure is a source-map interpretation, not a surveyed geographic alignment."
     },
     {
       "id": "vanderbilt-inner",
@@ -427,8 +433,14 @@
         [
           582,
           407
+        ],
+        [
+          546,
+          397
         ]
-      ]
+      ],
+      "closedLoop": true,
+      "geometryReview": "Pixel-space route closed at the marked start/finish. Closure is a source-map interpretation, not a surveyed geographic alignment."
     }
   ],
   "alignment": {
