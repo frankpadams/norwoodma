@@ -1,0 +1,94 @@
+{
+  "status": "in-progress-not-georeferenced",
+  "visibility": "private-review-only",
+  "updated": "2026-10-12",
+  "method": "Use 3+ independently identified, widely distributed brochure-to-ground control points; least-squares similarity fit; evaluate withheld control-point error; inspect imagery and trail junctions; never publish without owner approval.",
+  "systems": [
+    {
+      "name": "Meadow Street",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Bernie Cooper Riverfront Park",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Vanderbilt / Pine Tree Forest",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Shattuck Park",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Germany Brook",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Ellis Playground",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Hennessey Field / Murphy Park",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Ellis Pond / Alevizos Park",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Endean Park / Hawes Brook",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Ledgeview Drive",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    },
+    {
+      "name": "Willett / Tiot Trail",
+      "registration": "pending-geographic-control-points",
+      "verifiedControlPoints": 0,
+      "holdoutErrorMeters": null,
+      "approvedForPublicMap": false
+    }
+  ],
+  "sourceNotes": [
+    "Norwood town Open Space and Recreation Plan identifies open-space properties but does not establish brochure pixel-to-coordinate correspondences.",
+    "Neponset River Watershed Association identifies Meadow Street trail access at the end of Meadow Street.",
+    "Norwood Trails Advisory Committee 2026 Vanderbilt hike describes newly constructed crossing; check current versus proposed route status."
+  ],
+  "warnings": [
+    "No control point geographic coordinates have been independently established.",
+    "Do not imply transformed trail geometries are verified."
+  ]
+}
