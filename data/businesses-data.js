@@ -1038,10 +1038,10 @@ window.NORWOOD_BUSINESSES=[
   ["KR Design Studios","Design & Creative Services","61 Endicott Street, Building 26 Unit 265","","https://www.winsmithmill.com/our-tenants"],
   ["Mona Sartoveh","Artists & Photography Studios","61 Endicott Street, Building 26 Unit 268","","https://www.winsmithmill.com/our-tenants"],
   ["Dina K Photography","Photography & Creative Studios","61 Endicott Street, Building 26 Unit 350","","https://www.winsmithmill.com/our-tenants"],
-  ["Weekend Craft","Arts, Crafts & Workshops","61 Endicott Street, Building 26 Unit 356","","https://www.winsmithmill.com/our-tenants"],
+  ["Weekend Craft Cafe — Classes & Workshops",["Arts, Crafts & Workshops","Craft Classes","Creative Studios"],"61 Endicott Street, Building 25 Unit 25-122","","https://weekendcraft.com/studio/"],
   ["Ann Gorbett Polo Barrera","Artists & Creative Studios","61 Endicott Street, Building 26 Unit 360","","https://www.winsmithmill.com/our-tenants"],
   ["Sue Fortuna","Artists & Creative Studios","61 Endicott Street, Building 26 Unit 362","","https://www.winsmithmill.com/our-tenants"],
-  ["Michelle Beaton — Weekend Craft Studio","Arts, Crafts & Workshops","61 Endicott Street, Building 26 Unit 364","","https://www.winsmithmill.com/our-tenants"],
+
   ["Hometown Arcade","Arcades & Family Entertainment","61 Endicott Street, Building 26A","781-909-4663","https://www.hometownarcade.com/"],
   ["The Grounding Loft","Event, Class & Creative Rental Space","61 Endicott Street, Building 26 Unit 251","","https://www.winsmithmill.com/our-tenants"],
   ["CouCou","Children's Clothing & Specialty Retail","61 Endicott Street, Building 26 Unit 252","","https://www.winsmithmill.com/our-tenants"],
