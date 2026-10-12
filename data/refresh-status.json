@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-10-12T11:44:31.604349-04:00",
+  "generated_at": "2026-10-12T19:06:36.152988-04:00",
   "offline": false,
-  "events_published": 2672,
+  "events_published": 2699,
   "news_published": 120,
-  "civic_notices": 28,
+  "civic_notices": 44,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2672,
-      "generated_at": "2026-10-12T11:44:31.267343-04:00"
+      "events": 2699,
+      "generated_at": "2026-10-12T19:06:35.653376-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 104,
-      "generated_at": "2026-10-12T11:44:31.280678-04:00"
+      "generated_at": "2026-10-12T19:06:35.661392-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1045,
-      "generated_at": "2026-10-12T11:44:31.308065-04:00"
+      "events": 1052,
+      "generated_at": "2026-10-12T19:06:35.683815-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 938,
-      "generated_at": "2026-10-12T11:44:31.330970-04:00"
+      "generated_at": "2026-10-12T19:06:35.699701-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 6,
-      "generated_at": "2026-10-12T11:44:31.342832-04:00"
+      "generated_at": "2026-10-12T19:06:35.707292-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 74,
-      "generated_at": "2026-10-12T11:44:31.356326-04:00"
+      "generated_at": "2026-10-12T19:06:35.715965-04:00"
     }
   ],
   "recreation_programs": 156,
@@ -485,11 +485,10 @@
     },
     {
       "source_id": "norwood-summer-concerts",
-      "ok": false,
+      "ok": true,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/",
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "norwood-summerfest-series",
@@ -1346,21 +1345,19 @@
     },
     {
       "source_id": "town-community-events",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/residents/holidays_and_community_events/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/residents/h",
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "town-conservation",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/government/committees_boards/conservation_commission/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.go",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "town-cultural-council",
@@ -1374,31 +1371,28 @@
     },
     {
       "source_id": "town-farmers-market",
-      "ok": false,
+      "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/government/committees_boards/sustainability_commission/farmers_market.php: 403 Client Error: Forbidden for url: https://www.n",
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "town-fire-page",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/departments/fire/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/fire/index.php",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "town-police-page",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/departments/police/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/police/index.php",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "town-recreation-programs",
@@ -1416,33 +1410,30 @@
     },
     {
       "source_id": "town-health-events",
-      "ok": false,
+      "ok": true,
       "method": "html_page",
-      "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/departments/health/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/health/index.php | h",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 1
+      "found": 1,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "town-senior-newsletter",
-      "ok": false,
+      "ok": true,
       "method": "newsletter_calendar",
-      "found": 0,
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/council_on_aging/newsletter_calendar.php",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 4
+      "found": 4,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "town-veterans",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/departments/veterans_services/index.php: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/departments/veterans_",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "united-church-events",
@@ -1552,23 +1543,21 @@
     },
     {
       "source_id": "norwood-trails-committee-events",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
-      "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 0
+      "found": 1,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "norwood-sustainability-events",
-      "ok": false,
+      "ok": true,
       "method": "town_department_event_discovery",
-      "found": 0,
-      "note": "all configured pages failed: https://www.norwoodma.gov/: 403 Client Error: Forbidden for url: https://www.norwoodma.gov/",
-      "outcome": "blocked",
-      "access_limited": true,
-      "retained_events": 0
+      "found": 1,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     }
   ],
   "news_sources": [
@@ -1612,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 72,
+      "found": 74,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1620,7 +1609,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 74,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1636,7 +1625,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 19,
+      "found": 20,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1657,10 +1646,9 @@
     {
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
-      "ok": false,
-      "found": 0,
-      "method": "page_parsers",
-      "note": "403 Client Error: Forbidden for url: https://www.norwoodma.gov/"
+      "ok": true,
+      "found": 11,
+      "method": "jsonld+semantic_html+visible_dates"
     },
     {
       "source": "Norwood Community Media",
@@ -1707,12 +1695,12 @@
       "source_counts": {
         "Hoodline": 2,
         "Colliers": 1,
-        "The Norwood Record": 40,
+        "The Norwood Record": 39,
         "The Norwood Record — Latest": 20,
+        "Town of Norwood": 8,
         "Inside Norwood": 9,
         "Patch": 5,
         "Norwood Public Schools": 2,
-        "Town of Norwood": 7,
         "Norwood Town News": 19,
         "newportdispatch.com": 1,
         "WCVB": 1,
