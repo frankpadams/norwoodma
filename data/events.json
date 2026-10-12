@@ -123,268 +123,6 @@
     ]
   },
   {
-    "id": "2026-10-11-4th-annual-halloween-costume-swap-0dfbee3",
-    "title": "4th Annual Halloween Costume Swap",
-    "start": {
-      "date": "2026-10-11",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/4th-annual-halloween-costume-swap-5/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Halloween Costume SwapGet ready for Halloween while giving gently used costumes a second life! The Morrill Memorial Library is hosting its annual Halloween Costume Swap from Monday, September 14 through Saturday, October 31. Have a costume ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-11-we-re-going-on-a-pumpkin-hunt-storywalk-ecdd027",
-    "title": "We're Going on a Pumpkin Hunt StoryWalk",
-    "start": {
-      "date": "2026-10-11",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/were-going-on-a-pumpkin-hunt-storywalk-5/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Join Norwood CFCE for a festive fall adventure at the South Norwood StoryWalk! Throughout the month of October, enjoy the story We're Going on a Pumpkin Hunt by Goldie Hawk as you walk along the trail. As you read each page, keep your eyes ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-10-11-ar5k",
-    "title": "Third Annual AR5K Road Race",
-    "start": {
-      "date": "2026-10-11",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "13:00"
-    },
-    "venue": "Knights of Columbus",
-    "address": "572 Nichols St, Norwood, MA 02062",
-    "category": "fundraiser",
-    "source_id": "norwood-town-news-calendar",
-    "source_url": "https://www.norwoodtownnews.com/events/346490/third-annual-ar5k-road-race",
-    "cost": "See registration",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "secondary_listing_verified_2026-09-27",
-    "notes": "Run/walk fundraiser supporting scholarships for Norwood High School students and sock donations to Pine Street Inn.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-fundraisers",
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-10-11-divine-mercy-prayers-70dbdd4",
-    "title": "Divine Mercy Prayers",
-    "start": {
-      "date": "2026-10-11",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "12:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "manual-approved-blackhole-social-skills-2026-10-11",
-    "title": "Dungeons & Dragons and Social Skill Practice",
-    "start": {
-      "date": "2026-10-11",
-      "time": "12:30"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "14:00"
-    },
-    "venue": "Blackhole Comics",
-    "address": "732 Washington St, Norwood, MA",
-    "town": "Norwood",
-    "category": "family",
-    "source_id": "community-event-submissions",
-    "source_url": "https://www.facebook.com/photo/?fbid=122170487444658701&set=gm.1449392433751429",
-    "cost": "Free",
-    "organizer": "Blackhole Comics",
-    "recurrence": "biweekly",
-    "recurrence_details": "Every other Sunday; confirm schedule with organizer",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "moderator_approved_submission",
-    "notes": "Dungeons & Dragons play for children to practice social skills and connect with peers.",
-    "discovered_by": "approved_submission_fallback",
-    "calendar_ids": [
-      "blackhole-comics",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-aee429bc4313-2026-10-11",
-    "title": "Sunday Sandlot Baseball Grades 1-3",
-    "start": {
-      "date": "2026-10-11",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "15:15"
-    },
-    "venue": "08/30/2026 - 10/25/2026 02:00 PM - 03:15 PM Kelley Field",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$100.00 Res, $110.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-08-30",
-    "session_end": "2026-10-25",
-    "days": "Su",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-aee429bc4313",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-e9c74b71aacd-2026-10-11",
-    "title": "Sunday Sandlot Baseball Grades 4-6",
-    "start": {
-      "date": "2026-10-11",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": "17:00"
-    },
-    "venue": "08/30/2026 - 10/25/2026 03:30 PM - 05:00 PM Kelley Field",
-    "category": "youth_programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30917",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$100.00 Res, $110.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-08-30",
-    "session_end": "2026-10-25",
-    "days": "Su",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-e9c74b71aacd",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-youth",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-11-running-for-austin-giving-back-to-norwood-e944b47",
-    "title": "Running for Austin, Giving Back to Norwood",
-    "start": {
-      "date": "2026-10-11",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-11",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-town-news",
-    "source_url": "https://www.norwoodtownnews.com/2026/10/01/586235/running-for-austin-giving-back-to-norwood",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Town News — Calendar / Local Town Pages",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Running for Austin, Giving Back to Norwood The 3rd annual Austin Reardon 5K is Sunday, Oct. 11, at 10 a.m. at the Knights of Columbus, honoring a Norwood High grad and funding scholarships for NHS seniors. Norwood Mural Celebrates Stories of the Community The Norwood Cultural Council unveiled \"Family Tree,\" a public mural by local artist Tara Bilotta, on Norwood Day. Council chair Jonathan Cardoni on the story behind it. Fall Home Improvement, October 2026 - Zone 2 Fall Home Improvement, October",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-sports"
-    ]
-  },
-  {
     "id": "2026-10-12-closed-today-83188fb",
     "title": "CLOSED TODAY",
     "start": {
@@ -834,36 +572,6 @@
     "verification_status": "auto_primary_source",
     "notes": "Morning Mass will be celebrated at 9 a.m.",
     "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-12-monday-oct-a3f9dbc",
-    "title": "Monday , Oct",
-    "start": {
-      "date": "2026-10-12",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-12",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shalom-corner-closed17.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Monday , Oct October 12 , 2026 Shalom Corner Closed Monday, Oct 12th (All day) MORE INFO",
-    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -23713,6 +23421,66 @@
       "norwood-sports",
       "nys-grade-boys-grade-4",
       "nys-team-boys-grade-4-norwood-trappers"
+    ]
+  },
+  {
+    "id": "2026-11-07-effective-prayer-bobby-lewis-norwood",
+    "title": "Effective Prayer: Finding Healing and Wholeness in Divine Love",
+    "start": {
+      "date": "2026-11-07",
+      "time": "14:00"
+    },
+    "venue": "First Church of Christ, Scientist, Norwood",
+    "address": "751 Washington Street, Norwood, MA",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "christian-science-lectures",
+    "source_url": "https://www.christianscience.com/ln/calendar/bobby-lewis",
+    "organizer": "First Church of Christ, Scientist, Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "verified_official_2026-10-12",
+    "notes": "In-person Christian Science lecture with Bobby Lewis. See official event calendar for details.",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "submission-9096b5abefd50ca4",
+    "title": "Effective Prayer: Finding Healing and Wholeness in divine Lovess in divine Love",
+    "start": {
+      "date": "2026-11-07",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": null
+    },
+    "venue": "First Church of Christ, Scientist, Norwood, MA",
+    "address": "751 Washington Street",
+    "town": "Norwood, MA",
+    "category": "community",
+    "source_id": "community-event-submissions",
+    "source_url": "https://script.google.com/macros/s/AKfycbx7-saWBvzP492fspqbrRx6EUxECfbbMXyafVhxuXVWPNGZ-6Z5x7PVe7lWTrqP4BJY/exec",
+    "registration_url": null,
+    "cost": "Free",
+    "accessibility": null,
+    "organizer": "First Church of Christ, Scientist, Norwood",
+    "recurrence": "No — one-time event",
+    "recurrence_details": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "moderator_approved_submission",
+    "notes": "This is a free public talk for our community about the power of prayer that recognizes God as divine Love. The speaker, Bobby Lewis, from Buena Vista, Colorado will share examples of physical healing as a result of prayer. The talk is sponsored by the First Church of Christ, Scientist in Norwood",
+    "last_verified": null,
+    "discovered_by": "community_submission_feed",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "blackhole-comics",
+      "norwood-community"
     ]
   },
   {
@@ -84704,6 +84472,33 @@
       "rec-all",
       "rec-sports",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-10-vfw-post-2452-meat-raffle-9c7fbc5",
+    "title": "VFW Post 2452 Meat Raffle",
+    "start": {
+      "date": "2027-04-10",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2027-04-10",
+      "time": "17:00"
+    },
+    "venue": "Norwood VFW Post 2452",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "vfw-post-2452-meat-raffle",
+    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
+    "cost": "$2 per drawing; $20 pre-buy",
+    "public_access": "public",
+    "series": "VFW Post 2452 Meat Raffle",
+    "publish_candidate": true,
+    "verification_status": "established_recurring_schedule",
+    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
+    "discovered_by": "scheduled_recurring_series",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
