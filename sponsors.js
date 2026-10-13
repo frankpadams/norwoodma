@@ -12,7 +12,7 @@ function track(kind,s){try{const k='norwood-sponsor-'+kind,d=JSON.parse(localSto
 function render(n){const i=indices[n],slot=slots[n],view=views[n],button=buttons[n];if(i<0||!sponsors[i]){slot.hidden=true;return}
 const s=sponsors[i];slot.hidden=false;view.replaceChildren();
 const a=document.createElement('a');a.href=url(s.url);a.className=s.image?'home-ad-image-link':'ad-placeholder';a.rel='noopener sponsored';if(new URL(a.href).origin!==location.origin)a.target='_blank';
-if(s.image){const img=document.createElement('img');img.src=s.image;img.alt=s.alt||s.name||'Sponsor';a.append(img)}else{const strong=document.createElement('strong');strong.textContent=s.name||'Sponsor Norwood.ma';const span=document.createElement('span');span.textContent='Advertise on Norwood.ma →';a.append(strong,span)}
+if(s.image){const img=document.createElement('img');img.src=s.image;img.alt=s.alt||s.name||'Sponsor';img.addEventListener('error',()=>{a.className='ad-placeholder';a.replaceChildren();const strong=document.createElement('strong');strong.textContent=s.name||'Sponsor';const span=document.createElement('span');span.textContent='Visit sponsor →';a.append(strong,span)},{once:true});a.append(img)}else{const strong=document.createElement('strong');strong.textContent=s.name||'Sponsor Norwood.ma';const span=document.createElement('span');span.textContent='Advertise on Norwood.ma →';a.append(strong,span)}
 a.addEventListener('click',()=>track('clicks',s));view.append(a);button.hidden=sponsors.length<2;track('impressions',s);
 }
 function choose(n,preferPromo=false){const other=indices[1-n],choices=paid().filter(i=>i!==other),house=promo();
@@ -28,7 +28,7 @@ requestAnimationFrame(()=>{positioning=false;const narrow=window.matchMedia('(ma
 const left=calendar.querySelector('.event-splash'),lh=left?.getBoundingClientRect().height||0,rh=transit.getBoundingClientRect().height-(first.parentElement===rightStack&&!first.hidden?first.getBoundingClientRect().height:0)-(second.parentElement===rightStack&&!second.hidden?second.getBoundingClientRect().height:0);
 const shorter=lh<=rh?calendar:rightStack,longer=shorter===calendar?rightStack:calendar;
 if(first.parentElement!==shorter)shorter.append(first);
-const two=!narrow&&Math.abs(lh-rh)<=100&&sponsors.length>=2;
+const two=false; // One homepage sponsor slot, including on wide screens.
 if(two){if(second.parentElement!==longer)longer.append(second);if(indices[1]<0||indices[1]===indices[0]){indices[1]=choose(1);render(1);schedule(1)}}
 else{clearTimeout(timers[1]);second.hidden=true;indices[1]=-1;if(second.parentElement)second.remove()}
 if(indices[0]>=0&&first.hidden){render(0);schedule(0)}
@@ -48,6 +48,6 @@ function waitForContent(){return new Promise(resolve=>{
  // Network failures should not prevent sponsorship indefinitely.
  const limit=setTimeout(finish,4000);check();
 })}
-waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{buttons[0].hidden=true});
+waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{sponsors=[{id:'advertise',name:'Advertise on Norwood.ma',url:'/support.html#advertise',active:true,placements:['home-primary']}];indices[0]=0;render(0);layout();buttons[0].hidden=true;});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)slots.forEach((s,n)=>schedule(n))});
 })();
