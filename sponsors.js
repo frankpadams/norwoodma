@@ -34,7 +34,7 @@ else{clearTimeout(timers[1]);second.hidden=true;indices[1]=-1;if(second.parentEl
 if(indices[0]>=0&&first.hidden){render(0);schedule(0)}
 })}
 let layoutTimer;const relayout=()=>{clearTimeout(layoutTimer);layoutTimer=setTimeout(layout,120)};
-const observer=new ResizeObserver(relayout);observer.observe(calendar.querySelector('.event-splash'));observer.observe(transit);
+if(typeof ResizeObserver!=='undefined'){const observer=new ResizeObserver(relayout);const eventsCard=calendar.querySelector('.event-splash');if(eventsCard)observer.observe(eventsCard);observer.observe(transit);}
 window.addEventListener('resize',relayout,{passive:true});
 // Do not request sponsor data or images until the main calendar and transit widgets have populated.
 function waitForContent(){return new Promise(resolve=>{
