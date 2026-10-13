@@ -4,6 +4,7 @@ if(!first||!calendar||!transit)return;
 const grid=calendar.closest('.dashboard-grid'),rightStack=document.createElement('div');rightStack.className='dash-stack';transit.parentNode.insertBefore(rightStack,transit);rightStack.append(transit);const second=first.cloneNode(true);
 second.id='homeAdSlotSecondary';second.querySelector('#sponsorNext').id='sponsorNextSecondary';second.querySelector('#sponsorCreative').id='sponsorCreativeSecondary';second.hidden=true;
 const slots=[first,second],views=slots.map(s=>s.querySelector('[id^="sponsorCreative"]')),buttons=slots.map(s=>s.querySelector('[id^="sponsorNext"]'));
+const emergencySponsors=[{id:'boston-mobile-tire',name:'Boston Mobile Tire',image:'/assets/ads/wide_rectangular_advertising_banner_for_a_mobile_t.png',url:'https://bostonmobiletire.com',alt:'Boston Mobile Tire — Tires installed, mounted and balanced at your work or home.',active:true,placements:['home-primary']},{id:'advertise',name:'Advertise on Norwood.ma',url:'/support.html#advertise',active:true,placements:['home-primary']}];
 let sponsors=[],indices=[-1,-1],turns=[0,0],paused=[0,0],timers=[null,null],positioning=false;
 const url=u=>{try{const x=new URL(u,location.origin);return /^(https?:)$/.test(x.protocol)?x.href:null}catch{return null}};
 const eligible=s=>s.active!==false&&Array.isArray(s.placements)&&s.placements.includes('home-primary')&&(!s.start||Date.now()>=Date.parse(s.start))&&(!s.end||Date.now()<=Date.parse(s.end+'T23:59:59'))&&url(s.url);
@@ -48,6 +49,6 @@ function waitForContent(){return new Promise(resolve=>{
  // Network failures should not prevent sponsorship indefinitely.
  const limit=setTimeout(finish,4000);check();
 })}
-waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{sponsors=[{id:'advertise',name:'Advertise on Norwood.ma',url:'/support.html#advertise',active:true,placements:['home-primary']}];indices[0]=0;render(0);layout();buttons[0].hidden=true;});
+waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);if(!sponsors.some(x=>x.id!=='advertise'))sponsors=emergencySponsors.filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{sponsors=emergencySponsors.filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)slots.forEach((s,n)=>schedule(n))});
 })();
