@@ -1,54 +1,26 @@
 (()=>{'use strict';
-const first=document.getElementById('homeAdSlot'),calendar=document.querySelector('.dashboard-grid .dash-stack'),transit=document.querySelector('.dashboard-grid .transit-preview');
-if(!first||!calendar||!transit)return;
-const grid=calendar.closest('.dashboard-grid'),rightStack=document.createElement('div');rightStack.className='dash-stack';transit.parentNode.insertBefore(rightStack,transit);rightStack.append(transit);const second=first.cloneNode(true);
-second.id='homeAdSlotSecondary';second.querySelector('#sponsorNext').id='sponsorNextSecondary';second.querySelector('#sponsorCreative').id='sponsorCreativeSecondary';second.hidden=true;
-const slots=[first,second],views=slots.map(s=>s.querySelector('[id^="sponsorCreative"]')),buttons=slots.map(s=>s.querySelector('[id^="sponsorNext"]'));
-const emergencySponsors=[{id:'boston-mobile-tire',name:'Boston Mobile Tire',image:'/assets/ads/wide_rectangular_advertising_banner_for_a_mobile_t.png',url:'https://bostonmobiletire.com',alt:'Boston Mobile Tire — Tires installed, mounted and balanced at your work or home.',active:true,placements:['home-primary']},{id:'advertise',name:'Advertise on Norwood.ma',url:'/support.html#advertise',active:true,placements:['home-primary']}];
-let sponsors=[],indices=[-1,-1],turns=[0,0],paused=[0,0],timers=[null,null],positioning=false;
-const url=u=>{try{const x=new URL(u,location.origin);return /^(https?:)$/.test(x.protocol)?x.href:null}catch{return null}};
-const eligible=s=>s.active!==false&&Array.isArray(s.placements)&&s.placements.includes('home-primary')&&(!s.start||Date.now()>=Date.parse(s.start))&&(!s.end||Date.now()<=Date.parse(s.end+'T23:59:59'))&&url(s.url);
-const paid=()=>sponsors.map((s,i)=>i).filter(i=>s.id!=='advertise'),promo=()=>sponsors.findIndex(s=>s.id==='advertise');
-function track(kind,s){try{const k='norwood-sponsor-'+kind,d=JSON.parse(localStorage.getItem(k)||'{}');d[s.id]=(d[s.id]||0)+1;localStorage.setItem(k,JSON.stringify(d))}catch{}}
-function render(n){const i=indices[n],slot=slots[n],view=views[n],button=buttons[n];if(i<0||!sponsors[i]){slot.hidden=true;return}
-const s=sponsors[i];slot.hidden=false;view.replaceChildren();
-const a=document.createElement('a');a.href=url(s.url);a.className=s.image?'home-ad-image-link':'ad-placeholder';a.rel='noopener sponsored';if(new URL(a.href).origin!==location.origin)a.target='_blank';
-if(s.image){const img=document.createElement('img');img.src=s.image;img.alt=s.alt||s.name||'Sponsor';img.addEventListener('error',()=>{a.className='ad-placeholder';a.replaceChildren();const strong=document.createElement('strong');strong.textContent=s.name||'Sponsor';const span=document.createElement('span');span.textContent='Visit sponsor →';a.append(strong,span)},{once:true});a.append(img)}else{const strong=document.createElement('strong');strong.textContent=s.name||'Sponsor Norwood.ma';const span=document.createElement('span');span.textContent='Advertise on Norwood.ma →';a.append(strong,span)}
-a.addEventListener('click',()=>track('clicks',s));view.append(a);button.hidden=sponsors.length<2;track('impressions',s);
+const slot=document.getElementById('homeAdSlot'),view=document.getElementById('sponsorCreative'),next=document.getElementById('sponsorNext');
+if(!slot||!view||!next)return;
+const backup=[{id:'boston-mobile-tire',name:'Boston Mobile Tire',image:'/assets/ads/wide_rectangular_advertising_banner_for_a_mobile_t.png',url:'https://bostonmobiletire.com',alt:'Boston Mobile Tire — Tires installed, mounted and balanced at your work or home.',placements:['home-primary'],active:true},{id:'advertise',name:'Advertise on Norwood.ma',url:'/support.html#advertise',placements:['home-primary'],active:true}];
+let sponsors=backup,index=0,timer=null,pauseUntil=0;
+const safeUrl=value=>{try{const u=new URL(value,location.href);return /^https?:$/.test(u.protocol)?u.href:null}catch{return null}};
+const eligible=s=>s&&s.active!==false&&Array.isArray(s.placements)&&s.placements.includes('home-primary')&&safeUrl(s.url)&&(!s.start||Date.now()>=Date.parse(s.start))&&(!s.end||Date.now()<=Date.parse(s.end+'T23:59:59'));
+function track(kind,s){try{const key='norwood-sponsor-'+kind,d=JSON.parse(localStorage.getItem(key)||'{}');d[s.id]=(d[s.id]||0)+1;localStorage.setItem(key,JSON.stringify(d))}catch{}}
+function render(){
+ const s=sponsors[index];if(!s)return;
+ const a=document.createElement('a');a.href=safeUrl(s.url);a.rel='noopener sponsored';if(new URL(a.href).origin!==location.origin)a.target='_blank';
+ const fallback=()=>{a.className='ad-placeholder';a.replaceChildren();const strong=document.createElement('strong');strong.textContent=s.name||'Sponsor';const small=document.createElement('span');small.textContent=s.id==='advertise'?'Advertise on Norwood.ma →':'Visit sponsor →';a.append(strong,small)};
+ if(s.image){a.className='home-ad-image-link';const img=document.createElement('img');img.alt=s.alt||s.name||'Sponsor';img.onerror=fallback;img.src=s.image;a.append(img)}else fallback();
+ a.addEventListener('click',()=>track('clicks',s));view.replaceChildren(a);slot.hidden=false;next.hidden=sponsors.length<2;track('impressions',s);
 }
-function choose(n,preferPromo=false){const other=indices[1-n],choices=paid().filter(i=>i!==other),house=promo();
-if(preferPromo&&house>=0&&house!==other)return house;
-if(choices.length){const prev=indices[n],next=choices.find(i=>i>prev);return next===undefined?choices[0]:next}
-return house>=0&&house!==other?house:-1;
-}
-function schedule(n){clearTimeout(timers[n]);if(indices[n]<0||slots[n].hidden)return;const delay=sponsors[indices[n]]?.id==='advertise'?10000:20000;timers[n]=setTimeout(()=>{if(document.hidden||Date.now()<paused[n]){schedule(n);return}advance(n,false)},delay)}
-function advance(n,manual){if(indices[n]<0)return;turns[n]++;indices[n]=choose(n,turns[n]%4===0);if(manual)paused[n]=Date.now()+60000;render(n);schedule(n);if(indices[1-n]<0&& !slots[1-n].hidden){render(1-n);schedule(1-n)}}
-buttons.forEach((b,n)=>b.addEventListener('click',()=>advance(n,true)));
-function layout(){if(positioning)return;positioning=true;
-requestAnimationFrame(()=>{positioning=false;const narrow=window.matchMedia('(max-width:760px)').matches;
-const left=calendar.querySelector('.event-splash'),lh=left?.getBoundingClientRect().height||0,rh=transit.getBoundingClientRect().height-(first.parentElement===rightStack&&!first.hidden?first.getBoundingClientRect().height:0)-(second.parentElement===rightStack&&!second.hidden?second.getBoundingClientRect().height:0);
-const shorter=lh<=rh?calendar:rightStack,longer=shorter===calendar?rightStack:calendar;
-if(first.parentElement!==shorter)shorter.append(first);
-const two=false; // One homepage sponsor slot, including on wide screens.
-if(two){if(second.parentElement!==longer)longer.append(second);if(indices[1]<0||indices[1]===indices[0]){indices[1]=choose(1);render(1);schedule(1)}}
-else{clearTimeout(timers[1]);second.hidden=true;indices[1]=-1;if(second.parentElement)second.remove()}
-if(indices[0]>=0&&first.hidden){render(0);schedule(0)}
-})}
-let layoutTimer;const relayout=()=>{clearTimeout(layoutTimer);layoutTimer=setTimeout(layout,120)};
-if(typeof ResizeObserver!=='undefined'){const observer=new ResizeObserver(relayout);const eventsCard=calendar.querySelector('.event-splash');if(eventsCard)observer.observe(eventsCard);observer.observe(transit);}
-window.addEventListener('resize',relayout,{passive:true});
-// Do not request sponsor data or images until the main calendar and transit widgets have populated.
-function waitForContent(){return new Promise(resolve=>{
- const events=document.getElementById('homeEvents'),status=document.getElementById('mapUpdated');
- const ready=()=>{const eventReady=!events||!/Loading upcoming events/i.test(events.textContent||'');const transitReady=!status||!/CONNECTING/i.test(status.textContent||'');return eventReady&&transitReady};
- if(ready()){resolve();return}
- let done=false;const observers=[];
- const finish=()=>{if(done)return;done=true;observers.forEach(o=>o.disconnect());clearTimeout(limit);resolve()};
- const check=()=>{if(ready())finish()};
- [events,status].filter(Boolean).forEach(el=>{const o=new MutationObserver(check);o.observe(el,{childList:true,subtree:true,characterData:true});observers.push(o)});
- // Network failures should not prevent sponsorship indefinitely.
- const limit=setTimeout(finish,4000);check();
-})}
-waitForContent().then(()=>fetch('/data/sponsors.json',{cache:'no-store'})).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(d=>{sponsors=(d.sponsors||[]).filter(eligible);if(!sponsors.some(x=>x.id!=='advertise'))sponsors=emergencySponsors.filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout()}).catch(()=>{sponsors=emergencySponsors.filter(eligible);indices[0]=choose(0);render(0);schedule(0);layout();});
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)slots.forEach((s,n)=>schedule(n))});
+function advance(manual=false){if(manual)pauseUntil=Date.now()+60000;index=(index+1)%sponsors.length;render();schedule()}
+function schedule(){clearTimeout(timer);if(sponsors.length<2)return;timer=setTimeout(()=>{if(document.hidden||Date.now()<pauseUntil){schedule();return}advance()},20000)}
+next.addEventListener('click',()=>advance(true));
+render();schedule();
+fetch('/data/sponsors.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json()}).then(data=>{
+ const valid=(Array.isArray(data.sponsors)?data.sponsors:[]).filter(eligible);
+ if(!valid.some(s=>s.id!=='advertise'))return;
+ sponsors=valid;index=Math.max(0,sponsors.findIndex(s=>s.id==='boston-mobile-tire'));render();schedule();
+}).catch(()=>{});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)schedule()});
 })();
