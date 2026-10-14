@@ -403,9 +403,33 @@
     const q=normalize(raw);
     return q.length<3?0:restaurantIndex.filter(r=>matchesQuery(r,q)).length;
   }
+ // Load the compact official index only when search is used; never block initial page paint.
+ let townResults=[],townLoaded=false,townLoading=false;
+ function loadTownIndex(){
+  if(townLoaded||townLoading)return;
+  townLoading=true;
+  fetch('data/official-town-search.json',{cache:'default'}).then(r=>r.ok?r.json():null).then(data=>{
+   townResults=Array.isArray(data?.results)?data.results.filter(x=>x.name&&/^https:\/\/www\.norwoodma\.gov\//.test(x.url)).map(x=>({...x,officialTown:true})):[];
+   townLoaded=true;
+   if(input.value.trim())render(false);
+  }).catch(()=>{townLoaded=true}).finally(()=>{townLoading=false});
+ }
+ function townMatches(raw){
+  const q=norm(raw),terms=words(q);if(!q||!terms.length)return [];
+  return townResults.map(x=>{
+   const title=norm(x.name),body=norm(x.text);
+   let score=title===q?150:title.startsWith(q)?105:title.includes(q)?75:0;
+   let found=0;
+   for(const t of terms){if(title.split(' ').some(w=>w.startsWith(t))){score+=35;found++}else if(body.split(' ').some(w=>w.startsWith(t))){score+=10;found++}}
+   return {x,score:score-12,found};
+  }).filter(v=>v.found===terms.length&&v.score>=18).sort((a,b)=>b.score-a.score).slice(0,5);
+ }
  function render(track=false){
   const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
-  const allHits=search(raw,200);
+  loadTownIndex();
+  const localHits=search(raw,200);
+  const townHits=townMatches(raw);
+  const allHits=[...localHits,...townHits].sort((a,b)=>b.score-a.score);
   const businessHits=allHits.filter(({x})=>x.business);
   // Autocomplete stays task-focused: individual businesses belong on the full
   // results page, not in the live dropdown.
