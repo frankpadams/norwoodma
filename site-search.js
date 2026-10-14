@@ -424,7 +424,7 @@
   ['Home, Garden & Tools',/washer|soil|bike repair|scanner|metal detector/i],
   ['Outdoors, Games & Recreation',/birdwatch|tennis|picnic|horseshoe/i],
   ['Kitchen & Entertaining',/dehydrator|karaoke/i],
-  ['Technology & Media',/turntable|roku|floppy|cd\\/dvd/i],
+  ['Technology & Media',/turntable|roku|floppy|cd|dvd/i],
   ['Accessibility',/magnifier/i]
  ];
  const lotCatalog='https://norwood.minlib.net/?browseCategory=morrill_library_of_things';
