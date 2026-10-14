@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-14T09:53:35.796865-04:00",
+  "generated_at": "2026-10-14T14:47:23.573359-04:00",
   "offline": false,
-  "events_published": 2674,
+  "events_published": 2676,
   "news_published": 120,
   "civic_notices": 48,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2674,
-      "generated_at": "2026-10-14T09:53:35.134043-04:00"
+      "events": 2676,
+      "generated_at": "2026-10-14T14:47:23.079103-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 112,
-      "generated_at": "2026-10-14T09:53:35.141854-04:00"
+      "generated_at": "2026-10-14T14:47:23.085896-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1043,
-      "generated_at": "2026-10-14T09:53:35.159034-04:00"
+      "events": 1046,
+      "generated_at": "2026-10-14T14:47:23.100591-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 916,
-      "generated_at": "2026-10-14T09:53:35.172627-04:00"
+      "events": 919,
+      "generated_at": "2026-10-14T14:47:23.112759-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 6,
-      "generated_at": "2026-10-14T09:53:35.179567-04:00"
+      "generated_at": "2026-10-14T14:47:23.119239-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 73,
-      "generated_at": "2026-10-14T09:53:35.187528-04:00"
+      "generated_at": "2026-10-14T14:47:23.126870-04:00"
     }
   ],
-  "recreation_programs": 155,
-  "recreation_occurrences": 1540,
+  "recreation_programs": 154,
+  "recreation_occurrences": 1539,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -715,7 +715,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 11,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -922,7 +922,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
       "ok": true,
       "method": "ical",
-      "found": 10,
+      "found": 11,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -976,7 +976,7 @@
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
-      "found": 19,
+      "found": 20,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1398,8 +1398,8 @@
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 155,
-      "note": "1811 calendar occurrences generated"
+      "found": 154,
+      "note": "1810 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1565,7 +1565,7 @@
       "source": "Norwood Public Schools",
       "url": "https://www.norwood.k12.ma.us/about/news/feed/rss",
       "ok": true,
-      "found": 13,
+      "found": 12,
       "method": "rss"
     },
     {
@@ -1601,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 70,
+      "found": 72,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1609,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 70,
+      "found": 72,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },

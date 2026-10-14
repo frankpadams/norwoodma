@@ -1833,6 +1833,40 @@
     ]
   },
   {
+    "id": "2026-10-15-boys-varsity-golf-bellingham-high-school-d95101f",
+    "title": "Boys Varsity Golf @ Bellingham High School",
+    "start": {
+      "date": "2026-10-15",
+      "time": "15:30"
+    },
+    "end": {
+      "date": "2026-10-15",
+      "time": "16:15"
+    },
+    "venue": "180 Paine Street, Bellingham MA 02019",
+    "address": "180 Paine Street, Bellingham MA 02019",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-golf",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Golf",
+    "public_access": "public",
+    "series": "Norwood Varsity Golf",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Golf Level: Boys Varsity Team: Norwood High School Site: New England Country Club Subsite: New England Country Club",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-c9d8d3a12d36-2026-10-15",
     "title": "Ballet 1 - Thursdays",
     "start": {
@@ -13579,42 +13613,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-1ff178068ae8-2026-10-27",
-    "title": "Cookie Decorating Class - Half Day CD01",
-    "start": {
-      "date": "2026-10-27",
-      "time": "12:30"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": "14:00"
-    },
-    "venue": "10/27/2026 12:30 PM - 02:00 PM Norwood Civic Center - Kitchen",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30892",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30892",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$30.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-27",
-    "session_end": "2026-10-27",
-    "days": "Tu",
-    "notes": "Chef Beth will teach participants fun ways to decorate cookies for Halloween and Day of the Dead. Participants will take home 6 homemade, decorated cookies. No refunds provided for this class !",
-    "rec_program_id": "rec-1ff178068ae8",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ce02eab929f2-2026-10-27",
     "title": "Babysitter Lessons/CPR",
     "start": {
@@ -14894,7 +14892,7 @@
     },
     "end": {
       "date": "2026-10-28",
-      "time": "17:00"
+      "time": "17:30"
     },
     "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
     "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
@@ -14924,11 +14922,11 @@
     "title": "Girls JV Volleyball @ Hopkinton High School - Junior Varsity",
     "start": {
       "date": "2026-10-28",
-      "time": "17:15"
+      "time": "17:00"
     },
     "end": {
       "date": "2026-10-28",
-      "time": "17:15"
+      "time": "17:30"
     },
     "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
     "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
@@ -15826,6 +15824,40 @@
     ]
   },
   {
+    "id": "2026-10-29-bv-soccer-southeastern-reg-voc-tech-school-dbde6b9",
+    "title": "BV Soccer @ Southeastern Reg Voc/Tech School",
+    "start": {
+      "date": "2026-10-29",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-10-29",
+      "time": "17:30"
+    },
+    "venue": "250 Foundry Street, South Easton Massachusetts 02375",
+    "address": "250 Foundry Street, South Easton Massachusetts 02375",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Southeastern RVT High School Subsite: Houlker Memorial Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2026-10-29-girls-freshman-volleyball-vs-ashland-high-sch-bae2943",
     "title": "Girls Freshman Volleyball vs Ashland High School",
     "start": {
@@ -16038,40 +16070,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-29-bv-soccer-southeastern-reg-voc-tech-school-dbde6b9",
-    "title": "BV Soccer @ Southeastern Reg Voc/Tech School",
-    "start": {
-      "date": "2026-10-29",
-      "time": "17:30"
-    },
-    "end": {
-      "date": "2026-10-29",
-      "time": "19:00"
-    },
-    "venue": "250 Foundry Street, South Easton Massachusetts 02375",
-    "address": "250 Foundry Street, South Easton Massachusetts 02375",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Southeastern RVT High School Subsite: Houlker Memorial Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -17681,8 +17679,8 @@
     ]
   },
   {
-    "id": "2026-10-31-norwood-blue-dogs-vs-milford-hopedale-lions-34921dc",
-    "title": "Norwood Blue Dogs vs Milford-Hopedale Lions",
+    "id": "2026-10-31-norwood-blue-dogs-vs-holliston-united-909e6ca",
+    "title": "Norwood Blue Dogs vs Holliston United",
     "start": {
       "date": "2026-10-31",
       "time": "13:00"
@@ -83936,6 +83934,75 @@
     ]
   },
   {
+    "id": "2027-04-08-boys-varsity-tennis-team-vs-norton-high-schoo-d3df94f",
+    "title": "Boys Varsity Tennis - Team vs Norton High School",
+    "start": {
+      "date": "2027-04-08",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-04-08",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-04-08-girls-varsity-tennis-team-norton-high-school-9387602",
+    "title": "Girls Varsity Tennis - Team @ Norton High School",
+    "start": {
+      "date": "2027-04-08",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-08",
+      "time": "18:30"
+    },
+    "venue": "66 W Main Street, Norton MA 02766",
+    "address": "66 W Main Street, Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-tennis",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Tennis",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Tennis",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Tennis - Team Level: Girls Varsity Team: Norwood High School Site: Norton High School Subsite: Tennis Courts",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3c6841bc2f75-2027-04-08",
     "title": "Ballet 2 - Thursdays",
     "start": {
@@ -85144,8 +85211,8 @@
     ]
   },
   {
-    "id": "2027-04-13-jv-north-girl-s-lacrosse-r-georges-vs-norton--076391f",
-    "title": "JV North Girl's Lacrosse R Georges vs Norton High School",
+    "id": "2027-04-13-jv-north-girl-s-lacrosse-r-georges-64105d0",
+    "title": "JV North Girl's Lacrosse R Georges",
     "start": {
       "date": "2027-04-13",
       "time": "17:30"
