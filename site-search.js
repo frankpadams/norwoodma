@@ -438,13 +438,18 @@
    if(!dialog){
      dialog=document.createElement('dialog');dialog.id='norwood-library-things-dialog';
      dialog.setAttribute('aria-label','Morrill Memorial Library Library of Things');
-     dialog.style.cssText='width:min(680px,calc(100vw - 28px));max-height:85dvh;overflow:auto;border:0;border-radius:14px;padding:20px;box-shadow:0 16px 60px #0005;color:#152c47;background:#fff';
+     dialog.style.cssText='box-sizing:border-box;width:min(680px,calc(100vw - 28px));max-height:85vh;max-height:85dvh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;border:0;border-radius:14px;padding:20px;box-shadow:0 16px 60px #0005;color:#152c47;background:#fff';
      document.body.appendChild(dialog);
      dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+     dialog.addEventListener('close',()=>{document.documentElement.style.overflow=dialog.dataset.previousHtmlOverflow||'';document.body.style.overflow=dialog.dataset.previousBodyOverflow||'';});
    }
    const groups=[...new Set(libraryThings.map(t=>t.category||'Other Items'))].sort().map(label=>[label,libraryThings.filter(t=>t.category===label).sort((a,b)=>a.name.localeCompare(b.name))]);
    dialog.innerHTML='<div style="display:flex;justify-content:space-between;gap:12px;align-items:start"><h2 style="margin:0">📚 Library of Things</h2><button type="button" data-lot-close style="font-size:1.4rem;min-width:44px;min-height:44px" aria-label="Close">×</button></div><p>Morrill Memorial Library lends useful equipment and other items. Browse the categories below, then check the library catalog for borrowing details and current availability. The library lists a three-week loan period without renewals for Library of Things items. Return items inside a library, not through a book drop.</p><p><a href="'+lotCatalog+'" target="_blank" rel="noopener" style="font-weight:700">View the official Library of Things catalog ↗</a></p>'+groups.filter(([,items])=>items.length).map(([label,items])=>'<section><h3>'+esc(label)+'</h3><ul style="padding-left:22px">'+items.sort((a,b)=>a.name.localeCompare(b.name)).map(t=>'<li data-lot-item="'+esc(t.name)+'" style="padding:6px 8px;border-radius:6px"><strong>'+esc(t.name)+'</strong> — '+esc(t.desc)+'</li>').join('')+'</ul></section>').join('')+'<p><small>This list combines a historical library inventory with newer examples. Items may have changed or been withdrawn. Confirm current holdings and availability in the official catalog.</small></p>';
    dialog.querySelector('[data-lot-close]').addEventListener('click',()=>dialog.close());
+   dialog.dataset.previousHtmlOverflow=document.documentElement.style.overflow;
+   dialog.dataset.previousBodyOverflow=document.body.style.overflow;
+   document.documentElement.style.overflow='hidden';
+   document.body.style.overflow='hidden';
    dialog.showModal();
    const selectedRow=[...dialog.querySelectorAll('[data-lot-item]')].find(el=>el.getAttribute('data-lot-item')===selected);
    if(selectedRow){selectedRow.style.background='#fff1b8';selectedRow.style.outline='2px solid #e5b93e';selectedRow.scrollIntoView({block:'center'});}
