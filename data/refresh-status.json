@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T17:25:22.304221-04:00",
+  "generated_at": "2026-10-13T21:20:13.171150-04:00",
   "offline": false,
-  "events_published": 2712,
+  "events_published": 2710,
   "news_published": 120,
   "civic_notices": 48,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2712,
-      "generated_at": "2026-10-13T17:25:21.641440-04:00"
+      "events": 2710,
+      "generated_at": "2026-10-13T21:20:12.809552-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 115,
-      "generated_at": "2026-10-13T17:25:21.652189-04:00"
+      "generated_at": "2026-10-13T21:20:12.822988-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 1061,
-      "generated_at": "2026-10-13T17:25:21.673104-04:00"
+      "generated_at": "2026-10-13T21:20:12.850135-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 934,
-      "generated_at": "2026-10-13T17:25:21.690348-04:00"
+      "generated_at": "2026-10-13T21:20:12.873075-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 6,
-      "generated_at": "2026-10-13T17:25:21.699990-04:00"
+      "generated_at": "2026-10-13T21:20:12.884707-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 74,
-      "generated_at": "2026-10-13T17:25:21.710815-04:00"
+      "generated_at": "2026-10-13T21:20:12.898240-04:00"
     }
   ],
   "recreation_programs": 158,
@@ -89,7 +89,7 @@
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 12,
+      "found": 11,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured weekday",
+      "note": "authoritative page no longer confirms configured start time",
       "outcome": "failed",
       "access_limited": false
     },
@@ -414,7 +414,7 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 52,
+      "found": 51,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -519,7 +519,7 @@
       "source_id": "norwood-toastmasters",
       "ok": true,
       "method": "toastmasters_meeting_cards",
-      "found": 2,
+      "found": 1,
       "note": "Club host unavailable; concrete dated Norwood Record listings used",
       "outcome": "events",
       "access_limited": false
@@ -1601,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 72,
+      "found": 73,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1609,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 72,
+      "found": 73,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1617,7 +1617,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 29,
+      "found": 37,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
