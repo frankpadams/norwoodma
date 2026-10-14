@@ -185,7 +185,7 @@
     const exactPhrase=h.includes(q),namePhrase=name.includes(q);
     let score=namePhrase?45:exactPhrase?24:0,matched=0;
     terms.forEach(w=>{if(name.split(/\s+/).includes(w)){score+=16;matched++;}else if(keywords.split(/\s+/).includes(w)){score+=7;matched++;}else if(desc.split(/\s+/).includes(w)){score+=3;matched++;}});
-    const singleStrong=terms.length===1&&(name.split(/\s+/).includes(terms[0])||(!generic.has(terms[0])&&keywords.split(/\s+/).includes(terms[0])&&terms[0].length>=5));
+    const singleStrong=terms.length===1&&(name.split(/\s+/).includes(terms[0])||(!generic.has(terms[0])&&keywords.split(/\s+/).includes(terms[0])&&terms[0].length>=3));
     const multiStrong=terms.length>1&&(namePhrase||exactPhrase||matched>=2);
     return{...t,score,eligible:singleStrong||multiStrong};
    }).filter(t=>t.eligible&&t.score>=20).sort((a,b)=>b.score-a.score).slice(0,3);
