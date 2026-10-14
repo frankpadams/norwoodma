@@ -410,6 +410,7 @@
   // Autocomplete stays task-focused: individual businesses belong on the full
   // results page, not in the live dropdown.
   let hits=(resultsPage?allHits:allHits.filter(({x})=>!x.business)).slice(0,12);
+  if(/^lock/i.test(raw)){const dup=hits.filter(v=>v.x.businessCategory&&/Locksmith/i.test(v.x.name));if(dup.length>1){hits=hits.filter(v=>!dup.includes(v));hits.unshift({x:{name:'Locksmiths & Emergency Lockout Services',url:'business-directory.html?q=lock',type:'Business directory',text:'Locksmiths and lockout services',norwoodPage:true,businessCategory:true},score:dup[0].score});}}
   if(howDoPage)hits=[...hits.filter(({x})=>x.type==='How Do I?'),...hits.filter(({x})=>x.type!=='How Do I?')].slice(0,12);
   if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
