@@ -171,7 +171,8 @@
     "source": "https://commons.wikimedia.org/wiki/File:Fred_Holland_Day_House,_Norwood_MA.jpg",
     "historical": false,
     "position": "center 52%",
-    "heroPriority": "primary"
+    "heroPriority": "supporting",
+    "weight": 0.15
   },
   {
     "id": "windsor-gardens-2012",
@@ -273,21 +274,6 @@
     "position": "center 48%",
     "heroPriority": "primary",
     "resolution": "4032 × 3024"
-  },
-  {
-    "id": "fred-holland-day-house-2010-alt",
-    "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fred%20Holland%20Day%20House%2C%20Norwood%20MA.jpg",
-    "alt": "Historic Fred Holland Day House in Norwood, Massachusetts",
-    "title": "F. Holland Day House",
-    "description": "The historic Norwood home associated with photographer and publisher F. Holland Day.",
-    "date": "2010",
-    "creator": "John Phelan",
-    "license": "CC BY 3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Fred_Holland_Day_House,_Norwood_MA.jpg",
-    "historical": false,
-    "position": "center 48%",
-    "heroPriority": "primary",
-    "resolution": "2272 × 1704"
   },
   {
     "id": "frank-town-common-rules-sign",
