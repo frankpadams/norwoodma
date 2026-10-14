@@ -1,4 +1,6 @@
 window.NORWOOD_BUSINESSES=[
+  ["Colonial Ale House (formerly Colonial House)","Restaurants & Dining","33 Savin Avenue","",""],
+  ["Gemma Kitchen & Bar","Restaurants & Dining","171 Nahatan Street","","https://gemmakitchenandbar.com/"],
   [
     "Air & Energy Services, Inc.",
     "HVAC",
