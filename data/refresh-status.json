@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T03:49:24.437098-04:00",
+  "generated_at": "2026-10-14T09:53:35.796865-04:00",
   "offline": false,
   "events_published": 2674,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2674,
-      "generated_at": "2026-10-14T03:49:23.876698-04:00"
+      "generated_at": "2026-10-14T09:53:35.134043-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 112,
-      "generated_at": "2026-10-14T03:49:23.884502-04:00"
+      "generated_at": "2026-10-14T09:53:35.141854-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 1043,
-      "generated_at": "2026-10-14T03:49:23.900792-04:00"
+      "generated_at": "2026-10-14T09:53:35.159034-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 916,
-      "generated_at": "2026-10-14T03:49:23.914414-04:00"
+      "generated_at": "2026-10-14T09:53:35.172627-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 6,
-      "generated_at": "2026-10-14T03:49:23.921505-04:00"
+      "generated_at": "2026-10-14T09:53:35.179567-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 73,
-      "generated_at": "2026-10-14T03:49:23.929445-04:00"
+      "generated_at": "2026-10-14T09:53:35.187528-04:00"
     }
   ],
   "recreation_programs": 155,
@@ -1601,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 72,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1609,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1617,7 +1617,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 37,
+      "found": 38,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
