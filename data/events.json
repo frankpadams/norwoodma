@@ -1360,13 +1360,13 @@
     "address": null,
     "category": "community",
     "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning8.html",
+    "source_url": "https://www.templebethdavid.net/event/double-chai3.html",
     "cost": null,
     "public_access": "public",
     "series": "Temple Beth David — Westwood",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Wednesday , Oct October 14 , 2026 Shorashim Hebrew Learning Wednesday, Oct 14th 3:45p to 5:45p MORE INFO",
+    "notes": "Wednesday , Oct October 14 , 2026 Double Chai Wednesday, Oct 14th 5:30p to 7:30p MORE INFO",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -12195,6 +12195,37 @@
     ]
   },
   {
+    "id": "2026-10-25-sunday-oct-636bb34",
+    "title": "Sunday , Oct",
+    "start": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/mini-interfaith-walk-to-end-hunger1.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Sunday , Oct October 25 , 2026 Mini Interfaith Walk To End Hunger Sunday, Oct 25th (All day) MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "2026-10-25-trunk-or-treat-70c1449",
     "title": "Trunk or Treat",
     "start": {
@@ -13609,6 +13640,42 @@
       "norwood-sports",
       "rec-all",
       "rec-sports",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-1ff178068ae8-2026-10-27",
+    "title": "Cookie Decorating Class - Half Day CD01",
+    "start": {
+      "date": "2026-10-27",
+      "time": "12:30"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "14:00"
+    },
+    "venue": "10/27/2026 12:30 PM - 02:00 PM Norwood Civic Center - Kitchen",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30892",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30892",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$30.00 Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": false,
+    "drop_in": false,
+    "session_start": "2026-10-27",
+    "session_end": "2026-10-27",
+    "days": "Tu",
+    "notes": "Chef Beth will teach participants fun ways to decorate cookies for Halloween and Day of the Dead. Participants will take home 6 homemade, decorated cookies. No refunds provided for this class !",
+    "rec_program_id": "rec-1ff178068ae8",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -18450,6 +18517,37 @@
     ]
   },
   {
+    "id": "2026-11-02-managing-your-job-search-step-by-step-approac-8c46c64",
+    "title": "Managing Your Job Search: Step-By-Step Approach",
+    "start": {
+      "date": "2026-11-02",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-02",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/mjs-nov-02/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Monday, November 2 Time — 10:00 am Platform — Zoom Learn how to cope with job loss and move towards an effective and organized plan resulting in successful employment. To Register Please click here to register for this event on Zoom’",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-c716c057b760-2026-11-02",
     "title": "Tot Fitness Session 2 - Ages 2-4 years",
     "start": {
@@ -19767,6 +19865,38 @@
     ]
   },
   {
+    "id": "2026-11-04-labor-market-research-skills-careers-employme-1ce1cbd",
+    "title": "Labor Market Research – Skills, Careers, Employment Outlook",
+    "start": {
+      "date": "2026-11-04",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "fundraiser",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/lmr-nov-04/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Wednesday, November 4 Time — 10:00 am Platform — Zoom Do you know what Labor Marker Research is and how it can benefit your job search? We answer these questions, give you tips on how to explore it, and demonstrate several major on-l",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-food-markets",
+      "norwood-fundraisers"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2026-11-04",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -20332,6 +20462,37 @@
       "rec-all",
       "rec-camps",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-05-ms-word-efficient-formatting-techniques-e3d44a8",
+    "title": "MS Word Efficient Formatting Techniques",
+    "start": {
+      "date": "2026-11-05",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/formatting-nov-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Thursday, November 5 Time — 10:00 am Platform — Zoom This webinar will review efficient ways to format text in MS Word including changing font style and size, text alignment, inserting bullets, setting up tabs, line spacing, margins,",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -22405,6 +22566,37 @@
     ]
   },
   {
+    "id": "2026-11-09-rejuvenate-your-r-sum-6b01451",
+    "title": "Rejuvenate Your Résumé",
+    "start": {
+      "date": "2026-11-09",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-09",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "market",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/rejuvenate-nov-09/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Monday, November 9 Time — 10:00 am Platform — Zoom This résumé workshop will explain current trends in résumé writing. Does your résumé include accomplishments? Are you using PAR statements? Are you aware of Applicant Tracking Softwa",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-food-markets"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-c716c057b760-2026-11-09",
     "title": "Tot Fitness Session 2 - Ages 2-4 years",
     "start": {
@@ -24068,6 +24260,37 @@
     ]
   },
   {
+    "id": "2026-11-12-are-you-linkedin-51faed2",
+    "title": "Are You LinkedIn?",
+    "start": {
+      "date": "2026-11-12",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/ayli-nov-12/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Thursday, November 12 Time — 10:00 am Platform — Zoom Are you new to LinkedIn? Are you wondering where to start? Then this webinar is for you. We will discuss why you should join this very popular professional networking website, how",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2026-11-12",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -24731,6 +24954,37 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-13-metro-south-west-abe-and-esol-information-ses-4d2a98e",
+    "title": "Metro South/West ABE and ESOL Information Session",
+    "start": {
+      "date": "2026-11-13",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-13",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/abe-nov-13/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Friday, November 13 Time — 10:00 am Platform — Zoom Learn more about connecting with ABE (Adult Basic Education) and ESOL (English as a Second Language) providers in the Metro South/West region. They will discuss how to connect with ",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -26229,6 +26483,38 @@
     ]
   },
   {
+    "id": "2026-11-16-excel-fitness-level-1-517d5f4",
+    "title": "Excel Fitness Level 1",
+    "start": {
+      "date": "2026-11-16",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/excel-1-nov-16/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Monday, November 16 Time — 10:00 am Platform — Zoom Are you ready to dive into Excel, the most popular MS Office program? Then this class is for you. We will help you build a strong foundation, using plain language and giving practic",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-c716c057b760-2026-11-16",
     "title": "Tot Fitness Session 2 - Ages 2-4 years",
     "start": {
@@ -27252,6 +27538,37 @@
     ]
   },
   {
+    "id": "2026-11-18-using-age-to-your-advantage-e96c8e4",
+    "title": "Using Age To Your Advantage",
+    "start": {
+      "date": "2026-11-18",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-18",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/age-nov-18/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Wednesday, November 18 Time — 10:00 am Platform — Zoom This workshop outlines the advantages mature job seekers bring to the workplace. It identifies strategies to get in the door and reviews effective answers to challenging age-rela",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2026-11-18",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -27879,6 +28196,37 @@
       "rec-all",
       "rec-camps",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-19-job-searching-with-a-large-language-model-92d38a6",
+    "title": "Job Searching with a Large Language Model",
+    "start": {
+      "date": "2026-11-19",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/llm-job-search-nov-19/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Thursday, November 19 Time — 10:00 am Platform — Zoom Large Language Models are the most publicly available AI tools of today. They specialize in language-based pattern matching and searching the web. This webinar will discuss how to",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -28794,6 +29142,37 @@
     ]
   },
   {
+    "id": "2026-11-20-how-to-save-to-reach-your-financial-goals-e653cb6",
+    "title": "How to Save to Reach Your Financial Goals",
+    "start": {
+      "date": "2026-11-20",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": "11:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/save-nov-20/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Friday, November 20 Time — 11:00 am Platform — Zoom Learn methods for intelligently planning how to save and grow your money. To Register Please click here to register for this event on Zoom’s website. Participation for these events ",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad2c3da06aee-2026-11-21",
     "title": "Dance and Play - Saturdays",
     "start": {
@@ -29514,6 +29893,37 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Monday, November 23 Time — 10:00 am Platform — Zoom In this session, participants will learn about the eligibility process that is necessary in order to be assigned to a career advisor to explore training opportunities and to receive",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-23-work-smart-with-outlook-365-163b5f6",
+    "title": "Work Smart with Outlook 365",
+    "start": {
+      "date": "2026-11-23",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-23",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/work-smart-nov-23/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Monday, November 23 Time — 10:00 am Platform — Zoom MS Outlook is an email client application preferred by most businesses and enterprises. This webinar will share tips on how to use Outlook to stay organized, collaborate with others",
     "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -30544,6 +30954,37 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-25-sharpening-your-interviewing-skills-c2c9a72",
+    "title": "Sharpening Your Interviewing Skills",
+    "start": {
+      "date": "2026-11-25",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-25",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/sharpening-nov-25/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Wednesday, November 25 Time — 10:00 am Platform — Zoom Have an interview in the near future? First time interviewing in a while? Register now to learn what to expect from an interview nowadays, how to prepare, present and perform wel",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -32326,6 +32767,37 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Date — Monday, November 30 Time — 10:00 am Platform — Zoom In this session, participants will learn about the eligibility process that is necessary in order to be assigned to a career advisor to explore training opportunities and to receive",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-30-linkedin-beyond-the-basics-085be5e",
+    "title": "LinkedIn Beyond the Basics",
+    "start": {
+      "date": "2026-11-30",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-30",
+      "time": "10:00"
+    },
+    "venue": "MassHire Norwood Events",
+    "address": null,
+    "category": "arts",
+    "source_id": "masshire-norwood-events",
+    "source_url": "https://masshiremsw.com/event/libb-nov-30/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Date — Monday, November 30 Time — 10:00 am Platform — Zoom In this webinar we discuss strengthening your profile, making it easier to be found on LI, researching companies and people, engaging and nurturing your network, and protecting your",
     "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -35667,44 +36139,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c545e61b0099-2026-12-07",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2026-12-07",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-12-07",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -39455,44 +39889,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-c545e61b0099-2026-12-14",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2026-12-14",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-12-14",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2026-12-14",
     "title": "Zumba Session 2",
     "start": {
@@ -43183,44 +43579,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-c545e61b0099-2026-12-21",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2026-12-21",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-12-21",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2026-12-21",
     "title": "Zumba Session 2",
     "start": {
@@ -43256,6 +43614,41 @@
       "rec-adult-fitness",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-21-varsity-wrestling-vs-bellingham-high-school-dff17b5",
+    "title": "Varsity Wrestling vs Bellingham High School",
+    "start": {
+      "date": "2026-12-21",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-21",
+      "time": "20:45"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-wrestling",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Wrestling",
+    "public_access": "public",
+    "series": "Norwood Varsity Wrestling",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Wrestling Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -44046,41 +44439,6 @@
       "norwood-community",
       "norwood-family",
       "pma-fine-arts"
-    ]
-  },
-  {
-    "id": "2026-12-23-varsity-wrestling-vs-bellingham-high-school-543199e",
-    "title": "Varsity Wrestling vs Bellingham High School",
-    "start": {
-      "date": "2026-12-23",
-      "time": "00:01"
-    },
-    "end": {
-      "date": "2026-12-23",
-      "time": "00:01"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-varsity-wrestling",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Varsity Wrestling",
-    "public_access": "public",
-    "series": "Norwood Varsity Wrestling",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Wrestling Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
     ]
   },
   {
@@ -46092,44 +46450,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c545e61b0099-2026-12-28",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2026-12-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-12-28",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -48855,44 +49175,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c545e61b0099-2027-01-04",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2027-01-04",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2027-01-04",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -52449,44 +52731,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-c545e61b0099-2027-01-11",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2027-01-11",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2027-01-11",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2027-01-11",
     "title": "Zumba Session 2",
     "start": {
@@ -55851,44 +56095,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c545e61b0099-2027-01-18",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2027-01-18",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2027-01-18",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -59424,44 +59630,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c545e61b0099-2027-01-25",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2027-01-25",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2027-01-25",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
     ]
   },
   {
@@ -63053,44 +63221,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c545e61b0099-2027-02-01",
-    "title": "Novice Kettle Bells Session 2 (Mondays)",
-    "start": {
-      "date": "2027-02-01",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2027-02-01",
-      "time": "19:30"
-    },
-    "venue": "11/30/2026 - 02/01/2027 06:30 PM - 07:30 PM Norwood Civic Center - Multi-Purpose Room",
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-30",
-    "session_end": "2027-02-01",
-    "days": "M",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c545e61b0099",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
     ]
   },
   {
@@ -87950,28 +88080,28 @@
     ]
   },
   {
-    "id": "2027-04-27-varsity-south-central-girls-lacrosse-m-connol-eda6f4a",
-    "title": "Varsity South Central Girls Lacrosse M Connolly vs Holliston High School",
+    "id": "2027-04-27-var-lacrosse-vs-holliston-high-school-4e7ffcc",
+    "title": "Var Lacrosse vs Holliston High School",
     "start": {
       "date": "2027-04-27",
       "time": "16:30"
     },
     "end": {
       "date": "2027-04-27",
-      "time": "17:45"
+      "time": "18:30"
     },
     "venue": "245 Nichols St, Norwood MA 02062",
     "address": "245 Nichols St, Norwood MA 02062",
     "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
     "cost": null,
-    "organizer": "Norwood Girls Varsity Lacrosse",
+    "organizer": "Norwood Boys Varsity Lacrosse",
     "public_access": "public",
-    "series": "Norwood Girls Varsity Lacrosse",
+    "series": "Norwood Boys Varsity Lacrosse",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -88022,8 +88152,8 @@
     ]
   },
   {
-    "id": "2027-04-27-var-lacrosse-holliston-high-school-b9ac624",
-    "title": "Var Lacrosse @ Holliston High School",
+    "id": "2027-04-27-varsity-south-central-girls-lacrosse-m-connol-4eab1ff",
+    "title": "Varsity South Central Girls Lacrosse M Connolly @ Holliston High School",
     "start": {
       "date": "2027-04-27",
       "time": "17:00"
@@ -88035,15 +88165,15 @@
     "venue": "370 Hollis Street, Holliston Massachusetts 01746",
     "address": "370 Hollis Street, Holliston Massachusetts 01746",
     "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
     "cost": null,
-    "organizer": "Norwood Boys Varsity Lacrosse",
+    "organizer": "Norwood Girls Varsity Lacrosse",
     "public_access": "public",
-    "series": "Norwood Boys Varsity Lacrosse",
+    "series": "Norwood Girls Varsity Lacrosse",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Turf)",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Turf)",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -88093,40 +88223,6 @@
     ]
   },
   {
-    "id": "2027-04-27-jv-north-girl-s-lacrosse-r-georges-vs-hollist-9da0e3f",
-    "title": "JV North Girl's Lacrosse R Georges vs Holliston High School",
-    "start": {
-      "date": "2027-04-27",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2027-04-27",
-      "time": "19:00"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls JV Lacrosse",
-    "public_access": "public",
-    "series": "Norwood Girls JV Lacrosse",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-021298089e70-2027-04-27",
     "title": "Jazz 3 - Tuesdays",
     "start": {
@@ -88161,6 +88257,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-04-27-jv-central-girls-lacrosse-holliston-high-scho-63dd8c3",
+    "title": "JV Central Girls Lacrosse @ Holliston High School",
+    "start": {
+      "date": "2027-04-27",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-04-27",
+      "time": "19:45"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Turf)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -92270,6 +92400,41 @@
     ]
   },
   {
+    "id": "2027-05-13-varsity-south-central-girls-lacrosse-m-connol-cde0abc",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Holliston High School",
+    "start": {
+      "date": "2027-05-13",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-05-13",
+      "time": "18:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3c6841bc2f75-2027-05-13",
     "title": "Ballet 2 - Thursdays",
     "start": {
@@ -92307,6 +92472,40 @@
     ]
   },
   {
+    "id": "2027-05-13-var-lacrosse-holliston-high-school-7afc0e9",
+    "title": "Var Lacrosse @ Holliston High School",
+    "start": {
+      "date": "2027-05-13",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-05-13",
+      "time": "18:30"
+    },
+    "venue": "370 Hollis Street, Holliston Massachusetts 01746",
+    "address": "370 Hollis Street, Holliston Massachusetts 01746",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Holliston High School Subsite: Kamitian Field (Turf)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-122acb4ba165-2027-05-13",
     "title": "Ballet 3 - Thursdays",
     "start": {
@@ -92341,6 +92540,40 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-05-13-jv-north-girl-s-lacrosse-r-georges-vs-hollist-8f77e2b",
+    "title": "JV North Girl's Lacrosse R Georges vs Holliston High School",
+    "start": {
+      "date": "2027-05-13",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-05-13",
+      "time": "19:00"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
