@@ -409,7 +409,7 @@
   if(hits.some(({x})=>x.url==='trash-recycling.html')) hits=hits.filter(({x})=>!x.officialTown);
   const things=thingMatches(raw);
   const howDoHtml=/^how(?:\s|$)|^how\s+do\s+i/i.test(raw)?'<div class="library-things-search-callout howdo-search-callout"><span class="library-things-badge">HOW DO I?</span><b>❓ Looking for a quick answer?</b><p>Browse practical answers to common Norwood questions.</p><a href="how-do-i.html">Open How Do I? →</a></div>':'';
-  const thingHtml=things.length?`<div class="library-things-search-callout"><span class="library-things-badge">LIBRARY OF THINGS</span><b>📚 The library may have ${things.length===1?'one':'things'} you can borrow</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><a href="${esc(things[0].url)}" target="_blank" rel="noopener">Check availability &amp; borrowing details →</a><small>Morrill Memorial Library · Listed by library; current availability is not guaranteed.</small></div>`:'';
+  const thingHtml=things.length?`<button type="button" class="library-things-search-callout" data-library-things-open="${esc(things[0].name)}" style="display:block;width:100%;text-align:left;cursor:pointer;border:1px solid #d6dfe8;border-radius:10px;padding:12px;background:#f4f8fd;color:inherit"><span class="library-things-badge">LIBRARY OF THINGS</span><b style="display:block">📚 Borrow from Morrill Memorial Library</b><p>${things.map(t=>`<strong>${esc(t.name)}</strong> — ${esc(t.desc)}`).join('<br>')}</p><small>View categorized items and library catalog →</small></button>`:'';
   // Keep menu-item searches on the dedicated Food & Drink results page.
   const foodIntent=restaurantMatchCount(raw)>0;
   const foodMoreHtml=foodIntent?`<a class="restaurant-search-bridge" href="restaurants.html?q=${encodeURIComponent(raw)}"><b>See Restaurant Results →</b><small>View matching restaurants in Food &amp; Drink</small></a>`:'';
@@ -419,6 +419,35 @@
   const resultCount=hits.length+things.length; const googleHtml=resultCount<10?`<div class="site-search-google"><a href="https://www.google.com/search?q=${encodeURIComponent(raw+' Norwood MA')}" target="_blank" rel="noopener"><b>Search Google for “${esc(raw)}” →</b><small>Search the wider web for Norwood-related results</small></a></div>`:''; box.innerHTML=heading+foodMoreHtml+howDoHtml+thingHtml+regularHtml+businessMoreHtml+googleHtml;
   box.hidden=false;insertArchiveBridge(raw);if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
+
+ const lotCategories=[
+  ['Home, Garden & Tools',/washer|soil|bike repair|scanner|metal detector/i],
+  ['Outdoors, Games & Recreation',/birdwatch|tennis|picnic|horseshoe/i],
+  ['Kitchen & Entertaining',/dehydrator|karaoke/i],
+  ['Technology & Media',/turntable|roku|floppy|cd\\/dvd/i],
+  ['Accessibility',/magnifier/i]
+ ];
+ const lotCatalog='https://norwood.minlib.net/?browseCategory=morrill_library_of_things';
+ function showLibraryThings(selected){
+   let dialog=document.getElementById('norwood-library-things-dialog');
+   if(!dialog){
+     dialog=document.createElement('dialog');dialog.id='norwood-library-things-dialog';
+     dialog.setAttribute('aria-label','Morrill Memorial Library Library of Things');
+     dialog.style.cssText='width:min(680px,calc(100vw - 28px));max-height:85dvh;overflow:auto;border:0;border-radius:14px;padding:20px;box-shadow:0 16px 60px #0005;color:#152c47;background:#fff';
+     document.body.appendChild(dialog);
+     dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+   }
+   const groups=lotCategories.map(([label,re])=>[label,libraryThings.filter(t=>re.test(t.name))]);
+   const assigned=new Set(groups.flatMap(([,items])=>items.map(t=>t.name)));
+   groups.push(['Other Items',libraryThings.filter(t=>!assigned.has(t.name))]);
+   dialog.innerHTML='<div style="display:flex;justify-content:space-between;gap:12px;align-items:start"><h2 style="margin:0">📚 Library of Things</h2><button type="button" data-lot-close style="font-size:1.4rem;min-width:44px;min-height:44px" aria-label="Close">×</button></div><p>Morrill Memorial Library lends useful equipment and other items. Browse the categories below, then check the library catalog for borrowing details and current availability.</p><p><a href="'+lotCatalog+'" target="_blank" rel="noopener" style="font-weight:700">View the official Library of Things catalog ↗</a></p>'+groups.filter(([,items])=>items.length).map(([label,items])=>'<section><h3>'+esc(label)+'</h3><ul style="padding-left:22px">'+items.sort((a,b)=>a.name.localeCompare(b.name)).map(t=>'<li data-lot-item="'+esc(t.name)+'" style="padding:6px 8px;border-radius:6px"><strong>'+esc(t.name)+'</strong> — '+esc(t.desc)+'</li>').join('')+'</ul></section>').join('')+'<p><small>Items listed here are examples from our current index, not a verified complete inventory. Check the library catalog for the full collection and availability.</small></p>';
+   dialog.querySelector('[data-lot-close]').addEventListener('click',()=>dialog.close());
+   dialog.showModal();
+   const selectedRow=[...dialog.querySelectorAll('[data-lot-item]')].find(el=>el.getAttribute('data-lot-item')===selected);
+   if(selectedRow){selectedRow.style.background='#fff1b8';selectedRow.style.outline='2px solid #e5b93e';selectedRow.scrollIntoView({block:'center'});}
+ }
+ document.addEventListener('click',e=>{const btn=e.target.closest('[data-library-things-open]');if(btn){e.preventDefault();showLibraryThings(btn.getAttribute('data-library-things-open'));}});
+
  input.addEventListener('input',()=>{submitted=false;render(false)});
  input.addEventListener('focus',()=>{if(input.value.trim())render(false)});
  form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;if(!resultsPage){location.href='search.html?q='+encodeURIComponent(q);return;}submitted=true;history.replaceState(null,'','search.html?q='+encodeURIComponent(q));render(true);box.setAttribute('tabindex','-1');const anchor=form.getBoundingClientRect().top+window.scrollY;window.scrollTo({top:Math.max(0,anchor-24),behavior:'smooth'});box.focus({preventScroll:true});});
