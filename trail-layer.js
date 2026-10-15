@@ -95,7 +95,7 @@ function draw(data){
  const excludedCemeteries=park===parks.germany?cemeteryAreas(data.elements||[]):[];
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
-  if(park===parks.germany&&!germanyVerifiedWayIds.has(String(element.id)))continue;
+  if(park===parks.germany&&!/germany\s*brook/i.test([element.tags?.name,element.tags?.['name:en'],element.tags?.alt_name,element.tags?.official_name,element.tags?.ref].filter(Boolean).join(' ')))continue;
   const tags=element.tags||{};
   const walkingTrack=park===parks.germany&&tags.highway==='track'&&/^(yes|designated|permissive)$/.test(tags.foot||'')&&/^(no|private)$/.test(tags.motor_vehicle||tags.vehicle||'no');
   if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||'')&&!walkingTrack)continue;
@@ -140,14 +140,14 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Paths intersecting mapped cemetery grounds are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
+ if(n){loaded=true;setStatus(park===parks.germany?n+' OpenStreetMap segments explicitly named Germany Brook highlighted. Unnamed brochure connectors are not yet mapped; no estimated lines are drawn.':n+' mapped walking path segments loaded in '+park.name+'.');}
  else setStatus(park===parks.germany?'Germany Brook: broad candidate paths are hidden until their geometry is matched to the Town brochure. The background map remains available.':'No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
  if(loading)return;
  loading=true;
  try{await loadTown()}catch(e){loading=false;setStatus('Could not load official Norwood town boundary. Trail overlay withheld rather than showing paths outside town: '+e.message);return;}
- if(park===parks.germany){drawBrochure();loading=false;return;}
+ // Germany Brook uses actual named OSM ways, never a transformed brochure sketch.
  setStatus('Loading mapped '+park.name+' footpaths…');
  const [s,w,n,e]=park.bbox;
  const query='[out:json][timeout:25];(way["highway"~"^(path|footway|steps|pedestrian|track)$"]('+[s,w,n,e].join(',')+');way["landuse"="cemetery"]('+[s,w,n,e].join(',')+');way["amenity"="grave_yard"]('+[s,w,n,e].join(',')+'););out geom;';
