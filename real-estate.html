@@ -43,7 +43,18 @@
 </div></main>
 <div class="utility-modal" id="utilityModal" aria-hidden="true"><div class="utility-dialog" role="dialog" aria-modal="true" aria-labelledby="utilityModalTitle"><div class="utility-dialog-head"><h2 id="utilityModalTitle">Utility estimate</h2><button class="utility-close" id="utilityClose" type="button" aria-label="Close">×</button></div><div class="utility-dialog-body" id="utilityModalBody"></div></div></div><footer class="old-footer"><div class="footer-brand"><a class="footer-logo" href="index.html"><img alt="Norwood.ma — Our Town. Online." src="assets/logo-dark-approved.png"/></a><div class="footer-meta">© 2026 Norwood.ma</div></div><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>Sponsored placements do not influence Norwood.ma data, comparisons, search tools or editorial content.</p></div></footer>
 <script>
-(function(){document.querySelectorAll(".sponsor-slots").forEach(group=>{const items=Array.from(group.children);for(let i=items.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[items[i],items[j]]=[items[j],items[i]];}group.replaceChildren(...items);});})();
+(function(){
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const safeUrl=u=>{try{const x=new URL(u,location.origin);return ['https:','http:'].includes(x.protocol)?x.href:null;}catch{return null;}};
+fetch('/data/sponsors.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Sponsor registry unavailable');return r.json();}).then(data=>{
+const now=new Date().toISOString().slice(0,10);
+document.querySelectorAll('.sponsor-slots').forEach(group=>{
+const id=group.dataset.sponsorGroup==='agents'?'real-estate-agents':'real-estate-lenders',max=id==='real-estate-agents'?4:3;
+const eligible=shuffle((data.sponsors||[]).filter(s=>s.active!==false&&(s.placements||[]).includes(id)&&s.image&&safeUrl(s.url)&&(!s.start||s.start<=now)&&(!s.end||s.end>=now)));
+const slots=Array.from(group.children);slots.forEach((slot,i)=>{const sponsor=eligible[i];if(!sponsor)return;const a=document.createElement('a');a.href=safeUrl(sponsor.url);a.target='_blank';a.rel='noopener sponsored';a.setAttribute('aria-label',sponsor.name||'Sponsor');const img=document.createElement('img');img.src=sponsor.image;img.alt=sponsor.alt||sponsor.name||'Sponsored advertisement';img.loading='lazy';a.appendChild(img);slot.replaceChildren(a);});
+});
+}).catch(()=>{});
+})();
 (function(){
  const $=id=>document.getElementById(id);
 
