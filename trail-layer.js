@@ -39,6 +39,8 @@ function draw(data){
   if(park===parks.germany){
    const highway=tags.highway||'';
    const sidewalk=/^(yes|both|left|right|separate)$/.test(tags.sidewalk||'')||tags.footway==='sidewalk';
+   const cemetery=tags.landuse==='cemetery'||tags.amenity==='grave_yard'||/cemetery|graveyard|burial/i.test([tags.name,tags.description,tags.operator].filter(Boolean).join(' '));
+   const roadlike=highway==='service'||highway==='track'||tags.service==='driveway'||tags.service==='parking_aisle'||tags.motor_vehicle==='yes'||tags.vehicle==='yes';
    const crossing=tags.footway==='crossing'||tags.crossing!=null;
    const street=/^(residential|service|living_street|unclassified|tertiary|secondary|primary)$/.test(highway);
    const paved=/^(asphalt|concrete|paving_stones|sett|cobblestone)$/.test(tags.surface||'');
@@ -49,7 +51,7 @@ function draw(data){
     if(winter){L.polyline(element.geometry.map(p=>[p.lat,p.lon]),{color:'#f59e0b',weight:6,dashArray:'7 7'}).bindPopup('Candidate Winter Street crossing — confirm location against Town trail brochure').addTo(crossings);}
     continue;
    }
-   if(sidewalk||street||highway==='pedestrian'||highway==='steps'||(highway==='footway'&&paved&&!tags.name))continue;
+   if(sidewalk||street||cemetery||roadlike||highway==='pedestrian'||highway==='steps'||(highway==='footway'&&paved&&!tags.name))continue;
   }
   const coords=element.geometry.map(p=>[p.lon,p.lat]);
   const length=coords.slice(1).reduce((sum,p,i)=>sum+meters(coords[i],p),0);
@@ -66,7 +68,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Sidewalks are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
+ if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Sidewalks and identifiable cemetery roads are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
  else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
