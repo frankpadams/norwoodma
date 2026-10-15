@@ -88,14 +88,53 @@ function endpoint(coordinates,kind,label){
  const record=endpoints.get(key)||{coord:c,kinds:new Set(),labels:new Set()};
  record.kinds.add(kind);record.labels.add(label);endpoints.set(key,record);
 }
+// Extend named Germany Brook OSM ways only along physically connected off-road footpaths.
+// No synthetic straight-line connections: gaps without mapped path geometry stay unfilled.
+function germanyConnectedWays(elements,cemeteries){
+ const valid=elements.filter(w=>{
+  if(w.type!=='way'||w.geometry?.length<2)return false;
+  const t=w.tags||{},h=t.highway||'';
+  if(!/^(path|footway)$/.test(h))return false;
+  if(t.access==='private'||t.foot==='no'||t.footway==='sidewalk'||t.footway==='crossing'||t.crossing!=null)return false;
+  if(/^(yes|both|left|right|separate)$/.test(t.sidewalk||''))return false;
+  if(/cemetery|graveyard|burial/i.test([t.name,t.description,t.operator].filter(Boolean).join(' ')))return false;
+  if(t.motor_vehicle==='yes'||t.vehicle==='yes')return false;
+  return !touchesCemetery(w.geometry.map(p=>[p.lon,p.lat]),cemeteries);
+ });
+ const named=w=>/germany\s*brook/i.test([w.tags?.name,w.tags?.['name:en'],w.tags?.alt_name,w.tags?.official_name,w.tags?.ref].filter(Boolean).join(' '));
+ const selected=new Set(valid.filter(named).map(w=>String(w.id)));
+ const nodeKey=p=>p.lat.toFixed(6)+','+p.lon.toFixed(6);
+ const connections=new Map();
+ for(const w of valid)for(const p of [w.geometry[0],w.geometry[w.geometry.length-1]]){
+  const key=nodeKey(p);if(!connections.has(key))connections.set(key,[]);connections.get(key).push(w);
+ }
+ // Only short, contiguous off-road links are automatically extended; this avoids
+ // pulling in entire neighborhood footpath networks or speculative road crossings.
+ let frontier=valid.filter(w=>selected.has(String(w.id)));
+ for(let depth=0;depth<3;depth++){
+  const next=[];
+  for(const w of frontier)for(const p of [w.geometry[0],w.geometry[w.geometry.length-1]])
+   for(const candidate of connections.get(nodeKey(p))||[]){
+    const id=String(candidate.id);
+    if(selected.has(id))continue;
+    const coords=candidate.geometry.map(v=>[v.lon,v.lat]);
+    const length=coords.slice(1).reduce((total,v,i)=>total+meters(coords[i],v),0);
+    if(length>220)continue;
+    selected.add(id);next.push(candidate);
+   }
+  frontier=next;
+ }
+ return selected;
+}
 function draw(data){
  if(!townGeometry){setStatus('Town boundary not loaded; trail lines withheld to avoid displaying out-of-town paths.');return;}
  trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();
  let n=0;
  const excludedCemeteries=park===parks.germany?cemeteryAreas(data.elements||[]):[];
+ const germanyWays=park===parks.germany?germanyConnectedWays(data.elements||[],excludedCemeteries):null;
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
-  if(park===parks.germany&&!/germany\s*brook/i.test([element.tags?.name,element.tags?.['name:en'],element.tags?.alt_name,element.tags?.official_name,element.tags?.ref].filter(Boolean).join(' ')))continue;
+  if(germanyWays&&!germanyWays.has(String(element.id)))continue;
   const tags=element.tags||{};
   const walkingTrack=park===parks.germany&&tags.highway==='track'&&/^(yes|designated|permissive)$/.test(tags.foot||'')&&/^(no|private)$/.test(tags.motor_vehicle||tags.vehicle||'no');
   if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||'')&&!walkingTrack)continue;
@@ -140,7 +179,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(park===parks.germany?n+' OpenStreetMap segments explicitly named Germany Brook highlighted. Unnamed brochure connectors are not yet mapped; no estimated lines are drawn.':n+' mapped walking path segments loaded in '+park.name+'.');}
+ if(n){loaded=true;setStatus(park===parks.germany?n+' named or directly connected off-road OpenStreetMap trail segments shown. Unmapped Winter Street crossings are not invented; review connectors against the Town brochure.':n+' mapped walking path segments loaded in '+park.name+'.');}
  else setStatus(park===parks.germany?'Germany Brook: broad candidate paths are hidden until their geometry is matched to the Town brochure. The background map remains available.':'No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
