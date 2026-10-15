@@ -9,6 +9,7 @@ const trails=L.featureGroup(),ends=L.featureGroup(),crossings=L.featureGroup();
 const isShown=()=>Boolean(checkbox?.checked);
 const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map);crossings.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends);map.removeLayer(crossings)}};
 sync();
+const germanyVerifiedWayIds=new Set([]); // Populate only with OSM ways matched against the Town brochure.
 const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook — extended corridor',center:[42.1988,-71.2175],bbox:[42.1915,-71.232,42.206,-71.199]}};
 let park=parks.shattuck;
 const trailArea=document.getElementById('trailAreaSelect');
@@ -61,6 +62,7 @@ function draw(data){
  const excludedCemeteries=park===parks.germany?cemeteryAreas(data.elements||[]):[];
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
+  if(park===parks.germany&&!germanyVerifiedWayIds.has(String(element.id)))continue;
   const tags=element.tags||{};
   const walkingTrack=park===parks.germany&&tags.highway==='track'&&/^(yes|designated|permissive)$/.test(tags.foot||'')&&/^(no|private)$/.test(tags.motor_vehicle||tags.vehicle||'no');
   if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||'')&&!walkingTrack)continue;
@@ -106,7 +108,7 @@ function draw(data){
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
  if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Paths intersecting mapped cemetery grounds are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
- else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
+ else setStatus(park===parks.germany?'Germany Brook: broad candidate paths are hidden until their geometry is matched to the Town brochure. The background map remains available.':'No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
  if(loading)return;
