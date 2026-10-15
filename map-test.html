@@ -88,23 +88,7 @@
 </div>
 <p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup; Norwood.ma does not currently display a school-boundary polygon overlay.</p>
 </details>
-<section id="trailWorkspace" class="boundary-panel" aria-label="Experimental trail mapping workspace" style="padding:14px;margin-top:12px">
-<h2 style="margin:0 0 8px;font-size:1.15rem">Trail mapping workspace <small style="font-size:.7rem">DRAFT ONLY</small></h2>
-<p style="font-size:.83rem">Draw geographic trail vertices on the map, or load an existing GeoJSON reference. Roads and permanent landmarks should anchor your alignment; vegetation is supporting evidence only. Drafts are not verified trail directions.</p>
-<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px">
-<label>Trail name <input id="trailName" value="Shattuck Park — draft" style="min-height:40px"></label>
-<label>Source <input id="trailSource" placeholder="Map / GPS / GIS citation" style="min-height:40px"></label>
-<label>Confidence <select id="trailQuality" style="min-height:40px"><option value="uncertain">Uncertain</option><option value="approximate">Approximate</option><option value="verified">Verified (evidence required)</option></select></label>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
-<label><input type="checkbox" id="trailDraw"> Enable click-to-draw</label>
-<button type="button" id="trailUndo">Undo vertex</button>
-<button type="button" id="trailClear">Clear draft</button>
-<button type="button" id="trailExport">Export GeoJSON</button>
-<label>Load reference GeoJSON <input type="file" id="trailImport" accept=".json,.geojson,application/json,application/geo+json"></label>
-</div>
-<p style="font-size:.8rem"><span id="trailPoints">0 vertices</span> · <span id="trailStatus" role="status">Initializing…</span></p>
-</section>
+<section class="boundary-panel" style="padding:14px;margin-top:12px" aria-label="Trail reconstruction status"><strong>Norwood trails — cartographic reconstruction</strong><p style="margin:6px 0;font-size:.85rem">This is an experimental map, not a trail navigation guide. Trail routes will be added from geographically checked GIS/OpenStreetMap data and the Town trail brochures, with uncertainty identified. No manual tracing is required from visitors.</p><a href="https://drive.google.com/file/d/1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw/view" target="_blank" rel="noopener">Shattuck Park source brochure ↗</a></section>
 <div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of sample Norwood locations"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div></aside>
@@ -125,6 +109,5 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="map-test.js?v=0.9"></script>
-<script src="trail-workspace.js?v=0.1"></script>
 </body>
 </html>
