@@ -2,7 +2,47 @@
 
 This is a shared working log for unfinished development, data-quality issues, and follow-up work. It is not an authority on what is true: Frank's decisions govern project direction, and automated entries are leads to review rather than conclusions. When Frank asks for the developer to-do list, project work log, outstanding issues, next steps, or similar, review this file as a useful project record and update it as work is completed or new issues are identified.
 
-_Last updated: 2026-10-01_
+_Last updated: 2026-10-15_
+
+## October 8–15 development review — unfinished / unverified
+
+These are follow-ups identified from the week's development conversations. A commit alone does not establish that the deployed desktop and mobile experiences work. Recheck against the live site before marking an item complete.
+
+### High priority: Trail accuracy and deployment
+
+- [ ] **Finish the Germany Brook Trail geometry on the test map.** Use the exact existing OpenStreetMap footpaths, not hand-drawn approximations or broad path searches: cross Winter Street, follow the east side of Father MacAleer soccer fields, behind the pool, emerge at the end of Hawthorne Street, continue through the Savage Center, and terminate at the short trail near the Senior Center. Preserve the Willett School/landfill route and legitimate viewpoint/field branches shown on the official brochure. Exclude cemetery roads and unrelated sidewalks; visually verify every connection and endpoint on desktop and mobile.
+- [ ] **Verify trail boundary policy and OSM connectivity.** Retain an entire selected trail way whenever any part intersects Norwood, including a brief Westwood crossing. Confirm that the Winter Street connection actually renders and that named OSM ways plus manually verified unnamed connectors form the intended route. Remove or disable obsolete brochure approximation and overly broad ten-hop candidate-selection logic after accurate geometry is implemented.
+- [ ] **Advance the townwide trail overlay.** Identify and align remaining Norwood trails to actual OSM paths / authoritative maps, preserving the already-accurate Shattuck Park trails. Validate trailheads, route lengths, junctions and mobile map usability before moving test routes live.
+
+### Ads, sponsors and admin publishing
+
+- [ ] **Audit and complete all advertising placements and the sponsor registry.** Confirm Boston Mobile Tire's existing ad renders consistently; connect lender/real-estate agent slots and all other active spaces to the admin panel. Inventory homepage/sidebar/footer, real estate and other pages, including Trash page ad 1–4. Display actual placement dimensions, recommended upload dimensions, aspect ratio, and desktop/mobile previews in the admin editor; test blank-state behavior and deployment.
+- [ ] **Complete secure one-click admin publishing and verify deployed dashboard.** Carry forward the existing top-priority publishing task; verify permissions, preview, save, publish, errors, and status for events, Hey Norwood, news, alerts, resources and sponsors, rather than relying on staged JSON downloads.
+
+### Events and source quality
+
+- [ ] **Live-QA universal event popups.** Verify consistent popup behavior across government and nongovernment events, the visible organizer website and Norwood.ma referral line, clear cost notices, external links opening once, responsive mobile layout, calendar export to Google/Apple, and social sharing. Commits were reported but deployed behavior remains unverified.
+- [ ] **Audit the events feed for duplicates, confusing titles, incorrect categories and expired entries.** Specifically check same-evening Dungeons & Dragons duplicates, incorrectly imported news items, homepage ordering (Common/farmers market first on their date), and source deduplication. Confirm local Home Depot children's workshops, Weekend Craft Café and other newly added feeds actually appear.
+- [ ] **Finish event source and ingestion verification.** Compare newly added PTO/school/youth-organization fundraiser sources, public-health and community sources, and the Worcester Deaf Club craft fair in Framingham against the live calendar; do not treat a registered source as successful until events are ingested.
+
+### Search, directories and local content
+
+- [ ] **Test and improve sitewide search federation.** Verify searches reach the Town Meeting Archive, Library of Things, Food & Drink, business directory and other indexes; prioritize relevant Norwood.ma results, handle synonyms (including VHS/VCR), misspellings and aliases, and suppress irrelevant resource-library pages. Verify the recent Library of Things synonym changes live.
+- [ ] **Finish Food & Drink desktop/mobile QA.** Verify autocomplete, cuisine and dietary filters, full-bar filter, Dinner Spinner, beverage coverage, partial/third-party menus, restaurant aliases and spelling tolerance; audit missing/renamed establishments and licensing information. Confirm the main-search restaurant-result integration.
+- [ ] **Verify and finish business/artist listings.** Check Colonial Ale House/Gemma updates, Got Styles Hair Salon, and any unpublished Lucky Mart, El Valle and La Baguette records; complete individually verified Winsmith Mill/Commerce Center tenant and artist profiles rather than linking everyone to a generic building page.
+- [ ] **Verify How Do I and resource-directory navigation.** Confirm the Norwood.ma trash/recycling pickup-day link is prominent and working after the Oct. 15 commit. Audit the Town's How Do I topics for missing Norwood.ma internal links, verify resource categorization and map links, and test on mobile.
+
+### Media, maps and municipal records
+
+- [ ] **Fix Real Estate / Moving to Norwood video navigation.** Each linked eLocalLink video must open its specific segment, not the default welcome video. Verify sponsor visibility, test the requested in-page popup player and mobile behavior, and check deployment.
+- [ ] **Finish Town Meeting Archive quality audit.** Replace remaining placeholders with sourced records, fix popup/external-link double activation and broken Town document links, verify article votes/outcomes/NCM video references and multi-night meetings, and confirm deep indexing works in archive and sitewide search.
+- [ ] **Verify homepage hero image rotation.** Confirm the Senior Center photo is in rotation with its crop positioned approximately 15% higher and the repeatedly shown house photo receives a lower frequency; audit all image weights and mobile crops.
+
+### Infrastructure and analytics
+
+- [ ] **Complete gas-price reliability and submission workflow.** Find a sustainable free/low-cost price data source (including iExit feasibility); preserve user-submitted prices, implement the agreed automatic acceptance for submissions within 15% and review handling outside that range, and display each price's update time. Test the live gas page and admin review workflow.
+- [ ] **Finish analytics ingestion setup.** Verify the Google Apps Script web-app `/exec` URL and Events-sheet receipt, resolve public tracking-token security and privacy design, then enable and test the website tracker.
+- [ ] **Verify GitHub Pages deployment and recently committed changes.** Audit failed/queued workflows, confirm the live site matches the intended cumulative commits, check custom error pages and shared footer, and perform targeted desktop/mobile smoke tests before marking any of the above complete.
 
 ## Highest priority: Secure one-click publishing
 
