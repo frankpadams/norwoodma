@@ -34,6 +34,16 @@ function draw(data){
   const tags=element.tags||{};
   if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||''))continue;
   if(tags.access==='private'||tags.foot==='no')continue;
+  // The broad Germany Brook search includes neighborhood sidewalks. Only highlight
+  // off-road candidate paths, not pedestrian street infrastructure.
+  if(park===parks.germany){
+   const highway=tags.highway||'';
+   const sidewalk=/^(yes|both|left|right|separate)$/.test(tags.sidewalk||'')||tags.footway==='sidewalk';
+   const crossing=tags.footway==='crossing'||tags.crossing!=null;
+   const street=/^(residential|service|living_street|unclassified|tertiary|secondary|primary)$/.test(highway);
+   const paved=/^(asphalt|concrete|paving_stones|sett|cobblestone)$/.test(tags.surface||'');
+   if(sidewalk||crossing||street||highway==='pedestrian'||highway==='steps'||(highway==='footway'&&paved&&!tags.name))continue;
+  }
   const coords=element.geometry.map(p=>[p.lon,p.lat]);
   const length=coords.slice(1).reduce((sum,p,i)=>sum+meters(coords[i],p),0);
   const name=tags.name||'Mapped walking path';
@@ -49,7 +59,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. This wider corridor is for comparison, not a verified single continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
+ if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Sidewalks and street crossings are excluded from the overlay. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
  else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
