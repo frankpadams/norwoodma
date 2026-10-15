@@ -195,7 +195,7 @@ function searchMatch(p,q){
  }
  return hay.includes(q);
 }
-function currentPlaces(){const q=norm(search.value);return places.filter(p=>(filter!==''&&(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
+function currentPlaces(){if(filter==='trails')return [];const q=norm(search.value);return places.filter(p=>(filter!==''&&(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
  const key=norm(p.address);
@@ -240,7 +240,7 @@ async function render(){
  else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
  else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
 }
-category?.addEventListener('change',()=>{filter=category.value;render();});
+category?.addEventListener('change',()=>{filter=category.value;render();if(filter==='trails')window.dispatchEvent(new Event('norwood:show-trails'));});
 let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
 
 async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
