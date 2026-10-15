@@ -2,6 +2,7 @@
 'use strict';
 const NORWOOD_BOUNDS=L.latLngBounds([[42.1515,-71.2355],[42.2265,-71.1505]]);
 const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});
+window.norwoodTrailMap=map; // Expose only to unlinked experimental trail workspace.
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
 map.addLayer(cluster);
