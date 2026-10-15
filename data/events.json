@@ -3771,7 +3771,7 @@
     ]
   },
   {
-    "id": "2026-10-18-k-pop-market-93dc031",
+    "id": "2026-10-18-k-pop-market-e2e382d",
     "title": "K-Pop Market",
     "start": {
       "date": "2026-10-18",
@@ -3779,20 +3779,21 @@
     },
     "end": {
       "date": "2026-10-18",
-      "time": null
+      "time": "18:00"
     },
-    "venue": null,
-    "address": null,
-    "category": "community",
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "category": "market",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/k-pop-market",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
+    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
+    "series": null,
     "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "K-Pop Market Sunday, October 18, 2026 1:00 PM 6:00 PM Norwood Taproom (map) Google Calendar ICS https://www.facebook.com/share/19o95PeikK/?mibextid=wwXIfr View Event →",
-    "discovered_by": "visible_dated_page",
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -15960,6 +15961,36 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-31-men-s-prayer-group-saturday-d57a1af",
+    "title": "Men's Prayer Group",
+    "start": {
+      "date": "2026-10-31",
+      "time": "07:30"
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "st-catherine-calendar",
+    "source_url": "https://stcatherinenorwood.org/events/mens-prayer-group/20261031",
+    "cost": null,
+    "public_access": "public",
+    "series": "Saint Catherine of Siena — Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Men's Prayer Group Saturday , October 31 , 7:30 AM - 8:30 AM All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship. Read More",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
