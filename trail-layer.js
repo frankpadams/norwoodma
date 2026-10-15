@@ -9,7 +9,10 @@ const trails=L.featureGroup(),ends=L.featureGroup();
 const isShown=()=>Boolean(checkbox?.checked);
 const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends)}};
 sync();
-const park={name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]};
+const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook',center:[42.1988,-71.2224],bbox:[42.1965,-71.226,42.2012,-71.2185]}};
+let park=parks.shattuck;
+const trailArea=document.getElementById('trailAreaSelect');
+function selectArea(key){park=parks[key]||parks.shattuck;trails.clearLayers();ends.clearLayers();endpoints.clear();loaded=false;sync();map.setView(park.center,16);load();}
 const setStatus=s=>{if(root)root.textContent=s};
 const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const meters=(a,b)=>L.latLng(a[1],a[0]).distanceTo(L.latLng(b[1],b[0]));
@@ -47,12 +50,12 @@ function draw(data){
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
  if(n){loaded=true;setStatus(n+' highlighted path segments loaded. Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
- else setStatus('No mapped footpaths returned in the Shattuck Park search area. No speculative trails have been drawn.');
+ else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
  if(loading)return;
  loading=true;
- setStatus('Loading mapped Shattuck Park footpaths…');
+ setStatus('Loading mapped '+park.name+' footpaths…');
  const [s,w,n,e]=park.bbox;
  const query='[out:json][timeout:25];way["highway"~"^(path|footway|steps|pedestrian)$"]('+[s,w,n,e].join(',')+');out geom;';
  // First try the primary OSM API directly; unlike Overpass it does not require a query interpreter.
@@ -93,5 +96,7 @@ checkbox?.addEventListener('change',()=>{
  else{setStatus('Lime-green overlay OFF — only background OpenStreetMap paths are visible.')}
 });
 focus?.addEventListener('click',()=>map.setView(park.center,17));
+trailArea?.addEventListener('change',()=>selectArea(trailArea.value));
+if(new URLSearchParams(location.search).get('trail')==='germany'&&trailArea){trailArea.value='germany';park=parks.germany;}
 if(checkbox?.checked)load();
 })();
