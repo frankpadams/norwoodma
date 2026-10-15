@@ -95,8 +95,10 @@ function germanyConnectedWays(elements,cemeteries){
   if(w.type!=='way'||w.geometry?.length<2)return false;
   const t=w.tags||{},h=t.highway||'';
   if(!/^(path|footway)$/.test(h))return false;
-  if(t.access==='private'||t.foot==='no'||t.footway==='sidewalk'||t.footway==='crossing'||t.crossing!=null)return false;
+  if(t.access==='private'||t.foot==='no'||t.footway==='sidewalk')return false;
   if(/^(yes|both|left|right|separate)$/.test(t.sidewalk||''))return false;
+  // A short mapped pedestrian crossing is a legitimate link between trail halves.
+  if((t.footway==='crossing'||t.crossing!=null)&&w.geometry.slice(1).reduce((sum,p,i)=>sum+meters([w.geometry[i].lon,w.geometry[i].lat],[p.lon,p.lat]),0)>45)return false;
   if(/cemetery|graveyard|burial/i.test([t.name,t.description,t.operator].filter(Boolean).join(' ')))return false;
   if(t.motor_vehicle==='yes'||t.vehicle==='yes')return false;
   return !touchesCemetery(w.geometry.map(p=>[p.lon,p.lat]),cemeteries);
@@ -151,6 +153,10 @@ function draw(data){
    // Paved footways can be legitimate trail connectors, including by the playing fields.
    // Do not discard them solely for being paved; explicit sidewalks remain excluded.
    if(crossing){
+    if(germanyWays?.has(String(element.id))){
+     for(const part of clipToTown(element.geometry.map(p=>[p.lon,p.lat])))L.polyline(part.map(([lon,lat])=>[lat,lon]),{color:'#f59e0b',weight:7,dashArray:'7 6'}).bindPopup('Mapped pedestrian crossing connecting Germany Brook trail segments — verify traffic conditions before crossing').addTo(crossings);
+     n++;continue;
+    }
     // Show only mapped Winter Street crossings as distinct connectors, never as ordinary trails.
     // This is a candidate until matched to the brochure's exact crossing location.
     const winter=(tags.name||'').toLowerCase().includes('winter')||(tags['addr:street']||'').toLowerCase().includes('winter');
@@ -179,7 +185,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(park===parks.germany?n+' named or directly connected off-road OpenStreetMap trail segments shown. Unmapped Winter Street crossings are not invented; review connectors against the Town brochure.':n+' mapped walking path segments loaded in '+park.name+'.');}
+ if(n){loaded=true;setStatus(park===parks.germany?n+' named or directly connected off-road OpenStreetMap trail segments shown. Short mapped pedestrian crossings connected to the trail are displayed in amber; verify Winter Street alignment against the Town brochure.':n+' mapped walking path segments loaded in '+park.name+'.');}
  else setStatus(park===parks.germany?'Germany Brook: broad candidate paths are hidden until their geometry is matched to the Town brochure. The background map remains available.':'No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
