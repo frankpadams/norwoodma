@@ -44,6 +44,17 @@ These are follow-ups identified from the week's development conversations. A com
 - [ ] **Finish analytics ingestion setup.** Verify the Google Apps Script web-app `/exec` URL and Events-sheet receipt, resolve public tracking-token security and privacy design, then enable and test the website tracker.
 - [ ] **Verify GitHub Pages deployment and recently committed changes.** Audit failed/queued workflows, confirm the live site matches the intended cumulative commits, check custom error pages and shared footer, and perform targeted desktop/mobile smoke tests before marking any of the above complete.
 
+## Existing-backlog currency audit — October 15
+
+Reviewed every pre-existing checklist item against available repository evidence, focusing on homepage/calendar code, source-health data, Conflict Contraption, and release metadata. This is a source-code audit, not a complete live deployment or ingestion verification.
+
+- **Implemented in source:** Homepage Select Calendars link and its deep link to the expanded picker. Marked complete for implementation; live/mobile QA still applies.
+- **Partially implemented:** Calendar-source health fields and selector presentation exist; stale policies, complete source coverage, and operational alerting remain open.
+- **Still open:** Conflict Contraption combines the main event array with a separate possible-conflicts array; unification and relevance metadata are not complete.
+- **Consistent but potentially dated:** README, VERSIONING and footer script agree on v1.0.2; evaluate whether October changes warrant a release bump.
+- **Insufficient evidence to close:** Secure admin publishing, individual school/sports/arts/health feed ingestion, zero-event feeds, calendar availability/submission UX, remembered homepage selection behavior, Conflict Contraption filtering/preferences, and ongoing documentation discipline. Retain open status pending functional verification.
+- **Overlap:** October follow-ups overlap older ingestion, publishing and versioning tasks; treat the new entries as acceptance checks rather than separate projects.
+
 ## Highest priority: Secure one-click publishing
 
 - [ ] **Enable secure direct publishing from /admin/.** Authenticate only the authorized Norwood.ma Google account with server-side token validation; store GitHub publishing credentials as backend secrets (never in browser code); provide Publish for events, Hey Norwood, news, alerts, resources, and featured items; validate inputs, commit to correct live data sources, trigger deployment, show success/failure and publication status. Aim for no JSON download or manual GitHub step. Confirm Cloudflare Worker free-tier suitability and protect against unauthorized requests.
@@ -64,7 +75,7 @@ These are follow-ups identified from the week's development conversations. A com
 
 ## Calendar Freshness / Data Quality Safeguards
 
-- [ ] **Add stale-calendar detection.** Track at minimum `last_checked`, `last_successful_update`, consecutive failures, and stale status for every monitored source.
+- [ ] **Audit stale-calendar detection end-to-end (partially implemented).** Calendar source-health data already contains last_checked, last_successful_update and consecutive_failures, and the calendar selector reads health data. Verify stale policy, coverage, alerting and production refresh.
 - [ ] **Define source-specific freshness thresholds.** Do not assume that a low-frequency annual calendar is stale on the same schedule as athletics or a frequently updated community calendar.
 - [ ] **Prevent stale data from appearing current.** Old events/feed data should be flagged, suppressed, or clearly identified according to the source's freshness policy rather than silently presented as current.
 - [ ] **Create actionable stale/failure reporting.** Repeated failures or a source crossing its stale threshold should create/record a developer action item instead of failing silently.
@@ -72,14 +83,14 @@ These are follow-ups identified from the week's development conversations. A com
 
 ## What's Happening / Homepage
 
-- [ ] **Add “Select Calendars” to the homepage What's Happening header.** Place it right-aligned on the same line as “What's Happening.”
-- [ ] **Deep-link the homepage button to the expanded calendar page with Select Calendars already open.**
+- [x] **Add “Select Calendars” to the homepage calendar header (implemented in source).** The homepage has a right-aligned Select Calendars link; verify mobile layout.
+- [x] **Deep-link the homepage button to the expanded calendar page with Select Calendars open (implemented in source).** The link and parameter/fragment handling exist; verify live navigation.
 - [ ] **Honor remembered calendar selections on the homepage.** Keep curated core What's Happening events and supplement them with events from the visitor's locally remembered selections.
 - [ ] **Show selection state in the homepage button.** After customization, use a compact indication such as “Calendars · 3 selected.”
 
 ## Conflict Contraption
 
-- [ ] **Use the master event dataset rather than a separate event database.**
+- [ ] **Unify Conflict Contraption event data and relevance rules.** Its JavaScript currently merges NORWOOD_EVENTS with a separate NORWOOD_POSSIBLE_CONFLICTS dataset; consolidate authoritative records and control inclusion with relevance metadata.
 - [ ] **Implement conflict relevance profiles.** Support `default conflict`, `optional conflict`, and `not conflict relevant` (or equivalent metadata).
 - [ ] **Use sensible defaults rather than selecting every granular feed.** Major community events, school-wide events, significant athletics, performances, fundraisers, facility reservations, roadwork, elections, etc. should generally be on by default; individual teams/practices and other high-volume feeds should generally be optional.
 - [ ] **Add hierarchical filters.** Allow broad categories to be toggled and expanded into increasingly specific feeds (for example Sports → Youth Soccer → division/team) without rendering every team at once.
@@ -98,4 +109,4 @@ These are follow-ups identified from the week's development conversations. A com
 
 ## Release/version hygiene
 
-- [ ] **Keep every product release synchronized.** Follow `VERSIONING.md`: update its current stable release, the README heading/current-release section, matching `RELEASE-vX.Y.Z.md`, the `SITE_VERSION` footer value in `nav.js`, and any authoritative subsystem docs affected by the change.
+- [ ] **Keep every product release synchronized.** October 15 source audit: VERSIONING.md, README.md and nav.js consistently report v1.0.2 (September 29). Determine whether later deployments constitute a new stable release, then update all release metadata and notes together.
