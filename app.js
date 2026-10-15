@@ -550,12 +550,12 @@ function eventPopupSharedActions(e, options={}){
  const websites=links.length?'<div class="event-popup-websites"><strong>More information:</strong>'+links.map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join('')+'</div>':'';
  const cost=e.cost||e.fees;
  const costNote='<p class="event-popup-notes"><strong>'+(cost?(/free|no charge/i.test(String(cost))?'Cost: ':'Reported cost (confirm with organizer): ')+esc(cost):'Cost not confirmed — check with organizer')+'</strong></p>';
- return maps+calendars+websites+sharing+costNote+'<p class="event-popup-notes">Please let the event host or organizer know you found this event on Norwood.ma</p>';
+ return '<div class="event-popup-quick-actions">'+(hasDate?'<details class="event-action-menu"><summary>＋ Add to Calendar</summary>'+calendars+'</details>':'')+'<details class="event-action-menu"><summary>↗ Share</summary>'+sharing+'</details>'+(q?'<details class="event-action-menu"><summary>⌖ Directions</summary>'+maps+'</details>':'')+'</div>'+'<details class="event-popup-more"><summary>More event information</summary>'+websites+costNote+'<p class="event-popup-notes">Please let the event host or organizer know you found this event on Norwood.ma</p></details>';
 }
 function openEventDetails(id){
  if(openTempleBethDavidDetails(id))return;
  const e=allEventsForPage.find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!e||!dlg||!box)return;
- const times=[e.start?.time&&e.start.time!=='00:00'&&formatEventTime(e.start.time),e.end?.time&&formatEventTime(e.end.time)].filter(Boolean).join('–');
+ const times=[e.start?.time&&e.start.time!=='00:00'&&formatEventTime(e.start.time),e.end?.time&&e.end.time!=='00:00'&&formatEventTime(e.end.time)].filter(Boolean).join('–');
  const where=eventLocationText(e),q=eventMapQuery(e),img=eventImageUrl(e),links=eventExternalLinks(e);
  const maps=q?'<div class="event-popup-actions"><strong>Directions:</strong><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+brandIcon('https://www.google.com/favicon.ico','Google Maps')+' Google</a><a href="https://maps.apple.com/?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+brandIcon('https://www.apple.com/favicon.ico','Apple Maps')+' Apple</a></div>':'';
  const calendars='<div class="event-popup-actions"><strong>Add to Calendar:</strong><a href="'+esc(googleCalendarUrl(e))+'" target="_blank" rel="noopener">'+brandIcon('https://www.google.com/favicon.ico','Google Calendar')+' Google</a><a href="'+esc(appleCalendarHref(e))+'" download="'+esc(String(e.title||'event').replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase()||'event')+'.ics">'+brandIcon('https://www.apple.com/favicon.ico','Apple Calendar')+' Apple</a></div>';
