@@ -5,14 +5,14 @@ if(!map)return;
 const root=document.getElementById('trailLayerStatus');
 const checkbox=document.getElementById('trailLayerToggle');
 const focus=document.getElementById('trailLayerFocus');
-const trails=L.featureGroup(),ends=L.featureGroup();
+const trails=L.featureGroup(),ends=L.featureGroup(),crossings=L.featureGroup();
 const isShown=()=>Boolean(checkbox?.checked);
-const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends)}};
+const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map);crossings.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends);map.removeLayer(crossings)}};
 sync();
 const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook — extended corridor',center:[42.1988,-71.2175],bbox:[42.1915,-71.232,42.206,-71.199]}};
 let park=parks.shattuck;
 const trailArea=document.getElementById('trailAreaSelect');
-function selectArea(key){park=parks[key]||parks.shattuck;trails.clearLayers();ends.clearLayers();endpoints.clear();loaded=false;sync();map.fitBounds([[park.bbox[0],park.bbox[1]],[park.bbox[2],park.bbox[3]]],{padding:[20,20]});load();}
+function selectArea(key){park=parks[key]||parks.shattuck;trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();loaded=false;sync();map.fitBounds([[park.bbox[0],park.bbox[1]],[park.bbox[2],park.bbox[3]]],{padding:[20,20]});load();}
 const setStatus=s=>{if(root)root.textContent=s};
 const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const meters=(a,b)=>L.latLng(a[1],a[0]).distanceTo(L.latLng(b[1],b[0]));
@@ -27,7 +27,7 @@ function endpoint(coordinates,kind,label){
  record.kinds.add(kind);record.labels.add(label);endpoints.set(key,record);
 }
 function draw(data){
- trails.clearLayers();ends.clearLayers();endpoints.clear();
+ trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();
  let n=0;
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
@@ -42,7 +42,14 @@ function draw(data){
    const crossing=tags.footway==='crossing'||tags.crossing!=null;
    const street=/^(residential|service|living_street|unclassified|tertiary|secondary|primary)$/.test(highway);
    const paved=/^(asphalt|concrete|paving_stones|sett|cobblestone)$/.test(tags.surface||'');
-   if(sidewalk||crossing||street||highway==='pedestrian'||highway==='steps'||(highway==='footway'&&paved&&!tags.name))continue;
+   if(crossing){
+    // Show only mapped Winter Street crossings as distinct connectors, never as ordinary trails.
+    // This is a candidate until matched to the brochure's exact crossing location.
+    const winter=(tags.name||'').toLowerCase().includes('winter')||(tags['addr:street']||'').toLowerCase().includes('winter');
+    if(winter){L.polyline(element.geometry.map(p=>[p.lat,p.lon]),{color:'#f59e0b',weight:6,dashArray:'7 7'}).bindPopup('Candidate Winter Street crossing — confirm location against Town trail brochure').addTo(crossings);}
+    continue;
+   }
+   if(sidewalk||street||highway==='pedestrian'||highway==='steps'||(highway==='footway'&&paved&&!tags.name))continue;
   }
   const coords=element.geometry.map(p=>[p.lon,p.lat]);
   const length=coords.slice(1).reduce((sum,p,i)=>sum+meters(coords[i],p),0);
@@ -59,7 +66,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Sidewalks and street crossings are excluded from the overlay. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
+ if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Sidewalks are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
  else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
