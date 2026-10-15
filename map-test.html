@@ -88,7 +88,16 @@
 </div>
 <p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup; Norwood.ma does not currently display a school-boundary polygon overlay.</p>
 </details>
-<section class="boundary-panel" style="padding:14px;margin-top:12px" aria-label="Trail reconstruction status"><strong>Norwood trails — cartographic reconstruction</strong><p style="margin:6px 0;font-size:.85rem">This is an experimental map, not a trail navigation guide. Trail routes will be added from geographically checked GIS/OpenStreetMap data and the Town trail brochures, with uncertainty identified. No manual tracing is required from visitors.</p><a href="https://drive.google.com/file/d/1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw/view" target="_blank" rel="noopener">Shattuck Park source brochure ↗</a></section>
+<section class="boundary-panel" style="padding:14px;margin-top:12px" aria-label="Shattuck Park trail mapping">
+<strong>Shattuck Park — mapped walking paths (test)</strong>
+<p style="margin:6px 0;font-size:.83rem">Green lines show actual OpenStreetMap path geometries where available. Blue dots identify mapped segment endpoints and gold dots identify junctions; neither is a confirmed public trailhead. This is not yet a complete or verified Town trail network.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<label style="font-size:.9rem"><input id="trailLayerToggle" type="checkbox" checked> Show mapped paths</label>
+<button type="button" id="trailLayerFocus" class="map-locate-button">Zoom to Shattuck Park</button>
+<a href="https://drive.google.com/file/d/1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw/view" target="_blank" rel="noopener">Town trail brochure ↗</a>
+</div>
+<p id="trailLayerStatus" role="status" style="font-size:.8rem">Initializing trail data…</p>
+</section>
 <div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of sample Norwood locations"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div></aside>
@@ -109,5 +118,6 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="map-test.js?v=0.9"></script>
+<script src="trail-layer.js?v=0.1"></script>
 </body>
 </html>
