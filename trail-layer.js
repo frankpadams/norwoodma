@@ -9,10 +9,10 @@ const trails=L.featureGroup(),ends=L.featureGroup();
 const isShown=()=>Boolean(checkbox?.checked);
 const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends)}};
 sync();
-const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook',center:[42.1988,-71.2224],bbox:[42.1965,-71.226,42.2012,-71.2185]}};
+const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook — extended corridor',center:[42.1988,-71.2175],bbox:[42.1915,-71.232,42.206,-71.199]}};
 let park=parks.shattuck;
 const trailArea=document.getElementById('trailAreaSelect');
-function selectArea(key){park=parks[key]||parks.shattuck;trails.clearLayers();ends.clearLayers();endpoints.clear();loaded=false;sync();map.setView(park.center,16);load();}
+function selectArea(key){park=parks[key]||parks.shattuck;trails.clearLayers();ends.clearLayers();endpoints.clear();loaded=false;sync();map.fitBounds([[park.bbox[0],park.bbox[1]],[park.bbox[2],park.bbox[3]]],{padding:[20,20]});load();}
 const setStatus=s=>{if(root)root.textContent=s};
 const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const meters=(a,b)=>L.latLng(a[1],a[0]).distanceTo(L.latLng(b[1],b[0]));
@@ -49,7 +49,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(n+' highlighted path segments loaded. Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
+ if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. This wider corridor is for comparison, not a verified single continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
  else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
@@ -89,13 +89,13 @@ async function load(){
  loading=false;
  setStatus('Trail overlay FAILED to load. No green lines were added. OpenStreetMap paths in the background are not our overlay. Errors: '+requestErrors.join(' | '));
 }
-window.addEventListener('norwood:show-trails',()=>{if(checkbox)checkbox.checked=true;sync();if(!loaded)load();map.setView(park.center,17);});
+window.addEventListener('norwood:show-trails',()=>{if(checkbox)checkbox.checked=true;sync();if(!loaded)load();map.fitBounds([[park.bbox[0],park.bbox[1]],[park.bbox[2],park.bbox[3]]],{padding:[20,20]});});
 checkbox?.addEventListener('change',()=>{
  sync();
  if(checkbox.checked){if(!loaded)load();else setStatus('Lime-green overlay ON — uncheck to compare with the background paths.');}
  else{setStatus('Lime-green overlay OFF — only background OpenStreetMap paths are visible.')}
 });
-focus?.addEventListener('click',()=>map.setView(park.center,17));
+focus?.addEventListener('click',()=>map.fitBounds([[park.bbox[0],park.bbox[1]],[park.bbox[2],park.bbox[3]]],{padding:[20,20]}));
 trailArea?.addEventListener('change',()=>selectArea(trailArea.value));
 if(new URLSearchParams(location.search).get('trail')==='germany'&&trailArea){trailArea.value='germany';park=parks.germany;}
 if(checkbox?.checked)load();
