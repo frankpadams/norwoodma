@@ -2124,6 +2124,43 @@
     ]
   },
   {
+    "id": "2026-10-17-norwood-bolts-vs-newton-g-hot-shots-9baec70",
+    "title": "Norwood Bolts vs Newton G Hot Shots",
+    "start": {
+      "date": "2026-10-17",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-10-17",
+      "time": null
+    },
+    "venue": "Coakley Turf Field 14",
+    "field": "Coakley Turf Field 14",
+    "grade": "Girls Grade 8",
+    "gender": "girls",
+    "team": "Norwood Bolts",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-8",
+      "nys-team-girls-grade-8-norwood-bolts"
+    ]
+  },
+  {
     "id": "2026-10-17-norwood-food-pantry-food-assistance-34f5178",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -2394,43 +2431,6 @@
     "notes": "OUT OF TOWN — Wrentham, MA. Listed on Norfolk County Halloween Happenings flyer; confirm details with organizer before attending. Organizer event link and admission not independently verified.",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-17-norwood-bolts-vs-newton-g-hot-shots-9baec70",
-    "title": "Norwood Bolts vs Newton G Hot Shots",
-    "start": {
-      "date": "2026-10-17",
-      "time": "10:30"
-    },
-    "end": {
-      "date": "2026-10-17",
-      "time": null
-    },
-    "venue": "-",
-    "field": "-",
-    "grade": "Girls Grade 8",
-    "gender": "girls",
-    "team": "Norwood Bolts",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-8",
-      "nys-team-girls-grade-8-norwood-bolts"
     ]
   },
   {
@@ -7465,6 +7465,38 @@
     "calendar_ids": [
       "library-calendar",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-22-teen-anime-club-9d9aa2d",
+    "title": "Teen Anime Club",
+    "start": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "00:00"
+    },
+    "venue": "Morrill Memorial Library",
+    "address": null,
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-club-37/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "teen anime club",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -13009,6 +13041,35 @@
     ]
   },
   {
+    "id": "2026-10-27-board-of-selectmen-meeting-eac323b",
+    "title": "Board of Selectmen Meeting",
+    "start": {
+      "date": "2026-10-27",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-10-27",
+      "time": "19:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
+    ]
+  },
+  {
     "id": "2026-10-27-musical-bingo-9093fc1",
     "title": "Musical Bingo",
     "start": {
@@ -16093,6 +16154,43 @@
     ]
   },
   {
+    "id": "2026-10-31-norwood-bolts-vs-marlboro-panthers-dupont-5c3819a",
+    "title": "Norwood Bolts vs Marlboro Panthers Dupont",
+    "start": {
+      "date": "2026-10-31",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": "Coakley Turf Field 14",
+    "field": "Coakley Turf Field 14",
+    "grade": "Girls Grade 8",
+    "gender": "girls",
+    "team": "Norwood Bolts",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-8",
+      "nys-team-girls-grade-8-norwood-bolts"
+    ]
+  },
+  {
     "id": "2026-10-31-norwood-food-pantry-food-assistance-7379ab8",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -16344,43 +16442,6 @@
       "rec-all",
       "rec-youth",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-10-31-norwood-bolts-vs-marlboro-panthers-dupont-5c3819a",
-    "title": "Norwood Bolts vs Marlboro Panthers Dupont",
-    "start": {
-      "date": "2026-10-31",
-      "time": "10:30"
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "-",
-    "field": "-",
-    "grade": "Girls Grade 8",
-    "gender": "girls",
-    "team": "Norwood Bolts",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-8",
-      "nys-team-girls-grade-8-norwood-bolts"
     ]
   },
   {
@@ -22358,6 +22419,35 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-10-board-of-selectmen-meeting-83e4bf4",
+    "title": "Board of Selectmen Meeting",
+    "start": {
+      "date": "2026-11-10",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-11-10",
+      "time": "19:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
     ]
   },
   {
@@ -35961,6 +36051,35 @@
     ]
   },
   {
+    "id": "2026-12-08-board-of-selectmen-meeting-5e7c219",
+    "title": "Board of Selectmen Meeting",
+    "start": {
+      "date": "2026-12-08",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-12-08",
+      "time": "19:00"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-19c4fc7a167a-2026-12-08",
     "title": "Fit for You",
     "start": {
@@ -40113,40 +40232,6 @@
     ]
   },
   {
-    "id": "2026-12-16-tvl-boys-varsity-ice-hockey-hopkinton-high-sc-02513d5",
-    "title": "TVL Boys Varsity Ice Hockey @ Hopkinton High School",
-    "start": {
-      "date": "2026-12-16",
-      "time": "00:01"
-    },
-    "end": {
-      "date": "2026-12-16",
-      "time": "00:01"
-    },
-    "venue": "121 Donald Lynch Boulevard, Marlborough Massachusetts 01752",
-    "address": "121 Donald Lynch Boulevard, Marlborough Massachusetts 01752",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Hockey",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Hockey",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Ice Hockey Level: TVL Boys Varsity Team: Norwood High School Site: New England Sports Center (Marlboro) Subsite: NESC Rink 1",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-12-16-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -40957,6 +41042,40 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-12-16-tvl-boys-varsity-ice-hockey-hopkinton-high-sc-02513d5",
+    "title": "TVL Boys Varsity Ice Hockey @ Hopkinton High School",
+    "start": {
+      "date": "2026-12-16",
+      "time": "20:10"
+    },
+    "end": {
+      "date": "2026-12-16",
+      "time": "20:40"
+    },
+    "venue": "121 Donald Lynch Boulevard, Marlborough Massachusetts 01752",
+    "address": "121 Donald Lynch Boulevard, Marlborough Massachusetts 01752",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Hockey",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Ice Hockey Level: TVL Boys Varsity Team: Norwood High School Site: New England Sports Center (Marlboro) Subsite: NESC Rink 1",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -42099,6 +42218,40 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2026-12-18-varsity-girls-swimming-1-norton-high-school-9d45f53",
+    "title": "Varsity Girls Swimming 1 @ Norton High School",
+    "start": {
+      "date": "2026-12-18",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-18",
+      "time": "21:00"
+    },
+    "venue": "Clark Recreation Dr., Norton MA 02766",
+    "address": "Clark Recreation Dr., Norton MA 02766",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Swimming",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Swimming",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Swimming 1 Level: Varsity Girls Team: Medfield / Norwood Site: Wheaton College Subsite: Swimming Pool",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-family",
       "norwood-high-athletics",
       "norwood-sports",
@@ -51467,6 +51620,42 @@
     ]
   },
   {
+    "id": "2027-01-08-sr-district-festival-806eb7a",
+    "title": "Sr. District Festival",
+    "start": {
+      "date": "2027-01-08",
+      "time": null
+    },
+    "end": {
+      "date": "2027-01-08",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:35:30",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad2c3da06aee-2027-01-09",
     "title": "Dance and Play - Saturdays",
     "start": {
@@ -51783,6 +51972,42 @@
     "discovered_by": "scheduled_recurring_series",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2027-01-09-sr-district-festival-96e1614",
+    "title": "Sr. District Festival",
+    "start": {
+      "date": "2027-01-09",
+      "time": null
+    },
+    "end": {
+      "date": "2027-01-09",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:35:21",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -66891,6 +67116,42 @@
     ]
   },
   {
+    "id": "2027-02-10-paul-m-alberta-norwood-jazz-classic-34ef51f",
+    "title": "Paul M. Alberta Norwood Jazz Classic",
+    "start": {
+      "date": "2027-02-10",
+      "time": null
+    },
+    "end": {
+      "date": "2027-02-10",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Afternoon & evening at NHS",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:36:41",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2027-02-11-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -70801,6 +71062,42 @@
     ]
   },
   {
+    "id": "2027-02-23-maje-jazz-festival-off-site-32fa07a",
+    "title": "MAJE Jazz Festival (Off site)",
+    "start": {
+      "date": "2027-02-23",
+      "time": null
+    },
+    "end": {
+      "date": "2027-02-23",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:37:29",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "2027-02-24-isu-figure-skating-junior-world-championships-f2dbf85",
     "title": "ISU Figure Skating Junior World Championships – Sofia / BUL",
     "start": {
@@ -73003,6 +73300,42 @@
     ]
   },
   {
+    "id": "2027-03-02-maje-festival-off-site-b1ee628",
+    "title": "MAJE Festival (Off site)",
+    "start": {
+      "date": "2027-03-02",
+      "time": null
+    },
+    "end": {
+      "date": "2027-03-02",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:50:50",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-151098b0a2e1-2027-03-03",
     "title": "Pre-School Prep Session 23",
     "start": {
@@ -74064,6 +74397,42 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-03-05-jr-district-festival-0043393",
+    "title": "Jr. District Festival",
+    "start": {
+      "date": "2027-03-05",
+      "time": null
+    },
+    "end": {
+      "date": "2027-03-05",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:51:34",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -89658,7 +90027,7 @@
     "series": "Norwood Boys Freshman Baseball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: baseball Level: 9th Team: Norwood High School Site: Bellingham Memorial School Subsite: MS Gym",
+    "notes": "Sport: baseball Level: 9th Team: Norwood High School Site: Bellingham Memorial School Subsite: MS Baseball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -92462,6 +92831,43 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-18-elemetary-band-and-orchestra-concert-6d2b552",
+    "title": "Elemetary Band and Orchestra Concert",
+    "start": {
+      "date": "2027-05-18",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-05-18",
+      "time": null
+    },
+    "venue": "Norwood High School",
+    "address": null,
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
+    "cost": null,
+    "public_access": "public",
+    "series": "PMA / Fine Arts",
+    "publish_candidate": true,
+    "verification_status": "pma_public_website_api",
+    "notes": "Confirmed · Strings at 6pm; Band at 7:30pm",
+    "discovered_by": "pma_website_calendar_api",
+    "status": "confirmed",
+    "schedule_group": null,
+    "report_time": null,
+    "source_updated_at": "2026-10-15 12:59:13",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "published on PMA public Events page",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family",
+      "pma-fine-arts"
     ]
   },
   {

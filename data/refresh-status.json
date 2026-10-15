@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-10-15T07:44:37.172578-04:00",
+  "generated_at": "2026-10-15T13:13:33.293507-04:00",
   "offline": false,
-  "events_published": 2672,
+  "events_published": 2684,
   "news_published": 120,
-  "civic_notices": 47,
+  "civic_notices": 50,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2672,
-      "generated_at": "2026-10-15T07:44:36.725974-04:00"
+      "events": 2684,
+      "generated_at": "2026-10-15T13:13:32.617334-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 136,
-      "generated_at": "2026-10-15T07:44:36.738410-04:00"
+      "events": 143,
+      "generated_at": "2026-10-15T13:13:32.628908-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1037,
-      "generated_at": "2026-10-15T07:44:36.763966-04:00"
+      "events": 1040,
+      "generated_at": "2026-10-15T13:13:32.651098-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 899,
-      "generated_at": "2026-10-15T07:44:36.785460-04:00"
+      "events": 900,
+      "generated_at": "2026-10-15T13:13:32.669757-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-15T07:44:36.797042-04:00"
+      "generated_at": "2026-10-15T13:13:32.679765-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 73,
-      "generated_at": "2026-10-15T07:44:36.810356-04:00"
+      "generated_at": "2026-10-15T13:13:32.690992-04:00"
     }
   ],
   "recreation_programs": 154,
@@ -106,12 +106,13 @@
     },
     {
       "source_id": "community-event-submissions",
-      "ok": true,
+      "ok": false,
       "method": "community_submission_json",
-      "found": 6,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='script.google.com', port=443): Read timed out. (read timeout=18)",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 18
     },
     {
       "source_id": "elks-calendar",
@@ -210,9 +211,9 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 1,
+      "found": 0,
       "note": null,
-      "outcome": "events",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -281,7 +282,7 @@
       "source_id": "library-assabet-calendar",
       "ok": true,
       "method": "assabet_calendar",
-      "found": 102,
+      "found": 103,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -290,7 +291,7 @@
       "source_id": "library-cfce",
       "ok": true,
       "method": "assabet_filtered_calendar",
-      "found": 102,
+      "found": 103,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -913,7 +914,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
       "ok": true,
       "method": "ical",
-      "found": 6,
+      "found": 7,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1136,7 +1137,7 @@
       "source_id": "nps-pma",
       "ok": true,
       "method": "pma_calendar_hub",
-      "found": 33,
+      "found": 42,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1179,12 +1180,13 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
-      "found": 4,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "parser_gap",
+      "access_limited": false,
+      "retained_events": 4
     },
     {
       "source_id": "pcrinc-events",
@@ -1585,9 +1587,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -1617,7 +1620,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 37,
+      "found": 43,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1625,7 +1628,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1647,7 +1650,7 @@
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
       "ok": true,
-      "found": 11,
+      "found": 12,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -1693,12 +1696,12 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Town of Norwood": 9,
         "Hoodline": 2,
         "Colliers": 1,
         "The Norwood Record": 39,
         "The Norwood Record — Latest": 20,
-        "Town of Norwood": 8,
-        "Inside Norwood": 9,
+        "Inside Norwood": 8,
         "Patch": 5,
         "Norwood Public Schools": 2,
         "Norwood Town News": 19,
