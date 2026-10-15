@@ -422,7 +422,7 @@ function openTempleBethDavidDetails(id){
    (times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+
    (e.venue?'<p><strong>Location:</strong> '+esc(e.venue)+'</p>':'')+
    (e.notes?'<p>'+esc(e.notes)+'</p>':'')+
-   (links.length?'<div class="event-popup-websites">'+links.map(l=>'<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' ↗</a>').join('')+'</div>':'')+'</section>';
+   (links.length?'<div class="event-popup-websites">'+links.map(l=>'<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' ↗</a>').join('')+'</div>':'')+eventPopupSharedActions(e)+'</section>';
  }).join('');
  dlg.showModal();return true;
 }
@@ -532,6 +532,19 @@ function eventExternalLinks(e){
  return out;
 }
 function brandIcon(src,alt){return '<img class="event-brand-icon" src="'+src+'" alt="'+alt+'">';}
+function eventPopupSharedActions(e, options={}){
+ const q=eventMapQuery(e), links=eventExternalLinks(e);
+ const maps=q?'<div class="event-popup-actions"><strong>Directions:</strong><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'" target="_blank" rel="noopener">Google Maps</a><a href="https://maps.apple.com/?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener">Apple Maps</a></div>':'';
+ const hasDate=!!e.start?.date;
+ const calendars=hasDate?'<div class="event-popup-actions"><strong>Add to Calendar:</strong><a href="'+esc(googleCalendarUrl(e))+'" target="_blank" rel="noopener">Google Calendar</a><a href="'+esc(appleCalendarHref(e))+'" download="norwood-event.ics">Apple / Outlook (.ics)</a></div>':'';
+ const eventUrl=new URL('events.html',location.href);eventUrl.searchParams.set(options.rec?'rec':'event',String(e.id||''));
+ const shareUrl=eventUrl.href, shareTitle=(e.title||'Norwood event')+' — Norwood.ma';
+ const sharing='<div class="event-popup-actions"><strong>Share event:</strong><button type="button" data-share-event="'+esc(shareUrl)+'" data-share-title="'+esc(shareTitle)+'">Share / more apps</button><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(shareUrl)+'" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text='+encodeURIComponent(shareTitle)+'&url='+encodeURIComponent(shareUrl)+'" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(shareUrl)+'" target="_blank" rel="noopener">LinkedIn</a><a href="https://wa.me/?text='+encodeURIComponent(shareTitle+' '+shareUrl)+'" target="_blank" rel="noopener">WhatsApp</a><button type="button" data-copy-event="'+esc(shareUrl)+'">Copy link</button></div>';
+ const websites=links.length?'<div class="event-popup-websites"><strong>More information:</strong>'+links.map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join('')+'</div>':'';
+ const cost=e.cost||e.fees;
+ const costNote='<p class="event-popup-notes"><strong>'+(cost?(/free|no charge/i.test(String(cost))?'Cost: ':'Reported cost (confirm with organizer): ')+esc(cost):'Cost not confirmed — check with organizer')+'</strong></p>';
+ return maps+calendars+websites+sharing+costNote+'<p class="event-popup-notes">Please let the event host or organizer know you found this event on Norwood.ma</p>';
+}
 function openEventDetails(id){
  if(openTempleBethDavidDetails(id))return;
  const e=allEventsForPage.find(x=>String(x.id||'')===String(id||'')),dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!e||!dlg||!box)return;
@@ -547,7 +560,7 @@ function openEventDetails(id){
  const referral='<p class="event-popup-notes"><strong>'+costLabel+'</strong></p><p class="event-popup-notes">Please let the event host or organizer know you found this event on Norwood.ma</p>';
  const athleticsId=String(e.source_id||'').toLowerCase(),isNhsAthletics=athleticsId==='nps-athletics'||athleticsId==='norwood-high-athletics'||athleticsId.startsWith('nps-athletics-arbiter-');
  const athleticsNote=isNhsAthletics?'<p class="event-popup-notes event-athletics-note"><strong>Athletics calendar:</strong> Home varsity games are included on the default community calendar. Select the NPS Athletics calendar to also see away games and practices.</p>':'';
- box.innerHTML=(img?'<img class="event-popup-thumb" src="'+esc(img)+'" alt="" loading="lazy">':'')+'<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><div class="event-popup-facts"><p><strong>Date:</strong> '+esc(eventDateLabel(e))+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Location:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+'</div>'+((eventTitleContext(e)||e.notes)?'<p class="event-popup-notes">'+esc([eventTitleContext(e),e.notes].filter(Boolean).join(' ')).replace(/\n\n/g,'</p><p class="event-popup-notes">').replace(/\n/g,'<br>')+'</p>':'')+maps+calendars+websites+athleticsNote;
+ box.innerHTML=(img?'<img class="event-popup-thumb" src="'+esc(img)+'" alt="" loading="lazy">':'')+'<p class="eyebrow">Event details</p><h2 id="eventDetailsTitle">'+esc(e.title)+'</h2><div class="event-popup-facts"><p><strong>Date:</strong> '+esc(eventDateLabel(e))+'</p>'+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(where?'<p><strong>Location:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.cost?'<p><strong>Admission:</strong> '+esc(e.cost)+'</p>':'')+'</div>'+((eventTitleContext(e)||e.notes)?'<p class="event-popup-notes">'+esc([eventTitleContext(e),e.notes].filter(Boolean).join(' ')).replace(/\n\n/g,'</p><p class="event-popup-notes">').replace(/\n/g,'<br>')+'</p>':'')+eventPopupSharedActions(e)+athleticsNote;
  dlg.showModal();
 }
 function openRecreationProgramDetails(id){
