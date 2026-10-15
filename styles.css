@@ -369,3 +369,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .event-popup-more .event-popup-websites{margin-top:8px}
 .event-popup-more .event-popup-notes{font-size:.88rem;color:#526777;font-weight:400}
 @media(max-width:600px){.event-details-dialog{width:96vw;max-height:90dvh}.event-details-dialog #eventDetailsContent{padding:18px 16px 22px}.event-popup-quick-actions{gap:5px}.event-action-menu>summary{font-size:.78rem;padding:8px 4px}.event-action-menu .event-popup-actions>a,.event-action-menu .event-popup-actions>button{flex:1 1 auto}}
+
+/* Keep source links and the community referral visible below expandable details. */
+.event-details-dialog .event-popup-websites{margin:12px 0 8px;gap:8px}
+.event-details-dialog .event-popup-websites strong{font-size:.88rem}
+.event-details-dialog .event-popup-referral{margin:15px 0 0;padding-top:12px;border-top:1px solid #e2e9ee;color:#526777;font-size:.84rem;line-height:1.45}
