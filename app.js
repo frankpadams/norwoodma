@@ -550,7 +550,7 @@ function eventPopupSharedActions(e, options={}){
  const websites=links.length?'<div class="event-popup-websites"><strong>More information:</strong>'+links.map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join('')+'</div>':'';
  const cost=e.cost||e.fees;
  const costNote='<p class="event-popup-notes"><strong>'+(cost?(/free|no charge/i.test(String(cost))?'Cost: ':'Reported cost (confirm with organizer): ')+esc(cost):'Cost not confirmed — check with organizer')+'</strong></p>';
- return '<div class="event-popup-quick-actions">'+(hasDate?'<details class="event-action-menu"><summary>＋ Add to Calendar</summary>'+calendars+'</details>':'')+'<details class="event-action-menu"><summary>↗ Share</summary>'+sharing+'</details>'+(q?'<details class="event-action-menu"><summary>⌖ Directions</summary>'+maps+'</details>':'')+'</div>'+'<details class="event-popup-more"><summary>More event information</summary>'+websites+costNote+'<p class="event-popup-notes">Please let the event host or organizer know you found this event on Norwood.ma</p></details>';
+ return '<div class="event-popup-quick-actions">'+(hasDate?'<details class="event-action-menu"><summary>＋ Add to Calendar</summary>'+calendars+'</details>':'')+'<details class="event-action-menu"><summary>↗ Share</summary>'+sharing+'</details>'+(q?'<details class="event-action-menu"><summary>⌖ Directions</summary>'+maps+'</details>':'')+'</div>'+websites+'<details class="event-popup-more"><summary>More event information</summary>'+costNote+'</details>'+'<p class="event-popup-referral">Please let the event host or organizer know you found this event on Norwood.ma</p>';
 }
 function openEventDetails(id){
  if(openTempleBethDavidDetails(id))return;
