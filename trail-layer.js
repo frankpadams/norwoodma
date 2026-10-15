@@ -55,8 +55,25 @@ async function load(){
  setStatus('Loading mapped Shattuck Park footpaths…');
  const [s,w,n,e]=park.bbox;
  const query='[out:json][timeout:25];way["highway"~"^(path|footway|steps|pedestrian)$"]('+[s,w,n,e].join(',')+');out geom;';
+ // First try the primary OSM API directly; unlike Overpass it does not require a query interpreter.
+ try{
+  const api='https://api.openstreetmap.org/api/0.6/map?bbox='+[w,s,e,n].join(',');
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+  let response;
+  try{response=await fetch(api,{signal:controller.signal})}finally{clearTimeout(timer)}
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const xml=new DOMParser().parseFromString(await response.text(),'application/xml');
+  if(xml.querySelector('parsererror'))throw Error('Invalid OSM XML');
+  const nodes=new Map([...xml.querySelectorAll('node[id]')].map(node=>[node.getAttribute('id'),{lat:Number(node.getAttribute('lat')),lon:Number(node.getAttribute('lon'))}]));
+  const elements=[...xml.querySelectorAll('way')].map(way=>{
+   const tags=Object.fromEntries([...way.querySelectorAll('tag')].map(t=>[t.getAttribute('k'),t.getAttribute('v')]));
+   const geometry=[...way.querySelectorAll('nd')].map(nd=>nodes.get(nd.getAttribute('ref'))).filter(Boolean);
+   return {type:'way',id:way.getAttribute('id'),tags,geometry};
+  });
+  if(elements.some(x=>/^(path|footway|steps|pedestrian)$/.test(x.tags.highway||''))){draw({elements});loading=false;return;}
+  requestErrors.push('OSM API: no mapped footpaths in area');
+ }catch(err){requestErrors.push('OSM API: '+String(err?.message||err));}
  const hosts=['https://overpass.private.coffee/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://overpass-api.de/api/interpreter'];
- requestErrors=[];
  for(const host of hosts){
   try{
    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
