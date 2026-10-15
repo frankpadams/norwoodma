@@ -15,6 +15,7 @@ const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const meters=(a,b)=>L.latLng(a[1],a[0]).distanceTo(L.latLng(b[1],b[0]));
 const endpoints=new Map();
 let loading=false;
+let requestErrors=[];
 let loaded=false;
 function endpoint(coordinates,kind,label){
  const c=kind==='start'?coordinates[0]:coordinates[coordinates.length-1];
@@ -54,7 +55,8 @@ async function load(){
  setStatus('Loading mapped Shattuck Park footpaths…');
  const [s,w,n,e]=park.bbox;
  const query='[out:json][timeout:25];way["highway"~"^(path|footway|steps|pedestrian)$"]('+[s,w,n,e].join(',')+');out geom;';
- const hosts=['https://overpass.kumi.systems/api/interpreter','https://overpass.nchc.org.tw/api/interpreter','https://overpass-api.de/api/interpreter'];
+ const hosts=['https://overpass.private.coffee/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://overpass-api.de/api/interpreter'];
+ requestErrors=[];
  for(const host of hosts){
   try{
    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
@@ -62,10 +64,10 @@ async function load(){
    try{response=await fetch(host+'?data='+encodeURIComponent(query),{signal:controller.signal})}finally{clearTimeout(timer)}
    if(!response.ok)throw Error(response.status);
    const data=await response.json();draw(data);loading=false;return;
-  }catch(err){/* Try another public read-only OSM mirror. */}
+  }catch(err){requestErrors.push(host.split('/')[2]+': '+String(err?.message||err));}
  }
  loading=false;
- setStatus('Could not load trail overlay from OpenStreetMap. Background paths are still visible, but there are no highlighted Norwood.ma lines to compare.');
+ setStatus('Trail overlay FAILED to load. No green lines were added. OpenStreetMap paths in the background are not our overlay. Errors: '+requestErrors.join(' | '));
 }
 window.addEventListener('norwood:show-trails',()=>{if(checkbox)checkbox.checked=true;sync();if(!loaded)load();map.setView(park.center,17);});
 checkbox?.addEventListener('change',()=>{
