@@ -58,6 +58,7 @@ async function load(){
  }
  setStatus('Live OpenStreetMap trail data is temporarily unavailable. No unverified trail lines are shown.');
 }
+window.addEventListener('norwood:show-trails',()=>{if(checkbox){checkbox.checked=true;map.addLayer(trails);map.addLayer(ends);if(!loaded)load();}map.setView(park.center,17);});
 checkbox?.addEventListener('change',()=>{
  if(checkbox.checked){map.addLayer(trails);map.addLayer(ends);if(!loaded)load()}
  else{map.removeLayer(trails);map.removeLayer(ends);setStatus('Trail layer hidden.')}
