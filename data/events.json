@@ -1357,43 +1357,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-f779c5e21a69-2026-10-16",
-    "title": "Apples, Apples, and More Apples!",
-    "start": {
-      "date": "2026-10-16",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-10-16",
-      "time": "10:15"
-    },
-    "venue": "10/16/2026 09:15 AM - 10:15 AM Senior Center 275 Prospect Street Norwood, MA",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30919",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30919",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$10.00 Res, $10.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-16",
-    "session_end": "2026-10-16",
-    "days": "F",
-    "notes": "Enjoy a morning with our senior friends as we listen to a story, make a craft and make a yummy treat to take home. Registration required - cost is per family. Program takes place at the Senior Center - 275 Prospect Ave.",
-    "rec_program_id": "rec-f779c5e21a69",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2026-10-16",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -5142,6 +5105,32 @@
     "calendar_ids": [
       "town-meetings"
     ]
+  },
+  {
+    "id": "2026-10-19-planning-board-meeting-canceled-5a4e791",
+    "title": "Planning Board Meeting (Canceled)",
+    "start": {
+      "date": "2026-10-19",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-19",
+      "time": null
+    },
+    "venue": "275 Prospect Street, Norwood MA",
+    "address": null,
+    "category": "government",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
+    "calendar_ids": []
   },
   {
     "id": "2026-10-20-anti-racism-book-club-i-know-why-the-caged-bi-e9c1981",
@@ -49495,76 +49484,6 @@
     ]
   },
   {
-    "id": "2027-01-06-boys-varsity-track-field-indoor-vs-hopkinton--5d270bd",
-    "title": "Boys Varsity Track & Field - Indoor vs Hopkinton High School",
-    "start": {
-      "date": "2027-01-06",
-      "time": "00:01"
-    },
-    "end": {
-      "date": "2027-01-06",
-      "time": "00:01"
-    },
-    "venue": "211 South Street, Waltham MA 02453",
-    "address": "211 South Street, Waltham MA 02453",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-indoor-track",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Indoor Track & Field",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Indoor Track & Field",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Track & Field - Indoor Level: Boys Varsity Team: Norwood High School Site: Brandeis University Subsite: Gosman Sports and Convocation Center",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2027-01-06-girls-varsity-track-field-indoor-vs-hopkinton-6cd0848",
-    "title": "Girls Varsity Track & Field - Indoor vs Hopkinton High School",
-    "start": {
-      "date": "2027-01-06",
-      "time": "00:01"
-    },
-    "end": {
-      "date": "2027-01-06",
-      "time": "00:01"
-    },
-    "venue": "211 South Street, Waltham MA 02453",
-    "address": "211 South Street, Waltham MA 02453",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-indoor-track",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Indoor Track & Field",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Indoor Track & Field",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Track & Field - Indoor Level: Girls Varsity Team: Norwood High School Site: Brandeis University Subsite: Gosman Sports and Convocation Center",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-01-06-tvl-girls-varsity-ice-hockey-dedham-ds-norton-ef2baff",
     "title": "TVL Girls Varsity Ice Hockey @ Dedham/DS/Norton Co-op",
     "start": {
@@ -50036,6 +49955,76 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-01-06-boys-varsity-track-field-indoor-vs-hopkinton--5d270bd",
+    "title": "Boys Varsity Track & Field - Indoor vs Hopkinton High School",
+    "start": {
+      "date": "2027-01-06",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-01-06",
+      "time": "17:30"
+    },
+    "venue": "211 South Street, Waltham MA 02453",
+    "address": "211 South Street, Waltham MA 02453",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-indoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Indoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Indoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Track & Field - Indoor Level: Boys Varsity Team: Norwood High School Site: Brandeis University Subsite: Gosman Sports and Convocation Center",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-01-06-girls-varsity-track-field-indoor-vs-hopkinton-6cd0848",
+    "title": "Girls Varsity Track & Field - Indoor vs Hopkinton High School",
+    "start": {
+      "date": "2027-01-06",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-01-06",
+      "time": "17:30"
+    },
+    "venue": "211 South Street, Waltham MA 02453",
+    "address": "211 South Street, Waltham MA 02453",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-indoor-track",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Indoor Track & Field",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Indoor Track & Field",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Track & Field - Indoor Level: Girls Varsity Team: Norwood High School Site: Brandeis University Subsite: Gosman Sports and Convocation Center",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
