@@ -122,7 +122,7 @@ function germanyConnectedWays(elements,cemeteries){
  // Only short, contiguous off-road links are automatically extended; this avoids
  // pulling in entire neighborhood footpath networks or speculative road crossings.
  let frontier=valid.filter(w=>selected.has(String(w.id)));
- for(let depth=0;depth<3;depth++){
+ for(let depth=0;depth<10;depth++){
   const next=[];
   for(const w of frontier)for(const p of [w.geometry[0],w.geometry[w.geometry.length-1]])
    for(const candidate of connections.get(nodeKey(p))||[]){
@@ -130,7 +130,7 @@ function germanyConnectedWays(elements,cemeteries){
     if(selected.has(id))continue;
     const coords=candidate.geometry.map(v=>[v.lon,v.lat]);
     const length=coords.slice(1).reduce((total,v,i)=>total+meters(coords[i],v),0);
-    if(length>220)continue;
+    if(length>350)continue;
     selected.add(id);next.push(candidate);
    }
   frontier=next;
@@ -194,7 +194,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(park===parks.germany?n+' named or directly connected off-road OpenStreetMap trail segments shown. Short mapped pedestrian crossings connected to the trail are displayed in amber; verify Winter Street alignment against the Town brochure.':n+' mapped walking path segments loaded in '+park.name+'.');}
+ if(n){loaded=true;setStatus(park===parks.germany?n+' named or directly connected off-road OpenStreetMap trail segments shown. Short mapped pedestrian crossings connected to the trail are displayed in amber. The longer connected-path search may include branches; verify the Winter Street–Hawthorne Street–Savage Center route against the Town brochure.':n+' mapped walking path segments loaded in '+park.name+'.');}
  else setStatus(park===parks.germany?'Germany Brook: broad candidate paths are hidden until their geometry is matched to the Town brochure. The background map remains available.':'No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
