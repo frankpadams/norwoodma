@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-14T19:22:03.002012-04:00",
+  "generated_at": "2026-10-14T20:34:30.572965-04:00",
   "offline": false,
-  "events_published": 2685,
+  "events_published": 2707,
   "news_published": 120,
   "civic_notices": 48,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2685,
-      "generated_at": "2026-10-14T19:22:02.409735-04:00"
+      "events": 2707,
+      "generated_at": "2026-10-14T20:34:29.896774-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 123,
-      "generated_at": "2026-10-14T19:22:02.419353-04:00"
+      "events": 139,
+      "generated_at": "2026-10-14T20:34:29.907858-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 1049,
-      "generated_at": "2026-10-14T19:22:02.439280-04:00"
+      "events": 1056,
+      "generated_at": "2026-10-14T20:34:29.930615-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 915,
-      "generated_at": "2026-10-14T19:22:02.456298-04:00"
+      "events": 916,
+      "generated_at": "2026-10-14T20:34:29.949011-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 7,
-      "generated_at": "2026-10-14T19:22:02.465447-04:00"
+      "generated_at": "2026-10-14T20:34:29.958868-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 75,
-      "generated_at": "2026-10-14T19:22:02.476001-04:00"
+      "generated_at": "2026-10-14T20:34:29.971395-04:00"
     }
   ],
   "recreation_programs": 154,
@@ -210,9 +210,9 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 1,
+      "found": 0,
       "note": null,
-      "outcome": "events",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -1179,12 +1179,13 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
-      "found": 4,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "parser_gap",
+      "access_limited": false,
+      "retained_events": 4
     },
     {
       "source_id": "pcrinc-events",
@@ -1585,9 +1586,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -1601,7 +1603,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 74,
+      "found": 73,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1611,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 74,
+      "found": 73,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
