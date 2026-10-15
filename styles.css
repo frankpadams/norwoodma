@@ -347,3 +347,25 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 #homeAdSlotSecondary[hidden]{display:none!important}
 .dashboard-grid .transit-preview>.ad-slot{margin-top:16px;width:100%;box-sizing:border-box}
+
+/* Compact, progressive-disclosure event details */
+.event-details-dialog{width:min(94vw,610px);max-height:min(88dvh,800px)}
+.event-details-dialog #eventDetailsContent{padding:22px 26px 26px}
+.event-details-dialog .eyebrow{font-size:.75rem;letter-spacing:.1em}
+.event-details-dialog h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:.3rem 34px .9rem 0}
+.event-popup-facts{display:grid;gap:4px;margin-bottom:14px}
+.event-popup-facts p{margin:2px 0}
+.event-popup-quick-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0 10px}
+.event-action-menu{min-width:0;position:relative}
+.event-action-menu>summary{list-style:none;display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:9px 8px;border-radius:11px;border:1px solid #cddce5;background:#f1f6fa;color:#12364d;font-weight:700;cursor:pointer;font-size:.9rem}
+.event-action-menu>summary::-webkit-details-marker,.event-popup-more>summary::-webkit-details-marker{display:none}
+.event-action-menu[open]{grid-column:1/-1}
+.event-action-menu[open]>summary{background:#123e5e;color:white}
+.event-action-menu .event-popup-actions{border:0;margin:4px 0 8px;padding:8px 0;gap:8px}
+.event-action-menu .event-popup-actions strong{display:none}
+.event-action-menu .event-popup-actions>a,.event-action-menu .event-popup-actions>button{font:inherit;font-weight:600;font-size:.88rem;color:#12364d;background:white;border:1px solid #d6e0e7;border-radius:9px;padding:9px 11px;cursor:pointer;min-height:40px}
+.event-popup-more{border-top:1px solid #e2e9ee;margin-top:12px;padding-top:12px}
+.event-popup-more>summary{cursor:pointer;color:#174969;font-weight:700;padding:6px 0}
+.event-popup-more .event-popup-websites{margin-top:8px}
+.event-popup-more .event-popup-notes{font-size:.88rem;color:#526777;font-weight:400}
+@media(max-width:600px){.event-details-dialog{width:96vw;max-height:90dvh}.event-details-dialog #eventDetailsContent{padding:18px 16px 22px}.event-popup-quick-actions{gap:5px}.event-action-menu>summary{font-size:.78rem;padding:8px 4px}.event-action-menu .event-popup-actions>a,.event-action-menu .event-popup-actions>button{flex:1 1 auto}}
