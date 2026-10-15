@@ -54,7 +54,8 @@ function draw(data){
    const roadlike=highway==='service'||highway==='track'||tags.service==='driveway'||tags.service==='parking_aisle'||tags.motor_vehicle==='yes'||tags.vehicle==='yes';
    const crossing=tags.footway==='crossing'||tags.crossing!=null;
    const street=/^(residential|service|living_street|unclassified|tertiary|secondary|primary)$/.test(highway);
-   const paved=/^(asphalt|concrete|paving_stones|sett|cobblestone)$/.test(tags.surface||'');
+   // Paved footways can be legitimate trail connectors, including by the playing fields.
+   // Do not discard them solely for being paved; explicit sidewalks remain excluded.
    if(crossing){
     // Show only mapped Winter Street crossings as distinct connectors, never as ordinary trails.
     // This is a candidate until matched to the brochure's exact crossing location.
@@ -62,7 +63,7 @@ function draw(data){
     if(winter){for(const part of clipToTown(element.geometry.map(p=>[p.lon,p.lat]))){L.polyline(part.map(([lon,lat])=>[lat,lon]),{color:'#f59e0b',weight:6,dashArray:'7 7'}).bindPopup('Candidate Winter Street crossing — confirm location against Town trail brochure').addTo(crossings);}}
     continue;
    }
-   if(sidewalk||street||cemetery||roadlike||highway==='pedestrian'||highway==='steps'||(highway==='footway'&&paved&&!tags.name))continue;
+   if(sidewalk||street||cemetery||roadlike||highway==='pedestrian'||highway==='steps')continue;
   }
   const coords=element.geometry.map(p=>[p.lon,p.lat]);
   const clipped=clipToTown(coords);
