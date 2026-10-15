@@ -10,7 +10,7 @@ const isShown=()=>Boolean(checkbox?.checked);
 const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map);crossings.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends);map.removeLayer(crossings)}};
 sync();
 const germanyVerifiedWayIds=new Set([]); // Populate only with OSM ways matched against the Town brochure.
-const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook — extended corridor',center:[42.1988,-71.2175],bbox:[42.1915,-71.232,42.206,-71.199]}};
+const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook — Town brochure trace',center:[42.1988,-71.2175],bbox:[42.1915,-71.232,42.206,-71.199]}};
 let park=parks.shattuck;
 const trailArea=document.getElementById('trailAreaSelect');
 function selectArea(key){park=parks[key]||parks.shattuck;trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();loaded=false;sync();map.fitBounds([[park.bbox[0],park.bbox[1]],[park.bbox[2],park.bbox[3]]],{padding:[20,20]});load();}
@@ -48,6 +48,39 @@ function touchesCemetery(coords,areas){
   }
   return false;
  });
+}
+// Hand-digitized from the March 2023 Town Germany Brook brochure (image pixel coordinates).
+// Georeferencing is preliminary; do not use for navigation. No OSM walking-way discovery.
+const brochureLines=[
+ {type:'Primary natural',pts:[[285,842],[316,823],[349,815],[379,834]]},
+ {type:'Primary natural',pts:[[316,823],[347,780],[380,725],[415,665],[397,622],[386,577],[394,528],[422,477],[461,433],[494,398],[520,372],[548,381]]},
+ {type:'Primary natural',pts:[[520,372],[555,320],[590,273],[621,235],[652,207],[697,196],[746,180],[790,166],[819,157],[856,174],[895,198],[935,205],[969,197],[999,217],[1027,251],[1054,272]]},
+ {type:'Primary asphalt',pts:[[1054,272],[1087,273],[1110,296],[1118,326],[1137,354]]},
+ {type:'Secondary natural',pts:[[1137,354],[1170,350],[1212,348],[1254,334],[1280,314]]},
+ {type:'Secondary natural',pts:[[1054,272],[1066,239],[1067,217],[1045,202]]},
+ {type:'Primary natural',pts:[[397,622],[383,571],[391,527],[414,483]]}
+];
+function brochureCoordinate([x,y]){
+ // Approximate transform anchored at Willett School and Germany Brook Conservation Land.
+ // The 2023 PDF is not a surveyed georeferenced GIS dataset.
+ return [-71.22197+(x-420)*0.000012+(y-955)*0.00000217,
+         42.19405-(y-955)*0.0000086+(x-420)*0.0000032];
+}
+function drawBrochure(){
+ trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();
+ let count=0;
+ for(const line of brochureLines){
+  const coords=line.pts.map(brochureCoordinate);
+  for(const part of clipToTown(coords)){
+   const points=part.map(([lon,lat])=>[lat,lon]);
+   L.polyline(points,{color:'#173c13',weight:10,opacity:.85,interactive:false}).addTo(trails);
+   L.polyline(points,{color:line.type==='Primary asphalt'?'#fbbf24':'#b5ff16',weight:6,opacity:1})
+    .bindPopup('<strong>Germany Brook Trail — '+line.type+'</strong><p>Approximate digitization of the March 2023 Town trail brochure. Alignment is not surveyed; do not use for navigation.</p>').addTo(trails);
+   count++;
+  }
+ }
+ loaded=true;
+ setStatus('Germany Brook brochure trace ('+count+' clipped sections). Only the routes drawn on the Town brochure are highlighted. Alignment is approximate and not for navigation. The Winter Street crossing and trail branches require field/GIS verification.');
 }
 function endpoint(coordinates,kind,label){
  const c=kind==='start'?coordinates[0]:coordinates[coordinates.length-1];
@@ -114,6 +147,7 @@ async function load(){
  if(loading)return;
  loading=true;
  try{await loadTown()}catch(e){loading=false;setStatus('Could not load official Norwood town boundary. Trail overlay withheld rather than showing paths outside town: '+e.message);return;}
+ if(park===parks.germany){drawBrochure();loading=false;return;}
  setStatus('Loading mapped '+park.name+' footpaths…');
  const [s,w,n,e]=park.bbox;
  const query='[out:json][timeout:25];(way["highway"~"^(path|footway|steps|pedestrian|track)$"]('+[s,w,n,e].join(',')+');way["landuse"="cemetery"]('+[s,w,n,e].join(',')+');way["amenity"="grave_yard"]('+[s,w,n,e].join(',')+'););out geom;';
