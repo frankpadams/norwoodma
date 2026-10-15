@@ -43,7 +43,8 @@ function draw(data){
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
   const tags=element.tags||{};
-  if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||''))continue;
+  const walkingTrack=park===parks.germany&&tags.highway==='track'&&/^(yes|designated|permissive)$/.test(tags.foot||'')&&/^(no|private)$/.test(tags.motor_vehicle||tags.vehicle||'no');
+  if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||'')&&!walkingTrack)continue;
   if(tags.access==='private'||tags.foot==='no')continue;
   // The broad Germany Brook search includes neighborhood sidewalks. Only highlight
   // off-road candidate paths, not pedestrian street infrastructure.
@@ -51,7 +52,7 @@ function draw(data){
    const highway=tags.highway||'';
    const sidewalk=/^(yes|both|left|right|separate)$/.test(tags.sidewalk||'')||tags.footway==='sidewalk';
    const cemetery=tags.landuse==='cemetery'||tags.amenity==='grave_yard'||/cemetery|graveyard|burial/i.test([tags.name,tags.description,tags.operator].filter(Boolean).join(' '));
-   const roadlike=highway==='service'||highway==='track'||tags.service==='driveway'||tags.service==='parking_aisle'||tags.motor_vehicle==='yes'||tags.vehicle==='yes';
+   const roadlike=highway==='service'||(highway==='track'&&!walkingTrack)||tags.service==='driveway'||tags.service==='parking_aisle'||tags.motor_vehicle==='yes'||tags.vehicle==='yes';
    const crossing=tags.footway==='crossing'||tags.crossing!=null;
    const street=/^(residential|service|living_street|unclassified|tertiary|secondary|primary)$/.test(highway);
    // Paved footways can be legitimate trail connectors, including by the playing fields.
