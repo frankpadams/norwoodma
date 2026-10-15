@@ -30,6 +30,24 @@ function insideRing(p,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.
 function insideTown(p){if(!townGeometry)return false;const polygons=townGeometry.type==='MultiPolygon'?townGeometry.coordinates:[townGeometry.coordinates];return polygons.some(poly=>insideRing(p,poly[0])&&!poly.slice(1).some(h=>insideRing(p,h)));}
 function segmentHits(a,b,c,d){const rx=b[0]-a[0],ry=b[1]-a[1],sx=d[0]-c[0],sy=d[1]-c[1],den=rx*sy-ry*sx;if(Math.abs(den)<1e-14)return null;const qx=c[0]-a[0],qy=c[1]-a[1],t=(qx*sy-qy*sx)/den,u=(qx*ry-qy*rx)/den;return t>0&&t<1&&u>=0&&u<=1?t:null;}
 function clipToTown(coords){const polygons=townGeometry.type==='MultiPolygon'?townGeometry.coordinates:[townGeometry.coordinates],rings=polygons.flat();const parts=[];let active=[];for(let i=1;i<coords.length;i++){const a=coords[i-1],b=coords[i];const ts=[0,1];for(const ring of rings)for(let k=0;k<ring.length;k++){const t=segmentHits(a,b,ring[k],ring[(k+1)%ring.length]);if(t!==null)ts.push(t)}ts.sort((x,y)=>x-y);for(let j=1;j<ts.length;j++){const t0=ts[j-1],t1=ts[j],mid=(t0+t1)/2,point=t=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];if(insideTown(point(mid))){if(!active.length)active.push(point(t0));active.push(point(t1))}else if(active.length){if(active.length>1)parts.push(active);active=[]}}}if(active.length>1)parts.push(active);return parts;}
+// Exclude entire OSM ways touching mapped cemetery grounds. This deliberately
+// favors hiding a borderline trail over showing cemetery roads as hiking trails.
+function cemeteryAreas(elements){
+ return elements.filter(x=>x.type==='way'&&
+  (x.tags?.landuse==='cemetery'||x.tags?.amenity==='grave_yard')&&
+  x.geometry?.length>=4).map(x=>x.geometry.map(p=>[p.lon,p.lat]));
+}
+function touchesCemetery(coords,areas){
+ return areas.some(ring=>{
+  if(coords.some(p=>insideRing(p,ring)))return true;
+  for(let i=1;i<coords.length;i++){
+   const a=coords[i-1],b=coords[i];
+   if(insideRing([(a[0]+b[0])/2,(a[1]+b[1])/2],ring))return true;
+   for(let j=0;j<ring.length;j++)if(segmentHits(a,b,ring[j],ring[(j+1)%ring.length])!==null)return true;
+  }
+  return false;
+ });
+}
 function endpoint(coordinates,kind,label){
  const c=kind==='start'?coordinates[0]:coordinates[coordinates.length-1];
  const key=c.map(v=>v.toFixed(5)).join(',');
@@ -40,6 +58,7 @@ function draw(data){
  if(!townGeometry){setStatus('Town boundary not loaded; trail lines withheld to avoid displaying out-of-town paths.');return;}
  trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();
  let n=0;
+ const excludedCemeteries=park===parks.germany?cemeteryAreas(data.elements||[]):[];
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
   const tags=element.tags||{};
@@ -67,6 +86,7 @@ function draw(data){
    if(sidewalk||street||cemetery||roadlike||highway==='pedestrian'||highway==='steps')continue;
   }
   const coords=element.geometry.map(p=>[p.lon,p.lat]);
+  if(excludedCemeteries.length&&touchesCemetery(coords,excludedCemeteries))continue;
   const clipped=clipToTown(coords);
   if(!clipped.length)continue;
   const length=coords.slice(1).reduce((sum,p,i)=>sum+meters(coords[i],p),0);
@@ -85,7 +105,7 @@ function draw(data){
   L.circleMarker([e.coord[1],e.coord[0]],{radius:repeated?5:7,color:'#fff',weight:2,fillColor:repeated?'#d69a17':'#003b71',fillOpacity:1})
     .bindPopup('<strong>'+label+'</strong><p>Not a verified public trail entrance. Confirm access against the Town brochure.</p>').addTo(ends);
  }
- if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Sidewalks and identifiable cemetery roads are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
+ if(n){loaded=true;setStatus(n+' candidate mapped path segments loaded in '+park.name+'. Paths intersecting mapped cemetery grounds are excluded; any explicitly identified Winter Street crossing is shown as an amber dashed connector. This is not yet a verified continuous trail.  Toggle the checkbox to compare lime-green Norwood.ma overlays against the OSM background. Blue dots are segment endpoints; gold dots are junctions. Trailheads remain unverified.');}
  else setStatus('No mapped footpaths returned in the '+park.name+' search area. No speculative trails have been drawn.');
 }
 async function load(){
@@ -94,7 +114,7 @@ async function load(){
  try{await loadTown()}catch(e){loading=false;setStatus('Could not load official Norwood town boundary. Trail overlay withheld rather than showing paths outside town: '+e.message);return;}
  setStatus('Loading mapped '+park.name+' footpaths…');
  const [s,w,n,e]=park.bbox;
- const query='[out:json][timeout:25];way["highway"~"^(path|footway|steps|pedestrian)$"]('+[s,w,n,e].join(',')+');out geom;';
+ const query='[out:json][timeout:25];(way["highway"~"^(path|footway|steps|pedestrian|track)$"]('+[s,w,n,e].join(',')+');way["landuse"="cemetery"]('+[s,w,n,e].join(',')+');way["amenity"="grave_yard"]('+[s,w,n,e].join(',')+'););out geom;';
  // First try the primary OSM API directly; unlike Overpass it does not require a query interpreter.
  try{
   const api='https://api.openstreetmap.org/api/0.6/map?bbox='+[w,s,e,n].join(',');
