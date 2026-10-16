@@ -374,3 +374,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .event-details-dialog .event-popup-websites{margin:12px 0 8px;gap:8px}
 .event-details-dialog .event-popup-websites strong{font-size:.88rem}
 .event-details-dialog .event-popup-referral{margin:15px 0 0;padding-top:12px;border-top:1px solid #e2e9ee;color:#526777;font-size:.84rem;line-height:1.45}
+
+/* Boston Mobile Tire: 20% smaller creative, with natural container height. */
+#homeAdSlot #sponsorCreative>a:has(img[src*="wide_rectangular_advertising_banner_for_a_mobile_t"]){min-height:0}
+#homeAdSlot #sponsorCreative img[src*="wide_rectangular_advertising_banner_for_a_mobile_t"]{width:80%;max-width:80%;max-height:none;height:auto;margin-inline:auto}
