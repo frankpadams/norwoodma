@@ -6834,40 +6834,6 @@
     ]
   },
   {
-    "id": "2026-10-22-girls-middle-school-volleyball-ashland-high-s-6112c5c",
-    "title": "Girls Middle School Volleyball @ Ashland High School",
-    "start": {
-      "date": "2026-10-22",
-      "time": "16:30"
-    },
-    "end": {
-      "date": "2026-10-22",
-      "time": "18:00"
-    },
-    "venue": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
-    "address": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Coakley Girls Middle School Volleyball",
-    "public_access": "public",
-    "series": "Coakley Girls Middle School Volleyball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Ashland Middle School Subsite: Gym",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-22-junior-varsity-field-hockey-vs-holliston-high-998607a",
     "title": "Junior Varsity Field Hockey vs Holliston High School",
     "start": {
@@ -6966,6 +6932,40 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-22-girls-middle-school-volleyball-ashland-high-s-6112c5c",
+    "title": "Girls Middle School Volleyball @ Ashland High School",
+    "start": {
+      "date": "2026-10-22",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "18:30"
+    },
+    "venue": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
+    "address": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Coakley Girls Middle School Volleyball",
+    "public_access": "public",
+    "series": "Coakley Girls Middle School Volleyball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Ashland Middle School Subsite: Gym",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -7206,6 +7206,34 @@
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-22-norwood-housing-authority-meeting-3896fe7",
+    "title": "Norwood Housing Authority Meeting",
+    "start": {
+      "date": "2026-10-22",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": null
+    },
+    "venue": "40 William Shyne Circle, Norwood, Massachusetts",
+    "address": null,
+    "category": "community",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
     "calendar_ids": [
       "norwood-community"
     ]
@@ -15642,43 +15670,6 @@
     ]
   },
   {
-    "id": "2026-10-31-norwood-international-vs-foxboro-warriors-7-8-b3d531a",
-    "title": "Norwood International vs Foxboro Warriors 7/8B-Blue",
-    "start": {
-      "date": "2026-10-31",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "-",
-    "field": "-",
-    "grade": "Boys Grade 8",
-    "gender": "boys",
-    "team": "Norwood International",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-8",
-      "nys-team-boys-grade-8-norwood-international"
-    ]
-  },
-  {
     "id": "2026-10-31-norwood-thunder-vs-canton-girls-grade-3-rapin-9ee292f",
     "title": "Norwood Thunder vs Canton Girls Grade 3 Rapinoe",
     "start": {
@@ -16105,6 +16096,43 @@
       "norwood-sports",
       "nys-grade-boys-grade-4",
       "nys-team-boys-grade-4-norwood-chargers"
+    ]
+  },
+  {
+    "id": "2026-10-31-norwood-international-vs-foxboro-warriors-7-8-b3d531a",
+    "title": "Norwood International vs Foxboro Warriors 7/8B-Blue",
+    "start": {
+      "date": "2026-10-31",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": "Father macs 11",
+    "field": "Father macs 11",
+    "grade": "Boys Grade 8",
+    "gender": "boys",
+    "team": "Norwood International",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-8",
+      "nys-team-boys-grade-8-norwood-international"
     ]
   },
   {
@@ -37870,8 +37898,8 @@
     ]
   },
   {
-    "id": "2026-12-12-the-great-american-soulbook-7b38dc0",
-    "title": "The Great American SoulBook",
+    "id": "2026-12-12-the-great-american-soulbook-holiday-show-9fb9564",
+    "title": "The Great American SoulBook Holiday Show",
     "start": {
       "date": "2026-12-12",
       "time": "19:30"
@@ -90940,8 +90968,8 @@
     ]
   },
   {
-    "id": "2027-05-12-state-semi-finals-softball-hopkinton-high-sch-07b4543",
-    "title": "State Semi Finals Softball @ Hopkinton High School",
+    "id": "2027-05-12-girls-varsity-softball-hopkinton-high-school-aaee7a1",
+    "title": "Girls Varsity Softball @ Hopkinton High School",
     "start": {
       "date": "2027-05-12",
       "time": "17:00"
@@ -90961,7 +90989,7 @@
     "series": "Norwood Girls Varsity Softball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Softball Level: State Semi Finals Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
+    "notes": "Sport: Softball Level: Girls Varsity Team: Norwood High School Site: Hopkinton High School Subsite: Turf Baseball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
