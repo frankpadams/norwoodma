@@ -379,7 +379,10 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #homeAdSlot #sponsorCreative>a:has(img[src*="wide_rectangular_advertising_banner_for_a_mobile_t"]){min-height:0}
 #homeAdSlot #sponsorCreative img[src*="wide_rectangular_advertising_banner_for_a_mobile_t"]{width:80%;max-width:80%;max-height:none;height:auto;margin-inline:auto}
 
-/* Restaurant sponsor rail: keep the sponsorship label inside its box. */
-.restaurant-ad-rail{box-sizing:border-box;min-width:0;padding:12px;border:1px solid #dbe3ec;border-radius:14px;background:#fff;display:flex;flex-direction:column;gap:10px}
-.restaurant-ad-rail .ad-rail-label{position:static;display:block;margin:0;padding:0 2px;color:#526777;font-size:.72rem;font-weight:700;letter-spacing:.09em;line-height:1.4}
-.restaurant-ad-rail .restaurant-ad-slot{box-sizing:border-box;min-width:0;width:100%}
+
+/* Homepage sponsor: match the restaurant page's understated label-above-creative layout. */
+#homeAdSlot{padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible}
+#homeAdSlot .ad-slot-head{padding:0 0 5px!important;margin:0!important}
+#homeAdSlot .ad-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;color:#526777;text-decoration:none}
+#homeAdSlot #sponsorCreative{padding:0!important;margin:0!important}
+#homeAdSlot #sponsorCreative>a{padding:0!important;margin:0!important;min-height:0}
