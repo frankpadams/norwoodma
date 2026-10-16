@@ -386,3 +386,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #homeAdSlot .ad-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;color:#526777;text-decoration:none}
 #homeAdSlot #sponsorCreative{padding:0!important;margin:0!important}
 #homeAdSlot #sponsorCreative>a{padding:0!important;margin:0!important;min-height:0}
+
+/* Give the homepage sponsor a visible, compact enclosing card. */
+#homeAdSlot{padding:10px 12px 12px!important;border:1px solid #dbe3ec!important;border-radius:14px!important;background:#fff!important;box-sizing:border-box}
+#homeAdSlot .ad-slot-head{padding-bottom:7px!important}
+#homeAdSlot #sponsorCreative>a{border-radius:10px;overflow:hidden}
