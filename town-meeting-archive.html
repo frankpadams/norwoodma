@@ -513,18 +513,22 @@ const sourceRegistryReady=fetch('data/town-meeting-sources.json',{cache:'no-cach
   .catch(()=>null);
 function runArchiveSearch(){
   const q=normalizeSearch(search.value);
+  const terms=q.split(' ').filter(Boolean);
+  const matches=text=>{const hay=normalizeSearch(text);return terms.every(term=>hay.includes(term));};
+  let shown=0;
   meetings.forEach(m=>{
     const d=m.querySelector(':scope > details');
     const rows=[...m.querySelectorAll('.article-ledger tbody tr')];
-    const meetingText=(m.querySelector(':scope > details > summary')?.textContent||'').toLowerCase();
+    const meetingText=m.querySelector(':scope > details > summary')?.textContent||'';
+    const meetingHit=!!q&&matches(meetingText);
     let rowHit=false;
     rows.forEach(row=>{
-      const hit=!q || normalizeSearch(row.textContent).includes(q) || normalizeSearch(meetingText).includes(q);
+      const hit=!q || meetingHit || matches(row.textContent);
       row.style.display=hit?'':'none';
-      if(q&&hit) rowHit=true;
+      if(q&&hit)rowHit=true;
     });
-    const generalHit=!q || m.dataset.searchIndex.includes(q);
-    const sourceHit=!!q && !rowHit && normalizeSearch([m.dataset.sourceIndex||'',m.dataset.registrySourceIndex||''].join(' ')).includes(q);
+    const generalHit=!q || matches(m.dataset.searchIndex||'');
+    const sourceHit=!!q&&!rowHit&&matches([m.dataset.sourceIndex||'',m.dataset.registrySourceIndex||''].join(' '));
     let note=m.querySelector('.archive-source-match');
     if(sourceHit){
       if(!note){note=document.createElement('div');note.className='archive-source-match';const body=m.querySelector('.body');if(body)body.insertBefore(note,body.firstChild);}
@@ -532,11 +536,22 @@ function runArchiveSearch(){
       note.style.display='block';
       rows.forEach(row=>row.style.display='');
     }else if(note){note.style.display='none';}
-    const show=!q || rowHit || generalHit;
+    const show=!q||rowHit||generalHit;
     m.style.display=show?'':'none';
-    if(q&&show) d.open=true;
-    if(!q) d.open=false;
+    if(show)shown++;
+    if(q&&show)d.open=true;
+    if(!q)d.open=false;
   });
+  let status=document.getElementById('archiveSearchStatus');
+  if(!status){
+    status=document.createElement('p');
+    status.id='archiveSearchStatus';
+    status.className='archive-note';
+    status.setAttribute('role','status');
+    status.setAttribute('aria-live','polite');
+    document.querySelector('.archive-tools')?.insertAdjacentElement('afterend',status);
+  }
+  status.textContent=q?(shown?shown+' matching meeting'+(shown===1?'':'s')+' found.':'No matching Town Meetings found. Try fewer or different keywords.'):'';
 }
 search.addEventListener('input',runArchiveSearch);
 document.querySelector('.archive-search-button')?.addEventListener('click',()=>{runArchiveSearch();search.focus();});
