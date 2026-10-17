@@ -259,9 +259,12 @@ function diversifyAdjacentOrganizations(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // An article headline describing Craft Affair is not a separate calendar event.
+ // Preserve the actual craft fair record and its verified date/time.
+ items=items.filter(e=>!(e.start?.date==='2026-10-17'&&e.source_id==='norwood-town-news'&&/a tradition of treasures/i.test(e.title||'')&&/craft affair/i.test(e.notes||'')));
  // Manually verified 2026 community event: keep visible until the automated source path
  // reliably discovers it, then this compatibility entry can be removed.
- if(!items.some(e=>e.id==='2026-10-17-a-craft-affair-norwood')){
+ if(!items.some(e=>e.start?.date==='2026-10-17'&&/\ba craft affair\b/i.test(e.title||'')&&/norwood high school/i.test(e.venue||''))){
    items.push({
      id:'2026-10-17-a-craft-affair-norwood',
      title:'A Craft Affair at Norwood',
