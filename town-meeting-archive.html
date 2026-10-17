@@ -19,6 +19,7 @@
 .meeting-watch{display:inline-flex;align-items:center;margin-top:9px;padding:7px 10px;border:1px solid #b9c9d3;border-radius:999px;background:#f5f9fc;color:var(--blue);font:800 .86rem/1.2 inherit;text-decoration:none;cursor:pointer}.meeting-watch:hover,.meeting-watch:focus-visible{background:#eaf2f7;border-color:#8da9bb}.video-related-heading{font-size:1rem;margin:20px 0 6px;padding-top:14px;border-top:1px solid var(--line);color:var(--deep)}#videoList p{margin:8px 0}.ncm-video-link::before{content:"";display:inline-block;width:22px;height:14px;margin-right:4px;vertical-align:-2px;background:url("https://norwoodcommunitymedia.org/wp-content/themes/ncm/img/norwood-community-media-logo.png") center/contain no-repeat}@media(max-width:650px){.ncm-video-link::before{width:20px;height:13px}}.archive-masthead{background:var(--deep);color:#fff;border-bottom:5px solid var(--gold)}.archive-masthead .wrap{padding:28px 0 26px}.archive-masthead h1{color:#fff}.member-guide{margin:0 0 16px;border:1px solid #cbd6dc;border-radius:10px;background:#fff;overflow:hidden}.member-guide>summary{position:relative;list-style:none;cursor:pointer;padding:14px 48px 14px 16px;font-weight:850;color:var(--deep)}.member-guide>summary::-webkit-details-marker{display:none}.member-guide>summary:after{content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center}.member-guide[open]>summary{border-bottom:1px solid var(--line)}.member-guide[open]>summary:after{content:"−"}.member-guide-body{padding:15px 16px 17px}.member-guide-body p{margin:.35rem 0 .8rem}.guide-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 14px}.guide-link{display:block;padding:10px 11px;border:1px solid #d8e0e5;border-radius:8px;text-decoration:none;color:var(--blue);font-weight:750;background:#f8fafb}.guide-link small{display:block;color:var(--muted);font-weight:500;margin-top:2px}@media(max-width:650px){.guide-links{grid-template-columns:1fr}.member-guide>summary{min-height:48px}}
 .archive-source-match{display:none;margin:8px 0 12px;padding:9px 11px;border-radius:8px;background:#f7f8fb;border:1px solid #dfe4ec;font-size:.9rem;line-height:1.35}.archive-source-match strong{color:var(--blue)}
 .archive-tools{display:flex;align-items:flex-end;gap:12px;margin-top:10px}.archive-search-group{flex:1 1 520px;max-width:620px}.archive-search-group>label{display:block;margin-bottom:4px}.archive-tools .archive-search-shell{margin:0}.archive-tools .archive-help{flex:0 0 auto;margin:0;min-height:46px}@media(max-width:680px){.archive-tools{align-items:stretch;gap:8px}.archive-search-group{min-width:0;max-width:none}.archive-tools .archive-help{min-height:44px;padding-left:12px;padding-right:12px;white-space:nowrap}}@media(max-width:480px){.archive-tools{flex-direction:column}.archive-search-group{flex:0 0 auto;width:100%}.archive-tools .archive-help{align-self:flex-start}} .next-town-meeting{border-left:4px solid var(--gold)}.next-town-meeting h2{margin:0 0 8px;color:var(--deep)}.next-town-meeting p{margin:7px 0}.next-meeting-date{font-size:1.16rem}@media(max-width:480px){.next-town-meeting{padding:16px}}
+.archive-suggestions{background:#fff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 7px 20px #0002;margin-top:4px;overflow:hidden}.archive-suggestions[hidden]{display:none}.archive-suggestion{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid #e8edf1;background:#fff;padding:11px 13px;font:inherit;color:var(--ink);cursor:pointer;white-space:normal}.archive-suggestion:last-child{border-bottom:0}.archive-suggestion:hover,.archive-suggestion:focus-visible{background:#fff6d5;outline:2px solid var(--gold);outline-offset:-2px}
 </style>
 </head>
 <body>
@@ -562,6 +563,60 @@ function runArchiveSearch(){
   }
   status.textContent=q?(shown?(relaxed?'No results matched all your keywords. Showing results for '+(foundTerms.length?foundTerms.join(' or '):'related keywords')+'. '+(absentTerms.length?'No results found for '+absentTerms.join(', ')+'. ':''):'')+shown+' matching meeting'+(shown===1?'':'s')+' found.':'No matching Town Meetings found for '+terms.join(', ')+'. Try different keywords.'):'';
 }
+
+// Suggestions come from actual archive article headings and meeting labels.
+const suggestionBox=document.createElement('div');
+suggestionBox.id='archiveSuggestions';
+suggestionBox.className='archive-suggestions';
+suggestionBox.setAttribute('role','listbox');
+suggestionBox.setAttribute('aria-label','Suggested archive searches');
+suggestionBox.hidden=true;
+search.setAttribute('autocomplete','off');
+search.setAttribute('aria-controls','archiveSuggestions');
+search.setAttribute('aria-expanded','false');
+search.closest('.archive-search-shell').insertAdjacentElement('afterend',suggestionBox);
+const suggestionTopics=[...new Set(meetings.flatMap(m=>[
+  m.querySelector(':scope > details > summary')?.textContent?.trim(),
+  ...[...m.querySelectorAll('.article-ledger tbody tr')].map(tr=>{
+    const cells=[...tr.querySelectorAll('td')];
+    return (cells[1]||cells[0])?.textContent?.trim();
+  })
+]).filter(t=>t&&t.length>=5&&t.length<=110))];
+function renderArchiveSuggestions(){
+  const q=normalizeSearch(search.value);
+  suggestionBox.replaceChildren();
+  if(q.length<2){suggestionBox.hidden=true;search.setAttribute('aria-expanded','false');return;}
+  const terms=q.split(' ').filter(Boolean);
+  const ranked=suggestionTopics.map(label=>{
+    const normalized=normalizeSearch(label);
+    const score=normalized.startsWith(q)?0:terms.every(t=>normalized.includes(t))?1:terms.some(t=>normalized.startsWith(t))?2:99;
+    return {label,score};
+  }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||a.label.length-b.label.length).slice(0,5);
+  for(const item of ranked){
+    const btn=document.createElement('button');
+    btn.type='button';btn.className='archive-suggestion';btn.setAttribute('role','option');
+    btn.textContent=item.label;
+    btn.addEventListener('click',()=>{
+      search.value=item.label;suggestionBox.hidden=true;
+      search.setAttribute('aria-expanded','false');runArchiveSearch();search.focus();
+    });
+    suggestionBox.appendChild(btn);
+  }
+  suggestionBox.hidden=!ranked.length;
+  search.setAttribute('aria-expanded',String(!!ranked.length));
+}
+search.addEventListener('input',renderArchiveSuggestions);
+search.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){suggestionBox.hidden=true;search.setAttribute('aria-expanded','false');}
+  if(e.key==='ArrowDown'&&!suggestionBox.hidden){e.preventDefault();suggestionBox.querySelector('button')?.focus();}
+});
+suggestionBox.addEventListener('keydown',e=>{
+  const buttons=[...suggestionBox.querySelectorAll('button')],i=buttons.indexOf(document.activeElement);
+  if(e.key==='ArrowDown'){e.preventDefault();buttons[Math.min(i+1,buttons.length-1)]?.focus();}
+  if(e.key==='ArrowUp'){e.preventDefault();if(i<=0)search.focus();else buttons[i-1]?.focus();}
+  if(e.key==='Escape'){suggestionBox.hidden=true;search.setAttribute('aria-expanded','false');search.focus();}
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.archive-search-group')){suggestionBox.hidden=true;search.setAttribute('aria-expanded','false');}});
 search.addEventListener('input',runArchiveSearch);
 document.querySelector('.archive-search-button')?.addEventListener('click',()=>{runArchiveSearch();search.focus();});
 const incomingArchiveQuery=new URLSearchParams(location.search).get('q')||'';
