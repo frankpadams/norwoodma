@@ -1639,13 +1639,13 @@
     "address": null,
     "category": "community",
     "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/tot-shabbat34.html",
+    "source_url": "https://www.templebethdavid.net/event/shabbat-services---bat-mitzvah-hannah-byers.html",
     "cost": null,
     "public_access": "public",
     "series": "Temple Beth David — Westwood",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Saturday , Oct October 17 , 2026 Tot Shabbat Shabbat, Oct 17th 9:15a to 10:15a MORE INFO",
+    "notes": "Saturday , Oct October 17 , 2026 Shabbat Services - Bat Mitzvah Hannah Byers Shabbat, Oct 17th 10:30a to 12:00p MORE INFO",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -2376,7 +2376,7 @@
   },
   {
     "id": "2026-10-19-picture-day-053859e",
-    "title": "Picture Day!",
+    "title": "Oldham Elementary School Picture Day",
     "start": {
       "date": "2026-10-19",
       "time": "08:00"
@@ -2385,7 +2385,7 @@
       "date": "2026-10-19",
       "time": "12:00"
     },
-    "venue": "Norwood Public Schools",
+    "venue": "Oldham Elementary School",
     "address": null,
     "category": "community",
     "source_id": "nps-oldham",
@@ -11957,6 +11957,36 @@
     "verification_status": "auto_primary_source",
     "notes": null,
     "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-28-wednesday-oct-08a2830",
+    "title": "Wednesday , Oct",
+    "start": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning12.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Wednesday , Oct October 28 , 2026 Shorashim Hebrew Learning Wednesday, Oct 28th 3:45p to 5:45p MORE INFO",
+    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
