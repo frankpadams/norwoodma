@@ -1,0 +1,39 @@
+name: Generate restaurant SEO pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/restaurants.json'
+      - 'scripts/generate_restaurant_seo.py'
+      - '.github/workflows/generate-restaurant-seo.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: restaurant-seo-generation
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate restaurant SEO pages
+        run: python scripts/generate_restaurant_seo.py
+      - name: Commit generated pages
+        run: |
+          if git diff --quiet -- restaurants.html restaurants-*.html; then
+            echo "Restaurant SEO pages already current."
+            exit 0
+          fi
+          git config user.name "norwood-ma-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add restaurants.html restaurants-*.html
+          git commit -m "chore: regenerate restaurant SEO pages"
+          git pull --rebase origin main
+          git push origin HEAD:main
