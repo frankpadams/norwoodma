@@ -793,7 +793,7 @@ window.NORWOOD_BUSINESSES=[
   [
     "A&B Driving School",
     "Driving Schools",
-    "",
+    "10 Guild Street",
     "",
     "https://www.norwooddriving.com/"
   ],
@@ -1071,13 +1071,6 @@ window.NORWOOD_BUSINESSES=[
     ""
   ],
   [
-    "Bay State Barbershop",
-    "Barbers, Salons & Personal Care",
-    "1145 Washington Street",
-    "781-352-3596",
-    ""
-  ],
-  [
     "Impeccable Barber Co.",
     "Barbers, Salons & Personal Care",
     "599 Washington Street",
@@ -1106,13 +1099,6 @@ window.NORWOOD_BUSINESSES=[
     ""
   ],
   [
-    "Hair Therapy Spa",
-    "Barbers, Salons & Personal Care",
-    "54 Cottage Street E",
-    "781-686-3083",
-    ""
-  ],
-  [
     "Dellaria Salon",
     "Barbers, Salons & Personal Care",
     "20 Broadway",
@@ -1138,13 +1124,6 @@ window.NORWOOD_BUSINESSES=[
     "Electrical Contractors",
     "273 Lenox Street, Suite 7",
     "617-553-3454",
-    ""
-  ],
-  [
-    "Echo House Painting",
-    "Painting & Home Improvement",
-    "814 Norwest Drive",
-    "781-403-4809",
     ""
   ],
   [
@@ -4228,7 +4207,7 @@ window.NORWOOD_BUSINESSES=[
     ""
   ],
   [
-    "C&E Auto Collision",
+    "C & E Auto Collision North",
     "Auto Body & Collision",
     "664 Pleasant Street",
     "",
@@ -5073,7 +5052,7 @@ window.NORWOOD_BUSINESSES=[
     ""
   ],
   [
-    "24 Volkswagen of Norwood",
+    "Nucar Volkswagen of Norwood",
     "Auto Dealers",
     "1280 Providence Highway",
     "",
@@ -5195,6 +5174,20 @@ window.NORWOOD_BUSINESSES=[
     "Automotive Service Center",
     "Auto Repair & Mechanics",
     "1199 Washington Street",
+    "",
+    ""
+  ],
+  [
+    "Broadway Collision Center & Mechanical Repair",
+    "Auto Body & Collision",
+    "100 Broadway",
+    "",
+    ""
+  ],
+  [
+    "Auto Sales on Broadway",
+    "Auto Dealers",
+    "100 Broadway, Suite A",
     "",
     ""
   ]
