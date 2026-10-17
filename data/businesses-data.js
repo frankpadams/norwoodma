@@ -4076,7 +4076,7 @@ window.NORWOOD_BUSINESSES=[
   [
     "Monster Mini Golf — Norwood",
     "Indoor Recreation & Family Entertainment",
-    "Norwood",
+    "1560 Boston Providence Turnpike",
     "",
     "https://monsterminigolf.com/"
   ],
@@ -5293,6 +5293,34 @@ window.NORWOOD_BUSINESSES=[
     "Levi Gutter Solutions",
     "Gutters & Home Services",
     "36 Clapboardtree Street",
+    "",
+    ""
+  ],
+  [
+    "Automall Service Center",
+    "Auto Repair & Mechanics",
+    "740 Boston Providence Turnpike",
+    "",
+    ""
+  ],
+  [
+    "Norwood Auto Sales and Service",
+    "Auto Dealers; Auto Repair & Mechanics",
+    "707 Neponset Street",
+    "",
+    ""
+  ],
+  [
+    "Launch Trampoline Park",
+    "Indoor Recreation & Family Entertainment",
+    "570 Boston Providence Turnpike",
+    "",
+    ""
+  ],
+  [
+    "Family Taxi Service",
+    "Taxi & Transportation",
+    "22 Saint George Avenue",
     "",
     ""
   ]
