@@ -2081,7 +2081,7 @@ window.NORWOOD_BUSINESSES=[
   [
     "S & A General Contracting, Inc.",
     "General Contracting & Remodeling",
-    "Norwood",
+    "184 Hill Street",
     "617-291-9951",
     "https://www.sa-generalcontracting.com/"
   ],
@@ -5323,5 +5323,33 @@ window.NORWOOD_BUSINESSES=[
     "22 Saint George Avenue",
     "",
     ""
+  ],
+  [
+    "High Pace Construction",
+    "Contractors & Home Services",
+    "34 Day Street",
+    "",
+    ""
+  ],
+  [
+    "Nexus General Contractor & Construction",
+    "Contractors & Home Services",
+    "61 Endicott Street, Suite 24-212",
+    "",
+    ""
+  ],
+  [
+    "RK Construction",
+    "Contractors & Home Services",
+    "100 Access Road, Suite 209",
+    "",
+    ""
+  ],
+  [
+    "CMI Property Management",
+    "Real Estate & Property Management",
+    "128 Carnegie Row",
+    "781-501-5666",
+    "https://cmipropertymanagement.com/"
   ]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);const rawAddress=String(b[2]||'').trim();const isSpecificAddress=!!rawAddress&&!/^norwood(?:,?\s*ma(?:\s+02062)?)?$/i.test(rawAddress)&&!/^\s*(?:pleasant street|providence highway|access road|kerry place)\s*$/i.test(rawAddress);const address=isSpecificAddress?(rawAddress+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(rawAddress)?(/\bMA\b/i.test(rawAddress)?'':', MA'):', Norwood, MA 02062')):'';return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address,locationHint:rawAddress&&!isSpecificAddress?rawAddress:'',phone:b[3],website:b[4],town:(rawAddress.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
