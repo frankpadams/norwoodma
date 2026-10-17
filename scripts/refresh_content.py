@@ -563,6 +563,11 @@ def normalize_published_event_title(e):
     e=dict(e or {})
     title=clean_text(e.get('title'))
     sid=str(e.get('source_id') or '')
+    # School-specific calendar feeds must identify their school in generic event titles.
+    school_names={'nps-oldham':'Oldham Elementary School','nps-balch':'Balch Elementary School','nps-callahan':'Callahan Elementary School','nps-cleveland':'Cleveland Elementary School','nps-prescott':'Prescott Elementary School','nps-coakley':'Coakley Middle School','nps-nhs':'Norwood High School','nps-willett':'Willett Early Childhood Center'}
+    if sid in school_names and re.fullmatch(r'picture day!?|picture days!?',title,re.I):
+        title=school_names[sid]+' Picture Day'
+        e['venue']=school_names[sid]
     weekday_only=re.compile(r'^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)[\s,.:;-]*$',re.I)
     month_only=re.compile(r'^(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+20\d{2}$',re.I)
     junk_only=re.compile(r'^(?:event|events|calendar|schedule|meeting|meetings|program|programs|session|sessions|service|services|class|classes|group|groups|activity|activities|read more|learn more|click here|more information?)$',re.I)
