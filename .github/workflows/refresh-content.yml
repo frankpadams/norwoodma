@@ -99,6 +99,71 @@ jobs:
           BAND_PMA_ICAL_URL: ${{ secrets.BAND_PMA_ICAL_URL }}
         run: python scripts/refresh_content.py
 
+      - name: Generate crawlable event structured data
+        if: steps.freshness.outputs.run_refresh == 'true'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, re, html
+          from datetime import date
+          from pathlib import Path
+
+          page = Path('events.html')
+          events = json.loads(Path('data/events.json').read_text())
+          today = date.today().isoformat()
+          items = []
+          for e in events:
+              if not isinstance(e, dict) or e.get('publish_candidate') is False:
+                  continue
+              start = e.get('start') or {}
+              end = e.get('end') or {}
+              day = start.get('date', '')
+              if not isinstance(day, str) or not re.fullmatch(r'\\d{4}-\\d{2}-\\d{2}', day) or day < today:
+                  continue
+              title = str(e.get('title') or '').strip()
+              if not title:
+                  continue
+              start_time = start.get('time')
+              end_time = end.get('time')
+              start_at = day + ('T' + start_time + ':00-04:00' if isinstance(start_time, str) and re.fullmatch(r'\\d{2}:\\d{2}', start_time) else '')
+              # Date-only values are preferable to invented event times or time zones.
+              if 'T' in start_at:
+                  from zoneinfo import ZoneInfo
+                  from datetime import datetime
+                  start_at = datetime.fromisoformat(day + 'T' + start_time).replace(tzinfo=ZoneInfo('America/New_York')).isoformat()
+              obj = {'@type': 'Event', 'name': title, 'startDate': start_at,
+                     'url': 'https://www.norwood.ma/events.html'}
+              if isinstance(end.get('date'), str) and re.fullmatch(r'\\d{4}-\\d{2}-\\d{2}', end['date']):
+                  end_at = end['date']
+                  if isinstance(end_time, str) and re.fullmatch(r'\\d{2}:\\d{2}', end_time):
+                      from datetime import datetime
+                      from zoneinfo import ZoneInfo
+                      end_at = datetime.fromisoformat(end_at + 'T' + end_time).replace(tzinfo=ZoneInfo('America/New_York')).isoformat()
+                  obj['endDate'] = end_at
+              if e.get('notes'):
+                  obj['description'] = str(e['notes'])[:900]
+              place = str(e.get('venue') or '').strip()
+              address = str(e.get('address') or '').strip()
+              if place or address:
+                  obj['location'] = {'@type': 'Place', 'name': place or address}
+                  if address:
+                      obj['location']['address'] = address
+              if e.get('source_url') and str(e['source_url']).startswith('https://'):
+                  obj['sameAs'] = str(e['source_url'])
+              items.append(obj)
+          # Use a bounded, chronologically ordered set of real upcoming calendar entries.
+          items.sort(key=lambda x: x['startDate'])
+          items = items[:150]
+          payload = json.dumps({'@context': 'https://schema.org', '@graph': items}, ensure_ascii=False).replace('<', '\\u003c')
+          block = '<!-- BEGIN GENERATED EVENT SEO --><script type="application/ld+json">' + payload + '</script><!-- END GENERATED EVENT SEO -->'
+          source = page.read_text()
+          source = re.sub(r'<!-- BEGIN GENERATED EVENT SEO -->.*?<!-- END GENERATED EVENT SEO -->', '', source, flags=re.S)
+          source = source.replace('</head>', block + '</head>', 1)
+          page.write_text(source)
+          Path('data/event-seo-status.json').write_text(json.dumps({'events_in_schema': len(items), 'generated_from': 'data/events.json'}, indent=2) + '\\n')
+          print(f'Generated structured data for {len(items)} upcoming events.')
+          PY
+
       - name: Verify approved community submissions are reaching the importer
         if: steps.freshness.outputs.run_refresh == 'true'
         shell: bash
@@ -118,7 +183,7 @@ jobs:
         if: steps.freshness.outputs.run_refresh == 'true'
         shell: bash
         run: |
-          if git diff --quiet -- data/ feeds/; then
+          if git diff --quiet -- data/ feeds/ events.html; then
             echo "No content changes."
             exit 0
           fi
@@ -127,7 +192,7 @@ jobs:
           # would revert registry/seed edits that land while a refresh is running.
           rm -rf /tmp/norwood-refresh
           mkdir -p /tmp/norwood-refresh
-          git diff --name-only -z -- data/ feeds/ > /tmp/norwood-refresh/changed
+          git diff --name-only -z -- data/ feeds/ events.html > /tmp/norwood-refresh/changed
           while IFS= read -r -d '' path; do
             mkdir -p "/tmp/norwood-refresh/$(dirname "$path")"
             cp -a "$path" "/tmp/norwood-refresh/$path"
@@ -147,6 +212,6 @@ jobs:
 
           git config user.name "norwood-ma-content-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ feeds/
+          git add data/ feeds/ events.html
           git commit -m "data: automated content refresh"
           git push origin HEAD:main
