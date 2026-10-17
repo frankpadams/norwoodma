@@ -515,20 +515,24 @@ function runArchiveSearch(){
   const q=normalizeSearch(search.value);
   const terms=q.split(' ').filter(Boolean);
   const matches=text=>{const hay=normalizeSearch(text);return terms.every(term=>hay.includes(term));};
+  const indexes=meetings.map(m=>m.dataset.searchIndex||'');
+  const strictHits=terms.length?indexes.filter(matches).length:meetings.length;
+  const relaxed=terms.length>1&&strictHits===0;
+  const matchesRelaxed=text=>{const hay=normalizeSearch(text);return relaxed?terms.some(term=>hay.includes(term)):matches(text);};
   let shown=0;
   meetings.forEach(m=>{
     const d=m.querySelector(':scope > details');
     const rows=[...m.querySelectorAll('.article-ledger tbody tr')];
     const meetingText=m.querySelector(':scope > details > summary')?.textContent||'';
-    const meetingHit=!!q&&matches(meetingText);
+    const meetingHit=!!q&&matchesRelaxed(meetingText);
     let rowHit=false;
     rows.forEach(row=>{
-      const hit=!q || meetingHit || matches(row.textContent);
+      const hit=!q || meetingHit || matchesRelaxed(row.textContent);
       row.style.display=hit?'':'none';
       if(q&&hit)rowHit=true;
     });
-    const generalHit=!q || matches(m.dataset.searchIndex||'');
-    const sourceHit=!!q&&!rowHit&&matches([m.dataset.sourceIndex||'',m.dataset.registrySourceIndex||''].join(' '));
+    const generalHit=!q || matchesRelaxed(m.dataset.searchIndex||'');
+    const sourceHit=!!q&&!rowHit&&matchesRelaxed([m.dataset.sourceIndex||'',m.dataset.registrySourceIndex||''].join(' '));
     let note=m.querySelector('.archive-source-match');
     if(sourceHit){
       if(!note){note=document.createElement('div');note.className='archive-source-match';const body=m.querySelector('.body');if(body)body.insertBefore(note,body.firstChild);}
@@ -551,7 +555,7 @@ function runArchiveSearch(){
     status.setAttribute('aria-live','polite');
     document.querySelector('.archive-tools')?.insertAdjacentElement('afterend',status);
   }
-  status.textContent=q?(shown?shown+' matching meeting'+(shown===1?'':'s')+' found.':'No matching Town Meetings found. Try fewer or different keywords.'):'';
+  status.textContent=q?(shown?(relaxed?'No exact all-keyword matches. Showing broader results matching any of your keywords: ':'')+shown+' matching meeting'+(shown===1?'':'s')+' found.':'No matching Town Meetings found. Try fewer or different keywords.'):'';
 }
 search.addEventListener('input',runArchiveSearch);
 document.querySelector('.archive-search-button')?.addEventListener('click',()=>{runArchiveSearch();search.focus();});
