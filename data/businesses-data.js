@@ -5239,5 +5239,61 @@ window.NORWOOD_BUSINESSES=[
     "491 Walpole Street",
     "781-551-9184",
     ""
+  ],
+  [
+    "G & S Auto and Truck Service",
+    "Auto Repair & Mechanics",
+    "283 Lenox Street, Unit 2",
+    "",
+    ""
+  ],
+  [
+    "EuroSide Automotive",
+    "Auto Repair & Mechanics",
+    "1220 Washington Street",
+    "",
+    ""
+  ],
+  [
+    "Enterprise Car Sales",
+    "Auto Dealers",
+    "596 Providence Highway",
+    "",
+    ""
+  ],
+  [
+    "Brennan Brothers Contractors",
+    "Contractors & Home Services",
+    "492 Washington Street",
+    "",
+    ""
+  ],
+  [
+    "Mario Musto Construction Corp",
+    "Contractors & Home Services",
+    "85 Vernon Street",
+    "",
+    ""
+  ],
+  [
+    "Baystate Archery Center",
+    "Sporting Goods & Recreation",
+    "55 Boston Providence Turnpike",
+    "",
+    ""
+  ],
+  [
+    "Winsmith Mill Market",
+    "Antiques & Vintage",
+    "61 Endicott Street",
+    "",
+    ""
+  ],
+  [
+    "Levi Gutter Solutions",
+    "Gutters & Home Services",
+    "36 Clapboardtree Street",
+    "",
+    ""
   ]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);const rawAddress=String(b[2]||'').trim();const isSpecificAddress=!!rawAddress&&!/^norwood(?:,?\s*ma(?:\s+02062)?)?$/i.test(rawAddress)&&!/^\s*(?:pleasant street|providence highway|access road|kerry place)\s*$/i.test(rawAddress);const address=isSpecificAddress?(rawAddress+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(rawAddress)?(/\bMA\b/i.test(rawAddress)?'':', MA'):', Norwood, MA 02062')):'';return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address,locationHint:rawAddress&&!isSpecificAddress?rawAddress:'',phone:b[3],website:b[4],town:(rawAddress.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
