@@ -5351,5 +5351,19 @@ window.NORWOOD_BUSINESSES=[
     "128 Carnegie Row",
     "781-501-5666",
     "https://cmipropertymanagement.com/"
+  ],
+  [
+    "TAG Associates Inc.",
+    "Business Consulting",
+    "511 Washington Street",
+    "781-551-8801",
+    ""
+  ],
+  [
+    "Viewcrest Advisors, Ltd.",
+    "Business Consulting",
+    "41 Railroad Avenue",
+    "617-564-3779",
+    ""
   ]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);const rawAddress=String(b[2]||'').trim();const isSpecificAddress=!!rawAddress&&!/^norwood(?:,?\s*ma(?:\s+02062)?)?$/i.test(rawAddress)&&!/^\s*(?:pleasant street|providence highway|access road|kerry place)\s*$/i.test(rawAddress);const address=isSpecificAddress?(rawAddress+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(rawAddress)?(/\bMA\b/i.test(rawAddress)?'':', MA'):', Norwood, MA 02062')):'';return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address,locationHint:rawAddress&&!isSpecificAddress?rawAddress:'',phone:b[3],website:b[4],town:(rawAddress.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
