@@ -7,7 +7,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 restaurants = json.loads((ROOT / "data/restaurants.json").read_text())
 categories = [
-    ("pizza-italian", "Pizza & Italian", lambda x: x.get("category") == "Pizza & Italian"),
+    ("pizza", "Pizza", lambda x: x.get("category") == "Pizza & Italian" and "pizza" in (x.get("cuisine") or "").lower()),
+    ("italian", "Italian Restaurants", lambda x: x.get("category") == "Pizza & Italian" and ("italian" in (x.get("cuisine") or "").lower() or "pasta" in (x.get("cuisine") or "").lower())),
     ("breakfast-cafes", "Breakfast & Cafés", lambda x: x.get("category") == "Breakfast & Cafe"),
     ("indian-south-asian", "Indian & South Asian", lambda x: x.get("category") == "Indian & South Asian"),
     ("asian", "Asian Restaurants", lambda x: x.get("category") in ("Asian", "Hibachi")),
@@ -28,7 +29,7 @@ def item(x):
 def schema(rows, name):
     return json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": name,
                        "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": item(x)}
-                                           for i, x in enumerate(rows, 1)]}, ensure_ascii=False).replace("<", "\\u003c")
+                                           for i, x in enumerate(rows)]}, ensure_ascii=False).replace("<", "\\u003c")
 def links():
     return " ".join(f'<a href="restaurants-{slug}.html">{e(label)}</a>' for slug, label, _ in categories)
 for slug, label, test in categories:
@@ -63,4 +64,4 @@ listings = "\n".join('<li><strong>' + e(x["name"]) + '</strong> — ' + e(x.get(
 block = '<details class="restaurant-seo-list"><summary>Browse the full A–Z restaurant list</summary><h2 id="restaurant-all-heading">Norwood Restaurants, Cafés and Food Businesses A–Z</h2><p>Browse the complete directory below or use the search and filters above. Restaurant details may change; confirm directly before visiting.</p><ul>' + listings + '</ul></details>'
 page = page[:start] + block + page[stop:]
 page_path.write_text(page)
-print(f"Generated 6 category pages and main directory from {len(rows)} restaurants")
+print(f"Generated 7 category pages and main directory from {len(rows)} restaurants")
