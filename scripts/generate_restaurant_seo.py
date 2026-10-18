@@ -2,6 +2,7 @@
 """Regenerate restaurant SEO pages from data/restaurants.json. Idempotent."""
 import html
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,6 +10,9 @@ restaurants = json.loads((ROOT / "data/restaurants.json").read_text())
 categories = [
     ("pizza", "Pizza", lambda x: x.get("category") == "Pizza & Italian" and "pizza" in (x.get("cuisine") or "").lower()),
     ("italian", "Italian Restaurants", lambda x: x.get("category") == "Pizza & Italian" and ("italian" in (x.get("cuisine") or "").lower() or "pasta" in (x.get("cuisine") or "").lower())),
+    ("breakfast", "Breakfast", lambda x: x.get("category") == "Breakfast & Cafe" or "breakfast" in (x.get("cuisine","")+" "+x.get("tags","")).lower()),
+    ("lunch", "Lunch", lambda x: re.search(r"\\blunch\\b", x.get("tags","")+" "+x.get("cuisine",""), re.I) is not None),
+    ("dinner", "Dinner", lambda x: re.search(r"\\bdinner\\b", x.get("tags","")+" "+x.get("cuisine",""), re.I) is not None),
     ("breakfast-cafes", "Breakfast & Cafés", lambda x: x.get("category") == "Breakfast & Cafe"),
     ("indian-south-asian", "Indian & South Asian", lambda x: x.get("category") == "Indian & South Asian"),
     ("asian", "Asian Restaurants", lambda x: x.get("category") in ("Asian", "Hibachi")),
