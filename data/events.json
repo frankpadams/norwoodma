@@ -3882,7 +3882,7 @@
     ]
   },
   {
-    "id": "2026-10-20-paint-night-3054e94",
+    "id": "2026-10-20-paint-night-970db50",
     "title": "Paint Night",
     "start": {
       "date": "2026-10-20",
@@ -3890,24 +3890,26 @@
     },
     "end": {
       "date": "2026-10-20",
-      "time": null
+      "time": "20:00"
     },
-    "venue": null,
-    "address": null,
-    "category": "community",
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "category": "arts",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/paint-night",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
+    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
+    "series": null,
     "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Paint Night Tuesday, October 20, 2026 6:00 PM 8:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
-    "discovered_by": "visible_dated_page",
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
+      "norwood-arts",
       "norwood-community"
     ]
   },
