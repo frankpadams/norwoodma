@@ -597,36 +597,6 @@
     ]
   },
   {
-    "id": "2026-10-18-sunday-oct-7d8ee6d",
-    "title": "Sunday , Oct",
-    "start": {
-      "date": "2026-10-18",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-18",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim1.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Sunday , Oct October 18 , 2026 Shorashim Sunday, Oct 18th 9:30a to 11:30a MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-19-parachute-playtime-96134ca",
     "title": "Parachute Playtime",
     "start": {
@@ -13222,6 +13192,36 @@
     "notes": "GRCPAC fundraiser; bands Girl With A Hawk and Crow Follow; Blue Ribbon BBQ catering.",
     "calendar_ids": [
       "norwood-fundraisers"
+    ]
+  },
+  {
+    "id": "2026-10-31-saturday-oct-9147661",
+    "title": "Saturday , Oct",
+    "start": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-31",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/shabbat-services---bar-mitzvah-gabriel-heyman.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Saturday , Oct October 31 , 2026 Shabbat Services - Bar Mitzvah Gabriel Heyman Shabbat, Oct 31st 10:30a to 12:00p MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -30198,7 +30198,7 @@
     ]
   },
   {
-    "id": "2026-12-05-holiday-season-open-house-461527a",
+    "id": "2026-12-05-holiday-season-open-house-87f0a30",
     "title": "Holiday Season Open House",
     "start": {
       "date": "2026-12-05",
@@ -30208,25 +30208,27 @@
       "date": "2026-12-05",
       "time": "19:00"
     },
-    "venue": "93 Day Street, Norwood, Ma, 02062",
-    "address": "93 Day Street, Norwood, 02062",
-    "category": "sports",
+    "venue": "93 Day Street, Norwood, Ma, 02062, 93 Day Street, Norwood, Massachusetts, 02062, United States",
+    "address": "93 Day Street, Norwood, Ma, 02062, 93 Day Street, Norwood, Massachusetts, 02062, United States",
+    "category": "arts",
     "source_id": "historical-society-events",
     "source_url": "https://norwoodhistoricalsociety.org/event/holiday-open-house-2/",
     "cost": null,
+    "organizer": "Norwood Historical Society",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "@ We are delighted to welcome you to the F Holland Day House for an open house to mark the holiday season. Enjoy refreshments and take a self-guided tour of the F Holland Day House. The house is enhanced with holiday trimmings and items fro",
-    "discovered_by": "scheduled_tribe_api",
+    "notes": "We are excited to continue this holiday tradition, as the Norwood High School Madrigals, conducted by Director of Choirs Jennifer Hartnett, perform crowd-pleasing versions of familiar songs in the Great Hall of the Day House. Seating opens ",
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
+      "norwood-arts",
       "norwood-community",
-      "norwood-historical-society",
-      "norwood-sports"
+      "norwood-family",
+      "norwood-historical-society"
     ]
   },
   {
@@ -33984,7 +33986,7 @@
     ]
   },
   {
-    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-0bad2b3",
+    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-1026a44",
     "title": "A Victorian Christmas with Diane Taraz",
     "start": {
       "date": "2026-12-12",
@@ -33994,24 +33996,26 @@
       "date": "2026-12-12",
       "time": "19:00"
     },
-    "venue": "F Holland Day House",
-    "address": "93 Day Street, Norwood, MA, 02062",
+    "venue": "F Holland Day House, 93 Day Street, Norwood, MA, 02062, United States",
+    "address": "F Holland Day House, 93 Day Street, Norwood, MA, 02062, United States",
     "category": "arts",
     "source_id": "historical-society-events",
     "source_url": "https://norwoodhistoricalsociety.org/event/victorian-christmas-concert/",
-    "cost": "$20.00",
+    "cost": null,
+    "organizer": "Norwood Historical Society",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Christmas The Stories Behind the Carols We Still Sing @ per person Clad in a hand-sewn 1850s gown and accompanying herself on guitar and dulcimer, Diane Taraz brings to life the beloved carols written or revived in the Victorian era – the a",
-    "discovered_by": "scheduled_tribe_api",
+    "notes": "We are excited to continue this holiday tradition, as the Norwood High School Madrigals, conducted by Director of Choirs Jennifer Hartnett, perform crowd-pleasing versions of familiar songs in the Great Hall of the Day House. Seating opens ",
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
-    "access_type": "paid",
+    "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
       "norwood-community",
+      "norwood-family",
       "norwood-historical-society"
     ]
   },
