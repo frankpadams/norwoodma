@@ -313,38 +313,6 @@
     ]
   },
   {
-    "id": "2026-10-18-child-of-god-sunday-50-plus-year-member-celeb-17a31c9",
-    "title": "Child of God Sunday, 50 plus year member celebration and POT LUCK",
-    "start": {
-      "date": "2026-10-18",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-18",
-      "time": "12:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
     "id": "2026-10-18-divine-mercy-prayers-e2fa8f4",
     "title": "Divine Mercy Prayers",
     "start": {
@@ -7154,6 +7122,38 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-food-markets"
+    ]
+  },
+  {
+    "id": "2026-10-25-interfaith-walk-for-hunger-a285edf",
+    "title": "Interfaith Walk for Hunger",
+    "start": {
+      "date": "2026-10-25",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": "14:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-sports"
     ]
   },
   {
@@ -30198,7 +30198,7 @@
     ]
   },
   {
-    "id": "2026-12-05-holiday-season-open-house-87f0a30",
+    "id": "2026-12-05-holiday-season-open-house-461527a",
     "title": "Holiday Season Open House",
     "start": {
       "date": "2026-12-05",
@@ -30208,27 +30208,25 @@
       "date": "2026-12-05",
       "time": "19:00"
     },
-    "venue": "93 Day Street, Norwood, Ma, 02062, 93 Day Street, Norwood, Massachusetts, 02062, United States",
-    "address": "93 Day Street, Norwood, Ma, 02062, 93 Day Street, Norwood, Massachusetts, 02062, United States",
-    "category": "arts",
+    "venue": "93 Day Street, Norwood, Ma, 02062",
+    "address": "93 Day Street, Norwood, 02062",
+    "category": "sports",
     "source_id": "historical-society-events",
     "source_url": "https://norwoodhistoricalsociety.org/event/holiday-open-house-2/",
     "cost": null,
-    "organizer": "Norwood Historical Society",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "We are excited to continue this holiday tradition, as the Norwood High School Madrigals, conducted by Director of Choirs Jennifer Hartnett, perform crowd-pleasing versions of familiar songs in the Great Hall of the Day House. Seating opens ",
-    "discovered_by": "scheduled_ical",
+    "notes": "@ We are delighted to welcome you to the F Holland Day House for an open house to mark the holiday season. Enjoy refreshments and take a self-guided tour of the F Holland Day House. The house is enhanced with holiday trimmings and items fro",
+    "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
-      "norwood-arts",
       "norwood-community",
-      "norwood-family",
-      "norwood-historical-society"
+      "norwood-historical-society",
+      "norwood-sports"
     ]
   },
   {
@@ -33986,7 +33984,7 @@
     ]
   },
   {
-    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-1026a44",
+    "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-0bad2b3",
     "title": "A Victorian Christmas with Diane Taraz",
     "start": {
       "date": "2026-12-12",
@@ -33996,26 +33994,24 @@
       "date": "2026-12-12",
       "time": "19:00"
     },
-    "venue": "F Holland Day House, 93 Day Street, Norwood, MA, 02062, United States",
-    "address": "F Holland Day House, 93 Day Street, Norwood, MA, 02062, United States",
+    "venue": "F Holland Day House",
+    "address": "93 Day Street, Norwood, MA, 02062",
     "category": "arts",
     "source_id": "historical-society-events",
     "source_url": "https://norwoodhistoricalsociety.org/event/victorian-christmas-concert/",
-    "cost": null,
-    "organizer": "Norwood Historical Society",
+    "cost": "$20.00",
     "public_access": "public",
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "We are excited to continue this holiday tradition, as the Norwood High School Madrigals, conducted by Director of Choirs Jennifer Hartnett, perform crowd-pleasing versions of familiar songs in the Great Hall of the Day House. Seating opens ",
-    "discovered_by": "scheduled_ical",
+    "notes": "Christmas The Stories Behind the Carols We Still Sing @ per person Clad in a hand-sewn 1850s gown and accompanying herself on guitar and dulcimer, Diane Taraz brings to life the beloved carols written or revived in the Victorian era – the a",
+    "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
-    "access_type": "public",
+    "access_type": "paid",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
       "norwood-community",
-      "norwood-family",
       "norwood-historical-society"
     ]
   },
