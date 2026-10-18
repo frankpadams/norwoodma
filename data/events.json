@@ -5411,7 +5411,7 @@
     ]
   },
   {
-    "id": "2026-10-24-men-s-prayer-group-saturday-2ee1811",
+    "id": "2026-10-24-men-s-prayer-group-966b06d",
     "title": "Men's Prayer Group",
     "start": {
       "date": "2026-10-24",
@@ -5419,20 +5419,21 @@
     },
     "end": {
       "date": "2026-10-24",
-      "time": null
+      "time": "08:30"
     },
-    "venue": null,
+    "venue": "Saint Catherine of Siena Parish",
     "address": null,
     "category": "community",
     "source_id": "st-catherine-calendar",
-    "source_url": "https://stcatherinenorwood.org/events/mens-prayer-group/20261024",
+    "source_url": "https://stcatherinenorwood.org/",
     "cost": null,
+    "organizer": "Saint Catherine of Siena Parish",
     "public_access": "public",
-    "series": "Saint Catherine of Siena — Calendar",
+    "series": null,
     "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Men's Prayer Group Saturday , October 24 , 7:30 AM - 8:30 AM All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship. Read More",
-    "discovered_by": "visible_dated_page",
+    "verification_status": "auto_primary_source",
+    "notes": "All men are invited to join us in the chapel on Saturday morning following the 7 a.m. Mass for prayer, Bible study and fellowship.",
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
