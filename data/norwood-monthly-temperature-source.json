@@ -1,0 +1,32 @@
+{
+  "station": "Norwood Memorial Airport",
+  "station_id": "USW00054704",
+  "geography": "Norwood",
+  "period": "1991–2020",
+  "source": "https://www.ncei.noaa.gov/pub/data/normals/1991-2020/products/station/USW00054704.csv",
+  "unit": "degrees Fahrenheit",
+  "status": "source_identified_values_pending_verification",
+  "dimensions": [
+    "month",
+    "normal_period"
+  ],
+  "measures": [
+    "average_daily_high",
+    "average_daily_low"
+  ],
+  "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  "note": "Populate only after validating NOAA station normals; do not mistake monthly climate normals for year-by-year observed trends."
+}
