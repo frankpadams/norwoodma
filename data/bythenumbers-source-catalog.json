@@ -1,0 +1,95 @@
+{
+  "updated": "2026-10-19",
+  "sources": [
+    {
+      "agency": "Massachusetts Department of Public Health",
+      "dataset": "Substance use and overdose data; Community Profile dashboard",
+      "url": "https://www.mass.gov/lists/substance-use-and-overdose-data",
+      "geography": "municipality or state, varies by measure",
+      "time": "annual",
+      "status": "source_identified_extract_pending",
+      "caution": "Suppressions and small counts require review"
+    },
+    {
+      "agency": "SAMHSA",
+      "dataset": "NSDUH substate mental health and substance use estimates",
+      "url": "https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/substate-releases",
+      "geography": "substate region",
+      "time": "multi-year periods",
+      "status": "source_identified_extract_pending",
+      "caution": "Not Norwood-level; estimates and confidence intervals"
+    },
+    {
+      "agency": "National Institute of Mental Health",
+      "dataset": "Mental illness prevalence statistics",
+      "url": "https://www.nimh.nih.gov/health/statistics",
+      "geography": "United States",
+      "time": "survey year",
+      "status": "one_observation_imported",
+      "caution": "National estimates, not town rates"
+    },
+    {
+      "agency": "FBI / DOJ",
+      "dataset": "Crime Data Explorer UCR and NIBRS",
+      "url": "https://cde.ucr.cjis.gov/",
+      "geography": "law enforcement agency",
+      "time": "annual",
+      "status": "secondary_2024_observations_imported_direct_verification_pending",
+      "caution": "Reporting definitions and agency participation vary"
+    },
+    {
+      "agency": "Norwood Police Department",
+      "dataset": "Annual town reports and police activity",
+      "url": "https://www.norwoodma.gov/",
+      "geography": "Norwood",
+      "time": "annual",
+      "status": "source_identified_extract_pending",
+      "caution": "Department-specific incident and call definitions"
+    },
+    {
+      "agency": "Norwood Fire Department",
+      "dataset": "Annual town reports fire and EMS responses",
+      "url": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "geography": "Norwood",
+      "time": "annual",
+      "status": "2021_observations_imported",
+      "caution": "Responses are not unique incidents; EMS included"
+    },
+    {
+      "agency": "Massachusetts Department of Fire Services",
+      "dataset": "Fire incident statistics NFIRS MFIRS NERIS",
+      "url": "https://www.mass.gov/info-details/fire-data-and-statistics",
+      "geography": "municipality or state",
+      "time": "annual",
+      "status": "source_identified_extract_pending",
+      "caution": "Reporting system transitioned in 2025"
+    },
+    {
+      "agency": "U.S. Census Bureau",
+      "dataset": "QuickFacts decennial census and estimates",
+      "url": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "geography": "Norwood",
+      "time": "decennial and annual estimates",
+      "status": "population_and_density_imported",
+      "caution": "Estimates and decennial counts are distinct"
+    },
+    {
+      "agency": "Massachusetts DESE",
+      "dataset": "District enrollment and finance trends",
+      "url": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "geography": "Norwood and Massachusetts",
+      "time": "fiscal and school year",
+      "status": "multiple_series_imported",
+      "caution": "Enrollment and fiscal FTE pupil denominator differ"
+    },
+    {
+      "agency": "Massachusetts Board of Library Commissioners",
+      "dataset": "Public library annual statistics",
+      "url": "https://mblc.state.ma.us/programs-and-support/library-statistics/",
+      "geography": "Norwood",
+      "time": "annual",
+      "status": "source_identified_extract_pending",
+      "caution": "Check reporting definitions across years"
+    }
+  ]
+}
