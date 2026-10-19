@@ -1,0 +1,72 @@
+{
+  "status": "research_preview",
+  "age2020": {
+    "year": 2020,
+    "geography": "Norwood town",
+    "source": "https://data.census.gov/table?g=060XX00US2502150200&tid=DECENNIALDHC2020.P12",
+    "secondary": "https://www.zip-codes.com/zip-code/02062/zip-code-02062.asp",
+    "note": "2020 Decennial Census detailed age bins, secondary transcription pending direct table cross-check; verify town vs ZIP geography before public release.",
+    "groups": [
+      "Under 5",
+      "5–9",
+      "10–14",
+      "15–19",
+      "20–24",
+      "25–29",
+      "30–34",
+      "35–39",
+      "40–44",
+      "45–49",
+      "50–54",
+      "55–59",
+      "60–64",
+      "65–69",
+      "70–74",
+      "75–79",
+      "80–84",
+      "85+"
+    ],
+    "counts": [
+      1815,
+      1650,
+      1618,
+      1516,
+      1554,
+      2240,
+      2637,
+      2357,
+      1790,
+      1699,
+      2057,
+      2375,
+      2239,
+      1773,
+      1411,
+      1013,
+      857,
+      1010
+    ]
+  },
+  "ageRecent": {
+    "period": "Current Census QuickFacts estimate",
+    "under18": 20,
+    "over65": 17.6,
+    "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/LND110210",
+    "note": "Cross-sectional estimate, not directly comparable to decennial age bins."
+  },
+  "population": [
+    {
+      "year": 2010,
+      "count": 28602
+    },
+    {
+      "year": 2020,
+      "count": 31611
+    },
+    {
+      "year": 2025,
+      "count": 31714
+    }
+  ],
+  "populationSource": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/LND110210"
+}
