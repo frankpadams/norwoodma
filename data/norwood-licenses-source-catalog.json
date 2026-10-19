@@ -49,6 +49,34 @@
       "source": "https://cms5.revize.com/revize/norwoodma/2024%20Annual%20Report.pdf",
       "measure": "Dealer, victualer, taxi, lodging, entertainment and other licenses",
       "caution": "Separate permits issued during year from active license stock"
+    },
+    {
+      "id": "dog_licenses",
+      "agency": "Norwood Town Clerk",
+      "source": "https://www.norwoodma.gov/",
+      "measure": "Dogs licensed per calendar year; new versus renewal if available",
+      "caution": "Active registrations and annual issuances are distinct"
+    },
+    {
+      "id": "marriage_licenses",
+      "agency": "Norwood Town Clerk / Massachusetts Registry of Vital Records and Statistics",
+      "source": "https://www.mass.gov/orgs/registry-of-vital-records-and-statistics",
+      "measure": "Marriage intentions or licenses issued in Norwood per year",
+      "caution": "Marriage intention filed in Norwood does not necessarily mean couple resides in Norwood; prioritize Norwood resident counts where available"
+    },
+    {
+      "id": "building_permits",
+      "agency": "Norwood Building Department",
+      "source": "https://www.norwoodma.gov/",
+      "measure": "Building permits issued by year and category, permit valuation and residential units authorized",
+      "caution": "Permits and dwelling units are different measures; alterations not new construction"
+    },
+    {
+      "id": "business_permits",
+      "agency": "Norwood Town Clerk and Licensing Board",
+      "source": "https://www.norwoodma.gov/",
+      "measure": "Annual business certificates, license and permit issuance by category",
+      "caution": "Business certificates are not counts of operating establishments"
     }
   ],
   "observations": []
