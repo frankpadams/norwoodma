@@ -6655,6 +6655,74 @@
     ]
   },
   {
+    "id": "2026-10-25-divine-mercy-prayers-99ab26e",
+    "title": "Divine Mercy Prayers",
+    "start": {
+      "date": "2026-10-25",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": "12:30"
+    },
+    "venue": "Norwood Knights of Columbus Events",
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-kofc-events",
+    "source_url": "https://iccnorwood.org/events",
+    "cost": null,
+    "organizer": "Norwood Knights of Columbus Events",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-25-norwood-storm-vs-foxboro-warriors-3g-gold-91f5ba5",
+    "title": "Norwood Storm vs Foxboro Warriors 3G - Gold",
+    "start": {
+      "date": "2026-10-25",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-10-25",
+      "time": null
+    },
+    "venue": "Oldham School 8",
+    "field": "Oldham School 8",
+    "grade": "Girls Grade 3",
+    "gender": "girls",
+    "team": "Norwood Storm",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-3",
+      "nys-team-girls-grade-3-norwood-storm"
+    ]
+  },
+  {
     "id": "2026-10-25-canton-pumpkin-fest-carnival",
     "title": "Canton Pumpkin Fest Carnival — Canton, MA",
     "start": {
