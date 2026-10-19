@@ -1570,6 +1570,193 @@
       "role": "norwood",
       "source": "https://www.boston25news.com/news/local/norwood-hospital-flood-strains-ambulance-services-one-year-later/7DHBUV45OREXLMW5LRR6FOJTDI/",
       "notes": "June 2020–June 2021 period (NOT calendar year 2021); sourced from Norwood Fire Department ambulance-run list published by Boston 25. Period must be shown before cross-year comparison."
+    },
+    {
+      "series": "light_electric_sales_revenue",
+      "variable": "Norwood Light annual electricity sales revenue",
+      "year": 2024,
+      "value": 55889590,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "2024 Norwood annual town report. Broadband growth refers only to commercial customers and fiscal year 2024; other figures are calendar year."
+    },
+    {
+      "series": "light_electric_energy_sold",
+      "variable": "Norwood Light annual electricity sold",
+      "year": 2024,
+      "value": 319570517,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "2024 Norwood annual town report. Broadband growth refers only to commercial customers and fiscal year 2024; other figures are calendar year."
+    },
+    {
+      "series": "light_electric_accounts",
+      "variable": "Norwood Light electric accounts",
+      "year": 2024,
+      "value": 15824,
+      "unit": "accounts",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "2024 Norwood annual town report. Broadband growth refers only to commercial customers and fiscal year 2024; other figures are calendar year."
+    },
+    {
+      "series": "light_electric_avg_revenue_kwh",
+      "variable": "Norwood Light average electricity revenue per kWh",
+      "year": 2024,
+      "value": 0.1749,
+      "unit": "USD/kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "2024 Norwood annual town report. Broadband growth refers only to commercial customers and fiscal year 2024; other figures are calendar year."
+    },
+    {
+      "series": "light_commercial_broadband_customer_growth",
+      "variable": "Norwood Light commercial broadband customers year-over-year growth",
+      "year": 2024,
+      "value": 6,
+      "unit": "percent",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "2024 Norwood annual town report. Broadband growth refers only to commercial customers and fiscal year 2024; other figures are calendar year."
+    },
+    {
+      "series": "light_residential_electric_kwh",
+      "variable": "Norwood Light residential electricity sold",
+      "year": 2024,
+      "value": 90086430,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2024/download",
+      "notes": "DPU annual return, electricity sales by customer class."
+    },
+    {
+      "series": "light_residential_electric_customers_dec31",
+      "variable": "Norwood Light residential electric customers Dec 31",
+      "year": 2024,
+      "value": 0,
+      "unit": "customers",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2024/download",
+      "notes": "DPU annual return, December 31 customers; not annual unique customers."
+    },
+    {
+      "series": "light_commercial_electric_kwh",
+      "variable": "Norwood Light commercial electricity sold",
+      "year": 2024,
+      "value": 99218414,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2024/download",
+      "notes": "DPU annual return, electricity sales by customer class."
+    },
+    {
+      "series": "light_commercial_electric_customers_dec31",
+      "variable": "Norwood Light commercial electric customers Dec 31",
+      "year": 2024,
+      "value": 1908,
+      "unit": "customers",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2024/download",
+      "notes": "DPU annual return, December 31 customers; not annual unique customers."
+    },
+    {
+      "series": "light_industrial_electric_kwh",
+      "variable": "Norwood Light industrial electricity sold",
+      "year": 2024,
+      "value": 124941510,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2024/download",
+      "notes": "DPU annual return, electricity sales by customer class."
+    },
+    {
+      "series": "light_industrial_electric_customers_dec31",
+      "variable": "Norwood Light industrial electric customers Dec 31",
+      "year": 2024,
+      "value": 45,
+      "unit": "customers",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2024/download",
+      "notes": "DPU annual return, December 31 customers; not annual unique customers."
+    },
+    {
+      "series": "light_residential_electric_kwh",
+      "variable": "Norwood Light residential electricity sold",
+      "year": 2025,
+      "value": 91258608,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
+      "notes": "DPU annual return, electricity sales by customer class."
+    },
+    {
+      "series": "light_residential_electric_customers_dec31",
+      "variable": "Norwood Light residential electric customers Dec 31",
+      "year": 2025,
+      "value": 13617,
+      "unit": "customers",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
+      "notes": "DPU annual return, December 31 customers; not annual unique customers."
+    },
+    {
+      "series": "light_commercial_electric_kwh",
+      "variable": "Norwood Light commercial electricity sold",
+      "year": 2025,
+      "value": 99140908,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
+      "notes": "DPU annual return, electricity sales by customer class."
+    },
+    {
+      "series": "light_commercial_electric_customers_dec31",
+      "variable": "Norwood Light commercial electric customers Dec 31",
+      "year": 2025,
+      "value": 1915,
+      "unit": "customers",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
+      "notes": "DPU annual return, December 31 customers; not annual unique customers."
+    },
+    {
+      "series": "light_industrial_electric_kwh",
+      "variable": "Norwood Light industrial electricity sold",
+      "year": 2025,
+      "value": 125294330,
+      "unit": "kWh",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
+      "notes": "DPU annual return, electricity sales by customer class."
+    },
+    {
+      "series": "light_industrial_electric_customers_dec31",
+      "variable": "Norwood Light industrial electric customers Dec 31",
+      "year": 2025,
+      "value": 49,
+      "unit": "customers",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
+      "notes": "DPU annual return, December 31 customers; not annual unique customers."
     }
   ]
 }
