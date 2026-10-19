@@ -1,0 +1,33 @@
+{
+  "status": "awaiting_verified_closure_dates",
+  "subject": "Norwood Public Schools",
+  "measure": "Full-day school closures due to snow or winter weather",
+  "dimension": "school_year",
+  "counting_rules": {
+    "snow_day": "One scheduled instructional day canceled district-wide due to snow, ice, or winter weather",
+    "exclude": [
+      "Scheduled vacation and holidays",
+      "Professional development days",
+      "Early dismissals unless tracked separately",
+      "Reserved snow make-up days not actually used"
+    ],
+    "partial_closures": "Record separately",
+    "school_year_label": "Use YYYY–YYYY (e.g., 2023–2024)"
+  },
+  "observations": [],
+  "sources": [
+    {
+      "name": "Norwood Public Schools school calendars",
+      "url": "https://www.norwood.k12.ma.us/"
+    },
+    {
+      "name": "Norwood School Committee archives",
+      "url": "https://www.norwood.k12.ma.us/sc"
+    },
+    {
+      "name": "2023–24 approved calendar",
+      "url": "https://campussuite-storage.s3.amazonaws.com/prod/1213978/583ade96-581b-11e7-99ef-124f7febbf4a/2739479/7acb431c-c74d-11ee-8aed-0a58a9feac02/file/2023-2024CalendarSCApproved%282%29.pdf"
+    }
+  ],
+  "note": "Published calendars reserve potential make-up days but do not establish how many weather closures actually occurred. Verify dated closure announcements and final adjusted calendar for each school year."
+}
