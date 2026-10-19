@@ -1460,6 +1460,72 @@
       "role": "norwood",
       "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
       "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
+    },
+    {
+      "series": "english_learners_percent",
+      "variable": "English Learners",
+      "year": 2025,
+      "value": 16.6,
+      "unit": "percent",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
+      "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
+    },
+    {
+      "series": "students_with_disabilities_percent",
+      "variable": "Students with Disabilities",
+      "year": 2025,
+      "value": 24.3,
+      "unit": "percent",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
+      "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
+    },
+    {
+      "series": "first_language_not_english_percent",
+      "variable": "First language not English",
+      "year": 2025,
+      "value": 30.7,
+      "unit": "percent",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
+      "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
+    },
+    {
+      "series": "high_needs_percent",
+      "variable": "High Needs",
+      "year": 2025,
+      "value": 58.3,
+      "unit": "percent",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
+      "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
+    },
+    {
+      "series": "state_english_learners_percent",
+      "variable": "English Learners",
+      "year": 2025,
+      "value": 13.9,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "role": "reference",
+      "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
+      "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
+    },
+    {
+      "series": "state_students_with_disabilities_percent",
+      "variable": "Students with Disabilities",
+      "year": 2025,
+      "value": 20.6,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "role": "reference",
+      "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
+      "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
     }
   ]
 }
