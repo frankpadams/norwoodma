@@ -27341,6 +27341,44 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-be5f4c1e08ea-2026-11-30",
+    "title": "Intermediate Kettle Bells Session 2 (Mondays)",
+    "start": {
+      "date": "2026-11-30",
+      "time": "17:30"
+    },
+    "end": {
+      "date": "2026-11-30",
+      "time": "18:30"
+    },
+    "venue": "11/30/2026 - 02/01/2027 05:30 PM - 06:30 PM Norwood Civic Center - Multi-Purpose Room",
+    "category": "adult_fitness",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30883",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$90.00 Res, $100.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2026-11-30",
+    "session_end": "2027-02-01",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-be5f4c1e08ea",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "norwood-sports",
+      "rec-adult-fitness",
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-028951c24952-2026-11-30",
     "title": "Irish Step 3 - Mondays",
     "start": {
@@ -86228,8 +86266,8 @@
     ]
   },
   {
-    "id": "2027-05-10-varsity-baseball-vs-weymouth-high-school-7860b4a",
-    "title": "Varsity baseball vs Weymouth High School",
+    "id": "2027-05-10-varsity-baseball-vs-westwood-high-school-709a184",
+    "title": "Varsity baseball vs Westwood High School",
     "start": {
       "date": "2027-05-10",
       "time": "19:00"
@@ -87879,6 +87917,109 @@
     ]
   },
   {
+    "id": "2027-05-24-var-lacrosse-vs-dedham-high-school-86ebb50",
+    "title": "Var Lacrosse vs Dedham High School",
+    "start": {
+      "date": "2027-05-24",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2027-05-24",
+      "time": "17:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-24-varsity-central-girls-lacrosse-dedham-high-sc-806f478",
+    "title": "Varsity Central Girls Lacrosse @ Dedham High School",
+    "start": {
+      "date": "2027-05-24",
+      "time": "16:15"
+    },
+    "end": {
+      "date": "2027-05-24",
+      "time": "17:45"
+    },
+    "venue": "140 Whiting Ave, Dedham MA 02026",
+    "address": "140 Whiting Ave, Dedham MA 02026",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: Varsity Team: Norwood High School Site: Dedham High School Subsite: Multipurpose Turf Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-24-jv-central-girls-lacrosse-dedham-high-school-558f700",
+    "title": "JV Central Girls Lacrosse @ Dedham High School",
+    "start": {
+      "date": "2027-05-24",
+      "time": "17:45"
+    },
+    "end": {
+      "date": "2027-05-24",
+      "time": "19:00"
+    },
+    "venue": "140 Whiting Ave, Dedham MA 02026",
+    "address": "140 Whiting Ave, Dedham MA 02026",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Dedham High School Subsite: Multipurpose Turf Field",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-05-25-boys-varsity-tennis-team-vs-dedham-high-schoo-26b5313",
     "title": "Boys Varsity Tennis - Team vs Dedham High School",
     "start": {
@@ -87901,41 +88042,6 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Tennis - Team Level: Boys Varsity Team: Norwood High School Site: Norwood High School Subsite: Tennis Courts",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2027-05-25-var-lacrosse-vs-dedham-high-school-501869b",
-    "title": "Var Lacrosse vs Dedham High School",
-    "start": {
-      "date": "2027-05-25",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2027-05-25",
-      "time": "17:30"
-    },
-    "venue": "245 Nichols St, Norwood MA 02062",
-    "address": "245 Nichols St, Norwood MA 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Lacrosse",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Lacrosse",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -87983,18 +88089,18 @@
     ]
   },
   {
-    "id": "2027-05-25-varsity-central-girls-lacrosse-dedham-high-sc-693fe7f",
-    "title": "Varsity Central Girls Lacrosse @ Dedham High School",
+    "id": "2027-05-26-varsity-south-central-girls-lacrosse-m-connol-66dc36e",
+    "title": "Varsity South Central Girls Lacrosse M Connolly vs Attleboro High School",
     "start": {
-      "date": "2027-05-25",
-      "time": "16:15"
+      "date": "2027-05-26",
+      "time": "16:00"
     },
     "end": {
-      "date": "2027-05-25",
-      "time": "17:45"
+      "date": "2027-05-26",
+      "time": "17:15"
     },
-    "venue": "140 Whiting Ave, Dedham MA 02026",
-    "address": "140 Whiting Ave, Dedham MA 02026",
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -88004,12 +88110,13 @@
     "series": "Norwood Girls Varsity Lacrosse",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Central Girls Lacrosse Level: Varsity Team: Norwood High School Site: Dedham High School Subsite: Multipurpose Turf Field",
+    "notes": "Sport: South Central Girls Lacrosse M Connolly Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
+      "norwood-community",
       "norwood-family",
       "norwood-high-athletics",
       "norwood-sports",
@@ -88017,18 +88124,18 @@
     ]
   },
   {
-    "id": "2027-05-25-jv-central-girls-lacrosse-dedham-high-school-015bb73",
-    "title": "JV Central Girls Lacrosse @ Dedham High School",
+    "id": "2027-05-26-jv-north-girl-s-lacrosse-r-georges-vs-attlebo-039239b",
+    "title": "JV North Girl's Lacrosse R Georges vs Attleboro High School",
     "start": {
-      "date": "2027-05-25",
-      "time": "17:45"
+      "date": "2027-05-26",
+      "time": "17:30"
     },
     "end": {
-      "date": "2027-05-25",
-      "time": "19:00"
+      "date": "2027-05-26",
+      "time": "18:30"
     },
-    "venue": "140 Whiting Ave, Dedham MA 02026",
-    "address": "140 Whiting Ave, Dedham MA 02026",
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -88038,7 +88145,7 @@
     "series": "Norwood Girls JV Lacrosse",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Dedham High School Subsite: Multipurpose Turf Field",
+    "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
