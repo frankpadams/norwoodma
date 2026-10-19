@@ -1,0 +1,55 @@
+{
+  "status": "sources_identified_extraction_pending",
+  "scope": "Norwood-specific annual licenses, permits and registrations; benchmarks optional only when directly comparable",
+  "dimensions": [
+    "year",
+    "license_type",
+    "license_status",
+    "age_group_if_available"
+  ],
+  "series": [
+    {
+      "id": "drivers_licenses_active",
+      "agency": "Massachusetts RMV",
+      "source": "https://www.mass.gov/orgs/massachusetts-registry-of-motor-vehicles",
+      "measure": "Active driver licenses held by Norwood residents",
+      "caution": "Municipal resident counts need source verification"
+    },
+    {
+      "id": "fishing_licenses",
+      "agency": "MassWildlife",
+      "source": "https://www.mass.gov/orgs/division-of-fisheries-and-wildlife",
+      "measure": "Fishing licenses held by Norwood residents by year",
+      "caution": "Do not use statewide totals or point-of-sale location as residence"
+    },
+    {
+      "id": "hunting_licenses",
+      "agency": "MassWildlife",
+      "source": "https://www.mass.gov/orgs/division-of-fisheries-and-wildlife",
+      "measure": "Hunting and sporting licenses held by Norwood residents by year",
+      "caution": "Combined sporting licenses require consistent counting"
+    },
+    {
+      "id": "firearms_licenses",
+      "agency": "DCJIS",
+      "source": "https://www.mass.gov/info-details/data-about-firearms-licensing-and-transactions",
+      "measure": "Active LTC and FID, plus applications by status and year",
+      "caution": "Separate applications, licenses issued, and active license inventory"
+    },
+    {
+      "id": "liquor_licenses",
+      "agency": "Norwood Town Clerk and ABCC",
+      "source": "https://www.mass.gov/lists/enforcement-data-and-reports-abcc",
+      "measure": "Active licenses by class and year",
+      "caution": "Avoid conflating renewals, transfers, and total active licenses"
+    },
+    {
+      "id": "other_municipal_licenses",
+      "agency": "Norwood Town Clerk",
+      "source": "https://cms5.revize.com/revize/norwoodma/2024%20Annual%20Report.pdf",
+      "measure": "Dealer, victualer, taxi, lodging, entertainment and other licenses",
+      "caution": "Separate permits issued during year from active license stock"
+    }
+  ],
+  "observations": []
+}
