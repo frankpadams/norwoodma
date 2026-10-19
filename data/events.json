@@ -3114,6 +3114,34 @@
     ]
   },
   {
+    "id": "2026-10-21-capital-outlay-committee-meeting-2319d4c",
+    "title": "Capital Outlay Committee Meeting",
+    "start": {
+      "date": "2026-10-21",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-21",
+      "time": null
+    },
+    "venue": "566 Washington St Norwood, MA 02062",
+    "address": null,
+    "category": "community",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-21-wednesday-oct-a7adf05",
     "title": "Wednesday , Oct",
     "start": {
@@ -3994,8 +4022,8 @@
     ]
   },
   {
-    "id": "2026-10-22-pto-sponsored-halloween-party-time-tba-38dfa8d",
-    "title": "PTO Sponsored Halloween Party Time TBA",
+    "id": "2026-10-22-pto-sponsored-halloween-party-6-00-7-30-pm-aa2657b",
+    "title": "PTO Sponsored Halloween Party 6:00-7:30 PM",
     "start": {
       "date": "2026-10-22",
       "time": null
@@ -5991,6 +6019,43 @@
     ]
   },
   {
+    "id": "2026-10-24-norwood-blaze-vs-canton-boys-grade-3-mckennie-3cb53b4",
+    "title": "Norwood Blaze vs Canton Boys Grade 3 McKennie",
+    "start": {
+      "date": "2026-10-24",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": "-",
+    "field": "-",
+    "grade": "Boys Grade 3",
+    "gender": "boys",
+    "team": "Norwood Blaze",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-3",
+      "nys-team-boys-grade-3-norwood-blaze"
+    ]
+  },
+  {
     "id": "2026-10-24-dedham-square-trick-or-treat",
     "title": "Dedham Square Trick or Treat",
     "start": {
@@ -6065,43 +6130,6 @@
     "notes": "Foxborough, MA. Listed on Norfolk County Halloween Happenings flyer; confirm details with organizer before attending. Organizer event link and admission not independently verified.",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-24-norwood-blaze-vs-dedham-maroon-3b-2874377",
-    "title": "Norwood Blaze vs Dedham Maroon 3B",
-    "start": {
-      "date": "2026-10-24",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-10-24",
-      "time": null
-    },
-    "venue": "Oldham School 9",
-    "field": "Oldham School 9",
-    "grade": "Boys Grade 3",
-    "gender": "boys",
-    "team": "Norwood Blaze",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-3",
-      "nys-team-boys-grade-3-norwood-blaze"
     ]
   },
   {
@@ -7968,39 +7996,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-10-27-teen-anime-club-6406ae4",
-    "title": "Teen Anime Club",
-    "start": {
-      "date": "2026-10-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/teen-anime-club-27/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Simoni RoomGrades 7-12Hang out on a half-day at the library with our Teen Anime Club! We will watch some anime, have some crafts available, and snacks will also be provided. Registration is required.",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community",
-      "norwood-family"
     ]
   },
   {
@@ -12583,43 +12578,6 @@
     ]
   },
   {
-    "id": "2026-10-31-norwood-blaze-vs-milton-copperheads-0a733d6",
-    "title": "Norwood Blaze vs Milton Copperheads",
-    "start": {
-      "date": "2026-10-31",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "Oldham School 9",
-    "field": "Oldham School 9",
-    "grade": "Boys Grade 3",
-    "gender": "boys",
-    "team": "Norwood Blaze",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-3",
-      "nys-team-boys-grade-3-norwood-blaze"
-    ]
-  },
-  {
     "id": "2026-10-31-norwood-chargers-vs-medfield-united-4b-9a3227c",
     "title": "Norwood Chargers vs Medfield United 4B",
     "start": {
@@ -16386,6 +16344,43 @@
       "norwood-sports",
       "nys-grade-boys-grade-4",
       "nys-team-boys-grade-4-norwood-trappers"
+    ]
+  },
+  {
+    "id": "2026-11-07-norwood-blaze-vs-c-c-ironbirds-76b19ce",
+    "title": "Norwood Blaze vs C-C Ironbirds",
+    "start": {
+      "date": "2026-11-07",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": null
+    },
+    "venue": "-",
+    "field": "-",
+    "grade": "Boys Grade 3",
+    "gender": "boys",
+    "team": "Norwood Blaze",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-3",
+      "nys-team-boys-grade-3-norwood-blaze"
     ]
   },
   {
@@ -20273,43 +20268,6 @@
     "discovered_by": "scheduled_recurring_series",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-14-norwood-blaze-vs-newton-b-united-4eeb9ce",
-    "title": "Norwood Blaze vs Newton B United",
-    "start": {
-      "date": "2026-11-14",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-11-14",
-      "time": null
-    },
-    "venue": "Oldham School 9",
-    "field": "Oldham School 9",
-    "grade": "Boys Grade 3",
-    "gender": "boys",
-    "team": "Norwood Blaze",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-3",
-      "nys-team-boys-grade-3-norwood-blaze"
     ]
   },
   {
