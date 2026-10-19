@@ -1757,6 +1757,193 @@
       "role": "norwood",
       "source": "https://www.mass.gov/doc/norwood-ar-2025/download",
       "notes": "DPU annual return, December 31 customers; not annual unique customers."
+    },
+    {
+      "series": "pinball_license_revenue",
+      "variable": "Pinball machine license fee revenue",
+      "year": 2022,
+      "value": 500,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "pinball_license_revenue",
+      "variable": "Pinball machine license fee revenue",
+      "year": 2023,
+      "value": 550,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "pool_bowling_license_revenue",
+      "variable": "Pool and bowling license fee revenue",
+      "year": 2022,
+      "value": 672,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "pool_bowling_license_revenue",
+      "variable": "Pool and bowling license fee revenue",
+      "year": 2023,
+      "value": 602,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "car_dealer_license_revenue",
+      "variable": "Car dealership license fee revenue",
+      "year": 2022,
+      "value": 8600,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "car_dealer_license_revenue",
+      "variable": "Car dealership license fee revenue",
+      "year": 2023,
+      "value": 9200,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "common_victualler_license_revenue",
+      "variable": "Common victualler license fee revenue",
+      "year": 2022,
+      "value": 8600,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "common_victualler_license_revenue",
+      "variable": "Common victualler license fee revenue",
+      "year": 2023,
+      "value": 8100,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "taxi_license_revenue",
+      "variable": "Taxi license fee revenue",
+      "year": 2022,
+      "value": 205,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "taxi_license_revenue",
+      "variable": "Taxi license fee revenue",
+      "year": 2023,
+      "value": 205,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "junk_collector_license_revenue",
+      "variable": "Junk collector license fee revenue",
+      "year": 2022,
+      "value": 270,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "junk_collector_license_revenue",
+      "variable": "Junk collector license fee revenue",
+      "year": 2023,
+      "value": 550,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "fire_permit_revenue",
+      "variable": "Fire permit fee revenue",
+      "year": 2022,
+      "value": 58229,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "fire_permit_revenue",
+      "variable": "Fire permit fee revenue",
+      "year": 2023,
+      "value": 126047,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "building_inspection_permit_revenue",
+      "variable": "Building inspection permit fee revenue",
+      "year": 2022,
+      "value": 2428272,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "burial_permit_revenue",
+      "variable": "Burial permit fee revenue",
+      "year": 2022,
+      "value": 2090,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
+    },
+    {
+      "series": "burial_permit_revenue",
+      "variable": "Burial permit fee revenue",
+      "year": 2023,
+      "value": 2270,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norwoodma.gov/2023%20Annual%20Report.pdf",
+      "notes": "Actual fee revenue in town annual report, NOT number of devices or licenses. Fiscal-year accounting may differ from calendar-year issuance."
     }
   ]
 }
