@@ -1306,6 +1306,94 @@
       "role": "norwood",
       "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
       "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "residential_tax_rate",
+      "variable": "Residential and open space property tax rate",
+      "year": 2024,
+      "value": 10.47,
+      "unit": "USD per $1,000 assessed",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "commercial_tax_rate",
+      "variable": "Commercial industrial personal property tax rate",
+      "year": 2024,
+      "value": 23.92,
+      "unit": "USD per $1,000 assessed",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "residential_assessed_value",
+      "variable": "Residential assessed property valuation",
+      "year": 2024,
+      "value": 5727192034,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "commercial_assessed_value",
+      "variable": "Commercial assessed property valuation",
+      "year": 2024,
+      "value": 1174074667,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "industrial_assessed_value",
+      "variable": "Industrial assessed property valuation",
+      "year": 2024,
+      "value": 150433442,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "residential_parcel_count",
+      "variable": "Residential property parcels",
+      "year": 2024,
+      "value": 8302,
+      "unit": "parcels",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "commercial_parcel_count",
+      "variable": "Commercial property parcels",
+      "year": 2024,
+      "value": 442,
+      "unit": "parcels",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "industrial_parcel_count",
+      "variable": "Industrial property parcels",
+      "year": 2024,
+      "value": 199,
+      "unit": "parcels",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
     }
   ]
 }
