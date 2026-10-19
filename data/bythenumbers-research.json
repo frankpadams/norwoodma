@@ -1064,6 +1064,248 @@
       "role": "reference",
       "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
       "notes": "Reference benchmark for Norwood school-age public participation."
+    },
+    {
+      "series": "retail_sales",
+      "variable": "Retail sales",
+      "year": 2022,
+      "value": 2331415000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/NES010223",
+      "notes": "2022 Economic Census-derived QuickFacts measure; sales are not GDP."
+    },
+    {
+      "series": "food_service_sales",
+      "variable": "Accommodation and food services sales",
+      "year": 2022,
+      "value": 242742000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/NES010223",
+      "notes": "2022 Economic Census-derived QuickFacts measure; sales are not GDP."
+    },
+    {
+      "series": "health_social_revenue",
+      "variable": "Health care and social assistance revenue",
+      "year": 2022,
+      "value": 326254000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/NES010223",
+      "notes": "2022 Economic Census-derived QuickFacts measure; sales are not GDP."
+    },
+    {
+      "series": "transport_warehousing_revenue",
+      "variable": "Transportation and warehousing revenue",
+      "year": 2022,
+      "value": 121724000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/NES010223",
+      "notes": "2022 Economic Census-derived QuickFacts measure; sales are not GDP."
+    },
+    {
+      "series": "retail_sales_per_capita",
+      "variable": "Retail sales per capita",
+      "year": 2022,
+      "value": 74379,
+      "unit": "USD/person",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/NES010223",
+      "notes": "2022 Economic Census-derived QuickFacts measure; sales are not GDP."
+    },
+    {
+      "series": "water_daily_demand",
+      "variable": "Average daily municipal water demand",
+      "year": 2024,
+      "value": 2.64,
+      "unit": "million gallons/day",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://cms5.revize.com/revize/norwoodma/2024%20Annual%20Report.pdf",
+      "notes": "2024 Annual Town Report; average daily demand, not annual total."
+    },
+    {
+      "series": "police_overdose_calls",
+      "variable": "Police calls coded drug overdose",
+      "year": 2021,
+      "value": 17,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_overdose_calls",
+      "variable": "Police calls coded drug overdose",
+      "year": 2022,
+      "value": 27,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_drug_law_calls",
+      "variable": "Police calls coded drug law violation",
+      "year": 2021,
+      "value": 6,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_drug_law_calls",
+      "variable": "Police calls coded drug law violation",
+      "year": 2022,
+      "value": 13,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_domestic_calls",
+      "variable": "Police calls coded domestic",
+      "year": 2021,
+      "value": 202,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_domestic_calls",
+      "variable": "Police calls coded domestic",
+      "year": 2022,
+      "value": 250,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_fraud_calls",
+      "variable": "Police calls coded fraud",
+      "year": 2021,
+      "value": 160,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_fraud_calls",
+      "variable": "Police calls coded fraud",
+      "year": 2022,
+      "value": 130,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_death_home_calls",
+      "variable": "Police calls coded death at home",
+      "year": 2021,
+      "value": 32,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_death_home_calls",
+      "variable": "Police calls coded death at home",
+      "year": 2022,
+      "value": 37,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_building_checks",
+      "variable": "Police building checks",
+      "year": 2021,
+      "value": 2494,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_building_checks",
+      "variable": "Police building checks",
+      "year": 2022,
+      "value": 5501,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_disturbance_calls",
+      "variable": "Police calls coded disturbance",
+      "year": 2021,
+      "value": 213,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_disturbance_calls",
+      "variable": "Police calls coded disturbance",
+      "year": 2022,
+      "value": 255,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_disabled_vehicle_calls",
+      "variable": "Police calls coded disabled motor vehicle",
+      "year": 2021,
+      "value": 286,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, prior-year comparison column; dispatch/activity code, not verified unique criminal incidents."
+    },
+    {
+      "series": "police_disabled_vehicle_calls",
+      "variable": "Police calls coded disabled motor vehicle",
+      "year": 2022,
+      "value": 354,
+      "unit": "police activity entries",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://norwoodlibrary.org/wp-content/uploads/2023/06/2022_Norwood_Annual_Town_Report.pdf",
+      "notes": "2022 town report police table, current-year total; dispatch/activity code, not verified unique criminal incidents."
     }
   ]
 }
