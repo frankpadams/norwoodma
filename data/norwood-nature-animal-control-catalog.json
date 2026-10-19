@@ -1,0 +1,94 @@
+{
+  "updated": "2026-10-19",
+  "status": "research_sources_identified_counts_pending",
+  "scope": "Norwood-specific observations only; distinguish sampled sightings, municipal inventory and actual animal control events",
+  "datasets": [
+    {
+      "id": "animal_control_activity",
+      "dimensions": [
+        "year",
+        "incident_type"
+      ],
+      "measures": [
+        "calls",
+        "bites",
+        "strays",
+        "wildlife_incidents",
+        "quarantines",
+        "rabies_tests",
+        "animals_returned"
+      ],
+      "source": "https://www.norwoodma.gov/",
+      "status": "annual_town_reports_to_extract"
+    },
+    {
+      "id": "dog_licenses",
+      "dimensions": [
+        "year"
+      ],
+      "measures": [
+        "active_dogs_licensed",
+        "licenses_issued"
+      ],
+      "source": "https://www.norwoodma.gov/",
+      "status": "annual_town_reports_to_extract"
+    },
+    {
+      "id": "trees_by_species",
+      "dimensions": [
+        "species",
+        "survey_year",
+        "public_private"
+      ],
+      "measures": [
+        "trees_counted",
+        "share_of_inventory"
+      ],
+      "source": "https://www.mass.gov/doc/tree-inventories-and-surveys/download",
+      "status": "Norwood-specific tree inventory not yet located"
+    },
+    {
+      "id": "trees_planted",
+      "dimensions": [
+        "year",
+        "species",
+        "site"
+      ],
+      "measures": [
+        "trees_planted"
+      ],
+      "source": "https://www.norwoodtownnews.com/2023/01/02/422938/that-s-a-wrap-2022-",
+      "status": "historical_article_identified; verify annual count"
+    },
+    {
+      "id": "wildlife_sightings",
+      "dimensions": [
+        "species",
+        "month",
+        "year",
+        "taxon"
+      ],
+      "measures": [
+        "observations",
+        "unique_species"
+      ],
+      "source": "https://www.inaturalist.org/observations",
+      "status": "Norwood geographic filter and export pending",
+      "note": "Observation frequency is not animal abundance"
+    },
+    {
+      "id": "rare_species_records",
+      "dimensions": [
+        "species",
+        "year"
+      ],
+      "measures": [
+        "recorded_occurrences"
+      ],
+      "source": "https://www.mass.gov/info-details/rare-species-viewer",
+      "status": "Norwood-filtered records pending",
+      "note": "Protect precise locations of sensitive species"
+    }
+  ],
+  "observations": []
+}
