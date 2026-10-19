@@ -1526,6 +1526,50 @@
       "role": "reference",
       "source": "https://profiles.doe.mass.edu/profiles/student.aspx?fycode=2025&leftNavId=305&orgcode=02200000&orgtypecode=5",
       "notes": "2024–25 DESE selected populations; school year ending 2025. Students with disabilities is the DESE designation; distinct from all residents with disabilities."
+    },
+    {
+      "series": "hospital_closure_ambulance_transports",
+      "variable": "Norwood FD ambulance transports to other hospitals",
+      "year": 2021,
+      "value": 2589,
+      "unit": "transports",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.boston25news.com/news/local/norwood-hospital-flood-strains-ambulance-services-one-year-later/7DHBUV45OREXLMW5LRR6FOJTDI/",
+      "notes": "June 2020–June 2021 period (NOT calendar year 2021); sourced from Norwood Fire Department ambulance-run list published by Boston 25. Period must be shown before cross-year comparison."
+    },
+    {
+      "series": "hospital_closure_transport_needham",
+      "variable": "Norwood FD transports to Beth Israel Needham",
+      "year": 2021,
+      "value": 1709,
+      "unit": "transports",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.boston25news.com/news/local/norwood-hospital-flood-strains-ambulance-services-one-year-later/7DHBUV45OREXLMW5LRR6FOJTDI/",
+      "notes": "June 2020–June 2021 period (NOT calendar year 2021); sourced from Norwood Fire Department ambulance-run list published by Boston 25. Period must be shown before cross-year comparison."
+    },
+    {
+      "series": "hospital_closure_transport_brockton",
+      "variable": "Norwood FD transports to Good Samaritan Brockton",
+      "year": 2021,
+      "value": 282,
+      "unit": "transports",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.boston25news.com/news/local/norwood-hospital-flood-strains-ambulance-services-one-year-later/7DHBUV45OREXLMW5LRR6FOJTDI/",
+      "notes": "June 2020–June 2021 period (NOT calendar year 2021); sourced from Norwood Fire Department ambulance-run list published by Boston 25. Period must be shown before cross-year comparison."
+    },
+    {
+      "series": "hospital_closure_transport_newton",
+      "variable": "Norwood FD transports to Newton-Wellesley",
+      "year": 2021,
+      "value": 212,
+      "unit": "transports",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.boston25news.com/news/local/norwood-hospital-flood-strains-ambulance-services-one-year-later/7DHBUV45OREXLMW5LRR6FOJTDI/",
+      "notes": "June 2020–June 2021 period (NOT calendar year 2021); sourced from Norwood Fire Department ambulance-run list published by Boston 25. Period must be shown before cross-year comparison."
     }
   ]
 }
