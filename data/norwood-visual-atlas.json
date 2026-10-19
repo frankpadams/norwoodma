@@ -68,5 +68,78 @@
       "count": 31714
     }
   ],
-  "populationSource": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/LND110210"
+  "populationSource": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/LND110210",
+  "ageTimeline": {
+    "status": "research_preview",
+    "geography": "Norwood town, Massachusetts",
+    "ageGroups": [
+      "Under 5",
+      "5–19",
+      "20–24",
+      "25–34",
+      "35–44",
+      "45–54",
+      "55–64",
+      "65–74",
+      "75–84",
+      "85+"
+    ],
+    "years": [
+      {
+        "year": 2000,
+        "counts": [
+          1693,
+          4687,
+          1380,
+          4758,
+          4740,
+          3743,
+          2564,
+          2425,
+          1851,
+          746
+        ],
+        "source": "https://www.mass.gov/doc/norwoodpdf/download",
+        "sourceLabel": "Norwood housing profile, Table 3",
+        "method": "Decennial Census, as reproduced in Massachusetts housing profile"
+      },
+      {
+        "year": 2010,
+        "counts": [
+          1747,
+          4616,
+          1463,
+          4177,
+          3861,
+          4330,
+          3448,
+          2206,
+          1814,
+          940
+        ],
+        "source": "https://www.mass.gov/doc/norwoodpdf/download",
+        "sourceLabel": "Norwood housing profile, Table 3",
+        "method": "Decennial Census, as reproduced in Massachusetts housing profile"
+      },
+      {
+        "year": 2020,
+        "counts": [
+          1815,
+          4784,
+          1554,
+          4877,
+          4147,
+          3756,
+          4614,
+          3184,
+          1870,
+          1010
+        ],
+        "source": "https://data.census.gov/table?g=060XX00US2502150200&tid=DECENNIALDHC2020.P12",
+        "sourceLabel": "2020 Census Demographic and Housing Characteristics, P12",
+        "method": "Decennial Census, detailed five-year age bands aggregated into matching historical groups; original geographic transcription awaiting cross-check"
+      }
+    ],
+    "note": "Each year represents an observed census snapshot. Straight boundaries between decades are graphical connections, not measured annual changes. No projections. 2020 age transcription requires final validation."
+  }
 }
