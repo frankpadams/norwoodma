@@ -1394,6 +1394,72 @@
       "role": "norwood",
       "source": "https://norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
       "notes": "Norwood FY2024 Board of Assessors annual report; fiscal-year measure."
+    },
+    {
+      "series": "real_estate_sales_volume_all_types",
+      "variable": "Recorded real estate sales volume, all property types",
+      "year": 2019,
+      "value": 652705572,
+      "unit": "USD",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
+      "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
+    },
+    {
+      "series": "registry_land_documents",
+      "variable": "Land documents recorded (not home sales)",
+      "year": 2018,
+      "value": 4549,
+      "unit": "documents",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
+      "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
+    },
+    {
+      "series": "registry_land_documents",
+      "variable": "Land documents recorded (not home sales)",
+      "year": 2019,
+      "value": 5175,
+      "unit": "documents",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
+      "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
+    },
+    {
+      "series": "registry_mortgages",
+      "variable": "Mortgages recorded",
+      "year": 2019,
+      "value": 1149,
+      "unit": "mortgages",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
+      "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
+    },
+    {
+      "series": "registry_foreclosure_deeds",
+      "variable": "Foreclosure deeds recorded",
+      "year": 2018,
+      "value": 9,
+      "unit": "deeds",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
+      "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
+    },
+    {
+      "series": "registry_foreclosure_deeds",
+      "variable": "Foreclosure deeds recorded",
+      "year": 2019,
+      "value": 3,
+      "unit": "deeds",
+      "geography": "Norwood",
+      "role": "norwood",
+      "source": "https://www.norfolkdeeds.org/real-estate-activity/norwood-ma-2019-real-estate-activity-report/",
+      "notes": "Norfolk Registry of Deeds; documents and mortgages must not be interpreted as number of homes sold. All-property sales volume includes commercial transactions."
     }
   ]
 }
