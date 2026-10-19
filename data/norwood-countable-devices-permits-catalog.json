@@ -1,0 +1,125 @@
+{
+  "updated": "2026-10-19",
+  "status": "sources_identified_counts_pending",
+  "geography": "Norwood, Massachusetts",
+  "principles": [
+    "Count physical units separately from licensees, establishments, and permits",
+    "Preserve observation date or reporting year",
+    "Record address and device category when public",
+    "Only Norwood-located units qualify; non-Norwood benchmarks labeled separately"
+  ],
+  "datasets": [
+    {
+      "id": "food_beverage_vending_units",
+      "measure": "licensed vending units physically located in Norwood",
+      "source": "https://www.mass.gov/how-to/apply-for-a-license-to-operate-a-food-or-beverage-vending-machine",
+      "agency": "Massachusetts DPH",
+      "dimensions": [
+        "year",
+        "machine_type",
+        "location"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "water_vending_units",
+      "measure": "water vending units in Norwood",
+      "source": "https://www.mass.gov/how-to/apply-for-a-license-to-operate-a-water-vending-machine-wvm",
+      "agency": "Massachusetts DPH",
+      "dimensions": [
+        "year",
+        "location"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "nonbank_atms",
+      "measure": "non-bank ATM terminals physically located in Norwood",
+      "source": "https://www.mass.gov/info-details/find-a-non-bank-atm",
+      "agency": "Massachusetts Division of Banks",
+      "dimensions": [
+        "snapshot_date",
+        "location",
+        "surcharge"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "bank_atms",
+      "measure": "bank and credit union ATM terminals in Norwood",
+      "source": "https://www.mass.gov/info-details/electronic-services-application-procedure-information",
+      "agency": "Massachusetts Division of Banks",
+      "dimensions": [
+        "year",
+        "location"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "amusement_devices",
+      "measure": "licensed jukeboxes, pinball and automatic amusement devices",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "agency": "Norwood Town Clerk",
+      "dimensions": [
+        "year",
+        "device_type"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "pool_tables",
+      "measure": "licensed pool tables",
+      "source": "https://www.norwoodlibrary.org/wp-content/uploads/2026/02/2024_NorwoodTown_Annual_Report.pdf",
+      "agency": "Norwood Town Clerk",
+      "dimensions": [
+        "year"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "fuel_dispensing_pumps",
+      "measure": "regulated retail motor-fuel dispensers in Norwood",
+      "source": "https://malegislature.gov/Reports/28964/Division%20of%20Standards%20Annual%20Report%20for%20Calendar%20Year%202024.pdf",
+      "agency": "Massachusetts Division of Standards",
+      "dimensions": [
+        "year",
+        "fuel_type"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "commercial_scales",
+      "measure": "inspected commercial scales in Norwood",
+      "source": "https://malegislature.gov/Reports/28964/Division%20of%20Standards%20Annual%20Report%20for%20Calendar%20Year%202024.pdf",
+      "agency": "Massachusetts Division of Standards",
+      "dimensions": [
+        "year",
+        "scale_type"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "tobacco_vending",
+      "measure": "licensed tobacco vending machines in Norwood",
+      "source": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64C/Section2",
+      "agency": "Massachusetts Department of Revenue",
+      "dimensions": [
+        "year",
+        "location"
+      ],
+      "status": "extract_pending"
+    },
+    {
+      "id": "printed_matter_vending",
+      "measure": "permitted newspaper and other printed-matter vending machines on Norwood public property",
+      "source": "https://cms5.revize.com/revize/norwoodma/By%20Laws%20red-line%20version.pdf",
+      "agency": "Norwood Board of Selectmen",
+      "dimensions": [
+        "year",
+        "location"
+      ],
+      "status": "extract_pending"
+    }
+  ],
+  "observations": []
+}
