@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "status": "research_unapproved",
+  "updated": "2026-10-19",
+  "rules": {
+    "missing": "No interpolation; only observed years",
+    "approval": "Research data only; conclusions require review",
+    "year": "Fiscal and school-year labels follow source convention; do not silently equate with calendar years"
+  },
+  "observations": [
+    {
+      "series": "school_spending",
+      "variable": "Total school expenditures",
+      "year": 2020,
+      "value": 66490000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded to nearest $10,000; nominal dollars; includes all funds"
+    },
+    {
+      "series": "school_spending",
+      "variable": "Total school expenditures",
+      "year": 2021,
+      "value": 72620000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded to nearest $10,000; nominal dollars; includes all funds"
+    },
+    {
+      "series": "school_spending",
+      "variable": "Total school expenditures",
+      "year": 2022,
+      "value": 77660000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded to nearest $10,000; nominal dollars; includes all funds"
+    },
+    {
+      "series": "school_spending",
+      "variable": "Total school expenditures",
+      "year": 2023,
+      "value": 82000000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded to nearest $10,000; nominal dollars; includes all funds"
+    },
+    {
+      "series": "school_spending",
+      "variable": "Total school expenditures",
+      "year": 2024,
+      "value": 87950000,
+      "unit": "USD",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded to nearest $10,000; nominal dollars; includes all funds"
+    },
+    {
+      "series": "school_spending_per_pupil",
+      "variable": "Total expenditures per pupil",
+      "year": 2020,
+      "value": 18124,
+      "unit": "USD/pupil",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded whole dollars; FTE pupil denominator"
+    },
+    {
+      "series": "school_spending_per_pupil",
+      "variable": "Total expenditures per pupil",
+      "year": 2021,
+      "value": 20402,
+      "unit": "USD/pupil",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded whole dollars; FTE pupil denominator"
+    },
+    {
+      "series": "school_spending_per_pupil",
+      "variable": "Total expenditures per pupil",
+      "year": 2022,
+      "value": 21115,
+      "unit": "USD/pupil",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded whole dollars; FTE pupil denominator"
+    },
+    {
+      "series": "school_spending_per_pupil",
+      "variable": "Total expenditures per pupil",
+      "year": 2023,
+      "value": 22144,
+      "unit": "USD/pupil",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded whole dollars; FTE pupil denominator"
+    },
+    {
+      "series": "school_spending_per_pupil",
+      "variable": "Total expenditures per pupil",
+      "year": 2024,
+      "value": 23366,
+      "unit": "USD/pupil",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE DART rounded whole dollars; FTE pupil denominator"
+    },
+    {
+      "series": "school_pupil_fte",
+      "variable": "Total pupil FTE",
+      "year": 2020,
+      "value": 3668.6,
+      "unit": "FTE pupils",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE financial pupil FTE; not same as October enrollment"
+    },
+    {
+      "series": "school_pupil_fte",
+      "variable": "Total pupil FTE",
+      "year": 2021,
+      "value": 3559.4,
+      "unit": "FTE pupils",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE financial pupil FTE; not same as October enrollment"
+    },
+    {
+      "series": "school_pupil_fte",
+      "variable": "Total pupil FTE",
+      "year": 2022,
+      "value": 3678.1,
+      "unit": "FTE pupils",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE financial pupil FTE; not same as October enrollment"
+    },
+    {
+      "series": "school_pupil_fte",
+      "variable": "Total pupil FTE",
+      "year": 2023,
+      "value": 3702.9,
+      "unit": "FTE pupils",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE financial pupil FTE; not same as October enrollment"
+    },
+    {
+      "series": "school_pupil_fte",
+      "variable": "Total pupil FTE",
+      "year": 2024,
+      "value": 3764,
+      "unit": "FTE pupils",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE financial pupil FTE; not same as October enrollment"
+    },
+    {
+      "series": "teacher_salary",
+      "variable": "Average teacher salary",
+      "year": 2020,
+      "value": 88388,
+      "unit": "USD/teacher",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Nominal average salaries; not a constant teacher cohort"
+    },
+    {
+      "series": "teacher_salary",
+      "variable": "Average teacher salary",
+      "year": 2021,
+      "value": 85184,
+      "unit": "USD/teacher",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Nominal average salaries; not a constant teacher cohort"
+    },
+    {
+      "series": "teacher_salary",
+      "variable": "Average teacher salary",
+      "year": 2022,
+      "value": 90872,
+      "unit": "USD/teacher",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Nominal average salaries; not a constant teacher cohort"
+    },
+    {
+      "series": "teacher_salary",
+      "variable": "Average teacher salary",
+      "year": 2023,
+      "value": 90868,
+      "unit": "USD/teacher",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Nominal average salaries; not a constant teacher cohort"
+    },
+    {
+      "series": "teacher_salary",
+      "variable": "Average teacher salary",
+      "year": 2024,
+      "value": 92324,
+      "unit": "USD/teacher",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Nominal average salaries; not a constant teacher cohort"
+    },
+    {
+      "series": "teacher_fte",
+      "variable": "Teacher FTE",
+      "year": 2020,
+      "value": 280.4,
+      "unit": "FTE teachers",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "FTE staffing"
+    },
+    {
+      "series": "teacher_fte",
+      "variable": "Teacher FTE",
+      "year": 2021,
+      "value": 299.6,
+      "unit": "FTE teachers",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "FTE staffing"
+    },
+    {
+      "series": "teacher_fte",
+      "variable": "Teacher FTE",
+      "year": 2022,
+      "value": 305,
+      "unit": "FTE teachers",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "FTE staffing"
+    },
+    {
+      "series": "teacher_fte",
+      "variable": "Teacher FTE",
+      "year": 2023,
+      "value": 316.2,
+      "unit": "FTE teachers",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "FTE staffing"
+    },
+    {
+      "series": "teacher_fte",
+      "variable": "Teacher FTE",
+      "year": 2024,
+      "value": 331,
+      "unit": "FTE teachers",
+      "geography": "Norwood",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "FTE staffing"
+    },
+    {
+      "series": "state_spending_per_pupil",
+      "variable": "State total expenditures per pupil",
+      "year": 2020,
+      "value": 17573,
+      "unit": "USD/pupil",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; rounded dollars"
+    },
+    {
+      "series": "state_spending_per_pupil",
+      "variable": "State total expenditures per pupil",
+      "year": 2021,
+      "value": 19066,
+      "unit": "USD/pupil",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; rounded dollars"
+    },
+    {
+      "series": "state_spending_per_pupil",
+      "variable": "State total expenditures per pupil",
+      "year": 2022,
+      "value": 20284,
+      "unit": "USD/pupil",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; rounded dollars"
+    },
+    {
+      "series": "state_spending_per_pupil",
+      "variable": "State total expenditures per pupil",
+      "year": 2023,
+      "value": 21886,
+      "unit": "USD/pupil",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; rounded dollars"
+    },
+    {
+      "series": "state_spending_per_pupil",
+      "variable": "State total expenditures per pupil",
+      "year": 2024,
+      "value": 23165,
+      "unit": "USD/pupil",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; rounded dollars"
+    },
+    {
+      "series": "state_teacher_salary",
+      "variable": "State average teacher salary",
+      "year": 2020,
+      "value": 83586,
+      "unit": "USD/teacher",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; nominal dollars"
+    },
+    {
+      "series": "state_teacher_salary",
+      "variable": "State average teacher salary",
+      "year": 2021,
+      "value": 86118,
+      "unit": "USD/teacher",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; nominal dollars"
+    },
+    {
+      "series": "state_teacher_salary",
+      "variable": "State average teacher salary",
+      "year": 2022,
+      "value": 89858,
+      "unit": "USD/teacher",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; nominal dollars"
+    },
+    {
+      "series": "state_teacher_salary",
+      "variable": "State average teacher salary",
+      "year": 2023,
+      "value": 92941,
+      "unit": "USD/teacher",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; nominal dollars"
+    },
+    {
+      "series": "state_teacher_salary",
+      "variable": "State average teacher salary",
+      "year": 2024,
+      "value": 91014,
+      "unit": "USD/teacher",
+      "geography": "Massachusetts",
+      "source": "https://profiles.doe.mass.edu/analysis/finance.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "DESE statewide comparison; nominal dollars"
+    },
+    {
+      "series": "school_enrollment",
+      "variable": "School district October enrollment",
+      "year": 2022,
+      "value": 3444,
+      "unit": "students",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "School year labels; not FTE spending denominator"
+    },
+    {
+      "series": "school_enrollment",
+      "variable": "School district October enrollment",
+      "year": 2023,
+      "value": 3486,
+      "unit": "students",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "School year labels; not FTE spending denominator"
+    },
+    {
+      "series": "school_enrollment",
+      "variable": "School district October enrollment",
+      "year": 2024,
+      "value": 3545,
+      "unit": "students",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "School year labels; not FTE spending denominator"
+    },
+    {
+      "series": "school_enrollment",
+      "variable": "School district October enrollment",
+      "year": 2025,
+      "value": 3575,
+      "unit": "students",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "School year labels; not FTE spending denominator"
+    },
+    {
+      "series": "school_enrollment",
+      "variable": "School district October enrollment",
+      "year": 2026,
+      "value": 3491,
+      "unit": "students",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "School year labels; not FTE spending denominator"
+    },
+    {
+      "series": "state_enrollment",
+      "variable": "State October enrollment",
+      "year": 2022,
+      "value": 911529,
+      "unit": "students",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide school year enrollment"
+    },
+    {
+      "series": "state_enrollment",
+      "variable": "State October enrollment",
+      "year": 2023,
+      "value": 913735,
+      "unit": "students",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide school year enrollment"
+    },
+    {
+      "series": "state_enrollment",
+      "variable": "State October enrollment",
+      "year": 2024,
+      "value": 914959,
+      "unit": "students",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide school year enrollment"
+    },
+    {
+      "series": "state_enrollment",
+      "variable": "State October enrollment",
+      "year": 2025,
+      "value": 915932,
+      "unit": "students",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide school year enrollment"
+    },
+    {
+      "series": "state_enrollment",
+      "variable": "State October enrollment",
+      "year": 2026,
+      "value": 900487,
+      "unit": "students",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide school year enrollment"
+    },
+    {
+      "series": "school_stability",
+      "variable": "Student stability rate",
+      "year": 2021,
+      "value": 95.9,
+      "unit": "percent",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Percent enrolled all year"
+    },
+    {
+      "series": "school_stability",
+      "variable": "Student stability rate",
+      "year": 2022,
+      "value": 94.3,
+      "unit": "percent",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Percent enrolled all year"
+    },
+    {
+      "series": "school_stability",
+      "variable": "Student stability rate",
+      "year": 2023,
+      "value": 93.7,
+      "unit": "percent",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Percent enrolled all year"
+    },
+    {
+      "series": "school_stability",
+      "variable": "Student stability rate",
+      "year": 2024,
+      "value": 95,
+      "unit": "percent",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Percent enrolled all year"
+    },
+    {
+      "series": "school_stability",
+      "variable": "Student stability rate",
+      "year": 2025,
+      "value": 93.4,
+      "unit": "percent",
+      "geography": "Norwood",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Percent enrolled all year"
+    },
+    {
+      "series": "state_school_stability",
+      "variable": "State student stability rate",
+      "year": 2021,
+      "value": 95.3,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide percent enrolled all year"
+    },
+    {
+      "series": "state_school_stability",
+      "variable": "State student stability rate",
+      "year": 2022,
+      "value": 93.7,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide percent enrolled all year"
+    },
+    {
+      "series": "state_school_stability",
+      "variable": "State student stability rate",
+      "year": 2023,
+      "value": 94.1,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide percent enrolled all year"
+    },
+    {
+      "series": "state_school_stability",
+      "variable": "State student stability rate",
+      "year": 2024,
+      "value": 94.4,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide percent enrolled all year"
+    },
+    {
+      "series": "state_school_stability",
+      "variable": "State student stability rate",
+      "year": 2025,
+      "value": 94.3,
+      "unit": "percent",
+      "geography": "Massachusetts",
+      "source": "https://profiles-public.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
+      "notes": "Statewide percent enrolled all year"
+    }
+  ]
+}
