@@ -907,6 +907,176 @@
       "geography": "Norwood",
       "source": "https://profiles.doe.mass.edu/analysis/enrollment.aspx?orgcode=02200000&orgtypecode=5",
       "notes": "DESE DART enrollment series; year denotes school-year ending year"
+    },
+    {
+      "series": "census_population",
+      "variable": "Population (decennial census and annual estimate)",
+      "year": 2010,
+      "value": 28602,
+      "unit": "residents",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "2010 and 2020 census counts; 2025 population estimate; different methodologies, not an annual series."
+    },
+    {
+      "series": "census_population",
+      "variable": "Population (decennial census and annual estimate)",
+      "year": 2020,
+      "value": 31611,
+      "unit": "residents",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "2010 and 2020 census counts; 2025 population estimate; different methodologies, not an annual series."
+    },
+    {
+      "series": "census_population",
+      "variable": "Population (decennial census and annual estimate)",
+      "year": 2025,
+      "value": 31714,
+      "unit": "residents",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "2010 and 2020 census counts; 2025 population estimate; different methodologies, not an annual series."
+    },
+    {
+      "series": "census_population_density",
+      "variable": "Population density",
+      "year": 2010,
+      "value": 2758.6,
+      "unit": "residents/sq mile",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "Decennial census density."
+    },
+    {
+      "series": "census_population_density",
+      "variable": "Population density",
+      "year": 2020,
+      "value": 3045.7,
+      "unit": "residents/sq mile",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "Decennial census density."
+    },
+    {
+      "series": "census_land_area",
+      "variable": "Land area",
+      "year": 2010,
+      "value": 10.37,
+      "unit": "square miles",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "Decennial census geography."
+    },
+    {
+      "series": "census_land_area",
+      "variable": "Land area",
+      "year": 2020,
+      "value": 10.38,
+      "unit": "square miles",
+      "geography": "Norwood",
+      "source": "https://www.census.gov/quickfacts/fact/table/norwoodtownnorfolkcountymassachusetts/POP815223",
+      "notes": "Decennial census geography."
+    },
+    {
+      "series": "fire_total_calls",
+      "variable": "Fire department total responses",
+      "year": 2021,
+      "value": 6152,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "fire_ems_calls",
+      "variable": "Fire department EMS responses",
+      "year": 2021,
+      "value": 4719,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "fire_structure_fires",
+      "variable": "Fire department structure-fire responses",
+      "year": 2021,
+      "value": 69,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "fire_motor_vehicle_injury",
+      "variable": "Fire department motor vehicle crashes with injuries",
+      "year": 2021,
+      "value": 119,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "fire_vehicle_fires",
+      "variable": "Fire department vehicle-fire responses",
+      "year": 2021,
+      "value": 11,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "fire_false_alarm_unintentional",
+      "variable": "Fire department unintentional alarms",
+      "year": 2021,
+      "value": 388,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "fire_alarm_malfunction",
+      "variable": "Fire department alarm system malfunctions",
+      "year": 2021,
+      "value": 270,
+      "unit": "responses",
+      "geography": "Norwood",
+      "source": "https://www.norwoodma.gov/Annual%20Town%20Report%202021%20Pubished.pdf",
+      "notes": "Norwood 2021 Annual Town Report, Fire Department responses. Single-year observation, not a trend."
+    },
+    {
+      "series": "us_any_mental_illness",
+      "variable": "Adults with any mental illness in past year",
+      "year": 2022,
+      "value": 23.1,
+      "unit": "percent of adults",
+      "geography": "United States",
+      "source": "https://www.nimh.nih.gov/health/statistics/mental-illness",
+      "notes": "National NSDUH-based NIMH prevalence; not a Norwood estimate."
+    },
+    {
+      "series": "police_violent_offenses",
+      "variable": "Violent offenses reported by Norwood Police",
+      "year": 2024,
+      "value": 54,
+      "unit": "offenses",
+      "geography": "Norwood Police Department service area",
+      "source": "https://americanfactbook.org/crime/city/norwood-ma",
+      "notes": "Secondary presentation of FBI Crime Data Explorer; agency service area, not municipal resident prevalence. Pending direct FBI reconciliation."
+    },
+    {
+      "series": "police_property_offenses",
+      "variable": "Property offenses reported by Norwood Police",
+      "year": 2024,
+      "value": 229,
+      "unit": "offenses",
+      "geography": "Norwood Police Department service area",
+      "source": "https://americanfactbook.org/crime/city/norwood-ma",
+      "notes": "Secondary presentation of FBI Crime Data Explorer; agency service area, not municipal resident prevalence. Pending direct FBI reconciliation."
     }
   ]
 }
