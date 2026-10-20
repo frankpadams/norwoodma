@@ -383,17 +383,24 @@
 })();
 </script><script id="ncm-popup-launcher">document.querySelectorAll('[data-ncm-popup]').forEach(a=>a.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const key=[...a.classList].find(x=>x.startsWith('ncm-')&&['ncm-community','ncm-government','ncm-school','ncm-sports'].includes(x));const channel=key==='ncm-school'?'schools':(key||'ncm-community').replace('ncm-','');const url='ncm-player-preview.html?channel='+encodeURIComponent(channel);const popup=window.open(url,'_blank','popup=yes,width=1050,height=800');if(popup){e.preventDefault();try{popup.focus()}catch(_){}}}));</script><script id="ncm-live-schedule-data">
 (function(){
+ const keys=['community','government','schools'];
+ const easternDate=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ const easternMinute=()=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());return Number(parts.find(x=>x.type==='hour').value)*60+Number(parts.find(x=>x.type==='minute').value)};
+ let latest=null;
+ function draw(){
+  if(!latest||latest.date!==easternDate())return;
+  for(const key of keys){
+   const el=document.querySelector('[data-ncm-program="'+key+'"]');if(!el)continue;
+   const channel=latest.channels?.[key],slots=channel?.slots||[];
+   const current=slots.filter(x=>Number.isFinite(x.minute)&&x.minute<=easternMinute()).at(-1);
+   const program=current||slots.at(-1);
+   el.textContent=channel?.status==='scheduled'&&program?.title?program.title:'Schedule unavailable';
+   if(program?.title)el.title='According to NCM published broadcast schedule';
+  }
+ }
  async function refresh(){
- try{
- const r=await fetch('data/ncm-now-playing.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;
- const data=await r.json();const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
- if(data.date!==today)return;
- for(const [key,entry] of Object.entries(data.channels||{})){
- const el=document.querySelector('[data-ncm-program="'+key+'"]');
- if(el)el.textContent=entry.status==='scheduled'&&entry.title?entry.title:'Schedule unavailable';
+  try{const r=await fetch('data/ncm-now-playing.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;latest=await r.json();draw()}catch(_){}
  }
- }catch(_){}
- }
- refresh();setInterval(refresh,120000);
+ refresh();setInterval(draw,30000);setInterval(refresh,300000);
 })();
 </script></body></html>
