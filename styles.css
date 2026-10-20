@@ -395,6 +395,9 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 /* Keep the navigation toggle as a hamburger at every collapsed width. */
 .top.norwood-menu-collapsed>#menu{font-size:0!important;line-height:0!important}
 .top.norwood-menu-collapsed>#menu::after{content:"";display:block;width:22px;height:16px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;box-sizing:border-box;background:linear-gradient(currentColor,currentColor) center / 100% 2px no-repeat}
+.top.norwood-menu-collapsed>#menu{border:1px solid rgba(0,59,113,.18)!important;border-radius:9px!important;background:transparent!important;color:#003b71!important;box-shadow:none!important}
+.top.norwood-menu-collapsed>#menu:hover{background:rgba(0,59,113,.07)!important}
+.top.norwood-menu-collapsed>#menu:focus-visible{outline:2px solid #003b71!important;outline-offset:2px!important}
 
 
 /* Homepage: two compact 215 × 83 sponsor placements with a modest gap. */
