@@ -404,4 +404,26 @@
  }
  refresh();setInterval(draw,30000);setInterval(refresh,300000);
 })();
-</script><script id="today-gas-average-script">(async()=>{const avg=document.getElementById('todayGasAverage'),count=document.getElementById('todayGasCount');if(!avg)return;try{const response=await fetch('data/gas-prices.json',{cache:'no-store'});if(!response.ok)throw Error('Unavailable');const data=await response.json();const prices=Object.entries(data.stations||{}).filter(([name,p])=>!name.toLowerCase().includes('costco')&&Number.isFinite(Number(p.regular))&&Number(p.regular)>0).map(([,p])=>Number(p.regular));if(!prices.length)throw Error('No prices');const mean=prices.reduce((a,b)=>a+b,0)/prices.length;avg.textContent='</html>+mean.toFixed(2)+' / gallon';count.textContent='Regular · '+prices.length+' Norwood stations';}catch(e){avg.textContent='See available prices';count.textContent='Norwood regular gas';}})();</script></body></html>
+</script><script id="today-gas-average-script">
+(async function(){
+ const avg=document.getElementById('todayGasAverage');
+ const count=document.getElementById('todayGasCount');
+ if(!avg||!count)return;
+ try{
+  const response=await fetch('data/gas-prices.json',{cache:'no-store'});
+  if(!response.ok)throw new Error('Prices unavailable');
+  const data=await response.json();
+  const names=['Norwood Gulf','Gulf — Broadway',"Mr. Frank's Food Mart",'Sunoco — Route 1','Mobil — Route 1','Irving Oil / Rojo',"BJ's Gas Station",'CITGO','Shell — Walpole Street','Mobil / On the Run — Norwood Center','Shell — Pleasant Street'];
+  const prices=names.map(name=>data.stations&&data.stations[name]).filter(p=>p&&!p.stale&&typeof p.regular==='number'&&Number.isFinite(p.regular)&&p.regular>0).map(p=>p.regular);
+  if(!prices.length)throw new Error('No Norwood prices');
+  const mean=prices.reduce((sum,price)=>sum+price,0)/prices.length;
+  avg.textContent='$'+mean.toFixed(2)+' / gal';
+  const checked=data.generated_at?new Date(data.generated_at):null;
+  const checkedLabel=checked&&!isNaN(checked)?' · checked '+checked.toLocaleDateString('en-US',{month:'short',day:'numeric'}):'';
+  count.textContent='Regular · '+prices.length+' stations'+checkedLabel;
+ }catch(error){
+  avg.textContent='Prices unavailable';
+  count.textContent='View Norwood gas prices';
+ }
+})();
+</script></body></html>
