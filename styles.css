@@ -429,3 +429,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 .top.norwood-menu-collapsed>#menu{font-size:0!important;line-height:0!important;color:#fff!important;-webkit-text-fill-color:transparent!important}
 .top.norwood-menu-collapsed>#menu::before{content:none!important;display:none!important}
 .top.norwood-menu-collapsed>#menu::after{content:""!important;display:block!important;flex:none!important;width:23px!important;height:17px!important;border-top:2px solid #fff!important;border-bottom:2px solid #fff!important;background:linear-gradient(#fff,#fff) center/100% 2px no-repeat!important;box-sizing:border-box!important;box-shadow:none!important}
+
+/* The hamburger's three strokes are supplied by the button's child span.
+   Disable the older generated glyph so only one icon is visible. */
+.top #menu::before,.top #menu::after{content:none!important;display:none!important}
+.top #menu>span[aria-hidden="true"]{display:block!important;flex:0 0 24px!important;width:24px!important;height:18px!important}
