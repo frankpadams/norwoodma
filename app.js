@@ -107,7 +107,7 @@ function diversifyNewsChronologically(items){
 function renderNews(items){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
- let clean=diversifyNewsChronologically((items||[]).filter(x=>{const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}));
+ let clean=diversifyNewsChronologically((items||[]).filter(x=>{if(!isHome && /^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}));
  let selected=[], selectedDays;
  if(isHome){
   // Homepage stays compact and adapts to the smallest recent window that supplies enough current stories.
