@@ -380,4 +380,30 @@
  }
  update();setInterval(update,30000);setTimeout(()=>map.invalidateSize(),350);
 })();
-</script><script id="ncm-popup-launcher">document.querySelectorAll('[data-ncm-popup]').forEach(a=>a.addEventListener('click',e=>{const popup=window.open(a.href,'ncm_live','popup=yes,width=980,height=720,noopener');if(popup){e.preventDefault();}}));</script></body></html>
+</script><script id="ncm-popup-launcher">document.querySelectorAll('[data-ncm-popup]').forEach(a=>a.addEventListener('click',e=>{const popup=window.open(a.href,'ncm_live','popup=yes,width=980,height=720,noopener');if(popup){e.preventDefault();}}));</script><script id="ncm-live-schedule-data">
+(function(){
+ const channelMap={community:{site:1,channel:1},government:{site:3,channel:1},schools:{site:2,channel:1},sports:{site:2,channel:2}};
+ const timeZone='America/New_York';
+ function nowParts(){const parts=new Intl.DateTimeFormat('en-CA',{timeZone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const obj=Object.fromEntries(parts.map(p=>[p.type,p.value]));return {date:obj.year+'-'+obj.month+'-'+obj.day,minutes:Number(obj.hour)*60+Number(obj.minute)}}
+ function parseTime(s){const m=String(s||'').match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);if(!m)return null;return (Number(m[1])%12+(m[3].toUpperCase()==='PM'?12:0))*60+Number(m[2])}
+ function extractRows(html){const doc=new DOMParser().parseFromString(html,'text/html');const out=[];const nodes=[...doc.querySelectorAll('li, tr, .schedule-item, .schedule-row')];for(const el of nodes){const raw=(el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();const m=raw.match(/^(\d{1,2}:\d{2}\s*(?:AM|PM))\s+(.{3,140})/i);if(m)out.push({minutes:parseTime(m[1]),title:m[2]})}return out.sort((a,b)=>a.minutes-b.minutes)}
+ function show(key,title){const el=document.querySelector('[data-ncm-program="'+key+'"]');if(el)el.textContent=title}
+ async function load(){
+ const now=nowParts();
+ await Promise.all(Object.entries(channelMap).map(async ([key,c])=>{
+  const url='https://reflect-npa.cablecast.tv/internetchannel/?site='+c.site+'&channel='+c.channel+'&currentDay='+now.date;
+  const row=document.querySelector('[data-ncm-program="'+key+'"]')?.closest('a');if(row)row.href=url;
+  try{
+   const res=await fetch('https://reflect-npa.cablecast.tv/CablecastAPI/v1/publicsitedata/schedule?site='+c.site+'&channel='+c.channel+'&currentDay='+now.date,{mode:'cors'});
+   if(!res.ok)throw Error('Schedule unavailable');
+   const data=await res.json();
+   const items=Array.isArray(data)?data:Array.isArray(data.schedule)?data.schedule:Array.isArray(data.Schedule)?data.Schedule:Array.isArray(data.items)?data.items:[];
+   const entries=items.map(x=>({title:x.title||x.Title||x.show?.title||x.Show?.Title||x.showTitle||x.ShowTitle,minutes:parseTime(x.startTime||x.StartTime||x.time||x.Time)})).filter(x=>x.title&&x.minutes!==null).sort((a,b)=>a.minutes-b.minutes);
+   const current=entries.filter(x=>x.minutes<=now.minutes).at(-1);
+   if(current)show(key,current.title);
+  }catch(e){/* Do not invent an on-air title when the provider cannot be read. */}
+ }));
+ }
+ load();setInterval(load,120000);
+})();
+</script></body></html>
