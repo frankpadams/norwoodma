@@ -1,58 +1,94 @@
 {
-  "generated_at": "2026-10-07T03:42:00Z",
-  "source": "iExit / OPIS public listings",
-  "source_url": "https://www.iexitapp.com/gasprices/Massachusetts/17/Norwood/14977/Unleaded/3",
-  "note": "Regular prices refreshed from iExit public listings. OPIS is iExit's fuel-price data partner. Individual source prices may be older than the page check time.",
+  "generated_at": "2026-10-20T22:10:45.309069Z",
+  "source": "Google Places API (New)",
   "stations": {
-    "Norwood Gulf": {
-      "regular": 4.299,
-      "checked": "2026-10-07T03:42:00Z"
-    },
-    "Gulf — Broadway": {
-      "regular": 4.299,
-      "checked": "2026-10-07T03:42:00Z",
-      "stale": true
-    },
-    "Mr. Frank's Food Mart": {
-      "regular": 4.319,
-      "checked": "2026-10-07T03:42:00Z"
-    },
-    "Sunoco — Route 1": {
-      "regular": 4.259,
-      "checked": "2026-10-07T03:42:00Z"
-    },
-    "Mobil — Route 1": {
-      "regular": 4.199,
-      "checked": "2026-10-07T03:42:00Z"
-    },
-    "Irving Oil / Rojo": {
-      "regular": 4.259,
-      "checked": "2026-10-07T03:42:00Z"
-    },
     "BJ's Gas Station": {
-      "regular": 4.159,
-      "checked": "2026-10-07T03:42:00Z"
+      "checked": "2026-10-20T22:10:43.250919Z",
+      "diesel": 6.08,
+      "premium": 5.0,
+      "regular": 4.0,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T11:07:23Z"
     },
     "CITGO": {
-      "regular": 4.299,
-      "checked": "2026-10-07T03:42:00Z"
+      "checked": "2026-10-20T22:10:43.585150Z",
+      "diesel": 6.3,
+      "midgrade": 5.0,
+      "premium": 5.2,
+      "regular": 4.1,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T12:29:09Z"
     },
-    "Shell — Walpole Street": {
-      "regular": 4.199,
-      "checked": "2026-10-07T03:42:00Z"
-    },
-    "Mobil / On the Run — Norwood Center": {
-      "regular": 4.999,
-      "checked": "2026-10-07T03:42:00Z"
-    },
-    "Shell — Pleasant Street": {
-      "regular": 4.429,
+    "Costco Gas \u2014 Dedham": {
       "checked": "2026-10-07T03:42:00Z",
+      "regular": 4.059
+    },
+    "Costco Gas \u2014 Sharon": {
+      "checked": "2026-10-20T22:10:45.309047Z",
+      "premium": 4.8,
+      "regular": 3.92,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T12:19:01Z"
+    },
+    "Gulf \u2014 Broadway": {
+      "checked": "2026-10-07T03:42:00Z",
+      "regular": 4.299,
       "stale": true
     },
-    "Costco Gas — Dedham": {
-      "regular": 4.059,
-      "checked": "2026-10-07T03:42:00Z"
+    "Irving Oil / Rojo": {
+      "checked": "2026-10-07T03:42:00Z",
+      "regular": 4.259
+    },
+    "Mobil / On the Run \u2014 Norwood Center": {
+      "checked": "2026-10-20T22:10:44.287271Z",
+      "midgrade": 5.9,
+      "premium": 6.3,
+      "regular": 5.0,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T06:36:53Z"
+    },
+    "Mobil \u2014 Route 1": {
+      "checked": "2026-10-20T22:10:42.535128Z",
+      "diesel": 6.2,
+      "midgrade": 5.2,
+      "premium": 5.3,
+      "regular": 4.1,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T12:14:51Z"
+    },
+    "Mr. Frank's Food Mart": {
+      "checked": "2026-10-07T03:42:00Z",
+      "regular": 4.319
+    },
+    "Norwood Gulf": {
+      "checked": "2026-10-20T22:10:40.762722Z",
+      "diesel": 6.3,
+      "midgrade": 4.9,
+      "premium": 5.0,
+      "regular": 4.3,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T12:04:10Z"
+    },
+    "Shell \u2014 Pleasant Street": {
+      "checked": "2026-10-20T22:10:44.626280Z",
+      "diesel": 6.4,
+      "midgrade": 4.8,
+      "premium": 5.3,
+      "regular": 4.22,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T12:25:40Z"
+    },
+    "Shell \u2014 Walpole Street": {
+      "checked": "2026-10-07T03:42:00Z",
+      "regular": 4.199
+    },
+    "Sunoco \u2014 Route 1": {
+      "checked": "2026-10-20T22:10:41.755501Z",
+      "midgrade": 4.87,
+      "premium": 5.42,
+      "regular": 4.08,
+      "source": "Google Places API (New)",
+      "updated": "2026-10-20T12:11:03Z"
     }
   }
 }
