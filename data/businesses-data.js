@@ -1163,7 +1163,7 @@ window.NORWOOD_BUSINESSES=[
   ],
   [
     "OneLocal Bank",
-    "Banks & Financial Services",
+    "Banks & Financial Services; Mortgage Lenders",
     "11 Central Street",
     "781-762-1800",
     "https://www.onelocalbank.com/"
@@ -1205,7 +1205,7 @@ window.NORWOOD_BUSINESSES=[
   ],
   [
     "Members Plus Credit Union — Norwood",
-    "Credit Unions & Financial Services",
+    "Credit Unions & Financial Services; Mortgage Lenders",
     "111 Lenox Street, Unit 101",
     "781-702-5969",
     "https://www.memberspluscu.org/"
@@ -2871,10 +2871,10 @@ window.NORWOOD_BUSINESSES=[
   ],
   [
     "Omega Financial, Inc.",
-    "Financial Planning & Investment Services",
-    "7 Vernon Street",
-    "781-864-1965",
-    ""
+    "Mortgage Brokers",
+    "661 Washington Street, Suite 203",
+    "781-762-2928",
+    "https://www.omegafin.com/"
   ],
   [
     "Planet Fitness — Norwood",
