@@ -65,7 +65,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.buffalospizzasubs.com/",
     "link_type": "official",
     "tags": "pizza subs calzone delivery",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "burger-king-norwood",
@@ -145,7 +148,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://conradsrestaurant.com/",
     "link_type": "official",
     "tags": "american pub steak tips bar burger burgers hamburger cheeseburger pizza pasta soup soups seafood sandwiches cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "crave",
@@ -444,7 +450,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://maksroastbeefnorwood.com/",
     "link_type": "official",
     "tags": "roast beef sandwich pizza sub",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "mcdonalds-broadway",
@@ -623,7 +632,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.pizzapalacenorwood.com/",
     "link_type": "official",
     "tags": "pizza pasta sub calzone delivery hamburger burgers cheeseburger chicken noodle soup chili stew fries french fries grilled cheese chicken wings chicken fingers steak tips turkey tips haddock salmon hawaiian greek meat lovers buffalo barbecue broccoli alfredo taco shrimp scampi philly parm eggplant roast beef swiss caesar salad chef antipasto kebob gyro baked fried",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "pizzeria-bruno-s",
@@ -635,7 +647,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.pizzeriabrunos.com/",
     "link_type": "official",
     "tags": "pizza italian sub pasta delivery calzone calzones meatball steak cheese buffalo chicken wings salad sandwiches wraps dinners dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "pokemoto-norwood",
@@ -679,7 +694,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://royalpizzanorwood.com/",
     "link_type": "official",
     "tags": "pizza pasta subs",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "sarva-little-venice",
@@ -965,5 +983,15 @@ window.NORWOOD_RESTAURANTS= [
     "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
     "verified": "2026-09-27"
   },
-  {"id":"colonial-ale-house","name":"Colonial Ale House","category":"American & Pub","cuisine":"American · Pub","address":"33 Savin Ave","url":"https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House+33+Savin+Ave+Norwood+MA","link_type":"maps","tags":"formerly Colonial House restaurant pub bar","verified":"2026-10-14"}
+  {
+    "id": "colonial-ale-house",
+    "name": "Colonial Ale House",
+    "category": "American & Pub",
+    "cuisine": "American · Pub",
+    "address": "33 Savin Ave",
+    "url": "https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House+33+Savin+Ave+Norwood+MA",
+    "link_type": "maps",
+    "tags": "formerly Colonial House restaurant pub bar",
+    "verified": "2026-10-14"
+  }
 ];
