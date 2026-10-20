@@ -94,6 +94,51 @@
     'spanakopita':['spinach pie'],
     'tzatziki':['cucumber yogurt sauce']
   };
+  // Correct common food spelling errors and one-edit typos only against indexed menu items.
+  const foodMisspellings={
+    'calzoni':'calzone','calzon':'calzone','calzonee':'calzone',
+    'chiken':'chicken','chikcen':'chicken','parmasan':'parmesan','parmasian':'parmesan',
+    'mozarella':'mozzarella','mozerella':'mozzarella','quesidilla':'quesadilla',
+    'quesidillas':'quesadillas','buritto':'burrito','burito':'burrito',
+    'enchalada':'enchilada','enchiladas':'enchiladas','gyroo':'gyro',
+    'shwarma':'shawarma','shawrma':'shawarma','felafel':'falafel',
+    'humus':'hummus','hummous':'hummus','biriyani':'biryani','briyani':'biryani',
+    'tikka massala':'tikka masala','tika masala':'tikka masala',
+    'pad tai':'pad thai','pad thia':'pad thai','lo main':'lo mein',
+    'sushie':'sushi','hibatchi':'hibachi','sashame':'sashimi',
+    'pannini':'panini','cannolli':'cannoli','canoli':'cannoli',
+    'bruchetta':'bruschetta','brushetta':'bruschetta','rissotto':'risotto',
+    'gnocci':'gnocchi','alfredo':'alfredo','açai':'acai','acaí':'acai',
+    'capuccino':'cappuccino','expresso':'espresso','frappee':'frappe'
+  };
+  function correctedFoodQuery(query){
+    const q=normalize(query);
+    if(foodMisspellings[q]) return normalize(foodMisspellings[q]);
+    return q.split(' ').map(w=>foodMisspellings[w]||w).join(' ');
+  }
+  function editDistanceAtMostTwo(a,b){
+    if(Math.abs(a.length-b.length)>2) return false;
+    let prev=Array.from({length:b.length+1},(_,i)=>i);
+    for(let i=1;i<=a.length;i++){
+      const cur=[i];
+      for(let j=1;j<=b.length;j++){
+        cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));
+      }
+      if(Math.min(...cur)>2)return false;
+      prev=cur;
+    }
+    return prev[b.length]<=2;
+  }
+  function fuzzyIndexedDishMatch(r,query){
+    const q=correctedFoodQuery(query);
+    if(q.length<5)return false;
+    const terms=q.split(' ').filter(Boolean);
+    return (Array.isArray(r.dishes)?r.dishes:[]).some(d=>{
+      const item=normalize(d), words=item.split(' ');
+      if(terms.length===1)return words.some(w=>w.length>=5&&(editDistanceAtMostOne(q,w)||(q.length>=8&&editDistanceAtMostTwo(q,w))));
+      return terms.every(t=>words.some(w=>w===t||(t.length>=5&&editDistanceAtMostOne(t,w))||(t.length>=8&&editDistanceAtMostTwo(t,w))));
+    });
+  }
   function dishMatch(r,query){
     const q=normalize(query);
     const dishes=Array.isArray(r.dishes)?r.dishes:[];
@@ -149,7 +194,7 @@
   }
   function matchesQuery(r,q){
     if(!q) return true;
-    if(dishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;
+    if(dishMatch(r,q)||dishMatch(r,correctedFoodQuery(q))||fuzzyIndexedDishMatch(r,q)||beverageMatch(r,q)||genericSubMatch(r,q)) return true;
     // Cuisine searches should return every relevant restaurant, not only a literal dish entry.
     if(['sushi','hibachi'].includes(q)) return matchesCuisine(r,q);
     const beverageTerms=Object.entries(beverageAliases).flatMap(([key,aliases])=>[key,...aliases].map(normalize));
