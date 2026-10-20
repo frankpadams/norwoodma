@@ -392,14 +392,6 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #homeAdSlot .ad-slot-head{padding-bottom:7px!important}
 #homeAdSlot #sponsorCreative>a{border-radius:10px;overflow:hidden}
 
-/* Keep the navigation toggle as a hamburger at every collapsed width. */
-.top.norwood-menu-collapsed>#menu{font-size:0!important;line-height:0!important}
-.top.norwood-menu-collapsed>#menu::after{content:"";display:block;width:22px;height:16px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;box-sizing:border-box;background:linear-gradient(currentColor,currentColor) center / 100% 2px no-repeat}
-
-
-.top.norwood-menu-collapsed>#menu:focus-visible{outline:2px solid #003b71!important;outline-offset:2px!important}
-
-
 /* Homepage: two compact 215 × 83 sponsor placements with a modest gap. */
 #homeAdSlot .home-ad-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:center}
 #homeAdSlot .home-ad-creative{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:215/83;min-height:0!important;width:100%;overflow:hidden;border-radius:7px}
@@ -425,6 +417,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 @media(max-width:899px){#foodSearchForm .restaurant-guidance{justify-self:start}}
 
 
-/* Keep the original three-line hamburger clearly visible on the blue header. */
-.top.norwood-menu-collapsed>#menu{color:#fff!important;-webkit-text-fill-color:#fff!important}
-.top.norwood-menu-collapsed>#menu::after{color:#fff!important;border-color:#fff!important;background:linear-gradient(#fff,#fff) center / 100% 2px no-repeat!important}
+
+/* Restore original hamburger artwork from the October 13 navigation styling. */
+.top.norwood-menu-collapsed>#menu{font-size:inherit!important;line-height:normal!important;color:inherit!important;-webkit-text-fill-color:currentColor!important;background-image:none!important}
+.top.norwood-menu-collapsed>#menu::after{content:none!important;display:none!important}
