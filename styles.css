@@ -418,6 +418,6 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 
 
-/* Restore original hamburger artwork from the October 13 navigation styling. */
-.top.norwood-menu-collapsed>#menu{font-size:inherit!important;line-height:normal!important;color:inherit!important;-webkit-text-fill-color:currentColor!important;background-image:none!important}
-.top.norwood-menu-collapsed>#menu::after{content:none!important;display:none!important}
+/* October 6-style hamburger: plain original Menu button, no injected icon. */
+.top.norwood-menu-collapsed>#menu{font-size:14px!important;line-height:1.2!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:transparent!important;background-image:none!important;border:1px solid rgba(255,255,255,.55)!important;border-radius:7px!important;box-shadow:none!important}
+.top.norwood-menu-collapsed>#menu::before,.top.norwood-menu-collapsed>#menu::after{content:none!important;display:none!important}
