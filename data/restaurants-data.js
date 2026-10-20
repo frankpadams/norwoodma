@@ -952,7 +952,25 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.minascaferestaurant.com/",
     "link_type": "official",
     "tags": "brazilian churrasco steak juice feijoada feijao tropeiro barbecue fried fish roasted chicken gizzard polenta meatballs lasagna beef stroganoff strogonoff bananas salpicao potato salad farofa collard greens yucca yuca passion fruit pineapple acai cupuacu",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "picanha",
+      "sirloin steak",
+      "ribeye steak",
+      "steak tips",
+      "chicken hearts",
+      "grilled chicken",
+      "sausage",
+      "rice",
+      "beans",
+      "farofa",
+      "feijoada",
+      "coxinha",
+      "cheese bread",
+      "fried yucca",
+      "flan",
+      "brigadeiro"
+    ]
   },
   {
     "id": "minerva-indian-cuisine",
@@ -963,7 +981,27 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.bostonminerva.com/",
     "link_type": "official",
     "tags": "dosa idli curry buffet Indian vindaloo vadai biryani indo chinese gongura south andhra telangana thali thaali vegetarian non samosa palak paneer navratan korma chana masala onion pakora vegetable sambar bhindi fry papad roti lamb kheema chicken 65",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken tikka masala",
+      "butter chicken",
+      "chicken biryani",
+      "vegetable biryani",
+      "lamb biryani",
+      "samosa",
+      "naan",
+      "garlic naan",
+      "palak paneer",
+      "paneer tikka masala",
+      "chana masala",
+      "dal makhani",
+      "tandoori chicken",
+      "chicken vindaloo",
+      "lamb curry",
+      "pakora",
+      "mango lassi",
+      "gulab jamun"
+    ]
   },
   {
     "id": "mizuya-asian-cuisine",
@@ -975,7 +1013,25 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.mizuyanorwood.com/",
     "link_type": "official",
     "tags": "sushi ramen Japanese Chinese bubble tea sashimi nigiri maki boba dumplings gyoza tempura teriyaki fried rice noodles udon poke miso soup edamame platter",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "sushi",
+      "sashimi",
+      "maki rolls",
+      "spicy tuna roll",
+      "california roll",
+      "salmon roll",
+      "shrimp tempura roll",
+      "hibachi chicken",
+      "hibachi steak",
+      "hibachi shrimp",
+      "fried rice",
+      "noodles",
+      "miso soup",
+      "edamame",
+      "gyoza",
+      "tempura"
+    ]
   },
   {
     "id": "murphs-place",
@@ -1020,7 +1076,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://nappertandyspubs.com/location/napper-tandys-norwood",
     "link_type": "official",
     "tags": "irish pub burger fish chips bar cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "fish and chips",
+      "burgers",
+      "chicken wings",
+      "nachos",
+      "shepherd's pie",
+      "chicken tenders",
+      "steak tips",
+      "sandwiches",
+      "salads"
+    ]
   },
   {
     "id": "new-england-central-bakery",
@@ -1031,7 +1098,12 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=New+England+Central+Bakery%2C+1140+Washington+St",
     "link_type": "maps",
     "tags": "Brazilian bakery bread pastry snack",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "bread",
+      "rolls",
+      "pastries"
+    ]
   },
   {
     "id": "new-golden-abacus",
@@ -1042,7 +1114,22 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.newgoldenabacus02062.com/",
     "link_type": "official",
     "tags": "Chinese Szechuan takeout bar cocktails cocktail beer wine drinks",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "fried rice",
+      "lo mein",
+      "chicken fingers",
+      "crab rangoon",
+      "egg rolls",
+      "general tso chicken",
+      "sesame chicken",
+      "beef with broccoli",
+      "kung pao chicken",
+      "hot and sour soup",
+      "wonton soup",
+      "pork fried rice",
+      "boneless spare ribs"
+    ]
   },
   {
     "id": "norwood-spice",
@@ -1053,7 +1140,22 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://norwoodspicema.com/",
     "link_type": "official",
     "tags": "Indian Nepali momo curry tandoori vindaloo chicken lamb mulligatawny soup biryani vegetable tikka masala samosa chicken soup samosas chicken tikka masala momos naan pakora pakoras lasooni gobi aloo tikki chowmein jeera chaat sekuwa dal makhani tadka korma chana matar paneer saag shahi shrimp seafood fish garlic onion mango lassi sweet salty kheer gulab jamun rasmalai",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken tikka masala",
+      "butter chicken",
+      "biryani",
+      "samosa",
+      "naan",
+      "garlic naan",
+      "palak paneer",
+      "chana masala",
+      "dal",
+      "tandoori chicken",
+      "chicken vindaloo",
+      "pakora",
+      "mango lassi"
+    ]
   },
   {
     "id": "norwood-town-square-diner",
@@ -1064,7 +1166,17 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Norwood+Town+Square+Diner%2C+164+Nahatan+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "diner breakfast lunch pancakes omelettes classic",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pancakes",
+      "omelettes",
+      "french toast",
+      "eggs",
+      "breakfast sandwiches",
+      "burgers",
+      "sandwiches",
+      "salads"
+    ]
   },
   {
     "id": "el-valle-mexican-american-cuisine",
@@ -1075,7 +1187,16 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=El+Valle+Mexican+and+American+Cuisine%2C+487+Washington+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "Mexican American tacos burritos quesadillas nachos enchiladas fajitas rice beans kids family",
-    "verified": "2026-09-26"
+    "verified": "2026-09-26",
+    "dishes": [
+      "tacos",
+      "burritos",
+      "quesadillas",
+      "enchiladas",
+      "nachos",
+      "fajitas",
+      "burgers"
+    ]
   },
   {
     "id": "olivadi",
@@ -1087,7 +1208,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.olivadirestaurant.com/",
     "link_type": "official",
     "tags": "Italian pasta pizza seafood dinner spaghetti chicken parm parmigiana rigatoni risotto meatballs salmon swordfish chicken parmigiana scallops filet veal milanese cannoli rock shrimp limone olivadi burger angus sea affogato kids tenders cheese pepperoni octopus mussels arancini burrata calamari onion soup oysters eggplant caesar bolognese carbonara gnocchi nduja pappardelle linguine scampi margherita prosciutto sausage broccolini",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pizza",
+      "margherita pizza",
+      "pasta",
+      "gnocchi",
+      "risotto",
+      "chicken parmesan",
+      "eggplant parmesan",
+      "tiramisu",
+      "calamari",
+      "bruschetta"
+    ]
   },
   {
     "id": "one-bistro",
@@ -1099,7 +1232,16 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.onebistro.com/",
     "link_type": "official",
     "tags": "american bistro brunch seafood steak steaks burger burgers salmon scallops shrimp lobster chowder risotto pasta flatbread eggs benedict french toast bar cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "steak",
+      "salmon",
+      "chicken",
+      "pasta",
+      "burgers",
+      "salads",
+      "desserts"
+    ]
   },
   {
     "id": "pizza-palace",
@@ -1161,7 +1303,17 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://pokemoto.order.online/store/28595114",
     "link_type": "official",
     "tags": "poke sushi bowl seafood tofu boba healthy hawaiian",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "poke bowls",
+      "tuna poke",
+      "salmon poke",
+      "shrimp poke",
+      "tofu poke",
+      "rice bowls",
+      "seaweed salad",
+      "edamame"
+    ]
   },
   {
     "id": "q-sabor-latino-market",
@@ -1183,7 +1335,14 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Rincon+Caribeno+2%2C+111+Lenox+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "dominican caribbean latin mofongo takeout catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "rice and beans",
+      "plantains",
+      "empanadas",
+      "roast pork",
+      "stewed chicken"
+    ]
   },
   {
     "id": "royal-pizza",
@@ -1228,7 +1387,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.shabulee.com/",
     "link_type": "official",
     "tags": "hot pot shabu sushi Chinese Japanese bar cocktails cocktail beer wine sake drinks",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "sushi",
+      "sashimi",
+      "maki rolls",
+      "pad thai",
+      "fried rice",
+      "drunken noodles",
+      "tom yum soup",
+      "green curry",
+      "red curry",
+      "dumplings"
+    ]
   },
   {
     "id": "siam-lotus",
@@ -1240,7 +1411,21 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.siamlotuscuisine.com/",
     "link_type": "official",
     "tags": "Thai curry noodles pad thai soup papaya salad",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pad thai",
+      "drunken noodles",
+      "pad see ew",
+      "green curry",
+      "red curry",
+      "massaman curry",
+      "tom yum soup",
+      "tom kha soup",
+      "thai fried rice",
+      "spring rolls",
+      "satay",
+      "mango sticky rice"
+    ]
   },
   {
     "id": "sidedoor-cafe",
