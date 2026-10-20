@@ -414,13 +414,23 @@
   if(!response.ok)throw new Error('Prices unavailable');
   const data=await response.json();
   const names=['Norwood Gulf','Gulf — Broadway',"Mr. Frank's Food Mart",'Sunoco — Route 1','Mobil — Route 1','Irving Oil / Rojo',"BJ's Gas Station",'CITGO','Shell — Walpole Street','Mobil / On the Run — Norwood Center','Shell — Pleasant Street'];
-  const prices=names.map(name=>data.stations&&data.stations[name]).filter(p=>p&&!p.stale&&typeof p.regular==='number'&&Number.isFinite(p.regular)&&p.regular>0).map(p=>p.regular);
-  if(!prices.length)throw new Error('No Norwood prices');
-  const mean=prices.reduce((sum,price)=>sum+price,0)/prices.length;
+  const cutoff=Date.now()-48*60*60*1000;
+  const recent=names.map(name=>data.stations&&data.stations[name]).filter(p=>{
+   if(!p||p.stale||typeof p.regular!=='number'||!Number.isFinite(p.regular)||p.regular<=0)return false;
+   const timestamp=p.updated||p.reported_at||p.price_updated_at||p.checked;
+   const time=timestamp?Date.parse(timestamp):NaN;
+   return Number.isFinite(time)&&time>=cutoff&&time<=Date.now()+300000;
+  });
+  if(!recent.length){
+   avg.textContent='No recent prices';
+   count.textContent='Last reports over 48h old';
+   return;
+  }
+  const mean=recent.reduce((sum,p)=>sum+p.regular,0)/recent.length;
   avg.textContent='$'+mean.toFixed(2)+' / gal';
-  const checked=data.generated_at?new Date(data.generated_at):null;
-  const checkedLabel=checked&&!isNaN(checked)?' · checked '+checked.toLocaleDateString('en-US',{month:'short',day:'numeric'}):'';
-  count.textContent=checked&&!isNaN(checked)?(checked.getMonth()+1)+'/'+checked.getDate()+'/'+String(checked.getFullYear()).slice(-2):'Date unavailable';
+  const newest=Math.max(...recent.map(p=>Date.parse(p.updated||p.reported_at||p.price_updated_at||p.checked)));
+  const date=new Date(newest);
+  count.textContent=(date.getMonth()+1)+'/'+date.getDate()+'/'+String(date.getFullYear()).slice(-2)+' · '+recent.length+' stations';
  }catch(error){
   avg.textContent='Prices unavailable';
   count.textContent='';
