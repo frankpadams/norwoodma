@@ -529,7 +529,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.dunkindonuts.com/locations/us/ma/norwood/444-walpole-street/store-363060/",
     "link_type": "official",
     "tags": "coffee donuts bagels breakfast cafe",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "donuts",
+      "munchkins",
+      "bagels",
+      "muffins",
+      "croissants",
+      "breakfast sandwiches",
+      "bacon egg and cheese",
+      "wake up wraps",
+      "hash browns"
+    ]
   },
   {
     "id": "express-pizza",
@@ -563,7 +574,16 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://locations.friendlysrestaurants.com/ll/us/ma/norwood/1469-providence-highway/",
     "link_type": "official",
     "tags": "burgers family diner ice cream sundaes kids hamburger cheeseburger milkshake milkshakes vanilla shake chocolate shake strawberry shake fries melts",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "ice cream",
+      "sundaes",
+      "fribbles",
+      "burgers",
+      "chicken tenders",
+      "grilled cheese",
+      "french fries"
+    ]
   },
   {
     "id": "fuego-burritos-bowls",
@@ -592,7 +612,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://furlongscandies.com/",
     "link_type": "official",
     "tags": "candy chocolate ice cream dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chocolates",
+      "candy",
+      "ice cream",
+      "fudge"
+    ]
   },
   {
     "id": "gemma-kitchen-bar",
@@ -603,7 +629,28 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://gemmakitchenandbar.com/",
     "link_type": "official",
     "tags": "american italian bar dinner cocktail cocktails beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pizza",
+      "margherita pizza",
+      "mushroom pizza",
+      "bolognese",
+      "carbonara",
+      "spicy vodka pasta",
+      "spaghetti and clams",
+      "shrimp tacos",
+      "truffle fries",
+      "deviled eggs",
+      "meatballs",
+      "sliders",
+      "wings",
+      "chicken parmesan",
+      "steak tips",
+      "steak frites",
+      "tiramisu",
+      "cheesecake",
+      "garlic knots"
+    ]
   },
   {
     "id": "guarino-s-pastry-shop",
@@ -614,7 +661,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.guarinopastryshop.com/",
     "link_type": "official",
     "tags": "bakery pastry cake cannoli bread",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pastries",
+      "cakes",
+      "cookies",
+      "cannoli"
+    ]
   },
   {
     "id": "gyro-kebab-house",
@@ -650,7 +703,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://restaurants.ihop.com/en-us/ma/norwood/breakfast-1378-boston-providence-highway-4689",
     "link_type": "official",
     "tags": "breakfast pancakes waffles omelettes diner family",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pancakes",
+      "buttermilk pancakes",
+      "omelettes",
+      "french toast",
+      "waffles",
+      "crepes",
+      "eggs benedict",
+      "breakfast sandwiches",
+      "burgers"
+    ]
   },
   {
     "id": "irish-brewing-boston",
@@ -661,7 +725,11 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://irishbrewingboston.com/",
     "link_type": "official",
     "tags": "brewery taproom pizza live music beer bar craft drinks",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pretzels",
+      "pizza"
+    ]
   },
   {
     "id": "jake-n-joes",
@@ -673,7 +741,14 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.jakenjoes.com/locations/norwood/",
     "link_type": "official",
     "tags": "sports bar burgers wings american grill patio smashburger cheeseburger angus milkshake milkshakes vanilla shake chocolate shake strawberry shake oreo shake salted caramel shake orange creamsicle shake boneless wings chicken tenders philly cheesesteak fries pub cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "wings",
+      "burgers",
+      "nachos",
+      "pizza",
+      "salads"
+    ]
   },
   {
     "id": "jersey-mikes-norwood",
@@ -684,7 +759,16 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.jerseymikes.com/16047/norwood-ma",
     "link_type": "official",
     "tags": "subs sandwiches cheesesteak deli takeout catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "subs",
+      "italian sub",
+      "turkey sub",
+      "club sub",
+      "cheesesteak",
+      "chicken cheesesteak",
+      "sandwiches"
+    ]
   },
   {
     "id": "kwality-norwood",
@@ -695,7 +779,28 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://kwalityicecreamnorwood.com/",
     "link_type": "official",
     "tags": "ice cream kulfi falooda Indian dessert alphonso mango rajbhog ferrero rocher butterscotch rose pav bhaji cheese masala vada dabeli samosa kichidi khichdi aloo tikki chole chaat bhel puri dahi sev desi burger anjeer shake",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "kulfi",
+      "falooda",
+      "cassata",
+      "ice cream",
+      "pav bhaji",
+      "vada pav",
+      "dabeli",
+      "pani puri",
+      "sev puri",
+      "bhel",
+      "samosa",
+      "chaat",
+      "bhakari pizza",
+      "paneer pizza",
+      "pasta",
+      "grilled sandwiches",
+      "burgers",
+      "aloo tikki",
+      "gulab jamun"
+    ]
   },
   {
     "id": "la-casita",
@@ -734,7 +839,25 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.lewisbarandgrill.com/",
     "link_type": "official",
     "tags": "burger brunch pizza pub bar soup french onion clam chowder chili steak tips chicken parm parmigiana rigatoni birria tacos fish and chips mac cheese jambalaya french onion soup turkey tips chicken parmigiana mac and cheese lobster mac and cheese reuben poutine quahog burgers hamburger cheeseburger bacon cheeseburger fries french fries onion rings sweet potato fries tater tots hot dog grilled cheese tuna melt wings chicken tenders shrimp taco short rib pulled pork salmon caprese pastrami texan blue margherita meatball ricotta pepperoni nutella sausage buffalo truffle mushroom stuffed pretzel bites dip nachos zucchini waffles sliders burrata guacamole cutlet nashville burnt ends curds fried pickles ribs peppers toast eggs benedict avocado grill cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "stuffed quahog",
+      "clam chowder",
+      "buffalo chicken dip",
+      "quesadillas",
+      "nachos",
+      "poutine",
+      "nashville hot chicken and waffles",
+      "sliders",
+      "burrata",
+      "wings",
+      "chicken tenders",
+      "pizza",
+      "burgers",
+      "french toast",
+      "eggs benedict",
+      "avocado toast"
+    ]
   },
   {
     "id": "lunch-box-deli",
@@ -745,7 +868,11 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://lunchboxnorwood.com/",
     "link_type": "official",
     "tags": "sandwich deli lunch catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "sandwiches",
+      "subs"
+    ]
   },
   {
     "id": "maha-juice-bar",
@@ -757,7 +884,12 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://mahajuice.com/location",
     "link_type": "official",
     "tags": "juice smoothie acai bowl healthy breakfast lunch",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "smoothies",
+      "fresh juice",
+      "acai bowls"
+    ]
   },
   {
     "id": "mak-s-roast-beef-pizza",
@@ -782,7 +914,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.mcdonalds.com/us/en-us/location/ma/norwood/32-broadway/1273.html",
     "link_type": "official",
     "tags": "burgers fries breakfast coffee drive thru fast food",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "big mac",
+      "quarter pounder",
+      "cheeseburger",
+      "hamburger",
+      "chicken mcnuggets",
+      "chicken sandwich",
+      "french fries",
+      "egg mcmuffin",
+      "hash browns"
+    ]
   },
   {
     "id": "mick-morgans-norwood",
@@ -793,7 +936,12 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://mickmorgansnorwood.com/",
     "link_type": "official",
     "tags": "irish pub brunch burgers beer patio american bar cocktails cocktail wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burgers",
+      "fish and chips",
+      "shepherd's pie"
+    ]
   },
   {
     "id": "minas-cafe-steakhouse",
