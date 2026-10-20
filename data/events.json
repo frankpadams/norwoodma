@@ -891,7 +891,7 @@
     ]
   },
   {
-    "id": "2026-10-20-musical-bingo-d06bea5",
+    "id": "2026-10-20-musical-bingo-d9f0b96",
     "title": "Musical Bingo",
     "start": {
       "date": "2026-10-20",
@@ -899,25 +899,27 @@
     },
     "end": {
       "date": "2026-10-20",
-      "time": null
+      "time": "20:30"
     },
-    "venue": null,
-    "address": null,
-    "category": "community",
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "category": "school_theatre",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/musical-bingo-4",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
+    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
+    "series": null,
     "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, October 20, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
-    "discovered_by": "visible_dated_page",
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
-      "norwood-community"
+      "norwood-arts",
+      "norwood-family"
     ]
   },
   {
