@@ -174,7 +174,16 @@ window.NORWOOD_RESTAURANTS= [
       "chicken sandwich",
       "chicken nuggets",
       "french fries",
-      "onion rings"
+      "onion rings",
+      "impossible whopper",
+      "double whopper",
+      "whopper jr",
+      "bacon king",
+      "original chicken sandwich",
+      "royal crispy chicken sandwich",
+      "chicken fries",
+      "mozzarella fries",
+      "hershey's sundae pie"
     ]
   },
   {
@@ -270,7 +279,20 @@ window.NORWOOD_RESTAURANTS= [
       "salad",
       "guacamole",
       "chips",
-      "queso"
+      "queso",
+      "barbacoa burrito",
+      "carnitas burrito",
+      "chicken burrito",
+      "steak burrito",
+      "sofritas bowl",
+      "barbacoa bowl",
+      "carnitas bowl",
+      "chicken bowl",
+      "steak bowl",
+      "sofritas tacos",
+      "chips and guacamole",
+      "chips and queso blanco",
+      "kid's build your own"
     ]
   },
   {
@@ -469,7 +491,25 @@ window.NORWOOD_RESTAURANTS= [
       "bread bites",
       "salads",
       "chocolate lava cake",
-      "brownies"
+      "brownies",
+      "hand tossed pizza",
+      "thin crust pizza",
+      "brooklyn style pizza",
+      "pan pizza",
+      "extravaganZZa pizza",
+      "meatZZa pizza",
+      "deluxe pizza",
+      "honolulu hawaiian pizza",
+      "buffalo chicken pizza",
+      "memphis bbq chicken pizza",
+      "philly cheese steak pizza",
+      "spinach and feta pizza",
+      "chicken alfredo pasta",
+      "italian sausage marinara pasta",
+      "chicken carbonara pasta",
+      "chocolate lava crunch cakes",
+      "parmesan bread bites",
+      "cinnamon bread twists"
     ]
   },
   {
@@ -713,7 +753,22 @@ window.NORWOOD_RESTAURANTS= [
       "crepes",
       "eggs benedict",
       "breakfast sandwiches",
-      "burgers"
+      "burgers",
+      "original buttermilk pancakes",
+      "new york cheesecake pancakes",
+      "double blueberry pancakes",
+      "strawberry banana pancakes",
+      "mexican tres leches pancakes",
+      "big steak omelette",
+      "bacon temptation omelette",
+      "spinach and mushroom omelette",
+      "chicken fajita omelette",
+      "split decision breakfast",
+      "breakfast sampler",
+      "rooty tooty fresh n fruity",
+      "country fried steak",
+      "sirloin tips",
+      "chicken and waffles"
     ]
   },
   {
@@ -767,7 +822,21 @@ window.NORWOOD_RESTAURANTS= [
       "club sub",
       "cheesesteak",
       "chicken cheesesteak",
-      "sandwiches"
+      "sandwiches",
+      "the original italian",
+      "club supreme",
+      "turkey and provolone",
+      "ham and provolone",
+      "tuna fish",
+      "the number four",
+      "the super sub",
+      "famous philly",
+      "big kahuna cheese steak",
+      "chipotle cheese steak",
+      "chicken bacon ranch cheese steak",
+      "buffalo chicken cheese steak",
+      "portabella cheese steak",
+      "portabella chicken cheese steak"
     ]
   },
   {
@@ -924,7 +993,22 @@ window.NORWOOD_RESTAURANTS= [
       "chicken sandwich",
       "french fries",
       "egg mcmuffin",
-      "hash browns"
+      "hash browns",
+      "double quarter pounder with cheese",
+      "double cheeseburger",
+      "mcchicken",
+      "filet o fish",
+      "mcgriddle",
+      "sausage mcmuffin",
+      "sausage biscuit",
+      "hotcakes",
+      "apple pie",
+      "mcflurry",
+      "oreo mcflurry",
+      "chocolate shake",
+      "vanilla shake",
+      "strawberry shake",
+      "sausage burrito"
     ]
   },
   {
@@ -1635,7 +1719,19 @@ window.NORWOOD_RESTAURANTS= [
       "nachos",
       "crunchwrap supreme",
       "chalupa",
-      "cinnamon twists"
+      "cinnamon twists",
+      "cheesy gordita crunch",
+      "doritos locos tacos",
+      "beefy five layer burrito",
+      "cheesy bean and rice burrito",
+      "burrito supreme",
+      "chicken quesadilla",
+      "steak quesadilla",
+      "nachos bellgrande",
+      "cheesy fiesta potatoes",
+      "spicy potato soft taco",
+      "black bean crunchwrap supreme",
+      "cinnabon delights"
     ]
   },
   {
@@ -1902,7 +1998,20 @@ window.NORWOOD_RESTAURANTS= [
       "chili",
       "baked potato",
       "french fries",
-      "frosty"
+      "frosty",
+      "dave's single",
+      "dave's double",
+      "dave's triple",
+      "jr bacon cheeseburger",
+      "asiago ranch chicken club",
+      "spicy chicken nuggets",
+      "homestyle chicken sandwich",
+      "apple pecan salad",
+      "taco salad",
+      "sour cream and chive baked potato",
+      "chili cheese fries",
+      "chocolate frosty",
+      "vanilla frosty"
     ]
   },
   {
