@@ -150,7 +150,16 @@ window.NORWOOD_RESTAURANTS= [
     "tags": "american pub steak tips bar burger burgers hamburger cheeseburger pizza pasta soup soups seafood sandwiches cocktails cocktail beer wine drinks full",
     "verified": "2026-09-17",
     "dishes": [
-      "calzones"
+      "calzones",
+      "pizza",
+      "chicken parm",
+      "burgers",
+      "salads",
+      "pasta",
+      "fries",
+      "chicken fingers",
+      "mac and cheese",
+      "grilled cheese"
     ]
   },
   {
@@ -184,7 +193,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Crushed+Peppers%2C+20+Broadway+%232%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "pizza grill calzone wings subs burgers pasta takeout",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pizza",
+      "calzones",
+      "sandwiches",
+      "subs",
+      "burgers",
+      "salads",
+      "pasta",
+      "mac and cheese",
+      "wings",
+      "chicken fingers"
+    ]
   },
   {
     "id": "d-g-deli",
@@ -531,7 +552,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://mustang-pizza.com/",
     "link_type": "official",
     "tags": "pizza sub salad takeout delivery cheeseburger burgers fries french fries curly fries waffle fries onion rings mozzarella sticks chicken fingers chicken wings quesadilla italian sandwich turkey ham cheese blt club grilled buffalo steak bacon ranch stir fry ziti parmesan pasta eggplant meatball veal teriyaki mango habanero lemon pepper",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pizza",
+      "calzones",
+      "stromboli",
+      "subs",
+      "wraps",
+      "burgers",
+      "pasta",
+      "salads",
+      "wings",
+      "quesadillas"
+    ]
   },
   {
     "id": "napper-tandy-s",
@@ -634,7 +667,22 @@ window.NORWOOD_RESTAURANTS= [
     "tags": "pizza pasta sub calzone delivery hamburger burgers cheeseburger chicken noodle soup chili stew fries french fries grilled cheese chicken wings chicken fingers steak tips turkey tips haddock salmon hawaiian greek meat lovers buffalo barbecue broccoli alfredo taco shrimp scampi philly parm eggplant roast beef swiss caesar salad chef antipasto kebob gyro baked fried",
     "verified": "2026-09-17",
     "dishes": [
-      "calzones"
+      "calzones",
+      "pizza",
+      "subs",
+      "sandwiches",
+      "chicken parm",
+      "eggplant parm",
+      "steak and cheese",
+      "burgers",
+      "salads",
+      "pasta",
+      "chicken marsala",
+      "shrimp scampi",
+      "fries",
+      "wings",
+      "soups",
+      "desserts"
     ]
   },
   {
@@ -649,7 +697,14 @@ window.NORWOOD_RESTAURANTS= [
     "tags": "pizza italian sub pasta delivery calzone calzones meatball steak cheese buffalo chicken wings salad sandwiches wraps dinners dessert",
     "verified": "2026-09-17",
     "dishes": [
-      "calzones"
+      "calzones",
+      "pizza",
+      "sandwiches",
+      "wraps",
+      "salads",
+      "wings",
+      "dinners",
+      "desserts"
     ]
   },
   {
@@ -696,7 +751,16 @@ window.NORWOOD_RESTAURANTS= [
     "tags": "pizza pasta subs",
     "verified": "2026-09-17",
     "dishes": [
-      "calzones"
+      "calzones",
+      "pizza",
+      "hot subs",
+      "cold subs",
+      "steak subs",
+      "wraps",
+      "burgers",
+      "pasta",
+      "salads",
+      "desserts"
     ]
   },
   {
@@ -778,7 +842,18 @@ window.NORWOOD_RESTAURANTS= [
     "tags": "pizza subs wings calzones pasta delivery takeout",
     "verified": "2026-09-17",
     "dishes": [
-      "calzones"
+      "calzones",
+      "pizza",
+      "hot subs",
+      "cold subs",
+      "chicken parm",
+      "wraps",
+      "burgers",
+      "sandwiches",
+      "pasta",
+      "salads",
+      "wings",
+      "desserts"
     ]
   },
   {
@@ -847,7 +922,27 @@ window.NORWOOD_RESTAURANTS= [
     "link_type": "official",
     "tags": "Greek Mediterranean gyro kebab falafel gluten free gf vegetarian gyros souvlaki chicken pork spanakopita moussaka salad baklava tzatziki hummus pita lamb fries",
     "gluten_free": true,
-    "verified": "2026-09-21"
+    "verified": "2026-09-21",
+    "dishes": [
+      "gyros",
+      "chicken gyro",
+      "pork gyro",
+      "falafel",
+      "hummus",
+      "tzatziki",
+      "greek salad",
+      "kabobs",
+      "spanakopita",
+      "moussaka",
+      "pastitsio",
+      "souvlaki",
+      "burgers",
+      "wraps",
+      "fries",
+      "baklava",
+      "loukoumades",
+      "lentil soup"
+    ]
   },
   {
     "id": "the-panini-press-deli",
@@ -903,7 +998,15 @@ window.NORWOOD_RESTAURANTS= [
     "link_type": "official",
     "tags": "vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta tikka masala manchurian pav bhaji paneer biryani indo chinese",
     "gluten_free": true,
-    "verified": "2026-09-21"
+    "verified": "2026-09-21",
+    "dishes": [
+      "pizza",
+      "panini",
+      "pasta",
+      "indian food",
+      "indo chinese",
+      "salads"
+    ]
   },
   {
     "id": "vico-ristorante-italiano",
