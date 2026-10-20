@@ -451,6 +451,7 @@
  const stationBounds=L.latLngBounds([[42.1695,-71.2030],[42.2015,-71.1880]]);
  function frameStations(){map.invalidateSize();map.fitBounds(stationBounds,{padding:[13,13],maxZoom:15,animate:false});}
  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+ const stations=[['Windsor Gardens',42.1728,-71.1990],['Norwood Central',42.1887,-71.1990],['Norwood Depot',42.2001,-71.1920]];stations.forEach(st=>L.circleMarker([st[1],st[2]],{radius:6,color:'#76558e',fillColor:'#fff',fillOpacity:1,weight:3,interactive:false}).addTo(map));
  let markers=[];
  async function update(){
   try{
@@ -462,7 +463,7 @@
    markers=vehicles.map(vehicle=>{
     const a=vehicle.attributes;
     const train=vehicle.relationships?.route?.data?.id==='CR-Franklin';
-    return L.circleMarker([a.latitude,a.longitude],{radius:train?7:6,color:train?'#003b71':'#ad7100',fillColor:train?'#2673b9':'#f1c44c',fillOpacity:.95,weight:2,interactive:false}).addTo(map);
+    return L.marker([a.latitude,a.longitude],{interactive:false,icon:L.divIcon({className:'',html:'<span style="display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:'+(train?'#76558e':'#e5b62a')+';font-size:14px;border:1px solid white">'+(train?'🚆':'🚌')+'</span>',iconSize:[23,23],iconAnchor:[12,12]})}).addTo(map);
    });
   }catch(error){/* Retain map and previously displayed markers if the feed is unavailable. */}
  }
