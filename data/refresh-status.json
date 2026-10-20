@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-20T13:21:04.550283-04:00",
+  "generated_at": "2026-10-20T17:46:28.639945-04:00",
   "offline": false,
-  "events_published": 2474,
+  "events_published": 2463,
   "news_published": 120,
   "civic_notices": 52,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2474,
-      "generated_at": "2026-10-20T13:21:04.256096-04:00"
+      "events": 2463,
+      "generated_at": "2026-10-20T17:46:28.080799-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 128,
-      "generated_at": "2026-10-20T13:21:04.269393-04:00"
+      "generated_at": "2026-10-20T17:46:28.092966-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 926,
-      "generated_at": "2026-10-20T13:21:04.295838-04:00"
+      "events": 927,
+      "generated_at": "2026-10-20T17:46:28.116649-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 827,
-      "generated_at": "2026-10-20T13:21:04.318644-04:00"
+      "events": 828,
+      "generated_at": "2026-10-20T17:46:28.136868-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-10-20T13:21:04.330783-04:00"
+      "generated_at": "2026-10-20T17:46:28.147519-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 71,
-      "generated_at": "2026-10-20T13:21:04.344350-04:00"
+      "generated_at": "2026-10-20T17:46:28.159880-04:00"
     }
   ],
-  "recreation_programs": 128,
-  "recreation_occurrences": 1404,
+  "recreation_programs": 126,
+  "recreation_occurrences": 1391,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -169,7 +169,7 @@
       "source_id": "fallout-shelter",
       "ok": true,
       "method": "html_list",
-      "found": 12,
+      "found": 13,
       "note": ""
     },
     {
@@ -679,7 +679,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 11,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1398,8 +1398,8 @@
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 128,
-      "note": "1625 calendar occurrences generated"
+      "found": 126,
+      "note": "1612 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1601,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 69,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1609,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 19,
+      "found": 70,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },

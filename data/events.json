@@ -441,37 +441,6 @@
     ]
   },
   {
-    "id": "2026-10-20-book-club-f47ddaa",
-    "title": "Book Club",
-    "start": {
-      "date": "2026-10-20",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-10-20",
-      "time": "14:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-20-farmers-closing",
     "title": "Norwood Farmers Market: Closing Day",
     "start": {
@@ -3265,42 +3234,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-10-23",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-10-23",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-10-23",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-630568bafb76-2026-10-23",
     "title": "Music with Miss Maura - Babies & Waddlers Fall 2",
     "start": {
@@ -5433,6 +5366,36 @@
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
     "notes": "Shabbat, Oct 24",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-24-this-show-is-sold-out-please-join-us-for-a-fr-4b30325",
+    "title": "This show is SOLD OUT! Please join us for a free live stream on YouTube & Facebook",
+    "start": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "fallout-shelter",
+    "source_url": "https://www.extendedplaysessions.com/",
+    "cost": null,
+    "public_access": "public",
+    "series": "The Fallout Shelter / Extended Play Sessions",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "This show is SOLD OUT! Please join us for a free live stream on YouTube & Facebook Saturday, October 24 at 7:00 ET. Take one red-hot horn section of alto, tenor, and baritone sax and trombone, add barrelhouse boogie-woogie piano and stinging Fender guitar, then pour over a rhythm section Blues Review called the best in the business. Top it off with a crazy, charismatic frontman with one of the biggest blues voices around, seasoned by years tearing up juke joints, festivals, and concert halls on ",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -8920,6 +8883,37 @@
     ]
   },
   {
+    "id": "2026-10-28-ona-comittee-special-program-celebrating-over-21f06c5",
+    "title": "ONA Comittee Special Program: Celebrating over 20 years of ONA",
+    "start": {
+      "date": "2026-10-28",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "20:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-28-school-committee-meeting-f8165c0",
     "title": "School Committee Meeting",
     "start": {
@@ -10299,42 +10293,6 @@
     "verification_status": "town_schedule_verified_2026-10-09",
     "notes": "In-person early voting. See full schedule and registration information. Preview your precinct-specific sample ballot: https://www.sec.state.ma.us/WhereDoIVoteMA/ ; official ballot-question guide: https://www.sec.state.ma.us/divisions/elections/download/information-for-voters/archive/IFV_2026%20English.pdf",
     "calendar_ids": []
-  },
-  {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-10-30",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-10-30",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-10-30",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
   },
   {
     "id": "rec-occurrence-rec-630568bafb76-2026-10-30",
@@ -14407,42 +14365,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-11-06",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-11-06",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-11-06",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-630568bafb76-2026-11-06",
     "title": "Music with Miss Maura - Babies & Waddlers Fall 2",
     "start": {
@@ -18140,42 +18062,6 @@
       "norwood-sports",
       "rec-all",
       "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-11-13",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-11-13",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-11-13",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -21962,7 +21848,7 @@
     "series": "The Fallout Shelter / Extended Play Sessions",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Seth Walker The Talented Singer/Songwriter/Guitarist Returns! Thu, Nov 19, 20 26 7:00pm Revered voice in modern Americana, Seth Walker returns to The Fallout Shelter with his Gospel-drenched, Southern-inflected sound and true blue knack for the guitar. Raised on a North Carolina commune by classically trained musicians, he swapped cello for blues guitar in his 20s, taking him to Austin, New Orleans, and Nashville before settling in Asheville. He's shared stages with roots legends, reached No. 2 ",
+    "notes": "Seth Walker The Talented Singer/Songwriter/Guitarist Returns! Thu, Nov 19, 20 26 7:00pm Revered Americana artist Seth Walker returns to The Fallout Shelter with his Gospel-drenched, Southern-inflected sound and a true blue knack for the guitar. Raised on a North Carolina commune by classically trained musicians, he played cello for years before picking up the guitar in his 20s, then let Austin, New Orleans, and Nashville shape the rest. Fresh off his new album Why The Worry, he weaves blues, R&B",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -22161,42 +22047,6 @@
       "norwood-sports",
       "rec-all",
       "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-11-20",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-11-20",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -25306,42 +25156,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-11-27",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-11-27",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2026-11-27",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -28149,42 +27963,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-5d2cc38898cc-2026-12-04",
-    "title": "Little Scientists Session 2",
-    "start": {
-      "date": "2026-12-04",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2026-12-04",
-      "time": "10:00"
-    },
-    "venue": "10/23/2026 - 12/04/2026 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-12-04",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-5d2cc38898cc",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
     ]
   },
   {
@@ -45114,42 +44892,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-dd3e7aa54ff3-2027-01-08",
-    "title": "Little Scientists Session 3",
-    "start": {
-      "date": "2027-01-08",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2027-01-08",
-      "time": "10:00"
-    },
-    "venue": "01/08/2027 - 02/12/2027 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-08",
-    "session_end": "2027-02-12",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-dd3e7aa54ff3",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2027-01-08",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -48511,42 +48253,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-dd3e7aa54ff3-2027-01-15",
-    "title": "Little Scientists Session 3",
-    "start": {
-      "date": "2027-01-15",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2027-01-15",
-      "time": "10:00"
-    },
-    "venue": "01/08/2027 - 02/12/2027 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-08",
-    "session_end": "2027-02-12",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-dd3e7aa54ff3",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2027-01-15",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -51516,42 +51222,6 @@
       "norwood-sports",
       "rec-all",
       "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-dd3e7aa54ff3-2027-01-22",
-    "title": "Little Scientists Session 3",
-    "start": {
-      "date": "2027-01-22",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2027-01-22",
-      "time": "10:00"
-    },
-    "venue": "01/08/2027 - 02/12/2027 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-08",
-    "session_end": "2027-02-12",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-dd3e7aa54ff3",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -54891,42 +54561,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-dd3e7aa54ff3-2027-01-29",
-    "title": "Little Scientists Session 3",
-    "start": {
-      "date": "2027-01-29",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2027-01-29",
-      "time": "10:00"
-    },
-    "venue": "01/08/2027 - 02/12/2027 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-08",
-    "session_end": "2027-02-12",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-dd3e7aa54ff3",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2027-01-29",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -58083,42 +57717,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-dd3e7aa54ff3-2027-02-05",
-    "title": "Little Scientists Session 3",
-    "start": {
-      "date": "2027-02-05",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2027-02-05",
-      "time": "10:00"
-    },
-    "venue": "01/08/2027 - 02/12/2027 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-08",
-    "session_end": "2027-02-12",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-dd3e7aa54ff3",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2027-02-05",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -60972,42 +60570,6 @@
       "norwood-sports",
       "rec-all",
       "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-dd3e7aa54ff3-2027-02-12",
-    "title": "Little Scientists Session 3",
-    "start": {
-      "date": "2027-02-12",
-      "time": "09:15"
-    },
-    "end": {
-      "date": "2027-02-12",
-      "time": "10:00"
-    },
-    "venue": "01/08/2027 - 02/12/2027 09:15 AM - 10:00 AM Norwood Civic Center - Kennedy Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30908",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$70.00 Res, $80.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-08",
-    "session_end": "2027-02-12",
-    "days": "F",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-dd3e7aa54ff3",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -85817,6 +85379,40 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: North Girl's Lacrosse R Georges Level: JV Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-26-var-lacrosse-attleboro-high-school-1088e83",
+    "title": "Var Lacrosse @ Attleboro High School",
+    "start": {
+      "date": "2027-05-26",
+      "time": "18:15"
+    },
+    "end": {
+      "date": "2027-05-26",
+      "time": "19:30"
+    },
+    "venue": "1 Blue Pride Way, Attleboro MA 02703",
+    "address": "1 Blue Pride Way, Attleboro MA 02703",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Attleboro High School Subsite: Tozier-Cassidy",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
