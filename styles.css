@@ -391,3 +391,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #homeAdSlot{padding:10px 12px 12px!important;border:1px solid #dbe3ec!important;border-radius:14px!important;background:#fff!important;box-sizing:border-box}
 #homeAdSlot .ad-slot-head{padding-bottom:7px!important}
 #homeAdSlot #sponsorCreative>a{border-radius:10px;overflow:hidden}
+
+/* Keep the navigation toggle as a hamburger at every collapsed width. */
+.top.norwood-menu-collapsed>#menu{font-size:0!important;line-height:0!important}
+.top.norwood-menu-collapsed>#menu::after{content:"";display:block;width:22px;height:16px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;box-sizing:border-box;background:linear-gradient(currentColor,currentColor) center / 100% 2px no-repeat}
