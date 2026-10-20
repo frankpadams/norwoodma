@@ -211,14 +211,12 @@
  const weatherUpdate=()=>{const temp=$('temp')?.textContent?.trim(),forecast=$('forecast')?.textContent?.trim();if(temp&&temp!=='Weather')$('todayWeatherSummary').textContent=temp+(forecast&& !/loading/i.test(forecast)?' · '+forecast:'');};
  weatherUpdate();setTimeout(weatherUpdate,2000);setTimeout(weatherUpdate,6000);
  const ev=$('todayEventScroll');
- const buildEvents=()=>{
-   const raw=window.NORWOOD_EVENTS||window.EVENTS||window.eventsData||window.NorwoodEvents;
-   const arr=Array.isArray(raw)?raw:Array.isArray(raw?.events)?raw.events:[];
-   const items=arr.filter(e=>e.title||e.name).filter(e=>{const d=new Date(e.start||e.startDate||e.date||0);return !Number.isNaN(d.getTime())&&d.getTime()>=Date.now()-86400000}).sort((a,b)=>new Date(a.start||a.startDate||a.date)-new Date(b.start||b.startDate||b.date)).slice(0,12);
-   if(!items.length)return false;
-   ev.innerHTML=items.map(e=>{const title=e.title||e.name,dt=e.start||e.startDate||e.date,url=e.url||e.link||'events.html',pic=e.image||e.imageUrl||e.photo;return '<a class="today-story" href="'+esc(url)+'"><span class="today-story-photo" '+(pic?'style="background-image:url(&quot;'+esc(pic)+'&quot;)"':'')+'>'+(pic?'':'📅')+'</span><span class="today-story-body"><small>'+esc(date(dt))+'</small><strong>'+esc(title)+'</strong><span>'+esc(e.location||e.venue||'View event details')+' ↗</span></span></a>'}).join('');
-   return true;
+ const renderEvents=arr=>{
+   const today=new Date().toISOString().slice(0,10);
+   const items=arr.filter(e=>e.title&&e.start?.date&&(e.end?.date||e.start.date)>=today).sort((a,b)=>(a.start.date+' '+(a.start.time||'')).localeCompare(b.start.date+' '+(b.start.time||''))).slice(0,14);
+   if(!items.length){ev.innerHTML='<a href="events.html">Browse the community calendar ↗</a>';return;}
+   ev.innerHTML=items.map(e=>{const url='events.html?event='+encodeURIComponent(e.id||'');const pic=e.image||e.image_url||e.photo||e.thumbnail;return '<a class="today-story" href="'+esc(url)+'"><span class="today-story-photo" '+(pic?'style="background-image:url(&quot;'+esc(pic)+'&quot;)"':'')+'>'+(pic?'':'📅')+'</span><span class="today-story-body"><small>'+esc(date(e.start.date+'T12:00:00'))+(e.start.time?' · '+esc(e.start.time):'')+'</small><strong>'+esc(e.title)+'</strong><span>'+esc(e.venue||'View event details')+' ↗</span></span></a>'}).join('');
  };
- if(!buildEvents()){ev.innerHTML='<a class="today-story" href="events.html"><span class="today-story-photo">📅</span><span class="today-story-body"><small>COMMUNITY CALENDAR</small><strong>Browse upcoming Norwood events</strong><span>View the live calendar ↗</span></span></a>';}
+ fetch('data/events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Events unavailable');return r.json()}).then(data=>renderEvents(Array.isArray(data)?data:[])).catch(()=>{ev.innerHTML='<a href="events.html">Open the current community calendar ↗</a>'});
 })();
 </script></body></html>
