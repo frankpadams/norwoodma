@@ -108,6 +108,7 @@
  .status.feature-card-test .trivia-test>small{transform:none!important}
  .status.feature-card-test small br{display:none!important}
 }
+.today-gas .gas-widget-stations{display:block;font-size:12px;font-weight:600;line-height:1.3;margin-top:3px}.today-gas .gas-widget-date{display:block;font-size:10px;line-height:1.2;margin-top:7px;opacity:.8}
 </style>
 <style>
 /* Test refinements: joined bar, larger sans-serif labels/icons, muted-to-color hover. */
@@ -312,7 +313,7 @@
 <div class="home-redesign">
   <section class="today-panel" aria-labelledby="norwoodTodayTitle">
     <div class="today-heading"><div><h2 id="norwoodTodayTitle">Norwood Today</h2><p class="today-date" id="todayDate"></p></div></div>
-    <div class="today-utility-pair"><a class="today-weather" href="weather.html" aria-label="View Norwood weather and forecast"><div class="today-weather-icon" id="todayWeatherIcon" aria-hidden="true">☀</div><div><strong>Today's weather</strong><span id="todayWeatherSummary">See the current local forecast and conditions.</span></div></a><a class="today-gas" href="gas-prices.html" aria-label="Compare Norwood gas prices"><div><strong>Norwood Avg.</strong><span id="todayGasAverage">Checking prices…</span><small id="todayGasCount" class="gas-widget-date">—</small><span class="gas-widget-cue" aria-hidden="true">Gas prices ↗</span></div></a></div>
+    <div class="today-utility-pair"><a class="today-weather" href="weather.html" aria-label="View Norwood weather and forecast"><div class="today-weather-icon" id="todayWeatherIcon" aria-hidden="true">☀</div><div><strong>Today's weather</strong><span id="todayWeatherSummary">See the current local forecast and conditions.</span></div></a><a class="today-gas" href="gas-prices.html" aria-label="Compare Norwood gas prices"><div><strong>Norwood Avg.</strong><span id="todayGasAverage">Checking prices…</span><span id="todayGasCount" class="gas-widget-stations">—</span><small id="todayGasDate" class="gas-widget-date">—</small><span class="gas-widget-cue" aria-hidden="true">Gas prices ↗</span></div></a></div>
     <details class="today-transit-alerts"><summary>🚆 Transit service notifications <span id="todayTransitCount">Checking MBTA…</span></summary><div id="todayTransitDetails">Checking Franklin Line and 34E service…</div></details>
     <section class="today-block"><div class="today-block-head"><h3>What's happening</h3><a href="events.html">More events ↗</a></div><div class="today-scroll" id="todayEventScroll"><div class="today-loading">Loading the community calendar…</div></div></section>
     <section class="today-block"><div class="today-block-head"><h3>Local news</h3><a href="news.html">More news ↗</a></div><div class="today-scroll" id="todayNewsScroll"><div class="today-loading">Loading recent local reporting…</div></div></section>
@@ -408,6 +409,7 @@
 (async function(){
  const avg=document.getElementById('todayGasAverage');
  const count=document.getElementById('todayGasCount');
+ const dateLabel=document.getElementById('todayGasDate');
  if(!avg||!count)return;
  try{
   const response=await fetch('data/gas-prices.json',{cache:'no-store'});
@@ -424,16 +426,19 @@
   if(!recent.length){
    avg.textContent='No recent prices';
    count.textContent='Last reports over 48h old';
+   if(dateLabel)dateLabel.textContent='';
    return;
   }
   const mean=recent.reduce((sum,p)=>sum+p.regular,0)/recent.length;
   avg.textContent='$'+mean.toFixed(2)+' / gal';
   const newest=Math.max(...recent.map(p=>Date.parse(p.updated||p.reported_at||p.price_updated_at||p.checked)));
   const date=new Date(newest);
-  count.textContent=(date.getMonth()+1)+'/'+date.getDate()+'/'+String(date.getFullYear()).slice(-2)+' · '+recent.length+' stations';
+  count.textContent=recent.length+' stations';
+  if(dateLabel)dateLabel.textContent=(date.getMonth()+1)+'/'+date.getDate()+'/'+String(date.getFullYear()).slice(-2);
  }catch(error){
   avg.textContent='Prices unavailable';
   count.textContent='';
+  if(dateLabel)dateLabel.textContent='';
  }
 })();
 </script></body></html>
