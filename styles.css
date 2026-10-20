@@ -395,3 +395,13 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 /* Keep the navigation toggle as a hamburger at every collapsed width. */
 .top.norwood-menu-collapsed>#menu{font-size:0!important;line-height:0!important}
 .top.norwood-menu-collapsed>#menu::after{content:"";display:block;width:22px;height:16px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;box-sizing:border-box;background:linear-gradient(currentColor,currentColor) center / 100% 2px no-repeat}
+
+
+/* Homepage: two compact 215 × 83 sponsor placements with a modest gap. */
+#homeAdSlot .home-ad-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:center}
+#homeAdSlot .home-ad-creative{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:215/83;min-height:0!important;width:100%;overflow:hidden;border-radius:7px}
+#homeAdSlot .bmt-dual-ad img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:fill;transition:opacity .2s ease}
+#homeAdSlot .bmt-dual-ad .bmt-services{opacity:0}
+@media(hover:hover){#homeAdSlot .bmt-dual-ad:hover .bmt-services,#homeAdSlot .bmt-dual-ad:focus-visible .bmt-services{opacity:1}}
+#homeAdSlot .home-ad-empty{border:1px dashed #b8c6d3;background:#f7f9fb;color:#536b7d;text-decoration:none;font-size:clamp(10px,1vw,13px);font-weight:600;text-align:center}
+@container (max-width:560px){#homeAdSlot .home-ad-pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
