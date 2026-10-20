@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - name: Install free station-price client
+        run: pip install py-gasbuddy
       - name: Fetch current fuel prices
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-        run: python3 scripts/update-gas-prices.py
+        run: python3 scripts/update-free-gas-prices.py
       - name: Publish changed prices
         run: |
           git add data/gas-prices.json
