@@ -423,3 +423,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #foodSearchForm .gf-help-popover{display:none;position:absolute;z-index:100;right:0;bottom:calc(100% + 9px);width:min(320px,80vw);padding:12px 14px;border:1px solid #b9d3c3;border-radius:9px;background:#fff;color:#21362a;box-shadow:0 6px 24px #0002;font-size:13px;line-height:1.5;text-align:left}
 #foodSearchForm .gf-help-trigger:hover + .gf-help-popover,#foodSearchForm .gf-help-trigger:focus + .gf-help-popover,#foodSearchForm .restaurant-guidance:focus-within .gf-help-popover{display:block}
 @media(max-width:899px){#foodSearchForm .restaurant-guidance{justify-self:start}}
+
+/* Single source of hamburger artwork: suppress legacy icon layers. */
+.top>#menu::before{content:none!important;display:none!important}
+.top.norwood-menu-collapsed>#menu{appearance:none!important;background-image:none!important;text-shadow:none!important}
+.top.norwood-menu-collapsed>#menu::after{content:""!important;display:block!important;flex:none!important;width:22px!important;height:16px!important;border:0!important;border-top:2px solid currentColor!important;border-bottom:2px solid currentColor!important;border-radius:0!important;box-shadow:none!important;transform:none!important;background:linear-gradient(currentColor,currentColor) center center/100% 2px no-repeat!important}
