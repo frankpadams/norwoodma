@@ -96,19 +96,28 @@
   function matchesCuisine(r,choice){
     const q=normalize(choice);
     if(!q) return true;
-    if(q==='sushi') return normalize(r.cuisine).includes('sushi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('sushi'));
-    if(q==='hibachi') return normalize(r.cuisine).includes('hibachi') || (Array.isArray(r.cuisine_tags)&&r.cuisine_tags.includes('hibachi'));
-    const category=normalize(r.category), cuisine=normalize(r.cuisine), tags=normalize(Array.isArray(r.tags)?r.tags.join(' '):(r.tags||''));
+    if(q==='gluten free') return r.gluten_free===true;
+    if(q==='full bar') return hasFullBar(r);
+    const category=normalize(r.category), cuisine=normalize(r.cuisine);
+    const tags=normalize(Array.isArray(r.tags)?r.tags.join(' '):(r.tags||''));
     const cuisineTags=Array.isArray(r.cuisine_tags)?r.cuisine_tags.map(normalize):[];
-    if(category===q || cuisineTags.includes(q)) return true;
-    // Spinner choices describe foods, not necessarily the directory's broader category names.
-    const words=' '+[category,cuisine,tags].join(' ')+' ';
-    if(q==='pizza') return /\\bpizza\\b/.test(words);
-    if(q==='italian') return /\\bitalian\\b/.test(words) || category==='pizza italian';
-    if(q==='american pub burgers') return /\\b(american|pub|burger|burgers|tavern)\\b/.test(words);
-    if(q==='asian sushi') return /\\b(asian|sushi|japanese|chinese|thai|korean|vietnamese|hibachi)\\b/.test(words);
-    if(q==='middle eastern mediterranean') return /\b(middle eastern|mediterranean|greek|lebanese|turkish|persian)\b/.test(words);
-    return words.includes(' '+q+' ');
+    const words=' '+[category,cuisine,tags,cuisineTags.join(' ')].join(' ')+' ';
+    const has=re=>re.test(words);
+    if(q==='sushi') return has(/\\bsushi\\b/);
+    if(q==='hibachi') return has(/\\bhibachi\\b/);
+    if(q==='pizza') return has(/\\bpizza\\b/);
+    if(q==='italian') return has(/\\bitalian\\b/) || category==='pizza italian';
+    if(q==='american pub burgers') return category==='american pub' || has(/\\b(pub|tavern|burger|burgers)\\b/);
+    if(q==='asian sushi') return category==='asian' || has(/\\b(sushi|japanese|chinese|thai|korean|vietnamese|hibachi)\\b/);
+    if(q==='indian south asian') return category==='indian south asian' || has(/\\b(indian|pakistani|nepalese|bangladeshi|south asian)\\b/);
+    if(q==='middle eastern mediterranean') return category==='middle eastern' || has(/\\b(middle eastern|mediterranean|greek|lebanese|turkish|persian)\\b/);
+    if(q==='mexican latin') return category==='mexican latin' || has(/\\b(mexican|latin|salvadoran|colombian|peruvian|tacos)\\b/);
+    if(q==='brazilian') return category==='brazilian' || has(/\\bbrazilian\\b/);
+    if(q==='breakfast brunch cafe') return category==='breakfast cafe' || has(/\\b(breakfast|brunch|cafe)\\b/);
+    if(q==='deli sandwiches') return category==='deli sandwiches' || has(/\\b(deli|sandwiches|subs)\\b/);
+    if(q==='bakery sweets') return category==='bakery sweets' || has(/\\b(bakery|pastry|dessert|sweets|ice cream)\\b/);
+    if(q==='quick service casual') return category==='quick service' || has(/\\b(fast food|quick service|fast casual)\\b/);
+    return category===q || cuisineTags.includes(q) || words.includes(' '+q+' ');
   }
   function matchesQuery(r,q){
     if(!q) return true;
