@@ -355,7 +355,7 @@
 <div class="home-redesign">
   <section class="today-panel" aria-labelledby="norwoodTodayTitle">
     <div class="today-heading"><div><h2 id="norwoodTodayTitle">Norwood Today</h2><p class="today-date" id="todayDate"></p></div></div>
-    <div class="today-utility-pair"><a class="today-weather" href="weather.html" aria-label="View Norwood weather and forecast"><div class="today-weather-icon" id="todayWeatherIcon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4 12h2m16 0h-2"/></svg></div><div><strong>Today's weather</strong><span id="todayWeatherSummary">See the current local forecast and conditions.</span></div></a><a class="today-gas" href="gas-prices.html" aria-label="Compare Norwood gas prices"><span class="today-gas-pump" aria-hidden="true"><svg viewBox="0 0 24 24" width="29" height="29" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h12M6 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M8 7h6v6H8zM16 9h2l2 3v6a2 2 0 0 1-4 0"/></svg></span><div><strong>Norwood Avg.</strong><span id="todayGasAverage">Checking prices…</span><span id="todayGasCount" class="gas-widget-stations">—</span><small id="todayGasDate" class="gas-widget-date">—</small><span class="gas-widget-cue" aria-hidden="true">Gas prices ↗</span></div></a><a class="today-dinner" href="restaurants.html#dinner-spinner" aria-label="Spin for dinner in Norwood"><span class="today-dinner-wheel today-dinner-utensils" aria-hidden="true"><svg viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10M3 3v7c0 3 2 4 4 4s4-1 4-4V3M7 14v15M21 3c-3 5-3 11 0 14v12M21 3v14"/></svg></span><span class="today-dinner-copy"><strong>Dinner Spinner</strong><small>Restaurant Randomizer<br>&amp; Dining Directory</small></span><span class="today-dinner-action">Spin for Dinner ↗</span></a></div>
+    <div class="today-utility-pair"><a class="today-weather" href="weather.html" aria-label="View Norwood weather and forecast"><div class="today-weather-icon" id="todayWeatherIcon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4 12h2m16 0h-2"/></svg></div><div><strong>Today's weather</strong><span id="todayWeatherSummary">See the current local forecast and conditions.</span></div></a><a class="today-gas" href="gas-prices.html" aria-label="Compare Norwood gas prices"><span class="today-gas-pump" aria-hidden="true"><svg viewBox="0 0 24 24" width="29" height="29" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h12M6 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M8 7h6v6H8zM16 9h2l2 3v6a2 2 0 0 1-4 0"/></svg></span><div><strong>Norwood Avg.</strong><span id="todayGasAverage">Checking prices…</span><small id="todayGasDate" class="gas-widget-date">—</small><span class="gas-widget-cue" aria-hidden="true">Gas prices ↗</span></div></a><a class="today-dinner" href="restaurants.html#dinner-spinner" aria-label="Spin for dinner in Norwood"><span class="today-dinner-wheel today-dinner-utensils" aria-hidden="true"><svg viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10M3 3v7c0 3 2 4 4 4s4-1 4-4V3M7 14v15M21 3c-3 5-3 11 0 14v12M21 3v14"/></svg></span><span class="today-dinner-copy"><strong>Dinner Spinner</strong><small>Restaurant Randomizer<br>&amp; Dining Directory</small></span><span class="today-dinner-action">Spin for Dinner ↗</span></a></div>
     <details class="today-transit-alerts"><summary>🚆 Transit service notifications <span id="todayTransitCount">Checking MBTA…</span></summary><div id="todayTransitDetails">Checking Franklin Line and 34E service…</div></details>
     <section class="today-block"><div class="today-block-head"><h3>What's happening</h3><a href="events.html">More events ↗</a></div><div class="today-scroll" id="todayEventScroll"><div class="today-loading">Loading the community calendar…</div></div></section>
     <section class="today-block"><div class="today-block-head"><h3>Local news</h3><a href="news.html">More news ↗</a></div><div class="today-scroll" id="todayNewsScroll"><div class="today-loading">Loading recent local reporting…</div></div></section>
@@ -474,7 +474,7 @@
   });
   if(!recent.length){
    avg.textContent='No recent prices';
-   count.textContent='Last reports over 48h old';
+   if(count)count.textContent='Last reports over 48h old';
    if(dateLabel)dateLabel.textContent='';
    return;
   }
@@ -482,11 +482,11 @@
   avg.textContent='$'+mean.toFixed(2)+' / gal';
   const newest=Math.max(...recent.map(p=>Date.parse(p.updated||p.reported_at||p.price_updated_at||p.checked)));
   const date=new Date(newest);
-  count.textContent=recent.length+' stations';
+  if(count)count.textContent=recent.length+' stations';
   if(dateLabel)dateLabel.textContent=(date.getMonth()+1)+'/'+date.getDate()+'/'+String(date.getFullYear()).slice(-2);
  }catch(error){
   avg.textContent='Prices unavailable';
-  count.textContent='';
+  if(count)count.textContent='';
   if(dateLabel)dateLabel.textContent='';
  }
 })();
