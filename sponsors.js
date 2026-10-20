@@ -9,6 +9,6 @@ const services=document.createElement('img');services.className='bmt-services';s
 services.onerror=()=>{services.style.display='none'};
 van.onerror=()=>{van.src='/assets/ads/wide_rectangular_advertising_banner_for_a_mobile_t.png'};
 primary.append(van,services);
-const placeholder=document.createElement('a');placeholder.className='home-ad-creative home-ad-empty';placeholder.href='/support.html#advertise';placeholder.textContent='Advertise here';placeholder.setAttribute('aria-label','Advertise in this space on Norwood.ma');
+const placeholder=document.createElement('a');placeholder.className='home-ad-creative home-ad-image-link tcb-ad';placeholder.href='https://towncommonbooks.com';placeholder.target='_blank';placeholder.rel='noopener sponsored';placeholder.setAttribute('aria-label','Town Common Books — soft opening October 24, grand opening November 1');const tcb=document.createElement('img');tcb.src='/assets/ads/TCB.webp';tcb.alt='Town Common Books: Soft Opening Oct 24, Grand Opening Nov 1 — towncommonbooks.com';tcb.loading='eager';tcb.decoding='async';placeholder.append(tcb);
 pair.append(primary,placeholder);view.replaceChildren(pair);slot.hidden=false;
 })();
