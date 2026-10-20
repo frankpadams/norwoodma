@@ -42,7 +42,20 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://betweenthebunz.us/",
     "link_type": "official",
     "tags": "smash burger chicken fries lobster roll smashburger burgers hamburger cheeseburger crispy chicken sandwich crinkle fries hot dog og seasoned cut dogs rolls",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "smash burgers",
+      "cheeseburgers",
+      "crispy chicken sandwiches",
+      "nashville hot chicken",
+      "hot dogs",
+      "lobster rolls",
+      "chili cheese fries",
+      "chicken tenders",
+      "caribbean salad",
+      "coleslaw",
+      "frappes"
+    ]
   },
   {
     "id": "boston-tavern",
@@ -154,7 +167,12 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.cafefreshbagelsnorwood.com/",
     "link_type": "official",
     "tags": "bagel breakfast sandwich coffee",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "bagels",
+      "cream cheese",
+      "breakfast sandwiches"
+    ]
   },
   {
     "id": "cafe-k-streets",
@@ -229,7 +247,24 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.cravebowlsusa.com/",
     "link_type": "official",
     "tags": "shawarma kebab bowl pita mediterranean",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "shawarma",
+      "beef shawarma",
+      "chicken shawarma",
+      "falafel",
+      "kabobs",
+      "kebabs",
+      "hummus",
+      "grape leaves",
+      "kibbeh",
+      "greek bowl",
+      "rice bowls",
+      "tacos",
+      "pita sandwiches",
+      "fries",
+      "baklava"
+    ]
   },
   {
     "id": "crazy-taco-bar-grill",
@@ -358,7 +393,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.expresspizzanorwood.com/",
     "link_type": "official",
     "tags": "pizza subs pasta salad",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pizza",
+      "subs",
+      "salads",
+      "pasta",
+      "chicken alfredo",
+      "spaghetti",
+      "ziti",
+      "meatballs",
+      "penne marinara",
+      "ravioli"
+    ]
   },
   {
     "id": "friendlys-norwood",
