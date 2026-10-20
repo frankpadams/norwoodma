@@ -5377,6 +5377,9 @@ window.NORWOOD_BUSINESSES=[
   ["loanDepot — Norwood","Mortgage Lenders & Brokers","220 Norwood Park South, Suite 100","508-850-4100","https://www.loandepot.com/"],
   ["Lighthouse Funding Group","Mortgage Brokers","661 Washington Street, Suite 209","781-769-1002",""],
   ["Nery Mancebo — Primerica Mortgage","Mortgage Loan Officers","11 Vanderbilt Avenue, Suite 100","","https://www.primerica.com/nerymancebo"],
+  ["plās design co.","Architecture & Interior Design","51 Prospect Avenue","",""],
+  ["At Your Service Electric","Electricians & Electrical Contractors","174 Union Street","339-204-1842","https://www.atyourserviceelec.com"],
+  ["Petrucci Electrical Service Inc.","Electricians & Electrical Contractors","Norwood","781-771-5375","https://petruccielectric.com/"],
   [
     "STRATERES",
     "Business Consulting & Services",
