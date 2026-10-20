@@ -424,3 +424,7 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #foodSearchForm .gf-help-trigger:hover + .gf-help-popover,#foodSearchForm .gf-help-trigger:focus + .gf-help-popover,#foodSearchForm .restaurant-guidance:focus-within .gf-help-popover{display:block}
 @media(max-width:899px){#foodSearchForm .restaurant-guidance{justify-self:start}}
 
+
+/* Keep the original three-line hamburger clearly visible on the blue header. */
+.top.norwood-menu-collapsed>#menu{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.top.norwood-menu-collapsed>#menu::after{color:#fff!important;border-color:#fff!important;background:linear-gradient(#fff,#fff) center / 100% 2px no-repeat!important}
