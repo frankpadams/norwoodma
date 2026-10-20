@@ -2430,8 +2430,8 @@
     ]
   },
   {
-    "id": "2026-10-22-stem-career-expo-244f261",
-    "title": "STEM Career Expo",
+    "id": "2026-10-22-stem-career-expo-day-of-instructions-exhibito-1c4f1c2",
+    "title": "STEM Career Expo Day of Instructions (Exhibitors & Chaperones)",
     "start": {
       "date": "2026-10-22",
       "time": "09:35"
@@ -2450,14 +2450,15 @@
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Date — Thursday, October 22, 2026 Time — Set-up anytime between 8:00 AM – 9:15 AM; Event begins at 9:35 AM and will end at 1:00 PM Location — Solomon Pond Mall, 610 Donald Lynch Blvd, Marlborough, MA 01752 Showcase your organization, inspir",
+    "notes": "Below you will find day of instructions for Exhibitors & Chaperones. For exhibitors, reach out to Leo Sena @lsena@mswyouth.org. For chaperones, please reach out to Amanda Chenier @achenier@mswyouth.org. Click Here to View Map of Event Exhib",
     "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-arts",
-      "norwood-community"
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -2593,6 +2594,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-10-22-school-committee-meeting-d367a4b",
+    "title": "School Committee Meeting",
+    "start": {
+      "date": "2026-10-22",
+      "time": "15:15"
+    },
+    "end": {
+      "date": "2026-10-22",
+      "time": "16:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "town-meetings"
     ]
   },
   {
@@ -3000,8 +3031,8 @@
     ]
   },
   {
-    "id": "2026-10-22-pto-sponsored-halloween-party-6-00-7-30-pm-aa2657b",
-    "title": "PTO Sponsored Halloween Party 6:00-7:30 PM",
+    "id": "2026-10-22-norwood-school-committee-budget-subcommittee--e95532c",
+    "title": "Norwood School Committee: Budget Subcommittee Meeting- Virtual",
     "start": {
       "date": "2026-10-22",
       "time": null
@@ -3010,24 +3041,20 @@
       "date": "2026-10-22",
       "time": null
     },
-    "venue": "Norwood Public Schools",
+    "venue": null,
     "address": null,
-    "category": "arts",
-    "source_id": "nps-oldham",
-    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9351171/pto-sponsored-halloween-party-time-tba",
+    "category": "government",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
     "cost": null,
-    "organizer": "Norwood Public Schools",
     "public_access": "public",
-    "series": null,
+    "series": "Town of Norwood",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
+    "verification_status": "verified_town_master_calendar",
     "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
+    "discovered_by": "town_revize_master_calendar",
     "calendar_ids": [
-      "norwood-arts",
       "norwood-community",
       "norwood-family"
     ]
@@ -5593,43 +5620,6 @@
     "notes": null,
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-10-25-norwood-braves-vs-bellingham-hawks-g4-dias-4bc847c",
-    "title": "Norwood Braves vs Bellingham Hawks G4 - Dias",
-    "start": {
-      "date": "2026-10-25",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-10-25",
-      "time": null
-    },
-    "venue": "Oldham School 8",
-    "field": "Oldham School 8",
-    "grade": "Girls Grade 4",
-    "gender": "girls",
-    "team": "Norwood Braves",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-4",
-      "nys-team-girls-grade-4-norwood-braves"
     ]
   },
   {
@@ -9607,7 +9597,7 @@
     "series": "Norwood Boys JV Soccer",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: B JV Team: Norwood High School Site: Southeastern RVT High School Subsite: Upper Field",
+    "notes": "Sport: Soccer Level: B JV Team: Norwood High School Site: Southeastern RVT High School Subsite: Lower Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -10097,6 +10087,39 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-29-pto-sponsored-halloween-party-6-00-7-30-pm-d9ea702",
+    "title": "PTO Sponsored Halloween Party 6:00-7:30 PM",
+    "start": {
+      "date": "2026-10-29",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-30",
+      "time": null
+    },
+    "venue": "Norwood Public Schools",
+    "address": null,
+    "category": "arts",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9351171/pto-sponsored-halloween-party-time-tba",
+    "cost": null,
+    "organizer": "Norwood Public Schools",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -15571,7 +15594,7 @@
     "series": "The Fallout Shelter / Extended Play Sessions",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Walter Parks & The Unlawful Assembly The Magnificent Quartet Returns! Sat, Nov 7, 20 26 7:00pm Walter Parks and The Unlawful Assembly return to the Fallout Shelter after a brilliant February debut that wowed the room with reimagined spirituals and hymns. Longtime sideman to Woodstock legend Richie Havens, Parks leads a band featuring vocalist Ada Dyer, currently touring the world alongside Bruce Springsteen, drummer Steven Williams, and Hammond organ master Michael Bellar. Gospel, blues, and pri",
+    "notes": "Walter Parks & The Unlawful Assembly The Magnificent Quartet Returns! Sat, Nov 7, 20 26 7:00pm Walter Parks and The Unlawful Assembly return to the Fallout Shelter after a brilliant February debut that wowed the room with reimagined spirituals and hymns. Longtime sideman to Woodstock legend Richie Havens, Parks leads a band featuring vocalist Ada Dyer, currently touring the world alongside Bruce Springsteen, drummer Steven Williams, and Etienne Lytle on keys. Gospel, blues, and prison work songs",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -45895,44 +45918,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-b4937ee054a7-2027-01-11",
-    "title": "Pre-School Prep Session 17",
-    "start": {
-      "date": "2027-01-11",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-11",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 17",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-11",
-    "session_end": "2027-01-14",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b4937ee054a7",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-dbad3ed0b0e4-2027-01-11",
     "title": "All Welcome Yoga Session 3",
     "start": {
@@ -46257,44 +46242,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-b4937ee054a7-2027-01-12",
-    "title": "Pre-School Prep Session 17",
-    "start": {
-      "date": "2027-01-12",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-12",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 17",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-11",
-    "session_end": "2027-01-14",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b4937ee054a7",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -46906,44 +46853,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-b4937ee054a7-2027-01-13",
-    "title": "Pre-School Prep Session 17",
-    "start": {
-      "date": "2027-01-13",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-13",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 17",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-11",
-    "session_end": "2027-01-14",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b4937ee054a7",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -47807,44 +47716,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-b4937ee054a7-2027-01-14",
-    "title": "Pre-School Prep Session 17",
-    "start": {
-      "date": "2027-01-14",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-14",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 17",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-11",
-    "session_end": "2027-01-14",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-b4937ee054a7",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -49661,44 +49532,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-061beea39045-2027-01-19",
-    "title": "Pre-School Prep Session 18",
-    "start": {
-      "date": "2027-01-19",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-19",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 18",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-19",
-    "session_end": "2027-01-21",
-    "days": "TuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-061beea39045",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2027-01-19",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -50265,44 +50098,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-061beea39045-2027-01-20",
-    "title": "Pre-School Prep Session 18",
-    "start": {
-      "date": "2027-01-20",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-20",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 18",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-19",
-    "session_end": "2027-01-21",
-    "days": "TuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-061beea39045",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -51040,44 +50835,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-061beea39045-2027-01-21",
-    "title": "Pre-School Prep Session 18",
-    "start": {
-      "date": "2027-01-21",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-21",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 18",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-19",
-    "session_end": "2027-01-21",
-    "days": "TuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-061beea39045",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -52694,44 +52451,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-d1dfaee50e6b-2027-01-25",
-    "title": "Pre-School Prep Session 19",
-    "start": {
-      "date": "2027-01-25",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-25",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 19",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-25",
-    "session_end": "2027-01-28",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-d1dfaee50e6b",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-dbad3ed0b0e4-2027-01-25",
     "title": "All Welcome Yoga Session 3",
     "start": {
@@ -53159,44 +52878,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-d1dfaee50e6b-2027-01-26",
-    "title": "Pre-School Prep Session 19",
-    "start": {
-      "date": "2027-01-26",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-26",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 19",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-25",
-    "session_end": "2027-01-28",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-d1dfaee50e6b",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -53759,44 +53440,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-d1dfaee50e6b-2027-01-27",
-    "title": "Pre-School Prep Session 19",
-    "start": {
-      "date": "2027-01-27",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-27",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 19",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-25",
-    "session_end": "2027-01-28",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-d1dfaee50e6b",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -54630,44 +54273,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-d1dfaee50e6b-2027-01-28",
-    "title": "Pre-School Prep Session 19",
-    "start": {
-      "date": "2027-01-28",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-01-28",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 19",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-01-25",
-    "session_end": "2027-01-28",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-d1dfaee50e6b",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -56281,44 +55886,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-9264d8c2f90f-2027-02-01",
-    "title": "Pre-School Prep Session 20",
-    "start": {
-      "date": "2027-02-01",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-01",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 20",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-01",
-    "session_end": "2027-02-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9264d8c2f90f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-dbad3ed0b0e4-2027-02-01",
     "title": "All Welcome Yoga Session 3",
     "start": {
@@ -56750,44 +56317,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-9264d8c2f90f-2027-02-02",
-    "title": "Pre-School Prep Session 20",
-    "start": {
-      "date": "2027-02-02",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-02",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 20",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-01",
-    "session_end": "2027-02-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9264d8c2f90f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -57246,44 +56775,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-9264d8c2f90f-2027-02-03",
-    "title": "Pre-School Prep Session 20",
-    "start": {
-      "date": "2027-02-03",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-03",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 20",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-01",
-    "session_end": "2027-02-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9264d8c2f90f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -58089,44 +57580,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-9264d8c2f90f-2027-02-04",
-    "title": "Pre-School Prep Session 20",
-    "start": {
-      "date": "2027-02-04",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-04",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 20",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-01",
-    "session_end": "2027-02-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9264d8c2f90f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -59254,44 +58707,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-9a7ab9ab608f-2027-02-08",
-    "title": "Pre-School Prep Session 21",
-    "start": {
-      "date": "2027-02-08",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-08",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 21",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-08",
-    "session_end": "2027-02-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9a7ab9ab608f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-dbad3ed0b0e4-2027-02-08",
     "title": "All Welcome Yoga Session 3",
     "start": {
@@ -59575,44 +58990,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-9a7ab9ab608f-2027-02-09",
-    "title": "Pre-School Prep Session 21",
-    "start": {
-      "date": "2027-02-09",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-09",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 21",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-08",
-    "session_end": "2027-02-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9a7ab9ab608f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -60206,44 +59583,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-9a7ab9ab608f-2027-02-10",
-    "title": "Pre-School Prep Session 21",
-    "start": {
-      "date": "2027-02-10",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-10",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 21",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-08",
-    "session_end": "2027-02-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9a7ab9ab608f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -61002,44 +60341,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-9a7ab9ab608f-2027-02-11",
-    "title": "Pre-School Prep Session 21",
-    "start": {
-      "date": "2027-02-11",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-11",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 21",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-08",
-    "session_end": "2027-02-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-9a7ab9ab608f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -64301,44 +63602,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-86103d4d33b5-2027-02-22",
-    "title": "Pre-School Prep Session 22",
-    "start": {
-      "date": "2027-02-22",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-22",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 22",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-22",
-    "session_end": "2027-02-25",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-86103d4d33b5",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2027-02-22",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -64587,44 +63850,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-86103d4d33b5-2027-02-23",
-    "title": "Pre-School Prep Session 22",
-    "start": {
-      "date": "2027-02-23",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-23",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 22",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-22",
-    "session_end": "2027-02-25",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-86103d4d33b5",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -64979,44 +64204,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-86103d4d33b5-2027-02-24",
-    "title": "Pre-School Prep Session 22",
-    "start": {
-      "date": "2027-02-24",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-24",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 22",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-22",
-    "session_end": "2027-02-25",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-86103d4d33b5",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -65643,44 +64830,6 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-86103d4d33b5-2027-02-25",
-    "title": "Pre-School Prep Session 22",
-    "start": {
-      "date": "2027-02-25",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-02-25",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 22",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-02-22",
-    "session_end": "2027-02-25",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-86103d4d33b5",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -66434,44 +65583,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-151098b0a2e1-2027-03-01",
-    "title": "Pre-School Prep Session 23",
-    "start": {
-      "date": "2027-03-01",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-01",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 23",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-01",
-    "session_end": "2027-03-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-151098b0a2e1",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2027-03-01",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -66761,44 +65872,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-151098b0a2e1-2027-03-02",
-    "title": "Pre-School Prep Session 23",
-    "start": {
-      "date": "2027-03-02",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-02",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 23",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-01",
-    "session_end": "2027-03-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-151098b0a2e1",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -67158,44 +66231,6 @@
       "norwood-arts",
       "norwood-community",
       "pma-fine-arts"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-151098b0a2e1-2027-03-03",
-    "title": "Pre-School Prep Session 23",
-    "start": {
-      "date": "2027-03-03",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-03",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 23",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-01",
-    "session_end": "2027-03-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-151098b0a2e1",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -67715,44 +66750,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-151098b0a2e1-2027-03-04",
-    "title": "Pre-School Prep Session 23",
-    "start": {
-      "date": "2027-03-04",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-04",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 23",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-01",
-    "session_end": "2027-03-04",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-151098b0a2e1",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
       "recreation-calendar"
     ]
   },
@@ -68579,44 +67576,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-73f40108b58d-2027-03-08",
-    "title": "Pre-School Prep Session 24",
-    "start": {
-      "date": "2027-03-08",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-08",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 24",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-08",
-    "session_end": "2027-03-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-73f40108b58d",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2027-03-08",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -68898,44 +67857,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-73f40108b58d-2027-03-09",
-    "title": "Pre-School Prep Session 24",
-    "start": {
-      "date": "2027-03-09",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-09",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 24",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-08",
-    "session_end": "2027-03-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-73f40108b58d",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -69227,44 +68148,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-73f40108b58d-2027-03-10",
-    "title": "Pre-School Prep Session 24",
-    "start": {
-      "date": "2027-03-10",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-10",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 24",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-08",
-    "session_end": "2027-03-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-73f40108b58d",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -69754,44 +68637,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-73f40108b58d-2027-03-11",
-    "title": "Pre-School Prep Session 24",
-    "start": {
-      "date": "2027-03-11",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-11",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 24",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-08",
-    "session_end": "2027-03-11",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-73f40108b58d",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
       "recreation-calendar"
     ]
   },
@@ -70581,44 +69426,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-469d587e0b65-2027-03-15",
-    "title": "Pre-School Prep Session 25",
-    "start": {
-      "date": "2027-03-15",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-15",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 25",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-15",
-    "session_end": "2027-03-18",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-469d587e0b65",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2027-03-15",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -70838,44 +69645,6 @@
       "norwood-sports",
       "rec-adult-fitness",
       "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-469d587e0b65-2027-03-16",
-    "title": "Pre-School Prep Session 25",
-    "start": {
-      "date": "2027-03-16",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-16",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 25",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-15",
-    "session_end": "2027-03-18",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-469d587e0b65",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
       "recreation-calendar"
     ]
   },
@@ -71167,44 +69936,6 @@
     "calendar_ids": [
       "norwood-sports",
       "skating-club-boston-events"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-469d587e0b65-2027-03-17",
-    "title": "Pre-School Prep Session 25",
-    "start": {
-      "date": "2027-03-17",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-17",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 25",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-15",
-    "session_end": "2027-03-18",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-469d587e0b65",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
-      "recreation-calendar"
     ]
   },
   {
@@ -71534,44 +70265,6 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-469d587e0b65-2027-03-18",
-    "title": "Pre-School Prep Session 25",
-    "start": {
-      "date": "2027-03-18",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2027-03-18",
-      "time": "12:00"
-    },
-    "venue": "Pre-School Prep Session 25",
-    "category": "camps_vacation",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30922",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$125.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2027-03-15",
-    "session_end": "2027-03-18",
-    "days": "MTuWTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-469d587e0b65",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "rec-camps",
       "recreation-calendar"
     ]
   },
@@ -75907,7 +74600,7 @@
     "address": null,
     "category": "community",
     "source_id": "nps-oldham",
-    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274721/autism-awareness-day-wear-blue-to-school",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9274716/autism-awareness-day-wear-blue-to-school",
     "cost": null,
     "organizer": "Norwood Public Schools",
     "public_access": "public",
