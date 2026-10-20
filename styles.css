@@ -424,3 +424,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 
 /* Keep the approved menu button; hide only its visible word. */
 .top.norwood-menu-collapsed>#menu{font-size:0!important;-webkit-text-fill-color:transparent!important}
+
+/* Icon-only hamburger: three visible white strokes, no visible Menu text. */
+.top.norwood-menu-collapsed>#menu{font-size:0!important;line-height:0!important;color:#fff!important;-webkit-text-fill-color:transparent!important}
+.top.norwood-menu-collapsed>#menu::before{content:none!important;display:none!important}
+.top.norwood-menu-collapsed>#menu::after{content:""!important;display:block!important;flex:none!important;width:23px!important;height:17px!important;border-top:2px solid #fff!important;border-bottom:2px solid #fff!important;background:linear-gradient(#fff,#fff) center/100% 2px no-repeat!important;box-sizing:border-box!important;box-shadow:none!important}
