@@ -198,17 +198,16 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
   window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
 
-  // Collapse only when the navigation would overflow the available header width.
-  // Recheck on resize and after font loading; the dropdown overlays rather than stretches the header.
+  // Collapse only when the actual visible navigation approaches within 30px of the logo.
   const header=menu.closest('header.top');
   if(header){
     const updateMenuFit=()=>{
       const brand=header.querySelector('.brand');
-      const brandWidth=brand?Math.min(brand.getBoundingClientRect().width||220,220):220;
-      const links=[...nav.querySelectorAll('a')].filter(a=>!a.hasAttribute('data-add-home-screen')&&!a.hasAttribute('data-android-install'));
-      // Main-site icons and labels require roughly 68-100px each plus gaps.
-      const needed=links.reduce((total,a)=>total+Math.max(68,Math.min(140,(a.textContent||'').trim().length*7+30)),0)+Math.max(brandWidth,180)+90;
-      const collapse=header.clientWidth<needed;
+      // Measure the uncollapsed navigation, not estimated link widths.
+      header.classList.remove('norwood-menu-collapsed');
+      const logoRight=brand?brand.getBoundingClientRect().right:0;
+      const navRect=nav.getBoundingClientRect();
+      const collapse=navRect.left-logoRight<30 || navRect.right>header.getBoundingClientRect().right+1;
       header.classList.toggle('norwood-menu-collapsed',collapse);
       if(!collapse&&nav.classList.contains('open'))close();
     };
