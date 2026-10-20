@@ -53,7 +53,16 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.thebostontavern.com/",
     "link_type": "official",
     "tags": "pub burgers seafood wings bar chicken parmesan pasta penne linguine steak tips meatloaf mac and cheese fajitas chicken broccoli scampi ribeye hamburger cheeseburger onion rings fish and chips fried clams clam chowder pizza tavern sports cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "boneless wings",
+      "stuffed quahog",
+      "stuffie",
+      "chicken caesar smashburger",
+      "baked rigatoni",
+      "steak frites",
+      "salmon risotto"
+    ]
   },
   {
     "id": "brookside-cafe",
@@ -64,7 +73,34 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.brooksidecafeofnorwood.com/",
     "link_type": "official",
     "tags": "breakfast lunch diner brunch",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "eggs benedict",
+      "omelettes",
+      "pancakes",
+      "french toast",
+      "waffles",
+      "breakfast sandwich",
+      "breakfast quesadilla",
+      "corned beef hash",
+      "steak tips",
+      "steak bomb sub",
+      "fish and chips",
+      "chicken tenders",
+      "chicken sandwich",
+      "reuben",
+      "tuna melt",
+      "grilled cheese",
+      "club sandwich",
+      "burgers",
+      "greek salad",
+      "chicken broccoli alfredo",
+      "fried ravioli",
+      "wings",
+      "mozzarella sticks",
+      "haddock",
+      "scallops"
+    ]
   },
   {
     "id": "buffalo-s-pizza-subs",
@@ -102,7 +138,12 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://byblosrestaurant.com/",
     "link_type": "official",
     "tags": "lebanese middle eastern mezze halal live music kibbeh kebbeh lamb shawarma charcoal grill baklava baklawa maamoul katayef atayef znoud el sit rice pudding ashtalia falafel hummus tabbouleh baba ghanoush grape leaves kebab kafta",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "lebanese food",
+      "mediterranean food",
+      "middle eastern food"
+    ]
   },
   {
     "id": "cafe-fresh-bagel",
@@ -124,7 +165,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.cafekstreets-norwood.com/",
     "link_type": "official",
     "tags": "coffee croffle Korean breakfast latte dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "croffles",
+      "waffles",
+      "korean corn dogs",
+      "breakfast"
+    ]
   },
   {
     "id": "cheff-n-eetinn",
@@ -249,7 +296,14 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.dilli-delights.com/",
     "link_type": "official",
     "tags": "chaat biryani curry kebab Indian vindaloo samosa tikki chaat vada dahi vada golgappas pakora paneer pakora bhel puri butter chicken chicken biryani mutton biryani korma nehari gulab jamun jalebi kheer beef wings roasted tikka masala lamb chops aloo navratan palak matar grilled barra chai mango lassi",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "biryani",
+      "naan",
+      "pakora",
+      "samosa",
+      "kebabs"
+    ]
   },
   {
     "id": "domino-s-pizza",
@@ -326,7 +380,14 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://fuegoburritos.com/order/fuego-norwood-643-washington-st",
     "link_type": "official",
     "tags": "burrito bowl tacos quesadilla mexican fast casual vegetarian",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burritos",
+      "rice bowls",
+      "guacamole",
+      "chips",
+      "salsa"
+    ]
   },
   {
     "id": "furlong-s-candies-ice-cream",
