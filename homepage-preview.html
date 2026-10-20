@@ -380,7 +380,7 @@
  }
  update();setInterval(update,30000);setTimeout(()=>map.invalidateSize(),350);
 })();
-</script><script id="ncm-popup-launcher">document.querySelectorAll('[data-ncm-popup]').forEach(a=>a.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const popup=window.open(a.href,'_blank','popup=yes,width=1050,height=760');if(popup){e.preventDefault();try{popup.focus()}catch(_){}}}));</script><script id="ncm-live-schedule-data">
+</script><script id="ncm-popup-launcher">document.querySelectorAll('[data-ncm-popup]').forEach(a=>a.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const key=[...a.classList].find(x=>x.startsWith('ncm-')&&['ncm-community','ncm-government','ncm-school','ncm-sports'].includes(x));const channel=key==='ncm-school'?'schools':(key||'ncm-community').replace('ncm-','');const url='ncm-player-preview.html?channel='+encodeURIComponent(channel);const popup=window.open(url,'_blank','popup=yes,width=1050,height=800');if(popup){e.preventDefault();try{popup.focus()}catch(_){}}}));</script><script id="ncm-live-schedule-data">
 (function(){
  const channelMap={community:{site:1,channel:1},government:{site:3,channel:1},schools:{site:2,channel:1},sports:{site:2,channel:2}};
  const timeZone='America/New_York';
