@@ -20,7 +20,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://acapulcos.net/mexican-restaurant-locations/norwood-ma/",
     "link_type": "official",
     "tags": "tacos burritos fajitas margaritas family",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "enchiladas",
+      "mole enchiladas",
+      "burritos",
+      "fajita burrito",
+      "shrimp burrito",
+      "tacos",
+      "tacos al pastor",
+      "fajita tacos",
+      "guacamole"
+    ]
   },
   {
     "id": "between-the-bunz",
@@ -359,7 +370,21 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://gyrokebabhouse.com/",
     "link_type": "official",
     "tags": "turkish gyro kebab falafel halal",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken gyro",
+      "meat gyro",
+      "gyro wrap",
+      "chicken shish",
+      "lamb shish",
+      "mixed grill",
+      "lahmacun",
+      "falafel",
+      "french fries",
+      "mozzarella sticks",
+      "stuffed grape leaves",
+      "greek salad"
+    ]
   },
   {
     "id": "ihop-norwood",
@@ -426,7 +451,24 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://lacasitanorwood.com/",
     "link_type": "official",
     "tags": "pupusas birria tacos burritos salvadoran mexican latin bowl quesadilla soup birria pupusa birria burrito birria bowl steak tacos chicken tacos shrimp tacos smash burger",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "tacos",
+      "birria tacos",
+      "shrimp tacos",
+      "quesadillas",
+      "birria quesadilla",
+      "nachos",
+      "burritos",
+      "birria burrito",
+      "rice bowls",
+      "pupusas",
+      "cheese pupusa",
+      "pork pupusa",
+      "shrimp pupusa",
+      "smash burger",
+      "tortas"
+    ]
   },
   {
     "id": "lewis-restaurant-grille",
