@@ -13,12 +13,12 @@ from playwright.sync_api import sync_playwright
 
 TZ = ZoneInfo("America/New_York")
 CHANNELS = {
-    "community": {"channel": 1, "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/"},
-    "government": {"channel": 3, "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"},
-    "schools": {"channel": 2, "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/"},
+    "community": {"site": 1, "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/"},
+    "government": {"site": 3, "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"},
+    "schools": {"site": 2, "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/"},
 }
 # Cablecast's publicly indexed guide displays schedule time and title pairs.
-CABLECAST = "https://reflect-npa.cablecast.tv/internetchannel/?channel={channel}&site=1&currentDay={date}"
+CABLECAST = "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site={site}&currentDay={date}"
 TIME = re.compile(r"^\s*(1[0-2]|0?[1-9]):([0-5][0-9])\s*([AP]M)\s*$", re.I)
 IGNORE = {"schedule", "see the entire schedule", "search the schedule", "today"}
 
@@ -72,7 +72,7 @@ def main():
         browser = p.chromium.launch(headless=True)
         for key, info in CHANNELS.items():
             entry = {"status": "unavailable", "title": None, "url": info["url"], "slots": []}
-            for url in [CABLECAST.format(channel=info["channel"], date=date), info["url"]]:
+            for url in [CABLECAST.format(site=info["site"], date=date), info["url"]]:
                 page = browser.new_page(timezone_id="America/New_York", user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36")
                 try:
                     response = page.goto(url, wait_until="domcontentloaded", timeout=25000)
