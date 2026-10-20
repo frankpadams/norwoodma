@@ -107,6 +107,7 @@
     if(q==='italian') return /\\bitalian\\b/.test(words) || category==='pizza italian';
     if(q==='american pub burgers') return /\\b(american|pub|burger|burgers|tavern)\\b/.test(words);
     if(q==='asian sushi') return /\\b(asian|sushi|japanese|chinese|thai|korean|vietnamese|hibachi)\\b/.test(words);
+    if(q==='middle eastern mediterranean') return /\b(middle eastern|mediterranean|greek|lebanese|turkish|persian)\b/.test(words);
     return words.includes(' '+q+' ');
   }
   function matchesQuery(r,q){
