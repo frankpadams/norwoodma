@@ -1042,7 +1042,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Murph%27s+Place%2C+58+Broadway%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "breakfast brunch diner pancakes eggs lunch skillet sandwich",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "breakfast sandwiches",
+      "bacon egg and cheese sandwich",
+      "steak tips and eggs",
+      "pancakes",
+      "french toast",
+      "eggs benedict",
+      "corned beef hash",
+      "omelettes",
+      "roast beef melt",
+      "greek salad"
+    ]
   },
   {
     "id": "mustang-pizza",
@@ -1324,7 +1336,21 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Q%27Sabor+Latino+Market%2C+1101+Washington+St%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "pupusas latin salvadoran breakfast takeout market soup",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "tacos",
+      "pupusas",
+      "revueltas",
+      "burritos",
+      "quesadillas",
+      "chicken fajitas",
+      "mojarra frita",
+      "fried plantains",
+      "chiles rellenos",
+      "huevos rancheros",
+      "chorizo breakfast",
+      "horchata"
+    ]
   },
   {
     "id": "rincon-caribeno-2",
@@ -1470,7 +1496,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=SPoT%21%2C+56+Cottage+St+E",
     "link_type": "maps",
     "tags": "bagel breakfast sandwich coffee candy",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "bagels",
+      "cream cheese",
+      "flavored cream cheese",
+      "chocolate chip cannoli"
+    ]
   },
   {
     "id": "stashs-pizza-norwood",
@@ -1761,7 +1793,28 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://washingtonno7.com/",
     "link_type": "official",
     "tags": "american bar pizza cocktail live music burger burgers hamburger cheeseburger chicken wings chicken tenders fries french fries mozzarella sticks fried pickles soup pub cocktails beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken wings",
+      "chicken tenders",
+      "mozzarella sticks",
+      "shrimp skewers",
+      "fried pickles",
+      "cauliflower bites",
+      "caesar salad",
+      "burgers",
+      "sandwiches",
+      "pizza",
+      "chicken quesadilla",
+      "mac and cheese",
+      "hummus",
+      "buffalo cauliflower",
+      "reuben",
+      "pastrami sandwich",
+      "steak and cheese egg rolls",
+      "pretzel",
+      "clam chowder"
+    ]
   },
   {
     "id": "wendys-norwood",
@@ -1836,7 +1889,16 @@ window.NORWOOD_RESTAURANTS= [
     "verified": "2026-09-27",
     "dinner_spinner": false,
     "food_menu": true,
-    "status": "coming-soon"
+    "status": "coming-soon",
+    "dishes": [
+      "smoothies",
+      "acai bowls",
+      "dragon fruit bowls",
+      "yogurt bowls",
+      "loaded toast",
+      "egg and avocado toast",
+      "chicken flatbread"
+    ]
   },
   {
     "id": "orange-leaf-frozen-yogurt",
@@ -1847,7 +1909,15 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Orange+Leaf+Frozen+Yogurt%2C+38+Vanderbilt+Ave%2C+Norwood%2C+MA+02062",
     "link_type": "maps",
     "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
-    "verified": "2026-09-27"
+    "verified": "2026-09-27",
+    "dishes": [
+      "frozen yogurt",
+      "froyo cake",
+      "acai bowls",
+      "smoothies",
+      "milkshakes",
+      "cookies and cream shake"
+    ]
   },
   {
     "id": "colonial-ale-house",
@@ -1858,6 +1928,17 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House+33+Savin+Ave+Norwood+MA",
     "link_type": "maps",
     "tags": "formerly Colonial House restaurant pub bar",
-    "verified": "2026-10-14"
+    "verified": "2026-10-14",
+    "dishes": [
+      "stuffed quahog",
+      "chicken wings",
+      "fried calamari",
+      "onion rings",
+      "chicken parmesan",
+      "eggplant parmesan",
+      "ravioli",
+      "spaghetti",
+      "fish and chips"
+    ]
   }
 ];
