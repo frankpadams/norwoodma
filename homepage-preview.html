@@ -436,6 +436,9 @@
 (function(){
  const host=document.getElementById('quickTransitMap');if(!host||!window.L)return;
  const map=L.map(host,{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:true}).setView([42.1945,-71.1995],11);
+ // Frame Windsor Gardens, Norwood Central, and Norwood Depot together at the closest fitting zoom.
+ const stationBounds=L.latLngBounds([[42.1695,-71.2030],[42.2015,-71.1880]]);
+ function frameStations(){map.invalidateSize();map.fitBounds(stationBounds,{padding:[13,13],maxZoom:15,animate:false});}
  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
  let markers=[];
  async function update(){
@@ -452,7 +455,7 @@
    });
   }catch(error){/* Retain map and previously displayed markers if the feed is unavailable. */}
  }
- update();setInterval(update,30000);setTimeout(()=>map.invalidateSize(),350);
+ update();setInterval(update,30000);setTimeout(frameStations,350);window.addEventListener("resize",frameStations);
 })();
 </script><script id="ncm-popup-launcher">document.querySelectorAll('[data-ncm-popup]').forEach(a=>a.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const key=[...a.classList].find(x=>x.startsWith('ncm-')&&['ncm-community','ncm-government','ncm-school','ncm-sports'].includes(x));const channel=key==='ncm-school'?'schools':(key||'ncm-community').replace('ncm-','');const url='ncm-player-preview.html?channel='+encodeURIComponent(channel);const popup=window.open(url,'_blank','popup=yes,width=1050,height=800');if(popup){e.preventDefault();try{popup.focus()}catch(_){}}}));</script><script id="ncm-live-schedule-data">
 (function(){
