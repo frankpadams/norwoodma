@@ -1436,7 +1436,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://order.toasttab.com/online/sidedoorcafe",
     "link_type": "official",
     "tags": "coffee espresso breakfast pastry sandwich",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "breakfast sandwiches",
+      "sandwiches",
+      "coffee",
+      "pastries"
+    ]
   },
   {
     "id": "simple-sweets",
@@ -1447,7 +1453,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://simplesweetsboba.com/",
     "link_type": "official",
     "tags": "boba tea mochi donut dessert ice cream",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "bubble tea",
+      "boba tea",
+      "milk tea",
+      "fruit tea"
+    ]
   },
   {
     "id": "spot",
@@ -1495,7 +1507,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=Sunrise+Breakfast%2C+528+Washington+St",
     "link_type": "maps",
     "tags": "breakfast brunch diner Irish breakfast eggs sandwich",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pancakes",
+      "omelettes",
+      "french toast",
+      "breakfast sandwiches"
+    ]
   },
   {
     "id": "taco-bell-norwood",
@@ -1506,7 +1524,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://locations.tacobell.com/ma/norwood/958-providence-highway/restaurant.html",
     "link_type": "official",
     "tags": "tacos burritos quesadilla fast food drive thru late night",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "tacos",
+      "crunchy taco",
+      "soft taco",
+      "burritos",
+      "bean burrito",
+      "quesadillas",
+      "nachos",
+      "crunchwrap supreme",
+      "chalupa",
+      "cinnamon twists"
+    ]
   },
   {
     "id": "thai-boo-cuisine",
@@ -1517,7 +1547,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://thaiboocuisineinc.com/",
     "link_type": "official",
     "tags": "Thai pad thai curry soup tom yum kha panang mango",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pad thai",
+      "pad see ew",
+      "drunken noodles",
+      "thai fried rice",
+      "green curry",
+      "red curry",
+      "massaman curry",
+      "tom yum soup",
+      "spring rolls"
+    ]
   },
   {
     "id": "thai-thani",
@@ -1528,7 +1569,17 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.thaithanifood.com/",
     "link_type": "official",
     "tags": "Thai curry pad thai takeout tom yum soup basil shrimp",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pad thai",
+      "pad see ew",
+      "drunken noodles",
+      "green curry",
+      "red curry",
+      "fried rice",
+      "tom yum soup",
+      "spring rolls"
+    ]
   },
   {
     "id": "the-chateau-restaurant",
@@ -1540,7 +1591,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://chateaurestaurant.com/norwood/",
     "link_type": "official",
     "tags": "Italian American pasta ravioli family chicken parm esan toasted ravioli lasagna eggplant parm veal parm angel hair sirloin tips turkey tips bar cocktails cocktail beer wine drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken parmesan",
+      "eggplant parmesan",
+      "spaghetti",
+      "ravioli",
+      "lasagna",
+      "pizza",
+      "meatballs",
+      "pasta",
+      "garlic bread",
+      "tiramisu"
+    ]
   },
   {
     "id": "the-feisty-greek",
@@ -1583,7 +1646,13 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=The+Panini+Press+%26+Deli%2C+82+Chapel+St",
     "link_type": "maps",
     "tags": "panini deli sandwich Italian sub",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "panini",
+      "sandwiches",
+      "subs",
+      "salads"
+    ]
   },
   {
     "id": "the-sixties-diner",
@@ -1594,7 +1663,15 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.thesixtiesdiner.com/",
     "link_type": "official",
     "tags": "diner breakfast brunch lunch retro",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pancakes",
+      "omelettes",
+      "french toast",
+      "burgers",
+      "sandwiches",
+      "milkshakes"
+    ]
   },
   {
     "id": "tipico-salvadoreno-2",
@@ -1605,7 +1682,14 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.tipicosalvadorenotwo.com/",
     "link_type": "official",
     "tags": "pupusas salvadoran tacos burritos breakfast latin",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pupusas",
+      "tamales",
+      "yuca frita",
+      "plantains",
+      "rice and beans"
+    ]
   },
   {
     "id": "to-beirut-bistro",
@@ -1616,7 +1700,17 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://tobeirut.com/",
     "link_type": "official",
     "tags": "Lebanese Mediterranean halal gyro falafel shawarma chicken beef hummus tabbouleh baba ghanoush kebab kafta grape leaves fattoush baklava",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "shawarma",
+      "falafel",
+      "hummus",
+      "tabbouleh",
+      "fattoush",
+      "kebabs",
+      "grape leaves",
+      "pita"
+    ]
   },
   {
     "id": "veggie-crust-norwood",
@@ -1648,7 +1742,15 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://viconorwood.com/",
     "link_type": "official",
     "tags": "Italian pasta seafood wine dinner meatballs burrata caprese fettuccine maremonti shrimp scallops gnocchi sorrentina spaghetti aglio olio farfalle boscaiola risotto pescatora mussels clams calamari rigatoni bolognese bucatini cacio pepe penne saltimbocca veal chicken rustico alfredo grilled salmon bar cocktails cocktail beer drinks full",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pasta",
+      "risotto",
+      "gnocchi",
+      "chicken parmesan",
+      "eggplant parmesan",
+      "tiramisu"
+    ]
   },
   {
     "id": "washington-no-7",
@@ -1670,7 +1772,17 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://locations.wendys.com/united-states/ma/norwood/1412-boston-providence-turnpike",
     "link_type": "official",
     "tags": "burgers fries chicken breakfast drive thru fast food",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burgers",
+      "baconator",
+      "chicken nuggets",
+      "spicy chicken sandwich",
+      "chili",
+      "baked potato",
+      "french fries",
+      "frosty"
+    ]
   },
   {
     "id": "yamato-hibachi-sushi-bar",
@@ -1681,7 +1793,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://yamatonorwoodma.com/",
     "link_type": "official",
     "tags": "hibachi sushi Japanese ramen",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "hibachi chicken",
+      "hibachi steak",
+      "hibachi shrimp",
+      "sushi",
+      "sashimi",
+      "maki rolls",
+      "fried rice",
+      "miso soup",
+      "edamame"
+    ]
   },
   {
     "id": "brazil-for-you",
@@ -1692,7 +1815,14 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.brazilforyou.com/",
     "link_type": "official",
     "tags": "brazilian market grocery prepared food hot food breakfast lunch buffet grill bakery coxinha pao de queijo cheese bread imported groceries takeout",
-    "verified": "2026-09-27"
+    "verified": "2026-09-27",
+    "dishes": [
+      "coxinha",
+      "pao de queijo",
+      "brigadeiro",
+      "pastel",
+      "acai bowl"
+    ]
   },
   {
     "id": "smoothie-king-norwood",
