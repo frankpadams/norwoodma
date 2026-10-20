@@ -405,3 +405,8 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 @media(hover:hover){#homeAdSlot .bmt-dual-ad:hover .bmt-services,#homeAdSlot .bmt-dual-ad:focus-visible .bmt-services{opacity:1}}
 #homeAdSlot .home-ad-empty{border:1px dashed #b8c6d3;background:#f7f9fb;color:#536b7d;text-decoration:none;font-size:clamp(10px,1vw,13px);font-weight:600;text-align:center}
 @container (max-width:560px){#homeAdSlot .home-ad-pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Keep both sponsor images proportionate and contained in their 215:83 slots. */
+#homeAdSlot #sponsorCreative .home-ad-pair .home-ad-creative img{width:100%;height:100%;max-height:none;object-fit:contain}
+#homeAdSlot #sponsorCreative .bmt-dual-ad img{position:absolute;inset:0}
+#homeAdSlot #sponsorCreative .tcb-ad img{display:block}
