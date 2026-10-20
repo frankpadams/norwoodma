@@ -3,7 +3,7 @@ import json, os, urllib.request, urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
-KEY=os.environ["GOOGLE_PLACES_API_KEY"]
+KEY=os.environ.get("GOOGLE_PLACES_API_KEY", "").strip()
 OUT=Path("data/gas-prices.json")
 stations=[
  ("Norwood Gulf","Norwood Gulf, 707 Neponset St, Norwood MA"),
@@ -57,7 +57,10 @@ oldstations=old.get("stations",{}) if isinstance(old,dict) else {}
 
 fresh={}
 errors=[]
+if not KEY:
+ print("Google Places API key is not configured; existing prices will not be relabeled as fresh.")
 for label,q in stations:
+ if not KEY: break
  try:
   s=req("https://places.googleapis.com/v1/places:searchText",{"textQuery":q,"maxResultCount":1},"places.id")
   places=s.get("places",[])
@@ -67,7 +70,12 @@ for label,q in stations:
   pid=places[0]["id"]
   p=req("https://places.googleapis.com/v1/places/"+pid,fields="id,fuelOptions")
   n=normalize(p)
-  if n: fresh[label]=n
+  if n:
+   previous=oldstations.get(label,{})
+   if "updated" not in n:
+    print(f"{label}: Google returned a price without an update timestamp; omitting unverifiable freshness")
+    continue
+   fresh[label]={**n,"source":"Google Places API (New)","checked":datetime.now(timezone.utc).isoformat().replace("+00:00","Z")}
   else: print(f"{label}: no fuel prices returned")
  except Exception as e:
   errors.append((label,str(e)))
@@ -75,7 +83,7 @@ for label,q in stations:
 
 if not fresh:
  if oldstations:
-  raise SystemExit("No fresh gas-price data could be retrieved; preserving cached prices but failing the refresh so the outage is visible.")
+  raise SystemExit("No fresh gas-price data could be retrieved; preserving cached prices and original dates. Check GOOGLE_PLACES_API_KEY, billing, and Places API permissions.")
  raise SystemExit("No gas-price data could be retrieved. Failing refresh instead of publishing an empty file.")
 
 results=dict(fresh)
