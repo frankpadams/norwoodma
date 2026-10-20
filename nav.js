@@ -64,7 +64,8 @@
               ? Math.min(scheduledCutoff!==null?scheduledCutoff:broadcastEnd,broadcastEnd)
               : scheduledCutoff;
             if(cutoff!==null&&now.minutes>cutoff)continue;
-            const live=st!==null&&now.minutes>=st&&(cutoff===null||now.minutes<=cutoff);
+            const liveCutoff=broadcastEnd!==null&&st!==null&&broadcastEnd>=st?broadcastEnd:(en!==null?en:st!==null?st+120:null);
+            const live=st!==null&&now.minutes>=st&&(liveCutoff===null||now.minutes<=liveCutoff);
             let title=n.title||'Public meeting';
             if(!/\bmeeting\b/i.test(title))title+=' Meeting';
             let url=n.url||'https://www.norwoodma.gov/calendar.php';
