@@ -9,7 +9,34 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://1947.boston/",
     "link_type": "official",
     "tags": "dosa biryani curry vegetarian vegan halal vindaloo tandoori noodles fried rice paper ghee roast podi masala idli vada south indian tiffin indo chinese 70mm",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken tikka masala",
+      "butter chicken",
+      "garlic naan",
+      "butter naan",
+      "samosa",
+      "palak paneer",
+      "chicken korma",
+      "biryani",
+      "chicken biryani",
+      "goat biryani",
+      "vegetable biryani",
+      "dosa",
+      "masala dosa",
+      "chicken 65",
+      "gobi manchurian",
+      "chilli paneer",
+      "paneer tikka",
+      "tandoori chicken",
+      "chicken vindaloo",
+      "lamb vindaloo",
+      "dal",
+      "pakora",
+      "rasam",
+      "kothu paratha",
+      "mango lassi"
+    ]
   },
   {
     "id": "acapulcos-mexican-family-restaurant-cantina",
@@ -139,7 +166,16 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.bk.com/store-locator/store/restaurant_2749",
     "link_type": "official",
     "tags": "burgers fries chicken breakfast drive thru fast food",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "whopper",
+      "cheeseburger",
+      "hamburger",
+      "chicken sandwich",
+      "chicken nuggets",
+      "french fries",
+      "onion rings"
+    ]
   },
   {
     "id": "byblos-restaurant",
@@ -200,7 +236,19 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://cheffneetinn.com/",
     "link_type": "official",
     "tags": "bakery bread pastry breakfast lunch catering",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "artisan bread",
+      "baguette",
+      "sandwiches",
+      "salads",
+      "soups",
+      "hand pies",
+      "haitian patties",
+      "pastries",
+      "cookies",
+      "cakes"
+    ]
   },
   {
     "id": "chipotle-mexican-grill",
@@ -212,7 +260,18 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://locations.chipotle.com/ma/norwood/1415-boston-providence-highway",
     "link_type": "official",
     "tags": "burrito bowl taco chain quick service",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "burrito",
+      "burrito bowl",
+      "rice bowl",
+      "tacos",
+      "quesadilla",
+      "salad",
+      "guacamole",
+      "chips",
+      "queso"
+    ]
   },
   {
     "id": "conrad-s-restaurant",
@@ -275,7 +334,27 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.crazytacobar.com/",
     "link_type": "official",
     "tags": "tacos burritos quesadillas breakfast",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "beef birria tacos",
+      "birria tacos",
+      "tacos",
+      "carnitas burrito",
+      "burritos",
+      "quesabirria",
+      "quesadilla",
+      "chicken bowl",
+      "rice bowls",
+      "street corn",
+      "elote",
+      "nachos",
+      "enchiladas",
+      "chimichanga",
+      "torta",
+      "tostada",
+      "churros",
+      "tres leches"
+    ]
   },
   {
     "id": "crushed-peppers",
@@ -309,7 +388,20 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.google.com/maps/search/?api=1&query=D+%26+G+Deli%2C+301+Nahatan+St",
     "link_type": "maps",
     "tags": "deli chicken salad sandwich lunch",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "chicken salad",
+      "chicken salad sandwich",
+      "italian sub",
+      "meatball sub",
+      "pastrami sandwich",
+      "steak and cheese sub",
+      "potato salad",
+      "macaroni salad",
+      "soups",
+      "subs",
+      "sandwiches"
+    ]
   },
   {
     "id": "daddy-s-dairy",
@@ -320,7 +412,22 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.daddysdairy.net/",
     "link_type": "official",
     "tags": "ice cream sundae frozen yogurt dessert",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "hard ice cream",
+      "soft serve ice cream",
+      "frozen yogurt",
+      "sundaes",
+      "brownie sundae",
+      "banana split",
+      "ice cream sandwich",
+      "ice cream cake",
+      "ice cream pie",
+      "frappes",
+      "milkshakes",
+      "sorbet",
+      "slush"
+    ]
   },
   {
     "id": "dilli-delights",
@@ -349,7 +456,21 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://pizza.dominos.com/massachusetts/norwood/1023-washington-st",
     "link_type": "official",
     "tags": "pizza delivery chain",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "pizza",
+      "specialty pizza",
+      "chicken wings",
+      "boneless chicken",
+      "pasta",
+      "oven baked pasta",
+      "oven baked sandwiches",
+      "stuffed cheesy bread",
+      "bread bites",
+      "salads",
+      "chocolate lava cake",
+      "brownies"
+    ]
   },
   {
     "id": "dunkin-nahatan",
@@ -360,7 +481,20 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://locations.dunkindonuts.com/en/ma/norwood/141-nahatan-st/301216",
     "link_type": "official",
     "tags": "coffee donuts bagels breakfast cafe",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "donuts",
+      "munchkins",
+      "bagels",
+      "cream cheese",
+      "muffins",
+      "croissants",
+      "breakfast sandwiches",
+      "bacon egg and cheese",
+      "sausage egg and cheese",
+      "wake up wraps",
+      "hash browns"
+    ]
   },
   {
     "id": "dunkin-providence-highway",
@@ -371,7 +505,20 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://locations.dunkindonuts.com/en/ma/norwood/1202-providence-highway/338716",
     "link_type": "official",
     "tags": "coffee donuts bagels breakfast drive thru cafe",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "donuts",
+      "munchkins",
+      "bagels",
+      "cream cheese",
+      "muffins",
+      "croissants",
+      "breakfast sandwiches",
+      "bacon egg and cheese",
+      "sausage egg and cheese",
+      "wake up wraps",
+      "hash browns"
+    ]
   },
   {
     "id": "dunkin-walpole",
