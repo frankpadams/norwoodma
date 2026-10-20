@@ -1,5 +1,36 @@
 window.NORWOOD_RESOURCES= [
   {
+    "name": "Framingham Family Resource Center",
+    "category": "Education & Family",
+    "description": "Free family support, parenting resources, community referrals and assistance navigating children's and family services. Contact the center to confirm its current catchment area and services for Norwood families.",
+    "url": "https://www.frcma.org/locations/",
+    "phone": "508-270-1313",
+    "address": "88 Lincoln Street, Framingham, MA 01702",
+    "tags": "family resource center FRC Framingham parents children family support",
+    "topics": [
+      "kids",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Regional",
+    "verified": "2026-10"
+  },
+  {
+    "name": "Massachusetts Family Resource Centers — Statewide Directory",
+    "category": "Education & Family",
+    "description": "Find Massachusetts Family Resource Centers offering free family support, parenting education, referrals, and help navigating school, behavioral health and other family needs. No DCF involvement is required to contact a center.",
+    "url": "https://www.frcma.org/locations/",
+    "tags": "FRC statewide directory DCF family resource center parenting support children CRA",
+    "topics": [
+      "kids",
+      "education-family",
+      "family-support"
+    ],
+    "coverage": "Statewide",
+    "verified": "2026-10"
+  },
+
+  {
     "name": "Massachusetts Middle-Income Heating Oil Relief",
     "category": "Basic Needs",
     "description": "State heating oil relief for eligible middle-income Massachusetts households who may not qualify for traditional fuel assistance. Check current eligibility, benefit amounts and application deadlines.",
