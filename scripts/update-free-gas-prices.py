@@ -5,7 +5,7 @@ Unofficial GasBuddy client; no paid credentials. Never invent report timestamps.
 import asyncio, json, re
 from datetime import datetime, timezone
 from pathlib import Path
-from gasbuddy import GasBuddy
+from py_gasbuddy import GasBuddy
 
 OUT=Path("data/gas-prices.json")
 ADDRESSES={
@@ -49,7 +49,8 @@ async def main():
  updates={}
  for item in rows:
   if not isinstance(item,dict):continue
-  addr=norm(" ".join(str(item.get(k,"")) for k in ("address","street_address","streetAddress")))
+  address=item.get("address") or {}
+  addr=norm(" ".join(str(address.get(k,"")) for k in ("line1","line2")) if isinstance(address,dict) else str(address))
   name=norm(item.get("name",""))
   matches=[label for label,needle in ADDRESSES.items() if norm(needle) in addr]
   if len(matches)!=1:continue
