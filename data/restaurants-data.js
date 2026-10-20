@@ -776,7 +776,10 @@ window.NORWOOD_RESTAURANTS= [
     "url": "https://www.stashsnorwood.com/",
     "link_type": "official",
     "tags": "pizza subs wings calzones pasta delivery takeout",
-    "verified": "2026-09-17"
+    "verified": "2026-09-17",
+    "dishes": [
+      "calzones"
+    ]
   },
   {
     "id": "sunrise-breakfast",
