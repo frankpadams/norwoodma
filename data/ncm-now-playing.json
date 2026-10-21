@@ -1,33 +1,13 @@
 {
-  "updated_at": "2026-10-21T02:26:16.976273-04:00",
+  "updated_at": "2026-10-21T08:14:37.809009-04:00",
   "date": "2026-10-21",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Senior Center Exercise: Zumba with Alma",
+      "title": "Living Locally in 2024",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 180,
-          "title": "The Life of Royal Hartigan - Public Access 8.24.26"
-        },
-        {
-          "minute": 300,
-          "title": "Norwood Digest 11/18/21"
-        },
-        {
-          "minute": 360,
-          "title": "Norwood Library Presents: Brian McGrory Boston Globe Editor"
-        },
-        {
-          "minute": 450,
-          "title": "Entrepreneurship 101: Business Grows Norwood - 4.24.25"
-        },
-        {
-          "minute": 490,
-          "title": "NHS UPDATE LIVE!"
-        },
         {
           "minute": 540,
           "title": "South Norwood News with Olga Abdallah"
@@ -35,23 +15,35 @@
         {
           "minute": 600,
           "title": "Senior Center Exercise: Zumba with Alma"
+        },
+        {
+          "minute": 660,
+          "title": "Tales From Tiot! Norwood's Immigrants"
+        },
+        {
+          "minute": 720,
+          "title": "The Life of Royal Hartigan - Public Access 8.24.26"
+        },
+        {
+          "minute": 840,
+          "title": "Chair Yoga with Lorella 3/31/20"
+        },
+        {
+          "minute": 900,
+          "title": "Coakley Middle School Walkthrough 10.21.24"
+        },
+        {
+          "minute": 960,
+          "title": "Living Locally in 2024"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-21"
     },
     "government": {
       "status": "scheduled",
-      "title": "Guild Pond Info Session 10.8.26",
+      "title": "Board of Selectmen 10.13.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 270,
-          "title": "Board of Selectmen 10.13.26"
-        },
-        {
-          "minute": 480,
-          "title": "Guild Pond Info Session 10.8.26"
-        },
         {
           "minute": 600,
           "title": "Planning Board 10.5.26"
@@ -71,35 +63,23 @@
         {
           "minute": 990,
           "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
+          "minute": 1110,
+          "title": "Finance Commission 10.15.26"
+        },
+        {
+          "minute": 1200,
+          "title": "Board of Selectmen 10.13.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-21"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Football vs King Philip 9.25.26",
+      "title": "NHS Update - September 2026",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 180,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
-        {
-          "minute": 270,
-          "title": "Her Game, Her Voice - Episode 4"
-        },
-        {
-          "minute": 300,
-          "title": "Her Game, Her Voice - Episode 6"
-        },
-        {
-          "minute": 330,
-          "title": "2026 NHS Football vs Stoughton 9.10.26"
-        },
-        {
-          "minute": 480,
-          "title": "2026 NHS Golf vs Weymouth 9.9.26"
-        },
         {
           "minute": 570,
           "title": "2013 NHS Field Hockey vs. Canton"
@@ -107,6 +87,26 @@
         {
           "minute": 630,
           "title": "2026 NHS Football vs King Philip 9.25.26"
+        },
+        {
+          "minute": 750,
+          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 840,
+          "title": "Her Game, Her Voice - Episode 4"
+        },
+        {
+          "minute": 870,
+          "title": "Her Game, Her Voice - Episode 6"
+        },
+        {
+          "minute": 900,
+          "title": "2026 NHS Convocation"
+        },
+        {
+          "minute": 1020,
+          "title": "NHS Update - September 2026"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-21"
