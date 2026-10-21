@@ -473,6 +473,35 @@
  function frameStations(){map.invalidateSize();map.fitBounds(stationBounds,{padding:[13,13],maxZoom:15,animate:false});}
  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
  const stations=[['Windsor Gardens',42.1728,-71.1990],['Norwood Central',42.1887,-71.1990],['Norwood Depot',42.2001,-71.1920]];stations.forEach(st=>L.circleMarker([st[1],st[2]],{radius:6,color:'#76558e',fillColor:'#fff',fillOpacity:1,weight:3,interactive:false}).addTo(map));
+ // Draw the actual Franklin Line track geometry from the MBTA route shape feed.
+ // Decode the standard encoded polyline used by MBTA shape attributes.
+ function decodePolyline(encoded){
+  const points=[];let i=0,lat=0,lng=0;
+  while(i<encoded.length){
+   let shift=0,result=0,b;
+   do{b=encoded.charCodeAt(i++)-63;result|=(b&31)<<shift;shift+=5;}while(b>=32&&i<encoded.length);
+   lat+=(result&1)?~(result>>1):(result>>1);
+   shift=0;result=0;
+   do{b=encoded.charCodeAt(i++)-63;result|=(b&31)<<shift;shift+=5;}while(b>=32&&i<encoded.length);
+   lng+=(result&1)?~(result>>1):(result>>1);
+   points.push([lat/1e5,lng/1e5]);
+  }
+  return points;
+ }
+ fetch('https://api-v3.mbta.com/trips?filter[route]=CR-Franklin&page[limit]=10&include=shape')
+  .then(r=>{if(!r.ok)throw Error('Rail shape unavailable');return r.json()})
+  .then(json=>{
+   const shapes=(json.included||[]).filter(x=>x.type==='shape'&&x.attributes?.polyline);
+   const seen=new Set();
+   shapes.forEach(shape=>{
+    if(seen.has(shape.id))return;seen.add(shape.id);
+    const coords=decodePolyline(shape.attributes.polyline);
+    const local=coords.filter(([lat,lng])=>lat>=42.165&&lat<=42.208&&lng>=-71.22&&lng<=-71.17);
+    if(local.length<2)return;
+    // Render actual track geometry, not straight lines between stations.
+    L.polyline(local,{color:'#76558e',weight:4,opacity:.85,interactive:false}).addTo(map);
+   });
+  }).catch(()=>{});
  let markers=[];
  // Load 34E stops once; limit markers to the Norwood-area map to avoid clutter.
  fetch('https://api-v3.mbta.com/stops?filter[route]=34E').then(r=>{if(!r.ok)throw Error('Stops unavailable');return r.json()}).then(json=>{(json.data||[]).forEach(stop=>{const a=stop.attributes||{};if(!Number.isFinite(a.latitude)||!Number.isFinite(a.longitude))return;if(a.latitude<42.165||a.latitude>42.21||a.longitude< -71.215||a.longitude> -71.175)return;L.circleMarker([a.latitude,a.longitude],{radius:3,color:'#145b94',weight:1,fillColor:'#e6f3ff',fillOpacity:1,interactive:false}).addTo(map)})}).catch(()=>{});
