@@ -103,3 +103,5 @@ Post-release operational development has also added regional-event organization,
 ## Maintenance rule
 
 Before calling a software release complete, synchronize the current version in `VERSIONING.md`, this README, the matching release note, and `SITE_VERSION` in `nav.js`, then update any authoritative subsystem document affected by the change. Do not bump the product version for routine generated data or one-off content maintenance.
+
+Homepage event summaries display both start and end dates for multi-day events, plus recurrence text when supplied, so seasonal attractions are not presented as single-day or daily events.
