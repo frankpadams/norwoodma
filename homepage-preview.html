@@ -455,6 +455,8 @@
  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
  const stations=[['Windsor Gardens',42.1728,-71.1990],['Norwood Central',42.1887,-71.1990],['Norwood Depot',42.2001,-71.1920]];stations.forEach(st=>L.circleMarker([st[1],st[2]],{radius:6,color:'#76558e',fillColor:'#fff',fillOpacity:1,weight:3,interactive:false}).addTo(map));
  let markers=[];
+ // Load 34E stops once; limit markers to the Norwood-area map to avoid clutter.
+ fetch('https://api-v3.mbta.com/stops?filter[route]=34E').then(r=>{if(!r.ok)throw Error('Stops unavailable');return r.json()}).then(json=>{(json.data||[]).forEach(stop=>{const a=stop.attributes||{};if(!Number.isFinite(a.latitude)||!Number.isFinite(a.longitude))return;if(a.latitude<42.165||a.latitude>42.21||a.longitude< -71.215||a.longitude> -71.175)return;L.circleMarker([a.latitude,a.longitude],{radius:3,color:'#145b94',weight:1,fillColor:'#e6f3ff',fillOpacity:1,interactive:false}).addTo(map)})}).catch(()=>{});
  async function update(){
   try{
    const response=await fetch('https://api-v3.mbta.com/vehicles?filter[route]=34E,CR-Franklin');
