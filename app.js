@@ -347,7 +347,7 @@ function groupEvents(items){
 });
  return g;
 }
-function eventLinks(e){const links=[];const add=(url,label)=>{if(url&&!links.some(x=>x.url===url))links.push({url,label})};add(e.registration_url,'Participate / register');add(e.donation_url,'Donate / support');add(e.purchase_url,'Purchase / order');add(e.source_url,'Official event information');add(e.field_status_url,'Check field status');(Array.isArray(e.links)?e.links:[]).forEach(x=>{if(typeof x==='string')add(x,'More information');else if(x&&x.url)add(x.url,x.label||'More information')});return links;}
+function eventLinks(e){const links=[];const add=(url,label)=>{if(url&&!links.some(x=>x.url===url))links.push({url,label})};add(e.registration_url,'Participate / register');add(e.donation_url,'Donate / support');add(e.purchase_url,'Purchase / order');add((/\.(?:json|xml|ics|csv)(?:[?#]|$)|\/api\/|calendar_data_handler|\/feed\/?(?:[?#]|$)/i.test(String(e.source_url||'')) ? (e.source_id==='town-civic-meetings'||e.category==='civic_meeting' ? 'https://www.norwoodma.gov/' : '') : e.source_url),'Official event information');add(e.field_status_url,'Check field status');(Array.isArray(e.links)?e.links:[]).forEach(x=>{if(typeof x==='string')add(x,'More information');else if(x&&x.url)add(x.url,x.label||'More information')});return links;}
 function eventDateType(e){
  const start=String(e.start?.date||''),end=String(e.end?.date||'');
  if(e.recurrence||e.recurring===true||e.schedule_days||e.selected_dates||e.occurrence_dates)return 'recurring';
