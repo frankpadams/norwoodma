@@ -198,7 +198,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
   window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
 
-  // Collapse only when the actual visible navigation approaches within 30px of the logo.
+  // Collapse only when the actual visible navigation approaches within 8px of the logo.
   const header=menu.closest('header.top');
   if(header){
     const updateMenuFit=()=>{
@@ -207,7 +207,7 @@
       header.classList.remove('norwood-menu-collapsed');
       const logoRight=brand?brand.getBoundingClientRect().right:0;
       const navRect=nav.getBoundingClientRect();
-      const collapse=navRect.left-logoRight<30 || navRect.right>header.getBoundingClientRect().right+1;
+      const collapse=navRect.left-logoRight<8 || navRect.right>header.getBoundingClientRect().right+1;
       header.classList.toggle('norwood-menu-collapsed',collapse);
       if(!collapse&&nav.classList.contains('open'))close();
     };
