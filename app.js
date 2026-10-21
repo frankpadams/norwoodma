@@ -364,8 +364,8 @@ function eventRow(e){
  const d=parseLocalDate(e.start?.date),day=d?d.getDate():'',mon=d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'',dow=d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'';
  const civic=e.category==='civic_meeting'?'<p class="civic-watch-note">Come back to Norwood.ma at meeting time to watch live.</p>':'';
  const multi=!!(e.end?.date&&e.start?.date&&e.end.date!==e.start.date);
- const range=multi?`<p class="event-date-range"><strong>${String(e.category||'').toLowerCase().includes('fundraiser')?'Fundraiser runs':'Runs'}:</strong> ${esc(shortDate(e.start.date))}–${esc(shortDate(e.end.date))}</p>`:'';
- return `<a class="event-row ${eventClass(e.category)}" href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><div class="event-date">${eventDateBadge(e)}<small>${dow}</small><b>${day}</b><span>${mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">+</span></a>`;
+ const range=multi?`<p class="event-date-range"><strong>Dates:</strong> ${esc(shortDate(e.start.date))} – ${esc(shortDate(e.end.date))}</p>`:'';
+ return `<a class="event-row ${eventClass(e.category)}" href="events.html?event=${encodeURIComponent(e.id||'')}" data-event-details="${esc(e.id||'')}"><div class="event-date">${eventDateBadge(e)}<small>${multi?'THROUGH':dow}</small><b>${multi?`${day}–${parseLocalDate(e.end.date)?.getDate()||''}`:day}</b><span>${multi&&parseLocalDate(e.end.date)?.getMonth()!==d?.getMonth()?`${mon}–${parseLocalDate(e.end.date).toLocaleDateString([],{month:'short'}).toUpperCase()}`:mon}</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">${esc(eventKind(e.category))}</span>${paidAdmissionIcon(e)}</div><h3>${esc(e.title)}</h3>${range}<p>${esc(eventSummary(e))}</p>${civic}</div><span class="event-arrow">+</span></a>`;
 }
 function eventMatchesCalendar(e,key){
  if(!key||key==='all')return true;
