@@ -163,3 +163,5 @@ If the GitHub secret has not yet been configured, the scheduled workflow skips a
 ### Workflow correction captured in v0.12.4
 
 The production test of v0.12.3 exposed a GitHub Actions configuration defect: `actions/setup-python` had `cache: pip`, which expects a conventional `requirements.txt`/`pyproject.toml` unless a dependency path is supplied. Norwood.ma uses `requirements-automation.txt`. The production repository was manually corrected by removing that cache setting, and v0.12.4 makes that correction canonical so future releases do not restore the broken workflow.
+
+Homepage event summaries display both start and end dates for multi-day events, plus recurrence text when supplied, so seasonal attractions are not presented as single-day or daily events.
