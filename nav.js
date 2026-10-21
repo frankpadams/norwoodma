@@ -20,6 +20,27 @@
       const v=Object.fromEntries(parts.map(p=>[p.type,p.value]));
       return {date:`${v.year}-${v.month}-${v.day}`,minutes:Number(v.hour)*60+Number(v.minute)};
     };
+    function confirmedNcmLive(notice,schedule,now){
+      if(schedule?.date!==now.date)return false;
+      const channel=schedule.channels?.[/school committee/i.test(notice.title||'')?'schools':'government'];
+      if(channel?.status!=='scheduled')return false;
+      const slots=(channel.slots||[]).filter(s=>Number.isInteger(s.minute)&&s.minute>=0&&s.minute<1440).sort((a,b)=>a.minute-b.minute);
+      const index=slots.findLastIndex(s=>s.minute<=now.minutes);
+      if(index<0)return false;
+      const slot=slots[index],end=slots[index+1]?.minute??Math.min(1440,slot.minute+180);
+      if(now.minutes>=end)return false;
+      const title=String(slot.title||'');
+      if(/\b(rebroadcast|replay|repeat|recorded)\b/i.test(title))return false;
+      const recorded=title.match(/\b(\d{1,2})[.\/-](\d{1,2})[.\/-](\d{4}|\d{2})\b/);
+      if(recorded){
+        const year=recorded[3].length===2?'20'+recorded[3]:recorded[3];
+        const date=year+'-'+recorded[1].padStart(2,'0')+'-'+recorded[2].padStart(2,'0');
+        if(date!==now.date)return false;
+      }
+      if(slot.live!==true&&slot.is_live!==true&&!/\blive\b/i.test(title))return false;
+      const key=s=>String(s).toLowerCase().replace(/\b\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}\b/g,'').replace(/\b(live|meeting|broadcast|norwood)\b/g,'').replace(/[^a-z0-9]/g,'');
+      return key(title)===key(notice.title)&&key(notice.title)!=='';
+    }
     const normalize=a=>({title:String(a.title||a.event||'Emergency alert'),summary:String(a.summary||a.headline||a.description||''),url:String(a.url||a.web||a['@id']||''),severity:String(a.severity||'Unknown'),expires:a.expires||null,source:a.source||'Public alert',rank:priority[String(a.severity||'Unknown')]||20,kind:'urgent'});
     const items=[];
     try{
@@ -34,6 +55,11 @@
       const r=await fetch('data/civic-notices.json?fresh='+Date.now(),{cache:'no-store'});
       if(r.ok){
         const data=await r.json(), list=Array.isArray(data)?data:(data.notices||[]), now=easternParts();
+        let ncmSchedule=null;
+        try{
+          const response=await fetch('data/ncm-now-playing.json?fresh='+Date.now(),{cache:'no-store'});
+          if(response.ok)ncmSchedule=await response.json();
+        }catch(e){}
         for(const n of list){
           if(n.kind==='election'){
             const first=n.show_from||n.start_date, last=n.election_date||n.end_date;
@@ -65,7 +91,7 @@
               : scheduledCutoff;
             if(cutoff!==null&&now.minutes>cutoff)continue;
             const liveCutoff=broadcastEnd!==null&&st!==null&&broadcastEnd>=st?broadcastEnd:(en!==null?en:st!==null?st+120:null);
-            const live=st!==null&&now.minutes>=st&&(liveCutoff===null||now.minutes<=liveCutoff);
+            const live=st!==null&&now.minutes>=st&&(liveCutoff===null||now.minutes<liveCutoff)&&confirmedNcmLive(n,ncmSchedule,now);
             let title=n.title||'Public meeting';
             if(!/\bmeeting\b/i.test(title))title+=' Meeting';
             let url=n.url||'https://www.norwoodma.gov/calendar.php';
