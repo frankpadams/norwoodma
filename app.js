@@ -259,6 +259,11 @@ function diversifyAdjacentOrganizations(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // Official October 16 Town notice: November 2 hybrid information session for Town Meeting members.
+ // End time is not published; display until the following day and allow normal event expiry.
+ if(!items.some(e=>e.start?.date==='2026-11-02'&&/town meeting.*information session|information session.*town meeting/i.test(e.title||''))){
+  items.push({id:'town-meeting-info-session-2026-11-02',title:'Town Meeting Information Session — Fall Special Town Meetings',start:{date:'2026-11-02',time:'18:30'},venue:'George Usevich Lecture Hall, Norwood High School',address:'245 Nichols Street, Norwood, MA 02062',category:'government',organizer:'Town of Norwood',source_id:'norwood-town-meeting-official-notice',source_url:'https://cms5.revize.com/revize/norwoodma25/Town%20Meeting/INFO%20SESSION%20NOV%202.pdf?t=202610161121230',public_access:'public',publish_candidate:true,curated_default:true,verification_status:'official_town_notice_2026-10-16',notes:'Information session for Town Meeting members about the Fall 2026 Special Town Meeting warrants and Yellow Sheets. In-person and virtual participation offered; Town and Norwood Community Media plan to record the session. Special Town Meetings begin November 16. Meeting end time not specified in the notice.'});
+ }
  // An article headline describing Craft Affair is not a separate calendar event.
  // Preserve the actual craft fair record and its verified date/time.
  items=items.filter(e=>!(e.start?.date==='2026-10-17'&&e.source_id==='norwood-town-news'&&/a tradition of treasures/i.test(e.title||'')&&/craft affair/i.test(e.notes||'')));
