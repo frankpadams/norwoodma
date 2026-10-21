@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T13:35:13.937773-04:00",
+  "updated_at": "2026-10-21T17:26:52.038181-04:00",
   "date": "2026-10-21",
   "timezone": "America/New_York",
   "channels": {
@@ -8,18 +8,6 @@
       "title": "Local Artist Bill Breen - Public Access 10.7.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 840,
-          "title": "Chair Yoga with Lorella 3/31/20"
-        },
-        {
-          "minute": 900,
-          "title": "Coakley Middle School Walkthrough 10.21.24"
-        },
-        {
-          "minute": 960,
-          "title": "Living Locally in 2024"
-        },
         {
           "minute": 1080,
           "title": "The Kevin Broderick Show - Michael Walsh"
@@ -45,14 +33,6 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 870,
-          "title": "School Committee 10.7.26 Rebroadcast"
-        },
-        {
-          "minute": 990,
-          "title": "Guild Pond Info Session 10.8.26"
-        },
-        {
           "minute": 1110,
           "title": "Finance Commission 10.15.26"
         },
@@ -65,25 +45,9 @@
     },
     "schools": {
       "status": "scheduled",
-      "title": "Norwood News 10.16.26",
+      "title": "2026 Early College Readiness",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 840,
-          "title": "Her Game, Her Voice - Episode 4"
-        },
-        {
-          "minute": 870,
-          "title": "Her Game, Her Voice - Episode 6"
-        },
-        {
-          "minute": 900,
-          "title": "2026 NHS Convocation"
-        },
-        {
-          "minute": 1020,
-          "title": "NHS Update - September 2026"
-        },
         {
           "minute": 1140,
           "title": "Senior College Post Secondary Planning - Sept. 2026"
@@ -95,6 +59,10 @@
         {
           "minute": 1320,
           "title": "Norwood News 10.16.26"
+        },
+        {
+          "minute": 1380,
+          "title": "2026 Early College Readiness"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-21"
