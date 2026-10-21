@@ -2,7 +2,11 @@
 
 This is a shared working log for unfinished development, data-quality issues, and follow-up work. It is not an authority on what is true: Frank's decisions govern project direction, and automated entries are leads to review rather than conclusions. When Frank asks for the developer to-do list, project work log, outstanding issues, next steps, or similar, review this file as a useful project record and update it as work is completed or new issues are identified.
 
-_Last updated: 2026-10-15_
+_Last updated: 2026-10-20_
+
+## Upcoming: Schools & Education quick link
+
+- [ ] **Develop a dedicated Schools & Education destination.** The test homepage quick link currently points to the general Local Resources directory as a temporary destination. Plan a more useful schools and education page/section, including Norwood schools and related educational resources; update the quick link once ready. This item is surfaced in the Admin dashboard through the developer to-do list.
 
 ## October 8–15 development review — unfinished / unverified
 
