@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T03:50:04.621097-04:00",
+  "generated_at": "2026-10-21T09:57:59.897806-04:00",
   "offline": false,
   "events_published": 2437,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2437,
-      "generated_at": "2026-10-21T03:50:04.346651-04:00"
+      "generated_at": "2026-10-21T09:57:59.563465-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 123,
-      "generated_at": "2026-10-21T03:50:04.356280-04:00"
+      "generated_at": "2026-10-21T09:57:59.574422-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 916,
-      "generated_at": "2026-10-21T03:50:04.374632-04:00"
+      "generated_at": "2026-10-21T09:57:59.597169-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 820,
-      "generated_at": "2026-10-21T03:50:04.390234-04:00"
+      "generated_at": "2026-10-21T09:57:59.616349-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-10-21T03:50:04.398251-04:00"
+      "generated_at": "2026-10-21T09:57:59.626643-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 70,
-      "generated_at": "2026-10-21T03:50:04.407576-04:00"
+      "generated_at": "2026-10-21T09:57:59.638698-04:00"
     }
   ],
   "recreation_programs": 126,
@@ -364,9 +364,9 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -382,9 +382,9 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -545,9 +545,9 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -1286,11 +1286,10 @@
     },
     {
       "source_id": "resource-scouting-america-troop-42-norwood",
-      "ok": false,
+      "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "all configured pages failed: https://www.troop42norwood.com/: HTTPSConnectionPool(host='www.troop42norwood.com', port=443): Read timed out. (read timeout=18)",
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-scouting-america-troop-49-norwood",
@@ -1602,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 70,
+      "found": 72,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1626,7 +1625,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 18,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
