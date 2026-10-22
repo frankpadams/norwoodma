@@ -7396,5 +7396,61 @@
     "curated_default": true,
     "verification_status": "flyer_verified_2026-10-17",
     "notes": "Estate and yard sale with furniture, clothing, shoes, housewares, outdoor furniture and more. Flyer says everything must go."
+  },
+  {
+    "id": "town-common-books-2026-10-24",
+    "title": "Town Common Books: Soft Opening",
+    "start": {
+      "date": "2026-10-24",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": "17:00"
+    },
+    "venue": "Town Common Books",
+    "address": "679 Washington St, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "town-common-books",
+    "source_url": "https://www.towncommonbooks.com/",
+    "organizer": "Town Common Books",
+    "cost": null,
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-10-21",
+    "notes": "Celebrate the opening of Norwood’s independent bookstore. Open noon–5 PM. Books and merchandise available for purchase.",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "town-common-books-2026-11-01",
+    "title": "Town Common Books: Grand Opening Celebration",
+    "start": {
+      "date": "2026-11-01",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-11-01",
+      "time": "17:00"
+    },
+    "venue": "Town Common Books",
+    "address": "679 Washington St, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "town-common-books",
+    "source_url": "https://www.towncommonbooks.com/",
+    "organizer": "Town Common Books",
+    "cost": null,
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-10-21",
+    "notes": "Celebrate the opening of Norwood’s independent bookstore. Open noon–5 PM. Books and merchandise available for purchase.",
+    "calendar_ids": [
+      "norwood-community"
+    ]
   }
 ]
