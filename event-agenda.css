@@ -48,3 +48,8 @@
 @media(max-width:600px){#eventPeriods .event-agenda-entry>summary{padding-right:84px}#eventPeriods .event-agenda-share{right:29px;top:50%}}
 
 #eventPeriods .event-agenda-service:has(.event-agenda-website){flex-basis:100%}
+
+/* Give the expand control breathing room from the viewport edge. */
+#eventPeriods .event-agenda-expand{right:14px}
+#eventPeriods .event-agenda-share{right:45px}
+@media(max-width:600px){#eventPeriods .event-agenda-expand{right:12px}#eventPeriods .event-agenda-share{right:43px}}
