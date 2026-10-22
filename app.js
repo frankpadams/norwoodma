@@ -46,7 +46,10 @@ function rotatingHeroMessage(){
     "From pizza to pickleball — find it here.",
     "Can’t decide where to eat? We literally built a spinner.",
     "Dinner decisions and scheduling collisions. We have tools for that.",
-    "We built a Dinner Spinner. Things escalated from there."
+    "We built a Dinner Spinner. Things escalated from there.",
+    "Your next favorite thing might be five minutes away.",
+    "Find a trail. Find a taco. Find out what passed.",
+    "Norwood has a lot going on. We brought links."
   ];
   title.textContent=messages[Math.floor(Math.random()*messages.length)];
 }
