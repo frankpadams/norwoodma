@@ -61,3 +61,7 @@
 .events-page .events-hero-actions.events-action-cards{flex-wrap:nowrap;align-items:stretch}
 .events-page .events-hero-actions .events-action-card{min-width:0;white-space:nowrap;justify-content:center}
 @media(max-width:600px){.events-page .events-hero-actions.events-action-cards{gap:6px}.events-page .events-hero-actions .events-action-card{flex:1 1 0;padding:8px 5px;font-size:.76rem}.events-page .events-hero-actions .events-action-card strong{font-size:clamp(.65rem,2.7vw,.8rem)}}
+
+/* Distinguish adjacent calendar and directions groups without forcing a new line. */
+#eventPeriods .event-agenda-service:has(strong:first-child) + .event-agenda-service:has(strong:first-child){border-left:1px solid #b8c4d0;padding-left:16px}
+@media(max-width:600px){#eventPeriods .event-agenda-service:has(strong:first-child) + .event-agenda-service:has(strong:first-child){padding-left:10px}}
