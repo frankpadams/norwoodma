@@ -49,7 +49,10 @@ function rotatingHeroMessage(){
     "We built a Dinner Spinner. Things escalated from there.",
     "Your next favorite thing might be five minutes away.",
     "Find a trail. Find a taco. Find out what passed.",
-    "Norwood has a lot going on. We brought links."
+    "Norwood has a lot going on. We brought links.",
+    "There’s a lot to like here. Let’s help you find it.",
+    "Get out of the house. You don’t have to get out of town.",
+    "Find something to do. Or something worth knowing."
   ];
   title.textContent=messages[Math.floor(Math.random()*messages.length)];
 }
