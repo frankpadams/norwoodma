@@ -1850,7 +1850,7 @@ window.NORWOOD_RESTAURANTS= [
   },
   {
     "id": "veggie-crust-norwood",
-    "name": "Gopal’s Crust / Veggie Crust",
+    "name": "Gopal’s Crust (formerly Veggie Crust)",
     "category": "Pizza & Italian",
     "cuisine": "Vegetarian · Indian-inspired Pizza · Vegan",
     "address": "641 Washington St",
