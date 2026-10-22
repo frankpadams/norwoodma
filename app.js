@@ -462,8 +462,30 @@ function renderEventsPage(items){
  else {
   const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['next','Next few days'],['save','Save the date']];
   host.innerHTML=window.NorwoodEventAgenda.render(sections.flatMap(([k])=>g[k]));
+  decorateAgendaSharing(items);
  }
  const st=$('#eventsStatus');if(st)st.textContent='';
+}
+function decorateAgendaSharing(items){
+ const host=document.querySelector('#eventPeriods');if(!host)return;
+ const byId=new Map(items.map(e=>[String(e.id||''),e]));
+ host.querySelectorAll('.event-agenda-entry').forEach(entry=>{
+  const id=entry.id.replace(/^agenda-/,'');const e=byId.get(id);if(!e)return;
+  const summary=entry.querySelector('summary'),detail=entry.querySelector('.event-agenda-detail');if(!summary||!detail)return;
+  const shareUrl=new URL('events.html',location.href);shareUrl.searchParams.set('event',id);
+  const share=document.createElement('button');share.type='button';share.className='event-agenda-share';share.setAttribute('aria-label','Share '+(e.title||'event'));share.dataset.shareEvent=shareUrl.href;share.dataset.shareTitle=(e.title||'Event')+' — Norwood.ma';
+  share.innerHTML='<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.7 6.6-4.2m-6.6 8.8 6.6 4.2"/></svg><span>Share</span>';
+  summary.insertAdjacentElement('afterend',share);
+  const icon=(url,label)=>'<img src="'+esc(url)+'" alt="" width="15" height="15" loading="lazy"><span class="sr-only">'+esc(label)+'</span>';
+  const link=(url,label,ico,download=false)=>'<a href="'+esc(url)+'" '+(download?'download="norwood-event.ics"':'target="_blank" rel="noopener"')+' title="'+esc(label)+'" aria-label="'+esc(label)+'">'+icon(ico,label)+'</a>';
+  const cal= e.start?.date?'<div class="event-agenda-service"><strong>Add to calendar:</strong>'+link(googleCalendarUrl(e),'Google Calendar','https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31.ico')+link(appleCalendarHref(e),'Apple Calendar','https://www.apple.com/favicon.ico',true)+link(appleCalendarHref(e),'Outlook calendar (.ics)','https://outlook.live.com/favicon.ico',true)+'</div>':'';
+  const q=eventMapQuery(e);
+  const dirs=q?'<div class="event-agenda-service"><strong>Get directions:</strong>'+link('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q),'Google Maps','https://www.google.com/favicon.ico')+link('https://maps.apple.com/?q='+encodeURIComponent(q),'Apple Maps','https://www.apple.com/favicon.ico')+link('https://www.mapquest.com/search/results?query='+encodeURIComponent(q),'MapQuest','https://www.mapquest.com/favicon.ico')+'</div>':'';
+  const official=eventExternalLinks(e).find(x=>/official|event|register|tickets/i.test(x.label))||eventExternalLinks(e)[0];
+  const website=official?'<div class="event-agenda-service"><a class="event-agenda-website" href="'+esc(official.url)+'" target="_blank" rel="noopener">Event website ↗</a></div>':'';
+  detail.querySelector('.event-agenda-links')?.remove();
+  detail.insertAdjacentHTML('beforeend','<div class="event-agenda-services">'+cal+dirs+website+'</div>');
+ });
 }
 function renderHomeEvents(items){
  const host=$('#homeEvents');if(!host)return;
@@ -587,7 +609,7 @@ function openRecreationProgramDetails(id){
 }
 async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;let items=await loadEvents();items=items.filter(e=>eventHasRealTitle(e)&&eventIsLocalBrewery(e));allEventsForPage=items;const eventId=new URLSearchParams(location.search).get('event');if(eventId&&!$('#eventPeriods'))setTimeout(()=>openEventDetails(eventId),0);const recId=new URLSearchParams(location.search).get('rec');if(recId)setTimeout(()=>openRecreationProgramDetails(recId),0);renderEventsPage(items);renderHomeEvents(items);
  const runEventSearch=()=>renderEventsPage(window.NORWOOD_CALENDAR_FILTER?window.NORWOOD_CALENDAR_FILTER(allEventsForPage):allEventsForPage); $('#eventSearch')?.addEventListener('input',runEventSearch); $('#eventSearchButton')?.addEventListener('click',runEventSearch); $('#eventSearch')?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();runEventSearch();}});
- document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);})); document.addEventListener('click',e=>{const share=e.target.closest('[data-share-event]');if(share){e.preventDefault();if(navigator.share)navigator.share({title:share.dataset.shareTitle,text:share.dataset.shareText||share.dataset.shareTitle,url:share.dataset.shareEvent}).catch(()=>{});else navigator.clipboard?.writeText(share.dataset.shareText||share.dataset.shareEvent);return}const copy=e.target.closest('[data-copy-event]');if(copy){e.preventDefault();navigator.clipboard?.writeText(copy.dataset.copyEvent);copy.textContent='Copied';return}const detail=e.target.closest('[data-event-details]');if(detail){e.preventDefault();openEventDetails(detail.dataset.eventDetails);return}const close=e.target.closest('.event-details-close');if(close){$('#eventDetailsDialog')?.close();return}const day=e.target.closest('[data-calendar-date]');if(day){calendarSelected=day.dataset.calendarDate;renderEventsPage(allEventsForPage);return}const step=e.target.closest('[data-month-step]');if(step){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+Number(step.dataset.monthStep),1);calendarSelected=dateKey(calendarCursor);renderEventsPage(allEventsForPage)}});
+ document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);})); document.addEventListener('click',e=>{const share=e.target.closest('[data-share-event]');if(share){e.preventDefault();if(navigator.share)navigator.share({title:share.dataset.shareTitle,url:share.dataset.shareEvent}).catch(()=>{});else navigator.clipboard?.writeText(share.dataset.shareEvent).then(()=>{const label=share.querySelector('span');if(label)label.textContent='Copied';}).catch(()=>{});return}const copy=e.target.closest('[data-copy-event]');if(copy){e.preventDefault();navigator.clipboard?.writeText(copy.dataset.copyEvent);copy.textContent='Copied';return}const detail=e.target.closest('[data-event-details]');if(detail){e.preventDefault();openEventDetails(detail.dataset.eventDetails);return}const close=e.target.closest('.event-details-close');if(close){$('#eventDetailsDialog')?.close();return}const day=e.target.closest('[data-calendar-date]');if(day){calendarSelected=day.dataset.calendarDate;renderEventsPage(allEventsForPage);return}const step=e.target.closest('[data-month-step]');if(step){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+Number(step.dataset.monthStep),1);calendarSelected=dateKey(calendarCursor);renderEventsPage(allEventsForPage)}});
 }events();
 
 if(document.querySelector('#transitMap') && window.L){
