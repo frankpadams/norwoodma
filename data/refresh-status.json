@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T19:29:43.927084-04:00",
+  "generated_at": "2026-10-21T20:19:38.220238-04:00",
   "offline": false,
   "events_published": 2449,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2449,
-      "generated_at": "2026-10-21T19:29:43.472851-04:00"
+      "generated_at": "2026-10-21T20:19:37.948927-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 123,
-      "generated_at": "2026-10-21T19:29:43.484200-04:00"
+      "generated_at": "2026-10-21T20:19:37.960624-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 918,
-      "generated_at": "2026-10-21T19:29:43.507215-04:00"
+      "generated_at": "2026-10-21T20:19:37.983956-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 822,
-      "generated_at": "2026-10-21T19:29:43.526901-04:00"
+      "generated_at": "2026-10-21T20:19:38.003389-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-10-21T19:29:43.537323-04:00"
+      "generated_at": "2026-10-21T20:19:38.013852-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 70,
-      "generated_at": "2026-10-21T19:29:43.549499-04:00"
+      "generated_at": "2026-10-21T20:19:38.026044-04:00"
     }
   ],
   "recreation_programs": 126,
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -1601,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 71,
+      "found": 24,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1633,21 +1633,21 @@
       "source": "The Norwood Record",
       "url": "https://www.norwoodrecord.com/news",
       "ok": true,
-      "found": 52,
+      "found": 53,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
       "source": "The Norwood Record — Latest",
       "url": "https://www.norwoodrecord.com/latest",
       "ok": true,
-      "found": 32,
+      "found": 33,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
       "ok": true,
-      "found": 12,
+      "found": 0,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -1661,14 +1661,14 @@
       "source": "Norwood Public Schools",
       "url": "https://www.norwood.k12.ma.us/about/news",
       "ok": true,
-      "found": 25,
+      "found": 30,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
       "source": "Inside Norwood",
       "url": "https://insidenorwood.com/",
       "ok": true,
-      "found": 13,
+      "found": 0,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
@@ -1698,10 +1698,10 @@
         "The Norwood Record — Latest": 23,
         "Hoodline": 2,
         "Colliers": 1,
+        "Norwood Public Schools": 5,
         "Inside Norwood": 6,
         "Patch": 5,
-        "Norwood Public Schools": 2,
-        "Norwood Town News": 12,
+        "Norwood Town News": 9,
         "newportdispatch.com": 1,
         "WCVB": 1,
         "Norwood Parents Music Association": 1,
