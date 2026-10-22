@@ -32,3 +32,7 @@ The machine-readable audit is `data/news-source-registry.json`.
 
 ## Next engineering pass
 Add per-source parsers/health reporting for the highest-value sources, stronger semantic duplicate clustering, category assignment, direct-publisher URL resolution for Google News discoveries, and an editorial override file for feature/hide/pin/category corrections without changing application code.
+
+## Publication-date extraction
+
+Headline dates can describe deadlines or events and must not establish publication dates. HTML fallbacks exclude headings and links when reading nearby publication text; dated article URLs may establish publication dates. Dates within headlines are preserved, apart from an optional leading date label. Regression tests cover a headline deadline differing from the publication date and rejection of headline-only dates.

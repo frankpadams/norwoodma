@@ -2508,6 +2508,13 @@ def news_from_html_cards(html, source_name, source_url):
         out.append(row)
     return out
 
+def news_publication_text(node):
+    """Exclude headline/link dates when looking for a nearby publication date."""
+    fragment=BeautifulSoup(str(node),'html.parser')
+    for tag in fragment.find_all(['h1','h2','h3','h4','h5','h6','a','script','style']):
+        tag.decompose()
+    return clean_text(fragment.get_text(' '))
+
 def news_from_visible_cards(html, source_name, source_url):
     """Fallback for local pages whose dates are visible text rather than <time>."""
     if not BeautifulSoup:return []
@@ -2522,7 +2529,7 @@ def news_from_visible_cards(html, source_name, source_url):
         text=''
         for _ in range(5):
             if not getattr(card,'parent',None): break
-            card=card.parent; text=clean_text(card.get_text(' '))
+            card=card.parent; text=news_publication_text(card)
             if date_re.search(text): break
         m=date_re.search(text)
         if not m: continue
@@ -2550,17 +2557,23 @@ def news_from_link_dates(html, source_name, source_url):
         if len(title)<8 or len(title)>220: continue
         href=urljoin(source_url,a.get('href'))
         if not href.startswith(('http://','https://')): continue
-        # Prefer a date carried by the link itself or the URL; otherwise inspect a small nearby container.
-        nearby=' '.join(filter(None,[title,clean_text(a.parent.get_text(' ')) if a.parent else '']))[:800]
-        m=textual.search(nearby) or numeric.search(nearby)
-        d=parse_dt(m.group(0)) if m else None
+        # A headline may contain a deadline/event date, not a publication date.
+        um=url_date.search(href)
+        d=parse_dt(um.group(1).replace('/','-')) if um else None
+        card=a
         if not d:
-            um=url_date.search(href)
-            if um: d=parse_dt(um.group(1).replace('/','-'))
+            for _ in range(4):
+                if not getattr(card,'parent',None): break
+                card=card.parent
+                nearby=news_publication_text(card)[:800]
+                m=textual.search(nearby) or numeric.search(nearby)
+                if m:
+                    d=parse_dt(m.group(0))
+                    if d: break
         if not d: continue
         # Strip a leading date from official-town link labels while keeping the actual headline.
-        clean_title=textual.sub('',title,count=1).strip(' ·-|:')
-        clean_title=numeric.sub('',clean_title,count=1).strip(' ·-|:')
+        clean_title=re.sub(r'^'+textual.pattern, '', title, count=1, flags=re.I).strip(' ·-|:')
+        clean_title=re.sub(r'^'+numeric.pattern, '', clean_title, count=1).strip(' ·-|:')
         if len(clean_title)<8: continue
         row={'source':source_name,'title':clean_title,'date':d.astimezone(TZ).isoformat(),'url':href,'summary':'','localVerified':True,'discovered_by':'scheduled_link_date'}
         image=image_from_card(a.parent if a.parent else a,source_url)
