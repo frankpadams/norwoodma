@@ -95,3 +95,7 @@ Community-submission records represented in `events.json` retain their `submissi
 ## Resource HTML publication
 
 `data/resources-data.js` and `data/businesses-data.js` feed `scripts/generate-resource-html.cjs`, which runs the existing category/card rules in `scripts/resource-renderer.js` and writes all 27 topic sections into `resources.html`. Run the generator after changing those inputs. `.github/workflows/generate-resource-html.yml` automates regeneration on main. `resources.js` controls visibility, browser history, and filters without fetching either dataset. Related businesses remain collapsed. No-JavaScript visitors receive all topics.
+
+## Town Meeting member records
+
+`data/town-meeting-2026-individual-votes.json` stores 37 ordered electronic motions with stable IDs, descriptive labels, official totals and named Yes/No/Abs votes. `Abs` means abstention; missing votes never imply absence. Historical attendance is stored separately by member and meeting date, preserving PRESENT/ABSENT, district and term. The May 11 roster has 251 entries (195 present); May 14 has 252 (186 present). Names are joined only by exact normalized letters for member records. Unmatched voting names retain unverified attendance/district. The first public member record is Frank P. Adams; other names remain plain text pending review. The combined voting report does not assign motion dates, so the UI does not infer them.
