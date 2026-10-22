@@ -447,7 +447,7 @@ function renderEventsPage(items){
    if(e){
      // Use the same event row and action decorator as the main calendar.
      // A shared link presents it expanded, without maintaining a second detail template.
-     host.innerHTML='<section class="event-period event-shared-detail"><div class="event-period-head"><p class="eyebrow">Event details</p><h2>'+esc(e.title)+'</h2></div><div class="event-agenda-list">'+window.NorwoodEventAgenda.row(e)+'</div></section>';
+     host.innerHTML='<section class="event-period event-shared-detail"><div class="event-period-head"><p class="eyebrow">Event details</p><h2>'+esc(e.title)+'</h2></div><div class="event-agenda-list">'+window.NorwoodEventAgenda.row(e)+'</div><p class="event-full-calendar-link"><a href="events.html">See full Norwood.ma event calendar →</a></p></section>';
      const entry=host.querySelector('.event-agenda-entry');if(entry)entry.open=true;
      decorateAgendaSharing([e]);
      const st=$('#eventsStatus');if(st)st.textContent='Showing full event information';
