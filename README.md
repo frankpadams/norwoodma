@@ -107,3 +107,5 @@ Post-release operational development has also added regional-event organization,
 Before calling a software release complete, synchronize the current version in `VERSIONING.md`, this README, the matching release note, and `SITE_VERSION` in `nav.js`, then update any authoritative subsystem document affected by the change. Do not bump the product version for routine generated data or one-off content maintenance.
 
 Homepage event summaries display both start and end dates for multi-day events, plus recurrence text when supplied, so seasonal attractions are not presented as single-day or daily events.
+
+Accessibility text-size controls use five distinct page scales: 80%, 90%, 100%, 125%, and 150%. The legacy root-font adjustments are neutralized so each setting has one consistent multiplier, including event and news text.
