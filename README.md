@@ -29,6 +29,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - News and event refreshes are automated; ordinary generated-content refreshes are not software releases.
 
 ### Search
+- Site search loads government guide sections directly from the maintained HTML when search is used, including department and board descriptions, membership, contacts, documents and FAQs. Results link to and open the matching section.
 - Search is comprehensive but intentionally ranked: Norwood.ma standalone/topic pages first, authoritative Town/school/utility pages second, and individual records/items after the relevant landing page.
 - Search supports synonyms, related terms, spelling tolerance, and source indicators.
 - Norwood government, Norwood Light, and Norwood Public Schools results receive source-specific indicators; event results receive an event/calendar indicator.

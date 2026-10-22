@@ -16,6 +16,7 @@
   archiveHasMatch(raw).then(hit=>{if(request!==archiveRequest||archiveNorm(input.value)!==archiveNorm(raw)||!hit)return;const links=[...box.querySelectorAll(':scope > a')];if(box.querySelector('.town-meeting-search-bridge'))return;const a=document.createElement('a');a.className='town-meeting-search-bridge';a.href='town-meeting-archive.html?q='+encodeURIComponent(raw);a.innerHTML='<b>📜 Town Meeting Archive — Matching records found →</b><small>View relevant archive records for “'+esc(raw)+'” →</small>';const sixth=links[5];if(sixth)box.insertBefore(a,sixth);else{const google=box.querySelector('.site-search-google');box.insertBefore(a,google||null);}});
  }
  const pages=[
+  {name:'Understanding Norwood Town Government',url:'government-guide.html',type:'Town Government',text:'government guide departments boards committees members contacts FAQs bylaws charter budgets annual reports selectmen general manager town meeting'},
   {name:'Artists, Crafters & Artisans',url:'artists-crafters-artisans.html',type:'Things to Do',text:'artists art crafters crafts artisans makers jewelry jewellery painting painters photography photographers glass textiles fiber handmade SONO Arts Norwood Space Center Winsmith Maple Roots Creative Melissa Adams'},
   {name:'Things to Do',url:'things.html',type:'Things to Do',text:'activities entertainment explore parks recreation'},
   {name:'Museum passes & discounts',url:'museum-discounts.html',type:'Things to Do',text:'museum pass passes discount discounts free admission cheap attractions library Morrill EBT SNAP WIC ConnectorCare Card to Culture Museums for All Bank of America Museums on Us credit card zoo aquarium science museum MFA ICA'},
@@ -195,6 +196,7 @@
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function items(){
   const out=pages.map(p=>({...p,norwoodPage:p.norwoodPage!==false}));
+  out.push(...governmentResults);
   townCanonical.forEach(t=>out.push({...t}));
   // Individual restaurants are discoverable through Food & Drink, not duplicated in sitewide results.
   (window.NORWOOD_RESOURCES||[]).forEach(r=>{
@@ -243,7 +245,7 @@
     nameWords.forEach(w=>best=Math.max(best,closeWord(q,w)*30));
     typeWords.forEach(w=>best=Math.max(best,closeWord(q,w)*20));
     bodyWords.forEach(w=>best=Math.max(best,closeWord(q,w)*8));
-    if(best>=10)matchedCore++;
+    if(best>=(x.governmentGuide?8:10))matchedCore++;
     score+=best;
    });
    const related=expandedWords.filter(w=>!queryWords.includes(w));
@@ -425,8 +427,34 @@
    return {x,score:score-12,found};
   }).filter(v=>v.found===terms.length&&v.score>=18).sort((a,b)=>b.score-a.score).slice(0,5);
  }
+
+ // Read the maintained HTML itself so member, contact and FAQ edits stay searchable.
+ let governmentResults=[],governmentPromise=null;
+ function loadGovernmentIndex(){
+  if(governmentPromise)return governmentPromise;
+  governmentPromise=fetch('government-guide.html',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Government guide unavailable');return r.text()}).then(html=>{
+   const doc=new DOMParser().parseFromString(html,'text/html');
+   const slug=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+   const readableText=node=>node.nodeType===3?node.nodeValue:[...node.childNodes].map(readableText).join(' ');
+   const blocks=[...doc.querySelectorAll('main details.department,main details.board,main details.gov-civic-card,main #important-documents')];
+   governmentResults=blocks.map(el=>{
+    const heading=el.querySelector(':scope > summary .gov-civic-title')||el.querySelector(':scope > summary')||el.querySelector('h2,h3');
+    const name=(heading?.textContent||'Town government').replace(/\s+/g,' ').trim();
+    const kind=el.classList.contains('department')?'Department':el.classList.contains('board')?'Board or committee':'Government guide';
+    const id=el.id||'government-'+(el.classList.contains('gov-civic-card')?'overview-':'')+slug(name);
+    return {name,url:'government-guide.html#'+id,type:'Town Government · '+kind,text:readableText(el).replace(/\s+/g,' ').trim(),norwoodPage:true,governmentGuide:true};
+   });
+   if(input.value.trim())render(false);
+   return governmentResults;
+  }).catch(()=>{governmentPromise=null;return []});
+  return governmentPromise;
+ }
+ window.NorwoodSiteSearch.loadGovernmentIndex=loadGovernmentIndex;
+ input.addEventListener('focus',()=>{loadGovernmentIndex()});
+
  function render(track=false){
   const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
+  loadGovernmentIndex();
   loadTownIndex();
   const localHits=search(raw,200);
   const townHits=townMatches(raw);
