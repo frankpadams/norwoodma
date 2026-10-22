@@ -56,3 +56,8 @@
 
 /* Only show Share for an expanded event. */
 #eventPeriods .event-agenda-entry:not([open]) .event-agenda-share{display:none}
+
+/* Keep the two hero actions on one compact row, including narrow screens. */
+.events-page .events-hero-actions.events-action-cards{flex-wrap:nowrap;align-items:stretch}
+.events-page .events-hero-actions .events-action-card{min-width:0;white-space:nowrap;justify-content:center}
+@media(max-width:600px){.events-page .events-hero-actions.events-action-cards{gap:6px}.events-page .events-hero-actions .events-action-card{flex:1 1 0;padding:8px 5px;font-size:.76rem}.events-page .events-hero-actions .events-action-card strong{font-size:clamp(.65rem,2.7vw,.8rem)}}
