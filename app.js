@@ -56,7 +56,8 @@ function rotatingHeroMessage(){
     "Your browser history is about to get aggressively local.",
     "Because knowing the recycling schedule counts as having your life together.",
     "One minute you’re checking trash day. Next minute you have zoning opinions.",
-    "Making you suspiciously well-informed at the next Concert on the Common."
+    "Making you suspiciously well-informed at the next Concert on the Common.",
+    "From board meetings to breweries. Know what’s brewing in Norwood."
   ];
   title.textContent=messages[Math.floor(Math.random()*messages.length)];
 }
