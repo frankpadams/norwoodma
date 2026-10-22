@@ -1277,43 +1277,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-7114f9286f47-2026-10-23",
-    "title": "Pumpkin Party",
-    "start": {
-      "date": "2026-10-23",
-      "time": "09:30"
-    },
-    "end": {
-      "date": "2026-10-23",
-      "time": "11:00"
-    },
-    "venue": "10/23/2026 09:30 AM - 11:00 AM Norwood Civic Center - Willett Room",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30902",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30902",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$15.00 Res, $25.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-23",
-    "session_end": "2026-10-23",
-    "days": "F",
-    "notes": "Join us for this fun party celebrating the season. Stories, songs, and plenty of pumpkin crafts. This is not a drop off, guardians do not pay but are expected to stay.",
-    "rec_program_id": "rec-7114f9286f47",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-fc27544fe5d5-2026-10-23",
     "title": "Indoor Tot Time - Fridays",
     "start": {
@@ -5404,42 +5367,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-1ff178068ae8-2026-10-27",
-    "title": "Cookie Decorating Class - Half Day CD01",
-    "start": {
-      "date": "2026-10-27",
-      "time": "12:30"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": "14:00"
-    },
-    "venue": "10/27/2026 12:30 PM - 02:00 PM Norwood Civic Center - Kitchen",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30892",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30892",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$30.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-27",
-    "session_end": "2026-10-27",
-    "days": "Tu",
-    "notes": "Chef Beth will teach participants fun ways to decorate cookies for Halloween and Day of the Dead. Participants will take home 6 homemade, decorated cookies. No refunds provided for this class !",
-    "rec_program_id": "rec-1ff178068ae8",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ce02eab929f2-2026-10-27",
     "title": "Babysitter Lessons/CPR",
     "start": {
@@ -5883,7 +5810,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, October 27, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
+    "notes": "Musical Bingo Tuesday, October 27, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -8107,7 +8034,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Trivia With Tim Thursday, October 29, 2026 7:00 PM 9:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
+    "notes": "Trivia With Tim Thursday, October 29, 2026 7:00 PM 9:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -10574,7 +10501,7 @@
     ]
   },
   {
-    "id": "2026-11-02-g-jv-soccer-ashland-high-school-8f881f1",
+    "id": "2026-11-02-g-jv-soccer-ashland-high-school-e41f014",
     "title": "G JV Soccer @ Ashland High School",
     "start": {
       "date": "2026-11-02",
@@ -10584,8 +10511,8 @@
       "date": "2026-11-02",
       "time": "18:30"
     },
-    "venue": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
-    "address": "87 West Union Street Middle School Grass Field, Ashland MA 01721",
+    "venue": "65 East Union St, Ashland MA 01721",
+    "address": "65 East Union St, Ashland MA 01721",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-jv-soccer",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -10595,7 +10522,7 @@
     "series": "Norwood Girls JV Soccer",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: G JV Team: Norwood High School Site: Ashland Middle School Subsite: Turf Field",
+    "notes": "Sport: Soccer Level: G JV Team: Norwood High School Site: Ashland HS Subsite: Turf Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -11274,7 +11201,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, November 3, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
+    "notes": "Musical Bingo Tuesday, November 3, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -12468,7 +12395,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Trivia With TIm Thursday, November 5, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
+    "notes": "Trivia With TIm Thursday, November 5, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -14924,7 +14851,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, November 10, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
+    "notes": "Musical Bingo Tuesday, November 10, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -15538,6 +15465,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-11-dave-limina-s-wednesdave-blues-iii-special-gu-20de16e",
+    "title": "Dave Limina's Wednesdave Blues III ​Special Guests Darcel Wilson, Odra Lee & Diane Blue",
+    "start": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/875973/WEDNESDAVE-BLUES",
+    "cost": null,
+    "public_access": "public",
+    "series": "The Fallout Shelter / Extended Play Sessions",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Dave Limina's Wednesdave Blues III ​Special Guests Darcel Wilson, Odra Lee & Diane Blue Wed, Nov 11, 20 26 7:00pm Dave Limina returns for Wednesdave Blues, a new once-a-month blues extravaganza at The Fallout Shelter with special guests every month. A Boston music legend, Dave spent 25 years alongside Ronnie Earl & the Broadcasters, has shared the stage with an impressive list of greats, and is a mainstay on the New England music circuit and Chairman of the Keyboard Department at Berklee College",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -16267,7 +16224,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Trivia With TIm Thursday, November 12, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
+    "notes": "Trivia With TIm Thursday, November 12, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -18869,7 +18826,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, November 17, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
+    "notes": "Musical Bingo Tuesday, November 17, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -20218,7 +20175,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Trivia With TIm Thursday, November 19, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
+    "notes": "Trivia With TIm Thursday, November 19, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -20870,7 +20827,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Brews and Botanicals Exotic Plant Show Saturday, November 21, 2026 12:00 PM 5:00 PM Norwood Taproom (map) Google Calendar ICS https://www.facebook.com/share/1DtPpAT1Ev/ View Event →",
+    "notes": "Brews and Botanicals Exotic Plant Show Saturday, November 21, 2026 12:00 PM 5:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -22309,7 +22266,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, November 24, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
+    "notes": "Musical Bingo Tuesday, November 24, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -23478,7 +23435,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Trivia With TIm Thursday, November 26, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
+    "notes": "Trivia With TIm Thursday, November 26, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -25166,7 +25123,7 @@
     "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Musical Bingo Tuesday, December 1, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Join us for a night of Musical Bingo where your favorite songs replace the numbers and every round turns into a singalong. THIS IS A FREE, NON-TICKETED EVENT View Event →",
+    "notes": "Musical Bingo Tuesday, December 1, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS View Event →",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -27117,6 +27074,36 @@
       "norwood-community",
       "norwood-historical-society",
       "norwood-sports"
+    ]
+  },
+  {
+    "id": "2026-12-05-the-tom-hambridge-band-highly-anticipated-ret-c8a36dc",
+    "title": "The Tom Hambridge Band Highly Anticipated Return to The Fallout Shelter!",
+    "start": {
+      "date": "2026-12-05",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/877783/THE-TOM-HAMBRIDGE-BAND",
+    "cost": null,
+    "public_access": "public",
+    "series": "The Fallout Shelter / Extended Play Sessions",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "The Tom Hambridge Band Highly Anticipated Return to The Fallout Shelter! Sat, Dec 5, 20 26 7:00pm Tom Hambridge has produced 15 Grammy-nominated albums, won 5 Grammys, and earned countless other awards and honors, with his songs recorded by everyone from Eric Clapton and Van Morrison to Buddy Guy, B.B. King, and Lynyrd Skynyrd. Backed by his killer band, he’ll perform songs he’s written and produced for some of the biggest names in music and share the stories behind the hits, alongside music fro",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
