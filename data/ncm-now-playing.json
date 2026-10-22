@@ -1,91 +1,115 @@
 {
-  "updated_at": "2026-10-21T20:09:34.357805-04:00",
-  "date": "2026-10-21",
+  "updated_at": "2026-10-22T01:15:10.842801-04:00",
+  "date": "2026-10-22",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Local Artist Bill Breen - Public Access 10.7.26",
+      "title": "The Kevin Broderick Show - Michael Walsh",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1230,
+          "minute": 180,
+          "title": "The Kevin Broderick Show - Michael Walsh"
+        },
+        {
+          "minute": 240,
+          "title": "Norwood Library Presents: Brian McGrory Boston Globe Editor"
+        },
+        {
+          "minute": 330,
           "title": "Lights Camera Summer 3 Session 1"
         },
         {
-          "minute": 1350,
-          "title": "Local Artist Bill Breen - Public Access 10.7.26"
-        }
-      ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-21"
-    },
-    "government": {
-      "status": "scheduled",
-      "title": "Board of Selectmen 10.13.26",
-      "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
-      "slots": [
-        {
-          "minute": 0,
-          "title": "Guild Pond Info Session 10.8.26"
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
         },
         {
-          "minute": 120,
-          "title": "Trails Advisory Committee 10.13.26"
-        },
-        {
-          "minute": 270,
-          "title": "Board of Selectmen 10.13.26"
-        },
-        {
-          "minute": 480,
-          "title": "Guild Pond Info Session 10.8.26"
+          "minute": 540,
+          "title": "Coakley Middle School Walkthrough 10.21.24"
         },
         {
           "minute": 600,
-          "title": "Planning Board 10.5.26"
+          "title": "Gentle Exercise with Steve"
         },
         {
-          "minute": 630,
-          "title": "Finance Commission 10.15.26"
-        },
+          "minute": 660,
+          "title": "The Kevin Broderick Show - Michael Walsh"
+        }
+      ],
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-22"
+    },
+    "government": {
+      "status": "scheduled",
+      "title": "Finance Commission 10.15.26",
+      "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
+      "slots": [
         {
-          "minute": 720,
+          "minute": 90,
           "title": "Trails Advisory Committee 10.13.26"
         },
         {
-          "minute": 870,
+          "minute": 240,
           "title": "School Committee 10.7.26 Rebroadcast"
         },
         {
-          "minute": 990,
+          "minute": 360,
           "title": "Guild Pond Info Session 10.8.26"
         },
         {
-          "minute": 1110,
+          "minute": 480,
           "title": "Finance Commission 10.15.26"
         },
         {
-          "minute": 1200,
+          "minute": 570,
           "title": "Board of Selectmen 10.13.26"
+        },
+        {
+          "minute": 780,
+          "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
+          "minute": 900,
+          "title": "Finance Commission 10.15.26"
         }
       ],
-      "source": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-22"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 Early College Readiness",
+      "title": "2026 NHS Football vs King Philip 9.25.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1320,
-          "title": "Norwood News 10.16.26"
+          "minute": 180,
+          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
         },
         {
-          "minute": 1380,
-          "title": "2026 Early College Readiness"
+          "minute": 270,
+          "title": "Her Game, Her Voice - Episode 4"
+        },
+        {
+          "minute": 300,
+          "title": "Her Game, Her Voice - Episode 6"
+        },
+        {
+          "minute": 330,
+          "title": "2026 NHS Football vs Stoughton 9.10.26"
+        },
+        {
+          "minute": 480,
+          "title": "2026 NHS Golf vs Weymouth 9.9.26"
+        },
+        {
+          "minute": 570,
+          "title": "2013 NHS Field Hockey vs. Canton"
+        },
+        {
+          "minute": 630,
+          "title": "2026 NHS Football vs King Philip 9.25.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-21"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-22"
     }
   }
 }
