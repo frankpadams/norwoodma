@@ -5479,42 +5479,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-d743b0bdea58-2026-10-27",
-    "title": "Home Alone Safety",
-    "start": {
-      "date": "2026-10-27",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": "17:15"
-    },
-    "venue": "10/27/2026 04:00 PM - 05:15 PM Norwood Civic Center - Lydon Suite",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30894",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30894",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$60.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-27",
-    "session_end": "2026-10-27",
-    "days": "Tu",
-    "notes": "Take the first steps toward independence. Learn how to call 911, choking prevention and relief, accident and fire protection, and basic first aid. We'll watch an instructional video, discuss how to manage your time when you're home alone for short periods, and explore various scenarios with a wrap up exercise. Please bring a snack and a drink. Instructed by Juanita Allen.",
-    "rec_program_id": "rec-d743b0bdea58",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-10-27-girls-middle-school-volleyball-bellingham-hig-c455d2e",
     "title": "Girls Middle School Volleyball @ Bellingham High School",
     "start": {
@@ -42508,6 +42472,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-01-06",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-01-06",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-06",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-4faef268f312-2027-01-06",
     "title": "Pee-Wee",
     "start": {
@@ -44397,6 +44397,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-01-11",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-01-11",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-11",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2027-01-11",
     "title": "Zumba Session 2",
     "start": {
@@ -45766,6 +45802,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-01-13",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-01-13",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-13",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -47615,6 +47687,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-01-18",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-01-18",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-18",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2027-01-18",
     "title": "Zumba Session 2",
     "start": {
@@ -48913,6 +49021,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-01-20",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-01-20",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-20",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -50961,6 +51105,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-01-25",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-01-25",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-25",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2027-01-25",
     "title": "Zumba Session 2",
     "start": {
@@ -52253,6 +52433,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-01-27",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-01-27",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-27",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -54364,6 +54580,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-02-01",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-02-01",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-01",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3d40e3a65af6-2027-02-01",
     "title": "Zumba Session 2",
     "start": {
@@ -55552,6 +55804,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-02-03",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-02-03",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-03",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -57039,6 +57327,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-02-08",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-02-08",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-08",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "2027-02-09-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -58214,6 +58538,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-02-10",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-02-10",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-10",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -59865,6 +60225,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-02-15",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-02-15",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-15",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "2027-02-15-no-school-february-break-c23aa44",
     "title": "No School February Break",
     "start": {
@@ -60762,6 +61158,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-02-17",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-02-17",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-17",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -61859,6 +62291,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-02-22",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-02-22",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-22",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-6c709c8cb11b-2027-02-22",
     "title": "Zumba Session 3",
     "start": {
@@ -62798,6 +63266,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-10a2efcf3e6c-2027-02-24",
+    "title": "American Mahjong",
+    "start": {
+      "date": "2027-02-24",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-02-24",
+      "time": "20:30"
+    },
+    "venue": "01/06/2027 - 02/24/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30939",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-06",
+    "session_end": "2027-02-24",
+    "days": "W",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-10a2efcf3e6c",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -63873,6 +64377,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-03-01",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-03-01",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-03-01",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },
@@ -65833,6 +66373,42 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-03-08",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-03-08",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-03-08",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-6c709c8cb11b-2027-03-08",
     "title": "Zumba Session 3",
     "start": {
@@ -67679,6 +68255,42 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-9870a4e574ad-2027-03-15",
+    "title": "Mustang Mahjong League - American Mahjong",
+    "start": {
+      "date": "2027-03-15",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-03-15",
+      "time": "20:30"
+    },
+    "venue": "01/11/2027 - 03/15/2027 06:30 PM - 08:30 PM Norwood Civic Center - Willett Room",
+    "category": "programs",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30957",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$50.00 Res, $60.00 Non-Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": true,
+    "drop_in": false,
+    "session_start": "2027-01-11",
+    "session_end": "2027-03-15",
+    "days": "M",
+    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
+    "rec_program_id": "rec-9870a4e574ad",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "rec-all",
       "recreation-calendar"
     ]
   },

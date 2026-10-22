@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-22T13:21:57.890323-04:00",
+  "generated_at": "2026-10-22T17:47:40.440422-04:00",
   "offline": false,
-  "events_published": 2420,
+  "events_published": 2437,
   "news_published": 120,
   "civic_notices": 52,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2420,
-      "generated_at": "2026-10-22T13:21:57.180143-04:00"
+      "events": 2437,
+      "generated_at": "2026-10-22T17:47:39.971862-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 121,
-      "generated_at": "2026-10-22T13:21:57.188431-04:00"
+      "generated_at": "2026-10-22T17:47:39.983211-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 903,
-      "generated_at": "2026-10-22T13:21:57.204812-04:00"
+      "generated_at": "2026-10-22T17:47:40.005876-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 812,
-      "generated_at": "2026-10-22T13:21:57.218174-04:00"
+      "generated_at": "2026-10-22T17:47:40.025043-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-10-22T13:21:57.225168-04:00"
+      "generated_at": "2026-10-22T17:47:40.035446-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 69,
-      "generated_at": "2026-10-22T13:21:57.233125-04:00"
+      "generated_at": "2026-10-22T17:47:40.048516-04:00"
     }
   ],
-  "recreation_programs": 123,
-  "recreation_occurrences": 1370,
+  "recreation_programs": 124,
+  "recreation_occurrences": 1387,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -396,10 +396,11 @@
     },
     {
       "source_id": "norwood-girl-scouts-public-events",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "retained_events": 0
     },
     {
       "source_id": "norwood-junior-womans-club",
@@ -526,10 +527,11 @@
     },
     {
       "source_id": "norwood-town-news",
-      "ok": true,
+      "ok": false,
       "method": "html_list",
-      "found": 1,
-      "note": ""
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "retained_events": 0
     },
     {
       "source_id": "norwood-town-news-calendar",
@@ -1398,8 +1400,8 @@
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 123,
-      "note": "1609 calendar occurrences generated"
+      "found": 124,
+      "note": "1626 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1444,10 +1446,11 @@
     },
     {
       "source_id": "vfw-discovery",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "retained_events": 0
     },
     {
       "source_id": "washington-no7-events",
@@ -1506,12 +1509,13 @@
     },
     {
       "source_id": "womens-business-network-norwood",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "womens-community-committee",
@@ -1525,12 +1529,13 @@
     },
     {
       "source_id": "norwood-art-association-events",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "together-yes-events",
@@ -1601,7 +1606,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 72,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1625,7 +1630,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 18,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1674,9 +1679,10 @@
     {
       "source": "Norwood Town News",
       "url": "https://www.norwoodtownnews.com/",
-      "ok": true,
-      "found": 12,
-      "method": "jsonld+semantic_html+visible_dates"
+      "ok": false,
+      "found": 0,
+      "method": "page_parsers",
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
     },
     {
       "source": "queue_health",
@@ -1689,13 +1695,13 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 21,
+      "found": 22,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
         "The Norwood Record": 46,
         "Town of Norwood": 8,
-        "The Norwood Record — Latest": 23,
+        "The Norwood Record — Latest": 22,
         "Hoodline": 2,
         "Colliers": 1,
         "Norwood Public Schools": 5,
@@ -1713,7 +1719,8 @@
         "Boston.com": 2,
         "REBusinessOnline": 1,
         "U.S. Figure Skating": 1,
-        "ESPN": 1
+        "ESPN": 1,
+        "SpaceRef": 1
       },
       "note": null
     }
