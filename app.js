@@ -478,7 +478,6 @@ function decorateAgendaSharing(items){
   const icon=(url,label)=>'<img src="'+esc(url)+'" alt="" width="15" height="15" loading="lazy"><span class="sr-only">'+esc(label)+'</span>';
   const link=(url,label,ico,download=false)=>'<a href="'+esc(url)+'" '+(download?'download="norwood-event.ics"':'target="_blank" rel="noopener"')+' title="'+esc(label)+'" aria-label="'+esc(label)+'">'+icon(ico,label)+'</a>';
   const cal= e.start?.date?'<div class="event-agenda-service"><strong>Add to calendar:</strong>'+link(googleCalendarUrl(e),'Google Calendar','https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31.ico')+'<button type="button" class="event-ics-download" data-ics-event="'+esc(String(e.id||''))+'" title="Download for Apple Calendar" aria-label="Download for Apple Calendar"><img src="https://www.apple.com/favicon.ico" alt="" width="15" height="15"></button>'+link(outlookCalendarUrl(e),'Outlook Calendar','assets/outlook-calendar-icon.svg')+'</div>':'';
-  detail.querySelectorAll('[data-ics-event]').forEach(btn=>btn.addEventListener('click',()=>downloadEventIcs(e)));
   const q=eventMapQuery(e);
   const dirs=q?'<div class="event-agenda-service"><strong>Get directions:</strong>'+link('https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q),'Google Maps','https://www.google.com/favicon.ico')+link('https://maps.apple.com/?daddr='+encodeURIComponent(q)+'&dirflg=d','Apple Maps','https://www.apple.com/favicon.ico')+link('https://www.mapquest.com/directions?to='+encodeURIComponent(q),'MapQuest','https://www.mapquest.com/favicon.ico')+'</div>':'';
   const official=eventExternalLinks(e).find(x=>/official|event|register|tickets/i.test(x.label))||eventExternalLinks(e)[0];
@@ -486,6 +485,7 @@ function decorateAgendaSharing(items){
   detail.querySelector('.event-agenda-links')?.remove();
   detail.querySelectorAll('p').forEach(p=>{if(p.textContent.includes('&nbsp;'))p.textContent=p.textContent.replace(/&nbsp;/g,' ');});
   detail.insertAdjacentHTML('beforeend','<div class="event-agenda-services">'+website+cal+dirs+'</div>');
+  detail.querySelectorAll('[data-ics-event]').forEach(btn=>btn.addEventListener('click',()=>downloadEventIcs(e)));
  });
 }
 function renderHomeEvents(items){
