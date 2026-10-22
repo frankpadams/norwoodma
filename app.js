@@ -485,7 +485,7 @@ function decorateAgendaSharing(items){
   const website=official?'<div class="event-agenda-service"><a class="event-agenda-website" href="'+esc(official.url)+'" target="_blank" rel="noopener">Event website ↗</a></div>':'';
   detail.querySelector('.event-agenda-links')?.remove();
   detail.querySelectorAll('p').forEach(p=>{if(p.textContent.includes('&nbsp;'))p.textContent=p.textContent.replace(/&nbsp;/g,' ');});
-  detail.insertAdjacentHTML('beforeend','<div class="event-agenda-services">'+cal+dirs+website+'</div>');
+  detail.insertAdjacentHTML('beforeend','<div class="event-agenda-services">'+website+cal+dirs+'</div>');
  });
 }
 function renderHomeEvents(items){
