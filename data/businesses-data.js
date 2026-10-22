@@ -2107,11 +2107,11 @@ window.NORWOOD_BUSINESSES=[
     ""
   ],
   [
-    "20/20 Eye Care",
-    "Optometry & Eyewear",
-    "91A Central Street",
+    "Eye Care Specialists — Central Street (20/20 Eye Care)",
+    "Ophthalmology, Optometry & Eyewear",
+    "91 Central Street, Suite B",
     "781-501-5650",
-    ""
+    "https://lasikeyesboston.com/"
   ],
   [
     "A & J Gas & Automotive Services",
@@ -5335,8 +5335,8 @@ window.NORWOOD_BUSINESSES=[
     "Nexus General Contractor & Construction",
     "Contractors & Home Services",
     "61 Endicott Street, Suite 24-212",
-    "",
-    ""
+    "781-232-7628",
+    "https://nexuscontractingllc.com/"
   ],
   [
     "RK Construction",
@@ -5373,18 +5373,88 @@ window.NORWOOD_BUSINESSES=[
     "",
     "https://norwoodspacecenter.com/directory/"
   ],
-  ["Poli Mortgage Group","Mortgage Lenders & Brokers","685 Canton Street","","https://polimortgage.com/"],
-  ["loanDepot — Norwood","Mortgage Lenders & Brokers","220 Norwood Park South, Suite 100","508-850-4100","https://www.loandepot.com/"],
-  ["Lighthouse Funding Group","Mortgage Brokers","661 Washington Street, Suite 209","781-769-1002",""],
-  ["Nery Mancebo — Primerica Mortgage","Mortgage Loan Officers","11 Vanderbilt Avenue, Suite 100","","https://www.primerica.com/nerymancebo"],
-  ["plās design co.","Architecture & Interior Design","51 Prospect Avenue","",""],
-  ["At Your Service Electric","Electricians & Electrical Contractors","174 Union Street","339-204-1842","https://www.atyourserviceelec.com"],
-  ["Petrucci Electrical Service Inc.","Electricians & Electrical Contractors","Norwood","781-771-5375","https://petruccielectric.com/"],
+  [
+    "Poli Mortgage Group",
+    "Mortgage Lenders & Brokers",
+    "685 Canton Street",
+    "",
+    "https://polimortgage.com/"
+  ],
+  [
+    "loanDepot — Norwood",
+    "Mortgage Lenders & Brokers",
+    "220 Norwood Park South, Suite 100",
+    "508-850-4100",
+    "https://www.loandepot.com/"
+  ],
+  [
+    "Lighthouse Funding Group",
+    "Mortgage Brokers",
+    "661 Washington Street, Suite 209",
+    "781-769-1002",
+    ""
+  ],
+  [
+    "Nery Mancebo — Primerica Mortgage",
+    "Mortgage Loan Officers",
+    "11 Vanderbilt Avenue, Suite 100",
+    "",
+    "https://www.primerica.com/nerymancebo"
+  ],
+  [
+    "plās design co.",
+    "Architecture & Interior Design",
+    "51 Prospect Avenue",
+    "",
+    ""
+  ],
+  [
+    "At Your Service Electric",
+    "Electricians & Electrical Contractors",
+    "174 Union Street",
+    "339-204-1842",
+    "https://www.atyourserviceelec.com"
+  ],
+  [
+    "Petrucci Electrical Service Inc.",
+    "Electricians & Electrical Contractors",
+    "Norwood",
+    "781-771-5375",
+    "https://petruccielectric.com/"
+  ],
   [
     "STRATERES",
     "Business Consulting & Services",
     "83 Morse Street",
     "",
     "https://norwoodspacecenter.com/directory/"
+  ],
+  [
+    "MV Building & Remodeling",
+    "General Contracting & Remodeling",
+    "34 4th Street",
+    "781-551-0429",
+    ""
+  ],
+  [
+    "Robert Dalton Garage Doors",
+    "Garage Doors",
+    "16 Rock Court",
+    "781-414-1928",
+    ""
+  ],
+  [
+    "Odd-Jobs Construction",
+    "Handyman, Carpentry & Deck Repair",
+    "",
+    "617-957-4379",
+    "https://oddjobssheehan.wixsite.com/mysite"
+  ],
+  [
+    "Eye Care Specialists — Guild Medical Building",
+    "Ophthalmology & Eye Care",
+    "825 Washington Street, Suite 230",
+    "781-769-8880",
+    "https://lasikeyesboston.com/"
   ]
 ].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);const rawAddress=String(b[2]||'').trim();const isSpecificAddress=!!rawAddress&&!/^norwood(?:,?\s*ma(?:\s+02062)?)?$/i.test(rawAddress)&&!/^\s*(?:pleasant street|providence highway|access road|kerry place)\s*$/i.test(rawAddress);const address=isSpecificAddress?(rawAddress+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(rawAddress)?(/\bMA\b/i.test(rawAddress)?'':', MA'):', Norwood, MA 02062')):'';return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address,locationHint:rawAddress&&!isSpecificAddress?rawAddress:'',phone:b[3],website:b[4],town:(rawAddress.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
