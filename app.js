@@ -461,7 +461,7 @@ function renderEventsPage(items){
  if(eventView==='calendar') host.innerHTML=renderCalendarView(items);
  else {
   const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['next','Next few days'],['save','Save the date']];
-  host.innerHTML=sections.filter(([k])=>g[k].length).map(([k,label])=>`<section class="event-period ${k==='save'?'save-date':''}"><div class="event-period-head"><p class="eyebrow">${esc(monthDayRange(g[k]))}</p><h2>${label}</h2></div><div class="event-list">${g[k].map(eventRow).join('')}</div></section>`).join('')||'<section class="event-period"><p>No upcoming public events match this search.</p></section>';
+  host.innerHTML=window.NorwoodEventAgenda.render(sections.flatMap(([k])=>g[k]));
  }
  const st=$('#eventsStatus');if(st)st.textContent='';
 }
