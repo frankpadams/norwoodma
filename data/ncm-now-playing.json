@@ -1,25 +1,13 @@
 {
-  "updated_at": "2026-10-22T01:15:10.842801-04:00",
+  "updated_at": "2026-10-22T06:30:14.861918-04:00",
   "date": "2026-10-22",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "The Kevin Broderick Show - Michael Walsh",
+      "title": "Entrepreneurship 101: AI 5.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 180,
-          "title": "The Kevin Broderick Show - Michael Walsh"
-        },
-        {
-          "minute": 240,
-          "title": "Norwood Library Presents: Brian McGrory Boston Globe Editor"
-        },
-        {
-          "minute": 330,
-          "title": "Lights Camera Summer 3 Session 1"
-        },
         {
           "minute": 490,
           "title": "NHS UPDATE LIVE!"
@@ -35,6 +23,18 @@
         {
           "minute": 660,
           "title": "The Kevin Broderick Show - Michael Walsh"
+        },
+        {
+          "minute": 720,
+          "title": "The Life of Royal Hartigan - Public Access 8.24.26"
+        },
+        {
+          "minute": 840,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 900,
+          "title": "Entrepreneurship 101: AI 5.21.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-22"
@@ -44,18 +44,6 @@
       "title": "Finance Commission 10.15.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 90,
-          "title": "Trails Advisory Committee 10.13.26"
-        },
-        {
-          "minute": 240,
-          "title": "School Committee 10.7.26 Rebroadcast"
-        },
-        {
-          "minute": 360,
-          "title": "Guild Pond Info Session 10.8.26"
-        },
         {
           "minute": 480,
           "title": "Finance Commission 10.15.26"
@@ -71,31 +59,27 @@
         {
           "minute": 900,
           "title": "Finance Commission 10.15.26"
+        },
+        {
+          "minute": 990,
+          "title": "Community Preservation Committee 10.7.26"
+        },
+        {
+          "minute": 1080,
+          "title": "Trails Advisory Committee 10.13.26"
+        },
+        {
+          "minute": 1230,
+          "title": "Finance Commission 10.15.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-22"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Football vs King Philip 9.25.26",
+      "title": "2026 NHS Golf vs Weymouth 9.9.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 180,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
-        {
-          "minute": 270,
-          "title": "Her Game, Her Voice - Episode 4"
-        },
-        {
-          "minute": 300,
-          "title": "Her Game, Her Voice - Episode 6"
-        },
-        {
-          "minute": 330,
-          "title": "2026 NHS Football vs Stoughton 9.10.26"
-        },
         {
           "minute": 480,
           "title": "2026 NHS Golf vs Weymouth 9.9.26"
@@ -107,6 +91,22 @@
         {
           "minute": 630,
           "title": "2026 NHS Football vs King Philip 9.25.26"
+        },
+        {
+          "minute": 750,
+          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 900,
+          "title": "2011 NHS Field Hockey vs. Framingham 10.12.11"
+        },
+        {
+          "minute": 990,
+          "title": "2026 NHS Field Hockey vs Dedham"
+        },
+        {
+          "minute": 1080,
+          "title": "2026 NHS Golf vs Weymouth 9.9.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-22"
