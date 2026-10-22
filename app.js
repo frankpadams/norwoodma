@@ -477,7 +477,8 @@ function decorateAgendaSharing(items){
   summary.appendChild(share);
   const icon=(url,label)=>'<img src="'+esc(url)+'" alt="" width="15" height="15" loading="lazy"><span class="sr-only">'+esc(label)+'</span>';
   const link=(url,label,ico,download=false)=>'<a href="'+esc(url)+'" '+(download?'download="norwood-event.ics"':'target="_blank" rel="noopener"')+' title="'+esc(label)+'" aria-label="'+esc(label)+'">'+icon(ico,label)+'</a>';
-  const cal= e.start?.date?'<div class="event-agenda-service"><strong>Add to calendar:</strong>'+link(googleCalendarUrl(e),'Google Calendar','https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31.ico')+link(appleCalendarHref(e),'Apple Calendar','https://www.apple.com/favicon.ico',true)+link(appleCalendarHref(e),'Outlook calendar (.ics)','assets/outlook-calendar-icon.svg',true)+'</div>':'';
+  const cal= e.start?.date?'<div class="event-agenda-service"><strong>Add to calendar:</strong>'+link(googleCalendarUrl(e),'Google Calendar','https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31.ico')+'<button type="button" class="event-ics-download" data-ics-event="'+esc(String(e.id||''))+'" title="Download for Apple Calendar" aria-label="Download for Apple Calendar"><img src="https://www.apple.com/favicon.ico" alt="" width="15" height="15"></button>'+link(outlookCalendarUrl(e),'Outlook Calendar','assets/outlook-calendar-icon.svg')+'</div>':'';
+  detail.querySelectorAll('[data-ics-event]').forEach(btn=>btn.addEventListener('click',()=>downloadEventIcs(e)));
   const q=eventMapQuery(e);
   const dirs=q?'<div class="event-agenda-service"><strong>Get directions:</strong>'+link('https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q),'Google Maps','https://www.google.com/favicon.ico')+link('https://maps.apple.com/?daddr='+encodeURIComponent(q)+'&dirflg=d','Apple Maps','https://www.apple.com/favicon.ico')+link('https://www.mapquest.com/directions?to='+encodeURIComponent(q),'MapQuest','https://www.mapquest.com/favicon.ico')+'</div>':'';
   const official=eventExternalLinks(e).find(x=>/official|event|register|tickets/i.test(x.label))||eventExternalLinks(e)[0];
@@ -555,6 +556,17 @@ function appleCalendarHref(e){
  const dt=r.allDay?';VALUE=DATE:':':';
  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Norwood.ma//Events//EN','BEGIN:VEVENT','UID:'+safe((e.id||Date.now())+'@norwood.ma'),'DTSTART'+dt+r.start,'DTEND'+dt+r.end,'SUMMARY:'+safe(e.title),loc?'LOCATION:'+safe(loc):'',desc?'DESCRIPTION:'+safe(desc):'','END:VEVENT','END:VCALENDAR'].filter(Boolean).join('\r\n');
  return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(ics);
+}
+function outlookCalendarUrl(e){
+ const r=eventCalendarRange(e),p=new URLSearchParams({path:'/calendar/action/compose',rru:'addevent',subject:e.title||'Norwood event',body:eventCalendarDescription(e),location:eventLocationText(e)});
+ const iso=(date,time)=>date?date+'T'+(time||'00:00')+':00':'';
+ p.set('startdt',iso(e.start?.date,e.start?.time));p.set('enddt',iso(e.end?.date||e.start?.date,e.end?.time||e.start?.time));
+ if(r.allDay)p.set('allday','true');
+ return 'https://outlook.office.com/calendar/0/deeplink/compose?'+p.toString();
+}
+function downloadEventIcs(e){
+ const href=appleCalendarHref(e),blob=new Blob([decodeURIComponent(href.split(',').slice(1).join(','))],{type:'text/calendar;charset=utf-8'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='norwood-event.ics';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
 }
 function eventExternalLinks(e){
  const links=eventLinks(e),seen=new Set(),out=[];
