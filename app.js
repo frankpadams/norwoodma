@@ -445,12 +445,11 @@ function renderEventsPage(items){
  if(eventId){
    const e=items.find(x=>String(x.id||'')===eventId);
    if(e){
-     const d=parseLocalDate(e.start?.date);
-     const dateLabel=d?d.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric',year:'numeric'}):(e.start?.date||'');
-     const timeBits=[];if(e.start?.time)timeBits.push(formatEventTime(e.start.time));if(e.end?.time)timeBits.push(formatEventTime(e.end.time));
-     const where=[e.venue,e.address].filter(Boolean).join(' · ');
-     const links=eventLinks(e);const linkHtml=links.length?'<div class="event-detail-links"><strong>Links:</strong>'+links.map(x=>'<p><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a></p>').join('')+'</div>':'';
-     host.innerHTML='<section class="event-period"><div class="event-period-head"><p class="eyebrow">Event details</p><h2>'+esc(e.title)+'</h2></div><div class="event-list"><article class="event-row '+eventClass(e.category)+'"><div class="event-date"><small>'+esc(d?d.toLocaleDateString([],{weekday:'short'}).toUpperCase():'')+'</small><b>'+esc(d?d.getDate():'')+'</b><span>'+esc(d?d.toLocaleDateString([],{month:'short'}).toUpperCase():'')+'</span></div><div class="event-body"><div class="event-kind-line"><span class="event-kind">'+esc(eventKind(e.category))+'</span>'+paidAdmissionIcon(e)+'</div><h3>'+esc(e.title)+'</h3><p><strong>Date:</strong> '+esc(dateLabel)+'</p>'+(timeBits.length?'<p><strong>Time:</strong> '+esc(timeBits.join('–'))+'</p>':'')+(where?'<p><strong>Place:</strong> '+esc(where)+'</p>':'')+(e.organizer?'<p><strong>Organization:</strong> '+esc(e.organizer)+'</p>':'')+(e.notes?'<p>'+esc(e.notes)+'</p>':'')+linkHtml+'</div></article></div></section>';
+     // Use the same event row and action decorator as the main calendar.
+     // A shared link presents it expanded, without maintaining a second detail template.
+     host.innerHTML='<section class="event-period event-shared-detail"><div class="event-period-head"><p class="eyebrow">Event details</p><h2>'+esc(e.title)+'</h2></div><div class="event-agenda-list">'+window.NorwoodEventAgenda.row(e)+'</div></section>';
+     const entry=host.querySelector('.event-agenda-entry');if(entry)entry.open=true;
+     decorateAgendaSharing([e]);
      const st=$('#eventsStatus');if(st)st.textContent='Showing full event information';
      return;
    }
