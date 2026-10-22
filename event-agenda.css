@@ -46,3 +46,5 @@
 #eventPeriods .event-agenda-expand{position:absolute;right:0;top:50%;transform:translateY(-50%);width:22px}
 #eventPeriods .event-agenda-entry[open]>summary .event-agenda-expand{transform:translateY(-50%) rotate(45deg)}
 @media(max-width:600px){#eventPeriods .event-agenda-entry>summary{padding-right:84px}#eventPeriods .event-agenda-share{right:29px;top:50%}}
+
+#eventPeriods .event-agenda-service:has(.event-agenda-website){flex-basis:100%}
