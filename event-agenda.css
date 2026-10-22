@@ -23,3 +23,19 @@
 .events-page .calendar-picker-wrap{margin:0 0 12px}
 .events-page #eventsStatus:empty{display:none}
 @media(max-width:620px){.events-page .events-hero.page-hero{padding:12px 14px;margin-bottom:10px}.events-page .events-hero h1{font-size:1.65rem}.events-page .events-hero .events-action-card{padding:8px 10px;min-height:40px;box-sizing:border-box}.events-page .events-hero-actions.events-action-cards{gap:7px;margin-top:9px}.events-page .event-tools{gap:8px;margin-bottom:8px}.events-page .event-search-row{flex-basis:100%}}
+
+/* Compact event actions: direct share, with service links only when expanded. */
+#eventPeriods .event-agenda-entry{position:relative}
+#eventPeriods .event-agenda-entry>summary{padding-right:72px}
+#eventPeriods .event-agenda-share{position:absolute;right:23px;top:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:42px;min-height:39px;padding:2px;border:0;background:transparent;color:#004e85;cursor:pointer;font:inherit;z-index:1}
+#eventPeriods .event-agenda-share span{font-size:10px;font-weight:700;line-height:1.05}
+#eventPeriods .event-agenda-share:focus-visible{outline:2px solid #d5ad36;outline-offset:1px}
+#eventPeriods .event-agenda-services{display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px;margin-top:7px}
+#eventPeriods .event-agenda-service{display:inline-flex;align-items:center;flex-wrap:wrap;gap:7px;font-size:.82rem;line-height:1.3}
+#eventPeriods .event-agenda-service strong{font-weight:700}
+#eventPeriods .event-agenda-service>a:not(.event-agenda-website){display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;padding:3px;border-radius:4px}
+#eventPeriods .event-agenda-service>a:hover{background:#eaf1f6}
+#eventPeriods .event-agenda-service img{width:17px;height:17px;object-fit:contain}
+#eventPeriods .event-agenda-website{color:#004e85;font-weight:700;text-decoration:underline}
+#eventPeriods .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:600px){#eventPeriods .event-agenda-entry>summary{padding-right:64px}#eventPeriods .event-agenda-share{right:18px;top:3px}#eventPeriods .event-agenda-services{gap:6px 12px}}
