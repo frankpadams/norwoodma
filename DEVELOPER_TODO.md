@@ -2,7 +2,7 @@
 
 This is a shared working log for unfinished development, data-quality issues, and follow-up work. It is not an authority on what is true: Frank's decisions govern project direction, and automated entries are leads to review rather than conclusions. When Frank asks for the developer to-do list, project work log, outstanding issues, next steps, or similar, review this file as a useful project record and update it as work is completed or new issues are identified.
 
-_Last updated: 2026-10-20_
+_Last updated: 2026-10-22_
 
 ## Upcoming: Schools & Education quick link
 
@@ -114,3 +114,13 @@ Reviewed every pre-existing checklist item against available repository evidence
 ## Release/version hygiene
 
 - [ ] **Keep every product release synchronized.** October 15 source audit: VERSIONING.md, README.md and nav.js consistently report v1.0.2 (September 29). Determine whether later deployments constitute a new stable release, then update all release metadata and notes together.
+
+## Government guide review — October 22, 2026
+
+- [x] Reviewed all 24 department and 30 board/committee entries; standardized role descriptions and contact sections, corrected department leadership from official department listings, removed editorial verification annotations, and retained resident guidance.
+- [x] Added FY2027 budget PDF page links with printed section/page labels and physical PDF page numbers; mapped departmental statements in Section 4H and school summary in Section 3B.
+- [x] Located library-hosted trustees minutes and current 2026–2029 trustees; linked dedicated town minutes archives where general document-center links were insufficient.
+- [ ] Recheck school-site destinations in a normal browser: automated HTTP requests received 503 responses, while search indexes identify the district's administration, committee, minutes and budget destinations. Keep these official links; do not treat bot blocking as a 404.
+- [ ] Verify posted appointment changes for boards whose official pages contain expired or inconsistent rosters (Airport Commission, Budget Balancing Committee, Permanent Building Construction Committee). No unsupported replacement names were invented; the Budget Balancing roster was omitted because its page conflicts with current school membership.
+- [ ] Board of Registrars, Cable Commission, Master Plan Steering Committee and the 2022 anniversary committee: locate additional published minutes if available. Cable's linked records page is empty; Retirement Board directs requests to Debra Wilkes at retirement@norwoodma.gov / 781-327-8818.
+- [ ] Confirm PDF page-fragment behavior on iPhone/iPad; readable printed section/page and PDF page numbers remain available even where the viewer ignores fragments.
