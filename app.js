@@ -52,7 +52,11 @@ function rotatingHeroMessage(){
     "Norwood has a lot going on. We brought links.",
     "There’s a lot to like here. Let’s help you find it.",
     "Get out of the house. You don’t have to get out of town.",
-    "Find something to do. Or something worth knowing."
+    "Find something to do. Or something worth knowing.",
+    "Your browser history is about to get aggressively local.",
+    "Because knowing the recycling schedule counts as having your life together.",
+    "One minute you’re checking trash day. Next minute you have zoning opinions.",
+    "Making you suspiciously well-informed at the next Concert on the Common."
   ];
   title.textContent=messages[Math.floor(Math.random()*messages.length)];
 }
