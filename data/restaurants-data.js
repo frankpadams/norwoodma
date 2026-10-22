@@ -1850,13 +1850,13 @@ window.NORWOOD_RESTAURANTS= [
   },
   {
     "id": "veggie-crust-norwood",
-    "name": "Veggie Crust Norwood",
+    "name": "Gopal’s Crust",
     "category": "Pizza & Italian",
     "cuisine": "Vegetarian · Indian-inspired Pizza · Vegan",
     "address": "641 Washington St",
-    "url": "https://www.vegcrust.com/menu/norwood/",
+    "url": "https://gopalcrust.com/",
     "link_type": "official",
-    "tags": "vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta tikka masala manchurian pav bhaji paneer biryani indo chinese",
+    "tags": "Veggie Crust Norwood Gopals Crust vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta tikka masala manchurian pav bhaji paneer biryani indo chinese",
     "gluten_free": true,
     "verified": "2026-09-21",
     "dishes": [
