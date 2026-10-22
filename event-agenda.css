@@ -53,3 +53,6 @@
 #eventPeriods .event-agenda-expand{right:14px}
 #eventPeriods .event-agenda-share{right:45px}
 @media(max-width:600px){#eventPeriods .event-agenda-expand{right:12px}#eventPeriods .event-agenda-share{right:43px}}
+
+/* Only show Share for an expanded event. */
+#eventPeriods .event-agenda-entry:not([open]) .event-agenda-share{display:none}
