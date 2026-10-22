@@ -35,6 +35,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Directory/category landing pages should rank before individual businesses/resources when the query names the category.
 
 ### Directories, resources, and maps
+- Resource topic listings are generated into `resources.html` from the maintained resource/business data using `node scripts/generate-resource-html.cjs`. `scripts/resource-renderer.js` owns the card, category and ordering rules. A GitHub workflow regenerates the page when those inputs change. Browser JavaScript only reveals categories and applies filters; the data files are no longer downloaded by this page. Without JavaScript, all topic sections are available.
 - Local Resources is for nonprofit, civic, public-service, assistance, and community resources; commercial businesses belong in the Business Directory.
 - Business records may belong to multiple relevant categories. Every record with a usable street address should be mappable.
 - Business categories/subcategories should provide a map route so users can compare nearby options.

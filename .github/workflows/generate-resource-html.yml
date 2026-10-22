@@ -1,0 +1,36 @@
+name: Generate crawlable resource directory
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/resources-data.js'
+      - 'data/businesses-data.js'
+      - 'scripts/resource-renderer.js'
+      - 'scripts/generate-resource-html.cjs'
+      - '.github/workflows/generate-resource-html.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: resource-html
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/generate-resource-html.cjs
+      - name: Publish resource HTML
+        run: |
+          if git diff --quiet -- resources.html; then exit 0; fi
+          git config user.name 'norwood-ma-content-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add resources.html
+          git commit -m 'data: regenerate crawlable resource directory'
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -91,3 +91,7 @@ Approved/Published community submissions are ingested from the deployed privacy-
 ## v0.12.4 publication acknowledgment
 
 Community-submission records represented in `events.json` retain their `submission-…` stable IDs. The scheduled workflow can send those IDs plus public matching fields (title/date/venue) to the authenticated Apps Script acknowledgment endpoint after the generated dataset has been pushed. This acknowledgment contains no submitter contact or reviewer-note data and does not add private moderation data to the public dataset.
+
+## Resource HTML publication
+
+`data/resources-data.js` and `data/businesses-data.js` feed `scripts/generate-resource-html.cjs`, which runs the existing category/card rules in `scripts/resource-renderer.js` and writes all 27 topic sections into `resources.html`. Run the generator after changing those inputs. `.github/workflows/generate-resource-html.yml` automates regeneration on main. `resources.js` controls visibility, browser history, and filters without fetching either dataset. Related businesses remain collapsed. No-JavaScript visitors receive all topics.
