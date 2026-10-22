@@ -434,3 +434,19 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
    Disable the older generated glyph so only one icon is visible. */
 .top #menu::before,.top #menu::after{content:none!important;display:none!important}
 .top #menu>span[aria-hidden="true"]{display:block!important;flex:0 0 24px!important;width:24px!important;height:18px!important}
+
+/* Five distinct accessibility sizes; neutralize legacy root-size adjustments. */
+html[data-text-size]{font-size:100%}
+html[data-text-size="smallest"] body{zoom:.8}
+html[data-text-size="compact"] body{zoom:.9}
+html[data-text-size="standard"] body{zoom:1}
+html[data-text-size="large"] body{zoom:1.25}
+html[data-text-size="largest"] body{zoom:1.5}
+@supports not (zoom:1){
+ html[data-text-size="smallest"]{font-size:80%}
+ html[data-text-size="compact"]{font-size:90%}
+ html[data-text-size="standard"]{font-size:100%}
+ html[data-text-size="large"]{font-size:125%}
+ html[data-text-size="largest"]{font-size:150%}
+ html[data-text-size] body{font-size:inherit}
+}
