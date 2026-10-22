@@ -57,7 +57,10 @@ function rotatingHeroMessage(){
     "Because knowing the recycling schedule counts as having your life together.",
     "One minute you’re checking trash day. Next minute you have zoning opinions.",
     "Making you suspiciously well-informed at the next Concert on the Common.",
-    "From board meetings to breweries. Know what’s brewing in Norwood."
+    "From board meetings to breweries. Know what’s brewing in Norwood.",
+    "Come for the events. Accidentally develop an interest in municipal finance.",
+    "All the local information you meant to look up eventually.",
+    "Helping you sound like you’ve lived here longer than you have."
   ];
   title.textContent=messages[Math.floor(Math.random()*messages.length)];
 }
