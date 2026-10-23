@@ -6,8 +6,44 @@ METHOD:PUBLISH
 X-WR-CALNAME:Fundraisers & benefits
 X-WR-CALDESC:Public fundraisers\, charity events and community benefits.
 BEGIN:VEVENT
+UID:2026-10-22-norwood-scores-at-micca-ad18660@norwood.ma
+DTSTAMP:20261023T004842Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Norwood Scores at MICCA
+DESCRIPTION:Norwood Scores at MICCA Heading to championships this week and next By Jeff Sullivan · October 22\, 2026 · 0 Latest Hennessey basin comments end Oct. 24 Project “lynchpin” of Meadowbrook flood mitigation By Jeff Sullivan · October 22\, 2026 · 0 Trails looking at Hot Dog lot at U-Ave $50K voted to be returned to CPA fundraiser By Jeff Sullivan · October 22\, 2026 · 0 New Mustang Sally book out Two Norwood mainstays join forces October 22\, 2026 · 0 CPC goes through submitted projects Morrill restorat\nSource: https://www.norwoodrecord.com/article/norwood-high-school-micca-scores-four-out-of-five
+URL:https://www.norwoodrecord.com/article/norwood-high-school-micca-scores-four-out-of-five
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-trails-looking-at-hot-dog-lot-at-u-ave-ee424c2@norwood.ma
+DTSTAMP:20261023T004842Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Trails looking at Hot Dog lot at U-Ave
+DESCRIPTION:Trails looking at Hot Dog lot at U-Ave $50K voted to be returned to CPA fundraiser By Jeff Sullivan · October 22\, 2026 · 0\nSource: https://www.norwoodrecord.com/article/university-avenue-trail-hot-dog-lot-access-issue-norwood
+URL:https://www.norwoodrecord.com/article/university-avenue-trail-hot-dog-lot-access-issue-norwood
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-hennessey-basin-comments-end-oct-24-9bbc50a@norwood.ma
+DTSTAMP:20261023T004842Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Hennessey basin comments end Oct. 24
+DESCRIPTION:Hennessey basin comments end Oct. 24 Project “lynchpin” of Meadowbrook flood mitigation By Jeff Sullivan · October 22\, 2026 · 0 Trails looking at Hot Dog lot at U-Ave $50K voted to be returned to CPA fundraiser By Jeff Sullivan · October 22\, 2026 · 0 New Mustang Sally book out Two Norwood mainstays join forces October 22\, 2026 · 0 CPC goes through submitted projects Morrill restoration and NHS bathrooms on the docket By Jeff Sullivan · October 22\, 2026 · 0 VETERANS’ DAY WEDNESDAY\, NOVEMBER 11th\,\nSource: https://www.norwoodrecord.com/article/hennessey-basin-project-comments-end-lenox-cross-streets-park
+URL:https://www.norwoodrecord.com/article/hennessey-basin-project-comments-end-lenox-cross-streets-park
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-latest-0871e75@norwood.ma
+DTSTAMP:20261023T004842Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Latest
+DESCRIPTION:Latest Hennessey basin comments end Oct. 24 Project “lynchpin” of Meadowbrook flood mitigation By Jeff Sullivan · October 22\, 2026 · 0 Trails looking at Hot Dog lot at U-Ave $50K voted to be returned to CPA fundraiser By Jeff Sullivan · October 22\, 2026 · 0 New Mustang Sally book out Two Norwood mainstays join forces October 22\, 2026 · 0 CPC goes through submitted projects Morrill restoration and NHS bathrooms on the docket By Jeff Sullivan · October 22\, 2026 · 0 VETERANS’ DAY WEDNESDAY\, NOVEMBE\nSource: https://www.norwoodrecord.com/latest
+URL:https://www.norwoodrecord.com/latest
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-10-25-cbn-psychic-medium@norwood.ma
-DTSTAMP:20261022T214740Z
+DTSTAMP:20261023T004842Z
 DTSTART;TZID=America/New_York:20261025T183000
 DTEND;TZID=America/New_York:20261025T203000
 SUMMARY:An Evening with Psychic Medium Cathy Ripley Greene
@@ -17,7 +53,7 @@ URL:https://cbnma.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-31-pumpkinpalooza@norwood.ma
-DTSTAMP:20261022T214740Z
+DTSTAMP:20261023T004842Z
 DTSTART;TZID=America/New_York:20261031T190000
 SUMMARY:Pumpkinpalooza Halloween Fundraiser
 LOCATION:The Fallout Shelter — 61 Endicott St\, Norwood\, MA
@@ -26,7 +62,7 @@ URL:https://www.extendedplaysessions.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-04-labor-market-research-skills-careers-employme-1ce1cbd@norwood.ma
-DTSTAMP:20261022T214740Z
+DTSTAMP:20261023T004842Z
 DTSTART;TZID=America/New_York:20261104T100000
 DTEND;TZID=America/New_York:20261104T100000
 SUMMARY:Labor Market Research – Skills\, Careers\, Employment Outlook
@@ -36,7 +72,7 @@ URL:https://masshiremsw.com/event/lmr-nov-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-19-madrigals-caroling-fundraiser-9165d1c@norwood.ma
-DTSTAMP:20261022T214740Z
+DTSTAMP:20261023T004842Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Madrigals Caroling Fundraiser
