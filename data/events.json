@@ -2230,6 +2230,44 @@
     ]
   },
   {
+    "id": "submission-db3e58d0b88f457a",
+    "title": "Norwood Historical Soicety: Medfield 1651 to Present",
+    "start": {
+      "date": "2026-10-24",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-10-24",
+      "time": null
+    },
+    "venue": "F Holland Day House",
+    "address": "93 Day Street",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "community-event-submissions",
+    "source_url": "https://norwoodhistoricalsociety.org/event/fall-members-meeting-medfields-375th-anniversary/",
+    "registration_url": null,
+    "cost": "Free",
+    "accessibility": "Wheelchair accessible",
+    "organizer": "Norwood Historical Society",
+    "recurrence": "No — one-time event",
+    "recurrence_details": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "moderator_approved_submission",
+    "notes": "The society's fall meeting will celebrate our neighboring town's 375th Anniversary. Medfield educator and historian Richard DeSorgher, presenting “The Growth of a Small New England Town: Medfield 1651 to Present.” Like Norwood, Medfield was originally part of the Dedham land grant of 1636 and was the first community to form its own separate town, incorporated in 1651. It was the place of pivotal events in King Philip's War, played a role in the underground railroads, and became an industrial hub",
+    "last_verified": null,
+    "discovered_by": "community_submission_feed",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "blackhole-comics",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-10-24-norfolk-aggie-haunted-hayride",
     "title": "Norfolk Aggie Haunted Hayride",
     "start": {
@@ -9478,7 +9516,7 @@
     ]
   },
   {
-    "id": "2026-11-02-b-jv-soccer-vs-ashland-high-school-5687470",
+    "id": "2026-11-02-b-jv-soccer-vs-ashland-high-school-29c1bd9",
     "title": "B JV Soccer vs Ashland High School",
     "start": {
       "date": "2026-11-02",
@@ -9488,8 +9526,8 @@
       "date": "2026-11-02",
       "time": "18:00"
     },
-    "venue": "295 Vernon St, Norwood MA 02062",
-    "address": "295 Vernon St, Norwood MA 02062",
+    "venue": "1315 Washington Street, Norwood Massachusetts 02062",
+    "address": "1315 Washington Street, Norwood Massachusetts 02062",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-boys-jv-soccer",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -9499,7 +9537,7 @@
     "series": "Norwood Boys JV Soccer",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: B JV Team: Norwood High School Site: Norwood-Father Mac's Subsite: #1",
+    "notes": "Sport: Soccer Level: B JV Team: Norwood High School Site: Coakley Middle School Subsite: Coakley Upper Field (turf)",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
