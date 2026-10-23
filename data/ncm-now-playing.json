@@ -1,23 +1,43 @@
 {
-  "updated_at": "2026-10-22T21:55:35.710605-04:00",
-  "date": "2026-10-22",
+  "updated_at": "2026-10-23T03:14:01.170848-04:00",
+  "date": "2026-10-23",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Tales From Tiot! Norwood's Immigrants",
+      "title": "Gentle Exercise with Steve",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 240,
+          "title": "South Norwood News with Olga Abdallah"
+        },
+        {
+          "minute": 300,
           "title": "Images of Norwood"
         },
         {
-          "minute": 1380,
+          "minute": 360,
           "title": "Tales From Tiot! Norwood's Immigrants"
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 660,
+          "title": "Summerfest Concerts: Pan Neubean Steel"
+        },
+        {
+          "minute": 840,
+          "title": "Gentle Exercise with Steve"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-22"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-23"
     },
     "government": {
       "status": "scheduled",
@@ -25,23 +45,71 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 270,
+          "title": "Board of Selectmen 10.13.26"
+        },
+        {
+          "minute": 480,
+          "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
+          "minute": 600,
+          "title": "Planning Board 10.5.26"
+        },
+        {
+          "minute": 630,
+          "title": "Finance Commission 10.15.26"
+        },
+        {
+          "minute": 720,
+          "title": "Trails Advisory Committee 10.13.26"
+        },
+        {
+          "minute": 870,
+          "title": "School Committee 10.7.26 Rebroadcast"
+        },
+        {
+          "minute": 990,
           "title": "Guild Pond Info Session 10.8.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-22"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-23"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Volleyball vs Dedham 9.28.26",
+      "title": "2012 8th Grade Football vs. Framingham Superbowl",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1350,
+          "minute": 330,
+          "title": "2026 NHS Football vs King Philip 9.25.26"
+        },
+        {
+          "minute": 450,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 540,
+          "title": "2011 NHS Field Hockey vs. Framingham 10.12.11"
+        },
+        {
+          "minute": 630,
+          "title": "2026 NHS Field Hockey vs Dedham"
+        },
+        {
+          "minute": 720,
+          "title": "2010 NHS Football vs. Walpole 10.16.10"
+        },
+        {
+          "minute": 900,
+          "title": "NHS Golf vs Dedham 10/8/20"
+        },
+        {
+          "minute": 960,
+          "title": "2012 8th Grade Football vs. Framingham Superbowl"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-22"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-23"
     }
   }
 }
