@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T13:57:17.906484-04:00",
+  "updated_at": "2026-10-23T17:15:56.760692-04:00",
   "date": "2026-10-23",
   "timezone": "America/New_York",
   "channels": {
@@ -9,24 +9,8 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 840,
-          "title": "Gentle Exercise with Steve"
-        },
-        {
-          "minute": 900,
-          "title": "South Norwood News with Olga Abdallah"
-        },
-        {
-          "minute": 960,
-          "title": "Images of Norwood"
-        },
-        {
-          "minute": 1020,
-          "title": "Tales From Tiot! Norwood's Immigrants"
-        },
-        {
           "minute": 1080,
-          "title": "Norwood News 10.16.26"
+          "title": "Norwood News 10.23.26"
         },
         {
           "minute": 1140,
@@ -34,7 +18,7 @@
         },
         {
           "minute": 1320,
-          "title": "Norwood News 10.16.26"
+          "title": "Norwood News 10.23.26"
         },
         {
           "minute": 1380,
@@ -49,14 +33,6 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 870,
-          "title": "School Committee 10.7.26 Rebroadcast"
-        },
-        {
-          "minute": 990,
-          "title": "Guild Pond Info Session 10.8.26"
-        },
-        {
           "minute": 1110,
           "title": "Finance Commission 10.15.26"
         },
@@ -69,21 +45,9 @@
     },
     "schools": {
       "status": "scheduled",
-      "title": "NCM Sports Talk July 2026",
+      "title": "2026 NHS Golf vs Weymouth 9.9.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 900,
-          "title": "NHS Golf vs Dedham 10/8/20"
-        },
-        {
-          "minute": 960,
-          "title": "2012 8th Grade Football vs. Framingham Superbowl"
-        },
-        {
-          "minute": 990,
-          "title": "2012 8th Grade Football Norwood vs. Sudbury"
-        },
         {
           "minute": 1050,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
@@ -99,6 +63,10 @@
         {
           "minute": 1260,
           "title": "NCM Sports Talk July 2026"
+        },
+        {
+          "minute": 1350,
+          "title": "2026 NHS Golf vs Weymouth 9.9.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-23"
