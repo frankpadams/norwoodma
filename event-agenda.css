@@ -65,3 +65,9 @@
 /* Distinguish adjacent calendar and directions groups without forcing a new line. */
 #eventPeriods .event-agenda-service:has(strong:first-child) + .event-agenda-service:has(strong:first-child){border-left:1px solid #b8c4d0;padding-left:16px}
 @media(max-width:600px){#eventPeriods .event-agenda-service:has(strong:first-child) + .event-agenda-service:has(strong:first-child){padding-left:10px}}
+
+/* Fundraising link is the first plain row in the agenda list. */
+#eventPeriods .fundraiser-agenda-link{display:block;padding:11px 2px;border-bottom:1px solid #dce4eb;color:#12334d;text-decoration:none}
+#eventPeriods .fundraiser-agenda-link:hover .event-agenda-title{text-decoration:underline;text-underline-offset:3px}
+#eventPeriods .fundraiser-agenda-link:focus-visible{outline:3px solid #d7ac30;outline-offset:3px;border-radius:3px}
+@media(max-width:600px){#eventPeriods .fundraiser-agenda-link{padding:10px 0}}
