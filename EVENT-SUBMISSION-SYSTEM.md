@@ -6,24 +6,24 @@
 
 > **Permanent release document:** Keep this file in every future Norwood.ma release and update it whenever the event-submission, moderation, or publication workflow changes.
 
-## Purpose
+## Current public intake
 
-Norwood.ma uses a Google Form for community event submissions while the public website remains a static GitHub Pages site. This avoids operating a public form backend or database and keeps submitted information in the site owner's Google account.
+The Events page’s **Submit an Event** control opens the Contact page with “Submit or ask about an event” selected. People can send event details through the site contact form. The owner reviews the message, verifies the event and its Norwood relevance, then adds eligible events to the normal event pipeline. Contact messages are not published or imported automatically; ChatGPT may assist with review when the owner asks it to process email.
 
-The intended architecture is:
+Current path:
 
-`Public Google Form → private Google response Sheet → moderation → Approved → Norwood.ma event ingestion → events.json → website`
+`Events page → Contact page → message to site owner → manual verification and curation → shared event pipeline → events.json → website`
 
-All stages are now operational. The public Apps Script endpoint was verified with an Approved test event on September 19, 2026, and v0.12.4 connects that endpoint to the scheduled Norwood.ma event ingestion pipeline.
+The Google Form and spreadsheet workflow described below is retained as a legacy path for previously submitted records and any existing approved data. The public website no longer links to the Google Form.
 
-## Public form
+## Legacy Google Form and moderation workflow
 
 **Name:** `Norwood.ma — Submit an Event`
 
 **Public URL:**  
 https://docs.google.com/forms/d/e/1FAIpQLSdfxwECrzswF-uRA_VraKrYMPVL605stp4fKwhbpFSuTqlG3w/viewform
 
-The public site links to this form from the prominent **Submit an Event** control on the What's Happening / Events experience. The footer is **not** an event-submission entry point; its link is reserved for **Support Norwood.ma**.
+This is the former public form. The Events page now links to the Contact page instead. The footer remains reserved for **Support Norwood.ma**.
 
 Submissions are moderated. They are not automatically published merely because somebody submits the form.
 
@@ -117,11 +117,11 @@ Prefer the most specific authoritative event or registration URL available rathe
 
 Community submissions are one source feeding the broader What's Happening system. They should ultimately use the same normalization, verification, categorization, deduplication, recurrence, expiration, and publication rules as automatically discovered events.
 
-The implemented production path is:
+The current production path is manual from the Contact page as described above. The legacy Google Form path remains:
 
 `Google Sheet Approved/Published row → Apps Script allowlisted JSON endpoint → scheduled GitHub content refresh → normalization/deduplication/expiration → events.json → Git commit/Pages deployment → authenticated acknowledgment → private moderation Sheet`
 
-This operates independently of software releases. Under normal operation, changing a valid submission to `Approved` makes it eligible for the next scheduled two-hour content refresh.
+For legacy records, changing a valid submission to `Approved` makes it eligible for the next scheduled content refresh.
 
 ### Security boundary
 
@@ -135,9 +135,7 @@ Private administrative information includes submitter name/email, reviewer notes
 
 ## Deployment notes
 
-The Google Form and Sheet live independently of GitHub Pages and do not require a Norwood.ma release to continue accepting submissions. Website releases only need to preserve the public form link and the event-ingestion integration code/configuration.
-
-If the Google Form is replaced rather than edited in place, update every site reference and this document with the new public URL. Editing the existing form normally preserves its URL.
+The Contact page and its email delivery are the current public intake route. The legacy Google Form, response Sheet, and ingestion integration remain separate from the public Contact form. Do not restore the old Form as the public submission link unless the owner requests that change. If the legacy Form is eventually retired, first confirm that no approved or pending records still depend on its import path.
 
 ## Developer checklist for future changes
 
