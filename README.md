@@ -11,6 +11,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 ## Current architecture
 
 ### Events and calendars
+- Current and upcoming fundraisers are rendered daily by `.github/workflows/refresh-fundraisers.yml` from the shared calendar and `data/fundraisers-curated.json`. See `FUNDRAISERS.md` for the hybrid discovery and publication workflow.
 - `data/events.json` / `data/events-data.js` are the shared generated event dataset used by What's Happening and related event experiences.
 - Event ingestion is source-driven, normalized, deduplicated, and expiration-aware.
 - Community-submitted events enter through the documented moderation pipeline in `EVENT-SUBMISSION-SYSTEM.md`.

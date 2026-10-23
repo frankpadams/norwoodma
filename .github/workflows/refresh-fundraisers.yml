@@ -1,0 +1,45 @@
+name: Refresh current fundraisers
+on:
+  schedule:
+    # Once daily, approximately 8:35 AM Eastern during daylight saving time.
+    - cron: '35 12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/refresh_fundraisers.py'
+      - 'data/fundraisers-curated.json'
+      - '.github/workflows/refresh-fundraisers.yml'
+permissions:
+  contents: write
+concurrency:
+  group: norwood-fundraisers-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test fundraiser selection and expiration
+        run: python -m unittest discover -s tests -p test_fundraisers.py -v
+      - name: Refresh fundraiser section from latest calendar and curated campaigns
+        run: python scripts/refresh_fundraisers.py
+      - name: Commit onto latest main
+        run: |
+          git config user.name "norwood-ma-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # Re-render after fetching latest main, preserving concurrent site edits.
+          git restore fundraising.html
+          rm -f data/fundraisers.json
+          git pull --ff-only origin main
+          python scripts/refresh_fundraisers.py
+          git add fundraising.html data/fundraisers.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: refresh current fundraisers"
+          git push origin HEAD:main
