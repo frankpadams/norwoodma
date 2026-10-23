@@ -897,6 +897,67 @@
     ]
   },
   {
+    "id": "2026-10-23-nhs-receives-50-000-for-innovation-pathways-bd4f78d",
+    "title": "NHS Receives $50,000 for Innovation Pathways",
+    "start": {
+      "date": "2026-10-23",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-23",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "nps-news",
+    "source_url": "https://www.norwood.k12.ma.us/about/news/1832502/nhs-receives-50-000-for-innovation-pathways",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Public Schools — News",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "NHS Receives $50,000 for Innovation Pathways October 23, 2026",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-10-23-norwood-school-news-1512ead",
+    "title": "Norwood School News",
+    "start": {
+      "date": "2026-10-23",
+      "time": null
+    },
+    "end": {
+      "date": "2026-10-23",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "nps-news",
+    "source_url": "https://drive.google.com/file/d/1SEB1uAjZbxYCnTzbNGJFBc7kcCUhIz_D/view?usp=sharing",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Public Schools — News",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Norwood School News October 23, 2026 Check out the news and events from around your Norwood Public Schools community for the week ending 10.23.2026, including, Madrigal Singers, Balch Fun Run, Prescott PTO, LMPA Pumpkins and more! Read Article",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-10-24-teen-morning-makerspace-fbbec98",
     "title": "Teen Morning Makerspace",
     "start": {
@@ -7772,37 +7833,6 @@
       "norwood-community",
       "norwood-sports",
       "skating-club-boston-events"
-    ]
-  },
-  {
-    "id": "2026-10-31-zoom-with-a-law-librarian-ba0f842",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-10-31",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-621/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
     ]
   },
   {
@@ -34569,74 +34599,6 @@
     ]
   },
   {
-    "id": "2026-12-22-varsity-boys-swimming-1-westwood-high-school-bab4ea7",
-    "title": "Varsity Boys Swimming 1 @ Westwood High School",
-    "start": {
-      "date": "2026-12-22",
-      "time": "00:01"
-    },
-    "end": {
-      "date": "2026-12-22",
-      "time": "00:01"
-    },
-    "venue": "200 Nahatan Street, Westwood MA 02090",
-    "address": "200 Nahatan Street, Westwood MA 02090",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-swimming",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Swimming",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Swimming",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Swimming 1 Level: Varsity Boys Team: Medfield / Norwood Site: Westwood High School Subsite: Swimming Pool",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-12-22-varsity-girls-swimming-1-westwood-high-school-75aeb44",
-    "title": "Varsity Girls Swimming 1 @ Westwood High School",
-    "start": {
-      "date": "2026-12-22",
-      "time": "00:01"
-    },
-    "end": {
-      "date": "2026-12-22",
-      "time": "00:01"
-    },
-    "venue": "200 Nahatan Street, Westwood MA 02090",
-    "address": "200 Nahatan Street, Westwood MA 02090",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Girls Varsity Swimming",
-    "public_access": "public",
-    "series": "Norwood Girls Varsity Swimming",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Swimming 1 Level: Varsity Girls Team: Medfield / Norwood Site: Westwood High School Subsite: Swimming Pool",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-12-22-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -50237,6 +50199,74 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-01-25-varsity-boys-swimming-1-westwood-high-school-9a75995",
+    "title": "Varsity Boys Swimming 1 @ Westwood High School",
+    "start": {
+      "date": "2027-01-25",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-01-25",
+      "time": "18:15"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-swimming",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Swimming",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Swimming",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Swimming 1 Level: Varsity Boys Team: Medfield / Norwood Site: Westwood High School Subsite: Swimming Pool",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-01-25-varsity-girls-swimming-1-westwood-high-school-6d98a89",
+    "title": "Varsity Girls Swimming 1 @ Westwood High School",
+    "start": {
+      "date": "2027-01-25",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-01-25",
+      "time": "18:15"
+    },
+    "venue": "200 Nahatan Street, Westwood MA 02090",
+    "address": "200 Nahatan Street, Westwood MA 02090",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Swimming",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Swimming",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Swimming 1 Level: Varsity Girls Team: Medfield / Norwood Site: Westwood High School Subsite: Swimming Pool",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-family",
       "norwood-high-athletics",
       "norwood-sports",
