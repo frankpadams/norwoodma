@@ -14,7 +14,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Current and upcoming fundraisers are rendered daily by `.github/workflows/refresh-fundraisers.yml` from the shared calendar and `data/fundraisers-curated.json`. See `FUNDRAISERS.md` for the hybrid discovery and publication workflow.
 - `data/events.json` / `data/events-data.js` are the shared generated event dataset used by What's Happening and related event experiences.
 - Event ingestion is source-driven, normalized, deduplicated, and expiration-aware.
-- Community-submitted events enter through the documented moderation pipeline in `EVENT-SUBMISSION-SYSTEM.md`.
+- Event suggestions arrive through the Contact page and are reviewed, verified, and added to the shared event pipeline as documented in `EVENT-SUBMISSION-SYSTEM.md`.
 - Selectable calendars include official/community sources and topic-specific feeds where dependable ingestion is available.
 - Same-day What's Happening priority is structural policy: Town Common/Farmers Market events first; then non-religious one-time/drop-in events; religious one-time/drop-in events; non-religious session occurrences; religious session occurrences. Source diversity operates within a tier.
 - Regional events are maintained separately from the core Norwood calendar. Curated nearby/regional events may be included when they are reasonably relevant to Norwood residents, with municipality clearly identified.
