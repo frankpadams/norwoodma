@@ -8,15 +8,11 @@
 
 ## Current public intake
 
-The Events page’s **Submit an Event**, the Resources page’s **Submit a Resource**, and the Fundraising page’s **Submit a Fundraiser Event** buttons open the Contact page form with the matching reason selected. The contact form sends the message to the site owner’s email. The owner reviews it, verifies details and Norwood relevance, then adds eligible items to the appropriate site data pipeline. Contact messages are not published or imported automatically; ChatGPT may assist with reviewing incoming messages when the owner asks it to process email.
+The Events page’s **Submit an Event**, the Resources page’s **Submit a Resource**, and the Fundraising page’s **Submit a Fundraiser Event** buttons all open the existing Contact page. The Contact page and its form remain unchanged. Form submissions reach the site owner by email; the owner reviews them, verifies details and Norwood relevance, then adds eligible items to the appropriate site data pipeline. Contact messages are not published or imported automatically; ChatGPT may assist with reviewing incoming messages when the owner asks it to process email.
 
-Current paths:
+Current path:
 
-`Events page → Contact form (event selected) → owner email → manual verification and curation → shared event pipeline → events.json → website`
-
-`Resources page → Contact form (resource selected) → owner email → review → resource directory`
-
-`Fundraising page → Contact form (fundraiser selected) → owner email → verification → curated fundraiser input → fundraiser page`
+`Event, resource, or fundraiser button → existing Contact page and form → owner email → review and verification → appropriate site data pipeline`
 
 The Google Form and spreadsheet workflow described below is retained as a legacy path for previously submitted records and any existing approved data. The public website no longer links to the Google Form.
 
