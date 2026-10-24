@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T17:15:56.760692-04:00",
+  "updated_at": "2026-10-23T20:02:41.262951-04:00",
   "date": "2026-10-23",
   "timezone": "America/New_York",
   "channels": {
@@ -8,14 +8,6 @@
       "title": "South Norwood News with Olga Abdallah",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 1080,
-          "title": "Norwood News 10.23.26"
-        },
-        {
-          "minute": 1140,
-          "title": "2016 Dancing with the Norwood Stars!"
-        },
         {
           "minute": 1320,
           "title": "Norwood News 10.23.26"
@@ -33,6 +25,42 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
+          "minute": 0,
+          "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
+          "minute": 120,
+          "title": "Trails Advisory Committee 10.13.26"
+        },
+        {
+          "minute": 270,
+          "title": "Board of Selectmen 10.13.26"
+        },
+        {
+          "minute": 480,
+          "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
+          "minute": 600,
+          "title": "Planning Board 10.5.26"
+        },
+        {
+          "minute": 630,
+          "title": "Finance Commission 10.15.26"
+        },
+        {
+          "minute": 720,
+          "title": "Trails Advisory Committee 10.13.26"
+        },
+        {
+          "minute": 870,
+          "title": "School Committee 10.7.26 Rebroadcast"
+        },
+        {
+          "minute": 990,
+          "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
           "minute": 1110,
           "title": "Finance Commission 10.15.26"
         },
@@ -41,25 +69,13 @@
           "title": "Board of Selectmen 10.13.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-23"
+      "source": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"
     },
     "schools": {
       "status": "scheduled",
       "title": "2026 NHS Golf vs Weymouth 9.9.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 1050,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
-        {
-          "minute": 1140,
-          "title": "2026 NHS Unified Basketball vs Dedham 9.25.26"
-        },
-        {
-          "minute": 1200,
-          "title": "NHS Golf vs Dedham 10/8/20"
-        },
         {
           "minute": 1260,
           "title": "NCM Sports Talk July 2026"
