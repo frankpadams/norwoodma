@@ -2619,8 +2619,8 @@ def news_item_blocked(item):
         host=host[4:]
     if host=='realtor.com' or host.endswith('.realtor.com'):
         return True
-    return bool(re.search(r'\s[-–—]\s*realtor\.com\s*
-
+    title=clean_text(item.get('title')).lower()
+    return title.endswith((' - realtor.com',' – realtor.com',' — realtor.com'))
 def meaningful_news_title(title):
     """Reject navigation/accessibility labels accidentally scraped as story headlines."""
     raw=clean_text(title)
