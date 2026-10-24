@@ -78,21 +78,35 @@ function newsQuality(x){
  return {ok:true};
 }
 
-async function weather(){
- const temp=$('#temp'), forecast=$('#forecast'); if(!temp&&!forecast)return;
+async function loadNorwoodForecast(){
+ const key='norwood-forecast-v1',now=Date.now();
+ const valid=n=>n&&Number.isFinite(n.temperature)&&['F','C'].includes(n.temperatureUnit)&&typeof n.shortForecast==='string'&&Date.parse(n.startTime)<=Date.now()&&Date.parse(n.endTime)>Date.now();
+ const json=async url=>{const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);try{const r=await fetch(url,{signal:controller.signal});if(!r.ok)throw Error('Forecast unavailable');return await r.json();}finally{clearTimeout(timer);}};
  try{
-  let p=await fetch('https://api.weather.gov/points/42.1945,-71.1995');
-  let pj=await p.json();
-  let f=await fetch(pj.properties.forecast);
-  let j=await f.json(),n=j.properties.periods[0];
-  if(temp){
-   const label=`${n.temperature}° · ${n.shortForecast}`;
-   temp.textContent=label;
-   temp.classList.toggle('weather-title-long',label.length>24);
-   temp.classList.toggle('weather-title-very-long',label.length>34);
-  }
-  if(forecast)forecast.textContent=`${n.name} · ${n.windSpeed}`;
- }catch(e){if(forecast)forecast.textContent='Live weather temporarily unavailable';}
+  const point=await json('https://api.weather.gov/points/42.1945,-71.1995');
+  const data=await json(point.properties.forecast),period=data.properties.periods[0];
+  if(!valid(period))throw Error('Invalid forecast');
+  const result={period,savedAt:Date.now(),updatedAt:data.properties.updated||data.properties.generatedAt||new Date().toISOString()};
+  try{localStorage.setItem(key,JSON.stringify(result));}catch(e){}
+  return {...result,cached:false};
+ }catch(e){
+  try{const result=JSON.parse(localStorage.getItem(key));if(result&&now-result.savedAt>=0&&now-result.savedAt<=3*60*60*1000&&valid(result.period))return {...result,cached:true};}catch(e){}
+  return null;
+ }
+}
+function norwoodForecastLabel(result){
+ if(!result)return 'View Norwood forecast ↗';
+ const n=result.period,label=n.temperature+'°'+n.temperatureUnit+' · '+n.shortForecast;
+ if(!result.cached)return label+(n.windSpeed?' · Wind '+n.windSpeed:'');
+ const updated=new Date(result.updatedAt);
+ const stamp=Number.isFinite(updated.getTime())?updated.toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}):'earlier';
+ return label+' · Cached forecast · Updated '+stamp;
+}
+async function weather(){
+ const temp=$('#temp'),forecast=$('#forecast');if(!temp&&!forecast)return;
+ const result=await loadNorwoodForecast(),label=norwoodForecastLabel(result);
+ if(temp){temp.textContent=result?'Forecast · '+label:'Weather';temp.classList.toggle('weather-title-long',label.length>24);temp.classList.toggle('weather-title-very-long',label.length>34);}
+ if(forecast)forecast.textContent=result?(temp?'View full forecast ↗':label):'View Norwood forecast ↗';
 } weather();
 
 function newsSourceKey(x){
@@ -635,12 +649,26 @@ const basemap=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/service
 let vehicleLayer=L.layerGroup().addTo(map),stopLayer=L.layerGroup().addTo(map),railStopLayer=L.layerGroup().addTo(map),shapeLayer=L.layerGroup().addTo(map),railShapeLayer=L.layerGroup().addTo(map);
 function vehicleIcon(kind,bearing){const emoji=kind==='bus'?'🚌':'🚆',bg=kind==='bus'?'#F2C100':'#785a91';return L.divIcon({className:'',html:`<div class="vehicle transit-vehicle" style="background:${bg};transform:rotate(${Number.isFinite(bearing)?bearing:0}deg)"><span style="display:block;transform:rotate(${Number.isFinite(bearing)?-bearing:0}deg)">${emoji}</span><i class="direction-arrow">▲</i></div>`,iconSize:[34,34],iconAnchor:[17,17]})}
 function decodePolyline(str){let index=0,lat=0,lng=0,coords=[];while(index<str.length){let b,shift=0,result=0;do{b=str.charCodeAt(index++)-63;result|=(b&0x1f)<<shift;shift+=5}while(b>=0x20);lat+=(result&1)?~(result>>1):(result>>1);shift=0;result=0;do{b=str.charCodeAt(index++)-63;result|=(b&0x1f)<<shift;shift+=5}while(b>=0x20);lng+=(result&1)?~(result>>1):(result>>1);coords.push([lat/1e5,lng/1e5])}return coords}
-const mbtaGet=u=>fetch(u).then(r=>{if(!r.ok)throw Error(r.status);return r.json()});function direction(route,v){const id=v.attributes.direction_id;return route?.attributes?.direction_destinations?.[id]||route?.attributes?.direction_names?.[id]||`Direction ${id}`}function busDir(v){return Number(v.attributes.direction_id)===0?'Inbound → Forest Hills':'Outbound → Walpole'}function railDir(v){const d=Number(v.attributes.direction_id);return d===1?'Inbound → Boston':'Outbound → Franklin/Foxboro'}function statusText(s){return String(s||'Live vehicle').toLowerCase().replaceAll('_',' ').replace(/^./,x=>x.toUpperCase())}function when(x){const d=x.attributes.departure_time||x.attributes.arrival_time;if(!d)return 'Time unavailable';const min=Math.round((new Date(d)-Date.now())/60000);const eta=new Date(Date.now()+Math.max(0,min)*60000).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});return min<=0?`Due · est. ${eta}`:min===1?`1 min · est. ${eta}`:`${min} min · est. ${eta}`}function nearestPassedStop(v,stops){if(!stops.length)return'';const lat=v.attributes.latitude,lon=v.attributes.longitude;let best=null,bd=1e9;for(const s of stops){const a=s.attributes;if(!a.latitude)continue;const d=(a.latitude-lat)**2+(a.longitude-lon)**2;if(d<bd){bd=d;best=s}}return best?.attributes?.name||''}function stationTimes(pred){const groups={inbound:[],outbound:[]};pred.forEach(z=>(Number(z.attributes.direction_id)===1?groups.inbound:groups.outbound).push(when(z)));return `<div class="dir"><span>Inbound</span><span>${groups.inbound.slice(0,2).map(esc).join(' · ')||'No prediction'}</span></div><div class="dir"><span>Outbound</span><span>${groups.outbound.slice(0,2).map(esc).join(' · ')||'No prediction'}</span></div>`}
+const mbtaGet=u=>fetch(u).then(r=>{if(!r.ok)throw Error(r.status);return r.json()});function direction(route,v){const id=v.attributes.direction_id;return route?.attributes?.direction_destinations?.[id]||route?.attributes?.direction_names?.[id]||`Direction ${id}`}function busDir(v){return Number(v.attributes.direction_id)===0?'Inbound → Forest Hills':'Outbound → Walpole'}function railDir(v){const d=Number(v.attributes.direction_id);return d===1?'Inbound → Boston':'Outbound → Franklin/Foxboro'}function statusText(s){return String(s||'Live vehicle').toLowerCase().replaceAll('_',' ').replace(/^./,x=>x.toUpperCase())}function when(x){
+ const value=x.attributes?.departure_time||x.attributes?.arrival_time;
+ const dt=new Date(value||''), now=new Date(), diff=dt-now;
+ if(!Number.isFinite(diff)||diff < -60000)return 'No current prediction';
+ const min=Math.round(diff/60000);
+ const eta=dt.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});
+ if(diff>120*60000){
+  const day=d=>d.toLocaleDateString('en-CA',{timeZone:'America/New_York'});
+  const tomorrow=new Date(now);tomorrow.setDate(tomorrow.getDate()+1);
+  const prefix=day(dt)===day(now)?'':day(dt)===day(tomorrow)?'Tomorrow at ':dt.toLocaleDateString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric'})+' at ';
+  return 'Est. '+prefix+eta;
+ }
+ return min<=0?'Due · est. '+eta:min+' min · est. '+eta;
+}
+function nearestPassedStop(v,stops){if(!stops.length)return'';const lat=v.attributes.latitude,lon=v.attributes.longitude;let best=null,bd=1e9;for(const s of stops){const a=s.attributes;if(!a.latitude)continue;const d=(a.latitude-lat)**2+(a.longitude-lon)**2;if(d<bd){bd=d;best=s}}return best?.attributes?.name||''}function stationTimes(pred){const groups={inbound:[],outbound:[]};pred.forEach(z=>(Number(z.attributes.direction_id)===1?groups.inbound:groups.outbound).push(when(z)));return `<div class="dir"><span>Inbound</span><span>${groups.inbound.slice(0,2).map(esc).join(' · ')||'No prediction'}</span></div><div class="dir"><span>Outbound</span><span>${groups.outbound.slice(0,2).map(esc).join(' · ')||'No prediction'}</span></div>`}
 async function mbta(){try{const [br,tr,bv,tv,bs,rs,bh,rh]=await Promise.all([mbtaGet('https://api-v3.mbta.com/routes/34E'),mbtaGet('https://api-v3.mbta.com/routes/CR-Franklin'),mbtaGet('https://api-v3.mbta.com/vehicles?filter[route]=34E'),mbtaGet('https://api-v3.mbta.com/vehicles?filter[route]=CR-Franklin'),mbtaGet('https://api-v3.mbta.com/stops?filter[route]=34E'),mbtaGet('https://api-v3.mbta.com/stops?filter[route]=CR-Franklin'),mbtaGet('https://api-v3.mbta.com/shapes?filter[route]=34E'),mbtaGet('https://api-v3.mbta.com/shapes?filter[route]=CR-Franklin')]);vehicleLayer.clearLayers();stopLayer.clearLayers();railStopLayer.clearLayers();shapeLayer.clearLayers();railShapeLayer.clearLayers();
 const localBusStops=(bs.data||[]).filter(x=>x.attributes.latitude>42.15&&x.attributes.latitude<42.23&&x.attributes.longitude>-71.24&&x.attributes.longitude<-71.15);(bv.data||[]).filter(v=>v.attributes.latitude).forEach(v=>{const loc=nearestPassedStop(v,localBusStops);L.marker([v.attributes.latitude,v.attributes.longitude],{icon:vehicleIcon('bus',v.attributes.bearing)}).bindPopup(`<b>34E · ${esc(busDir(v))}</b><br>${loc?`Last reported near <span class="bus-location">${esc(loc)}</span><br>`:''}${esc(statusText(v.attributes.current_status))}<br>Updated: ${new Date(v.attributes.updated_at).toLocaleTimeString()}`).addTo(vehicleLayer)});
 (tv.data||[]).filter(v=>v.attributes.latitude).forEach(v=>{const toward=direction(tr.data,v);L.marker([v.attributes.latitude,v.attributes.longitude],{icon:vehicleIcon('train',v.attributes.bearing)}).bindPopup(`<b>Franklin/Foxboro · Toward ${esc(toward)}</b><br>${esc(statusText(v.attributes.current_status))}`).addTo(vehicleLayer)});
 localBusStops.forEach(x=>L.circleMarker([x.attributes.latitude,x.attributes.longitude],{radius:5,color:'#003B71',weight:2,fillColor:'#fff',fillOpacity:1}).bindPopup(`<b>${esc(x.attributes.name)}</b><br>34E stop`).addTo(stopLayer));
-const localRail=(rs.data||[]).filter(x=>/Norwood Central|Norwood Depot|Windsor Gardens/i.test(x.attributes.name));let stationCards=[];for(const x of localRail){let pred=[];try{pred=(await mbtaGet(`https://api-v3.mbta.com/predictions?filter[route]=CR-Franklin&filter[stop]=${encodeURIComponent(x.id)}`)).data||[]}catch(e){};pred=pred.filter(z=>z.attributes.departure_time||z.attributes.arrival_time).sort((a,b)=>new Date(a.attributes.departure_time||a.attributes.arrival_time)-new Date(b.attributes.departure_time||b.attributes.arrival_time));const times=stationTimes(pred);stationCards.push(`<div class="station-arrivals"><b>${esc(x.attributes.name)}</b>${times}</div>`);L.circleMarker([x.attributes.latitude,x.attributes.longitude],{radius:8,color:'#785a91',weight:3,fillColor:'#fff',fillOpacity:1}).bindTooltip(esc(x.attributes.name),{permanent:true,direction:'top',className:'station-label',offset:[0,-8]}).bindPopup(`<b>🚆 ${esc(x.attributes.name)}</b><br>Franklin/Foxboro Line${times}`).addTo(railStopLayer)}document.querySelector('#selectedInfo').innerHTML=stationCards.join('');if(localRail.length>=3&&!map._norwoodInitialStationsFit){const bounds=L.latLngBounds(localRail.map(x=>[x.attributes.latitude,x.attributes.longitude]));map.invalidateSize();map.fitBounds(bounds,{padding:[32,38],maxZoom:14,animate:false});map._norwoodInitialStationsFit=true;}
+const localRail=(rs.data||[]).filter(x=>/Norwood Central|Norwood Depot|Windsor Gardens/i.test(x.attributes.name));let stationCards=[];for(const x of localRail){let pred=[];try{pred=(await mbtaGet(`https://api-v3.mbta.com/predictions?filter[route]=CR-Franklin&filter[stop]=${encodeURIComponent(x.id)}`)).data||[]}catch(e){};pred=pred.filter(z=>{const t=Date.parse(z.attributes.departure_time||z.attributes.arrival_time);return Number.isFinite(t)&&t>=Date.now()-60000;}).sort((a,b)=>new Date(a.attributes.departure_time||a.attributes.arrival_time)-new Date(b.attributes.departure_time||b.attributes.arrival_time));const times=stationTimes(pred);stationCards.push(`<div class="station-arrivals"><b>${esc(x.attributes.name)}</b>${times}</div>`);L.circleMarker([x.attributes.latitude,x.attributes.longitude],{radius:8,color:'#785a91',weight:3,fillColor:'#fff',fillOpacity:1}).bindTooltip(esc(x.attributes.name),{permanent:true,direction:'top',className:'station-label',offset:[0,-8]}).bindPopup(`<b>🚆 ${esc(x.attributes.name)}</b><br>Franklin/Foxboro Line${times}`).addTo(railStopLayer)}document.querySelector('#selectedInfo').innerHTML=stationCards.join('');if(localRail.length>=3&&!map._norwoodInitialStationsFit){const bounds=L.latLngBounds(localRail.map(x=>[x.attributes.latitude,x.attributes.longitude]));map.invalidateSize();map.fitBounds(bounds,{padding:[32,38],maxZoom:14,animate:false});map._norwoodInitialStationsFit=true;}
 (bh.data||[]).forEach(x=>x.attributes.polyline&&L.polyline(decodePolyline(x.attributes.polyline),{color:'#003B71',weight:5,opacity:.72}).addTo(shapeLayer));(rh.data||[]).forEach(x=>x.attributes.polyline&&L.polyline(decodePolyline(x.attributes.polyline),{color:'#785a91',weight:4,opacity:.7,dashArray:'8 6'}).addTo(railShapeLayer));$('#busStatus').textContent=`34E: ${bv.data?.length||0} live bus${bv.data?.length===1?'':'es'} · tap a bus for direction`;$('#railStatus').textContent=`Franklin/Foxboro: Norwood Central + Depot + Windsor Gardens · ${tv.data?.length||0} live train${tv.data?.length===1?'':'s'}`;$('#mapUpdated').textContent='LIVE · '+new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});}catch(e){$('#busStatus').textContent='Live MBTA data unavailable';$('#railStatus').textContent='Live MBTA data unavailable';$('#mapUpdated').textContent='MBTA CONNECTION ISSUE'}}mbta();setInterval(mbta,20000);
 }
 

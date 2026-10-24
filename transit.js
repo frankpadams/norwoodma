@@ -11,7 +11,20 @@ function busDir(v){return Number(v.attributes.direction_id)===0?'Inbound → For
 function stationTimes(pred){const g={i:[],o:[]};pred.forEach(z=>(Number(z.attributes.direction_id)===1?g.i:g.o).push(when(z)));return `<div class=\"dir\"><span>Inbound</span><span>${g.i.slice(0,2).map(esc).join(' · ')||'No prediction'}</span></div><div class=\"dir\"><span>Outbound</span><span>${g.o.slice(0,2).map(esc).join(' · ')||'No prediction'}</span></div>`}
 function nearestStop(v,stops){let best=null,bd=1e9;for(const s of stops){const a=s.attributes;if(!a.latitude)continue;const d=(a.latitude-v.attributes.latitude)**2+(a.longitude-v.attributes.longitude)**2;if(d<bd){bd=d;best=s}}return best?.attributes?.name||''}
 function statusText(s){return String(s||'Live vehicle').toLowerCase().replaceAll('_',' ').replace(/^./,x=>x.toUpperCase())}
-function when(x){const d=x.attributes.departure_time||x.attributes.arrival_time;if(!d)return 'Scheduled time unavailable';const dt=new Date(d),min=Math.round((dt-Date.now())/60000),eta=new Date(Date.now()+Math.max(0,min)*60000).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});return min<=0?`Due · est. ${eta}`:min===1?`1 min · est. ${eta}`:`${min} min · est. ${eta}`}
+function when(x){
+ const value=x.attributes?.departure_time||x.attributes?.arrival_time;
+ const dt=new Date(value||''), now=new Date(), diff=dt-now;
+ if(!Number.isFinite(diff)||diff < -60000)return 'No current prediction';
+ const min=Math.round(diff/60000);
+ const eta=dt.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});
+ if(diff>120*60000){
+  const day=d=>d.toLocaleDateString('en-CA',{timeZone:'America/New_York'});
+  const tomorrow=new Date(now);tomorrow.setDate(tomorrow.getDate()+1);
+  const prefix=day(dt)===day(now)?'':day(dt)===day(tomorrow)?'Tomorrow at ':dt.toLocaleDateString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric'})+' at ';
+  return 'Est. '+prefix+eta;
+ }
+ return min<=0?'Due · est. '+eta:min+' min · est. '+eta;
+}
 async function update(){try{const [br,tr,bv,tv,bs,rs,bh,rh]=await Promise.all([
  get('https://api-v3.mbta.com/routes/34E'),get('https://api-v3.mbta.com/routes/CR-Franklin'),get('https://api-v3.mbta.com/vehicles?filter[route]=34E'),get('https://api-v3.mbta.com/vehicles?filter[route]=CR-Franklin'),get('https://api-v3.mbta.com/stops?filter[route]=34E'),get('https://api-v3.mbta.com/stops?filter[route]=CR-Franklin'),get('https://api-v3.mbta.com/shapes?filter[route]=34E'),get('https://api-v3.mbta.com/shapes?filter[route]=CR-Franklin')]);
  live.clearLayers();busStops.clearLayers();railStops.clearLayers();busShapes.clearLayers();railShapes.clearLayers();
@@ -19,7 +32,7 @@ async function update(){try{const [br,tr,bv,tv,bs,rs,bh,rh]=await Promise.all([
  (tv.data||[]).filter(v=>v.attributes.latitude).forEach(v=>{const toward=direction(tr.data,v);L.marker([v.attributes.latitude,v.attributes.longitude],{icon:vehicleIcon('train',v.attributes.bearing)}).bindPopup(`<b>Franklin/Foxboro Line · Toward ${esc(toward)}</b><br>${esc(statusText(v.attributes.current_status))}<br>Last report: ${new Date(v.attributes.updated_at).toLocaleTimeString()}`).addTo(live)});
  localBusStops.forEach(x=>L.circleMarker([x.attributes.latitude,x.attributes.longitude],{radius:5,color:'#003B71',weight:2,fillColor:'#fff',fillOpacity:1}).bindPopup(`<b>${esc(x.attributes.name)}</b><br>34E stop`).addTo(busStops));
  const localRail=(rs.data||[]).filter(x=>/Norwood Central|Norwood Depot|Windsor Gardens/i.test(x.attributes.name));
- let stationCards=[];for(const x of localRail){let pred=[];try{pred=(await get(`https://api-v3.mbta.com/predictions?filter[route]=CR-Franklin&filter[stop]=${encodeURIComponent(x.id)}`)).data||[]}catch(e){};pred=pred.filter(z=>(z.attributes.departure_time||z.attributes.arrival_time)).sort((a,b)=>new Date(a.attributes.departure_time||a.attributes.arrival_time)-new Date(b.attributes.departure_time||b.attributes.arrival_time));const times=stationTimes(pred);stationCards.push(`<div class=\"station-arrivals\"><b>${esc(x.attributes.name)}</b>${times}</div>`);L.circleMarker([x.attributes.latitude,x.attributes.longitude],{radius:8,color:'#785a91',weight:3,fillColor:'#fff',fillOpacity:1}).bindTooltip(esc(x.attributes.name),{permanent:true,direction:'top',className:'station-label',offset:[0,-8]}).bindPopup(`<b>🚆 ${esc(x.attributes.name)}</b><br>Franklin/Foxboro Line${times}`).addTo(railStops)}document.querySelector('#stationArrivals').innerHTML=stationCards.join('');
+ let stationCards=[];for(const x of localRail){let pred=[];try{pred=(await get(`https://api-v3.mbta.com/predictions?filter[route]=CR-Franklin&filter[stop]=${encodeURIComponent(x.id)}`)).data||[]}catch(e){};pred=pred.filter(z=>{const t=Date.parse(z.attributes.departure_time||z.attributes.arrival_time);return Number.isFinite(t)&&t>=Date.now()-60000;}).sort((a,b)=>new Date(a.attributes.departure_time||a.attributes.arrival_time)-new Date(b.attributes.departure_time||b.attributes.arrival_time));const times=stationTimes(pred);stationCards.push(`<div class=\"station-arrivals\"><b>${esc(x.attributes.name)}</b>${times}</div>`);L.circleMarker([x.attributes.latitude,x.attributes.longitude],{radius:8,color:'#785a91',weight:3,fillColor:'#fff',fillOpacity:1}).bindTooltip(esc(x.attributes.name),{permanent:true,direction:'top',className:'station-label',offset:[0,-8]}).bindPopup(`<b>🚆 ${esc(x.attributes.name)}</b><br>Franklin/Foxboro Line${times}`).addTo(railStops)}document.querySelector('#stationArrivals').innerHTML=stationCards.join('');
  (bh.data||[]).forEach(x=>x.attributes.polyline&&L.polyline(dec(x.attributes.polyline),{color:'#003B71',weight:5,opacity:.72}).addTo(busShapes));
  (rh.data||[]).forEach(x=>x.attributes.polyline&&L.polyline(dec(x.attributes.polyline),{color:'#785a91',weight:4,opacity:.7,dashArray:'8 6'}).addTo(railShapes));
  document.querySelector('#detailUpdated').textContent=`Live MBTA · ${bv.data?.length||0} bus(es) · ${tv.data?.length||0} train(s) · updated ${new Date().toLocaleTimeString()}`;

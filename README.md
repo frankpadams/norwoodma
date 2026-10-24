@@ -54,7 +54,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 
 ### Transit, weather, and local tools
 - Transit includes MBTA commuter rail and Route 34E context, with live information where available.
-- Weather uses National Weather Service forecast data plus local radar and the Norwood Airport webcam.
+- Weather uses National Weather Service forecast data plus local radar and the Norwood Airport webcam. On forecast failures, widgets show a labeled cached forecast only while its period is current and the cache is under three hours old; otherwise they offer the forecast link. Network requests time out after eight seconds.\n- Transit predictions beyond two hours use estimated clock times with Tomorrow/date labels in Norwood local time. Invalid or expired predictions are excluded.
 - Interactive tools include Norwood Trivia, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
 
 ### PWA, navigation, and presentation
