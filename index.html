@@ -626,7 +626,8 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
   const prices=recent.map(p=>p.regular).sort((a,b)=>a-b);
   const middle=Math.floor(prices.length/2);
   const median=prices.length%2?prices[middle]:(prices[middle-1]+prices[middle])/2;
-  avg.textContent='(p=>Date.parse(p.updated||p.reported_at||p.price_updated_at||p.checked)));
+  avg.textContent=String.fromCharCode(36)+median.toFixed(2)+' / gal';
+  const newest=Math.max(...recent.map(p=>Date.parse(p.updated||p.reported_at||p.price_updated_at||p.checked)));
   const date=new Date(newest);
   if(count)count.textContent=recent.length+' stations';
   if(dateLabel)dateLabel.textContent=(date.getMonth()+1)+'/'+date.getDate()+'/'+String(date.getFullYear()).slice(-2);
