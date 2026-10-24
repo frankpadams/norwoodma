@@ -2,6 +2,7 @@
 'use strict';
 const NORWOOD_BOUNDS=L.latLngBounds([[42.1515,-71.2355],[42.2265,-71.1505]]);
 const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});
+window.norwoodTrailReviewMap=map;
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 /* Aerial imagery is useful for aligning fixed landmarks independently of street-map cartography. */
 const aerial=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Imagery © Esri and providers'});

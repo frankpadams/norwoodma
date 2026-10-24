@@ -1,5 +1,5 @@
 # Norwood trail mapping — durable handoff and working notes
-Updated 2026-10-11. This file is a project handoff for subsequent ChatGPT sessions. READ THIS BEFORE EDITING TRAILS.
+Updated 2026-10-23. This file is a project handoff for subsequent ChatGPT sessions. READ THIS BEFORE EDITING TRAILS.
 
 ## User objective and constraints
 - Show real trail path lines overlaid on an interactive OpenStreetMap/satellite basemap, on a **private review/test page**.
@@ -92,3 +92,10 @@ Never say that a brochure is aligned just because a marker was geocoded or arbit
 - Use a **third independently identified landmark** as a check. If the third point deviates significantly, the brochure may be distorted, not to scale, or the matching point may be wrong. Investigate before accepting.
 - Three non-collinear landmarks can also fit an affine transform (including shear/nonuniform scale), but an independent fourth landmark is then needed to test it. Do not confuse fitting controls with independent validation.
 - For locally distorted schematic maps, use additional local controls and segment-specific tracing against satellite imagery or verified mapped footpaths. Do not require dozens of landmarks when two or three suffice for a useful first approximation.
+
+
+## Trail editor prototype — 2026-10-23
+- Added a test-page draft editor: choose a visible candidate line, create a separate draft copy, click the draft line to insert an anchor, and drag anchors (including endpoints) to reshape it.
+- Undo/redo, delete draft, local browser autosave, and GeoJSON download are included. The visible source candidate remains unchanged; none of these edits publish.
+- The review page remains `noindex`, but is not access-controlled; anyone with its URL can view it.
+- Validate browser interactions and mobile behavior on the review page before using the prototype for trail data. All geometry remains provisional and unverified.
