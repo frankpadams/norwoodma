@@ -23,5 +23,15 @@ class NewsPublicationDatesTest(unittest.TestCase):
             with self.subTest(parser=parser.__name__):
                 self.assertEqual(parser(html, 'Record', 'https://www.norwoodrecord.com/news'), [])
 
+    def test_realtor_com_content_is_blocked(self):
+        items = [
+            {'source': 'Realtor.com', 'title': 'Local listing', 'url': 'https://news.google.com/rss/item'},
+            {'source': 'Google News discovery', 'title': '37 Wheelock Ave - Realtor.com', 'url': 'https://news.google.com/rss/item'},
+            {'source': 'Unknown', 'title': 'Local listing', 'url': 'https://www.realtor.com/realestateandhomes-detail/example'},
+        ]
+        for item in items:
+            with self.subTest(item=item):
+                self.assertTrue(refresh.news_item_blocked(item))
+
 if __name__ == '__main__':
     unittest.main()
