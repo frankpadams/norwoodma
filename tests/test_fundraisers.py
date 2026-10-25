@@ -12,6 +12,15 @@ class FundraisersTest(unittest.TestCase):
         e.update(updates)
         return e
 
+    def test_empty_events_file_is_a_valid_empty_calendar(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temp:
+            path = Path(temp) / 'events.json'
+            path.write_text('  \\n')
+            self.assertEqual(m.load_events(path), [])
+            path.write_text('[]')
+            self.assertEqual(m.load_events(path), [])
+
     def test_expiration_and_local_scope(self):
         events = [self.event(), self.event(id='old', end={'date':'2026-10-22'}), self.event(id='away', organizer='Other Town PTO')]
         self.assertEqual([r['id'] for r in m.collect([], events, date(2026,10,23))], ['test'])
