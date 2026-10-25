@@ -1,67 +1,119 @@
 {
-  "updated_at": "2026-10-24T20:28:09.349346-04:00",
-  "date": "2026-10-24",
+  "updated_at": "2026-10-25T01:11:02.630128-04:00",
+  "date": "2026-10-25",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Tales From Tiot! Norwood's Immigrants",
+      "title": "Norwood News 10.23.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 120,
+          "title": "South Norwood News with Olga Abdallah"
+        },
+        {
+          "minute": 180,
+          "title": "Norwood News 10.16.26"
+        },
+        {
+          "minute": 240,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 300,
+          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
+        },
+        {
+          "minute": 360,
           "title": "McDonough Housing Dedication"
         },
         {
-          "minute": 1320,
-          "title": "Norwood News 10.23.26"
+          "minute": 420,
+          "title": "Tales From Tiot! Norwood's Immigrants"
         },
         {
-          "minute": 1380,
-          "title": "Tales From Tiot! Norwood's Immigrants"
+          "minute": 480,
+          "title": "Norwood News 10.23.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-24"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-25"
     },
     "government": {
       "status": "scheduled",
-      "title": "Capital Outlay Committee 10.21.26",
+      "title": "Airport Commission 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1230,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 1290,
-          "title": "Airport Commission 10.21.26"
-        },
-        {
-          "minute": 1320,
+          "minute": 90,
           "title": "Conservation Commission 10.21.26"
         },
         {
-          "minute": 1410,
+          "minute": 180,
           "title": "Capital Outlay Committee 10.21.26"
+        },
+        {
+          "minute": 210,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 270,
+          "title": "Airport Commission 10.21.26"
+        },
+        {
+          "minute": 300,
+          "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 390,
+          "title": "Capital Outlay Committee 10.21.26"
+        },
+        {
+          "minute": 420,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 480,
+          "title": "Airport Commission 10.21.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-24"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-25"
     },
     "schools": {
       "status": "scheduled",
-      "title": "1964 Oldham School Dedication",
+      "title": "1996 NHS Senior Video & Prom",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 120,
+          "title": "2019 NHS Fall Rally"
+        },
+        {
+          "minute": 180,
+          "title": "Vintage: 1960 NHS Music Program"
+        },
+        {
+          "minute": 240,
+          "title": "Kidz w/ Kameras: Middle School Video Workshop"
+        },
+        {
+          "minute": 300,
+          "title": "Norwood News 10.16.26"
+        },
+        {
+          "minute": 360,
           "title": "2011 Prescott School Instrumental Concert"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "1964 Oldham School Dedication"
+        },
+        {
+          "minute": 480,
+          "title": "1996 NHS Senior Video & Prom"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-24"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-25"
     }
   }
 }
