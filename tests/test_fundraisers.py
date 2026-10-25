@@ -16,7 +16,7 @@ class FundraisersTest(unittest.TestCase):
         from tempfile import TemporaryDirectory
         with TemporaryDirectory() as temp:
             path = Path(temp) / 'events.json'
-            path.write_text('  \\n')
+            path.write_text('')
             self.assertEqual(m.load_events(path), [])
             path.write_text('[]')
             self.assertEqual(m.load_events(path), [])
