@@ -91,13 +91,25 @@ def render(rows, today):
     return START + '\n' + ''.join(parts) + '\n' + END
 
 
+def load_events(path=None):
+    """Load calendar events, treating a blank seed file as an empty calendar."""
+    path = Path(path) if path is not None else ROOT / 'data/events.json'
+    raw = path.read_text(encoding='utf-8').strip()
+    if not raw:
+        return []
+    data = json.loads(raw)
+    if not isinstance(data, list):
+        raise ValueError(f'{path} must contain a JSON array')
+    return data
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--today', type=date.fromisoformat)
     args = parser.parse_args()
     today = args.today or datetime.now(ZoneInfo('America/New_York')).date()
     curated = json.loads((ROOT / 'data/fundraisers-curated.json').read_text())
-    events = json.loads((ROOT / 'data/events.json').read_text())
+    events = load_events()
     rows = collect(curated, events, today)
     page = ROOT / 'fundraising.html'
     content = page.read_text()
