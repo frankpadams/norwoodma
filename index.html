@@ -494,7 +494,8 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
  const sourceKey=n=>String(n.source||'').trim().toLowerCase().replace(/^the\\s+/,'')||'unknown';
  const selected=candidates.slice(0,24);
  newsEl.innerHTML=selected.map(n=>'<div class="today-story"><span class="today-story-photo" '+(n.image?'style="background-image:url(&quot;'+esc(n.image)+'&quot;)"':'')+'>'+(n.image?'':'📰')+'</span><span class="today-story-body"><small>'+esc(n.source||'Local news')+' · '+esc(date(n.date))+'</small><strong><a href="'+esc(n.url)+'" target="_blank" rel="noopener">'+esc(n.title)+'</a></strong><span><a href="'+esc(n.url)+'" target="_blank" rel="noopener">Read story ↗</a></span></span></div>').join('')||'<p class="today-loading">See the latest reporting in the news directory.</p>';
- const town=recent.filter(n=>/town of norwood|norwood town government|norwood (police|fire|dpw|public works|light)/i.test(n.source||''));
+ const recyclingNotice={source:'Norwood DPW',title:'DPW corrects the November–December recycling pickup schedule',date:'2026-10-25T12:00:00-04:00',url:'trash-recycling.html#recycling-calendar'};
+ const town=[recyclingNotice,...recent.filter(n=>/town of norwood|norwood town government|norwood (police|fire|dpw|public works|light)/i.test(n.source||'')).filter(n=>!/(november.{0,20}december|december.{0,20}november).{0,60}recycl/i.test(n.title||''))];
  $('todayTownAnnouncements').innerHTML=town.slice(0,6).map(n=>'<a href="'+esc(n.url)+'" target="_blank" rel="noopener"><strong>'+esc(n.title)+'</strong><small>'+esc(date(n.date))+'</small></a>').join('')||'<a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Browse current announcements from the Town of Norwood ↗</a>';
  const ev=$('todayEventScroll');
  const renderEvents=arr=>{
