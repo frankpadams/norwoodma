@@ -95,7 +95,7 @@ def load_events(path=None):
     """Load calendar events, treating a blank seed file as an empty calendar."""
     path = Path(path) if path is not None else ROOT / 'data/events.json'
     raw = path.read_text(encoding='utf-8').strip()
-    if not raw:
+    if not raw:  # Some workflows intentionally provide a blank calendar seed.
         return []
     data = json.loads(raw)
     if not isinstance(data, list):
