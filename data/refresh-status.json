@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-25T12:39:20.084248-04:00",
+  "generated_at": "2026-10-25T17:05:16.026543-04:00",
   "offline": false,
-  "events_published": 2343,
+  "events_published": 2313,
   "news_published": 120,
   "civic_notices": 51,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2343,
-      "generated_at": "2026-10-25T12:39:19.657390-04:00"
+      "events": 2313,
+      "generated_at": "2026-10-25T17:05:15.577347-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 110,
-      "generated_at": "2026-10-25T12:39:19.663940-04:00"
+      "events": 87,
+      "generated_at": "2026-10-25T17:05:15.589228-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 858,
-      "generated_at": "2026-10-25T12:39:19.678070-04:00"
+      "events": 859,
+      "generated_at": "2026-10-25T17:05:15.612956-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 781,
-      "generated_at": "2026-10-25T12:39:19.689690-04:00"
+      "events": 778,
+      "generated_at": "2026-10-25T17:05:15.634166-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
-      "events": 4,
-      "generated_at": "2026-10-25T12:39:19.695735-04:00"
+      "events": 3,
+      "generated_at": "2026-10-25T17:05:15.644914-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 66,
-      "generated_at": "2026-10-25T12:39:19.703006-04:00"
+      "events": 63,
+      "generated_at": "2026-10-25T17:05:15.657153-04:00"
     }
   ],
   "recreation_programs": 123,
@@ -332,7 +332,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 32,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1601,7 +1601,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 73,
+      "found": 72,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1609,7 +1609,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 73,
+      "found": 74,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1617,7 +1617,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 37,
+      "found": 31,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1625,7 +1625,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 18,
+      "found": 19,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1689,10 +1689,11 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 22,
+      "found": 23,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "NBC Boston": 1,
         "Newport Dispatch": 1,
         "Norwood Public Schools": 6,
         "The Norwood Record": 49,
@@ -1701,7 +1702,7 @@
         "Hoodline": 2,
         "Colliers": 1,
         "Inside Norwood": 3,
-        "Patch": 4,
+        "Patch": 3,
         "Norwood Town News": 9,
         "newportdispatch.com": 1,
         "WCVB": 1,
