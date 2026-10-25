@@ -3422,7 +3422,6 @@ def main():
     write_json('refresh-status.json',report)
     print(json.dumps({'events':len(events),'news':len(news),'civic_notices':len(civic_notices),'recreation_programs':len(rec_programs),'coverage':cov},indent=2))
 if __name__=='__main__': main()
-,clean_text(item.get('title')),re.I))
 
 def meaningful_news_title(title):
     """Reject navigation/accessibility labels accidentally scraped as story headlines."""
