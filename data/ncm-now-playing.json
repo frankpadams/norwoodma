@@ -1,29 +1,13 @@
 {
-  "updated_at": "2026-10-25T06:03:27.297930-04:00",
+  "updated_at": "2026-10-25T10:31:23.368837-04:00",
   "date": "2026-10-25",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Comcast Cyber Security Presentation 10.19.26",
+      "title": "Tales From Tiot! Norwood's Immigrants",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 420,
-          "title": "Tales From Tiot! Norwood's Immigrants"
-        },
-        {
-          "minute": 480,
-          "title": "Norwood News 10.23.26"
-        },
-        {
-          "minute": 540,
-          "title": "Norwood News 10.16.26"
-        },
-        {
-          "minute": 600,
-          "title": "Images of Norwood"
-        },
         {
           "minute": 660,
           "title": "South Norwood News with Olga Abdallah"
@@ -35,39 +19,31 @@
         {
           "minute": 780,
           "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 840,
+          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
+        },
+        {
+          "minute": 900,
+          "title": "Norwood News 10.23.26"
+        },
+        {
+          "minute": 960,
+          "title": "McDonough Housing Dedication"
+        },
+        {
+          "minute": 1020,
+          "title": "Tales From Tiot! Norwood's Immigrants"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-25"
     },
     "government": {
       "status": "scheduled",
-      "title": "Conservation Commission 10.21.26",
+      "title": "Capital Outlay Committee 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 390,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 420,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 480,
-          "title": "Airport Commission 10.21.26"
-        },
-        {
-          "minute": 510,
-          "title": "Conservation Commission 10.21.26"
-        },
-        {
-          "minute": 600,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 630,
-          "title": "Board of Health 10.19.26"
-        },
         {
           "minute": 690,
           "title": "Airport Commission 10.21.26"
@@ -75,27 +51,35 @@
         {
           "minute": 720,
           "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 810,
+          "title": "Capital Outlay Committee 10.21.26"
+        },
+        {
+          "minute": 840,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 900,
+          "title": "Airport Commission 10.21.26"
+        },
+        {
+          "minute": 930,
+          "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 1020,
+          "title": "Capital Outlay Committee 10.21.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-25"
     },
     "schools": {
       "status": "scheduled",
-      "title": "1964 Oldham School Dedication",
+      "title": "2026 NHS Volleyball vs Dedham 9.28.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 420,
-          "title": "1964 Oldham School Dedication"
-        },
-        {
-          "minute": 480,
-          "title": "1996 NHS Senior Video & Prom"
-        },
-        {
-          "minute": 600,
-          "title": "2019 NHS Fall Rally"
-        },
         {
           "minute": 660,
           "title": "Vintage: 1960 NHS Music Program"
@@ -111,6 +95,18 @@
         {
           "minute": 840,
           "title": "1964 Oldham School Dedication"
+        },
+        {
+          "minute": 900,
+          "title": "2026 NHS Unified Basketball vs Dedham 9.25.26"
+        },
+        {
+          "minute": 960,
+          "title": "2024 NHS Unified Basketball NFD vs. NPD 10.30.24"
+        },
+        {
+          "minute": 1020,
+          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-25"
