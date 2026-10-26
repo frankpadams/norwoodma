@@ -1,10 +1,10 @@
-# Norwood.ma v1.1.1
+# Norwood.ma v1.1.2
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.1.1 — adds a Fourthwall product gallery to the Norwood Trading & Supply page.
+**Current release:** v1.1.2 — adds in-person availability information for selected Norwood Trading & Supply items at Town Common Books.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
