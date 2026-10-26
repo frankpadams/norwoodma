@@ -12,7 +12,7 @@ layer.addLayer(routeLayer);layer.addLayer(stopLayer);layer.addLayer(vehicleLayer
 const localBounds={minLat:42.15,maxLat:42.23,minLng:-71.24,maxLng:-71.15};
 const railNames=/Norwood Central|Norwood Depot|Windsor Gardens/i;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const request=url=>fetch(API+url).then(r=>{if(!r.ok)throw Error(r.status);return r.json()});
+const request=(url,options)=>fetch(API+url,options||{}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()});
 function decodePolyline(str){
  let i=0,lat=0,lng=0,coords=[];
  while(i<str.length){
@@ -96,8 +96,8 @@ async function refreshVehicles(token){
  refreshing=true;
  try{
   const [busResult,railResult,info]=await Promise.all([
-   request('vehicles?filter[route]=34E&_='+Date.now()),
-   request('vehicles?filter[route]=CR-Franklin&_='+Date.now()),
+   request('vehicles?filter[route]=34E',{cache:'no-store'}),
+   request('vehicles?filter[route]=CR-Franklin',{cache:'no-store'}),
    loadStatic()
   ]);
   if(!toggle.checked||token!==generation)return;

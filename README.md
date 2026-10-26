@@ -1,10 +1,10 @@
-# Norwood.ma v1.3.0
+# Norwood.ma v1.3.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.3.0 — adds an optional live MBTA overlay for 34E buses and Franklin/Foxboro Line trains, with Norwood stops and route paths; groups map boundaries, district references, ALPR, and transit under one “More map layers & options” menu.
+**Current release:** v1.3.1 — fixes the live MBTA vehicle request so 34E buses and Franklin/Foxboro Line trains can appear in the map overlay.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
