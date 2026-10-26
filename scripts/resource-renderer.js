@@ -268,8 +268,10 @@ function topicFilterKind(topicId,r){
  if(topicId==='community'){
    if(/church|parish|temple|synagogue|mosque|mandir|congregation|worship|faith/.test(h))return'faith';
    if(/pta|pto|scout|youth|school|student|parent teacher/.test(h))return'youth';
+   // Prefer the specific environment filter when a resource also mentions a library,
+   // such as the Seed Library, instead of placing it under general arts and culture.
+   if(/animal|humane|watershed|environment|conservation|garden|seed library/.test(h))return'environment';
    if(/news|media|historical|arts|culture|theatre|theater|library|museum|music|visual arts/.test(h))return'culture';
-   if(/animal|humane|watershed|environment|conservation|garden/.test(h))return'environment';
    if(/volunteer|rotary|lions|elks|women.?s club|junior woman|knights of columbus|community organization|community-groups/.test(h))return'clubs';
    if(/lgbtq|immigrant|refugee|disability|deaf|recovery|support group|mental health|caregiver/.test(h))return'support';
    if(isLocalResource(r))return'local';
