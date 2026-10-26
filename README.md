@@ -1,10 +1,10 @@
-# Norwood.ma v1.2.0
+# Norwood.ma v1.2.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.2.0 — adds an optional, off-by-default community-mapped ALPR camera layer to Explore Norwood by Map.
+**Current release:** v1.2.1 — combines boundary and additional overlays in one expandable Map layers menu; preserves the existing boundary behavior and optional ALPR camera layer.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -44,7 +44,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Business categories/subcategories should provide a map route so users can compare nearby options.
 - Food & Drink is backed by the maintained restaurant dataset and includes the Dinner Spinner.
 - Parks/trails/recreation pages expose known amenities and mapping.
-- Explore Norwood by Map includes an optional, off-by-default ALPR camera layer sourced from community-mapped OpenStreetMap data via DeFlock; coverage may be incomplete and available camera details are shown in map popups.
+- Explore Norwood by Map groups boundary controls and optional overlays in one expandable Map layers menu. Its existing town-boundary and voting-precinct overlays remain independently selectable; the ALPR camera layer remains optional, off by default, and sourced from community-mapped OpenStreetMap data via DeFlock; coverage may be incomplete and available camera details are shown in map popups.
 - How Do I provides task-oriented resident guidance and links to authoritative departments/services.
 
 ### Civic information and alerts

@@ -30,6 +30,7 @@
 .boundary-options label{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:750;color:#36566c}
 .boundary-link{font-size:.8rem;font-weight:800;color:#003b71}
 .boundary-status{margin:0;padding:0 13px 12px;color:#687983;font-size:.74rem;line-height:1.4}
+.boundary-group-label{margin:0;padding:8px 13px 0;color:#687983;font-size:.7rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
 .map-overlay-control{position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #d5e0e6;border-radius:9px;background:#f9fbfc}
 .map-overlay-control>label{display:flex;align-items:center;gap:7px;font-size:.82rem;font-weight:800;color:#17384d;cursor:pointer}
 .map-overlay-help{width:24px;height:24px;border:1px solid #9bb0bc;border-radius:50%;background:#fff;color:#36566c;font:inherit;font-size:.78rem;font-weight:900;cursor:pointer}
@@ -90,7 +91,8 @@
 <button class="locate map-locate-button" id="locateMe">◎ Near me</button>
 </div>
 <details class="boundary-panel">
-<summary>Boundaries &amp; districts</summary>
+<summary>Map layers</summary>
+<p class="boundary-group-label">Boundaries &amp; districts</p>
 <div class="boundary-options">
 <label><input type="checkbox" id="townBoundary"> Town boundary</label>
 <label><input type="checkbox" id="votingPrecincts"> Voting precincts</label>
@@ -98,9 +100,8 @@
 <a class="boundary-link" href="https://sites.google.com/norwood.k12.ma.us/scenario1/home" target="_blank" rel="noopener">Elementary school assignment lookup (2026–27) ↗</a>
 </div>
 <p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. If the voting-precinct overlay does not load, use the Massachusetts Secretary of the Commonwealth’s address lookup to find your precinct and polling place. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup.</p>
-</details>
-<details class="boundary-panel map-overlay-panel">
-<summary>Additional map layers</summary>
+
+<p class="boundary-group-label">Additional map layers</p>
 <div class="boundary-options">
 <div class="map-overlay-control">
 <label for="alprToggle"><input type="checkbox" id="alprToggle"> ALPR cameras</label>
@@ -110,6 +111,7 @@
 </div>
 <p id="alprStatus" class="boundary-status">Community-mapped camera locations from <a href="https://deflock.org/" target="_blank" rel="noopener">DeFlock ↗</a> / OpenStreetMap. Coverage may be incomplete.</p>
 </details>
+
 <div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of Norwood locations"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
