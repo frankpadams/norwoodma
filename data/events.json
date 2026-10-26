@@ -1541,18 +1541,18 @@
     ]
   },
   {
-    "id": "2026-10-27-girls-middle-school-volleyball-bellingham-hig-c455d2e",
-    "title": "Girls Middle School Volleyball @ Bellingham High School",
+    "id": "2026-10-27-girls-middle-school-volleyball-vs-bellingham--f0c6670",
+    "title": "Girls Middle School Volleyball vs Bellingham High School",
     "start": {
       "date": "2026-10-27",
-      "time": "16:30"
+      "time": "16:00"
     },
     "end": {
       "date": "2026-10-27",
-      "time": "17:30"
+      "time": "17:00"
     },
-    "venue": "130 Blackstone Street, Bellingham MA 02019",
-    "address": "130 Blackstone Street, Bellingham MA 02019",
+    "venue": "1315 Washington Street, Norwood Massachusetts 02062",
+    "address": "1315 Washington Street, Norwood Massachusetts 02062",
     "category": "sports",
     "source_id": "nps-athletics-arbiter-girls-ms-volleyball",
     "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
@@ -1562,7 +1562,7 @@
     "series": "Coakley Girls Middle School Volleyball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Bellingham Memorial School Subsite: MS Gym",
+    "notes": "Sport: Volleyball Level: Girls Middle School Team: Norwood High School Site: Coakley Middle School Subsite: Gym",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -11922,6 +11922,38 @@
     ]
   },
   {
+    "id": "2026-11-11-featured-articles-8648dca",
+    "title": "Featured Articles",
+    "start": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-town-news",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/26/588782/norwood-s-diya-bhandari-receives-2-500-scholarship",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Town News — Calendar / Local Town Pages",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Featured Articles Norwood’s Diya Bhandari Receives $2,500 Scholarship Norwood’s Diya Bhandari Receives $2,500 Scholarship Read More » Giving Tuesday: A Day to Give Back Giving Tuesday: A Day to Give Back Read More » A little off the top Thanksgiving’s got to give a little Read More » Norwood Veterans’ Day Celebration Wednesday, November 11 Read More » Norwood Wellness Fair returns for third year Taking care of your health involves more than just an annual doctor’s visit. From physical fitness an",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-food-markets",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "2026-11-11-no-school-holiday-veteran-s-day-04d8838",
     "title": "No School - Holiday - Veteran's Day",
     "start": {
@@ -11951,6 +11983,36 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-11-norwood-veterans-day-celebration-641ddb0",
+    "title": "Norwood Veterans’ Day Celebration",
+    "start": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "norwood-town-news",
+    "source_url": "https://www.norwoodtownnews.com/2026/10/26/588777/norwood-veterans-day-celebration",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Town News — Calendar / Local Town Pages",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Norwood Veterans’ Day Celebration Wednesday, November 11 Read More »",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -69609,6 +69671,41 @@
     ]
   },
   {
+    "id": "2027-04-01-var-lacrosse-vs-archbishop-williams-high-scho-c41dcd4",
+    "title": "Var Lacrosse vs Archbishop Williams High School",
+    "start": {
+      "date": "2027-04-01",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-04-01",
+      "time": "18:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Lacrosse Level: Var Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-3c6841bc2f75-2027-04-01",
     "title": "Ballet 2 - Thursdays",
     "start": {
@@ -81091,11 +81188,11 @@
     "title": "Var Lacrosse @ Attleboro High School",
     "start": {
       "date": "2027-05-26",
-      "time": "18:15"
+      "time": "17:30"
     },
     "end": {
       "date": "2027-05-26",
-      "time": "19:30"
+      "time": "18:45"
     },
     "venue": "1 Blue Pride Way, Attleboro MA 02703",
     "address": "1 Blue Pride Way, Attleboro MA 02703",
