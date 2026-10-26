@@ -1,10 +1,10 @@
-# Norwood.ma v1.2.1
+# Norwood.ma v1.3.0
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.2.1 — combines boundary and additional overlays in one expandable Map layers menu; preserves the existing boundary behavior and optional ALPR camera layer.
+**Current release:** v1.3.0 — adds an optional live MBTA overlay for 34E buses and Franklin/Foxboro Line trains, with Norwood stops and route paths; groups map boundaries, district references, ALPR, and transit under one “More map layers & options” menu.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -44,7 +44,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Business categories/subcategories should provide a map route so users can compare nearby options.
 - Food & Drink is backed by the maintained restaurant dataset and includes the Dinner Spinner.
 - Parks/trails/recreation pages expose known amenities and mapping.
-- Explore Norwood by Map groups boundary controls and optional overlays in one expandable Map layers menu. Its existing town-boundary and voting-precinct overlays remain independently selectable; the ALPR camera layer remains optional, off by default, and sourced from community-mapped OpenStreetMap data via DeFlock; coverage may be incomplete and available camera details are shown in map popups.
+- Explore Norwood by Map groups boundary controls, district-reference links, ALPR cameras, and live MBTA transit in one “More map layers & options” menu. Existing town-boundary and voting-precinct overlays remain independently selectable. ALPR and MBTA overlays are off by default. MBTA V3 data provides live 34E bus and Franklin/Foxboro Line train locations, route paths, and Norwood stops; vehicles refresh every 30 seconds while enabled and appear only when reported. ALPR locations are community-mapped through OpenStreetMap via DeFlock and may be incomplete.
 - How Do I provides task-oriented resident guidance and links to authoritative departments/services.
 
 ### Civic information and alerts

@@ -91,12 +91,13 @@
 <button class="locate map-locate-button" id="locateMe">◎ Near me</button>
 </div>
 <details class="boundary-panel">
-<summary>Map layers</summary>
+<summary>More map layers &amp; options</summary>
 <p class="boundary-group-label">Boundaries &amp; districts</p>
 <div class="boundary-options">
 <label><input type="checkbox" id="townBoundary"> Town boundary</label>
 <label><input type="checkbox" id="votingPrecincts"> Voting precincts</label>
 <a class="boundary-link" href="https://www.sec.state.ma.us/wheredoivotema/" target="_blank" rel="noopener">Find my voting precinct & polling place ↗</a>
+<a class="boundary-link" href="https://www.norwoodma.gov/District%20Map.pdf" target="_blank" rel="noopener">Norwood voting district map (PDF) ↗</a>
 <a class="boundary-link" href="https://sites.google.com/norwood.k12.ma.us/scenario1/home" target="_blank" rel="noopener">Elementary school assignment lookup (2026–27) ↗</a>
 </div>
 <p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. If the voting-precinct overlay does not load, use the Massachusetts Secretary of the Commonwealth’s address lookup to find your precinct and polling place. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup.</p>
@@ -108,8 +109,13 @@
 <button type="button" class="map-overlay-help" id="alprHelp" aria-label="What are ALPR cameras?" aria-controls="alprHelpText" aria-expanded="false">i</button>
 <span id="alprHelpText" class="map-overlay-tooltip" role="tooltip">Automated license plate readers (AI-enabled surveillance devices)</span>
 </div>
+<div class="map-overlay-control">
+<label for="mbtaToggle"><input type="checkbox" id="mbtaToggle"> Live MBTA transit</label>
+</div>
 </div>
 <p id="alprStatus" class="boundary-status">Community-mapped camera locations from <a href="https://deflock.org/" target="_blank" rel="noopener">DeFlock ↗</a> / OpenStreetMap. Coverage may be incomplete.</p>
+<p id="mbtaStatus" class="boundary-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, route paths and Norwood stops. Live vehicle positions from the MBTA V3 API refresh every 30 seconds while this layer is on.</p>
+</p>
 </details>
 
 <div class="map-shell">
@@ -128,5 +134,6 @@
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
 <script src="map-test.js?v=20261026-alpr-layer"></script>
+<script src="map-transit-layer.js?v=20261026-mbta-layer"></script>
 </body>
 </html>
