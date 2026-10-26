@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-26T16:19:22.698753-04:00",
+  "generated_at": "2026-10-26T17:12:21.570010-04:00",
   "offline": false,
-  "events_published": 2321,
+  "events_published": 2322,
   "news_published": 120,
   "civic_notices": 52,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2321,
-      "generated_at": "2026-10-26T16:19:21.947403-04:00"
+      "events": 2322,
+      "generated_at": "2026-10-26T17:12:21.037011-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 109,
-      "generated_at": "2026-10-26T16:19:21.957887-04:00"
+      "generated_at": "2026-10-26T17:12:21.044390-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 858,
-      "generated_at": "2026-10-26T16:19:21.979457-04:00"
+      "generated_at": "2026-10-26T17:12:21.059291-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 779,
-      "generated_at": "2026-10-26T16:19:21.997686-04:00"
+      "generated_at": "2026-10-26T17:12:21.073781-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-10-26T16:19:22.007439-04:00"
+      "generated_at": "2026-10-26T17:12:21.080119-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 65,
-      "generated_at": "2026-10-26T16:19:22.019028-04:00"
+      "generated_at": "2026-10-26T17:12:21.087322-04:00"
     }
   ],
   "recreation_programs": 122,
@@ -115,12 +115,13 @@
     },
     {
       "source_id": "elks-calendar",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.elks.org/lodges/lodgeCalendar.cfm?lodgenumber=1124: HTTPSConnectionPool(host='www.elks.org', port=443): Max retries exceeded with url: /lod",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "emerald-city-plant-shop",
@@ -142,9 +143,9 @@
       "source_id": "faith-shree-hari-dham",
       "ok": true,
       "method": "html_calendar",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
+      "found": 1,
+      "note": null,
+      "outcome": "events",
       "access_limited": false
     },
     {
@@ -1601,7 +1602,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 75,
+      "found": 77,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
