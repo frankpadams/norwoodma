@@ -107,3 +107,8 @@ For the nine nights with official attendance reports, PRESENT/ABSENT comes only 
 Name matching uses normalized full names or unique compatible given names and middle initials, preserving suffixes. The 2024 surname/initial reports are matched to the historical roster; ambiguous labels are resolved only when surrounding independently matched rows uniquely establish their roster position. One blank voter row is absent from the May 16 roster and is not assigned attendance. OCR corrections and 2024 row-level matching evidence are preserved in `data/town-meeting-member-match-audit.json`. Reproduction instructions and import scripts are in `scripts/town-meeting/`.
 
 Every member-record motion has a nonempty description drawn from its linked article. Bare article labels and procedural labels are enriched with the subject so the record is intelligible before opening the article. Run `enrich-article-descriptions.py` after importing or updating source records.
+
+
+## Map: ALPR cameras
+
+The Explore Norwood map has an optional ALPR camera overlay, off by default. It consumes the public hourly U.S. vector-tile feed at `https://tiles.dontgetflocked.com/cameras-us-hourly.json`, sourced from community-mapped OpenStreetMap data through DeFlock. The layer uses viewport tiles rather than downloading the national dataset. Popups show available brand, operator and direction tags and link back to the OpenStreetMap record. Coverage may be incomplete; the site does not present this as a complete inventory. Attribute OpenStreetMap contributors and DeFlock when displaying this dataset.

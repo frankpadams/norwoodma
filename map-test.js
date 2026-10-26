@@ -272,6 +272,57 @@ async function togglePrecincts(on){
 }
 
 
+let alprLayer=null,alprLoadPromise=null;
+const alprToggle=document.querySelector('#alprToggle'),alprStatus=document.querySelector('#alprStatus'),alprHelp=document.querySelector('#alprHelp');
+async function ensureAlprLayer(){
+ if(alprLayer)return alprLayer;
+ if(!alprLoadPromise){
+  alprLoadPromise=(async()=>{
+   if(!L.vectorGrid?.protobuf)throw Error('The map layer renderer did not load');
+   const tileJson=await fetchGeoJSON('https://tiles.dontgetflocked.com/cameras-us-hourly.json');
+   const tileUrl=tileJson.tiles?.[0];
+   if(!tileUrl)throw Error('The camera feed did not provide a tile URL');
+   const layer=L.vectorGrid.protobuf(tileUrl,{
+    vectorTileLayerStyles:{cameras:()=>({fill:true,fillColor:'#cf3d36',fillOpacity:.95,stroke:true,color:'#fff',weight:1.5,radius:6})},
+    interactive:true,
+    maxNativeZoom:14,
+    attribution:'ALPR camera locations &copy; OpenStreetMap contributors via DeFlock',
+    getFeatureId:f=>f.properties?.osmId
+   });
+   layer.on('click',e=>{
+    const p=e.layer?.properties||{},details=[];
+    if(p.brand)details.push('<b>Brand:</b> '+esc(p.brand));
+    if(p.operator)details.push('<b>Operator:</b> '+esc(p.operator));
+    if(p.directionCardinal)details.push('<b>Direction:</b> '+esc(p.directionCardinal));
+    const osmType=p.osmType==='way'?'way':'node';
+    const osmId=Number(p.osmId);
+    if(Number.isSafeInteger(osmId)&&osmId>0)details.push('<a href="https://www.openstreetmap.org/'+osmType+'/'+osmId+'" target="_blank" rel="noopener">Open this map record in OpenStreetMap ↗</a>');
+    const body='<div class="map-popup"><h3>ALPR camera</h3><p>Community-mapped location from OpenStreetMap.</p>'+(details.length?'<p>'+details.join('<br>')+'</p>':'')+'</div>';
+    L.popup().setLatLng(e.latlng).setContent(body).openOn(map);
+   });
+   alprLayer=layer;
+   return layer;
+  })().catch(err=>{alprLoadPromise=null;throw err});
+ }
+ return alprLoadPromise;
+}
+async function toggleAlpr(on){
+ if(!on){if(alprLayer)map.removeLayer(alprLayer);if(alprStatus)alprStatus.textContent='ALPR camera layer is off. Community-mapped coverage may be incomplete.';return}
+ if(alprStatus)alprStatus.textContent='Loading community-mapped ALPR camera locations…';
+ try{
+  const layer=await ensureAlprLayer();
+  if(alprToggle?.checked)layer.addTo(map);
+  if(alprStatus)alprStatus.textContent='Showing community-mapped ALPR cameras. Coverage may be incomplete; select a marker for available details.';
+ }catch(err){
+  if(alprStatus)alprStatus.textContent='ALPR camera locations could not be loaded right now. Please try again later.';
+  console.warn('ALPR camera layer failed to load',err);
+ }
+}
+alprToggle?.addEventListener('change',e=>toggleAlpr(e.target.checked));
+alprHelp?.addEventListener('click',()=>{
+ const open=alprHelp.getAttribute('aria-expanded')==='true';
+ alprHelp.setAttribute('aria-expanded',String(!open));
+});
 document.querySelector('#locateMe').addEventListener('click',()=>{
  if(!navigator.geolocation){alert('Location is not available in this browser.');return}
  navigator.geolocation.getCurrentPosition(pos=>{
