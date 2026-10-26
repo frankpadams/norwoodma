@@ -3827,6 +3827,19 @@ window.NORWOOD_RESOURCES= [
     ]
   },
   {
+    "name": "Norwood Seed Library",
+    "category": "Environment",
+    "description": "Free seeds for vegetables, herbs, native plants and flowers, with planting instructions and seed-saving guidance from the Morrill Memorial Library.",
+    "url": "https://norwoodlibrary.org/seed-library/",
+    "tags": "seed seeds seed library seed-saving garden gardening grow planting plant plants vegetable vegetables herb herbs native flowers free",
+    "coverage": "Local",
+    "verified": "2026-10",
+    "topics": [
+      "todo",
+      "community"
+    ]
+  },
+  {
     "name": "Norwood Community Media",
     "category": "News & Media",
     "description": "Local government, community, school and sports video programming.",
