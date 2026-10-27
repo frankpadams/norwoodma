@@ -454,9 +454,12 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
 .today-sidebar .quick-widget-grid>a.quick-widget.quick-things-wide{grid-column:1/-1!important;min-height:36px!important;max-height:36px!important;height:36px!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;justify-content:center!important;align-items:center!important;gap:8px!important;padding:4px 10px!important}
 .today-sidebar .quick-widget-grid>.quick-things-wide .feature-icon{position:relative!important;top:auto!important;left:auto!important;margin:0!important;flex:0 0 20px!important;width:20px!important;height:20px!important}
 .today-sidebar .quick-widget-grid>.quick-things-wide b{white-space:nowrap!important;font-size:.88rem!important;line-height:1!important;margin:0!important}
-.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide){position:relative;isolation:isolate;overflow:hidden;background-size:cover!important;background-repeat:no-repeat!important;color:#12364f!important}
+.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide){filter:saturate(.45);transition:filter .22s ease,transform .2s,box-shadow .2s;position:relative;isolation:isolate;overflow:hidden;background-size:cover!important;background-repeat:no-repeat!important;color:#12364f!important}
 .today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide)::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.78);z-index:0;transition:background .2s}
-.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide):hover::before{background:rgba(255,255,255,.58)}
+.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide):is(:hover,:focus-visible){filter:saturate(1)}
+.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide):is(:hover,:focus-visible)>b{color:#000!important;text-shadow:0 1px 2px rgba(255,255,255,.98),0 0 7px rgba(255,255,255,.92)}
+.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide):is(:hover,:focus-visible) .feature-icon svg{stroke:#000!important}
+.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide):is(:hover,:focus-visible)::before{background:rgba(255,255,255,.58)}
 .today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide)>.feature-icon,.today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide)>b{position:relative;z-index:1;color:#12364f!important;text-shadow:0 1px 2px #fff,0 0 6px #fff}
 .today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide) .feature-icon svg{width:100%;height:100%;fill:none;stroke:#12364f;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .today-sidebar .quick-widget-grid>.trivia-test{background-image:url("assets/NorwoodClock.JPG")!important;background-position:center 20%!important}
