@@ -79,3 +79,14 @@
 
 .townie-share-copy svg{fill:none}
 @media(max-width:580px){.townie-share-copy{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}}
+
+.townie-facebook-dialog{width:min(440px,calc(100% - 32px));padding:0;border:1px solid #cddae4;border-radius:18px;background:#fff;color:#18354e;box-shadow:0 24px 80px rgba(10,30,48,.3)}
+.townie-facebook-dialog::backdrop{background:rgba(12,29,44,.58);backdrop-filter:blur(3px)}
+.townie-facebook-dialog-content{padding:24px}
+.townie-facebook-dialog h2{margin:0 0 10px;color:#123e68;font-size:1.35rem}
+.townie-facebook-dialog p{margin:0;color:#526577;line-height:1.55}
+.townie-facebook-dialog-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.townie-button-secondary{border:1px solid #cddae4;background:#f6f9fb;color:#18354e;box-shadow:none}
+.townie-button-secondary:hover{background:#eaf1f6}
+.townie-facebook-dialog form{margin:0}
+@media(max-width:420px){.townie-facebook-dialog-actions{display:grid}.townie-facebook-dialog-actions>*{width:100%}}
