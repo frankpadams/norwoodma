@@ -36,6 +36,8 @@
    "The latest Norwood town news",
    "Timely alerts",
    "Ideas for fun things to do around town",
+   "A comprehensive list of Norwood parks and their amenities",
+   "Map guides and lookup tools for finding your voting precinct, elementary school district, and flock cameras",
    "Quick guides for trash and recycling, moving to Norwood, and getting involved in the community",
    "The latest gas prices from around town",
    "All of the above and so much more",
