@@ -11,7 +11,7 @@ document.getElementById(inputId).addEventListener('input',e=>{const q=e.target.v
 document.getElementById('departments').addEventListener('click',e=>{const b=e.target.closest('[data-faq]');if(!b)return;const [q,a]=dpwFaq[Number(b.dataset.faq)];document.getElementById('faqTitle').textContent=q;document.getElementById('faqAnswer').innerHTML=a;document.getElementById('faqModal').showModal()});
 document.getElementById('faqClose').addEventListener('click',()=>document.getElementById('faqModal').close());
 document.getElementById('faqModal').addEventListener('click',e=>{if(e.target.id==='faqModal')e.target.close()});
-</script><script src="nav.js?v=90059e51a72a"></script><script id="government-search-targets">
+</script><script src="nav.js?v=3659fad9fa2e"></script><script id="government-search-targets">
 (function(){
  const slug=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
  document.querySelectorAll('main details.department,main details.board,main details.gov-civic-card,main #important-documents').forEach(el=>{
