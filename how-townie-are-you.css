@@ -76,3 +76,6 @@
 .townie-seal-credit a{color:#526577;text-underline-offset:2px}
 .townie-replay{margin-top:0}
 @media(max-width:580px){.townie-score-display{flex-direction:column;gap:18px;text-align:center}.townie-seal-chart{flex-basis:auto;width:min(58vw,220px)}.townie-score-copy .townie-result-note{margin-left:auto;margin-right:auto}.townie-share-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:360px;margin:0 auto}.townie-share-button{padding:10px 9px}}
+
+.townie-share-copy svg{fill:none}
+@media(max-width:580px){.townie-share-copy{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}}
