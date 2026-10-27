@@ -136,27 +136,32 @@
       return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
     }).join('')+'</div><button class="site-timely-next" type="button" aria-label="Next alert">›</button><span class="site-timely-status sr-only" aria-live="polite"></span>';
     const track=strip.querySelector('.site-timely-track'), slides=[...strip.querySelectorAll('.site-timely-item')];
-    let current=0,timer=null,paused=false;
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const show=(idx,announce=false)=>{
-      if(!slides.length)return;
-      current=(idx+slides.length)%slides.length;
-      slides.forEach((el,i)=>{el.classList.toggle('is-active',i===current);el.setAttribute('aria-hidden',String(i!==current));if(i!==current)el.setAttribute('tabindex','-1');else el.removeAttribute('tabindex');});
-      if(announce&&slides.length>1){const s=strip.querySelector('.site-timely-status');if(s)s.textContent='Alert '+(current+1)+' of '+slides.length;}
-    };
-    const stop=()=>{if(timer){clearInterval(timer);timer=null;}};
-    const start=()=>{stop();if(!reduced&&!paused&&slides.length>1)timer=setInterval(()=>show(current+1),7000);};
-    strip.querySelector('.site-timely-prev').addEventListener('click',()=>{show(current-1,true);start();});
-    strip.querySelector('.site-timely-next').addEventListener('click',()=>{show(current+1,true);start();});
-    strip.addEventListener('mouseenter',()=>{paused=true;stop();});
-    strip.addEventListener('mouseleave',()=>{paused=false;start();});
-    strip.addEventListener('focusin',()=>{paused=true;stop();});
-    strip.addEventListener('focusout',()=>{setTimeout(()=>{if(!strip.contains(document.activeElement)){paused=false;start();}},0);});
-    let touchX=null;
-    track.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;paused=true;stop();},{passive:true});
-    track.addEventListener('touchend',e=>{if(touchX!==null){const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>35)show(current+(dx<0?1:-1),true);}touchX=null;paused=false;start();},{passive:true});
-    if(slides.length<2){strip.querySelector('.site-timely-prev')?.remove();strip.querySelector('.site-timely-next')?.remove();strip.classList.add('site-timely-single');}
-    show(0);start();
+    if(slides.length>1&&!reduced){
+      strip.classList.add('site-timely-marquee');
+      strip.querySelector('.site-timely-prev')?.remove();
+      strip.querySelector('.site-timely-next')?.remove();
+      const group=document.createElement('div');
+      group.className='site-timely-marquee-group';
+      slides.forEach(el=>{el.classList.add('is-active');group.appendChild(el);});
+      track.appendChild(group);
+      const duplicate=group.cloneNode(true);
+      duplicate.setAttribute('aria-hidden','true');
+      duplicate.querySelectorAll('a,button,[tabindex]').forEach(el=>el.setAttribute('tabindex','-1'));
+      track.appendChild(duplicate);
+      const size=()=>{const w=group.getBoundingClientRect().width;track.style.setProperty('--ticker-distance',w+'px');track.style.setProperty('--ticker-duration',Math.max(12,w/45)+'s');};
+      size();
+      if('ResizeObserver' in window)new ResizeObserver(size).observe(group);
+      else window.addEventListener('resize',size);
+      track.addEventListener('touchstart',()=>strip.classList.add('ticker-paused'),{passive:true});
+      track.addEventListener('touchend',()=>strip.classList.remove('ticker-paused'),{passive:true});
+      track.addEventListener('touchcancel',()=>strip.classList.remove('ticker-paused'),{passive:true});
+    }else{
+      slides.forEach((el,i)=>{el.classList.toggle('is-active',i===0);el.setAttribute('aria-hidden',String(i!==0));});
+      strip.querySelector('.site-timely-prev')?.remove();
+      strip.querySelector('.site-timely-next')?.remove();
+      strip.classList.add('site-timely-single');
+    }
     const independent=document.querySelector('.independent');
     if(existing)existing.replaceWith(strip);
     else if(independent)independent.insertAdjacentElement('afterend',strip);
