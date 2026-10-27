@@ -76,6 +76,9 @@
         <a class="townie-share-button" id="townieShareSms" href="sms:" aria-label="Share your score by text message">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4.5h16a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5h-8L6 21v-3.5H4A1.5 1.5 0 0 1 2.5 16V6A1.5 1.5 0 0 1 4 4.5Z"/><path d="M7 9h10M7 12h7"/></svg><span>Text</span>
         </a>
+        <button class="townie-share-button townie-share-more" id="townieShareMore" type="button" aria-label="Open more sharing options">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 16V4m0 0L7 9m5-5 5 5M5 13v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6"/></svg><span>More apps</span>
+        </button>
         <button class="townie-share-button townie-share-copy" id="townieCopyScore" type="button" aria-label="Copy your score graphic and caption">
           <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>Copy</span>
         </button>
@@ -84,7 +87,7 @@
       <dialog class="townie-facebook-dialog" id="townieFacebookShareDialog" aria-labelledby="townieFacebookShareTitle">
         <div class="townie-facebook-dialog-content">
           <h2 id="townieFacebookShareTitle">Where do you want to share?</h2>
-          <p>Choose your Facebook profile or a group. Facebook will let you confirm the destination before posting.</p>
+          <p>Choose your Facebook profile or a group in Facebook. The caption and quiz link are prefilled; the score graphic is copied so you can paste it into your post.</p>
           <div class="townie-facebook-dialog-actions">
             <button class="townie-button townie-button-primary" type="button" data-facebook-destination="your profile">Your profile</button>
             <button class="townie-button townie-button-secondary" type="button" data-facebook-destination="a group">A group</button>
@@ -104,6 +107,6 @@
   <a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a>
 </footer>
 <script src="nav.js?v=0b0b62f90b1d"></script>
-<script src="how-townie-are-you.js?v=20261027-share-flow"></script>
+<script src="how-townie-are-you.js?v=20261027-share-targets"></script>
 </body>
 </html>
