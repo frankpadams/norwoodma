@@ -118,7 +118,43 @@
   }
  }
  function copyShareCaption(percent){const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).catch(()=>{});return Promise.resolve()}
- async function shareScore(id,target){const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?";let supportsImageShare=false;try{const sample=new File(["preview"],"norwood-townie-score.png",{type:"image/png"});supportsImageShare=!!(navigator.share&&navigator.canShare&&navigator.canShare({files:[sample]}))}catch(error){}let postWindow=null;if(!supportsImageShare){const fallbackUrl=control.href||control.dataset.fallbackUrl;if(fallbackUrl)postWindow=window.open(fallbackUrl,"_blank","noopener,noreferrer")}status.textContent="Preparing your seal graphic and caption…";try{const blob=await makeShareCard(percent),file=new File([blob],"norwood-townie-score.png",{type:"image/png"});if(supportsImageShare){await navigator.share({files:[file],title:message,text:message});status.textContent="Share sheet opened with the score graphic and caption. Choose "+target+"; you can add text before posting."}else{const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);await copyShareCaption(percent);status.textContent="Caption copied and the score graphic downloaded. Add the image to the "+target+" post, then add or edit the text before posting."}}catch(error){status.textContent=error&&error.name==="AbortError"?"Share canceled. You can try another share option.":"Couldn’t prepare the share graphic. Try another share option."}}
+ async function shareScore(id,target){
+  const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?",caption=message+" "+shareUrl;
+  let supportsImageShare=false;
+  try{
+   const sample=new File(["preview"],"norwood-townie-score.png",{type:"image/png"});
+   supportsImageShare=!!(navigator.share&&navigator.canShare&&navigator.canShare({files:[sample]}));
+  }catch(error){}
+  let postWindow=null;
+  if(!supportsImageShare){
+   const fallbackUrl=control.href||control.dataset.fallbackUrl;
+   if(fallbackUrl)postWindow=window.open(fallbackUrl,"_blank","noopener,noreferrer");
+  }
+  status.textContent="Preparing your score graphic, caption, and quiz link…";
+  try{
+   const blob=await makeShareCard(percent),file=new File([blob],"norwood-townie-score.png",{type:"image/png"});
+   if(supportsImageShare){
+    try{
+     await navigator.share({files:[file],title:message,text:caption,url:shareUrl});
+     status.textContent="Share sheet opened with the score graphic, caption, and quiz link. Choose "+target+"; you can add text before posting.";
+     return;
+    }catch(error){
+     if(error&&error.name==="AbortError"){
+      status.textContent="Share canceled. You can try another share option.";
+      return;
+     }
+    }
+   }
+   const link=document.createElement("a");
+   link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();
+   setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+   await copyShareCaption(percent);
+   status.textContent="The score graphic was downloaded and the caption with quiz link was copied. Add both to your "+target+" post.";
+  }catch(error){
+   if(postWindow&&!postWindow.closed)postWindow.close();
+   status.textContent="Couldn’t prepare the score graphic and quiz link. Try another share option.";
+  }
+ }
  [["townieShareFacebook","Facebook"],["townieShareInstagram","Instagram"],["townieShareX","X"],["townieShareSms","text message"]].forEach(([id,target])=>$(id).addEventListener("click",event=>{event.preventDefault();shareScore(id,target)}));
  $("townieCopyScore").addEventListener("click",copyShareScore);
  $("townieStart").addEventListener("click",()=>{current=0;knowledgePoints=0;experiencePoints=0;intro.hidden=true;results.hidden=true;game.hidden=false;render()});
