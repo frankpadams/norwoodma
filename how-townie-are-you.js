@@ -53,7 +53,17 @@
   }
   updateScore();questionTitle.focus({preventScroll:true});
  }
- function complete(){game.hidden=true;results.hidden=false;const percent=Math.round(((knowledgePoints+experiencePoints)/questions.length)*100);$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";$("townieSealChart").style.setProperty("--townie-score",percent+"%");$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent);window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
+ function setTownieSealScore(percent){
+  const chart=$("townieSealChart"),colorLayer=chart.querySelector(".townie-seal-color");
+  chart.style.setProperty("--townie-score",percent+"%");
+  if(!colorLayer)return;
+  if(percent<=0){colorLayer.style.clipPath="polygon(50% 50%)";return}
+  if(percent>=100){colorLayer.style.clipPath="circle(50% at 50% 50%)";return}
+  const steps=Math.max(1,Math.ceil(percent*3.6)),points=["50% 50%"];
+  for(let i=0;i<=steps;i++){const angle=(-90+percent*3.6*i/steps)*Math.PI/180,x=50+50*Math.cos(angle),y=50+50*Math.sin(angle);points.push(x.toFixed(3)+"% "+y.toFixed(3)+"%")}
+  colorLayer.style.clipPath="polygon("+points.join(",")+")";
+ }
+ function complete(){game.hidden=true;results.hidden=false;const percent=Math.round(((knowledgePoints+experiencePoints)/questions.length)*100);$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";setTownieSealScore(percent);$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent);window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
 
  const shareUrl=window.location.origin+window.location.pathname;
  function configureShare(percent){const message="I’m "+percent+"% Norwood Townie! What’s your score?";const encodedUrl=encodeURIComponent(shareUrl),encodedMessage=encodeURIComponent(message);$("townieShareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl+"&quote="+encodedMessage;$("townieShareX").href="https://x.com/intent/post?text="+encodedMessage+"&url="+encodedUrl;$("townieShareSms").href="sms:?body="+encodeURIComponent(message+" "+shareUrl)}
@@ -65,6 +75,6 @@
  $("townieStart").addEventListener("click",()=>{current=0;knowledgePoints=0;experiencePoints=0;intro.hidden=true;results.hidden=true;game.hidden=false;render()});
  next.addEventListener("click",()=>{if(current<questions.length-1){current++;render()}else complete()});
  $("townieReplay").addEventListener("click",()=>{$("townieStart").click()});
- function previewResultsIfRequested(){const params=new URLSearchParams(window.location.search);if(params.get("preview")!=="results")return;const raw=params.has("score")?Number(params.get("score")):72;const percent=Number.isFinite(raw)?Math.max(0,Math.min(100,Math.round(raw/4)*4)):72;intro.hidden=true;game.hidden=true;results.hidden=false;$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";$("townieSealChart").style.setProperty("--townie-score",percent+"%");$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent)}
+ function previewResultsIfRequested(){const params=new URLSearchParams(window.location.search);if(params.get("preview")!=="results")return;const raw=params.has("score")?Number(params.get("score")):72;const percent=Number.isFinite(raw)?Math.max(0,Math.min(100,Math.round(raw/4)*4)):72;intro.hidden=true;game.hidden=true;results.hidden=false;$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";setTownieSealScore(percent);$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent)}
  previewResultsIfRequested();
 })();
