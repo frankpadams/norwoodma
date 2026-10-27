@@ -800,5 +800,24 @@
         "Blackhole Comics"
       ]
     }
+  },
+  {
+    "id": "norwood-youth-softball",
+    "group": "sports",
+    "name": "Norwood Youth Softball",
+    "description": "Organization events, clinic notices and dates published on the official calendar. Individual team game schedules are separate.",
+    "feed_url": "http://tmsdln.com/2138d",
+    "view_url": "https://norwoodyouthsoftball.com/calendar",
+    "provider": "Norwood Youth Softball",
+    "kind": "external_live",
+    "verified": true,
+    "health_source_ids": [
+      "norwood-youth-softball"
+    ],
+    "selector": {
+      "source_ids": [
+        "norwood-youth-softball"
+      ]
+    }
   }
 ]
