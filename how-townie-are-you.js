@@ -30,6 +30,17 @@
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Did John Carroll know your name?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever given directions using a Norwood business that closed years ago?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you been in the Norwood Record? (Yes, the crime log counts too.)"},
+  {type:"choice",category:"NORWOOD.MA KNOW-HOW",prompt:"What can you find at www.Norwood.ma?",options:[
+   "Dinner Spinner restaurant randomizer",
+   "Event listings for what’s happening around Norwood, plus a conflict contraption to help plan events when fewer things are competing",
+   "The latest Norwood town news",
+   "Timely alerts",
+   "Ideas for fun things to do around town",
+   "Quick guides for trash and recycling, moving to Norwood, and getting involved in the community",
+   "The latest gas prices from around town",
+   "All of the above and so much more",
+   "A Town Meeting archive that lets you see exactly how your representative voted"
+  ],correct:"All of the above and so much more",explanation:"Norwood.ma brings local news, events, alerts, practical guides, fun ideas, and useful tools together in one place."},
  ];
  const $=id=>document.getElementById(id);
  const intro=$("townieIntro"),game=$("townieGame"),results=$("townieResults"),questionTitle=$("townieQuestion");
