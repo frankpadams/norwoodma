@@ -17,7 +17,7 @@
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever attended a Concert on the Common?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever gone to Norwood Day?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever taken the 34E to Forest Hills?"},
-  {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever skated at Roll-Land?"},
+  {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever skated at Roll-Land or Froggies?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever attended the meat raffle?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever met Mustang Sally?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever volunteered with a Norwood organization, such as youth sports, a town committee, or a service organization?"},
