@@ -1,10 +1,10 @@
-# Norwood.ma v1.4.1
+# Norwood.ma v1.4.2
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.4.1 — refines the How Townie Are You? score-sharing graphic and adds a Facebook profile-or-group choice.
+**Current release:** v1.4.2 — routes Townie score sharing directly to the selected service, with a separate system share option.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -90,6 +90,14 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 
 ## Current stable release
 
+### v1.4.2 — destination-specific Townie sharing
+Released October 27, 2026.
+
+- Facebook, X, Instagram, and Text now open their own destination instead of all opening the system share sheet.
+- Facebook’s profile/group choice opens Facebook’s composer; the caption and quiz link are prefilled, and the score graphic is copied or downloaded for attaching.
+- Added a separate More apps option for the device share sheet, which shares the score graphic, caption, and quiz link together when supported.
+- Updated quiz progress and option-order labels for the final fixed-order question.
+
 ### v1.0.2 — event priority and source coverage
 Released September 29, 2026.
 
@@ -101,6 +109,7 @@ Post-release operational development has also added regional-event organization,
 
 ## Release history
 
+- **v1.4.2** — destination-specific Townie sharing, system share option, and final-question order fix.
 - **v1.0.2** — event priority, Health Department source coverage, and Fine Arts/theatre monitoring.
 - **v1.0.1** — one-time/drop-in events prioritized ahead of session occurrences.
 - **v1.0.0** — first stable release; permanent semantic versioning and documentation synchronization established.
