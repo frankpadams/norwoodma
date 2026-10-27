@@ -454,6 +454,11 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
 .today-sidebar .quick-widget-grid>a.quick-widget.quick-things-wide{grid-column:1/-1!important;min-height:36px!important;max-height:36px!important;height:36px!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;justify-content:center!important;align-items:center!important;gap:8px!important;padding:4px 10px!important}
 .today-sidebar .quick-widget-grid>.quick-things-wide .feature-icon{position:relative!important;top:auto!important;left:auto!important;margin:0!important;flex:0 0 20px!important;width:20px!important;height:20px!important}
 .today-sidebar .quick-widget-grid>.quick-things-wide b{white-space:nowrap!important;font-size:.88rem!important;line-height:1!important;margin:0!important}
+/* Force a single horizontal row despite inherited feature-card grid declarations. */
+#home .today-sidebar .quick-widget-grid>a.quick-things-wide{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:center!important;grid-template-columns:none!important;grid-template-rows:none!important}
+#home .today-sidebar .quick-widget-grid>a.quick-things-wide>.feature-icon{display:inline-flex!important;grid-column:auto!important;grid-row:auto!important;align-items:center!important;justify-content:center!important;flex-shrink:0!important;transform:none!important}
+#home .today-sidebar .quick-widget-grid>a.quick-things-wide>b{display:inline-block!important;grid-column:auto!important;grid-row:auto!important;align-self:center!important;white-space:nowrap!important;transform:none!important}
+
 .today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide){filter:saturate(.45);transition:filter .22s ease,transform .2s,box-shadow .2s;position:relative;isolation:isolate;overflow:hidden;background-size:cover!important;background-repeat:no-repeat!important;color:#12364f!important}
 .today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide)::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.78);z-index:0;transition:background .2s}
 .today-sidebar .quick-widget-grid>.quick-widget.tall:not(.quick-things-wide):is(:hover,:focus-visible){filter:saturate(1)}
