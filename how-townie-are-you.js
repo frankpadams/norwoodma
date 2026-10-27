@@ -78,8 +78,9 @@
    try{
     const canvas=document.createElement("canvas");canvas.width=1200;canvas.height=630;
     const c=canvas.getContext("2d");
-    c.fillStyle="#f7f9fb";c.fillRect(0,0,1200,630);c.fillStyle="#003b71";c.fillRect(0,0,1200,18);
-    const size=410,x=45,y=125,cx=x+size/2,cy=y+size/2;
+    c.fillStyle="#f7f9fb";c.fillRect(0,0,1200,630);
+    c.fillStyle="#003b71";c.fillRect(0,0,1200,14);
+    const size=360,x=82,y=(630-size)/2,cx=x+size/2,cy=y+size/2;
     const sealCanvas=document.createElement("canvas");sealCanvas.width=size;sealCanvas.height=size;
     const sealContext=sealCanvas.getContext("2d");
     sealContext.beginPath();sealContext.arc(size/2,size/2,size/2,0,Math.PI*2);sealContext.clip();
@@ -94,9 +95,17 @@
      c.save();c.beginPath();c.moveTo(cx,cy);c.arc(cx,cy,size/2,-Math.PI/2,-Math.PI/2+Math.PI*2*percent/100);c.closePath();c.clip();
      c.drawImage(img,x,y,size,size);c.restore();
     }
-    c.fillStyle="#123e68";c.font="800 58px system-ui, sans-serif";c.fillText("I’m "+percent+"% Norwood Townie!",500,270);
-    c.fillStyle="#526577";c.font="600 34px system-ui, sans-serif";c.fillText("What’s your score?",500,335);
-    c.fillStyle="#123e68";c.font="700 26px system-ui, sans-serif";c.fillText("norwood.ma",500,430);
+    const textX=490,textWidth=630,title="I’m "+percent+"% Norwood Townie!";
+    let titleSize=52;
+    c.textAlign="left";c.textBaseline="alphabetic";
+    c.fillStyle="#123e68";
+    c.font="800 "+titleSize+"px system-ui, sans-serif";
+    while(c.measureText(title).width>textWidth&&titleSize>38){
+     titleSize--;c.font="800 "+titleSize+"px system-ui, sans-serif";
+    }
+    c.fillText(title,textX,274);
+    c.fillStyle="#526577";c.font="600 32px system-ui, sans-serif";c.fillText("What’s your score?",textX,340);
+    c.fillStyle="#123e68";c.font="700 26px system-ui, sans-serif";c.fillText("norwood.ma",textX,420);
     canvas.toBlob(blob=>blob?resolve(blob):reject(new Error("share image unavailable")),"image/png");
    }catch(error){reject(error)}
   }));
