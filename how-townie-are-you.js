@@ -96,9 +96,31 @@
    }catch(error){reject(error)}
   }));
  }
+ async function copyShareScore(){
+  const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus");
+  const message="I’m "+percent+"% Norwood Townie! What’s your score?";
+  const caption=message+" "+shareUrl;
+  status.textContent="Preparing your score graphic and caption for copying…";
+  try{
+   const blob=await makeShareCard(percent);
+   if(!navigator.clipboard||!navigator.clipboard.write||typeof ClipboardItem==="undefined")throw new Error("image clipboard unavailable");
+   const item=new ClipboardItem({"image/png":blob,"text/plain":new Blob([caption],{type:"text/plain"})});
+   await navigator.clipboard.write([item]);
+   status.textContent="Score graphic and caption copied. Paste them into your post, then add any extra text.";
+  }catch(error){
+   try{
+    const blob=await makeShareCard(percent),link=document.createElement("a");
+    link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();
+    setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+    await copyShareCaption(percent);
+    status.textContent="This browser couldn’t copy an image. The graphic was downloaded and the caption copied; add them to your post.";
+   }catch(fallbackError){status.textContent="Couldn’t copy the score graphic. Try one of the share options instead."}
+  }
+ }
  function copyShareCaption(percent){const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).catch(()=>{});return Promise.resolve()}
  async function shareScore(id,target){const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?";let supportsImageShare=false;try{const sample=new File(["preview"],"norwood-townie-score.png",{type:"image/png"});supportsImageShare=!!(navigator.share&&navigator.canShare&&navigator.canShare({files:[sample]}))}catch(error){}let postWindow=null;if(!supportsImageShare){const fallbackUrl=control.href||control.dataset.fallbackUrl;if(fallbackUrl)postWindow=window.open(fallbackUrl,"_blank","noopener,noreferrer")}status.textContent="Preparing your seal graphic and caption…";try{const blob=await makeShareCard(percent),file=new File([blob],"norwood-townie-score.png",{type:"image/png"});if(supportsImageShare){await navigator.share({files:[file],title:message,text:message});status.textContent="Share sheet opened with the score graphic and caption. Choose "+target+"; you can add text before posting."}else{const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);await copyShareCaption(percent);status.textContent="Caption copied and the score graphic downloaded. Add the image to the "+target+" post, then add or edit the text before posting."}}catch(error){status.textContent=error&&error.name==="AbortError"?"Share canceled. You can try another share option.":"Couldn’t prepare the share graphic. Try another share option."}}
  [["townieShareFacebook","Facebook"],["townieShareInstagram","Instagram"],["townieShareX","X"],["townieShareSms","text message"]].forEach(([id,target])=>$(id).addEventListener("click",event=>{event.preventDefault();shareScore(id,target)}));
+ $("townieCopyScore").addEventListener("click",copyShareScore);
  $("townieStart").addEventListener("click",()=>{current=0;knowledgePoints=0;experiencePoints=0;intro.hidden=true;results.hidden=true;game.hidden=false;render()});
  next.addEventListener("click",()=>{if(current<questions.length-1){current++;render()}else complete()});
  $("townieReplay").addEventListener("click",()=>{$("townieStart").click()});
