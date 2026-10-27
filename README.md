@@ -1,10 +1,10 @@
-# Norwood.ma v1.4.0
+# Norwood.ma v1.4.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.4.0 — adds How Townie Are You?, a separate interactive quiz with shuffled choices, a matching question, and Townie points for local experiences.
+**Current release:** v1.4.1 — refines the How Townie Are You? score-sharing graphic for balanced spacing and readable text.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
