@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <link href="assets/favicon-approved.png" rel="icon">
   <link href="styles.css?v=20261020-single-hamburger" rel="stylesheet">
-  <link href="how-townie-are-you.css?v=1.4.0" rel="stylesheet">
+  <link href="how-townie-are-you.css?v=1.4.1" rel="stylesheet">
   <script defer src="analytics.js?v=0.13.3.30"></script>
 </head>
 <body>
@@ -49,11 +49,38 @@
   </section>
   <section class="townie-panel townie-results" id="townieResults" hidden>
     <p class="townie-kicker">QUIZ COMPLETE</p>
-    <h2>Your Townie score</h2>
-    <p class="townie-total"><strong id="townieTotal">0</strong><span> / 25 points</span></p>
-    <div class="townie-score-breakdown"><p><strong id="knowledgeScore">0 / 12</strong><span>knowledge points</span></p><p><strong id="experienceScore">0 / 13</strong><span>Townie experience points</span></p></div>
-    <p class="townie-result-note">Your score combines correct Norwood answers with the local experiences you’ve had.</p>
-    <button class="townie-button townie-button-primary" id="townieReplay" type="button">Play again <span aria-hidden="true">↻</span></button>
+    <div class="townie-score-display">
+      <div class="townie-seal-chart" id="townieSealChart" role="img" aria-label="Townie score: 0 percent" style="--townie-score:0%">
+        <span class="townie-seal-fill" aria-hidden="true"></span>
+        <img id="townieSeal" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="" crossorigin="anonymous">
+      </div>
+      <div class="townie-score-copy">
+        <p class="townie-percent" id="towniePercent">0%</p>
+        <h2 id="townieResultTitle">I’m 0% Norwood Townie!</h2>
+        <p class="townie-share-question">What’s your score?</p>
+        <p class="townie-result-note">Your score brings together Norwood know-how and the local experiences you’ve had.</p>
+      </div>
+    </div>
+    <div class="townie-share">
+      <p class="townie-share-label">Share your score</p>
+      <div class="townie-share-options" aria-label="Share your score">
+        <a class="townie-share-button" id="townieShareFacebook" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Share your score on Facebook">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"/></svg><span>Facebook</span>
+        </a>
+        <button class="townie-share-button" id="townieShareInstagram" type="button" aria-label="Share your score on Instagram">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.7" cy="6.7" r="1" class="townie-icon-fill"/></svg><span>Instagram</span>
+        </button>
+        <a class="townie-share-button" id="townieShareX" href="https://x.com/intent/post" target="_blank" rel="noopener" aria-label="Share your score on X">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.9 3H22l-6.8 7.8L23.2 21h-6.3L12 14.7 6.4 21H3.2l7.3-8.4L2.8 3h6.5l4.5 5.9L18.9 3Zm-1.1 16h1.7L8.3 4.9H6.5L17.8 19Z"/></svg><span>X</span>
+        </a>
+        <a class="townie-share-button" id="townieShareSms" href="sms:" aria-label="Share your score by text message">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4.5h16a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5h-8L6 21v-3.5H4A1.5 1.5 0 0 1 2.5 16V6A1.5 1.5 0 0 1 4 4.5Z"/><path d="M7 9h10M7 12h7"/></svg><span>Text</span>
+        </a>
+      </div>
+      <p class="townie-share-status" id="townieShareStatus" role="status" aria-live="polite"></p>
+    </div>
+    <p class="townie-seal-credit">Town seal image: <a href="https://commons.wikimedia.org/wiki/File:Seal_of_Norwood,_Massachusetts.png" target="_blank" rel="noopener">Town of Norwood via Wikimedia Commons ↗</a></p>
+    <button class="townie-button townie-button-primary townie-replay" id="townieReplay" type="button">Play again <span aria-hidden="true">↻</span></button>
   </section>
   
 </main>
@@ -63,6 +90,6 @@
   <a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a>
 </footer>
 <script src="nav.js?v=6637434d9b6d"></script>
-<script src="how-townie-are-you.js?v=1.4.0"></script>
+<script src="how-townie-are-you.js?v=1.4.1"></script>
 </body>
 </html>
