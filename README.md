@@ -1,10 +1,10 @@
-# Norwood.ma v1.3.1
+# Norwood.ma v1.4.0
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.3.1 — fixes the live MBTA vehicle request so 34E buses and Franklin/Foxboro Line trains can appear in the map overlay.
+**Current release:** v1.4.0 — adds How Townie Are You?, a separate interactive quiz with shuffled choices, a matching question, and Townie points for local experiences.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -58,7 +58,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Transit includes MBTA commuter rail and Route 34E context, with live information where available.
 - Weather uses National Weather Service forecast data plus local radar and the Norwood Airport webcam. On forecast failures, widgets show a labeled cached forecast only while its period is current and the cache is under three hours old; otherwise they offer the forecast link. Network requests time out after eight seconds.
 - Transit predictions beyond two hours use estimated clock times with Tomorrow/date labels in Norwood local time. Invalid or expired predictions are excluded.
-- Interactive tools include Norwood Trivia, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
+- Interactive tools include Norwood Trivia, How Townie Are You?, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
 
 ### PWA, navigation, and presentation
 - Primary interior navigation is Home · What's Happening · News · Explore · Transit · Calendars · Local Resources; the homepage omits redundant Home.
