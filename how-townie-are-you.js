@@ -40,8 +40,8 @@
    "Map guides and lookup tools for finding your voting precinct, elementary school district, and flock cameras",
    "Quick guides for trash and recycling, moving to Norwood, and getting involved in the community",
    "The latest gas prices from around town",
-   "All of the above and so much more",
-   "A Town Meeting archive that lets you see exactly how your representative voted"
+   "A Town Meeting archive that lets you see exactly how your representative voted",
+   "All of the above and so much more"
   ],correct:"All of the above and so much more",explanation:"Norwood.ma brings local news, events, alerts, practical guides, fun ideas, and useful tools together in one place."},
  ];
  const $=id=>document.getElementById(id);
@@ -81,9 +81,11 @@
   for(let i=0;i<=steps;i++){const angle=(-90+percent*3.6*i/steps)*Math.PI/180,x=50+50*Math.cos(angle),y=50+50*Math.sin(angle);points.push(x.toFixed(3)+"% "+y.toFixed(3)+"%")}
   colorLayer.style.clipPath="polygon("+points.join(",")+")";
  }
- function complete(){game.hidden=true;results.hidden=false;const percent=Math.round(((knowledgePoints+experiencePoints)/questions.length)*100);$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";setTownieSealScore(percent);$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent);window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
+ function complete(){game.hidden=true;results.hidden=false;const percent=Math.round(((knowledgePoints+experiencePoints)/questions.length)*100);$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";setTownieSealScore(percent);$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent);prepareShareCard(percent);window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
 
  const shareUrl=window.location.origin+window.location.pathname;
+ let preparedShareCard=null;
+ function prepareShareCard(percent){preparedShareCard=makeShareCard(percent).catch(()=>null)}
  function configureShare(percent){const message="I’m "+percent+"% Norwood Townie! What’s your score?";const encodedUrl=encodeURIComponent(shareUrl),encodedMessage=encodeURIComponent(message);$("townieShareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl+"&quote="+encodedMessage;$("townieShareX").href="https://x.com/intent/post?text="+encodedMessage+"&url="+encodedUrl;$("townieShareSms").href="sms:?body="+encodeURIComponent(message+" "+shareUrl)}
  function loadSealForCard(){return new Promise((resolve,reject)=>{const img=$("townieSeal");if(img.complete){if(img.naturalWidth)resolve(img);else reject(new Error("seal unavailable"));return}img.onload=()=>resolve(img);img.onerror=()=>reject(new Error("seal unavailable"))})}
  function makeShareCard(percent){
@@ -159,7 +161,7 @@
   }
   status.textContent="Preparing your score graphic, caption, and quiz link…";
   try{
-   const blob=await makeShareCard(percent),file=new File([blob],"norwood-townie-score.png",{type:"image/png"});
+   const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");const file=new File([blob],"norwood-townie-score.png",{type:"image/png"});
    if(supportsImageShare){
     try{
      await navigator.share({files:[file],title:message,text:caption,url:shareUrl});
@@ -199,6 +201,6 @@
  $("townieStart").addEventListener("click",()=>{current=0;knowledgePoints=0;experiencePoints=0;intro.hidden=true;results.hidden=true;game.hidden=false;render()});
  next.addEventListener("click",()=>{if(current<questions.length-1){current++;render()}else complete()});
  $("townieReplay").addEventListener("click",()=>{$("townieStart").click()});
- function previewResultsIfRequested(){const params=new URLSearchParams(window.location.search);if(params.get("preview")!=="results")return;const raw=params.has("score")?Number(params.get("score")):72;const percent=Number.isFinite(raw)?Math.max(0,Math.min(100,Math.round(raw/4)*4)):72;intro.hidden=true;game.hidden=true;results.hidden=false;$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";setTownieSealScore(percent);$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent)}
+ function previewResultsIfRequested(){const params=new URLSearchParams(window.location.search);if(params.get("preview")!=="results")return;const raw=params.has("score")?Number(params.get("score")):72;const percent=Number.isFinite(raw)?Math.max(0,Math.min(100,Math.round(raw/4)*4)):72;intro.hidden=true;game.hidden=true;results.hidden=false;$("towniePercent").textContent=percent+"%";$("townieResultTitle").textContent="I’m "+percent+"% Norwood Townie!";setTownieSealScore(percent);$("townieSealChart").setAttribute("aria-label","Townie score: "+percent+" percent");configureShare(percent);prepareShareCard(percent)}
  previewResultsIfRequested();
 })();
