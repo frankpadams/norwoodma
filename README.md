@@ -1,10 +1,10 @@
-# Norwood.ma v1.4.3
+# Norwood.ma v1.4.4
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.4.3 — improves Facebook score sharing by copying the caption and quiz link while opening Facebook’s composer.
+**Current release:** v1.4.4 — confirms when the Facebook caption and quiz link are copied and explains how to paste them into a post or group.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -90,6 +90,12 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 
 ## Current stable release
 
+### v1.4.4 — Facebook share paste guidance
+Released October 27, 2026.
+
+- Added a confirmation popup after the Facebook caption and quiz link are copied and the score graphic is downloaded.
+- The popup instructs users to paste the text into a profile post or group, attach the image, then open Facebook.
+
 ### v1.4.3 — Facebook score-share caption handling
 Released October 27, 2026.
 
@@ -115,6 +121,7 @@ Post-release operational development has also added regional-event organization,
 
 ## Release history
 
+- **v1.4.4** — Facebook share copy confirmation and paste instructions.
 - **v1.4.3** — Facebook caption handling for Townie score shares.
 - **v1.4.2** — destination-specific Townie sharing, system share option, and final-question order fix.
 - **v1.0.2** — event priority, Health Department source coverage, and Fine Arts/theatre monitoring.
