@@ -24,7 +24,7 @@
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever attended Norwood’s fishing derby and rubber duck race?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Do you have a vehicle sticker for Norwood’s Winter Street Recycling Facility?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever been to a race at Norwood Arena?"},
-  {type:"townie",category:"HAVE YOU EVER…?",prompt:"Do you own at least one piece of clothing that references Norwood?",context:'If not, <a href="https://www.norwood.ma/nts.html" target="_blank" rel="noopener">visit Norwood Trading &amp; Supply ↗</a>.'}
+  {type:"townie",category:"HAVE YOU EVER…?",prompt:"Do you own at least one piece of clothing that references Norwood?",context:'If not, <a href="https://www.norwood.ma/nts.html" target="_blank" rel="noopener">visit Norwood Trading &amp; Supply ↗</a>.'},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Were you or an immediate family member born at Norwood Hospital?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Do you refer to South Norwood as “the Flats”?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Did John Carroll know your name?"},
