@@ -68,7 +68,34 @@
  const shareUrl=window.location.origin+window.location.pathname;
  function configureShare(percent){const message="I’m "+percent+"% Norwood Townie! What’s your score?";const encodedUrl=encodeURIComponent(shareUrl),encodedMessage=encodeURIComponent(message);$("townieShareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl+"&quote="+encodedMessage;$("townieShareX").href="https://x.com/intent/post?text="+encodedMessage+"&url="+encodedUrl;$("townieShareSms").href="sms:?body="+encodeURIComponent(message+" "+shareUrl)}
  function loadSealForCard(){return new Promise((resolve,reject)=>{const img=$("townieSeal");if(img.complete){if(img.naturalWidth)resolve(img);else reject(new Error("seal unavailable"));return}img.onload=()=>resolve(img);img.onerror=()=>reject(new Error("seal unavailable"))})}
- function makeShareCard(percent){return loadSealForCard().then(img=>new Promise((resolve,reject)=>{try{const canvas=document.createElement("canvas");canvas.width=1200;canvas.height=630;const c=canvas.getContext("2d");c.fillStyle="#f7f9fb";c.fillRect(0,0,1200,630);c.fillStyle="#003b71";c.fillRect(0,0,1200,18);const size=410,x=45,y=125,cx=x+size/2,cy=y+size/2;c.save();c.beginPath();c.arc(cx,cy,size/2,0,Math.PI*2);c.clip();c.fillStyle="#fff";c.fillRect(x,y,size,size);c.filter="grayscale(1)";c.drawImage(img,x,y,size,size);c.restore();if(percent>0){c.save();c.beginPath();c.moveTo(cx,cy);c.arc(cx,cy,size/2,-Math.PI/2,-Math.PI/2+Math.PI*2*percent/100);c.closePath();c.clip();c.drawImage(img,x,y,size,size);c.restore()}c.fillStyle="#123e68";c.font="800 58px system-ui, sans-serif";c.fillText("I’m "+percent+"% Norwood Townie!",500,270);c.fillStyle="#526577";c.font="600 34px system-ui, sans-serif";c.fillText("What’s your score?",500,335);c.fillStyle="#123e68";c.font="700 26px system-ui, sans-serif";c.fillText("norwood.ma",500,430);canvas.toBlob(blob=>blob?resolve(blob):reject(new Error("share image unavailable")),"image/png")}catch(error){reject(error)}}))}
+ function makeShareCard(percent){
+  return loadSealForCard().then(img=>new Promise((resolve,reject)=>{
+   try{
+    const canvas=document.createElement("canvas");canvas.width=1200;canvas.height=630;
+    const c=canvas.getContext("2d");
+    c.fillStyle="#f7f9fb";c.fillRect(0,0,1200,630);c.fillStyle="#003b71";c.fillRect(0,0,1200,18);
+    const size=410,x=45,y=125,cx=x+size/2,cy=y+size/2;
+    const sealCanvas=document.createElement("canvas");sealCanvas.width=size;sealCanvas.height=size;
+    const sealContext=sealCanvas.getContext("2d");
+    sealContext.beginPath();sealContext.arc(size/2,size/2,size/2,0,Math.PI*2);sealContext.clip();
+    sealContext.fillStyle="#fff";sealContext.fillRect(0,0,size,size);sealContext.drawImage(img,0,0,size,size);
+    const gray=sealContext.getImageData(0,0,size,size);
+    for(let i=0;i<gray.data.length;i+=4){
+     const luminance=Math.round(gray.data[i]*.299+gray.data[i+1]*.587+gray.data[i+2]*.114);
+     gray.data[i]=luminance;gray.data[i+1]=luminance;gray.data[i+2]=luminance;
+    }
+    sealContext.putImageData(gray,0,0);c.drawImage(sealCanvas,x,y);
+    if(percent>0){
+     c.save();c.beginPath();c.moveTo(cx,cy);c.arc(cx,cy,size/2,-Math.PI/2,-Math.PI/2+Math.PI*2*percent/100);c.closePath();c.clip();
+     c.drawImage(img,x,y,size,size);c.restore();
+    }
+    c.fillStyle="#123e68";c.font="800 58px system-ui, sans-serif";c.fillText("I’m "+percent+"% Norwood Townie!",500,270);
+    c.fillStyle="#526577";c.font="600 34px system-ui, sans-serif";c.fillText("What’s your score?",500,335);
+    c.fillStyle="#123e68";c.font="700 26px system-ui, sans-serif";c.fillText("norwood.ma",500,430);
+    canvas.toBlob(blob=>blob?resolve(blob):reject(new Error("share image unavailable")),"image/png");
+   }catch(error){reject(error)}
+  }));
+ }
  function copyShareCaption(percent){const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).catch(()=>{});return Promise.resolve()}
  async function shareScore(id,target){const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?";let supportsImageShare=false;try{const sample=new File(["preview"],"norwood-townie-score.png",{type:"image/png"});supportsImageShare=!!(navigator.share&&navigator.canShare&&navigator.canShare({files:[sample]}))}catch(error){}let postWindow=null;if(!supportsImageShare){const fallbackUrl=control.href||control.dataset.fallbackUrl;if(fallbackUrl)postWindow=window.open(fallbackUrl,"_blank","noopener,noreferrer")}status.textContent="Preparing your seal graphic and caption…";try{const blob=await makeShareCard(percent),file=new File([blob],"norwood-townie-score.png",{type:"image/png"});if(supportsImageShare){await navigator.share({files:[file],title:message,text:message});status.textContent="Share sheet opened with the score graphic and caption. Choose "+target+"; you can add text before posting."}else{const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);await copyShareCaption(percent);status.textContent="Caption copied and the score graphic downloaded. Add the image to the "+target+" post, then add or edit the text before posting."}}catch(error){status.textContent=error&&error.name==="AbortError"?"Share canceled. You can try another share option.":"Couldn’t prepare the share graphic. Try another share option."}}
  [["townieShareFacebook","Facebook"],["townieShareInstagram","Instagram"],["townieShareX","X"],["townieShareSms","text message"]].forEach(([id,target])=>$(id).addEventListener("click",event=>{event.preventDefault();shareScore(id,target)}));
