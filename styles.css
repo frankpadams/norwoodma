@@ -450,3 +450,14 @@ html[data-text-size="largest"] body{zoom:1.5}
  html[data-text-size="largest"]{font-size:150%}
  html[data-text-size] body{font-size:inherit}
 }
+
+/* Continuous, accessible top-alert ticker. Emergency messages retain their links. */
+.site-timely-alert.site-timely-marquee{display:block!important;position:relative!important}
+.site-timely-marquee .site-timely-track{display:flex!important;justify-content:flex-start!important;gap:0!important;width:100%!important;overflow:hidden!important}
+.site-timely-marquee-group{display:flex;align-items:center;flex:none;width:max-content;animation:site-timely-scroll var(--ticker-duration,30s) linear infinite}
+.site-timely-marquee .site-timely-item.is-active{display:inline-flex!important;flex:none!important;width:auto!important;max-width:none!important;padding:0 28px!important;overflow:visible!important}
+.site-timely-marquee:hover .site-timely-marquee-group,
+.site-timely-marquee:focus-within .site-timely-marquee-group,
+.site-timely-marquee.ticker-paused .site-timely-marquee-group{animation-play-state:paused}
+@keyframes site-timely-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--ticker-distance,600px)))}}
+@media(prefers-reduced-motion:reduce){.site-timely-marquee-group{animation:none!important}}
