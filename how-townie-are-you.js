@@ -146,11 +146,18 @@
    }catch(fallbackError){status.textContent="Couldn’t copy the score graphic. Try one of the share options instead."}
   }
  }
- function copyShareCaption(percent){const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).then(()=>true).catch(()=>false);return Promise.resolve(false)}
+ function copyShareCaption(percent){
+  const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;
+  const fallback=()=>{const field=document.createElement("textarea");field.value=caption;field.setAttribute("readonly","");field.style.position="fixed";field.style.opacity="0";document.body.appendChild(field);field.select();let copied=false;try{copied=document.execCommand("copy")}catch(error){}field.remove();return copied};
+  if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).then(()=>true).catch(()=>fallback());
+  return Promise.resolve(fallback());
+}
  async function shareDirect(id,target,destination){
   const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?",caption=message+" "+shareUrl;
   const url=control.href||control.dataset.fallbackUrl;
-  if(id==="townieShareFacebook"||id==="townieShareX"||id==="townieShareInstagram"){
+  if(id==="townieShareFacebook"){
+   pendingFacebookShareUrl=url;
+  }else if(id==="townieShareX"||id==="townieShareInstagram"){
    if(url)window.open(url,"_blank","noopener,noreferrer");
   }else if(id==="townieShareSms"){
    if(url)window.location.href=url;
@@ -161,10 +168,13 @@
    try{
     const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");
     const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);
-    status.textContent=copied
-     ?"Facebook doesn’t prefill custom captions from share links. Your caption and quiz link are copied; paste them into the post. The score graphic was downloaded; attach it before posting."
-     :"Facebook doesn’t prefill custom captions from share links. The score graphic was downloaded. Use Copy to copy the caption and quiz link.";
-   }catch(error){status.textContent="Facebook doesn’t prefill custom captions. Use Copy for the caption and link, then attach the score graphic if available."}
+    $("townieFacebookReadyMessage").textContent=copied
+     ?"Copied to your clipboard: the score caption and quiz link. Paste them into your Facebook post or group. The score graphic was downloaded; attach it before posting."
+     :"I couldn’t copy the caption automatically. The score graphic was downloaded; use Copy on the quiz page for the caption and link, then paste them into your Facebook post or group.";
+    status.textContent=copied?"Caption and link copied; score graphic downloaded.":"Score graphic downloaded; caption copy needs another try.";
+    if(typeof facebookReadyDialog.showModal==="function")facebookReadyDialog.showModal();
+    else window.alert($("townieFacebookReadyMessage").textContent);
+   }catch(error){status.textContent="Couldn’t prepare the score graphic. Use Copy for the caption and link."}
    return;
   }
   try{
@@ -204,7 +214,12 @@
    await copyShareCaption(percent);status.textContent="The graphic was downloaded and the caption with quiz link was copied.";
   }catch(error){if(error&&error.name==="AbortError"){status.textContent="Share canceled.";return}status.textContent="Couldn’t prepare the score graphic and quiz link. Try Copy or a direct share option."}
  }
- const facebookDialog=$("townieFacebookShareDialog");
+ const facebookDialog=$("townieFacebookShareDialog"),facebookReadyDialog=$("townieFacebookReadyDialog");
+ let pendingFacebookShareUrl="";
+ $("townieFacebookContinue").addEventListener("click",()=>{
+  const link=document.createElement("a");link.href=pendingFacebookShareUrl;link.target="_blank";link.rel="noopener noreferrer";link.click();
+  facebookReadyDialog.close();
+ });
  $("townieShareFacebook").addEventListener("click",event=>{
   event.preventDefault();
   if(typeof facebookDialog.showModal==="function")facebookDialog.showModal();
