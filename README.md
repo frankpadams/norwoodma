@@ -4,7 +4,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.4.1 — refines the How Townie Are You? score-sharing graphic for balanced spacing and readable text.
+**Current release:** v1.4.1 — refines the How Townie Are You? score-sharing graphic and adds a Facebook profile-or-group choice.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
