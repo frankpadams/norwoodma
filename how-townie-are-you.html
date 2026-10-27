@@ -81,6 +81,17 @@
         </button>
       </div>
       <p class="townie-share-status" id="townieShareStatus" role="status" aria-live="polite"></p>
+      <dialog class="townie-facebook-dialog" id="townieFacebookShareDialog" aria-labelledby="townieFacebookShareTitle">
+        <div class="townie-facebook-dialog-content">
+          <h2 id="townieFacebookShareTitle">Where do you want to share?</h2>
+          <p>Choose your Facebook profile or a group. Facebook will let you confirm the destination before posting.</p>
+          <div class="townie-facebook-dialog-actions">
+            <button class="townie-button townie-button-primary" type="button" data-facebook-destination="your profile">Your profile</button>
+            <button class="townie-button townie-button-secondary" type="button" data-facebook-destination="a group">A group</button>
+            <form method="dialog"><button class="townie-button townie-button-secondary" type="submit">Cancel</button></form>
+          </div>
+        </div>
+      </dialog>
     </div>
     <p class="townie-seal-credit">Town seal image: <a href="https://commons.wikimedia.org/wiki/File:Seal_of_Norwood,_Massachusetts.png" target="_blank" rel="noopener">Town of Norwood via Wikimedia Commons ↗</a></p>
     <button class="townie-button townie-button-primary townie-replay" id="townieReplay" type="button">Play again <span aria-hidden="true">↻</span></button>
