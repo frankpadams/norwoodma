@@ -90,3 +90,6 @@
 .townie-button-secondary:hover{background:#eaf1f6}
 .townie-facebook-dialog form{margin:0}
 @media(max-width:420px){.townie-facebook-dialog-actions{display:grid}.townie-facebook-dialog-actions>*{width:100%}}
+
+.townie-share-more{background:#f5f9fc}
+@media(max-width:580px){.townie-share-more{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}}
