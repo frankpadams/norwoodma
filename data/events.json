@@ -1270,36 +1270,6 @@
     ]
   },
   {
-    "id": "2026-10-27-tuesday-oct-134c8bf",
-    "title": "Tuesday , Oct",
-    "start": {
-      "date": "2026-10-27",
-      "time": null
-    },
-    "end": {
-      "date": "2026-10-27",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning11.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Tuesday , Oct October 27 , 2026 Shorashim Hebrew Learning Tuesday, Oct 27th 3:45p to 5:45p MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-10-28-baby-bop-story-time-5f26a0f",
     "title": "Baby Bop Story Time",
     "start": {
@@ -9340,6 +9310,36 @@
     "calendar_ids": [
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-08-sunday-nov-e334483",
+    "title": "Sunday , Nov",
+    "start": {
+      "date": "2026-11-08",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-08",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/shorashim4.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Sunday , Nov November 8 , 2026 Shorashim Sunday, Nov 8th 9:30a to 11:30a MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -43958,6 +43958,74 @@
       "rec-all",
       "rec-youth",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-01-20-varsity-boys-winter-dcl-foley-swimming-1-west-b2bdfd5",
+    "title": "Varsity Boys - Winter DCL Foley Swimming 1 @ Weston High School",
+    "start": {
+      "date": "2027-01-20",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-01-20",
+      "time": "18:30"
+    },
+    "venue": "456 Wellesley Street, Weston Massachusetts 02493",
+    "address": "456 Wellesley Street, Weston Massachusetts 02493",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-swimming",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Swimming",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Swimming",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Swimming 1 Level: Varsity Boys - Winter DCL Foley Team: Medfield / Norwood Site: Weston Middle School Subsite: Weston Middle School",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-01-20-varsity-girls-winter-dcl-foley-swimming-1-wes-7a2f28f",
+    "title": "Varsity Girls - Winter DCL Foley Swimming 1 @ Weston High School",
+    "start": {
+      "date": "2027-01-20",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2027-01-20",
+      "time": "18:30"
+    },
+    "venue": "456 Wellesley Street, Weston Massachusetts 02493",
+    "address": "456 Wellesley Street, Weston Massachusetts 02493",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-swimming",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Swimming",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Swimming",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Swimming 1 Level: Varsity Girls - Winter DCL Foley Team: Medfield / Norwood Site: Weston Middle School Subsite: Weston Middle School",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
