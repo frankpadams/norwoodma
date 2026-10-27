@@ -6,7 +6,7 @@
 
 - Balanced the Townie score-share card with more even side margins and improved vertical spacing.
 - Sized the headline to fit within its text area so the complete score is visible.
-- Kept the quiz URL included in supported native shares so shared link previews can lead back to the quiz.
+- Added a Facebook destination choice for the user’s profile or a group; the quiz link remains included in supported share flows.
 
 ## Notes
 
