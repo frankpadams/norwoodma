@@ -30,7 +30,7 @@
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Did John Carroll know your name?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you ever given directions using a Norwood business that closed years ago?"},
   {type:"townie",category:"HAVE YOU EVER…?",prompt:"Have you been in the Norwood Record? (Yes, the crime log counts too.)"},
-  {type:"choice",category:"NORWOOD.MA KNOW-HOW",prompt:"What can you find at www.Norwood.ma?",options:[
+  {type:"choice",category:"NORWOOD.MA KNOW-HOW",prompt:"What can you find at www.Norwood.ma?",shuffleOptions:false,options:[
    "Dinner Spinner restaurant randomizer",
    "Event listings for what’s happening around Norwood, plus a conflict contraption to help plan events when fewer things are competing",
    "The latest Norwood town news",
@@ -58,7 +58,7 @@
   $("townieProgressText").textContent="Question "+(current+1)+" of "+questions.length;
   $("townieCategory").textContent=q.category;questionTitle.textContent=q.prompt;
   if(q.type==="choice"){
-   shuffle(q.options).forEach(option=>{const b=document.createElement("button");b.type="button";b.className="townie-choice";b.textContent=option;b.addEventListener("click",()=>{if(answered)return;const correct=option===q.correct;if(correct)knowledgePoints++;choices.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.textContent===q.correct)x.classList.add("is-correct")});if(!correct)b.classList.add("is-wrong");finishQuestion(correct,correct?"Correct!":"Not quite. The answer is "+q.correct+".",q.explanation+(q.detail||""))});choices.appendChild(b)});
+   (q.shuffleOptions===false?q.options:shuffle(q.options)).forEach(option=>{const b=document.createElement("button");b.type="button";b.className="townie-choice";b.textContent=option;b.addEventListener("click",()=>{if(answered)return;const correct=option===q.correct;if(correct)knowledgePoints++;choices.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.textContent===q.correct)x.classList.add("is-correct")});if(!correct)b.classList.add("is-wrong");finishQuestion(correct,correct?"Correct!":"Not quite. The answer is "+q.correct+".",q.explanation+(q.detail||""))});choices.appendChild(b)});
   }else if(q.type==="match"){
    choices.hidden=true;match.hidden=false;
    q.rows.forEach((row,index)=>{const wrap=document.createElement("div");wrap.className="townie-match-row";const label=document.createElement("label");label.htmlFor="townieMatch"+index;label.textContent=row[0];const select=document.createElement("select");select.id="townieMatch"+index;select.className="townie-select";select.setAttribute("aria-label","Choose an office for "+row[0]);const placeholder=document.createElement("option");placeholder.value="";placeholder.textContent="Choose an office";select.appendChild(placeholder);q.offices.forEach(office=>{const opt=document.createElement("option");opt.value=office;opt.textContent=office;select.appendChild(opt)});wrap.append(label,select);match.appendChild(wrap)});
