@@ -86,7 +86,7 @@
  const shareUrl=window.location.origin+window.location.pathname;
  let preparedShareCard=null;
  function prepareShareCard(percent){preparedShareCard=makeShareCard(percent).catch(()=>null)}
- function configureShare(percent){const message="I’m "+percent+"% Norwood Townie! What’s your score?";const encodedUrl=encodeURIComponent(shareUrl),encodedMessage=encodeURIComponent(message);$("townieShareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl;$("townieShareX").href="https://x.com/intent/post?text="+encodedMessage+"&url="+encodedUrl;$("townieShareSms").href="sms:?body="+encodeURIComponent(message+" "+shareUrl)}
+ function configureShare(){}
  function loadSealForCard(){return new Promise((resolve,reject)=>{const img=$("townieSeal");if(img.complete){if(img.naturalWidth)resolve(img);else reject(new Error("seal unavailable"));return}img.onload=()=>resolve(img);img.onerror=()=>reject(new Error("seal unavailable"))})}
  function makeShareCard(percent){
   return loadSealForCard().then(img=>new Promise((resolve,reject)=>{
@@ -152,88 +152,25 @@
   if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).then(()=>true).catch(()=>fallback());
   return Promise.resolve(fallback());
 }
- async function shareDirect(id,target,destination){
-  const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?",caption=message+" "+shareUrl;
-  const url=control.href||control.dataset.fallbackUrl;
-  if(id==="townieShareFacebook"){
-   pendingFacebookShareUrl=url;
-  }else if(id==="townieShareX"||id==="townieShareInstagram"){
-   if(url)window.open(url,"_blank","noopener,noreferrer");
-  }else if(id==="townieShareSms"){
-   if(url)window.location.href=url;
-  }
-  status.textContent="Opening "+target+" and preparing your score graphic…";
-  if(id==="townieShareFacebook"){
-   const copied=await copyShareCaption(percent);
-   try{
-    const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");
-    const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);
-    $("townieFacebookReadyMessage").textContent=copied
-     ?"Copied to your clipboard: the score caption and quiz link. Paste them into your Facebook post or group. The score graphic was downloaded; attach it before posting."
-     :"I couldn’t copy the caption automatically. The score graphic was downloaded; use Copy on the quiz page for the caption and link, then paste them into your Facebook post or group.";
-    status.textContent=copied?"Caption and link copied; score graphic downloaded.":"Score graphic downloaded; caption copy needs another try.";
-    if(typeof facebookReadyDialog.showModal==="function")facebookReadyDialog.showModal();
-    else window.alert($("townieFacebookReadyMessage").textContent);
-   }catch(error){status.textContent="Couldn’t prepare the score graphic. Use Copy for the caption and link."}
-   return;
-  }
-  try{
-   const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");
-   let imageReady=false;
-   try{
-    if(navigator.clipboard&&navigator.clipboard.write&&typeof ClipboardItem!=="undefined"){
-     const item=new ClipboardItem({"image/png":blob,"text/plain":new Blob([caption],{type:"text/plain"})});
-     await navigator.clipboard.write([item]);imageReady=true;
-    }
-   }catch(error){}
-   if(!imageReady){
-    const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();
-    setTimeout(()=>URL.revokeObjectURL(link.href),1000);
-    await copyShareCaption(percent);
-   }
-   const where=destination?"; choose "+destination+" in Facebook":"";
-   status.textContent=imageReady
-    ?"Your caption and quiz link are prefilled. The score graphic is copied; paste it into your "+target+" post"+where+"."
-    :"Your caption and quiz link are ready. The score graphic was downloaded; attach it to your "+target+" post"+where+".";
-  }catch(error){status.textContent="Couldn’t prepare the score graphic and quiz link. Try Copy or More apps."}
- }
- async function shareMore(){
+ async function shareNative(){
   const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),message="I’m "+percent+"% Norwood Townie! What’s your score?",caption=message+" "+shareUrl;
-  let supportsImageShare=false;
-  try{const sample=new File(["preview"],"norwood-townie-score.png",{type:"image/png"});supportsImageShare=!!(navigator.share&&navigator.canShare&&navigator.canShare({files:[sample]}))}catch(error){}
-  status.textContent="Preparing your score graphic, caption, and quiz link…";
+  status.textContent="Preparing your score to share…";
   try{
-   const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");
-   if(supportsImageShare){
-    const file=new File([blob],"norwood-townie-score.png",{type:"image/png"});
-    await navigator.share({files:[file],title:message,text:caption,url:shareUrl});
-    status.textContent="Shared with the score graphic, caption, and quiz link.";
-    return;
-   }
-   const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);
-   await copyShareCaption(percent);status.textContent="The graphic was downloaded and the caption with quiz link was copied.";
-  }catch(error){if(error&&error.name==="AbortError"){status.textContent="Share canceled.";return}status.textContent="Couldn’t prepare the score graphic and quiz link. Try Copy or a direct share option."}
+   const blob=await (preparedShareCard||makeShareCard(percent));
+   if(!navigator.share)throw new Error("native sharing unavailable");
+   let data={title:message,text:caption,url:shareUrl};
+   if(blob&&typeof File!=="undefined"&&navigator.canShare){try{const file=new File([blob],"norwood-townie-score.png",{type:"image/png"});if(navigator.canShare({files:[file]}))data={files:[file],title:message,text:caption,url:shareUrl}}catch(error){}}
+   try{await navigator.share(data)}catch(error){if(error&&error.name==="AbortError"){status.textContent="Share canceled.";return}if(data.files)await navigator.share({title:message,text:caption,url:shareUrl});else throw error}
+   status.textContent=data.files?"Share menu opened with your score graphic, caption, and quiz link.":"Share menu opened with your caption and quiz link.";
+  }catch(error){
+   if(error&&error.name==="AbortError"){status.textContent="Share canceled.";return}
+   try{const blob=await (preparedShareCard||makeShareCard(percent)),link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);await copyShareCaption(percent);status.textContent="This browser couldn’t open its share menu. The graphic was downloaded and the caption and link were copied."}
+   catch(fallbackError){status.textContent="Couldn’t prepare the score for sharing. Try Copy instead."}
+  }
  }
- const facebookDialog=$("townieFacebookShareDialog"),facebookReadyDialog=$("townieFacebookReadyDialog");
- let pendingFacebookShareUrl="";
- $("townieFacebookContinue").addEventListener("click",()=>{
-  const link=document.createElement("a");link.href=pendingFacebookShareUrl;link.target="_blank";link.rel="noopener noreferrer";link.click();
-  facebookReadyDialog.close();
- });
- $("townieShareFacebook").addEventListener("click",event=>{
-  event.preventDefault();
-  if(typeof facebookDialog.showModal==="function")facebookDialog.showModal();
-  else if(window.confirm("Share to your Facebook profile? Choose Cancel to share to a group."))shareScore("townieShareFacebook","Facebook","your profile");
-  else shareScore("townieShareFacebook","Facebook","a group");
- });
- facebookDialog.querySelectorAll("[data-facebook-destination]").forEach(button=>button.addEventListener("click",()=>{
-  const destination=button.dataset.facebookDestination;
-  facebookDialog.close();
-  shareDirect("townieShareFacebook","Facebook",destination);
- }));
- [["townieShareInstagram","Instagram"],["townieShareX","X"],["townieShareSms","text message"]].forEach(([id,target])=>$(id).addEventListener("click",event=>{event.preventDefault();shareDirect(id,target)}));
+ $("townieShareNative").addEventListener("click",shareNative);
+ $("townieShareSms").addEventListener("click",event=>{event.preventDefault();const percent=parseInt($("towniePercent").textContent,10)||0;window.location.href="sms:?body="+encodeURIComponent("I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl)});
  $("townieCopyScore").addEventListener("click",copyShareScore);
- $("townieShareMore").addEventListener("click",shareMore);
  $("townieStart").addEventListener("click",()=>{current=0;knowledgePoints=0;experiencePoints=0;intro.hidden=true;results.hidden=true;game.hidden=false;render()});
  next.addEventListener("click",()=>{if(current<questions.length-1){current++;render()}else complete()});
  $("townieReplay").addEventListener("click",()=>{$("townieStart").click()});

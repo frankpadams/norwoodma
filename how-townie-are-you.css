@@ -64,21 +64,22 @@
 .townie-score-copy .townie-result-note{margin:10px 0 0}
 .townie-share{margin:0 auto 16px;padding:20px 0 6px;border-top:1px solid #e1e8ee}
 .townie-share-label{margin:0 0 13px;color:#18354e;font-weight:800}
-.townie-share-options{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.townie-share-options{display:grid;grid-template-columns:minmax(0,1.7fr) repeat(2,minmax(0,1fr));gap:10px;max-width:700px}
 .townie-share-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:10px 15px;border:1px solid #d5e0e8;border-radius:10px;background:#fff;color:#18354e;text-decoration:none;font:inherit;font-weight:750;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
 .townie-share-button:hover{transform:translateY(-1px);border-color:#7597b3;background:#f5f9fc}
 .townie-share-button:focus-visible{outline:3px solid #176da5;outline-offset:3px}
 .townie-share-button svg{width:20px;height:20px;fill:currentColor;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.townie-share-button:nth-child(2) svg,.townie-share-button:nth-child(4) svg{fill:none}
+.townie-share-text svg,.townie-share-hints svg{fill:none}
 .townie-share-button .townie-icon-fill{fill:currentColor;stroke:none}
 .townie-share-status{min-height:1.5em;margin:12px 0 0;color:#526577;font-size:.92rem}
 .townie-seal-credit{margin:0 auto 18px;color:#748290;font-size:.78rem}
 .townie-seal-credit a{color:#526577;text-underline-offset:2px}
 .townie-replay{margin-top:0}
-@media(max-width:580px){.townie-score-display{flex-direction:column;gap:18px;text-align:center}.townie-seal-chart{flex-basis:auto;width:min(58vw,220px)}.townie-score-copy .townie-result-note{margin-left:auto;margin-right:auto}.townie-share-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:360px;margin:0 auto}.townie-share-button{padding:10px 9px}}
+@media(max-width:580px){.townie-score-display{flex-direction:column;gap:18px;text-align:center}.townie-seal-chart{flex-basis:auto;width:min(58vw,220px)}.townie-score-copy .townie-result-note{margin-left:auto;margin-right:auto}.townie-share-options{grid-template-columns:repeat(2,minmax(0,1fr));max-width:360px;margin:0 auto}.townie-share-button{padding:10px 9px}}
 
 .townie-share-copy svg{fill:none}
-@media(max-width:580px){.townie-share-copy{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}}
+.townie-share-native{justify-content:space-between;background:#f5f9fc}.townie-share-hints{display:inline-flex;align-items:center;gap:3px;margin-left:auto}.townie-share-hints svg{width:16px;height:16px;fill:currentColor;stroke:currentColor;stroke-width:1.6}.townie-share-hints .townie-icon-fill{fill:currentColor;stroke:none}
+@media(max-width:580px){.townie-share-native{grid-column:1/-1}.townie-share-copy{width:auto}}
 
 .townie-facebook-dialog{width:min(440px,calc(100% - 32px));padding:0;border:1px solid #cddae4;border-radius:18px;background:#fff;color:#18354e;box-shadow:0 24px 80px rgba(10,30,48,.3)}
 .townie-facebook-dialog::backdrop{background:rgba(12,29,44,.58);backdrop-filter:blur(3px)}
@@ -91,5 +92,3 @@
 .townie-facebook-dialog form{margin:0}
 @media(max-width:420px){.townie-facebook-dialog-actions{display:grid}.townie-facebook-dialog-actions>*{width:100%}}
 
-.townie-share-more{background:#f5f9fc}
-@media(max-width:580px){.townie-share-more{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}}
