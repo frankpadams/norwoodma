@@ -468,8 +468,8 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
   </section>
   <aside class="today-sidebar" aria-label="Quick access"><div class="sidebar-heading"><p class="eyebrow">QUICK ACCESS</p></div><div class="quick-widget-grid">
 
-<a class="quick-widget tall things-test" href="things.html"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 29s9-8.2 9-17a9 9 0 1 0-18 0c0 8.8 9 17 9 17Z"/><circle cx="16" cy="12" r="3"/></svg></span><b>Things to Do</b><small>Activities and places to explore</small></a>
-<a class="quick-widget tall trivia-test" href="norwood-trivia.html"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M12.5 11a4 4 0 0 1 7.5 2c0 3-4 3.5-4 6M16 24h.01"/></svg></span><b>Norwood Trivia</b><small>Test your knowledge</small></a>
+<a class="quick-widget tall things-test" href="things.html"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 29s9-8.2 9-17a9 9 0 1 0-18 0c0 8.8 9 17 9 17Z"/><circle cx="16" cy="12" r="3"/></svg></span><b>Things to Do</b></a>
+<a class="quick-widget tall trivia-test" href="norwood-trivia.html"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M12.5 11a4 4 0 0 1 7.5 2c0 3-4 3.5-4 6M16 24h.01"/></svg></span><b>Norwood Trivia</b></a>
 <a class="quick-transit wide quick-transit-link" href="transit.html" aria-label="Open Norwood transit map, schedules, and arrivals"><div class="quick-transit-head"><div class="transit-brand"><span class="transit-live-label">LIVE TRANSIT</span><span class="ncm-head-divider" aria-hidden="true">|</span><strong class="transit-brand-name"><svg class="transit-t-logo" viewBox="0 0 100 100" role="img" aria-label="MBTA T logo"><circle cx="50" cy="50" r="45" fill="#fff" stroke="#000" stroke-width="6"/><path d="M20 29H80V43H58V79H42V43H20Z" fill="#000"/></svg> MBTA</strong></div></div><div id="quickTransitMap" aria-hidden="true"></div><div class="quick-transit-foot"><span>Map, Schedules, &amp; Arrivals ↗</span></div></a>
 </div><section class="ncm-now-widget ncm-rows-widget" aria-labelledby="ncmNowTitle"><header class="ncm-rows-head"><span class="ncm-on-air">ON AIR</span><span class="ncm-head-divider" aria-hidden="true">|</span><strong id="ncmNowTitle"><img class="ncm-title-logo" src="https://norwoodcommunitymedia.org/wp-content/themes/ncm/img/norwood-community-media-logo.png" alt="NCM" onerror="this.style.display='none';this.insertAdjacentText('afterend','NCM')"></strong></header><div class="ncm-rows">
 <a class="ncm-program-row ncm-community" href="https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/" target="_blank" rel="noopener" data-ncm-popup><span class="ncm-row-eyebrow">COMMUNITY</span><strong class="ncm-current-program" data-ncm-program="community">Schedule unavailable</strong><span class="ncm-row-play">▶</span></a>
@@ -660,4 +660,14 @@ const label=button.querySelector('span');
 if(copied){if(label)label.textContent='Copied!';button.setAttribute('aria-label','Event link copied');}
 else{window.prompt('Copy this event link:',url)}
 },true);
-})();</script></body></html>
+})();</script>
+<style id="compact-things-trivia-cards">
+.today-sidebar .quick-widget-grid>.quick-widget.tall.things-test,
+.today-sidebar .quick-widget-grid>.quick-widget.tall.trivia-test{min-height:64px!important;padding:5px 8px!important;gap:2px!important}
+.today-sidebar .quick-widget-grid>.quick-widget.tall.things-test .feature-icon,
+.today-sidebar .quick-widget-grid>.quick-widget.tall.trivia-test .feature-icon{top:0!important;margin:0!important;width:21px!important;height:21px!important}
+.today-sidebar .quick-widget-grid>.quick-widget.tall.things-test b,
+.today-sidebar .quick-widget-grid>.quick-widget.tall.trivia-test b{font-size:.84rem!important;line-height:1.1!important}
+@media(max-width:600px){.today-sidebar .quick-widget-grid>.quick-widget.tall.things-test,.today-sidebar .quick-widget-grid>.quick-widget.tall.trivia-test{min-height:60px!important;padding:4px 7px!important}}
+</style>
+</body></html>
