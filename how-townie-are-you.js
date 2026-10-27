@@ -86,7 +86,7 @@
  const shareUrl=window.location.origin+window.location.pathname;
  let preparedShareCard=null;
  function prepareShareCard(percent){preparedShareCard=makeShareCard(percent).catch(()=>null)}
- function configureShare(percent){const message="I’m "+percent+"% Norwood Townie! What’s your score?";const encodedUrl=encodeURIComponent(shareUrl),encodedMessage=encodeURIComponent(message);$("townieShareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl+"&quote="+encodedMessage;$("townieShareX").href="https://x.com/intent/post?text="+encodedMessage+"&url="+encodedUrl;$("townieShareSms").href="sms:?body="+encodeURIComponent(message+" "+shareUrl)}
+ function configureShare(percent){const message="I’m "+percent+"% Norwood Townie! What’s your score?";const encodedUrl=encodeURIComponent(shareUrl),encodedMessage=encodeURIComponent(message);$("townieShareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl;$("townieShareX").href="https://x.com/intent/post?text="+encodedMessage+"&url="+encodedUrl;$("townieShareSms").href="sms:?body="+encodeURIComponent(message+" "+shareUrl)}
  function loadSealForCard(){return new Promise((resolve,reject)=>{const img=$("townieSeal");if(img.complete){if(img.naturalWidth)resolve(img);else reject(new Error("seal unavailable"));return}img.onload=()=>resolve(img);img.onerror=()=>reject(new Error("seal unavailable"))})}
  function makeShareCard(percent){
   return loadSealForCard().then(img=>new Promise((resolve,reject)=>{
@@ -146,7 +146,7 @@
    }catch(fallbackError){status.textContent="Couldn’t copy the score graphic. Try one of the share options instead."}
   }
  }
- function copyShareCaption(percent){const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).catch(()=>{});return Promise.resolve()}
+ function copyShareCaption(percent){const caption="I’m "+percent+"% Norwood Townie! What’s your score? "+shareUrl;if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(caption).then(()=>true).catch(()=>false);return Promise.resolve(false)}
  async function shareDirect(id,target,destination){
   const percent=parseInt($("towniePercent").textContent,10)||0,status=$("townieShareStatus"),control=$(id),message="I’m "+percent+"% Norwood Townie! What’s your score?",caption=message+" "+shareUrl;
   const url=control.href||control.dataset.fallbackUrl;
@@ -156,6 +156,17 @@
    if(url)window.location.href=url;
   }
   status.textContent="Opening "+target+" and preparing your score graphic…";
+  if(id==="townieShareFacebook"){
+   const copied=await copyShareCaption(percent);
+   try{
+    const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");
+    const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="norwood-townie-score.png";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+    status.textContent=copied
+     ?"Facebook doesn’t prefill custom captions from share links. Your caption and quiz link are copied; paste them into the post. The score graphic was downloaded; attach it before posting."
+     :"Facebook doesn’t prefill custom captions from share links. The score graphic was downloaded. Use Copy to copy the caption and quiz link.";
+   }catch(error){status.textContent="Facebook doesn’t prefill custom captions. Use Copy for the caption and link, then attach the score graphic if available."}
+   return;
+  }
   try{
    const blob=await (preparedShareCard||makeShareCard(percent));if(!blob)throw new Error("share image unavailable");
    let imageReady=false;
