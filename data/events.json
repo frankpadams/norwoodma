@@ -757,40 +757,6 @@
     ]
   },
   {
-    "id": "2026-10-28-bv-soccer-hopkinton-high-school-24f9834",
-    "title": "BV Soccer @ Hopkinton High School",
-    "start": {
-      "date": "2026-10-28",
-      "time": "18:30"
-    },
-    "end": {
-      "date": "2026-10-28",
-      "time": "20:00"
-    },
-    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
-    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Soccer",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Soccer",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Hopkinton High School Subsite: HS Turf",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2026-10-28-girls-varsity-volleyball-hopkinton-high-schoo-6bcc2b4",
     "title": "Girls Varsity Volleyball @ Hopkinton High School",
     "start": {
@@ -854,6 +820,40 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-10-28-bv-soccer-hopkinton-high-school-24f9834",
+    "title": "BV Soccer @ Hopkinton High School",
+    "start": {
+      "date": "2026-10-28",
+      "time": "18:45"
+    },
+    "end": {
+      "date": "2026-10-28",
+      "time": "20:15"
+    },
+    "venue": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "address": "90 Hayden Rowe Street, Hopkinton Massachusetts 01748",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Soccer",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Soccer",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Soccer Level: BV Team: Norwood High School Site: Hopkinton High School Subsite: HS Turf",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -12413,6 +12413,37 @@
     ]
   },
   {
+    "id": "2026-11-16-mass-save-clinic-8743ec5",
+    "title": "Mass Save Clinic",
+    "start": {
+      "date": "2026-11-16",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "13:00"
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "town-senior-newsletter",
+    "source_url": "https://www.norwoodma.gov/document_center/Senior/Newsletters/20261101N (2).pdf?t=202610281211020",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Senior Center — Newsletter & Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_newsletter_pdf",
+    "notes": "Mass Save Clinic - Monday, November 16th, 11:00am-1:00pm. Julie Barbour-Issa, Energy Advocate for the Town of Norwood, can answer questions about home energy efficiency, heating systems, insulation and more. Residents who heat their homes with gas may qualify for free home insulation if their household income is below $96,000 for a household of one or $109,700 for a household of two. Confirm registration requirements with the Senior Center.",
+    "discovered_by": "newsletter_pdf",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "senior-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-75fb1d73294b-2026-11-16",
     "title": "Move and Groove Mondays Session 2",
     "start": {
@@ -12799,6 +12830,38 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-17-coffee-chat-ac85fcf",
+    "title": "Coffee Chat",
+    "start": {
+      "date": "2026-11-17",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-17",
+      "time": "10:00"
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "town-senior-newsletter",
+    "source_url": "https://www.norwoodma.gov/document_center/Senior/Newsletters/20261101N (2).pdf?t=202610281211020",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Senior Center — Newsletter & Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_newsletter_pdf",
+    "notes": "Coffee Chat – Tuesday, November 17th, 9:00-10:00am, Craft Room, Senior Center. Please join me for coffee and conversation. No sign-up is required. Volunteer Opportunity – Old Colony Planning Council is looking for volunteers for its Long-Term Care Ombudsman Program. Ombudsmen advocate for residents of nursing homes and rest homes when Confirm registration requirements with the Senior Center.",
+    "discovered_by": "newsletter_pdf",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "senior-calendar"
     ]
   },
   {
@@ -14913,6 +14976,38 @@
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-20-ballroom-dance-04c7fe8",
+    "title": "Ballroom Dance",
+    "start": {
+      "date": "2026-11-20",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": "22:00"
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "town-senior-newsletter",
+    "source_url": "https://www.norwoodma.gov/document_center/Senior/Newsletters/20261101N (2).pdf?t=202610281211020",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Senior Center — Newsletter & Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_newsletter_pdf",
+    "notes": "Ballroom Dance Friday November 20th at 7pm With Music played by Disc Jockey John Peters The Dance will be in the Senior Center from 7 to 10 PM. Fundraiser to be held at Texas Roadhouse-November 5th! 3-10 PM Confirm registration requirements with the Senior Center.",
+    "discovered_by": "newsletter_pdf",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-fundraisers",
+      "senior-calendar"
     ]
   },
   {
@@ -18062,6 +18157,37 @@
     ]
   },
   {
+    "id": "2026-11-28-sale-will-be-held-on-70e0128",
+    "title": "Sale will be held on",
+    "start": {
+      "date": "2026-11-28",
+      "time": "09:30"
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": "15:00"
+    },
+    "venue": "Norwood Senior Center",
+    "address": "275 Prospect Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "town-senior-newsletter",
+    "source_url": "https://www.norwoodma.gov/document_center/Senior/Newsletters/20261101N (2).pdf?t=202610281211020",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Senior Center — Newsletter & Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_newsletter_pdf",
+    "notes": "Sale will be held on Saturday, November 28th, 2026, and— for the first time ever— we will be extending our hours. This year’s sale will run from 9:30 AM to 3:00 PM. Confirm registration requirements with the Senior Center.",
+    "discovered_by": "newsletter_pdf",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "senior-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-612e68cd5d10-2026-11-28",
     "title": "Ballet 1 - Saturdays",
     "start": {
@@ -20404,6 +20530,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-03-holiday-kickoff-after-hours-thu-09967e5",
+    "title": "Holiday Kickoff After Hours",
+    "start": {
+      "date": "2026-12-03",
+      "time": "17:30"
+    },
+    "end": {
+      "date": "2026-12-03",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "nrrc-events",
+    "source_url": "https://members.nrrchamber.com//EvtListing.aspx?class=B&dbid2=MANRR&&date=20261203",
+    "cost": null,
+    "public_access": "public",
+    "series": "Neponset River Regional Chamber — Events",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Holiday Kickoff After Hours Thu, Dec 3rd @ 5:30 PM",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -50997,6 +51153,37 @@
     ]
   },
   {
+    "id": "2027-02-05-electric-avenue-the-80s-mtv-experience-7cc5e21",
+    "title": "Electric Avenue, The 80s MTV Experience",
+    "start": {
+      "date": "2027-02-05",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2027-02-05",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": null,
+    "category": "arts",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/electric-avenue",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Theatre — Shows & Events",
+    "publish_candidate": true,
+    "verification_status": "official_dated_event_page",
+    "notes": "Dated event from the official venue site.",
+    "discovered_by": "official_event_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2027-02-05-special-someone-dance",
     "title": "Special Someone Dance",
     "start": {
@@ -51343,6 +51530,37 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-02-06-songbird-the-singular-tribute-to-barbra-strei-2f78a41",
+    "title": "Songbird: The Singular Tribute to Barbra Streisand",
+    "start": {
+      "date": "2027-02-06",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2027-02-06",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": null,
+    "category": "arts",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/songbird-barbra-streisand",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Theatre — Shows & Events",
+    "publish_candidate": true,
+    "verification_status": "official_dated_event_page",
+    "notes": "Dated event from the official venue site.",
+    "discovered_by": "official_event_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
@@ -58174,6 +58392,37 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-02-26-abba-revisited-90eb801",
+    "title": "ABBA Revisited",
+    "start": {
+      "date": "2027-02-26",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2027-02-26",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": null,
+    "category": "arts",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/abba-revisited",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Theatre — Shows & Events",
+    "publish_candidate": true,
+    "verification_status": "official_dated_event_page",
+    "notes": "Dated event from the official venue site.",
+    "discovered_by": "official_event_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
     ]
   },
   {
