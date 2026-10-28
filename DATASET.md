@@ -112,3 +112,8 @@ Every member-record motion has a nonempty description drawn from its linked arti
 ## Map: ALPR cameras
 
 The Explore Norwood map has an optional ALPR camera overlay, off by default. It consumes the public hourly U.S. vector-tile feed at `https://tiles.dontgetflocked.com/cameras-us-hourly.json`, sourced from community-mapped OpenStreetMap data through DeFlock. The layer uses viewport tiles rather than downloading the national dataset. Popups show available brand, operator and direction tags and link back to the OpenStreetMap record. Coverage may be incomplete; the site does not present this as a complete inventory. Attribute OpenStreetMap contributors and DeFlock when displaying this dataset.
+
+
+
+## Sports & Recreation hub
+`sports-recreation.html` owns league listings and compact announcement records. `sports-guide.js` derives registration badges from unexpired notices and opens audience panels/sport groups from hashes. `sports-guide.css` styles the hub. Maintain announcement dates and verification under `SPORTS-RECREATION.md`; calendar events remain in the existing event pipeline.

@@ -1,5 +1,5 @@
 (()=>{
-  const SITE_VERSION='1.4.4';
+  const SITE_VERSION='1.5.0';
   if(!document.querySelector('script[data-norwood-pwa]')){const s=document.createElement('script');s.src='/pwa.js?v=20260928-rounded2';s.dataset.norwoodPwa='true';document.head.appendChild(s);}
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
@@ -276,3 +276,4 @@
   }
 })();
 (function iosHomePrompt(){try{const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;if(!ios||standalone||localStorage.getItem('norwood-ios-home-dismissed'))return;const today=new Date().toISOString().slice(0,10),last=localStorage.getItem('norwood-ios-last-visit');let visits=Number(localStorage.getItem('norwood-ios-visits')||0);if(last!==today){visits++;localStorage.setItem('norwood-ios-visits',String(visits));localStorage.setItem('norwood-ios-last-visit',today)}if(visits<3)return;const el=document.createElement('aside');el.className='ios-home-prompt';el.setAttribute('role','dialog');el.setAttribute('aria-label','Add Norwood.ma to your Home Screen');el.innerHTML='<button class="ios-home-close" aria-label="Dismiss">×</button><img src="https://www.norwood.ma/assets/apple-touch-icon.png?v=20260921" alt=""><div><strong>Keep Norwood.ma handy</strong><p>Add Norwood.ma to your Home Screen for quick access. Tap <b>Share</b> ↑ and choose <b>Add to Home Screen</b>.</p><button class="ios-home-gotit">Got it</button><button class="ios-home-later">Not now</button></div>';document.body.appendChild(el);const dismiss=()=>{localStorage.setItem('norwood-ios-home-dismissed','1');el.remove()};el.querySelector('.ios-home-close').onclick=dismiss;el.querySelector('.ios-home-gotit').onclick=dismiss;el.querySelector('.ios-home-later').onclick=()=>{localStorage.setItem('norwood-ios-visits','0');localStorage.setItem('norwood-ios-last-visit',today);el.remove()};}catch(e){}})();
+

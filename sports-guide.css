@@ -1,0 +1,59 @@
+
+#norwood-sports-concept{--paper:light-dark(#ffffff,#141e2b);--ink:light-dark(#18344d,#e7edf5);--soft:light-dark(#f4f7fa,#1b2939);--line:light-dark(#dbe3eb,#34465b);--secondary:light-dark(#576b7d,#b2c0ce);--navy:light-dark(#103b62,#102f4e);--gold:#e6bd58;--status:light-dark(#e8f4ed,#183d2e);--status-ink:light-dark(#256043,#a9dfbc);font-family:Arial,sans-serif;font-size:15px;line-height:1.5;background:var(--paper);color:var(--ink)}
+#norwood-sports-concept *{box-sizing:border-box}
+#norwood-sports-concept a{color:inherit;text-decoration:none}
+#norwood-sports-concept a:hover{text-decoration:underline}
+#norwood-sports-concept button{font:inherit;cursor:pointer}
+#norwood-sports-concept .ns-disclaimer{background:var(--soft);padding:8px 30px;font-size:11px;color:var(--secondary)}
+#norwood-sports-concept .ns-header{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:20px 30px;background:var(--navy);color:#fff}
+#norwood-sports-concept .ns-logo{font-size:26px;font-weight:750;letter-spacing:-1px;white-space:nowrap}
+#norwood-sports-concept .ns-logo em{color:var(--gold);font-style:normal}
+#norwood-sports-concept .ns-tagline{font-size:10px;letter-spacing:2px;display:block;margin-top:-4px;color:#d5e4f0}
+#norwood-sports-concept .ns-nav{display:flex;gap:20px;font-size:12px;align-items:center;flex-wrap:wrap}
+#norwood-sports-concept .ns-nav span:last-child{color:var(--gold)}
+#norwood-sports-concept .ns-main{padding:28px 36px 32px;max-width:980px;margin:auto}
+#norwood-sports-concept .ns-breadcrumb{font-size:12px;color:var(--secondary);margin-bottom:14px}
+#norwood-sports-concept h1{font-size:34px;line-height:1.15;letter-spacing:-1px;margin:0 0 8px;font-weight:750}
+#norwood-sports-concept .ns-intro{color:var(--secondary);margin:0 0 22px}
+#norwood-sports-concept .ns-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 26px}
+#norwood-sports-concept .ns-tab{border:0;border-bottom:3px solid transparent;background:transparent;color:var(--secondary);padding:12px 18px;font-weight:650;display:flex;gap:8px;align-items:center}
+#norwood-sports-concept .ns-tab svg{width:17px;height:17px}
+#norwood-sports-concept .ns-tab[aria-selected=true]{color:var(--ink);border-bottom-color:var(--gold);background:var(--soft)}
+#norwood-sports-concept .ns-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
+#norwood-sports-concept h2{font-size:19px;margin:0;letter-spacing:-.3px;font-weight:700}
+#norwood-sports-concept .ns-small{font-size:12px;color:var(--secondary)}
+#norwood-sports-concept .ns-notices{list-style:none;padding:0;border-top:1px solid var(--line);margin-bottom:29px}
+#norwood-sports-concept .ns-notice{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}
+#norwood-sports-concept .ns-label{font-size:11px;color:var(--secondary);font-weight:650;letter-spacing:.3px;text-transform:uppercase}
+#norwood-sports-concept .ns-notice a{font-weight:600}
+#norwood-sports-concept .ns-deadline{font-size:12px;color:var(--secondary);white-space:nowrap}
+#norwood-sports-concept .ns-deadline.urgent{color:var(--ink);font-weight:650}
+#norwood-sports-concept .ns-guide-intro{font-size:13px;margin:5px 0 14px;color:var(--secondary)}
+#norwood-sports-concept .ns-sports{border-top:1px solid var(--line)}
+#norwood-sports-concept details{border-bottom:1px solid var(--line)}
+#norwood-sports-concept summary{padding:14px 0;display:flex;gap:12px;align-items:center;cursor:pointer;list-style:none}
+#norwood-sports-concept summary::-webkit-details-marker{display:none}
+#norwood-sports-concept .ns-chevron{width:16px;height:16px;color:var(--secondary);transition:transform .15s}
+#norwood-sports-concept details[open] .ns-chevron{transform:rotate(90deg)}
+#norwood-sports-concept .ns-sport-name{font-weight:650;font-size:15px}
+#norwood-sports-concept .ns-sport-meta{margin-left:auto;font-size:12px;color:var(--secondary)}
+#norwood-sports-concept .ns-league{padding:3px 0 20px 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 18px}
+#norwood-sports-concept .ns-league h3{font-size:15px;font-weight:650;margin:0 0 4px}
+#norwood-sports-concept .ns-league p{font-size:12px;margin:0;color:var(--secondary)}
+#norwood-sports-concept .ns-pill{display:inline-flex;align-self:start;border-radius:5px;background:var(--status);color:var(--status-ink);font-size:11px;font-weight:600;padding:3px 7px;white-space:nowrap}
+#norwood-sports-concept .ns-links{display:flex;gap:17px;flex-wrap:wrap;grid-column:1/-1;font-size:12px;margin-top:7px}
+#norwood-sports-concept .ns-links a{font-weight:650;color:var(--ink)}
+#norwood-sports-concept .ns-calendar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;background:var(--soft);border-radius:8px;margin-top:24px}
+#norwood-sports-concept .ns-calendar h3{font-size:14px;margin:0 0 3px;font-weight:650}
+#norwood-sports-concept .ns-calendar p{font-size:12px;margin:0;color:var(--secondary)}
+#norwood-sports-concept .ns-calendar a{font-size:12px;font-weight:650;white-space:nowrap}
+#norwood-sports-concept .ns-footer{margin-top:23px;display:flex;justify-content:space-between;gap:16px;font-size:11px;color:var(--secondary)}
+#norwood-sports-concept [hidden]{display:none!important}
+#norwood-sports-concept .ns-places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+#norwood-sports-concept .ns-place{padding:18px;background:var(--soft);border-radius:8px}
+#norwood-sports-concept .ns-place h3{font-size:15px;margin:0 0 5px}
+#norwood-sports-concept .ns-place p{font-size:12px;color:var(--secondary);margin:0}
+@media(max-width:650px){#norwood-sports-concept .ns-main{padding:22px 18px}#norwood-sports-concept .ns-header{padding:17px 18px}#norwood-sports-concept .ns-nav{display:none}#norwood-sports-concept .ns-disclaimer{padding:7px 18px}#norwood-sports-concept h1{font-size:28px}#norwood-sports-concept .ns-tab{padding:12px 10px;font-size:12px;gap:5px}#norwood-sports-concept .ns-tab svg{width:15px}#norwood-sports-concept .ns-notice{grid-template-columns:44px minmax(0,1fr);gap:3px 7px}#norwood-sports-concept .ns-deadline{grid-column:2;white-space:normal}#norwood-sports-concept .ns-section-head{flex-wrap:wrap;gap:3px}#norwood-sports-concept .ns-league{grid-template-columns:1fr;padding-left:28px}#norwood-sports-concept .ns-pill{justify-self:start}#norwood-sports-concept .ns-calendar{align-items:flex-start;flex-direction:column;gap:10px}#norwood-sports-concept .ns-places{grid-template-columns:1fr}#norwood-sports-concept .ns-footer{flex-direction:column;gap:5px}}
+
+#norwood-sports-concept{border-radius:0}#norwood-sports-concept .ns-main{padding-top:28px}#norwood-sports-concept .ns-breadcrumb a{text-decoration:underline}#norwood-sports-concept .ns-tab[aria-selected=true]{border-bottom-color:#b78a18}#norwood-sports-concept .ns-league-status[hidden]{display:none}#norwood-sports-concept .ns-notice[hidden]{display:none}#norwood-sports-concept .ns-empty{font-size:13px;color:var(--secondary)}#norwood-sports-concept details{scroll-margin-top:24px}#norwood-sports-concept .ns-tab:focus-visible,#norwood-sports-concept summary:focus-visible{outline:3px solid #b78a18;outline-offset:3px}#norwood-sports-concept .ns-tab svg{display:none}
+@media(max-width:420px){#norwood-sports-concept .ns-tab{padding:11px 7px;font-size:12px}#norwood-sports-concept .ns-sport-meta{max-width:45%;text-align:right}#norwood-sports-concept .ns-tabs{gap:0}}

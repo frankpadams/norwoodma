@@ -25,6 +25,17 @@
   {name:'Fishing & boating',url:'fishing-boating.html',type:'Things to Do',text:'kayak canoe paddling launch fishing boat water Ellis Pond'},
   {name:'Swimming',url:'swimming.html',type:'Things to Do',text:'pool swim swimming lessons Hawes Father Mac beach'},
   {name:'Trails, Parks, Hiking & biking',url:'parks-trails.html',type:'Things to Do',text:'parks park playground playgrounds fields trail trails walking hiking hike biking bike bicycle maps brochures trails advisory committee cycling clubs bike shops Hawes Father Macs McAleer Ellis Balch Callahan Cleveland Doherty Murphy Oldham Prescott Wilson Winslow Endean Alevizos Bernie Cooper Shattuck Hennessey Germany Brook Meadow Vanderbilt Pine Tree Forest Tiot Blue Hills Moose Hill Trustees AMC MassBike Charles River Wheelers'},
+  {name:'Youth Softball',url:'sports-recreation.html#youth-softball',type:'Youth Sports',text:'youth sports leagues kids children registration clinics softball pitching hitting fielding Norwood Youth Softball'},
+  {name:'Youth Baseball',url:'sports-recreation.html#youth-baseball',type:'Youth Sports',text:'youth sports leagues kids children registration clinics baseball Little League Babe Ruth'},
+  {name:'Youth Soccer',url:'sports-recreation.html#youth-soccer',type:'Youth Sports',text:'youth sports leagues kids children registration clinics soccer intramural travel'},
+  {name:'Youth Basketball',url:'sports-recreation.html#youth-basketball',type:'Youth Sports',text:'youth sports leagues kids children registration clinics basketball in town travel'},
+  {name:'Youth Football & Cheer',url:'sports-recreation.html#youth-football-cheer',type:'Youth Sports',text:'youth sports leagues kids children registration clinics football cheer flag football'},
+  {name:'Youth Hockey & Skating',url:'sports-recreation.html#youth-hockey-skating',type:'Youth Sports',text:'youth sports leagues kids children registration clinics hockey skating Nuggets learn to skate'},
+  {name:'Youth Lacrosse',url:'sports-recreation.html#youth-lacrosse',type:'Youth Sports',text:'youth sports leagues kids children registration clinics lacrosse girls boys'},
+  {name:'Youth Golf',url:'sports-recreation.html#youth-golf',type:'Youth Sports',text:'youth sports leagues kids children registration clinics golf junior PGA'},
+  {name:'Youth Sports & Leagues',url:'sports-recreation.html#youth',type:'Youth Sports',text:'youth sports youth leagues kids sports children sports teams registration clinics softball baseball soccer basketball football cheer hockey skating lacrosse golf adaptive inclusive multi sport'},
+  {name:'Adult Sports & Fitness',url:'sports-recreation.html#adult',type:'Sports & Recreation',text:'adult sports leagues fitness classes pickleball volleyball drop in recreation'},
+  {name:'Places to Play',url:'sports-recreation.html#places',type:'Sports & Recreation',text:'fields courts pools facilities skating golf archery'},
   {name:'Sports & recreation',url:'sports-recreation.html',type:'Things to Do',text:'sports youth adult pickleball golf soccer baseball basketball hockey lacrosse ninja climbing obstacle'},
   {name:'Tennis courts in Norwood',url:'parks-trails.html#tennis-courts',type:'Parks & recreation',text:'tennis tennis courts public courts Norwood High School NHS Coakley Ivatts Hawes Washington Street Nichols Street racket racquet recreation'},
   {name:'Doherty Park & Field',url:'parks-trails.html',type:'Parks & recreation',text:'Doherty Park Doherty Field Brewster Drive playground Little League baseball hardcourt recreation park field'},
@@ -267,12 +278,15 @@
    if(x.type==='How Do I?'&&matchedCore>0&&score>=18)score+=howDoPage?140:34;
    if(x.business&&score>=30)score+=3;
    if(acronym&&aliasTerms(raw)){if(nameWords.includes(raw)||typeWords.includes(raw))score+=50;}
+   if(x.url==='sports-recreation.html#youth'&&!/\b(adult|adults|senior|seniors)\b/.test(raw)&&/\b(youth|kids|children|softball|baseball|soccer|basketball|football|cheer|hockey|lacrosse|leagues)\b/.test(raw)&&matchedCore>0)score+=70;
    let tier=3;
    const phraseMatch=name===raw||name.startsWith(raw)||name.includes(raw)||body.includes(raw);
    const fullCoreMatch=queryWords.length<=1?matchedCore>0:matchedCore===queryWords.length;
    const strongCore=phraseMatch||fullCoreMatch;
    if(x.norwoodPage&&!x.business&&!x.calendar&&!x.recreation&&x.type!=='Event'&&strongCore&&score>=18)tier=1;
    else if(x.canonicalTown&&strongCore&&score>=18)tier=2;
+   const youthSports={softball:'softball',baseball:'baseball',soccer:'soccer',basketball:'basketball',football:'football-cheer',cheer:'football-cheer',hockey:'hockey-skating',lacrosse:'lacrosse'};
+   if(x.url==='sports-recreation.html#youth'&&youthSports[raw])x={...x,url:'sports-recreation.html#youth-'+youthSports[raw]};
    return{x,score,tier,matchedCore};
   }).filter(o=>o.score>7&&(queryWords.length<=1||o.matchedCore>0))
    .sort((a,b)=>a.tier-b.tier||b.score-a.score||a.x.name.localeCompare(b.x.name))
@@ -483,7 +497,7 @@
   const businessMoreHtml=!resultsPage&&businessHits.length?`<a href="businesses.html?q=${encodeURIComponent(raw)}" style="display:block;background:#edf6fc;border:1px solid #c7ddeb;border-radius:9px;padding:12px;margin:5px 0"><b>🏪 Business Directory — ${businessHits.length} matching business${businessHits.length===1?'':'es'} found →</b><small>Open matching business listings</small></a>`:'';
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"${x.business?' style="display:block;background:#edf6fc;border:1px solid #c7ddeb;border-radius:9px;padding:10px;margin:5px 0"':''}><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}${x.officialSchool?' <img class="search-source-icon school-search-icon" src="https://www.norwood.k12.ma.us/favicon.ico" alt="Official Norwood Public Schools resource" title="Official Norwood Public Schools resource">':''}${x.type==='Event'?' <span class="search-source-icon event-search-icon" aria-label="Event" title="Event">📅</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length+(facilitySport?1:0)} result${hits.length+things.length+(facilitySport?1:0)===1?'':'s'}</small></div>`:'';
-  const resultCount=hits.length+things.length+(facilitySport?1:0)+(seedIntent?1:0); const googleHtml=resultCount<10?`<div class="site-search-google"><a href="https://www.google.com/search?q=${encodeURIComponent(raw+' Norwood MA')}" target="_blank" rel="noopener"><b>Search Google for “${esc(raw)}” →</b><small>Search the wider web for Norwood-related results</small></a></div>`:''; box.innerHTML=heading+facilityHtml+foodMoreHtml+howDoHtml+seedLibraryHtml+thingHtml+regularHtml+businessMoreHtml+googleHtml;
+  const resultCount=hits.length+things.length+(facilitySport?1:0)+(seedIntent?1:0); const googleHtml=resultCount<10?`<div class="site-search-google"><a href="https://www.google.com/search?q=${encodeURIComponent(raw+' Norwood MA')}" target="_blank" rel="noopener"><b>Search Google for “${esc(raw)}” →</b><small>Search the wider web for Norwood-related results</small></a></div>`:''; const leagueIntent=/\b(youth|kids|children|softball|baseball|soccer|basketball|football|cheer|hockey|lacrosse|leagues)\b/.test(norm(raw))&&!/\b(field|fields|court|courts|facility|facilities|park|parks|adult|adults)\b/.test(norm(raw)); box.innerHTML=heading+(leagueIntent?regularHtml:'')+facilityHtml+foodMoreHtml+howDoHtml+seedLibraryHtml+thingHtml+(leagueIntent?'':regularHtml)+businessMoreHtml+googleHtml;
   box.hidden=false;insertArchiveBridge(raw);if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
 
