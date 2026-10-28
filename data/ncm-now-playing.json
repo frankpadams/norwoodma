@@ -1,45 +1,49 @@
 {
-  "updated_at": "2026-10-27T20:20:43.276564-04:00",
-  "date": "2026-10-27",
+  "updated_at": "2026-10-28T02:07:14.161831-04:00",
+  "date": "2026-10-28",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood Trails: Wooden Trail Structures Presentation",
+      "title": "Senior Center Exercise: Zumba with Alma",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1260,
-          "title": "The JBTS Trio - Public Access 8.18.26"
+          "minute": 180,
+          "title": "The Vehicle For Change 10.20.26"
         },
         {
-          "minute": 1350,
-          "title": "Norwood Trails: Wooden Trail Structures Presentation"
+          "minute": 240,
+          "title": "NOT QUITE LIVE: Episode 91 9/7/1995"
+        },
+        {
+          "minute": 300,
+          "title": "Ernie's Jukebox: Let The Music Do The Talkin'"
+        },
+        {
+          "minute": 390,
+          "title": "Local Artist Bill Breen - Public Access 10.7.26"
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 540,
+          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
+        },
+        {
+          "minute": 600,
+          "title": "Senior Center Exercise: Zumba with Alma"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-27"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-28"
     },
     "government": {
       "status": "scheduled",
-      "title": "Airport Commission 10.21.26",
+      "title": "Capital Outlay Committee 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 0,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 30,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 90,
-          "title": "Airport Commission 10.21.26"
-        },
-        {
-          "minute": 120,
-          "title": "Conservation Commission 10.21.26"
-        },
         {
           "minute": 210,
           "title": "Capital Outlay Committee 10.21.26"
@@ -50,86 +54,62 @@
         },
         {
           "minute": 300,
-          "title": "Airport Commission 10.21.26"
+          "title": "Capital Outlay Committee 10.21.26"
         },
         {
           "minute": 330,
-          "title": "Conservation Commission 10.21.26"
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 390,
+          "title": "Airport Commission 10.21.26"
         },
         {
           "minute": 420,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 450,
-          "title": "Board of Health 10.19.26"
+          "title": "Conservation Commission 10.21.26"
         },
         {
           "minute": 510,
-          "title": "Airport Commission 10.21.26"
-        },
-        {
-          "minute": 540,
-          "title": "Conservation Commission 10.21.26"
-        },
-        {
-          "minute": 630,
           "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 660,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 720,
-          "title": "Airport Commission 10.21.26"
-        },
-        {
-          "minute": 750,
-          "title": "Conservation Commission 10.21.26"
-        },
-        {
-          "minute": 870,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 900,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 960,
-          "title": "Finance Commission 10.15.26"
-        },
-        {
-          "minute": 1050,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 1080,
-          "title": "Airport Commission 10.21.26"
         }
       ],
-      "source": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-28"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Convocation",
+      "title": "2009 Mr. Man on the Hill",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1260,
-          "title": "1989 Prescott School 30th Reunion"
-        },
-        {
-          "minute": 1320,
+          "minute": 180,
           "title": "Oldham School Home Movies 1963-1964"
         },
         {
-          "minute": 1350,
+          "minute": 210,
           "title": "2026 NHS Convocation"
+        },
+        {
+          "minute": 300,
+          "title": "Norwood News 10.16.26"
+        },
+        {
+          "minute": 360,
+          "title": "1989 Prescott School 30th Reunion"
+        },
+        {
+          "minute": 420,
+          "title": "Oldham School Home Movies 1963-1964"
+        },
+        {
+          "minute": 450,
+          "title": "2026 NHS Convocation"
+        },
+        {
+          "minute": 540,
+          "title": "2009 Mr. Man on the Hill"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-27"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-28"
     }
   }
 }
