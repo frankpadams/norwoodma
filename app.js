@@ -417,7 +417,7 @@ function eventSearchText(e){return [e.title,e.notes,e.venue,e.address,e.town,e.c
 let calendarCursor=new Date(),calendarSelected='';
 function renderCalendarView(items){
  const byDate=new Map();for(const e of items){const k=e.start?.date;if(!k)continue;if(!byDate.has(k))byDate.set(k,[]);byDate.get(k).push(e)}
- if(!calendarSelected&&items.length){calendarSelected=items[0].start?.date||dateKey(new Date());const d=parseLocalDate(calendarSelected);if(d)calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
+ if(!calendarSelected){calendarSelected=dateKey(new Date());calendarCursor=new Date(new Date().getFullYear(),new Date().getMonth(),1)}
  const y=calendarCursor.getFullYear(),m=calendarCursor.getMonth(),first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),lead=first.getDay();
  const cells=[];for(let i=0;i<lead;i++)cells.push('<span class="month-empty" aria-hidden="true"></span>');
  for(let day=1;day<=days;day++){const k=dateKey(new Date(y,m,day)),count=(byDate.get(k)||[]).length;cells.push(`<button class="month-day ${k===calendarSelected?'selected':''} ${count?'has-events':''}" data-calendar-date="${k}" aria-pressed="${k===calendarSelected}"><span>${day}</span>${count?`<small>${count} event${count===1?'':'s'}</small>`:''}</button>`)}
