@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-10-28T18:47:29.214285-04:00",
+  "generated_at": "2026-10-29T02:06:45.578093-04:00",
   "offline": false,
-  "events_published": 2285,
+  "events_published": 2258,
   "news_published": 120,
-  "civic_notices": 52,
+  "civic_notices": 50,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2285,
-      "generated_at": "2026-10-28T18:47:28.830428-04:00"
+      "events": 2258,
+      "generated_at": "2026-10-29T02:06:44.906486-04:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 106,
-      "generated_at": "2026-10-28T18:47:28.839559-04:00"
+      "events": 104,
+      "generated_at": "2026-10-29T02:06:44.915144-04:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 842,
-      "generated_at": "2026-10-28T18:47:28.856715-04:00"
+      "events": 829,
+      "generated_at": "2026-10-29T02:06:44.932702-04:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 774,
-      "generated_at": "2026-10-28T18:47:28.871218-04:00"
+      "events": 764,
+      "generated_at": "2026-10-29T02:06:44.949764-04:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-10-28T18:47:28.878924-04:00"
+      "generated_at": "2026-10-29T02:06:44.958055-04:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 66,
-      "generated_at": "2026-10-28T18:47:28.887805-04:00"
+      "events": 65,
+      "generated_at": "2026-10-29T02:06:44.967748-04:00"
     }
   ],
   "recreation_programs": 119,
-  "recreation_occurrences": 1340,
+  "recreation_occurrences": 1332,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -332,7 +332,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 29,
+      "found": 28,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -414,7 +414,7 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 44,
+      "found": 43,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -480,7 +480,7 @@
       "source_id": "norwood-space-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 13,
+      "found": 12,
       "note": ""
     },
     {
@@ -1330,7 +1330,7 @@
       "source_id": "st-catherine-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 13,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1339,7 +1339,7 @@
       "source_id": "st-timothy-calendar",
       "ok": true,
       "method": "church_events_calendar",
-      "found": 44,
+      "found": 43,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1602,7 +1602,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 20,
+      "found": 74,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 19,
+      "found": 18,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
