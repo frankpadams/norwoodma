@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download and crop CC BY 4.0 photograph
+      - name: Download and crop Massachusetts CC BY 2.0 photograph
         run: |
           python3 - <<'PY'
           import urllib.request, pathlib
           from PIL import Image, ImageOps
           from io import BytesIO
-          source='https://commons.wikimedia.org/wiki/Special:Redirect/file/Ballot_with_ballot_box_in_Sonoma%2C_California_-_November_2022_-_Sarah_Stierch_02.jpg'
+          source='https://commons.wikimedia.org/wiki/Special:Redirect/file/Voting_in_Boxborough%2C_Massachusetts_during_the_2016_primaries_%2825054460549%29.jpg'
           req=urllib.request.Request(source,headers={'User-Agent':'NorwoodMA-Website/1.0 (Creative Commons attribution retained)'})
           raw=urllib.request.urlopen(req,timeout=45).read()
           image=Image.open(BytesIO(raw)).convert('RGB')
@@ -31,11 +31,10 @@ jobs:
           from pathlib import Path
           p=Path('elections.html')
           s=p.read_text()
-          remote='https://commons.wikimedia.org/wiki/Special:Redirect/file/Ballot%20with%20ballot%20box%20in%20Sonoma%2C%20California%20-%20November%202022%20-%20Sarah%20Stierch%2002.jpg'
-          assert s.count(remote)==2, 'Expected two social image tags'
-          s=s.replace(remote,'https://www.norwood.ma/assets/elections-social-2026.jpg')
-          s=s.replace('<meta property="og:image:alt"', '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt"')
-          s=s.replace('Social sharing photo:', 'Social sharing photo (cropped for social preview):')
+          local='https://www.norwood.ma/assets/elections-social-2026.jpg'
+          assert s.count(local)==2, 'Expected two local social image tags'
+          if 'og:image:width' not in s:
+              s=s.replace('<meta property="og:image:alt"', '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt"')
           p.write_text(s)
           PY
       - name: Commit the image and metadata
@@ -43,4 +42,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/elections-social-2026.jpg elections.html
-          git diff --cached --quiet || (git commit -m "Host CC BY ballot photo locally for election social previews" && git push)
+          git diff --cached --quiet || (git commit -m "Host Massachusetts polling-place photo locally for election social previews" && git push)
