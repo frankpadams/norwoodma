@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download and crop Massachusetts CC BY 2.0 photograph
+      - name: Download and crop CC BY 4.0 election sticker photograph
         run: |
           python3 - <<'PY'
           import urllib.request, pathlib
           from PIL import Image, ImageOps
           from io import BytesIO
-          source='https://commons.wikimedia.org/wiki/Special:Redirect/file/Voting_in_Boxborough%2C_Massachusetts_during_the_2016_primaries_%2825054460549%29.jpg'
+          source='https://commons.wikimedia.org/wiki/Special:Redirect/file/An_election_judge_reaches_for_a_roll_of_%22I_Voted%22_stickers_at_Woodrow_Town_Hall_on_Primary_Election_Day%2C_Aug._11%2C_2026%2C_in_Cass_County%2C_Minnesota.jpg'
           req=urllib.request.Request(source,headers={'User-Agent':'NorwoodMA-Website/1.0 (Creative Commons attribution retained)'})
           raw=urllib.request.urlopen(req,timeout=45).read()
           image=Image.open(BytesIO(raw)).convert('RGB')
@@ -42,4 +42,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/elections-social-2026.jpg elections.html
-          git diff --cached --quiet || (git commit -m "Host Massachusetts polling-place photo locally for election social previews" && git push)
+          git diff --cached --quiet || (git commit -m "Host election sticker photo locally for election social previews" && git push)
