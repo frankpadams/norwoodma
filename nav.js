@@ -108,7 +108,7 @@
       }
     }catch(e){}
     if(!items.length){if(existing)existing.remove();return;}
-    const seen=new Set();const alerts=items.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
+    const seen=new Set();const electionOnly=easternParts().date>='2026-10-29'&&easternParts().date<='2026-11-03';const visibleItems=electionOnly?items.filter(a=>a.kind==='election'):items;const alerts=visibleItems.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
     const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
     strip.innerHTML='<button class="site-timely-prev" type="button" aria-label="Previous alert">‹</button><div class="site-timely-track" tabindex="0">'+alerts.map(a=>{
       let label='NOTICE';
