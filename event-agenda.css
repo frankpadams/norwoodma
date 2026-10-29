@@ -71,3 +71,12 @@
 #eventPeriods .fundraiser-agenda-link:hover .event-agenda-title{text-decoration:underline;text-underline-offset:3px}
 #eventPeriods .fundraiser-agenda-link:focus-visible{outline:3px solid #d7ac30;outline-offset:3px;border-radius:3px}
 @media(max-width:600px){#eventPeriods .fundraiser-agenda-link{padding:10px 0}}
+
+/* Fundraiser shortcut is a distinct event-style row, not an agenda heading. */
+#eventPeriods .fundraiser-agenda-link{display:grid;grid-template-columns:70px minmax(0,1fr) 20px;gap:24px;align-items:center;padding:8px 2px 14px 0;margin:0 0 6px;text-decoration:none;color:#12334d;border-bottom:1px solid #dce4eb}
+#eventPeriods .fundraiser-agenda-icon{display:flex;align-items:center;justify-content:center;width:70px;min-height:52px;background:#f1f5f8;border-top:3px solid #d5ad36;border-radius:0 0 7px 7px;color:#004e85;font-size:1.45rem}
+#eventPeriods .fundraiser-agenda-copy{min-width:0}
+#eventPeriods .fundraiser-agenda-arrow{font-size:1.5rem;color:#647b8d;text-align:center}
+#eventPeriods .fundraiser-agenda-link:hover .event-agenda-title{text-decoration:underline;text-underline-offset:3px}
+#eventPeriods .fundraiser-agenda-link:focus-visible{outline:3px solid #d7ac30;outline-offset:3px}
+@media(max-width:600px){#eventPeriods .fundraiser-agenda-link{grid-template-columns:38px minmax(0,1fr) 16px;gap:10px;padding:8px 0 13px}#eventPeriods .fundraiser-agenda-icon{width:38px;min-height:38px;font-size:1.1rem}}
