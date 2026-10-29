@@ -864,44 +864,6 @@
     ]
   },
   {
-    "id": "rec-occurrence-rec-edc38b87d0b9-2026-10-29",
-    "title": "Halloween Hop",
-    "start": {
-      "date": "2026-10-29",
-      "time": "17:30"
-    },
-    "end": {
-      "date": "2026-10-29",
-      "time": "19:00"
-    },
-    "venue": "10/29/2026 05:30 PM - 07:00 PM Norwood Senior Center 275 Prospect Street",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30887",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30887",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$12.00 Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": false,
-    "drop_in": false,
-    "session_start": "2026-10-29",
-    "session_end": "2026-10-29",
-    "days": "Th",
-    "notes": "Get spooky outdoors at the Senior Center for games, dancing, crafts, pizza, face paint, and more! We will have a costume parade for all our guests, so please dress up in your costumes!",
-    "rec_program_id": "rec-edc38b87d0b9",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-10-29-junior-varsity-field-hockey-vs-ashland-high-s-fede0f1",
     "title": "Junior Varsity Field Hockey vs Ashland High School",
     "start": {
@@ -28999,6 +28961,40 @@
     ]
   },
   {
+    "id": "2026-12-21-girls-varsity-ice-hockey-natick-high-school-f1ada8a",
+    "title": "Girls Varsity Ice Hockey @ Natick High School",
+    "start": {
+      "date": "2026-12-21",
+      "time": "19:40"
+    },
+    "end": {
+      "date": "2026-12-21",
+      "time": "21:10"
+    },
+    "venue": "15 West St, Natick Massachusetts 01760-4396",
+    "address": "15 West St, Natick Massachusetts 01760-4396",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Hockey",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Ice Hockey Level: Girls Varsity Team: Norwood High School Site: Natick High School Subsite: Chase Ice Arena",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2026-12-22-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -33885,6 +33881,40 @@
     ]
   },
   {
+    "id": "2027-01-03-varsity-gymnastics-hopkinton-holliston-millis-a3e6db1",
+    "title": "Varsity Gymnastics @ Hopkinton/Holliston/Millis/Medway",
+    "start": {
+      "date": "2027-01-03",
+      "time": "08:30"
+    },
+    "end": {
+      "date": "2027-01-03",
+      "time": "14:30"
+    },
+    "venue": "260 Eliot St, Ashland Massachusetts 01721",
+    "address": "260 Eliot St, Ashland Massachusetts 01721",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-gymnastics",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Gymnastics",
+    "public_access": "public",
+    "series": "Norwood Varsity Gymnastics",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Gymnastics Level: Varsity Team: Norwood High School Site: Elite Gymnastics Academy Subsite: Elite Gymnastics Academy",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2027-01-03-junior-varsity-girls-basketball-vs-mansfield--73e4d6f",
     "title": "Junior Varsity Girls Basketball vs Mansfield High School",
     "start": {
@@ -37539,6 +37569,40 @@
     "discovered_by": "scheduled_recurring_series",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2027-01-09-varsity-gymnastics-hopkinton-holliston-millis-08ca0e1",
+    "title": "Varsity Gymnastics @ Hopkinton/Holliston/Millis/Medway",
+    "start": {
+      "date": "2027-01-09",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2027-01-09",
+      "time": "17:30"
+    },
+    "venue": "260 Eliot St, Ashland Massachusetts 01721",
+    "address": "260 Eliot St, Ashland Massachusetts 01721",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-varsity-gymnastics",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Varsity Gymnastics",
+    "public_access": "public",
+    "series": "Norwood Varsity Gymnastics",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Gymnastics Level: Varsity Team: Norwood High School Site: Elite Gymnastics Academy Subsite: Elite Gymnastics Academy",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
