@@ -1870,43 +1870,6 @@
     ]
   },
   {
-    "id": "2026-10-31-norwood-bolts-vs-marlboro-panthers-dupont-5c3819a",
-    "title": "Norwood Bolts vs Marlboro Panthers Dupont",
-    "start": {
-      "date": "2026-10-31",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "Coakley Turf Field 14",
-    "field": "Coakley Turf Field 14",
-    "grade": "Girls Grade 8",
-    "gender": "girls",
-    "team": "Norwood Bolts",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-8",
-      "nys-team-girls-grade-8-norwood-bolts"
-    ]
-  },
-  {
     "id": "2026-10-31-norwood-food-pantry-food-assistance-7379ab8",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -2659,43 +2622,6 @@
       "norwood-sports",
       "nys-grade-boys-grade-6",
       "nys-team-boys-grade-6-norwood-minoans"
-    ]
-  },
-  {
-    "id": "2026-10-31-norwood-wolfpack-vs-bellingham-hawks-b8-tucke-3173f2c",
-    "title": "Norwood Wolfpack vs Bellingham Hawks B8 - Tucker",
-    "start": {
-      "date": "2026-10-31",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-10-31",
-      "time": null
-    },
-    "venue": "Father macs 10",
-    "field": "Father macs 10",
-    "grade": "Boys Grade 8",
-    "gender": "boys",
-    "team": "Norwood Wolfpack",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-8",
-      "nys-team-boys-grade-8-norwood-wolfpack"
     ]
   },
   {
@@ -6078,6 +6004,43 @@
       "rec-all",
       "rec-sports",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-06-norwood-arsenal-vs-westwood-fc-b6-69bf501",
+    "title": "Norwood Arsenal vs Westwood FC - B6",
+    "start": {
+      "date": "2026-11-06",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": null
+    },
+    "venue": "Coakley Middle School Lower 7",
+    "field": "Coakley Middle School Lower 7",
+    "grade": "Boys Grade 6",
+    "gender": "boys",
+    "team": "Norwood Arsenal",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-6",
+      "nys-team-boys-grade-6-norwood-arsenal"
     ]
   },
   {
