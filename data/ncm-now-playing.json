@@ -1,61 +1,49 @@
 {
-  "updated_at": "2026-10-30T04:21:46.966254-04:00",
+  "updated_at": "2026-10-30T11:14:04.870792-04:00",
   "date": "2026-10-30",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "The JBTS Trio - Public Access 8.18.26",
+      "title": "Norwood News 10.30.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 300,
-          "title": "Summerfest Concerts: Squeezebox Stompers 8.26.26"
-        },
-        {
-          "minute": 420,
-          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
-        },
-        {
-          "minute": 490,
-          "title": "NHS UPDATE LIVE!"
-        },
-        {
-          "minute": 510,
-          "title": "Entertainment Norwood: Episode 3 - American Revolution"
-        },
-        {
-          "minute": 600,
-          "title": "Flex and Firm with Steve"
-        },
-        {
-          "minute": 660,
-          "title": "Norwood Digest: October 2019"
-        },
-        {
           "minute": 720,
           "title": "The JBTS Trio - Public Access 8.18.26"
+        },
+        {
+          "minute": 840,
+          "title": "Gentle Exercise with Steve"
+        },
+        {
+          "minute": 900,
+          "title": "Norwood Votes - April '05 Election Results"
+        },
+        {
+          "minute": 990,
+          "title": "Lead School Update: November 2016"
+        },
+        {
+          "minute": 1020,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 1075,
+          "title": "LIVE! NHS Football vs Ashland"
+        },
+        {
+          "minute": 1320,
+          "title": "Norwood News 10.30.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-30"
     },
     "government": {
       "status": "scheduled",
-      "title": "Capital Outlay Committee 10.21.26",
+      "title": "Conservation Commission 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 360,
-          "title": "Guild Pond Info Session 10.8.26"
-        },
-        {
-          "minute": 480,
-          "title": "Finance Commission 10.15.26"
-        },
-        {
-          "minute": 570,
-          "title": "Board of Selectmen 10.13.26"
-        },
         {
           "minute": 780,
           "title": "Finance Commission 10.15.26"
@@ -71,31 +59,27 @@
         {
           "minute": 1200,
           "title": "Capital Outlay Committee 10.21.26"
+        },
+        {
+          "minute": 1230,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 1290,
+          "title": "Airport Commission 10.21.26"
+        },
+        {
+          "minute": 1320,
+          "title": "Conservation Commission 10.21.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-30"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Volleyball vs Dedham 9.28.26",
+      "title": "2012 NHS Golf vs. Walpole 10.9.12",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 300,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
-        },
-        {
-          "minute": 420,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
-        {
-          "minute": 510,
-          "title": "2008 NHS Cross Country"
-        },
-        {
-          "minute": 570,
-          "title": "2008 Girls Soccer vs. Braintree"
-        },
         {
           "minute": 690,
           "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
@@ -107,6 +91,22 @@
         {
           "minute": 930,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 1020,
+          "title": "2012 8th Grade Football vs. Framingham Superbowl"
+        },
+        {
+          "minute": 1050,
+          "title": "2026 NHS Football vs Westwood 10.9.26 Rebroadcast"
+        },
+        {
+          "minute": 1200,
+          "title": "2014 NHS Field Hockey vs. Hopkinton"
+        },
+        {
+          "minute": 1290,
+          "title": "2012 NHS Golf vs. Walpole 10.9.12"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-30"
