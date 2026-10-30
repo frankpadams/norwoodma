@@ -65,7 +65,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 ### PWA, navigation, and presentation
 - Primary interior navigation is Home · What's Happening · News · Explore · Transit · Calendars · Local Resources; the homepage omits redundant Home.
 - Mobile navigation uses the hamburger menu; Support Norwood.ma is intentionally kept there rather than promoted into primary desktop navigation.
-- The More page (`discover.html`) groups destinations by subject: News & Events; Everyday Living; Government & Participation; Food, Shopping & Services; Activities & Recreation; Getting Around; and Fun & Games. Compact link lists retain short descriptions, with About/Support and Mobile/Apps separate. Site search sits above the groups; links use the maintained destination pages rather than retired previews.
+- The More page (`discover.html`) groups destinations by subject: News & Events; Everyday Living; Government & Participation; Food, Shopping & Services; Activities & Recreation; Getting Around; and Fun & Games. Compact link lists retain short descriptions, with About/Support and Mobile/Apps separate. Site search sits above the groups; links use the maintained destination pages rather than retired previews. Maintain coverage of every public destination page here, including topic-specific restaurant guides and public detail guides. Exclude error pages, redirects, empty files, admin pages and development/review previews; audit both the root HTML inventory and sitemap when changing coverage.
 - Approved blue/gold Norwood.ma branding, favicon/home-screen icon, accessibility controls, and independent-site disclosures are sitewide conventions.
 - Asset query-string versions are cache-busters and are separate from the product release number.
 
