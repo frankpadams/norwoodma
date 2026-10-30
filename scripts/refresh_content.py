@@ -3130,7 +3130,7 @@ def election_notices_from_news(news):
         key=d.isoformat()
         if key in seen:continue
         seen.add(key)
-        out.append({'kind':'election','title':clean_text(x.get('title')) or f'Election Day — {d.strftime("%B %-d")}', 'election_date':d.isoformat(),'show_from':(d-timedelta(days=5)).isoformat(),'url':x.get('url') or 'https://www.norwoodma.gov/','source':'Town of Norwood'})
+        out.append({'kind':'election','title':clean_text(x.get('title')) or f'Election Day — {d.strftime("%B %-d")}', 'election_date':d.isoformat(),'show_from':(d-timedelta(days=5)).isoformat(),'url':'elections.html','source':'Town of Norwood'})
     return out
 
 def refresh_civic_notices(news,offline=False):
@@ -3932,7 +3932,7 @@ def election_notices_from_news(news):
         key=d.isoformat()
         if key in seen:continue
         seen.add(key)
-        out.append({'kind':'election','title':clean_text(x.get('title')) or f'Election Day — {d.strftime("%B %-d")}', 'election_date':d.isoformat(),'show_from':(d-timedelta(days=5)).isoformat(),'url':x.get('url') or 'https://www.norwoodma.gov/','source':'Town of Norwood'})
+        out.append({'kind':'election','title':clean_text(x.get('title')) or f'Election Day — {d.strftime("%B %-d")}', 'election_date':d.isoformat(),'show_from':(d-timedelta(days=5)).isoformat(),'url':'elections.html','source':'Town of Norwood'})
     return out
 
 def refresh_civic_notices(news,offline=False):
