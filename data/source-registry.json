@@ -13812,5 +13812,29 @@
     },
     "conflict_profile": "optional",
     "notes": "Monitor official Town sources for dated public sustainability programs and community events; deduplicate against Farmers Market and Library listings."
+  },
+  {
+    "id": "norwood-dpw-facebook-updates",
+    "name": "Norwood DPW — Facebook updates",
+    "organization": "Norwood Department of Public Works",
+    "source_class": "official_department",
+    "authority": "official",
+    "coverage": "Norwood, MA",
+    "url": "https://www.facebook.com/share/1FfmRgQ1rB/?mibextid=wwXIfr",
+    "domain": "facebook.com",
+    "produces": [
+      "civic_notices"
+    ],
+    "potential_outputs": [
+      "heads_up",
+      "yellow_alert"
+    ],
+    "active_monitor": false,
+    "monitor_priority": 1,
+    "ingestion": {
+      "method": "facebook_public_page_requires_access_validation",
+      "status": "pending_access_validation"
+    },
+    "notes": "Important DPW notices: triage urgent closures/outages to yellow alerts and service changes to Heads-Up Norwood. Not actively polled until reliable public post retrieval is established."
   }
 ]
