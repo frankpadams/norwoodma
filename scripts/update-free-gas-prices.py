@@ -1,78 +1,116 @@
 #!/usr/bin/env python3
-"""Best-effort free, community-reported station-price feed.
-Unofficial GasBuddy client; no paid credentials. Never invent report timestamps.
-"""
-import asyncio, json, re
-from datetime import datetime, timezone
-from pathlib import Path
-from py_gasbuddy import GasBuddy
+"""Free fallbacks: direct Costco prices and timestamped GasBuddy community reports."""
+import asyncio
+import re
+import urllib.request
+from html import unescape
+from gas_price_common import (STATIONS,OUT,STATUS,read,write,merge,needs_fallback,
+                              address_matches,usable_price,now,iso,stamp)
 
-OUT=Path("data/gas-prices.json")
-ADDRESSES={
- "Norwood Gulf":"707 neponset",
- "Gulf — Broadway":"145 broadway",
- "Mr. Frank's Food Mart":"917 washington",
- "Sunoco — Route 1":"515 providence",
- "Route 1 Auto Services":"305 boston",
- "Mobil — Route 1":"971 providence",
- "Irving Oil / Rojo":"69 providence",
- "BJ's Gas Station":"1412",
- "CITGO":"960",
- "Shell — Walpole Street":"491 walpole",
- "Mobil / On the Run — Norwood Center":"499 washington",
- "Shell — Pleasant Street":"238 pleasant",
-}
-def norm(s): return re.sub(r"[^a-z0-9]+"," ",str(s).lower()).strip()
-def timestamp(value):
- if not value:return None
- if isinstance(value,(int,float)):
-  try:return datetime.fromtimestamp(value/1000 if value>1e11 else value,timezone.utc).isoformat()
-  except (ValueError,OverflowError):return None
- if isinstance(value,str):
-  try:return datetime.fromisoformat(value.replace("Z","+00:00")).astimezone(timezone.utc).isoformat()
-  except ValueError:return None
- return None
-def station_rows(payload):
- if isinstance(payload,list):return payload
- if not isinstance(payload,dict):return []
- for k in ("results","stations","data"):
-  if isinstance(payload.get(k),list):return payload[k]
- return []
-async def main():
- old=json.loads(OUT.read_text()) if OUT.exists() else {"stations":{}}
- try:
-  client=GasBuddy()
-  response=await client.price_lookup_service(zipcode="02062",limit=100)
- except Exception as exc:
-  raise SystemExit(f"Free station feed failed; preserving existing data: {exc}")
- rows=station_rows(response)
- updates={}
- for item in rows:
-  if not isinstance(item,dict):continue
-  address=item.get("address") or {}
-  addr=norm(" ".join(str(address.get(k,"")) for k in ("line1","line2")) if isinstance(address,dict) else str(address))
-  name=norm(item.get("name",""))
-  matches=[label for label,needle in ADDRESSES.items() if norm(needle) in addr]
-  if len(matches)!=1:continue
-  fuel=item.get("regular_gas") or item.get("regularGas") or {}
-  if not isinstance(fuel,dict):continue
-  raw=fuel.get("price")
-  try:price=float(str(raw).replace("$",""))
-  except (ValueError,TypeError):continue
-  if not 1.5<=price<=8.0:continue
-  report=next((timestamp(v) for v in (fuel.get("reported_at"),fuel.get("updated_at"),fuel.get("last_updated"),fuel.get("timestamp"),item.get("updated_at")) if timestamp(v)),None)
-  if not report:continue
-  if (datetime.now(timezone.utc)-datetime.fromisoformat(report)).total_seconds()>30*86400:continue
-  updates[matches[0]]={"regular":round(price,3),"updated":report,"source":"GasBuddy community report"}
- if not updates:
-  raise SystemExit(f"Free feed returned {len(rows)} stations but no safely matched, timestamped prices. Preserving existing data.")
- stations=dict(old.get("stations",{}))
- for label,entry in updates.items():
-  previous=stations.get(label,{})
-  old_time=timestamp(previous.get("updated") or previous.get("reported_at") or previous.get("checked"))
-  if old_time and old_time>entry["updated"]:continue
-  stations[label]={**previous,**entry,"stale":False}
- payload={**old,"generated_at":datetime.now(timezone.utc).isoformat(),"source":"Free community station reports","stations":stations}
- OUT.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n")
- print(f"Matched {len(updates)} timestamped station prices from {len(rows)} results")
-if __name__=="__main__":asyncio.run(main())
+COSTCO={'Costco Gas — Dedham':'https://www.costco.com/warehouse-locations-319.html'}
+
+def costco_prices(spec,html,url,observed_at):
+    text=unescape(re.sub('<[^>]+>',' ',html))
+    text=re.sub(r'\s+',' ',text).lower()
+    # A curated warehouse URL still has to identify the expected warehouse/address.
+    if spec['city'].lower()+' warehouse' not in text or not re.search(r'\b200\s+legacy\s+blvd\b',text):
+        return {}
+    out={}
+    pattern=r'class=["\']gas-type["\']\s*>\s*(Regular|Premium|Diesel)\s*</span>\s*<br\s*/?>\s*<span[^>]*>\s*\$(\d+\.\d{2})(?:\s*<sup>\s*(\d)\s*</sup>)?'
+    for match in re.finditer(pattern,html,re.I):
+        price=float(match[2]+(match[3] or ''))
+        if usable_price(price,observed_at):
+            out[match[1].lower()]={'price':price,'observed_at':observed_at,
+                'source':'Costco official warehouse page','source_url':url,'payment':'membership'}
+    return out
+
+def community_prices(spec,items):
+    out={}
+    matches=[]
+    for item in items:
+        address=item.get('address') or {}
+        if not isinstance(address,dict):continue
+        if address_matches(spec,address.get('line1',''),address.get('locality',''),address.get('region','')):
+            matches.append(item)
+    for item in matches:
+        # The library price field is credit pump price, not deal/cashback price.
+        if item.get('currency')!='USD' or str(item.get('unit_of_measure','')).lower() not in ('gallon','gallons','gal'):
+            continue
+        for key,fuel in [('regular_gas','regular'),('midgrade_gas','midgrade'),('premium_gas','premium'),('diesel','diesel')]:
+            node=item.get(key) or {}
+            dt=stamp(node.get('last_updated'))
+            price=node.get('price')
+            if not usable_price(price,node.get('last_updated')):continue
+            if fuel in out and stamp(out[fuel]['updated'])>=dt:continue
+            out[fuel]={'price':round(price,3),'updated':iso(dt),'source':'GasBuddy community report',
+                       'source_url':'https://www.gasbuddy.com/station/'+str(item['station_id']),'payment':'credit'}
+    return out,len(matches)
+
+async def gasbuddy_rows(zips):
+    from py_gasbuddy import GasBuddy
+    client=GasBuddy(timeout=20000)
+    rows=[]
+    for zip_code in zips:
+        cursor=None
+        seen=set()
+        for _ in range(3):
+            response=await client.price_lookup_service(zipcode=int(zip_code),limit=100,cursor=cursor)
+            rows.extend(response.get('results',[]))
+            cursor=response.get('next_cursor')
+            if not cursor or cursor in seen:break
+            seen.add(cursor)
+    return rows
+
+def main():
+    payload=read(OUT,{'stations':{}})
+    rows=payload.setdefault('stations',{})
+    status=read(STATUS,{'stations':{}})
+    status['generated_at']=iso(now())
+    count=0
+    for spec in STATIONS:
+        label=spec['name']
+        if label not in COSTCO or not needs_fallback(rows.get(label,{})):continue
+        diagnostic={}
+        try:
+            url=COSTCO[label]
+            request=urllib.request.Request(url,headers={'User-Agent':'Norwood.ma gas-price updater (+https://norwood.ma/about.html)'})
+            with urllib.request.urlopen(request,timeout=20) as response:
+                html=response.read().decode('utf-8')
+            incoming=costco_prices(spec,html,url,iso(now()))
+            result,accepted=merge(rows.get(label,{}),incoming)
+            if accepted:rows[label]=result
+            count+=len(accepted)
+            diagnostic={'outcome':'prices_observed' if incoming else 'no_verified_prices','accepted_grades':accepted,'source_url':url}
+        except Exception as exc:
+            diagnostic={'outcome':'source_unavailable','error':type(exc).__name__}
+        status.setdefault('stations',{}).setdefault(label,{})['costco']=diagnostic
+        print(label+' Costco: '+diagnostic['outcome'])
+    targets=[s for s in STATIONS if needs_fallback(rows.get(s['name'],{}))]
+    if targets:
+        try:
+            items=asyncio.run(asyncio.wait_for(gasbuddy_rows(sorted({s['zip'] for s in targets})),timeout=120))
+            for spec in targets:
+                label=spec['name']
+                incoming,matched=community_prices(spec,items)
+                result,accepted=merge(rows.get(label,{}),incoming)
+                if accepted:rows[label]=result
+                count+=len(accepted)
+                diagnostic={'outcome':'prices_returned' if incoming else 'no_timestamped_prices' if matched else 'no_address_match',
+                            'matched_stations':matched,'accepted_grades':accepted}
+                status.setdefault('stations',{}).setdefault(label,{})['gasbuddy']=diagnostic
+                print(label+' GasBuddy: '+diagnostic['outcome'])
+        except Exception as exc:
+            for spec in targets:
+                status.setdefault('stations',{}).setdefault(spec['name'],{})['gasbuddy']={'outcome':'source_unavailable','error':type(exc).__name__}
+            print('::warning::GasBuddy unavailable ('+type(exc).__name__+'); preserved existing prices and dates. No bypass attempted.')
+    if count:
+        payload['generated_at']=iso(now())
+        payload['source']='Station-specific fuel reports; see per-fuel provenance'
+        write(OUT,payload)
+    status['unresolved_stations']=[s['name'] for s in STATIONS if needs_fallback(rows.get(s['name'],{}))]
+    write(STATUS,status)
+    if status['unresolved_stations']:
+        print('::warning::No recent regular price for: '+', '.join(status['unresolved_stations']))
+    print(f'Accepted {count} newer fallback fuel reports.')
+
+if __name__=='__main__':main()

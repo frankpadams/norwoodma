@@ -117,3 +117,9 @@ The Explore Norwood map has an optional ALPR camera overlay, off by default. It 
 
 ## Sports & Recreation hub
 `sports-recreation.html` owns league listings and compact announcement records. `sports-guide.js` derives registration badges from unexpired notices and opens audience panels/sport groups from hashes. `sports-guide.css` styles the hub. Maintain announcement dates and verification under `SPORTS-RECREATION.md`; calendar events remain in the existing event pipeline.
+
+
+
+## Gas prices and coverage diagnostics
+
+`data/gas-prices.json` retains flat grade prices for browser compatibility and adds `fuel_reports` with per-grade source, actual report timestamp or explicitly labeled source-observation time, source URL/place ID and payment requirement when known. `data/gas-price-status.json` records the latest Google candidate matches/rejections, fallback outcomes, accepted grades and unresolved stations. Both updaters share the 14-station identity inventory and conservative merge rules in `scripts/gas_price_common.py`. A failed lookup preserves previous prices and dates. See `GAS-PRICES.md` for the source order, reliability limits and maintenance checks.

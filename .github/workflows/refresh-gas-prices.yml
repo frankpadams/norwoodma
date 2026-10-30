@@ -1,30 +1,70 @@
 name: Refresh gas prices
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update-gas-prices.py'
+      - 'scripts/update-free-gas-prices.py'
+      - 'scripts/gas_price_common.py'
+      - 'tests/test_gas_prices.py'
+      - '.github/workflows/refresh-gas-prices.yml'
   schedule:
     - cron: '17 9 * * *'
 permissions:
   contents: write
 concurrency:
   group: refresh-gas-prices
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
-      - name: Fetch current fuel prices
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install free community fallback
+        id: fallback_dependency
+        continue-on-error: true
+        run: python -m pip install py-gasbuddy==0.7.2
+      - name: Validate station matching and price preservation
+        run: python -m unittest discover -s tests -p 'test_gas_prices.py' -v
+      - name: Fetch Google prices with verified station identity
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-        run: python3 scripts/update-gas-prices.py
-      - name: Publish changed prices
+        run: python scripts/update-gas-prices.py
+      - name: Try free sources for stations without recent prices
+        run: python scripts/update-free-gas-prices.py
+      - name: Publish prices and station diagnostics
         run: |
-          git add data/gas-prices.json
+          git add data/gas-prices.json data/gas-price-status.json
           if git diff --cached --quiet; then
             echo "No gas-price changes."
             exit 0
           fi
+          mkdir -p /tmp/norwood-gas
+          cp data/gas-prices.json data/gas-price-status.json /tmp/norwood-gas/
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/norwood-gas/*.json data/
           git config user.name "Norwood.ma automation"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "Refresh gas prices"
-          git push
+          git add data/gas-prices.json data/gas-price-status.json
+          git commit -m "Refresh gas prices and station coverage diagnostics"
+          git push origin HEAD:main
+      - name: Report missing station coverage
+        run: |
+          python - <<'PY'
+          import json, os
+          d=json.load(open('data/gas-price-status.json'))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Gas-price coverage\n\n')
+              f.write('| Station | Google | Costco | GasBuddy |\n|---|---|---|---|\n')
+              for name, row in d['stations'].items():
+                  f.write('| '+name+' | '+' | '.join(row.get(s,{}).get('outcome','Not needed') for s in ('google','costco','gasbuddy'))+' |\n')
+              f.write('\nWithout a recent regular price: '+', '.join(d.get('unresolved_stations',[]))+'\n')
+          PY

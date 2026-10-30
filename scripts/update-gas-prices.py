@@ -1,105 +1,91 @@
 #!/usr/bin/env python3
-import json, os, urllib.request, urllib.error
-from datetime import datetime, timezone
-from pathlib import Path
+"""Verify Google station addresses and retain per-station lookup diagnostics."""
+import json
+import os
+import urllib.request
+import urllib.error
+from gas_price_common import (STATIONS, OUT, STATUS, address_matches, google_address,
+                              read, write, merge, now, iso, usable_price)
 
-KEY=os.environ.get("GOOGLE_PLACES_API_KEY", "").strip()
-OUT=Path("data/gas-prices.json")
-stations=[
- ("Norwood Gulf","Norwood Gulf, 707 Neponset St, Norwood MA"),
- ("Gulf — Broadway","Gulf, 145 Broadway, Norwood MA"),
- ("Mr. Frank\'s Food Mart","Mr. Frank\'s Food Mart, 917 Washington St, Norwood MA"),
- ("Sunoco — Route 1","Sunoco, 515 Providence Hwy, Norwood MA"),
- ("Route 1 Auto Services","Route 1 Auto Services, 305 Boston Providence Turnpike, Norwood MA"),
- ("Mobil — Route 1","Mobil, 971 Providence Hwy, Norwood MA"),
- ("Irving Oil / Rojo","Irving Oil Rojo, 69 Providence Hwy, Norwood MA"),
- ("BJ's Gas Station","BJ's Gas, 1412 Boston Providence Turnpike, Norwood MA"),
- ("CITGO","CITGO, 960 Boston Providence Hwy, Norwood MA"),
- ("Shell — Walpole Street","Shell, 491 Walpole St, Norwood MA"),
- ("Mobil / On the Run — Norwood Center","Mobil, 499 Washington St, Norwood MA"),
- ("Shell — Pleasant Street","Shell, 238 Pleasant St, Norwood MA"),
- ("Costco Gas — Dedham","Costco Gasoline, 200 Legacy Blvd, Dedham MA"),
- ("Costco Gas — Sharon","Costco Gasoline, 160 Old Post Rd, Sharon MA"),
-]
-def req(url, body=None, fields=None):
- headers={"X-Goog-Api-Key":KEY,"Content-Type":"application/json"}
- if fields: headers["X-Goog-FieldMask"]=fields
- r=urllib.request.Request(url,data=(json.dumps(body).encode() if body else None),headers=headers,method="POST" if body else "GET")
- try:
-  with urllib.request.urlopen(r,timeout=25) as x:return json.load(x)
- except urllib.error.HTTPError as e:
-  detail=e.read().decode("utf-8","replace")
-  raise RuntimeError(f"Google Places HTTP {e.code}: {detail[:500]}")
-def price_value(x):
- v=x.get("price",{})
- units=v.get("units")
- nanos=v.get("nanos",0)
- return (float(units)+float(nanos)/1e9) if units is not None else None
+KEY=os.environ.get('GOOGLE_PLACES_API_KEY','').strip()
+
+def request(url,body=None,fields=None):
+    headers={'X-Goog-Api-Key':KEY,'Content-Type':'application/json','X-Goog-FieldMask':fields}
+    req=urllib.request.Request(url,data=json.dumps(body).encode() if body else None,
+                               headers=headers,method='POST' if body else 'GET')
+    try:
+        with urllib.request.urlopen(req,timeout=20) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError('Google HTTP '+str(exc.code)) from None
+
 def normalize(place):
- out={}
- newest=None
- for f in place.get("fuelOptions",{}).get("fuelPrices",[]):
-  typ=str(f.get("type","")).upper()
-  key={"REGULAR_UNLEADED":"regular","MIDGRADE":"midgrade","PREMIUM":"premium","DIESEL":"diesel"}.get(typ)
-  if not key: continue
-  val=price_value(f)
-  if val is not None: out[key]=round(val,3)
-  t=f.get("updateTime")
-  if t and (newest is None or t>newest):newest=t
- if newest: out["updated"]=newest
- return out
+    out={}
+    for fuel in place.get('fuelOptions',{}).get('fuelPrices',[]):
+        key={'REGULAR_UNLEADED':'regular','MIDGRADE':'midgrade','PREMIUM':'premium','DIESEL':'diesel'}.get(fuel.get('type'))
+        money=fuel.get('price',{})
+        if not key or money.get('currencyCode')!='USD':continue
+        try:value=round(float(money['units'])+float(money.get('nanos',0))/1e9,3)
+        except (KeyError,TypeError,ValueError):continue
+        date=fuel.get('updateTime')
+        if not usable_price(value,date):continue
+        report=dict(price=value,updated=date,source='Google Places API (New)',place_id=place.get('id'))
+        if key not in out or date>out[key]['updated']:out[key]=report
+    return out
 
-old={}
-if OUT.exists():
- try: old=json.loads(OUT.read_text())
- except: old={}
-oldstations=old.get("stations",{}) if isinstance(old,dict) else {}
+def lookup(spec,fetch=request):
+    attempts,verified,seen=[],[],set()
+    found={}
+    address=f"{spec['numbers'][0]} {spec['street']}, {spec['city']}, MA {spec['zip']}"
+    for query in (spec['name']+', '+address,'gas station '+address):
+        response=fetch('https://places.googleapis.com/v1/places:searchText',
+                       {'textQuery':query,'pageSize':5},
+                       'places.id,places.displayName,places.formattedAddress,places.addressComponents,places.types')
+        for candidate in response.get('places',[]):
+            pid=candidate.get('id')
+            if not pid or pid in seen:continue
+            seen.add(pid)
+            matched=address_matches(spec,*google_address(candidate)) and 'gas_station' in candidate.get('types',[])
+            record={'place_id':pid,'name':candidate.get('displayName',{}).get('text'),
+                    'address':candidate.get('formattedAddress'),'address_verified':matched}
+            attempts.append(record)
+            if not matched:
+                record['outcome']='address_or_station_type_mismatch'
+                continue
+            verified.append(pid)
+            details=fetch('https://places.googleapis.com/v1/places/'+pid,fields='id,fuelOptions')
+            prices=normalize(details)
+            record['outcome']='usable_prices' if prices else 'no_usable_fuel_prices'
+            for fuel,report in prices.items():
+                if fuel not in found or report['updated']>found[fuel]['updated']:found[fuel]=report
+            if 'regular' in found:
+                return found,{'outcome':'prices_returned','candidates':attempts}
+    return found,{'outcome':'partial_prices' if found else 'no_usable_fuel_prices' if verified else 'no_verified_station','candidates':attempts}
 
-fresh={}
-errors=[]
-if not KEY:
- print("Google Places API key is not configured; existing prices will not be relabeled as fresh.")
-for label,q in stations:
- if not KEY: break
- try:
-  s=req("https://places.googleapis.com/v1/places:searchText",{"textQuery":q,"maxResultCount":1},"places.id")
-  places=s.get("places",[])
-  if not places:
-   print(f"{label}: no matching place")
-   continue
-  pid=places[0]["id"]
-  p=req("https://places.googleapis.com/v1/places/"+pid,fields="id,fuelOptions")
-  n=normalize(p)
-  if n:
-   previous=oldstations.get(label,{})
-   if "updated" not in n:
-    print(f"{label}: Google returned a price without an update timestamp; omitting unverifiable freshness")
-    continue
-   fresh[label]={**n,"source":"Google Places API (New)","checked":datetime.now(timezone.utc).isoformat().replace("+00:00","Z")}
-  else: print(f"{label}: no fuel prices returned")
- except Exception as e:
-  errors.append((label,str(e)))
-  print(f"{label}: {e}")
+def main():
+    payload=read(OUT,{'stations':{}})
+    rows=payload.setdefault('stations',{})
+    status={'generated_at':iso(now()),'stations':{}}
+    updates=0
+    for spec in STATIONS:
+        label=spec['name']
+        try:
+            if KEY:
+                prices,diagnostic=lookup(spec)
+                result,accepted=merge(rows.get(label,{}),prices)
+                if accepted:rows[label]=result
+                diagnostic['accepted_grades']=accepted
+                updates+=len(accepted)
+            else:diagnostic={'outcome':'api_key_not_configured'}
+        except Exception as exc:
+            diagnostic={'outcome':'lookup_error','error':str(exc) if isinstance(exc,RuntimeError) else type(exc).__name__}
+        status['stations'][label]={'google':diagnostic}
+        print(label+': '+diagnostic['outcome'])
+    if updates:
+        payload['generated_at']=iso(now())
+        payload['source']='Station-specific fuel reports; see per-fuel provenance'
+        write(OUT,payload)
+    write(STATUS,status)
+    print(f'Accepted {updates} newer fuel reports; preserved other prices and dates.')
 
-if not fresh:
- if oldstations:
-  raise SystemExit("No fresh gas-price data could be retrieved; preserving cached prices and original dates. Check GOOGLE_PLACES_API_KEY, billing, and Places API permissions.")
- raise SystemExit("No gas-price data could be retrieved. Failing refresh instead of publishing an empty file.")
-
-results=dict(fresh)
-for label,_ in stations:
- if label not in results and label in oldstations:
-  results[label]=oldstations[label]
-
-if results == oldstations and OUT.exists():
- print("No gas-price data changes.")
- raise SystemExit(0)
-
-payload={
- "generated_at":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),
- "source":"Google Places API (New)",
- "stations":results
-}
-OUT.parent.mkdir(parents=True,exist_ok=True)
-OUT.write_text(json.dumps(payload,indent=2,sort_keys=True)+"\n")
-print(f"Wrote {len(results)} stations to {OUT}")
+if __name__=='__main__':main()
