@@ -1,57 +1,37 @@
 {
-  "updated_at": "2026-10-30T11:14:04.870792-04:00",
+  "updated_at": "2026-10-30T16:02:23.023388-04:00",
   "date": "2026-10-30",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood News 10.30.26",
+      "title": "Norwood Digest: October 2019",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 720,
-          "title": "The JBTS Trio - Public Access 8.18.26"
-        },
-        {
-          "minute": 840,
-          "title": "Gentle Exercise with Steve"
-        },
-        {
-          "minute": 900,
-          "title": "Norwood Votes - April '05 Election Results"
-        },
         {
           "minute": 990,
           "title": "Lead School Update: November 2016"
         },
         {
-          "minute": 1020,
-          "title": "Comcast Cyber Security Presentation 10.19.26"
-        },
-        {
-          "minute": 1075,
+          "minute": 1060,
           "title": "LIVE! NHS Football vs Ashland"
         },
         {
           "minute": 1320,
           "title": "Norwood News 10.30.26"
+        },
+        {
+          "minute": 1380,
+          "title": "Norwood Digest: October 2019"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-30"
     },
     "government": {
       "status": "scheduled",
-      "title": "Conservation Commission 10.21.26",
+      "title": "Capital Outlay Committee 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 780,
-          "title": "Finance Commission 10.15.26"
-        },
-        {
-          "minute": 870,
-          "title": "Trails Advisory Committee 10.13.26"
-        },
         {
           "minute": 1020,
           "title": "School Committee 10.28.26 Rebroadcast"
@@ -71,6 +51,10 @@
         {
           "minute": 1320,
           "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 1410,
+          "title": "Capital Outlay Committee 10.21.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-30"
@@ -80,18 +64,6 @@
       "title": "2012 NHS Golf vs. Walpole 10.9.12",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 690,
-          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
-        },
-        {
-          "minute": 810,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
-        },
-        {
-          "minute": 930,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
         {
           "minute": 1020,
           "title": "2012 8th Grade Football vs. Framingham Superbowl"
