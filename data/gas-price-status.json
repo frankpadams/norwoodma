@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T05:20:40.267296Z",
+  "generated_at": "2026-10-30T15:53:10.176904Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
@@ -74,8 +74,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -144,7 +144,9 @@
     },
     "Irving Oil / Rojo": {
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "regular"
+        ],
         "candidates": [
           {
             "address": "69 Providence Hwy, Norwood, MA 02062, USA",
@@ -183,11 +185,11 @@
               "gas_station",
               "car_wash",
               "food_store",
-              "store",
-              "service",
               "restaurant",
-              "point_of_interest",
               "food",
+              "store",
+              "point_of_interest",
+              "service",
               "establishment"
             ]
           },
@@ -205,8 +207,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -216,7 +218,9 @@
     },
     "Mobil / On the Run — Norwood Center": {
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "regular"
+        ],
         "candidates": [
           {
             "address": "499 Washington St, Norwood, MA 02062, USA",
@@ -243,7 +247,9 @@
     },
     "Mobil — Route 1": {
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "regular"
+        ],
         "candidates": [
           {
             "address": "971 Providence Hwy, Norwood, MA 02062, USA",
@@ -259,8 +265,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -358,23 +364,25 @@
             ]
           },
           {
-            "address": "683 Washington St, Norwood, MA 02062, USA",
+            "address": "501 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Norwood Convenience and News",
+            "name": "Lucky Mart Inc.",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "683 Washington St",
+              "501 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
             "station_verified": false,
             "types": [
               "convenience_store",
+              "grocery_store",
               "food_store",
               "food",
               "store",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -500,25 +508,6 @@
             ]
           },
           {
-            "address": "960 Boston Providence Hwy, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Citgo",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "960 Boston Providence Hwy",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
-            "station_verified": true,
-            "types": [
-              "gas_station",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
             "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Norwood Bottled Gas",
@@ -534,6 +523,25 @@
               "supplier",
               "manufacturer",
               "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
+          },
+          {
+            "address": "960 Boston Providence Hwy, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Citgo",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "960 Boston Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
+            "station_verified": true,
+            "types": [
+              "gas_station",
               "point_of_interest",
               "service",
               "establishment"
