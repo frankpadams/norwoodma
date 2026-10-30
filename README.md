@@ -53,6 +53,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Alerts and homepage civic notices are date-sensitive content and should expire or be removed when no longer useful.
 - Norwood Community Media schedules/streams are used when a government meeting has a confirmed live broadcast.
 - A meeting start time alone never establishes a live telecast. LIVE NOW / Watch Live requires today's NCM channel schedule to identify the same meeting with an explicit live marker; older recordings, rebroadcasts, other programs, missing data, and expired schedule slots cannot confirm it. Unconfirmed meetings keep their official information link.
+- Election alerts link to the maintained Norwood.ma elections page (`elections.html`); the news discovery refresh preserves this destination.
 - The site clearly distinguishes itself from Town government.
 
 ### Transit, weather, and local tools
