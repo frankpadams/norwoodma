@@ -4,10 +4,16 @@ import json
 import os
 import urllib.request
 import urllib.error
-from gas_price_common import (STATIONS, OUT, STATUS, address_matches, google_address,
+from gas_price_common import (STATIONS, OUT, STATUS, address_matches, google_address, norm,
                               read, write, merge, now, iso, usable_price)
 
 KEY=os.environ.get('GOOGLE_PLACES_API_KEY','').strip()
+
+KNOWN_NAMES={
+    'Gulf — Broadway':{'gulf'},
+    "Mr. Frank's Food Mart":{'mr franks food mart','mr franks gas and food mart'},
+    'Route 1 Auto Services':{'route 1 auto services'},
+}
 
 def request(url,body=None,fields=None):
     headers={'X-Goog-Api-Key':KEY,'Content-Type':'application/json','X-Goog-FieldMask':fields}
@@ -45,9 +51,14 @@ def lookup(spec,fetch=request):
             pid=candidate.get('id')
             if not pid or pid in seen:continue
             seen.add(pid)
-            matched=address_matches(spec,*google_address(candidate)) and 'gas_station' in candidate.get('types',[])
+            parsed=google_address(candidate)
+            address_verified=address_matches(spec,*parsed)
+            name=candidate.get('displayName',{}).get('text','')
+            station_verified=('gas_station' in candidate.get('types',[]) or norm(name) in KNOWN_NAMES.get(spec['name'],set()))
+            matched=address_verified and station_verified
             record={'place_id':pid,'name':candidate.get('displayName',{}).get('text'),
-                    'address':candidate.get('formattedAddress'),'address_verified':matched}
+                    'address':candidate.get('formattedAddress'),'address_verified':address_verified,
+                    'station_verified':station_verified,'types':candidate.get('types',[]),'parsed_address':list(parsed)}
             attempts.append(record)
             if not matched:
                 record['outcome']='address_or_station_type_mismatch'

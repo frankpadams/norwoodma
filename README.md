@@ -60,7 +60,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Transit includes MBTA commuter rail and Route 34E context, with live information where available.
 - Weather uses National Weather Service forecast data plus local radar and the Norwood Airport webcam. On forecast failures, widgets show a labeled cached forecast only while its period is current and the cache is under three hours old; otherwise they offer the forecast link. Network requests time out after eight seconds.
 - Transit predictions beyond two hours use estimated clock times with Tomorrow/date labels in Norwood local time. Invalid or expired predictions are excluded.
-- Gas prices use address-verified Google station lookups, direct official Costco Dedham prices, and a best-effort free GasBuddy fallback for stations without recent regular prices. Per-grade provenance and per-station diagnostics preserve original report dates when a source fails. See `GAS-PRICES.md` for matching, coverage and free-source limitations.
+- Gas prices use address-verified Google station lookups, direct official Costco Dedham/Sharon prices, and a best-effort free GasBuddy fallback for stations without recent regular prices. Per-grade provenance and per-station diagnostics preserve original report dates when a source fails. See `GAS-PRICES.md` for matching, coverage and free-source limitations.
 - Interactive tools include Norwood Trivia, How Townie Are You?, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
 
 ### PWA, navigation, and presentation

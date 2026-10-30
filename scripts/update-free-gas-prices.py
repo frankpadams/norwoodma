@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
 """Free fallbacks: direct Costco prices and timestamped GasBuddy community reports."""
 import asyncio
+import logging
 import re
 import urllib.request
 from html import unescape
 from gas_price_common import (STATIONS,OUT,STATUS,read,write,merge,needs_fallback,
                               address_matches,usable_price,now,iso,stamp)
 
-COSTCO={'Costco Gas — Dedham':'https://www.costco.com/warehouse-locations-319.html'}
+COSTCO={
+    'Costco Gas — Dedham':{'url':'https://www.costco.com/warehouse-locations-319.html','address':'200 legacy blvd'},
+    'Costco Gas — Sharon':{'url':'https://www.costco.com/warehouse-locations-1704.html','address':'160 old post road'},
+}
 
 def costco_prices(spec,html,url,observed_at):
     text=unescape(re.sub('<[^>]+>',' ',html))
     text=re.sub(r'\s+',' ',text).lower()
     # A curated warehouse URL still has to identify the expected warehouse/address.
-    if spec['city'].lower()+' warehouse' not in text or not re.search(r'\b200\s+legacy\s+blvd\b',text):
+    warehouse=COSTCO.get(spec['name'],{})
+    if spec['city'].lower()+' warehouse' not in text or not re.search(r'\b'+re.escape(warehouse.get('address','INVALID'))+r'\b',text):
         return {}
     out={}
     pattern=r'class=["\']gas-type["\']\s*>\s*(Regular|Premium|Diesel)\s*</span>\s*<br\s*/?>\s*<span[^>]*>\s*\$(\d+\.\d{2})(?:\s*<sup>\s*(\d)\s*</sup>)?'
@@ -47,6 +52,8 @@ def community_prices(spec,items):
     return out,len(matches)
 
 async def gasbuddy_rows(zips):
+    # Third-party debug/error logs can dump anti-bot HTML; retain only our safe outcome.
+    logging.getLogger('py_gasbuddy').setLevel(logging.CRITICAL)
     from py_gasbuddy import GasBuddy
     client=GasBuddy(timeout=20000)
     rows=[]
@@ -72,7 +79,7 @@ def main():
         if label not in COSTCO or not needs_fallback(rows.get(label,{})):continue
         diagnostic={}
         try:
-            url=COSTCO[label]
+            url=COSTCO[label]['url']
             request=urllib.request.Request(url,headers={'User-Agent':'Norwood.ma gas-price updater (+https://norwood.ma/about.html)'})
             with urllib.request.urlopen(request,timeout=20) as response:
                 html=response.read().decode('utf-8')

@@ -50,6 +50,23 @@ class GasPriceTests(unittest.TestCase):
         self.assertEqual(len(calls),2)
         self.assertEqual(status['outcome'],'no_verified_station')
 
+    def test_known_station_name_can_use_exact_address_without_google_type(self):
+        candidate={'id':'gulf','types':['car_repair'],'displayName':{'text':'Gulf'},'addressComponents':[
+            {'types':['street_number'],'shortText':'145'},
+            {'types':['route'],'shortText':'Broadway'},
+            {'types':['locality'],'shortText':'Norwood'},
+            {'types':['administrative_area_level_1'],'shortText':'MA'}]}
+        def fetch(url,body=None,fields=None):
+            return {'places':[candidate]} if body else {'id':'gulf','fuelOptions':{}}
+        prices,status=google.lookup(STATIONS[1],fetch)
+        self.assertEqual(status['outcome'],'no_usable_fuel_prices')
+        self.assertTrue(status['candidates'][0]['address_verified'])
+        self.assertTrue(status['candidates'][0]['station_verified'])
+
+    def test_sharon_gas_forecourt_address_is_distinct_from_warehouse(self):
+        self.assertTrue(address_matches(STATIONS[13],'162 Old Post Road','Sharon','MA'))
+        self.assertFalse(address_matches(STATIONS[13],'164 Old Post Road','Sharon','MA'))
+
     def test_failed_lookup_keeps_prices_and_dates_identical(self):
         old={'regular':4.259,'checked':'2026-10-07T03:42:00Z'}
         result,changed=merge(old,{})

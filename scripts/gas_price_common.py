@@ -26,7 +26,7 @@ STATIONS = [
     station('Mobil / On the Run — Norwood Center',499,'Washington St'),
     station('Shell — Pleasant Street',238,'Pleasant St'),
     station('Costco Gas — Dedham',200,'Legacy Blvd','Dedham','02026'),
-    station('Costco Gas — Sharon',160,'Old Post Rd','Sharon','02067'),
+    station('Costco Gas — Sharon',162,'Old Post Rd','Sharon','02067',numbers=['162','160']),
 ]
 
 def now():
