@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T05:18:03.844373Z",
+  "generated_at": "2026-10-30T05:20:40.202914Z",
   "source": "Station-specific fuel reports; see per-fuel provenance",
   "stations": {
     "BJ's Gas Station": {
@@ -57,11 +57,23 @@
       "source": "Costco official warehouse page"
     },
     "Costco Gas — Sharon": {
-      "checked": "2026-10-29T16:05:32.985896Z",
-      "premium": 4.72,
-      "regular": 3.88,
+      "checked": "2026-10-30T05:20:40.202900Z",
+      "fuel_reports": {
+        "premium": {
+          "place_id": "ChIJWesZt8Z95IkRdz1DrG5OKfA",
+          "source": "Google Places API (New)",
+          "updated": "2026-10-29T17:48:56Z"
+        },
+        "regular": {
+          "place_id": "ChIJWesZt8Z95IkRdz1DrG5OKfA",
+          "source": "Google Places API (New)",
+          "updated": "2026-10-29T21:18:53Z"
+        }
+      },
+      "premium": 4.74,
+      "regular": 3.84,
       "source": "Google Places API (New)",
-      "updated": "2026-10-29T05:34:23Z"
+      "updated": "2026-10-29T21:18:53Z"
     },
     "Gulf — Broadway": {
       "checked": "2026-10-07T03:42:00Z",

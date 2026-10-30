@@ -1,19 +1,29 @@
 {
-  "generated_at": "2026-10-30T05:18:02.229593Z",
+  "generated_at": "2026-10-30T05:20:40.267296Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
-        "accepted_grades": [
-          "premium",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "1412-1420 Boston-Providence Turnpike, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "BJ's Gas Station",
             "outcome": "usable_prices",
-            "place_id": "ChIJfwQD5eh_5IkRcqiccBaQhBE"
+            "parsed_address": [
+              "1412-1420 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJfwQD5eh_5IkRcqiccBaQhBE",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
@@ -28,21 +38,25 @@
             "address_verified": true,
             "name": "Citgo",
             "outcome": "usable_prices",
-            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4"
+            "parsed_address": [
+              "960 Boston Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -51,7 +65,19 @@
             "address_verified": true,
             "name": "Costco Gas Station",
             "outcome": "no_usable_fuel_prices",
-            "place_id": "ChIJ29WmLe9_44kRTe6v36Z9AVY"
+            "parsed_address": [
+              "200 Legacy Blvd",
+              "Dedham",
+              "MA"
+            ],
+            "place_id": "ChIJ29WmLe9_44kRTe6v36Z9AVY",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -59,45 +85,32 @@
     },
     "Costco Gas — Sharon": {
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "premium",
+          "regular"
+        ],
         "candidates": [
           {
             "address": "162 Old Post Rd, Sharon, MA 02067, USA",
-            "address_verified": false,
+            "address_verified": true,
             "name": "Costco Gas Station",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJWesZt8Z95IkRdz1DrG5OKfA"
-          },
-          {
-            "address": "433 S Main St, Sharon, MA 02067, USA",
-            "address_verified": false,
-            "name": "Cumberland Farms",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJMSN0V3d95IkRmkemDYY84h4"
-          },
-          {
-            "address": "160 Old Post Rd, Sharon, MA 02067, USA",
-            "address_verified": false,
-            "name": "Costco Wholesale",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJ78k2cQB95IkR_r4CYI_j3Pg"
-          },
-          {
-            "address": "68 Pond St, Sharon, MA 02067, USA",
-            "address_verified": false,
-            "name": "bp",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJuyPIPmCH5IkRbJsyI3sjXlA"
-          },
-          {
-            "address": "133 Old Post Rd, Sharon, MA 02067, USA",
-            "address_verified": false,
-            "name": "The Point at Sharon",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJHfikkhF95IkRMC76iXTR5nM"
+            "outcome": "usable_prices",
+            "parsed_address": [
+              "162 Old Post Rd",
+              "Sharon",
+              "MA"
+            ],
+            "place_id": "ChIJWesZt8Z95IkRdz1DrG5OKfA",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
-        "outcome": "no_verified_station"
+        "outcome": "prices_returned"
       }
     },
     "Gulf — Broadway": {
@@ -110,44 +123,92 @@
         "candidates": [
           {
             "address": "145 Broadway, Norwood, MA 02062, USA",
-            "address_verified": false,
+            "address_verified": true,
             "name": "Gulf",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJ5xKyejR_5IkRQdmRJDyj2J8"
+            "outcome": "no_usable_fuel_prices",
+            "parsed_address": [
+              "145 Broadway",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5xKyejR_5IkRQdmRJDyj2J8",
+            "station_verified": true,
+            "types": [
+              "point_of_interest",
+              "establishment"
+            ]
           }
         ],
-        "outcome": "no_verified_station"
+        "outcome": "no_usable_fuel_prices"
       }
     },
     "Irving Oil / Rojo": {
       "google": {
-        "accepted_grades": [
-          "diesel",
-          "premium",
-          "midgrade",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "69 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Rojo Car Wash",
             "outcome": "no_usable_fuel_prices",
-            "place_id": "ChIJmfAoIA-A5IkRj18N1IY1kCI"
+            "parsed_address": [
+              "69 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJmfAoIA-A5IkRj18N1IY1kCI",
+            "station_verified": true,
+            "types": [
+              "car_wash",
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "69 Boston Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Cravings On The Go",
             "outcome": "no_usable_fuel_prices",
-            "place_id": "ChIJtQnH3-eB5IkREHkmbw_z3Uc"
+            "parsed_address": [
+              "69 Boston Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJtQnH3-eB5IkREHkmbw_z3Uc",
+            "station_verified": true,
+            "types": [
+              "convenience_store",
+              "gas_station",
+              "car_wash",
+              "food_store",
+              "store",
+              "service",
+              "restaurant",
+              "point_of_interest",
+              "food",
+              "establishment"
+            ]
           },
           {
             "address": "69 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Marathon",
             "outcome": "usable_prices",
-            "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg"
+            "parsed_address": [
+              "69 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "service",
+              "point_of_interest",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
@@ -155,16 +216,26 @@
     },
     "Mobil / On the Run — Norwood Center": {
       "google": {
-        "accepted_grades": [
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "499 Washington St, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Mobil",
             "outcome": "usable_prices",
-            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU"
+            "parsed_address": [
+              "499 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
@@ -172,18 +243,26 @@
     },
     "Mobil — Route 1": {
       "google": {
-        "accepted_grades": [
-          "premium",
-          "midgrade",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "971 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Mobil",
             "outcome": "usable_prices",
-            "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU"
+            "parsed_address": [
+              "971 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
@@ -199,55 +278,133 @@
         "candidates": [
           {
             "address": "917 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
+            "address_verified": true,
             "name": "Mr. Franks Food Mart",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJNXM7gDJ-5IkRU2sKGIw8aGg"
+            "outcome": "no_usable_fuel_prices",
+            "parsed_address": [
+              "917 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJNXM7gDJ-5IkRU2sKGIw8aGg",
+            "station_verified": true,
+            "types": [
+              "store",
+              "convenience_store",
+              "food_store",
+              "food",
+              "point_of_interest",
+              "establishment"
+            ]
           },
           {
             "address": "917 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
+            "address_verified": true,
             "name": "Smokehouse BBQ",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJRc3nUnF_5IkReh5h0CoNT4E"
+            "parsed_address": [
+              "917 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJRc3nUnF_5IkReh5h0CoNT4E",
+            "station_verified": false,
+            "types": [
+              "barbecue_restaurant",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "establishment"
+            ]
           },
           {
             "address": "499 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Mobil",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU"
+            "parsed_address": [
+              "499 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "496 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Quick Stop",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg"
+            "parsed_address": [
+              "496 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
+              "point_of_interest",
+              "establishment"
+            ]
           },
           {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
+            "address": "683 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Lucky Mart Inc.",
+            "name": "Norwood Convenience and News",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4"
+            "parsed_address": [
+              "683 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
+              "point_of_interest",
+              "establishment"
+            ]
           }
         ],
-        "outcome": "no_verified_station"
+        "outcome": "no_usable_fuel_prices"
       }
     },
     "Norwood Gulf": {
       "google": {
-        "accepted_grades": [
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "707 Neponset St, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Norwood Gulf",
             "outcome": "usable_prices",
-            "place_id": "ChIJH2U-bX2A5IkRMVnDFPLe8QI"
+            "parsed_address": [
+              "707 Neponset St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJH2U-bX2A5IkRMVnDFPLe8QI",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "car_repair",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
@@ -263,64 +420,151 @@
         "candidates": [
           {
             "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
-            "address_verified": false,
+            "address_verified": true,
             "name": "Route 1 Auto Services",
-            "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJ5U-FinSA5IkREJZ9Xr1UwAQ"
+            "outcome": "no_usable_fuel_prices",
+            "parsed_address": [
+              "305 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5U-FinSA5IkREJZ9Xr1UwAQ",
+            "station_verified": true,
+            "types": [
+              "car_repair",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "515 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Sunoco",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE"
+            "parsed_address": [
+              "515 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "69 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Marathon",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg"
+            "parsed_address": [
+              "69 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "971 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Mobil",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU"
+            "parsed_address": [
+              "971 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "960 Boston Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Citgo",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4"
+            "parsed_address": [
+              "960 Boston Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           },
           {
             "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
-            "address_verified": false,
+            "address_verified": true,
             "name": "Norwood Bottled Gas",
             "outcome": "address_or_station_type_mismatch",
-            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE"
+            "parsed_address": [
+              "305 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
+            "station_verified": false,
+            "types": [
+              "supplier",
+              "manufacturer",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
-        "outcome": "no_verified_station"
+        "outcome": "no_usable_fuel_prices"
       }
     },
     "Shell — Pleasant Street": {
       "google": {
-        "accepted_grades": [
-          "diesel",
-          "premium",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "238 Pleasant St, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Shell",
             "outcome": "usable_prices",
-            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs"
+            "parsed_address": [
+              "238 Pleasant St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
@@ -339,7 +583,19 @@
             "address_verified": true,
             "name": "Shell",
             "outcome": "no_usable_fuel_prices",
-            "place_id": "ChIJZSIN1aF_5IkRkcagK4NRJmw"
+            "parsed_address": [
+              "491 Walpole St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJZSIN1aF_5IkRkcagK4NRJmw",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -347,17 +603,30 @@
     },
     "Sunoco — Route 1": {
       "google": {
-        "accepted_grades": [
-          "premium",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "515 Providence Hwy, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Sunoco",
             "outcome": "usable_prices",
-            "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE"
+            "parsed_address": [
+              "515 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "prices_returned"
