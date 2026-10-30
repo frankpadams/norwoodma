@@ -1,31 +1,79 @@
 {
-  "updated_at": "2026-10-29T21:45:28.647757-04:00",
-  "date": "2026-10-29",
+  "updated_at": "2026-10-30T04:21:46.966254-04:00",
+  "date": "2026-10-30",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood Votes - April '05 Election Results",
+      "title": "The JBTS Trio - Public Access 8.18.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1320,
-          "title": "Norwood Votes - April '05 Election Results"
+          "minute": 300,
+          "title": "Summerfest Concerts: Squeezebox Stompers 8.26.26"
+        },
+        {
+          "minute": 420,
+          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
+          "title": "Entertainment Norwood: Episode 3 - American Revolution"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 660,
+          "title": "Norwood Digest: October 2019"
+        },
+        {
+          "minute": 720,
+          "title": "The JBTS Trio - Public Access 8.18.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-29"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-30"
     },
     "government": {
       "status": "scheduled",
-      "title": "Guild Pond Info Session 10.8.26",
+      "title": "Capital Outlay Committee 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 360,
           "title": "Guild Pond Info Session 10.8.26"
+        },
+        {
+          "minute": 480,
+          "title": "Finance Commission 10.15.26"
+        },
+        {
+          "minute": 570,
+          "title": "Board of Selectmen 10.13.26"
+        },
+        {
+          "minute": 780,
+          "title": "Finance Commission 10.15.26"
+        },
+        {
+          "minute": 870,
+          "title": "Trails Advisory Committee 10.13.26"
+        },
+        {
+          "minute": 1020,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 1200,
+          "title": "Capital Outlay Committee 10.21.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-29"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-30"
     },
     "schools": {
       "status": "scheduled",
@@ -33,11 +81,35 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 300,
+          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
+        },
+        {
+          "minute": 420,
+          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 510,
+          "title": "2008 NHS Cross Country"
+        },
+        {
+          "minute": 570,
+          "title": "2008 Girls Soccer vs. Braintree"
+        },
+        {
+          "minute": 690,
+          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        },
+        {
+          "minute": 810,
+          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
+        },
+        {
+          "minute": 930,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-29"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-30"
     }
   }
 }
