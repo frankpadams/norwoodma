@@ -1,33 +1,13 @@
 {
-  "updated_at": "2026-10-31T07:06:17.017599-04:00",
+  "updated_at": "2026-10-31T12:16:17.340868-04:00",
   "date": "2026-10-31",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood News 10.30.26",
+      "title": "The Vehicle For Change 10.20.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 480,
-          "title": "Norwood News 10.30.26"
-        },
-        {
-          "minute": 540,
-          "title": "Norwood Votes - April '05 Election Results"
-        },
-        {
-          "minute": 630,
-          "title": "Lead School Update: November 2016"
-        },
-        {
-          "minute": 660,
-          "title": "Comcast Cyber Security Presentation 10.19.26"
-        },
-        {
-          "minute": 720,
-          "title": "Norwood News 10.30.26"
-        },
         {
           "minute": 780,
           "title": "Norwood Votes - April '05 Election Results"
@@ -35,35 +15,35 @@
         {
           "minute": 900,
           "title": "Norwood News 10.30.26"
+        },
+        {
+          "minute": 960,
+          "title": "Norwood Digest: October 2019"
+        },
+        {
+          "minute": 1020,
+          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
+        },
+        {
+          "minute": 1080,
+          "title": "Norwood News 10.30.26"
+        },
+        {
+          "minute": 1140,
+          "title": "Norwood Postcard: October 1996"
+        },
+        {
+          "minute": 1200,
+          "title": "The Vehicle For Change 10.20.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-31"
     },
     "government": {
       "status": "scheduled",
-      "title": "School Committee 10.28.26 Rebroadcast",
+      "title": "Capital Outlay Committee 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 450,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 480,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 540,
-          "title": "Airport Commission 10.21.26"
-        },
-        {
-          "minute": 570,
-          "title": "Finance Commission 10.15.26"
-        },
-        {
-          "minute": 660,
-          "title": "Trails Advisory Committee 10.13.26"
-        },
         {
           "minute": 810,
           "title": "Guild Pond Info Session 10.8.26"
@@ -75,27 +55,31 @@
         {
           "minute": 1020,
           "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 1170,
+          "title": "Finance Commission 10.27.26"
+        },
+        {
+          "minute": 1230,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 1320,
+          "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 1410,
+          "title": "Capital Outlay Committee 10.21.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-31"
     },
     "schools": {
       "status": "scheduled",
-      "title": "Update After Dark! Halloween Edition",
+      "title": "Norwood News 10.30.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 480,
-          "title": "2012 NHS Golf vs. Walpole 10.9.12"
-        },
-        {
-          "minute": 540,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
-        },
-        {
-          "minute": 660,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
         {
           "minute": 750,
           "title": "2012 8th Grade Football vs. Framingham Superbowl"
@@ -111,6 +95,22 @@
         {
           "minute": 990,
           "title": "Update After Dark! Halloween Edition"
+        },
+        {
+          "minute": 1080,
+          "title": "2018 Willett Halloween Parade"
+        },
+        {
+          "minute": 1099,
+          "title": "2018 Little Mustangs Halloween Parade"
+        },
+        {
+          "minute": 1113,
+          "title": "Update After Dark! Halloween Edition"
+        },
+        {
+          "minute": 1200,
+          "title": "Norwood News 10.30.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-31"
