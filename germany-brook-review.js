@@ -4,12 +4,12 @@ const picker=document.getElementById('trailSystemSelect');
 const status=document.getElementById('trailSystemSelectionStatus');
 if(!map||!picker)return;
 let routeLayer=null;
-fetch('data/trails/germany-brook-review.geojson')
+fetch('data/trails/germany-brook-review.geojson?v=20261031-osm1')
  .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
  .then(data=>{
   routeLayer=L.geoJSON(data,{style:()=>({color:'#a85b00',weight:6,opacity:.95}),onEachFeature:(f,l)=>{
    const p=f.properties||{};
-   l.bindPopup('<strong>'+p.name+'</strong><br>Candidate trail records joined for review. The joined line ends at Father Mac\'s; the remaining connection to Savage Center is not included yet. The short 0.2-mile loop is separate.');
+   l.bindPopup('<strong>'+p.name+'</strong><br>Continuous Willett-to-Savage Center route following existing OpenStreetMap paths along Germany Brook and behind Father Mac\'s pool. Approximately 1.13 miles. The short gravel loop and Vernon Street branch are separate.');
   }}).addTo(map);
   const sync=()=>{
    if(!routeLayer)return;
@@ -17,7 +17,7 @@ fetch('data/trails/germany-brook-review.geojson')
    else map.removeLayer(routeLayer);
    if(picker.value==='germany'||picker.value==='all'){
     const base=status?.textContent||'';
-    if(status)status.textContent=base+' Germany Brook review line added: Willett to Father Mac\'s; separate short loop excluded.';
+    if(status)status.textContent=base+' Germany Brook: continuous Willett-to-Savage Center route, about 1.13 miles, following mapped OSM paths. Short loop kept separate.';
    }
   };
   picker.addEventListener('change',sync);
