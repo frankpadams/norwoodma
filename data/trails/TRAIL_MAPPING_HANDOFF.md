@@ -109,3 +109,9 @@ Never say that a brochure is aligned just because a marker was geocoded or arbit
 - Review GeoJSON now has 114 coordinates and a measured length of 1811.9m / 1.126mi. This is measured geometry, not a brochure-stated length. The separate short gravel loop and Vernon Street branch (OSM way 1343590941) are not part of the main route.
 - Changed data/trails/germany-brook-review.geojson and germany-brook-review.js, with review-page cache version 20261031-osm1. Public map.html remains untouched. OSM source way URLs and ODbL attribution are in the GeoJSON. Geometry commit: 02d94c625650dc52e5c26e76c906ce071c0f87d7.
 - Other brochure systems are not made complete by this change; their OSM candidates still require brochure matching.
+
+### Endean existing-path snapshot — 2026-10-31
+- Downloaded OSM map API geometry for bbox -71.22,42.17,-71.205,42.18. Inspected the existing Endean/Hawes brochure raster and compared the rail corridor, sports fields, Hawes facilities and Mylod Street path network.
+- Saved six explicitly named Endean Conservation Land Path ways (808767513, 834820018, 834820513, 834821451, 834821452, 835006003) in data/trails/endean-osm-paths.geojson with source way URLs and ODbL attribution.
+- Replaced the named-Endean live Overpass request with that stored geometry in map-trails-review.js, rendering these actual mapped segments as solid green paths. Additional brochure-only branches remain incomplete; no artificial joins were added to this network. General candidate layers are still separate. Review-page script cache version: 20261031-osm1.
+- Repo commits: 1a9b5664793b5f7e762ec02c286aefbf21390e93 (snapshot), 5667e8fc596c781b1b6e29671f95181ecf37d89d (loader), e6ecbb062c23a7addb4266dec13fa39ab971cbac (page cache). Live site was still serving the older Germany route when first checked; do not claim deployment until checked.
