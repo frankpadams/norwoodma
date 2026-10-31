@@ -99,3 +99,13 @@ Never say that a brochure is aligned just because a marker was geocoded or arbit
 - Undo/redo, delete draft, local browser autosave, and GeoJSON download are included. The visible source candidate remains unchanged; none of these edits publish.
 - The review page remains `noindex`, but is not access-controlled; anyone with its URL can view it.
 - Validate browser interactions and mobile behavior on the review page before using the prototype for trail data. All geometry remains provisional and unverified.
+
+
+## OSM-aligned Germany Brook route — 2026-10-31
+- User explicitly requested following existing OSM path geometry when it matches brochure routes.
+- Retrieved OSM API map data for bbox -71.225,42.20,-71.21,42.21; complete way geometries include the Germany Brook corridor beyond the query envelope. Overpass queries failed, but the OSM map API succeeded.
+- Compared the actual Germany Brook brochure map with mapped footpaths, pool, playing fields and Savage Center property. Route uses OSM ways 339612105 (named Germany Brook Trail), 194823774 (ground track with motor_vehicle=no), and 194823771 (path behind/north of Father Mac's pool continuing to Savage Center property).
+- These ways share endpoint nodes 1684914889 and 2053294671; joining them leaves zero geometric gap and removes the earlier artificial 34.2m connector. Retained the existing short Willett access approach from the MassGIS/MAPC review geometry.
+- Review GeoJSON now has 114 coordinates and a measured length of 1811.9m / 1.126mi. This is measured geometry, not a brochure-stated length. The separate short gravel loop and Vernon Street branch (OSM way 1343590941) are not part of the main route.
+- Changed data/trails/germany-brook-review.geojson and germany-brook-review.js, with review-page cache version 20261031-osm1. Public map.html remains untouched. OSM source way URLs and ODbL attribution are in the GeoJSON. Geometry commit: 02d94c625650dc52e5c26e76c906ce071c0f87d7.
+- Other brochure systems are not made complete by this change; their OSM candidates still require brochure matching.
