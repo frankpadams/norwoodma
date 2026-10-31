@@ -470,31 +470,42 @@ render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>no
  const update=()=>{if(select?.value==='endean'||select?.value==='all')refLayer.addTo(map);else map.removeLayer(refLayer)};
  select?.addEventListener('change',update);update();
 })();
-/* Named OSM Endean footpath geometry, separated from official brochure geometry.
-   This is an approximate review layer; endpoints are not verified access points. */
-(async()=>{
+/* Existing Endean OSM paths, matched to the brochure's rail, fields and Mylod Street landmarks.
+   Snapshot avoids depending on a live Overpass response during review. */
+(()=>{
  const picker=document.getElementById('trailSystemSelect');
  const status=document.getElementById('trailSystemSelectionStatus');
  if(!picker||!status)return;
  let layer=null,loading=false;
+ const detail=document.createElement('p');
+ detail.id='endeanMappedPathStatus';
+ detail.style.cssText='display:none;margin:8px 0;font-size:.9rem';
+ status.insertAdjacentElement('afterend',detail);
  async function show(){
+  detail.style.display='';
   if(layer){layer.addTo(map);return}
   if(loading)return;loading=true;
+  detail.textContent='Loading existing mapped Endean paths…';
   try{
-   const query='[out:json][timeout:25];way["highway"~"^(path|footway)$"]["name"="Endean Conservation Land Path"](42.165,-71.225,42.183,-71.201);out geom;';
-   const res=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',body:new URLSearchParams({data:query}),signal:AbortSignal.timeout(30000)});
-   if(!res.ok)throw Error('OSM service unavailable');
-   const data=await res.json();
-   const ways=(data.elements||[]).filter(w=>w.geometry?.length>1);
-   if(!ways.length)throw Error('No named Endean paths returned');
-   layer=L.layerGroup(ways.map(w=>L.polyline(w.geometry.map(p=>[p.lat,p.lon]),{color:'#00896b',weight:5,opacity:.85})
-     .bindPopup('<b>Endean Conservation Land Path</b><br>Approximate OpenStreetMap line. Not a verified official trail alignment or navigation route.')));
+   const response=await fetch('data/trails/endean-osm-paths.geojson?v=20261031-osm1');
+   if(!response.ok)throw Error('HTTP '+response.status);
+   const data=await response.json();
+   layer=L.geoJSON(data,{style:{color:'#00896b',weight:5,opacity:.9},onEachFeature:(feature,line)=>{
+    const div=document.createElement('div');
+    const title=document.createElement('strong');title.textContent='Endean Conservation Land Path';div.append(title);
+    const text=document.createElement('p');text.textContent='Existing OSM path geometry, compared with the town brochure using the rail corridor, playing fields, Hawes facilities and Mylod Street. Additional brochure branches are not included in these six mapped segments.';div.append(text);
+    const link=document.createElement('a');link.href=feature.properties.source_url;link.target='_blank';link.rel='noopener';link.textContent='View original OSM path';div.append(link);line.bindPopup(div);
+   }});
    if(['endean','all'].includes(picker.value))layer.addTo(map);
-   status.textContent=ways.length+' Endean named OSM path segments available for review. Hawes Pool and athletic facilities are alignment references; access points are approximate.';
-  }catch(e){status.textContent='Endean path overlay unavailable: '+e.message}
+   detail.textContent=data.features.length+' existing Endean OSM path segments shown as solid green lines. Brochure-only connections remain separate.';
+  }catch(e){detail.textContent='Stored Endean paths could not load: '+e.message}
   finally{loading=false}
  }
- picker.addEventListener('change',()=>{if(['endean','all'].includes(picker.value))show();else if(layer)map.removeLayer(layer)});
+ const update=()=>{
+  if(['endean','all'].includes(picker.value))show();
+  else {detail.style.display='none';if(layer)map.removeLayer(layer)}
+ };
+ picker.addEventListener('change',update);update();
 })();
 /* Source-described trail access areas. Geocode street-level reference only;
    never label an address result as the exact woodland entrance. */
