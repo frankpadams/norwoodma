@@ -1,57 +1,53 @@
 {
-  "updated_at": "2026-11-01T01:18:33.006150-04:00",
+  "updated_at": "2026-11-01T06:58:37.354020-05:00",
   "date": "2026-11-01",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood Digest: October 2019",
+      "title": "Lead School Update: November 2016",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 120,
-          "title": "Norwood News 10.16.26"
+          "minute": 420,
+          "title": "Norwood Digest: October 2019"
         },
         {
-          "minute": 180,
-          "title": "Norwood Postcard: October 1996"
+          "minute": 480,
+          "title": "Norwood News 10.30.26"
         },
         {
-          "minute": 240,
-          "title": "The Vehicle For Change 10.20.26"
-        },
-        {
-          "minute": 300,
-          "title": "Comcast Cyber Security Presentation 10.19.26"
-        },
-        {
-          "minute": 360,
+          "minute": 540,
           "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
         },
         {
-          "minute": 420,
-          "title": "Norwood Digest: October 2019"
+          "minute": 600,
+          "title": "Norwood Postcard: October 1996"
+        },
+        {
+          "minute": 660,
+          "title": "The Vehicle For Change 10.20.26"
+        },
+        {
+          "minute": 720,
+          "title": "Norwood News 10.30.26"
+        },
+        {
+          "minute": 780,
+          "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
+        },
+        {
+          "minute": 840,
+          "title": "Lead School Update: November 2016"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-01"
     },
     "government": {
       "status": "scheduled",
-      "title": "Conservation Commission 10.21.26",
+      "title": "Board of Selectmen 10.27.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 90,
-          "title": "School Committee 10.28.26 Rebroadcast"
-        },
-        {
-          "minute": 240,
-          "title": "Board of Selectmen 10.27.26"
-        },
-        {
-          "minute": 330,
-          "title": "Conservation Commission 10.21.26"
-        },
         {
           "minute": 420,
           "title": "Capital Outlay Committee 10.21.26"
@@ -71,6 +67,18 @@
         {
           "minute": 720,
           "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 810,
+          "title": "Trails Advisory Committee 10.13.26"
+        },
+        {
+          "minute": 960,
+          "title": "Airport Commission 10.21.26"
+        },
+        {
+          "minute": 990,
+          "title": "Board of Selectmen 10.27.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-01"
@@ -81,35 +89,31 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 90,
-          "title": "Update After Dark! Halloween Edition"
-        },
-        {
-          "minute": 120,
-          "title": "2018 Willett Halloween Parade"
-        },
-        {
-          "minute": 139,
-          "title": "2018 Little Mustangs Halloween Parade"
-        },
-        {
-          "minute": 153,
-          "title": "Update After Dark! Halloween Edition"
-        },
-        {
-          "minute": 240,
-          "title": "Norwood News 10.23.26"
-        },
-        {
-          "minute": 300,
+          "minute": 450,
           "title": "Update After Dark: Halloween 10/30/14"
         },
         {
-          "minute": 360,
+          "minute": 540,
           "title": "Update After Dark! Halloween Edition"
         },
         {
-          "minute": 450,
+          "minute": 630,
+          "title": "2018 Willett Halloween Parade"
+        },
+        {
+          "minute": 649,
+          "title": "2018 Little Mustangs Halloween Parade"
+        },
+        {
+          "minute": 663,
+          "title": "Update After Dark! Halloween Edition"
+        },
+        {
+          "minute": 750,
+          "title": "Norwood News 10.23.26"
+        },
+        {
+          "minute": 810,
           "title": "Update After Dark: Halloween 10/30/14"
         }
       ],
