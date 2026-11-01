@@ -166,6 +166,49 @@
     if(existing)existing.replaceWith(strip);
     else if(independent)independent.insertAdjacentElement('afterend',strip);
     else document.body.prepend(strip);
+    // A single alert may fit on desktop but overflow on a narrow phone.
+    // Measure the rendered text against the actual strip width after insertion.
+    if(slides.length===1&&!reduced){
+      const item=slides[0];
+      const measure=()=>{
+        const available=track.clientWidth;
+        const contentWidth=item.scrollWidth;
+        const needsScroll=contentWidth>available+1;
+        if(needsScroll&&!strip.classList.contains('site-timely-marquee')){
+          strip.classList.add('site-timely-marquee');
+          strip.classList.remove('site-timely-single');
+          item.classList.add('is-active');
+          const group=document.createElement('div');
+          group.className='site-timely-marquee-group';
+          group.appendChild(item);
+          track.appendChild(group);
+          const duplicate=group.cloneNode(true);
+          duplicate.setAttribute('aria-hidden','true');
+          duplicate.querySelectorAll('a,button,[tabindex]').forEach(el=>el.setAttribute('tabindex','-1'));
+          track.appendChild(duplicate);
+        }else if(!needsScroll&&strip.classList.contains('site-timely-marquee')){
+          const group=track.querySelector('.site-timely-marquee-group');
+          if(group){track.appendChild(item);track.querySelectorAll('.site-timely-marquee-group').forEach(el=>el.remove());}
+          strip.classList.remove('site-timely-marquee');
+          strip.classList.add('site-timely-single');
+        }
+        if(needsScroll){
+          const group=track.querySelector('.site-timely-marquee-group');
+          if(group){
+            const width=group.getBoundingClientRect().width;
+            track.style.setProperty('--ticker-distance',width+'px');
+            track.style.setProperty('--ticker-duration',Math.max(12,width/45)+'s');
+          }
+        }
+      };
+      requestAnimationFrame(measure);
+      if('ResizeObserver' in window)new ResizeObserver(measure).observe(track);
+      else window.addEventListener('resize',measure);
+      document.fonts?.ready.then(measure);
+      track.addEventListener('touchstart',()=>strip.classList.add('ticker-paused'),{passive:true});
+      track.addEventListener('touchend',()=>strip.classList.remove('ticker-paused'),{passive:true});
+      track.addEventListener('touchcancel',()=>strip.classList.remove('ticker-paused'),{passive:true});
+    }
   }
   sitewideTimelyAlerts();
   // Re-check critical alerts on already-open pages. The underlying alert/event fetches
