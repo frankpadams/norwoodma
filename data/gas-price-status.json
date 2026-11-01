@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-31T15:17:33.236098Z",
+  "generated_at": "2026-11-01T15:59:03.682604Z",
   "stations": {
     "BJ's Gas Station": {
-      "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
-      },
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "diesel",
+          "premium",
+          "regular"
+        ],
         "candidates": [
           {
             "address": "1412-1420 Boston-Providence Turnpike, Norwood, MA 02062, USA",
@@ -36,7 +36,6 @@
     "CITGO": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -66,6 +65,14 @@
       }
     },
     "Costco Gas — Dedham": {
+      "costco": {
+        "accepted_grades": [
+          "regular",
+          "premium"
+        ],
+        "outcome": "prices_observed",
+        "source_url": "https://www.costco.com/warehouse-locations-319.html"
+      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -230,10 +237,7 @@
     },
     "Mobil / On the Run — Norwood Center": {
       "google": {
-        "accepted_grades": [
-          "midgrade",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "499 Washington St, Norwood, MA 02062, USA",
@@ -261,6 +265,7 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -358,6 +363,27 @@
             ]
           },
           {
+            "address": "683 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Norwood Convenience and News",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "683 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
+              "point_of_interest",
+              "establishment"
+            ]
+          },
+          {
             "address": "496 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Quick Stop",
@@ -377,29 +403,6 @@
               "point_of_interest",
               "establishment"
             ]
-          },
-          {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Lucky Mart Inc.",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "501 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
-            "station_verified": false,
-            "types": [
-              "convenience_store",
-              "grocery_store",
-              "food_store",
-              "food",
-              "store",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -410,6 +413,7 @@
         "accepted_grades": [
           "diesel",
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -548,16 +552,16 @@
             ]
           },
           {
-            "address": "499 Washington St, Norwood, MA 02062, USA",
+            "address": "238 Pleasant St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Mobil",
+            "name": "Shell",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "499 Washington St",
+              "238 Pleasant St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
+            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
             "station_verified": true,
             "types": [
               "gas_station",
@@ -575,6 +579,7 @@
         "accepted_grades": [
           "diesel",
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -672,7 +677,6 @@
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
-    "BJ's Gas Station",
     "Shell — Walpole Street"
   ]
 }
