@@ -1,71 +1,119 @@
 {
-  "updated_at": "2026-10-31T19:38:49.050860-04:00",
-  "date": "2026-10-31",
+  "updated_at": "2026-11-01T01:18:33.006150-04:00",
+  "date": "2026-11-01",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Local Artist Bill Breen - Public Access 10.7.26",
+      "title": "Norwood Digest: October 2019",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1200,
+          "minute": 120,
+          "title": "Norwood News 10.16.26"
+        },
+        {
+          "minute": 180,
+          "title": "Norwood Postcard: October 1996"
+        },
+        {
+          "minute": 240,
           "title": "The Vehicle For Change 10.20.26"
         },
         {
-          "minute": 1260,
+          "minute": 300,
           "title": "Comcast Cyber Security Presentation 10.19.26"
         },
         {
-          "minute": 1320,
+          "minute": 360,
           "title": "Morrill Library Presentation by Patti Fanning - \"Wish You Were Here\""
         },
         {
-          "minute": 1380,
-          "title": "Local Artist Bill Breen - Public Access 10.7.26"
+          "minute": 420,
+          "title": "Norwood Digest: October 2019"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-10-31"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-01"
     },
     "government": {
       "status": "scheduled",
-      "title": "Capital Outlay Committee 10.21.26",
+      "title": "Conservation Commission 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1230,
+          "minute": 90,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 240,
           "title": "Board of Selectmen 10.27.26"
         },
         {
-          "minute": 1320,
+          "minute": 330,
           "title": "Conservation Commission 10.21.26"
         },
         {
-          "minute": 1410,
+          "minute": 420,
           "title": "Capital Outlay Committee 10.21.26"
+        },
+        {
+          "minute": 450,
+          "title": "Finance Commission 10.27.26"
+        },
+        {
+          "minute": 510,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 660,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 720,
+          "title": "Conservation Commission 10.21.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-10-31"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-01"
     },
     "schools": {
       "status": "scheduled",
-      "title": "Update After Dark! Halloween Edition",
+      "title": "Update After Dark: Halloween 10/30/14",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1200,
-          "title": "Norwood News 10.30.26"
+          "minute": 90,
+          "title": "Update After Dark! Halloween Edition"
         },
         {
-          "minute": 1260,
+          "minute": 120,
+          "title": "2018 Willett Halloween Parade"
+        },
+        {
+          "minute": 139,
+          "title": "2018 Little Mustangs Halloween Parade"
+        },
+        {
+          "minute": 153,
+          "title": "Update After Dark! Halloween Edition"
+        },
+        {
+          "minute": 240,
+          "title": "Norwood News 10.23.26"
+        },
+        {
+          "minute": 300,
           "title": "Update After Dark: Halloween 10/30/14"
         },
         {
-          "minute": 1320,
+          "minute": 360,
           "title": "Update After Dark! Halloween Edition"
+        },
+        {
+          "minute": 450,
+          "title": "Update After Dark: Halloween 10/30/14"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-10-31"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-01"
     }
   }
 }
