@@ -9,7 +9,7 @@ const trails=L.featureGroup(),ends=L.featureGroup(),crossings=L.featureGroup();
 const isShown=()=>Boolean(checkbox?.checked);
 const sync=()=>{if(isShown()){trails.addTo(map);ends.addTo(map);crossings.addTo(map)}else{map.removeLayer(trails);map.removeLayer(ends);map.removeLayer(crossings)}};
 sync();
-const germanyVerifiedWayIds=new Set([]); // Populate only with OSM ways matched against the Town brochure.
+const germanyVerifiedWayIds=new Set(['339612105','194823774','194823771']); // OSM ways documented in Germany Brook review GeoJSON; do not expand to nearby paths.
 const parks={shattuck:{name:'Shattuck Park',center:[42.19283,-71.21099],bbox:[42.1917,-71.2132,42.1940,-71.2088]},germany:{name:'Germany Brook — Town brochure trace',center:[42.1988,-71.2175],bbox:[42.1915,-71.232,42.206,-71.199]}};
 let park=parks.shattuck;
 const trailArea=document.getElementById('trailAreaSelect');
@@ -142,7 +142,7 @@ function draw(data){
  trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();
  let n=0;
  const excludedCemeteries=park===parks.germany?cemeteryAreas(data.elements||[]):[];
- const germanyWays=park===parks.germany?germanyConnectedWays(data.elements||[],excludedCemeteries):null;
+ const germanyWays=park===parks.germany?germanyVerifiedWayIds:null;
  for(const element of data.elements||[]){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
   if(germanyWays&&!germanyWays.has(String(element.id)))continue;
