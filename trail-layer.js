@@ -147,7 +147,7 @@ function draw(data){
   if(element.type!=='way'||!Array.isArray(element.geometry)||element.geometry.length<2)continue;
   if(germanyWays&&!germanyWays.has(String(element.id)))continue;
   const tags=element.tags||{};
-  const walkingTrack=park===parks.germany&&tags.highway==='track'&&/^(yes|designated|permissive)$/.test(tags.foot||'')&&/^(no|private)$/.test(tags.motor_vehicle||tags.vehicle||'no');
+  const walkingTrack=park===parks.germany&&germanyVerifiedWayIds.has(String(element.id))&&tags.highway==='track'&&tags.access!=='private'&&tags.foot!=='no'&&tags.motor_vehicle!=='yes'&&tags.vehicle!=='yes';
   if(!/^(path|footway|steps|pedestrian)$/.test(tags.highway||'')&&!walkingTrack)continue;
   if(tags.access==='private'||tags.foot==='no')continue;
   // The broad Germany Brook search includes neighborhood sidewalks. Only highlight
