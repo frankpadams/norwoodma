@@ -1,0 +1,439 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Madelyn Road entrance",
+        "route_name": "Madelyn Road entrance",
+        "trail_type": "primary",
+        "route_color": "#758f3f",
+        "line_pattern": "solid",
+        "section_description": "Natural entrance path from Madelyn Road to the playground connector.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1910285,
+            42.2066863
+          ],
+          [
+            -71.1907937,
+            42.2067173
+          ],
+          [
+            -71.190513,
+            42.2067476
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Primary natural path",
+        "route_name": "Primary natural path",
+        "trail_type": "primary",
+        "route_color": "#758f3f",
+        "line_pattern": "solid",
+        "section_description": "Main natural path through the woods, beside Plantingfield Brook and toward the Route 1 side of the park.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1905409,
+            42.2049409
+          ],
+          [
+            -71.1902601,
+            42.2049826
+          ],
+          [
+            -71.1896732,
+            42.205039
+          ],
+          [
+            -71.1889585,
+            42.2051356
+          ],
+          [
+            -71.188637,
+            42.2051805
+          ],
+          [
+            -71.1882439,
+            42.2052779
+          ],
+          [
+            -71.1878457,
+            42.2053827
+          ],
+          [
+            -71.1875596,
+            42.2056112
+          ],
+          [
+            -71.1872479,
+            42.2058698
+          ],
+          [
+            -71.186967,
+            42.2060755
+          ],
+          [
+            -71.1866605,
+            42.206296
+          ],
+          [
+            -71.1863336,
+            42.2064858
+          ],
+          [
+            -71.1860578,
+            42.2066229
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Western woodland path",
+        "route_name": "Western woodland path",
+        "trail_type": "secondary",
+        "route_color": "#387f38",
+        "line_pattern": "solid",
+        "section_description": "Secondary natural path connecting the southern trail with the playground crossing.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1902601,
+            42.2049826
+          ],
+          [
+            -71.1903111,
+            42.2050443
+          ],
+          [
+            -71.190362,
+            42.2051327
+          ],
+          [
+            -71.1903364,
+            42.2051972
+          ],
+          [
+            -71.1901882,
+            42.2053514
+          ],
+          [
+            -71.1900349,
+            42.2055246
+          ],
+          [
+            -71.1898815,
+            42.2056978
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Playground connector to woods",
+        "route_name": "Playground connector to woods",
+        "trail_type": "connector",
+        "route_color": "#387f38",
+        "line_pattern": "dots",
+        "section_description": "Dotted connector across the playground to the woodland paths; it is shown separately from the wooded trail sections.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1898815,
+            42.2056978
+          ],
+          [
+            -71.1897589,
+            42.2057989
+          ],
+          [
+            -71.1896261,
+            42.2059267
+          ],
+          [
+            -71.1894677,
+            42.2060616
+          ],
+          [
+            -71.1893195,
+            42.2061777
+          ],
+          [
+            -71.1891561,
+            42.2062936
+          ],
+          [
+            -71.1889722,
+            42.2064434
+          ],
+          [
+            -71.1887525,
+            42.2066233
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Madelyn Road connector",
+        "route_name": "Madelyn Road connector",
+        "trail_type": "connector",
+        "route_color": "#387f38",
+        "line_pattern": "dots",
+        "section_description": "Dotted playground connector from the Madelyn Road entrance.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.190513,
+            42.2067476
+          ],
+          [
+            -71.1903498,
+            42.2066385
+          ],
+          [
+            -71.1901459,
+            42.2065136
+          ],
+          [
+            -71.1899368,
+            42.2063848
+          ],
+          [
+            -71.1897379,
+            42.2062371
+          ],
+          [
+            -71.1894677,
+            42.2060616
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Northern woodland link",
+        "route_name": "Northern woodland link",
+        "trail_type": "secondary",
+        "route_color": "#387f38",
+        "line_pattern": "solid",
+        "section_description": "Secondary natural path from the Codman Road parking area toward the eastern connector.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1887525,
+            42.2066233
+          ],
+          [
+            -71.188579,
+            42.2065674
+          ],
+          [
+            -71.1884056,
+            42.206504
+          ],
+          [
+            -71.1882424,
+            42.2064444
+          ],
+          [
+            -71.1880995,
+            42.2064005
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Eastern playground connector",
+        "route_name": "Eastern playground connector",
+        "trail_type": "connector",
+        "route_color": "#387f38",
+        "line_pattern": "dots",
+        "section_description": "Dotted connector joining the northern access to the main eastern path.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1880995,
+            42.2064005
+          ],
+          [
+            -71.1879618,
+            42.2063108
+          ],
+          [
+            -71.1878191,
+            42.2062173
+          ],
+          [
+            -71.1876763,
+            42.2061237
+          ],
+          [
+            -71.1875182,
+            42.2060224
+          ],
+          [
+            -71.1873754,
+            42.2059555
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Eastern junction link",
+        "route_name": "Eastern junction link",
+        "trail_type": "primary",
+        "route_color": "#758f3f",
+        "line_pattern": "solid",
+        "section_description": "Short natural link to the main path.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1873754,
+            42.2059555
+          ],
+          [
+            -71.1872479,
+            42.2058698
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Playground \u2014 Seasonal natural path",
+        "route_name": "Seasonal natural path",
+        "trail_type": "seasonal",
+        "route_color": "#758f3f",
+        "line_pattern": "dashes",
+        "section_description": "Seasonal natural route through the wet area between the northern access and the southern main path. Conditions may limit access.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1887525,
+            42.2066233
+          ],
+          [
+            -71.1888343,
+            42.2064567
+          ],
+          [
+            -71.1889009,
+            42.2062937
+          ],
+          [
+            -71.1889318,
+            42.2061188
+          ],
+          [
+            -71.188932,
+            42.2059396
+          ],
+          [
+            -71.1889067,
+            42.2057448
+          ],
+          [
+            -71.188861,
+            42.2055688
+          ],
+          [
+            -71.1887592,
+            42.2053805
+          ],
+          [
+            -71.188637,
+            42.2051805
+          ]
+        ]
+      }
+    }
+  ]
+}

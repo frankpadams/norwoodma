@@ -1,0 +1,398 @@
+{
+  "brochure_url": "https://drive.google.com/file/d/1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp/view",
+  "source_page": 2,
+  "render_dimensions": [
+    1400,
+    1082
+  ],
+  "controls": [
+    {
+      "pixel": [
+        244,
+        472
+      ],
+      "coordinate": [
+        -71.19109,
+        42.20665
+      ],
+      "landmark": "Codman / Madelyn junction",
+      "fit_residual_m": 6.5
+    },
+    {
+      "pixel": [
+        345,
+        454
+      ],
+      "coordinate": [
+        -71.1904818269,
+        42.206759732
+      ],
+      "landmark": "Madelyn entrance path bend",
+      "fit_residual_m": 2.9
+    },
+    {
+      "pixel": [
+        385,
+        180
+      ],
+      "coordinate": [
+        -71.19028,
+        42.20781
+      ],
+      "landmark": "Codman northern bend",
+      "fit_residual_m": 3.2
+    },
+    {
+      "pixel": [
+        710,
+        400
+      ],
+      "coordinate": [
+        -71.18867,
+        42.20694
+      ],
+      "landmark": "Codman southeastern bend",
+      "fit_residual_m": 2.2
+    },
+    {
+      "pixel": [
+        820,
+        260
+      ],
+      "coordinate": [
+        -71.1879879,
+        42.207476
+      ],
+      "landmark": "Cameron / Codman junction",
+      "fit_residual_m": 8.6
+    },
+    {
+      "pixel": [
+        960,
+        105
+      ],
+      "coordinate": [
+        -71.18745,
+        42.208
+      ],
+      "landmark": "Codman / Ellis Avenue junction",
+      "fit_residual_m": 7.4
+    }
+  ],
+  "method": "Approximate brochure linework registered against six OSM road landmarks. No GPS track available for the woodland network; existing MAPC path is a comparison source. Exact shared pixels preserve trail junctions. Seasonal and connector patterns follow the brochure.",
+  "transform": [
+    [
+      5.103366170535418e-06,
+      -7.289816307531377e-08
+    ],
+    [
+      -4.959304966689615e-09,
+      -3.812366181049631e-06
+    ],
+    [
+      -71.1922714180709,
+      42.208503531390676
+    ]
+  ],
+  "source_routes": [
+    [
+      "Madelyn Road entrance",
+      "primary",
+      [
+        [
+          244,
+          472
+        ],
+        [
+          290,
+          463
+        ],
+        [
+          345,
+          454
+        ]
+      ],
+      "Natural entrance path from Madelyn Road to the playground connector."
+    ],
+    [
+      "Primary natural path",
+      "primary",
+      [
+        [
+          340,
+          928
+        ],
+        [
+          395,
+          916
+        ],
+        [
+          510,
+          899
+        ],
+        [
+          650,
+          871
+        ],
+        [
+          713,
+          858
+        ],
+        [
+          790,
+          831
+        ],
+        [
+          868,
+          802
+        ],
+        [
+          924,
+          741
+        ],
+        [
+          985,
+          672
+        ],
+        [
+          1040,
+          617
+        ],
+        [
+          1100,
+          558
+        ],
+        [
+          1164,
+          507
+        ],
+        [
+          1218,
+          470
+        ]
+      ],
+      "Main natural path through the woods, beside Plantingfield Brook and toward the Route 1 side of the park."
+    ],
+    [
+      "Western woodland path",
+      "secondary",
+      [
+        [
+          395,
+          916
+        ],
+        [
+          385,
+          900
+        ],
+        [
+          375,
+          877
+        ],
+        [
+          380,
+          860
+        ],
+        [
+          409,
+          819
+        ],
+        [
+          439,
+          773
+        ],
+        [
+          469,
+          727
+        ]
+      ],
+      "Secondary natural path connecting the southern trail with the playground crossing."
+    ],
+    [
+      "Playground connector to woods",
+      "connector",
+      [
+        [
+          469,
+          727
+        ],
+        [
+          493,
+          700
+        ],
+        [
+          519,
+          666
+        ],
+        [
+          550,
+          630
+        ],
+        [
+          579,
+          599
+        ],
+        [
+          611,
+          568
+        ],
+        [
+          647,
+          528
+        ],
+        [
+          690,
+          480
+        ]
+      ],
+      "Dotted connector across the playground to the woodland paths; it is shown separately from the wooded trail sections."
+    ],
+    [
+      "Madelyn Road connector",
+      "connector",
+      [
+        [
+          345,
+          454
+        ],
+        [
+          377,
+          482
+        ],
+        [
+          417,
+          514
+        ],
+        [
+          458,
+          547
+        ],
+        [
+          497,
+          585
+        ],
+        [
+          550,
+          630
+        ]
+      ],
+      "Dotted playground connector from the Madelyn Road entrance."
+    ],
+    [
+      "Northern woodland link",
+      "secondary",
+      [
+        [
+          690,
+          480
+        ],
+        [
+          724,
+          494
+        ],
+        [
+          758,
+          510
+        ],
+        [
+          790,
+          525
+        ],
+        [
+          818,
+          536
+        ]
+      ],
+      "Secondary natural path from the Codman Road parking area toward the eastern connector."
+    ],
+    [
+      "Eastern playground connector",
+      "connector",
+      [
+        [
+          818,
+          536
+        ],
+        [
+          845,
+          559
+        ],
+        [
+          873,
+          583
+        ],
+        [
+          901,
+          607
+        ],
+        [
+          932,
+          633
+        ],
+        [
+          960,
+          650
+        ]
+      ],
+      "Dotted connector joining the northern access to the main eastern path."
+    ],
+    [
+      "Eastern junction link",
+      "primary",
+      [
+        [
+          960,
+          650
+        ],
+        [
+          985,
+          672
+        ]
+      ],
+      "Short natural link to the main path."
+    ],
+    [
+      "Seasonal natural path",
+      "seasonal",
+      [
+        [
+          690,
+          480
+        ],
+        [
+          674,
+          524
+        ],
+        [
+          661,
+          567
+        ],
+        [
+          655,
+          613
+        ],
+        [
+          655,
+          660
+        ],
+        [
+          660,
+          711
+        ],
+        [
+          669,
+          757
+        ],
+        [
+          689,
+          806
+        ],
+        [
+          713,
+          858
+        ]
+      ],
+      "Seasonal natural route through the wet area between the northern access and the southern main path. Conditions may limit access."
+    ]
+  ]
+}

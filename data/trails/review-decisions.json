@@ -41,6 +41,13 @@
       "status": "approved_locked",
       "snapshot": "data/trails/vanderbilt-approved.geojson",
       "geometry_sha256": "0760e583a89ee1d44d5158ca3e2cf149820a5b233a1a26dff8790e82abdcc329"
+    },
+    {
+      "area": "Ellis Pond / Alevizos Park",
+      "decision": "Owner approved corrected alignment after removing disconnected southern non-trail segment. Do not restore the Lower Pond segment.",
+      "date": "2026-11-03",
+      "status": "approved_alignment",
+      "review_file": "data/trails/ellis-pond-review.geojson"
     }
   ]
 }
