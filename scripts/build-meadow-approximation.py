@@ -113,6 +113,11 @@ def build():
  for check in CHECKS:
   predicted=convert(check['pixel']);delta=np.array(predicted)-np.array(check['coordinate']);meters=float(np.hypot(delta[0]*82400,delta[1]*111200));checks.append({**check,'predicted_coordinate':predicted,'residual_meters':round(meters,1)})
  output={'type':'FeatureCollection','source_url':PDF,'status':'approximate_for_owner_review','named_routes':7,'features':features}
+ lock_path=ROOT/'data/trails/meadow-street-lock.json'
+ if lock_path.exists():
+  lock=json.loads(lock_path.read_text());geometry=[{'id':f['id'],'geometry':f['geometry']} for f in output['features']]
+  digest=hashlib.sha256(json.dumps(geometry,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+  if digest!=lock['geometry_sha256']:raise RuntimeError('Meadow Street is approved and locked. Preserve the approved snapshot; alignment changes require an explicit owner request and updated approval record.')
  (ROOT/'data/trails/meadow-street-approximate.geojson').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
  registration={'authorization':'For this one, try to approximate trails based on proximity to nearby roads and the river.','date':'2026-11-02','source_pdf':PDF,'source_image_dimensions':[1056,816],'model':'Affine pixel-to-longitude/latitude transform; locally appropriate approximate alignment','controls':CONTROLS,'independent_landmark_checks':checks,'coefficients':coeff.tolist(),'interpretation':'Landmark residuals check image placement only. They are not a measurement of actual trail accuracy.','riverbank_extension':bank_registration,'i95_correction':{'instruction':'Eastern Blue leg must run parallel to I-95, not on it.','guide_source_way_ids':I95_SOURCE_WAYS,'guide_coordinates':I95_GUIDE,'offset_meters':I95_OFFSET_METERS,'side':'western woodland side of western carriageway','minimum_checked_distance_from_guide_meters':44,'note':'Offset is an approximate placement guide, not a surveyed trail setback.'},'source_map_note':'Image positions were read from the actual Town map, including the river-side Blue branch and both Green–White branches; previous guessed trace JSON was not used.'}
  (ROOT/'data/trails/meadow-street-registration.json').write_text(json.dumps(registration,ensure_ascii=False,indent=2)+'\n')

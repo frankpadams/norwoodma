@@ -25,6 +25,14 @@
       "status": "approved_locked",
       "snapshot": "data/trails/endean-approved.geojson",
       "geometry_sha256": "09e7bd65473d17b18aecc62ad7aa4df122a37b354eaf3dc2fc15f4e3f2379abd"
+    },
+    {
+      "area": "Meadow Street",
+      "decision": "Owner approved the complete preview, including the off-highway Blue alignment and western riverbank connections; lock it in.",
+      "date": "2026-11-02",
+      "status": "approved_locked",
+      "snapshot": "data/trails/meadow-street-approved.geojson",
+      "geometry_sha256": "e02dcea35f52eb2312544e5d59abaeecf37dc9524ca2b6ba4976f005aa499ee2"
     }
   ]
 }

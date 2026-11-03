@@ -30,7 +30,7 @@ const selectedFeatures=()=>{
  return features.filter(f=>f.properties?.in_norwood&&L.geoJSON(f).getBounds().intersects(bounds));
 };
 function previewControls(){
- if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='meadow'?'data/trails/meadow-street-approximate.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
+ if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
  $('trailPreviewButton').textContent=preview?'Return to source comparison':selected==='all'?'Choose a trail to preview':'Preview '+areas[selected].name;
  $('trailPreviewButton').disabled=selected==='all';
  $('trailToggleLabel').textContent=preview?areas[selected].name+' trail':'Show trail overlays';
@@ -84,7 +84,7 @@ map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contr
  try{
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
   const meadowResponse=await fetch('data/trails/meadow-street-trailhead.json?v=20261102-google1');if(!meadowResponse.ok)throw Error('Meadow Street trailhead HTTP '+meadowResponse.status);meadowTrailhead=await meadowResponse.json();
-  const meadowRoutesResponse=await fetch('data/trails/meadow-street-approximate.geojson?v=20261102-riverbank1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
+  const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
   const additionsResponse=await fetch('data/trails/endean-connections.geojson?v=20261102-coakley1');if(!additionsResponse.ok)throw Error('Endean connection HTTP '+additionsResponse.status);const additions=await additionsResponse.json();data.features.push(...additions.features);
   const endeanResponse=await fetch('data/trails/endean-approved.geojson?v=20261102-locked1');if(!endeanResponse.ok)throw Error('Endean approved paths HTTP '+endeanResponse.status);endean=await endeanResponse.json();
   const networkResponse=await fetch('data/trails/germany-brook-approved.geojson?v=20261102-locked1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();if(params.get('preview')==='1')setPreview(true);else{render();focus();}
