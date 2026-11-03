@@ -842,36 +842,6 @@
     ]
   },
   {
-    "id": "2026-11-03-tuesday-nov-a27df74",
-    "title": "Tuesday , Nov",
-    "start": {
-      "date": "2026-11-03",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-03",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning13.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Tuesday , Nov November 3 , 2026 Shorashim Hebrew Learning Tuesday, Nov 3rd 3:45p to 5:45p MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-04-2027-eastern-sectional-singles-and-u-s-pairs--d810a91",
     "title": "2027 Eastern Sectional Singles and U.S. Pairs Final",
     "start": {
@@ -2558,15 +2528,15 @@
     ]
   },
   {
-    "id": "2026-11-05-girls-varsity-volleyball-vs-king-philip-regio-c6240a8",
-    "title": "Girls Varsity Volleyball vs King Philip Regional High School — Norwood High School",
+    "id": "2026-11-05-prelim-r32-r16-miaa-playoff-volleyball-vs-kin-057c68b",
+    "title": "Prelim, R32, R16 MIAA Playoff Volleyball vs King Philip Regional High School — Norwood High School",
     "start": {
       "date": "2026-11-05",
       "time": "17:30"
     },
     "end": {
       "date": "2026-11-05",
-      "time": "19:00"
+      "time": "19:30"
     },
     "venue": "245 Nichols St, Norwood MA 02062",
     "address": "245 Nichols St, Norwood MA 02062",
@@ -2579,7 +2549,7 @@
     "series": "Norwood Girls Varsity Volleyball",
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Sport: Volleyball Level: Girls Varsity Team: Norwood High School - Varsity Site: Norwood High School Subsite: Gym",
+    "notes": "Sport: Volleyball Level: Prelim, R32, R16 MIAA Playoff Team: Norwood High School - Varsity Site: Norwood High School Subsite: Gym",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -12153,6 +12123,36 @@
     ]
   },
   {
+    "id": "2026-11-17-tuesday-nov-8e5fa0f",
+    "title": "Tuesday , Nov",
+    "start": {
+      "date": "2026-11-17",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-17",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning17.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Tuesday , Nov November 17 , 2026 Shorashim Hebrew Learning Tuesday, Nov 17th 3:45p to 5:45p MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-11-18-baby-bop-story-time-05191ad",
     "title": "Baby Bop Story Time",
     "start": {
@@ -18464,6 +18464,37 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-29-neighboorhood-rack-pop-up-thrift-market-b041d3c",
+    "title": "Neighboorhood Rack Pop-Up Thrift Market",
+    "start": {
+      "date": "2026-11-29",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/neighboorhood-rack-pop-up-thrift-market",
+    "cost": null,
+    "public_access": "public",
+    "series": "Castle Island Brewing — Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Neighboorhood Rack Pop-Up Thrift Market Sunday, November 29, 2026 1:00 PM 4:00 PM Norwood Taproom (map) Google Calendar ICS Reserve your rack: https://docs.google.com/forms/d/e/1FAIpQLSfiOUclOP1frFwDJL1vA6F-EK_KOlsQSNH1HSdyTys-gmU8GQ/viewform View Event →",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-food-markets"
     ]
   },
   {
