@@ -181,3 +181,9 @@ Owner approved both displayed loops and requested lock-in. vanderbilt-approved.g
 
 ## Hennessey Field / Murphy Park review — 2026-11-03
 Opened Drive brochure 2023.03.24 HennesseyField and MurphyPark_Trails_MAP_BROCHURE.pdf, page 2. Retained OSM ways 1077490141 and 1077490142 for main gravel network; added brochure-derived natural loop and short northern offshoot using six path/entrance landmarks. hennessey-registration.json records controls and residuals. hennessey-review.geojson displays only these four features when selected, with brochure popups. Owner review pending. Vanderbilt remains locked.
+
+### Hennessey brochure colors and descriptions — 2026-11-03
+Owner requested brochure colors and text explaining sections: gray primary gravel paths, green natural woodland loop and northern offshoot, in both review and preview. Added plain-language map explanation and section-specific popups. Keep one system toggle. Geometry unchanged.
+
+### Brochure colors apply to earlier systems — 2026-11-03
+Owner extended the convention to previously reviewed trails. Preserve approved geometry and one system toggle. Match route colors where explicit; explain types in map text and popups, with brochure links. Preview now preserves Meadow route colors and Green–White dashes; Shattuck natural paths are green; Cooper park paths are tan. Reviewed the actual Germany, Shattuck, Cooper and Endean brochure images. Germany uses olive main natural route, green branches, black identified paving. Endean uses black identified paving, gray identified gravel, green natural/connecting paths. Do not invent primary/secondary/seasonal classifications for source sections without those attributes; the Endean explanation says that distinction is incomplete. Hennessey gray gravel and green natural paths apply in both modes. Locked GeoJSON files remain byte-for-byte unchanged.

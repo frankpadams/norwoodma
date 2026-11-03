@@ -12,7 +12,10 @@
         "status": "existing",
         "in_norwood": true,
         "name": "Hennessey Field / Murphy Park \u2014 main gravel path",
-        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view"
+        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+        "route_color": "#737373",
+        "trail_type": "Primary gravel path",
+        "section_description": "Main gravel paths connecting the Cross Street and Lenox Avenue entrances, with a branch through the eastern part of the woods."
       },
       "geometry": {
         "type": "LineString",
@@ -139,7 +142,10 @@
         "status": "existing",
         "in_norwood": true,
         "name": "Hennessey Field / Murphy Park \u2014 main gravel path",
-        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view"
+        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+        "route_color": "#737373",
+        "trail_type": "Primary gravel path",
+        "section_description": "Main gravel paths connecting the Cross Street and Lenox Avenue entrances, with a branch through the eastern part of the woods."
       },
       "geometry": {
         "type": "LineString",
@@ -225,7 +231,9 @@
         "status": "approximate",
         "approximation": true,
         "in_norwood": true,
-        "route_color": "#087f46"
+        "route_color": "#387f38",
+        "trail_type": "Natural path",
+        "section_description": "Natural walking path through the woods; the loop has a short northern offshoot."
       },
       "geometry": {
         "type": "LineString",
@@ -339,7 +347,9 @@
         "status": "approximate",
         "approximation": true,
         "in_norwood": true,
-        "route_color": "#087f46"
+        "route_color": "#387f38",
+        "trail_type": "Natural path",
+        "section_description": "Natural walking path through the woods; the loop has a short northern offshoot."
       },
       "geometry": {
         "type": "LineString",
