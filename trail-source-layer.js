@@ -35,6 +35,7 @@ const selectedFeatures=()=>{
  return features.filter(f=>f.properties?.in_norwood&&L.geoJSON(f).getBounds().intersects(bounds));
 };
 function previewControls(){
+ if($('ledgeviewBrochureNotice'))$('ledgeviewBrochureNotice').hidden=selected!=='ledgeview';
  if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='ledgeview'?'data/trails/ledgeview-review.geojson':selected==='ellis-playground'?'data/trails/ellis-playground-review.geojson':selected==='ellis-pond'?'data/trails/ellis-pond-review.geojson':selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
  $('trailPreviewButton').textContent=preview?'Return to source comparison':selected==='all'?'Choose a trail to preview':'Preview '+areas[selected].name;
  $('trailPreviewButton').disabled=selected==='all';
@@ -69,7 +70,7 @@ function render(){
  if(!data)return;group.clearLayers();const features=selectedFeatures().filter(allowed);
  L.geoJSON({type:'FeatureCollection',features},{style,onEachFeature:(f,l)=>{
   const p=f.properties;const name=p.local_name||p.prop_name||p.name||p.reg_name||'Mapped path';
-  if(selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'){l.bindTooltip(esc(p.route_name||name));l.bindPopup('<strong>'+esc(name)+'</strong><p>'+(selected==='vanderbilt'?'Approved brochure alignment. Inner and outer loops together form the 5K route.':esc(p.trail_type)+': '+esc(p.section_description))+'</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>');return;}
+  if(selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'){l.bindTooltip(esc(p.route_name||name));l.bindPopup('<strong>'+esc(name)+'</strong><p>'+(selected==='vanderbilt'?'Approved brochure alignment. Inner and outer loops together form the 5K route.':esc(p.trail_type)+': '+esc(p.section_description))+'</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>'+(selected==='ledgeview'?'<p><strong>Read the brochure before visiting.</strong> It contains important information about proposed access, low-lying pools, trenches and high water. It notes that conditions are typically best at a river height of 10 feet or less.</p>':''));return;}
   if(preview&&brochureGuides[selected]){const guide=brochureGuides[selected];l.bindPopup('<strong>'+esc(areas[selected].name)+' trail</strong><p>'+esc(name==='Mapped path'?'Connecting path':name)+'</p><p>'+esc(guide.text)+'</p><a href="https://drive.google.com/file/d/'+guide.id+'/view" target="_blank" rel="noopener">Town trail brochure ↗</a>');return;}
   if(preview){l.bindPopup('<strong>'+esc(areas[selected].name)+' trail</strong><p>'+esc(name==='Mapped path'?'Connected trail path':name)+(p.approximation?' — approximate Town-map route':'')+'</p>');return;}
   const sourceId=p.osm_way_id||p.objectid;
