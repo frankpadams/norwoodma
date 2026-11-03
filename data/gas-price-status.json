@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-11-02T19:26:52.875818Z",
+  "generated_at": "2026-11-03T16:59:58.991695Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
-        "accepted_grades": [
-          "diesel",
-          "premium",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "1412-1420 Boston-Providence Turnpike, Norwood, MA 02062, USA",
@@ -23,9 +19,9 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           }
@@ -38,7 +34,6 @@
         "accepted_grades": [
           "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -66,6 +61,14 @@
       }
     },
     "Costco Gas — Dedham": {
+      "costco": {
+        "accepted_grades": [
+          "regular",
+          "premium"
+        ],
+        "outcome": "prices_observed",
+        "source_url": "https://www.costco.com/warehouse-locations-319.html"
+      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -196,11 +199,11 @@
               "convenience_store",
               "gas_station",
               "car_wash",
-              "food_store",
               "restaurant",
+              "food_store",
               "food",
-              "store",
               "point_of_interest",
+              "store",
               "service",
               "establishment"
             ]
@@ -231,6 +234,7 @@
     "Mobil / On the Run — Norwood Center": {
       "google": {
         "accepted_grades": [
+          "premium",
           "regular"
         ],
         "candidates": [
@@ -260,8 +264,6 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
-          "diesel",
-          "premium",
           "midgrade",
           "regular"
         ],
@@ -358,44 +360,44 @@
             ]
           },
           {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
+            "address": "683 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Lucky Mart Inc.",
+            "name": "Norwood Convenience and News",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "501 Washington St",
+              "683 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
             "station_verified": false,
             "types": [
               "convenience_store",
-              "grocery_store",
               "food_store",
               "food",
               "store",
               "point_of_interest",
-              "service",
               "establishment"
             ]
           },
           {
-            "address": "238 Pleasant St, Norwood, MA 02062, USA",
+            "address": "496 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Shell",
+            "name": "Quick Stop",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "238 Pleasant St",
+              "496 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
-            "station_verified": true,
+            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
+            "station_verified": false,
             "types": [
-              "gas_station",
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
               "point_of_interest",
-              "service",
               "establishment"
             ]
           }
@@ -406,8 +408,6 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -525,6 +525,27 @@
             ]
           },
           {
+            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Norwood Bottled Gas",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "305 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
+            "station_verified": false,
+            "types": [
+              "supplier",
+              "manufacturer",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
+          },
+          {
             "address": "238 Pleasant St, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Shell",
@@ -535,25 +556,6 @@
               "MA"
             ],
             "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
-            "station_verified": true,
-            "types": [
-              "gas_station",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "394 Providence Hwy, Westwood, MA 02090, USA",
-            "address_verified": false,
-            "name": "Shell",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "394 Providence Hwy",
-              "Westwood",
-              "MA"
-            ],
-            "place_id": "ChIJ2_n8M5qB5IkR78OxSCOOjI8",
             "station_verified": true,
             "types": [
               "gas_station",
@@ -632,8 +634,6 @@
     "Sunoco — Route 1": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -653,8 +653,8 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "store",
               "food",
+              "store",
               "point_of_interest",
               "service",
               "establishment"
