@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-02T22:38:41.498303-05:00",
+  "generated_at": "2026-11-03T05:14:25.669522-05:00",
   "offline": false,
-  "events_published": 2269,
+  "events_published": 2244,
   "news_published": 120,
   "civic_notices": 58,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2269,
-      "generated_at": "2026-11-02T22:38:40.860405-05:00"
+      "events": 2244,
+      "generated_at": "2026-11-03T05:14:25.028891-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 120,
-      "generated_at": "2026-11-02T22:38:40.870656-05:00"
+      "events": 118,
+      "generated_at": "2026-11-03T05:14:25.040384-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 822,
-      "generated_at": "2026-11-02T22:38:40.890033-05:00"
+      "events": 814,
+      "generated_at": "2026-11-03T05:14:25.062918-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 741,
-      "generated_at": "2026-11-02T22:38:40.906223-05:00"
+      "events": 733,
+      "generated_at": "2026-11-03T05:14:25.081940-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-11-02T22:38:40.915508-05:00"
+      "generated_at": "2026-11-03T05:14:25.092391-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 64,
-      "generated_at": "2026-11-02T22:38:40.926625-05:00"
+      "generated_at": "2026-11-03T05:14:25.104495-05:00"
     }
   ],
-  "recreation_programs": 117,
-  "recreation_occurrences": 1312,
+  "recreation_programs": 115,
+  "recreation_occurrences": 1302,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -142,9 +142,9 @@
       "source_id": "faith-shree-hari-dham",
       "ok": true,
       "method": "html_calendar",
-      "found": 1,
-      "note": null,
-      "outcome": "events",
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -332,7 +332,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 27,
+      "found": 25,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1330,7 +1330,7 @@
       "source_id": "st-catherine-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 12,
+      "found": 11,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1399,8 +1399,8 @@
       "source_id": "town-recreation-programs",
       "ok": true,
       "method": "myrec_programs",
-      "found": 117,
-      "note": "1600 calendar occurrences generated"
+      "found": 115,
+      "note": "1592 calendar occurrences generated"
     },
     {
       "source_id": "town-selectmen-car-washes",
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 87,
+      "found": 26,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1618,7 +1618,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 9,
+      "found": 34,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1626,7 +1626,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 23,
+      "found": 22,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1694,14 +1694,14 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Fiorentino Legal, P.C.": 2,
         "WCVB": 3,
         "NBC Boston": 3,
         "Norwood Town News": 25,
         "The Daily Tribune News": 1,
         "Norwood Public Schools": 6,
-        "The Norwood Record": 45,
+        "The Norwood Record": 44,
         "The Norwood Record — Latest": 19,
-        "Fiorentino Legal, P.C.": 1,
         "NewsBreak: Local News & Alerts": 1,
         "Newport Dispatch": 1,
         "Town of Norwood": 6,
