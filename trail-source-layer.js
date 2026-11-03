@@ -19,11 +19,12 @@ const areas={
  willett:{name:'Willett / Tiot',bounds:[[42.186,-71.231],[42.198,-71.215]]}
 };
 const group=L.featureGroup().addTo(map),boundary=L.featureGroup().addTo(map);
-let data=null,selected='all';
+let data=null,germany=null,selected='all';
+const selectedFeatures=()=>selected==='germany'?(germany?.features||[]):(data?.features||[]);
 function allowed(f){const p=f.properties||{};if(!$('trailNearby').checked&&!p.in_norwood)return false;if(p.source==='OpenStreetMap')return $('trailOsm').checked;if(p.status==='planned'||p.status==='proposed')return $('trailPlanned').checked;return $('trailMapc').checked;}
-function style(f){const p=f.properties;if(p.status==='planned'||p.status==='proposed')return {color:'#c56500',weight:6,opacity:.95,dashArray:'10 7'};return p.source==='OpenStreetMap'?{color:'#1267b0',weight:4,opacity:.9,dashArray:'4 3'}:{color:'#087f46',weight:7,opacity:.9};}
+function style(f){const p=f.properties;if(p.germany_role==='original-route')return {color:'#087f46',weight:8,opacity:.95};if(p.status==='planned'||p.status==='proposed')return {color:'#c56500',weight:6,opacity:.95,dashArray:'10 7'};return p.source==='OpenStreetMap'?{color:'#1267b0',weight:4,opacity:.9,dashArray:'4 3'}:{color:'#087f46',weight:7,opacity:.9};}
 function render(){
- if(!data)return;group.clearLayers();const features=data.features.filter(allowed);
+ if(!data)return;group.clearLayers();const features=selectedFeatures().filter(allowed);
  L.geoJSON({type:'FeatureCollection',features},{style,onEachFeature:(f,l)=>{
   const p=f.properties;const name=p.local_name||p.prop_name||p.name||p.reg_name||'Mapped path';
   const sourceId=p.osm_way_id||p.objectid;
@@ -33,11 +34,11 @@ function render(){
 function updateCount(){
  if(!data)return;const bounds=map.getBounds();let count=0;
  group.eachLayer(g=>g.eachLayer(l=>{if(l.getBounds&&bounds.intersects(l.getBounds()))count++;}));
- const shown=data.features.filter(allowed).length;
- status.textContent=count+' source segments in view · '+shown+' displayed overall. Area: '+areas[selected].name+'. Lines use the stored source coordinates.';
+ const shown=selectedFeatures().filter(allowed).length;
+ status.textContent=selected==='germany'?'Germany Brook: original route plus '+(germany?.connected_osm_way_count||0)+' connected OSM segments and their offshoots. Green: original route. Blue: connected OSM paths.':count+' source segments in view · '+shown+' displayed overall. Area: '+areas[selected].name+'. Lines use the stored source coordinates.';
 }
 function focus(){const area=areas[selected];map.fitBounds(area.bounds,{padding:[22,22]});$('trailLayerFocus').textContent='Zoom to '+area.name;}
-$('trailAreaSelect').addEventListener('change',e=>{selected=e.target.value;focus();});
+$('trailAreaSelect').addEventListener('change',e=>{selected=e.target.value;render();focus();});
 $('trailLayerFocus').addEventListener('click',focus);
 ['trailMapc','trailOsm','trailPlanned','trailNearby'].forEach(id=>$(id).addEventListener('change',render));
 $('trailLayerToggle').addEventListener('change',e=>{if(e.target.checked){group.addTo(map);boundary.addTo(map);render();}else{map.removeLayer(group);map.removeLayer(boundary);status.textContent='Trail overlays hidden.';}});
@@ -52,7 +53,8 @@ L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'MassGIS 2025 aeria
 map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contributors, ODbL');
 (async()=>{
  try{
-  const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');render();focus();
+  const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
+  const networkResponse=await fetch('data/trails/germany-brook-connected.geojson?v=20261102-connected1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();render();focus();
  }catch(e){status.textContent='Trail lines could not load: '+e.message;}
  try{
   const response=await fetch('data/trails/norwood-boundary.geojson');if(!response.ok)return;const geo=await response.json();L.geoJSON(geo,{style:{color:'#34495e',weight:2,opacity:.75,fill:false,dashArray:'3 5'},interactive:false}).addTo(boundary);

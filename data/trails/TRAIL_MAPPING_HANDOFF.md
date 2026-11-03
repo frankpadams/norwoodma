@@ -124,3 +124,8 @@ Never say that a brochure is aligned just because a marker was geocoded or arbit
 - map-test.html now loads trail-source-layer.js with all 11 area views, MAPC/OSM/planned toggles, optional outside-town MAPC paths, source popups, GeoJSON download and OSM/MassGIS 2025 aerial basemap switch. Area bounds are viewports only; they do not assign unnamed paths to a trail system. Stored source data removes dependency on live Overpass requests when opening this review page.
 - Public map.html and public map source are unchanged. The test page remains unlinked and noindex.
 - Rebuild helper: python scripts/build-trail-source-snapshot.py CACHE_DIRECTORY; required input formats and URLs are in its docstring. Raw downloaded XML is transient; the distributable GeoJSON is committed.
+
+## Germany Brook connected-path expansion — November 2, 2026
+- User approved the current Bernie Cooper Park and Shattuck Park alignments. Preserve both. Decisions are stored in review-decisions.json.
+- User requested the original Germany Brook line plus all OSM paths touching/connecting to it, recursively including offshoots. germany-brook-connected.geojson retains the original route exactly and includes 10 complete OSM ways reached through shared OSM nodes from seeds 339612105, 194823774 and 194823771. Includes Vernon Street branch 1343590941 and further offshoots. Every added way records its parent way and connecting node; no synthetic connectors or coordinate edits.
+- Germany Brook area now displays the original green route and connected blue network; other area views retain the previous source overlay. Builder: scripts/build-germany-connected-paths.py CACHE_DIRECTORY.
