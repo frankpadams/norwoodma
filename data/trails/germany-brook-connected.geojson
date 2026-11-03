@@ -527,11 +527,12 @@
         ],
         "status": "existing",
         "in_norwood": true,
-        "germany_role": "connected-branch",
+        "germany_role": "included-leg",
         "connected_from": {
           "way": 339612105,
           "node": 1684914920
-        }
+        },
+        "name": "Germany Brook to Willett School past the baseball field"
       },
       "geometry": {
         "type": "LineString",
@@ -1249,7 +1250,7 @@
       "properties": {
         "bicycle": "yes",
         "highway": "footway",
-        "name": "Germany Brook Trail",
+        "name": "Germany Brook western-end connection",
         "source": "OpenStreetMap",
         "source_url": "https://www.openstreetmap.org/way/896399146",
         "osm_way_id": 896399146,
@@ -1268,7 +1269,7 @@
         ],
         "status": "existing",
         "in_norwood": true,
-        "germany_role": "connected-branch",
+        "germany_role": "included-leg",
         "connected_from": {
           "way": 339612105,
           "node": 1684914920
@@ -1570,11 +1571,12 @@
         ],
         "status": "existing",
         "in_norwood": true,
-        "germany_role": "connected-branch",
+        "germany_role": "included-leg",
         "connected_from": {
           "way": 339612105,
           "node": 12431844857
-        }
+        },
+        "name": "Germany Brook landfill spur"
       },
       "geometry": {
         "type": "LineString",

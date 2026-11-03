@@ -50,6 +50,12 @@ def build(cache):
     assert leg_coords[0]==ways['194823771'][2][0]
     assert leg_coords[-1]==ways['194823771'][2][-1]
     features.append({'type':'Feature','id':'germany-father-macs-loop-leg','properties':{'name':"Savage Center to Father Mac’s parking lot and behind the pool",'source':'OpenStreetMap — owner-directed route','source_url':'https://www.openstreetmap.org/way/9280147','source_way_ids':[int(x[0]) for x in legs],'source_way_urls':['https://www.openstreetmap.org/way/'+x[0] for x in legs],'osm_node_ids':[int(n) for n in leg_nodes],'status':'existing','in_norwood':True,'germany_role':'added-leg'},'geometry':{'type':'LineString','coordinates':leg_coords}})
+    included_legs={1343590948:'Germany Brook landfill spur',896399146:'Germany Brook western-end connection',156220165:'Germany Brook to Willett School past the baseball field'}
+    for f in features:
+        ident=f['properties'].get('osm_way_id')
+        if ident in included_legs:
+            f['properties']['germany_role']='included-leg'
+            f['properties']['name']=included_legs[ident]
     output={'type':'FeatureCollection','attribution':'© OpenStreetMap contributors, ODbL 1.0; Norwood.ma existing route','seed_way_ids':sorted(map(int,seeds)),'connected_osm_way_count':len(seen),'connection_rule':'Recursive shared OSM nodes; source coordinates retained; no synthetic joins','features':features}
     (ROOT/'data/trails/germany-brook-connected.geojson').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
     print(len(seen),'OSM ways plus the preserved original route')

@@ -132,3 +132,6 @@ Never say that a brochure is aligned just because a marker was geocoded or arbit
 
 ### Savage Center / Father Mac’s loop leg — November 2, 2026
 User directed a connection from the Savage Center endpoint WSW to Father Mac’s parking lot, then north behind the pool to the existing route. Added a green leg constructed from exact OSM node slices of ways 9280147, 806490984, 806490992 and 1343590941. Starts at existing Savage node 69631695, joins at node 2053294671; all intermediate joins share identical mapped nodes. Original route and other park alignments are unchanged. Builder reproduces the new leg; no guessed connectors.
+
+### Include landfill spur and Willett School leg — November 2, 2026
+User requested inclusion of the landfill offshoot (OSM way 1343590948) and the western-end connection south past the baseball field to Willett School (ways 896399146 and 156220165). These already exist in the connected network; promoted them to green included-route legs with clear names, preserving all source coordinates. Builder now reproduces the included-leg roles.
