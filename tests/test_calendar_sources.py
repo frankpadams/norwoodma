@@ -11,6 +11,22 @@ SPEC.loader.exec_module(refresh)
 
 
 class CalendarSourcesTest(unittest.TestCase):
+    def test_school_scope_is_preserved_and_idempotent(self):
+        original={'id':'disney','title':'Disney Day!','source_id':'nps-oldham','source_url':'https://www.norwood.k12.ma.us/oldham/calendar/9274669/disney-day','venue':'Norwood Public Schools','organizer':'Norwood Public Schools'}
+        event=refresh.normalize_published_event_title(original)
+        self.assertEqual(event['title'],'Disney Day! — Oldham Elementary School')
+        self.assertEqual(event['venue'],'Oldham Elementary School')
+        self.assertEqual(event['organizer'],'Oldham Elementary School')
+        self.assertEqual(refresh.normalize_published_event_title(event),event)
+        # A district feed can link to an event belonging to one school.
+        original['source_id']='nps-district'
+        self.assertEqual(refresh.normalize_published_event_title(original)['school_scope'],'Oldham Elementary School')
+
+    def test_school_scope_does_not_replace_offsite_venue(self):
+        event=refresh.normalize_published_event_title({'title':'Semi-Formal','source_id':'nps-nhs','venue':'Four Points, Norwood'})
+        self.assertIn('Norwood High School',event['title'])
+        self.assertEqual(event['venue'],'Four Points, Norwood')
+
     def health(self, source=None, **row):
         source = source or {'health_policy': {'empty_result_is_failure': False}}
         status = {'source_id': 'test', 'ok': True, 'found': 0, **row}

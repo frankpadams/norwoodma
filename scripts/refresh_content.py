@@ -565,9 +565,28 @@ def normalize_published_event_title(e):
     sid=str(e.get('source_id') or '')
     # School-specific calendar feeds must identify their school in generic event titles.
     school_names={'nps-oldham':'Oldham Elementary School','nps-balch':'Balch Elementary School','nps-callahan':'Callahan Elementary School','nps-cleveland':'Cleveland Elementary School','nps-prescott':'Prescott Elementary School','nps-coakley':'Coakley Middle School','nps-nhs':'Norwood High School','nps-willett':'Willett Early Childhood Center'}
-    if sid in school_names and re.fullmatch(r'picture day!?|picture days!?',title,re.I):
-        title=school_names[sid]+' Picture Day'
-        e['venue']=school_names[sid]
+    # A district organizer or shared calendar must not broaden a school's event.
+    # Specific event URLs take precedence over the calendar's district-wide source.
+    school=None
+    url=e.get('source_url') or ''
+    for school_id,name in school_names.items():
+        slug=school_id.removeprefix('nps-')
+        if re.search(r'/'+re.escape(slug)+r'/',url,re.I):
+            school=name
+            break
+    school=school or school_names.get(sid)
+    if not school and (sid.startswith('nps-athletics') or sid=='norwood-high-athletics'):
+        school='Norwood High School'
+    if not school and sid in {'nps-district','nps-district-ical'}:
+        school='Willett Early Childhood Center' if 'willett-kindergarten' in url.lower() else 'All Norwood Public Schools'
+    if school:
+        e['school_scope']=school
+        if school.lower() not in title.lower():
+            title=title+' — '+school
+        if e.get('venue') in (None,'','Norwood Public Schools'):
+            e['venue']=school
+        if e.get('organizer')=='Norwood Public Schools' and school!='All Norwood Public Schools':
+            e['organizer']=school
     weekday_only=re.compile(r'^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)[\s,.:;-]*$',re.I)
     month_only=re.compile(r'^(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+20\d{2}$',re.I)
     junk_only=re.compile(r'^(?:event|events|calendar|schedule|meeting|meetings|program|programs|session|sessions|service|services|class|classes|group|groups|activity|activities|read more|learn more|click here|more information?)$',re.I)

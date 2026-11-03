@@ -156,3 +156,5 @@ The Government Overview guide keeps role descriptions, published leadership, con
 
 
 Civic imports preserve the full official event title, including Information Session and conditional “if needed” wording. An information session must never be shortened to Town Meeting. Calendar listings show Watch Live only while the current NCM schedule explicitly confirms live coverage of that same event; recordings and rebroadcasts do not qualify.
+
+School calendar events explicitly identify the applicable school(s) in their listing titles. Specific school feeds and event URLs retain their school scope even when the organizer is Norwood Public Schools; only confirmed district-wide events are labeled All Norwood Public Schools. Venue and participating school scope are separate: an off-campus venue does not change which school the event belongs to.
