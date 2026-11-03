@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "endean-coakley-west-to-sse",
+      "properties": {
+        "name": "Coakley western-edge trail connection",
+        "source": "Norwood.ma owner-directed route",
+        "source_url": "data/trails/endean-connections.geojson",
+        "status": "existing",
+        "in_norwood": true,
+        "trail_system": "Endean / Hawes Brook",
+        "endpoint_sources": [
+          {
+            "osm_way_id": 789314426,
+            "endpoint": "last",
+            "coordinate": [
+              -71.2130664,
+              42.172585
+            ]
+          },
+          {
+            "osm_way_id": 835006003,
+            "endpoint": "last",
+            "coordinate": [
+              -71.2122394,
+              42.1713315
+            ]
+          }
+        ],
+        "route_instruction": "Connect the trail at the western edge of the new Coakley School to the endpoint south-southeast, as requested by the site owner on 2026-11-02."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2130664,
+            42.172585
+          ],
+          [
+            -71.2122394,
+            42.1713315
+          ]
+        ]
+      }
+    }
+  ]
+}

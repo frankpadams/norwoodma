@@ -141,3 +141,9 @@ Production preference: one toggle per named trail system, grouping all its inclu
 
 ## Germany Brook APPROVED AND LOCKED — November 2, 2026
 The owner approved the complete single-style Germany Brook preview and said “lock it in.” germany-brook-approved.geojson is the fixed approved snapshot; germany-brook-lock.json records its geometry SHA-256 and included legs. The test map now loads that snapshot, preserving the exact approved alignment. The connected-path builder rejects geometry changes against the lock. Carry this same snapshot into the production map under one Germany Brook toggle. Do not re-derive or replace its geometry during other trail work. Public map remains unchanged.
+
+### Selected-trail preview — November 2, 2026
+Preview control now follows the View area selection, with a matching trail name and single trail checkbox. Changing area while previewing updates that preview instead of jumping to Germany Brook or exiting preview. Germany Brook always uses its locked approved snapshot. Other area previews show the existing source paths intersecting that area viewport; these area previews are not new approvals or final system-membership classifications. All Norwood requires selection of an individual trail before preview.
+
+### Endean Coakley western-edge connection — November 2, 2026
+User instructed connecting the trail endpoint at the western edge of the new Coakley School to the endpoint south-southeast. Added endean-connections.geojson with a direct connection from OSM way 789314426 last coordinate (-71.2130664,42.172585) to way 835006003 last coordinate (-71.2122394,42.1713315). This is an owner-directed link between existing mapped endpoints, not an OSM-imported segment. Source snapshots remain unchanged; the loader merges this maintained addition into the Endean area. Germany Brook approved geometry remains unchanged.
