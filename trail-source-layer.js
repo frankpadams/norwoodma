@@ -40,7 +40,7 @@ function previewControls(){
 }
 function allowed(f){if(preview)return true;const p=f.properties||{};if(!$('trailNearby').checked&&!p.in_norwood)return false;if(p.source==='OpenStreetMap')return $('trailOsm').checked;if(p.status==='planned'||p.status==='proposed')return $('trailPlanned').checked;return $('trailMapc').checked;}
 const brochureGuides={
- 'ellis-pond':{id:'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX',text:'Olive green: primary natural paths at the northern launch, eastern shore and Lower Pond. Gray: the gravel dam crossing. Black: the paved west-dam approach from Walpole Street. The northern and Lower Pond paths are separate access routes.'},
+ 'ellis-pond':{id:'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX',text:'Olive green: primary natural paths at the northern launch and eastern shore. Gray: the gravel dam crossing. Black: the paved west-dam approach from Walpole Street. The northern launch is a separate access route.'},
  shattuck:{id:'1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw',text:'Green: natural woodland paths, matching the Town brochure.'},
  cooper:{id:'1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V',text:'Tan: the park path network, matching the brochure. Paths connect the Saint John, Saint Joseph and Saint Paul Avenue entrances with the riverfront.'},
  germany:{id:'1X-mPJgOAaNFPAF_jxQHyPPiwcpqv9--1',text:'Olive green: the main natural trail. Green: natural branches. Black: paved sections where identified in the mapped data. Seasonal natural sections use a dashed line where identified.'},
@@ -113,7 +113,7 @@ map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contr
   const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
   const additionsResponse=await fetch('data/trails/endean-connections.geojson?v=20261102-coakley1');if(!additionsResponse.ok)throw Error('Endean connection HTTP '+additionsResponse.status);const additions=await additionsResponse.json();data.features.push(...additions.features);
   const endeanResponse=await fetch('data/trails/endean-approved.geojson?v=20261102-locked1');if(!endeanResponse.ok)throw Error('Endean approved paths HTTP '+endeanResponse.status);endean=await endeanResponse.json();
-  const ellisPondResponse=await fetch('data/trails/ellis-pond-review.geojson?v=20261103-1');if(!ellisPondResponse.ok)throw Error('Ellis Pond paths HTTP '+ellisPondResponse.status);ellisPond=await ellisPondResponse.json();
+  const ellisPondResponse=await fetch('data/trails/ellis-pond-review.geojson?v=20261103-2');if(!ellisPondResponse.ok)throw Error('Ellis Pond paths HTTP '+ellisPondResponse.status);ellisPond=await ellisPondResponse.json();
   const hennesseyResponse=await fetch('data/trails/hennessey-review.geojson?v=20261103-colors1');if(!hennesseyResponse.ok)throw Error('Hennessey paths HTTP '+hennesseyResponse.status);hennessey=await hennesseyResponse.json();
   const vanderbiltResponse=await fetch('data/trails/vanderbilt-approved.geojson?v=20261103-1');if(!vanderbiltResponse.ok)throw Error('Vanderbilt loops HTTP '+vanderbiltResponse.status);vanderbilt=await vanderbiltResponse.json();
   const networkResponse=await fetch('data/trails/germany-brook-approved.geojson?v=20261102-locked1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();if(params.get('preview')==='1')setPreview(true);else{render();focus();}

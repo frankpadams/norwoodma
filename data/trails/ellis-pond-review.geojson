@@ -372,58 +372,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Ellis Pond / Alevizos Park \u2014 Alevizos Park / Lower Pond path",
-        "trail_type": "Primary natural",
-        "route_color": "#758f3f",
-        "section_description": "Natural path beside Lower Pond in Alevizos Park, south of Walpole Street.",
-        "source": "Norwood Trails Committee brochure",
-        "source_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
-        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
-        "status": "approximate",
-        "approximation": true,
-        "in_norwood": true
-      },
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            -71.2189006,
-            42.1781165
-          ],
-          [
-            -71.2189219,
-            42.178231
-          ],
-          [
-            -71.2189783,
-            42.1783598
-          ],
-          [
-            -71.2190508,
-            42.1784622
-          ],
-          [
-            -71.2191409,
-            42.1785717
-          ],
-          [
-            -71.2192051,
-            42.1786806
-          ],
-          [
-            -71.2192612,
-            42.1788027
-          ],
-          [
-            -71.2193168,
-            42.1789114
-          ]
-        ]
-      }
     }
   ]
 }
