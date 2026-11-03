@@ -96,6 +96,113 @@
     ]
   ],
   "interpretation": "Landmark residuals check image placement only. They are not a measurement of actual trail accuracy.",
+  "riverbank_extension": {
+    "shoreline_source_osm_ways": [
+      1325519385,
+      1325521005
+    ],
+    "shoreline_coordinates": [
+      [
+        -71.167202,
+        42.1757645
+      ],
+      [
+        -71.1675239,
+        42.1762257
+      ],
+      [
+        -71.1675078,
+        42.176496
+      ],
+      [
+        -71.1674112,
+        42.1767663
+      ],
+      [
+        -71.1672208,
+        42.1771758
+      ],
+      [
+        -71.1669123,
+        42.1776528
+      ],
+      [
+        -71.1667487,
+        42.1780404
+      ],
+      [
+        -71.1666951,
+        42.1781517
+      ],
+      [
+        -71.1667648,
+        42.1783207
+      ],
+      [
+        -71.1669847,
+        42.1785592
+      ],
+      [
+        -71.1674622,
+        42.1786685
+      ],
+      [
+        -71.167843,
+        42.1787659
+      ],
+      [
+        -71.1680791,
+        42.1790382
+      ],
+      [
+        -71.168004,
+        42.1792708
+      ]
+    ],
+    "landward_offset_meters": 10,
+    "connections": [
+      {
+        "route_id": "meadow-yellow",
+        "old_endpoint": [
+          -71.16687736,
+          42.1778671
+        ],
+        "endpoint": [
+          -71.16694245,
+          42.17788215
+        ],
+        "adjustment_meters": 5.6,
+        "bank_position": 5.512781137111375
+      },
+      {
+        "route_id": "meadow-orange",
+        "old_endpoint": [
+          -71.16753398,
+          42.17869534
+        ],
+        "endpoint": [
+          -71.16757866,
+          42.17860424
+        ],
+        "adjustment_meters": 10.8,
+        "bank_position": 10.188157626174648
+      },
+      {
+        "route_id": "meadow-green",
+        "old_endpoint": [
+          -71.16795457,
+          42.17922089
+        ],
+        "endpoint": [
+          -71.16813404,
+          42.17924791
+        ],
+        "adjustment_meters": 15.1,
+        "bank_position": 12.840205549408465
+      }
+    ],
+    "method": "Continue the off-highway corridor northeast to its intersection with a landward offset of the mapped western shoreline; follow the bank to the riverside endpoints."
+  },
   "i95_correction": {
     "instruction": "Eastern Blue leg must run parallel to I-95, not on it.",
     "guide_source_way_ids": [

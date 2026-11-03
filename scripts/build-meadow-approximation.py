@@ -48,6 +48,46 @@ def west_parallel_leg(original_junction):
  assert all(road_distance(c,I95_GUIDE)>44 for c in shifted)
  return shifted
 
+# Western shoreline from OSM water polygons 1325519385 and 1325521005.
+WEST_BANK=[[-71.167202,42.1757645],[-71.1675239,42.1762257],[-71.1675078,42.176496],[-71.1674112,42.1767663],[-71.1672208,42.1771758],[-71.1669123,42.1776528],[-71.1667487,42.1780404],[-71.1666951,42.1781517],[-71.1667648,42.1783207],[-71.1669847,42.1785592],[-71.1674622,42.1786685],[-71.167843,42.1787659],[-71.1680791,42.1790382],[-71.168004,42.1792708]]
+
+def riverbank_extension(features,parallel):
+ scale=np.array([82400,111200]);shore=np.array(WEST_BANK)*scale;land=[]
+ for i,p in enumerate(shore):
+  direction=shore[min(i+1,len(shore)-1)]-shore[max(i-1,0)];direction/=np.linalg.norm(direction);land.append(p+np.array([-direction[1],direction[0]])*10)
+ land=np.array(land)
+ start=np.array(parallel[-1])*scale
+ road=np.array([[-71.1671699,42.1756245],[-71.1668297,42.1759906]])*scale
+ direction=road[1]-road[0];direction/=np.linalg.norm(direction);end=road[1]+np.array([-direction[1],direction[0]])*I95_OFFSET_METERS
+ def cross(a,b):return a[0]*b[1]-a[1]*b[0]
+ intersections=[]
+ for i,(a,b) in enumerate(zip(land,land[1:])):
+  r=end-start;v=b-a;den=cross(r,v)
+  if abs(den)<1e-9:continue
+  t=cross(a-start,v)/den;u=cross(a-start,r)/den
+  if 0<=t<=1 and 0<=u<=1:intersections.append((t,i+u,start+t*r))
+ assert intersections,'Road-parallel extension must meet the western-bank path'
+ _,entry,join=min(intersections,key=lambda x:x[0]);byid={f['id']:f for f in features};connections=[]
+ for ident,which in [('meadow-yellow',-1),('meadow-orange',0),('meadow-green',-1)]:
+  old=byid[ident]['geometry']['coordinates'][which];point=np.array(old)*scale;candidates=[]
+  for i,(a,b) in enumerate(zip(land,land[1:])):
+   t=np.clip(np.dot(point-a,b-a)/np.dot(b-a,b-a),0,1);q=a+t*(b-a);candidates.append((np.linalg.norm(q-point),i+t,q))
+  distance,position,q=min(candidates,key=lambda x:x[0]);assert distance<30,'Riverside endpoint adjustment too large'
+  coordinate=[round(float(v),8) for v in q/scale];byid[ident]['geometry']['coordinates'][which]=coordinate
+  connections.append({'route_id':ident,'old_endpoint':old,'endpoint':coordinate,'adjustment_meters':round(float(distance),1),'bank_position':float(position)})
+ last=max(c['bank_position'] for c in connections);points=[(entry,[round(float(v),8) for v in join/scale])]
+ points.extend((float(i),[round(float(v),8) for v in q/scale]) for i,q in enumerate(land) if entry<i<last)
+ points.extend((c['bank_position'],c['endpoint']) for c in connections)
+ points.sort(key=lambda x:x[0]);result=list(parallel)
+ for _,coordinate in points:
+  if coordinate!=result[-1]:result.append(coordinate)
+ byid['meadow-blue-river']['geometry']['coordinates']=result
+ byid['meadow-blue-river']['properties']['riverbank_extension']='Continue northeast to the western bank, then north along the bank to Yellow, Orange and Green endpoints.'
+ byid['meadow-blue-river']['properties']['shoreline_source_osm_ways']=[1325519385,1325521005]
+ for c in connections:
+  assert c['endpoint'] in result
+ return {'shoreline_source_osm_ways':[1325519385,1325521005],'shoreline_coordinates':WEST_BANK,'landward_offset_meters':10,'connections':connections,'method':'Continue the off-highway corridor northeast to its intersection with a landward offset of the mapped western shoreline; follow the bank to the riverside endpoints.'}
+
 def build():
  matrix=np.array([[*c['pixel'],1] for c in CONTROLS]);target=np.array([c['coordinate'] for c in CONTROLS]);coeff=np.linalg.solve(matrix,target)
  def convert(p):return [round(float(v),8) for v in np.array([*p,1])@coeff]
@@ -68,12 +108,13 @@ def build():
  assert main['geometry']['coordinates'][-1]==east['geometry']['coordinates'][0]
  for a,b in zip(east['geometry']['coordinates'],east['geometry']['coordinates'][1:]):
   for t in np.linspace(0,1,21):assert road_distance(np.array(a)+(np.array(b)-a)*t,I95_GUIDE)>44
+ bank_registration=riverbank_extension(features,parallel)
  checks=[]
  for check in CHECKS:
   predicted=convert(check['pixel']);delta=np.array(predicted)-np.array(check['coordinate']);meters=float(np.hypot(delta[0]*82400,delta[1]*111200));checks.append({**check,'predicted_coordinate':predicted,'residual_meters':round(meters,1)})
  output={'type':'FeatureCollection','source_url':PDF,'status':'approximate_for_owner_review','named_routes':7,'features':features}
  (ROOT/'data/trails/meadow-street-approximate.geojson').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
- registration={'authorization':'For this one, try to approximate trails based on proximity to nearby roads and the river.','date':'2026-11-02','source_pdf':PDF,'source_image_dimensions':[1056,816],'model':'Affine pixel-to-longitude/latitude transform; locally appropriate approximate alignment','controls':CONTROLS,'independent_landmark_checks':checks,'coefficients':coeff.tolist(),'interpretation':'Landmark residuals check image placement only. They are not a measurement of actual trail accuracy.','i95_correction':{'instruction':'Eastern Blue leg must run parallel to I-95, not on it.','guide_source_way_ids':I95_SOURCE_WAYS,'guide_coordinates':I95_GUIDE,'offset_meters':I95_OFFSET_METERS,'side':'western woodland side of western carriageway','minimum_checked_distance_from_guide_meters':44,'note':'Offset is an approximate placement guide, not a surveyed trail setback.'},'source_map_note':'Image positions were read from the actual Town map, including the river-side Blue branch and both Green–White branches; previous guessed trace JSON was not used.'}
+ registration={'authorization':'For this one, try to approximate trails based on proximity to nearby roads and the river.','date':'2026-11-02','source_pdf':PDF,'source_image_dimensions':[1056,816],'model':'Affine pixel-to-longitude/latitude transform; locally appropriate approximate alignment','controls':CONTROLS,'independent_landmark_checks':checks,'coefficients':coeff.tolist(),'interpretation':'Landmark residuals check image placement only. They are not a measurement of actual trail accuracy.','riverbank_extension':bank_registration,'i95_correction':{'instruction':'Eastern Blue leg must run parallel to I-95, not on it.','guide_source_way_ids':I95_SOURCE_WAYS,'guide_coordinates':I95_GUIDE,'offset_meters':I95_OFFSET_METERS,'side':'western woodland side of western carriageway','minimum_checked_distance_from_guide_meters':44,'note':'Offset is an approximate placement guide, not a surveyed trail setback.'},'source_map_note':'Image positions were read from the actual Town map, including the river-side Blue branch and both Green–White branches; previous guessed trace JSON was not used.'}
  (ROOT/'data/trails/meadow-street-registration.json').write_text(json.dumps(registration,ensure_ascii=False,indent=2)+'\n')
  for trail in ['germany-brook','endean']:
   d=json.loads((ROOT/f'data/trails/{trail}-approved.geojson').read_text());lock=json.loads((ROOT/f'data/trails/{trail}-lock.json').read_text());g=[{'id':f['id'],'geometry':f['geometry']} for f in d['features']];assert hashlib.sha256(json.dumps(g,sort_keys=True,separators=(',',':')).encode()).hexdigest()==lock['geometry_sha256']
