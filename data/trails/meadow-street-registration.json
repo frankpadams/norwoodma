@@ -21,7 +21,7 @@
       "source": "https://www.openstreetmap.org/way/9280491"
     },
     {
-      "landmark": "West-bank end of I-95 / Neponset River bridge",
+      "landmark": "I-95 bridge reference used for coarse map registration; Blue roadside leg corrected separately",
       "pixel": [
         807,
         537
@@ -96,5 +96,34 @@
     ]
   ],
   "interpretation": "Landmark residuals check image placement only. They are not a measurement of actual trail accuracy.",
+  "i95_correction": {
+    "instruction": "Eastern Blue leg must run parallel to I-95, not on it.",
+    "guide_source_way_ids": [
+      1099197709,
+      1099156880
+    ],
+    "guide_coordinates": [
+      [
+        -71.1710621,
+        42.1714153
+      ],
+      [
+        -71.168036,
+        42.1746896
+      ],
+      [
+        -71.1672692,
+        42.1755175
+      ],
+      [
+        -71.1671699,
+        42.1756245
+      ]
+    ],
+    "offset_meters": 45.0,
+    "side": "western woodland side of western carriageway",
+    "minimum_checked_distance_from_guide_meters": 44,
+    "note": "Offset is an approximate placement guide, not a surveyed trail setback."
+  },
   "source_map_note": "Image positions were read from the actual Town map, including the river-side Blue branch and both Green–White branches; previous guessed trace JSON was not used."
 }

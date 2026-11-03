@@ -127,7 +127,8 @@
             681,
             704
           ]
-        ]
+        ],
+        "alignment_correction": "Eastern Blue leg parallel to I-95 on its western woodland side; removed highway-reaching spur."
       },
       "geometry": {
         "type": "LineString",
@@ -233,12 +234,8 @@
             42.17449029
           ],
           [
-            -71.16853355,
-            42.17428199
-          ],
-          [
-            -71.16842151,
-            42.17420057
+            -71.16890187,
+            42.1744689
           ]
         ]
       }
@@ -290,42 +287,32 @@
             807,
             537
           ]
-        ]
+        ],
+        "alignment_correction": "Eastern Blue leg parallel to I-95 on its western woodland side; removed highway-reaching spur.",
+        "alignment_guide_osm_ways": [
+          1099197709,
+          1099156880
+        ],
+        "offset_from_western_carriageway_center_meters": 45.0
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            -71.16853355,
-            42.17428199
+            -71.16890187,
+            42.1744689
           ],
           [
-            -71.16836297,
-            42.17434732
+            -71.16848638,
+            42.17491847
           ],
           [
-            -71.16818384,
-            42.17452581
+            -71.16771944,
+            42.17574653
           ],
           [
-            -71.16792481,
-            42.17476327
-          ],
-          [
-            -71.16770637,
-            42.17501923
-          ],
-          [
-            -71.16747832,
-            42.17530983
-          ],
-          [
-            -71.16728979,
-            42.17554041
-          ],
-          [
-            -71.1671699,
-            42.1756245
+            -71.16761988,
+            42.1758538
           ]
         ]
       }
