@@ -355,6 +355,38 @@
     ]
   },
   {
+    "id": "2026-11-03-create-craft-e7bb597",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-03",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-03",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-03/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-b18dca3fbbbb-2026-11-03",
     "title": "Jazz 2 - Tuesdays",
     "start": {
@@ -716,6 +748,37 @@
     ]
   },
   {
+    "id": "2026-11-03-jackson-walnut-park-schools-tuesday-topics-74b36cf",
+    "title": "Jackson Walnut Park Schools – Tuesday Topics",
+    "start": {
+      "date": "2026-11-03",
+      "time": "20:30"
+    },
+    "end": {
+      "date": "2026-11-03",
+      "time": "21:30"
+    },
+    "venue": "Jackson Walnut Park School",
+    "address": "200 Jackson Road, Newton, MA, 02458",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/jackson-walnut-park-schools-tuesday-topics/2026-11-03/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Discover Jackson Walnut Park School: Summer & Fall Open Houses: Are you looking for an educational community that nurtures both mind and character? Join us for upcoming Open Houses and […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-11-03-no-school-professional-development-cf6e861",
     "title": "No School - Professional Development — All Norwood Public Schools",
     "start": {
@@ -1026,6 +1089,37 @@
     ]
   },
   {
+    "id": "2026-11-04-park-street-school-head-of-school-coffee-681de77",
+    "title": "Park Street School Head of School Coffee",
+    "start": {
+      "date": "2026-11-04",
+      "time": "08:30"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "09:30"
+    },
+    "venue": "Park Street School",
+    "address": "Preschool - One Park Street / Elementary School - 67 Brimmer Street, Boston, MA, 02108",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/park-street-school-head-of-school-coffee-2/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Join our Head of School, Tracy Bradley, for a time of inspiration and vision as she shares her passion for Park Street School, for education, and for our students from […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-08ecd9af5873-2026-11-04",
     "title": "Pre-School Prep Session 8",
     "start": {
@@ -1201,6 +1295,100 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-04-create-craft-910baba",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-04",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-04/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-04-mornings-at-the-museum-f8ae1db",
+    "title": "Mornings at the Museum",
+    "start": {
+      "date": "2026-11-04",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "13:30"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/mornings-at-the-museum/2026-11-04/",
+    "cost": "USD 15.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Start your day with joy, discovery, and creativity at MORNINGS AT THE MUSEUM—just for little ones and their grown-ups! 🗓 Wednesdays, Thursdays & Fridays at 10:00 AM 🎟 Included with […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts"
+    ]
+  },
+  {
+    "id": "2026-11-04-fessenden-first-look-grades-7-9-wednesdays-10-05e70fa",
+    "title": "Fessenden First Look (Grades 7–9): Wednesdays 10:30 AM",
+    "start": {
+      "date": "2026-11-04",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "14:15"
+    },
+    "venue": "The Fessenden School",
+    "address": "250 Waltham St, West Newton, MA, 02465",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/fessenden-first-look-grades-7-9-wednesdays-1030-am-2/2026-11-04/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Please join us for the division-specific Fessenden First Look of your choice. These virtual, 45-minute Zoom events are the perfect way to explore if Fessenden is the right fit for […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
     ]
   },
   {
@@ -1418,6 +1606,68 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-04-the-teen-years-ceding-control-cultivating-con-994671d",
+    "title": "The Teen Years: Ceding Control, Cultivating Connection",
+    "start": {
+      "date": "2026-11-04",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "21:00"
+    },
+    "venue": "Boston Graduate School of Psychoanalysis (BGSP)",
+    "address": "1581 Beacon Street, Brookline, MA, 02446",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/the-teen-years-ceding-control-cultivating-connection/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>As adolescents navigate more independence and the responsibility that comes with it, communication between parents and their children is key. But how do you foster better communication when teens are […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-04-wellan-montessori-school-affording-wellan-vir-02896a4",
+    "title": "Wellan Montessori School Affording Wellan Virtual Info Session (Financial Aid)",
+    "start": {
+      "date": "2026-11-04",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-04",
+      "time": "20:00"
+    },
+    "venue": "Boston Parents Paper",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/wellan-montessori-school-affording-wellan-virtual-info-session-financial-aid/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Wellan Montessori School Affording Wellan Virtual Info Session (Financial Aid) Wednesday, November 4th, 2026 | 7:00 PM – 8:00 PM Join us online for the Affording Wellan Virtual Info Session! […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
       "norwood-family"
     ]
   },
@@ -1900,6 +2150,36 @@
     ]
   },
   {
+    "id": "2026-11-05-nature-drawing-at-blithewold-94b557b",
+    "title": "Nature Drawing At Blithewold",
+    "start": {
+      "date": "2026-11-05",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "12:30"
+    },
+    "venue": "Blithewold Manor, Gardens and Arboretum",
+    "address": "101 Ferry Road, Bristol, R, 02809",
+    "category": "workshop",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/nature-drawing-at-blithewold-3/2026-11-05/",
+    "cost": "USD 35 – 45",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>This drawing class will focus on subjects from nature: flowers, trees, and landscape. Each week, a topic will be presented to introduce a variety of methods and materials. Individual expression […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-7c686bdbe82c-2026-11-05",
     "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
     "start": {
@@ -1934,6 +2214,132 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-05-fessenden-first-look-international-boarding-g-3bc6ccf",
+    "title": "Fessenden First Look (International Boarding Grades 5-9) Thursdays 8:00 AM",
+    "start": {
+      "date": "2026-11-05",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "11:45"
+    },
+    "venue": "The Fessenden School",
+    "address": "250 Waltham St, West Newton, MA, 02465",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/fessenden-first-look-international-boarding-grades-5-9-thursdays-800-am-2/2026-11-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Please join us for the division-specific Fessenden First Look of your choice. These virtual, 45-minute Zoom events are the perfect way to explore if Fessenden is the right fit for […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-05-brimmer-and-may-school-weekday-open-house-9e97f8c",
+    "title": "Brimmer and May School Weekday Open House",
+    "start": {
+      "date": "2026-11-05",
+      "time": "11:15"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "13:00"
+    },
+    "venue": "Brimmer and May School",
+    "address": "69 Middlesex Road, Chestnut Hill, MA, 02467",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/brimmer-and-may-school-weekday-open-house-2/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Come see classes in action, meet teachers and administrators, and tour campus! Students, parents/guardians, and visitors are all welcome. Program details and day-of logistics will be sent to participants in […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-05-create-craft-f041a1b",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-05",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-05/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-05-mornings-at-the-museum-38fa31d",
+    "title": "Mornings at the Museum",
+    "start": {
+      "date": "2026-11-05",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "13:30"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/mornings-at-the-museum/2026-11-05/",
+    "cost": "USD 15.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Start your day with joy, discovery, and creativity at MORNINGS AT THE MUSEUM—just for little ones and their grown-ups! 🗓 Wednesdays, Thursdays & Fridays at 10:00 AM 🎟 Included with […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts"
     ]
   },
   {
@@ -2008,6 +2414,73 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-05-fessenden-first-look-domestic-boarding-grades-5a1ac50",
+    "title": "Fessenden First Look (Domestic Boarding – Grades 5-9): Thursdays 1:00 PM",
+    "start": {
+      "date": "2026-11-05",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "16:45"
+    },
+    "venue": "The Fessenden School",
+    "address": "250 Waltham St, West Newton, MA, 02465",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/fessenden-first-look-domestic-boarding-grades-5-9-thursdays-100-pm-2/2026-11-05/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Please join us for the division-specific Fessenden First Look of your choice. These virtual, 45-minute Zoom events are the perfect way to explore if Fessenden is the right fit for […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-05-varsity-field-hockey-vs-marshfield-high-schoo-47b14a6",
+    "title": "Varsity Field Hockey vs Marshfield High School — Norwood High School",
+    "start": {
+      "date": "2026-11-05",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "17:30"
+    },
+    "venue": "245 Nichols St, Norwood MA 02062",
+    "address": "245 Nichols St, Norwood MA 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Field Hockey",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Field Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Field Hockey Level: Varsity Team: Norwood High School Site: Norwood High School Subsite: Stadium",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -2213,6 +2686,37 @@
     ]
   },
   {
+    "id": "2026-11-05-st-mark-s-school-virtual-open-house-166d6d1",
+    "title": "St. Mark’s School Virtual Open House",
+    "start": {
+      "date": "2026-11-05",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "20:00"
+    },
+    "venue": "Boston Parents Paper",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/st-marks-school-virtual-open-house/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Explore St. Mark\\'s From Anywhere Thursday, November 5, 2026 | 7–7:45 p.m. ET No matter where you call home, our Virtual Open House brings St. Mark\\'s directly to you. Meet […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-11-05-trivia-with-tim-3f372d3",
     "title": "Trivia With TIm",
     "start": {
@@ -2240,6 +2744,38 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-05-introduction-to-ballet-for-teens-adults-9f95d94",
+    "title": "Introduction to Ballet for Teens & Adults",
+    "start": {
+      "date": "2026-11-05",
+      "time": "19:15"
+    },
+    "end": {
+      "date": "2026-11-05",
+      "time": "20:30"
+    },
+    "venue": "North Reading School of Ballet",
+    "address": "52 Main Street #210, North Reading, MA, 01864",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/introduction-to-ballet-for-teens-adults/2026-11-05/",
+    "cost": "USD 180",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Always wanted to try ballet but weren\\'t sure where to start? This six-week introductory session is designed specifically for teens and adults with little to no dance experience, offering an […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
     ]
   },
   {
@@ -2469,6 +3005,37 @@
     ]
   },
   {
+    "id": "2026-11-06-brewster-academy-open-house-6565e57",
+    "title": "Brewster Academy Open House",
+    "start": {
+      "date": "2026-11-06",
+      "time": "08:30"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "13:00"
+    },
+    "venue": "Brewster Academy",
+    "address": "80 Academy Drive, Wolfeboro, NH, 03894",
+    "category": "workshop",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/brewster-academy-open-house/2026-11-06/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>YOUR CHILD’S POTENTIAL IS PERSONAL. THEIR EDUCATION SHOULD BE TOO. At Brewster Academy, students are known, challenged, and supported as individuals. Our distinctive Brewster Model® combines small classes, collaborative teaching, […]</p>",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-630568bafb76-2026-11-06",
     "title": "Music with Miss Maura - Babies & Waddlers Fall 2",
     "start": {
@@ -2619,6 +3186,163 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-06-grandparents-and-gratitude-day-33b3daf",
+    "title": "Grandparents and Gratitude Day",
+    "start": {
+      "date": "2026-11-06",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "13:30"
+    },
+    "venue": "Hale Education",
+    "address": null,
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/grandparents-and-gratitude-day/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>We’re proud to collaborate with Fox Hill Living to offer this multi-generational community event. The day will include a short, all-ages meditation and gentle stretch, a fun gratitude-themed craft, and […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-06-create-craft-f7d1444",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-06",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-06/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-06-mornings-at-the-museum-d9edc89",
+    "title": "Mornings at the Museum",
+    "start": {
+      "date": "2026-11-06",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "13:30"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/mornings-at-the-museum/2026-11-06/",
+    "cost": "USD 15.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Start your day with joy, discovery, and creativity at MORNINGS AT THE MUSEUM—just for little ones and their grown-ups! 🗓 Wednesdays, Thursdays & Fridays at 10:00 AM 🎟 Included with […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts"
+    ]
+  },
+  {
+    "id": "2026-11-06-kidsjam-at-berklee-free-56f2037",
+    "title": "KidsJam at Berklee – Free",
+    "start": {
+      "date": "2026-11-06",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "15:00"
+    },
+    "venue": "Boston Parents Paper",
+    "address": null,
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/kidsjam-at-berklee-free/2026-11-06/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>KidsJam is a free, interactive early childhood music education program for children ages 3–5, offered to the Boston-area community by the Music Education Department at Berklee College of Music. Designed […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-06-bessie-s-closet-at-discovery-museum-a5a787c",
+    "title": "Bessie’s Closet at Discovery Museum",
+    "start": {
+      "date": "2026-11-06",
+      "time": "15:00"
+    },
+    "end": {
+      "date": "2026-11-06",
+      "time": "19:30"
+    },
+    "venue": "Discovery Museum",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/bessies-closet-at-discovery-museum-3/2026-11-06/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Museum Admission Not Required Bessie’s Closet is a free pop-up clothing store open to all members of our community. Supported by donations from our Museum community and beyond, Bessie’s Closet […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
     ]
   },
   {
@@ -2992,6 +3716,67 @@
     ]
   },
   {
+    "id": "2026-11-07-discover-blithewold-differently-b210a64",
+    "title": "Discover Blithewold Differently",
+    "start": {
+      "date": "2026-11-07",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "11:00"
+    },
+    "venue": "Blithewold Manor, Gardens and Arboretum",
+    "address": "101 Ferry Road, Bristol, R, 02809",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/discover-blithewold-differently/",
+    "cost": "USD 35 – 50",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Step away from the distractions of everyday life and give yourself time to slow down, feel calmer and refreshed, and reconnect with the natural world. You’ll explore Blithewold’s gardens and […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
+    ]
+  },
+  {
+    "id": "2026-11-07-eliot-pearson-children-s-school-2026-open-hou-336c164",
+    "title": "Eliot-Pearson Children’s School 2026 Open House",
+    "start": {
+      "date": "2026-11-07",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "12:00"
+    },
+    "venue": "Joyce Cummings Center",
+    "address": "177 College Ave, Medford, MA, 02155",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/eliot-pearson-childrens-school-2026-open-house/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Join us for an engaging morning where you can explore our vibrant and inclusive community, meet our dedicated staff, and discover the enriching programs we offer. This is a wonderful […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-11-07-norwood-braves-vs-north-attleboro-sky-3-4-0245f94",
     "title": "Norwood Braves vs North Attleboro Sky 3/4",
     "start": {
@@ -3096,6 +3881,67 @@
     ]
   },
   {
+    "id": "2026-11-07-swenext-innovation-expo-ab38ddb",
+    "title": "SWENext Innovation Expo",
+    "start": {
+      "date": "2026-11-07",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "12:00"
+    },
+    "venue": "The Westin Boston Seaport District",
+    "address": "425 Summer ST, Boston, MA, 02210",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/swenext-innovation-expo/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Boston! The Society of Women Engineers (SWE) is thrilled to announce the inaugural edition of SWENext Innovation Expo at the WE26 Conference in Boston this November. Open to students of […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
+    ]
+  },
+  {
+    "id": "2026-11-07-st-mark-s-school-admission-open-house-f97b46c",
+    "title": "St. Mark’s School Admission Open House",
+    "start": {
+      "date": "2026-11-07",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "11:00"
+    },
+    "venue": "St. Mark’s School",
+    "address": "25 Marlboro Road, Southborough, MA, 01772",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/st-marks-school-admission-open-house/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Your Complete Introduction to St. Mark\\'s Saturday, November 7, 2026 | 9:00–10:45 a.m. This is the ideal place to begin your St. Mark\\'s journey. Hear directly from our Head of […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-612e68cd5d10-2026-11-07",
     "title": "Ballet 1 - Saturdays",
     "start": {
@@ -3130,6 +3976,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-07-acera-stem-festival-and-open-house-a711cff",
+    "title": "Acera STEM Festival and Open House",
+    "start": {
+      "date": "2026-11-07",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "12:00"
+    },
+    "venue": "Acera School",
+    "address": "5 Lowell Avenue, Winchester, MA, 01890",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/acera-stem-festival-and-open-house/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Join us for a day of hands-on science, live demos, and creative engineering challenges designed for students in K-8th grades! Whether you love building robots, solving math puzzles, or exploring […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
     ]
   },
   {
@@ -3170,6 +4047,99 @@
     ]
   },
   {
+    "id": "2026-11-07-bessie-s-closet-at-discovery-museum-5f7f916",
+    "title": "Bessie’s Closet at Discovery Museum",
+    "start": {
+      "date": "2026-11-07",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "15:00"
+    },
+    "venue": "Discovery Museum",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/bessies-closet-at-discovery-museum-3/2026-11-07/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Museum Admission Not Required Bessie’s Closet is a free pop-up clothing store open to all members of our community. Supported by donations from our Museum community and beyond, Bessie’s Closet […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
+    ]
+  },
+  {
+    "id": "2026-11-07-cambridge-ellis-school-open-house-4745880",
+    "title": "Cambridge-Ellis School Open House",
+    "start": {
+      "date": "2026-11-07",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "12:00"
+    },
+    "venue": "Cambridge-Ellis School",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/cambridge-ellis-school-open-house/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Come see what makes Cambridge-Ellis School such a joyous place for children and their families! Join us on November 7th anytime between 10am and 12pm for a self-guided tour of […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-07-children-s-art-discovery-class-inspired-objec-3c13e43",
+    "title": "Children’s Art Discovery Class: Inspired Objects",
+    "start": {
+      "date": "2026-11-07",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "12:00"
+    },
+    "venue": "The Guild of Boston Artists",
+    "address": "162 Newbury Street, Boston, M, 02116",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/childrens-art-discovery-class-inspired-objects-2/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Join us for a FREE Children\\'s Art Discovery Class focused on the concept of still-life, a classic genre of painting that consists of arranged objects. After a scavenger hunt in […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad028384be8a-2026-11-07",
     "title": "Tap 1 - Saturdays",
     "start": {
@@ -3204,6 +4174,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-07-marvelous-maples-with-joe-verstandig-bcf7322",
+    "title": "Marvelous Maples with Joe Verstandig",
+    "start": {
+      "date": "2026-11-07",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "12:30"
+    },
+    "venue": "Blithewold Mansion, Gardens and Arboretum",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/marvelous-maples-with-joe-verstandig/",
+    "cost": "USD 25 – 35",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Nothing enriches the soul quite like an afternoon walk surrounded by beautiful autumnal colors! Join Joe Verstandig, the Living Collections Manager at Newport Tree Conservancy (and former Blithewold staff member), […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-sports"
     ]
   },
   {
@@ -3429,6 +4430,69 @@
     ]
   },
   {
+    "id": "2026-11-07-create-craft-0fea5a7",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-07",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-07/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-07-falmouth-academy-open-house-986b346",
+    "title": "Falmouth Academy Open House",
+    "start": {
+      "date": "2026-11-07",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "15:00"
+    },
+    "venue": "Falmouth Academy",
+    "address": "7 Highfield Drive, Falmouth, MA, 02540",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/falmouth-academy-open-house-2/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Learn about the value of a Falmouth Academy education. Join us at our Fall Open House to learn how Falmouth Academy\\'s Middle School and High School ignite creativity, wonder, and […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-11-07-norwood-comets-vs-mansfield-buzz-6127ca6",
     "title": "Norwood Comets vs Mansfield Buzz",
     "start": {
@@ -3537,6 +4601,37 @@
       "norwood-sports",
       "nys-grade-boys-grade-4",
       "nys-team-boys-grade-4-norwood-trappers"
+    ]
+  },
+  {
+    "id": "2026-11-07-tenacre-country-day-school-open-house-538225f",
+    "title": "Tenacre Country Day School Open House",
+    "start": {
+      "date": "2026-11-07",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-07",
+      "time": "15:00"
+    },
+    "venue": "Tenacre Country Day School",
+    "address": "78 Benvenue Street, Wellesley, MA, 02482",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/tenacre-country-day-school-open-house-3/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Discover Tenacre This Fall Join us for two exciting opportunities to explore what makes Tenacre special. In-Person Open House Saturday, November 7 | 10:00 AM - 12:00 PM Experience our […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
     ]
   },
   {
@@ -4168,6 +5263,36 @@
     ]
   },
   {
+    "id": "2026-11-08-bessie-s-closet-at-discovery-museum-9f03c43",
+    "title": "Bessie’s Closet at Discovery Museum",
+    "start": {
+      "date": "2026-11-08",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-08",
+      "time": "15:00"
+    },
+    "venue": "Discovery Museum",
+    "address": null,
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/bessies-closet-at-discovery-museum-3/2026-11-08/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Museum Admission Not Required Bessie’s Closet is a free pop-up clothing store open to all members of our community. Supported by donations from our Museum community and beyond, Bessie’s Closet […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
+    ]
+  },
+  {
     "id": "2026-11-08-rev-goodwin-joins-us-at-our-worship-service-2d93834",
     "title": "Rev. Goodwin joins us at our Worship service",
     "start": {
@@ -4261,6 +5386,38 @@
     ]
   },
   {
+    "id": "2026-11-08-create-craft-c033684",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-08",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-08",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-08/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-11-08-rnqg-fabric-sale",
     "title": "RNQG Fabric Sale",
     "description": "Browse hundreds of fat quarters, fabric cuts, patterns and new quilt kits. Open to the public.",
@@ -4325,6 +5482,38 @@
     ]
   },
   {
+    "id": "2026-11-08-vivo-performing-arts-presents-all-cello-orche-714b191",
+    "title": "Vivo Performing Arts presents All-Cello Orchestra: Pablo Casals 150th Birthday Tribute",
+    "start": {
+      "date": "2026-11-08",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-08",
+      "time": "20:00"
+    },
+    "venue": "Roxbury Community College Media Arts Center",
+    "address": "1234 Columbus Ave, Roxbury Crossing, MA, 02120",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/vivo-performing-arts-presents-all-cello-orchestra-pablo-casals-150th-birthday-tribute/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>The cello speaks—perhaps more than any other orchestral instrument—in a way that feels human. Its range overlaps with the human voice, players share space with and embrace their instrument, and […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-sports"
+    ]
+  },
+  {
     "id": "2026-11-08-sunday-nov-e334483",
     "title": "Sunday , Nov",
     "start": {
@@ -4375,7 +5564,7 @@
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Morrill Memorial Library is partnering with Claire Mauro to bring a unique workshop to Norwood. The workshop will combine the role of a caregiver and the writing process. &nbsp;Program title: For Grief’s SakeDate and Time: Monday, November ",
+    "notes": "Morrill Memorial Library is partnering with Claire Mauro to bring a unique workshop to Norwood. The workshop will combine the role of a caregiver and the writing process. &nbsp;The workshop will cover reflections on the writing process alon",
     "discovered_by": "scheduled_jsonld",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -4826,6 +6015,38 @@
       "rec-all",
       "rec-camps",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-09-create-craft-6d578df",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-09",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-09",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-09/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
     ]
   },
   {
@@ -5297,6 +6518,38 @@
     ]
   },
   {
+    "id": "2026-11-10-create-craft-98f2bb8",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-10",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-10",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-10/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-b18dca3fbbbb-2026-11-10",
     "title": "Jazz 2 - Tuesdays",
     "start": {
@@ -5710,6 +6963,37 @@
     ]
   },
   {
+    "id": "2026-11-10-acera-school-parent-information-session-c75f5f8",
+    "title": "Acera School Parent Information Session",
+    "start": {
+      "date": "2026-11-10",
+      "time": "21:00"
+    },
+    "end": {
+      "date": "2026-11-10",
+      "time": "22:30"
+    },
+    "venue": "Acera School",
+    "address": "5 Lowell Avenue, Winchester, MA, 01890",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/acera-school-parent-information-session/2026-11-10/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Join us for a 1.5 hour Information Session, designed for parents, guardians, and other adults interested in learning more about Acera. You\\'ll hear about Acera’s educational approach and the types […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-11-10-nhs-junior-senior-semi-formal",
     "title": "Norwood High School Junior/Senior Semi-Formal",
     "description": "At Four Points in Norwood. Tickets are $70 and will go on sale soon. Event time was not provided.",
@@ -5995,6 +7279,69 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-11-create-craft-3fb0692",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-11",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-11/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-11-mornings-at-the-museum-7c221d7",
+    "title": "Mornings at the Museum",
+    "start": {
+      "date": "2026-11-11",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "13:30"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/mornings-at-the-museum/2026-11-11/",
+    "cost": "USD 15.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Start your day with joy, discovery, and creativity at MORNINGS AT THE MUSEUM—just for little ones and their grown-ups! 🗓 Wednesdays, Thursdays & Fridays at 10:00 AM 🎟 Included with […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts"
     ]
   },
   {
@@ -6367,6 +7714,43 @@
     ]
   },
   {
+    "id": "2026-11-11-norwood-bolts-vs-ashland-bobcats-428e358",
+    "title": "Norwood Bolts vs Ashland Bobcats",
+    "start": {
+      "date": "2026-11-11",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": "Coakley Turf Field 14",
+    "field": "Coakley Turf Field 14",
+    "grade": "Girls Grade 8",
+    "gender": "girls",
+    "team": "Norwood Bolts",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-8",
+      "nys-team-girls-grade-8-norwood-bolts"
+    ]
+  },
+  {
     "id": "2026-11-11-no-school-holiday-veteran-s-day-04d8838",
     "title": "No School - Holiday - Veteran's Day — All Norwood Public Schools",
     "start": {
@@ -6676,6 +8060,37 @@
     ]
   },
   {
+    "id": "2026-11-12-abundant-life-christian-school-drop-in-open-h-c1ff2f9",
+    "title": "Abundant Life Christian School Drop-In Open House",
+    "start": {
+      "date": "2026-11-12",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "12:00"
+    },
+    "venue": "Abundant Life Christian School",
+    "address": "173 Church Street, Wilmington, MA, 01887",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/abundant-life-christian-school-drop-in-open-house/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Come see Abundant Life in action! Join us on Thursday, November 12, 2026, anytime between 9:00 AM and 12:00 PM for our Drop-In Open House. Explore our school, see learning […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-6b58cffd681e-2026-11-12",
     "title": "Pre-School Prep Session 9",
     "start": {
@@ -6779,6 +8194,100 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-12-dedham-country-day-school-classroom-observati-26db843",
+    "title": "Dedham Country Day School Classroom Observation",
+    "start": {
+      "date": "2026-11-12",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "13:30"
+    },
+    "venue": "Dedham Country Day School",
+    "address": "90 Sandy Valley Rd, Dedham, MA, 02026",
+    "category": "workshop",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/dedham-country-day-school-classroom-observation-3/2026-11-12/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Dedham Country Day School invites you to our Classroom Observation. Classroom Observations are a great way to experience students and teachers in action! Parents and caregivers are invited to come […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-12-create-craft-b729740",
+    "title": "Create & Craft",
+    "start": {
+      "date": "2026-11-12",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-12/",
+    "cost": "USD 10.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-12-mornings-at-the-museum-98f13c2",
+    "title": "Mornings at the Museum",
+    "start": {
+      "date": "2026-11-12",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "13:30"
+    },
+    "venue": "Wenham Museum",
+    "address": "132 Main Street, Wenham, M, 01984",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/mornings-at-the-museum/2026-11-12/",
+    "cost": "USD 15.00",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Start your day with joy, discovery, and creativity at MORNINGS AT THE MUSEUM—just for little ones and their grown-ups! 🗓 Wednesdays, Thursdays & Fridays at 10:00 AM 🎟 Included with […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts"
     ]
   },
   {
@@ -6963,6 +8472,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-12-hiawatha-performances-and-the-garden-river-fi-5ded33e",
+    "title": "Hiawatha Performances and the Garden River First Nation",
+    "start": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "19:30"
+    },
+    "venue": "Longfellow House-Washington’s Headquarters National Historic Site",
+    "address": "105 Brattle Street, Cambridge, MA, 02138",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/hiawatha-performances-and-the-garden-river-first-nation/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>In August of 1900, several members of the Longfellow family travelled to Desbarats, Ontario, where they had been invited to attend the first performance of Henry Wadsworth Longfellow’s poem Hiawatha […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-family"
     ]
   },
   {
@@ -7228,6 +8768,68 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-12-introduction-to-ballet-for-teens-adults-1cc6a8b",
+    "title": "Introduction to Ballet for Teens & Adults",
+    "start": {
+      "date": "2026-11-12",
+      "time": "19:15"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "20:30"
+    },
+    "venue": "North Reading School of Ballet",
+    "address": "52 Main Street #210, North Reading, MA, 01864",
+    "category": "arts",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/introduction-to-ballet-for-teens-adults/2026-11-12/",
+    "cost": "USD 180",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Always wanted to try ballet but weren\\'t sure where to start? This six-week introductory session is designed specifically for teens and adults with little to no dance experience, offering an […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston",
+      "norwood-arts",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-12-meridian-academy-open-house-0da22d2",
+    "title": "Meridian Academy Open House",
+    "start": {
+      "date": "2026-11-12",
+      "time": "21:30"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "23:30"
+    },
+    "venue": "Meridian Academy",
+    "address": "54 Brookside Avenue, Jamaica Plain, MA, 02130",
+    "category": "community",
+    "source_id": "boston-parents-paper-greater-boston",
+    "source_url": "https://bostonparentspaper.com/event/meridian-academy-open-house-2/2026-11-12/",
+    "cost": "USD 0",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "<p>Meridian Academy mentors a diverse group of students to pose and investigate original questions, work collaboratively, and communicate clearly and creatively. Through these efforts, we foster community, act with integrity […]</p>\\n",
+    "discovered_by": "scheduled_jsonld",
+    "public_access_status": "confirmed_public",
+    "access_type": "paid",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "boston-parents-paper-greater-boston"
     ]
   },
   {
@@ -7666,6 +9268,43 @@
     ]
   },
   {
+    "id": "2026-11-13-norwood-wolfpack-vs-bellingham-hawks-b8-tucke-552a748",
+    "title": "Norwood Wolfpack vs Bellingham Hawks B8 - Tucker",
+    "start": {
+      "date": "2026-11-13",
+      "time": "20:15"
+    },
+    "end": {
+      "date": "2026-11-13",
+      "time": null
+    },
+    "venue": "Coakley Turf Field 14",
+    "field": "Coakley Turf Field 14",
+    "grade": "Boys Grade 8",
+    "gender": "boys",
+    "team": "Norwood Wolfpack",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-8",
+      "nys-team-boys-grade-8-norwood-wolfpack"
+    ]
+  },
+  {
     "id": "2026-11-14-norwood-cfce-table-at-the-norwood-wellness-fa-23fe04e",
     "title": "Norwood CFCE Table at the Norwood Wellness Fair",
     "start": {
@@ -7765,43 +9404,6 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-14-norwood-bolts-vs-ashland-bobcats-1037a12",
-    "title": "Norwood Bolts vs Ashland Bobcats",
-    "start": {
-      "date": "2026-11-14",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-11-14",
-      "time": null
-    },
-    "venue": "Father macs 11",
-    "field": "Father macs 11",
-    "grade": "Girls Grade 8",
-    "gender": "girls",
-    "team": "Norwood Bolts",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-8",
-      "nys-team-girls-grade-8-norwood-bolts"
     ]
   },
   {
@@ -75732,6 +77334,41 @@
     ]
   },
   {
+    "id": "2027-05-06-varsity-central-girls-lacrosse-canton-high-sc-3dd338a",
+    "title": "Varsity Central Girls Lacrosse @ Canton High School — Norwood High School",
+    "start": {
+      "date": "2027-05-06",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-05-06",
+      "time": "19:30"
+    },
+    "venue": "900 Washington St, Canton Massachusetts 02021",
+    "address": "900 Washington St, Canton Massachusetts 02021",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: Varsity Team: Norwood High School Site: Canton High School Subsite: Turf WWII Vet Mem",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-72ffc1925081-2027-05-06",
     "title": "Pointe [must be in Ballet 3] - Thursdays",
     "start": {
@@ -75835,6 +77472,41 @@
     "school_scope": "Norwood High School",
     "calendar_ids": [
       "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-06-jv-central-girls-lacrosse-canton-high-school-1bf17bf",
+    "title": "JV Central Girls Lacrosse @ Canton High School — Norwood High School",
+    "start": {
+      "date": "2027-05-06",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2027-05-06",
+      "time": "20:30"
+    },
+    "venue": "900 Washington St, Canton Massachusetts 02021",
+    "address": "900 Washington St, Canton Massachusetts 02021",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls JV Lacrosse",
+    "public_access": "public",
+    "series": "Norwood Girls JV Lacrosse",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Central Girls Lacrosse Level: JV Team: Norwood High School Site: Canton High School Subsite: Turf WWII Vet Mem",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
       "norwood-family",
       "norwood-high-athletics",
       "norwood-sports",
