@@ -65,7 +65,7 @@ map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contr
 (async()=>{
  try{
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
-  const networkResponse=await fetch('data/trails/germany-brook-connected.geojson?v=20261102-willett-landfill1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();if(params.get('preview')==='1')setPreview(true);else{render();focus();}
+  const networkResponse=await fetch('data/trails/germany-brook-approved.geojson?v=20261102-locked1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();if(params.get('preview')==='1')setPreview(true);else{render();focus();}
  }catch(e){status.textContent='Trail lines could not load: '+e.message;}
  try{
   const response=await fetch('data/trails/norwood-boundary.geojson');if(!response.ok)return;const geo=await response.json();L.geoJSON(geo,{style:{color:'#34495e',weight:2,opacity:.75,fill:false,dashArray:'3 5'},interactive:false}).addTo(boundary);

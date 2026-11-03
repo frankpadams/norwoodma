@@ -1,0 +1,16 @@
+{
+  "trail": "Germany Brook",
+  "status": "approved_locked",
+  "approved_date": "2026-11-02",
+  "snapshot": "data/trails/germany-brook-approved.geojson",
+  "geometry_sha256": "619e1b52db09e5909a52a67d46581c71c7b606be64ebd9762114c32c46bd2931",
+  "feature_count": 12,
+  "includes": [
+    "Main Germany Brook route",
+    "All connected OSM paths and offshoots",
+    "Landfill spur",
+    "Western end past the baseball field to Willett School",
+    "Savage Center–Father Mac’s parking lot and pool loop"
+  ],
+  "production_control": "One toggle for the complete Germany Brook trail system"
+}

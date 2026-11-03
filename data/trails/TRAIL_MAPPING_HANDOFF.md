@@ -138,3 +138,6 @@ User requested inclusion of the landfill offshoot (OSM way 1343590948) and the w
 
 ### Final-view preview control — November 2, 2026
 Production preference: one toggle per named trail system, grouping all its included paths; no green/blue/orange source toggles in production. Test map now has a Preview Germany Brook button, displaying the complete included Germany network in a single solid style, with one Germany Brook trail checkbox. Source comparison controls are hidden during preview and restored by Return to source comparison. Direct preview URL: map-test.html?trail=germany&preview=1. Switching area exits this Germany-only preview. Public map remains unchanged.
+
+## Germany Brook APPROVED AND LOCKED — November 2, 2026
+The owner approved the complete single-style Germany Brook preview and said “lock it in.” germany-brook-approved.geojson is the fixed approved snapshot; germany-brook-lock.json records its geometry SHA-256 and included legs. The test map now loads that snapshot, preserving the exact approved alignment. The connected-path builder rejects geometry changes against the lock. Carry this same snapshot into the production map under one Germany Brook toggle. Do not re-derive or replace its geometry during other trail work. Public map remains unchanged.

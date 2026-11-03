@@ -3,7 +3,7 @@ Usage: python scripts/build-germany-connected-paths.py CACHE_DIRECTORY
 The cache holds complete OSM /api/0.6/map XML cells. Preserve every coordinate;
 follow branches recursively, without proximity-based joins or distance limits.
 """
-import json,sys,xml.etree.ElementTree as ET
+import hashlib,json,sys,xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -57,6 +57,13 @@ def build(cache):
             f['properties']['germany_role']='included-leg'
             f['properties']['name']=included_legs[ident]
     output={'type':'FeatureCollection','attribution':'© OpenStreetMap contributors, ODbL 1.0; Norwood.ma existing route','seed_way_ids':sorted(map(int,seeds)),'connected_osm_way_count':len(seen),'connection_rule':'Recursive shared OSM nodes; source coordinates retained; no synthetic joins','features':features}
+    lock_path=ROOT/'data/trails/germany-brook-lock.json'
+    if lock_path.exists():
+        lock=json.loads(lock_path.read_text())
+        geometry=[{'id':f['id'],'geometry':f['geometry']} for f in output['features']]
+        digest=hashlib.sha256(json.dumps(geometry,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        if digest!=lock['geometry_sha256']:
+            raise RuntimeError('Germany Brook geometry is approved and locked. Preserve the approved snapshot; route changes require an explicit owner request and an updated approval record.')
     (ROOT/'data/trails/germany-brook-connected.geojson').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
     print(len(seen),'OSM ways plus the preserved original route')
 if __name__=='__main__':build(Path(sys.argv[1]))

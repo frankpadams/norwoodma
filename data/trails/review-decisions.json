@@ -12,8 +12,11 @@
     },
     {
       "area": "Germany Brook",
-      "decision": "Retain the original route and include all recursively connected OSM paths and their offshoots.",
-      "date": "2026-11-02"
+      "decision": "User approved the complete final-view preview and requested that it be locked in. Preserve the approved snapshot geometry and all included branches.",
+      "date": "2026-11-02",
+      "status": "approved_locked",
+      "snapshot": "data/trails/germany-brook-approved.geojson",
+      "geometry_sha256": "619e1b52db09e5909a52a67d46581c71c7b606be64ebd9762114c32c46bd2931"
     }
   ]
 }
