@@ -147,3 +147,6 @@ Preview control now follows the View area selection, with a matching trail name 
 
 ### Endean Coakley western-edge connection — November 2, 2026
 User instructed connecting the trail endpoint at the western edge of the new Coakley School to the endpoint south-southeast. Added endean-connections.geojson with a direct connection from OSM way 789314426 last coordinate (-71.2130664,42.172585) to way 835006003 last coordinate (-71.2122394,42.1713315). This is an owner-directed link between existing mapped endpoints, not an OSM-imported segment. Source snapshots remain unchanged; the loader merges this maintained addition into the Endean area. Germany Brook approved geometry remains unchanged.
+
+## Endean / Hawes Brook APPROVED AND LOCKED — November 2, 2026
+Owner approved the displayed Endean preview including the new western-Coakley-to-SSE-endpoint connection and said “lock it in.” endean-approved.geojson freezes exactly the source features displayed in that selected-area preview, without changing their coordinates. endean-lock.json records its geometry SHA-256. The map loader now uses this snapshot whenever Endean is selected, preventing future general-source refreshes from changing the approved view. Carry the approved snapshot forward under one Endean / Hawes Brook toggle. Germany Brook’s separate approved snapshot and lock remain unchanged.

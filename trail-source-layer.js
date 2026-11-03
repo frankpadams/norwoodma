@@ -19,9 +19,10 @@ const areas={
  willett:{name:'Willett / Tiot',bounds:[[42.186,-71.231],[42.198,-71.215]]}
 };
 const group=L.featureGroup().addTo(map),boundary=L.featureGroup().addTo(map);
-let data=null,germany=null,selected='all',preview=false;
+let data=null,germany=null,endean=null,selected='all',preview=false;
 const selectedFeatures=()=>{
  if(selected==='germany')return germany?.features||[];
+ if(selected==='endean')return endean?.features||[];
  const features=data?.features||[];
  if(!preview||selected==='all')return features;
  const bounds=L.latLngBounds(areas[selected].bounds);
@@ -77,6 +78,7 @@ map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contr
  try{
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
   const additionsResponse=await fetch('data/trails/endean-connections.geojson?v=20261102-coakley1');if(!additionsResponse.ok)throw Error('Endean connection HTTP '+additionsResponse.status);const additions=await additionsResponse.json();data.features.push(...additions.features);
+  const endeanResponse=await fetch('data/trails/endean-approved.geojson?v=20261102-locked1');if(!endeanResponse.ok)throw Error('Endean approved paths HTTP '+endeanResponse.status);endean=await endeanResponse.json();
   const networkResponse=await fetch('data/trails/germany-brook-approved.geojson?v=20261102-locked1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();if(params.get('preview')==='1')setPreview(true);else{render();focus();}
  }catch(e){status.textContent='Trail lines could not load: '+e.message;}
  try{
