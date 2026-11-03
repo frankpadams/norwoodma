@@ -33,6 +33,8 @@
 .map-disclaimer p{margin:0;color:#5f707b;font-size:.75rem;line-height:1.5}
 .map-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;min-height:620px;border:1px solid #d5e0e6;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(0,42,74,.08)}
 #prototypeMap{min-height:620px}
+.trail-review-mode .map-shell{grid-template-columns:minmax(0,1fr)}
+.trail-review-mode .map-list{display:none}
 .map-list{border-left:1px solid #d5e0e6;overflow:auto;max-height:620px;background:#fbfcfd}
 .map-list-head{position:sticky;top:0;z-index:2;background:#f3f7f9;border-bottom:1px solid #d5e0e6;padding:14px 16px}
 .map-list-head b{display:block;color:#153b56}.map-list-head small{color:#71808a}
@@ -89,17 +91,21 @@
 </div>
 <p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup; Norwood.ma does not currently display a school-boundary polygon overlay.</p>
 </details>
-<section class="boundary-panel" style="padding:14px;margin-top:12px" aria-label="Shattuck Park trail mapping">
-<strong>Walking trail comparison (test)</strong>
-<label for="trailAreaSelect" style="display:block;margin-top:8px;font-weight:700">Trail system</label>
-<select id="trailAreaSelect" style="min-height:42px;max-width:100%;padding:8px;border:1px solid #cbd8e0;border-radius:8px"><option value="shattuck">Shattuck Park</option><option value="germany">Germany Brook — named OSM trails</option></select>
-<p style="margin:6px 0;font-size:.83rem">Bright lime-green outlined lines are the Norwood.ma overlay; the ordinary paths underneath belong to the OpenStreetMap base map. Blue dots identify mapped segment endpoints and gold dots identify junctions; neither is a confirmed public trailhead. This is not yet a complete or verified Town trail network.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-<label style="font-size:.9rem"><input id="trailLayerToggle" type="checkbox" checked> Highlight trail overlay (on/off)</label>
-<button type="button" id="trailLayerFocus" class="map-locate-button">Zoom to Shattuck Park</button>
-<a href="https://drive.google.com/file/d/1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw/view" target="_blank" rel="noopener">Town trail brochure ↗</a>
+<section class="boundary-panel" style="padding:14px;margin-top:12px" aria-label="Norwood trail source comparison">
+<strong>Norwood trail map — source linework</strong>
+<p style="margin:6px 0;font-size:.9rem">Compare mapped paths over OpenStreetMap or the 2025 aerial imagery. Choose an area to zoom in; source lines retain their original coordinates.</p>
+<label for="trailAreaSelect" style="display:block;margin-top:8px;font-weight:700">View area</label>
+<select id="trailAreaSelect" style="min-height:42px;max-width:100%;padding:8px;border:1px solid #cbd8e0;border-radius:8px">
+<option value="all">All Norwood</option><option value="shattuck">Shattuck Park</option><option value="germany">Germany Brook</option><option value="endean">Endean / Hawes Brook</option><option value="meadow">Meadow Street</option><option value="cooper">Bernie Cooper Park</option><option value="vanderbilt">Vanderbilt / Pine Tree Forest</option><option value="hennessey">Hennessey Field / Murphy Park</option><option value="ellis-pond">Ellis Pond / Alevizos Park</option><option value="ellis-playground">Ellis Playground</option><option value="ledgeview">Ledgeview Drive</option><option value="willett">Willett / Tiot</option></select>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0">
+<label><input id="trailMapc" type="checkbox" checked> <span style="color:#087f46;font-weight:800">Green:</span> MAPC existing paths</label>
+<label><input id="trailOsm" type="checkbox" checked> <span style="color:#1267b0;font-weight:800">Blue:</span> OpenStreetMap paths</label>
+<label><input id="trailPlanned" type="checkbox" checked> <span style="color:#a85100;font-weight:800">Orange dashed:</span> planned / proposed</label>
+<label><input id="trailNearby" type="checkbox"> Include nearby paths outside Norwood</label>
 </div>
-<p id="trailLayerStatus" role="status" style="font-size:.8rem">Initializing trail data…</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><label><input id="trailLayerToggle" type="checkbox" checked> Show trail overlays</label><button type="button" id="trailLayerFocus" class="map-locate-button">Zoom to All Norwood</button><a href="data/trails/norwood-source-paths.geojson" download>Download source GeoJSON ↗</a></div>
+<p id="trailLayerStatus" role="status" style="font-size:.85rem">Loading stored trail coordinates…</p>
+<p style="font-size:.8rem;margin-bottom:0">The dotted boundary outlines Norwood. Click a line for its source and route status. Area views show the available source coverage; a blank area means that these datasets have no displayed path there.</p>
 </section>
 <div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of sample Norwood locations"></div>
@@ -120,7 +126,7 @@
 <script src="data/events-data.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script src="map-test.js?v=0.10"></script>
-<script src="trail-layer.js?v=0.24"></script>
+<script src="map-test.js?v=20261102-sources1"></script>
+<script src="trail-source-layer.js?v=20261102-sources1"></script>
 </body>
 </html>
