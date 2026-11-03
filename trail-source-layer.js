@@ -19,8 +19,9 @@ const areas={
  willett:{name:'Willett / Tiot',bounds:[[42.186,-71.231],[42.198,-71.215]]}
 };
 const group=L.featureGroup().addTo(map),boundary=L.featureGroup().addTo(map);
-let data=null,germany=null,endean=null,meadow=null,vanderbilt=null,meadowTrailhead=null,selected='all',preview=false;
+let data=null,germany=null,endean=null,meadow=null,vanderbilt=null,hennessey=null,meadowTrailhead=null,selected='all',preview=false;
 const selectedFeatures=()=>{
+ if(selected==='hennessey')return hennessey?.features||[];
  if(selected==='vanderbilt')return vanderbilt?.features||[];
  if(selected==='meadow')return meadow?.features||[];
  if(selected==='germany')return germany?.features||[];
@@ -31,7 +32,7 @@ const selectedFeatures=()=>{
  return features.filter(f=>f.properties?.in_norwood&&L.geoJSON(f).getBounds().intersects(bounds));
 };
 function previewControls(){
- if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='vanderbilt'?'data/trails/vanderbilt-loops-approximate.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
+ if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
  $('trailPreviewButton').textContent=preview?'Return to source comparison':selected==='all'?'Choose a trail to preview':'Preview '+areas[selected].name;
  $('trailPreviewButton').disabled=selected==='all';
  $('trailToggleLabel').textContent=preview?areas[selected].name+' trail':'Show trail overlays';
@@ -42,7 +43,7 @@ function render(){
  if(!data)return;group.clearLayers();const features=selectedFeatures().filter(allowed);
  L.geoJSON({type:'FeatureCollection',features},{style,onEachFeature:(f,l)=>{
   const p=f.properties;const name=p.local_name||p.prop_name||p.name||p.reg_name||'Mapped path';
-  if(selected==='vanderbilt'){l.bindTooltip(esc(p.route_name));l.bindPopup('<strong>'+esc(name)+'</strong><p>Approximate brochure alignment. Inner and outer loops together form the 5K route.</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>');return;}
+  if(selected==='vanderbilt'||selected==='hennessey'){l.bindTooltip(esc(p.route_name||name));l.bindPopup('<strong>'+esc(name)+'</strong><p>'+(selected==='vanderbilt'?'Approved brochure alignment. Inner and outer loops together form the 5K route.':'Main paths use OSM geometry; natural loop and spur approximate the Town brochure.')+'</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>');return;}
   if(preview){l.bindPopup('<strong>'+esc(areas[selected].name)+' trail</strong><p>'+esc(name==='Mapped path'?'Connected trail path':name)+(p.approximation?' — approximate Town-map route':'')+'</p>');return;}
   const sourceId=p.osm_way_id||p.objectid;
   l.bindPopup('<strong>'+esc(name)+'</strong><p>'+esc(p.source)+' · '+esc(p.status)+'<br>'+esc(p.source_layer||p.highway||'')+(p.surface?' · '+esc(p.surface):'')+'</p><p>Source feature '+esc(sourceId)+(p.acc_status?'<br>Source access: '+esc(p.acc_status):'')+'</p><a href="'+esc(p.source_url)+'" target="_blank" rel="noopener">View source geometry ↗</a>');
@@ -58,7 +59,7 @@ function updateCount(){
  const shown=selectedFeatures().filter(allowed).length;
  status.textContent=selected==='germany'?'Germany Brook: green includes the main route, Father Mac’s pool loop, landfill spur and western-end connection past the baseball field to Willett School. Blue: other connected OSM offshoots.':count+' source segments in view · '+shown+' displayed overall. Area: '+areas[selected].name+'. Lines use the stored source coordinates.';
 }
-function focus(){const area=areas[selected];map.fitBounds((preview&&selected==='germany'||selected==='meadow'||selected==='vanderbilt')&&group.getLayers().length?group.getBounds():area.bounds,{padding:[22,22]});$('trailLayerFocus').textContent='Zoom to '+area.name;}
+function focus(){const area=areas[selected];map.fitBounds((preview&&selected==='germany'||selected==='meadow'||selected==='vanderbilt'||selected==='hennessey')&&group.getLayers().length?group.getBounds():area.bounds,{padding:[22,22]});$('trailLayerFocus').textContent='Zoom to '+area.name;}
 function setPreview(value){
  preview=value&&selected!=='all';
  if(preview){$('trailLayerToggle').checked=true;group.addTo(map);}
@@ -89,7 +90,8 @@ map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contr
   const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
   const additionsResponse=await fetch('data/trails/endean-connections.geojson?v=20261102-coakley1');if(!additionsResponse.ok)throw Error('Endean connection HTTP '+additionsResponse.status);const additions=await additionsResponse.json();data.features.push(...additions.features);
   const endeanResponse=await fetch('data/trails/endean-approved.geojson?v=20261102-locked1');if(!endeanResponse.ok)throw Error('Endean approved paths HTTP '+endeanResponse.status);endean=await endeanResponse.json();
-  const vanderbiltResponse=await fetch('data/trails/vanderbilt-loops-approximate.geojson?v=20261103-1');if(!vanderbiltResponse.ok)throw Error('Vanderbilt loops HTTP '+vanderbiltResponse.status);vanderbilt=await vanderbiltResponse.json();
+  const hennesseyResponse=await fetch('data/trails/hennessey-review.geojson?v=20261103-1');if(!hennesseyResponse.ok)throw Error('Hennessey paths HTTP '+hennesseyResponse.status);hennessey=await hennesseyResponse.json();
+  const vanderbiltResponse=await fetch('data/trails/vanderbilt-approved.geojson?v=20261103-1');if(!vanderbiltResponse.ok)throw Error('Vanderbilt loops HTTP '+vanderbiltResponse.status);vanderbilt=await vanderbiltResponse.json();
   const networkResponse=await fetch('data/trails/germany-brook-approved.geojson?v=20261102-locked1');if(!networkResponse.ok)throw Error('Germany Brook network HTTP '+networkResponse.status);germany=await networkResponse.json();if(params.get('preview')==='1')setPreview(true);else{render();focus();}
  }catch(e){status.textContent='Trail lines could not load: '+e.message;}
  try{

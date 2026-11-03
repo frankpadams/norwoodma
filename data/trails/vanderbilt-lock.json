@@ -1,0 +1,13 @@
+{
+  "trail": "Vanderbilt / Pine Tree Forest",
+  "status": "approved_locked",
+  "approved_date": "2026-11-03",
+  "snapshot": "data/trails/vanderbilt-approved.geojson",
+  "geometry_sha256": "0760e583a89ee1d44d5158ca3e2cf149820a5b233a1a26dff8790e82abdcc329",
+  "feature_count": 2,
+  "includes": [
+    "Outer loop (red)",
+    "Inner loop (black)"
+  ],
+  "production_control": "One toggle for the entire trail system; retain distinct loop colors"
+}

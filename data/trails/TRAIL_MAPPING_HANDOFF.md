@@ -175,3 +175,9 @@ Owner approved the complete Meadow Street preview and said “lock it in.” mea
 - Test page loads vanderbilt-loops-approximate.geojson; vanderbilt-registration.json preserves the landmark controls, transform and source pixel traces. Inner loop follows PDF vector strokes; outer follows red raster route. Approximate alignment uses Vanderbilt/Morgan junction, Vanderbilt entrance and paired power-line bend. Compared against stored OSM roads, power lines and waterways.
 - Both loops together form the brochure’s 5K; neither individual loop is advertised as 5K. Every loop popup links to the brochure. Generic preview retains one trail-system control.
 - Awaiting owner review; not locked. Public map unchanged. Preserve all previously approved/locked systems.
+
+## Vanderbilt locked — 2026-11-03
+Owner approved both displayed loops and requested lock-in. vanderbilt-approved.geojson freezes the approved geometry byte-for-byte, protected by vanderbilt-lock.json SHA-256 0760e583a89ee1d44d5158ca3e2cf149820a5b233a1a26dff8790e82abdcc329. Test map now loads the approved snapshot. Preserve red outer and black inner loop styling in both modes. Next review: Hennessey Field / Murphy Park.
+
+## Hennessey Field / Murphy Park review — 2026-11-03
+Opened Drive brochure 2023.03.24 HennesseyField and MurphyPark_Trails_MAP_BROCHURE.pdf, page 2. Retained OSM ways 1077490141 and 1077490142 for main gravel network; added brochure-derived natural loop and short northern offshoot using six path/entrance landmarks. hennessey-registration.json records controls and residuals. hennessey-review.geojson displays only these four features when selected, with brochure popups. Owner review pending. Vanderbilt remains locked.

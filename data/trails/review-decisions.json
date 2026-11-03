@@ -33,6 +33,14 @@
       "status": "approved_locked",
       "snapshot": "data/trails/meadow-street-approved.geojson",
       "geometry_sha256": "e02dcea35f52eb2312544e5d59abaeecf37dc9524ca2b6ba4976f005aa499ee2"
+    },
+    {
+      "area": "Vanderbilt / Pine Tree Forest",
+      "decision": "Owner approved both loops and requested lock-in. Preserve approved geometry and red outer / black inner styling.",
+      "date": "2026-11-03",
+      "status": "approved_locked",
+      "snapshot": "data/trails/vanderbilt-approved.geojson",
+      "geometry_sha256": "0760e583a89ee1d44d5158ca3e2cf149820a5b233a1a26dff8790e82abdcc329"
     }
   ]
 }

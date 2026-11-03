@@ -1,0 +1,363 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-1077490142",
+      "properties": {
+        "highway": "footway",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/1077490142",
+        "osm_way_id": 1077490142,
+        "status": "existing",
+        "in_norwood": true,
+        "name": "Hennessey Field / Murphy Park \u2014 main gravel path",
+        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.19605,
+            42.185841
+          ],
+          [
+            -71.1960384,
+            42.1859658
+          ],
+          [
+            -71.1959767,
+            42.1861407
+          ],
+          [
+            -71.1959124,
+            42.1863504
+          ],
+          [
+            -71.1958373,
+            42.1864478
+          ],
+          [
+            -71.1958064,
+            42.1865124
+          ],
+          [
+            -71.1958265,
+            42.1867032
+          ],
+          [
+            -71.1958145,
+            42.1867528
+          ],
+          [
+            -71.1957166,
+            42.1868303
+          ],
+          [
+            -71.1955717,
+            42.186891
+          ],
+          [
+            -71.1953639,
+            42.1869367
+          ],
+          [
+            -71.1952525,
+            42.1869734
+          ],
+          [
+            -71.195109,
+            42.1870529
+          ],
+          [
+            -71.1950299,
+            42.1871255
+          ],
+          [
+            -71.1949897,
+            42.187196
+          ],
+          [
+            -71.1949092,
+            42.1872547
+          ],
+          [
+            -71.1948489,
+            42.1872934
+          ],
+          [
+            -71.194806,
+            42.187366
+          ],
+          [
+            -71.1948368,
+            42.1874226
+          ],
+          [
+            -71.1949079,
+            42.1874723
+          ],
+          [
+            -71.1950755,
+            42.1875538
+          ],
+          [
+            -71.1952069,
+            42.187672
+          ],
+          [
+            -71.1953437,
+            42.1877654
+          ],
+          [
+            -71.1954497,
+            42.1878598
+          ],
+          [
+            -71.195506,
+            42.1879492
+          ],
+          [
+            -71.1955637,
+            42.1879791
+          ],
+          [
+            -71.1956348,
+            42.1879781
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-1077490141",
+      "properties": {
+        "highway": "footway",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/1077490141",
+        "osm_way_id": 1077490141,
+        "status": "existing",
+        "in_norwood": true,
+        "name": "Hennessey Field / Murphy Park \u2014 main gravel path",
+        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1958145,
+            42.1867528
+          ],
+          [
+            -71.1958064,
+            42.18688
+          ],
+          [
+            -71.1957917,
+            42.1870142
+          ],
+          [
+            -71.1957635,
+            42.1871215
+          ],
+          [
+            -71.1957139,
+            42.1872239
+          ],
+          [
+            -71.1955865,
+            42.1873312
+          ],
+          [
+            -71.1955503,
+            42.1874266
+          ],
+          [
+            -71.1955664,
+            42.1875379
+          ],
+          [
+            -71.1956133,
+            42.1877177
+          ],
+          [
+            -71.1956133,
+            42.1878608
+          ],
+          [
+            -71.1956348,
+            42.1879781
+          ],
+          [
+            -71.1956348,
+            42.1881142
+          ],
+          [
+            -71.1956522,
+            42.1882195
+          ],
+          [
+            -71.1957032,
+            42.1883328
+          ],
+          [
+            -71.1958252,
+            42.1884183
+          ],
+          [
+            -71.195903,
+            42.1884968
+          ],
+          [
+            -71.1959241,
+            42.18864
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hennessey Field / Murphy Park \u2014 Natural loop",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true,
+        "route_color": "#087f46"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1953639,
+            42.1869367
+          ],
+          [
+            -71.1952971,
+            42.1868098
+          ],
+          [
+            -71.195201,
+            42.1867253
+          ],
+          [
+            -71.1951052,
+            42.1866356
+          ],
+          [
+            -71.1949945,
+            42.186588
+          ],
+          [
+            -71.1948763,
+            42.1865616
+          ],
+          [
+            -71.19473,
+            42.1865773
+          ],
+          [
+            -71.1945758,
+            42.1866248
+          ],
+          [
+            -71.1944084,
+            42.1866722
+          ],
+          [
+            -71.1943187,
+            42.1867672
+          ],
+          [
+            -71.1942475,
+            42.1868938
+          ],
+          [
+            -71.1941898,
+            42.1870152
+          ],
+          [
+            -71.1941052,
+            42.1871471
+          ],
+          [
+            -71.1940931,
+            42.1872896
+          ],
+          [
+            -71.1940828,
+            42.1873846
+          ],
+          [
+            -71.19406,
+            42.1874585
+          ],
+          [
+            -71.1940907,
+            42.1875219
+          ],
+          [
+            -71.1941745,
+            42.18758
+          ],
+          [
+            -71.1942652,
+            42.1876328
+          ],
+          [
+            -71.1943866,
+            42.1875748
+          ],
+          [
+            -71.1945087,
+            42.1875009
+          ],
+          [
+            -71.1946302,
+            42.1874429
+          ],
+          [
+            -71.1947373,
+            42.1874113
+          ],
+          [
+            -71.194806,
+            42.187366
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hennessey Field / Murphy Park \u2014 Natural-loop northern spur",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+        "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true,
+        "route_color": "#087f46"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1943866,
+            42.1875748
+          ],
+          [
+            -71.19423,
+            42.1876856
+          ],
+          [
+            -71.1941822,
+            42.1877225
+          ]
+        ]
+      }
+    }
+  ]
+}

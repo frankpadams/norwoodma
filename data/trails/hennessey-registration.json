@@ -1,0 +1,216 @@
+{
+  "brochure_url": "https://drive.google.com/file/d/1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q/view",
+  "render_dimensions": [
+    1400,
+    1082
+  ],
+  "controls": [
+    {
+      "pixel": [
+        683,
+        202
+      ],
+      "coordinate": [
+        -71.1959241,
+        42.18864
+      ],
+      "landmark": "Cross Street trail entrance",
+      "fit_residual_m": 5.8
+    },
+    {
+      "pixel": [
+        680,
+        717
+      ],
+      "coordinate": [
+        -71.19605,
+        42.185841
+      ],
+      "landmark": "Lenox Avenue trail entrance",
+      "fit_residual_m": 3.4
+    },
+    {
+      "pixel": [
+        734,
+        300
+      ],
+      "coordinate": [
+        -71.1956348,
+        42.1879781
+      ],
+      "landmark": "Northern main-path fork",
+      "fit_residual_m": 10.5
+    },
+    {
+      "pixel": [
+        713,
+        556
+      ],
+      "coordinate": [
+        -71.1958145,
+        42.1867528
+      ],
+      "landmark": "Southern main-path fork",
+      "fit_residual_m": 3.6
+    },
+    {
+      "pixel": [
+        858,
+        433
+      ],
+      "coordinate": [
+        -71.194806,
+        42.187366
+      ],
+      "landmark": "Eastern gravel bend",
+      "fit_residual_m": 1.6
+    },
+    {
+      "pixel": [
+        783,
+        523
+      ],
+      "coordinate": [
+        -71.1953639,
+        42.1869367
+      ],
+      "landmark": "Natural-loop southern junction",
+      "fit_residual_m": 5.1
+    }
+  ],
+  "method": "Existing OSM geometry retained for both main paths. Brochure natural loop and spur approximated with affine registration against six main-path landmarks. Fit residuals measure control agreement, not trail accuracy.",
+  "transform": [
+    [
+      6.622137956663607e-06,
+      -2.7551695781286944e-09
+    ],
+    [
+      -2.0493019917133815e-07,
+      -5.2781201235335695e-06
+    ],
+    [
+      -71.20041812861211,
+      42.18965690155303
+    ]
+  ],
+  "source_routes": [
+    [
+      "Natural loop",
+      [
+        [
+          783,
+          523
+        ],
+        [
+          790,
+          539
+        ],
+        [
+          805,
+          555
+        ],
+        [
+          820,
+          572
+        ],
+        [
+          837,
+          581
+        ],
+        [
+          855,
+          586
+        ],
+        [
+          877,
+          583
+        ],
+        [
+          900,
+          574
+        ],
+        [
+          925,
+          565
+        ],
+        [
+          938,
+          547
+        ],
+        [
+          948,
+          523
+        ],
+        [
+          956,
+          500
+        ],
+        [
+          968,
+          475
+        ],
+        [
+          969,
+          448
+        ],
+        [
+          970,
+          430
+        ],
+        [
+          973,
+          416
+        ],
+        [
+          968,
+          404
+        ],
+        [
+          955,
+          393
+        ],
+        [
+          941,
+          383
+        ],
+        [
+          923,
+          394
+        ],
+        [
+          905,
+          408
+        ],
+        [
+          887,
+          419
+        ],
+        [
+          871,
+          425
+        ],
+        [
+          858,
+          433
+        ]
+      ]
+    ],
+    [
+      "Natural-loop northern spur",
+      [
+        [
+          941,
+          383
+        ],
+        [
+          946,
+          373
+        ],
+        [
+          953,
+          366
+        ]
+      ]
+    ]
+  ]
+}
