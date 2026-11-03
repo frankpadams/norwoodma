@@ -1,0 +1,100 @@
+{
+  "authorization": "For this one, try to approximate trails based on proximity to nearby roads and the river.",
+  "date": "2026-11-02",
+  "source_pdf": "https://cms5.revize.com/revize/norwoodma25/Trails/Broc_MeadowStProp_D5Alt_20250807.pdf?t=202603061503060",
+  "source_image_dimensions": [
+    1056,
+    816
+  ],
+  "model": "Affine pixel-to-longitude/latitude transform; locally appropriate approximate alignment",
+  "controls": [
+    {
+      "landmark": "Eastern end of Meadow Street",
+      "pixel": [
+        177,
+        333
+      ],
+      "coordinate": [
+        -71.17355,
+        42.17757
+      ],
+      "source": "https://www.openstreetmap.org/way/9280491"
+    },
+    {
+      "landmark": "West-bank end of I-95 / Neponset River bridge",
+      "pixel": [
+        807,
+        537
+      ],
+      "coordinate": [
+        -71.1671699,
+        42.1756245
+      ],
+      "source": "https://www.openstreetmap.org/way/9279714"
+    },
+    {
+      "landmark": "Eastern bend of Neponset River",
+      "pixel": [
+        862,
+        245
+      ],
+      "coordinate": [
+        -71.1666493,
+        42.1781577
+      ],
+      "source": "https://www.openstreetmap.org/way/1013227546"
+    }
+  ],
+  "independent_landmark_checks": [
+    {
+      "landmark": "Upper river bend",
+      "pixel": [
+        742,
+        130
+      ],
+      "coordinate": [
+        -71.1680014,
+        42.1790978
+      ],
+      "source": "https://www.openstreetmap.org/way/815547162",
+      "predicted_coordinate": [
+        -71.1678735,
+        42.17919261
+      ],
+      "residual_meters": 14.9
+    },
+    {
+      "landmark": "Heather Drive / Meadow Street intersection",
+      "pixel": [
+        75,
+        334
+      ],
+      "coordinate": [
+        -71.17446,
+        42.17755
+      ],
+      "source": "https://www.openstreetmap.org/way/9279792",
+      "predicted_coordinate": [
+        -71.17457897,
+        42.17758809
+      ],
+      "residual_meters": 10.7
+    }
+  ],
+  "coefficients": [
+    [
+      1.0089105441133045e-05,
+      -2.629019366765353e-07
+    ],
+    [
+      1.1746849061863992e-07,
+      -8.724861666162023e-06
+    ],
+    [
+      -71.17537488867046,
+      42.180521912577625
+    ]
+  ],
+  "interpretation": "Landmark residuals check image placement only. They are not a measurement of actual trail accuracy.",
+  "source_map_note": "Image positions were read from the actual Town map, including the river-side Blue branch and both Green–White branches; previous guessed trace JSON was not used."
+}
