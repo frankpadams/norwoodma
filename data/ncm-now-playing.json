@@ -1,55 +1,123 @@
 {
-  "updated_at": "2026-11-02T20:28:57.846612-05:00",
-  "date": "2026-11-02",
+  "updated_at": "2026-11-03T03:30:48.796091-05:00",
+  "date": "2026-11-03",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "The Vehicle For Change 10.20.26",
+      "title": "Norwood Postcard: November 1996",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1230,
+          "minute": 240,
+          "title": "Local Artist Bill Breen - Public Access 10.7.26"
+        },
+        {
+          "minute": 330,
           "title": "NOT QUITE LIVE: Episode 19 4/30/1992"
         },
         {
-          "minute": 1290,
+          "minute": 390,
           "title": "Ernie's Jukebox: Let The Music Do The Talkin'"
         },
         {
-          "minute": 1380,
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 540,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 600,
+          "title": "Gentle Exercise with Steve"
+        },
+        {
+          "minute": 660,
           "title": "The Vehicle For Change 10.20.26"
+        },
+        {
+          "minute": 720,
+          "title": "Norwood Postcard: November 1996"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-02"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-03"
     },
     "government": {
       "status": "scheduled",
-      "title": "Board of Health 10.19.26",
+      "title": "Trails Advisory Committee 10.13.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 300,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 390,
+          "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 480,
+          "title": "Capital Outlay Committee 10.21.26"
+        },
+        {
+          "minute": 510,
           "title": "Finance Commission 10.27.26"
         },
         {
-          "minute": 1380,
+          "minute": 570,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 720,
           "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 780,
+          "title": "Conservation Commission 10.21.26"
+        },
+        {
+          "minute": 870,
+          "title": "Trails Advisory Committee 10.13.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-02"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-03"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2012 Norwood vs. Dedham Football",
+      "title": "Celebrating Innovation Career Pathways at NHS",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 300,
+          "title": "2026 NHS Football vs Westwood 10.9.26 Rebroadcast"
+        },
+        {
+          "minute": 450,
           "title": "2012 Norwood vs. Dedham Football"
+        },
+        {
+          "minute": 600,
+          "title": "2026 NHS Unified Basketball vs Dedham 9.25.26"
+        },
+        {
+          "minute": 660,
+          "title": "NHS Boys Soccer vs Medway 10.7.26"
+        },
+        {
+          "minute": 780,
+          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        },
+        {
+          "minute": 900,
+          "title": "NHS Update - September 2026"
+        },
+        {
+          "minute": 1020,
+          "title": "Celebrating Innovation Career Pathways at NHS"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-02"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-03"
     }
   }
 }
