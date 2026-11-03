@@ -168,3 +168,10 @@ Every named trail system must be clickable on the real map. Clicking any include
 
 ## Meadow Street APPROVED AND LOCKED — November 2, 2026
 Owner approved the complete Meadow Street preview and said “lock it in.” meadow-street-approved.geojson freezes all seven named routes, the Blue leg west of I-95, its northeast continuation and western riverbank path, and exact Yellow/Orange/Green connections. meadow-street-lock.json records the geometry checksum. The loader uses the approved snapshot, and the approximation builder rejects changes against the lock. Preserve its approved approximate alignment; this is not a conversion to recorded GPS data. Carry it into production under one Meadow Street toggle with the official brochure popup requirement above. Other approved trail locks remain unchanged.
+
+## Vanderbilt / Pine Tree Forest — 2026-11-03 test approximation
+- Owner requested inner and outer loops traced using the Drive brochure and nearby map features.
+- Source: VanderbiltPTFInnerAndOuterLoops5KMap.pdf, Drive ID 1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0.
+- Test page loads vanderbilt-loops-approximate.geojson; vanderbilt-registration.json preserves the landmark controls, transform and source pixel traces. Inner loop follows PDF vector strokes; outer follows red raster route. Approximate alignment uses Vanderbilt/Morgan junction, Vanderbilt entrance and paired power-line bend. Compared against stored OSM roads, power lines and waterways.
+- Both loops together form the brochure’s 5K; neither individual loop is advertised as 5K. Every loop popup links to the brochure. Generic preview retains one trail-system control.
+- Awaiting owner review; not locked. Public map unchanged. Preserve all previously approved/locked systems.
