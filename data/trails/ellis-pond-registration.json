@@ -1,0 +1,207 @@
+{
+  "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+  "source_page": 2,
+  "render_dimensions": [
+    1400,
+    1082
+  ],
+  "controls": [
+    {
+      "pixel": [
+        995,
+        335
+      ],
+      "coordinate": [
+        -71.2199734,
+        42.1829726
+      ],
+      "landmark": "Northeast trail entrance",
+      "fit_residual_m": 1.5
+    },
+    {
+      "pixel": [
+        1076,
+        424
+      ],
+      "coordinate": [
+        -71.2192698,
+        42.1823377
+      ],
+      "landmark": "Eastern shoreline bend",
+      "fit_residual_m": 1.5
+    },
+    {
+      "pixel": [
+        1015,
+        587
+      ],
+      "coordinate": [
+        -71.219826,
+        42.1812835
+      ],
+      "landmark": "Eastern shore / Walpole access junction",
+      "fit_residual_m": 6.0
+    },
+    {
+      "pixel": [
+        886,
+        630
+      ],
+      "coordinate": [
+        -71.2208495,
+        42.181001
+      ],
+      "landmark": "Dam east end",
+      "fit_residual_m": 1.0
+    },
+    {
+      "pixel": [
+        1040,
+        652
+      ],
+      "coordinate": [
+        -71.2194733,
+        42.1808275
+      ],
+      "landmark": "Walpole Street trail entrance",
+      "fit_residual_m": 4.1
+    }
+  ],
+  "method": "Retain OSM east-shore geometry; approximate missing northern, west-dam and Lower Pond routes using brochure pixels and five east-shore landmarks. Affine fit residuals are not accuracy estimates for missing paths. West-dam road endpoint snapped to Walpole Street.",
+  "transform": [
+    [
+      8.619241459341028e-06,
+      -2.1267423288601251e-07
+    ],
+    [
+      2.4215826793794193e-07,
+      -6.712792918681099e-06
+    ],
+    [
+      -71.2286456060245,
+      42.18542588860911
+    ]
+  ],
+  "source_routes": [
+    [
+      "Nichols Street pond access",
+      "Primary natural",
+      "#758f3f",
+      [
+        [
+          565,
+          157
+        ],
+        [
+          565,
+          183
+        ],
+        [
+          568,
+          215
+        ],
+        [
+          568,
+          249
+        ],
+        [
+          569,
+          284
+        ],
+        [
+          575,
+          311
+        ],
+        [
+          583,
+          329
+        ],
+        [
+          592,
+          343
+        ]
+      ],
+      "Natural path from the Nichols Street entrance to the northern canoe/kayak launch."
+    ],
+    [
+      "West dam approach from Walpole Street",
+      "Primary asphalt",
+      "#202020",
+      [
+        [
+          909,
+          764
+        ],
+        [
+          899,
+          746
+        ],
+        [
+          891,
+          728
+        ],
+        [
+          882,
+          708
+        ],
+        [
+          875,
+          688
+        ],
+        [
+          865,
+          665
+        ],
+        [
+          860,
+          647
+        ],
+        [
+          866,
+          632
+        ]
+      ],
+      "Paved approach from Walpole Street along the west side of Hawes Brook to the dam and pond access."
+    ],
+    [
+      "Alevizos Park / Lower Pond path",
+      "Primary natural",
+      "#758f3f",
+      [
+        [
+          1101,
+          1054
+        ],
+        [
+          1099,
+          1037
+        ],
+        [
+          1093,
+          1018
+        ],
+        [
+          1085,
+          1003
+        ],
+        [
+          1075,
+          987
+        ],
+        [
+          1068,
+          971
+        ],
+        [
+          1062,
+          953
+        ],
+        [
+          1056,
+          937
+        ]
+      ],
+      "Natural path beside Lower Pond in Alevizos Park, south of Walpole Street."
+    ]
+  ]
+}

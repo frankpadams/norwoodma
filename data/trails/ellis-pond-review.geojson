@@ -1,0 +1,429 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-824000280",
+      "properties": {
+        "highway": "path",
+        "horse": "no",
+        "name": "Ellis Pond \u2014 eastern shore and pond access",
+        "surface": "gravel",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/824000280",
+        "osm_way_id": 824000280,
+        "status": "existing",
+        "in_norwood": true,
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "route_color": "#758f3f",
+        "trail_type": "Primary natural",
+        "section_description": "Eastern pond-side paths and the access from Walpole Street. Shown as primary natural trail in the Town brochure."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2208495,
+            42.181001
+          ],
+          [
+            -71.219826,
+            42.1812835
+          ],
+          [
+            -71.2198175,
+            42.1813176
+          ],
+          [
+            -71.2198252,
+            42.1813934
+          ],
+          [
+            -71.2198003,
+            42.1815222
+          ],
+          [
+            -71.2197711,
+            42.181561
+          ],
+          [
+            -71.2195723,
+            42.1816432
+          ],
+          [
+            -71.2194502,
+            42.1817305
+          ],
+          [
+            -71.2194152,
+            42.1818098
+          ],
+          [
+            -71.2193659,
+            42.1819697
+          ],
+          [
+            -71.2193246,
+            42.182172
+          ],
+          [
+            -71.2192698,
+            42.1823377
+          ],
+          [
+            -71.2195438,
+            42.1823977
+          ],
+          [
+            -71.2197818,
+            42.1824514
+          ],
+          [
+            -71.2201069,
+            42.1825165
+          ],
+          [
+            -71.2202748,
+            42.1825644
+          ],
+          [
+            -71.2202902,
+            42.1825929
+          ],
+          [
+            -71.2202594,
+            42.182642
+          ],
+          [
+            -71.2201605,
+            42.1827281
+          ],
+          [
+            -71.220108,
+            42.1827792
+          ],
+          [
+            -71.2200449,
+            42.1828536
+          ],
+          [
+            -71.2200123,
+            42.182909
+          ],
+          [
+            -71.2199734,
+            42.1829726
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-824228125",
+      "properties": {
+        "highway": "path",
+        "name": "Ellis Pond \u2014 eastern shore and pond access",
+        "surface": "gravel",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/824228125",
+        "osm_way_id": 824228125,
+        "status": "existing",
+        "in_norwood": true,
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "route_color": "#758f3f",
+        "trail_type": "Primary natural",
+        "section_description": "Eastern pond-side paths and the access from Walpole Street. Shown as primary natural trail in the Town brochure."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.219826,
+            42.1812835
+          ],
+          [
+            -71.2197542,
+            42.1813036
+          ],
+          [
+            -71.2196808,
+            42.1811665
+          ],
+          [
+            -71.2196473,
+            42.1810976
+          ],
+          [
+            -71.2196062,
+            42.1810287
+          ],
+          [
+            -71.2195351,
+            42.1809281
+          ],
+          [
+            -71.2195126,
+            42.1808914
+          ],
+          [
+            -71.2194733,
+            42.1808275
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-824228597",
+      "properties": {
+        "highway": "path",
+        "name": "Ellis Pond \u2014 eastern shore and pond access",
+        "surface": "gravel",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/824228597",
+        "osm_way_id": 824228597,
+        "status": "existing",
+        "in_norwood": true,
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "route_color": "#758f3f",
+        "trail_type": "Primary natural",
+        "section_description": "Eastern pond-side paths and the access from Walpole Street. Shown as primary natural trail in the Town brochure."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2197542,
+            42.1813036
+          ],
+          [
+            -71.2198252,
+            42.1813934
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-1243709537",
+      "properties": {
+        "bridge": "yes",
+        "highway": "path",
+        "horse": "no",
+        "layer": "1",
+        "name": "Ellis Pond \u2014 dam crossing",
+        "surface": "gravel",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/1243709537",
+        "osm_way_id": 1243709537,
+        "status": "existing",
+        "in_norwood": true,
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "route_color": "#737373",
+        "trail_type": "Primary gravel",
+        "section_description": "Short gravel crossing at the dam."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2209669,
+            42.1809692
+          ],
+          [
+            -71.2208495,
+            42.181001
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-1243709538",
+      "properties": {
+        "highway": "path",
+        "horse": "no",
+        "name": "Ellis Pond \u2014 dam crossing",
+        "surface": "gravel",
+        "source": "OpenStreetMap",
+        "source_url": "https://www.openstreetmap.org/way/1243709538",
+        "osm_way_id": 1243709538,
+        "status": "existing",
+        "in_norwood": true,
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "route_color": "#737373",
+        "trail_type": "Primary gravel",
+        "section_description": "Short gravel crossing at the dam."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2210358,
+            42.1809514
+          ],
+          [
+            -71.2209669,
+            42.1809692
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Pond / Alevizos Park \u2014 Nichols Street pond access",
+        "trail_type": "Primary natural",
+        "route_color": "#758f3f",
+        "section_description": "Natural path from the Nichols Street entrance to the northern canoe/kayak launch.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2237377,
+            42.1842518
+          ],
+          [
+            -71.2237314,
+            42.1840773
+          ],
+          [
+            -71.2236978,
+            42.1838618
+          ],
+          [
+            -71.2236896,
+            42.1836336
+          ],
+          [
+            -71.2236725,
+            42.1833984
+          ],
+          [
+            -71.2236142,
+            42.1832159
+          ],
+          [
+            -71.2235409,
+            42.1830934
+          ],
+          [
+            -71.22346,
+            42.1829975
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Pond / Alevizos Park \u2014 West dam approach from Walpole Street",
+        "trail_type": "Primary asphalt",
+        "route_color": "#202020",
+        "section_description": "Paved approach from Walpole Street along the west side of Hawes Brook to the dam and pond access.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2203586,
+            42.1802889
+          ],
+          [
+            -71.2207163,
+            42.180227
+          ],
+          [
+            -71.2207896,
+            42.1803495
+          ],
+          [
+            -71.220872,
+            42.1804857
+          ],
+          [
+            -71.2209372,
+            42.1806214
+          ],
+          [
+            -71.2210289,
+            42.1807779
+          ],
+          [
+            -71.2210764,
+            42.1808998
+          ],
+          [
+            -71.2210358,
+            42.1809514
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis Pond / Alevizos Park \u2014 Alevizos Park / Lower Pond path",
+        "trail_type": "Primary natural",
+        "route_color": "#758f3f",
+        "section_description": "Natural path beside Lower Pond in Alevizos Park, south of Walpole Street.",
+        "source": "Norwood Trails Committee brochure",
+        "source_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "brochure_url": "https://drive.google.com/file/d/1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX/view",
+        "status": "approximate",
+        "approximation": true,
+        "in_norwood": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2189006,
+            42.1781165
+          ],
+          [
+            -71.2189219,
+            42.178231
+          ],
+          [
+            -71.2189783,
+            42.1783598
+          ],
+          [
+            -71.2190508,
+            42.1784622
+          ],
+          [
+            -71.2191409,
+            42.1785717
+          ],
+          [
+            -71.2192051,
+            42.1786806
+          ],
+          [
+            -71.2192612,
+            42.1788027
+          ],
+          [
+            -71.2193168,
+            42.1789114
+          ]
+        ]
+      }
+    }
+  ]
+}
