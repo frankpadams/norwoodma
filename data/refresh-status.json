@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-11-02T15:34:14.854528-05:00",
+  "generated_at": "2026-11-02T21:13:57.052674-05:00",
   "offline": false,
-  "events_published": 2271,
+  "events_published": 2267,
   "news_published": 120,
-  "civic_notices": 51,
+  "civic_notices": 58,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2271,
-      "generated_at": "2026-11-02T15:34:14.042098-05:00"
+      "events": 2267,
+      "generated_at": "2026-11-02T21:13:56.635986-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 120,
-      "generated_at": "2026-11-02T15:34:14.054163-05:00"
+      "generated_at": "2026-11-02T21:13:56.648175-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 822,
-      "generated_at": "2026-11-02T15:34:14.076662-05:00"
+      "events": 818,
+      "generated_at": "2026-11-02T21:13:56.671444-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 741,
-      "generated_at": "2026-11-02T15:34:14.095496-05:00"
+      "generated_at": "2026-11-02T21:13:56.691931-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-11-02T15:34:14.105781-05:00"
+      "generated_at": "2026-11-02T21:13:56.702885-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 64,
-      "generated_at": "2026-11-02T15:34:14.117779-05:00"
+      "generated_at": "2026-11-02T21:13:56.715031-05:00"
     }
   ],
   "recreation_programs": 117,
@@ -556,7 +556,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured weekday",
+      "note": "authoritative page no longer confirms configured start time",
       "outcome": "failed",
       "access_limited": false
     },
@@ -977,7 +977,7 @@
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
-      "found": 20,
+      "found": 19,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1180,13 +1180,12 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": false,
+      "ok": true,
       "method": "html_hub",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "parser_gap",
-      "access_limited": false,
-      "retained_events": 3
+      "found": 5,
+      "note": null,
+      "outcome": "events",
+      "access_limited": false
     },
     {
       "source_id": "pcrinc-events",
@@ -1587,10 +1586,9 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": false,
-      "found": 0,
-      "method": "rss",
-      "note": "not well-formed (invalid token): line 1, column 119"
+      "ok": true,
+      "found": 3,
+      "method": "rss"
     },
     {
       "source": "Norwood Town News",
@@ -1604,7 +1602,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 85,
+      "found": 87,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1612,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 85,
+      "found": 87,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1620,7 +1618,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 8,
+      "found": 34,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
