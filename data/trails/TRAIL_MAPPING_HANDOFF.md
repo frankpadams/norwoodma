@@ -135,3 +135,6 @@ User directed a connection from the Savage Center endpoint WSW to Father Mac’s
 
 ### Include landfill spur and Willett School leg — November 2, 2026
 User requested inclusion of the landfill offshoot (OSM way 1343590948) and the western-end connection south past the baseball field to Willett School (ways 896399146 and 156220165). These already exist in the connected network; promoted them to green included-route legs with clear names, preserving all source coordinates. Builder now reproduces the included-leg roles.
+
+### Final-view preview control — November 2, 2026
+Production preference: one toggle per named trail system, grouping all its included paths; no green/blue/orange source toggles in production. Test map now has a Preview Germany Brook button, displaying the complete included Germany network in a single solid style, with one Germany Brook trail checkbox. Source comparison controls are hidden during preview and restored by Return to source comparison. Direct preview URL: map-test.html?trail=germany&preview=1. Switching area exits this Germany-only preview. Public map remains unchanged.

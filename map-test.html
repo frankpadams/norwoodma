@@ -32,7 +32,7 @@
 .map-disclaimer{margin-top:18px;padding:13px 15px;border:1px solid #d8e1e6;border-radius:10px;background:#f4f7f9}
 .map-disclaimer p{margin:0;color:#5f707b;font-size:.75rem;line-height:1.5}
 .map-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;min-height:620px;border:1px solid #d5e0e6;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(0,42,74,.08)}
-#prototypeMap{min-height:620px}
+#prototypeMap{min-height:620px;scroll-margin-top:110px}
 .trail-review-mode .map-shell{grid-template-columns:minmax(0,1fr)}
 .trail-review-mode .map-list{display:none}
 .map-list{border-left:1px solid #d5e0e6;overflow:auto;max-height:620px;background:#fbfcfd}
@@ -97,13 +97,14 @@
 <label for="trailAreaSelect" style="display:block;margin-top:8px;font-weight:700">View area</label>
 <select id="trailAreaSelect" style="min-height:42px;max-width:100%;padding:8px;border:1px solid #cbd8e0;border-radius:8px">
 <option value="all">All Norwood</option><option value="shattuck">Shattuck Park</option><option value="germany">Germany Brook</option><option value="endean">Endean / Hawes Brook</option><option value="meadow">Meadow Street</option><option value="cooper">Bernie Cooper Park</option><option value="vanderbilt">Vanderbilt / Pine Tree Forest</option><option value="hennessey">Hennessey Field / Murphy Park</option><option value="ellis-pond">Ellis Pond / Alevizos Park</option><option value="ellis-playground">Ellis Playground</option><option value="ledgeview">Ledgeview Drive</option><option value="willett">Willett / Tiot</option></select>
-<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0">
+<div id="trailSourceControls" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0">
 <label><input id="trailMapc" type="checkbox" checked> <span style="color:#087f46;font-weight:800">Green:</span> MAPC existing paths</label>
 <label><input id="trailOsm" type="checkbox" checked> <span style="color:#1267b0;font-weight:800">Blue:</span> OpenStreetMap paths</label>
 <label><input id="trailPlanned" type="checkbox" checked> <span style="color:#a85100;font-weight:800">Orange dashed:</span> planned / proposed</label>
 <label><input id="trailNearby" type="checkbox"> Include nearby paths outside Norwood</label>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><label><input id="trailLayerToggle" type="checkbox" checked> Show trail overlays</label><button type="button" id="trailLayerFocus" class="map-locate-button">Zoom to All Norwood</button><a href="data/trails/norwood-source-paths.geojson" download>Download source GeoJSON ↗</a></div>
+<div style="margin:12px 0"><button type="button" id="trailPreviewButton" class="map-locate-button" aria-pressed="false">Preview Germany Brook</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><label><input id="trailLayerToggle" type="checkbox" checked> <span id="trailToggleLabel">Show trail overlays</span></label><button type="button" id="trailLayerFocus" class="map-locate-button">Zoom to All Norwood</button><a href="data/trails/norwood-source-paths.geojson" download>Download source GeoJSON ↗</a></div>
 <p id="trailLayerStatus" role="status" style="font-size:.85rem">Loading stored trail coordinates…</p>
 <p style="font-size:.8rem;margin-bottom:0">The dotted boundary outlines Norwood. Click a line for its source and route status. Area views show the available source coverage; a blank area means that these datasets have no displayed path there.</p>
 </section>
@@ -127,6 +128,6 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="map-test.js?v=20261102-sources1"></script>
-<script src="trail-source-layer.js?v=20261102-willett-landfill1"></script>
+<script src="trail-source-layer.js?v=20261102-finalpreview1"></script>
 </body>
 </html>
