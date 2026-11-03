@@ -13,5 +13,33 @@
  function row(e){const multi=validDate(e.end?.date)&&e.end.date>e.start.date;const dates=short(e.start.date)+(multi?'–'+short(e.end.date):'');const times=[time(e.start?.time),time(e.end?.time)].filter(Boolean).join('–');const info=links(e);return '<details class="event-agenda-entry" id="agenda-'+esc(e.id)+'"><summary><span class="event-agenda-copy"><span class="event-agenda-title">'+esc(e.title)+'</span><span class="event-agenda-meta">'+esc(metadata(e)||'Select for event details')+'</span></span><span class="event-agenda-expand" aria-hidden="true">+</span></summary><div class="event-agenda-detail"><p><strong>When:</strong> '+esc(dates+(times?' · '+times:''))+'</p>'+(e.address?'<p><strong>Where:</strong> '+esc(e.address)+'</p>':'')+(e.organizer?'<p><strong>Hosted by:</strong> '+esc(e.organizer)+'</p>':'')+(e.notes||e.description?'<p>'+esc(text(e.notes||e.description))+'</p>':'')+(e.category==='civic_meeting'?'<p>Return to Norwood.ma at meeting time for available live coverage.</p>':'')+'<div class="event-agenda-links">'+info.map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join('')+'<a href="events.html?event='+encodeURIComponent(e.id||'')+'" data-event-details="'+esc(e.id||'')+'">Calendar &amp; sharing options →</a></div></div></details>';}
  function agendaRank(e){const t=[e.title,e.venue,e.address,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();const common=/\b(town common|norwood common|common green|farmers?['’]? market)\b/.test(t);const civic=/\b(election day|primary election|general election|town election|voting day|town meeting|special town meeting|select board|board of selectmen|planning board|school committee|finance commission|conservation commission|zoning board|board of health|public hearing|committee meeting|board meeting)\b/.test(t);const holiday=/\b(new year'?s day|martin luther king|presidents'? day|patriots'? day|memorial day|juneteenth|independence day|fourth of july|labor day|columbus day|indigenous peoples'? day|veterans day|thanksgiving|christmas|halloween|holiday observance)\b/.test(t);const religious=/\b(church|parish|chapel|congregation|temple|synagogue|mosque|mandir|worship|bible|prayer|faith|ministry|saint catherine|st\. catherine|first congregational|grace episcopal|united church)\b/.test(t);const varsity=/\b(varsity|high school (football|soccer|basketball|baseball|softball|volleyball|hockey|lacrosse|tennis|track|swimming|wrestling)|mustangs (football|soccer|basketball|baseball|softball|volleyball|hockey|lacrosse))\b/.test(t);if(common)return 0;if(civic||holiday)return 1;if(religious)return 5;if(varsity)return 4;if(e.session_based===true&&e.drop_in!==true)return 3;return 2;}
 function render(items,opts={}){const today=opts.today||todayKey(),days=new Map();for(const e of items){const start=e.start?.date,end=e.end?.date||start;if(!e.title||!validDate(start)||!validDate(end)||end<today)continue;const key=start<today?today:start;if(!days.has(key))days.set(key,[]);days.get(key).push(e);}const fundraiser='<a class="fundraiser-agenda-link" href="fundraising.html"><span class="fundraiser-agenda-icon" aria-hidden="true">♥</span><span class="fundraiser-agenda-copy"><span class="event-agenda-title">Current &amp; Upcoming Norwood Fundraisers</span><span class="event-agenda-meta">View the fundraisers currently happening to support Norwood organizations</span></span><span class="fundraiser-agenda-arrow" aria-hidden="true">›</span></a>';const listings=[...days.keys()].sort().map(key=>{const d=date(key),label=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});return '<section class="event-agenda-day" aria-label="'+esc(label)+'"><h2 class="event-agenda-date"><time datetime="'+key+'"><span class="agenda-weekday">'+d.toLocaleDateString('en-US',{weekday:'short'})+'</span><span class="agenda-day-number">'+d.getDate()+'</span><span class="agenda-month">'+d.toLocaleDateString('en-US',{month:'short'})+' '+d.getFullYear()+'</span></time></h2><div class="event-agenda-list">'+days.get(key).sort((a,b)=>agendaRank(a)-agendaRank(b)||(a.start?.time||'99:99').localeCompare(b.start?.time||'99:99')).map(row).join('')+'</div></section>';}).join('');return fundraiser+(listings||'<p class="event-agenda-empty">No upcoming public events match this search.</p>');}
- return {render,row,todayKey,time,metadata,links};
+    function confirmedNcmLive(notice,schedule,now){
+      if(schedule?.date!==now.date)return false;
+      const channel=schedule.channels?.[/school committee/i.test(notice.title||'')?'schools':'government'];
+      if(channel?.status!=='scheduled')return false;
+      const slots=(channel.slots||[]).filter(s=>Number.isInteger(s.minute)&&s.minute>=0&&s.minute<1440).sort((a,b)=>a.minute-b.minute);
+      const index=slots.findLastIndex(s=>s.minute<=now.minutes);
+      if(index<0)return false;
+      const slot=slots[index],end=slots[index+1]?.minute??Math.min(1440,slot.minute+180);
+      if(now.minutes>=end)return false;
+      const title=String(slot.title||'');
+      if(/\b(rebroadcast|replay|repeat|recorded)\b/i.test(title))return false;
+      const recorded=title.match(/\b(\d{1,2})[.\/-](\d{1,2})[.\/-](\d{4}|\d{2})\b/);
+      if(recorded){
+        const year=recorded[3].length===2?'20'+recorded[3]:recorded[3];
+        const date=year+'-'+recorded[1].padStart(2,'0')+'-'+recorded[2].padStart(2,'0');
+        if(date!==now.date)return false;
+      }
+      if(slot.live!==true&&slot.is_live!==true&&!/\blive\b/i.test(title))return false;
+      const key=s=>String(s).toLowerCase().replace(/\b\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}\b/g,'').replace(/\b(live|meeting|broadcast|norwood)\b/g,'').replace(/[^a-z0-9]/g,'');
+      return key(title)===key(notice.title)&&key(notice.title)!=='';
+    }
+
+ function liveLink(e,schedule,clock=new Date()){
+  const p=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(clock).map(x=>[x.type,x.value]));
+  const now={date:p.year+'-'+p.month+'-'+p.day,minutes:+p.hour*60+(+p.minute)};
+  if(e.start?.date!==now.date||!confirmedNcmLive(e,schedule,now))return '';
+  return safeUrl(schedule.channels[/school committee/i.test(e.title)?'schools':'government'].url);
+ }
+ return {render,row,todayKey,time,metadata,links,liveLink};
 });

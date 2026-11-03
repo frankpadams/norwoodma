@@ -3026,7 +3026,7 @@ def civic_meetings_from_town_data(days=185):
                 if ed.tzinfo: ed=ed.astimezone(TZ)
                 et=ed.strftime('%H:%M')
             except Exception: pass
-        title=m.group(1)
+        title=raw_title
         key=(title.lower(),d.isoformat(),st)
         if key in seen: continue
         seen.add(key)
@@ -3080,7 +3080,7 @@ def civic_meetings_from_town_calendar(months=6):
             if not d or d < today-timedelta(days=1) or d > today+timedelta(days=185):continue
             tmnode=node.select_one('.fc-time')
             tm=_time_from_text(clean_text(tmnode.get_text(' '))) if tmnode else _time_from_text(text)
-            title=mm.group(1)
+            title=clean_text(re.sub(r'^(?:\d{1,2}:\d{2}\s*(?:am|pm)?\s*)', '', text, flags=re.I))
             key=(title.lower(),d.isoformat(),tm)
             if key in seen:continue
             seen.add(key)
@@ -3100,6 +3100,7 @@ def civic_meetings_from_ncm_live_schedule(days=60):
         for idx,row in enumerate(rows):
             m=IMPORTANT_MEETING_RE.search(row.get('title',''))
             if not m: continue
+            if not row.get('live') and not row.get('is_live') and not re.search(r'\blive\b', row.get('title',''), re.I): continue
             # If Cablecast shows a later, distinct program on the Government channel,
             # that transition is positive evidence that this meeting broadcast ended.
             # Missing/ambiguous schedule data is never treated as an early end.
@@ -3111,7 +3112,7 @@ def civic_meetings_from_ncm_live_schedule(days=60):
                     continue
                 broadcast_end=later.get('time')
                 break
-            out.append({'kind':'meeting','title':m.group(1),'date':d.isoformat(),
+            out.append({'kind':'meeting','title':clean_text(re.sub(r'\blive\b', '', row.get('title',''), flags=re.I)),'date':d.isoformat(),
                         'start_time':row.get('time'),'end_time':None,
                         'broadcast_end_time':broadcast_end,
                         'url':'https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/',
@@ -3828,7 +3829,7 @@ def civic_meetings_from_town_data(days=185):
                 if ed.tzinfo: ed=ed.astimezone(TZ)
                 et=ed.strftime('%H:%M')
             except Exception: pass
-        title=m.group(1)
+        title=raw_title
         key=(title.lower(),d.isoformat(),st)
         if key in seen: continue
         seen.add(key)
@@ -3882,7 +3883,7 @@ def civic_meetings_from_town_calendar(months=6):
             if not d or d < today-timedelta(days=1) or d > today+timedelta(days=185):continue
             tmnode=node.select_one('.fc-time')
             tm=_time_from_text(clean_text(tmnode.get_text(' '))) if tmnode else _time_from_text(text)
-            title=mm.group(1)
+            title=clean_text(re.sub(r'^(?:\d{1,2}:\d{2}\s*(?:am|pm)?\s*)', '', text, flags=re.I))
             key=(title.lower(),d.isoformat(),tm)
             if key in seen:continue
             seen.add(key)
@@ -3902,6 +3903,7 @@ def civic_meetings_from_ncm_live_schedule(days=60):
         for idx,row in enumerate(rows):
             m=IMPORTANT_MEETING_RE.search(row.get('title',''))
             if not m: continue
+            if not row.get('live') and not row.get('is_live') and not re.search(r'\blive\b', row.get('title',''), re.I): continue
             # If Cablecast shows a later, distinct program on the Government channel,
             # that transition is positive evidence that this meeting broadcast ended.
             # Missing/ambiguous schedule data is never treated as an early end.
@@ -3913,7 +3915,7 @@ def civic_meetings_from_ncm_live_schedule(days=60):
                     continue
                 broadcast_end=later.get('time')
                 break
-            out.append({'kind':'meeting','title':m.group(1),'date':d.isoformat(),
+            out.append({'kind':'meeting','title':clean_text(re.sub(r'\blive\b', '', row.get('title',''), flags=re.I)),'date':d.isoformat(),
                         'start_time':row.get('time'),'end_time':None,
                         'broadcast_end_time':broadcast_end,
                         'url':'https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/',

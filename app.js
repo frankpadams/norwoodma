@@ -511,6 +511,19 @@ function decorateAgendaSharing(items,root){
   const official=eventExternalLinks(e).find(x=>/official|event|register|tickets/i.test(x.label))||eventExternalLinks(e)[0];
   const website=official?'<div class="event-agenda-service"><a class="event-agenda-website" href="'+esc(official.url)+'" target="_blank" rel="noopener">Event website ↗</a></div>':'';
   detail.querySelector('.event-agenda-links')?.remove();
+  const updateLive=async()=>{
+   try{
+    const response=await fetch('data/ncm-now-playing.json?fresh='+Date.now(),{cache:'no-store'});
+    if(!response.ok)return;
+    const url=window.NorwoodEventAgenda.liveLink(e,await response.json());
+    detail.querySelector('.event-calendar-watch-live')?.remove();
+    if(url)detail.insertAdjacentHTML('afterbegin','<p class="event-calendar-watch-live"><a href="'+esc(url)+'" target="_blank" rel="noopener">Watch Live →</a></p>');
+   }catch(_){}
+  };
+  if(/town meeting|committee|commission|board|information session/i.test(e.title||'')){
+   updateLive();const liveTimer=setInterval(()=>{if(!entry.isConnected){clearInterval(liveTimer);return;}updateLive();},60000);
+  }
+
   detail.querySelectorAll('p').forEach(p=>{if(p.textContent.includes('&nbsp;'))p.textContent=p.textContent.replace(/&nbsp;/g,' ');});
   detail.insertAdjacentHTML('beforeend','<div class="event-agenda-services">'+website+cal+dirs+'</div>');
   detail.querySelectorAll('[data-ics-event]').forEach(btn=>btn.addEventListener('click',()=>downloadEventIcs(e)));

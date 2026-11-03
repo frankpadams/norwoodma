@@ -154,3 +154,5 @@ The Events list uses one shared date badge per day with compact, expandable list
 The Government Overview guide keeps role descriptions, published leadership, contact routes, and available service/document links within each department or board entry. Budget references include the fiscal year, printed section/page, and physical PDF page with a `#page=` link so the reference remains usable when a PDF viewer ignores page fragments. Published minutes archives are linked directly where available; offices that distribute records on request use their published contact route. Editorial verification notes belong in the developer work log rather than public entries.
 
 
+
+Civic imports preserve the full official event title, including Information Session and conditional “if needed” wording. An information session must never be shortened to Town Meeting. Calendar listings show Watch Live only while the current NCM schedule explicitly confirms live coverage of that same event; recordings and rebroadcasts do not qualify.
