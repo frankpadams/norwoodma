@@ -1,33 +1,13 @@
 {
-  "updated_at": "2026-11-03T11:54:59.497749-05:00",
+  "updated_at": "2026-11-03T17:15:19.094796-05:00",
   "date": "2026-11-03",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Comcast Cyber Security Presentation 10.19.26",
+      "title": "Local Artist Bill Breen - Public Access 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 720,
-          "title": "Norwood Postcard: November 1996"
-        },
-        {
-          "minute": 780,
-          "title": "Local Artist Bill Breen - Public Access 10.7.26"
-        },
-        {
-          "minute": 840,
-          "title": "Flex and Firm with Steve"
-        },
-        {
-          "minute": 900,
-          "title": "Norwood Votes - April '05 Election Results"
-        },
-        {
-          "minute": 1020,
-          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
-        },
         {
           "minute": 1080,
           "title": "Shadow, Sound, Spectacle: Literary Monsters at Morrill Memorial Library 10.22.26"
@@ -39,6 +19,14 @@
         {
           "minute": 1230,
           "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 1290,
+          "title": "The Kevin Broderick Show: Episode 15 - Dale Boch"
+        },
+        {
+          "minute": 1380,
+          "title": "Local Artist Bill Breen - Public Access 10.21.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-03"
@@ -48,22 +36,6 @@
       "title": "Board of Selectmen 10.27.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 720,
-          "title": "Board of Health 10.19.26"
-        },
-        {
-          "minute": 780,
-          "title": "Conservation Commission 10.21.26"
-        },
-        {
-          "minute": 870,
-          "title": "Trails Advisory Committee 10.13.26"
-        },
-        {
-          "minute": 1020,
-          "title": "Airport Commission 10.21.26"
-        },
         {
           "minute": 1050,
           "title": "Board of Selectmen 10.27.26"
@@ -85,21 +57,9 @@
     },
     "schools": {
       "status": "scheduled",
-      "title": "2016 NHS-TV Mustang Magazine #37",
+      "title": "2016 Fall Sports Awards",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 780,
-          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
-        },
-        {
-          "minute": 900,
-          "title": "NHS Update - September 2026"
-        },
-        {
-          "minute": 1020,
-          "title": "Celebrating Innovation Career Pathways at NHS"
-        },
         {
           "minute": 1080,
           "title": "2016 Fall Sports Awards"
@@ -115,6 +75,10 @@
         {
           "minute": 1260,
           "title": "2016 NHS-TV Mustang Magazine #37"
+        },
+        {
+          "minute": 1320,
+          "title": "2016 Fall Sports Awards"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-03"
