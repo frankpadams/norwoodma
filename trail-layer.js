@@ -200,6 +200,37 @@ function draw(data){
 async function load(){
  if(loading)return;
  loading=true;
+ if(park===parks.germany){
+  setStatus('Loading the three identified OpenStreetMap ways for Germany Brook…');
+  try{
+   const elements=await Promise.all([...germanyVerifiedWayIds].map(async id=>{
+    const response=await fetch('https://api.openstreetmap.org/api/0.6/way/'+id+'/full');
+    if(!response.ok)throw Error('OSM way '+id+' returned HTTP '+response.status);
+    const xml=new DOMParser().parseFromString(await response.text(),'application/xml');
+    if(xml.querySelector('parsererror'))throw Error('OSM way '+id+' returned invalid XML');
+    const nodes=new Map([...xml.querySelectorAll('node[id]')].map(node=>[node.getAttribute('id'),{lat:Number(node.getAttribute('lat')),lon:Number(node.getAttribute('lon'))}]));
+    const way=[...xml.querySelectorAll('way')].find(item=>item.getAttribute('id')===id);
+    if(!way)throw Error('OSM way '+id+' was not returned');
+    const geometry=[...way.querySelectorAll('nd')].map(nd=>nodes.get(nd.getAttribute('ref'))).filter(Boolean);
+    if(geometry.length<2)throw Error('OSM way '+id+' has no usable coordinates');
+    const tags=Object.fromEntries([...way.querySelectorAll('tag')].map(tag=>[tag.getAttribute('k'),tag.getAttribute('v')]));
+    return {type:'way',id,tags,geometry};
+   }));
+   trails.clearLayers();ends.clearLayers();crossings.clearLayers();endpoints.clear();
+   for(const element of elements){
+    const coords=element.geometry.map(point=>[point.lon,point.lat]);
+    const length=coords.slice(1).reduce((sum,point,index)=>sum+meters(coords[index],point),0);
+    const popup='<strong>Germany Brook — mapped OSM way '+element.id+'</strong><p>'+Math.round(length)+' m ('+(length/1609.344).toFixed(2)+' mi) of existing OpenStreetMap linework. This is mapped geometry, not a recorded GPS track or a verified trail entrance.</p><a target="_blank" rel="noopener" href="https://www.openstreetmap.org/way/'+element.id+'">Inspect source geometry ↗</a>';
+    const points=coords.map(([lon,lat])=>[lat,lon]);
+    L.polyline(points,{color:'#103a11',weight:13,opacity:.9,interactive:false}).addTo(trails);
+    L.polyline(points,{color:'#b5ff16',weight:9,opacity:1}).bindPopup(popup).addTo(trails);
+   }
+   loaded=true;
+   setStatus('Three identified OpenStreetMap ways are shown directly from their stored OSM geometry: '+[...germanyVerifiedWayIds].join(', ')+'. No brochure alignment or synthetic connections were applied. Compare these lines with the Town brochure; mapped geometry is not a recorded GPS track or proof of public access.');
+  }catch(e){setStatus('Could not load the three identified OpenStreetMap ways: '+e.message);}
+  loading=false;
+  return;
+ }
  try{await loadTown()}catch(e){loading=false;setStatus('Could not load official Norwood town boundary. Trail overlay withheld rather than showing paths outside town: '+e.message);return;}
  // Germany Brook uses actual named OSM ways, never a transformed brochure sketch.
  setStatus('Loading mapped '+park.name+' footpaths…');
