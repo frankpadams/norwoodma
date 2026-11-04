@@ -4,7 +4,7 @@
 const map=window.norwoodTrailMap;if(!map)return;
 const select=document.getElementById('trailAreaSelect'),box=document.getElementById('trailCheckboxes');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const files={germany:'germany-brook-approved',endean:'endean-approved',meadow:'meadow-street-approved',vanderbilt:'vanderbilt-approved',pineforest:'pineforest-vanderbilt-approved',hennessey:'hennessey-review','ellis-pond':'ellis-pond-review','ellis-playground':'ellis-playground-review',ledgeview:'ledgeview-review',willett:'willett-tiot-approved'};
+const files={cooper:'bernie-cooper-review',germany:'germany-brook-approved',endean:'endean-approved',meadow:'meadow-street-approved',vanderbilt:'vanderbilt-approved',pineforest:'pineforest-vanderbilt-approved',hennessey:'hennessey-review','ellis-pond':'ellis-pond-review','ellis-playground':'ellis-playground-review',ledgeview:'ledgeview-review',willett:'willett-tiot-approved'};
 const docs={shattuck:'1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw',germany:'1X-mPJgOAaNFPAF_jxQHyPPiwcpqv9--1',endean:'1WwtpOYWhmyOCY1-L9RdgvQ4v-Yj8J3Sz',meadow:'1u1MtJmXcGFB3NRXDAlsmGkPwTM53QUXF',cooper:'1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V',vanderbilt:'1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0',pineforest:'1X_ULmRhJYLmzNekIgRJkOggoqfcJYaNv',hennessey:'1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q','ellis-pond':'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX','ellis-playground':'1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp',ledgeview:'1XtBbNiYSEFR1R6i1udUzjPr1Hv_mC20o',willett:'1i3uG3TOsoQ2OeCiyV_-mpyKqjwjxlVKL'};
 const bounds={shattuck:[[42.1908,-71.214],[42.1945,-71.2075]],cooper:[[42.170,-71.212],[42.181,-71.197]]};
 const names=Object.fromEntries([...select.options].map(o=>[o.value,o.textContent]));
