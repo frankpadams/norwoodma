@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-04T13:10:58.909956-05:00",
+  "generated_at": "2026-11-04T17:20:48.682011-05:00",
   "offline": false,
-  "events_published": 2282,
+  "events_published": 2283,
   "news_published": 120,
   "civic_notices": 56,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2282,
-      "generated_at": "2026-11-04T13:10:58.547015-05:00"
+      "events": 2283,
+      "generated_at": "2026-11-04T17:20:48.384271-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 137,
-      "generated_at": "2026-11-04T13:10:58.560090-05:00"
+      "generated_at": "2026-11-04T17:20:48.397489-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 850,
-      "generated_at": "2026-11-04T13:10:58.584477-05:00"
+      "events": 851,
+      "generated_at": "2026-11-04T17:20:48.422754-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 737,
-      "generated_at": "2026-11-04T13:10:58.603854-05:00"
+      "events": 738,
+      "generated_at": "2026-11-04T17:20:48.444000-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-11-04T13:10:58.615116-05:00"
+      "generated_at": "2026-11-04T17:20:48.455664-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 65,
-      "generated_at": "2026-11-04T13:10:58.628376-05:00"
+      "generated_at": "2026-11-04T17:20:48.468490-05:00"
     }
   ],
   "recreation_programs": 115,
@@ -968,7 +968,7 @@
       "source_id": "nps-athletics-arbiter-varsity-football",
       "ok": true,
       "method": "ical",
-      "found": 11,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1413,7 +1413,7 @@
       "source_id": "town-health-events",
       "ok": true,
       "method": "html_page",
-      "found": 1,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1546,7 +1546,7 @@
       "source_id": "norwood-trails-committee-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 1,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1555,7 +1555,7 @@
       "source_id": "norwood-sustainability-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 1,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1602,7 +1602,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 29,
+      "found": 33,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 29,
+      "found": 31,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1648,7 +1648,7 @@
       "source": "Town of Norwood",
       "url": "https://www.norwoodma.gov/",
       "ok": true,
-      "found": 0,
+      "found": 5,
       "method": "jsonld+semantic_html+visible_dates"
     },
     {
