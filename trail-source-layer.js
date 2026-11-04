@@ -24,6 +24,7 @@ const group=L.featureGroup().addTo(map),boundary=L.featureGroup().addTo(map);
 let pineforest=null;
 let data=null,germany=null,endean=null,meadow=null,vanderbilt=null,hennessey=null,ellisPond=null,ellisPlayground=null,ledgeview=null,willett=null,meadowTrailhead=null,selected='all',preview=false;
 const selectedFeatures=()=>{
+ if(selected==='shattuck')return (data?.features||[]).filter(f=>[194702136,194702137,194702139,1500329017,1510603648,1510603649,1510603650,1510603651,1510603652].includes(f.properties?.osm_way_id));
  if(selected==='cooper')return (data?.features||[]).filter(f=>[1494669362,1494669363,1494669364,1494669365,1494669366,1494669367,1494669368,1494669369,1494669370,1494669371,1494669372,1558881794].includes(f.properties?.osm_way_id));
  if(selected==='pineforest')return pineforest?.features||[];
  if(selected==='willett'&&preview)return willett?.features||[];
