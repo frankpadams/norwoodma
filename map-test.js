@@ -8,6 +8,7 @@ const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:4
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory'),searchHelp=document.querySelector('#mapSearchHelp');
 let filter=category?.value??'',userMarker=null,renderToken=0,activePlaceKey='';
+let selectedCategories=new Set();
 const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedBusinessGroup=params.get('businessGroup')||'',requestedBusinessSub=params.get('businessSub')||'',requestedCategory=params.get('category')||'';
 if(requestedCategory&&category&&[...category.options].some(o=>o.value===requestedCategory)){filter=requestedCategory;category.value=requestedCategory;}
 if((requestedBusinessGroup||requestedBusinessSub)&&category){filter='business';category.value='business';if(search)search.value='';}
@@ -16,6 +17,7 @@ else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(cate
 // On ordinary page loads, force Show All even if the browser restores an old select value.
 // Explicit deep-link categories, business searches and place searches take precedence.
 if(!requestedCategory&&!requestedBusinessGroup&&!requestedBusinessSub&&!requestedBusiness&&!requestedPlace&&category){filter='';category.value='';}
+if(filter&&filter!=='all')selectedCategories.add(filter);
 const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -195,7 +197,7 @@ function searchMatch(p,q){
  }
  return hay.includes(q);
 }
-function currentPlaces(){if(filter==='trails')return [];const q=norm(search.value);return places.filter(p=>(filter!==''&&(filter==='all'||p.category===filter||(Array.isArray(p.also)&&p.also.includes(filter))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
+function currentPlaces(){const q=norm(search.value);return places.filter(p=>(!selectedCategories.size||selectedCategories.has(p.category)||(Array.isArray(p.also)&&p.also.some(c=>selectedCategories.has(c))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
  const key=norm(p.address);
@@ -222,7 +224,7 @@ async function render(){
  count.textContent=shown.length+' place'+(shown.length===1?'':'s')+' in this view';
  status.innerHTML='Plotting locations… <span class="map-progress" id="mapProgress">0 of '+shown.length+' mapped</span>';
  const cards=new Map(),markers=[],progress=document.querySelector('#mapProgress');
- shown.forEach((p,i)=>{
+ let previousGroup='';shown.sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name));shown.forEach((p,i)=>{if(p.category!==previousGroup){previousGroup=p.category;const heading=document.createElement('div');heading.className='map-results-group';heading.textContent=({park:'Parks & recreation',food:'Restaurants & food',athletic:'Athletic fields & playgrounds',resource:'Community resources',civic:'Government & municipal',historic:'Historic sites',school:'Schools',business:'Local businesses',gas:'Gas stations',health:'Health & support',event:'Events',transit:'Transit','little-library':'Little Libraries','mini-food-pantry':'Little Food Pantries'}[p.category]||p.category);list.appendChild(heading)}
   const b=document.createElement('button');b.className='place-card';b.setAttribute('aria-pressed','false');b.innerHTML='<b>'+esc(p.name)+publicSchoolMark(p)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
  });
  let done=0,mapped=0;
@@ -236,11 +238,12 @@ async function render(){
  },6);
  if(token!==renderToken)return;
  status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
- if((filter==='all'&&!q)||(filter==='gas'&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
+ if((!selectedCategories.size&&!q)||(selectedCategories.has('gas')&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
  else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
  else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
 }
-category?.addEventListener('change',()=>{filter=category.value;render();if(filter==='trails')window.dispatchEvent(new Event('norwood:show-trails'));});
+category?.addEventListener('change',()=>{filter=category.value;selectedCategories=new Set(filter&&filter!=='all'?[filter]:[]);render();});
+window.addEventListener('norwood:map-categories',e=>{selectedCategories=new Set(e.detail?.categories||[]);filter=selectedCategories.size===1?[...selectedCategories][0]:'all';render();});
 let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
 
 async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
