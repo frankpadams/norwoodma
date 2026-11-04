@@ -11,7 +11,7 @@ const names=Object.fromEntries([...select.options].map(o=>[o.value,o.textContent
 const layers={},checks={};let sourcePromise;let selectingAll=false;let initialView=true;
 const source=()=>sourcePromise||(sourcePromise=fetch('data/trails/norwood-source-paths.geojson').then(r=>r.json()));
 function style(f,key){const p=f.properties||{},surf=(p.surface||'').toLowerCase();let color=p.route_color;
- if(!color)color=key==='cooper'?'#b7a97c':key==='germany'||key==='endean'?(['asphalt','paved','concrete'].includes(surf)||p.source_layer==='Paved Footway'?'#202020':['gravel','fine_gravel','compacted'].includes(surf)?'#737373':'#387f38'):'#387f38';
+ if(!color)color=key==='cooper'?'#c8322a':key==='germany'||key==='endean'?(['asphalt','paved','concrete'].includes(surf)||p.source_layer==='Paved Footway'?'#202020':['gravel','fine_gravel','compacted'].includes(surf)?'#737373':'#387f38'):'#387f38';
  return {color,weight:4,opacity:1,smoothFactor:0,dashArray:p.line_pattern==='dots'?'1 12':p.line_pattern==='dashes'||p.seasonal==='yes'?'10 7':p.route_name==='Green–White'?'8 6':null};
 }
 function focus(){const g=L.featureGroup(Object.keys(layers).filter(k=>checks[k]?.checked).map(k=>layers[k]));if(g.getLayers().length&&g.getBounds().isValid())map.fitBounds(g.getBounds(),{padding:[28,28],maxZoom:17});}
@@ -22,7 +22,7 @@ async function toggle(k){
  try{
  if(!layers[k]){
  let geo;
- if(files[k]){const r=await fetch('data/trails/'+files[k]+'.geojson?v=visitor2');if(!r.ok)throw Error('Could not load trail');geo=await r.json();}
+ if(files[k]){const r=await fetch('data/trails/'+files[k]+'.geojson?v=visitor-cooper-red3');if(!r.ok)throw Error('Could not load trail');geo=await r.json();}
  else {const all=await source(),b=L.latLngBounds(bounds[k]);geo={type:'FeatureCollection',features:all.features.filter(f=>f.properties?.in_norwood&&L.geoJSON(f).getBounds().intersects(b))};}
  layers[k]=L.geoJSON(geo,{smoothFactor:0,style:f=>style(f,k),onEachFeature:(f,l)=>{
  const p=f.properties||{},section=p.route_name||p.local_name||p.name||'';
