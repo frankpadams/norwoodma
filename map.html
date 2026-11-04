@@ -52,12 +52,12 @@
 .prototype-explainer{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
 .prototype-explainer div{background:#fff;border:1px solid #d8e1e6;border-radius:12px;padding:14px}
 .prototype-explainer b{display:block;color:#153b56;margin-bottom:4px}.prototype-explainer p{margin:0;color:#657681;font-size:.8rem}
-@media(max-width:760px){
+@media(max-width:760px){.map-workspace{grid-template-columns:1fr}.map-layer-choices{grid-template-columns:repeat(2,minmax(0,1fr))}.map-workspace #prototypeMap{min-height:54vh}
  .map-prototype{padding:22px 12px 42px}.map-prototype-head{align-items:flex-start;flex-direction:column}.prototype-note{white-space:normal}
  .map-shell{grid-template-columns:1fr;min-height:0}.map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none}.map-list-head{position:static}
  #prototypeMap{min-height:54vh}.map-control-panel{grid-template-columns:1fr}.prototype-explainer{grid-template-columns:1fr}
 }
-.map-search-help{padding:14px 16px;border-top:1px solid #d5e0e6;background:#fff;color:#36566c;font-size:.8rem;line-height:1.45}.map-search-help a{font-weight:800;color:#003b71}\n</style>
+.map-workspace{display:grid;grid-template-columns:minmax(215px,260px) minmax(0,1fr);gap:14px;align-items:start}.map-layer-sidebar{border:1px solid #d5e0e6;border-radius:12px;background:#fff;padding:14px}.map-layer-sidebar h2{font-size:1.1rem;color:#153b56;margin:0 0 5px}.map-layer-sidebar p{font-size:.78rem;color:#617682}.map-layer-choices{display:grid;gap:5px}.map-layer-choice{width:100%;text-align:left;border:1px solid #d5e0e6;border-radius:8px;background:#fff;color:#17384d;padding:10px;font:inherit;font-size:.86rem;cursor:pointer}.map-layer-choice[aria-pressed="true"]{background:#e8f3fa;border-color:#003b71;font-weight:800}.map-layer-choice:focus-visible{outline:3px solid #f2c100}.map-layer-more{margin-top:10px}.map-layer-more summary{cursor:pointer;font-weight:800;padding:9px 0}.map-layer-note{border-top:1px solid #e3eaee;padding-top:10px}.legacy-map-filter{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.map-workspace .map-shell{display:flex;flex-direction:column;min-height:0}.map-workspace #prototypeMap{min-height:510px}.map-workspace .map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none;overflow:visible}.place-card.is-selected{background:#fff3c5;box-shadow:inset 4px 0 #d7ad00}.map-search-help{padding:14px 16px;border-top:1px solid #d5e0e6;background:#fff;color:#36566c;font-size:.8rem;line-height:1.45}.map-search-help a{font-weight:800;color:#003b71}\n</style>
 <script src="analytics.js?v=0.13.4.37"></script></head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -66,7 +66,7 @@
 <main id="main" class="map-prototype">
 <section class="map-prototype-head"><div><p class="eyebrow">EXPLORE NORWOOD</p><h1>Explore Norwood by Map</h1><p>Browse restaurants, parks, schools, athletic fields, businesses, public resources, municipal buildings, historic sites, parking, transit, events and more. Filter the map, search for a place, or use your location to see what is nearby.</p></div></section>
 <div class="map-control-panel" aria-label="Map controls">
-<div class="map-filter-field"><label for="mapCategory">Show on map</label><select id="mapCategory">
+<div class="map-filter-field legacy-map-filter"><label for="mapCategory">Show on map</label><select id="mapCategory">
 <option value="" selected>Choose what to show…</option>
 <option value="all">All mapped places</option>
 <option value="food">Restaurants & food</option>
@@ -118,10 +118,10 @@
 </p>
 </details>
 
-<div class="map-shell">
+<div class="map-workspace"><aside class="map-layer-sidebar" aria-label="Choose map categories"><h2>Map layers</h2><p>Select a category to show its locations.</p><div id="mapLayerChoices" class="map-layer-choices"></div><details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details><p class="map-layer-note">Additional boundary and transit options remain available above.</p></aside><div class="map-main-column"><div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of Norwood locations"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
-</div>
+</div></div></div>
 <section class="map-disclaimer" aria-label="Map disclaimer"><p><strong>Map disclaimer:</strong> Maps are approximate and based on publicly available data, which may contain errors or become outdated. Norwood.ma is not responsible for decisions made based on map information. Please verify locations, boundaries, districts, parking, amenities, and other map data with an authoritative or independent source before making any consequential decision.</p></section>
 </main>
 <footer class="old-footer"><a class="footer-logo" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>Map information is provided as a community reference and should be independently verified when accuracy matters.</p></div><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></footer>
@@ -135,5 +135,15 @@
 <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
 <script src="map-test.js?v=20261026-alpr-layer"></script>
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
+<script>
+(()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
+const primary=['all','park','school','athletic','little-library','mini-food-pantry','resource','civic','historic','transit','parking','culture','event','landmark'];
+const businessCategories=['food','business','gas','health'];
+function button(value,label,target){const b=document.createElement('button');b.type='button';b.className='map-layer-choice';b.textContent=label;b.dataset.category=value;b.setAttribute('aria-pressed',String(select.value===value));b.addEventListener('click',()=>{select.value=select.value===value?'':value;select.dispatchEvent(new Event('change',{bubbles:true}));sync()});target.appendChild(b)}
+for(const option of select.options){if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
+function sync(){document.querySelectorAll('.map-layer-choice').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===select.value)))}
+select.addEventListener('change',sync);sync();
+})();
+</script>
 </body>
 </html>
