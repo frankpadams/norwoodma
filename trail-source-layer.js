@@ -123,7 +123,7 @@ L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'MassGIS 2025 aeria
 map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contributors, ODbL');
 (async()=>{
  try{
-  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-review.geojson?v=20261104-endpoints3')).json();
+  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-review.geojson?v=20261104-road4')).json();
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
   const meadowResponse=await fetch('data/trails/meadow-street-trailhead.json?v=20261102-google1');if(!meadowResponse.ok)throw Error('Meadow Street trailhead HTTP '+meadowResponse.status);meadowTrailhead=await meadowResponse.json();
   const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
