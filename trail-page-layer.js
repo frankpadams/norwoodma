@@ -39,6 +39,12 @@ const actions=document.createElement('div');actions.className='trail-actions';
 const fit=document.createElement('button');fit.textContent='Fit selected trails';fit.type='button';fit.onclick=focus;
 const clear=document.createElement('button');clear.textContent='Clear all';clear.type='button';clear.onclick=()=>{for(const k in checks){checks[k].checked=false;if(layers[k])map.removeLayer(layers[k]);}};
 actions.append(fit,clear);box.append(actions);
+const townOutline=L.featureGroup().addTo(map);
+const townLabel=document.createElement('label');townLabel.className='trail-choice';
+const townCheck=document.createElement('input');townCheck.type='checkbox';townCheck.checked=true;
+townCheck.addEventListener('change',()=>{if(townCheck.checked)townOutline.addTo(map);else map.removeLayer(townOutline);});
+townLabel.append(townCheck,document.createTextNode('Town outline'));box.append(townLabel);
+fetch('data/trails/norwood-boundary.geojson').then(r=>{if(!r.ok)throw Error('Boundary load failed');return r.json();}).then(geo=>L.geoJSON(geo,{interactive:false,style:{color:'#34495e',weight:2,opacity:.8,fill:false,dashArray:'5 5'}}).addTo(townOutline)).catch(()=>{townCheck.checked=false;townCheck.disabled=true;townLabel.append(document.createTextNode(' — unavailable'));});
 for(const k of Object.keys(names)){if(!docs[k])continue;const label=document.createElement('label');label.className='trail-choice';const cb=document.createElement('input');cb.type='checkbox';cb.value=k;checks[k]=cb;cb.addEventListener('change',()=>toggle(k));label.append(cb,document.createTextNode(names[k]));box.append(label);}
 document.body.classList.add('trail-review-mode');
 const aerial=L.tileLayer('https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}',{maxZoom:20,maxNativeZoom:19,attribution:'MassGIS · Massachusetts 2025 aerial imagery'});
