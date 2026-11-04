@@ -79,7 +79,12 @@
 .trail-choice{display:flex;align-items:center;gap:10px;padding:9px 6px;border-radius:7px;cursor:pointer;font-size:.9rem;color:#17384d}
 .trail-choice:hover{background:#edf4f7}.trail-choice input{width:18px;height:18px;accent-color:#003b71;flex-shrink:0}
 .trail-actions{display:flex;gap:14px;margin-bottom:10px}.trail-actions button{background:none;border:0;color:#003b71;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem}
-</style><style>#trailCheckboxes{gap:0;margin:12px 0}.trail-choice{padding:4px 6px;min-height:29px;line-height:1.2}.trail-actions{flex-wrap:wrap;gap:7px 13px;margin-bottom:12px}</style></head>
+</style><style>#trailCheckboxes{gap:0;margin:12px 0}.trail-choice{padding:4px 6px;min-height:29px;line-height:1.2}.trail-actions{flex-wrap:wrap;gap:7px 13px;margin-bottom:12px}</style><style>
+.trail-choice-row{display:flex;align-items:center;gap:6px}
+.trail-choice-row .trail-choice{flex:1;min-width:0;margin:0}
+.trail-brochure-icon{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;flex:0 0 30px;color:#003b71;border-radius:5px}
+.trail-brochure-icon:hover,.trail-brochure-icon:focus-visible{background:#e5eef4;outline:2px solid #b8cbd7}
+</style></head>
 <body class="trail-visitor">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
@@ -109,6 +114,6 @@
 window.norwoodTrailMap=L.map('prototypeMap',{scrollWheelZoom:true}).setView([42.190,-71.201],13);
 window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(window.norwoodTrailMap);
 </script>
-<script src="trail-page-layer.js?v=20261104-compact6"></script>
+<script src="trail-page-layer.js?v=20261104-brochures7"></script>
 </body>
 </html>
