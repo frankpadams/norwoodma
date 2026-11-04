@@ -28,7 +28,7 @@ async function toggle(k){
  const p=f.properties||{},section=p.route_name||p.local_name||p.name||'';
  let text=p.section_description||p.note||'';
  if(k==='ledgeview')text+=' Proposed access is contingent on land acquisition. Read the brochure for pools, trenches and high-water conditions.';
- l.bindTooltip(esc(names[k])+(section?' — '+esc(section):''));
+ l.bindTooltip(esc(names[k]),{sticky:true,direction:'top'});
  l.bindPopup('<strong>'+esc(names[k])+'</strong>'+(section?'<p>'+esc(section)+'</p>':'')+(text?'<p>'+esc(text)+'</p>':'')+'<a href="https://drive.google.com/file/d/'+docs[k]+'/view" target="_blank" rel="noopener">Read the Town trail brochure ↗</a>'+(k==='ledgeview'?'<p><a href="https://waterdata.usgs.gov/monitoring-location/USGS-01105554/#dataTypeId=continuous-00065-0&amp;period=P7D" target="_blank" rel="noopener">Check river height ↗</a></p>':''));
  }});
  }
