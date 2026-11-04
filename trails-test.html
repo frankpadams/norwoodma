@@ -73,7 +73,7 @@
 .trail-reading h2{font:700 23px Georgia,serif;margin:0 0 8px;color:#153b56}
 .trail-reading p{margin:0;line-height:1.6;color:#526b7b}
 @media(max-width:800px){.trail-visitor .trail-workspace{grid-template-columns:1fr}.trail-visitor #prototypeMap,.trail-visitor .map-shell{height:65vh;min-height:430px}.trail-visitor #trailVisitorPanel{padding:16px!important}.trail-visitor .map-prototype{padding:20px 12px}.trail-visitor .map-prototype-head{align-items:start}.trail-details{margin-top:14px;padding-top:14px}}
-</style><script>const trailPageParams=new URLSearchParams(location.search);if(!trailPageParams.has('trail'))trailPageParams.set('trail','germany');trailPageParams.set('preview','1');history.replaceState(null,'',location.pathname+'?'+trailPageParams.toString());</script><style>
+</style><script>const trailPageParams=new URLSearchParams(location.search);trailPageParams.delete('trail');trailPageParams.set('preview','1');history.replaceState(null,'',location.pathname+'?'+trailPageParams.toString());</script><style>
 .trail-visitor #trailAreaSelect,.trail-visitor label[for="trailAreaSelect"],.trail-visitor #trailVisitorPanel>div[style],.trail-visitor #ledgeviewBrochureNotice{display:none!important}
 #trailCheckboxes{display:grid;gap:4px;margin:16px 0}
 .trail-choice{display:flex;align-items:center;gap:10px;padding:9px 6px;border-radius:7px;cursor:pointer;font-size:.9rem;color:#17384d}
@@ -117,6 +117,6 @@
 window.norwoodTrailMap=L.map('prototypeMap',{scrollWheelZoom:true}).setView([42.190,-71.201],13);
 window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(window.norwoodTrailMap);
 </script>
-<script src="trail-page-layer.js?v=20261104-endean12"></script>
+<script src="trail-page-layer.js?v=20261103-outline-only"></script>
 </body>
 </html>
