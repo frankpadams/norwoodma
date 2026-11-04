@@ -58,6 +58,6 @@ document.body.classList.add('trail-review-mode');
 const aerial=L.tileLayer('https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}',{maxZoom:20,maxNativeZoom:19,attribution:'MassGIS · Massachusetts 2025 aerial imagery'});
 L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'Aerial imagery':aerial},null,{position:'topright'}).addTo(map);
 map.fitBounds([[42.1515,-71.2355],[42.2265,-71.1505]],{padding:[20,20]});
-const key=new URLSearchParams(location.search).get('trail');if(checks[key]){checks[key].checked=true;toggle(key).finally(()=>{initialView=false;});}else initialView=false;
+initialView=false;
 map.invalidateSize();
 })();
