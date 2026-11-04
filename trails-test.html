@@ -79,7 +79,7 @@
 .trail-choice{display:flex;align-items:center;gap:10px;padding:9px 6px;border-radius:7px;cursor:pointer;font-size:.9rem;color:#17384d}
 .trail-choice:hover{background:#edf4f7}.trail-choice input{width:18px;height:18px;accent-color:#003b71;flex-shrink:0}
 .trail-actions{display:flex;gap:14px;margin-bottom:10px}.trail-actions button{background:none;border:0;color:#003b71;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem}
-</style></head>
+</style><style>#trailCheckboxes{gap:0;margin:12px 0}.trail-choice{padding:4px 6px;min-height:29px;line-height:1.2}.trail-actions{flex-wrap:wrap;gap:7px 13px;margin-bottom:12px}</style></head>
 <body class="trail-visitor">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
@@ -93,7 +93,7 @@
 <div id="trailCheckboxes" aria-label="Trails"><p id="trailLoading" role="status">Loading trail choices…</p></div><label for="trailAreaSelect" style="display:block;margin-top:8px;font-weight:700">Trail</label>
 <select id="trailAreaSelect" style="min-height:42px;max-width:100%;padding:8px;border:1px solid #cbd8e0;border-radius:8px">
 <option value="shattuck">Shattuck Park</option><option value="germany">Germany Brook</option><option value="endean">Endean / Hawes Brook</option><option value="meadow">Meadow Street</option><option value="cooper">Bernie Cooper Park</option><option value="vanderbilt">Vanderbilt / Pine Tree Forest 5K</option><option value="pineforest">Pine Tree Forest / Vanderbilt Trails</option><option value="hennessey">Hennessey Field / Murphy Park</option><option value="ellis-pond">Ellis Pond / Alevizos Park</option><option value="ellis-playground">Ellis Playground</option><option value="ledgeview">Ledgeview Drive</option><option value="willett">Willet Trail Tiot Trail Leg</option></select>
-<div class="trail-details"><h2 id="trailDetailName">Germany Brook</h2><p id="trailDetailText">Select a trail to see its brochure and details.</p><a id="trailBrochure" class="trail-brochure" target="_blank" rel="noopener">Read the trail brochure ↗</a></div></section>
+<p id="trailLoadError" role="status" hidden></p></section>
 <div class="map-shell" id="trailMapShell">
 <div id="prototypeMap" aria-label="Interactive Norwood trail map"></div>
 
@@ -109,11 +109,6 @@
 window.norwoodTrailMap=L.map('prototypeMap',{scrollWheelZoom:true}).setView([42.190,-71.201],13);
 window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(window.norwoodTrailMap);
 </script>
-<script src="trail-page-layer.js?v=20261104-complete5"></script>
-<script>
-const trailDocs={shattuck:'1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw',germany:'1X-mPJgOAaNFPAF_jxQHyPPiwcpqv9--1',endean:'1WwtpOYWhmyOCY1-L9RdgvQ4v-Yj8J3Sz',meadow:'1u1MtJmXcGFB3NRXDAlsmGkPwTM53QUXF',cooper:'1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V',vanderbilt:'1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0',pineforest:'1X_ULmRhJYLmzNekIgRJkOggoqfcJYaNv',hennessey:'1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q','ellis-pond':'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX','ellis-playground':'1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp',ledgeview:'1XtBbNiYSEFR1R6i1udUzjPr1Hv_mC20o',willett:'1i3uG3TOsoQ2OeCiyV_-mpyKqjwjxlVKL'};
-const trailDescriptions={germany:'Follow Germany Brook and its connecting paths, including the Father Mac’s pool loop, landfill spur and Willett School connection.',vanderbilt:'The red outer loop and black inner loop together form the 5K running course.',pineforest:'Explore the main loop and colored secondary trails through Pine Tree Forest and along the brooks. Read the brochure for flooding and crossing information.',ledgeview:'A proposed loop contingent on land acquisition. The brochure contains important access and water-condition information.',willett:'The Tiot Trail leg behind Willett School, between the easement and Westover Parkway.'};
-function updateTrailDetails(){const sel=document.getElementById('trailAreaSelect'),k=sel.value;document.getElementById('trailDetailName').textContent=sel.options[sel.selectedIndex].text;document.getElementById('trailDetailText').textContent=trailDescriptions[k]||'Explore the trail’s paths on the map. Click a section for details, and read the Town brochure for entrances, route descriptions and conditions.';document.getElementById('trailBrochure').href='https://drive.google.com/file/d/'+trailDocs[k]+'/view';}
-document.getElementById('trailAreaSelect').addEventListener('change',updateTrailDetails);updateTrailDetails();
-</script></body>
+<script src="trail-page-layer.js?v=20261104-compact6"></script>
+</body>
 </html>
