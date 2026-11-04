@@ -55,7 +55,7 @@ const brochureGuides={
  'ellis-playground':{id:'1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp',text:'Olive green: primary natural paths. Green: secondary natural paths. Olive dashes: seasonal natural path through the wet area. Green dots: playground connectors. Access is from Codman Road and Madelyn Road.'},
  'ellis-pond':{id:'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX',text:'Olive green: primary natural paths at the northern launch and eastern shore. Gray: the gravel dam crossing. Black: the paved west-dam approach from Walpole Street. The northern launch is a separate access route.'},
  shattuck:{id:'1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw',text:'Green: natural woodland paths, matching the Town brochure.'},
- cooper:{id:'1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V',text:'Tan: the park path network, matching the brochure. Paths connect the Saint John, Saint Joseph and Saint Paul Avenue entrances with the riverfront.'},
+ cooper:{id:'1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V',text:'Red: the park path network, matching the brochure. Paths connect the Saint John, Saint Joseph and Saint Paul Avenue entrances with the riverfront.'},
  germany:{id:'1X-mPJgOAaNFPAF_jxQHyPPiwcpqv9--1',text:'Olive green: the main natural trail. Green: natural branches. Black: paved sections where identified in the mapped data. Seasonal natural sections use a dashed line where identified.'},
  endean:{id:'1WwtpOYWhmyOCY1-L9RdgvQ4v-Yj8J3Sz',text:'Black: mapped paved sections. Gray: mapped gravel sections. Green: natural paths and connecting sections. The brochure also distinguishes primary, secondary and seasonal natural trails; sections without that detail in the stored data retain green.'},
  meadow:{id:'1u1MtJmXcGFB3NRXDAlsmGkPwTM53QUXF',text:'Blue, black, green, magenta, orange and yellow follow the brochure’s named routes. The Green–White route uses a green dashed line. Blue includes the western riverbank connection.'}
@@ -66,7 +66,7 @@ function brochureStyle(f){
  if(p.route_color)return {color:p.route_color,weight:6,opacity:1,dashArray:p.line_pattern==='dots'?'1 12':p.line_pattern==='dashes'?'10 9':p.route_name==='Green–White'?'8 6':null};
  if(!preview)return null;
  if(selected==='shattuck')return {color:'#387f38',weight:6,opacity:1};
- if(selected==='cooper')return {color:'#c5bb96',weight:6,opacity:1};
+ if(selected==='cooper')return {color:'#c8322a',weight:6,opacity:1};
  if(selected==='germany'||selected==='endean'){
   const paved=['asphalt','paved','concrete'].includes(surface)||p.source_layer==='Paved Footway';
   const gravel=['gravel','fine_gravel','compacted'].includes(surface);
