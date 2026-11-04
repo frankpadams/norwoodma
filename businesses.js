@@ -54,7 +54,7 @@ function updateBusinessSchema(rows){
   const item={'@type':'LocalBusiness',name:b.name};
   if(b.address){
    const street=String(b.address).trim();
-   item.address={'@type':'PostalAddress',streetAddress:street,addressLocality:'Norwood',addressRegion:'MA',addressCountry:'US'};
+   item.address={'@type':'PostalAddress',streetAddress:street,addressLocality:(street.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon|Canton)\b/i)||[])[1]||'Norwood',addressRegion:'MA',addressCountry:'US'};
   }
   if(b.phone)item.telephone=b.phone;
   if(/^https?:\/\//i.test(b.website||''))item.url=b.website;
