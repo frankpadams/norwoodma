@@ -11,13 +11,13 @@
         "name": "Willett School Tiot Trail leg",
         "route_name": "Tiot Trail — Willett School leg",
         "trail_type": "Planned trail leg",
-        "section_description": "The brochure shows this 0.37-mile route behind Willett School, from the easement to Westover Parkway. Red matches the brochure. This is an approximate test-map alignment traced from the brochure’s satellite image and positioned using the mapped Willett school site.",
+        "section_description": "Planned 0.37-mile Tiot Trail leg behind Willett School, from the easement to Westover Parkway. Red follows the brochure. Approximate alignment registered to the mapped school building footprint using the supplied satellite crop.",
         "status": "planned",
         "in_norwood": true,
         "route_color": "#c8322a",
         "line_pattern": "dashes",
         "brochure_length_mi": 0.37,
-        "alignment_method": "Brochure satellite inset, length-calibrated to the brochure’s stated 0.37 miles; positioned relative to the mapped Willett school site. Approximate, not survey-grade.",
+        "alignment_method": "Satellite crop roof extents matched to OSM school building way 214921763; replaces earlier school-parcel anchor. Approximate image registration.",
         "source_coordinates": "Approximate",
         "confidence": "yellow"
       },
@@ -25,164 +25,156 @@
         "type": "LineString",
         "coordinates": [
           [
-            -71.2228699,
-            42.1966008
+            -71.2222329,
+            42.196162
           ],
           [
-            -71.2227874,
-            42.1965396
+            -71.2221354,
+            42.1961088
           ],
           [
-            -71.222647,
-            42.1964784
+            -71.221927,
+            42.1960474
           ],
           [
-            -71.2224902,
-            42.1964111
+            -71.2216611,
+            42.1959247
           ],
           [
-            -71.222358,
-            42.1963377
+            -71.221404,
+            42.1958019
           ],
           [
-            -71.2222094,
-            42.1962521
+            -71.2212799,
+            42.1956792
           ],
           [
-            -71.2220773,
-            42.1961542
+            -71.2210583,
+            42.1956178
           ],
           [
-            -71.2219452,
-            42.1960258
+            -71.2207746,
+            42.1955564
           ],
           [
-            -71.2218214,
-            42.1959034
+            -71.2206727,
+            42.1954337
           ],
           [
-            -71.2217058,
-            42.1957811
+            -71.2206372,
+            42.1952496
           ],
           [
-            -71.2215902,
-            42.1956404
+            -71.2206505,
+            42.1951882
           ],
           [
-            -71.2214664,
-            42.1954875
+            -71.2208012,
+            42.1950655
           ],
           [
-            -71.2213838,
-            42.1953407
+            -71.2209164,
+            42.1949427
           ],
           [
-            -71.2213095,
-            42.1952061
+            -71.2209519,
+            42.19482
           ],
           [
-            -71.22126,
-            42.1950715
+            -71.2209652,
+            42.1947586
           ],
           [
-            -71.2212269,
-            42.1949798
+            -71.2209519,
+            42.1946359
           ],
           [
-            -71.2212765,
-            42.1948758
+            -71.2209962,
+            42.1945131
           ],
           [
-            -71.221359,
-            42.1947718
+            -71.2210583,
+            42.1944518
           ],
           [
-            -71.2214498,
-            42.1946617
+            -71.2210804,
+            42.194329
           ],
           [
-            -71.2214911,
-            42.1945394
+            -71.2211514,
+            42.1942063
           ],
           [
-            -71.2214251,
-            42.1944415
+            -71.2211602,
+            42.1941449
           ],
           [
-            -71.2213095,
-            42.1943253
+            -71.2211381,
+            42.1940836
           ],
           [
-            -71.2211691,
-            42.1941968
+            -71.2210361,
+            42.1940222
           ],
           [
-            -71.221037,
-            42.1940622
+            -71.2209519,
+            42.1938994
           ],
           [
-            -71.220938,
-            42.1939215
+            -71.2209209,
+            42.1937767
           ],
           [
-            -71.2208884,
-            42.193787
+            -71.2208455,
+            42.193654
           ],
           [
-            -71.2208967,
-            42.1936585
+            -71.2207835,
+            42.1935312
           ],
           [
-            -71.2209792,
-            42.1935301
+            -71.2206594,
+            42.1934085
           ],
           [
-            -71.2210866,
-            42.1934016
+            -71.2206416,
+            42.1933471
           ],
           [
-            -71.2212187,
-            42.1933037
+            -71.2207258,
+            42.1932244
           ],
           [
-            -71.2213838,
-            42.1932303
+            -71.2208898,
+            42.1931016
           ],
           [
-            -71.2215737,
-            42.1931753
+            -71.2210228,
+            42.1930403
           ],
           [
-            -71.2217471,
-            42.1931263
+            -71.2214395,
+            42.1929789
           ],
           [
-            -71.2219287,
-            42.1930896
+            -71.221701,
+            42.1929175
           ],
           [
-            -71.2221104,
-            42.1930652
+            -71.2218561,
+            42.1928562
           ],
           [
-            -71.2223085,
-            42.1930591
+            -71.2219802,
+            42.1927948
           ],
           [
-            -71.2225067,
-            42.1930591
+            -71.2220689,
+            42.1927334
           ],
           [
-            -71.2226883,
-            42.1930591
-          ],
-          [
-            -71.2228865,
-            42.1930529
-          ],
-          [
-            -71.2229525,
-            42.1930529
+            -71.2223082,
+            42.1926557
           ]
         ]
       }
