@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#003B71">
-<title>Norwood Trails — Preview | Norwood.ma</title>
+<title>Norwood Trails | Norwood.ma</title>
 <link rel="icon" href="assets/favicon-approved.png">
 <link rel="stylesheet" href="styles.css?v=0.13.4.24">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -73,13 +73,19 @@
 .trail-reading h2{font:700 23px Georgia,serif;margin:0 0 8px;color:#153b56}
 .trail-reading p{margin:0;line-height:1.6;color:#526b7b}
 @media(max-width:800px){.trail-visitor .trail-workspace{grid-template-columns:1fr}.trail-visitor #prototypeMap,.trail-visitor .map-shell{height:65vh;min-height:430px}.trail-visitor #trailVisitorPanel{padding:16px!important}.trail-visitor .map-prototype{padding:20px 12px}.trail-visitor .map-prototype-head{align-items:start}.trail-details{margin-top:14px;padding-top:14px}}
-</style><script>const trailPageParams=new URLSearchParams(location.search);if(!trailPageParams.has('trail'))trailPageParams.set('trail','germany');trailPageParams.set('preview','1');history.replaceState(null,'',location.pathname+'?'+trailPageParams.toString());</script></head>
+</style><script>const trailPageParams=new URLSearchParams(location.search);if(!trailPageParams.has('trail'))trailPageParams.set('trail','germany');trailPageParams.set('preview','1');history.replaceState(null,'',location.pathname+'?'+trailPageParams.toString());</script><style>
+.trail-visitor #trailAreaSelect,.trail-visitor label[for="trailAreaSelect"],.trail-visitor #trailVisitorPanel>div[style],.trail-visitor #ledgeviewBrochureNotice{display:none!important}
+#trailCheckboxes{display:grid;gap:4px;margin:16px 0}
+.trail-choice{display:flex;align-items:center;gap:10px;padding:9px 6px;border-radius:7px;cursor:pointer;font-size:.9rem;color:#17384d}
+.trail-choice:hover{background:#edf4f7}.trail-choice input{width:18px;height:18px;accent-color:#003b71;flex-shrink:0}
+.trail-actions{display:flex;gap:14px;margin-bottom:10px}.trail-actions button{background:none;border:0;color:#003b71;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem}
+</style></head>
 <body class="trail-visitor">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
 <header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav"><a href="index.html">Home</a><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="calendars.html">Calendars</a><a href="resources.html">Local Resources</a></nav></header>
 <main id="main" class="map-prototype">
-<section class="map-prototype-head"><div><p class="eyebrow">EXPLORE OUTDOORS</p><h1>Norwood Trails</h1><p>Find a woodland walk, follow a riverbank, or explore a neighborhood trail. Choose a trail to see its paths and open the Town brochure for details.</p></div><span class="prototype-note">PAGE PREVIEW</span></section>
+<section class="map-prototype-head"><div><p class="eyebrow">EXPLORE OUTDOORS</p><h1>Norwood Trails</h1><p>Find a woodland walk, follow a riverbank, or explore a neighborhood trail. Choose a trail to see its paths and open the Town brochure for details.</p></div></section>
 <div class="map-control-panel" aria-label="Map controls">
 <div class="map-filter-field"><label for="mapCategory">Show on map</label><select id="mapCategory">
 <option value="" selected>Nothing selected</option>
@@ -113,9 +119,9 @@
 <p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup; Norwood.ma does not currently display a school-boundary polygon overlay.</p>
 </details>
 <div class="trail-workspace"><section class="boundary-panel" style="padding:14px;margin-top:12px" id="trailVisitorPanel" aria-label="Choose a trail">
-<strong class="trail-panel-title">Choose your trail</strong>
-<p class="trail-intro">One map view for each trail system.</p>
-<label for="trailAreaSelect" style="display:block;margin-top:8px;font-weight:700">Trail</label>
+<strong class="trail-panel-title">Choose your trails</strong>
+<p class="trail-intro">Select one or more trails to explore together.</p>
+<div id="trailCheckboxes" aria-label="Trails"></div><label for="trailAreaSelect" style="display:block;margin-top:8px;font-weight:700">Trail</label>
 <select id="trailAreaSelect" style="min-height:42px;max-width:100%;padding:8px;border:1px solid #cbd8e0;border-radius:8px">
 <option value="shattuck">Shattuck Park</option><option value="germany">Germany Brook</option><option value="endean">Endean / Hawes Brook</option><option value="meadow">Meadow Street</option><option value="cooper">Bernie Cooper Park</option><option value="vanderbilt">Vanderbilt / Pine Tree Forest 5K</option><option value="pineforest">Pine Tree Forest / Vanderbilt Trails</option><option value="hennessey">Hennessey Field / Murphy Park</option><option value="ellis-pond">Ellis Pond / Alevizos Park</option><option value="ellis-playground">Ellis Playground</option><option value="ledgeview">Ledgeview Drive</option><option value="willett">Willet Trail Tiot Trail Leg</option></select>
 <label id="ptfCompareLabel" hidden style="display:block;margin:10px 0"><input id="ptfCompare" type="checkbox"> Compare with approved 5K loops (dashed red outer / black inner)</label>
@@ -127,7 +133,7 @@
 </div>
 <div style="margin:12px 0"><button type="button" id="trailPreviewButton" class="map-locate-button" aria-pressed="false">Preview selected trail</button></div>
 <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><label><input id="trailLayerToggle" type="checkbox" checked> <span id="trailToggleLabel">Show trail overlays</span></label><button type="button" id="trailLayerFocus" class="map-locate-button">Zoom to All Norwood</button><a id="trailDownload" href="data/trails/norwood-source-paths.geojson" download>Download source GeoJSON ↗</a></div>
-<div class="trail-details"><h2 id="trailDetailName">Germany Brook</h2><p id="trailDetailText">Explore the paths and branches of this trail system.</p><a id="trailBrochure" class="trail-brochure" target="_blank" rel="noopener">Read the trail brochure ↗</a></div><p id="trailLayerStatus" role="status" style="font-size:.85rem">Loading stored trail coordinates…</p>
+<div class="trail-details"><h2 id="trailDetailName">Germany Brook</h2><p id="trailDetailText">Select a trail to see its brochure and details.</p><a id="trailBrochure" class="trail-brochure" target="_blank" rel="noopener">Read the trail brochure ↗</a></div><p id="trailLayerStatus" role="status" style="font-size:.85rem">Loading stored trail coordinates…</p>
 <p id="ledgeviewBrochureNotice" hidden style="padding:12px;border-left:4px solid #b58a00;background:#fff8df;font-size:.9rem;line-height:1.5"><strong>Before visiting, read the brochure’s important information.</strong> It covers proposed access, low-lying pools, trenches and high water. The brochure notes that conditions are typically best at a river height of 10 feet or less. <a href="https://drive.google.com/file/d/1XtBbNiYSEFR1R6i1udUzjPr1Hv_mC20o/view" target="_blank" rel="noopener">Read the Ledgeview trail brochure ↗</a></p>
 <p style="font-size:.8rem;margin-bottom:0">The dotted boundary outlines Norwood. Click a line for its source and route status. Area views show the available source coverage; a blank area means that these datasets have no displayed path there.</p>
 </section>
@@ -138,7 +144,7 @@
 </div><section class="trail-reading"><h2>Before you head out</h2><p>Click any trail line for its name and brochure. Read the brochure for access information, crossings, seasonal conditions and route details. Colors identify the sections shown on each trail’s brochure.</p></section>
 <section class="map-disclaimer" aria-label="Map disclaimer"><p><strong>Map disclaimer:</strong> Maps are approximate and based on publicly available data, which may contain errors or become outdated. Norwood.ma is not responsible for decisions made based on map information. Please verify locations, boundaries, districts, parking, amenities, and other map data with an authoritative or independent source before making any consequential decision.</p></section>
 </main>
-<footer class="old-footer"><a class="footer-logo" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>This prototype is intentionally unlinked while mapping is evaluated.</p></div><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></footer>
+<footer class="old-footer"><a class="footer-logo" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>Explore Norwood’s trails and consult each Town brochure before visiting.</p></div><a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Official Town website ↗</a></footer>
 <script src="nav.js?v=e8c449fc0e88"></script>
 <script src="data/businesses-data.js"></script>
 <script src="data/resources-data.js"></script>
@@ -147,7 +153,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="map-test.js?v=20261102-sources1"></script>
-<script src="trail-page-layer.js?v=20261104-page1"></script>
+<script src="trail-page-layer.js?v=20261104-multi2"></script>
 <script>
 const trailDocs={shattuck:'1glv3UMbXWVrsLtV4dnJAy4_3qkfwBXTw',germany:'1X-mPJgOAaNFPAF_jxQHyPPiwcpqv9--1',endean:'1WwtpOYWhmyOCY1-L9RdgvQ4v-Yj8J3Sz',meadow:'1u1MtJmXcGFB3NRXDAlsmGkPwTM53QUXF',cooper:'1m3gd8omNf9o07rn6RJQ4meeIz9Kc1Z9V',vanderbilt:'1vZ7KuQE0WHdan1lJJLNMbYqAdzj50iF0',pineforest:'1X_ULmRhJYLmzNekIgRJkOggoqfcJYaNv',hennessey:'1WePcy2c3Map2MZzt0i3PFl5hZNEprT-q','ellis-pond':'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX','ellis-playground':'1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp',ledgeview:'1XtBbNiYSEFR1R6i1udUzjPr1Hv_mC20o',willett:'1i3uG3TOsoQ2OeCiyV_-mpyKqjwjxlVKL'};
 const trailDescriptions={germany:'Follow Germany Brook and its connecting paths, including the Father Mac’s pool loop, landfill spur and Willett School connection.',vanderbilt:'The red outer loop and black inner loop together form the 5K running course.',pineforest:'Explore the main loop and colored secondary trails through Pine Tree Forest and along the brooks. Read the brochure for flooding and crossing information.',ledgeview:'A proposed loop contingent on land acquisition. The brochure contains important access and water-condition information.',willett:'The Tiot Trail leg behind Willett School, between the easement and Westover Parkway.'};
