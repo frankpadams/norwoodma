@@ -35,6 +35,7 @@ async function toggle(k){
  if(cb.checked){layers[k].addTo(map);focus();}
  }catch(e){cb.checked=false;document.getElementById('trailDetailText').textContent='This trail could not load. Please try again.';}
 }
+document.getElementById('trailLoading')?.remove();
 const actions=document.createElement('div');actions.className='trail-actions';
 const fit=document.createElement('button');fit.textContent='Fit selected trails';fit.type='button';fit.onclick=focus;
 const clear=document.createElement('button');clear.textContent='Clear all';clear.type='button';clear.onclick=()=>{for(const k in checks){checks[k].checked=false;if(layers[k])map.removeLayer(layers[k]);}};
