@@ -19,6 +19,7 @@ const areas={
  ledgeview:{name:'Ledgeview Drive (proposed)',bounds:[[42.1652,-71.1841],[42.1691,-71.1765]]},
  willett:{name:'Willet Trail Tiot Trail Leg',bounds:[[42.1918,-71.2242],[42.1969,-71.2197]]}
 };
+const comparison=L.featureGroup().addTo(map);
 const group=L.featureGroup().addTo(map),boundary=L.featureGroup().addTo(map);
 let pineforest=null;
 let data=null,germany=null,endean=null,meadow=null,vanderbilt=null,hennessey=null,ellisPond=null,ellisPlayground=null,ledgeview=null,willett=null,meadowTrailhead=null,selected='all',preview=false;
@@ -39,6 +40,7 @@ const selectedFeatures=()=>{
  return features.filter(f=>f.properties?.in_norwood&&L.geoJSON(f).getBounds().intersects(bounds));
 };
 function previewControls(){
+ if($('ptfCompareLabel'))$('ptfCompareLabel').hidden=selected!=='pineforest';
  if($('ledgeviewBrochureNotice'))$('ledgeviewBrochureNotice').hidden=selected!=='ledgeview';
  if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='pineforest'?'data/trails/pineforest-vanderbilt-review.geojson':selected==='willett'?'data/trails/willett-tiot-approved.geojson':selected==='ledgeview'?'data/trails/ledgeview-review.geojson':selected==='ellis-playground'?'data/trails/ellis-playground-review.geojson':selected==='ellis-pond'?'data/trails/ellis-pond-review.geojson':selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
  $('trailPreviewButton').textContent=preview?'Return to source comparison':selected==='all'?'Choose a trail to preview':'Preview '+areas[selected].name;
@@ -73,7 +75,7 @@ function brochureStyle(f){
 }
 function style(f){const matched=brochureStyle(f);if(matched)return matched;if(preview)return {color:'#087f46',weight:6,opacity:1,dashArray:['planned','proposed'].includes(f.properties?.status)?'10 7':null};const p=f.properties;if(p.approximation)return {color:p.route_color||'#087f46',weight:5,opacity:1,dashArray:p.line_pattern==='dots'?'1 12':p.line_pattern==='dashes'?'10 9':p.route_name==='Green–White'?'8 6':null};if(['original-route','added-leg','included-leg'].includes(p.germany_role))return {color:'#087f46',weight:8,opacity:.95};if(p.status==='planned'||p.status==='proposed')return {color:'#c56500',weight:6,opacity:.95,dashArray:'10 7'};return p.source==='OpenStreetMap'?{color:'#1267b0',weight:4,opacity:.9,dashArray:'4 3'}:{color:'#087f46',weight:7,opacity:.9};}
 function render(){
- if(!data)return;group.clearLayers();const features=selectedFeatures().filter(allowed);
+ if(!data)return;group.clearLayers();comparison.clearLayers();const features=selectedFeatures().filter(allowed);
  L.geoJSON({type:'FeatureCollection',features},{smoothFactor:0,style,onEachFeature:(f,l)=>{
   const p=f.properties;const name=p.local_name||p.prop_name||p.name||p.reg_name||'Mapped path';
   if(selected==='pineforest'||selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'||(selected==='willett'&&preview)){l.bindTooltip(esc(p.route_name||name));l.bindPopup('<strong>'+esc(name)+'</strong><p>'+(selected==='vanderbilt'?'Approved brochure alignment. Inner and outer loops together form the 5K route.':esc(p.trail_type)+': '+esc(p.section_description))+'</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>'+(selected==='ledgeview'?'<p><strong>Read the brochure before visiting.</strong> It contains important information about proposed access, low-lying pools, trenches and high water. It notes that conditions are typically best at a river height of 10 feet or less.</p><p><a href="https://waterdata.usgs.gov/monitoring-location/USGS-01105554/#dataTypeId=continuous-00065-0&amp;period=P7D" target="_blank" rel="noopener">Check Neponset River height at the USGS gauge ↗</a></p>':''));return;}
@@ -82,6 +84,7 @@ function render(){
   const sourceId=p.osm_way_id||p.objectid;
   l.bindPopup('<strong>'+esc(name)+'</strong><p>'+esc(p.source)+' · '+esc(p.status)+'<br>'+esc(p.source_layer||p.highway||'')+(p.surface?' · '+esc(p.surface):'')+'</p><p>Source feature '+esc(sourceId)+(p.acc_status?'<br>Source access: '+esc(p.acc_status):'')+'</p><a href="'+esc(p.source_url)+'" target="_blank" rel="noopener">View source geometry ↗</a>');
  }}).addTo(group);
+ if(selected==='pineforest'&&$('ptfCompare')?.checked&&vanderbilt)L.geoJSON(vanderbilt,{smoothFactor:0,style:f=>({color:f.properties.route_color,weight:3,opacity:1,dashArray:'10 7'}),onEachFeature:(f,l)=>l.bindTooltip('Approved 5K '+f.properties.route_name)}).addTo(comparison);
  if(selected==='meadow'&&meadowTrailhead){
   L.circleMarker([meadowTrailhead.latitude,meadowTrailhead.longitude],{radius:9,color:'#17384d',weight:3,fillColor:'#f2c100',fillOpacity:1}).bindTooltip('Meadow Street trail starting point').bindPopup('<strong>Meadow Street trail starting point</strong><p>Eastern end of Meadow Street, beside Norwood Memorial Airport.</p><a href="'+esc(meadowTrailhead.google_maps_url)+'" target="_blank" rel="noopener">Google Maps ↗</a><br><a href="'+esc(meadowTrailhead.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>').addTo(group);
  }
@@ -103,6 +106,7 @@ function setPreview(value){
 
  render();focus();if(preview)$('prototypeMap').scrollIntoView({behavior:'smooth',block:'start'});
 }
+$('ptfCompare')?.addEventListener('change',render);
 $('trailPreviewButton').addEventListener('click',()=>setPreview(!preview));
 $('trailAreaSelect').addEventListener('change',e=>{selected=e.target.value;setPreview(preview);});
 $('trailLayerFocus').addEventListener('click',focus);
@@ -119,7 +123,7 @@ L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'MassGIS 2025 aeria
 map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contributors, ODbL');
 (async()=>{
  try{
-  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-review.geojson?v=20261104-network1')).json();
+  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-review.geojson?v=20261104-compare2')).json();
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
   const meadowResponse=await fetch('data/trails/meadow-street-trailhead.json?v=20261102-google1');if(!meadowResponse.ok)throw Error('Meadow Street trailhead HTTP '+meadowResponse.status);meadowTrailhead=await meadowResponse.json();
   const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
