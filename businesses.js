@@ -43,18 +43,45 @@ window.NORWOOD_BUSINESS_TAXONOMY=Object.fromEntries(businesses.map(b=>[String(b.
 function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');const mapLink=b.address?'<p class="business-map-item-link"><a href="map.html?business='+encodeURIComponent(b.name)+'">Show on map →</a></p>':'';return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+'</div>'+(details?'<p>'+details+'</p>':'')+mapLink+'</article>';}
 function parse(){const p=location.hash.slice(1).split('/');return {group:p[0],sub:p[1]};}
 function setHash(h){location.hash=h;}
+
+// Keep structured data synchronized with the currently displayed directory listings.
+// Only publish fields present in the directory; do not invent ratings or hours.
+function updateBusinessSchema(rows){
+ const old=document.getElementById('business-directory-jsonld');
+ if(old)old.remove();
+ if(!rows.length)return;
+ const graph=rows.map(b=>{
+  const item={'@type':'LocalBusiness',name:b.name};
+  if(b.address){
+   const street=String(b.address).trim();
+   item.address={'@type':'PostalAddress',streetAddress:street,addressLocality:'Norwood',addressRegion:'MA',addressCountry:'US'};
+  }
+  if(b.phone)item.telephone=b.phone;
+  if(/^https?:\/\//i.test(b.website||''))item.url=b.website;
+  if(b.category)item.description=b.category;
+  return item;
+ });
+ const node=document.createElement('script');
+ node.id='business-directory-jsonld';
+ node.type='application/ld+json';
+ node.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});
+ document.head.appendChild(node);
+}
+
 function render(){
  const {group,sub}=parse(),g=groups[group],root=$('#businessDirectory');
- if(!g){root.innerHTML='';return;}
+ if(!g){root.innerHTML='';updateBusinessSchema([]);return;}
  if(!sub){
    const broad=businesses.filter(b=>b.taxonomy.some(x=>x.group===group)).sort((a,b)=>a.name.localeCompare(b.name));
    const tiles=g.subs.map(s=>{const n=broad.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(s[0]))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
    const subcategories=tiles?'<h3 class="business-filter-heading">Narrow this category</h3><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div>':'';
+   updateBusinessSchema(broad);
    const listings=broad.length?broad.map(card).join(''):'<p>No businesses found in this category yet.</p>';
    root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">'+broad.length+' '+(broad.length===1?'business':'businesses')+' in this category. <a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'">View this category on map</a></p>'+subcategories+'<h3 class="business-list-heading">All '+esc(g.label)+' businesses</h3><div class="resource-list">'+listings+'</div></section>';
  } else {
    const s=g.subs.find(x=>x[0]===sub);if(!s){setHash(group);return;}
    const rows=businesses.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(sub))).sort((a,b)=>a.name.localeCompare(b.name));
+   updateBusinessSchema(rows);
    root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+esc(g.label)+'</button><p class="eyebrow">'+esc(g.label.toUpperCase())+'</p><h2>'+esc(s[1])+'</h2><p class="sub"><a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'&businessSub='+encodeURIComponent(sub)+'">View these businesses on map</a></p><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';
  }
  document.querySelector('.resource-back')?.addEventListener('click',()=>{if(sub)setHash(group);else{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});}});
