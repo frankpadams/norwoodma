@@ -5,6 +5,7 @@ const map=window.norwoodTrailMap;if(!map)return;
 const $=id=>document.getElementById(id),status=$('trailLayerStatus');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const areas={
+ pineforest:{name:'Pine Tree Forest / Vanderbilt Trails',bounds:[[42.160,-71.193],[42.173,-71.181]]},
  all:{name:'All Norwood',bounds:[[42.1515,-71.2355],[42.2265,-71.1505]]},
  shattuck:{name:'Shattuck Park',bounds:[[42.1908,-71.214],[42.1945,-71.2075]]},
  germany:{name:'Germany Brook',bounds:[[42.1905,-71.227],[42.207,-71.207]]},
@@ -19,8 +20,10 @@ const areas={
  willett:{name:'Willet Trail Tiot Trail Leg',bounds:[[42.1918,-71.2242],[42.1969,-71.2197]]}
 };
 const group=L.featureGroup().addTo(map),boundary=L.featureGroup().addTo(map);
+let pineforest=null;
 let data=null,germany=null,endean=null,meadow=null,vanderbilt=null,hennessey=null,ellisPond=null,ellisPlayground=null,ledgeview=null,willett=null,meadowTrailhead=null,selected='all',preview=false;
 const selectedFeatures=()=>{
+ if(selected==='pineforest')return pineforest?.features||[];
  if(selected==='willett'&&preview)return willett?.features||[];
  if(selected==='ledgeview')return ledgeview?.features||[];
  if(selected==='ellis-playground')return ellisPlayground?.features||[];
@@ -37,13 +40,14 @@ const selectedFeatures=()=>{
 };
 function previewControls(){
  if($('ledgeviewBrochureNotice'))$('ledgeviewBrochureNotice').hidden=selected!=='ledgeview';
- if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='willett'?'data/trails/willett-tiot-approved.geojson':selected==='ledgeview'?'data/trails/ledgeview-review.geojson':selected==='ellis-playground'?'data/trails/ellis-playground-review.geojson':selected==='ellis-pond'?'data/trails/ellis-pond-review.geojson':selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
+ if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='pineforest'?'data/trails/pineforest-vanderbilt-review.geojson':selected==='willett'?'data/trails/willett-tiot-approved.geojson':selected==='ledgeview'?'data/trails/ledgeview-review.geojson':selected==='ellis-playground'?'data/trails/ellis-playground-review.geojson':selected==='ellis-pond'?'data/trails/ellis-pond-review.geojson':selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
  $('trailPreviewButton').textContent=preview?'Return to source comparison':selected==='all'?'Choose a trail to preview':'Preview '+areas[selected].name;
  $('trailPreviewButton').disabled=selected==='all';
  $('trailToggleLabel').textContent=preview?areas[selected].name+' trail':'Show trail overlays';
 }
 function allowed(f){if(preview)return true;const p=f.properties||{};if(!$('trailNearby').checked&&!p.in_norwood)return false;if(p.source==='OpenStreetMap')return $('trailOsm').checked;if(p.status==='planned'||p.status==='proposed')return $('trailPlanned').checked;return $('trailMapc').checked;}
 const brochureGuides={
+ pineforest:{id:'1X_ULmRhJYLmzNekIgRJkOggoqfcJYaNv',text:'Broader loop and secondary trails, separate from the 5K course. Colors follow the brochure. Read the brochure for stream crossings, flooding and river-height guidance. Draft alignment for review.'},
  ledgeview:{id:'1XtBbNiYSEFR1R6i1udUzjPr1Hv_mC20o',text:'PROPOSED — the August 2026 source map makes this potential loop contingent on land acquisition. Blue: future Tiot leg. Green: proposed loop. Red: pipe-gate approach. Black dots: pool-side section shown in the source. Approximate alignment; this map does not confirm public access.'},
  'ellis-playground':{id:'1x32aHzxdJrrcJvBEZbuB9H05Xaxtbkfp',text:'Olive green: primary natural paths. Green: secondary natural paths. Olive dashes: seasonal natural path through the wet area. Green dots: playground connectors. Access is from Codman Road and Madelyn Road.'},
  'ellis-pond':{id:'1nMBh4QI94dyM5U6xjmYX7CHpvKGr_6wX',text:'Olive green: primary natural paths at the northern launch and eastern shore. Gray: the gravel dam crossing. Black: the paved west-dam approach from Walpole Street. The northern launch is a separate access route.'},
@@ -72,7 +76,7 @@ function render(){
  if(!data)return;group.clearLayers();const features=selectedFeatures().filter(allowed);
  L.geoJSON({type:'FeatureCollection',features},{smoothFactor:0,style,onEachFeature:(f,l)=>{
   const p=f.properties;const name=p.local_name||p.prop_name||p.name||p.reg_name||'Mapped path';
-  if(selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'||(selected==='willett'&&preview)){l.bindTooltip(esc(p.route_name||name));l.bindPopup('<strong>'+esc(name)+'</strong><p>'+(selected==='vanderbilt'?'Approved brochure alignment. Inner and outer loops together form the 5K route.':esc(p.trail_type)+': '+esc(p.section_description))+'</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>'+(selected==='ledgeview'?'<p><strong>Read the brochure before visiting.</strong> It contains important information about proposed access, low-lying pools, trenches and high water. It notes that conditions are typically best at a river height of 10 feet or less.</p><p><a href="https://waterdata.usgs.gov/monitoring-location/USGS-01105554/#dataTypeId=continuous-00065-0&amp;period=P7D" target="_blank" rel="noopener">Check Neponset River height at the USGS gauge ↗</a></p>':''));return;}
+  if(selected==='pineforest'||selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'||(selected==='willett'&&preview)){l.bindTooltip(esc(p.route_name||name));l.bindPopup('<strong>'+esc(name)+'</strong><p>'+(selected==='vanderbilt'?'Approved brochure alignment. Inner and outer loops together form the 5K route.':esc(p.trail_type)+': '+esc(p.section_description))+'</p><a href="'+esc(p.brochure_url)+'" target="_blank" rel="noopener">Town trail brochure ↗</a>'+(selected==='ledgeview'?'<p><strong>Read the brochure before visiting.</strong> It contains important information about proposed access, low-lying pools, trenches and high water. It notes that conditions are typically best at a river height of 10 feet or less.</p><p><a href="https://waterdata.usgs.gov/monitoring-location/USGS-01105554/#dataTypeId=continuous-00065-0&amp;period=P7D" target="_blank" rel="noopener">Check Neponset River height at the USGS gauge ↗</a></p>':''));return;}
   if(preview&&brochureGuides[selected]){const guide=brochureGuides[selected];l.bindPopup('<strong>'+esc(areas[selected].name)+' trail</strong><p>'+esc(name==='Mapped path'?'Connecting path':name)+'</p><p>'+esc(guide.text)+'</p><a href="https://drive.google.com/file/d/'+guide.id+'/view" target="_blank" rel="noopener">Town trail brochure ↗</a>');return;}
   if(preview){l.bindPopup('<strong>'+esc(areas[selected].name)+' trail</strong><p>'+esc(name==='Mapped path'?'Connected trail path':name)+(p.approximation?' — approximate Town-map route':'')+'</p>');return;}
   const sourceId=p.osm_way_id||p.objectid;
@@ -89,7 +93,7 @@ function updateCount(){
  const shown=selectedFeatures().filter(allowed).length;
  status.textContent=selected==='germany'?'Germany Brook: green includes the main route, Father Mac’s pool loop, landfill spur and western-end connection past the baseball field to Willett School. Blue: other connected OSM offshoots.':count+' source segments in view · '+shown+' displayed overall. Area: '+areas[selected].name+'. Lines use the stored source coordinates.';
 }
-function focus(){const area=areas[selected];map.fitBounds((preview&&selected==='germany'||selected==='meadow'||selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'||(preview&&selected==='willett'))&&group.getLayers().length?group.getBounds():area.bounds,{padding:[22,22]});$('trailLayerFocus').textContent='Zoom to '+area.name;}
+function focus(){const area=areas[selected];map.fitBounds((preview&&selected==='germany'||selected==='meadow'||selected==='vanderbilt'||selected==='hennessey'||selected==='ellis-pond'||selected==='ellis-playground'||selected==='ledgeview'||selected==='pineforest'||(preview&&selected==='willett'))&&group.getLayers().length?group.getBounds():area.bounds,{padding:[22,22]});$('trailLayerFocus').textContent='Zoom to '+area.name;}
 function setPreview(value){
  preview=value&&selected!=='all';
  if(preview){$('trailLayerToggle').checked=true;group.addTo(map);}
@@ -115,6 +119,7 @@ L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'MassGIS 2025 aeria
 map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contributors, ODbL');
 (async()=>{
  try{
+  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-review.geojson?v=20261104-network1')).json();
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
   const meadowResponse=await fetch('data/trails/meadow-street-trailhead.json?v=20261102-google1');if(!meadowResponse.ok)throw Error('Meadow Street trailhead HTTP '+meadowResponse.status);meadowTrailhead=await meadowResponse.json();
   const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
