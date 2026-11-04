@@ -47,7 +47,12 @@ const townCheck=document.createElement('input');townCheck.type='checkbox';townCh
 townCheck.addEventListener('change',()=>{if(townCheck.checked)townOutline.addTo(map);else map.removeLayer(townOutline);});
 townLabel.append(townCheck,document.createTextNode('Town outline'));box.append(townLabel);
 fetch('data/trails/norwood-boundary.geojson').then(r=>{if(!r.ok)throw Error('Boundary load failed');return r.json();}).then(geo=>L.geoJSON(geo,{interactive:false,style:{color:'#34495e',weight:2,opacity:.8,fill:false,dashArray:'5 5'}}).addTo(townOutline)).catch(()=>{townCheck.checked=false;townCheck.disabled=true;townLabel.append(document.createTextNode(' — unavailable'));});
-for(const k of Object.keys(names)){if(!docs[k])continue;const label=document.createElement('label');label.className='trail-choice';const cb=document.createElement('input');cb.type='checkbox';cb.value=k;checks[k]=cb;cb.addEventListener('change',()=>toggle(k));label.append(cb,document.createTextNode(names[k]));box.append(label);}
+for(const k of Object.keys(names)){if(!docs[k])continue;const label=document.createElement('label');label.className='trail-choice';const cb=document.createElement('input');cb.type='checkbox';cb.value=k;checks[k]=cb;cb.addEventListener('change',()=>toggle(k));cb.id='trail-choice-'+k;
+const row=document.createElement('div');row.className='trail-choice-row';
+const name=document.createElement('span');name.textContent=names[k];label.append(cb,name);
+const brochure=document.createElement('a');brochure.className='trail-brochure-icon';brochure.href='https://drive.google.com/file/d/'+docs[k]+'/view';brochure.target='_blank';brochure.rel='noopener';brochure.title='Open '+names[k]+' brochure';brochure.setAttribute('aria-label',brochure.title);
+brochure.innerHTML='<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Z"/><path d="M9 3v16M15 5v16"/></svg>';
+row.append(label,brochure);box.append(row);}
 document.body.classList.add('trail-review-mode');
 const aerial=L.tileLayer('https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Aerial_Imagery_2025/MapServer/tile/{z}/{y}/{x}',{maxZoom:20,maxNativeZoom:19,attribution:'MassGIS · Massachusetts 2025 aerial imagery'});
 L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'Aerial imagery':aerial},null,{position:'topright'}).addTo(map);
