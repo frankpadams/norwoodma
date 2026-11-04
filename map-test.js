@@ -7,7 +7,7 @@ window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory'),searchHelp=document.querySelector('#mapSearchHelp');
-let filter=category?.value??'',userMarker=null,renderToken=0;
+let filter=category?.value??'',userMarker=null,renderToken=0,activePlaceKey='';
 const params=new URLSearchParams(location.search),requestedPlace=params.get('place')||'',requestedBusiness=params.get('business')||'',requestedBusinessGroup=params.get('businessGroup')||'',requestedBusinessSub=params.get('businessSub')||'',requestedCategory=params.get('category')||'';
 if(requestedCategory&&category&&[...category.options].some(o=>o.value===requestedCategory)){filter=requestedCategory;category.value=requestedCategory;}
 if((requestedBusinessGroup||requestedBusinessSub)&&category){filter='business';category.value='business';if(search)search.value='';}
@@ -223,14 +223,14 @@ async function render(){
  status.innerHTML='Plotting locations… <span class="map-progress" id="mapProgress">0 of '+shown.length+' mapped</span>';
  const cards=new Map(),markers=[],progress=document.querySelector('#mapProgress');
  shown.forEach((p,i)=>{
-  const b=document.createElement('button');b.className='place-card';b.innerHTML='<b>'+esc(p.name)+publicSchoolMark(p)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
+  const b=document.createElement('button');b.className='place-card';b.setAttribute('aria-pressed','false');b.innerHTML='<b>'+esc(p.name)+publicSchoolMark(p)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
  });
  let done=0,mapped=0;
  await pooled(shown,async p=>{
    const ll=await geocode(p);done++;if(token!==renderToken)return;
    if(ll){
      mapped++;const m=L.marker(ll).bindPopup(popup(p));cluster.addLayer(m);markers.push(m);
-     cards.get(p)?.addEventListener('click',()=>{map.setView(ll,16);m.openPopup()});
+     cards.get(p)?.addEventListener('click',()=>{activePlaceKey=norm(p.name+' '+p.address);document.querySelectorAll('.place-card').forEach(card=>{const active=card===cards.get(p);card.classList.toggle('is-selected',active);card.setAttribute('aria-pressed',String(active))});map.setView(ll,16);m.openPopup()});if(activePlaceKey===norm(p.name+' '+p.address)){cards.get(p)?.classList.add('is-selected');cards.get(p)?.setAttribute('aria-pressed','true')}
    }else cards.get(p)?.classList.add('unmapped');
    if(progress)progress.textContent=done+' of '+shown.length+' checked · '+mapped+' mapped';
  },6);
