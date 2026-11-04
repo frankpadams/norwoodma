@@ -213,3 +213,7 @@ Owner approved the displayed Ledgeview alignment. Preserve geometry and source c
 
 ## Willett / Tiot APPROVED AND LOCKED — 2026-11-04
 Owner accepted the uniform-scale version and explicitly said to consider it right. Preserve the exact geometry in willett-tiot-approved.geojson. It contains the actual extracted red centerline (1274 vertices), registered with uniform scale and rotation; supersedes all earlier Willett approximations and affine registrations. Test map now uses the approved snapshot. Retain red source color, one trail control, brochure popup, and source planned status. Do not alter the accepted geometry during other trail work.
+
+
+## Pine Tree Forest / Vanderbilt broader network APPROVED — 2026-11-04
+Owner accepted the building-aligned version (geometry commit 49732fe6d4ae4aabfd65e8cfd4c7b432b742bf24). Locked in pineforest-vanderbilt-approved.geojson; test map uses that snapshot. Separate from approved 5K course. Source PineTreeForestVanderbiltAllLoopsMap.pdf, Drive ID 1X_ULmRhJYLmzNekIgRJkOggoqfcJYaNv. Eight route colors; original brochure vector geometry transformed together with uniform scale and rotation using nine corners of OSM buildings 214911251 and 214911254. Preserve this accepted alignment; no endpoint extensions or snapping. Retain separate broader-network control and optional approved-5K comparison overlay. Earlier endpoint-adjusted drafts are superseded.
