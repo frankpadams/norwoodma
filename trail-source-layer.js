@@ -42,7 +42,7 @@ const selectedFeatures=()=>{
 function previewControls(){
  if($('ptfCompareLabel'))$('ptfCompareLabel').hidden=selected!=='pineforest';
  if($('ledgeviewBrochureNotice'))$('ledgeviewBrochureNotice').hidden=selected!=='ledgeview';
- if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='pineforest'?'data/trails/pineforest-vanderbilt-review.geojson':selected==='willett'?'data/trails/willett-tiot-approved.geojson':selected==='ledgeview'?'data/trails/ledgeview-review.geojson':selected==='ellis-playground'?'data/trails/ellis-playground-review.geojson':selected==='ellis-pond'?'data/trails/ellis-pond-review.geojson':selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
+ if($('trailDownload')){const link=$('trailDownload');link.hidden=false;link.href=selected==='pineforest'?'data/trails/pineforest-vanderbilt-approved.geojson':selected==='willett'?'data/trails/willett-tiot-approved.geojson':selected==='ledgeview'?'data/trails/ledgeview-review.geojson':selected==='ellis-playground'?'data/trails/ellis-playground-review.geojson':selected==='ellis-pond'?'data/trails/ellis-pond-review.geojson':selected==='hennessey'?'data/trails/hennessey-review.geojson':selected==='vanderbilt'?'data/trails/vanderbilt-approved.geojson':selected==='meadow'?'data/trails/meadow-street-approved.geojson':selected==='germany'?'data/trails/germany-brook-approved.geojson':selected==='endean'?'data/trails/endean-approved.geojson':'data/trails/norwood-source-paths.geojson';}
  $('trailPreviewButton').textContent=preview?'Return to source comparison':selected==='all'?'Choose a trail to preview':'Preview '+areas[selected].name;
  $('trailPreviewButton').disabled=selected==='all';
  $('trailToggleLabel').textContent=preview?areas[selected].name+' trail':'Show trail overlays';
@@ -123,7 +123,7 @@ L.control.layers({'OpenStreetMap':window.norwoodTrailBasemap,'MassGIS 2025 aeria
 map.attributionControl.addAttribution('Trail lines: MAPC; © OpenStreetMap contributors, ODbL');
 (async()=>{
  try{
-  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-review.geojson?v=20261104-buildings5')).json();
+  pineforest=await (await fetch('data/trails/pineforest-vanderbilt-approved.geojson?v=20261104-buildings5')).json();
   const response=await fetch('data/trails/norwood-source-paths.geojson?v=20261102');if(!response.ok)throw Error('Path data HTTP '+response.status);data=await response.json();if(!Array.isArray(data.features))throw Error('Invalid path data');
   const meadowResponse=await fetch('data/trails/meadow-street-trailhead.json?v=20261102-google1');if(!meadowResponse.ok)throw Error('Meadow Street trailhead HTTP '+meadowResponse.status);meadowTrailhead=await meadowResponse.json();
   const meadowRoutesResponse=await fetch('data/trails/meadow-street-approved.geojson?v=20261102-locked1');if(!meadowRoutesResponse.ok)throw Error('Meadow Street routes HTTP '+meadowRoutesResponse.status);meadow=await meadowRoutesResponse.json();
