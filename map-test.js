@@ -146,7 +146,8 @@ function resourceCategory(r){
  if(/health|medical|mental health|physical therapy|disability|senior|older/.test(t))return'health';
  if(/town government|town services|town &|police|fire|veteran|board|commission|clerk|assessor|building department/.test(t))return'civic';
  if(/library|history|museum|arts|music|theatre/.test(t))return'culture';
- if(/school|youth sports|education/.test(t))return'school';
+ if(/clothing|clothes|closet/.test(t))return'resource';
+ if(/school|youth sports|tutoring|college|university/.test(t))return'school';
  return'resource';
 }
 function cleanAddress(a){
@@ -284,7 +285,7 @@ async function togglePrecincts(on){
   const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
   const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
   const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
-  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{};l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
   if(box)box.textContent='Norwood voting precincts shown from the Massachusetts 2022 wards and precincts dataset.';
  }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
 }
