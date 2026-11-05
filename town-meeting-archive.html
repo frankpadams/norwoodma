@@ -557,6 +557,11 @@ dialog.upcoming-meeting-dialog{border:0;border-radius:12px;width:min(640px,calc(
 
 const repDistrict=document.getElementById('repDistrict'),repResult=document.getElementById('repResult');
 if(repDistrict)repDistrict.addEventListener('change',()=>{const d=repDistrict.value,m=currentTownMeetingMembers[d]||[];repResult.innerHTML=d?'<strong>District '+d+' · '+m.length+' current members</strong><div class="member-list">'+m.map(n=>'<span>'+n+'</span>').join('')+'</div><p class="archive-note">Current Town roster. For terms, addresses and the email addresses members have chosen to publish, <a href="https://cms5.revize.com/revize/norwoodma25/Town%20Meeting/Town%20Meeting%20Members%20by%20District.pdf" target="_blank" rel="noopener">view the Town’s official roster</a>.</p>':'Choose a district above. <a href="https://www.sec.state.ma.us/WhereDoIVoteMA/WhereDoIVote" target="_blank" rel="noopener">Don’t know your district? Look up your voting location.</a>';});
+const requestedDistrict = new URLSearchParams(location.search).get('district');
+if (repDistrict && Object.hasOwn(currentTownMeetingMembers, requestedDistrict)) {
+  repDistrict.value = requestedDistrict;
+  repDistrict.dispatchEvent(new Event('change'));
+}
 
 const reconData={
   "2022nov":'<p><strong>November 14, 2022 Special Town Meeting</strong></p><p><strong>Reconstructed from the official warrant and Town Clerk proceedings.</strong></p><p>The 16-article warrant included National Grid easements at Balch School/Eliot Field, Town Clerk fee changes, street acceptances, a $14.59 million capital program, water-system funding and meter work, property matters connected with the new middle school, master-planning work, unpaid bills and zoning. Articles 15 and 16 proposed the Multifamily Transit Overlay District/MBTA Communities framework; Town Meeting took them out of order and referred them back rather than adopting them.</p>',
