@@ -404,6 +404,47 @@ function precinctPopup(number) {
     (members.length ? '<ul style="padding-left:1.3em;margin:.5em 0">' + members.map(name => '<li>' + esc(name) + '</li>').join('') + '</ul>' : '<p>See the Town Meeting roster.</p>') +
     '<a href="town-meeting-archive.html#repDistrict">Who represents me?</a>';
 }
+// Keep the normal label center if its badge clears every edge. Otherwise use
+// the nearest clear interior sample, or the roomiest one in a narrow precinct.
+function precinctLabelPosition(feature, layer) {
+  const center = layer.getCenter();
+  const origin = map.project(center);
+  const geometry = feature.geometry;
+  const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
+  let best = origin, bestClearance = -Infinity, bestMove = Infinity;
+  const clearanceNeeded = 26;
+  for (const polygon of polygons) {
+    const rings = polygon.map(ring => ring.map(([lng, lat]) => map.project([lat, lng])));
+    const bounds = L.bounds(rings[0]);
+    function consider(point) {
+      let inside = false, clearance = Infinity;
+      for (const ring of rings) {
+        for (let i = 1; i < ring.length; i++) {
+          const a = ring[i - 1], b = ring[i];
+          if ((a.y > point.y) !== (b.y > point.y) &&
+              point.x < a.x + (point.y - a.y) * (b.x - a.x) / (b.y - a.y)) inside = !inside;
+          clearance = Math.min(clearance, L.LineUtil.pointToSegmentDistance(point, a, b));
+        }
+      }
+      if (!inside) return;
+      const score = Math.min(clearance, clearanceNeeded);
+      const move = point.distanceTo(origin);
+      if (score > bestClearance || (score === bestClearance && move < bestMove)) {
+        best = point; bestClearance = score; bestMove = move;
+      }
+    }
+    consider(origin);
+    if (bestClearance === clearanceNeeded && bestMove === 0) return center;
+    const size = bounds.getSize();
+    for (let row = 0; row < 24; row++) {
+      for (let col = 0; col < 24; col++) {
+        consider(L.point(bounds.min.x + size.x * (col + 0.5) / 24,
+                         bounds.min.y + size.y * (row + 0.5) / 24));
+      }
+    }
+  }
+  return map.unproject(best);
+}
 async function togglePrecincts(on){
  const box=document.querySelector('#boundaryStatus');
  if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}syncOutline();if(document.querySelector('#townBoundary').checked&&!boundaryLayers.town)toggleTownBoundary(true);return}
@@ -418,7 +459,13 @@ async function togglePrecincts(on){
   const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
   const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
   const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
-  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{smoothFactor:0,color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup(()=>precinctPopup(String(Number(number)) || number),{maxHeight:230,maxWidth:290})}}).addTo(map);
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{smoothFactor:0,color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number){
+    const positionLabel = () => l.getTooltip().setLatLng(precinctLabelPosition(f,l));
+    l.on('tooltipopen',positionLabel);
+    l.on('add',()=>map.on('zoomend',positionLabel));
+    l.on('remove',()=>map.off('zoomend',positionLabel));
+    l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});
+  }l.bindPopup(()=>precinctPopup(String(Number(number)) || number),{maxHeight:230,maxWidth:290})}}).addTo(map);
   syncOutline();
   if(box)box.textContent='Norwood voting precincts · Town outline follows the perimeter of the 2022 voting districts in this view.';
  }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
