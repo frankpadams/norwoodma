@@ -324,32 +324,82 @@ let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);s
 
 async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
 function boundaryStyle(kind){return kind==='town'?{color:'#003B71',weight:4,fill:false,opacity:.9}:{color:'#a36d00',weight:2,fillColor:'#f2c100',fillOpacity:.08,opacity:.85}}
+// Shared precinct edges occur twice. Join the remaining edges into perimeter rings.
+function electionPerimeter(data){
+ const edges=new Map(), points=new Map();
+ for(const feature of data.features){
+  const {type,coordinates}=feature.geometry;
+  const polygons=type==='Polygon'?[coordinates]:coordinates;
+  for(const polygon of polygons)for(const ring of polygon){
+   for(let i=1;i<ring.length;i++){
+    const a=ring[i-1].slice(0,2), b=ring[i].slice(0,2);
+    const first=a.join(','), second=b.join(',');
+    if(first===second)continue;
+    const key=[first,second].sort().join('|');
+    if(edges.has(key))edges.delete(key);
+    else edges.set(key,[first,second]);
+    points.set(first,[a[1],a[0]]);points.set(second,[b[1],b[0]]);
+   }
+  }
+ }
+ const neighbors=new Map();
+ for(const [a,b] of edges.values()){
+  if(!neighbors.has(a))neighbors.set(a,new Set());
+  if(!neighbors.has(b))neighbors.set(b,new Set());
+  neighbors.get(a).add(b);neighbors.get(b).add(a);
+ }
+ const rings=[];
+ while(neighbors.size){
+  let point=neighbors.keys().next().value;
+  const ring=[points.get(point)];
+  while(neighbors.has(point)){
+   const next=neighbors.get(point).values().next().value;
+   neighbors.get(point).delete(next);neighbors.get(next).delete(point);
+   if(!neighbors.get(point).size)neighbors.delete(point);
+   if(!neighbors.get(next).size)neighbors.delete(next);
+   point=next;ring.push(points.get(point));
+  }
+  rings.push(ring);
+ }
+ return L.polyline(rings,{...boundaryStyle('town'),interactive:false,smoothFactor:0});
+}
+let votingOutline;
+function syncOutline(){
+ const selected=document.querySelector('#townBoundary').checked;
+ const electoral=boundaryLayers.precincts&&map.hasLayer(boundaryLayers.precincts);
+ for(const layer of [boundaryLayers.town,votingOutline])if(layer)map.removeLayer(layer);
+ const outline=electoral?votingOutline:boundaryLayers.town;
+ if(selected&&outline)outline.addTo(map);
+}
 async function toggleTownBoundary(on){
  const box=document.querySelector('#boundaryStatus');
- if(!on){if(boundaryLayers.town){map.removeLayer(boundaryLayers.town);boundaryLayers.town=null}return}
- if(boundaryLayers.town){boundaryLayers.town.addTo(map);return}
+ if(!on||boundaryLayers.town||(votingOutline&&boundaryLayers.precincts)){syncOutline();return}
  if(box)box.textContent='Loading Norwood town boundary…';
  try{
   const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Massachusetts_Municipalities_Hosted/FeatureServer/0/query?where="+encodeURIComponent("TOWN='NORWOOD'")+"&outFields=TOWN&returnGeometry=true&outSR=4326&f=geojson";
   const gj=await fetchGeoJSON(url);
-  boundaryLayers.town=L.geoJSON(gj,{style:boundaryStyle('town'),onEachFeature:(f,l)=>l.bindPopup('<b>Town of Norwood boundary</b><br>MassGIS municipal boundary')}).addTo(map);
+  boundaryLayers.town=L.geoJSON(gj,{style:boundaryStyle('town'),onEachFeature:(f,l)=>l.bindPopup('<b>Town of Norwood boundary</b><br>MassGIS municipal boundary')});
+  syncOutline();
   if(box)box.textContent='Town boundary shown from MassGIS.';
  }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
 }
 async function togglePrecincts(on){
  const box=document.querySelector('#boundaryStatus');
- if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}return}
+ if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}syncOutline();if(document.querySelector('#townBoundary').checked&&!boundaryLayers.town)toggleTownBoundary(true);return}
  if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
  if(box)box.textContent='Loading Norwood voting precincts…';
  try{
   const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/All_Legislative_Layers_and_combined_for_popups_WFL1/FeatureServer/3/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
   const gj=await fetchGeoJSON(url);
   if(!gj?.features?.length)throw Error('No Norwood precincts returned');
+  if(!document.querySelector('#votingPrecincts').checked)return;
+  votingOutline=electionPerimeter(gj);
   const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
   const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
   const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
-  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
-  if(box)box.textContent='Norwood voting precincts shown from the Massachusetts 2022 wards and precincts dataset.';
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{smoothFactor:0,color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  syncOutline();
+  if(box)box.textContent='Norwood voting precincts · Town outline follows the perimeter of the 2022 voting districts in this view.';
  }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
 }
 
