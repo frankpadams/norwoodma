@@ -38,24 +38,24 @@ const venueAddresses={
  'norwood theatre':'109 Central St, Norwood, MA 02062'
 };
 const staticPlaces=[
- {name:'Little Library / Book Box — 69 Longwood Terrace',category:'little-library',also:['resource'],address:'69 Longwood Terrace, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 44 Blossom St',category:'little-library',also:['resource'],address:'44 Blossom St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 19 Crestwood Cir',category:'little-library',also:['resource'],address:'19 Crestwood Cir, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 28 Wilson St',category:'little-library',also:['resource'],address:'28 Wilson St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 12 Westview Dr',category:'little-library',also:['resource'],address:'12 Westview Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 68 Elm St',category:'little-library',also:['resource'],address:'68 Elm St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 310 Railroad Ave',category:'little-library',also:['resource'],address:'310 Railroad Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 22 Shaw St',category:'little-library',also:['resource'],address:'22 Shaw St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — 80 Highland St',category:'little-library',also:['resource'],address:'80 Highland St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Meadow St & Azalea Dr',category:'little-library',also:['resource'],address:'Meadow St at Azalea Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — East Cross & First',category:'little-library',also:['resource'],address:'East Cross St at First St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Callahan School',category:'little-library',also:['resource'],address:'116 Garfield Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Washington Street',category:'little-library',also:['resource'],address:'169 Washington St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Roosevelt Avenue',category:'little-library',also:['resource'],address:'82 Roosevelt Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Belnap & Cranmore',category:'little-library',also:['resource'],address:'Belnap St at Cranmore Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Father McAleer Playground',category:'little-library',also:['resource'],address:'Father McAleer Playground, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
- {name:'Little Library / Book Box — Savage Center / Senior Center property',category:'little-library',also:['resource'],address:'275 Prospect St, Norwood, MA 02062',details:'Neighborhood book-sharing box · exact location on the property to be confirmed',url:'resources.html'},
- {name:'Little Library / Book Box — Dean & Pellana',category:'little-library',also:['resource'],address:'Dean St at Pellana Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 69 Longwood Terrace',category:'little-library',address:'69 Longwood Terrace, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 44 Blossom St',category:'little-library',address:'44 Blossom St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 19 Crestwood Cir',category:'little-library',address:'19 Crestwood Cir, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 28 Wilson St',category:'little-library',address:'28 Wilson St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 12 Westview Dr',category:'little-library',address:'12 Westview Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 68 Elm St',category:'little-library',address:'68 Elm St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 310 Railroad Ave',category:'little-library',address:'310 Railroad Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 22 Shaw St',category:'little-library',address:'22 Shaw St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — 80 Highland St',category:'little-library',address:'80 Highland St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Meadow St & Azalea Dr',category:'little-library',address:'Meadow St at Azalea Dr, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — East Cross & First',category:'little-library',address:'East Cross St at First St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Callahan School',category:'little-library',address:'116 Garfield Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Washington Street',category:'little-library',address:'169 Washington St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Roosevelt Avenue',category:'little-library',address:'82 Roosevelt Ave, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Belnap & Cranmore',category:'little-library',address:'Belnap St at Cranmore Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Father McAleer Playground',category:'little-library',address:'Father McAleer Playground, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
+ {name:'Little Library / Book Box — Savage Center / Senior Center property',category:'little-library',address:'275 Prospect St, Norwood, MA 02062',details:'Neighborhood book-sharing box · exact location on the property to be confirmed',url:'resources.html'},
+ {name:'Little Library / Book Box — Dean & Pellana',category:'little-library',address:'Dean St at Pellana Rd, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Norwood Town Common',category:'civic',address:'Washington St at Nahatan St, Norwood, MA 02062',lat:42.19455,lng:-71.19955,details:'Town green · gazebo · community events',url:'parks-trails.html'},
  {name:'Bernie Cooper Park',category:'park',address:'Bernie Cooper Park, Norwood, MA 02062',details:'Neponset River · accessible riverfront walking',url:'parks-trails.html'},
  {name:'Endean Park & Hawes Brook',category:'park',address:'Endean Conservation Land, Norwood, MA 02062',details:'Wooded trails · pond · brook · conservation land',url:'parks-trails.html'},
@@ -113,8 +113,8 @@ const staticPlaces=[
  {name:'Murphy Park & Playground',category:'athletic',also:['park'],address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League baseball · basketball · walking connection',url:'parks-trails.html'},
  {name:'Morrill Memorial Library',category:'culture',also:['civic','historic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
  {name:'The Norwood Theatre',category:'culture',also:['historic'],address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Restored 1927 theatre · live music · theatre · comedy · films',url:'things.html'},
- {name:'First Congregational Church — Blessings Box',category:'mini-food-pantry',also:['resource'],address:'100 Winter St, Norwood, MA 02062',details:'Little food pantry · shelf-stable meal kits · no registration required',url:'resources.html'},
- {name:'Little Free Food Pantry — Railroad Avenue',category:'mini-food-pantry',also:['resource'],address:'280 Railroad Ave, Norwood, MA 02062',details:'Little food pantry · outdoor pickup available at any time · no eligibility requirement',url:'resources.html'},
+ {name:'First Congregational Church — Blessings Box',category:'mini-food-pantry',address:'100 Winter St, Norwood, MA 02062',details:'Little food pantry · shelf-stable meal kits · no registration required',url:'resources.html'},
+ {name:'Little Free Food Pantry — Railroad Avenue',category:'mini-food-pantry',address:'280 Railroad Ave, Norwood, MA 02062',details:'Little food pantry · outdoor pickup available at any time · no eligibility requirement',url:'resources.html'},
  {name:'Norwood Food Pantry',category:'resource',address:'150 Chapel St, Norwood, MA 02062',lat:42.18262,lng:-71.21230,details:'Food assistance · Saturday pantry hours',url:'resources.html'},
  {name:'Norwood Central',category:'transit',address:'164 Broadway, Norwood, MA 02062',lat:42.18873,lng:-71.19991,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Norwood Depot',category:'transit',address:'Railroad Ave, Norwood, MA 02062',lat:42.19675,lng:-71.19665,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
@@ -140,6 +140,8 @@ const staticPlaces=[
  {name:'Shell — Pleasant Street',category:'gas',also:['business'],address:'238 Pleasant Street, Norwood, MA 02062',details:'Gas station · convenience',url:'gas-prices.html'}
 ];
 function resourceCategory(r){
+ const dedicated=staticPlaces.find(p=>(p.category==='little-library'||p.category==='mini-food-pantry')&&norm(p.name)===norm(r.name));
+ if(dedicated)return dedicated.category;
  const t=norm([r.category,r.tags,(r.topics||[]).join(' ')].join(' '));
  // Legal and immigration providers are community resources, even when their
  // metadata also mentions family education or school-related guidance.
