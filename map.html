@@ -139,7 +139,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
-<script src="map-test.js?v=20261105-gas-reports"></script>
+<script src="map-test.js?v=20261105-care-providers"></script>
 <script src="map-integrated-trails.js?v=20261104-1"></script>
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
 <script src="map-work-zones.js?v=20261105-2"></script>
@@ -187,7 +187,16 @@ function addCommunityDropdown(){
  });
 }
 let parksAdded=false;
-for(const option of select.options){if(['park','athletic'].includes(option.value)){if(!parksAdded){button('parks-athletic','Parks, playgrounds & athletic fields',root,['park','athletic']);parksAdded=true}}else if(option.value==='resource')addCommunityDropdown();else if(communityCategories.includes(option.value)){button(option.value,option.textContent,root)}else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
+for(const option of select.options){if(['park','athletic'].includes(option.value)){if(!parksAdded){button('parks-athletic','Parks, playgrounds & athletic fields',root,['park','athletic']);parksAdded=true}}else if(option.value==='resource')addCommunityDropdown();else if(communityCategories.includes(option.value)){button(option.value,option.textContent,root)}else if(option.value==='health'){
+ const group=document.createElement('details');
+ group.className='map-layer-category-group';
+ const summary=document.createElement('summary');
+ summary.textContent='Health & support';
+ group.append(summary);
+ button('health','All health & support',group);
+ for(const [type,label] of Object.entries(window.norwoodHealthTypes||{}))button('care:'+type,label,group);
+ root.append(group);
+}else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
 sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.detail?.categories||[]).forEach(x=>active.add(x));sync()});
 })();
 </script>
