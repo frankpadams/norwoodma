@@ -207,6 +207,22 @@ function searchMatch(p,q){
  }
  return hay.includes(q);
 }
+// Use the directory's published membership, including resources in several topics.
+window.addEventListener('norwood:resource-topics', event=>{
+ const topicsByName=new Map();
+ for(const {key,names} of event.detail){
+  for(const name of names){
+   const id=norm(name);
+   if(!topicsByName.has(id))topicsByName.set(id,new Set());
+   topicsByName.get(id).add(key);
+  }
+ }
+ for(const place of places){
+  if(['little-library','mini-food-pantry'].includes(place.category))continue;
+  const topics=topicsByName.get(norm(place.name));
+  if(topics)place.also=[...new Set([...(place.also||[]),...topics])];
+ }
+});
 function currentPlaces(){const q=norm(search.value);return places.filter(p=>(!selectedCategories.size||selectedCategories.has(p.category)||(Array.isArray(p.also)&&p.also.some(c=>selectedCategories.has(c))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
