@@ -5,6 +5,8 @@ const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS
 window.norwoodTrailMap=map; // Expose only to unlinked experimental trail workspace.
 window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
+// Make small nearby groups (such as neighboring tenants) fan out as soon as tapped.
+cluster.on('clusterclick',e=>{if(e.layer.getChildCount()<=8)e.layer.spiderfy();});
 map.addLayer(cluster);
 const list=document.querySelector('#placeList'),count=document.querySelector('#placeCount'),status=document.querySelector('#mapStatus'),search=document.querySelector('#mapSearch'),category=document.querySelector('#mapCategory'),searchHelp=document.querySelector('#mapSearchHelp');
 let filter=category?.value??'',userMarker=null,renderToken=0,activePlaceKey='';
