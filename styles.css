@@ -96,18 +96,12 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
  .site-timely-prev,.site-timely-next{width:36px!important;height:33px!important;line-height:33px!important}
 }
 
-/* Hey Norwood: two equal fixed-height notice slots so every rotation occupies the same space. */
-#heyNorwoodNotices{display:grid!important;grid-template-rows:76px 76px!important;height:152px!important;min-height:152px!important;max-height:152px!important;overflow:hidden!important}
-#heyNorwoodNotices .hey-norwood-slot{height:76px!important;min-height:76px!important;max-height:76px!important;overflow:hidden!important;box-sizing:border-box}
+/* Each visible Hey Norwood notice takes only the space its text needs. */
+#heyNorwoodNotices{display:grid}
+#heyNorwoodNotices .hey-norwood-slot[hidden]{display:none}
 #heyNorwoodNotices .hey-norwood-slot+.hey-norwood-slot{border-top:1px solid rgba(0,59,113,.14)}
-#heyNorwoodNotices .good-to-know-item{height:100%!important;min-height:0!important;overflow:hidden!important}
-#heyNorwoodNotices .good-to-know-item>span:nth-child(2){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
-@media(max-width:700px){
-  #heyNorwoodNotices{grid-template-rows:82px 82px!important;height:164px!important;min-height:164px!important;max-height:164px!important}
-  #heyNorwoodNotices .hey-norwood-slot{height:82px!important;min-height:82px!important;max-height:82px!important}
-  #heyNorwoodNotices .good-to-know-item{align-items:center!important}
-}
-
+#heyNorwoodNotices .good-to-know-item{min-height:0;padding-block:5px}
+#heyNorwoodNotices .good-to-know-item>span:nth-child(2){min-width:0;overflow-wrap:anywhere}
 
 /* Expanded News: align local sources at the top of the right column, but let them scroll naturally with the page. */
 @media (min-width: 801px){
