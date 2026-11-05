@@ -289,8 +289,10 @@ async function render(){
  }
  if(searchHelp){
    const lgbtq=/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q);
-   searchHelp.hidden=!lgbtq;
+   const employment=selectedCategories.has('resource:employment');
+   searchHelp.hidden=!lgbtq&&!employment;
    searchHelp.innerHTML=lgbtq?'<strong>Looking for LGBTQ+ support?</strong><br>Most LGBTQ+ services in the directory are regional, statewide, or online and do not have a Norwood street address, so they cannot be shown accurately as map pins. <a href="resources.html#lgbtq">See LGBTQ+ Support resources →</a>':'';
+   if(employment)searchHelp.innerHTML += '<div><strong>Employment services</strong><ul><li><a href="https://www.mass.gov/info-details/massability-career-services">MassAbility vocational rehabilitation</a></li><li><a href="https://www.mass.gov/locations/masshire-norwood-career-center">MassHire Norwood career coaching and training</a></li><li><a href="https://www.jvs-boston.org/">JVS Boston job training</a></li><li><a href="https://www.mass.gov/how-to/apply-for-unemployment-insurance-benefits">Apply for Massachusetts unemployment benefits</a></li></ul><a href="resources.html#employment">All employment resources →</a></div>';
  }
  if(shown.some(p=>p.category==='gas')){
   const reports=await loadGasReports();
