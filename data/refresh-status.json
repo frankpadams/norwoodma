@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-04T18:52:15.981933-05:00",
+  "generated_at": "2026-11-04T21:55:31.064717-05:00",
   "offline": false,
-  "events_published": 2284,
+  "events_published": 2283,
   "news_published": 120,
   "civic_notices": 56,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2284,
-      "generated_at": "2026-11-04T18:52:15.641326-05:00"
+      "events": 2283,
+      "generated_at": "2026-11-04T21:55:30.698617-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 137,
-      "generated_at": "2026-11-04T18:52:15.653730-05:00"
+      "generated_at": "2026-11-04T21:55:30.710451-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 852,
-      "generated_at": "2026-11-04T18:52:15.678032-05:00"
+      "events": 851,
+      "generated_at": "2026-11-04T21:55:30.734149-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 738,
-      "generated_at": "2026-11-04T18:52:15.698397-05:00"
+      "generated_at": "2026-11-04T21:55:30.753403-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 4,
-      "generated_at": "2026-11-04T18:52:15.709687-05:00"
+      "generated_at": "2026-11-04T21:55:30.764109-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 65,
-      "generated_at": "2026-11-04T18:52:15.722305-05:00"
+      "generated_at": "2026-11-04T21:55:30.776473-05:00"
     }
   ],
   "recreation_programs": 115,
@@ -151,7 +151,7 @@
       "source_id": "faith-temple-beth-david-westwood",
       "ok": true,
       "method": "html_calendar",
-      "found": 13,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -1180,12 +1180,13 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
-      "found": 5,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "parser_gap",
+      "access_limited": false,
+      "retained_events": 3
     },
     {
       "source_id": "pcrinc-events",
@@ -1586,9 +1587,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -1602,7 +1604,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 31,
+      "found": 30,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1610,7 +1612,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 31,
+      "found": 32,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
