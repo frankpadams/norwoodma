@@ -1080,6 +1080,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "First Baptist Church of Norwood",
+    "address": "71 Bond Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Baptist congregation in Norwood with Sunday worship and community ministries.",
     "url": "https://www.fbcnorwood.com/",
@@ -1108,6 +1109,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "First Congregational Church in Norwood",
+    "address": "100 Winter Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "United Church of Christ congregation in Norwood with worship, faith formation and community programs.",
     "url": "https://www.fccnorwood.org/",
@@ -1239,6 +1241,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Grace Episcopal Church",
+    "address": "150 Chapel Street, Norwood, MA 02062",
     "category": "Faith & Community",
     "description": "Norwood faith community with worship, community events, volunteer support and outreach.",
     "url": "https://www.gracenor.org/",
@@ -1445,6 +1448,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Heritage Baptist Church",
+    "address": "615 Washington Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Baptist church in Norwood offering worship, Bible study and community ministries.",
     "url": "https://www.hbcnorwood.com/",
@@ -4715,6 +4719,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Norwood Seventh-day Adventist Church",
+    "address": "100 Winter Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Seventh-day Adventist congregation meeting in Norwood with Saturday worship and Bible study.",
     "url": "https://norwoodma.adventistchurch.org/",
@@ -5600,6 +5605,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Saint Catherine of Siena Parish",
+    "address": "547 Washington Street, Norwood, MA 02062",
     "category": "Faith & Community",
     "description": "Norwood Catholic parish with worship, youth programs, social outreach, recovery support and community organizations.",
     "url": "https://www.stcatherinenorwood.org/",
@@ -5776,6 +5782,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Shree Hari Dham Temple",
+    "address": "1504 Boston Providence Turnpike, Unit 17, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Hindu temple in Norwood offering worship and community religious programs.",
     "url": "https://www.shreeharidham.org/",
@@ -5927,6 +5934,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "St. Timothy Church",
+    "address": "650 Nichols Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Roman Catholic parish in Norwood with Mass, faith formation and parish ministries.",
     "url": "https://sttim.net/",
@@ -6259,6 +6267,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Trinity Community Church",
+    "address": "234 Walpole Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Christian church in Norwood with Sunday worship and community programs.",
     "url": "https://trinitycommunitychurch.org/",
@@ -6287,6 +6296,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "United Church of Norwood",
+    "address": "595 Washington Street, Norwood, MA 02062",
     "category": "Faith & Community",
     "description": "Norwood church offering English and Spanish worship, community programs and events.",
     "url": "https://www.unitedchurchofnorwood.org/",
@@ -6393,6 +6403,7 @@ window.NORWOOD_RESOURCES= [
   },
   {
     "name": "Waters Church — Norwood",
+    "address": "668 Walpole Street, Norwood, MA 02062",
     "category": "Houses of Worship",
     "description": "Christian church campus in Norwood with Sunday services, youth programs and community groups.",
     "url": "https://waterschurchnorwood.org/",
