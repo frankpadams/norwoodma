@@ -239,6 +239,414 @@ async function geocode(p){
 async function pooled(items,worker,limit=5){
  let i=0;const runners=Array.from({length:Math.min(limit,items.length)},async()=>{while(i<items.length){const idx=i++;await worker(items[idx],idx)}});await Promise.all(runners);
 }
+let gasReportsRequest;
+async function loadGasReports(){
+ if(!gasReportsRequest){
+  gasReportsRequest=fetch('data/gas-prices.json',{cache:'no-store'})
+   .then(response=>response.ok?response.json():Promise.reject())
+   .then(data=>data.stations)
+   .catch(()=>{gasReportsRequest=null;return null;});
+ }
+ return gasReportsRequest;
+}
+function gasPriceSummary(report){
+ const price=Number(report?.regular);
+ if(!(price>0))return 'No regular price recorded';
+ const grade=report.fuel_reports?.regular;
+ const date=new Date(grade?.observed_at||grade?.updated||report.observed_at||report.updated||'');
+ const when=Number.isFinite(date.getTime())?date.toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'}):'date unavailable';
+ return 'Regular 
+ const token=++renderToken,shown=currentPlaces(),q=norm(search.value);
+ cluster.clearLayers();list.innerHTML='';
+ if(!selectedCategories.size&&!q&&requestedCategory!=='all'){
+  count.textContent='Choose map layers';
+  status.textContent='Select one or more categories, or search for a place. Only matching locations will load.';
+  if(searchHelp)searchHelp.hidden=true;
+  return;
+ }
+ if(searchHelp){
+   const lgbtq=/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q);
+   searchHelp.hidden=!lgbtq;
+   searchHelp.innerHTML=lgbtq?'<strong>Looking for LGBTQ+ support?</strong><br>Most LGBTQ+ services in the directory are regional, statewide, or online and do not have a Norwood street address, so they cannot be shown accurately as map pins. <a href="resources.html#lgbtq">See LGBTQ+ Support resources →</a>':'';
+ }
+ if(shown.some(place=>place.category==='gas')){
+  const reports=await loadGasReports();
+  if(token!==renderToken)return;
+  for(const place of shown.filter(place=>place.category==='gas')){
+   place.details=reports?gasPriceSummary(reports[place.name]):'Gas prices temporarily unavailable';
+  }
+ }
+ count.textContent=shown.length+' place'+(shown.length===1?'':'s')+' in this view';
+ status.innerHTML='Plotting locations… <span class="map-progress" id="mapProgress">0 of '+shown.length+' mapped</span>';
+ const cards=new Map(),markers=[],progress=document.querySelector('#mapProgress');
+ let previousGroup='';shown.sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name));shown.forEach((p,i)=>{if(p.category!==previousGroup){previousGroup=p.category;const heading=document.createElement('div');heading.className='map-results-group';heading.textContent=({park:'Parks & recreation',food:'Restaurants & food',athletic:'Athletic fields & playgrounds',resource:'Community resources',civic:'Government & municipal',historic:'Historic sites',school:'Schools',business:'Local businesses',gas:'Gas stations',health:'Health & support',event:'Events',transit:'Transit','little-library':'Little Libraries','mini-food-pantry':'Little Food Pantries'}[p.category]||p.category);list.appendChild(heading)}
+  const b=document.createElement('button');b.className='place-card';b.setAttribute('aria-pressed','false');b.innerHTML='<b>'+esc(p.name)+publicSchoolMark(p)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
+ });
+ let done=0,mapped=0;
+ await pooled(shown,async p=>{
+   const ll=await geocode(p);done++;if(token!==renderToken)return;
+   if(ll){
+     mapped++;const m=L.marker(ll).bindPopup(popup(p));if(p.category==='gas'&&p.details.startsWith('Regular 
+     cards.get(p)?.addEventListener('click',()=>{activePlaceKey=norm(p.name+' '+p.address);document.querySelectorAll('.place-card').forEach(card=>{const active=card===cards.get(p);card.classList.toggle('is-selected',active);card.setAttribute('aria-pressed',String(active))});map.setView(ll,16);m.openPopup()});if(activePlaceKey===norm(p.name+' '+p.address)){cards.get(p)?.classList.add('is-selected');cards.get(p)?.setAttribute('aria-pressed','true')}
+   }else cards.get(p)?.classList.add('unmapped');
+   if(progress)progress.textContent=done+' of '+shown.length+' checked · '+mapped+' mapped';
+ },6);
+ if(token!==renderToken)return;
+ status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
+ if((!selectedCategories.size&&!q)||(selectedCategories.has('gas')&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
+ else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
+ else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
+}
+category?.addEventListener('change',()=>{filter=category.value;selectedCategories=new Set(filter&&filter!=='all'?[filter]:[]);render();});
+window.addEventListener('norwood:map-categories',e=>{selectedCategories=new Set(e.detail?.categories||[]);filter=selectedCategories.size===1?[...selectedCategories][0]:'all';render();});
+let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
+
+async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
+function boundaryStyle(kind){return kind==='town'?{color:'#003B71',weight:4,fill:false,opacity:.9}:{color:'#a36d00',weight:2,fillColor:'#f2c100',fillOpacity:.08,opacity:.85}}
+async function toggleTownBoundary(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.town){map.removeLayer(boundaryLayers.town);boundaryLayers.town=null}return}
+ if(boundaryLayers.town){boundaryLayers.town.addTo(map);return}
+ if(box)box.textContent='Loading Norwood town boundary…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Massachusetts_Municipalities_Hosted/FeatureServer/0/query?where="+encodeURIComponent("TOWN='NORWOOD'")+"&outFields=TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  boundaryLayers.town=L.geoJSON(gj,{style:boundaryStyle('town'),onEachFeature:(f,l)=>l.bindPopup('<b>Town of Norwood boundary</b><br>MassGIS municipal boundary')}).addTo(map);
+  if(box)box.textContent='Town boundary shown from MassGIS.';
+ }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
+}
+async function togglePrecincts(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}return}
+ if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
+ if(box)box.textContent='Loading Norwood voting precincts…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/All_Legislative_Layers_and_combined_for_popups_WFL1/FeatureServer/3/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  if(!gj?.features?.length)throw Error('No Norwood precincts returned');
+  const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
+  const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  if(box)box.textContent='Norwood voting precincts shown from the Massachusetts 2022 wards and precincts dataset.';
+ }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
+}
+
+
+let alprLayer=null,alprLoadPromise=null;
+const alprToggle=document.querySelector('#alprToggle'),alprStatus=document.querySelector('#alprStatus'),alprHelp=document.querySelector('#alprHelp');
+async function ensureAlprLayer(){
+ if(alprLayer)return alprLayer;
+ if(!alprLoadPromise){
+  alprLoadPromise=(async()=>{
+   if(!L.vectorGrid?.protobuf)throw Error('The map layer renderer did not load');
+   const tileJson=await fetchGeoJSON('https://tiles.dontgetflocked.com/cameras-us-hourly.json');
+   const tileUrl=tileJson.tiles?.[0];
+   if(!tileUrl)throw Error('The camera feed did not provide a tile URL');
+   const layer=L.vectorGrid.protobuf(tileUrl,{
+    vectorTileLayerStyles:{cameras:()=>({fill:true,fillColor:'#cf3d36',fillOpacity:.95,stroke:true,color:'#fff',weight:1.5,radius:6})},
+    interactive:true,
+    maxNativeZoom:14,
+    attribution:'ALPR camera locations &copy; OpenStreetMap contributors via DeFlock',
+    getFeatureId:f=>f.properties?.osmId
+   });
+   layer.on('click',e=>{
+    const p=e.layer?.properties||{},details=[];
+    if(p.brand)details.push('<b>Brand:</b> '+esc(p.brand));
+    if(p.operator)details.push('<b>Operator:</b> '+esc(p.operator));
+    if(p.directionCardinal)details.push('<b>Direction:</b> '+esc(p.directionCardinal));
+    const osmType=p.osmType==='way'?'way':'node';
+    const osmId=Number(p.osmId);
+    if(Number.isSafeInteger(osmId)&&osmId>0)details.push('<a href="https://www.openstreetmap.org/'+osmType+'/'+osmId+'" target="_blank" rel="noopener">Open this map record in OpenStreetMap ↗</a>');
+    const body='<div class="map-popup"><h3>ALPR camera</h3><p>Community-mapped location from OpenStreetMap.</p>'+(details.length?'<p>'+details.join('<br>')+'</p>':'')+'</div>';
+    L.popup().setLatLng(e.latlng).setContent(body).openOn(map);
+   });
+   alprLayer=layer;
+   return layer;
+  })().catch(err=>{alprLoadPromise=null;throw err});
+ }
+ return alprLoadPromise;
+}
+async function toggleAlpr(on){
+ if(!on){if(alprLayer)map.removeLayer(alprLayer);if(alprStatus)alprStatus.textContent='ALPR camera layer is off. Community-mapped coverage may be incomplete.';return}
+ if(alprStatus)alprStatus.textContent='Loading community-mapped ALPR camera locations…';
+ try{
+  const layer=await ensureAlprLayer();
+  if(alprToggle?.checked)layer.addTo(map);
+  if(alprStatus)alprStatus.textContent='Showing community-mapped ALPR cameras. Coverage may be incomplete; select a marker for available details.';
+ }catch(err){
+  if(alprStatus)alprStatus.textContent='ALPR camera locations could not be loaded right now. Please try again later.';
+  console.warn('ALPR camera layer failed to load',err);
+ }
+}
+alprToggle?.addEventListener('change',e=>toggleAlpr(e.target.checked));
+alprHelp?.addEventListener('click',()=>{
+ const open=alprHelp.getAttribute('aria-expanded')==='true';
+ alprHelp.setAttribute('aria-expanded',String(!open));
+});
+document.querySelector('#locateMe').addEventListener('click',()=>{
+ if(!navigator.geolocation){alert('Location is not available in this browser.');return}
+ navigator.geolocation.getCurrentPosition(pos=>{
+  const ll=[pos.coords.latitude,pos.coords.longitude];
+  if(userMarker)map.removeLayer(userMarker);
+  userMarker=L.circleMarker(ll,{radius:9,weight:3,color:'#003B71',fillColor:'#F2C100',fillOpacity:1}).addTo(map).bindPopup('<b>Your approximate location</b>').openPopup();map.setView(ll,15);
+ },()=>alert('Your location was not shared. You can still browse the map normally.'),{enableHighAccuracy:false,timeout:8000});
+});
+const townBoundaryToggle=document.querySelector('#townBoundary');
+townBoundaryToggle?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
+if(townBoundaryToggle?.checked)toggleTownBoundary(true);
+document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
+render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
+})();+price.toFixed(2)+'/gal · '+(grade?.observed_at?'Checked ':'Reported ')+when;
+}
+async function render(){
+ const token=++renderToken,shown=currentPlaces(),q=norm(search.value);
+ cluster.clearLayers();list.innerHTML='';
+ if(!selectedCategories.size&&!q&&requestedCategory!=='all'){
+  count.textContent='Choose map layers';
+  status.textContent='Select one or more categories, or search for a place. Only matching locations will load.';
+  if(searchHelp)searchHelp.hidden=true;
+  return;
+ }
+ if(searchHelp){
+   const lgbtq=/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q);
+   searchHelp.hidden=!lgbtq;
+   searchHelp.innerHTML=lgbtq?'<strong>Looking for LGBTQ+ support?</strong><br>Most LGBTQ+ services in the directory are regional, statewide, or online and do not have a Norwood street address, so they cannot be shown accurately as map pins. <a href="resources.html#lgbtq">See LGBTQ+ Support resources →</a>':'';
+ }
+ count.textContent=shown.length+' place'+(shown.length===1?'':'s')+' in this view';
+ status.innerHTML='Plotting locations… <span class="map-progress" id="mapProgress">0 of '+shown.length+' mapped</span>';
+ const cards=new Map(),markers=[],progress=document.querySelector('#mapProgress');
+ let previousGroup='';shown.sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name));shown.forEach((p,i)=>{if(p.category!==previousGroup){previousGroup=p.category;const heading=document.createElement('div');heading.className='map-results-group';heading.textContent=({park:'Parks & recreation',food:'Restaurants & food',athletic:'Athletic fields & playgrounds',resource:'Community resources',civic:'Government & municipal',historic:'Historic sites',school:'Schools',business:'Local businesses',gas:'Gas stations',health:'Health & support',event:'Events',transit:'Transit','little-library':'Little Libraries','mini-food-pantry':'Little Food Pantries'}[p.category]||p.category);list.appendChild(heading)}
+  const b=document.createElement('button');b.className='place-card';b.setAttribute('aria-pressed','false');b.innerHTML='<b>'+esc(p.name)+publicSchoolMark(p)+'</b><span>'+esc(p.address)+'</span><small>'+esc(p.details||p.category)+'</small>';list.appendChild(b);cards.set(p,b);
+ });
+ let done=0,mapped=0;
+ await pooled(shown,async p=>{
+   const ll=await geocode(p);done++;if(token!==renderToken)return;
+   if(ll){
+     mapped++;const m=L.marker(ll).bindPopup(popup(p));cluster.addLayer(m);markers.push(m);
+     cards.get(p)?.addEventListener('click',()=>{activePlaceKey=norm(p.name+' '+p.address);document.querySelectorAll('.place-card').forEach(card=>{const active=card===cards.get(p);card.classList.toggle('is-selected',active);card.setAttribute('aria-pressed',String(active))});map.setView(ll,16);m.openPopup()});if(activePlaceKey===norm(p.name+' '+p.address)){cards.get(p)?.classList.add('is-selected');cards.get(p)?.setAttribute('aria-pressed','true')}
+   }else cards.get(p)?.classList.add('unmapped');
+   if(progress)progress.textContent=done+' of '+shown.length+' checked · '+mapped+' mapped';
+ },6);
+ if(token!==renderToken)return;
+ status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
+ if((!selectedCategories.size&&!q)||(selectedCategories.has('gas')&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
+ else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
+ else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
+}
+category?.addEventListener('change',()=>{filter=category.value;selectedCategories=new Set(filter&&filter!=='all'?[filter]:[]);render();});
+window.addEventListener('norwood:map-categories',e=>{selectedCategories=new Set(e.detail?.categories||[]);filter=selectedCategories.size===1?[...selectedCategories][0]:'all';render();});
+let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
+
+async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
+function boundaryStyle(kind){return kind==='town'?{color:'#003B71',weight:4,fill:false,opacity:.9}:{color:'#a36d00',weight:2,fillColor:'#f2c100',fillOpacity:.08,opacity:.85}}
+async function toggleTownBoundary(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.town){map.removeLayer(boundaryLayers.town);boundaryLayers.town=null}return}
+ if(boundaryLayers.town){boundaryLayers.town.addTo(map);return}
+ if(box)box.textContent='Loading Norwood town boundary…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Massachusetts_Municipalities_Hosted/FeatureServer/0/query?where="+encodeURIComponent("TOWN='NORWOOD'")+"&outFields=TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  boundaryLayers.town=L.geoJSON(gj,{style:boundaryStyle('town'),onEachFeature:(f,l)=>l.bindPopup('<b>Town of Norwood boundary</b><br>MassGIS municipal boundary')}).addTo(map);
+  if(box)box.textContent='Town boundary shown from MassGIS.';
+ }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
+}
+async function togglePrecincts(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}return}
+ if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
+ if(box)box.textContent='Loading Norwood voting precincts…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/All_Legislative_Layers_and_combined_for_popups_WFL1/FeatureServer/3/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  if(!gj?.features?.length)throw Error('No Norwood precincts returned');
+  const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
+  const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  if(box)box.textContent='Norwood voting precincts shown from the Massachusetts 2022 wards and precincts dataset.';
+ }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
+}
+
+
+let alprLayer=null,alprLoadPromise=null;
+const alprToggle=document.querySelector('#alprToggle'),alprStatus=document.querySelector('#alprStatus'),alprHelp=document.querySelector('#alprHelp');
+async function ensureAlprLayer(){
+ if(alprLayer)return alprLayer;
+ if(!alprLoadPromise){
+  alprLoadPromise=(async()=>{
+   if(!L.vectorGrid?.protobuf)throw Error('The map layer renderer did not load');
+   const tileJson=await fetchGeoJSON('https://tiles.dontgetflocked.com/cameras-us-hourly.json');
+   const tileUrl=tileJson.tiles?.[0];
+   if(!tileUrl)throw Error('The camera feed did not provide a tile URL');
+   const layer=L.vectorGrid.protobuf(tileUrl,{
+    vectorTileLayerStyles:{cameras:()=>({fill:true,fillColor:'#cf3d36',fillOpacity:.95,stroke:true,color:'#fff',weight:1.5,radius:6})},
+    interactive:true,
+    maxNativeZoom:14,
+    attribution:'ALPR camera locations &copy; OpenStreetMap contributors via DeFlock',
+    getFeatureId:f=>f.properties?.osmId
+   });
+   layer.on('click',e=>{
+    const p=e.layer?.properties||{},details=[];
+    if(p.brand)details.push('<b>Brand:</b> '+esc(p.brand));
+    if(p.operator)details.push('<b>Operator:</b> '+esc(p.operator));
+    if(p.directionCardinal)details.push('<b>Direction:</b> '+esc(p.directionCardinal));
+    const osmType=p.osmType==='way'?'way':'node';
+    const osmId=Number(p.osmId);
+    if(Number.isSafeInteger(osmId)&&osmId>0)details.push('<a href="https://www.openstreetmap.org/'+osmType+'/'+osmId+'" target="_blank" rel="noopener">Open this map record in OpenStreetMap ↗</a>');
+    const body='<div class="map-popup"><h3>ALPR camera</h3><p>Community-mapped location from OpenStreetMap.</p>'+(details.length?'<p>'+details.join('<br>')+'</p>':'')+'</div>';
+    L.popup().setLatLng(e.latlng).setContent(body).openOn(map);
+   });
+   alprLayer=layer;
+   return layer;
+  })().catch(err=>{alprLoadPromise=null;throw err});
+ }
+ return alprLoadPromise;
+}
+async function toggleAlpr(on){
+ if(!on){if(alprLayer)map.removeLayer(alprLayer);if(alprStatus)alprStatus.textContent='ALPR camera layer is off. Community-mapped coverage may be incomplete.';return}
+ if(alprStatus)alprStatus.textContent='Loading community-mapped ALPR camera locations…';
+ try{
+  const layer=await ensureAlprLayer();
+  if(alprToggle?.checked)layer.addTo(map);
+  if(alprStatus)alprStatus.textContent='Showing community-mapped ALPR cameras. Coverage may be incomplete; select a marker for available details.';
+ }catch(err){
+  if(alprStatus)alprStatus.textContent='ALPR camera locations could not be loaded right now. Please try again later.';
+  console.warn('ALPR camera layer failed to load',err);
+ }
+}
+alprToggle?.addEventListener('change',e=>toggleAlpr(e.target.checked));
+alprHelp?.addEventListener('click',()=>{
+ const open=alprHelp.getAttribute('aria-expanded')==='true';
+ alprHelp.setAttribute('aria-expanded',String(!open));
+});
+document.querySelector('#locateMe').addEventListener('click',()=>{
+ if(!navigator.geolocation){alert('Location is not available in this browser.');return}
+ navigator.geolocation.getCurrentPosition(pos=>{
+  const ll=[pos.coords.latitude,pos.coords.longitude];
+  if(userMarker)map.removeLayer(userMarker);
+  userMarker=L.circleMarker(ll,{radius:9,weight:3,color:'#003B71',fillColor:'#F2C100',fillOpacity:1}).addTo(map).bindPopup('<b>Your approximate location</b>').openPopup();map.setView(ll,15);
+ },()=>alert('Your location was not shared. You can still browse the map normally.'),{enableHighAccuracy:false,timeout:8000});
+});
+const townBoundaryToggle=document.querySelector('#townBoundary');
+townBoundaryToggle?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
+if(townBoundaryToggle?.checked)toggleTownBoundary(true);
+document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
+render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
+})();))m.bindTooltip(p.details.split(' · ')[0],{permanent:selectedCategories.has('gas'),direction:'top'});cluster.addLayer(m);markers.push(m);
+     cards.get(p)?.addEventListener('click',()=>{activePlaceKey=norm(p.name+' '+p.address);document.querySelectorAll('.place-card').forEach(card=>{const active=card===cards.get(p);card.classList.toggle('is-selected',active);card.setAttribute('aria-pressed',String(active))});map.setView(ll,16);m.openPopup()});if(activePlaceKey===norm(p.name+' '+p.address)){cards.get(p)?.classList.add('is-selected');cards.get(p)?.setAttribute('aria-pressed','true')}
+   }else cards.get(p)?.classList.add('unmapped');
+   if(progress)progress.textContent=done+' of '+shown.length+' checked · '+mapped+' mapped';
+ },6);
+ if(token!==renderToken)return;
+ status.textContent=mapped+' mapped'+(shown.length-mapped?' · '+(shown.length-mapped)+' could not be located automatically':'')+' · click a place to center the map.';
+ if((!selectedCategories.size&&!q)||(selectedCategories.has('gas')&&requestedCategory==='gas'&&!q)){map.fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});}
+ else if(markers.length>1){const g=L.featureGroup(markers);map.fitBounds(g.getBounds().pad(.08),{maxZoom:14})}
+ else if(markers.length===1)map.setView(markers[0].getLatLng(),16);
+}
+category?.addEventListener('change',()=>{filter=category.value;selectedCategories=new Set(filter&&filter!=='all'?[filter]:[]);render();});
+window.addEventListener('norwood:map-categories',e=>{selectedCategories=new Set(e.detail?.categories||[]);filter=selectedCategories.size===1?[...selectedCategories][0]:'all';render();});
+let searchTimer;search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,180)});
+
+async function fetchGeoJSON(url){const r=await fetch(url);if(!r.ok)throw Error(r.status);return r.json()}
+function boundaryStyle(kind){return kind==='town'?{color:'#003B71',weight:4,fill:false,opacity:.9}:{color:'#a36d00',weight:2,fillColor:'#f2c100',fillOpacity:.08,opacity:.85}}
+async function toggleTownBoundary(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.town){map.removeLayer(boundaryLayers.town);boundaryLayers.town=null}return}
+ if(boundaryLayers.town){boundaryLayers.town.addTo(map);return}
+ if(box)box.textContent='Loading Norwood town boundary…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Massachusetts_Municipalities_Hosted/FeatureServer/0/query?where="+encodeURIComponent("TOWN='NORWOOD'")+"&outFields=TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  boundaryLayers.town=L.geoJSON(gj,{style:boundaryStyle('town'),onEachFeature:(f,l)=>l.bindPopup('<b>Town of Norwood boundary</b><br>MassGIS municipal boundary')}).addTo(map);
+  if(box)box.textContent='Town boundary shown from MassGIS.';
+ }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
+}
+async function togglePrecincts(on){
+ const box=document.querySelector('#boundaryStatus');
+ if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}return}
+ if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
+ if(box)box.textContent='Loading Norwood voting precincts…';
+ try{
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/All_Legislative_Layers_and_combined_for_popups_WFL1/FeatureServer/3/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const gj=await fetchGeoJSON(url);
+  if(!gj?.features?.length)throw Error('No Norwood precincts returned');
+  const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
+  const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  if(box)box.textContent='Norwood voting precincts shown from the Massachusetts 2022 wards and precincts dataset.';
+ }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
+}
+
+
+let alprLayer=null,alprLoadPromise=null;
+const alprToggle=document.querySelector('#alprToggle'),alprStatus=document.querySelector('#alprStatus'),alprHelp=document.querySelector('#alprHelp');
+async function ensureAlprLayer(){
+ if(alprLayer)return alprLayer;
+ if(!alprLoadPromise){
+  alprLoadPromise=(async()=>{
+   if(!L.vectorGrid?.protobuf)throw Error('The map layer renderer did not load');
+   const tileJson=await fetchGeoJSON('https://tiles.dontgetflocked.com/cameras-us-hourly.json');
+   const tileUrl=tileJson.tiles?.[0];
+   if(!tileUrl)throw Error('The camera feed did not provide a tile URL');
+   const layer=L.vectorGrid.protobuf(tileUrl,{
+    vectorTileLayerStyles:{cameras:()=>({fill:true,fillColor:'#cf3d36',fillOpacity:.95,stroke:true,color:'#fff',weight:1.5,radius:6})},
+    interactive:true,
+    maxNativeZoom:14,
+    attribution:'ALPR camera locations &copy; OpenStreetMap contributors via DeFlock',
+    getFeatureId:f=>f.properties?.osmId
+   });
+   layer.on('click',e=>{
+    const p=e.layer?.properties||{},details=[];
+    if(p.brand)details.push('<b>Brand:</b> '+esc(p.brand));
+    if(p.operator)details.push('<b>Operator:</b> '+esc(p.operator));
+    if(p.directionCardinal)details.push('<b>Direction:</b> '+esc(p.directionCardinal));
+    const osmType=p.osmType==='way'?'way':'node';
+    const osmId=Number(p.osmId);
+    if(Number.isSafeInteger(osmId)&&osmId>0)details.push('<a href="https://www.openstreetmap.org/'+osmType+'/'+osmId+'" target="_blank" rel="noopener">Open this map record in OpenStreetMap ↗</a>');
+    const body='<div class="map-popup"><h3>ALPR camera</h3><p>Community-mapped location from OpenStreetMap.</p>'+(details.length?'<p>'+details.join('<br>')+'</p>':'')+'</div>';
+    L.popup().setLatLng(e.latlng).setContent(body).openOn(map);
+   });
+   alprLayer=layer;
+   return layer;
+  })().catch(err=>{alprLoadPromise=null;throw err});
+ }
+ return alprLoadPromise;
+}
+async function toggleAlpr(on){
+ if(!on){if(alprLayer)map.removeLayer(alprLayer);if(alprStatus)alprStatus.textContent='ALPR camera layer is off. Community-mapped coverage may be incomplete.';return}
+ if(alprStatus)alprStatus.textContent='Loading community-mapped ALPR camera locations…';
+ try{
+  const layer=await ensureAlprLayer();
+  if(alprToggle?.checked)layer.addTo(map);
+  if(alprStatus)alprStatus.textContent='Showing community-mapped ALPR cameras. Coverage may be incomplete; select a marker for available details.';
+ }catch(err){
+  if(alprStatus)alprStatus.textContent='ALPR camera locations could not be loaded right now. Please try again later.';
+  console.warn('ALPR camera layer failed to load',err);
+ }
+}
+alprToggle?.addEventListener('change',e=>toggleAlpr(e.target.checked));
+alprHelp?.addEventListener('click',()=>{
+ const open=alprHelp.getAttribute('aria-expanded')==='true';
+ alprHelp.setAttribute('aria-expanded',String(!open));
+});
+document.querySelector('#locateMe').addEventListener('click',()=>{
+ if(!navigator.geolocation){alert('Location is not available in this browser.');return}
+ navigator.geolocation.getCurrentPosition(pos=>{
+  const ll=[pos.coords.latitude,pos.coords.longitude];
+  if(userMarker)map.removeLayer(userMarker);
+  userMarker=L.circleMarker(ll,{radius:9,weight:3,color:'#003B71',fillColor:'#F2C100',fillOpacity:1}).addTo(map).bindPopup('<b>Your approximate location</b>').openPopup();map.setView(ll,15);
+ },()=>alert('Your location was not shared. You can still browse the map normally.'),{enableHighAccuracy:false,timeout:8000});
+});
+const townBoundaryToggle=document.querySelector('#townBoundary');
+townBoundaryToggle?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
+if(townBoundaryToggle?.checked)toggleTownBoundary(true);
+document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
+render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
+})();+price.toFixed(2)+'/gal · '+(grade?.observed_at?'Checked ':'Reported ')+when;
+}
 async function render(){
  const token=++renderToken,shown=currentPlaces(),q=norm(search.value);
  cluster.clearLayers();list.innerHTML='';
