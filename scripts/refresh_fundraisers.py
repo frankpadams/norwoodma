@@ -81,10 +81,37 @@ def render(rows, today):
         text = r.get('description') or ''
         if r.get('order_deadline') and date.fromisoformat(r['order_deadline']) < today:
             text = 'Ordering has closed. ' + text
+        popup = r.get('popup')
+        if popup:
+            dialog_id = f'fundraiser-{esc("id")}-dialog'
+            title_id = f'{dialog_id}-title'
+            heading = (f'<h3><a href="#{dialog_id}" data-fundraiser-dialog="{dialog_id}" '
+                       f'aria-haspopup="dialog">{esc("title")}</a></h3>')
+            mail_to = '<br>'.join(escape(str(line)) for line in popup.get('mail_to', []))
+            popup_markup = (
+                f'<dialog id="{dialog_id}" class="fundraiser-dialog" aria-labelledby="{title_id}">'
+                '<form method="dialog"><button class="fundraiser-dialog-close" aria-label="Close details">×</button></form>'
+                f'<h2 id="{title_id}">{esc("title")}</h2>'
+                f'<p>{escape(popup.get("summary", ""))}</p>'
+                '<h3>How to contribute</h3>'
+                f'<p>Make checks payable to <strong>{escape(popup.get("check_payable_to", ""))}</strong> '
+                f'and write <strong>{escape(popup.get("memo", ""))}</strong> in the memo field.</p>'
+                f'<p class="fundraiser-mailing"><strong>Mail to:</strong><br>{mail_to}</p>'
+                f'<p>Venmo: <a href="{escape(popup.get("venmo_url", ""), quote=True)}" target="_blank" rel="noopener">'
+                f'{escape(popup.get("venmo_handle", ""))} ↗</a></p>'
+                '<p class="fundraiser-popup-links">'
+                f'<a href="{escape(popup.get("article_url", ""), quote=True)}" target="_blank" rel="noopener">Read the WBZ NewsRadio article ↗</a>'
+                f' · <a href="{escape(popup.get("audio_url", ""), quote=True)}" target="_blank" rel="noopener">Listen to the WBZ report ↗</a>'
+                '</p></dialog>'
+            )
+        else:
+            heading = f'<h3>{esc("title")}</h3>'
+            popup_markup = ''
         parts.append(f'<article class="item"><div class="date">{esc("date_label")}</div>'
-                     f'<h3>{esc("title")}</h3><p class="fundraiser-organizer">{esc("organizer")}</p>'
+                     f'{heading}<p class="fundraiser-organizer">{esc("organizer")}</p>'
                      f'<p>{escape(text)}</p><p><a class="action" href="{esc("url")}" '
-                     'target="_blank" rel="noopener">Details &amp; participation ↗</a></p></article>')
+                     'target="_blank" rel="noopener">Details &amp; participation ↗</a></p>'
+                     f'{popup_markup}</article>')
     if not rows:
         parts.append('<article class="item"><p>No current campaigns are listed. See the organizations below for ongoing ways to help.</p></article>')
     parts.append('</div><p class="small"><a href="contact.html">Contact us to suggest a Norwood fundraiser →</a></p>')
