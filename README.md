@@ -150,7 +150,8 @@ Post-release operational development has also added regional-event organization,
 
 ## Release history
 
-- **v1.6.0** — public live MassDOT work zones and higher-contrast precinct colors.\n- **v1.5.2** — distinct precinct colors and visible boundary outlines.
+- **v1.6.0** — public live MassDOT work zones and higher-contrast precinct colors.
+- **v1.5.2** — distinct precinct colors and visible boundary outlines.
 - **v1.5.1** — compact map category selector matching Trails.
 - **v1.5.0** — organized sports hub, compact announcements and direct sport navigation.
 - **v1.4.4** — Facebook share copy confirmation and paste instructions.
