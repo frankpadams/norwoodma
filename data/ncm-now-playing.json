@@ -1,67 +1,119 @@
 {
-  "updated_at": "2026-11-04T19:14:17.819793-05:00",
-  "date": "2026-11-04",
+  "updated_at": "2026-11-05T02:13:38.823776-05:00",
+  "date": "2026-11-05",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "The Vehicle for Change 10.27.26",
+      "title": "Gentle Exercise with Steve",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 180,
+          "title": "NPD Flock Camera Informational Presentation 9.30.26"
+        },
+        {
+          "minute": 300,
           "title": "Norwood Digest: A Conversation with 3 Retiring Local Bank Presidents"
         },
         {
-          "minute": 1320,
+          "minute": 360,
           "title": "Comcast Cyber Security Presentation 10.19.26"
         },
         {
-          "minute": 1380,
-          "title": "The Vehicle for Change 10.27.26"
+          "minute": 420,
+          "title": "Local Artist Bill Breen - Public Access 10.21.26"
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
+          "title": "Norwood Digest: A Conversation with 3 Retiring Local Bank Presidents"
+        },
+        {
+          "minute": 600,
+          "title": "Gentle Exercise with Steve"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-04"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-05"
     },
     "government": {
       "status": "scheduled",
-      "title": "Board of Selectmen 10.27.26",
+      "title": "Finance Commission 10.27.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1170,
+          "minute": 240,
           "title": "Finance Commission 10.27.26"
         },
         {
-          "minute": 1230,
-          "title": "Town Meeting Info Session 11.2.26"
+          "minute": 300,
+          "title": "School Committee 10.28.26 Rebroadcast"
         },
         {
-          "minute": 1290,
+          "minute": 450,
+          "title": "Finance Commission 10.27.26"
+        },
+        {
+          "minute": 510,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 570,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 720,
           "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 810,
+          "title": "Finance Commission 10.27.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-04"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-05"
     },
     "schools": {
       "status": "scheduled",
-      "title": "Norwood News 10.30.26",
+      "title": "Celebrating Innovation Career Pathways at NHS",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1230,
-          "title": "2016 NHS-TV1 Stories Period 5"
-        },
-        {
-          "minute": 1260,
+          "minute": 180,
           "title": "Celebrating Innovation Career Pathways at NHS"
         },
         {
-          "minute": 1320,
+          "minute": 240,
+          "title": "NHS Update Month in Review: September 2016"
+        },
+        {
+          "minute": 330,
+          "title": "2016 NHS-TV1 Stories Period 5"
+        },
+        {
+          "minute": 360,
+          "title": "Celebrating Innovation Career Pathways at NHS"
+        },
+        {
+          "minute": 420,
           "title": "Norwood News 10.30.26"
+        },
+        {
+          "minute": 450,
+          "title": "2016 Fall Sports Awards"
+        },
+        {
+          "minute": 540,
+          "title": "Senior College Post Secondary Planning - Sept. 2026"
+        },
+        {
+          "minute": 630,
+          "title": "Celebrating Innovation Career Pathways at NHS"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-04"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-05"
     }
   }
 }
