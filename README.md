@@ -1,10 +1,10 @@
-# Norwood.ma v1.5.2
+# Norwood.ma v1.6.0
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.5.2 — adds distinct colors and visible outlines for voting precincts on the map.
+**Current release:** v1.6.0 — adds a public live MassDOT work-zone layer and improves precinct color contrast.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -45,7 +45,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Business categories/subcategories should provide a map route so users can compare nearby options.
 - Food & Drink is backed by the maintained restaurant dataset and includes the Dinner Spinner.
 - Parks/trails/recreation pages expose known amenities and mapping.
-- Explore Norwood by Map groups boundary controls, district-reference links, ALPR cameras, and live MBTA transit in one “More map layers & options” menu. Existing town-boundary and voting-precinct overlays remain independently selectable. ALPR and MBTA overlays are off by default. MBTA V3 data provides live 34E bus and Franklin/Foxboro Line train locations, route paths, and Norwood stops; vehicles refresh every 30 seconds while enabled and appear only when reported. ALPR locations are community-mapped through OpenStreetMap via DeFlock and may be incomplete.
+- Explore Norwood by Map groups boundary controls, district-reference links, ALPR cameras, public MassDOT work zones, and live MBTA transit in one “More map layers & options” menu. Existing town-boundary and voting-precinct overlays remain independently selectable. ALPR, work-zone, and MBTA overlays are off by default. The MassDOT public GeoJSON work-zone feed is no-signup, CC0, and refreshed every 60 seconds; the map displays active events near Norwood while enabled. MBTA V3 data provides live 34E bus and Franklin/Foxboro Line train locations, route paths, and Norwood stops; vehicles refresh every 30 seconds while enabled and appear only when reported. ALPR locations are community-mapped through OpenStreetMap via DeFlock and may be incomplete.
 - How Do I provides task-oriented resident guidance and links to authoritative departments/services.
 
 ### Civic information and alerts
@@ -93,6 +93,12 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v1.6.0 — Live work zones and clearer precinct colors
+Released November 5, 2026.
+
+- Adds an optional MassDOT work-zone overlay using its public GeoJSON feed; active work zones near Norwood refresh every 60 seconds while enabled.
+- Improves precinct fill separation and strengthens boundary outlines.
 
 ### v1.5.2 — Voting precinct map styling
 Released November 4, 2026.
@@ -144,7 +150,7 @@ Post-release operational development has also added regional-event organization,
 
 ## Release history
 
-- **v1.5.2** — distinct precinct colors and visible boundary outlines.
+- **v1.6.0** — public live MassDOT work zones and higher-contrast precinct colors.\n- **v1.5.2** — distinct precinct colors and visible boundary outlines.
 - **v1.5.1** — compact map category selector matching Trails.
 - **v1.5.0** — organized sports hub, compact announcements and direct sport navigation.
 - **v1.4.4** — Facebook share copy confirmation and paste instructions.
