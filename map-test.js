@@ -14,7 +14,8 @@ if(requestedCategory&&category&&[...category.options].some(o=>o.value===requeste
 if((requestedBusinessGroup||requestedBusinessSub)&&category){filter='business';category.value='business';if(search)search.value='';}
 else if(requestedBusiness&&search){search.value=requestedBusiness;filter='business';if(category)category.value='business';}
 else if(requestedPlace&&search){search.value=requestedPlace;filter='all';if(category)category.value='all';}
-// On ordinary page loads, force Show All even if the browser restores an old select value.
+// Start ordinary page loads with no location categories active, so the map does not
+// geocode every place before the visitor chooses what to see.
 // Explicit deep-link categories, business searches and place searches take precedence.
 if(!requestedCategory&&!requestedBusinessGroup&&!requestedBusinessSub&&!requestedBusiness&&!requestedPlace&&category){filter='';category.value='';}
 if(filter&&filter!=='all')selectedCategories.add(filter);
@@ -216,6 +217,12 @@ async function pooled(items,worker,limit=5){
 async function render(){
  const token=++renderToken,shown=currentPlaces(),q=norm(search.value);
  cluster.clearLayers();list.innerHTML='';
+ if(!selectedCategories.size&&!q&&requestedCategory!=='all'){
+  count.textContent='Choose map layers';
+  status.textContent='Select one or more categories, or search for a place. Only matching locations will load.';
+  if(searchHelp)searchHelp.hidden=true;
+  return;
+ }
  if(searchHelp){
    const lgbtq=/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q);
    searchHelp.hidden=!lgbtq;
