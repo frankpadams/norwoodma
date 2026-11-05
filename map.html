@@ -110,6 +110,8 @@
 <p class="map-layer-section-label">Boundaries &amp; districts</p>
 <label class="map-layer-choice"><input type="checkbox" id="townBoundary" checked><span>Town outline</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="elementaryZones"><span>Elementary school districts</span></label>
+<p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
 <div class="map-layer-statuses">
 
@@ -200,6 +202,32 @@ for(const option of select.options){if(['park','athletic'].includes(option.value
  document.getElementById('mapCategoryGroups').append(group);
 }else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
 sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.detail?.categories||[]).forEach(x=>active.add(x));sync()});
+})();
+</script>
+<script>
+(()=>{
+ const toggle=document.getElementById('elementaryZones');
+ const status=document.getElementById('schoolZoneStatus');
+ const map=window.norwoodTrailMap;
+ const colors={Prescott:'#9d65ac',Willett:'#4479b0',Balch:'#e08b39',Oldham:'#54995a',Callahan:'#cc6177',Cleveland:'#399b9a'};
+ let loading;
+ toggle.addEventListener('change',async()=>{
+  if(!toggle.checked)status.textContent='';
+  else status.textContent='Loading elementary districts…';
+  try{
+   if(!loading && !toggle.checked)return;
+   loading ||= fetch('data/elementary-zones-2026.geojson').then(r=>{
+    if(!r.ok)throw Error();
+    return r.json();
+   }).then(data=>L.geoJSON(data,{
+    style:f=>({color:'#17384d',weight:2,fillColor:colors[f.properties.school],fillOpacity:0.42}),
+    onEachFeature:(f,layer)=>layer.bindTooltip(f.properties.school,{permanent:true,direction:'center'}).bindPopup(f.properties.school+' Elementary School · 2026–27 K–4 attendance area')
+   })).catch(error=>{loading=null;throw error});
+   const zones=await loading;
+   if(toggle.checked){zones.addTo(map);status.textContent='2026–27 K–4 attendance areas · Norwood Public Schools.'}
+   else map.removeLayer(zones);
+  }catch{if(toggle.checked){toggle.checked=false;status.textContent='Districts could not load. Use the elementary school assignment lookup below.'}}
+ });
 })();
 </script>
 </body>
