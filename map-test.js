@@ -157,7 +157,10 @@ function cleanAddress(a){
 }
 const dynamic=[];
 (window.NORWOOD_RESTAURANTS||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:'food',address:a,details:r.cuisine||r.category||'Restaurant',url:r.url||'restaurants.html'});});
-(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(!a)return;const gasAddress=staticPlaces.some(p=>p.category==='gas'&&norm(p.address)===norm(a));if(gasAddress)return;dynamic.push({name:b.name,category:'business',businessText:norm([b.category,b.labels,b.tags].flat().filter(Boolean).join(' ')),businessTaxonomy:(window.NORWOOD_BUSINESS_TAXONOMY||{})[String(b.name||'').toLowerCase()]||[],address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
+(window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(!a)return;
+ // The legacy Launch Trampoline Park entry duplicates the current Launch Family Entertainment listing.
+ if(norm(b.name)==='launch trampoline park')return;
+ const gasAddress=staticPlaces.some(p=>p.category==='gas'&&norm(p.address)===norm(a));if(gasAddress)return;dynamic.push({name:b.name,category:'business',businessText:norm([b.category,b.labels,b.tags].flat().filter(Boolean).join(' ')),businessTaxonomy:(window.NORWOOD_BUSINESS_TAXONOMY||{})[String(b.name||'').toLowerCase()]||[],address:a,details:(b.labels||b.tags||[b.category]).filter(Boolean).join(' · ')||'Local business',url:b.website||'businesses.html'});});
 (window.NORWOOD_RESOURCES||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:resourceCategory(r),address:a,details:r.description||r.category||'Community resource',url:r.url||'resources.html'});});
 (window.NORWOOD_EVENTS||[]).forEach(e=>{
  if(e.publish_candidate===false)return;
