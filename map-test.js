@@ -383,23 +383,23 @@ async function toggleTownBoundary(on){
   if(box)box.textContent='Town boundary shown from MassGIS.';
  }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
 }
-// Polling places published for the 2024 state election. Confirm future assignments by address.
+// Norwood Town Clerk polling-location directory, checked November 5, 2026.
 const precinctPollingPlaces = {
   1: 'Oldham School, 165 Prospect St.',
   2: 'Oldham School, 165 Prospect St.',
   3: 'Civic Center, 165 Nahatan St.',
-  4: 'Cleveland School, 33 George Willett Pkwy.',
+  4: 'Cleveland School, 33 George F. Willet Pkwy.',
   5: 'Civic Center, 165 Nahatan St.',
-  6: 'Balch School, 1170 Washington St.',
-  7: 'Balch School, 1170 Washington St.',
-  8: 'Callahan School, 116 Garfield Ave.',
+  6: 'Balch School, 1168 Washington St.',
+  7: 'Balch School, 1168 Washington St.',
+  8: 'Callahan School, 90 Garfield Ave.',
   9: 'Prescott School, 66 Richland Rd.'
 };
 function precinctPopup(number) {
   const members = typeof currentTownMeetingMembers === 'undefined' ? [] : currentTownMeetingMembers[number] || [];
   const location = precinctPollingPlaces[number];
-  return '<strong>Norwood Precinct ' + esc(number) + '</strong><p><b>Polling place (2024 election)</b><br>' +
-    esc(location || 'See official lookup') + '<br><a href="https://www.sec.state.ma.us/WhereDoIVoteMA/" target="_blank" rel="noopener">Confirm your current polling place ↗</a></p>' +
+  return '<strong>Norwood Precinct ' + esc(number) + '</strong><p><b>Polling place</b><br>' +
+    esc(location || 'See official lookup') + '<br><a href="https://www.norwoodma.gov/departments/town_clerk_and_accountant/voting_and_elections/departments/town_clerk_and_accountant/voting.php" target="_blank" rel="noopener">Town Clerk polling locations ↗</a><br><a href="https://www.sec.state.ma.us/WhereDoIVoteMA/" target="_blank" rel="noopener">Confirm your current polling place ↗</a></p>' +
     '<b>District ' + esc(number) + ' Town Meeting representatives</b>' +
     (members.length ? '<ul style="padding-left:1.3em;margin:.5em 0">' + members.map(name => '<li>' + esc(name) + '</li>').join('') + '</ul>' : '<p>See the Town Meeting roster.</p>') +
     '<a href="town-meeting-archive.html#repDistrict">Who represents me?</a>';
