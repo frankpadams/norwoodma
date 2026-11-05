@@ -491,7 +491,7 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
 /* Keep the two quiz tiles identical in footprint across viewport sizes. */
 #home .today-sidebar .quick-widget-grid>a:is(.trivia-test,.townie-test){box-sizing:border-box!important;grid-column:span 1!important;grid-row:auto!important;width:100%!important;height:112px!important;min-height:112px!important;max-height:112px!important;margin:0!important;align-self:stretch!important;justify-self:stretch!important;padding:12px!important}
 </style><style>
-#todayEventScroll .home-event-row,.home-fundraisers-link{display:grid!important;grid-template-columns:fit-content(6.5em) minmax(0,1fr);align-items:baseline;column-gap:.35rem!important}
+#todayEventScroll .home-event-row,.home-fundraisers-link{display:grid!important;grid-template-columns:3.3rem minmax(0,1fr);align-items:baseline;column-gap:.35rem!important}
 .home-event-date,.home-event-venue,.home-event-info small{font-size:.8rem;color:#526477;line-height:1.35}
 .home-event-date{font-weight:700}
 .home-event-info{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .55rem;min-width:0}
@@ -576,7 +576,7 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
      const range=e.end?.date&&e.end.date>e.start.date?'–'+date(e.end.date+'T12:00:00'):'';
      const time=e.start.time&&!/^(?:00:00(?::00)?|0:00|12:00\s*AM)$/i.test(String(e.start.time).trim())?e.start.time:'';
      const schedule=[time,e.recurrence].filter(Boolean).join(' · ');
-     return '<div class="today-story home-event-row"><span class="home-event-date">'+esc(date(e.start.date+'T12:00:00')+range)+'</span><div class="home-event-info"><strong><a href="'+esc(url)+'" data-preview-event="1">'+esc(e.title)+'</a></strong>'+(venue?'<span class="home-event-venue">'+esc(venue)+'</span>':'')+(schedule?'<small>'+esc(schedule)+'</small>':'')+'</div></div>';
+     return '<div class="today-story home-event-row"><span class="home-event-date">'+esc(date(e.start.date+'T12:00:00'))+(range?'<wbr>'+esc(range):'')+'</span><div class="home-event-info"><strong><a href="'+esc(url)+'" data-preview-event="1">'+esc(e.title)+'</a></strong>'+(venue?'<span class="home-event-venue">'+esc(venue)+'</span>':'')+(schedule?'<small>'+esc(schedule)+'</small>':'')+'</div></div>';
    }).join('');
  };
  fetch('data/events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Events unavailable');return r.json()}).then(data=>renderEvents(Array.isArray(data)?data:[])).catch(()=>{ev.innerHTML='<a href="events.html">Open the current community calendar ↗</a>'});
