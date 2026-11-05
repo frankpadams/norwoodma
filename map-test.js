@@ -447,14 +447,17 @@ function precinctLabelPosition(feature, layer) {
   }
   return map.unproject(best);
 }
+let precinctRequest;
 async function togglePrecincts(on){
  const box=document.querySelector('#boundaryStatus');
- if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}syncOutline();if(document.querySelector('#townBoundary').checked&&!boundaryLayers.town)toggleTownBoundary(true);return}
- if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
+ if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts)}syncOutline();if(document.querySelector('#townBoundary').checked&&!boundaryLayers.town)toggleTownBoundary(true);return}
+ if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);syncOutline();if(box)box.textContent='Norwood voting precincts';return}
  if(box)box.textContent='Loading Norwood voting precincts…';
  try{
   const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/All_Legislative_Layers_and_combined_for_popups_WFL1/FeatureServer/3/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
-  const gj=await fetchGeoJSON(url);
+  precinctRequest ||= fetchGeoJSON('data/norwood-voting-precincts.geojson').catch(()=>fetchGeoJSON(url));
+  const gj=await precinctRequest;
+  if(boundaryLayers.precincts)return;
   if(!gj?.features?.length)throw Error('No Norwood precincts returned');
   if(!document.querySelector('#votingPrecincts').checked)return;
   votingOutline=electionPerimeter(gj);
@@ -470,7 +473,11 @@ async function togglePrecincts(on){
   }l.bindPopup(()=>precinctPopup(String(Number(number)) || number),{maxHeight:230,maxWidth:290})}}).addTo(map);
   syncOutline();
   if(box)box.textContent='Norwood voting precincts · Town outline follows the perimeter of the 2022 voting districts in this view.';
- }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
+ }catch(e){
+  precinctRequest=null;
+  const toggle=document.querySelector('#votingPrecincts');
+  if(toggle.checked){toggle.checked=false;if(box)box.textContent='Could not load precincts. Select Voting precincts to retry.'}
+ }
 }
 
 
