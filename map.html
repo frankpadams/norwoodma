@@ -18,7 +18,7 @@
 .map-prototype-head h1{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);margin:.2rem 0 .4rem;color:#153b56}
 .map-prototype-head p{margin:0;max-width:720px;color:#627581}
 .prototype-note{font-size:.75rem;font-weight:850;letter-spacing:.06em;color:#805f00;background:#fff4c8;border:1px solid #e2c357;border-radius:999px;padding:6px 10px;white-space:nowrap}
-.map-control-panel{display:grid;grid-template-columns:minmax(190px,260px) minmax(240px,1fr) auto;gap:12px;align-items:end;margin:0 0 14px;padding:12px;border:1px solid #d5e0e6;border-radius:12px;background:#fff}
+.map-control-panel{display:flex;justify-content:flex-end;margin:0 0 14px}
 .map-filter-field{display:grid;gap:5px}.map-filter-field label{font-size:.76rem;font-weight:850;color:#36566c}
 .map-filter-field select,.map-filter-field input{width:100%;min-height:42px;border:1px solid #cbd8e0;border-radius:9px;padding:8px 11px;font:inherit;font-size:16px;background:#fff;color:#17384d}
 .map-locate-button{min-height:42px;border:1px solid #d7ad00;border-radius:9px;padding:8px 13px;background:#f2c100;color:#17384d;font:inherit;font-size:.82rem;font-weight:850;cursor:pointer}
@@ -57,7 +57,7 @@
  .map-shell{grid-template-columns:1fr;min-height:0}.map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none}.map-list-head{position:static}
  #prototypeMap{min-height:54vh}.map-control-panel{grid-template-columns:1fr}.prototype-explainer{grid-template-columns:1fr}
 }
-.map-workspace{display:grid;grid-template-columns:minmax(215px,260px) minmax(0,1fr);gap:14px;align-items:start}.map-layer-sidebar{border:1px solid #d5e0e6;border-radius:12px;background:#fff;padding:14px}.map-layer-sidebar h2{font-size:1.1rem;color:#153b56;margin:0 0 5px}.map-layer-sidebar p{font-size:.78rem;color:#617682}.map-layer-choices{display:grid;gap:1px}.map-layer-choice{display:flex;align-items:center;gap:8px;width:100%;min-height:32px;padding:5px 2px;border:0;border-radius:0;background:transparent;color:#17384d;text-align:left;font:inherit;font-size:.82rem;cursor:pointer}.map-layer-choice input{width:16px;height:16px;margin:0;accent-color:#003b71;flex:0 0 auto}.map-layer-choice:focus-within{outline:3px solid #f2c100;outline-offset:1px}.map-layer-choice:has(input:checked){font-weight:800}.map-layer-more{margin-top:10px}.map-layer-category-group{margin:0}.map-layer-category-group summary{cursor:pointer;padding:7px 2px;font-size:.84rem;font-weight:800;color:#17384d}.map-layer-category-items{padding-left:12px}.map-layer-more summary{cursor:pointer;font-weight:800;padding:9px 0}.map-layer-note{border-top:1px solid #e3eaee;padding-top:10px}.legacy-map-filter{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.map-workspace .map-shell{display:flex;flex-direction:column;min-height:0}.map-workspace #prototypeMap{min-height:510px}.map-workspace .map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none;overflow:visible}.place-card.is-selected{background:#fff3c5;box-shadow:inset 4px 0 #d7ad00}.map-search-help{padding:14px 16px;border-top:1px solid #d5e0e6;background:#fff;color:#36566c;font-size:.8rem;line-height:1.45}.map-search-help a{font-weight:800;color:#003b71}.map-results-group{padding:9px 16px;background:#eaf1f5;color:#153b56;font-size:.85rem;font-weight:850;border-bottom:1px solid #d5e0e6}.trail-layer-entry{display:flex;align-items:center;gap:7px;padding:7px 2px;font-size:.78rem}.trail-layer-entry a{margin-left:auto;font-weight:750;white-space:nowrap}.trail-layer-entry input{accent-color:#003b71}.trail-layer-actions{display:flex;gap:8px;margin:10px 0}.trail-layer-actions button{cursor:pointer;padding:6px;border:1px solid #bdcbd4;border-radius:6px;background:#fff}.map-layer-more #mapBusinessChoices{display:grid;gap:5px}
+.map-workspace{display:grid;grid-template-columns:minmax(215px,260px) minmax(0,1fr);gap:14px;align-items:start}.map-layer-sidebar{border:1px solid #d5e0e6;border-radius:12px;background:#fff;padding:14px}.map-layer-sidebar h2{font-size:1.1rem;color:#153b56;margin:0 0 5px}.map-layer-sidebar p{font-size:.78rem;color:#617682}.map-layer-choices{display:grid;gap:1px}.map-layer-section-label{margin:12px 0 3px;padding-top:9px;border-top:1px solid #e3eaee;color:#687983;font-size:.7rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.map-layer-choice-help{position:relative;display:flex;align-items:center;min-height:32px}.map-layer-choice-help>label{display:flex;align-items:center;gap:8px;flex:1;min-height:32px;color:#17384d;font-size:.82rem;cursor:pointer}.map-layer-statuses{margin:4px 0 8px}.map-layer-status{margin:3px 0;color:#71808a;font-size:.68rem;line-height:1.35}.map-layer-links{display:grid;gap:7px;margin-top:12px;padding-top:10px;border-top:1px solid #e3eaee;font-size:.75rem}.map-layer-links b{color:#153b56}.map-layer-links a{font-weight:750;color:#003b71}.map-inline-search{padding:10px 12px;border-top:1px solid #d5e0e6;border-bottom:1px solid #d5e0e6;background:#f8fafb}.map-inline-search input{max-width:100%}.map-layer-choice{display:flex;align-items:center;gap:8px;width:100%;min-height:32px;padding:5px 2px;border:0;border-radius:0;background:transparent;color:#17384d;text-align:left;font:inherit;font-size:.82rem;cursor:pointer}.map-layer-choice input{width:16px;height:16px;margin:0;accent-color:#003b71;flex:0 0 auto}.map-layer-choice:focus-within{outline:3px solid #f2c100;outline-offset:1px}.map-layer-choice:has(input:checked){font-weight:800}.map-layer-more{margin-top:10px}.map-layer-category-group{margin:0}.map-layer-category-group summary{cursor:pointer;padding:7px 2px;font-size:.84rem;font-weight:800;color:#17384d}.map-layer-category-items{padding-left:12px}.map-layer-more summary{cursor:pointer;font-weight:800;padding:9px 0}.map-layer-note{border-top:1px solid #e3eaee;padding-top:10px}.legacy-map-filter{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.map-workspace .map-shell{display:flex;flex-direction:column;min-height:0}.map-workspace #prototypeMap{min-height:510px}.map-workspace .map-list{border-left:0;border-top:1px solid #d5e0e6;max-height:none;overflow:visible}.place-card.is-selected{background:#fff3c5;box-shadow:inset 4px 0 #d7ad00}.map-search-help{padding:14px 16px;border-top:1px solid #d5e0e6;background:#fff;color:#36566c;font-size:.8rem;line-height:1.45}.map-search-help a{font-weight:800;color:#003b71}.map-results-group{padding:9px 16px;background:#eaf1f5;color:#153b56;font-size:.85rem;font-weight:850;border-bottom:1px solid #d5e0e6}.trail-layer-entry{display:flex;align-items:center;gap:7px;padding:7px 2px;font-size:.78rem}.trail-layer-entry a{margin-left:auto;font-weight:750;white-space:nowrap}.trail-layer-entry input{accent-color:#003b71}.trail-layer-actions{display:flex;gap:8px;margin:10px 0}.trail-layer-actions button{cursor:pointer;padding:6px;border:1px solid #bdcbd4;border-radius:6px;background:#fff}.map-layer-more #mapBusinessChoices{display:grid;gap:5px}
 @media(max-width:900px){.map-workspace{display:flex;flex-direction:column;align-items:stretch}.map-layer-sidebar,.map-main-column,.map-workspace .map-shell{width:100%;min-width:0}.map-workspace #prototypeMap{width:100%}.map-workspace .map-list{width:100%}}
 @media(max-width:760px){.map-workspace{grid-template-columns:minmax(0,1fr)}}</style>
 <script src="analytics.js?v=0.13.4.37"></script></head>
@@ -89,43 +89,42 @@
 <option value="event">Events</option>
 <option value="landmark">Landmarks</option>
 </select></div>
-<div class="map-filter-field map-filter-search"><label for="mapSearch">Search places</label><input id="mapSearch" type="search" placeholder="Restaurant, park, library, service…" autocomplete="off"></div>
+
 <button class="locate map-locate-button" id="locateMe">◎ Near me</button>
 </div>
-<details class="boundary-panel">
-<summary>More map layers &amp; options</summary>
-<p class="boundary-group-label">Boundaries &amp; districts</p>
-<div class="boundary-options">
-<label><input type="checkbox" id="townBoundary"> Town boundary</label>
-<label><input type="checkbox" id="votingPrecincts"> Voting precincts</label>
-<a class="boundary-link" href="https://www.sec.state.ma.us/wheredoivotema/" target="_blank" rel="noopener">Find my voting precinct & polling place ↗</a>
-<a class="boundary-link" href="https://www.norwoodma.gov/District%20Map.pdf" target="_blank" rel="noopener">Norwood voting district map (PDF) ↗</a>
-<a class="boundary-link" href="https://sites.google.com/norwood.k12.ma.us/scenario1/home" target="_blank" rel="noopener">Elementary school assignment lookup (2026–27) ↗</a>
-</div>
-<p id="boundaryStatus" class="boundary-status">Turn on a boundary layer to compare it with mapped places. If the voting-precinct overlay does not load, use the Massachusetts Secretary of the Commonwealth’s address lookup to find your precinct and polling place. For 2026–27 elementary school assignment, use Norwood Public Schools’ official address lookup.</p>
-
-<p class="boundary-group-label">Additional map layers</p>
-<div class="boundary-options">
-<div class="map-overlay-control">
-<label for="alprToggle"><input type="checkbox" id="alprToggle"> ALPR cameras</label>
+<div class="map-workspace"><aside class="map-layer-sidebar" aria-label="Map layers and related links">
+<h2>Map layers</h2>
+<p>Choose layers to load locations. Select more than one category to compare.</p>
+<div id="mapLayerChoices" class="map-layer-choices"></div>
+<p class="map-layer-section-label">Boundaries &amp; districts</p>
+<label class="map-layer-choice"><input type="checkbox" id="townBoundary" checked><span>Town outline</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
+<div class="map-layer-choice-help">
+<label for="alprToggle"><input type="checkbox" id="alprToggle"><span>ALPR cameras</span></label>
 <button type="button" class="map-overlay-help" id="alprHelp" aria-label="What are ALPR cameras?" aria-controls="alprHelpText" aria-expanded="false">i</button>
 <span id="alprHelpText" class="map-overlay-tooltip" role="tooltip">Automated license plate readers (AI-enabled surveillance devices)</span>
 </div>
-<div class="map-overlay-control">
-<label for="workZoneToggle"><input type="checkbox" id="workZoneToggle"> Work zones</label>
+<label class="map-layer-choice"><input type="checkbox" id="workZoneToggle"><span>Work zones</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
+<div class="map-layer-statuses">
+<p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
+<p id="alprStatus" class="map-layer-status" aria-live="polite">Community-mapped camera locations from DeFlock / OpenStreetMap. Coverage may be incomplete.</p>
+<p id="workZoneStatus" class="map-layer-status" aria-live="polite">Active MassDOT work zones near Norwood. Refreshes every 60 seconds while enabled.</p>
+<p id="mbtaStatus" class="map-layer-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, routes and Norwood stops. Live positions refresh every 30 seconds while enabled.</p>
 </div>
-<div class="map-overlay-control">
-<label for="mbtaToggle"><input type="checkbox" id="mbtaToggle"> Live MBTA transit</label>
-</div>
-</div>
-<p id="alprStatus" class="boundary-status">Community-mapped camera locations from <a href="https://deflock.org/" target="_blank" rel="noopener">DeFlock ↗</a> / OpenStreetMap. Coverage may be incomplete.</p>
-<p id="workZoneStatus" class="boundary-status" aria-live="polite">Active MassDOT work zones near Norwood. This public feed refreshes every 60 seconds.</p>
-<p id="mbtaStatus" class="boundary-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, route paths and Norwood stops. Live vehicle positions from the MBTA V3 API refresh every 30 seconds while this layer is on.</p>
-</p>
-</details>
-
-<div class="map-workspace"><aside class="map-layer-sidebar" aria-label="Choose map categories"><h2>Map layers</h2><p>Choose map layers to load locations. Select more than one to compare.</p><div id="mapLayerChoices" class="map-layer-choices"></div><details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div><a href="trails.html">Explore all Norwood trails →</a></details><details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details><p class="map-layer-note">Additional boundary and transit options remain available above.</p></aside><div class="map-main-column"><div class="map-shell">
+<details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div></details>
+<details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
+<nav class="map-layer-links" aria-label="Related map links">
+<b>Related links</b>
+<a href="https://www.sec.state.ma.us/wheredoivotema/" target="_blank" rel="noopener">Find my voting precinct &amp; polling place ↗</a>
+<a href="https://www.norwoodma.gov/District%20Map.pdf" target="_blank" rel="noopener">Norwood voting district map (PDF) ↗</a>
+<a href="https://sites.google.com/norwood.k12.ma.us/scenario1/home" target="_blank" rel="noopener">Elementary school assignment lookup ↗</a>
+<a href="https://deflock.org/" target="_blank" rel="noopener">DeFlock camera map ↗</a>
+<a href="trails.html">Explore all Norwood trails →</a>
+</nav>
+</aside><div class="map-main-column"><div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of Norwood locations"></div>
+<div class="map-filter-field map-filter-search map-inline-search"><label for="mapSearch">Search places</label><input id="mapSearch" type="search" placeholder="Restaurant, park, library, service…" autocomplete="off"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
 </div></div></div>
 <section class="map-disclaimer" aria-label="Map disclaimer"><p><strong>Map disclaimer:</strong> Maps are approximate and based on publicly available data, which may contain errors or become outdated. Norwood.ma is not responsible for decisions made based on map information. Please verify locations, boundaries, districts, parking, amenities, and other map data with an authoritative or independent source before making any consequential decision.</p></section>
@@ -139,7 +138,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
-<script src="map-test.js?v=20261105-map-precincts"></script>
+<script src="map-test.js?v=20261105-map-sidebar"></script>
 <script src="map-integrated-trails.js?v=20261104-1"></script>
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
 <script src="map-work-zones.js?v=20261105-2"></script>
