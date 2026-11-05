@@ -1,7 +1,8 @@
 (()=>{
 'use strict';
-const NORWOOD_BOUNDS=L.latLngBounds([[42.1515,-71.2355],[42.2265,-71.1505]]);
-const map=L.map('prototypeMap',{scrollWheelZoom:false}).fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});
+// Norwood municipal polygon extent from MassGIS, rounded outward.
+const NORWOOD_BOUNDS=L.latLngBounds([[42.14980,-71.23848],[42.21399,-71.15476]]);
+const map=L.map('prototypeMap',{scrollWheelZoom:false,zoomSnap:0.1}).fitBounds(NORWOOD_BOUNDS,{padding:[8,8]});
 window.norwoodTrailMap=map; // Expose only to unlinked experimental trail workspace.
 window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true});
