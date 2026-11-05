@@ -2,8 +2,8 @@
 
 **Authority:** This file is the canonical rule for Norwood.ma release numbering and release documentation.
 
-**Current stable release:** **v1.5.2**  
-**Stable-release date:** November 4, 2026
+**Current stable release:** **v1.6.0**  
+**Stable-release date:** November 5, 2026
 
 Norwood.ma uses a three-part release number:
 
