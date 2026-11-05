@@ -1,7 +1,7 @@
 (()=>{'use strict';
 const map=window.norwoodTrailMap,L=window.L,toggle=document.getElementById('workZoneToggle'),status=document.getElementById('workZoneStatus');
 if(!map||!L||!toggle||!status)return;
-const FEED='https://feed.massdot-swzm.com/massdot_wzdx_v4.1_work_zone_feed.geojson';
+const FEED='work-zones.php';
 const nearNorwood=L.latLngBounds([[42.12,-71.29],[42.27,-71.10]]);
 let layer=L.geoJSON(null,{filter:activeNearNorwood,style:{color:'#c2410c',weight:6,opacity:.9,dashArray:'8 5'},onEachFeature:(f,featureLayer)=>{
  const p=f.properties||{},core=p.core_details||{},roads=(core.road_names||[]).filter(Boolean).join(', ')||core.name||'Road work';
