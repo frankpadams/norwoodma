@@ -4,7 +4,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.5.1 — makes map category choices compact text-and-checkbox rows, matches the Trails selector, and stacks the map below its controls on mobile.
+**Current release:** v1.5.1 — makes map category choices compact text-and-checkbox rows, combines parks and athletic fields, and stacks the map below its controls on mobile.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
