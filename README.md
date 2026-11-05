@@ -1,10 +1,10 @@
-# Norwood.ma v1.5.0
+# Norwood.ma v1.5.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.5.0 — reorganizes Sports & Recreation into Youth, Adult and Places to Play, with compact announcements and expandable sport groups.
+**Current release:** v1.5.1 — makes map category choices compact text-and-checkbox rows, matching the Trails selector.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -94,6 +94,12 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 
 ## Current stable release
 
+### v1.5.1 — Compact map category selector
+Released November 5, 2026.
+
+- Replaced large map category buttons with compact text rows and checkboxes, matching the Trails selector.
+- Kept multi-category filtering and the existing map layers.
+
 ### v1.5.0 — Sports & Recreation organization
 Released October 27, 2026.
 
@@ -132,6 +138,7 @@ Post-release operational development has also added regional-event organization,
 
 ## Release history
 
+- **v1.5.1** — compact map category selector matching Trails.
 - **v1.5.0** — organized sports hub, compact announcements and direct sport navigation.
 - **v1.4.4** — Facebook share copy confirmation and paste instructions.
 - **v1.4.3** — Facebook caption handling for Townie score shares.
