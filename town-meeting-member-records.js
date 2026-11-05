@@ -28,8 +28,7 @@ function openMember(key){
 if(!data.members[key])return;
 el('tmMemberTitle').textContent='Member voting & attendance record';el('tmMemberSubtitle').textContent=data.members[key].name;
 el('tmMemberTabs').innerHTML=selected?'<button type="button" data-tm-back>← Back to vote results</button>':'';
-let first=true;
-el('tmMemberBody').innerHTML=data.meetings.map(period=>{const content=recordFor(key,period);if(!content)return '';const open=first;first=false;return '<details class="member-guide"'+(open?' open':'')+'><summary>'+esc(period.title)+'</summary><div class="member-guide-body">'+content+'</div></details>';}).join('')+'<p class="tm26-vote-note">'+esc(data.coverage_note)+'</p>';
+el('tmMemberBody').innerHTML=data.meetings.map(period=>{const content=recordFor(key,period);if(!content)return '';return '<details class="member-guide"><summary>'+esc(period.title)+'</summary><div class="member-guide-body">'+content+'</div></details>';}).join('')+'<p class="tm26-vote-note">'+esc(data.coverage_note)+'</p>';
 show();
 }
 function renderVotes(){
