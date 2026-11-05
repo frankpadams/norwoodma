@@ -111,10 +111,14 @@
 <span id="alprHelpText" class="map-overlay-tooltip" role="tooltip">Automated license plate readers (AI-enabled surveillance devices)</span>
 </div>
 <div class="map-overlay-control">
+<label for="workZoneToggle"><input type="checkbox" id="workZoneToggle"> Work zones</label>
+</div>
+<div class="map-overlay-control">
 <label for="mbtaToggle"><input type="checkbox" id="mbtaToggle"> Live MBTA transit</label>
 </div>
 </div>
 <p id="alprStatus" class="boundary-status">Community-mapped camera locations from <a href="https://deflock.org/" target="_blank" rel="noopener">DeFlock ↗</a> / OpenStreetMap. Coverage may be incomplete.</p>
+<p id="workZoneStatus" class="boundary-status" aria-live="polite">Active MassDOT work zones near Norwood. This public feed refreshes every 60 seconds.</p>
 <p id="mbtaStatus" class="boundary-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, route paths and Norwood stops. Live vehicle positions from the MBTA V3 API refresh every 30 seconds while this layer is on.</p>
 </p>
 </details>
@@ -137,6 +141,7 @@
 <script src="map-test.js?v=20261104-precinct-colors"></script>
 <script src="map-integrated-trails.js?v=20261104-1"></script>
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
+<script src="map-work-zones.js?v=20261105-1"></script>
 <script>
 (()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
 const primary=['school','civic','historic','transit','parking','culture','event','landmark'];
