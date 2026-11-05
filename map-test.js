@@ -402,8 +402,7 @@ function precinctPopup(number) {
     esc(location || 'See official lookup') + '<br><a href="https://www.norwoodma.gov/departments/town_clerk_and_accountant/voting_and_elections/departments/town_clerk_and_accountant/voting.php" target="_blank" rel="noopener">Town Clerk polling locations ↗</a><br><a href="https://www.sec.state.ma.us/WhereDoIVoteMA/" target="_blank" rel="noopener">Confirm your current polling place ↗</a></p>' +
     '<b>District ' + esc(number) + ' Town Meeting representatives</b><br>' +
     '<a href="town-meeting-archive.html?district=' + encodeURIComponent(number) + '#repDistrict">' +
-    (members.length ? 'View all ' + members.length + ' members' : 'View district roster') + '</a>' +
-    (members.length ? '<ul style="padding-left:1.3em;margin:.5em 0">' + members.map(name => '<li>' + esc(name) + '</li>').join('') + '</ul>' : '');
+    (members.length ? 'View all ' + members.length + ' members' : 'View district roster') + '</a>';
 }
 // Keep the normal label center if its badge clears every edge. Otherwise use
 // the nearest clear interior sample, or the roomiest one in a narrow precinct.
