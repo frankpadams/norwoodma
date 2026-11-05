@@ -349,7 +349,9 @@ document.querySelector('#locateMe').addEventListener('click',()=>{
   userMarker=L.circleMarker(ll,{radius:9,weight:3,color:'#003B71',fillColor:'#F2C100',fillOpacity:1}).addTo(map).bindPopup('<b>Your approximate location</b>').openPopup();map.setView(ll,15);
  },()=>alert('Your location was not shared. You can still browse the map normally.'),{enableHighAccuracy:false,timeout:8000});
 });
-document.querySelector('#townBoundary')?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
+const townBoundaryToggle=document.querySelector('#townBoundary');
+townBoundaryToggle?.addEventListener('change',e=>toggleTownBoundary(e.target.checked));
+if(townBoundaryToggle?.checked)toggleTownBoundary(true);
 document.querySelector('#votingPrecincts')?.addEventListener('change',e=>togglePrecincts(e.target.checked));
 render().then(async()=>{if(!requestedPlace)return;const target=places.find(p=>norm(p.name)===norm(requestedPlace))||currentPlaces()[0];if(!target)return;const ll=await geocode(target);if(!ll)return;map.setView(ll,16);for(const layer of cluster.getLayers()){if(layer.getLatLng&&layer.getLatLng().distanceTo(L.latLng(ll))<5){layer.openPopup();break;}}});
 })();
