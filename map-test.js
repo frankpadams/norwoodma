@@ -278,7 +278,7 @@ async function togglePrecincts(on){
  if(boundaryLayers.precincts){boundaryLayers.precincts.addTo(map);return}
  if(box)box.textContent='Loading Norwood voting precincts…';
  try{
-  const url="https://services9.arcgis.com/wMoJraMZWuVPEmGK/arcgis/rest/services/Voter_Precinct/FeatureServer/0/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
+  const url="https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/All_Legislative_Layers_and_combined_for_popups_WFL1/FeatureServer/3/query?where="+encodeURIComponent("UPPER(TOWN)='NORWOOD'")+"&outFields=PRECINCT,WP_NAME,TOWN&returnGeometry=true&outSR=4326&f=geojson";
   const gj=await fetchGeoJSON(url);
   if(!gj?.features?.length)throw Error('No Norwood precincts returned');
   const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
