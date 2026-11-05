@@ -383,6 +383,27 @@ async function toggleTownBoundary(on){
   if(box)box.textContent='Town boundary shown from MassGIS.';
  }catch(e){if(box)box.textContent='The town boundary could not be loaded right now.'}
 }
+// Polling places published for the 2024 state election. Confirm future assignments by address.
+const precinctPollingPlaces = {
+  1: 'Oldham School, 165 Prospect St.',
+  2: 'Oldham School, 165 Prospect St.',
+  3: 'Civic Center, 165 Nahatan St.',
+  4: 'Cleveland School, 33 George Willett Pkwy.',
+  5: 'Civic Center, 165 Nahatan St.',
+  6: 'Balch School, 1170 Washington St.',
+  7: 'Balch School, 1170 Washington St.',
+  8: 'Callahan School, 116 Garfield Ave.',
+  9: 'Prescott School, 66 Richland Rd.'
+};
+function precinctPopup(number) {
+  const members = typeof currentTownMeetingMembers === 'undefined' ? [] : currentTownMeetingMembers[number] || [];
+  const location = precinctPollingPlaces[number];
+  return '<strong>Norwood Precinct ' + esc(number) + '</strong><p><b>Polling place (2024 election)</b><br>' +
+    esc(location || 'See official lookup') + '<br><a href="https://www.sec.state.ma.us/WhereDoIVoteMA/" target="_blank" rel="noopener">Confirm your current polling place ↗</a></p>' +
+    '<b>District ' + esc(number) + ' Town Meeting representatives</b>' +
+    (members.length ? '<ul style="padding-left:1.3em;margin:.5em 0">' + members.map(name => '<li>' + esc(name) + '</li>').join('') + '</ul>' : '<p>See the Town Meeting roster.</p>') +
+    '<a href="town-meeting-archive.html#repDistrict">Who represents me?</a>';
+}
 async function togglePrecincts(on){
  const box=document.querySelector('#boundaryStatus');
  if(!on){if(boundaryLayers.precincts){map.removeLayer(boundaryLayers.precincts);boundaryLayers.precincts=null}syncOutline();if(document.querySelector('#townBoundary').checked&&!boundaryLayers.town)toggleTownBoundary(true);return}
@@ -397,7 +418,7 @@ async function togglePrecincts(on){
   const precinctKeys=[...new Set(gj.features.map(f=>String(f.properties?.PRECINCT??f.properties?.WP_NAME??'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
   const precinctPalette=['#e76f51','#2a9d8f','#e9c46a','#6c63a8','#4c9f70','#d45b8c','#3f88c5','#b7791f','#7a9e35','#a85570','#0f8b8d','#e07a5f'];
   const precinctColors=new Map(precinctKeys.map((key,i)=>[key,precinctPalette[i%precinctPalette.length]]));
-  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{smoothFactor:0,color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup('<b>'+esc(a.WP_NAME||('Norwood Precinct '+(a.PRECINCT||'')))+'</b><br>Voting precinct boundary')}}).addTo(map);
+  boundaryLayers.precincts=L.geoJSON(gj,{style:f=>{const a=f.properties||{},key=String(a.PRECINCT??a.WP_NAME??'').trim();return{smoothFactor:0,color:'#17384d',weight:3,opacity:1,fillColor:precinctColors.get(key)||'#6b7280',fillOpacity:.58}},onEachFeature:(f,l)=>{const a=f.properties||{},number=String(a.PRECINCT||'').trim();if(number)l.bindTooltip(number,{permanent:true,direction:'center',className:'precinct-number-label',opacity:1});l.bindPopup(()=>precinctPopup(String(Number(number)) || number),{maxHeight:230,maxWidth:290})}}).addTo(map);
   syncOutline();
   if(box)box.textContent='Norwood voting precincts · Town outline follows the perimeter of the 2022 voting districts in this view.';
  }catch(e){if(box)box.textContent='Voting precinct boundaries could not be loaded right now.'}
