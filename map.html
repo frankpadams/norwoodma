@@ -210,6 +210,21 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  const toggle=document.getElementById('elementaryZones');
  const status=document.getElementById('schoolZoneStatus');
  const map=window.norwoodTrailMap;
+ const schoolContacts = {
+  Balch: {name:'Thomas Balch Elementary School', address:'1170 Washington Street', phone:'781-762-0694'},
+  Callahan: {name:'C.M. Callahan Elementary School', address:'116 Garfield Avenue', phone:'781-762-0693'},
+  Cleveland: {name:'F.A. Cleveland Elementary School', address:'33 George Willett Parkway', phone:'781-762-6522'},
+  Oldham: {name:'John P. Oldham Elementary School', address:'165 Prospect Street', phone:'781-769-2417'},
+  Prescott: {name:'C.J. Prescott Elementary School', address:'66 Richland Road', phone:'781-762-6497'},
+  Willett: {name:'George F. Willett Elementary School', address:'100 Westover Parkway', phone:'781-762-6805'}
+ };
+ function schoolPopup(key) {
+  const school = schoolContacts[key];
+  if (!school) return '2026–27 K–4 attendance area';
+  return '<strong>' + school.name + '</strong><br>2026–27 K–4 attendance area<p>' +
+   school.address + '<br>Norwood, MA 02062<br><a href="tel:+1' + school.phone.replace(/-/g,'') + '">' + school.phone + '</a></p>' +
+   '<a href="https://www.norwood.k12.ma.us/' + key.toLowerCase() + '" target="_blank" rel="noopener">School website ↗</a>';
+ }
  const colors={Prescott:'#9d65ac',Willett:'#4479b0',Balch:'#e08b39',Oldham:'#54995a',Callahan:'#cc6177',Cleveland:'#399b9a'};
  let loading;
  toggle.addEventListener('change',async()=>{
@@ -222,7 +237,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
     return r.json();
    }).then(data=>L.geoJSON(data,{
     style:f=>({color:'#17384d',weight:2,fillColor:colors[f.properties.school],fillOpacity:0.42}),
-    onEachFeature:(f,layer)=>layer.bindTooltip(f.properties.school,{permanent:true,direction:'center'}).bindPopup(f.properties.school+' Elementary School · 2026–27 K–4 attendance area')
+    onEachFeature:(f,layer)=>layer.bindTooltip(f.properties.school,{permanent:true,direction:'center'}).bindPopup(schoolPopup(f.properties.school))
    })).catch(error=>{loading=null;throw error});
    const zones=await loading;
    if(toggle.checked){zones.addTo(map);status.textContent='2026–27 K–4 attendance areas · Norwood Public Schools.'}
