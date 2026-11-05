@@ -6,4 +6,4 @@ Released November 5, 2026.
 - Shows active work zones within the Norwood map area, with road name, direction, traffic impact, end time, and a source link in each popup.
 - Replaces generated precinct hues with a high-contrast palette and stronger outlines so adjacent precincts are easier to distinguish.
 
-The work-zone feed covers work zones only; it does not provide general congestion speeds. The overlay is off by default.
+The site serves the feed through a same-origin PHP relay to avoid browser cross-origin restrictions. The feed covers work zones only; it does not provide general congestion speeds. The overlay is off by default.
