@@ -97,9 +97,6 @@
 <h2>Map layers</h2>
 <p>Choose layers to load locations. Select more than one category to compare.</p>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
-<p class="map-layer-section-label">Boundaries &amp; districts</p>
-<label class="map-layer-choice"><input type="checkbox" id="townBoundary" checked><span>Town outline</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
 <div class="map-layer-choice-help">
 <label for="alprToggle"><input type="checkbox" id="alprToggle"><span>ALPR cameras</span></label>
 <button type="button" class="map-overlay-help" id="alprHelp" aria-label="What are ALPR cameras?" aria-controls="alprHelpText" aria-expanded="false">i</button>
@@ -107,14 +104,19 @@
 </div>
 <label class="map-layer-choice"><input type="checkbox" id="workZoneToggle"><span>Work zones</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
-<div class="map-layer-statuses">
+<details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div></details>
+<details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
+<div id="mapCategoryGroups"></div>
+<p class="map-layer-section-label">Boundaries &amp; districts</p>
+<label class="map-layer-choice"><input type="checkbox" id="townBoundary" checked><span>Town outline</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
+<div class="map-layer-statuses">
+
 <p id="alprStatus" class="map-layer-status" aria-live="polite">Community-mapped camera locations from DeFlock / OpenStreetMap. Coverage may be incomplete.</p>
 <p id="workZoneStatus" class="map-layer-status" aria-live="polite">Active MassDOT work zones near Norwood. Refreshes every 60 seconds while enabled.</p>
 <p id="mbtaStatus" class="map-layer-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, routes and Norwood stops. Live positions refresh every 30 seconds while enabled.</p>
 </div>
-<details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div></details>
-<details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
 <nav class="map-layer-links" aria-label="Related map links">
 <b>Related links</b>
 <a href="https://www.sec.state.ma.us/wheredoivotema/" target="_blank" rel="noopener">Find my voting precinct &amp; polling place ↗</a>
@@ -159,7 +161,7 @@ function addCommunityDropdown(){
  const choices=document.createElement('div');
  choices.className='map-layer-category-items';
  group.append(heading,choices);
- root.append(group);
+ document.getElementById('mapCategoryGroups').append(group);
  let state='idle';
  group.addEventListener('toggle',async()=>{
   if(!group.open||state!=='idle')return;
@@ -195,7 +197,7 @@ for(const option of select.options){if(['park','athletic'].includes(option.value
  group.append(summary);
  button('health','All health & support',group);
  for(const [type,label] of Object.entries(window.norwoodHealthTypes||{}))button('care:'+type,label,group);
- root.append(group);
+ document.getElementById('mapCategoryGroups').append(group);
 }else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
 sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.detail?.categories||[]).forEach(x=>active.add(x));sync()});
 })();
