@@ -8,7 +8,7 @@ const files={shattuck:'shattuck-park-approved',cooper:'bernie-cooper-review',ger
 const docs={shattuck:'https://www.norwoodma.gov/document_center/Trails%20Committee/2023.03.24%20ShattuckPark_Trails_MAP_BROCHURE.pdf',germany:'https://www.norwoodma.gov/Trails/2023.03.24%20GermanyBk_MAP_BROCHURE.pdf',endean:'https://www.norwoodma.gov/document_center/Trails%20Committee/2023.02.21%20EndeanHawesBrTr_MAP_BROCHURE.pdf',meadow:'https://www.norwoodma.gov/Trails/Broc_MeadowStProp_D5Alt_20250807.pdf',cooper:'https://www.norwoodma.gov/Trails/Broc_Cooper_D1_20250812.pdf',vanderbilt:'https://www.norwoodma.gov/VanderbiltPTFInnerAndOuterLoops5KMap.pdf',pineforest:'https://www.norwoodma.gov/Planning/PineTreeForestVanderbiltAllLoopsMap.pdf',hennessey:'https://www.norwoodma.gov/document_center/Trails%20Committee/2023.03.24%20HennesseyField%20and%20MurphyPark_Trails_MAP_BROCHURE.pdf','ellis-pond':'https://www.norwoodma.gov/document_center/Trails%20Committee/2023.03.24%20EllisPond_Alevizos%20Park_MAP_BROCHURE.pdf','ellis-playground':'https://www.norwoodma.gov/Trails/2023.03.24%20EllisPlayground_%20MAP_BROCHURE.pdf',ledgeview:'https://www.norwoodma.gov/Trails/LedgeviewDriveMap.pdf',willett:'https://www.norwoodma.gov/Planning/trails/WillettTiotTrailLegMap.pdf'};
 const bounds={shattuck:[[42.1908,-71.214],[42.1945,-71.2075]],cooper:[[42.170,-71.212],[42.181,-71.197]]};
 const names=Object.fromEntries([...select.options].map(o=>[o.value,o.textContent]));
-const layers={},checks={};let sourcePromise;let selectingAll=false;let initialView=true;
+const layers={},checks={},requestVersion={};let sourcePromise;let selectingAll=false;let initialView=true;
 const source=()=>sourcePromise||(sourcePromise=fetch('data/trails/norwood-source-paths.geojson').then(r=>r.json()));
 function style(f,key){const p=f.properties||{},surf=(p.surface||'').toLowerCase();let color=p.route_color;
  if(!color)color=key==='cooper'?'#c8322a':key==='germany'||key==='endean'?(['asphalt','paved','concrete'].includes(surf)||p.source_layer==='Paved Footway'?'#202020':['gravel','fine_gravel','compacted'].includes(surf)?'#737373':'#387f38'):'#387f38';
@@ -17,13 +17,15 @@ function style(f,key){const p=f.properties||{},surf=(p.surface||'').toLowerCase(
 function focus(){const g=L.featureGroup(Object.keys(layers).filter(k=>checks[k]?.checked).map(k=>layers[k]));if(g.getLayers().length&&g.getBounds().isValid())map.fitBounds(g.getBounds(),{padding:[28,28],maxZoom:17});}
 function details(k){select.value=k;}
 async function toggle(k){
- const cb=checks[k];if(!cb.checked){if(layers[k])map.removeLayer(layers[k]);return;}
+ const cb=checks[k],request= requestVersion[k]=(requestVersion[k]||0)+1;
+ if(!cb.checked){if(layers[k])map.removeLayer(layers[k]);return;}
  details(k);
  try{
  if(!layers[k]){
  let geo;
  if(files[k]){const r=await fetch('data/trails/'+files[k]+'.geojson?v=visitor-cooper-red3');if(!r.ok)throw Error('Could not load trail');geo=await r.json();}
  else {const all=await source(),b=L.latLngBounds(bounds[k]);geo={type:'FeatureCollection',features:all.features.filter(f=>f.properties?.in_norwood&&L.geoJSON(f).getBounds().intersects(b))};}
+ if(request!==requestVersion[k]||!cb.checked)return;
  layers[k]=L.geoJSON(geo,{smoothFactor:0,style:f=>style(f,k),onEachFeature:(f,l)=>{
  const p=f.properties||{},section=p.route_name||p.local_name||p.name||'';
  let text=p.section_description||p.note||'';
@@ -33,12 +35,12 @@ async function toggle(k){
  }});
  }
  if(cb.checked){layers[k].addTo(map);if(!selectingAll&&!initialView)focus();}
- }catch(e){cb.checked=false;const err=document.getElementById('trailLoadError');if(err){err.hidden=false;err.textContent=names[k]+' could not load. Please try again.';}}
+ }catch(e){if(request!==requestVersion[k]||!cb.checked)return;cb.checked=false;const err=document.getElementById('trailLoadError');if(err){err.hidden=false;err.textContent=names[k]+' could not load. Please try again.';}}
 }
 document.getElementById('trailLoading')?.remove();
 const actions=document.createElement('div');actions.className='trail-actions';
 const fit=document.createElement('button');fit.textContent='Fit selected trails';fit.type='button';fit.onclick=focus;
-const clear=document.createElement('button');clear.textContent='Clear all';clear.type='button';clear.onclick=()=>{for(const k in checks){checks[k].checked=false;if(layers[k])map.removeLayer(layers[k]);}};
+const clear=document.createElement('button');clear.textContent='Clear all';clear.type='button';clear.onclick=()=>{for(const k in checks){requestVersion[k]=(requestVersion[k]||0)+1;checks[k].checked=false;if(layers[k])map.removeLayer(layers[k]);}townCheck.checked=false;map.removeLayer(townOutline);};
 const all=document.createElement('button');all.textContent='Select all';all.type='button';all.onclick=async()=>{selectingAll=true;try{await Promise.all(Object.keys(checks).map(k=>{checks[k].checked=true;return toggle(k);}));}finally{selectingAll=false;focus();}};
 actions.append(all,clear,fit);box.append(actions);
 const columnHead=document.createElement('div');columnHead.className='trail-column-head';columnHead.innerHTML='<span>Show trails</span><span>Brochures</span>';box.append(columnHead);
