@@ -3302,6 +3302,44 @@
     ]
   },
   {
+    "id": "rec-occurrence-rec-6057569ba1e2-2026-11-09",
+    "title": "Batting Cage",
+    "start": {
+      "date": "2026-11-09",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-09",
+      "time": "17:00"
+    },
+    "venue": "11/09/2026 04:00 PM - 05:00 PM Norwood Civic Center - Batting Cage",
+    "category": "sports_leagues",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$30.00 Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": false,
+    "drop_in": false,
+    "session_start": "2026-11-09",
+    "session_end": "2026-11-09",
+    "days": "M",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "rec_program_id": "rec-6057569ba1e2",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "norwood-sports",
+      "rec-all",
+      "rec-sports",
+      "recreation-calendar"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-5f99d7665326-2026-11-09",
     "title": "Hard Shoe 3 - Mondays",
     "start": {
@@ -5700,6 +5738,44 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-f0a284246c89-2026-11-12",
+    "title": "Batting Cage",
+    "start": {
+      "date": "2026-11-12",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "17:00"
+    },
+    "venue": "11/12/2026 04:00 PM - 05:00 PM Norwood Civic Center - Batting Cage",
+    "category": "sports_leagues",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$30.00 Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": false,
+    "drop_in": false,
+    "session_start": "2026-11-12",
+    "session_end": "2026-11-12",
+    "days": "Th",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "rec_program_id": "rec-f0a284246c89",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "norwood-sports",
+      "rec-all",
+      "rec-sports",
       "recreation-calendar"
     ]
   },
