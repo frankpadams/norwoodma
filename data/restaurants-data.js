@@ -1095,7 +1095,7 @@ window.NORWOOD_RESTAURANTS= [
   {
     "id": "mak-s-roast-beef-pizza",
     "name": "Mak's Roast Beef & Pizza",
-    "category": "Deli & Sandwiches",
+    "category": "Pizza & Italian",
     "cuisine": "Roast beef · Pizza · Subs",
     "address": "20 Central St",
     "url": "https://maksroastbeefnorwood.com/",
