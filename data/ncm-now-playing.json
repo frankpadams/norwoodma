@@ -1,47 +1,123 @@
 {
-  "updated_at": "2026-11-05T21:06:45.707579-05:00",
-  "date": "2026-11-05",
+  "updated_at": "2026-11-06T04:44:04.366292-05:00",
+  "date": "2026-11-06",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood Biography: The George Lee Story",
+      "title": "The Vehicle for Change 10.27.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1320,
-          "title": "Norwood Biography: The George Lee Story"
+          "minute": 330,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 390,
+          "title": "The Kevin Broderick Show: Episode 15 - Dale Boch"
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
+          "title": "Norwood Votes - April '05 Election Results"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 660,
+          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
+        },
+        {
+          "minute": 720,
+          "title": "The Vehicle for Change 10.27.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-05"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-06"
     },
     "government": {
       "status": "scheduled",
-      "title": "Airport Commission 10.21.26",
+      "title": "Capital Outlay Committee 10.21.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 300,
+          "title": "Airport Commission 10.21.26"
+        },
+        {
+          "minute": 330,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 420,
           "title": "School Committee 10.28.26 Rebroadcast"
         },
         {
-          "minute": 1410,
-          "title": "Airport Commission 10.21.26"
+          "minute": 570,
+          "title": "Finance Commission 10.27.26"
+        },
+        {
+          "minute": 630,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 720,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 870,
+          "title": "Finance Commission 10.27.26"
+        },
+        {
+          "minute": 930,
+          "title": "Capital Outlay Committee 10.21.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-05"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-06"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Volleyball vs Dedham 9.28.26",
+      "title": "2026 NHS Unified Basketball vs Dedham 9.25.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 300,
+          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        },
+        {
+          "minute": 420,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 510,
+          "title": "2012 Norwood vs. Dedham Football"
+        },
+        {
+          "minute": 660,
+          "title": "2010 NHS Football vs. Walpole 10.16.10"
+        },
+        {
+          "minute": 810,
+          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        },
+        {
+          "minute": 930,
+          "title": "2012 8th Grade Football vs. Framingham Superbowl"
+        },
+        {
+          "minute": 960,
+          "title": "2012 6th Grade Football vs. Walpole"
+        },
+        {
+          "minute": 1080,
+          "title": "2026 NHS Unified Basketball vs Dedham 9.25.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-05"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-06"
     }
   }
 }
