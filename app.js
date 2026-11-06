@@ -294,6 +294,10 @@ async function loadEvents(){
  if(!items.some(e=>e.start?.date==='2026-11-08'&&/veterans.? day car show/i.test(e.title||''))){
   items.push({id:'veterans-day-car-show-2026-11-08',title:'Veterans Day Car Show — Norfolk Aggie',start:{date:'2026-11-08',time:'08:00'},venue:'Norfolk Aggie',address:'400 Main Street, Walpole, MA',category:'community',organizer:'Norfolk Aggie Ag Mechanics Club',source_id:'norfolk-aggie-car-show-date-change-flyer',public_access:'public',publish_candidate:true,curated_default:true,price:'$20 entry',notes:'DATE CHANGE: Rescheduled to Sunday, November 8. Gates open at 8 AM; trophies awarded at noon. Proceeds donated to Home Base veterans organization. Follow Norfolk Aggie Ag Mech Club for updates.'});
  }
+ // Public community meetup shared November 6, 2026.
+ if(!items.some(e=>e.start?.date==='2026-11-07'&&/castle island norwood meet.?up/i.test(e.title||''))){
+  items.push({id:'castle-island-norwood-samoyed-meetup-2026',title:'Castle Island Norwood Meet Up — Boston Samoyeds',start:{date:'2026-11-07',time:'13:00'},venue:'Castle Island Brewing — Norwood',address:'31 Astor Avenue, Norwood, MA 02062',category:'community',organizer:'Lauren Soto and Boston Samoyeds',source_id:'boston-samoyeds-facebook-event',source_url:'https://www.castleislandbeer.com/norwood',public_access:'public',publish_candidate:true,curated_default:true,notes:'Public dog meetup. Dogs must be leashed. Indoor space and outdoor space if weather permits; food truck anticipated by organizer. Venue link provides location details.'});
+ }
  // Flyer-verified Norwood High School Drama performances. Keep each first in its date's agenda.
  for (const [day,hour] of [['18','19:00'],['20','19:00'],['21','19:00'],['22','14:00']]) {
   const date='2026-11-'+day;
