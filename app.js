@@ -287,6 +287,13 @@ function diversifyAdjacentOrganizations(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // Flyer-verified Norwood High School Drama performances. Keep each first in its date's agenda.
+ for (const [day,hour] of [['18','19:00'],['20','19:00'],['21','19:00'],['22','14:00']]) {
+  const date='2026-11-'+day;
+  if(!items.some(e=>e.start?.date===date && /it's a wonderful life/i.test(e.title||''))){
+   items.push({id:'wonderful-life-nhs-2026-'+day,title:"It's a Wonderful Life — Norwood High School Drama",start:{date,time:hour},venue:'Norwood High School',address:'245 Nichols Street, Norwood, MA 02062',category:'arts',organizer:'Norwood High School Drama',source_id:'nhs-drama-wonderful-life-flyer',source_url:'https://gofan.co/app/school/MA14680_1?utm_source=GoFan&utm_medium=qrcode&utm_campaign=HQDashboardSchoolLink',purchase_url:'https://gofan.co/app/school/MA14680_1?utm_source=GoFan&utm_medium=qrcode&utm_campaign=HQDashboardSchoolLink',public_access:'public',publish_candidate:true,curated_default:true,agenda_priority:-100,price:'$10 general admission; $5 students and seniors',notes:'Norwood High School Drama presents It’s a Wonderful Life. Tickets $10 general admission, $5 students and seniors. Ticket link is the school’s GoFan ticketing page.'});
+  }
+ }
  // Official October 16 Town notice: November 2 hybrid information session for Town Meeting members.
  // End time is not published; display until the following day and allow normal event expiry.
  if(!items.some(e=>e.start?.date==='2026-11-02'&&/town meeting.*information session|information session.*town meeting/i.test(e.title||''))){
