@@ -287,6 +287,13 @@ function diversifyAdjacentOrganizations(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // Community-submitted November 2026 events; avoid duplicate entries from future feed updates.
+ if(!items.some(e=>e.start?.date==='2026-11-07'&&/winsmith mill holiday kickoff/i.test(e.title||''))){
+  items.push({id:'winsmith-holiday-kickoff-2026',title:'Winsmith Mill Holiday Kickoff — Books and Bulldogs',start:{date:'2026-11-07',time:'10:00'},end:{date:'2026-11-07',time:'17:00'},venue:'Books and Bulldogs at Winsmith Mill',address:'61 Endicott Street, Norwood, MA',category:'community',organizer:'Books and Bulldogs',source_id:'books-and-bulldogs-community-post',public_access:'public',publish_candidate:true,curated_default:true,notes:'Holiday kickoff with Christmas-themed books, raffles and giveaways throughout the day. Meet small-town romance author Denise Latham from 10 AM to noon.'});
+ }
+ if(!items.some(e=>e.start?.date==='2026-11-08'&&/veterans.? day car show/i.test(e.title||''))){
+  items.push({id:'veterans-day-car-show-2026-11-08',title:'Veterans Day Car Show — Norfolk Aggie',start:{date:'2026-11-08',time:'08:00'},venue:'Norfolk Aggie',address:'400 Main Street, Walpole, MA',category:'community',organizer:'Norfolk Aggie Ag Mechanics Club',source_id:'norfolk-aggie-car-show-date-change-flyer',public_access:'public',publish_candidate:true,curated_default:true,price:'$20 entry',notes:'DATE CHANGE: Rescheduled to Sunday, November 8. Gates open at 8 AM; trophies awarded at noon. Proceeds donated to Home Base veterans organization. Follow Norfolk Aggie Ag Mech Club for updates.'});
+ }
  // Flyer-verified Norwood High School Drama performances. Keep each first in its date's agenda.
  for (const [day,hour] of [['18','19:00'],['20','19:00'],['21','19:00'],['22','14:00']]) {
   const date='2026-11-'+day;
