@@ -1,7 +1,11 @@
 {
-  "generated_at": "2026-11-05T17:21:29.452420Z",
+  "generated_at": "2026-11-06T16:44:14.701886Z",
   "stations": {
     "BJ's Gas Station": {
+      "gasbuddy": {
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
+      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -33,7 +37,6 @@
       "google": {
         "accepted_grades": [
           "diesel",
-          "premium",
           "regular"
         ],
         "candidates": [
@@ -61,14 +64,6 @@
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -86,8 +81,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -157,6 +152,9 @@
     "Irving Oil / Rojo": {
       "google": {
         "accepted_grades": [
+          "diesel",
+          "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -175,8 +173,8 @@
             "types": [
               "car_wash",
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           },
@@ -231,8 +229,6 @@
     "Mobil / On the Run — Norwood Center": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -250,8 +246,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -281,8 +277,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -333,8 +329,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           },
@@ -374,8 +370,8 @@
               "convenience_store",
               "food_store",
               "food",
-              "point_of_interest",
               "store",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -395,8 +391,8 @@
               "convenience_store",
               "food_store",
               "food",
-              "point_of_interest",
               "store",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -407,8 +403,8 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -458,9 +454,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
-              "service",
-              "point_of_interest",
               "store",
+              "point_of_interest",
+              "service",
               "establishment"
             ]
           },
@@ -480,10 +476,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "food",
-              "store",
-              "point_of_interest",
               "service",
+              "food",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -501,8 +497,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -520,8 +516,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -540,9 +536,9 @@
             "types": [
               "supplier",
               "manufacturer",
-              "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -560,8 +556,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -572,7 +568,7 @@
     "Shell — Pleasant Street": {
       "google": {
         "accepted_grades": [
-          "midgrade",
+          "premium",
           "regular"
         ],
         "candidates": [
@@ -590,8 +586,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -634,7 +630,6 @@
       "google": {
         "accepted_grades": [
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -654,10 +649,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "service",
               "food",
-              "point_of_interest",
               "store",
+              "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -670,6 +665,7 @@
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
+    "BJ's Gas Station",
     "Shell — Walpole Street"
   ]
 }
