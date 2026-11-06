@@ -39,6 +39,24 @@ window.NORWOOD_RESTAURANTS= [
     ]
   },
   {
+    "id": "1a-pizza",
+    "name": "1A Pizza",
+    "category": "Pizza & Italian",
+    "cuisine": "Greek-style pizza · Subs",
+    "address": "494 Walpole St",
+    "url": "https://www.1apizza.com/",
+    "link_type": "official",
+    "tags": "pizza greek pizza grinders subs calzones salads takeout delivery",
+    "verified": "2026-11-06",
+    "dishes": [
+      "cheese pizza",
+      "pepperoni pizza",
+      "calzones",
+      "grinders",
+      "steak subs"
+    ]
+  },
+  {
     "id": "acapulcos-mexican-family-restaurant-cantina",
     "name": "Acapulcos Mexican Family Restaurant & Cantina",
     "category": "Mexican & Latin",
@@ -58,6 +76,24 @@ window.NORWOOD_RESTAURANTS= [
       "tacos al pastor",
       "fajita tacos",
       "guacamole"
+    ]
+  },
+  {
+    "id": "bardos-pizza-trailer",
+    "name": "Bardo's Pizza Trailer",
+    "category": "Pizza & Italian",
+    "cuisine": "South Shore bar pizza · Food trailer",
+    "address": "31 Astor Ave (Castle Island Brewery)",
+    "url": "https://bardospizza.com/",
+    "link_type": "official",
+    "tags": "bar pizza pizza trailer wings sandwiches takeout delivery schedule varies private events",
+    "verified": "2026-11-06",
+    "dishes": [
+      "cheese pizza",
+      "pepperoni pizza",
+      "bar pizza",
+      "wings",
+      "sandwiches"
     ]
   },
   {
@@ -102,6 +138,40 @@ window.NORWOOD_RESTAURANTS= [
       "baked rigatoni",
       "steak frites",
       "salmon risotto"
+    ]
+  },
+  {
+    "id": "brazil-for-you",
+    "name": "Brazil For You",
+    "category": "Brazilian",
+    "cuisine": "Brazilian · Market · Prepared foods",
+    "address": "1001 Boston Providence Hwy",
+    "url": "https://www.brazilforyou.com/",
+    "link_type": "official",
+    "tags": "brazilian market grocery prepared food hot food breakfast lunch buffet grill bakery coxinha pao de queijo cheese bread imported groceries takeout",
+    "verified": "2026-09-27",
+    "dishes": [
+      "coxinha",
+      "pao de queijo",
+      "brigadeiro",
+      "pastel",
+      "acai bowl"
+    ]
+  },
+  {
+    "id": "broadway-pizza-and-grill",
+    "name": "Broadway Pizza & Grill",
+    "category": "Pizza & Italian",
+    "cuisine": "Pizza · Subs · Grill",
+    "address": "75 East Cottage St",
+    "url": "https://www.google.com/maps/search/?api=1&query=Broadway+Pizza+and+Grill+75+East+Cottage+St+Norwood+MA",
+    "link_type": "maps",
+    "tags": "pizza subs pasta grill temporarily closed verify reopening",
+    "verified": "2026-11-06",
+    "dishes": [
+      "pizza",
+      "subs",
+      "pasta"
     ]
   },
   {
@@ -293,6 +363,28 @@ window.NORWOOD_RESTAURANTS= [
       "chips and guacamole",
       "chips and queso blanco",
       "kid's build your own"
+    ]
+  },
+  {
+    "id": "colonial-ale-house",
+    "name": "Colonial Ale House",
+    "category": "American & Pub",
+    "cuisine": "American · Pub",
+    "address": "33 Savin Ave",
+    "url": "https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House+33+Savin+Ave+Norwood+MA",
+    "link_type": "maps",
+    "tags": "formerly Colonial House restaurant pub bar",
+    "verified": "2026-10-14",
+    "dishes": [
+      "stuffed quahog",
+      "chicken wings",
+      "fried calamari",
+      "onion rings",
+      "chicken parmesan",
+      "eggplant parmesan",
+      "ravioli",
+      "spaghetti",
+      "fish and chips"
     ]
   },
   {
@@ -583,6 +675,26 @@ window.NORWOOD_RESTAURANTS= [
     ]
   },
   {
+    "id": "el-valle-mexican-american-cuisine",
+    "name": "El Valle Mexican and American Cuisine",
+    "category": "Mexican & Latin",
+    "cuisine": "Mexican · American",
+    "address": "487 Washington St",
+    "url": "https://www.google.com/maps/search/?api=1&query=El+Valle+Mexican+and+American+Cuisine%2C+487+Washington+St%2C+Norwood%2C+MA+02062",
+    "link_type": "maps",
+    "tags": "Mexican American tacos burritos quesadillas nachos enchiladas fajitas rice beans kids family",
+    "verified": "2026-09-26",
+    "dishes": [
+      "tacos",
+      "burritos",
+      "quesadillas",
+      "enchiladas",
+      "nachos",
+      "fajitas",
+      "burgers"
+    ]
+  },
+  {
     "id": "express-pizza",
     "name": "Express Pizza",
     "category": "Pizza & Italian",
@@ -690,6 +802,26 @@ window.NORWOOD_RESTAURANTS= [
       "tiramisu",
       "cheesecake",
       "garlic knots"
+    ]
+  },
+  {
+    "id": "veggie-crust-norwood",
+    "name": "Gopal’s Crust (formerly Veggie Crust)",
+    "category": "Pizza & Italian",
+    "cuisine": "Vegetarian · Indian-inspired Pizza · Vegan",
+    "address": "641 Washington St",
+    "url": "https://gopalcrust.com/",
+    "link_type": "official",
+    "tags": "Veggie Crust Norwood Gopals Crust vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta tikka masala manchurian pav bhaji paneer biryani indo chinese",
+    "gluten_free": true,
+    "verified": "2026-09-21",
+    "dishes": [
+      "pizza",
+      "panini",
+      "pasta",
+      "indian food",
+      "indo chinese",
+      "salads"
     ]
   },
   {
@@ -1275,26 +1407,6 @@ window.NORWOOD_RESTAURANTS= [
     ]
   },
   {
-    "id": "el-valle-mexican-american-cuisine",
-    "name": "El Valle Mexican and American Cuisine",
-    "category": "Mexican & Latin",
-    "cuisine": "Mexican · American",
-    "address": "487 Washington St",
-    "url": "https://www.google.com/maps/search/?api=1&query=El+Valle+Mexican+and+American+Cuisine%2C+487+Washington+St%2C+Norwood%2C+MA+02062",
-    "link_type": "maps",
-    "tags": "Mexican American tacos burritos quesadillas nachos enchiladas fajitas rice beans kids family",
-    "verified": "2026-09-26",
-    "dishes": [
-      "tacos",
-      "burritos",
-      "quesadillas",
-      "enchiladas",
-      "nachos",
-      "fajitas",
-      "burgers"
-    ]
-  },
-  {
     "id": "one-bistro",
     "gluten_free": true,
     "name": "One Bistro",
@@ -1313,6 +1425,25 @@ window.NORWOOD_RESTAURANTS= [
       "burgers",
       "salads",
       "desserts"
+    ]
+  },
+  {
+    "id": "orange-leaf-frozen-yogurt",
+    "name": "Orange Leaf Frozen Yogurt",
+    "category": "Bakery & Sweets",
+    "cuisine": "Frozen yogurt · Açaí & pitaya bowls · Desserts",
+    "address": "38 Vanderbilt Ave",
+    "url": "https://www.google.com/maps/search/?api=1&query=Orange+Leaf+Frozen+Yogurt%2C+38+Vanderbilt+Ave%2C+Norwood%2C+MA+02062",
+    "link_type": "maps",
+    "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
+    "verified": "2026-09-27",
+    "dishes": [
+      "frozen yogurt",
+      "froyo cake",
+      "acai bowls",
+      "smoothies",
+      "milkshakes",
+      "cookies and cream shake"
     ]
   },
   {
@@ -1545,6 +1676,29 @@ window.NORWOOD_RESTAURANTS= [
       "boba tea",
       "milk tea",
       "fruit tea"
+    ]
+  },
+  {
+    "id": "smoothie-king-norwood",
+    "name": "Smoothie King — Coming Soon",
+    "category": "Breakfast & Cafe",
+    "cuisine": "Smoothies · Açaí bowls · Quick service",
+    "address": "111 Lenox St, Unit 105",
+    "url": "https://locations.smoothieking.com/ll/us/ma/norwood/111-lenox-street-unit-105/",
+    "link_type": "official",
+    "tags": "coming soon smoothie smoothies juice acai açaí bowl bowls protein healthy breakfast quick service",
+    "verified": "2026-09-27",
+    "dinner_spinner": false,
+    "food_menu": true,
+    "status": "coming-soon",
+    "dishes": [
+      "smoothies",
+      "acai bowls",
+      "dragon fruit bowls",
+      "yogurt bowls",
+      "loaded toast",
+      "egg and avocado toast",
+      "chicken flatbread"
     ]
   },
   {
@@ -1849,26 +2003,6 @@ window.NORWOOD_RESTAURANTS= [
     ]
   },
   {
-    "id": "veggie-crust-norwood",
-    "name": "Gopal’s Crust (formerly Veggie Crust)",
-    "category": "Pizza & Italian",
-    "cuisine": "Vegetarian · Indian-inspired Pizza · Vegan",
-    "address": "641 Washington St",
-    "url": "https://gopalcrust.com/",
-    "link_type": "official",
-    "tags": "Veggie Crust Norwood Gopals Crust vegetarian vegan pizza Indian Indo-Chinese gluten free gf gluten-free crust pasta tikka masala manchurian pav bhaji paneer biryani indo chinese",
-    "gluten_free": true,
-    "verified": "2026-09-21",
-    "dishes": [
-      "pizza",
-      "panini",
-      "pasta",
-      "indian food",
-      "indo chinese",
-      "salads"
-    ]
-  },
-  {
     "id": "vico-ristorante-italiano",
     "gluten_free": true,
     "name": "Vico Ristorante Italiano",
@@ -1974,88 +2108,6 @@ window.NORWOOD_RESTAURANTS= [
       "fried rice",
       "miso soup",
       "edamame"
-    ]
-  },
-  {
-    "id": "brazil-for-you",
-    "name": "Brazil For You",
-    "category": "Brazilian",
-    "cuisine": "Brazilian · Market · Prepared foods",
-    "address": "1001 Boston Providence Hwy",
-    "url": "https://www.brazilforyou.com/",
-    "link_type": "official",
-    "tags": "brazilian market grocery prepared food hot food breakfast lunch buffet grill bakery coxinha pao de queijo cheese bread imported groceries takeout",
-    "verified": "2026-09-27",
-    "dishes": [
-      "coxinha",
-      "pao de queijo",
-      "brigadeiro",
-      "pastel",
-      "acai bowl"
-    ]
-  },
-  {
-    "id": "smoothie-king-norwood",
-    "name": "Smoothie King — Coming Soon",
-    "category": "Breakfast & Cafe",
-    "cuisine": "Smoothies · Açaí bowls · Quick service",
-    "address": "111 Lenox St, Unit 105",
-    "url": "https://locations.smoothieking.com/ll/us/ma/norwood/111-lenox-street-unit-105/",
-    "link_type": "official",
-    "tags": "coming soon smoothie smoothies juice acai açaí bowl bowls protein healthy breakfast quick service",
-    "verified": "2026-09-27",
-    "dinner_spinner": false,
-    "food_menu": true,
-    "status": "coming-soon",
-    "dishes": [
-      "smoothies",
-      "acai bowls",
-      "dragon fruit bowls",
-      "yogurt bowls",
-      "loaded toast",
-      "egg and avocado toast",
-      "chicken flatbread"
-    ]
-  },
-  {
-    "id": "orange-leaf-frozen-yogurt",
-    "name": "Orange Leaf Frozen Yogurt",
-    "category": "Bakery & Sweets",
-    "cuisine": "Frozen yogurt · Açaí & pitaya bowls · Desserts",
-    "address": "38 Vanderbilt Ave",
-    "url": "https://www.google.com/maps/search/?api=1&query=Orange+Leaf+Frozen+Yogurt%2C+38+Vanderbilt+Ave%2C+Norwood%2C+MA+02062",
-    "link_type": "maps",
-    "tags": "frozen yogurt froyo dessert ice cream smoothie smoothies acai açaí pitaya dragon fruit bowl bowls toppings",
-    "verified": "2026-09-27",
-    "dishes": [
-      "frozen yogurt",
-      "froyo cake",
-      "acai bowls",
-      "smoothies",
-      "milkshakes",
-      "cookies and cream shake"
-    ]
-  },
-  {
-    "id": "colonial-ale-house",
-    "name": "Colonial Ale House",
-    "category": "American & Pub",
-    "cuisine": "American · Pub",
-    "address": "33 Savin Ave",
-    "url": "https://www.google.com/maps/search/?api=1&query=Colonial+Ale+House+33+Savin+Ave+Norwood+MA",
-    "link_type": "maps",
-    "tags": "formerly Colonial House restaurant pub bar",
-    "verified": "2026-10-14",
-    "dishes": [
-      "stuffed quahog",
-      "chicken wings",
-      "fried calamari",
-      "onion rings",
-      "chicken parmesan",
-      "eggplant parmesan",
-      "ravioli",
-      "spaghetti",
-      "fish and chips"
     ]
   }
 ];
