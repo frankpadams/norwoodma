@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-06T02:07:13.319596-05:00",
+  "generated_at": "2026-11-06T05:00:58.672548-05:00",
   "offline": false,
-  "events_published": 2250,
+  "events_published": 2234,
   "news_published": 120,
   "civic_notices": 56,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2250,
-      "generated_at": "2026-11-06T02:07:12.692007-05:00"
+      "events": 2234,
+      "generated_at": "2026-11-06T05:00:58.172137-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 127,
-      "generated_at": "2026-11-06T02:07:12.703880-05:00"
+      "events": 126,
+      "generated_at": "2026-11-06T05:00:58.179044-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 837,
-      "generated_at": "2026-11-06T02:07:12.727331-05:00"
+      "events": 835,
+      "generated_at": "2026-11-06T05:00:58.192775-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 731,
-      "generated_at": "2026-11-06T02:07:12.746377-05:00"
+      "generated_at": "2026-11-06T05:00:58.203770-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-06T02:07:12.757095-05:00"
+      "generated_at": "2026-11-06T05:00:58.209701-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 63,
-      "generated_at": "2026-11-06T02:07:12.769502-05:00"
+      "events": 62,
+      "generated_at": "2026-11-06T05:00:58.216458-05:00"
     }
   ],
   "recreation_programs": 116,
@@ -210,9 +210,9 @@
       "source_id": "friends-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 19,
+      "found": 0,
       "note": null,
-      "outcome": "events",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -364,9 +364,9 @@
       "source_id": "norwood-blood-drives",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -382,9 +382,9 @@
       "source_id": "norwood-evening-garden-club",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -546,9 +546,9 @@
       "source_id": "norwood-vfw-public-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -1180,12 +1180,13 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
-      "found": 4,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "parser_gap",
+      "access_limited": false,
+      "retained_events": 2
     },
     {
       "source_id": "pcrinc-events",
@@ -1287,11 +1288,10 @@
     },
     {
       "source_id": "resource-scouting-america-troop-42-norwood",
-      "ok": false,
+      "ok": true,
       "method": "html_page",
       "found": 0,
-      "note": "all configured pages failed: https://www.troop42norwood.com/: 403 Client Error: OK for url: https://www.troop42norwood.com/",
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "resource-scouting-america-troop-49-norwood",
@@ -1587,9 +1587,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "not well-formed (invalid token): line 1, column 119"
     },
     {
       "source": "Norwood Town News",
@@ -1603,7 +1604,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 31,
+      "found": 30,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1611,7 +1612,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 31,
+      "found": 30,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1627,7 +1628,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 22,
+      "found": 23,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1691,10 +1692,11 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 17,
+      "found": 18,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "The Cool Down": 1,
         "NEREJ": 1,
         "Fiorentino Legal, P.C.": 2,
         "WCVB": 3,
@@ -1703,7 +1705,7 @@
         "The Daily Tribune News": 1,
         "Norwood Public Schools": 6,
         "The Norwood Record": 44,
-        "The Norwood Record — Latest": 18,
+        "The Norwood Record — Latest": 17,
         "NewsBreak: Local News & Alerts": 1,
         "Newport Dispatch": 1,
         "Town of Norwood": 6,

@@ -4461,37 +4461,6 @@
     ]
   },
   {
-    "id": "2026-11-11-veterans-mass-c4d9e19",
-    "title": "Veterans’ Mass",
-    "start": {
-      "date": "2026-11-11",
-      "time": "08:00"
-    },
-    "end": {
-      "date": "2026-11-11",
-      "time": "08:00"
-    },
-    "venue": "St Catherine’s of Siena Church",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/veterans-mass/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-11-veterans-day-no-school-00f0bc3",
     "title": "VETERANS DAY - NO SCHOOL — Coakley Middle School",
     "start": {
@@ -4565,65 +4534,31 @@
     ]
   },
   {
-    "id": "2026-11-11-veterans-day-parade-73226f7",
-    "title": "Veterans’ Day Parade",
+    "id": "2026-11-11-pma-veterans-day-parade",
+    "title": "Veterans Day Parade",
     "start": {
       "date": "2026-11-11",
-      "time": "10:30"
+      "time": "10:00"
     },
     "end": {
       "date": "2026-11-11",
-      "time": "10:30"
+      "time": null
     },
-    "venue": "Washington St Guid Sq to Town Common",
+    "venue": null,
     "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/veterans-day-parade/",
+    "category": "performance",
+    "source_id": "nps-pma",
+    "source_url": "https://norwoodpma.org/events",
     "cost": null,
     "public_access": "public",
-    "series": null,
+    "series": "PMA / Fine Arts — Marching Band",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
+    "verification_status": "manual_pma_events_2026-09-27",
+    "notes": "Tentative. PMA notes that the date/weekday should be confirmed.",
     "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-11-remembrance-ceremony-2fd51f1",
-    "title": "Remembrance Ceremony",
-    "start": {
-      "date": "2026-11-11",
-      "time": "10:45"
-    },
-    "end": {
-      "date": "2026-11-11",
-      "time": "10:45"
-    },
-    "venue": "Norwood Town Common",
-    "address": "580 Washington Street, Norwood, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/remembrance-ceremony/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
+      "norwood-arts",
+      "norwood-community",
+      "pma-fine-arts"
     ]
   },
   {
@@ -4724,37 +4659,6 @@
     "calendar_ids": [
       "boston-parents-paper-greater-boston",
       "norwood-arts"
-    ]
-  },
-  {
-    "id": "2026-11-11-old-parish-cemetery-self-guided-tours-45866db",
-    "title": "Old Parish Cemetery Self-Guided Tours",
-    "start": {
-      "date": "2026-11-11",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-11",
-      "time": "15:00"
-    },
-    "venue": "Washington St & Railroad Ave",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/old-parish-cemetery-self-guided-tours/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
     ]
   },
   {
@@ -6659,37 +6563,6 @@
     ]
   },
   {
-    "id": "2026-11-13-ribbon-cutting-squat-reset-100b194",
-    "title": "Ribbon Cutting-Squat & Reset",
-    "start": {
-      "date": "2026-11-13",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-13",
-      "time": "11:00"
-    },
-    "venue": "650 Washington Street",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/ribbon-cutting-squat-reset/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-13-creedence-revived-21d9981",
     "title": "Creedence Revived",
     "start": {
@@ -7160,39 +7033,6 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-14-norwood-wellness-fair-free-event-a88a699",
-    "title": "Norwood Wellness Fair (free event)",
-    "start": {
-      "date": "2026-11-14",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-14",
-      "time": "13:00"
-    },
-    "venue": "Coakley Middle School Norwood School Health Council",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/norwood-wellness-fair-free-event/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community",
-      "norwood-family",
-      "norwood-food-markets"
     ]
   },
   {
@@ -12037,69 +11877,6 @@
     ]
   },
   {
-    "id": "2026-11-20-ribbon-cutting-town-common-books-80eb609",
-    "title": "Ribbon Cutting-Town Common Books",
-    "start": {
-      "date": "2026-11-20",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "13:00"
-    },
-    "venue": "679 Washington Street",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/ribbon-cutting-town-common-book/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-20-gallery-hop-take-a-stroll-for-art-94e2a55",
-    "title": "Gallery Hop: Take a Stroll for Art",
-    "start": {
-      "date": "2026-11-20",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "20:30"
-    },
-    "venue": "Norwood Art Connection",
-    "address": "Custom Framing 45 Central St; Tax Solutions 642 Washington St ; Woodstuff Market 674 Washington St",
-    "category": "arts",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/gallery-hop-take-a-stroll-for-art/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-20-ballroom-dance-04c7fe8",
     "title": "Ballroom Dance",
     "start": {
@@ -12713,38 +12490,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-22-40th-norwood-turkey-trot-8740eff",
-    "title": "40th Norwood Turkey Trot",
-    "start": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "venue": "Start & Finish Norwood High School 245 Nichols St",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/40th-norwood-turkeytrot/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Register: Register Link Coming Soon Email: wingedfootrunning1@gmail.com",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community",
-      "norwood-family"
     ]
   },
   {
@@ -15695,37 +15440,6 @@
     ]
   },
   {
-    "id": "2026-11-28-small-business-saturday-6595bda",
-    "title": "Small Business Saturday",
-    "start": {
-      "date": "2026-11-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-28",
-      "time": "23:59"
-    },
-    "venue": "Friends of Norwood Center",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/small-business-saturday-3/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Buy from small and local businesses!",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-ad2c3da06aee-2026-11-28",
     "title": "Dance and Play - Saturdays",
     "start": {
@@ -16219,193 +15933,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-food-markets"
-    ]
-  },
-  {
-    "id": "2026-11-29-holiday-tree-lighting-festival-edf39c1",
-    "title": "Holiday Tree Lighting Festival",
-    "start": {
-      "date": "2026-11-29",
-      "time": "13:30"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "16:30"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/holiday-tree-lighting-festival-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-holiday-entertainment-hayrides-games-facepain-258d6ad",
-    "title": "Holiday entertainment: hayrides, games, Facepainting and more",
-    "start": {
-      "date": "2026-11-29",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "15:30"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "arts",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/holiday-entertainment-hayrides-games-facepainting-and-more/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-reindeer-dash-44ee7c0",
-    "title": "Reindeer Dash",
-    "start": {
-      "date": "2026-11-29",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "14:00"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/reindeerdash/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-holiday-parade-9b69e8a",
-    "title": "Holiday Parade",
-    "start": {
-      "date": "2026-11-29",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "15:30"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/holidayparade/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-santa-mrs-claus-arrive-at-the-gazebo-6cf845c",
-    "title": "Santa & Mrs. Claus arrive at the Gazebo",
-    "start": {
-      "date": "2026-11-29",
-      "time": "15:45"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "15:45"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/santa-mrs-claus-arriveat-the-gazebo/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-tree-lighting-5d87598",
-    "title": "Tree Lighting",
-    "start": {
-      "date": "2026-11-29",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "16:00"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/treelighting/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
     ]
   },
   {
@@ -19590,37 +19117,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-12-05-circle-of-hope-luminary-night-740932b",
-    "title": "Circle of Hope Luminary Night",
-    "start": {
-      "date": "2026-12-05",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-12-05",
-      "time": "18:00"
-    },
-    "venue": "Norwood Circle of Hope Foundation",
-    "address": "PO Box 421, Norwood, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/circle-of-hope-luminary-night/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Purchase Lumina $5 PO Box 421 Norwood MA 02062 info@norwoodcoh.org www.norwoodcoh.org",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
     ]
   },
   {
