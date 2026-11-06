@@ -78,7 +78,7 @@
 #trailCheckboxes{display:grid;gap:4px;margin:16px 0}
 .trail-choice{display:flex;align-items:center;gap:10px;padding:9px 6px;border-radius:7px;cursor:pointer;font-size:.9rem;color:#17384d}
 .trail-choice:hover{background:#edf4f7}.trail-choice input{width:18px;height:18px;accent-color:#003b71;flex-shrink:0}
-.trail-actions{display:flex;gap:14px;margin-bottom:10px}.trail-actions button{background:none;border:0;color:#003b71;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem}
+.trail-actions{display:flex;gap:14px;margin-bottom:10px}.trail-actions button{background:none;border:0;color:#003b71;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem;min-height:40px;padding:8px 4px;touch-action:manipulation}
 </style><style>#trailCheckboxes{gap:0;margin:12px 0}.trail-choice{padding:4px 6px;min-height:29px;line-height:1.2}.trail-actions{flex-wrap:wrap;gap:7px 13px;margin-bottom:12px}</style><style>
 .trail-choice-row{display:flex;align-items:center;gap:6px}
 .trail-choice-row .trail-choice{flex:1;min-width:0;margin:0}
@@ -144,6 +144,6 @@
 window.norwoodTrailMap=L.map('prototypeMap',{scrollWheelZoom:true}).setView([42.190,-71.201],13);
 window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(window.norwoodTrailMap);
 </script>
-<script src="trail-page-layer.js?v=town-pdf-links"></script>
+<script src="trail-page-layer.js?v=clear-race-cancel"></script>
 </body>
 </html>
