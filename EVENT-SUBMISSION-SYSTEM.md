@@ -115,7 +115,7 @@ Prefer the most specific authoritative event or registration URL available rathe
 
 ## Relationship to the main event pipeline
 
-Community submissions are one source feeding the broader What's Happening system. They should ultimately use the same normalization, verification, categorization, deduplication, recurrence, expiration, and publication rules as automatically discovered events.
+Community submissions are one source feeding the broader What's Happening system. They use the same normalization, verification, categorization, deduplication, recurrence, expiration, publication, and daily ranking rules as automatically discovered events. The permanent nine-tier priority and tie-breaking policy is documented in `EVENT-PRIORITIZATION.md`.
 
 The current production path is manual from the Contact page as described above. The legacy Google Form path remains:
 

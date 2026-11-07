@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-24",
+  "updated_at": "2026-11-06",
   "purpose": "Source registry and ingestion rules for Norwood.ma local events/news/community data.",
   "whats_happening_include": [
     "Public community traditions and celebrations",
@@ -13,13 +13,13 @@
     "Ticketed public entertainment in Norwood",
     "Community organization events open to the public",
     "Local, state and federal elections affecting Norwood voters",
-    "Public events held on the Norwood Town Common"
+    "Public events held on the Norwood Town Common",
+    "Public Norwood municipal board and committee meetings",
+    "Public religious worship, study, and community events"
   ],
   "whats_happening_exclude_default": [
     "Routine youth practices/registered-participant-only games",
-    "Routine worship services or religious study",
     "Member-only club meetings",
-    "Routine municipal board meetings unless shown in a separate civic feed",
     "Undated resource pages",
     "Events outside Norwood without a strong Norwood-specific reason",
     "Duplicate syndicated listings when a primary source exists"
@@ -66,5 +66,6 @@
     "access_rule": "Do not infer labels such as members-only or private. Preserve explicit access information from the source only when useful.",
     "sources_rule": "Monitor as many reliable Norwood-connected calendars and public schedules as practical, including schools/PTOs, youth sports, civic groups, houses of worship, clubs, arts groups, town departments, library, recreation, senior center and nonprofits.",
     "relationship_to_main_calendar": "Possible Conflicts includes all qualifying public calendar events plus supplemental conflict-only records; main-calendar eligibility remains independently curated."
-  }
+  },
+  "event_ranking_policy": "See EVENT-PRIORITIZATION.md. The shared agenda comparator assigns each event to the highest applicable priority and sorts by priority, then starting time with untimed events last, independently within each date."
 }

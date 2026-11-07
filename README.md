@@ -1,10 +1,10 @@
-# Norwood.ma v1.6.0
+# Norwood.ma v1.6.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.6.0 — adds a public live MassDOT work-zone layer and improves precinct color contrast.
+**Current release:** v1.6.1 — applies permanent daily event priorities and compact date/time display.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -17,7 +17,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Event ingestion is source-driven, normalized, deduplicated, and expiration-aware.
 - Event suggestions arrive through the Contact page and are reviewed, verified, and added to the shared event pipeline as documented in `EVENT-SUBMISSION-SYSTEM.md`.
 - Selectable calendars include official/community sources and topic-specific feeds where dependable ingestion is available.
-- Same-day What's Happening priority is structural policy: Town Common/Farmers Market events first; then non-religious one-time/drop-in events; religious one-time/drop-in events; non-religious session occurrences; religious session occurrences. Source diversity operates within a tier.
+- Daily event priorities are governed by `EVENT-PRIORITIZATION.md` and enforced by the shared `event-agenda.js` comparator across the homepage and calendar. Election events lead; religious events remain included at the bottom. Ties sort by start time, with untimed events last.
 - Regional events are maintained separately from the core Norwood calendar. Curated nearby/regional events may be included when they are reasonably relevant to Norwood residents, with municipality clearly identified.
 - Recurring/annual event discovery begins up to six months ahead so major community events can be found before the immediate event window.
 - Monthly discovery sweeps explicitly cover Health Department, Recreation, and individual school sources in addition to normal recurring ingestion.
@@ -93,6 +93,13 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v1.6.1 — Community-first event calendar
+Released November 6, 2026.
+
+- Applies the permanent nine-tier event ranking independently within each calendar day across the homepage and full calendar.
+- Includes public religious events at the bottom and public municipal board and committee meetings ahead of recurring programs.
+- Keeps event times inline where space allows and uses compact labels like “9am” and abbreviated dates such as “Jan 24.”
 
 ### v1.6.0 — Live work zones and clearer precinct colors
 Released November 5, 2026.

@@ -566,15 +566,15 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
  $('todayTownAnnouncements').innerHTML=town.slice(0,6).map(n=>n.popup==='hit-run'?'<a href="#hit-and-run" data-home-notice="hit-run"><strong>'+esc(n.title)+'</strong><small>'+esc(date(n.date))+' · Details</small></a>':'<a href="'+esc(n.url)+'" target="_blank" rel="noopener"><strong>'+esc(n.title)+'</strong><small>'+esc(date(n.date))+'</small></a>').join('')||'<a href="https://www.norwoodma.gov/" target="_blank" rel="noopener">Browse current announcements from the Town of Norwood ↗</a>';
  const ev=$('todayEventScroll');
  const renderEvents=arr=>{
-   const today=new Date().toISOString().slice(0,10);
-   const religious=e=>/\b(church|parish|chapel|congregation|temple|synagogue|mosque|worship|bible|prayer|faith|ministry|religious|sunday service|mass|saint catherine|st\. catherine)\b/i.test([e.title,e.organizer,e.venue,e.category,e.description].filter(Boolean).join(' '));
-   const items=arr.filter(e=>e.title&&e.start?.date&&(e.end?.date||e.start.date)>=today&&!religious(e)).sort((a,b)=>{const d=a.start.date.localeCompare(b.start.date);if(d)return d;const religious=e=>/\b(church|parish|chapel|congregation|temple|synagogue|mosque|worship|bible|prayer|faith|ministry|religious|sunday service|mass|saint catherine|st\. catherine)\b/i.test([e.title,e.organizer,e.venue,e.category,e.description].filter(Boolean).join(' '));const r=Number(religious(a))-Number(religious(b));return r||(a.start.time||'99:99').localeCompare(b.start.time||'99:99')}).slice(0,24);
+   const agenda=window.NorwoodEventAgenda;
+   const today=agenda?.todayKey?.()||new Date().toISOString().slice(0,10);
+   const items=arr.filter(e=>e.title&&e.start?.date&&(e.end?.date||e.start.date)>=today).sort((a,b)=>a.start.date.localeCompare(b.start.date)||(agenda?.compare?agenda.compare(a,b):(a.start.time||'99:99').localeCompare(b.start.time||'99:99'))).slice(0,24);
    if(!items.length){ev.innerHTML='<a href="events.html">Browse the community calendar ↗</a>';return;}
    ev.innerHTML=items.map(e=>{
      const url='events.html?event='+encodeURIComponent(e.id||'');
      const venue=[e.venue,e.location?.name,e.location?.venue,e.address].find(value=>typeof value==='string'&&value.trim());
      const range=e.end?.date&&e.end.date>e.start.date?'–'+date(e.end.date+'T12:00:00'):'';
-     const time=e.start.time&&!/^(?:00:00(?::00)?|0:00|12:00\s*AM)$/i.test(String(e.start.time).trim())?e.start.time:'';
+     const time=agenda?.time?.(e.start.time)||(e.start.time&&!/^(?:00:00(?::00)?|0:00|12:00\s*AM)$/i.test(String(e.start.time).trim())?e.start.time:'');
      const schedule=[time,e.recurrence].filter(Boolean).join(' · ');
      return '<div class="today-story home-event-row"><span class="home-event-date">'+esc(date(e.start.date+'T12:00:00'))+(range?'<wbr>'+esc(range):'')+'</span><div class="home-event-info"><strong><a href="'+esc(url)+'" data-preview-event="1">'+esc(e.title)+'</a></strong>'+(venue?'<span class="home-event-venue">'+esc(venue)+'</span>':'')+(schedule?'<small>'+esc(schedule)+'</small>':'')+'</div></div>';
    }).join('');
