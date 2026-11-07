@@ -16,6 +16,20 @@
   archiveHasMatch(raw).then(hit=>{if(request!==archiveRequest||archiveNorm(input.value)!==archiveNorm(raw)||!hit)return;const links=[...box.querySelectorAll(':scope > a')];if(box.querySelector('.town-meeting-search-bridge'))return;const a=document.createElement('a');a.className='town-meeting-search-bridge';a.href='town-meeting-archive.html?q='+encodeURIComponent(raw);a.innerHTML='<b>📜 Town Meeting Archive — Matching records found →</b><small>View relevant archive records for “'+esc(raw)+'” →</small>';const sixth=links[5];if(sixth)box.insertBefore(a,sixth);else{const google=box.querySelector('.site-search-google');box.insertBefore(a,google||null);}});
  }
  const pages=[
+  {name:'Norwood MWRA CSO Plan & Water Costs',url:'mwra-cso-plan.html',type:'Town & Utilities',text:'MWRA combined sewer overflow CSO plan water sewer bills costs Charles River water quality federal project Norwood'},
+  {name:'The Conflict Contraption',url:'conflict-contraption.html',type:'Games & Shenanigans',text:'conflict contraption interactive game communication disagreements perspectives Norwood game'},
+  {name:'Pizza in Norwood',url:'restaurants-pizza.html',type:'Food & Drink',text:'pizza pizzeria pizza places slices takeout delivery Norwood'},
+  {name:'Pizza & Italian Restaurants in Norwood',url:'restaurants-pizza-italian.html',type:'Food & Drink',text:'pizza Italian restaurant pasta pizzeria Norwood'},
+  {name:'Italian Restaurants in Norwood',url:'restaurants-italian.html',type:'Food & Drink',text:'Italian restaurants pasta pizza subs Norwood'},
+  {name:'Breakfast Cafes in Norwood',url:'restaurants-breakfast-cafes.html',type:'Food & Drink',text:'breakfast cafe cafes coffee brunch pancakes eggs Norwood'},
+  {name:'Breakfast in Norwood',url:'restaurants-breakfast.html',type:'Food & Drink',text:'breakfast cafes coffee brunch pancakes eggs Norwood'},
+  {name:'Lunch in Norwood',url:'restaurants-lunch.html',type:'Food & Drink',text:'lunch restaurants sandwiches fast casual Norwood'},
+  {name:'Dinner in Norwood',url:'restaurants-dinner.html',type:'Food & Drink',text:'dinner restaurants meals takeout Norwood'},
+  {name:'Indian & South Asian Restaurants in Norwood',url:'restaurants-indian-south-asian.html',type:'Food & Drink',text:'Indian South Asian restaurants curry Nepalese Pakistani Norwood'},
+  {name:'Asian Restaurants in Norwood',url:'restaurants-asian.html',type:'Food & Drink',text:'Asian restaurants Chinese Japanese Thai Korean Vietnamese Norwood'},
+  {name:'Gluten-Free Options in Norwood',url:'restaurants-gluten-free-options.html',type:'Food & Drink',text:'gluten free GF food restaurant dining Norwood'},
+  {name:'Mexican & Latin Restaurants in Norwood',url:'restaurants-mexican-latin.html',type:'Food & Drink',text:'Mexican Latin restaurants tacos burritos Norwood'},
+
   {name:'Norwood Trails Map',url:'trails.html',type:'Parks & Recreation',text:'Norwood trails trail map walking hiking biking brochures trailheads Meadow Street Germany Brook Pine Forest Vanderbilt Bernie Cooper Shattuck Willett Endean Hawes Tiot Trails Advisory Committee'},
   {name:'Norwood Trading & Supply',url:'nts.html',type:'Norwood.ma Shop',text:'Norwood Trading and Supply NTS apparel shirts clothing branded collection store merchandise Norwood'},
   {name:'Norwood Town Meeting & Archive',url:'town-meeting-archive.html',type:'Town Government',text:'town meeting archive articles votes attendance representatives agendas minutes warrant videos records members historical Norwood civic meetings'},
