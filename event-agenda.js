@@ -6,7 +6,7 @@
  const date=s=>new Date(s+'T12:00:00');
  function todayKey(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
  function time(s){
-  if(!s||/^0?0:00(?::00)?$/.test(s))return '';
+  if(!s||/^(?:0?0:00(?::00)?|12:00(?:\s*AM))$/i.test(String(s).trim()))return '';
   const m=String(s).trim().match(/^(\d{1,2}):(\d{2})(?::\d{2})?\s*(AM|PM)?$/i);
   if(!m)return text(s);
   let h=+m[1];const minute=+m[2],ampm=m[3]?.toLowerCase();
@@ -39,12 +39,14 @@ function rank(e){
   if(/\b(election|voter registration|early voting|voting opportunity|polling place|precinct voting|candidate forum|ballot)\b/.test(text))return 1;
   if(religious)return 9;
   if(/\b(town common|norwood common|common green|580 washington st)\b/.test(location))return 2;
-  if(e.category==='civic_meeting'||/\b(select board|board of selectmen|school committee|planning board|zoning board|zoning board of appeals|finance commission|conservation commission|board of health|town meeting|town committee|town board|public hearing)\b/.test(text))return 7;
   const recurrence=String(e.recurrence||'').trim();
   const singleOccurrence=/^(?:once|one[- ]?time|single(?: occurrence| date)?)$/i.test(recurrence);
-  if(e.session_based===true||(!singleOccurrence&&!!recurrence)||/\b(weekly|biweekly|fortnightly|monthly|daily|every\s+(?:day|week|month|year|monday|tuesday|wednesday|thursday|friday|saturday|sunday)|each\s+(?:week|month))\b/.test(text))return 8;
-  if(/\b(festival|fair|expo|exposition|open house|community celebration|town celebration|special (?:event|workshop|presentation)|one[- ]time (?:event|workshop|presentation)|workshop|presentation|author talk|book signing|fundraiser|fundraising event|carnival|parade|public performance|theatrical performance)\b/.test(text))return 3;
+  const recurring=e.session_based===true||(!singleOccurrence&&!!recurrence)||/\b(weekly|biweekly|fortnightly|monthly|daily|every\s+(?:day|week|month|year|monday|tuesday|wednesday|thursday|friday|saturday|sunday)|each\s+(?:week|month))\b/.test(text);
+  const specialOneTime=/\b(festival|fair|expo|exposition|open house|community celebration|town celebration|special (?:event|workshop|presentation)|one[- ]time (?:event|workshop|presentation)|workshop|presentation|author talk|book signing|fundraiser|fundraising event|carnival|parade|public performance|theatrical performance)\b/.test(text);
+  if(specialOneTime&&!recurring)return 3;
   if(/\b(live\s+music|live\s+(?:band|bands|performance)|concert|music performance|band performance|jazz performance)\b/.test(text))return 4;
+  if(e.category==='civic_meeting'||/\b(select board|board of selectmen|school committee|planning board|zoning board|zoning board of appeals|finance commission|conservation commission|board of health|town meeting|town committee|town board|public hearing)\b/.test(text))return 7;
+  if(recurring)return 8;
   const cost=[e.cost,e.price,e.fees,e.admission].filter(Boolean).join(' ').toLowerCase();
   if(/^(?:free|none|no charge|no cost|\$?0(?:\.00)?)$/.test(cost.trim())||/\bfree (?:admission|event|program|activity|to the public)\b|\bno charge\b|\bno cost\b/.test(text))return 5;
   return 6;
