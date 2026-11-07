@@ -1432,6 +1432,43 @@
     ]
   },
   {
+    "id": "2026-11-08-norwood-storm-vs-mansfield-swarm-eb7a089",
+    "title": "Norwood Storm vs Mansfield Swarm",
+    "start": {
+      "date": "2026-11-08",
+      "time": "11:30"
+    },
+    "end": {
+      "date": "2026-11-08",
+      "time": null
+    },
+    "venue": "Oldham School 8",
+    "field": "Oldham School 8",
+    "grade": "Girls Grade 3",
+    "gender": "girls",
+    "team": "Norwood Storm",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-3",
+      "nys-team-girls-grade-3-norwood-storm"
+    ]
+  },
+  {
     "id": "manual-approved-blackhole-social-skills-2026-11-08",
     "title": "Dungeons & Dragons and Social Skill Practice",
     "start": {
