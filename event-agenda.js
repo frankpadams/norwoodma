@@ -42,9 +42,11 @@ function rank(e){
   const recurrence=String(e.recurrence||'').trim();
   const singleOccurrence=/^(?:once|one[- ]?time|single(?: occurrence| date)?)$/i.test(recurrence);
   const recurring=e.session_based===true||(!singleOccurrence&&!!recurrence)||/\b(weekly|biweekly|fortnightly|monthly|daily|every\s+(?:day|week|month|year|monday|tuesday|wednesday|thursday|friday|saturday|sunday)|each\s+(?:week|month))\b/.test(text);
-  const specialOneTime=/\b(festival|fair|expo|exposition|open house|community celebration|town celebration|special (?:event|workshop|presentation)|one[- ]time (?:event|workshop|presentation)|workshop|presentation|author talk|book signing|fundraiser|fundraising event|carnival|parade|public performance|theatrical performance)\b/.test(text);
+  const specialOneTime=/\b(festival|fair|expo|exposition|open house|community celebration|town celebration|special event|special (?:workshop|presentation)|one[- ]time event|carnival|parade)\b/.test(text);
   if(specialOneTime&&!recurring)return 3;
   if(/\b(live\s+music|live\s+(?:band|bands|performance)|concert|music performance|band performance|jazz performance)\b/.test(text))return 4;
+  const oneTimeProgram=/\b(workshop|presentation|author talk|book signing|fundraiser|fundraising event|public performance|theatrical performance)\b/.test(text);
+  if(oneTimeProgram&&!recurring)return 3;
   if(e.category==='civic_meeting'||/\b(select board|board of selectmen|school committee|planning board|zoning board|zoning board of appeals|finance commission|conservation commission|board of health|town meeting|town committee|town board|public hearing)\b/.test(text))return 7;
   if(recurring)return 8;
   const cost=[e.cost,e.price,e.fees,e.admission].filter(Boolean).join(' ').toLowerCase();
