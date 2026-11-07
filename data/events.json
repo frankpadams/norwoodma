@@ -2307,6 +2307,43 @@
     ]
   },
   {
+    "id": "2026-11-09-norwood-bolts-vs-marlboro-panthers-dupont-e7d17dc",
+    "title": "Norwood Bolts vs Marlboro Panthers Dupont",
+    "start": {
+      "date": "2026-11-09",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-11-09",
+      "time": null
+    },
+    "venue": "Coakley Turf Field 14",
+    "field": "Coakley Turf Field 14",
+    "grade": "Girls Grade 8",
+    "gender": "girls",
+    "team": "Norwood Bolts",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-8",
+      "nys-team-girls-grade-8-norwood-bolts"
+    ]
+  },
+  {
     "id": "2026-11-09-housing-advisory-committee-meeting-0058b64",
     "title": "Housing Advisory Committee Meeting",
     "start": {
@@ -5549,6 +5586,43 @@
     "calendar_ids": [
       "friends-norwood-center",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-13-norwood-air-strikers-vs-medway-mustangs-b5-na-660e239",
+    "title": "Norwood Air Strikers vs Medway Mustangs B5 Navy",
+    "start": {
+      "date": "2026-11-13",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-13",
+      "time": null
+    },
+    "venue": "Coakley Middle School Lower 7",
+    "field": "Coakley Middle School Lower 7",
+    "grade": "Boys Grade 5",
+    "gender": "boys",
+    "team": "Norwood Air Strikers",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-5",
+      "nys-team-boys-grade-5-norwood-air-strikers"
     ]
   },
   {
