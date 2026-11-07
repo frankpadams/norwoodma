@@ -36,7 +36,7 @@ function rank(e){
   const text=[e.title,e.notes,e.description,e.category,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
   const location=[e.venue,e.address,e.location?.name,e.location?.venue].filter(Boolean).join(' ').toLowerCase();
   const religious=/\b(church|parish|chapel|congregation|temple|synagogue|mosque|worship|bible|prayer|faith|religious|ministry|saint catherine|st\.? catherine)\b/.test(text+' '+location);
-  if(/\b(election|voter registration|early voting|voting opportunity|polling place|precinct voting|candidate forum|ballot)\b/.test(text))return 1;
+  if(/\b(elections?|voter registration|register to vote|early voting|voting opportunit(?:y|ies)|voting information|polling place|precinct voting|candidate forum|ballot|vote by mail|absentee voting|polls open|where to vote)\b/.test(text))return 1;
   if(religious)return 9;
   if(/\b(town common|norwood common|common green|580 washington st)\b/.test(location))return 2;
   const recurrence=String(e.recurrence||'').trim();
@@ -47,7 +47,7 @@ function rank(e){
   if(/\b(live\s+music|live\s+(?:band|bands|performance)|concert|music performance|band performance|jazz performance)\b/.test(text))return 4;
   const oneTimeProgram=/\b(workshop|presentation|author talk|book signing|fundraiser|fundraising event|public performance|theatrical performance)\b/.test(text);
   if(oneTimeProgram&&!recurring)return 3;
-  if(e.category==='civic_meeting'||/\b(select board|board of selectmen|school committee|planning board|zoning board|zoning board of appeals|finance commission|conservation commission|board of health|town meeting|town committee|town board|public hearing)\b/.test(text))return 7;
+  if(e.category==='civic_meeting'||/\b(select board|board of selectmen|school committee|planning board|zoning board|zoning board of appeals|finance commission|conservation commission|board of health|town meeting|town committee|town board|public hearing)\b/.test(text)||(/\b(?:board|committee|commission)\b/.test(text)&&/\b(?:meeting|hearing)\b/.test(text)&&/\b(?:norwood|town hall|municipal)\b/.test(text+' '+location)))return 7;
   if(recurring)return 8;
   const cost=[e.cost,e.price,e.fees,e.admission].filter(Boolean).join(' ').toLowerCase();
   if(/^(?:free|none|no charge|no cost|\$?0(?:\.00)?)$/.test(cost.trim())||/\bfree (?:admission|event|program|activity|to the public)\b|\bno charge\b|\bno cost\b/.test(text))return 5;
