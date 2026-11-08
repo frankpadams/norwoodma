@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:18:50.705882-05:00",
+  "generated_at": "2026-11-08T17:23:02.287762-05:00",
   "offline": false,
   "events_published": 2204,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2204,
-      "generated_at": "2026-11-08T14:18:49.983520-05:00"
+      "generated_at": "2026-11-08T17:23:01.759256-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 119,
-      "generated_at": "2026-11-08T14:18:49.992544-05:00"
+      "generated_at": "2026-11-08T17:23:01.771083-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 821,
-      "generated_at": "2026-11-08T14:18:50.010858-05:00"
+      "generated_at": "2026-11-08T17:23:01.794209-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 715,
-      "generated_at": "2026-11-08T14:18:50.026289-05:00"
+      "generated_at": "2026-11-08T17:23:01.813327-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-08T14:18:50.034677-05:00"
+      "generated_at": "2026-11-08T17:23:01.823775-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 62,
-      "generated_at": "2026-11-08T14:18:50.044231-05:00"
+      "generated_at": "2026-11-08T17:23:01.835888-05:00"
     }
   ],
   "recreation_programs": 121,
@@ -788,7 +788,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-soccer",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -851,7 +851,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1602,7 +1602,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 27,
+      "found": 28,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 27,
+      "found": 28,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1626,7 +1626,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 25,
+      "found": 26,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
