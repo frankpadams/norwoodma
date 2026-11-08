@@ -1,35 +1,43 @@
 {
-  "updated_at": "2026-11-07T18:50:13.513976-05:00",
-  "date": "2026-11-07",
+  "updated_at": "2026-11-08T00:22:30.633444-05:00",
+  "date": "2026-11-08",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23",
+      "title": "Norwood Veterans: Thomas McDonough",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1170,
+          "minute": 60,
+          "title": "Korean War Memorial Bench Dedication"
+        },
+        {
+          "minute": 120,
+          "title": "Norwood Biography: The George Lee Story"
+        },
+        {
+          "minute": 210,
+          "title": "Veterans' Memorials Tour"
+        },
+        {
+          "minute": 270,
           "title": "Vietnam Veterans Bench Dedication 5.28.22"
         },
         {
-          "minute": 1230,
+          "minute": 330,
           "title": "Veterans Day 1999"
         },
         {
-          "minute": 1260,
+          "minute": 360,
           "title": "Norwood Digest Special: Michael Cunningham"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "Norwood Veterans: Thomas McDonough"
-        },
-        {
-          "minute": 1380,
-          "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-07"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-08"
     },
     "government": {
       "status": "scheduled",
@@ -37,39 +45,71 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1170,
+          "minute": 180,
           "title": "Conservation Commission 11.4.26"
         },
         {
-          "minute": 1260,
+          "minute": 270,
           "title": "Historical Commission 11.5.26"
         },
         {
-          "minute": 1320,
+          "minute": 330,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 420,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 600,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 690,
+          "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 750,
           "title": "School Committee 10.28.26 Rebroadcast"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-07"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-08"
     },
     "schools": {
       "status": "scheduled",
-      "title": "1996 Frank Bilotta Retirement Dinner",
+      "title": "2016 Fall Sports Awards",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1140,
-          "title": "NPA-TV Sports Extra: November 2017"
+          "minute": 90,
+          "title": "Senior College Post Secondary Planning - Sept. 2026"
         },
         {
-          "minute": 1260,
+          "minute": 180,
           "title": "Celebrating Innovation Career Pathways at NHS"
         },
         {
-          "minute": 1320,
-          "title": "1996 Frank Bilotta Retirement Dinner"
+          "minute": 240,
+          "title": "NHS Update Month in Review: September 2016"
+        },
+        {
+          "minute": 330,
+          "title": "2016 NHS-TV1 Stories Period 5"
+        },
+        {
+          "minute": 360,
+          "title": "Celebrating Innovation Career Pathways at NHS"
+        },
+        {
+          "minute": 420,
+          "title": "Norwood News 10.30.26"
+        },
+        {
+          "minute": 450,
+          "title": "2016 Fall Sports Awards"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-07"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-08"
     }
   }
 }
