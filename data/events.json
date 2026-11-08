@@ -162,37 +162,6 @@
     ]
   },
   {
-    "id": "2026-11-08-rev-goodwin-joins-us-at-our-worship-service-2d93834",
-    "title": "Rev. Goodwin joins us at our Worship service",
-    "start": {
-      "date": "2026-11-08",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "11:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-08-divine-mercy-prayers-2613933",
     "title": "Divine Mercy Prayers",
     "start": {
@@ -14044,6 +14013,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-28-decorating-the-church-for-advent-f12b5f7",
+    "title": "Decorating the Church for Advent",
+    "start": {
+      "date": "2026-11-28",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": "15:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
