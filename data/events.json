@@ -420,36 +420,6 @@
     ]
   },
   {
-    "id": "2026-11-08-sunday-nov-e334483",
-    "title": "Sunday , Nov",
-    "start": {
-      "date": "2026-11-08",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim4.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Sunday , Nov November 8 , 2026 Shorashim K-6 Sunday, Nov 8th 9:30a to 11:30a MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-09-for-grief-s-sake-15ae7c2",
     "title": "For Grief's Sake",
     "start": {
@@ -10757,6 +10727,36 @@
     "notes": "Public ticketed performance; see official theatre page for ticket prices and availability.",
     "calendar_ids": [
       "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-21-saturday-nov-ac897f0",
+    "title": "Saturday , Nov",
+    "start": {
+      "date": "2026-11-21",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-21",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/tot-shabbat35.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Saturday , Nov November 21 , 2026 Tot Shabbat Shabbat, Nov 21st 9:15a MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
