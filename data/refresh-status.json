@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-08T04:14:23.725243-05:00",
+  "generated_at": "2026-11-08T08:59:56.979287-05:00",
   "offline": false,
-  "events_published": 2203,
+  "events_published": 2204,
   "news_published": 120,
   "civic_notices": 56,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2203,
-      "generated_at": "2026-11-08T04:14:23.389967-05:00"
+      "events": 2204,
+      "generated_at": "2026-11-08T08:59:56.664282-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 119,
-      "generated_at": "2026-11-08T04:14:23.401514-05:00"
+      "generated_at": "2026-11-08T08:59:56.676865-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 820,
-      "generated_at": "2026-11-08T04:14:23.424707-05:00"
+      "events": 821,
+      "generated_at": "2026-11-08T08:59:56.701692-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 714,
-      "generated_at": "2026-11-08T04:14:23.443456-05:00"
+      "events": 715,
+      "generated_at": "2026-11-08T08:59:56.722113-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-08T04:14:23.453904-05:00"
+      "generated_at": "2026-11-08T08:59:56.733483-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 62,
-      "generated_at": "2026-11-08T04:14:23.465916-05:00"
+      "generated_at": "2026-11-08T08:59:56.746436-05:00"
     }
   ],
   "recreation_programs": 121,
@@ -1280,7 +1280,7 @@
       "source_id": "resource-norwood-youth-soccer",
       "ok": true,
       "method": "nys_multi_schedule",
-      "found": 140,
+      "found": 141,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 29,
+      "found": 27,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
