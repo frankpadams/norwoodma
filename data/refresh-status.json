@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T17:05:33.837540-05:00",
+  "generated_at": "2026-11-07T19:14:29.215717-05:00",
   "offline": false,
   "events_published": 2233,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2233,
-      "generated_at": "2026-11-07T17:05:33.320496-05:00"
+      "generated_at": "2026-11-07T19:14:28.570585-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 124,
-      "generated_at": "2026-11-07T17:05:33.328773-05:00"
+      "generated_at": "2026-11-07T19:14:28.582949-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 832,
-      "generated_at": "2026-11-07T17:05:33.346049-05:00"
+      "generated_at": "2026-11-07T19:14:28.607149-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 718,
-      "generated_at": "2026-11-07T17:05:33.359767-05:00"
+      "generated_at": "2026-11-07T19:14:28.626656-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-07T17:05:33.367231-05:00"
+      "generated_at": "2026-11-07T19:14:28.637699-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 63,
-      "generated_at": "2026-11-07T17:05:33.375937-05:00"
+      "generated_at": "2026-11-07T19:14:28.650311-05:00"
     }
   ],
   "recreation_programs": 121,
@@ -89,7 +89,7 @@
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 9,
+      "found": 13,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -201,19 +201,21 @@
     },
     {
       "source_id": "friends-center-blog",
-      "ok": true,
+      "ok": false,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodcenter.org/blog/: HTTPSConnectionPool(host='www.norwoodcenter.org', port=443): Max retries exceeded with url: /blog/ (",
+      "retained_events": 0
     },
     {
       "source_id": "friends-center-events",
-      "ok": true,
+      "ok": false,
       "method": "tribe_events",
-      "found": 19,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "HTTPSConnectionPool(host='www.norwoodcenter.org', port=443): Max retries exceeded with url: /events/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.norwoodcenter.org', p",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 17
     },
     {
       "source_id": "friends-coa-dances",
@@ -297,10 +299,11 @@
     },
     {
       "source_id": "library-home",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://norwoodlibrary.org/: HTTPSConnectionPool(host='norwoodlibrary.org', port=443): Max retries exceeded with url: / (Caused b",
+      "retained_events": 0
     },
     {
       "source_id": "lifeworks-events",
@@ -362,12 +365,13 @@
     },
     {
       "source_id": "norwood-blood-drives",
-      "ok": true,
+      "ok": false,
       "method": "secondary_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/calendar: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar | https://www.norwoodcenter.org",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-carillon-series",
@@ -380,12 +384,13 @@
     },
     {
       "source_id": "norwood-evening-garden-club",
-      "ok": true,
+      "ok": false,
       "method": "secondary_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/calendar: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar | https://www.norwoodcenter.org",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-food-pantry-hours",
@@ -544,12 +549,13 @@
     },
     {
       "source_id": "norwood-vfw-public-events",
-      "ok": true,
+      "ok": false,
       "method": "secondary_org_event_discovery",
-      "found": 1,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/calendar: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/calendar | https://www.norwoodcenter.org",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-women-business-networking",
@@ -1047,13 +1053,12 @@
     },
     {
       "source_id": "nps-cms-pto",
-      "ok": false,
+      "ok": true,
       "method": "school_parent_org_composite",
       "found": 0,
-      "note": "all configured pages failed: https://www.norwood.k12.ma.us/cms/pto: 502 Server Error: Bad Gateway for url: https://www.norwood.k12.ma.us/cms/pto",
-      "outcome": "failed",
-      "access_limited": false,
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-coakley",
@@ -1075,13 +1080,12 @@
     },
     {
       "source_id": "nps-extended-day",
-      "ok": false,
+      "ok": true,
       "method": "ical",
       "found": 0,
-      "note": "502 Server Error: Bad Gateway for url: https://www.norwood.k12.ma.us/extended-day/calendar/feed/ical.ics",
-      "outcome": "failed",
-      "access_limited": false,
-      "retained_events": 0
+      "note": null,
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "nps-fine-arts",
@@ -1182,12 +1186,13 @@
     },
     {
       "source_id": "nrrc-events",
-      "ok": true,
+      "ok": false,
       "method": "html_hub",
-      "found": 4,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://www.nrrchamber.com/: HTTPSConnectionPool(host='www.nrrchamber.com', port=443): Max retries exceeded with url: / (Caused b",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 2
     },
     {
       "source_id": "pcrinc-events",
@@ -1537,12 +1542,13 @@
     },
     {
       "source_id": "together-yes-events",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodlibrary.org/: HTTPSConnectionPool(host='www.norwoodlibrary.org', port=443): Max retries exceeded with url: / (Caus",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-trails-committee-events",
@@ -1588,9 +1594,10 @@
     {
       "source": "Friends of Norwood Center",
       "url": "https://www.norwoodcenter.org/feed/",
-      "ok": true,
-      "found": 3,
-      "method": "rss"
+      "ok": false,
+      "found": 0,
+      "method": "rss",
+      "note": "HTTPSConnectionPool(host='www.norwoodcenter.org', port=443): Max retries exceeded with url: /feed/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.norwoodcenter.org', por"
     },
     {
       "source": "Norwood Town News",
@@ -1612,7 +1619,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 29,
+      "found": 28,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
