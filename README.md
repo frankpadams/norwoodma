@@ -17,7 +17,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Event ingestion is source-driven, normalized, deduplicated, and expiration-aware.
 - Event suggestions arrive through the Contact page and are reviewed, verified, and added to the shared event pipeline as documented in `EVENT-SUBMISSION-SYSTEM.md`.
 - Selectable calendars include official/community sources and topic-specific feeds where dependable ingestion is available.
-- Daily event priorities are governed by `EVENT-PRIORITIZATION.md` and enforced by the shared `event-agenda.js` comparator across the homepage and calendar. Election events lead; religious events remain included at the bottom. Ties sort by start time, with untimed events last.
+- Daily event priorities are governed by `EVENT-PRIORITIZATION.md` and enforced by the shared `event-agenda.js` comparator across the homepage and calendar. Election events lead; religious events remain included at the bottom, including events held at churches and events organized by or held at the Knights of Columbus. Ties sort by start time, with untimed events last.
 - Regional events are maintained separately from the core Norwood calendar. Curated nearby/regional events may be included when they are reasonably relevant to Norwood residents, with municipality clearly identified.
 - Recurring/annual event discovery begins up to six months ahead so major community events can be found before the immediate event window.
 - Monthly discovery sweeps explicitly cover Health Department, Recreation, and individual school sources in addition to normal recurring ingestion.

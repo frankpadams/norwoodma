@@ -21,7 +21,7 @@ Every event receives the highest applicable priority below. Lower-numbered prior
 | 6 | Other non-religious events | Ticketed activities, paid performances, educational or recreational events, and other secular events not classified above. |
 | 7 | Norwood municipal meetings | Select Board, School Committee, Planning Board, Zoning Board of Appeals, Finance Commission, other Norwood boards and committees, and their public meetings. |
 | 8 | Multi-session and recurring programs | Recreation classes, weekly activities, ongoing workshops, multi-week programs, recurring classes, and other recurring activities. |
-| 9 | Religious events | Worship services, religious education, church-sponsored activities, gatherings, and other faith-based programming. |
+| 9 | Religious events | Worship services, religious education, church-sponsored activities, events held at churches, events organized by or held at the Knights of Columbus, and other faith-based programming. |
 
 ## Classification and tie-breaking
 

@@ -34,10 +34,11 @@
 }
 function rank(e){
   const text=[e.title,e.notes,e.description,e.category,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
-  const location=[e.venue,e.address,e.location?.name,e.location?.venue].filter(Boolean).join(' ').toLowerCase();
+  const location=[e.venue,e.address,typeof e.location==='string'?e.location:e.location?.name,e.location?.venue].filter(Boolean).join(' ').toLowerCase();
   const religious=/\b(church|parish|chapel|congregation|temple|synagogue|mosque|worship|bible|prayer|faith|religious|ministry|saint catherine|st\.? catherine)\b/.test(text+' '+location);
   if(/\b(elections?|voter registration|register to vote|early voting|voting opportunit(?:y|ies)|voting information|polling place|precinct voting|candidate forum|ballot|vote by mail|absentee voting|polls open|where to vote)\b/.test(text))return 1;
-  if(religious)return 9;
+  const knightsOfColumbus=e.source_id==='norwood-kofc-events'||/\bknights\s+of\s+columbus\b/i.test([e.title,e.organizer,location].join(' '));
+  if(religious||knightsOfColumbus)return 9;
   if(/\b(town common|norwood common|common green|580 washington st)\b/.test(location))return 2;
   const recurrence=String(e.recurrence||'').trim();
   const singleOccurrence=/^(?:once|one[- ]?time|single(?: occurrence| date)?)$/i.test(recurrence);
