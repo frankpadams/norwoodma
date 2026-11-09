@@ -1,73 +1,53 @@
 {
-  "updated_at": "2026-11-09T04:26:49.393038-05:00",
+  "updated_at": "2026-11-09T14:59:16.247196-05:00",
   "date": "2026-11-09",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Veterans' Memorials Tour",
+      "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 300,
-          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
+          "minute": 900,
+          "title": "Norwood Digest Special: Michael Cunningham"
         },
         {
-          "minute": 360,
-          "title": "Shadow, Sound, Spectacle: Literary Monsters at Morrill Memorial Library 10.22.26"
+          "minute": 960,
+          "title": "Norwood Veterans: Thomas McDonough"
         },
         {
-          "minute": 420,
-          "title": "Norwood News 11.6.26"
+          "minute": 1020,
+          "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23"
         },
         {
-          "minute": 490,
-          "title": "NHS UPDATE LIVE!"
+          "minute": 1080,
+          "title": "Norwood Postcard: November 1996"
         },
         {
-          "minute": 540,
-          "title": "Living History Tour: Aboard a B-17"
+          "minute": 1140,
+          "title": "Norwood Veterans: Ted Mulvehill"
         },
         {
-          "minute": 600,
-          "title": "Korean War Memorial Bench Dedication"
+          "minute": 1170,
+          "title": "2000 World War II Diploma Ceremony"
         },
         {
-          "minute": 660,
-          "title": "Norwood Biography: The George Lee Story"
+          "minute": 1200,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
         },
         {
-          "minute": 750,
-          "title": "Veterans' Memorials Tour"
+          "minute": 1260,
+          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-09"
     },
     "government": {
       "status": "scheduled",
-      "title": "School Committee 10.28.26 Rebroadcast",
+      "title": "Historical Commission 11.5.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 420,
-          "title": "Conservation Commission 11.4.26"
-        },
-        {
-          "minute": 510,
-          "title": "Historical Commission 11.5.26"
-        },
-        {
-          "minute": 570,
-          "title": "Board of Selectmen 10.27.26"
-        },
-        {
-          "minute": 660,
-          "title": "Town Meeting Info Session 11.2.26"
-        },
-        {
-          "minute": 840,
-          "title": "Conservation Commission 11.4.26"
-        },
         {
           "minute": 930,
           "title": "Historical Commission 11.5.26"
@@ -75,42 +55,46 @@
         {
           "minute": 990,
           "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 1080,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 1260,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 1350,
+          "title": "Historical Commission 11.5.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-09"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast",
+      "title": "NHS Boys Soccer vs Medway 10.7.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 330,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
-        },
-        {
-          "minute": 450,
+          "minute": 990,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
         },
         {
-          "minute": 540,
+          "minute": 1080,
           "title": "Sports Extra: November 2019"
         },
         {
-          "minute": 630,
+          "minute": 1170,
           "title": "NCM Sports Talk Pre-Game Show"
         },
         {
-          "minute": 660,
-          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+          "minute": 1200,
+          "title": "2026 NHS Golf vs Weymouth 9.9.26"
         },
         {
-          "minute": 750,
+          "minute": 1290,
           "title": "NHS Boys Soccer vs Medway 10.7.26"
-        },
-        {
-          "minute": 870,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-09"
