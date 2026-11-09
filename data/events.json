@@ -2029,6 +2029,43 @@
     ]
   },
   {
+    "id": "2026-11-11-norwood-broncos-vs-newton-g-grizzlies-b6a0b1f",
+    "title": "Norwood Broncos vs Newton G Grizzlies",
+    "start": {
+      "date": "2026-11-11",
+      "time": "15:30"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": "Callahan 12",
+    "field": "Callahan 12",
+    "grade": "Girls Grade 5",
+    "gender": "girls",
+    "team": "Norwood Broncos",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-5",
+      "nys-team-girls-grade-5-norwood-broncos"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-787f7addaf61-2026-11-11",
     "title": "Modern 2 - Wednesdays",
     "start": {
@@ -3086,6 +3123,36 @@
     ]
   },
   {
+    "id": "2026-11-12-school-committee-meeting-budget-subcommittee--9c588c5",
+    "title": "School Committee Meeting: Budget Subcommittee (Virtual)",
+    "start": {
+      "date": "2026-11-12",
+      "time": "15:15"
+    },
+    "end": {
+      "date": "2026-11-12",
+      "time": "16:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "town-meetings"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-c9d8d3a12d36-2026-11-12",
     "title": "Ballet 1 - Thursdays",
     "start": {
@@ -4033,6 +4100,44 @@
     "calendar_ids": [
       "friends-norwood-center",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-4382c81b9c95-2026-11-13",
+    "title": "Batting Cage",
+    "start": {
+      "date": "2026-11-13",
+      "time": "15:15"
+    },
+    "end": {
+      "date": "2026-11-13",
+      "time": "16:15"
+    },
+    "venue": "11/13/2026 03:15 PM - 04:15 PM Norwood Civic Center - Batting Cage",
+    "category": "sports_leagues",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$30.00 Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": false,
+    "drop_in": false,
+    "session_start": "2026-11-13",
+    "session_end": "2026-11-13",
+    "days": "F",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "rec_program_id": "rec-4382c81b9c95",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "norwood-sports",
+      "rec-all",
+      "rec-sports",
+      "recreation-calendar"
     ]
   },
   {
@@ -6305,6 +6410,44 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-5b6fd479e068-2026-11-16",
+    "title": "Batting Cage",
+    "start": {
+      "date": "2026-11-16",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "17:00"
+    },
+    "venue": "11/16/2026 04:00 PM - 05:00 PM Norwood Civic Center - Batting Cage",
+    "category": "sports_leagues",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$30.00 Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": false,
+    "drop_in": false,
+    "session_start": "2026-11-16",
+    "session_end": "2026-11-16",
+    "days": "M",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "rec_program_id": "rec-5b6fd479e068",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "norwood-sports",
+      "rec-all",
+      "rec-sports",
       "recreation-calendar"
     ]
   },
@@ -8812,6 +8955,44 @@
     "calendar_ids": [
       "rec-all",
       "rec-special-events",
+      "recreation-calendar"
+    ]
+  },
+  {
+    "id": "rec-occurrence-rec-28cf1219c24d-2026-11-19",
+    "title": "Batting Cage",
+    "start": {
+      "date": "2026-11-19",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "17:00"
+    },
+    "venue": "11/19/2026 04:00 PM - 05:00 PM Norwood Civic Center - Batting Cage",
+    "category": "sports_leagues",
+    "source_id": "town-recreation-programs",
+    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30955",
+    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
+    "organizer": "Norwood Recreation Department",
+    "cost": "$30.00 Res",
+    "public_access": "registration_required",
+    "publish_candidate": true,
+    "curated_default": false,
+    "session_based": false,
+    "drop_in": false,
+    "session_start": "2026-11-19",
+    "session_end": "2026-11-19",
+    "days": "Th",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "rec_program_id": "rec-28cf1219c24d",
+    "verification_status": "auto_primary_source",
+    "discovered_by": "myrec_program_weekday_expansion",
+    "calendar_ids": [
+      "norwood-sports",
+      "rec-all",
+      "rec-sports",
       "recreation-calendar"
     ]
   },
@@ -13241,37 +13422,6 @@
     "notes": null,
     "discovered_by": "town_revize_master_calendar",
     "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-27-zoom-with-a-law-librarian-c1821b8",
-    "title": "Zoom with a Law Librarian",
-    "start": {
-      "date": "2026-11-27",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/zoom-with-a-law-librarian-645/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Get help finding and using Massachusetts legal information via ZoomEvery Weekday from 1PM to 2PM, patrons from anywhere in Massachusetts can Zoom one-on-one with a law librarian from the Trial Court Libraries of Massachusetts for legal info",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
       "norwood-community"
     ]
   },
@@ -19436,7 +19586,7 @@
     "address": null,
     "category": "community",
     "source_id": "fallout-shelter",
-    "source_url": "https://grcpac.yapsody.com/event/index/875973/WEDNESDAVE-BLUES",
+    "source_url": "https://grcpac.yapsody.com/event/index/878885/WEDNESDAVE-BLUES",
     "cost": null,
     "public_access": "public",
     "series": "The Fallout Shelter / Extended Play Sessions",
