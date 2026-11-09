@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-09T00:09:13.002800-05:00",
+  "generated_at": "2026-11-09T02:21:05.400755-05:00",
   "offline": false,
-  "events_published": 2195,
+  "events_published": 2196,
   "news_published": 120,
   "civic_notices": 56,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2195,
-      "generated_at": "2026-11-09T00:09:12.170350-05:00"
+      "events": 2196,
+      "generated_at": "2026-11-09T02:21:04.829171-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 116,
-      "generated_at": "2026-11-09T00:09:12.184601-05:00"
+      "generated_at": "2026-11-09T02:21:04.835418-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 817,
-      "generated_at": "2026-11-09T00:09:12.211482-05:00"
+      "generated_at": "2026-11-09T02:21:04.848130-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 713,
-      "generated_at": "2026-11-09T00:09:12.234179-05:00"
+      "generated_at": "2026-11-09T02:21:04.858262-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-11-09T00:09:12.247285-05:00"
+      "generated_at": "2026-11-09T02:21:04.863949-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 62,
-      "generated_at": "2026-11-09T00:09:12.261284-05:00"
+      "generated_at": "2026-11-09T02:21:04.870472-05:00"
     }
   ],
   "recreation_programs": 120,
@@ -414,7 +414,7 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 43,
+      "found": 42,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -1339,7 +1339,7 @@
       "source_id": "st-timothy-calendar",
       "ok": true,
       "method": "church_events_calendar",
-      "found": 43,
+      "found": 42,
       "note": null,
       "outcome": "events",
       "access_limited": false
