@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T19:10:24.835749-05:00",
+  "generated_at": "2026-11-08T20:53:12.137682-05:00",
   "offline": false,
   "events_published": 2204,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2204,
-      "generated_at": "2026-11-08T19:10:24.235652-05:00"
+      "generated_at": "2026-11-08T20:53:11.675435-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 119,
-      "generated_at": "2026-11-08T19:10:24.242940-05:00"
+      "generated_at": "2026-11-08T20:53:11.682261-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 821,
-      "generated_at": "2026-11-08T19:10:24.256982-05:00"
+      "generated_at": "2026-11-08T20:53:11.695753-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 715,
-      "generated_at": "2026-11-08T19:10:24.268052-05:00"
+      "generated_at": "2026-11-08T20:53:11.706464-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-08T19:10:24.273904-05:00"
+      "generated_at": "2026-11-08T20:53:11.712482-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 62,
-      "generated_at": "2026-11-08T19:10:24.280635-05:00"
+      "generated_at": "2026-11-08T20:53:11.719476-05:00"
     }
   ],
   "recreation_programs": 121,
@@ -270,13 +270,12 @@
     },
     {
       "source_id": "league-women-voters-norwood",
-      "ok": false,
+      "ok": true,
       "method": "organization_event_discovery",
       "found": 0,
-      "note": "all configured pages failed: https://my.lwv.org/massachusetts/norwood: HTTPSConnectionPool(host='my.lwv.org', port=443): Read timed out. (read timeout=18)",
-      "outcome": "failed",
-      "access_limited": false,
-      "retained_events": 0
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
+      "access_limited": false
     },
     {
       "source_id": "library-assabet-calendar",
