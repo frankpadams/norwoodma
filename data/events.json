@@ -2368,6 +2368,43 @@
     ]
   },
   {
+    "id": "2026-11-11-norwood-thunderbolts-vs-newton-b-real-d511fca",
+    "title": "Norwood Thunderbolts vs Newton B Real",
+    "start": {
+      "date": "2026-11-11",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": "Coakley Middle School Upper 4",
+    "field": "Coakley Middle School Upper 4",
+    "grade": "Boys Grade 3",
+    "gender": "boys",
+    "team": "Norwood Thunderbolts",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-3",
+      "nys-team-boys-grade-3-norwood-thunderbolts"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-b8b250304255-2026-11-11",
     "title": "Adult Tap - Wednesdays",
     "start": {
@@ -4643,6 +4680,43 @@
     ]
   },
   {
+    "id": "2026-11-14-norwood-thunder-vs-milford-hopedale-storm-22ffece",
+    "title": "Norwood Thunder vs Milford-Hopedale Storm",
+    "start": {
+      "date": "2026-11-14",
+      "time": "10:15"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": null
+    },
+    "venue": "Oldham School 8",
+    "field": "Oldham School 8",
+    "grade": "Girls Grade 3",
+    "gender": "girls",
+    "team": "Norwood Thunder",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-3",
+      "nys-team-girls-grade-3-norwood-thunder"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ad028384be8a-2026-11-14",
     "title": "Tap 1 - Saturdays",
     "start": {
@@ -4788,43 +4862,6 @@
       "norwood-sports",
       "nys-grade-girls-grade-6",
       "nys-team-girls-grade-6-norwood-force"
-    ]
-  },
-  {
-    "id": "2026-11-14-norwood-thunder-vs-milford-hopedale-storm-22ffece",
-    "title": "Norwood Thunder vs Milford-Hopedale Storm",
-    "start": {
-      "date": "2026-11-14",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-14",
-      "time": null
-    },
-    "venue": "Oldham School 8",
-    "field": "Oldham School 8",
-    "grade": "Girls Grade 3",
-    "gender": "girls",
-    "team": "Norwood Thunder",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-3",
-      "nys-team-girls-grade-3-norwood-thunder"
     ]
   },
   {
@@ -17334,6 +17371,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-05-lumos-holiday-candlelight",
+    "title": "A Festive Holiday Candlelight Experience",
+    "description": "Lumos Experiences presents a holiday string trio concert for ages 8 and up. The ticket page lists four one-hour sittings at 2pm, 4pm, 6pm and 8pm. Check ticket availability before going.",
+    "start": {
+      "date": "2026-12-05",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": "21:00"
+    },
+    "venue": "Grace Episcopal Church",
+    "address": "150 Chapel St, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "performance",
+    "source_id": "lumos-experiences",
+    "source_url": "https://www.fatsoma.com/e/e7x83voz/a-festive-holiday-candlelight-experience-in-norwood-ma-saturday-december-5th",
+    "organizer": "Lumos Experiences",
+    "cost": "$27.50–$77 including booking fees",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "verified_official_ticketing_2026-11-09",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-sports"
     ]
   },
   {
