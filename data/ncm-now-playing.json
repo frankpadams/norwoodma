@@ -1,51 +1,119 @@
 {
-  "updated_at": "2026-11-08T20:51:41.130758-05:00",
-  "date": "2026-11-08",
+  "updated_at": "2026-11-09T04:26:49.393038-05:00",
+  "date": "2026-11-09",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Local Artist Bill Breen - Public Access 10.21.26",
+      "title": "Veterans' Memorials Tour",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 300,
+          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
+        },
+        {
+          "minute": 360,
           "title": "Shadow, Sound, Spectacle: Literary Monsters at Morrill Memorial Library 10.22.26"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "Norwood News 11.6.26"
         },
         {
-          "minute": 1380,
-          "title": "Local Artist Bill Breen - Public Access 10.21.26"
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 540,
+          "title": "Living History Tour: Aboard a B-17"
+        },
+        {
+          "minute": 600,
+          "title": "Korean War Memorial Bench Dedication"
+        },
+        {
+          "minute": 660,
+          "title": "Norwood Biography: The George Lee Story"
+        },
+        {
+          "minute": 750,
+          "title": "Veterans' Memorials Tour"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-08"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-09"
     },
     "government": {
       "status": "scheduled",
-      "title": "Town Meeting Info Session 11.2.26",
+      "title": "School Committee 10.28.26 Rebroadcast",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 420,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 510,
+          "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 570,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 660,
           "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 840,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 930,
+          "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 990,
+          "title": "School Committee 10.28.26 Rebroadcast"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-08"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-09"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Volleyball vs Dedham 9.28.26",
+      "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 330,
+          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
+        },
+        {
+          "minute": 450,
           "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 540,
+          "title": "Sports Extra: November 2019"
+        },
+        {
+          "minute": 630,
+          "title": "NCM Sports Talk Pre-Game Show"
+        },
+        {
+          "minute": 660,
+          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+        },
+        {
+          "minute": 750,
+          "title": "NHS Boys Soccer vs Medway 10.7.26"
+        },
+        {
+          "minute": 870,
+          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-08"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-09"
     }
   }
 }
