@@ -132,6 +132,34 @@ function diversifyNewsChronologically(items){
  return out;
 }
 
+const newsDateFormat = new Intl.DateTimeFormat('en-US', {
+ timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric'
+});
+
+function newsPageArticle(item){
+ const source = (item.source || '').trim();
+ const title = (item.title || '').trim();
+ const suffix = ' - ' + source;
+ const headline = source && title.length > suffix.length && title.toLowerCase().endsWith(suffix.toLowerCase())
+  ? title.slice(0, -suffix.length) : title;
+ const summary = (item.summary || '').trim();
+ const image = item.image || item.thumbnail || item.image_url || item.imageUrl;
+ const thumb = image ? `<img class="news-row-thumbnail" src="${esc(image)}" alt="" width="120" height="80" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : '';
+ return `<article>
+  <a class="news-story" href="${esc(item.url)}" target="_blank" rel="noopener">
+   <div class="news-story-copy">
+    <h3>${esc(headline)}</h3>
+    ${summary ? `<p class="news-story-summary">${esc(summary)}</p>` : ''}
+    <div class="news-story-meta">
+     ${source ? `<span class="news-story-source">${esc(source)}</span><span aria-hidden="true">·</span>` : ''}
+     <time datetime="${esc(item.date)}">${newsDateFormat.format(new Date(item.date))}</time>
+    </div>
+   </div>
+   ${thumb}
+  </a>
+ </article>`;
+}
+
 function renderNews(items){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
@@ -151,7 +179,10 @@ function renderNews(items){
  if(!selected.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article><article class="news-ncm-item"><a href="https://norwoodcommunitymedia.org/programs/show/norwood-news-11-6-26-1-14456/" target="_blank" rel="noopener"><small>Norwood Community Media · Weekly newscast</small><h3>This Week on Norwood News (video) · Nov 6</h3><p>Watch the latest episode from NCM.</p></a></article>';const btn=$('#moreNews');if(btn)btn.hidden=true;return;}
  const visibleItems=isHome?selected.slice(0,20):selected.slice(0,60), initialHome=9;
  const ncmEpisode='<article class="news-ncm-item"><a href="https://norwoodcommunitymedia.org/programs/show/norwood-news-11-6-26-1-14456/" target="_blank" rel="noopener"><small>Norwood Community Media · Weekly newscast</small><h3>This Week on Norwood News (video) · Nov 6</h3><p>Watch the latest episode from NCM.</p></a></article>';
- const articleHtml=visibleItems.map((x,i)=>{const image=!isHome&&(x.image||x.thumbnail||x.image_url||x.imageUrl);const thumb=image?`<img class="news-thumb" src="${esc(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();this.closest('article')?.classList.remove('has-thumb')">`:'';return `<article class="${isHome && i>=initialHome?'news-extra':''}${image?' has-thumb':''}">${thumb}<a href="${esc(x.url)}" target="_blank" rel="noopener"><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original article for details.')}</p></a></article>`;}).join('');
+ const articleHtml=visibleItems.map((x,i)=>{
+  if(!isHome)return newsPageArticle(x);
+  return `<article class="${i>=initialHome?'news-extra':''}"><a href="${esc(x.url)}" target="_blank" rel="noopener"><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original article for details.')}</p></a></article>`;
+ }).join('');
  feed.innerHTML=articleHtml+ncmEpisode;
  const btn=$('#moreNews'); if(btn)btn.hidden=!isHome||selected.length<=initialHome;
 }

@@ -25,6 +25,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - One-time public events should not be displaced by routine multi-week session occurrences.
 
 ### News
+- The News page displays a single headline feed beside the local source directory. On narrow screens, the directory follows the feed.
 - News is aggregated from local/official and regional sources under the policy in `NEWS-SOURCES.md`.
 - The system favors current, materially Norwood-related reporting; rejects stale, undated, promotional, obituary, and low-value single-game material; and deduplicates substantially identical coverage.
 - Google News is a discovery mechanism, not a publisher or preferred source.

@@ -103,12 +103,113 @@ h1,h2,h3,h4,h5,h6,.eyebrow,.section-title,.card-title,.tile-title,.panel-title,.
 #heyNorwoodNotices .good-to-know-item{min-height:0;padding-block:5px}
 #heyNorwoodNotices .good-to-know-item>span:nth-child(2){min-width:0;overflow-wrap:anywhere}
 
-/* Expanded News: align local sources at the top of the right column, but let them scroll naturally with the page. */
-@media (min-width: 801px){
-  .news-page-grid{align-items:start}
-  .news-page-grid .news-sources{position:static;top:auto;align-self:start}
+/* The news page pairs a single headline feed with its directory of local sources. */
+.news-page-grid {
+  max-width: 1180px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: clamp(20px, 3vw, 36px);
+  align-items: start;
 }
 
+.news-page-grid .news-sources {
+  position: static;
+}
+
+.news-headlines-header {
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 10px;
+}
+
+.news-headlines-header h2,
+.news-headlines-header p {
+  margin: 0;
+}
+
+.news-headlines-header p {
+  margin-top: 4px;
+}
+
+.news-page-grid #newsFeed.feed {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+.news-page-grid #newsFeed.feed article {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 15px 0;
+}
+
+.news-page-grid #newsFeed .news-story {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(10px, 2vw, 20px);
+  color: var(--blue);
+}
+
+.news-story-copy {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.news-page-grid #newsFeed .news-story h3 {
+  margin: 0;
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.news-story:hover h3,
+.news-story:focus-visible h3 {
+  text-decoration: underline;
+}
+
+.news-page-grid #newsFeed .news-story-summary {
+  margin: 5px 0 0;
+  color: var(--ink);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.news-story-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 7px;
+  margin-top: 7px;
+  color: #526573;
+  font-size: 0.75rem;
+}
+
+.news-story-source {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.news-row-thumbnail {
+  flex: none;
+  width: clamp(72px, 12vw, 120px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+html[data-high-contrast="true"] .news-page-grid #newsFeed :is(.news-story, .news-story-summary, .news-story-meta, .news-story-source) {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .news-page-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
 /* Resource directory cards: separate individual resources from the page background. */
 .resource-list .resource-item{background:#fff;padding:16px 18px;box-sizing:border-box;}

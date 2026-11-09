@@ -30,6 +30,10 @@ The machine-readable audit is `data/news-source-registry.json`.
 - Group/deduplicate substantially identical coverage. Prefer the original/primary source when available; otherwise retain distinct journalism when it adds meaningful reporting.
 - Summaries on Norwood.ma must be neutral and brief; the headline links to the publisher.
 
+## News page presentation
+
+Each story shows a linked headline, a short excerpt when available, and its publisher and publication date. Publisher-provided thumbnails appear to the right when available. The local source directory sits beside the feed on desktop and below it on smaller screens.
+
 ## Next engineering pass
 Add per-source parsers/health reporting for the highest-value sources, stronger semantic duplicate clustering, category assignment, direct-publisher URL resolution for Google News discoveries, and an editorial override file for feature/hide/pin/category corrections without changing application code.
 
