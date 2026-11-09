@@ -31,364 +31,6 @@
     ]
   },
   {
-    "id": "2026-11-08-musical-sundays-concert-series-popular-music--9a3631f",
-    "title": "Musical Sundays Concert Series: Popular Music and Veterans",
-    "start": {
-      "date": "2026-11-08",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "school_theatre",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-popular-music-and-veterans/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The Fall Musical Sundays Concert Series continues with acoustic duo, Jon and Li Waterman, performing a special concert to honor our veterans on Sunday, November 8 at 3:00pm. Registration is required for all the shows in the Musical Sundays ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-08-5th-fbff-class-cbce47b",
-    "title": "5th FBFF Class",
-    "start": {
-      "date": "2026-11-08",
-      "time": "08:30"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "09:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "workshop",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-08-bessie-s-closet-at-discovery-museum-9f03c43",
-    "title": "Bessie’s Closet at Discovery Museum",
-    "start": {
-      "date": "2026-11-08",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "15:00"
-    },
-    "venue": "Discovery Museum",
-    "address": null,
-    "category": "community",
-    "source_id": "boston-parents-paper-greater-boston",
-    "source_url": "https://bostonparentspaper.com/event/bessies-closet-at-discovery-museum-3/2026-11-08/",
-    "cost": "USD 0",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "<p>Museum Admission Not Required Bessie’s Closet is a free pop-up clothing store open to all members of our community. Supported by donations from our Museum community and beyond, Bessie’s Closet […]</p>\\n",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "paid",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "boston-parents-paper-greater-boston"
-    ]
-  },
-  {
-    "id": "2026-11-08-norwood-braves-vs-bellingham-hawks-g4-dias-9da1c11",
-    "title": "Norwood Braves vs Bellingham Hawks G4 - Dias",
-    "start": {
-      "date": "2026-11-08",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": null
-    },
-    "venue": "Oldham School 8",
-    "field": "Oldham School 8",
-    "grade": "Girls Grade 4",
-    "gender": "girls",
-    "team": "Norwood Braves",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-4",
-      "nys-team-girls-grade-4-norwood-braves"
-    ]
-  },
-  {
-    "id": "2026-11-08-divine-mercy-prayers-2613933",
-    "title": "Divine Mercy Prayers",
-    "start": {
-      "date": "2026-11-08",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "12:30"
-    },
-    "venue": "Norwood Knights of Columbus Events",
-    "address": null,
-    "category": "community",
-    "source_id": "norwood-kofc-events",
-    "source_url": "https://iccnorwood.org/events",
-    "cost": null,
-    "organizer": "Norwood Knights of Columbus Events",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-08-norwood-storm-vs-mansfield-swarm-eb7a089",
-    "title": "Norwood Storm vs Mansfield Swarm",
-    "start": {
-      "date": "2026-11-08",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": null
-    },
-    "venue": "Oldham School 8",
-    "field": "Oldham School 8",
-    "grade": "Girls Grade 3",
-    "gender": "girls",
-    "team": "Norwood Storm",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-girls-grade-3",
-      "nys-team-girls-grade-3-norwood-storm"
-    ]
-  },
-  {
-    "id": "manual-approved-blackhole-social-skills-2026-11-08",
-    "title": "Dungeons & Dragons and Social Skill Practice",
-    "start": {
-      "date": "2026-11-08",
-      "time": "12:30"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "14:00"
-    },
-    "venue": "Blackhole Comics",
-    "address": "732 Washington St, Norwood, MA",
-    "town": "Norwood",
-    "category": "family",
-    "source_id": "community-event-submissions",
-    "source_url": "https://www.facebook.com/photo/?fbid=122170487444658701&set=gm.1449392433751429",
-    "cost": "Free",
-    "organizer": "Blackhole Comics",
-    "recurrence": "biweekly",
-    "recurrence_details": "Every other Sunday; confirm schedule with organizer",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "moderator_approved_submission",
-    "notes": "Dungeons & Dragons play for children to practice social skills and connect with peers.",
-    "discovered_by": "approved_submission_fallback",
-    "calendar_ids": [
-      "blackhole-comics",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-08-create-craft-c033684",
-    "title": "Create & Craft",
-    "start": {
-      "date": "2026-11-08",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "18:00"
-    },
-    "venue": "Wenham Museum",
-    "address": "132 Main Street, Wenham, M, 01984",
-    "category": "arts",
-    "source_id": "boston-parents-paper-greater-boston",
-    "source_url": "https://bostonparentspaper.com/event/create-craft-2/2026-11-08/",
-    "cost": "USD 10.00",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "<p>🎨✨ Create, Craft, and Imagine! ✨🎨 Make the most of school vacation week and drop-in for hands-on creativity at the museum! Kids can choose from a menu of craft projects […]</p>\\n",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "paid",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "boston-parents-paper-greater-boston",
-      "norwood-arts",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-08-rnqg-fabric-sale",
-    "title": "RNQG Fabric Sale",
-    "description": "Browse hundreds of fat quarters, fabric cuts, patterns and new quilt kits. Open to the public.",
-    "start": {
-      "date": "2026-11-08",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "15:30"
-    },
-    "venue": "Norwood VFW Hall",
-    "address": "193 Dean Street, Norwood, MA 02062",
-    "category": "community",
-    "source_id": "rnqg",
-    "source_url": "https://rnqg.org/events/rnqg-fabric-sale/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "official_source_verified_2026-10-30",
-    "notes": "Official Rhododendron Needlers Quilt Guild event listing. Norwood location and details confirmed; fundraiser status not stated, so listed as a regular public event.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-fundraisers"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-91104216c70c-2026-11-08",
-    "title": "On the Mark Archery - Fall 2 Program",
-    "start": {
-      "date": "2026-11-08",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "16:00"
-    },
-    "venue": "10/18/2026 - 11/08/2026 03:00 PM - 04:00 PM Pequitside Farm, 79 Pleasant Street Canton, MA",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30930",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30930",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$165.00 Res, $165.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-10-18",
-    "session_end": "2026-11-08",
-    "days": "Su",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-91104216c70c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-08-vivo-performing-arts-presents-all-cello-orche-714b191",
-    "title": "Vivo Performing Arts presents All-Cello Orchestra: Pablo Casals 150th Birthday Tribute",
-    "start": {
-      "date": "2026-11-08",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-11-08",
-      "time": "20:00"
-    },
-    "venue": "Roxbury Community College Media Arts Center",
-    "address": "1234 Columbus Ave, Roxbury Crossing, MA, 02120",
-    "category": "arts",
-    "source_id": "boston-parents-paper-greater-boston",
-    "source_url": "https://bostonparentspaper.com/event/vivo-performing-arts-presents-all-cello-orchestra-pablo-casals-150th-birthday-tribute/",
-    "cost": "USD 0",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "<p>The cello speaks—perhaps more than any other orchestral instrument—in a way that feels human. Its range overlaps with the human voice, players share space with and embrace their instrument, and […]</p>\\n",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "paid",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "boston-parents-paper-greater-boston",
-      "norwood-arts",
-      "norwood-sports"
-    ]
-  },
-  {
     "id": "2026-11-09-for-grief-s-sake-15ae7c2",
     "title": "For Grief's Sake",
     "start": {
@@ -74604,6 +74246,33 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-05-08-vfw-post-2452-meat-raffle-0e234eb",
+    "title": "VFW Post 2452 Meat Raffle",
+    "start": {
+      "date": "2027-05-08",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2027-05-08",
+      "time": "17:00"
+    },
+    "venue": "Norwood VFW Post 2452",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "vfw-post-2452-meat-raffle",
+    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
+    "cost": "$2 per drawing; $20 pre-buy",
+    "public_access": "public",
+    "series": "VFW Post 2452 Meat Raffle",
+    "publish_candidate": true,
+    "verification_status": "established_recurring_schedule",
+    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
+    "discovered_by": "scheduled_recurring_series",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
