@@ -160,25 +160,32 @@ function newsPageArticle(item){
  </article>`;
 }
 
-function renderNews(items){
+function renderNews(items, episodes = []){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
- let clean=diversifyNewsChronologically((items||[]).filter(x=>{if(!isHome && /^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;}));
+ const episodeUrls = new Set(episodes.map(episode => episode.url.replace(/\/$/, '')));
+ const clean=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/, '')))return false;if(!isHome && /^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
  let selected=[], selectedDays;
  if(isHome){
   // Homepage stays compact and adapts to the smallest recent window that supplies enough current stories.
+  const ordered = diversifyNewsChronologically(clean);
   const windows=[7,14,21,30,45], target=20; selectedDays=45;
-  for(const days of windows){const cutoff=now-days*day, candidate=clean.filter(x=>Date.parse(x.date)>=cutoff);selected=candidate;selectedDays=days;if(candidate.length>=target)break;}
+  for(const days of windows){const cutoff=now-days*day, candidate=ordered.filter(x=>Date.parse(x.date)>=cutoff);selected=candidate;selectedDays=days;if(candidate.length>=target)break;}
  }else{
-  // Expanded News page: show all qualifying stories from the past 45 days, strictly newest first.
   selectedDays=45;
-  const cutoff=now-45*day;
-  selected=diversifyNewsChronologically(clean.filter(x=>Date.parse(x.date)>=cutoff));
+  const cutoff=now-selectedDays*day;
+  selected=clean.filter(x=>Date.parse(x.date)>=cutoff).sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));
  }
- const health=$('#feedHealth'); if(health)health.textContent=selected.length?`Local news from the past ${selectedDays} days · ${selected.length} verified stor${selected.length===1?'y':'ies'}`:'No verified local news is currently available';
- if(!selected.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article><article class="news-ncm-item"><a href="https://norwoodcommunitymedia.org/programs/show/norwood-news-11-6-26-1-14456/" target="_blank" rel="noopener"><small>Norwood Community Media · Weekly newscast</small><h3>This Week on Norwood News (video) · Nov 6</h3><p>Watch the latest episode from NCM.</p></a></article>';const btn=$('#moreNews');if(btn)btn.hidden=true;return;}
- const visibleItems=isHome?selected.slice(0,20):selected.slice(0,60), initialHome=9;
- const ncmEpisode='<article class="news-ncm-item"><a href="https://norwoodcommunitymedia.org/programs/show/norwood-news-11-6-26-1-14456/" target="_blank" rel="noopener"><small>Norwood Community Media · Weekly newscast</small><h3>This Week on Norwood News (video) · Nov 6</h3><p>Watch the latest episode from NCM.</p></a></article>';
+ const latestEpisode = episodes[0];
+ const ncmEpisode = isHome && latestEpisode ? `<article class="news-ncm-item"><a href="${esc(latestEpisode.url)}" target="_blank" rel="noopener"><small>Norwood Community Media · Weekly newscast</small><h3>${esc(latestEpisode.title)} · ${newsDateFormat.format(new Date(latestEpisode.date))}</h3><p>Watch the latest episode from NCM.</p></a></article>` : '';
+ const initialHome=9;
+ const visibleItems = isHome ? selected.slice(0,20) : [
+  ...selected.slice(0,60),
+  ...episodes.filter(episode => Date.parse(episode.date) >= now-selectedDays*day)
+ ].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));
+ const health=$('#feedHealth');
+ if(health)health.textContent=visibleItems.length?`Local news from the past ${selectedDays} days · ${visibleItems.length} verified stor${visibleItems.length===1?'y':'ies'}`:'No verified local news is currently available';
+ if(!visibleItems.length){feed.innerHTML='<article><h3>No current headlines available</h3><p>We’ll keep checking local sources automatically.</p></article>'+ncmEpisode;const btn=$('#moreNews');if(btn)btn.hidden=true;return;}
  const articleHtml=visibleItems.map((x,i)=>{
   if(!isHome)return newsPageArticle(x);
   return `<article class="${i>=initialHome?'news-extra':''}"><a href="${esc(x.url)}" target="_blank" rel="noopener"><h3>${esc(x.title)}</h3><p>${esc(x.summary||'Open the original article for details.')}</p></a></article>`;
@@ -189,9 +196,34 @@ function renderNews(items){
 async function news(){
  const feed=$('#newsFeed'); if(!feed)return;
  let items=Array.isArray(window.NORWOOD_NEWS)?window.NORWOOD_NEWS.slice():[];
+ let episodes = [];
  if(items.length)renderNews(items);
- try{const r=await fetch('data/news.json?fresh='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh)){items=fresh;renderNews(items);}}}catch(e){}
- if(!items.length)renderNews([]);
+ const load = async (url, apply) => {
+  try {
+   const response = await fetch(url, {cache:'no-cache'});
+   if (!response.ok) return;
+   const data = await response.json();
+   if (!Array.isArray(data)) return;
+   apply(data);
+   renderNews(items, episodes);
+  } catch (error) {
+   // Keep any headlines already rendered from the bundled data.
+  }
+ };
+ await Promise.all([
+  load('data/news.json?fresh='+Date.now(), data => { items = data; }),
+  load('data/ncm-news-episodes.json', data => {
+   const today = new Intl.DateTimeFormat('sv-SE', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
+   episodes = data.filter(episode => episode.date <= today).map(episode => ({
+    ...episode,
+    date: episode.date + 'T12:00:00Z',
+    source: 'Norwood Community Media',
+    title: 'This Week on Norwood News (video)',
+    summary: 'Watch the weekly local newscast from Norwood Community Media.'
+   })).sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));
+  })
+ ]);
+ if(!items.length && !episodes.length)renderNews([]);
 } news();
 
 function dateKey(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`;}

@@ -34,6 +34,8 @@ The machine-readable audit is `data/news-source-registry.json`.
 
 Each story shows a linked headline, a short excerpt when available, and its publisher and publication date. Publisher-provided thumbnails appear to the right when available. The local source directory sits beside the feed on desktop and below it on smaller screens.
 
+The content refresh reads the official Norwood Community Media series archive and retains known episode links if the source is unavailable. The News page includes each episode in its 45-day feed by episode date. The homepage shows only the latest episode at the bottom of its news list.
+
 ## Next engineering pass
 Add per-source parsers/health reporting for the highest-value sources, stronger semantic duplicate clustering, category assignment, direct-publisher URL resolution for Google News discoveries, and an editorial override file for feature/hide/pin/category corrections without changing application code.
 

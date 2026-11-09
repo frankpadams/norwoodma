@@ -2868,6 +2868,44 @@ def events_from_local_news(items, offline=False):
     return dedupe_events(out)
 
 
+NCM_NEWS_ARCHIVE = 'https://norwoodcommunitymedia.org/programs/norwood-news-1-67/'
+
+
+def ncm_news_episodes(html):
+    """Extract dated regular newscasts from the official series archive."""
+    if BeautifulSoup is None:
+        raise RuntimeError('BeautifulSoup is required for the NCM archive')
+    episodes = {}
+    for link in BeautifulSoup(html, 'html.parser').find_all('a', href=True):
+        url = urljoin(NCM_NEWS_ARCHIVE, link['href'])
+        parsed = urlparse(url)
+        match = re.fullmatch(r'/programs/show/norwood-news-(\d{1,2})-(\d{1,2})-(\d{2,4})-1-\d+/?', parsed.path)
+        if parsed.netloc != 'norwoodcommunitymedia.org' or not match:
+            continue
+        month, day, year = map(int, match.groups())
+        try:
+            episode_date = date(year + 2000 if year < 100 else year, month, day).isoformat()
+        except ValueError:
+            continue
+        episodes.setdefault(episode_date, {'date': episode_date, 'url': url})
+    return episodes
+
+
+def refresh_ncm_news_episodes():
+    try:
+        episodes = ncm_news_episodes(request(NCM_NEWS_ARCHIVE).text)
+        if not episodes:
+            raise ValueError('No dated episodes found')
+        filename = 'ncm-news-episodes.json'
+        previous = {episode['date']: episode for episode in read_json(filename, [])}
+        previous.update(episodes)
+        dates = sorted(previous, reverse=True)[:24]
+        write_json(filename, [previous[d] for d in dates])
+        return {'source':'Norwood News', 'url':NCM_NEWS_ARCHIVE, 'ok':True, 'found':len(episodes), 'method':'ncm_archive'}
+    except Exception as ex:
+        return {'source':'Norwood News', 'url':NCM_NEWS_ARCHIVE, 'ok':False, 'found':0, 'method':'ncm_archive', 'note':str(ex)[:180]}
+
+
 def refresh_news(offline=False):
     old=read_json('news.json',[])
     # Explicit source endpoints are kept separate from browser code; failures are harmless.
@@ -2888,6 +2926,7 @@ def refresh_news(offline=False):
     google_queries=['"norwood, ma"','"norwood ma"','norwoodma','"norwood, massachusetts"']
     items=list(old); status=[]
     if not offline:
+      status.append(refresh_ncm_news_episodes())
       for name,url in feeds:
         try:
             got=parse_rss(request(url).text,name); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(got),'method':'rss'})
@@ -3691,6 +3730,7 @@ def refresh_news(offline=False):
     google_queries=['"norwood, ma"','"norwood ma"','norwoodma','"norwood, massachusetts"']
     items=list(old); status=[]
     if not offline:
+      status.append(refresh_ncm_news_episodes())
       for name,url in feeds:
         try:
             got=parse_rss(request(url).text,name); items.extend(got); status.append({'source':name,'url':url,'ok':True,'found':len(got),'method':'rss'})
