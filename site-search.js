@@ -75,7 +75,6 @@
   {name:'Official Town Updates',url:'town-updates.html',type:'Town Updates',text:'official public service updates town departments police public works DPW Norwood Light government notices announcements'},
   {name:'Live Music in Norwood',url:'live-music.html',type:'Things to Do',text:'live music bands concerts performances venues restaurants breweries pubs entertainment'},
   {name:'Gas Prices in Norwood',url:'gas-prices.html',type:'Transportation',text:'gas gasoline fuel prices stations cheapest regular premium diesel compare'},
-  {name:'Route 1 Roadwork',url:'route-1-roadwork.html',type:'Transportation',text:'Route 1 roadwork construction MassDOT nighttime milling paving traffic detour delays Providence Highway'},
   {name:'Credits',url:'credits.html',type:'Norwood.ma',text:'credits sources acknowledgments attribution community information'},
   {name:'Transit',url:'transit.html',type:'Transit',text:'train commuter rail bus MBTA Windsor Gardens Norwood Central Norwood Depot 34E schedules'},
   {name:'What’s Happening',url:'events.html',type:'Events',text:'events calendar music trivia community town common elections school theatre marching band fundraiser'},
