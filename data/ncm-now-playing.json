@@ -1,103 +1,119 @@
 {
-  "updated_at": "2026-11-09T21:40:00.149721-05:00",
-  "date": "2026-11-09",
+  "updated_at": "2026-11-10T05:54:23.178137-05:00",
+  "date": "2026-11-10",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood Digest Special: Michael Cunningham",
+      "title": "Flex and Firm with Steve",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1380,
+          "minute": 360,
+          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
           "title": "Norwood Digest Special: Michael Cunningham"
-        }
-      ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-09"
-    },
-    "government": {
-      "status": "scheduled",
-      "title": "Historical Commission 11.5.26",
-      "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
-      "slots": [
-        {
-          "minute": 1350,
-          "title": "Historical Commission 11.5.26"
-        }
-      ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-09"
-    },
-    "schools": {
-      "status": "scheduled",
-      "title": "NHS Boys Soccer vs Medway 10.7.26",
-      "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
-      "slots": [
-        {
-          "minute": 0,
-          "title": "Sports Extra: November 2019"
         },
         {
-          "minute": 90,
-          "title": "NCM Sports Talk Pre-Game Show"
-        },
-        {
-          "minute": 120,
-          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
-        },
-        {
-          "minute": 210,
-          "title": "NHS Boys Soccer vs Medway 10.7.26"
-        },
-        {
-          "minute": 330,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
-        },
-        {
-          "minute": 450,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
-        {
-          "minute": 540,
-          "title": "Sports Extra: November 2019"
-        },
-        {
-          "minute": 630,
-          "title": "NCM Sports Talk Pre-Game Show"
+          "minute": 600,
+          "title": "Gentle Exercise with Steve"
         },
         {
           "minute": 660,
-          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+          "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23"
+        },
+        {
+          "minute": 720,
+          "title": "Norwood Veterans: Thomas McDonough"
+        },
+        {
+          "minute": 780,
+          "title": "Veterans Day 1999"
+        },
+        {
+          "minute": 840,
+          "title": "Flex and Firm with Steve"
+        }
+      ],
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-10"
+    },
+    "government": {
+      "status": "scheduled",
+      "title": "School Committee 10.28.26 Rebroadcast",
+      "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
+      "slots": [
+        {
+          "minute": 420,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 600,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 690,
+          "title": "Historical Commission 11.5.26"
         },
         {
           "minute": 750,
-          "title": "NHS Boys Soccer vs Medway 10.7.26"
+          "title": "Town Meeting Info Session 11.2.26"
         },
         {
-          "minute": 870,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
+          "minute": 930,
+          "title": "Conservation Commission 11.4.26"
         },
         {
-          "minute": 990,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+          "minute": 1020,
+          "title": "Historical Commission 11.5.26"
         },
         {
           "minute": 1080,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        }
+      ],
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-10"
+    },
+    "schools": {
+      "status": "scheduled",
+      "title": "Celebrating Innovation Career Pathways at NHS",
+      "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
+      "slots": [
+        {
+          "minute": 420,
+          "title": "NHS Boys Soccer vs Medway 10.7.26"
+        },
+        {
+          "minute": 540,
+          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
+        },
+        {
+          "minute": 660,
+          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
+        },
+        {
+          "minute": 750,
           "title": "Sports Extra: November 2019"
         },
         {
-          "minute": 1170,
+          "minute": 840,
           "title": "NCM Sports Talk Pre-Game Show"
         },
         {
-          "minute": 1200,
-          "title": "2026 NHS Golf vs Weymouth 9.9.26"
+          "minute": 900,
+          "title": "NHS Update - September 2026"
         },
         {
-          "minute": 1290,
-          "title": "NHS Boys Soccer vs Medway 10.7.26"
+          "minute": 1020,
+          "title": "Celebrating Innovation Career Pathways at NHS"
         }
       ],
-      "source": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-10"
     }
   }
 }
