@@ -1,33 +1,13 @@
 {
-  "updated_at": "2026-11-10T13:31:39.616339-05:00",
+  "updated_at": "2026-11-10T18:57:18.194396-05:00",
   "date": "2026-11-10",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Norwood Digest Special: Michael Cunningham",
+      "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 840,
-          "title": "Flex and Firm with Steve"
-        },
-        {
-          "minute": 900,
-          "title": "Living History Tour: Aboard a B-17"
-        },
-        {
-          "minute": 960,
-          "title": "Korean War Memorial Bench Dedication"
-        },
-        {
-          "minute": 1020,
-          "title": "Norwood Biography: The George Lee Story"
-        },
-        {
-          "minute": 1110,
-          "title": "Veterans' Memorials Tour"
-        },
         {
           "minute": 1170,
           "title": "Vietnam Veterans Bench Dedication 5.28.22"
@@ -39,15 +19,51 @@
         {
           "minute": 1260,
           "title": "Norwood Digest Special: Michael Cunningham"
+        },
+        {
+          "minute": 1320,
+          "title": "Norwood Veterans: Thomas McDonough"
+        },
+        {
+          "minute": 1380,
+          "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-10"
     },
     "government": {
       "status": "scheduled",
-      "title": "LIVE! Board of Selectmen",
+      "title": "Historical Commission 11.5.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
+        {
+          "minute": 0,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 180,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 270,
+          "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 330,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 420,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 600,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 690,
+          "title": "Historical Commission 11.5.26"
+        },
         {
           "minute": 930,
           "title": "Conservation Commission 11.4.26"
@@ -55,35 +71,15 @@
         {
           "minute": 1020,
           "title": "Historical Commission 11.5.26"
-        },
-        {
-          "minute": 1095,
-          "title": "LIVE! Board of Selectmen"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-10"
+      "source": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2016 NHS-TV Mustang Magazine #37",
+      "title": "2016 Fall Sports Awards",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 840,
-          "title": "NCM Sports Talk Pre-Game Show"
-        },
-        {
-          "minute": 900,
-          "title": "NHS Update - September 2026"
-        },
-        {
-          "minute": 1020,
-          "title": "Celebrating Innovation Career Pathways at NHS"
-        },
-        {
-          "minute": 1080,
-          "title": "2016 Fall Sports Awards"
-        },
         {
           "minute": 1170,
           "title": "2016 NHS-TV1 Stories Period 5"
@@ -95,6 +91,10 @@
         {
           "minute": 1260,
           "title": "2016 NHS-TV Mustang Magazine #37"
+        },
+        {
+          "minute": 1320,
+          "title": "2016 Fall Sports Awards"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-10"
