@@ -570,7 +570,8 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
  const renderEvents=arr=>{
    const agenda=window.NorwoodEventAgenda;
    const today=agenda?.todayKey?.()||new Date().toISOString().slice(0,10);
-   const items=arr.filter(e=>e.title&&e.start?.date&&(e.end?.date||e.start.date)>=today).sort((a,b)=>a.start.date.localeCompare(b.start.date)||(agenda?.compare?agenda.compare(a,b):(a.start.time||'99:99').localeCompare(b.start.time||'99:99'))).slice(0,24);
+   const displayDay=e=>e.start.date<today?today:e.start.date;
+   const items=arr.filter(e=>e.title&&e.start?.date&&(e.end?.date||e.start.date)>=today).sort((a,b)=>displayDay(a).localeCompare(displayDay(b))||(agenda?.compare?agenda.compare(a,b):(a.start.time||'99:99').localeCompare(b.start.time||'99:99'))).slice(0,24);
    if(!items.length){ev.innerHTML='<a href="events.html">Browse the community calendar ↗</a>';return;}
    ev.innerHTML=items.map(e=>{
      const url='events.html?event='+encodeURIComponent(e.id||'');
