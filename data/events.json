@@ -1385,6 +1385,43 @@
     ]
   },
   {
+    "id": "2026-11-11-norwood-air-strikers-vs-mansfield-hornets-i-3e7e777",
+    "title": "Norwood Air Strikers vs Mansfield Hornets I",
+    "start": {
+      "date": "2026-11-11",
+      "time": "16:30"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": "Coakley Middle School Lower 7",
+    "field": "Coakley Middle School Lower 7",
+    "grade": "Boys Grade 5",
+    "gender": "boys",
+    "team": "Norwood Air Strikers",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-5",
+      "nys-team-boys-grade-5-norwood-air-strikers"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-d798be0af754-2026-11-11",
     "title": "Acro 2 - Wednesdays",
     "start": {
@@ -1457,6 +1494,41 @@
       "rec-all",
       "rec-sports",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-11-varsity-field-hockey-milton-high-school-f190d95",
+    "title": "Varsity Field Hockey @ Milton High School — Norwood High School",
+    "start": {
+      "date": "2026-11-11",
+      "time": "17:30"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "19:15"
+    },
+    "venue": "25 Gile Rd., Milton MA 02186",
+    "address": "25 Gile Rd., Milton MA 02186",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Field Hockey",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Field Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Field Hockey Level: Varsity Team: Norwood High School Site: Milton High School Subsite: Brooks Field Turf",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
     ]
   },
   {
@@ -5093,6 +5165,43 @@
     ]
   },
   {
+    "id": "2026-11-15-norwood-dash-vs-foxboro-warriors-5b-white-74427c7",
+    "title": "Norwood Dash vs Foxboro Warriors 5B-White",
+    "start": {
+      "date": "2026-11-15",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-15",
+      "time": null
+    },
+    "venue": "Callahan 12",
+    "field": "Callahan 12",
+    "grade": "Boys Grade 5",
+    "gender": "boys",
+    "team": "Norwood Dash",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-5",
+      "nys-team-boys-grade-5-norwood-dash"
+    ]
+  },
+  {
     "id": "2026-11-15-divine-mercy-prayers-c3228cb",
     "title": "Divine Mercy Prayers",
     "start": {
@@ -5121,6 +5230,43 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-15-norwood-trappers-vs-mansfield-hornets-iii-caccc10",
+    "title": "Norwood Trappers vs Mansfield Hornets III",
+    "start": {
+      "date": "2026-11-15",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-15",
+      "time": null
+    },
+    "venue": "Oldham School 8",
+    "field": "Oldham School 8",
+    "grade": "Boys Grade 4",
+    "gender": "boys",
+    "team": "Norwood Trappers",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-4",
+      "nys-team-boys-grade-4-norwood-trappers"
     ]
   },
   {
@@ -5865,6 +6011,35 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-16-finance-commission-meeting-6ef61ec",
+    "title": "Finance Commission Meeting",
+    "start": {
+      "date": "2026-11-16",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "20:00"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
     ]
   },
   {
@@ -8411,6 +8586,35 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-19-finance-commission-meeting-6ebc6e7",
+    "title": "Finance Commission Meeting",
+    "start": {
+      "date": "2026-11-19",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "20:00"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
     ]
   },
   {
@@ -17272,6 +17476,39 @@
     ]
   },
   {
+    "id": "2026-12-07-oldham-pto-winter-wonderland-shop-4c35126",
+    "title": "Oldham PTO Winter Wonderland Shop — Oldham Elementary School",
+    "start": {
+      "date": "2026-12-07",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2026-12-11",
+      "time": "14:00"
+    },
+    "venue": "Oldham Elementary School",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9521139/oldham-pto-winter-wonderland-shop",
+    "cost": null,
+    "organizer": "Oldham Elementary School",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Oldham Elementary School",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-b2c972dfe681-2026-12-07",
     "title": "Pre-School Prep Session 13",
     "start": {
@@ -17878,6 +18115,39 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
+    ]
+  },
+  {
+    "id": "2026-12-08-picture-retake-day-cc97d6e",
+    "title": "Picture Retake Day! — Oldham Elementary School",
+    "start": {
+      "date": "2026-12-08",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2026-12-08",
+      "time": "10:40"
+    },
+    "venue": "Oldham Elementary School",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9521138/picture-retake-day",
+    "cost": null,
+    "organizer": "Oldham Elementary School",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Oldham Elementary School",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
