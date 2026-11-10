@@ -1,69 +1,53 @@
 {
-  "updated_at": "2026-11-10T05:54:23.178137-05:00",
+  "updated_at": "2026-11-10T13:31:39.616339-05:00",
   "date": "2026-11-10",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Flex and Firm with Steve",
+      "title": "Norwood Digest Special: Michael Cunningham",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 360,
-          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
+          "minute": 840,
+          "title": "Flex and Firm with Steve"
         },
         {
-          "minute": 490,
-          "title": "NHS UPDATE LIVE!"
+          "minute": 900,
+          "title": "Living History Tour: Aboard a B-17"
         },
         {
-          "minute": 510,
-          "title": "Norwood Digest Special: Michael Cunningham"
+          "minute": 960,
+          "title": "Korean War Memorial Bench Dedication"
         },
         {
-          "minute": 600,
-          "title": "Gentle Exercise with Steve"
+          "minute": 1020,
+          "title": "Norwood Biography: The George Lee Story"
         },
         {
-          "minute": 660,
-          "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23"
+          "minute": 1110,
+          "title": "Veterans' Memorials Tour"
         },
         {
-          "minute": 720,
-          "title": "Norwood Veterans: Thomas McDonough"
+          "minute": 1170,
+          "title": "Vietnam Veterans Bench Dedication 5.28.22"
         },
         {
-          "minute": 780,
+          "minute": 1230,
           "title": "Veterans Day 1999"
         },
         {
-          "minute": 840,
-          "title": "Flex and Firm with Steve"
+          "minute": 1260,
+          "title": "Norwood Digest Special: Michael Cunningham"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-10"
     },
     "government": {
       "status": "scheduled",
-      "title": "School Committee 10.28.26 Rebroadcast",
+      "title": "LIVE! Board of Selectmen",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 420,
-          "title": "Town Meeting Info Session 11.2.26"
-        },
-        {
-          "minute": 600,
-          "title": "Conservation Commission 11.4.26"
-        },
-        {
-          "minute": 690,
-          "title": "Historical Commission 11.5.26"
-        },
-        {
-          "minute": 750,
-          "title": "Town Meeting Info Session 11.2.26"
-        },
         {
           "minute": 930,
           "title": "Conservation Commission 11.4.26"
@@ -73,33 +57,17 @@
           "title": "Historical Commission 11.5.26"
         },
         {
-          "minute": 1080,
-          "title": "School Committee 10.28.26 Rebroadcast"
+          "minute": 1095,
+          "title": "LIVE! Board of Selectmen"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-10"
     },
     "schools": {
       "status": "scheduled",
-      "title": "Celebrating Innovation Career Pathways at NHS",
+      "title": "2016 NHS-TV Mustang Magazine #37",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 420,
-          "title": "NHS Boys Soccer vs Medway 10.7.26"
-        },
-        {
-          "minute": 540,
-          "title": "2026 NHS Football vs Medfield 10.2.26 Rebroadcast"
-        },
-        {
-          "minute": 660,
-          "title": "2026 NHS Volleyball vs Dedham 9.28.26"
-        },
-        {
-          "minute": 750,
-          "title": "Sports Extra: November 2019"
-        },
         {
           "minute": 840,
           "title": "NCM Sports Talk Pre-Game Show"
@@ -111,6 +79,22 @@
         {
           "minute": 1020,
           "title": "Celebrating Innovation Career Pathways at NHS"
+        },
+        {
+          "minute": 1080,
+          "title": "2016 Fall Sports Awards"
+        },
+        {
+          "minute": 1170,
+          "title": "2016 NHS-TV1 Stories Period 5"
+        },
+        {
+          "minute": 1200,
+          "title": "Norwood News 11.6.26"
+        },
+        {
+          "minute": 1260,
+          "title": "2016 NHS-TV Mustang Magazine #37"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-10"
