@@ -7,6 +7,20 @@
    <h2 id="news-headlines-title">Current headlines</h2>
    <p class="muted small" id="feedHealth" role="status">Loading current headlines…</p>
   </div>
+  <div id="veterans-day-va-guide">
+    <a class="news-story" href="https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/" target="_blank" rel="noopener">
+      <div class="news-story-copy">
+        <h3>Veterans Day 2026 free meals and discounts for U.S. veterans</h3>
+        <p class="news-story-summary">VA News is updating its nationwide guide through Veterans Day, Wednesday, Nov. 11. Check the guide for eligibility and participating locations.</p>
+        <div class="news-story-meta"><span class="news-story-source">VA News</span><span aria-hidden="true">·</span><time datetime="2026-10-26">Oct 26, 2026</time></div>
+      </div>
+    </a>
+  </div>
+  <script>
+    if (Date.now() >= Date.parse('2026-11-12T00:00:00-05:00')) {
+      document.getElementById('veterans-day-va-guide').remove();
+    }
+  </script>
   <div class="feed" id="newsFeed"></div>
   <noscript><p>See the news sources for current local coverage.</p></noscript>
  </section>
