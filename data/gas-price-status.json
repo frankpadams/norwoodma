@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-11-09T19:45:36.825518Z",
+  "generated_at": "2026-11-10T17:00:17.655606Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "regular"
         ],
@@ -23,9 +22,9 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           }
@@ -36,9 +35,7 @@
     "CITGO": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -56,8 +53,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -66,6 +63,14 @@
       }
     },
     "Costco Gas — Dedham": {
+      "costco": {
+        "accepted_grades": [
+          "regular",
+          "premium"
+        ],
+        "outcome": "prices_observed",
+        "source_url": "https://www.costco.com/warehouse-locations-319.html"
+      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -113,8 +118,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -175,8 +180,8 @@
             "types": [
               "car_wash",
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -194,14 +199,14 @@
             "station_verified": true,
             "types": [
               "convenience_store",
-              "gas_station",
               "car_wash",
-              "restaurant",
-              "point_of_interest",
+              "gas_station",
               "food_store",
-              "store",
-              "food",
               "service",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -219,8 +224,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -261,7 +266,6 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -281,8 +285,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -320,6 +324,46 @@
             ]
           },
           {
+            "address": "499 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Mobil",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "499 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "service",
+              "point_of_interest",
+              "establishment"
+            ]
+          },
+          {
+            "address": "683 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Norwood Convenience and News",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "683 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
+              "food",
+              "point_of_interest",
+              "store",
+              "establishment"
+            ]
+          },
+          {
             "address": "917 Washington St, Norwood, MA 02062, USA",
             "address_verified": true,
             "name": "Smokehouse BBQ",
@@ -340,65 +384,23 @@
             ]
           },
           {
-            "address": "499 Washington St, Norwood, MA 02062, USA",
+            "address": "496 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Mobil",
+            "name": "Quick Stop",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "499 Washington St",
+              "496 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
-            "station_verified": true,
-            "types": [
-              "gas_station",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "683 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Norwood Convenience and News",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "683 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
             "station_verified": false,
             "types": [
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
-              "establishment"
-            ]
-          },
-          {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Lucky Mart Inc.",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "501 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
-            "station_verified": false,
-            "types": [
-              "convenience_store",
-              "grocery_store",
-              "food_store",
-              "food",
               "store",
-              "point_of_interest",
-              "service",
               "establishment"
             ]
           }
@@ -407,11 +409,13 @@
       }
     },
     "Norwood Gulf": {
+      "gasbuddy": {
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
+      },
       "google": {
         "accepted_grades": [
-          "diesel",
-          "premium",
-          "midgrade"
+          "premium"
         ],
         "candidates": [
           {
@@ -429,8 +433,8 @@
             "types": [
               "gas_station",
               "car_repair",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -460,9 +464,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
-              "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -482,10 +486,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "food",
               "store",
-              "point_of_interest",
               "service",
+              "food",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -503,8 +507,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -522,8 +526,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -554,8 +558,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -597,8 +601,6 @@
     "Sunoco — Route 1": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -618,10 +620,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "store",
-              "food",
               "service",
+              "food",
               "point_of_interest",
+              "store",
               "establishment"
             ]
           }
@@ -631,6 +633,7 @@
     }
   },
   "unresolved_stations": [
+    "Norwood Gulf",
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",

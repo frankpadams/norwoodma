@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-09T19:45:36.718175Z",
+  "generated_at": "2026-11-10T17:00:19.408909Z",
   "source": "Station-specific fuel reports; see per-fuel provenance",
   "stations": {
     "BJ's Gas Station": {
-      "checked": "2026-11-09T19:45:33.860680Z",
+      "checked": "2026-11-10T17:00:14.551205Z",
       "diesel": 5.9,
       "fuel_reports": {
         "diesel": {
@@ -14,21 +14,21 @@
         "premium": {
           "place_id": "ChIJfwQD5eh_5IkRcqiccBaQhBE",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:13:33Z"
+          "updated": "2026-11-09T13:21:23Z"
         },
         "regular": {
           "place_id": "ChIJfwQD5eh_5IkRcqiccBaQhBE",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:13:33Z"
+          "updated": "2026-11-09T13:13:50Z"
         }
       },
-      "premium": 4.76,
-      "regular": 3.8,
+      "premium": 4.7,
+      "regular": 3.7,
       "source": "Google Places API (New)",
-      "updated": "2026-11-08T21:13:33Z"
+      "updated": "2026-11-09T13:13:50Z"
     },
     "CITGO": {
-      "checked": "2026-11-09T19:45:34.223917Z",
+      "checked": "2026-11-10T17:00:15.037202Z",
       "diesel": 6.2,
       "fuel_reports": {
         "diesel": {
@@ -44,59 +44,59 @@
         "premium": {
           "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:14:05Z"
+          "updated": "2026-11-10T06:13:27Z"
         },
         "regular": {
           "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T10:25:01Z"
+          "updated": "2026-11-10T07:09:58Z"
         }
       },
       "midgrade": 5.0,
-      "premium": 5.2,
+      "premium": 5.1,
       "regular": 3.9,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T10:25:01Z"
+      "updated": "2026-11-10T07:09:58Z"
     },
     "Costco Gas — Dedham": {
-      "checked": "2026-11-08T15:56:21.300621Z",
+      "checked": "2026-11-10T17:00:18.985800Z",
       "fuel_reports": {
         "premium": {
-          "observed_at": "2026-11-08T15:56:21.284334Z",
+          "observed_at": "2026-11-10T17:00:18.973190Z",
           "payment": "membership",
           "source": "Costco official warehouse page",
           "source_url": "https://www.costco.com/warehouse-locations-319.html"
         },
         "regular": {
-          "observed_at": "2026-11-08T15:56:21.284334Z",
+          "observed_at": "2026-11-10T17:00:18.973190Z",
           "payment": "membership",
           "source": "Costco official warehouse page",
           "source_url": "https://www.costco.com/warehouse-locations-319.html"
         }
       },
-      "observed_at": "2026-11-08T15:56:21.284334Z",
-      "premium": 4.699,
+      "observed_at": "2026-11-10T17:00:18.973190Z",
+      "premium": 4.479,
       "regular": 3.599,
       "source": "Costco official warehouse page"
     },
     "Costco Gas — Sharon": {
-      "checked": "2026-11-09T19:45:36.718155Z",
+      "checked": "2026-11-10T17:00:17.581568Z",
       "fuel_reports": {
         "premium": {
           "place_id": "ChIJWesZt8Z95IkRdz1DrG5OKfA",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T10:15:02Z"
+          "updated": "2026-11-10T07:18:58Z"
         },
         "regular": {
           "place_id": "ChIJWesZt8Z95IkRdz1DrG5OKfA",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T10:15:02Z"
+          "updated": "2026-11-10T07:18:58Z"
         }
       },
       "premium": 4.6,
-      "regular": 3.64,
+      "regular": 3.6,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T10:15:02Z"
+      "updated": "2026-11-10T07:18:58Z"
     },
     "Gulf — Broadway": {
       "checked": "2026-10-07T03:42:00Z",
@@ -104,43 +104,43 @@
       "stale": true
     },
     "Irving Oil / Rojo": {
-      "checked": "2026-11-09T19:45:33.533105Z",
+      "checked": "2026-11-10T17:00:14.170656Z",
       "diesel": 5.96,
       "fuel_reports": {
         "diesel": {
           "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:15:00Z"
+          "updated": "2026-11-09T21:47:50Z"
         },
         "midgrade": {
           "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T04:17:53Z"
+          "updated": "2026-11-09T21:47:50Z"
         },
         "premium": {
           "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T09:29:18Z"
+          "updated": "2026-11-09T21:47:50Z"
         },
         "regular": {
           "place_id": "ChIJ3WCTHg-A5IkRH-7Ak4AvKrg",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T08:14:50Z"
+          "updated": "2026-11-09T21:47:50Z"
         }
       },
       "midgrade": 4.44,
-      "premium": 4.9,
+      "premium": 4.94,
       "regular": 3.94,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T08:14:50Z"
+      "updated": "2026-11-09T21:47:50Z"
     },
     "Mobil / On the Run — Norwood Center": {
-      "checked": "2026-11-09T19:45:35.354332Z",
+      "checked": "2026-11-10T17:00:16.111971Z",
       "fuel_reports": {
         "midgrade": {
           "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T04:48:16Z"
+          "updated": "2026-11-09T12:22:37Z"
         },
         "premium": {
           "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
@@ -150,17 +150,17 @@
         "regular": {
           "place_id": "ChIJWSd8Fdp_5IkRo64mO9N2rhU",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T09:55:41Z"
+          "updated": "2026-11-10T07:09:55Z"
         }
       },
       "midgrade": 5.9,
       "premium": 6.3,
       "regular": 4.9,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T09:55:41Z"
+      "updated": "2026-11-10T07:09:55Z"
     },
     "Mobil — Route 1": {
-      "checked": "2026-11-09T19:45:32.712436Z",
+      "checked": "2026-11-10T17:00:13.201954Z",
       "diesel": 6.1,
       "fuel_reports": {
         "diesel": {
@@ -171,31 +171,31 @@
         "midgrade": {
           "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T04:10:31Z"
+          "updated": "2026-11-10T06:24:35Z"
         },
         "premium": {
           "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:14:37Z"
+          "updated": "2026-11-10T04:59:37Z"
         },
         "regular": {
           "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T09:38:14Z"
+          "updated": "2026-11-10T07:19:31Z"
         }
       },
       "midgrade": 5.0,
       "premium": 5.1,
       "regular": 3.9,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T09:38:14Z"
+      "updated": "2026-11-10T07:19:31Z"
     },
     "Mr. Frank's Food Mart": {
       "checked": "2026-10-07T03:42:00Z",
       "regular": 4.319
     },
     "Norwood Gulf": {
-      "checked": "2026-11-09T19:45:29.853154Z",
+      "checked": "2026-11-10T17:00:10.123200Z",
       "diesel": 6.08,
       "fuel_reports": {
         "diesel": {
@@ -211,7 +211,7 @@
         "premium": {
           "place_id": "ChIJH2U-bX2A5IkRMVnDFPLe8QI",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:17:53Z"
+          "updated": "2026-11-09T16:23:00Z"
         },
         "regular": {
           "place_id": "ChIJH2U-bX2A5IkRMVnDFPLe8QI",
@@ -220,48 +220,48 @@
         }
       },
       "midgrade": 4.9,
-      "premium": 5.1,
+      "premium": 5.0,
       "regular": 4.4,
       "source": "Google Places API (New)",
       "updated": "2026-11-07T21:12:08Z"
     },
     "Shell — Pleasant Street": {
-      "checked": "2026-11-09T19:45:35.768778Z",
+      "checked": "2026-11-10T17:00:16.512458Z",
       "diesel": 6.1,
       "fuel_reports": {
         "diesel": {
           "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T06:09:21Z"
+          "updated": "2026-11-10T06:32:15Z"
         },
         "midgrade": {
           "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
           "source": "Google Places API (New)",
-          "updated": "2026-11-08T21:16:14Z"
+          "updated": "2026-11-09T15:40:37Z"
         },
         "premium": {
           "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T08:29:44Z"
+          "updated": "2026-11-09T18:01:55Z"
         },
         "regular": {
           "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T10:04:47Z"
+          "updated": "2026-11-10T06:33:13Z"
         }
       },
       "midgrade": 4.46,
       "premium": 4.86,
-      "regular": 4.0,
+      "regular": 4.1,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T10:04:47Z"
+      "updated": "2026-11-10T06:33:13Z"
     },
     "Shell — Walpole Street": {
       "checked": "2026-10-07T03:42:00Z",
       "regular": 4.199
     },
     "Sunoco — Route 1": {
-      "checked": "2026-11-09T19:45:31.636236Z",
+      "checked": "2026-11-10T17:00:12.025285Z",
       "fuel_reports": {
         "midgrade": {
           "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE",
@@ -276,14 +276,14 @@
         "regular": {
           "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE",
           "source": "Google Places API (New)",
-          "updated": "2026-11-09T10:06:20Z"
+          "updated": "2026-11-10T06:54:51Z"
         }
       },
       "midgrade": 4.61,
       "premium": 5.16,
-      "regular": 3.94,
+      "regular": 3.88,
       "source": "Google Places API (New)",
-      "updated": "2026-11-09T10:06:20Z"
+      "updated": "2026-11-10T06:54:51Z"
     }
   }
 }
