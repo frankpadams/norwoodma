@@ -32,6 +32,41 @@
   if(h>23)return null;
   return h*60+minute;
 }
+ function deduplicate(items){
+  const groups=new Map();
+  for(const e of items){
+   const title=text(e.title).toLowerCase().replace(/[’']/g,'').replace(/\u200b/g,'');
+   const venue=text(e.venue||e.address).toLowerCase();
+   const url=safeUrl(e.source_url);
+   const minutes=timeMinutes(e.start?.time);
+   const date=e.start?.date;
+   let name='', preference=0;
+   if(/^school committee meeting(?: - (?:budget (?:hearing|vote) - )?hybrid meeting\b|$)/.test(title)){
+    name='school committee';
+    preference=title==='school committee meeting'?1:0;
+   }else if(/^(?:neponset river regional chamber: )?connections at work \(noon networking\)$/.test(title)){
+    name='noon networking';
+    preference=title.startsWith('neponset')?1:0;
+   }else if(/^https:\/\/(?:www\.)?norwoodstage\.com\/(?:creedence-revived|boogie-wonder-band|john-denver-christmas)\/?$/.test(url)){
+    name=url.replace(/\/$/,'');
+    preference=title.includes('—')?1:0;
+   }else if(/^https:\/\/(?:www\.extendedplaysessions\.com|grcpac\.yapsody\.com)\//.test(url)){
+    name=title.match(/^(?:dave liminas wednesdave blues [ivx]+|goodnight moonshine|john németh & the blue dreamers|the mcdonough band)(?= |$)/)?.[0]||'';
+    preference=venue?1:0;
+   }
+   const key=date&&minutes!==null&&name
+    ?JSON.stringify([date,minutes,name])
+    :e.id?'id:'+e.id:Symbol();
+   const previous=groups.get(key);
+   if(!previous){groups.set(key,{event:e,preference});continue;}
+   const [primary,alternate]=preference>previous.preference?[e,previous.event]:[previous.event,e];
+   groups.set(key,{
+    event:{...primary,links:[...(primary.links||[]),...links(alternate)]},
+    preference:Math.max(preference,previous.preference)
+   });
+  }
+  return [...groups.values()].map(group=>group.event);
+ }
 function rank(e){
   const text=[e.title,e.notes,e.description,e.category,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
   const location=[e.venue,e.address,typeof e.location==='string'?e.location:e.location?.name,e.location?.venue].filter(Boolean).join(' ').toLowerCase();
@@ -62,7 +97,7 @@ function compare(a,b){
   if(bt===null&&at!==null)return -1;
   return (at??0)-(bt??0);
 }
-function render(items,opts={}){const today=opts.today||todayKey(),days=new Map();for(const e of items){const start=e.start?.date,end=e.end?.date||start;if(!e.title||!validDate(start)||!validDate(end)||end<today)continue;const key=start<today?today:start;if(!days.has(key))days.set(key,[]);days.get(key).push(e);}const fundraiser='<a class="fundraiser-agenda-link" href="fundraising.html"><span class="fundraiser-agenda-icon" aria-hidden="true">♥</span><span class="fundraiser-agenda-copy"><span class="event-agenda-title">Current &amp; Upcoming Norwood Fundraisers</span><span class="event-agenda-meta">View the fundraisers currently happening to support Norwood organizations</span></span><span class="fundraiser-agenda-arrow" aria-hidden="true">›</span></a>';const listings=[...days.keys()].sort().map(key=>{const d=date(key),label=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});return '<section class="event-agenda-day" aria-label="'+esc(label)+'"><h2 class="event-agenda-date"><time datetime="'+key+'"><span class="agenda-weekday">'+d.toLocaleDateString('en-US',{weekday:'short'})+'</span><span class="agenda-day-number">'+d.getDate()+'</span><span class="agenda-month">'+d.toLocaleDateString('en-US',{month:'short'})+' '+d.getFullYear()+'</span></time></h2><div class="event-agenda-list">'+days.get(key).sort(compare).map(row).join('')+'</div></section>';}).join('');return fundraiser+(listings||'<p class="event-agenda-empty">No upcoming public events match this search.</p>');}
+function render(items,opts={}){const today=opts.today||todayKey(),days=new Map();for(const e of deduplicate(items)){const start=e.start?.date,end=e.end?.date||start;if(!e.title||!validDate(start)||!validDate(end)||end<today)continue;const key=start<today?today:start;if(!days.has(key))days.set(key,[]);days.get(key).push(e);}const fundraiser='<a class="fundraiser-agenda-link" href="fundraising.html"><span class="fundraiser-agenda-icon" aria-hidden="true">♥</span><span class="fundraiser-agenda-copy"><span class="event-agenda-title">Current &amp; Upcoming Norwood Fundraisers</span><span class="event-agenda-meta">View the fundraisers currently happening to support Norwood organizations</span></span><span class="fundraiser-agenda-arrow" aria-hidden="true">›</span></a>';const listings=[...days.keys()].sort().map(key=>{const d=date(key),label=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});return '<section class="event-agenda-day" aria-label="'+esc(label)+'"><h2 class="event-agenda-date"><time datetime="'+key+'"><span class="agenda-weekday">'+d.toLocaleDateString('en-US',{weekday:'short'})+'</span><span class="agenda-day-number">'+d.getDate()+'</span><span class="agenda-month">'+d.toLocaleDateString('en-US',{month:'short'})+' '+d.getFullYear()+'</span></time></h2><div class="event-agenda-list">'+days.get(key).sort(compare).map(row).join('')+'</div></section>';}).join('');return fundraiser+(listings||'<p class="event-agenda-empty">No upcoming public events match this search.</p>');}
     function confirmedNcmLive(notice,schedule,now){
       if(schedule?.date!==now.date)return false;
       const channel=schedule.channels?.[/school committee/i.test(notice.title||'')?'schools':'government'];
@@ -91,5 +126,5 @@ function render(items,opts={}){const today=opts.today||todayKey(),days=new Map()
   if(e.start?.date!==now.date||!confirmedNcmLive(e,schedule,now))return '';
   return safeUrl(schedule.channels[/school committee/i.test(e.title)?'schools':'government'].url);
  }
- return {render,row,todayKey,time,metadata,links,rank,compare,liveLink};
+ return {render,row,deduplicate,todayKey,time,metadata,links,rank,compare,liveLink};
 });
