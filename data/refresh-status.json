@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-10T21:09:02.045652-05:00",
+  "generated_at": "2026-11-11T04:40:09.299206-05:00",
   "offline": false,
-  "events_published": 2206,
+  "events_published": 2182,
   "news_published": 120,
   "civic_notices": 59,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2206,
-      "generated_at": "2026-11-10T21:09:01.292711-05:00"
+      "events": 2182,
+      "generated_at": "2026-11-11T04:40:08.811356-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 115,
-      "generated_at": "2026-11-10T21:09:01.304657-05:00"
+      "events": 111,
+      "generated_at": "2026-11-11T04:40:08.823225-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 829,
-      "generated_at": "2026-11-10T21:09:01.328173-05:00"
+      "events": 822,
+      "generated_at": "2026-11-11T04:40:08.847597-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 728,
-      "generated_at": "2026-11-10T21:09:01.347526-05:00"
+      "events": 725,
+      "generated_at": "2026-11-11T04:40:08.866755-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-11-10T21:09:01.357863-05:00"
+      "generated_at": "2026-11-11T04:40:08.877287-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 61,
-      "generated_at": "2026-11-10T21:09:01.369978-05:00"
+      "generated_at": "2026-11-11T04:40:08.889278-05:00"
     }
   ],
   "recreation_programs": 133,
-  "recreation_occurrences": 1266,
+  "recreation_occurrences": 1256,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -80,7 +80,7 @@
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 11,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -332,7 +332,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 19,
+      "found": 18,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -396,10 +396,11 @@
     },
     {
       "source_id": "norwood-girl-scouts-public-events",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "retained_events": 0
     },
     {
       "source_id": "norwood-junior-womans-club",
@@ -480,7 +481,7 @@
       "source_id": "norwood-space-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 13,
+      "found": 12,
       "note": ""
     },
     {
@@ -523,14 +524,15 @@
       "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm",
       "outcome": "failed",
       "access_limited": false,
-      "retained_events": 2
+      "retained_events": 1
     },
     {
       "source_id": "norwood-town-news",
-      "ok": true,
+      "ok": false,
       "method": "html_list",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "retained_events": 0
     },
     {
       "source_id": "norwood-town-news-calendar",
@@ -1182,7 +1184,7 @@
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
-      "found": 4,
+      "found": 3,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1413,7 +1415,7 @@
       "source_id": "town-health-events",
       "ok": true,
       "method": "html_page",
-      "found": 2,
+      "found": 1,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1445,10 +1447,11 @@
     },
     {
       "source_id": "vfw-discovery",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "retained_events": 0
     },
     {
       "source_id": "washington-no7-events",
@@ -1493,7 +1496,7 @@
       "note": "all configured pages failed: https://bostonparentspaper.com/family-event-calendar/: 403 Client Error: Forbidden for url: https://bostonparentspaper.com/family-event-calendar/",
       "outcome": "blocked",
       "access_limited": true,
-      "retained_events": 11
+      "retained_events": 9
     },
     {
       "source_id": "progress-norwood-events",
@@ -1507,12 +1510,13 @@
     },
     {
       "source_id": "womens-business-network-norwood",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "womens-community-committee",
@@ -1526,12 +1530,13 @@
     },
     {
       "source_id": "norwood-art-association-events",
-      "ok": true,
+      "ok": false,
       "method": "secondary_discovery",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted",
-      "outcome": "empty",
-      "access_limited": false
+      "note": "all configured pages failed: https://www.norwoodtownnews.com/: 403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "together-yes-events",
@@ -1546,7 +1551,7 @@
       "source_id": "norwood-trails-committee-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 2,
+      "found": 1,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1555,7 +1560,7 @@
       "source_id": "norwood-sustainability-events",
       "ok": true,
       "method": "town_department_event_discovery",
-      "found": 2,
+      "found": 1,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1609,7 +1614,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 26,
+      "found": 25,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1617,7 +1622,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 26,
+      "found": 25,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1682,9 +1687,10 @@
     {
       "source": "Norwood Town News",
       "url": "https://www.norwoodtownnews.com/",
-      "ok": true,
-      "found": 13,
-      "method": "jsonld+semantic_html+visible_dates"
+      "ok": false,
+      "found": 0,
+      "method": "page_parsers",
+      "note": "403 Client Error: Forbidden for url: https://www.norwoodtownnews.com/"
     },
     {
       "source": "queue_health",
