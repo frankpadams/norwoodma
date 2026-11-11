@@ -3453,6 +3453,7 @@ def main():
     ]
     if curated_seeds:
         curated_ids={e.get('id') for e in curated_seeds if e.get('id')}
+        curated_ids.update(event_id for e in curated_seeds for event_id in e.get('supersedes_event_ids',[]))
         curated_keys={(canonical_title(e.get('title','')), (e.get('start') or {}).get('date')) for e in curated_seeds}
         events=[
             e for e in events
@@ -4257,6 +4258,7 @@ def main():
     ]
     if curated_seeds:
         curated_ids={e.get('id') for e in curated_seeds if e.get('id')}
+        curated_ids.update(event_id for e in curated_seeds for event_id in e.get('supersedes_event_ids',[]))
         curated_keys={(canonical_title(e.get('title','')), (e.get('start') or {}).get('date')) for e in curated_seeds}
         events=[
             e for e in events
