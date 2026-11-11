@@ -2827,5 +2827,86 @@
     "link_type": "maps",
     "tags": "colonial house formerly colonial house restaurant ale house pub bar american",
     "verified": "2026-10-14"
+  },
+  {
+    "id": "subway-nahatan-place",
+    "name": "Subway — Nahatan Place",
+    "category": "Deli & Sandwiches",
+    "cuisine": "Sandwiches",
+    "address": "111 Lenox Street, Suite 108",
+    "url": "https://restaurants.subway.com/united-states/ma/norwood/111-lenox-street",
+    "link_type": "official",
+    "tags": "subs sandwiches lunch",
+    "verified": "2026-11-10",
+    "phone": "781-440-0048"
+  },
+  {
+    "id": "subway-vanderbilt",
+    "name": "Subway — Vanderbilt Avenue",
+    "category": "Deli & Sandwiches",
+    "cuisine": "Sandwiches",
+    "address": "36 Vanderbilt Avenue",
+    "url": "https://restaurants.subway.com/united-states/ma/norwood/36-vanderbilt-ave",
+    "link_type": "official",
+    "tags": "subs sandwiches lunch",
+    "verified": "2026-11-10",
+    "phone": "781-269-5474"
+  },
+  {
+    "id": "mcdonalds-providence-highway",
+    "name": "McDonald’s — Providence Highway",
+    "category": "Quick Service",
+    "cuisine": "Burgers · Fast food",
+    "address": "31 Providence Highway",
+    "url": "https://www.mcdonalds.com/us/en-us/location/ma/norwood/31-providence-hwy/7076.html",
+    "link_type": "official",
+    "tags": "burgers fries quick service",
+    "verified": "2026-11-10"
+  },
+  {
+    "id": "starbucks-providence-highway",
+    "name": "Starbucks — Providence Highway",
+    "category": "Breakfast & Cafe",
+    "cuisine": "Coffee · Cafe",
+    "address": "1000 Providence Highway",
+    "url": "https://www.starbucks.com/store-locator/store/12538",
+    "link_type": "official",
+    "tags": "coffee cafe breakfast",
+    "verified": "2026-11-10",
+    "phone": "781-255-5805"
+  },
+  {
+    "id": "starbucks-shaws",
+    "name": "Starbucks — Inside Shaw’s",
+    "category": "Breakfast & Cafe",
+    "cuisine": "Coffee · Cafe",
+    "address": "134 Nahatan Street",
+    "url": "https://local.shaws.com/ma/norwood/134-nahatan-st.html",
+    "link_type": "official",
+    "tags": "coffee cafe grocery counter",
+    "verified": "2026-11-10"
+  },
+  {
+    "id": "north-end-style-deli",
+    "name": "North End Style Deli",
+    "category": "Deli & Sandwiches",
+    "cuisine": "Italian · Deli · Sandwiches",
+    "address": "445 Walpole Street",
+    "url": "https://order.online/store/north-end-style-deli-norwood-305593",
+    "link_type": "official",
+    "tags": "deli sandwiches pasta lunch",
+    "verified": "2026-11-10"
+  },
+  {
+    "id": "mary-lous-coffee",
+    "name": "Mary Lou’s Coffee",
+    "category": "Breakfast & Cafe",
+    "cuisine": "Coffee · Cafe",
+    "address": "491 Walpole Street",
+    "url": "https://marylous.com/",
+    "link_type": "official",
+    "tags": "coffee cafe breakfast mary lous",
+    "verified": "2026-11-10",
+    "phone": "781-551-9184"
   }
 ]

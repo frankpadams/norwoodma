@@ -2459,9 +2459,9 @@ window.NORWOOD_BUSINESSES=[
   [
     "Hanlon CPA",
     "Accounting & Tax Preparation",
-    "1408 Providence Highway",
+    "128 Carnegie Row, Suite 208",
     "781-830-9400",
-    "https://www.hanloncpa.com/"
+    "https://hanloncpa.com/contact-us"
   ],
   [
     "Happy Nails",
@@ -5631,6 +5631,135 @@ window.NORWOOD_BUSINESSES=[
     "61 Endicott Street, Building 45-101",
     "781-400-0764",
     "https://www.ragezone.us/norwood"
+  ],
+  [
+    "DMG Brokerage",
+    "Real Estate & Commercial Brokerage",
+    "83 Morse Street, Building 6BB",
+    "781-591-3232",
+    "https://dmgbrokerage.com/contact"
+  ],
+  [
+    "Camber Real Estate — Norwood",
+    "Real Estate",
+    "638 Washington Street",
+    "781-769-2225",
+    "https://camberrealestate.com/contact-us/"
+  ],
+  [
+    "Michele Mullen — NextHome Signature Realty",
+    "Real Estate Agents",
+    "83 Morse Street, Unit 8Y",
+    "781-603-6286",
+    "https://www.nexthome.com/agent/Michele-Mullen/10717/"
+  ],
+  [
+    "Shaun Maloof — NextHome Signature Realty",
+    "Real Estate Agents",
+    "83 Morse Street, Unit 8Y",
+    "617-259-4595",
+    "https://www.nexthousemassachusetts.com/agents/1202280/Shaun%2BMaloof"
+  ],
+  [
+    "Foley Palenscar Schortmann Insurance",
+    "Insurance",
+    "121 Central Street, Suite 205",
+    "781-762-2715",
+    "https://www.foleyins.com/contact/norwood"
+  ],
+  [
+    "Herbert H. Landy Insurance Agency",
+    "Insurance",
+    "100 River Ridge Drive, Suite 301",
+    "800-336-5422",
+    "https://www.landy.com/contactus.html"
+  ],
+  [
+    "Lydon & Murphy Insurance Agency",
+    "Insurance",
+    "520 Providence Highway",
+    "781-762-4280",
+    "https://www.lydonmurphyinsurance.com/"
+  ],
+  [
+    "Camber Insurance Agency",
+    "Insurance",
+    "638 Washington Street",
+    "781-769-2225",
+    "https://find.mapfreinsurance.com/agents/ma/norwood/638-washington-st/"
+  ],
+  [
+    "Christopher Mullen Insurance Agency",
+    "Insurance",
+    "470 Washington Street, Unit 2",
+    "781-762-0451",
+    "https://find.mapfreinsurance.com/agents/ma/norwood/470-washington-street-unit-2/"
+  ],
+  [
+    "Titcomb Insurance Agency",
+    "Insurance",
+    "54 Kings Road",
+    "781-762-3824",
+    "https://www.titcombinsurance.com/contact-joseph-titcomb/"
+  ],
+  [
+    "Robert M. Danna, CPA",
+    "Accounting & Tax Preparation",
+    "49 Walpole Street, Suite 3",
+    "781-769-1700",
+    "https://www.dannacpa.com/contact"
+  ],
+  [
+    "Nash CPAs and Advisors",
+    "Accounting & Tax Preparation",
+    "501 Providence Highway",
+    "781-286-1320",
+    "https://nash.cpa/contact/"
+  ],
+  [
+    "H&R Block — Norwood",
+    "Accounting & Tax Preparation",
+    "520 Providence Highway",
+    "781-762-2632",
+    "https://www.hrblock.com/tax-office-near-me/massachusetts/norwood/19998/"
+  ],
+  [
+    "Thorndike Company LLC",
+    "Financial Planning & Investment Services",
+    "501 Boston Providence Turnpike, Suite 2L",
+    "781-493-6067",
+    "https://www.thorndikecompany.com/"
+  ],
+  [
+    "John Lanahan — Ameriprise Financial",
+    "Financial Planning & Investment Services",
+    "501 Providence Highway",
+    "781-349-8440",
+    "https://www.ameripriseadvisors.com/john.j.lanahan/profile/"
+  ],
+  [
+    "Pantry + Bench by Therapy Gardens",
+    [
+      "Creative Workshops",
+      "Specialty Retail & Gifts"
+    ],
+    "62 Endicott Street, Building 25",
+    "",
+    "https://www.pantryandbench.com/"
+  ],
+  [
+    "Massage Envy — Dedham-Norwood",
+    "Massage Therapy & Skin Care",
+    "333 Morse Street",
+    "781-329-2777",
+    "https://locations.massageenvy.com/massachusetts/norwood/333-morse-street-park-place.html"
+  ],
+  [
+    "StretchLab Norwood",
+    "Fitness & Assisted Stretching",
+    "500 Providence Highway, Suite 2",
+    "781-287-8873",
+    "https://www.stretchlab.com/location/norwood"
   ]
 ].map((b, i) => {
   const labels = Array.isArray(b[1]) ? b[1] : String(b[1] || '').split(';').map(s => s.trim()).filter(Boolean);
