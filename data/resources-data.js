@@ -6662,5 +6662,19 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Nearby — Canton",
     "verified": "2026-11"
+  },
+  {
+    "name": "First Church of Christ, Scientist — Norwood",
+    "address": "751 Washington Street, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Christian Science congregation in Norwood. Contact the church for service and Reading Room details.",
+    "phone": "781-762-4135",
+    "tags": "Christian Science church worship congregation reading room",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
   }
 ];
