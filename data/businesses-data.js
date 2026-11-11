@@ -5505,5 +5505,146 @@ window.NORWOOD_BUSINESSES=[
     "108 Ledgeview Drive",
     "781-254-7087",
     ""
+  ],
+  [
+    "CVS Pharmacy — Norwood",
+    "Pharmacies & Medical Supplies",
+    "136 Nahatan Street",
+    "781-769-2422",
+    "https://www.cvs.com/store-locator/norwood-ma-pharmacies/136-nahatan-st-norwood-ma-02062/storeid=2054"
+  ],
+  [
+    "The Home Depot — Norwood Store",
+    "Hardware, Home Improvement & Tool Rental",
+    "1415 Boston Providence Highway",
+    "781-762-9270",
+    "https://www.homedepot.com/l/Norwood/MA/Norwood/02062/2681"
+  ],
+  [
+    "Ocean State Job Lot — Norwood",
+    "Discount & Variety Stores",
+    "1001 Boston Providence Highway",
+    "781-255-9702",
+    "https://www.oceanstatejoblot.com/store-locator/massachusetts/norwood/220/"
+  ],
+  [
+    "Harbor Freight Tools — Norwood",
+    "Hardware & Tool Supplies",
+    "1210 Boston Providence Turnpike",
+    "781-349-6969",
+    "https://www.harborfreight.com/storelocator/1210-boston-providence-tpke-norwood-02062?number=3378"
+  ],
+  [
+    "Advance Auto Parts — Norwood",
+    "Auto Parts & Accessories",
+    "961 Providence Highway",
+    "781-440-9992",
+    "https://stores.advanceautoparts.com/ma/norwood/961-providence-highway"
+  ],
+  [
+    "TNT Auto Detailing and Paintless Dent Removal",
+    "Auto Detailing & Paintless Dent Repair",
+    "242 Pleasant Street",
+    "508-889-4392",
+    "https://www.automiledetailing.com/"
+  ],
+  [
+    "Valvoline Instant Oil Change — Norwood",
+    "Auto Repair & Oil Change",
+    "175 Everett Street",
+    "781-255-9797",
+    "https://store.vioc.com/ma/norwood/175-everett-st"
+  ],
+  [
+    "Jiffy Lube — Norwood",
+    "Auto Repair & Oil Change",
+    "770 Boston Providence Turnpike",
+    "781-769-7544",
+    "https://www.jiffylube.com/locations/ma/norwood/1308"
+  ],
+  [
+    "McDonald Flooring & Design",
+    "Flooring & Carpet",
+    "55 Carnegie Row",
+    "781-769-0002",
+    "https://mcdonaldflooring.com/"
+  ],
+  [
+    "Sky Spa",
+    "Spas, Salons & Massage",
+    "451 Walpole Street",
+    "781-255-8759",
+    "https://myskyspa.com/contact/"
+  ],
+  [
+    "You Lucky Dogs",
+    "Pet Daycare, Grooming & Dog Training",
+    "169 Rear Railroad Avenue",
+    "781-352-2286",
+    "https://youluckydogs.com/contact-us/"
+  ],
+  [
+    "Norwood Dental Care",
+    "Dental & Orthodontics",
+    "47 Central Street",
+    "781-805-3476",
+    "https://www.norwooddentalcare.com/contact-us.html"
+  ],
+  [
+    "New England Dental Specialists of Norwood",
+    "Dental & Periodontal Specialists",
+    "24 Guild Street",
+    "781-551-2770",
+    "https://nedspecialists.com/contact-us/"
+  ],
+  [
+    "Heritage Home Care",
+    "Home Care & Senior Services",
+    "661 Washington Street, Suite 300A",
+    "781-725-2676",
+    "https://www.heritagehcare.com/contact-us"
+  ],
+  [
+    "ComForCare Home Care — Canton / Norwood",
+    "Home Care & Senior Services",
+    "1506 Boston Providence Turnpike, Unit 30",
+    "781-821-2800",
+    "https://www.comforcare.com/canton/contact-us/"
+  ],
+  [
+    "Alison Kaiser Photography",
+    "Photography & Fine Art",
+    "83 Morse Street",
+    "",
+    "https://norwoodspacecenter.com/business/alison-kaiser-photography/"
+  ],
+  [
+    "Michael Piazza Photography",
+    "Photography",
+    "83 Morse Street",
+    "",
+    "https://norwoodspacecenter.com/business/michael-piazza-photography/"
+  ],
+  [
+    "Rage Zone — Norwood",
+    "Family Entertainment & Activity Parties",
+    "61 Endicott Street, Building 45-101",
+    "781-400-0764",
+    "https://www.ragezone.us/norwood"
   ]
-].map((b,i)=>{const labels=Array.isArray(b[1])?b[1]:String(b[1]||'').split(';').map(s=>s.trim()).filter(Boolean);const rawAddress=String(b[2]||'').trim();const isSpecificAddress=!!rawAddress&&!/^norwood(?:,?\s*ma(?:\s+02062)?)?$/i.test(rawAddress)&&!/^\s*(?:pleasant street|providence highway|access road|kerry place)\s*$/i.test(rawAddress);const address=isSpecificAddress?(rawAddress+(/\b(?:Norwood|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i.test(rawAddress)?(/\bMA\b/i.test(rawAddress)?'':', MA'):', Norwood, MA 02062')):'';return{id:"biz-"+(i+1),name:b[0],category:labels[0]||"Local business",labels,tags:labels,address,locationHint:rawAddress&&!isSpecificAddress?rawAddress:'',phone:b[3],website:b[4],town:(rawAddress.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon)\b/i)||[])[1]||"Norwood"};});
+].map((b, i) => {
+  const labels = Array.isArray(b[1]) ? b[1] : String(b[1] || '').split(';').map(s => s.trim()).filter(Boolean);
+  const rawAddress = String(b[2] || '').trim();
+  const isSpecificAddress = !!rawAddress && !/^norwood(?:,?\s*ma(?:\s+02062)?)?$/i.test(rawAddress) && !/^(?:pleasant street|providence highway|access road|kerry place)$/i.test(rawAddress);
+  // A town name must be at the end of the address, never inside a street name.
+  const locality = rawAddress.match(/\b(East Walpole|Walpole|Westwood|Foxborough|Dedham|Sharon|Canton|Norwood)(?:,?\s+MA(?:\s+\d{5}(?:-\d{4})?)?)?$/i);
+  const address = isSpecificAddress
+    ? rawAddress + (locality ? (/\bMA\b/i.test(rawAddress) ? '' : ', MA') : ', Norwood, MA 02062')
+    : '';
+  return {
+    id: 'biz-' + (i + 1),
+    name: b[0], category: labels[0] || 'Local business', labels, tags: labels,
+    address, locationHint: rawAddress && !isSpecificAddress ? rawAddress : '',
+    phone: b[3], website: b[4], town: locality ? locality[1] : 'Norwood'
+  };
+});

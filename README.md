@@ -1,10 +1,10 @@
-# Norwood.ma v1.7.0
+# Norwood.ma v1.7.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.7.0 — daily official social posts and updated volunteer links.
+**Current release:** v1.7.1 — broader business coverage, directory search and corrected locality handling.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -32,6 +32,13 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Google News is a discovery mechanism, not a publisher or preferred source.
 - Weekly Norwood Community Media newscasts come from the official series archive and appear by episode date on the News page.
 - News and event refreshes are automated; ordinary generated-content refreshes are not software releases.
+
+### Business directory
+- `data/businesses-data.js` maintains business listings; keep existing rows in place when appending so stable business IDs remain unchanged.
+- `businesses.js` combines the maintained business data with `data/restaurants-data.js` for directory browsing and search. Matching names and food listings at the same normalized address are deduplicated. Restaurant changes therefore reach the directory through the existing food dataset.
+- Every business receives a browsing category. Unmatched classifications remain accessible in Other Local Services.
+- City names are inferred only at the end of an address. Street names such as Walpole Street and Norwood Park South must not establish locality. Preserve explicit neighboring towns and omit map links when no specific address is verified.
+- Search matches names, categories and streets across the directory. The dedicated Food & Drink directory and Dinner Spinner remain linked alongside the food listings.
 
 ### Search
 - Site search loads government guide sections directly from the maintained HTML when search is used, including department and board descriptions, membership, contacts, documents and FAQs. Results link to and open the matching section.
@@ -96,6 +103,12 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v1.7.1 — Business directory coverage
+Released November 10, 2026.
+
+- Adds 18 verified businesses and makes 77 maintained restaurant records searchable from the business directory.
+- Adds directory search, repairs missing browsing categories and corrects 64 address strings, including 49 records misclassified by the name Walpole Street.
 
 ### v1.7.0 — Daily official social posts
 Released November 10, 2026.
