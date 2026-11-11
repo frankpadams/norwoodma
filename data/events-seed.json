@@ -7970,5 +7970,101 @@
     ],
     "verification_status": "official_event_date_verified_and_owner_supplied_norwood_notice",
     "notes": "Eligible veterans may attend Crocetti’s in East Bridgewater on Sunday, Nov. 22, 11am–1pm. Bring valid proof of veteran status. While supplies last, first come, first served. Norwood veterans with transportation or scheduling barriers may register with Norwood Veteran Services before the event. Director Derek Wennerstrand will coordinate retrieval for registered Norwood veterans. Call (781) 762-1240 before the event to register for municipal pickup coordination or request details. Confirm eligibility, direct-attendance registration and pickup arrangements with the office. Norwood coordination details supplied in the notice shared with Norwood.ma."
+  },
+  {
+    "id": "2026-11-11-veterans-mass-c4d9e19",
+    "title": "Veterans’ Mass",
+    "start": {
+      "date": "2026-11-11",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": "St. Catherine of Siena Church",
+    "address": null,
+    "category": "community",
+    "source_id": "friends-center-events",
+    "source_url": "https://www.norwoodcenter.org/event/veterans-mass/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_town_veterans_day_notice",
+    "notes": "Veterans’ Mass begins at 8am as part of the Town of Norwood Veterans Day observances on Wednesday, Nov. 11, 2026. Community members, families and friends are invited.",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "friends-norwood-center",
+      "norwood-community"
+    ],
+    "curated_default": true
+  },
+  {
+    "id": "2026-11-11-veterans-day-parade-73226f7",
+    "title": "Veterans’ Day Parade",
+    "start": {
+      "date": "2026-11-11",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": null
+    },
+    "venue": "Aaron Guild Park / Washington Street to Town Common",
+    "address": null,
+    "category": "community",
+    "source_id": "friends-center-events",
+    "source_url": "https://www.norwoodcenter.org/event/veterans-day-parade/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_town_veterans_day_notice",
+    "notes": "Parade units stage at Aaron Guild Park at 10am. Parade steps off at 10:30am along Washington Street to the Town Common. Ceremonies begin at 10:45am, with bells and a moment of silence at 11am and conclusion at 11:15am. Community members, families and friends are invited.",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "friends-norwood-center",
+      "norwood-community"
+    ],
+    "curated_default": true
+  },
+  {
+    "id": "2026-11-11-remembrance-ceremony-2fd51f1",
+    "title": "Remembrance Ceremony",
+    "start": {
+      "date": "2026-11-11",
+      "time": "10:45"
+    },
+    "end": {
+      "date": "2026-11-11",
+      "time": "11:15"
+    },
+    "venue": "Norwood Town Common",
+    "address": "580 Washington Street, Norwood, MA, 02062",
+    "category": "community",
+    "source_id": "friends-center-events",
+    "source_url": "https://www.norwoodcenter.org/event/remembrance-ceremony/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_town_veterans_day_notice",
+    "notes": "Veterans Day ceremonies and observances at the Town Common begin at 10:45am. Pause for bells and a moment of silence at 11am. Conclusion at 11:15am. Community members, families and friends are invited to honor and remember all who have served.",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "friends-norwood-center",
+      "norwood-community"
+    ],
+    "curated_default": true
   }
 ]
