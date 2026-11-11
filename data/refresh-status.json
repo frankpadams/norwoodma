@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-10T16:02:39.661372-05:00",
+  "generated_at": "2026-11-10T19:23:31.178066-05:00",
   "offline": false,
-  "events_published": 2207,
+  "events_published": 2206,
   "news_published": 120,
   "civic_notices": 59,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2207,
-      "generated_at": "2026-11-10T16:02:38.853193-05:00"
+      "events": 2206,
+      "generated_at": "2026-11-10T19:23:30.844468-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 115,
-      "generated_at": "2026-11-10T16:02:38.865662-05:00"
+      "generated_at": "2026-11-10T19:23:30.855722-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 828,
-      "generated_at": "2026-11-10T16:02:38.890840-05:00"
+      "events": 829,
+      "generated_at": "2026-11-10T19:23:30.878895-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 727,
-      "generated_at": "2026-11-10T16:02:38.911675-05:00"
+      "events": 728,
+      "generated_at": "2026-11-10T19:23:30.897746-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-11-10T16:02:38.923214-05:00"
+      "generated_at": "2026-11-10T19:23:30.908174-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 61,
-      "generated_at": "2026-11-10T16:02:38.936403-05:00"
+      "generated_at": "2026-11-10T19:23:30.920390-05:00"
     }
   ],
   "recreation_programs": 133,
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured weekday",
+      "note": "authoritative page no longer confirms configured start time",
       "outcome": "failed",
       "access_limited": false
     },
@@ -556,7 +556,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -653,7 +653,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-cross-country",
       "ok": true,
       "method": "ical",
-      "found": 7,
+      "found": 6,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -842,7 +842,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-cross-country",
       "ok": true,
       "method": "ical",
-      "found": 7,
+      "found": 6,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -968,7 +968,7 @@
       "source_id": "nps-athletics-arbiter-varsity-football",
       "ok": true,
       "method": "ical",
-      "found": 11,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1697,11 +1697,10 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 18,
+      "found": 17,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
-        "Cincinnati Enquirer": 1,
         "Fiorentino Legal, P.C.": 3,
         "NBC Boston": 4,
         "Patch": 2,
@@ -1709,7 +1708,7 @@
         "The Norwood Record": 45,
         "The Norwood Record — Latest": 16,
         "NEREJ": 1,
-        "WCVB": 2,
+        "WCVB": 3,
         "Norwood Town News": 25,
         "The Daily Tribune News": 1,
         "Norwood Public Schools": 6,
