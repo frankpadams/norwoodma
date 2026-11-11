@@ -948,7 +948,33 @@
       "2026-11-11-remembrance-ceremony-2fd51f1",
       "2026-11-11-pma-veterans-day-parade"
     ],
-    "notes": "Join the Town of Norwood to honor and remember all who have served our nation. Community members, families and friends are invited.\n\n8am — Veterans’ Mass at St. Catherine of Siena Church.\n10am — Parade units staging at Aaron Guild Park.\n10:30am — Parade step-off along Washington Street to the Town Common.\n10:45am — Ceremonies and observances at the Town Common.\n11am — Pause for bells and a moment of silence.\n11:15am — Conclusion."
+    "notes": "Join the Town of Norwood to honor and remember all who have served our nation. Community members, families and friends are invited.",
+    "schedule": [
+      {
+        "time": "08:00",
+        "label": "Veterans’ Mass — St. Catherine of Siena Church"
+      },
+      {
+        "time": "10:00",
+        "label": "Parade units staging — Aaron Guild Park"
+      },
+      {
+        "time": "10:30",
+        "label": "Parade step-off — Washington Street to Town Common"
+      },
+      {
+        "time": "10:45",
+        "label": "Ceremonies and observances — Town Common"
+      },
+      {
+        "time": "11:00",
+        "label": "Pause for bells and a moment of silence"
+      },
+      {
+        "time": "11:15",
+        "label": "Conclusion"
+      }
+    ]
   },
   {
     "id": "2026-11-11-veterans-day-no-school-00f0bc3",
