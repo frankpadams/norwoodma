@@ -557,7 +557,7 @@ window.NORWOOD_BUSINESSES=[
     "Accounting, Tax & Bookkeeping",
     "661 Washington Street, Suite 310",
     "781-815-7006",
-    "https://daisytrancpa.com/"
+    "https://trancpatax.com/"
   ],
   [
     "Precision Paws Dog Grooming",
@@ -5760,6 +5760,41 @@ window.NORWOOD_BUSINESSES=[
     "500 Providence Highway, Suite 2",
     "781-287-8873",
     "https://www.stretchlab.com/location/norwood"
+  ],
+  [
+    "Salem Five Insurance Services — Norwood",
+    "Insurance",
+    "75 Boston Providence Turnpike",
+    "781-762-3400",
+    "https://www.salemfiveinsurance.com/locations/75-boston-providence-turnpike-norwood-ma/"
+  ],
+  [
+    "Leonard Noor & Company, P.C.",
+    "Accounting & Tax Preparation",
+    "1500 Providence Highway, Suite 34",
+    "",
+    "https://www.leonardnoorcpas.com/"
+  ],
+  [
+    "Tax Office & Associates",
+    [
+      "Accounting & Tax Preparation",
+      "Bookkeeping",
+      "Notary Services"
+    ],
+    "661 Washington Street, Suite 300A",
+    "",
+    "https://www.taxofc.com/contact"
+  ],
+  [
+    "Jennifer Cedor Law and Realty, PLLC",
+    [
+      "Real Estate",
+      "Attorneys & Legal Services"
+    ],
+    "991 Providence Highway",
+    "857-423-5300",
+    "https://www.jennifercedorlawandrealty.com/contact-us"
   ]
 ].map((b, i) => {
   const labels = Array.isArray(b[1]) ? b[1] : String(b[1] || '').split(';').map(s => s.trim()).filter(Boolean);
