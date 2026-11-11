@@ -29,7 +29,6 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Statewide",
     "verified": "2026-10"
   },
-
   {
     "name": "Massachusetts Middle-Income Heating Oil Relief",
     "category": "Basic Needs",
@@ -6515,5 +6514,153 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "town"
     ]
+  },
+  {
+    "name": "Anglican Church of the Redeemer in Norwood",
+    "address": "71 Bond Street, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Anglican congregation that meets for worship at First Baptist Church of Norwood.",
+    "url": "https://acrnorwood.org/",
+    "phone": "781-769-7940",
+    "tags": "Christian Anglican church worship congregation",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Emmanuel Lutheran Church",
+    "address": "24 Berwick Street, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Evangelical Lutheran Church in America congregation with in-person and online worship.",
+    "url": "https://www.emmanuelnorwood.org/",
+    "phone": "781-762-9457",
+    "tags": "Christian Lutheran ELCA church worship congregation",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Fulfilled Life Church",
+    "address": "661 Pleasant Street, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Christian congregation offering in-person worship in Norwood and online ministry.",
+    "url": "https://fulfilledchurchinboston.org/",
+    "phone": "781-771-0221",
+    "tags": "Christian church worship congregation",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Grace Sanctuary for All Nations",
+    "address": "225 Norwood Park South, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Norwood parish listed by the Redeemed Christian Church of God North America. Contact the parish for service details.",
+    "url": "https://secure.rccgna.org/pad/home/allparishes",
+    "phone": "857-719-9911",
+    "tags": "Christian RCCG church worship congregation",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Jain Center of Greater Boston",
+    "address": "556 Nichols Street, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Jain temple and community center with worship, religious education and community programs.",
+    "url": "https://jcgb.org/",
+    "phone": "781-762-9490",
+    "tags": "Jain Jainism temple mandir worship faith",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Norwood Church of God — Église de Dieu de Norwood",
+    "address": "190 Vanderbilt Avenue, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Haitian Christian congregation with worship, prayer and Bible study in Norwood.",
+    "url": "https://www.youtube.com/channel/UC3vxR_i_Tpctl63vHhu-baA",
+    "phone": "781-778-0080",
+    "tags": "Christian Haitian Creole French church worship congregation",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Revival Church for the Nations",
+    "address": "290 Vanderbilt Avenue, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Church listed at this address in Norwood’s inspection records. Call to confirm service details.",
+    "phone": "781-762-3786",
+    "tags": "Christian church worship congregation",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Saint George Orthodox Church",
+    "address": "6 Atwood Avenue, Norwood, MA 02062",
+    "category": "Houses of Worship",
+    "description": "Greek Orthodox parish. See the parish calendar for its schedule of services.",
+    "url": "https://www.stgeorgenorwood.org/",
+    "phone": "781-762-4396",
+    "tags": "Christian Greek Orthodox church parish worship",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Local",
+    "verified": "2026-11"
+  },
+  {
+    "name": "Al-Bushra Mosque",
+    "address": "4 Pearl Street, Dedham, MA 02026",
+    "category": "Houses of Worship",
+    "description": "Mosque in Dedham offering congregational prayers and community programs.",
+    "url": "https://albushramosque.org/",
+    "tags": "Muslim Islam mosque masjid worship prayer Dedham",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Nearby — Dedham",
+    "verified": "2026-11"
+  },
+  {
+    "name": "B’nai Tikvah",
+    "address": "1301 Washington Street, Canton, MA 02021",
+    "category": "Houses of Worship",
+    "description": "Jewish congregation in Canton with Shabbat services and community programs.",
+    "url": "https://www.bnaitikvahma.org/",
+    "phone": "781-828-5250",
+    "tags": "Jewish Judaism synagogue temple worship Canton",
+    "topics": [
+      "worship",
+      "community"
+    ],
+    "coverage": "Nearby — Canton",
+    "verified": "2026-11"
   }
 ];
