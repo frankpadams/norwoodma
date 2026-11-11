@@ -1,0 +1,52 @@
+name: Refresh official town social posts
+on:
+  schedule:
+    - cron: '41 13 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/refresh-town-social.py'
+      - '.github/workflows/town-social.yml'
+permissions:
+  contents: write
+concurrency:
+  group: town-social-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test social post handling
+        run: python -m unittest discover -s tests -p test_town_social.py
+      - name: Read official social feeds
+        id: refresh
+        continue-on-error: true
+        run: python scripts/refresh-town-social.py
+      - name: Publish posts and feed status
+        run: |
+          snapshot=$(mktemp -d)
+          cp data/town-social.json data/town-social-status.json "$snapshot/"
+          git fetch origin main
+          git reset --hard origin/main
+          cp "$snapshot/town-social.json" "$snapshot/town-social-status.json" data/
+          python scripts/refresh-town-social.py --offline
+          git add data/town-social.json data/town-social-status.json town-updates.html
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'norwood-ma-social-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git commit -m 'data: refresh official town social posts'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Report feed access failures
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          cat data/town-social-status.json >> "$GITHUB_STEP_SUMMARY"
+          exit 1

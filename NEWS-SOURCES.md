@@ -42,3 +42,11 @@ Add per-source parsers/health reporting for the highest-value sources, stronger 
 ## Publication-date extraction
 
 Headline dates can describe deadlines or events and must not establish publication dates. HTML fallbacks exclude headings and links when reading nearby publication text; dated article URLs may establish publication dates. Dates within headlines are preserved, apart from an optional leading date label. Regression tests cover a headline deadline differing from the publication date and rejection of headline-only dates.
+
+## Daily official social feed
+
+`.github/workflows/town-social.yml` runs once daily at 13:41 UTC (morning in Norwood) and on changes to its workflow or reader. It calls `scripts/refresh-town-social.py`, which discovers the public Curator embed IDs from the Town homepage and reads up to 100 posts per feed. It requires no ChatGPT service, social account login or API key.
+
+`data/town-social.json` retains up to 200 dated posts from the last 60 days. Identical text from Facebook and Instagram is grouped with links to both originals. `town-updates.html` renders the latest 30 posts as expandable entries with original text, images and source links. Image-only and video-only posts remain linked to their originals. Calendar event interpretation and selective homepage announcements retain their existing editorial workflows.
+
+`data/town-social-status.json` records each feed result. A failed source preserves the last available posts, adds a public availability message and fails the Actions run after saving the result. The status timestamp describes the most recent check, including partial failures. The reader never treats an unread feed as an empty successful result. Rebuild saved HTML with `python scripts/refresh-town-social.py --offline`.

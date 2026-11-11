@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-11T00:23:53.446267+00:00",
+  "ok": true,
+  "sources": [
+    {
+      "url": "https://api.curator.io/restricted/feeds/fc0dce71-f0a1-48f1-8e65-44960beab384/posts?limit=100",
+      "ok": true,
+      "posts_received": 100,
+      "posts_kept": 100
+    },
+    {
+      "url": "https://api.curator.io/restricted/feeds/4b1cd150-b1d1-40de-8aa7-93e7bb15a360/posts?limit=100",
+      "ok": true,
+      "posts_received": 100,
+      "posts_kept": 100
+    }
+  ],
+  "posts_retained": 37
+}

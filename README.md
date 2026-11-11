@@ -1,10 +1,10 @@
-# Norwood.ma v1.6.2
+# Norwood.ma v1.7.0
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 1.x series
-**Current release:** v1.6.2 — adds a weekly newsletter signup to the homepage.
+**Current release:** v1.7.0 — daily official social posts and updated volunteer links.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -25,6 +25,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - One-time public events should not be displaced by routine multi-week session occurrences.
 
 ### News
+- Official Facebook and Instagram posts embedded on the Town homepage are collected daily by `.github/workflows/town-social.yml` and rendered as dated posts on `town-updates.html`. The reader discovers the public embed feed IDs from the Town homepage, merges matching cross-network posts and retains the last available posts during source failures. Details are in `NEWS-SOURCES.md`.
 - The News page displays a single headline feed beside the local source directory. On narrow screens, the directory follows the feed.
 - News is aggregated from local/official and regional sources under the policy in `NEWS-SOURCES.md`.
 - The system favors current, materially Norwood-related reporting; rejects stale, undated, promotional, obituary, and low-value single-game material; and deduplicates substantially identical coverage.
@@ -95,6 +96,12 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v1.7.0 — Daily official social posts
+Released November 10, 2026.
+
+- Adds daily collection of the Town homepage’s public Facebook and Instagram embeds, with dated posts on Town Updates and explicit feed failure reporting.
+- Updates Get Involved with Town volunteer listings, Recreation contacts, FY2027 senior work-off documents and board position notices.
 
 ### v1.6.2 — Weekly newsletter signup
 Released November 9, 2026.
