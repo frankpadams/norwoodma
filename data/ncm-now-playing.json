@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-10T18:57:18.194396-05:00",
-  "date": "2026-11-10",
+  "updated_at": "2026-11-11T00:55:59.589504-05:00",
+  "date": "2026-11-11",
   "timezone": "America/New_York",
   "channels": {
     "community": {
@@ -9,27 +9,39 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1170,
+          "minute": 60,
+          "title": "Korean War Memorial Bench Dedication"
+        },
+        {
+          "minute": 120,
+          "title": "Norwood Biography: The George Lee Story"
+        },
+        {
+          "minute": 210,
+          "title": "Veterans' Memorials Tour"
+        },
+        {
+          "minute": 270,
           "title": "Vietnam Veterans Bench Dedication 5.28.22"
         },
         {
-          "minute": 1230,
+          "minute": 330,
           "title": "Veterans Day 1999"
         },
         {
-          "minute": 1260,
+          "minute": 360,
           "title": "Norwood Digest Special: Michael Cunningham"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "Norwood Veterans: Thomas McDonough"
         },
         {
-          "minute": 1380,
+          "minute": 480,
           "title": "\"We Remember Our Veterans\" at Norfolk County Registry of Deeds 11.8.23"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-10"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-11"
     },
     "government": {
       "status": "scheduled",
@@ -37,67 +49,75 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 0,
+          "minute": 60,
           "title": "Town Meeting Info Session 11.2.26"
         },
         {
-          "minute": 180,
+          "minute": 240,
           "title": "Conservation Commission 11.4.26"
-        },
-        {
-          "minute": 270,
-          "title": "Historical Commission 11.5.26"
         },
         {
           "minute": 330,
+          "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 390,
           "title": "School Committee 10.28.26 Rebroadcast"
         },
         {
-          "minute": 420,
+          "minute": 480,
           "title": "Town Meeting Info Session 11.2.26"
         },
         {
-          "minute": 600,
+          "minute": 660,
           "title": "Conservation Commission 11.4.26"
         },
         {
-          "minute": 690,
-          "title": "Historical Commission 11.5.26"
+          "minute": 750,
+          "title": "Board of Selectmen 10.27.26"
         },
         {
-          "minute": 930,
-          "title": "Conservation Commission 11.4.26"
-        },
-        {
-          "minute": 1020,
+          "minute": 840,
           "title": "Historical Commission 11.5.26"
         }
       ],
-      "source": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-11"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2016 Fall Sports Awards",
+      "title": "NHS Update - September 2026",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1170,
+          "minute": 120,
+          "title": "Celebrating Innovation Career Pathways at NHS"
+        },
+        {
+          "minute": 180,
+          "title": "2016 Fall Sports Awards"
+        },
+        {
+          "minute": 270,
           "title": "2016 NHS-TV1 Stories Period 5"
         },
         {
-          "minute": 1200,
+          "minute": 300,
           "title": "Norwood News 11.6.26"
         },
         {
-          "minute": 1260,
+          "minute": 360,
           "title": "2016 NHS-TV Mustang Magazine #37"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "2016 Fall Sports Awards"
+        },
+        {
+          "minute": 510,
+          "title": "NHS Update - September 2026"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-10"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-11"
     }
   }
 }
