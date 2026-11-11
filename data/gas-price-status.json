@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-11-10T17:00:17.655606Z",
+  "generated_at": "2026-11-11T17:04:48.409613Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
           "regular"
         ],
@@ -23,8 +24,8 @@
             "types": [
               "gas_station",
               "service",
-              "point_of_interest",
               "store",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -35,7 +36,6 @@
     "CITGO": {
       "google": {
         "accepted_grades": [
-          "premium",
           "regular"
         ],
         "candidates": [
@@ -63,14 +63,6 @@
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -88,8 +80,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -118,8 +110,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -159,7 +151,6 @@
     "Irving Oil / Rojo": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -182,31 +173,6 @@
               "gas_station",
               "service",
               "point_of_interest",
-              "establishment"
-            ]
-          },
-          {
-            "address": "69 Boston Providence Hwy, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Cravings On The Go",
-            "outcome": "no_usable_fuel_prices",
-            "parsed_address": [
-              "69 Boston Providence Hwy",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJtQnH3-eB5IkREHkmbw_z3Uc",
-            "station_verified": true,
-            "types": [
-              "convenience_store",
-              "car_wash",
-              "gas_station",
-              "food_store",
-              "service",
-              "restaurant",
-              "food",
-              "point_of_interest",
-              "store",
               "establishment"
             ]
           },
@@ -236,7 +202,6 @@
     "Mobil / On the Run — Norwood Center": {
       "google": {
         "accepted_grades": [
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -254,8 +219,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -357,9 +322,30 @@
             "types": [
               "convenience_store",
               "food_store",
+              "store",
               "food",
               "point_of_interest",
+              "establishment"
+            ]
+          },
+          {
+            "address": "496 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Quick Stop",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "496 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
               "store",
+              "food",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -382,40 +368,15 @@
               "point_of_interest",
               "establishment"
             ]
-          },
-          {
-            "address": "496 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Quick Stop",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "496 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
-            "station_verified": false,
-            "types": [
-              "convenience_store",
-              "food_store",
-              "food",
-              "point_of_interest",
-              "store",
-              "establishment"
-            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
       }
     },
     "Norwood Gulf": {
-      "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
-      },
       "google": {
         "accepted_grades": [
-          "premium"
+          "regular"
         ],
         "candidates": [
           {
@@ -464,9 +425,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
+              "store",
               "service",
               "point_of_interest",
-              "store",
               "establishment"
             ]
           },
@@ -486,8 +447,8 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "store",
               "service",
+              "store",
               "food",
               "point_of_interest",
               "establishment"
@@ -540,8 +501,7 @@
         "accepted_grades": [
           "diesel",
           "premium",
-          "midgrade",
-          "regular"
+          "midgrade"
         ],
         "candidates": [
           {
@@ -601,6 +561,7 @@
     "Sunoco — Route 1": {
       "google": {
         "accepted_grades": [
+          "premium",
           "regular"
         ],
         "candidates": [
@@ -620,10 +581,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "service",
+              "store",
               "food",
               "point_of_interest",
-              "store",
+              "service",
               "establishment"
             ]
           }
@@ -633,7 +594,6 @@
     }
   },
   "unresolved_stations": [
-    "Norwood Gulf",
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
