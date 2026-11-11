@@ -5,7 +5,7 @@ const test = require('node:test');
 const vm = require('node:vm');
 const root = path.join(__dirname, '..');
 
-function loadDirectory() {
+function loadDirectory(extraRestaurants = []) {
   const listeners = {};
   const elements = {
     '#businessDirectory': {innerHTML: ''},
@@ -25,6 +25,7 @@ function loadDirectory() {
   };
   vm.createContext(context);
   for (const file of ['data/businesses-data.js', 'data/restaurants-data.js', 'businesses.js']) {
+    if (file === 'businesses.js') context.window.NORWOOD_RESTAURANTS.push(...extraRestaurants);
     vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
   }
   return {context, elements, listeners};
@@ -82,4 +83,19 @@ test('structured search data identifies Walpole Street businesses as Norwood', (
   for (const item of onWalpoleStreet) {
     assert.equal(item.address.addressLocality, 'Norwood', item.name);
   }
+});
+
+
+test('separate restaurant branches remain visible and category navigation clears search', () => {
+  const {context, elements, listeners} = loadDirectory([
+    {id: 'test-east', name: 'Branch Cafe', address: '1 Test Street'},
+    {id: 'test-west', name: 'Branch Cafe', address: '2 Test Street'}
+  ]);
+  elements['#businessSearch'].value = 'branch cafe';
+  listeners.input();
+  assert.equal((elements['#businessDirectory'].innerHTML.match(/<b>Branch Cafe<\/b>/g) || []).length, 2);
+  context.location.hash = '#home';
+  listeners.hashchange();
+  assert.equal(elements['#businessSearch'].value, '');
+  assert.match(elements['#businessDirectory'].innerHTML, /Home Depot/);
 });

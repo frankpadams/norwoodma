@@ -36,8 +36,12 @@ const addressKey = value => String(value || '').toLowerCase()
  .replace(/boston[ -]*providence/g, 'providence').replace(/highway|turnpike|tpke/g, 'hwy')
  .replace(/street/g, 'st').replace(/avenue/g, 'ave').replace(/[^a-z0-9]/g, '');
 for (const restaurant of window.NORWOOD_RESTAURANTS || []) {
- const duplicate = businesses.some(b => nameKey(b.name) === nameKey(restaurant.name) ||
-  (addressKey(b.address) && addressKey(b.address) === addressKey(restaurant.address) && groups.food.match.test(b.category || '')));
+ const duplicate = businesses.some(b => {
+  const sameAddress = addressKey(b.address) && addressKey(b.address) === addressKey(restaurant.address);
+  const sameName = nameKey(b.name) === nameKey(restaurant.name);
+  return (sameName && (!b.address || !restaurant.address || sameAddress)) ||
+   (sameAddress && groups.food.match.test(b.category || ''));
+ });
  if (duplicate) continue;
  businesses.push({
   id: 'restaurant-' + restaurant.id, name: restaurant.name, category: 'Restaurants & Dining',
@@ -116,5 +120,9 @@ function render(){
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
 $('#businessSearch')?.addEventListener('input',render);
-window.addEventListener('hashchange',render);render();if($('#businessCount'))$('#businessCount').textContent=businesses.length+' local business listings.';
+window.addEventListener('hashchange',()=>{
+ const search = $('#businessSearch');
+ if (search) search.value = '';
+ render();
+});render();if($('#businessCount'))$('#businessCount').textContent=businesses.length+' local business listings.';
 })();
