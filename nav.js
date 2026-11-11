@@ -74,7 +74,7 @@
               const cutoff=st!==null?Math.max(en!==null?en:st,st+120):en;
               if(cutoff!==null&&now.minutes>cutoff)continue;
             }
-            items.push({kind:'community_meeting',rank:isToday?13:11,title:n.title||'Community meeting',url:n.url||'events.html',today:isToday,date:n.date});
+            items.push({kind:'community_meeting',rank:isToday?13:11,title:n.title||'Community meeting',url:n.url||'events.html',today:isToday,date:n.date,eventTime:n.start_time});
           }else if(n.kind==='meeting'&&n.date===now.date){
             const hm=x=>{if(!x)return null;const m=String(x).match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):null;};
             const st=hm(n.start_time), en=hm(n.end_time);
@@ -102,14 +102,47 @@
               url='https://www.norwoodma.gov/calendar.php?view=month&month='+String(d.getMonth()+1).padStart(2,'0')+'&day=01&year='+d.getFullYear();
             }
             const fmtTime=x=>{const m=String(x||'').match(/^(\d{1,2}):(\d{2})/);if(!m)return '';const h=Number(m[1]),min=m[2],ap=h>=12?'PM':'AM',h12=((h+11)%12)+1;return h12+':'+min+' '+ap;};
-            items.push({kind:'meeting',rank:live?18:12,title,url,live,startTime:fmtTime(n.start_time),scheduledEnd:n.end_time||null,overrun:en!==null&&now.minutes>en});
+            items.push({kind:'meeting',rank:live?18:12,title,url,live,date:n.date,eventTime:n.start_time,startTime:fmtTime(n.start_time),scheduledEnd:n.end_time||null,overrun:en!==null&&now.minutes>en});
           }
         }
       }
     }catch(e){}
     if(!items.length){if(existing)existing.remove();return;}
-    const seen=new Set();const electionOnly=easternParts().date>='2026-10-29'&&easternParts().date<='2026-11-03';const visibleItems=electionOnly?items.filter(a=>a.kind==='election'):items;const alerts=visibleItems.filter(a=>{const k=(a.kind+'|'+a.title+'|'+a.url).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>b.rank-a.rank);
-    const strip=document.createElement('aside');strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
+    const electionOnly=easternParts().date>='2026-10-29'&&easternParts().date<='2026-11-03';
+    const visibleItems=electionOnly?items.filter(a=>a.kind==='election'):items;
+    const meetings=visibleItems.filter(a=>a.kind==='meeting'||a.kind==='community_meeting');
+    const titleKey=title=>String(title||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().replace(/ meeting$/,'');
+    const timeKey=time=>String(time||'').slice(0,5).padStart(5,'0');
+    if(meetings.length){
+      try{
+        const response=await fetch('/data/events.json',{cache:'no-cache'});
+        const events=response.ok?await response.json():[];
+        for(const meeting of meetings){
+          const explicitId=new URL(meeting.url,location.href).searchParams.get('event');
+          const explicit=explicitId&&events.find(event=>event.id===explicitId);
+          const matching=events.filter(event=>event.id&&event.start?.date===meeting.date
+            &&titleKey(event.title)===titleKey(meeting.title)
+            &&(!meeting.eventTime||timeKey(event.start.time)===timeKey(meeting.eventTime)));
+          const event=explicit||(matching.length===1?matching[0]:null);
+          if(event)meeting.calendarUrl='/events.html?event='+encodeURIComponent(event.id);
+        }
+      }catch(e){/* Keep the notice’s source link if the calendar is unavailable. */}
+    }
+    const seen=new Set();
+    const alerts=visibleItems.sort((a,b)=>b.rank-a.rank).filter(a=>{
+      const key=a.kind==='meeting'||a.kind==='community_meeting'
+        ? [a.date,timeKey(a.eventTime),titleKey(a.title)].join('|')
+        : [a.kind,a.title,a.url].join('|').toLowerCase();
+      if(seen.has(key))return false;
+      seen.add(key);
+      return true;
+    });
+    if(!alerts.length){existing?.remove();return;}
+    const signature=JSON.stringify(alerts);
+    if(existing?.dataset.alertSignature===signature)return;
+    const strip=document.createElement('aside');
+    strip.dataset.alertSignature=signature;
+    strip.className='site-timely-alert';strip.setAttribute('role','region');strip.setAttribute('aria-label','Time-sensitive Norwood notices');
     strip.innerHTML='<button class="site-timely-prev" type="button" aria-label="Previous alert">‹</button><div class="site-timely-track" tabindex="0">'+alerts.map(a=>{
       let label='NOTICE';
       if(a.kind==='urgent')label=/child abduction|amber/i.test(a.title)?'AMBER ALERT':/silver alert|missing person/i.test(a.title)?'SILVER / MISSING PERSON ALERT':/tornado|storm|flood|hurricane|blizzard|squall|heat|cold|wind|fire/i.test(a.title)?'WEATHER ALERT':'EMERGENCY ALERT';
@@ -118,6 +151,8 @@
       if(a.kind==='meeting')label=a.live?'LIVE NOW':'TODAY';
       const meetingTime=a.kind==='meeting'&&a.startTime?' — '+esc(a.startTime):'';
       const main='<strong>'+label+':</strong> '+esc(a.title)+meetingTime;
+      const href=esc(a.calendarUrl||a.url||'#');
+      const external=a.calendarUrl?'':' target="_blank" rel="noopener"';
       if(a.kind==='meeting'&&a.live){
         let endNote='';
         if(a.scheduledEnd){
@@ -127,13 +162,13 @@
             if(a.overrun)endNote=' <span class="meeting-scheduled-end">(Scheduled end: '+h12+':'+min+' '+ap+')</span>';
           }
         }
-        return '<span class="site-timely-item">'+main+' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a>'+endNote+'</span>';
+        return '<span class="site-timely-item"><a href="'+href+'"'+external+'>'+main+' <span aria-hidden="true">→</span></a> <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">Watch Live →</a>'+endNote+'</span>';
       }
       if(a.kind==='community_meeting'){
         const liveLink=a.today?' <a class="watch-live" href="'+govLive+'" target="_blank" rel="noopener">If televised: Watch on NCM →</a>':'';
-        return '<span class="site-timely-item"><a href="'+esc(a.url||'events.html')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>'+liveLink+'</span>';
+        return '<span class="site-timely-item"><a href="'+href+'"'+external+'>'+main+' <span aria-hidden="true">→</span></a>'+liveLink+'</span>';
       }
-      return '<a class="site-timely-item" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+main+' <span aria-hidden="true">→</span></a>';
+      return '<a class="site-timely-item" href="'+href+'"'+external+'>'+main+' <span aria-hidden="true">→</span></a>';
     }).join('')+'</div><button class="site-timely-next" type="button" aria-label="Next alert">›</button><span class="site-timely-status sr-only" aria-live="polite"></span>';
     const track=strip.querySelector('.site-timely-track'), slides=[...strip.querySelectorAll('.site-timely-item')];
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -157,10 +192,21 @@
       track.addEventListener('touchend',()=>strip.classList.remove('ticker-paused'),{passive:true});
       track.addEventListener('touchcancel',()=>strip.classList.remove('ticker-paused'),{passive:true});
     }else{
-      slides.forEach((el,i)=>{el.classList.toggle('is-active',i===0);el.setAttribute('aria-hidden',String(i!==0));});
-      strip.querySelector('.site-timely-prev')?.remove();
-      strip.querySelector('.site-timely-next')?.remove();
-      strip.classList.add('site-timely-single');
+      let active=0;
+      const show=index=>{
+        active=(index+slides.length)%slides.length;
+        slides.forEach((el,i)=>{el.classList.toggle('is-active',i===active);el.setAttribute('aria-hidden',String(i!==active));});
+      };
+      show(0);
+      const prev=strip.querySelector('.site-timely-prev'), next=strip.querySelector('.site-timely-next');
+      if(slides.length>1){
+        prev.addEventListener('click',()=>show(active-1));
+        next.addEventListener('click',()=>show(active+1));
+      }else{
+        prev.remove();
+        next.remove();
+        strip.classList.add('site-timely-single');
+      }
     }
     const independent=document.querySelector('.independent');
     if(existing)existing.replaceWith(strip);
