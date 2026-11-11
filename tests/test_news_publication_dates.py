@@ -23,6 +23,18 @@ class NewsPublicationDatesTest(unittest.TestCase):
             with self.subTest(parser=parser.__name__):
                 self.assertEqual(parser(html, 'Record', 'https://www.norwoodrecord.com/news'), [])
 
+    def test_syndicated_contractor_promotion_is_removed_from_retained_news(self):
+        item = {
+            'source': 'Cincinnati Enquirer',
+            'title': 'Evergreen Heating and Cooling Named Top Ductless Contractor Serving Norwood Massachusetts - Cincinnati Enquirer',
+            'url': 'https://news.google.com/rss/articles/contractor-promotion',
+            'date': refresh.now_local().isoformat(),
+        }
+        reporting = dict(item, title='Norwood library heating repairs approved', source='The Norwood Record')
+        self.assertTrue(refresh.news_item_blocked(item))
+        self.assertFalse(refresh.news_item_blocked(reporting))
+        self.assertEqual(refresh.current_news([item, reporting]), [reporting])
+
     def test_realtor_com_content_is_blocked(self):
         items = [
             {'source': 'Realtor.com', 'title': 'Local listing', 'url': 'https://news.google.com/rss/item'},

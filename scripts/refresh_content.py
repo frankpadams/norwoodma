@@ -2637,6 +2637,11 @@ def news_item_blocked(item):
     if host=='realtor.com' or host.endswith('.realtor.com'):
         return True
     title=clean_text(item.get('title')).lower()
+    if re.search(r'\b(?:advertorial|sponsored content|paid advertisement)\b', title):
+        return True
+    # Syndicated contractor rankings are marketing copy, including via Google News.
+    if re.search(r'\b(?:named|ranked|recognized as)\s+(?:a\s+|the\s+)?(?:top|best|leading)\b.{0,80}\b(?:contractor|service provider|hvac company|heating and cooling company)\b', title):
+        return True
     return title.endswith((' - realtor.com',' – realtor.com',' — realtor.com'))
 def meaningful_news_title(title):
     """Reject navigation/accessibility labels accidentally scraped as story headlines."""
@@ -3654,7 +3659,7 @@ def current_news(items):
         if not d:
             continue
         d=d.astimezone(TZ)
-        if cutoff <= d <= latest and meaningful_news_title(x.get('title')) and not news_is_navigation_item(x) and not news_is_obituary(x) and not news_source_blocked(x.get('source')) and not news_is_routine_game_listing(x):
+        if cutoff <= d <= latest and meaningful_news_title(x.get('title')) and not news_is_navigation_item(x) and not news_is_obituary(x) and not news_item_blocked(x) and not news_is_routine_game_listing(x):
             out.append(x)
     return dedupe_news(out)[:120]
 
