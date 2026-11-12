@@ -545,13 +545,17 @@ function openTempleBethDavidDetails(id){
  }).join('');
  dlg.showModal();return true;
 }
+function calendarListings(items, defaultOnly=false){
+ const filtered=window.NORWOOD_CALENDAR_FILTER?.(items,defaultOnly)||[];
+ return window.NorwoodEventAgenda?.deduplicate?.(filtered)||filtered;
+}
 function renderEventsPage(items){
  const host=$('#eventPeriods'); if(!host)return;
  const params=new URLSearchParams(location.search);
  const eventId=params.get('event');
  const calendarKey=params.get('calendar')||'all';
  const q=($('#eventSearch')?.value||'').trim().toLowerCase();
- items=items.filter(e=>eventMatchesCalendar(e,calendarKey)).filter(e=>!q||eventSearchText(e).includes(q));
+ items=calendarListings(items).filter(e=>eventMatchesCalendar(e,calendarKey)).filter(e=>!q||eventSearchText(e).includes(q));
  items=consolidateTempleBethDavid(items);
  if(eventId){
    const e=items.find(x=>String(x.id||'')===eventId);
@@ -612,15 +616,10 @@ function decorateAgendaSharing(items,root){
   detail.querySelectorAll('[data-ics-event]').forEach(btn=>btn.addEventListener('click',()=>downloadEventIcs(e)));
  });
 }
-function isHomeCommunityEvent(e){
- if(e.source_id==='boston-parents-paper-greater-boston')return false;
- if(Array.isArray(e.calendar_ids)&&e.calendar_ids.length)return e.calendar_ids.includes('norwood-community');
- return e.curated_default===true||e.whats_happening_default===true||e.verification_status==='civic_notice';
-}
 function renderHomeEvents(items){
  const host=$('#homeEvents');if(!host)return;
  const today=dateKey(new Date());
- const visible=items.filter(e=>(e.end?.date||e.start?.date||'')>=today);
+ const visible=calendarListings(items,true).filter(e=>(e.end?.date||e.start?.date||'')>=today);
  const ranked=visible.map((e,i)=>({e,i})).sort((a,b)=>{
    const aStart=a.e.start?.date||'',bStart=b.e.start?.date||'';
    const aEnd=a.e.end?.date||aStart,bEnd=b.e.end?.date||bStart;
@@ -739,8 +738,8 @@ function openRecreationProgramDetails(id){
  const notice=r.session_notice||((r.session_based&&!r.drop_in)?'This activity is part of a Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.':'');
  box.innerHTML='<p class="eyebrow">Norwood Recreation</p><h2 id="eventDetailsTitle">'+esc(r.name||r.program)+'</h2>'+(r.program&&r.program!==r.name?'<p><strong>Program:</strong> '+esc(r.program)+'</p>':'')+(range?'<p><strong>Session:</strong> '+esc(range)+'</p>':'')+(times?'<p><strong>Time:</strong> '+esc(times)+'</p>':'')+(r.ages?'<p><strong>Ages:</strong> '+esc(r.ages)+'</p>':'')+(r.venue?'<p><strong>Location:</strong> '+esc(r.venue)+'</p>':'')+(r.fees?'<p><strong>Fee:</strong> '+esc(r.fees)+'</p>':'')+(r.description?'<p>'+esc(r.description)+'</p>':'')+(notice?'<p class="event-session-notice"><strong>Session note:</strong> '+esc(notice)+'</p>':'')+'<div class="event-detail-links">'+(r.guide_url?'<p><a href="'+esc(r.guide_url)+'" target="_blank" rel="noopener">View Recreation Guide ↗</a></p>':'')+(r.registration_url?'<p><a href="'+esc(r.registration_url)+'" target="_blank" rel="noopener">Register / View Program on MyRec ↗</a></p>':'')+'</div>'+eventPopupSharedActions({id:r.id,title:r.name||r.program,start:{date:r.start_date,time:r.start_time},end:{date:r.end_date||r.start_date,time:r.end_time},venue:r.venue,notes:r.description,cost:r.fees,registration_url:r.registration_url,guide_url:r.guide_url},{rec:true});dlg.showModal();
 }
-async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;let items=await loadEvents();items=items.filter(e=>eventHasRealTitle(e)&&eventIsLocalBrewery(e));allEventsForPage=items;const eventId=new URLSearchParams(location.search).get('event');if(eventId&&!$('#eventPeriods'))setTimeout(()=>openEventDetails(eventId),0);const recId=new URLSearchParams(location.search).get('rec');if(recId)setTimeout(()=>openRecreationProgramDetails(recId),0);const listings=window.NorwoodEventAgenda?.deduplicate?.(items)||items;renderEventsPage(listings);if($('#homeEvents')){const homeItems=items.filter(isHomeCommunityEvent);renderHomeEvents(window.NorwoodEventAgenda?.deduplicate?.(homeItems)||homeItems);}
- const runEventSearch=()=>renderEventsPage(window.NORWOOD_CALENDAR_FILTER?window.NORWOOD_CALENDAR_FILTER(allEventsForPage):allEventsForPage); $('#eventSearch')?.addEventListener('input',runEventSearch); $('#eventSearchButton')?.addEventListener('click',runEventSearch); $('#eventSearch')?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();runEventSearch();}});
+async function events(){if(!$('#eventPeriods')&&!$('#homeEvents'))return;let items=await loadEvents();items=items.filter(e=>eventHasRealTitle(e)&&eventIsLocalBrewery(e));allEventsForPage=items;const eventId=new URLSearchParams(location.search).get('event');if(eventId&&!$('#eventPeriods'))setTimeout(()=>openEventDetails(eventId),0);const recId=new URLSearchParams(location.search).get('rec');if(recId)setTimeout(()=>openRecreationProgramDetails(recId),0);renderEventsPage(items);renderHomeEvents(items);
+ const runEventSearch=()=>renderEventsPage(allEventsForPage); $('#eventSearch')?.addEventListener('input',runEventSearch); $('#eventSearchButton')?.addEventListener('click',runEventSearch); $('#eventSearch')?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();runEventSearch();}});
  document.querySelectorAll('[data-event-view]').forEach(b=>b.addEventListener('click',()=>{eventView=b.dataset.eventView;document.querySelectorAll('[data-event-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderEventsPage(allEventsForPage);})); document.addEventListener('click',e=>{const share=e.target.closest('[data-share-event]');if(share){e.preventDefault();if(navigator.share)navigator.share({title:share.dataset.shareTitle,text:share.dataset.shareText||share.dataset.shareTitle,url:share.dataset.shareEvent}).catch(()=>{});else navigator.clipboard?.writeText(share.dataset.shareEvent).then(()=>{const label=share.querySelector('span');if(label)label.textContent='Copied';}).catch(()=>{});return}const copy=e.target.closest('[data-copy-event]');if(copy){e.preventDefault();navigator.clipboard?.writeText(copy.dataset.copyEvent);copy.textContent='Copied';return}const detail=e.target.closest('[data-event-details]');if(detail){e.preventDefault();openEventDetails(detail.dataset.eventDetails);return}const close=e.target.closest('.event-details-close');if(close){$('#eventDetailsDialog')?.close();return}const day=e.target.closest('[data-calendar-date]');if(day){calendarSelected=day.dataset.calendarDate;renderEventsPage(allEventsForPage);return}const step=e.target.closest('[data-month-step]');if(step){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+Number(step.dataset.monthStep),1);calendarSelected=dateKey(calendarCursor);renderEventsPage(allEventsForPage)}});
 }events();
 
