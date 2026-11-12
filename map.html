@@ -116,13 +116,15 @@
 <p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
-<p class="map-layer-section-label">Environment</p>
+<details class="map-layer-more"><summary>Environment</summary>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
-<p class="map-layer-section-label">Property</p>
+</details>
+<details class="map-layer-more"><summary>Property</summary>
 <label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
+</details>
 <input type="checkbox" id="massgisAerial" hidden aria-hidden="true"><select id="massgisAerialYear" hidden aria-hidden="true"><option value="1990s">1990s</option><option value="2023">2023</option><option value="2025">2025</option></select>
 <p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
