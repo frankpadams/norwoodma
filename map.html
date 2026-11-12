@@ -120,7 +120,7 @@
 <label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
-<div id="assessmentMapTools" hidden style="padding:8px"><label for="assessmentMapSearch">Find an address</label><input id="assessmentMapSearch" type="search" placeholder="Street address…" autocomplete="off" style="width:100%;padding:8px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto"></div><small id="assessmentMapStatus">Zoom in to see assessment markers.</small></div>
+
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
 <input type="checkbox" id="massgisAerial" hidden aria-hidden="true"><select id="massgisAerialYear" hidden aria-hidden="true"><option value="1990s">1990s</option><option value="2023">2023</option><option value="2025">2025</option></select>
@@ -170,6 +170,7 @@
   </div>
  </details>
 </div>
+<div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
 <section id="mapOverlayLegends" aria-label="Map overlay legends" hidden style="padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px;margin:10px 0;background:var(--surface,#fff)"><strong>Map legend</strong><div id="mapOverlayLegendItems" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px"></div></section>
 <div class="map-filter-field map-filter-search map-inline-search"><label for="mapSearch">Search places</label><input id="mapSearch" type="search" placeholder="Restaurant, park, library, service…" autocomplete="off"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
@@ -370,8 +371,8 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 </script>
 <script src="map-massgis-layers.js?v=20261112-1937"></script>
 <script src="map-overlay-legends.js?v=20261112"></script>
-<script src="data/assessment-map-records.js?v=20261112"></script>
-<script src="map-assessment-layer.js?v=20261112"></script>
+<script src="data/assessment-map-records.js?v=20261112-1948"></script>
+<script src="map-assessment-layer.js?v=20261112-1948"></script>
 <script>
 (function(){
  const control=document.getElementById('mapBasemapControl');
