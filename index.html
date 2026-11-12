@@ -591,7 +591,8 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
    const agenda=window.NorwoodEventAgenda;
    const today=agenda?.todayKey?.()||new Date().toISOString().slice(0,10);
    const displayDay=e=>e.start.date<today?today:e.start.date;
-   const items=(agenda?.deduplicate?.(arr)||arr).filter(e=>e.title&&e.start?.date&&(e.end?.date||e.start.date)>=today).sort((a,b)=>displayDay(a).localeCompare(displayDay(b))||(agenda?.compare?agenda.compare(a,b):(a.start.time||'99:99').localeCompare(b.start.time||'99:99'))).slice(0,24);
+   const communityEvents=calendarListings(arr.filter(e=>eventHasRealTitle(e)&&eventIsLocalBrewery(e)),true);
+   const items=consolidateTempleBethDavid(communityEvents).filter(e=>e.start?.date&&(e.end?.date||e.start.date)>=today).sort((a,b)=>displayDay(a).localeCompare(displayDay(b))||(agenda?.compare?agenda.compare(a,b):(a.start.time||'99:99').localeCompare(b.start.time||'99:99'))).slice(0,24);
    if(!items.length){ev.innerHTML='<a href="events.html">Browse the community calendar ↗</a>';return;}
    ev.innerHTML=items.map(e=>{
      const url='events.html?event='+encodeURIComponent(e.id||'');
@@ -602,7 +603,7 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
      return '<div class="today-story home-event-row"><span class="home-event-date">'+esc(date(e.start.date+'T12:00:00'))+(range?'<wbr>'+esc(range):'')+'</span><div class="home-event-info"><strong><a href="'+esc(url)+'" data-preview-event="1">'+esc(e.title)+'</a></strong>'+(venue?'<span class="home-event-venue">'+esc(venue)+'</span>':'')+(schedule?'<small>'+esc(schedule)+'</small>':'')+'</div></div>';
    }).join('');
  };
- fetch('data/events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Events unavailable');return r.json()}).then(data=>renderEvents(Array.isArray(data)?data:[])).catch(()=>{ev.innerHTML='<a href="events.html">Open the current community calendar ↗</a>'});
+ loadEvents().then(renderEvents).catch(()=>{ev.innerHTML='<a href="events.html">Open the current community calendar ↗</a>'});
 })();
 </script><script id="preview-live-weather-transit">
 (async function(){
