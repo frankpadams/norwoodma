@@ -46,6 +46,7 @@
    opacity:def.opacity,attribution:'© MassGIS / MassDEP / MHC'
   });
   layer.on('tileerror',()=>{if(enabled.has(id))errorFor(id);});
+  layer.on('load',()=>{if(enabled.has(id)&&!errors.has(id))note(def.label+' loaded from MassGIS. Zoom in further for parcel details.');});
   return layer;
  }
  for(const [id,def] of Object.entries(definitions)){
@@ -56,7 +57,8 @@
    if(input.checked){
     enabled.add(id);
     if(def.minZoom&&map.getZoom()<def.minZoom){
-     note('Zoom in to level '+def.minZoom+' or closer to display property parcels.');
+     note('Zooming in to display property parcel boundaries…');
+     map.setZoom(def.minZoom);
     }else note('Loading '+def.label+' from MassGIS…');
     layers[id] ||= buildWms(id,def);
     if(!def.minZoom||map.getZoom()>=def.minZoom)layers[id].addTo(map);
