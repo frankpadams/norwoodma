@@ -1037,36 +1037,6 @@
     ]
   },
   {
-    "id": "2026-11-11-wednesday-nov-abde9bc",
-    "title": "Wednesday , Nov",
-    "start": {
-      "date": "2026-11-11",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-11",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shorashim-hebrew-learning16.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Wednesday , Nov November 11 , 2026 Shorashim Hebrew Learning Wednesday, Nov 11th 3:45p to 5:45p MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-12-norwood-practical-philosophy-club-9131e40",
     "title": "Norwood Practical Philosophy Club",
     "start": {
@@ -4061,8 +4031,36 @@
     ]
   },
   {
-    "id": "2026-11-14-a-man-named-cash-e4238f6",
-    "title": "A Man Named Cash",
+    "id": "2026-11-14-a-man-named-cash",
+    "title": "A Man Named Cash — Johnny Cash Tribute",
+    "start": {
+      "date": "2026-11-14",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": "109 Central St, Norwood, MA 02062",
+    "category": "performance",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/man-named-cash",
+    "cost": null,
+    "organizer": "Norwood Theatre",
+    "public_access": "ticketed_public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "organizer_verified_2026-10-14",
+    "notes": "Public ticketed performance; see official theatre page for ticket prices and availability.",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-14-cancelled-a-man-named-cash-26f5dca",
+    "title": "CANCELLED: A Man Named Cash",
     "start": {
       "date": "2026-11-14",
       "time": "19:30"
@@ -4086,34 +4084,6 @@
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-14-a-man-named-cash",
-    "title": "A Man Named Cash — Johnny Cash Tribute",
-    "start": {
-      "date": "2026-11-14",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-11-14",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": "109 Central St, Norwood, MA 02062",
-    "category": "performance",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/man-named-cash",
-    "cost": null,
-    "organizer": "Norwood Theatre",
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "organizer_verified_2026-10-14",
-    "notes": "Public ticketed performance; see official theatre page for ticket prices and availability.",
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
@@ -75399,42 +75369,6 @@
     ]
   },
   {
-    "id": "2027-05-17-varsity-baseball-vs-medfield-senior-high-scho-23c7df5",
-    "title": "Varsity baseball vs Medfield Senior High School — Norwood High School",
-    "start": {
-      "date": "2027-05-17",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2027-05-17",
-      "time": "09:00"
-    },
-    "venue": "1168 Washington St, Norwood Massachusetts 02062",
-    "address": "1168 Washington St, Norwood Massachusetts 02062",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Boys Varsity Baseball",
-    "public_access": "public",
-    "series": "Norwood Boys Varsity Baseball",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "school_scope": "Norwood High School",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
     "id": "2027-05-17-9th-baseball-medfield-senior-high-school-91a35c9",
     "title": "9th baseball @ Medfield Senior High School — Norwood High School",
     "start": {
@@ -75562,6 +75496,42 @@
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
     "notes": "Sport: Softball Level: Varsity Team: Norwood High School Site: Cleveland School Subsite: Lower Softball Diamond",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-05-17-varsity-baseball-vs-medfield-senior-high-scho-23c7df5",
+    "title": "Varsity baseball vs Medfield Senior High School — Norwood High School",
+    "start": {
+      "date": "2027-05-17",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-05-17",
+      "time": "21:00"
+    },
+    "venue": "1168 Washington St, Norwood Massachusetts 02062",
+    "address": "1168 Washington St, Norwood Massachusetts 02062",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-baseball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Baseball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Baseball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: baseball Level: Varsity Team: Norwood High School Site: Balch School Field (Norwood) Subsite: Baseball Field",
     "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",

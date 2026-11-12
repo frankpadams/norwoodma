@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-11T13:03:33.241375-05:00",
+  "generated_at": "2026-11-11T19:57:06.641877-05:00",
   "offline": false,
-  "events_published": 2182,
+  "events_published": 2181,
   "news_published": 120,
   "civic_notices": 59,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2182,
-      "generated_at": "2026-11-11T13:03:32.854682-05:00"
+      "events": 2181,
+      "generated_at": "2026-11-11T19:57:06.172024-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 111,
-      "generated_at": "2026-11-11T13:03:32.866867-05:00"
+      "generated_at": "2026-11-11T19:57:06.181043-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 822,
-      "generated_at": "2026-11-11T13:03:32.891511-05:00"
+      "generated_at": "2026-11-11T19:57:06.198926-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 725,
-      "generated_at": "2026-11-11T13:03:32.912212-05:00"
+      "generated_at": "2026-11-11T19:57:06.213633-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 2,
-      "generated_at": "2026-11-11T13:03:32.923545-05:00"
+      "generated_at": "2026-11-11T19:57:06.221478-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 61,
-      "generated_at": "2026-11-11T13:03:32.936403-05:00"
+      "generated_at": "2026-11-11T19:57:06.230713-05:00"
     }
   ],
   "recreation_programs": 133,
@@ -151,7 +151,7 @@
       "source_id": "faith-temple-beth-david-westwood",
       "ok": true,
       "method": "html_calendar",
-      "found": 11,
+      "found": 10,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -406,7 +406,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -770,7 +770,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -851,7 +851,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1633,7 +1633,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 25,
+      "found": 26,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
