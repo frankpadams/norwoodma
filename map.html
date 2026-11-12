@@ -160,7 +160,16 @@
 </nav>
 </aside><div class="map-main-column"><div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of Norwood locations"></div>
-<div class="map-filter-field" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px"><label for="mapBasemapChoice"><strong>Map background</strong></label><select id="mapBasemapChoice" aria-label="Map background"><option value="street">Street map</option><option value="esri">Satellite imagery (Esri)</option><option value="2025">MassGIS aerial (2025)</option><option value="1990s">Historical aerial — 1990s</option><option value="2023">Historical aerial — 2023</option></select><small id="mapBasemapStatus" aria-live="polite">Choose the map background; overlays remain visible.</small></div>
+<div id="mapBasemapControl" style="position:absolute;top:12px;right:12px;z-index:800;max-width:210px;font-size:13px">
+ <details style="background:#fff;border:1px solid #c9d4de;border-radius:7px;box-shadow:0 2px 9px #0002">
+  <summary aria-label="Change map background" style="cursor:pointer;list-style:none;display:flex;align-items:center;gap:7px;padding:8px 10px;font-weight:600"><span aria-hidden="true">▧</span> Layers <span aria-hidden="true" style="font-size:10px">▾</span></summary>
+  <div style="padding:4px 10px 10px;border-top:1px solid #e4e9ed">
+   <label for="mapBasemapChoice" style="display:block;margin:5px 0">Map background</label>
+   <select id="mapBasemapChoice" aria-label="Map background" style="width:100%;max-width:185px;font-size:13px"><option value="street">Street map</option><option value="esri">Satellite imagery (Esri)</option><option value="2025">MassGIS aerial (2025)</option><option value="1990s">Historical aerial — 1990s</option><option value="2023">Historical aerial — 2023</option></select>
+   <small id="mapBasemapStatus" aria-live="polite" style="display:block;margin-top:6px;line-height:1.3">Street map</small>
+  </div>
+ </details>
+</div>
 <section id="mapOverlayLegends" aria-label="Map overlay legends" hidden style="padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px;margin:10px 0;background:var(--surface,#fff)"><strong>Map legend</strong><div id="mapOverlayLegendItems" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px"></div></section>
 <div class="map-filter-field map-filter-search map-inline-search"><label for="mapSearch">Search places</label><input id="mapSearch" type="search" placeholder="Restaurant, park, library, service…" autocomplete="off"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
@@ -361,5 +370,16 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 </script>
 <script src="map-massgis-layers.js?v=20261112-1937"></script>
 <script src="map-overlay-legends.js?v=20261112"></script>
+<script>
+(function(){
+ const control=document.getElementById('mapBasemapControl');
+ const map=document.getElementById('prototypeMap');
+ if(!control||!map)return;
+ map.style.position='relative';
+ map.appendChild(control);
+ L.DomEvent.disableClickPropagation(control);
+ L.DomEvent.disableScrollPropagation(control);
+})();
+</script>
 </body>
 </html>
