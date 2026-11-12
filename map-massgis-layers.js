@@ -150,18 +150,46 @@
   popup.setContent(html);
  });
  const aerialToggle=document.getElementById('massgisAerial');
- let aerial;
- function updateAerial(){
-  if(aerial)map.removeLayer(aerial);
-  aerial=null;
-  if(!aerialToggle.checked){enabled.delete('massgisAerial');note('Historical aerial imagery hidden.');return;}
-  enabled.add('massgisAerial');errors.delete('massgisAerial');
-  aerial=aerialLayer();
-  aerial.on('tileerror',()=>{if(enabled.has('massgisAerial'))errorFor('massgisAerial');});
-  aerial.addTo(map);
-  aerial.bringToBack();
-  note('Loading '+aerialYear.value+' MassGIS aerial imagery. Map features remain above the imagery.');
+ const basemapChoice=document.getElementById('mapBasemapChoice');
+ const basemapStatus=document.getElementById('mapBasemapStatus');
+ const street=window.norwoodTrailBasemap;
+ let imagery=null;
+ const aerialLabels={'1990s':'1990s historical aerial','2023':'2023 aerial','2025':'2025 satellite / aerial'};
+ function setBackground(value){
+  if(imagery){map.removeLayer(imagery);imagery=null;}
+  if(value==='street'){
+   if(street&&!map.hasLayer(street))street.addTo(map);
+   if(basemapStatus)basemapStatus.textContent='Street map';
+   return;
+  }
+  // Remove the opaque street tiles: otherwise aerial images are hidden underneath.
+  if(street&&map.hasLayer(street))map.removeLayer(street);
+  aerialYear.value=value;
+  imagery=aerialLayer();
+  imagery.on('tileerror',()=>{if(basemapStatus)basemapStatus.textContent='Aerial tiles failed to load. Try another year or street map.';});
+  imagery.addTo(map);
+  imagery.bringToBack();
+  if(basemapStatus)basemapStatus.textContent='Loading '+aerialLabels[value]+' from MassGIS…';
  }
- aerialToggle?.addEventListener('change',updateAerial);
- aerialYear?.addEventListener('change',()=>{if(aerialToggle.checked)updateAerial();});
+ function syncAerialControl(){
+  if(!basemapChoice)return;
+  const value=basemapChoice.value;
+  if(aerialToggle)aerialToggle.checked=value==='1990s'||value==='2023';
+  if(value==='1990s'||value==='2023')aerialYear.value=value;
+  setBackground(value);
+  document.dispatchEvent(new Event('change',{bubbles:false}));
+ }
+ basemapChoice?.addEventListener('change',syncAerialControl);
+ aerialToggle?.addEventListener('change',()=>{
+  if(!basemapChoice)return;
+  basemapChoice.value=aerialToggle.checked?aerialYear.value:'street';
+  setBackground(basemapChoice.value);
+ });
+ aerialYear?.addEventListener('change',()=>{
+  if(!basemapChoice)return;
+  if(aerialToggle?.checked){
+   basemapChoice.value=aerialYear.value;
+   setBackground(basemapChoice.value);
+  }
+ });
 })();
