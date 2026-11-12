@@ -15,7 +15,6 @@
   massgisWetlands:{label:'Wetlands & waterways',layers:'massgis:GISDATA.WETLANDSDEP_POLY,massgis:GISDATA.MAJPOND_POLY,massgis:GISDATA.MAJSTRM_ARC',opacity:.62},
   massgisOpenSpace:{label:'Conservation & open space',layers:'massgis:GISDATA.OPENSPACE_POLY',opacity:.62},
   massgisTreeCanopy:{label:'Tree canopy & land cover (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',opacity:.76,minZoom:11},
-  massgisTreeCanopy:{label:'Tree canopy (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',filter:'COVERCODE IN (9,10,13,16)',opacity:.72,minZoom:13},
   massgisParcels:{label:'Property parcels',layers:'massgis:GISDATA.L3_TAXPAR_POLY',opacity:.77,minZoom:15},
   massgisHistoric:{label:'Historic inventory',layers:'massgis:GISDATA.MHCINV_POLY,massgis:GISDATA.MHCINV_PT',opacity:.8},
   massgisWater:{label:'Drinking-water protection',layers:'massgis:GISDATA.ZONE2_POLY,massgis:GISDATA.IWPA_POLY,massgis:GISDATA.SWP_ZONES_POLY',opacity:.56}
