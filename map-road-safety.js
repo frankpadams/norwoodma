@@ -43,3 +43,28 @@
   finally{loading=false;}
  });
 })();
+
+/* MassDOT traffic count survey locations; historical observations, not live traffic. */
+(()=>{
+ const map=window.norwoodTrailMap,toggle=document.getElementById('roadSafetyCounts'),status=document.getElementById('roadSafetyStatus');
+ if(!map||!toggle||!window.L)return;
+ const layer=L.layerGroup();let loaded=false,busy=false;
+ const clean=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&quot;',"'":'&#39;'}[c]));
+ toggle.addEventListener('change',async()=>{
+  if(!toggle.checked){map.removeLayer(layer);return;}
+  layer.addTo(map);if(loaded||busy)return;busy=true;status.textContent='Loading MassDOT traffic count locations…';
+  try{
+   const base='https://gisdev.massdot.state.ma.us/arcgis/rest/services/Traffic_Request_Portal/Traffic_Count_Locations/FeatureServer/0/query';
+   const p=new URLSearchParams({where:"UPPER(Town) = 'NORWOOD'",outFields:'Project_Title,Year,Volume,Speed,Class,Project_Num',returnGeometry:'true',outSR:'4326',f:'geojson',resultRecordCount:'2000'});
+   const response=await fetch(base+'?'+p);if(!response.ok)throw Error('HTTP '+response.status);
+   const data=await response.json();if(data.error)throw Error(data.error.message);
+   for(const feature of data.features||[]){const coords=feature.geometry?.coordinates;if(feature.geometry?.type!=='Point'||!coords)continue;
+    const [lng,lat]=coords;if(!Number.isFinite(lat)||!Number.isFinite(lng)||lat<42.12||lat>42.26||lng< -71.30||lng> -71.10)continue;
+    const a=feature.properties||{};const lines=['<strong>Traffic count survey</strong>',clean(a.Project_Title||'MassDOT count location'),a.Year?'Year: '+clean(a.Year):'',a.Volume?'Volume: '+clean(a.Volume):'',a.Speed?'Speed: '+clean(a.Speed):''].filter(Boolean);
+    L.circleMarker([lat,lng],{radius:6,color:'#fff',weight:1.5,fillColor:'#7542a2',fillOpacity:.9}).bindPopup(lines.join('<div>')+'<small>Source: MassDOT traffic count locations; not live traffic.</small>').addTo(layer);
+   }
+   loaded=true;status.textContent='MassDOT traffic count survey locations: '+layer.getLayers().length+' mapped. Data are historical and not live traffic.';
+  }catch(e){console.warn('Traffic count layer',e);status.textContent='MassDOT traffic count locations could not load. Please try again later.';}
+  finally{busy=false;}
+ });
+})();
