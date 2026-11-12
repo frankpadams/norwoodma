@@ -14,6 +14,7 @@
  const definitions={
   massgisWetlands:{label:'Wetlands & waterways',layers:'massgis:GISDATA.WETLANDSDEP_POLY,massgis:GISDATA.MAJPOND_POLY,massgis:GISDATA.MAJSTRM_ARC',opacity:.62},
   massgisOpenSpace:{label:'Conservation & open space',layers:'massgis:GISDATA.OPENSPACE_POLY',opacity:.62},
+  massgisTreeCanopy:{label:'Tree canopy (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',filter:'COVERCODE IN (9,10,13,16)',opacity:.7,minZoom:13},
   massgisTreeCanopy:{label:'Tree canopy (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',filter:'COVERCODE IN (9,10,13,16)',opacity:.72,minZoom:13},
   massgisParcels:{label:'Property parcels',layers:'massgis:GISDATA.L3_TAXPAR_POLY',opacity:.77,minZoom:15},
   massgisHistoric:{label:'Historic inventory',layers:'massgis:GISDATA.MHCINV_POLY,massgis:GISDATA.MHCINV_PT',opacity:.8},
@@ -92,6 +93,7 @@
   massgisWetlands:'Wetlands & waterways',
   massgisOpenSpace:'Conservation & open space',
   massgisTreeCanopy:'Tree canopy (2016)',
+  massgisTreeCanopy:'Tree canopy (2016)',
   massgisParcels:'Property parcels',
   massgisHistoric:'Historic buildings & districts',
   massgisWater:'Drinking-water protection'
@@ -100,6 +102,7 @@
   massgisHistoric:['https://mhc-macris.net/','Official MACRIS inventory'],
   massgisWetlands:['https://www.mass.gov/info-details/massgis-data-massdep-wetlands-2005','MassDEP wetlands data'],
   massgisOpenSpace:['https://www.mass.gov/info-details/massgis-data-protected-and-recreational-openspace','MassGIS open space data'],
+  massgisTreeCanopy:['https://www.mass.gov/info-details/massgis-data-2016-land-coverland-use','MassGIS 2016 land cover data'],
   massgisTreeCanopy:['https://www.mass.gov/info-details/massgis-data-2016-land-coverland-use','MassGIS 2016 land cover data'],
   massgisParcels:['https://www.mass.gov/info-details/massgis-data-property-tax-parcels','MassGIS parcel data'],
   massgisWater:['https://www.mass.gov/info-details/massgis-data-layers','MassGIS source data']
