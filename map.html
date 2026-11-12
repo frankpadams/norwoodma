@@ -135,6 +135,7 @@
 <details class="map-layer-more"><summary>Environment</summary>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisTreeCanopy"><span>Tree canopy (2016)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
 </details>
 <details class="map-layer-more"><summary>Property</summary>
@@ -382,7 +383,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  });
 })();
 </script>
-<script src="map-massgis-layers.js?v=20261112-parcel-tiles"></script>
+<script src="map-massgis-layers.js?v=20261112-canopy-v1"></script>
 <script src="map-overlay-legends.js?v=20261112"></script>
 <script src="data/assessment-map-records.js?v=20261112-1948"></script>
 <script src="map-assessment-layer.js?v=20261112-1948"></script>
@@ -409,7 +410,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   {ids:['femaFloodToggle'],status:'femaFloodStatus',title:'FEMA flood hazard zones'},
   {ids:['elementaryZones'],status:'schoolZoneStatus',title:'Elementary school districts'},
   {ids:['townBoundary','votingPrecincts'],status:'boundaryStatus',title:'Town boundaries and voting precincts'},
-  {ids:['massgisWetlands','massgisOpenSpace','massgisWater','massgisParcels','massgisHistoric','assessmentCardsToggle'],status:'massgisStatus',title:'MassGIS and property reference layers'},
+  {ids:['massgisWetlands','massgisOpenSpace','massgisWater','massgisTreeCanopy','massgisParcels','massgisHistoric','assessmentCardsToggle'],status:'massgisStatus',title:'MassGIS and property reference layers'},
   {ids:['alprToggle'],status:'alprStatus',title:'ALPR cameras'},
   {ids:['workZoneToggle'],status:'workZoneStatus',title:'Work zones'},
   {ids:['mbtaToggle'],status:'mbtaStatus',title:'Live MBTA transit'}
