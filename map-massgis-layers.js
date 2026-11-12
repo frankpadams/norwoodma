@@ -14,7 +14,7 @@
  const definitions={
   massgisWetlands:{label:'Wetlands & waterways',layers:'massgis:GISDATA.WETLANDSDEP_POLY,massgis:GISDATA.MAJPOND_POLY,massgis:GISDATA.MAJSTRM_ARC',opacity:.62},
   massgisOpenSpace:{label:'Conservation & open space',layers:'massgis:GISDATA.OPENSPACE_POLY',opacity:.62},
-  massgisTreeCanopy:{label:'Tree canopy (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',filter:'COVERCODE IN (9,10,13,16)',opacity:.7,minZoom:13},
+  massgisTreeCanopy:{label:'Tree canopy & land cover (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',opacity:.76,minZoom:11},
   massgisTreeCanopy:{label:'Tree canopy (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',filter:'COVERCODE IN (9,10,13,16)',opacity:.72,minZoom:13},
   massgisParcels:{label:'Property parcels',layers:'massgis:GISDATA.L3_TAXPAR_POLY',opacity:.77,minZoom:15},
   massgisHistoric:{label:'Historic inventory',layers:'massgis:GISDATA.MHCINV_POLY,massgis:GISDATA.MHCINV_PT',opacity:.8},
@@ -45,6 +45,13 @@
  function buildWms(id,def){
   // MassGIS publishes parcels as a dedicated cached tile service (zoom levels 15–20).
   // Use it rather than the generic GeoServer WMS, which can render blank parcels.
+  if(id==='massgisTreeCanopy'){
+   // Official cached MassGIS 2016 land-cover map; tree classes are colored green.
+   const tile=L.tileLayer('https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/LandCoverLandUse2016/MapServer/tile/{z}/{y}/{x}',{minNativeZoom:11,maxNativeZoom:19,maxZoom:22,opacity:.76,attribution:'2016 land cover © MassGIS / NOAA'});
+   tile.on('tileerror',()=>{if(enabled.has(id))errorFor(id);});
+   tile.on('load',()=>{if(enabled.has(id)&&!errors.has(id))note('2016 land cover loaded. Forested areas are shown in green; this map also shows other land-cover classes.');});
+   return tile;
+  }
   if(id==='massgisParcels'){
    const url='https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/MassGIS_Level3_Parcels/MapServer/tile/{z}/{y}/{x}';
    const parcelLayer=L.tileLayer(url,{minZoom:15,maxNativeZoom:20,maxZoom:22,opacity:1,attribution:'Parcel boundaries © MassGIS'});
