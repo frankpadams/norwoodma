@@ -14,6 +14,7 @@
  const definitions={
   massgisWetlands:{label:'Wetlands & waterways',layers:'massgis:GISDATA.WETLANDSDEP_POLY,massgis:GISDATA.MAJPOND_POLY,massgis:GISDATA.MAJSTRM_ARC',opacity:.62},
   massgisOpenSpace:{label:'Conservation & open space',layers:'massgis:GISDATA.OPENSPACE_POLY',opacity:.62},
+  massgisTreeCanopy:{label:'Tree canopy (2016)',layers:'massgis:GISDATA.LANDCOVER_LANDUSE_POLY',filter:'COVERCODE IN (9,10,13,16)',opacity:.72,minZoom:13},
   massgisParcels:{label:'Property parcels',layers:'massgis:GISDATA.L3_TAXPAR_POLY',opacity:.77,minZoom:15},
   massgisHistoric:{label:'Historic inventory',layers:'massgis:GISDATA.MHCINV_POLY,massgis:GISDATA.MHCINV_PT',opacity:.8},
   massgisWater:{label:'Drinking-water protection',layers:'massgis:GISDATA.ZONE2_POLY,massgis:GISDATA.IWPA_POLY,massgis:GISDATA.SWP_ZONES_POLY',opacity:.56}
@@ -52,7 +53,7 @@
   }
   const layer=L.tileLayer.wms(wms,{
    layers:def.layers,format:'image/png',transparent:true,version:'1.1.1',
-   opacity:def.opacity,attribution:'© MassGIS / MassDEP / MHC'
+   opacity:def.opacity, ...(def.filter?{CQL_FILTER:def.filter}:{}),attribution:'© MassGIS / MassDEP / MHC'
   });
   layer.on('tileerror',()=>{if(enabled.has(id))errorFor(id);});
   layer.on('load',()=>{if(enabled.has(id)&&!errors.has(id))note(def.label+' loaded from MassGIS. Zoom in further for parcel details.');});
@@ -66,8 +67,8 @@
    if(input.checked){
     enabled.add(id);
     if(def.minZoom&&map.getZoom()<def.minZoom){
-     note('Zooming in to display property parcel boundaries…');
-     map.setZoom(def.minZoom);
+     note('Zoom in to level '+def.minZoom+' to view '+def.label+'.');
+     if(id==='massgisParcels')map.setZoom(def.minZoom);
     }else note('Loading '+def.label+' from MassGIS…');
     layers[id] ||= buildWms(id,def);
     if(!def.minZoom||map.getZoom()>=def.minZoom)layers[id].addTo(map);
@@ -79,13 +80,10 @@
   });
  }
  map.on('zoomend',()=>{
-  const id='massgisParcels',layer=layers[id];
-  if(!layer||!enabled.has(id))return;
-  if(map.getZoom()>=definitions[id].minZoom){
-   if(!map.hasLayer(layer)){layer.addTo(map);note('Loading parcel boundaries…');}
-  }else{
-   if(map.hasLayer(layer))map.removeLayer(layer);
-   note('Zoom in to level 15 or closer to display property parcels.');
+  for(const id of ['massgisParcels','massgisTreeCanopy']){
+   const layer=layers[id];if(!layer||!enabled.has(id))continue;
+   if(map.getZoom()>=definitions[id].minZoom){if(!map.hasLayer(layer)){layer.addTo(map);note('Loading '+definitions[id].label+'…');}}
+   else{if(map.hasLayer(layer))map.removeLayer(layer);note('Zoom in to level '+definitions[id].minZoom+' to view '+definitions[id].label+'.');}
   }
  });
  // Explain every active thematic layer on click using the government's own feature attributes.
@@ -93,6 +91,7 @@
  const labels={
   massgisWetlands:'Wetlands & waterways',
   massgisOpenSpace:'Conservation & open space',
+  massgisTreeCanopy:'Tree canopy (2016)',
   massgisParcels:'Property parcels',
   massgisHistoric:'Historic buildings & districts',
   massgisWater:'Drinking-water protection'
@@ -101,6 +100,7 @@
   massgisHistoric:['https://mhc-macris.net/','Official MACRIS inventory'],
   massgisWetlands:['https://www.mass.gov/info-details/massgis-data-massdep-wetlands-2005','MassDEP wetlands data'],
   massgisOpenSpace:['https://www.mass.gov/info-details/massgis-data-protected-and-recreational-openspace','MassGIS open space data'],
+  massgisTreeCanopy:['https://www.mass.gov/info-details/massgis-data-2016-land-coverland-use','MassGIS 2016 land cover data'],
   massgisParcels:['https://www.mass.gov/info-details/massgis-data-property-tax-parcels','MassGIS parcel data'],
   massgisWater:['https://www.mass.gov/info-details/massgis-data-layers','MassGIS source data']
  };
