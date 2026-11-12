@@ -122,6 +122,12 @@
 <p class="map-layer-section-label">Layers</p>
 <p>Choose layers to load locations. Select more than one category to compare.</p>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
+<dialog id="gasPricesInfoDialog" aria-labelledby="gasPricesInfoTitle" style="max-width:min(520px,calc(100vw - 32px));border:1px solid #cbd6df;border-radius:10px;padding:22px;box-shadow:0 16px 50px #0003">
+<h2 id="gasPricesInfoTitle" style="margin:0 0 10px;font-size:1.15rem">About Gas Prices</h2>
+<p>Station listings and reported fuel prices are compiled from third-party sources, including Google Places fuel-price reports and, where available, official station or retailer pages (such as Costco). Reports are not live pump readings. They may be delayed, incomplete, incorrect, or out of date.</p>
+<p>Prices can differ by fuel grade, cash or credit payment, membership, and loyalty discounts. Check the date of each report on the <a href="gas-prices.html">Gas Prices page</a>, and always confirm the posted price and conditions directly with the station before buying fuel. Norwood.ma does not guarantee prices.</p>
+<form method="dialog" style="text-align:right"><button type="submit" style="padding:7px 16px;cursor:pointer">Close</button></form>
+</dialog>
 <div class="map-layer-choice-help">
 <label for="alprToggle"><input type="checkbox" id="alprToggle"><span>ALPR cameras</span></label>
 <button type="button" class="map-overlay-help" id="alprHelp" aria-label="What are ALPR cameras?" aria-controls="alprHelpText" aria-expanded="false">i</button>
@@ -263,7 +269,15 @@ for(const option of select.options){if(['park','athletic'].includes(option.value
  button('health','All health & support',group);
  for(const [type,label] of Object.entries(window.norwoodHealthTypes||{}))button('care:'+type,label,group);
  document.getElementById('mapCategoryGroups').append(group);
-}else if(option.value==='gas')button('gas','Gas Prices',root);else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
+}else if(option.value==='gas'){
+ button('gas','Gas Prices',root);
+ const row=root.querySelector('.map-layer-choice[data-category="gas"]');
+ if(row){
+  const info=document.createElement('button');info.type='button';info.className='map-overlay-help';info.textContent='i';info.setAttribute('aria-label','About gas price information');info.setAttribute('aria-haspopup','dialog');info.title='About gas price information';
+  info.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();document.getElementById('gasPricesInfoDialog')?.showModal();});
+  row.after(info);
+ }
+}else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
 sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.detail?.categories||[]).forEach(x=>active.add(x));sync()});
 })();
 </script>
