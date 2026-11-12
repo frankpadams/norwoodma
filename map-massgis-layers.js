@@ -174,8 +174,8 @@
  function syncAerialControl(){
   if(!basemapChoice)return;
   const value=basemapChoice.value;
-  if(aerialToggle)aerialToggle.checked=value==='1990s'||value==='2023';
-  if(value==='1990s'||value==='2023')aerialYear.value=value;
+  if(aerialToggle)aerialToggle.checked=value!=='street';
+  if(value!=='street')aerialYear.value=value;
   setBackground(value);
   document.dispatchEvent(new Event('change',{bubbles:false}));
  }
