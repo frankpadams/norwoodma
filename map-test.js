@@ -537,7 +537,7 @@ alprHelp?.addEventListener('click',()=>{
  const open=alprHelp.getAttribute('aria-expanded')==='true';
  alprHelp.setAttribute('aria-expanded',String(!open));
 });
-document.querySelector('#locateMe').addEventListener('click',()=>{
+document.querySelector('#locateMe')?.addEventListener('click',()=>{
  if(!navigator.geolocation){alert('Location is not available in this browser.');return}
  navigator.geolocation.getCurrentPosition(pos=>{
   const ll=[pos.coords.latitude,pos.coords.longitude];
