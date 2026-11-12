@@ -96,20 +96,7 @@
 
 </div>
 <div class="map-workspace"><aside class="map-layer-sidebar" aria-label="Map layers and related links">
-<h2>Map layers</h2>
-<p>Choose layers to load locations. Select more than one category to compare.</p>
-<div id="mapLayerChoices" class="map-layer-choices"></div>
-<div class="map-layer-choice-help">
-<label for="alprToggle"><input type="checkbox" id="alprToggle"><span>ALPR cameras</span></label>
-<button type="button" class="map-overlay-help" id="alprHelp" aria-label="What are ALPR cameras?" aria-controls="alprHelpText" aria-expanded="false">i</button>
-<span id="alprHelpText" class="map-overlay-tooltip" role="tooltip">Automated license plate readers (AI-enabled surveillance devices)</span>
-</div>
-<label class="map-layer-choice"><input type="checkbox" id="workZoneToggle"><span>Work zones</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
-<details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div><p><a href="trails.html">Explore all Norwood trails and maps →</a></p></details>
-<details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
-<div id="mapCategoryGroups"></div>
-<p class="map-layer-section-label">Boundaries &amp; districts</p>
+<h2>Boundaries &amp; districts</h2>
 <label class="map-layer-choice"><input type="checkbox" id="townBoundary" checked><span>Town outline</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="elementaryZones"><span>Elementary school districts</span></label>
@@ -117,17 +104,6 @@
 <p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
-<details class="map-layer-more"><summary>Environment</summary>
-<label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
-</details>
-<details class="map-layer-more"><summary>Property</summary>
-<label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
-</details>
-<input type="checkbox" id="massgisAerial" hidden aria-hidden="true"><select id="massgisAerialYear" hidden aria-hidden="true"><option value="1990s">1990s</option><option value="2023">2023</option><option value="2025">2025</option></select>
-<p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
 <p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p>
 <label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle" disabled><span>Base zoning districts (boundary data pending)</span></label>
@@ -143,6 +119,30 @@
 </details>
 
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
+<h2>Layers</h2>
+<p>Choose layers to load locations. Select more than one category to compare.</p>
+<div id="mapLayerChoices" class="map-layer-choices"></div>
+<div class="map-layer-choice-help">
+<label for="alprToggle"><input type="checkbox" id="alprToggle"><span>ALPR cameras</span></label>
+<button type="button" class="map-overlay-help" id="alprHelp" aria-label="What are ALPR cameras?" aria-controls="alprHelpText" aria-expanded="false">i</button>
+<span id="alprHelpText" class="map-overlay-tooltip" role="tooltip">Automated license plate readers (AI-enabled surveillance devices)</span>
+</div>
+<label class="map-layer-choice"><input type="checkbox" id="workZoneToggle"><span>Work zones</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
+<details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div><p><a href="trails.html">Explore all Norwood trails and maps →</a></p></details>
+<details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
+<div id="mapCategoryGroups"></div>
+<details class="map-layer-more"><summary>Environment</summary>
+<label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
+</details>
+<details class="map-layer-more"><summary>Property</summary>
+<label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
+</details>
+<input type="checkbox" id="massgisAerial" hidden aria-hidden="true"><select id="massgisAerialYear" hidden aria-hidden="true"><option value="1990s">1990s</option><option value="2023">2023</option><option value="2025">2025</option></select>
+<p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
 <div class="map-layer-statuses">
 
 <p id="alprStatus" class="map-layer-status" aria-live="polite">Community-mapped camera locations from DeFlock / OpenStreetMap. Coverage may be incomplete.</p>
