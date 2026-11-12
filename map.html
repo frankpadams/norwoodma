@@ -111,6 +111,8 @@
 <label class="map-layer-choice"><input type="checkbox" id="townBoundary" checked><span>Town outline</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="elementaryZones"><span>Elementary school districts</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="femaFloodToggle"><span>FEMA flood hazard zones</span></label>
+<p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
 <p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p>
@@ -258,6 +260,35 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
    if(toggle.checked){zones.addTo(map);status.textContent='2026–27 K–4 attendance areas · Norwood Public Schools.'}
    else map.removeLayer(zones);
   }catch{if(toggle.checked){toggle.checked=false;status.textContent='Districts could not load. Use the elementary school assignment lookup below.'}}
+ });
+})();
+</script>
+<script>
+(()=>{
+ const toggle=document.getElementById('femaFloodToggle');
+ const status=document.getElementById('femaFloodStatus');
+ const map=window.norwoodTrailMap;
+ if(!toggle||!status||!map||!window.L||!L.esri && !L.tileLayer)return;
+ // FEMA's public National Flood Hazard Layer: flood hazard zones are layer 28.
+ const endpoint='https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer';
+ const flood=L.tileLayer.wms('https://hazards.fema.gov/arcgis/services/public/NFHLWMS/MapServer/WMSServer',{
+  layers:'28',format:'image/png',transparent:true,opacity:0.65,version:'1.3.0',
+  attribution:'Flood hazard zones: FEMA National Flood Hazard Layer'
+ });
+ let failed=false;
+ flood.on('tileerror',()=>{
+  if(!toggle.checked||failed)return;
+  failed=true;status.innerHTML='FEMA map tiles could not load. Check the <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">official FEMA Flood Map Service Center</a>.';
+ });
+ toggle.addEventListener('change',()=>{
+  failed=false;
+  if(toggle.checked){
+   flood.addTo(map);
+   status.innerHTML='Showing FEMA effective flood hazard zones (zoom in for detail). This is not a property-specific flood determination. Verify with the <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">FEMA Flood Map Service Center</a>.';
+  }else{
+   map.removeLayer(flood);
+   status.textContent='Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.';
+  }
  });
 })();
 </script>
