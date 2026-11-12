@@ -77,60 +77,78 @@
    note('Zoom in to level 15 or closer to display property parcels.');
   }
  });
- // Query the official WMS at the clicked location, rather than treating the historic markers as decorative.
- let historicRequest=0;
+ // Explain every active thematic layer on click using the government's own feature attributes.
  const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- async function historicFeatureInfo(e){
-  if(!enabled.has('massgisHistoric'))return;
-  const request=++historicRequest;
-  const point=map.latLngToContainerPoint(e.latlng),size=map.getSize(),b=map.getBounds();
-  const bbox=[b.getWest(),b.getSouth(),b.getEast(),b.getNorth()].join(',');
-  const layerNames=definitions.massgisHistoric.layers;
-  const query=new URLSearchParams({
+ const labels={
+  massgisWetlands:'Wetlands & waterways',
+  massgisOpenSpace:'Conservation & open space',
+  massgisParcels:'Property parcels',
+  massgisHistoric:'Historic buildings & districts',
+  massgisWater:'Drinking-water protection'
+ };
+ const sourceLinks={
+  massgisHistoric:['https://mhc-macris.net/','Official MACRIS inventory'],
+  massgisWetlands:['https://www.mass.gov/info-details/massgis-data-massdep-wetlands-2005','MassDEP wetlands data'],
+  massgisOpenSpace:['https://www.mass.gov/info-details/massgis-data-protected-and-recreational-openspace','MassGIS open space data'],
+  massgisParcels:['https://www.mass.gov/info-details/massgis-data-property-tax-parcels','MassGIS parcel data'],
+  massgisWater:['https://www.mass.gov/info-details/massgis-data-layers','MassGIS source data']
+ };
+ const priority=['massgisHistoric','massgisWetlands','massgisOpenSpace','massgisWater','massgisParcels'];
+ let lookupSerial=0;
+ async function queryLayer(id,latlng){
+  const point=map.latLngToContainerPoint(latlng),size=map.getSize(),b=map.getBounds();
+  const names=definitions[id].layers;
+  const q=new URLSearchParams({
    SERVICE:'WMS',VERSION:'1.1.1',REQUEST:'GetFeatureInfo',SRS:'EPSG:4326',
-   BBOX:bbox,WIDTH:String(Math.round(size.x)),HEIGHT:String(Math.round(size.y)),
+   BBOX:[b.getWest(),b.getSouth(),b.getEast(),b.getNorth()].join(','),
+   WIDTH:String(Math.round(size.x)),HEIGHT:String(Math.round(size.y)),
    X:String(Math.round(point.x)),Y:String(Math.round(point.y)),
-   LAYERS:layerNames,QUERY_LAYERS:layerNames,STYLES:'',
-   INFO_FORMAT:'application/json',FEATURE_COUNT:'5',BUFFER:'8',RADIUS:'8'
+   LAYERS:names,QUERY_LAYERS:names,STYLES:'',INFO_FORMAT:'application/json',
+   FEATURE_COUNT:'4',BUFFER:'8'
   });
-  const popup=L.popup().setLatLng(e.latlng).setContent('Looking up historic inventory details…').openOn(map);
-  try{
-   const response=await fetch(wms+'?'+query.toString(),{mode:'cors'});
-   if(!response.ok)throw Error('Service error '+response.status);
-   const data=await response.json();
-   if(request!==historicRequest||!enabled.has('massgisHistoric'))return;
-   const features=data.features||[];
-   if(!features.length){
-    popup.setContent('<strong>Historic inventory</strong><p>No inventory record was returned at this location. Try clicking closer to a marker.</p><a target="_blank" rel="noopener" href="https://mhc-macris.net/">Search the official MACRIS inventory ↗</a>');
-    return;
-   }
-   const blocks=features.slice(0,5).map(feature=>{
-    const p=feature.properties||{};
-    const field=(...names)=>{for(const name of names){const key=Object.keys(p).find(k=>k.toLowerCase()===name.toLowerCase());if(key&&p[key]!=null&&String(p[key]).trim())return String(p[key]);}return '';};
-    const name=field('historic_name','resource_name','name','property_name','histname','site_name','inv_name','building_name')||'Historic inventory record';
-    const address=field('address','street_address','street','location','addr','streetname');
-    const town=field('town','municipality','city');
-    const inventory=field('mhc_id','mhc_no','mhc_number','inventory_no','macris_id','mhcnum');
-    const description=field('description','historic_use','significance','resource_type','type','style','period','year_built','date');
-    const lines=['<strong>'+escapeHtml(name)+'</strong>'];
-    if(address)lines.push('<div>'+escapeHtml(address)+(town?', '+escapeHtml(town):'')+'</div>');
-    if(inventory)lines.push('<div>Inventory ID: '+escapeHtml(inventory)+'</div>');
-    if(description)lines.push('<div>'+escapeHtml(description)+'</div>');
-    // If a service returns different field names, still expose meaningful source attributes.
-    if(!address&&!inventory&&!description){
-     for(const [key,value] of Object.entries(p).filter(([k,v])=>v!=null&&String(v).trim()&&!/shape|geom|objectid|globalid|length|area/i.test(k)).slice(0,6)){
-      lines.push('<div><small>'+escapeHtml(key.replace(/_/g,' '))+': '+escapeHtml(value)+'</small></div>');
-     }
-    }
-    return '<div style="padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid #ddd">'+lines.join('')+'</div>';
-   });
-   popup.setContent('<div style="max-height:280px;overflow:auto"><b>Massachusetts historic inventory</b>'+blocks.join('')+'<a target="_blank" rel="noopener" href="https://mhc-macris.net/">Verify records in MACRIS ↗</a><p><small>Inventory listing does not necessarily indicate protected historic designation.</small></p></div>');
-  }catch(error){
-   if(request!==historicRequest||!enabled.has('massgisHistoric'))return;
-   popup.setContent('<strong>Historic inventory</strong><p>Details could not be retrieved from the MassGIS service.</p><a href="https://mhc-macris.net/" target="_blank" rel="noopener">Search the official MACRIS inventory ↗</a>');
-  }
+  const response=await fetch(wms+'?'+q.toString(),{mode:'cors'});
+  if(!response.ok)throw Error('WMS '+response.status);
+  const json=await response.json();
+  return Array.isArray(json.features)?json.features:[];
  }
- map.on('click',historicFeatureInfo);
+ function featureHtml(feature){
+  const props=feature.properties||{};
+  const entries=Object.entries(props).filter(([k,v])=>v!==null&&v!==undefined&&String(v).trim()&&String(v).toLowerCase()!=='null'&&!/^(objectid|fid|shape|geom|globalid|ogc_fid|the_geom|shape_length|shape_area)$/i.test(k));
+  const preferred=/name|address|street|town|type|class|zone|district|status|protection|use|wetland|resource|inventory|mhc|parcel|map_par_id|owner|description|acres/i;
+  entries.sort((a,b)=>Number(preferred.test(b[0]))-Number(preferred.test(a[0])));
+  if(!entries.length)return '<p>Mapped feature found, but the service did not provide descriptive attributes.</p>';
+  return '<dl style="margin:5px 0">'+entries.slice(0,9).map(([key,value])=>
+   '<div style="margin:3px 0"><dt style="display:inline;font-weight:600">'+escapeHtml(key.replace(/_/g,' '))+': </dt><dd style="display:inline;margin:0">'+escapeHtml(value)+'</dd></div>'
+  ).join('')+'</dl>';
+ }
+ map.on('click',async e=>{
+  const active=priority.filter(id=>enabled.has(id)&&(!definitions[id].minZoom||map.getZoom()>=definitions[id].minZoom));
+  if(!active.length)return;
+  // FEMA has a separate official identify popup. Avoid competing popups when it is selected.
+  if(document.getElementById('femaFloodToggle')?.checked)return;
+  const seq=++lookupSerial;
+  const popup=L.popup({maxWidth:360}).setLatLng(e.latlng).setContent('Looking up mapped features…').openOn(map);
+  const results=await Promise.all(active.map(async id=>{
+   try{return {id,features:await queryLayer(id,e.latlng)}}
+   catch(error){return {id,error:true,features:[]}}
+  }));
+  if(seq!==lookupSerial)return;
+  const matches=results.filter(r=>r.features.length);
+  if(!matches.length){
+   const failed=results.some(r=>r.error);
+   popup.setContent('<strong>Map information</strong><p>'+(failed?'The map service could not return details at this location.':'No mapped feature was identified at this point. Try clicking closer to a shaded area or marker.')+'</p>');
+   return;
+  }
+  let html='<div style="max-height:310px;overflow-y:auto"><strong>Map information</strong>';
+  for(const result of matches){
+   html+='<section style="border-top:1px solid #ddd;margin-top:8px;padding-top:7px"><b>'+escapeHtml(labels[result.id])+'</b>';
+   for(const feature of result.features.slice(0,3))html+='<div style="margin:5px 0">'+featureHtml(feature)+'</div>';
+   const link=sourceLinks[result.id];
+   html+='<a target="_blank" rel="noopener" href="'+link[0]+'">'+escapeHtml(link[1])+' ↗</a></section>';
+  }
+  html+='<p style="font-size:.8em">Informational GIS data; verify with the relevant authority for legal or property decisions.</p></div>';
+  popup.setContent(html);
+ });
  const aerialToggle=document.getElementById('massgisAerial');
  let aerial;
  function updateAerial(){
