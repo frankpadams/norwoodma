@@ -41,6 +41,15 @@
   note(label+' could not load from the public MassGIS service. Try again later or use the MassGIS Data Hub linked below.');
  }
  function buildWms(id,def){
+  // MassGIS publishes parcels as a dedicated cached tile service (zoom levels 15–20).
+  // Use it rather than the generic GeoServer WMS, which can render blank parcels.
+  if(id==='massgisParcels'){
+   const url='https://tiles.arcgis.com/tiles/hGdibHYSPO59RG1h/arcgis/rest/services/MassGIS_Level3_Parcels/MapServer/tile/{z}/{y}/{x}';
+   const parcelLayer=L.tileLayer(url,{minZoom:15,maxNativeZoom:20,maxZoom:22,opacity:1,attribution:'Parcel boundaries © MassGIS'});
+   parcelLayer.on('tileerror',()=>{if(enabled.has(id))errorFor(id);});
+   parcelLayer.on('load',()=>{if(enabled.has(id)&&!errors.has(id))note('MassGIS parcel boundaries loaded.');});
+   return parcelLayer;
+  }
   const layer=L.tileLayer.wms(wms,{
    layers:def.layers,format:'image/png',transparent:true,version:'1.1.1',
    opacity:def.opacity,attribution:'© MassGIS / MassDEP / MHC'
