@@ -10,7 +10,7 @@
   {id:'massgisOpenSpace',title:'Conservation & open space',service:geoserver,layers:['massgis:GISDATA.OPENSPACE_POLY']},
   {id:'massgisParcels',title:'Property parcels',service:geoserver,layers:['massgis:GISDATA.L3_TAXPAR_POLY'],description:'Parcel outlines are informational, not a legal survey. Zoom in to see them.'},
   {id:'massgisHistoric',title:'Historic buildings & districts',service:geoserver,layers:['massgis:GISDATA.MHCINV_POLY','massgis:GISDATA.MHCINV_PT']},
-  {id:'massgisWater',title:'Drinking-water protection',service:geoserver,layers:['massgis:GISDATA.ZONE2_POLY','massgis:GISDATA.IWPA_POLY','massgis:GISDATA.SWP_ZONES_POLY']},
+  {id:'massgisWater',title:'Drinking-water protection',service:geoserver,layers:['massgis:GISDATA.ZONE2_POLY','massgis:GISDATA.IWPA_POLY','massgis:GISDATA.SWP_ZONES_POLY'],description:'These are water-supply protection boundaries, NOT flood-risk zones. Each map symbol is supplied by MassGIS. Click a shaded area to inspect available feature attributes.',waterGuide:true,link:'https://www.mass.gov/info-details/massgis-data-massdep-wellhead-protection-areas-zone-ii-zone-i-iwpa',linkText:'MassDEP wellhead definitions'},
   {id:'massgisAerial',title:'Historical aerial imagery',description:'Photographic basemap. The selected year is shown below; this layer does not use thematic shading.'},
   {id:'elementaryZones',title:'Elementary school attendance areas',colors:[['Prescott','#9d65ac'],['Willett','#4479b0'],['Balch','#e08b39'],['Oldham','#54995a'],['Callahan','#cc6177'],['Cleveland','#399b9a']]},
   {id:'votingPrecincts',title:'Voting precincts',description:'Nine numbered precinct boundaries. Select a precinct on the map for details.'}
@@ -34,6 +34,27 @@
     const swatch=document.createElement('span');swatch.style.cssText='display:inline-block;width:16px;height:14px;flex:none;border:1px solid #54616b;background:'+color;
     row.append(swatch,document.createTextNode(label));list.append(row);
    }card.append(list);
+  }
+  if(def.waterGuide){
+   const guide=document.createElement('div');guide.style.cssText='font-size:.86rem;line-height:1.45;margin-top:8px';
+   const rows=[
+    ['Zone II — groundwater','Modeled recharge area contributing water to a public drinking-water well.'],
+    ['IWPA — interim groundwater','Estimated protection area around a public well where an approved Zone II has not been established.'],
+    ['Zone A — surface water','Land closest to a public drinking-water reservoir or its tributaries; generally within 400 ft of the waterbody or 200 ft of a tributary.'],
+    ['Zone B — surface water','Surrounding area extending up to one-half mile from a public water-supply waterbody, or to the watershed edge.'],
+    ['Zone C — surface water','Remaining watershed land outside Zones A and B.']
+   ];
+   const intro=document.createElement('p');intro.textContent='How to interpret the mapped categories:';intro.style.margin='4px 0 6px';guide.append(intro);
+   const list=document.createElement('dl');list.style.margin='0';
+   for(const [name,meaning] of rows){
+    const dt=document.createElement('dt');dt.textContent=name;dt.style.cssText='font-weight:650;margin-top:7px';
+    const dd=document.createElement('dd');dd.textContent=meaning;dd.style.margin='2px 0 0 0';
+    list.append(dt,dd);
+   }
+   guide.append(list);
+   const note=document.createElement('p');note.textContent='Colors are defined by the official legend images below; a color alone does not indicate water quality, contamination, or relative risk. Some zones overlap.';note.style.cssText='margin:9px 0 4px';guide.append(note);
+   const source=document.createElement('a');source.href='https://www.mass.gov/info-details/massgis-data-surface-water-supply-protection-areas-zone-a-b-c';source.target='_blank';source.rel='noopener';source.textContent='MassDEP surface-water Zone A/B/C definitions ↗';guide.append(source);
+   card.append(guide);
   }
   if(def.layers){
    for(const layer of def.layers){
