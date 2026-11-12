@@ -105,17 +105,17 @@
 
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
-<p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p>
-<label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle" disabled><span>Base zoning districts (boundary data pending)</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="zoningOverlayToggle" disabled><span>Zoning overlay districts (boundary data pending)</span></label>
-<div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div>
+
+<label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle" disabled><span>Base zoning districts</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="zoningOverlayToggle" disabled><span>Zoning overlay districts</span></label>
+
 <dialog id="zoningInfoDialog" aria-labelledby="zoningInfoTitle" style="max-width:min(520px,90vw);border:1px solid #bdcbd4;border-radius:12px;padding:22px;color:#17384d"><h3 id="zoningInfoTitle" style="margin-top:0"></h3><div id="zoningInfoBody"></div><form method="dialog" style="text-align:right;margin-top:18px"><button type="submit">Close</button></form></dialog>
 <template id="zoningDistrictContent"><p class="map-layer-status"><strong>Residential:</strong> S, S1, S2, G, A<br><strong>Business:</strong> GB, CB, BPH, LB<br><strong>Industrial:</strong> O, LM, LMA, M, LSDD</p>
 <p class="map-layer-status"><strong>Overlays:</strong> FPOD, WRPOD, WCSOD, MUOD, SGASGOD, MMOD, MSOD, NSC-MUOD, MCMOD. Some overlay provisions have subdistricts or additional maps; verify against the current bylaws.</p>
 </template>
 <template id="zoningDisclaimerContent"><p class="map-layer-status"><strong>Map disclaimer:</strong> When published, Norwood.ma zoning boundaries will be informational approximations derived from published maps or GIS sources. They may contain errors or be outdated and must not be relied on for legal, permitting, development, or property decisions. Confirm boundaries with the <a href="https://www.axisgis.com/norwoodma/" target="_blank" rel="noopener">official Norwood GIS viewer</a> and <a href="https://ecode360.com/42511353" target="_blank" rel="noopener">zoning bylaws</a>.</p>
 </template>
-<p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p>
+
 </details>
 
 
@@ -173,6 +173,7 @@
  </details>
 </div>
 <div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
+<section aria-label="Zoning map information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Zoning districts &amp; overlays</strong><p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p><div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div><p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p></section>
 <section class="map-layer-details" aria-label="Map layer information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Layer information</strong><div style="margin-top:7px"><p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
