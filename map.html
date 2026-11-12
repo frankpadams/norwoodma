@@ -138,6 +138,9 @@
 <label class="map-layer-choice"><input type="checkbox" id="massgisTreeCanopy"><span>Tree canopy (2016)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
 </details>
+<details class="map-layer-more"><summary>Road Safety &amp; Transportation</summary>
+<label class="map-layer-choice"><input type="checkbox" id="roadSafetyCrashes"><span>Reported traffic crashes (2024–2025)</span></label>
+</details>
 <details class="map-layer-more"><summary>Property</summary>
 <label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
@@ -176,7 +179,7 @@
 <div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
 <template id="zoningLayerInfoContent"><section aria-label="Zoning map information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Zoning districts &amp; overlays</strong><p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p><div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div><p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p></section>
 </template>
-<div id="mapLayerStatusStore" hidden><p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
+<div id="mapLayerStatusStore" hidden><p id="roadSafetyStatus" class="map-layer-status">MassDOT reported crash locations, 2024–2025. Crash reports may be incomplete, delayed, or approximately geocoded. <a href="https://www.mass.gov/motor-vehicle-crash-data" target="_blank" rel="noopener">MassDOT crash data and methodology</a>.</p><p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
 <p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
@@ -205,6 +208,7 @@
 <script src="map-integrated-trails.js?v=town-pdf-links"></script>
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
 <script src="map-work-zones.js?v=scheduled-shifts"></script>
+<script src="map-road-safety.js?v=20261112"></script>
 <script>
 (()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
 const primary=['school','civic','historic','transit','parking','culture','event','landmark'];
@@ -413,6 +417,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   {ids:['massgisWetlands','massgisOpenSpace','massgisWater','massgisTreeCanopy','massgisParcels','massgisHistoric','assessmentCardsToggle'],status:'massgisStatus',title:'MassGIS and property reference layers'},
   {ids:['alprToggle'],status:'alprStatus',title:'ALPR cameras'},
   {ids:['workZoneToggle'],status:'workZoneStatus',title:'Work zones'},
+  {ids:['roadSafetyCrashes'],status:'roadSafetyStatus',title:'Road safety and transportation'},
   {ids:['mbtaToggle'],status:'mbtaStatus',title:'Live MBTA transit'}
  ];
  trigger.addEventListener('click',()=>{
