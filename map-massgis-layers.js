@@ -154,7 +154,7 @@
  const basemapStatus=document.getElementById('mapBasemapStatus');
  const street=window.norwoodTrailBasemap;
  let imagery=null;
- const aerialLabels={'1990s':'1990s historical aerial','2023':'2023 aerial','2025':'2025 satellite / aerial'};
+ const aerialLabels={'esri':'Esri World Imagery','1990s':'1990s historical aerial','2023':'2023 aerial','2025':'2025 satellite / aerial'};
  function setBackground(value){
   if(imagery){map.removeLayer(imagery);imagery=null;}
   if(value==='street'){
@@ -164,8 +164,8 @@
   }
   // Remove the opaque street tiles: otherwise aerial images are hidden underneath.
   if(street&&map.hasLayer(street))map.removeLayer(street);
-  aerialYear.value=value;
-  imagery=aerialLayer();
+  if(value!=='esri')aerialYear.value=value;
+  imagery=value==='esri'?L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:22,maxNativeZoom:19,attribution:'Tiles © Esri, Maxar, Earthstar Geographics, and the GIS User Community'}):aerialLayer();
   imagery.on('tileerror',()=>{if(basemapStatus)basemapStatus.textContent='Aerial tiles failed to load. Try another year or street map.';});
   imagery.addTo(map);
   imagery.bringToBack();
@@ -174,8 +174,8 @@
  function syncAerialControl(){
   if(!basemapChoice)return;
   const value=basemapChoice.value;
-  if(aerialToggle)aerialToggle.checked=value!=='street';
-  if(value!=='street')aerialYear.value=value;
+  if(aerialToggle)aerialToggle.checked=value!=='street'&&value!=='esri';
+  if(value!=='street'&&value!=='esri')aerialYear.value=value;
   setBackground(value);
   document.dispatchEvent(new Event('change',{bubbles:false}));
  }
