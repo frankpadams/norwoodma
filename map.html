@@ -114,6 +114,20 @@
 <label class="map-layer-choice"><input type="checkbox" id="femaFloodToggle"><span>FEMA flood hazard zones</span></label>
 <p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
+<details class="map-layer-more" id="massgisLayers"><summary>Environment, property &amp; history</summary>
+<p class="map-layer-status">Live MassGIS map services. All layers are off until selected. Map features may extend beyond Norwood.</p>
+<label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="massgisAerial"><span>Historical aerial imagery</span></label>
+<label for="massgisAerialYear" class="map-layer-status">Aerial year</label>
+<select id="massgisAerialYear" aria-label="Aerial imagery year"><option value="1990s">1990s (black &amp; white)</option><option value="2023">2023 (color)</option><option value="2025">2025 (color)</option></select>
+<p id="massgisStatus" class="map-layer-status" aria-live="polite">Parcel boundaries appear at closer zoom levels. These are reference maps, not surveys or legal determinations.</p>
+<p class="map-layer-status">Sources: <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS data catalog</a> · <a href="https://gis.data.mass.gov/" target="_blank" rel="noopener">MassGIS Data Hub</a>. For property-specific decisions, consult the relevant state or local authority.</p>
+</details>
+
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
 <p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p>
 <label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle" disabled><span>Base zoning districts (boundary data pending)</span></label>
@@ -292,5 +306,6 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  });
 })();
 </script>
+<script src="map-massgis-layers.js?v=20261112"></script>
 </body>
 </html>
