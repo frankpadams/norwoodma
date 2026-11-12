@@ -78,7 +78,7 @@
 <option value="school">Schools</option>
 <option value="athletic">Athletic fields & playgrounds</option>
 <option value="business">Local businesses</option>
-<option value="gas">Gas stations</option>
+<option value="gas">Gas Prices</option>
 <option value="resource">Community resources</option>
 <option value="little-library">Little Libraries &amp; Book Boxes</option>
 <option value="mini-food-pantry">Little Food Pantries</option>
@@ -212,7 +212,7 @@
 <script>
 (()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
 const primary=['school','civic','historic','transit','parking','culture','event','landmark'];
-const businessCategories=['food','business','gas','health'];
+const businessCategories=['food','business','health'];
 const communityCategories=['resource','little-library','mini-food-pantry'];
 const active=new Set(select.value&&select.value!=='all'?[select.value]:[]);
 function sync(){document.querySelectorAll('.map-layer-choice[data-categories] input').forEach(input=>{const row=input.closest('.map-layer-choice'),values=(row.dataset.categories||row.dataset.category).split(',');input.checked=values.every(value=>active.has(value));input.indeterminate=values.some(value=>active.has(value))&&!input.checked})}
@@ -262,7 +262,7 @@ for(const option of select.options){if(['park','athletic'].includes(option.value
  button('health','All health & support',group);
  for(const [type,label] of Object.entries(window.norwoodHealthTypes||{}))button('care:'+type,label,group);
  document.getElementById('mapCategoryGroups').append(group);
-}else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
+}else if(option.value==='gas')button('gas','Gas Prices',root);else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
 sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.detail?.categories||[]).forEach(x=>active.add(x));sync()});
 })();
 </script>
