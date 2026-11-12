@@ -123,9 +123,7 @@
 <div id="assessmentMapTools" hidden style="padding:8px"><label for="assessmentMapSearch">Find an address</label><input id="assessmentMapSearch" type="search" placeholder="Street address…" autocomplete="off" style="width:100%;padding:8px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto"></div><small id="assessmentMapStatus">Zoom in to see assessment markers.</small></div>
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="massgisAerial"><span>Historical aerial imagery (also available in map background selector)</span></label>
-<label for="massgisAerialYear" class="map-layer-status">Aerial year</label>
-<select id="massgisAerialYear" aria-label="Aerial imagery year"><option value="1990s">1990s (black &amp; white)</option><option value="2023">2023 (color)</option><option value="2025">2025 (color)</option></select>
+<input type="checkbox" id="massgisAerial" hidden aria-hidden="true"><select id="massgisAerialYear" hidden aria-hidden="true"><option value="1990s">1990s</option><option value="2023">2023</option><option value="2025">2025</option></select>
 <p id="massgisStatus" class="map-layer-status" aria-live="polite">Parcel boundaries appear at closer zoom levels. These are reference maps, not surveys or legal determinations.</p>
 <p class="map-layer-status">Sources: <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS data catalog</a> · <a href="https://gis.data.mass.gov/" target="_blank" rel="noopener">MassGIS Data Hub</a>. For property-specific decisions, consult the relevant state or local authority.</p>
 </details>
