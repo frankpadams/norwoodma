@@ -162,15 +162,10 @@
 </nav>
 </aside><div class="map-main-column"><div class="map-shell">
 <div id="prototypeMap" aria-label="Interactive map of Norwood locations"></div>
-<div id="mapBasemapControl" style="position:absolute;top:12px;right:12px;z-index:800;max-width:210px;font-size:13px">
- <details style="background:#fff;border:1px solid #c9d4de;border-radius:7px;box-shadow:0 2px 9px #0002">
-  <summary aria-label="Change map background" style="cursor:pointer;list-style:none;display:flex;align-items:center;gap:7px;padding:8px 10px;font-weight:600"><span aria-hidden="true">▧</span> Map view <span aria-hidden="true" style="font-size:10px">▾</span></summary>
-  <div style="padding:4px 10px 10px;border-top:1px solid #e4e9ed">
-   <label for="mapBasemapChoice" style="display:block;margin:5px 0">Map background</label>
-   <select id="mapBasemapChoice" aria-label="Map background" style="width:100%;max-width:185px;font-size:13px"><option value="street">Street map</option><option value="esri">Satellite imagery (Esri)</option><option value="2025">MassGIS aerial (2025)</option><option value="1990s">Historical aerial — 1990s</option><option value="2023">Historical aerial — 2023</option></select>
-   <small id="mapBasemapStatus" aria-live="polite" style="display:block;margin-top:6px;line-height:1.3">Street map</small>
-  </div>
- </details>
+<div id="mapBasemapControl" style="position:absolute;top:12px;right:12px;z-index:800;font-size:13px;background:#fff;border:1px solid #c9d4de;border-radius:7px;box-shadow:0 2px 9px #0002;padding:7px 10px;display:flex;align-items:center;gap:8px">
+ <label for="mapBasemapChoice" style="font-weight:600;white-space:nowrap">Map view</label>
+ <select id="mapBasemapChoice" aria-label="Map view" style="max-width:185px;min-width:0;font-size:13px;padding:5px;border:1px solid #c9d4de;border-radius:5px"><option value="street">Street map</option><option value="esri">Satellite imagery (Esri)</option><option value="2025">MassGIS aerial (2025)</option><option value="1990s">Historical aerial — 1990s</option><option value="2023">Historical aerial — 2023</option></select>
+ <small id="mapBasemapStatus" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap">Street map</small>
 </div>
 <div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
 <template id="zoningLayerInfoContent"><section aria-label="Zoning map information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Zoning districts &amp; overlays</strong><p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p><div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div><p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p></section>
