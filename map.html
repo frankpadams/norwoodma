@@ -137,6 +137,7 @@
 <label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
 <details class="map-layer-more"><summary>Trails &amp; brochures</summary><div id="mapTrailChoices"></div><div class="trail-layer-actions"><button type="button" id="trailFit">Fit selected</button><button type="button" id="trailClear">Clear trails</button></div><p><a href="trails.html">Explore all Norwood trails and maps →</a></p></details>
 <details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
+<label class="map-layer-choice"><input type="checkbox" id="liquorLicensesToggle"><span>Liquor licenses</span></label>
 <div id="mapCategoryGroups"></div>
 <details class="map-layer-more"><summary>Environment</summary>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
@@ -216,6 +217,7 @@
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
 <script src="map-work-zones.js?v=scheduled-shifts"></script>
 <script src="map-road-safety.js?v=20261112-stations-v2"></script>
+<script src="map-liquor-licenses.js?v=20261112-abcc"></script>
 <script>
 (()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
 const primary=['school','civic','historic','transit','parking','culture','event','landmark'];
