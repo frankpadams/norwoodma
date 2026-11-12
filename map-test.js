@@ -148,6 +148,7 @@ function resourceCategory(r){
  if(/immigration|immigrant|refugee|asylum|attorney|lawyer|legal|uscis|deportation|detention/.test(t))return'resource';
  if(/health|medical|mental health|physical therapy|disability|senior|older/.test(t))return'health';
  if(/town government|town services|town &|police|fire|veteran|board|commission|clerk|assessor|building department/.test(t))return'civic';
+ if(/houses of worship|\bworship\b|\bchurch\b|\bmosque\b|\bsynagogue\b|\btemple\b|\bmandir\b/.test(t))return'worship';
  if(/library|history|museum|arts|music|theatre/.test(t))return'culture';
  if(/clothing|clothes|closet/.test(t))return'resource';
  if(/school|youth sports|tutoring|college|university/.test(t))return'school';
@@ -159,6 +160,10 @@ function cleanAddress(a){
  if(!/(,\s*(?:norwood|westwood|walpole|dedham|canton|sharon|foxborough|boston|needham|medfield|dover|millis|medway|massachusetts|ma)\b)/i.test(a))a+=', Norwood, MA 02062';
  return a;
 }
+// A landmark is a recognizable physical destination, not an arbitrary business.
+// Reuse verified local map records instead of inventing new pins or coordinates.
+const landmarkNames=new Set(['norwood town common','norwood memorial municipal building norwood town hall','morrill memorial library','the norwood theatre','f holland day house norwood historical society','oakview mansion','old parish cemetery','little red brick schoolhouse','st gabriel the archangel chapel','highland cemetery cemetery department','norwood memorial airport','norwood civic center','ellis pond alevizos park']);
+for(const p of staticPlaces){if(landmarkNames.has(norm(p.name)))p.also=[...new Set([...(p.also||[]),'landmark'])];}
 const dynamic=[];
 (window.NORWOOD_RESTAURANTS||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:'food',address:a,details:r.cuisine||r.category||'Restaurant',url:r.url||'restaurants.html'});});
 (window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(!a)return;
