@@ -119,6 +119,8 @@
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisParcels"><span>Property parcel boundaries</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
+<div id="assessmentMapTools" hidden style="padding:8px"><label for="assessmentMapSearch">Find an address</label><input id="assessmentMapSearch" type="search" placeholder="Street address…" autocomplete="off" style="width:100%;padding:8px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto"></div><small id="assessmentMapStatus">Zoom in to see assessment markers.</small></div>
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisAerial"><span>Historical aerial imagery (also available in map background selector)</span></label>
@@ -370,6 +372,8 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 </script>
 <script src="map-massgis-layers.js?v=20261112-1937"></script>
 <script src="map-overlay-legends.js?v=20261112"></script>
+<script src="data/assessment-map-records.js?v=20261112"></script>
+<script src="map-assessment-layer.js?v=20261112"></script>
 <script>
 (function(){
  const control=document.getElementById('mapBasemapControl');
