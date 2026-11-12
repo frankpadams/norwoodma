@@ -275,7 +275,9 @@ for(const option of select.options){if(['park','athletic'].includes(option.value
  if(row){
   const info=document.createElement('button');info.type='button';info.className='map-overlay-help';info.textContent='i';info.setAttribute('aria-label','About gas price information');info.setAttribute('aria-haspopup','dialog');info.title='About gas price information';
   info.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();document.getElementById('gasPricesInfoDialog')?.showModal();});
-  row.after(info);
+  const labelText=row.querySelector('span');
+  if(labelText){labelText.append(' ',info);labelText.style.display='inline-flex';labelText.style.alignItems='center';labelText.style.gap='5px';info.style.flex='none';}
+  else row.append(info);
  }
 }else if(primary.includes(option.value))button(option.value,option.textContent,root);else if(businessCategories.includes(option.value))button(option.value,option.textContent,business)}
 sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.detail?.categories||[]).forEach(x=>active.add(x));sync()});
