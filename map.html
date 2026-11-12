@@ -112,6 +112,18 @@
 <label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="elementaryZones"><span>Elementary school districts</span></label>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
+<details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
+<p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p>
+<label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle" disabled><span>Base zoning districts (boundary data pending)</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="zoningOverlayToggle" disabled><span>Zoning overlay districts (boundary data pending)</span></label>
+<details><summary>District names &amp; regulations</summary>
+<p class="map-layer-status"><strong>Residential:</strong> S, S1, S2, G, A<br><strong>Business:</strong> GB, CB, BPH, LB<br><strong>Industrial:</strong> O, LM, LMA, M, LSDD</p>
+<p class="map-layer-status"><strong>Overlays:</strong> FPOD, WRPOD, WCSOD, MUOD, SGASGOD, MMOD, MSOD, NSC-MUOD, MCMOD. Some overlay provisions have subdistricts or additional maps; verify against the current bylaws.</p>
+</details>
+<p class="map-layer-status"><strong>Map disclaimer:</strong> When published, Norwood.ma zoning boundaries will be informational approximations derived from published maps or GIS sources. They may contain errors or be outdated and must not be relied on for legal, permitting, development, or property decisions. Confirm boundaries with the <a href="https://www.axisgis.com/norwoodma/" target="_blank" rel="noopener">official Norwood GIS viewer</a> and <a href="https://ecode360.com/42511353" target="_blank" rel="noopener">zoning bylaws</a>.</p>
+<p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p>
+</details>
+
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
 <div class="map-layer-statuses">
 
