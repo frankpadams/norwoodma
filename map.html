@@ -101,8 +101,8 @@
 <label class="map-layer-choice"><input type="checkbox" id="votingPrecincts"><span>Voting precincts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="elementaryZones"><span>Elementary school districts</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="femaFloodToggle"><span>FEMA flood hazard zones</span></label>
-<p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
-<p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
+
+
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
 <p class="map-layer-status">Zoning boundaries are being prepared. The official GIS viewer remains the reference for property-specific decisions.</p>
@@ -118,7 +118,7 @@
 <p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p>
 </details>
 
-<p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
+
 <h2>Layers</h2>
 <p>Choose layers to load locations. Select more than one category to compare.</p>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
@@ -142,12 +142,12 @@
 <label class="map-layer-choice"><input type="checkbox" id="assessmentCardsToggle"><span>Property Cards / Assessments</span></label>
 </details>
 <input type="checkbox" id="massgisAerial" hidden aria-hidden="true"><select id="massgisAerialYear" hidden aria-hidden="true"><option value="1990s">1990s</option><option value="2023">2023</option><option value="2025">2025</option></select>
-<p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
+
 <div class="map-layer-statuses">
 
-<p id="alprStatus" class="map-layer-status" aria-live="polite">Community-mapped camera locations from DeFlock / OpenStreetMap. Coverage may be incomplete.</p>
-<p id="workZoneStatus" class="map-layer-status" aria-live="polite">Active MassDOT work zones near Norwood. Refreshes every 60 seconds while enabled.</p>
-<p id="mbtaStatus" class="map-layer-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, routes and Norwood stops. Live positions refresh every 30 seconds while enabled.</p>
+
+
+
 </div>
 <nav class="map-layer-links" aria-label="Related map links">
 <b>Related links</b>
@@ -173,6 +173,13 @@
  </details>
 </div>
 <div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
+<section class="map-layer-details" aria-label="Map layer information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Layer information</strong><div style="margin-top:7px"><p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
+<p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
+<p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
+<p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
+<p id="alprStatus" class="map-layer-status" aria-live="polite">Community-mapped camera locations from DeFlock / OpenStreetMap. Coverage may be incomplete.</p>
+<p id="workZoneStatus" class="map-layer-status" aria-live="polite">Active MassDOT work zones near Norwood. Refreshes every 60 seconds while enabled.</p>
+<p id="mbtaStatus" class="map-layer-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, routes and Norwood stops. Live positions refresh every 30 seconds while enabled.</p></div></section>
 <section id="mapOverlayLegends" aria-label="Map overlay legends" hidden style="padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px;margin:10px 0;background:var(--surface,#fff)"><strong>Map legend</strong><div id="mapOverlayLegendItems" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px"></div></section>
 <div class="map-filter-field map-filter-search map-inline-search"><label for="mapSearch">Search places</label><input id="mapSearch" type="search" placeholder="Restaurant, park, library, service…" autocomplete="off"></div>
 <aside class="map-list" aria-label="Mapped locations"><div class="map-list-head"><b id="placeCount">Loading mapped places…</b><small id="mapStatus">Click a place to center the map.</small></div><div id="placeList"></div><div id="mapSearchHelp" class="map-search-help" hidden></div></aside>
