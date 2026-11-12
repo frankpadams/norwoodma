@@ -294,11 +294,62 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   if(!toggle.checked||failed)return;
   failed=true;status.innerHTML='FEMA map tiles could not load. Check the <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">official FEMA Flood Map Service Center</a>.';
  });
+ const explanations={
+  A:'High-risk flood area (1% annual chance); detailed base flood elevations may not be mapped.',
+  AE:'High-risk flood area (1% annual chance) with base flood elevations determined.',
+  AH:'Shallow flooding area (1% annual chance), generally ponding.',
+  AO:'Shallow flooding area (1% annual chance), generally sheet flow.',
+  VE:'Coastal high-risk flood area with wave action.',
+  X:'Zone X: flood risk varies by subcategory; check the FEMA subtype and official map.',
+  D:'Flood hazard is undetermined.'
+ };
+ const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ let requestSerial=0;
+ // ArcGIS JSONP identify avoids cross-origin restrictions on the public FEMA service.
+ function identify(latlng){
+  const seq=++requestSerial;
+  const cb='norwoodFemaIdentify'+Date.now()+Math.floor(Math.random()*100000);
+  const bounds=map.getBounds(),size=map.getSize();
+  const params=new URLSearchParams({
+   f:'json',geometry:JSON.stringify({x:latlng.lng,y:latlng.lat,spatialReference:{wkid:4326}}),
+   geometryType:'esriGeometryPoint',sr:'4326',layers:'all:28',
+   tolerance:'3',mapExtent:[bounds.getWest(),bounds.getSouth(),bounds.getEast(),bounds.getNorth()].join(','),
+   imageDisplay:[size.x,size.y,96].join(','),returnGeometry:'false',callback:cb
+  });
+  const script=document.createElement('script');
+  const timeout=setTimeout(()=>finish(null),12000);
+  function finish(data){
+   clearTimeout(timeout);script.remove();
+   try{delete window[cb]}catch{window[cb]=undefined}
+   if(seq!==requestSerial||!toggle.checked)return;
+   const match=data?.results?.find(x=>x.layerId===28);
+   if(!match){
+    const msg=data?.error?'FEMA could not return zone details.':'No mapped FEMA flood hazard polygon was identified at this point.';
+    L.popup().setLatLng(latlng).setContent('<strong>FEMA flood hazard zones</strong><p>'+msg+'</p><a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">Check the official FEMA map ↗</a>').openOn(map);
+    return;
+   }
+   const a=match.attributes||{};
+   const zone=String(a.FLD_ZONE||a.FLD_ZONE_1||'Unknown');
+   const subtype=String(a.ZONE_SUBTY||'').trim();
+   const elevation=a.STATIC_BFE??a.BFE_REVERT;
+   let html='<strong>FEMA flood zone '+safe(zone)+'</strong>';
+   if(explanations[zone])html+='<p>'+safe(explanations[zone])+'</p>';
+   if(subtype&&subtype.toUpperCase()!=='NULL')html+='<p><strong>Subtype:</strong> '+safe(subtype)+'</p>';
+   if(elevation!==undefined&&elevation!==null&&elevation!==''&&Number(elevation)>-9000)html+='<p><strong>Mapped base flood elevation:</strong> '+safe(elevation)+' ft (verify datum with FEMA)</p>';
+   html+='<p style="font-size:.85em">Informational only; not a flood determination.</p><a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">Verify on FEMA’s official map ↗</a>';
+   L.popup().setLatLng(latlng).setContent(html).openOn(map);
+  }
+  window[cb]=finish;
+  script.onerror=()=>finish(null);
+  script.src=endpoint+'/identify?'+params;
+  document.head.appendChild(script);
+ }
+ map.on('click',e=>{if(toggle.checked)identify(e.latlng)});
  toggle.addEventListener('change',()=>{
   failed=false;
   if(toggle.checked){
    flood.addTo(map);
-   status.innerHTML='Showing FEMA effective flood hazard zones (zoom in for detail). This is not a property-specific flood determination. Verify with the <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">FEMA Flood Map Service Center</a>.';
+   status.innerHTML='Showing FEMA effective flood hazard zones. Click the map for zone details (zoom in for detail). This is not a property-specific flood determination. Verify with the <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">FEMA Flood Map Service Center</a>.';
   }else{
    map.removeLayer(flood);
    status.textContent='Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.';
