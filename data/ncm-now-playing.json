@@ -1,37 +1,13 @@
 {
-  "updated_at": "2026-11-13T09:52:23.832116-05:00",
+  "updated_at": "2026-11-13T16:18:49.290875-05:00",
   "date": "2026-11-13",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "LIVE! NHS Football vs Cumberland",
+      "title": "The Kevin Broderick Show: Episode 15 - Dale Boch",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 600,
-          "title": "Flex and Firm with Steve"
-        },
-        {
-          "minute": 660,
-          "title": "Vietnam Veterans Bench Dedication 5.28.22"
-        },
-        {
-          "minute": 720,
-          "title": "2026 Veterans Day Ceremony"
-        },
-        {
-          "minute": 780,
-          "title": "Local Artist Bill Breen - Public Access 11.4.26"
-        },
-        {
-          "minute": 840,
-          "title": "Gentle Exercise with Steve"
-        },
-        {
-          "minute": 900,
-          "title": "The Vehicle for Change 11.3.26"
-        },
         {
           "minute": 990,
           "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
@@ -39,35 +15,23 @@
         {
           "minute": 1065,
           "title": "LIVE! NHS Football vs Cumberland"
+        },
+        {
+          "minute": 1320,
+          "title": "Norwood News 11.13.26"
+        },
+        {
+          "minute": 1380,
+          "title": "The Kevin Broderick Show: Episode 15 - Dale Boch"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-13"
     },
     "government": {
       "status": "scheduled",
-      "title": "Historical Commission 11.5.26",
+      "title": "Board of Selectmen 10.27.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 660,
-          "title": "Conservation Commission 11.4.26"
-        },
-        {
-          "minute": 750,
-          "title": "Board of Selectmen 10.27.26"
-        },
-        {
-          "minute": 840,
-          "title": "Historical Commission 11.5.26"
-        },
-        {
-          "minute": 900,
-          "title": "Finance Commission 10.27.26"
-        },
-        {
-          "minute": 960,
-          "title": "Town Meeting Info Session 11.2.26"
-        },
         {
           "minute": 1140,
           "title": "Conservation Commission 11.4.26"
@@ -75,6 +39,14 @@
         {
           "minute": 1230,
           "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 1290,
+          "title": "Board of Health 10.19.26"
+        },
+        {
+          "minute": 1350,
+          "title": "Board of Selectmen 10.27.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-13"
@@ -84,22 +56,6 @@
       "title": "2026 NHS Volleyball vs Dedham 9.28.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 660,
-          "title": "2013 NHS Boys Soccer vs. Newton North"
-        },
-        {
-          "minute": 780,
-          "title": "2013 NHS Field Hockey vs. Canton"
-        },
-        {
-          "minute": 840,
-          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
-        },
-        {
-          "minute": 930,
-          "title": "2026 NHS Football vs Ashland 10.30.26"
-        },
         {
           "minute": 1080,
           "title": "2012 8th Grade Football Norwood vs. Sudbury"
