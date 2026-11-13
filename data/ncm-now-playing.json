@@ -1,63 +1,119 @@
 {
-  "updated_at": "2026-11-12T19:00:25.035666-05:00",
-  "date": "2026-11-12",
+  "updated_at": "2026-11-13T01:29:03.305461-05:00",
+  "date": "2026-11-13",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary",
+      "title": "Flex and Firm with Steve",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1200,
+          "minute": 90,
+          "title": "Vietnam Veterans Bench Dedication 5.28.22"
+        },
+        {
+          "minute": 180,
+          "title": "2026 Veterans Day Ceremony"
+        },
+        {
+          "minute": 240,
+          "title": "Local Artist Bill Breen - Public Access 11.4.26"
+        },
+        {
+          "minute": 300,
+          "title": "Living History Tour: Aboard a B-17"
+        },
+        {
+          "minute": 390,
           "title": "The Vehicle for Change 11.3.26"
         },
         {
-          "minute": 1320,
-          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
+          "title": "Norwood Biography: The George Lee Story"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-12"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-13"
     },
     "government": {
       "status": "scheduled",
-      "title": "Airport Commission 10.21.26",
+      "title": "Historical Commission 11.5.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1230,
-          "title": "Capital Outlay Committee 10.21.26"
-        },
-        {
-          "minute": 1260,
-          "title": "Historical Commission 11.5.26"
-        },
-        {
-          "minute": 1320,
+          "minute": 240,
           "title": "Conservation Commission 11.4.26"
         },
         {
-          "minute": 1410,
-          "title": "Airport Commission 10.21.26"
+          "minute": 330,
+          "title": "Historical Commission 11.5.26"
+        },
+        {
+          "minute": 390,
+          "title": "School Committee 10.28.26 Rebroadcast"
+        },
+        {
+          "minute": 480,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 660,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 750,
+          "title": "Board of Selectmen 10.27.26"
+        },
+        {
+          "minute": 840,
+          "title": "Historical Commission 11.5.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-12"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-13"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2011 NHS Football vs. Needham 9.10.11",
+      "title": "2026 NHS Field Hockey vs Ashland 10.29.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1170,
+          "minute": 180,
+          "title": "2013 NHS Field Hockey vs. Canton"
+        },
+        {
+          "minute": 240,
+          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+        },
+        {
+          "minute": 330,
           "title": "2026 NHS Football vs Ashland 10.30.26"
         },
         {
-          "minute": 1320,
+          "minute": 480,
           "title": "2011 NHS Football vs. Needham 9.10.11"
+        },
+        {
+          "minute": 660,
+          "title": "2013 NHS Boys Soccer vs. Newton North"
+        },
+        {
+          "minute": 780,
+          "title": "2013 NHS Field Hockey vs. Canton"
+        },
+        {
+          "minute": 840,
+          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-12"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-13"
     }
   }
 }
