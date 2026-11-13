@@ -140,6 +140,7 @@
 <details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
 <div id="mapCategoryGroups"></div>
 <details class="map-layer-more"><summary>Environment</summary>
+<label class="map-layer-choice"><input type="checkbox" id="environmentCleanupToggle"><span>Environmental cleanup sites (MassDEP)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisOpenSpace"><span>Conservation &amp; open space</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisTreeCanopy"><span>Tree canopy &amp; land cover (2016)</span></label>
@@ -452,5 +453,6 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  });
 })();
 </script>
+<script src="map-environmental-cleanup.js?v=20261113"></script>
 </body>
 </html>
