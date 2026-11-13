@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-13T05:06:10.971785-05:00",
+  "generated_at": "2026-11-13T11:54:31.089459-05:00",
   "offline": false,
-  "events_published": 2135,
+  "events_published": 2095,
   "news_published": 120,
   "civic_notices": 57,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2135,
-      "generated_at": "2026-11-13T05:06:10.522617-05:00"
+      "events": 2095,
+      "generated_at": "2026-11-13T11:54:30.232878-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 119,
-      "generated_at": "2026-11-13T05:06:10.528619-05:00"
+      "events": 118,
+      "generated_at": "2026-11-13T11:54:30.240516-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 803,
-      "generated_at": "2026-11-13T05:06:10.541148-05:00"
+      "events": 804,
+      "generated_at": "2026-11-13T11:54:30.256104-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 705,
-      "generated_at": "2026-11-13T05:06:10.551058-05:00"
+      "generated_at": "2026-11-13T11:54:30.268996-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-13T05:06:10.556596-05:00"
+      "generated_at": "2026-11-13T11:54:30.276014-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 62,
-      "generated_at": "2026-11-13T05:06:10.563083-05:00"
+      "events": 61,
+      "generated_at": "2026-11-13T11:54:30.284164-05:00"
     }
   ],
   "recreation_programs": 129,
@@ -414,9 +414,9 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 42,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -1094,8 +1094,8 @@
       "source_id": "nps-news",
       "ok": true,
       "method": "html_list",
-      "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "found": 1,
+      "note": ""
     },
     {
       "source_id": "nps-nhs",
@@ -1255,10 +1255,11 @@
     },
     {
       "source_id": "resource-knights-of-columbus-norwood-council",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.stcatherinenorwood.org/community: 403 Client Error: Forbidden for url: https://www.stcatherinenorwood.org/community",
+      "retained_events": 0
     },
     {
       "source_id": "resource-neponset-valley-sunrise-rotary-club",
@@ -1278,12 +1279,13 @@
     },
     {
       "source_id": "resource-norwood-youth-soccer",
-      "ok": true,
+      "ok": false,
       "method": "nys_multi_schedule",
-      "found": 147,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all NYS/BAYS discovery pages failed: https://norwoodsoccer.com/schedules: 403 Client Error: Forbidden for url: https://norwoodsoccer.com/schedules | https://norwoodsoccer.com/index",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 22
     },
     {
       "source_id": "resource-scouting-america-troop-42-norwood",
@@ -1328,21 +1330,23 @@
     },
     {
       "source_id": "st-catherine-calendar",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
-      "found": 11,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://stcatherinenorwood.org/: 403 Client Error: Forbidden for url: https://stcatherinenorwood.org/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 11
     },
     {
       "source_id": "st-timothy-calendar",
-      "ok": true,
+      "ok": false,
       "method": "church_events_calendar",
-      "found": 42,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://iccnorwood.org/events: 403 Client Error: Forbidden for url: https://iccnorwood.org/events",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "town-community-events",
@@ -1452,17 +1456,18 @@
     },
     {
       "source_id": "washington-no7-events",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://washingtonno7.com/: 403 Client Error: Forbidden for url: https://washingtonno7.com/",
+      "retained_events": 0
     },
     {
       "source_id": "eventbrite-norwood-discovery",
       "ok": true,
       "method": "event_platform_discovery",
       "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "note": null,
       "outcome": "events",
       "access_limited": false
     },
@@ -1609,7 +1614,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 29,
+      "found": 26,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1617,7 +1622,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 28,
+      "found": 27,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1625,7 +1630,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 8,
+      "found": 9,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1633,7 +1638,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 24,
+      "found": 25,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1701,6 +1706,7 @@
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "Norwood Public Schools": 6,
         "Westwood Minute": 1,
         "The Norwood Record": 43,
         "The Norwood Record — Latest": 18,
@@ -1712,7 +1718,6 @@
         "WCVB": 2,
         "Norwood Town News": 25,
         "The Daily Tribune News": 1,
-        "Norwood Public Schools": 6,
         "NewsBreak: Local News & Alerts": 1,
         "Newport Dispatch": 1,
         "Town of Norwood": 6,
