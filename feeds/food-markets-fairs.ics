@@ -7,7 +7,7 @@ X-WR-CALNAME:Food\, markets & fairs
 X-WR-CALDESC:Food-centered events\, markets\, fairs and vendor events.
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-11-13@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261113T100000
 DTEND;TZID=America/New_York:20261113T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -17,7 +17,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-norwood-cfce-table-at-the-norwood-wellness-fa-23fe04e@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261114T000000
 DTEND;TZID=America/New_York:20261114T000000
 SUMMARY:Norwood CFCE Table at the Norwood Wellness Fair
@@ -26,8 +26,18 @@ DESCRIPTION:Stop by the Norwood CFCE table at the Norwood Wellness Fair on Satur
 URL:https://norwoodlibrary.assabetinteractive.com/calendar/norwood-cfce-table-at-the-norwood-wellness-fair/
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-11-14-annual-rotary-craft-fair@norwood.ma
+DTSTAMP:20261114T035109Z
+DTSTART;TZID=America/New_York:20261114T090000
+DTEND;TZID=America/New_York:20261114T150000
+SUMMARY:Annual Rotary Craft Fair
+LOCATION:Tri-County Regional High School
+DESCRIPTION:Out of Town — Franklin\, MA. Annual Rotary craft fair. Details supplied by Ashley Falanga's Nov 14–20 weekly guide\; check organizer for changes.\nSource: https://www.ashleyfalanga.com
+URL:https://www.ashleyfalanga.com
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-11-14-norwood-food-pantry-food-assistance-15e1dab@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261114T090000
 DTEND;TZID=America/New_York:20261114T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -37,7 +47,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-norwood-wellness-fair@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T130000
 SUMMARY:3rd Annual Norwood Wellness Fair
@@ -47,7 +57,7 @@ URL:https://www.norwood.k12.ma.us/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-norwood-wellness-fair-free-event-a88a699@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T130000
 SUMMARY:Norwood Wellness Fair (free event)
@@ -57,17 +67,17 @@ URL:https://www.norwoodcenter.org/event/norwood-wellness-fair-free-event/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-worcester-deaf-club-arts-crafts-bazaar@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T150000
 SUMMARY:Worcester Deaf Club 14th Annual Arts & Crafts Bazaar
 LOCATION:Schwab Athletic Center — The Learning Center for the Deaf — 848 Central St\, Framingham\, MA 01701
-DESCRIPTION:14th Annual Arts & Crafts Bazaar. Vendor tables are $30 for an 8-foot table\; vendor registration deadline Oct. 30. Out-of-town event in Framingham at The Learning Center for the Deaf\; show town indicator.\nSource: https://massdeaf.org/events/
+DESCRIPTION:Out of Town — Framingham\, MA. 10 AM–3 PM\; artwork\, clothing\, jewelry\, knitted items\, holiday items\, baked goods\, refreshments for sale and vendor-product raffles. Open to the public\; interpreters provided. Proceeds support the Worcester Deaf Club annual Christmas party. Contact WorcDeafClub@gmail.com.\nCost: Free admission\nSource: https://massdeaf.org/events/
 URL:https://massdeaf.org/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-14-wellness-faire-at-coakley-middle-school-256a9ad@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261114T220000
 DTEND;TZID=America/New_York:20261114T230000
 SUMMARY:Wellness Faire at Coakley Middle School
@@ -76,8 +86,18 @@ DESCRIPTION:Source: https://www.fccnorwood.org/events
 URL:https://www.fccnorwood.org/events
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-11-15-fall-craft-fair-sharon@norwood.ma
+DTSTAMP:20261114T035109Z
+DTSTART;TZID=America/New_York:20261115T120000
+DTEND;TZID=America/New_York:20261115T150000
+SUMMARY:Fall Craft Fair
+LOCATION:Crescent Ridge Dairy
+DESCRIPTION:Out of Town — Sharon\, MA. Vendors\, face painting\, hayrides and more. Details supplied by Ashley Falanga's Nov 14–20 weekly guide\; check organizer for changes.\nSource: https://www.ashleyfalanga.com
+URL:https://www.ashleyfalanga.com
+END:VEVENT
+BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-11-18@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261118T100000
 DTEND;TZID=America/New_York:20261118T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -87,7 +107,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-11-20@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261120T100000
 DTEND;TZID=America/New_York:20261120T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -97,7 +117,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-21-norwood-food-pantry-food-assistance-669ad09@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261121T090000
 DTEND;TZID=America/New_York:20261121T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -107,7 +127,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-11-25@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261125T100000
 DTEND;TZID=America/New_York:20261125T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -117,7 +137,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-11-27@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261127T100000
 DTEND;TZID=America/New_York:20261127T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -127,7 +147,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-28-norwood-food-pantry-food-assistance-73b9443@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261128T090000
 DTEND;TZID=America/New_York:20261128T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -137,7 +157,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-29-neighboorhood-rack-pop-up-thrift-market-b041d3c@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261129T130000
 SUMMARY:Neighboorhood Rack Pop-Up Thrift Market
 DESCRIPTION:Neighboorhood Rack Pop-Up Thrift Market Sunday\, November 29\, 2026 1:00 PM 4:00 PM Norwood Taproom (map) Google Calendar ICS Reserve your rack: https://docs.google.com/forms/d/e/1FAIpQLSfiOUclOP1frFwDJL1vA6F-EK_KOlsQSNH1HSdyTys-gmU8GQ/viewform View Event →\nSource: https://www.castleislandbeer.com/calendar/neighboorhood-rack-pop-up-thrift-market
@@ -145,7 +165,7 @@ URL:https://www.castleislandbeer.com/calendar/neighboorhood-rack-pop-up-thrift-m
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-12-02@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261202T100000
 DTEND;TZID=America/New_York:20261202T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -155,7 +175,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-03-labor-market-research-skills-careers-employme-534736f@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261203T100000
 DTEND;TZID=America/New_York:20261203T100000
 SUMMARY:Labor Market Research – Skills\, Careers\, Employment Outlook
@@ -165,7 +185,7 @@ URL:https://masshiremsw.com/event/lmr-dec-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-12-04@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261204T100000
 DTEND;TZID=America/New_York:20261204T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -175,7 +195,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-05-norwood-food-pantry-food-assistance-3ff17b1@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261205T090000
 DTEND;TZID=America/New_York:20261205T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -185,7 +205,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-07-rejuvenate-your-r-sum-67c897b@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261207T100000
 DTEND;TZID=America/New_York:20261207T100000
 SUMMARY:Rejuvenate Your Résumé
@@ -195,7 +215,7 @@ URL:https://masshiremsw.com/event/ryr-dec-07/
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-12-09@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261209T100000
 DTEND;TZID=America/New_York:20261209T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -205,7 +225,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-12-11@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261211T100000
 DTEND;TZID=America/New_York:20261211T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -215,7 +235,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-12-norwood-food-pantry-food-assistance-6007271@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261212T090000
 DTEND;TZID=America/New_York:20261212T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -225,7 +245,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-12-16@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261216T100000
 DTEND;TZID=America/New_York:20261216T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -235,7 +255,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-12-18@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261218T100000
 DTEND;TZID=America/New_York:20261218T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -244,8 +264,18 @@ DESCRIPTION:Are you looking for fun and safe play for your child during the fall
 URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-12-18-simbang-gabi-dinner-dance-42c8943@norwood.ma
+DTSTAMP:20261114T035109Z
+DTSTART;TZID=America/New_York:20261218T183000
+DTEND;TZID=America/New_York:20261218T193000
+SUMMARY:Simbang Gabi Dinner/Dance
+LOCATION:Norwood Knights of Columbus Events
+DESCRIPTION:Source: https://iccnorwood.org/events
+URL:https://iccnorwood.org/events
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-12-19-norwood-food-pantry-food-assistance-acd5c23@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261219T090000
 DTEND;TZID=America/New_York:20261219T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -255,7 +285,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-12-23@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261223T100000
 DTEND;TZID=America/New_York:20261223T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -265,7 +295,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2026-12-25@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261225T100000
 DTEND;TZID=America/New_York:20261225T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -275,7 +305,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-26-norwood-food-pantry-food-assistance-d094426@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261226T090000
 DTEND;TZID=America/New_York:20261226T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -285,7 +315,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2026-12-30@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20261230T100000
 DTEND;TZID=America/New_York:20261230T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -295,7 +325,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-01-01@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270101T100000
 DTEND;TZID=America/New_York:20270101T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -305,7 +335,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-02-norwood-food-pantry-food-assistance-7336dbe@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270102T090000
 DTEND;TZID=America/New_York:20270102T114000
 SUMMARY:Norwood Food Pantry — Food Assistance
@@ -315,7 +345,7 @@ URL:https://www.norwoodpantry.org/food
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-01-06@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270106T100000
 DTEND;TZID=America/New_York:20270106T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -325,7 +355,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-01-08@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270108T100000
 DTEND;TZID=America/New_York:20270108T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -335,7 +365,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-01-13@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270113T100000
 DTEND;TZID=America/New_York:20270113T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -345,7 +375,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-01-15@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270115T100000
 DTEND;TZID=America/New_York:20270115T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -355,7 +385,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-01-20@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270120T100000
 DTEND;TZID=America/New_York:20270120T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -365,7 +395,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-01-22@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270122T100000
 DTEND;TZID=America/New_York:20270122T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -375,7 +405,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-01-27@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270127T100000
 DTEND;TZID=America/New_York:20270127T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -385,7 +415,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-01-29@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270129T100000
 DTEND;TZID=America/New_York:20270129T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -395,7 +425,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-02-03@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270203T100000
 DTEND;TZID=America/New_York:20270203T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -405,7 +435,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-02-05@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270205T100000
 DTEND;TZID=America/New_York:20270205T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -415,7 +445,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-02-10@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270210T100000
 DTEND;TZID=America/New_York:20270210T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -425,7 +455,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-02-12@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270212T100000
 DTEND;TZID=America/New_York:20270212T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -435,7 +465,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-02-17@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270217T100000
 DTEND;TZID=America/New_York:20270217T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -445,7 +475,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-02-19@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270219T100000
 DTEND;TZID=America/New_York:20270219T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -455,7 +485,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-02-24@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270224T100000
 DTEND;TZID=America/New_York:20270224T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -465,7 +495,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-02-26@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270226T100000
 DTEND;TZID=America/New_York:20270226T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -475,7 +505,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-03-03@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270303T100000
 DTEND;TZID=America/New_York:20270303T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -485,7 +515,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-03-05@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270305T100000
 DTEND;TZID=America/New_York:20270305T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -495,7 +525,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-03-10@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270310T100000
 DTEND;TZID=America/New_York:20270310T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -505,7 +535,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-03-12@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270312T100000
 DTEND;TZID=America/New_York:20270312T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -515,7 +545,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-03-17@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270317T100000
 DTEND;TZID=America/New_York:20270317T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -525,7 +555,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-03-19@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270319T100000
 DTEND;TZID=America/New_York:20270319T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -535,7 +565,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-03-24@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270324T100000
 DTEND;TZID=America/New_York:20270324T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -545,7 +575,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-03-26@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270326T100000
 DTEND;TZID=America/New_York:20270326T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -555,7 +585,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-03-31@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270331T100000
 DTEND;TZID=America/New_York:20270331T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -565,7 +595,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-04-02@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270402T100000
 DTEND;TZID=America/New_York:20270402T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -575,7 +605,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-04-07@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270407T100000
 DTEND;TZID=America/New_York:20270407T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -585,7 +615,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-04-09@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270409T100000
 DTEND;TZID=America/New_York:20270409T120000
 SUMMARY:Indoor Tot Time - Fridays
@@ -595,7 +625,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-0ace3af3a610-2027-04-14@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270414T100000
 DTEND;TZID=America/New_York:20270414T120000
 SUMMARY:Indoor Tot Time - Wednesdays
@@ -605,7 +635,7 @@ URL:https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=3
 END:VEVENT
 BEGIN:VEVENT
 UID:rec-occurrence-rec-fc27544fe5d5-2027-04-16@norwood.ma
-DTSTAMP:20261114T024755Z
+DTSTAMP:20261114T035109Z
 DTSTART;TZID=America/New_York:20270416T100000
 DTEND;TZID=America/New_York:20270416T120000
 SUMMARY:Indoor Tot Time - Fridays
