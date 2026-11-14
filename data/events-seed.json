@@ -2875,12 +2875,13 @@
     "category": "craft_fair",
     "source_id": "worcester-deaf-club",
     "source_url": "https://massdeaf.org/events/",
-    "cost": null,
+    "cost": "Free admission",
     "public_access": "public",
     "series": "Worcester Deaf Club Annual Arts & Crafts Bazaar",
     "publish_candidate": true,
-    "verification_status": "user_source_verified_2026-09-24",
-    "notes": "14th Annual Arts & Crafts Bazaar. Vendor tables are $30 for an 8-foot table; vendor registration deadline Oct. 30. Out-of-town event in Framingham at The Learning Center for the Deaf; show town indicator."
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Framingham, MA. 10 AM–3 PM; artwork, clothing, jewelry, knitted items, holiday items, baked goods, refreshments for sale and vendor-product raffles. Open to the public; interpreters provided. Proceeds support the Worcester Deaf Club annual Christmas party. Contact WorcDeafClub@gmail.com.",
+    "town": "Framingham"
   },
   {
     "id": "2026-11-14-norwood-wellness-fair",
@@ -8005,5 +8006,247 @@
         "label": "Conclusion"
       }
     ]
+  },
+  {
+    "id": "2026-11-14-bass-pro-santas-wonderland",
+    "title": "Bass Pro Shops — Santa’s Wonderland",
+    "description": "Free 4×6 Santa photo; online reservation highly recommended.",
+    "start": {
+      "date": "2026-11-14",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-24",
+      "time": null
+    },
+    "venue": "Bass Pro Shops",
+    "town": "Foxborough",
+    "category": "holiday",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Foxborough, MA. Free 4×6 Santa photo; online reservation highly recommended. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-fall-fest-on-the-hill",
+    "title": "Fall Fest on the Hill",
+    "description": "Pony rides, petting zoo, carnival games and more.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "15:00"
+    },
+    "venue": "Norfolk Town Hall",
+    "town": "Norfolk",
+    "category": "community",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Norfolk, MA. Pony rides, petting zoo, carnival games and more. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-annual-rotary-craft-fair",
+    "title": "Annual Rotary Craft Fair",
+    "description": "Annual Rotary craft fair.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "15:00"
+    },
+    "venue": "Tri-County Regional High School",
+    "town": "Franklin",
+    "category": "craft_fair",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Franklin, MA. Annual Rotary craft fair. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-breathwork-meditation",
+    "title": "Breathwork & Meditation Session",
+    "description": "Breathwork and meditation session.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "11:00"
+    },
+    "venue": "Walpole Public Library",
+    "town": "Walpole",
+    "category": "wellness",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Walpole, MA. Breathwork and meditation session. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-read-to-a-dog",
+    "title": "Read to a Dog",
+    "description": "Online registration required.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "12:00"
+    },
+    "venue": "Westwood Public Library",
+    "town": "Westwood",
+    "category": "library",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Westwood, MA. Online registration required. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-squishy-mallow-paint",
+    "title": "Squishy-mallow Drop-In Paint Event (Ages 5–12)",
+    "description": "Drop-in paint event for ages 5–12.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "15:00"
+    },
+    "venue": "Boyden Library",
+    "town": "Foxborough",
+    "category": "arts",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Foxborough, MA. Drop-in paint event for ages 5–12. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-festive-friends-paint-sip",
+    "title": "Festive Friends Paint and Sip",
+    "description": "Festive Friends paint-and-sip event.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "15:30"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "17:30"
+    },
+    "venue": "Muse Paintbar",
+    "town": "Foxborough",
+    "category": "arts",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Foxborough, MA. Festive Friends paint-and-sip event. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-frank-santos-hypnotist",
+    "title": "Frank Santos — R-Rated Hypnotist",
+    "description": "R-rated hypnotist performance; adult-oriented content.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": null
+    },
+    "venue": "Marilyn Rodman Performing Arts Center",
+    "town": "Foxborough",
+    "category": "entertainment",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Foxborough, MA. R-rated hypnotist performance; adult-oriented content. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-14-public-ice-skating-nov14",
+    "title": "Public Ice Skating",
+    "description": "Public skating session.",
+    "start": {
+      "date": "2026-11-14",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2026-11-14",
+      "time": "20:50"
+    },
+    "venue": "Norfolk Ice Arena",
+    "town": "Norfolk",
+    "category": "sports",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Norfolk, MA. Public skating session. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-15-public-ice-skating-nov15",
+    "title": "Public Ice Skating",
+    "description": "Public skating session.",
+    "start": {
+      "date": "2026-11-15",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-11-15",
+      "time": "14:50"
+    },
+    "venue": "Norfolk Ice Arena",
+    "town": "Norfolk",
+    "category": "sports",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Norfolk, MA. Public skating session. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
+  },
+  {
+    "id": "2026-11-15-fall-craft-fair-sharon",
+    "title": "Fall Craft Fair",
+    "description": "Vendors, face painting, hayrides and more.",
+    "start": {
+      "date": "2026-11-15",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-11-15",
+      "time": "15:00"
+    },
+    "venue": "Crescent Ridge Dairy",
+    "town": "Sharon",
+    "category": "craft_fair",
+    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
+    "source_url": "https://www.ashleyfalanga.com",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "owner_supplied_flyer_2026-11-13",
+    "notes": "Out of Town — Sharon, MA. Vendors, face painting, hayrides and more. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes."
   }
 ]
