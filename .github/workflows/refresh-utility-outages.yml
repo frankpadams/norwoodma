@@ -14,9 +14,7 @@ jobs:
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch validated outage feed
-        env:
-          OUTAGE_GEOJSON_URL: ${{ secrets.NORWOOD_OUTAGE_GEOJSON_URL }}
+      - name: Fetch verified Norwood Light outage events
         run: python3 scripts/refresh-utility-outages.py
       - name: Commit changed data
         run: |
