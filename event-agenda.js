@@ -84,6 +84,11 @@ function rank(e){
   const oneTimeProgram=/\b(workshop|presentation|author talk|book signing|fundraiser|fundraising event|public performance|theatrical performance)\b/.test(text);
   if(oneTimeProgram&&!recurring)return 3;
   if(e.category==='civic_meeting'||/\b(select board|board of selectmen|school committee|planning board|zoning board|zoning board of appeals|finance commission|conservation commission|board of health|town meeting|town committee|town board|public hearing)\b/.test(text)||(/\b(?:board|committee|commission)\b/.test(text)&&/\b(?:meeting|hearing)\b/.test(text)&&/\b(?:norwood|town hall|municipal)\b/.test(text+' '+location)))return 7;
+  // Free public drop-in activities and single-session kids workshops stay visible
+  // alongside other accessible activities, even when offered on a recurring schedule.
+  const dropIn=/\b(drop[ -]?in|open play|open gym|public skating|kids? workshops?|lego club|craft club|storytime|story time|sing[ -]?a[ -]?long)\b/i.test(text);
+  const freeActivity=/\bfree\b/i.test([e.cost,e.price,e.admission,e.notes,e.description].filter(Boolean).join(' '));
+  if(recurring&&dropIn&&freeActivity)return 5;
   if(recurring)return 8;
   const cost=[e.cost,e.price,e.fees,e.admission].filter(Boolean).join(' ').toLowerCase();
   if(/^(?:free|none|no charge|no cost|\$?0(?:\.00)?)$/.test(cost.trim())||/\bfree (?:admission|event|program|activity|to the public)\b|\bno charge\b|\bno cost\b/.test(text))return 5;
