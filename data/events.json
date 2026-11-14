@@ -376,37 +376,6 @@
     ]
   },
   {
-    "id": "2026-11-13-ribbon-cutting-squat-reset-100b194",
-    "title": "Ribbon Cutting-Squat & Reset",
-    "start": {
-      "date": "2026-11-13",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-13",
-      "time": "11:00"
-    },
-    "venue": "650 Washington Street",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/ribbon-cutting-squat-reset/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-4382c81b9c95-2026-11-13",
     "title": "Batting Cage",
     "start": {
@@ -1141,8 +1110,8 @@
     ]
   },
   {
-    "id": "2026-11-14-norwood-wellness-fair-free-event-a88a699",
-    "title": "Norwood Wellness Fair (free event)",
+    "id": "2026-11-14-lowe-s-kids-workshop-holiday-engine",
+    "title": "Lowe's Kids Workshop — Holiday Engine",
     "start": {
       "date": "2026-11-14",
       "time": "10:00"
@@ -1151,26 +1120,21 @@
       "date": "2026-11-14",
       "time": "13:00"
     },
-    "venue": "Coakley Middle School Norwood School Health Council",
+    "venue": "Participating Lowe's store (select when registering)",
     "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/norwood-wellness-fair-free-event/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
+    "town": "Location varies",
+    "category": "family",
+    "source_id": "lowes-official-kids-club",
+    "source_url": "https://www.lowes.com/events/register/holiday-engine",
+    "registration_url": "https://www.lowes.com/events/register/holiday-engine",
+    "cost": "Free",
+    "organizer": "Lowe's Kids Club",
+    "recurrence": "monthly",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
+    "notes": "Confirm store location; Out of Town if outside Norwood. Ages approximately 4–11; parent or guardian supervision; registration required. Confirm a participating store.",
     "calendar_ids": [
-      "friends-norwood-center",
       "norwood-community",
-      "norwood-family",
-      "norwood-food-markets"
+      "norwood-family"
     ]
   },
   {
@@ -3064,6 +3028,33 @@
     ]
   },
   {
+    "id": "2026-11-16-visit-with-the-gofi-service-dogs",
+    "title": "Visit with the GOFI Service Dogs",
+    "start": {
+      "date": "2026-11-16",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "11:45"
+    },
+    "venue": "Walpole Public Library",
+    "address": "143 School Street, Walpole, MA 02081",
+    "town": "Walpole",
+    "category": "children",
+    "source_id": "walpole-library-official",
+    "source_url": "https://www.walpolelibrary.org/events/list/",
+    "registration_url": null,
+    "cost": "Free",
+    "organizer": "Walpole Public Library",
+    "recurrence": null,
+    "publish_candidate": true,
+    "notes": "Out of Town — Walpole, MA. Free library visit with trained service dogs and their handlers.",
+    "calendar_ids": [
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-34986e58276a-2026-11-16",
     "title": "Irish Step 1 - Mondays",
     "start": {
@@ -3173,6 +3164,33 @@
       "rec-all",
       "rec-sports",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-16-teen-tween-pop-up-art-block-printing",
+    "title": "Teen/Tween Pop Up Art — Block Printing",
+    "start": {
+      "date": "2026-11-16",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": "17:30"
+    },
+    "venue": "Walpole Public Library",
+    "address": "143 School Street, Walpole, MA 02081",
+    "town": "Walpole",
+    "category": "children",
+    "source_id": "walpole-library-official",
+    "source_url": "https://www.walpolelibrary.org/events/list/",
+    "registration_url": "https://www.walpolelibrary.org/events/list/",
+    "cost": "Free",
+    "organizer": "Walpole Public Library",
+    "recurrence": null,
+    "publish_candidate": true,
+    "notes": "Out of Town — Walpole, MA. Free art activity, ages 11+, limited to 15 participants; online registration required.",
+    "calendar_ids": [
+      "norwood-family"
     ]
   },
   {
@@ -4649,6 +4667,33 @@
     ]
   },
   {
+    "id": "2026-11-18-move-groove-and-learn",
+    "title": "Move, Groove, and Learn",
+    "start": {
+      "date": "2026-11-18",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2026-11-18",
+      "time": "11:30"
+    },
+    "venue": "Walpole Public Library",
+    "address": "143 School Street, Walpole, MA 02081",
+    "town": "Walpole",
+    "category": "children",
+    "source_id": "walpole-library-official",
+    "source_url": "https://www.walpolelibrary.org/events/list/",
+    "registration_url": "https://www.walpolelibrary.org/events/list/",
+    "cost": "Free",
+    "organizer": "Walpole Public Library",
+    "recurrence": null,
+    "publish_candidate": true,
+    "notes": "Out of Town — Walpole, MA. Free drop-in preschool movement, songs and storytime with caregivers; no registration required.",
+    "calendar_ids": [
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-787f7addaf61-2026-11-18",
     "title": "Modern 2 - Wednesdays",
     "start": {
@@ -5528,6 +5573,33 @@
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-19-sing-a-long-with-stacey-peasley",
+    "title": "Sing-a-long with Stacey Peasley",
+    "start": {
+      "date": "2026-11-19",
+      "time": "10:30"
+    },
+    "end": {
+      "date": "2026-11-19",
+      "time": "11:00"
+    },
+    "venue": "Walpole Public Library",
+    "address": "143 School Street, Walpole, MA 02081",
+    "town": "Walpole",
+    "category": "children",
+    "source_id": "walpole-library-official",
+    "source_url": "https://www.walpolelibrary.org/events/list/",
+    "registration_url": null,
+    "cost": "Free",
+    "organizer": "Walpole Public Library",
+    "recurrence": null,
+    "publish_candidate": true,
+    "notes": "Out of Town — Walpole, MA. Free children's sing-along; all ages; arrive early for space.",
+    "calendar_ids": [
+      "norwood-family"
     ]
   },
   {
@@ -6662,37 +6734,6 @@
     ]
   },
   {
-    "id": "2026-11-20-ribbon-cutting-town-common-books-80eb609",
-    "title": "Ribbon Cutting-Town Common Books",
-    "start": {
-      "date": "2026-11-20",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "13:00"
-    },
-    "venue": "679 Washington Street",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/ribbon-cutting-town-common-book/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-20-trans-day-of-visability-5736645",
     "title": "Trans Day of Visability",
     "start": {
@@ -6759,38 +6800,6 @@
       "rec-all",
       "rec-sports",
       "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-20-gallery-hop-take-a-stroll-for-art-94e2a55",
-    "title": "Gallery Hop: Take a Stroll for Art",
-    "start": {
-      "date": "2026-11-20",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "20:30"
-    },
-    "venue": "Norwood Art Connection",
-    "address": "Custom Framing 45 Central St; Tax Solutions 642 Washington St ; Woodstuff Market 674 Washington St",
-    "category": "arts",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/gallery-hop-take-a-stroll-for-art/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-arts",
-      "norwood-community"
     ]
   },
   {
@@ -6987,6 +6996,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-21-home-depot-kids-workshop",
+    "title": "Home Depot Kids Workshop — Christmas Car Ornament",
+    "description": "Free hands-on building workshop for children ages 5–12, with parent or guardian participation. Kits and tools provided while supplies last.",
+    "start": {
+      "date": "2026-11-21",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-21",
+      "time": "12:00"
+    },
+    "venue": "The Home Depot — participating stores",
+    "town": "Norwood area (choose store when registering)",
+    "category": "family",
+    "source_id": "home-depot-official-kids-workshops",
+    "source_url": "https://www.homedepot.com/c/kids-workshop",
+    "registration_url": "https://www.homedepot.com/c/kids-workshop",
+    "cost": "Free",
+    "organizer": "The Home Depot",
+    "recurrence": "monthly",
+    "recurrence_details": "Usually first Saturday monthly; additional holiday workshop November 21, 2026.",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "official_home_depot_schedule_checked_2026-11-13",
+    "notes": "Participating Home Depot stores; select and confirm your preferred store on the registration page. Out-of-town location must be clearly indicated if a neighboring store is selected. Free while supplies last; registration recommended and early arrival advised.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -7628,38 +7668,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-22-40th-norwood-turkey-trot-8740eff",
-    "title": "40th Norwood Turkey Trot",
-    "start": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "venue": "Start & Finish Norwood High School 245 Nichols St",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/40th-norwood-turkeytrot/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Register Here Email: wingedfootrunning1@gmail.com",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community",
-      "norwood-family"
     ]
   },
   {
@@ -10638,37 +10646,6 @@
     ]
   },
   {
-    "id": "2026-11-28-small-business-saturday-6595bda",
-    "title": "Small Business Saturday",
-    "start": {
-      "date": "2026-11-28",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-28",
-      "time": "23:59"
-    },
-    "venue": "Friends of Norwood Center",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/small-business-saturday-3/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Buy from small and local businesses!",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-28-men-s-prayer-group-saturday-5177a21",
     "title": "Men's Prayer Group",
     "start": {
@@ -11284,193 +11261,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-food-markets"
-    ]
-  },
-  {
-    "id": "2026-11-29-holiday-tree-lighting-festival-edf39c1",
-    "title": "Holiday Tree Lighting Festival",
-    "start": {
-      "date": "2026-11-29",
-      "time": "13:30"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "16:30"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/holiday-tree-lighting-festival-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-holiday-entertainment-hayrides-games-facepain-258d6ad",
-    "title": "Holiday entertainment: hayrides, games, Facepainting and more",
-    "start": {
-      "date": "2026-11-29",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "15:30"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "arts",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/holiday-entertainment-hayrides-games-facepainting-and-more/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-reindeer-dash-44ee7c0",
-    "title": "Reindeer Dash",
-    "start": {
-      "date": "2026-11-29",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "14:00"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/reindeerdash/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-holiday-parade-9b69e8a",
-    "title": "Holiday Parade",
-    "start": {
-      "date": "2026-11-29",
-      "time": "15:30"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "15:30"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/holidayparade/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-santa-mrs-claus-arrive-at-the-gazebo-6cf845c",
-    "title": "Santa & Mrs. Claus arrive at the Gazebo",
-    "start": {
-      "date": "2026-11-29",
-      "time": "15:45"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "15:45"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/santa-mrs-claus-arriveat-the-gazebo/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-29-tree-lighting-5d87598",
-    "title": "Tree Lighting",
-    "start": {
-      "date": "2026-11-29",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "16:00"
-    },
-    "venue": "Norwood Recreation Department",
-    "address": "165 Nahatan St, Norwood, Boston, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/treelighting/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "More info: https://norwoodma.myrec.com/",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
     ]
   },
   {
@@ -13063,6 +12853,33 @@
     ]
   },
   {
+    "id": "2026-12-02-teen-tween-holiday-craft-tree-ornament",
+    "title": "Teen/Tween Holiday Craft — Tree Ornament",
+    "start": {
+      "date": "2026-12-02",
+      "time": "16:00"
+    },
+    "end": {
+      "date": "2026-12-02",
+      "time": "17:00"
+    },
+    "venue": "Walpole Public Library",
+    "address": "143 School Street, Walpole, MA 02081",
+    "town": "Walpole",
+    "category": "children",
+    "source_id": "walpole-library-official",
+    "source_url": "https://www.walpolelibrary.org/kidsteens/teens/things-to-do/",
+    "registration_url": "https://www.walpolelibrary.org/kidsteens/teens/things-to-do/",
+    "cost": "Free",
+    "organizer": "Walpole Public Library",
+    "recurrence": null,
+    "publish_candidate": true,
+    "notes": "Out of Town — Walpole, MA. Free holiday ornament craft for ages 11+; registration required.",
+    "calendar_ids": [
+      "norwood-family"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-ab6183ab4d93-2026-12-02",
     "title": "Just Bake It Basics Session 1 - Grades 3-5",
     "start": {
@@ -14496,6 +14313,37 @@
     ]
   },
   {
+    "id": "2026-12-05-home-depot-kids-workshop",
+    "title": "Home Depot Kids Workshop — Holiday Train",
+    "description": "Free hands-on building workshop for children ages 5–12, with parent or guardian participation. Kits and tools provided while supplies last.",
+    "start": {
+      "date": "2026-12-05",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": "12:00"
+    },
+    "venue": "The Home Depot — participating stores",
+    "town": "Norwood area (choose store when registering)",
+    "category": "family",
+    "source_id": "home-depot-official-kids-workshops",
+    "source_url": "https://www.homedepot.com/c/kids-workshop",
+    "registration_url": "https://www.homedepot.com/c/kids-workshop",
+    "cost": "Free",
+    "organizer": "The Home Depot",
+    "recurrence": "monthly",
+    "recurrence_details": "Usually first Saturday monthly; additional holiday workshop November 21, 2026.",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "official_home_depot_schedule_checked_2026-11-13",
+    "notes": "Participating Home Depot stores; select and confirm your preferred store on the registration page. Out-of-town location must be clearly indicated if a neighboring store is selected. Free while supplies last; registration recommended and early arrival advised.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2026-12-05-norwood-food-pantry-food-assistance-3ff17b1",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -14830,37 +14678,6 @@
       "norwood-high-athletics",
       "norwood-sports",
       "nps-athletics"
-    ]
-  },
-  {
-    "id": "2026-12-05-circle-of-hope-luminary-night-740932b",
-    "title": "Circle of Hope Luminary Night",
-    "start": {
-      "date": "2026-12-05",
-      "time": "16:00"
-    },
-    "end": {
-      "date": "2026-12-05",
-      "time": "18:00"
-    },
-    "venue": "Norwood Circle of Hope Foundation",
-    "address": "PO Box 421, Norwood, MA, 02062",
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/circle-of-hope-luminary-night/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Purchase Lumina $5 PO Box 421 Norwood MA 02062 info@norwoodcoh.org www.norwoodcoh.org",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community"
     ]
   },
   {
@@ -18786,6 +18603,34 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-food-markets"
+    ]
+  },
+  {
+    "id": "2026-12-12-lowe-s-kids-workshop-holiday-trolley-car",
+    "title": "Lowe's Kids Workshop — Holiday Trolley Car",
+    "start": {
+      "date": "2026-12-12",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2026-12-12",
+      "time": "13:00"
+    },
+    "venue": "Participating Lowe's store (select when registering)",
+    "address": null,
+    "town": "Location varies",
+    "category": "family",
+    "source_id": "lowes-official-kids-club",
+    "source_url": "https://www.lowes.com/events/register/holiday-trolley-car",
+    "registration_url": "https://www.lowes.com/events/register/holiday-trolley-car",
+    "cost": "Free",
+    "organizer": "Lowe's Kids Club",
+    "recurrence": "monthly",
+    "publish_candidate": true,
+    "notes": "Confirm store location; Out of Town if outside Norwood. Ages approximately 4–11; parent or guardian supervision; registration required. Confirm a participating store.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -28780,6 +28625,37 @@
     ]
   },
   {
+    "id": "2027-01-02-home-depot-kids-workshop",
+    "title": "Home Depot Kids Workshop — Claw Machine Bank",
+    "description": "Free hands-on building workshop for children ages 5–12, with parent or guardian participation. Kits and tools provided while supplies last.",
+    "start": {
+      "date": "2027-01-02",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2027-01-02",
+      "time": "12:00"
+    },
+    "venue": "The Home Depot — participating stores",
+    "town": "Norwood area (choose store when registering)",
+    "category": "family",
+    "source_id": "home-depot-official-kids-workshops",
+    "source_url": "https://www.homedepot.com/c/kids-workshop",
+    "registration_url": "https://www.homedepot.com/c/kids-workshop",
+    "cost": "Free",
+    "organizer": "The Home Depot",
+    "recurrence": "monthly",
+    "recurrence_details": "Usually first Saturday monthly; additional holiday workshop November 21, 2026.",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "official_home_depot_schedule_checked_2026-11-13",
+    "notes": "Participating Home Depot stores; select and confirm your preferred store on the registration page. Out-of-town location must be clearly indicated if a neighboring store is selected. Free while supplies last; registration recommended and early arrival advised.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
     "id": "2027-01-02-norwood-food-pantry-food-assistance-7336dbe",
     "title": "Norwood Food Pantry — Food Assistance",
     "start": {
@@ -36107,6 +35983,34 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-food-markets"
+    ]
+  },
+  {
+    "id": "2027-01-16-lowe-s-kids-workshop-winter-play-lodge",
+    "title": "Lowe's Kids Workshop — Winter Play Lodge",
+    "start": {
+      "date": "2027-01-16",
+      "time": "10:00"
+    },
+    "end": {
+      "date": "2027-01-16",
+      "time": "13:00"
+    },
+    "venue": "Participating Lowe's store (select when registering)",
+    "address": null,
+    "town": "Location varies",
+    "category": "family",
+    "source_id": "lowes-official-kids-club",
+    "source_url": "https://www.lowes.com/diy-projects-and-ideas/workshops",
+    "registration_url": "https://www.lowes.com/diy-projects-and-ideas/workshops",
+    "cost": "Free",
+    "organizer": "Lowe's Kids Club",
+    "recurrence": "monthly",
+    "publish_candidate": true,
+    "notes": "Confirm store location; Out of Town if outside Norwood. Ages approximately 4–11; parent or guardian supervision; registration required. Confirm a participating store.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
