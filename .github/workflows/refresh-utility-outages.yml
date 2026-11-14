@@ -1,0 +1,28 @@
+name: Refresh Norwood utility outage data
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: norwood-utility-outages
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch validated outage feed
+        env:
+          OUTAGE_GEOJSON_URL: ${{ secrets.NORWOOD_OUTAGE_GEOJSON_URL }}
+        run: python3 scripts/refresh-utility-outages.py
+      - name: Commit changed data
+        run: |
+          git add data/norwood-utility-outages.geojson
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh Norwood outage map data"
+          git push
