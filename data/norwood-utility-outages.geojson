@@ -1,10 +1,101 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "source": "Norwood Light / DataCapable",
-    "updated_at": null,
-    "status": "awaiting_authorized_geographic_feed",
-    "note": "No verified coordinate feed is connected. An empty feature list must not be interpreted as no outages."
+    "source": "Norwood Light / DataCapable public outage map",
+    "source_url": "https://utilisocial.io/datacapable/v2/p/norwood/map/events",
+    "updated_at": "2026-11-14T18:17:28.273770+00:00",
+    "status": "connected",
+    "event_count": 1
   },
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "id": "2249692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.19771,
+          42.19772
+        ]
+      },
+      "properties": {
+        "title": "Outage",
+        "provider": "Norwood Light",
+        "service": "Electric",
+        "source_url": "https://norwood.datacapable.com/map/",
+        "customers_affected": 46,
+        "reported_at": "1794672331000",
+        "updated_at": "1794680044000",
+        "status": "Investigating",
+        "identifier": "E908B5EB-BB2E-43F5-5A05-08DF425C8388"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2249692-area-0",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.1956,
+              42.204
+            ],
+            [
+              -71.1887,
+              42.1956
+            ],
+            [
+              -71.1883,
+              42.1945
+            ],
+            [
+              -71.19,
+              42.1934
+            ],
+            [
+              -71.1922,
+              42.1923
+            ],
+            [
+              -71.2039,
+              42.1952
+            ],
+            [
+              -71.2056,
+              42.1966
+            ],
+            [
+              -71.2057,
+              42.1971
+            ],
+            [
+              -71.204,
+              42.2006
+            ],
+            [
+              -71.2028,
+              42.202
+            ],
+            [
+              -71.198,
+              42.2036
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "title": "Outage",
+        "provider": "Norwood Light",
+        "service": "Electric",
+        "source_url": "https://norwood.datacapable.com/map/",
+        "customers_affected": 46,
+        "reported_at": "1794672331000",
+        "updated_at": "1794680044000",
+        "status": "Investigating",
+        "identifier": "E908B5EB-BB2E-43F5-5A05-08DF425C8388",
+        "area_boundary": true
+      }
+    }
+  ]
 }
