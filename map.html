@@ -140,6 +140,8 @@
 <details class="map-layer-more"><summary>Businesses &amp; restaurants</summary><div id="mapBusinessChoices"></div></details>
 <div id="mapCategoryGroups"></div>
 <details class="map-layer-more" id="utilityOutages"><summary>Utility outages &amp; service alerts</summary>
+<label class="map-layer-choice"><input type="checkbox" id="norwoodNativeOutagesToggle"><span>Power outage locations (map layer)</span></label>
+<p id="norwoodNativeOutagesStatus" class="map-layer-status" aria-live="polite">Geographic outage feed not connected; no outage locations can currently be verified.</p>
 <label class="map-layer-choice"><input type="checkbox" id="norwoodOutageMapToggle"><span>Show live Norwood Light outage map</span></label>
 <div class="map-layer-links" style="margin:0;padding:8px 4px 10px;border-top:0">
 <p style="margin:0 0 5px;font-size:.75rem;color:#617682">Norwood Light’s live outage map can be displayed over the map area. Other providers currently offer status links only.</p>
@@ -483,6 +485,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  toggle.addEventListener('change',()=>show(toggle.checked));close.addEventListener('click',()=>show(false));
 })();
 </script>
+<script src="map-utility-outages.js?v=20261114"></script>
 <script src="map-environmental-cleanup.js?v=20261113"></script>
 </body>
 </html>
