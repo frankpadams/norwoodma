@@ -3,7 +3,7 @@
   "metadata": {
     "source": "Norwood Light / DataCapable public outage map",
     "source_url": "https://utilisocial.io/datacapable/v2/p/norwood/map/events",
-    "updated_at": "2026-11-14T18:17:28.273770+00:00",
+    "updated_at": "2026-11-14T22:15:29.004452+00:00",
     "status": "connected",
     "event_count": 1
   },
@@ -23,9 +23,9 @@
         "provider": "Norwood Light",
         "service": "Electric",
         "source_url": "https://norwood.datacapable.com/map/",
-        "customers_affected": 46,
+        "customers_affected": 47,
         "reported_at": "1794672331000",
-        "updated_at": "1794680044000",
+        "updated_at": "1794680465000",
         "status": "Investigating",
         "identifier": "E908B5EB-BB2E-43F5-5A05-08DF425C8388"
       }
@@ -89,9 +89,9 @@
         "provider": "Norwood Light",
         "service": "Electric",
         "source_url": "https://norwood.datacapable.com/map/",
-        "customers_affected": 46,
+        "customers_affected": 47,
         "reported_at": "1794672331000",
-        "updated_at": "1794680044000",
+        "updated_at": "1794680465000",
         "status": "Investigating",
         "identifier": "E908B5EB-BB2E-43F5-5A05-08DF425C8388",
         "area_boundary": true
