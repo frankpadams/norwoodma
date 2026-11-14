@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-11-13T17:10:11.239969Z",
+  "generated_at": "2026-11-14T15:46:34.505146Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
         "accepted_grades": [
+          "diesel",
+          "premium",
           "regular"
         ],
         "candidates": [
@@ -21,9 +23,9 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           }
@@ -35,8 +37,6 @@
       "google": {
         "accepted_grades": [
           "diesel",
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -54,8 +54,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -81,8 +81,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -111,8 +111,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -173,8 +173,8 @@
             "types": [
               "car_wash",
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -192,14 +192,14 @@
             "station_verified": true,
             "types": [
               "convenience_store",
-              "gas_station",
               "car_wash",
+              "gas_station",
               "food_store",
+              "service",
               "restaurant",
               "food",
-              "store",
               "point_of_interest",
-              "service",
+              "store",
               "establishment"
             ]
           },
@@ -217,8 +217,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -258,9 +258,7 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -278,8 +276,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -330,8 +328,50 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "establishment"
+            ]
+          },
+          {
+            "address": "683 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Norwood Convenience and News",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "683 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
+              "food",
+              "point_of_interest",
+              "store",
+              "establishment"
+            ]
+          },
+          {
+            "address": "496 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Quick Stop",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "496 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
+            "station_verified": false,
+            "types": [
+              "convenience_store",
+              "food_store",
+              "food",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -354,48 +394,6 @@
               "point_of_interest",
               "establishment"
             ]
-          },
-          {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Lucky Mart Inc.",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "501 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
-            "station_verified": false,
-            "types": [
-              "convenience_store",
-              "grocery_store",
-              "food_store",
-              "food",
-              "store",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "1237 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Convenient Food Mart & Liquor",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "1237 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJ9cb7Wup_5IkRzpspW1SoTms",
-            "station_verified": false,
-            "types": [
-              "liquor_store",
-              "store",
-              "point_of_interest",
-              "establishment"
-            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -404,7 +402,7 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
-          "diesel",
+          "premium",
           "midgrade",
           "regular"
         ],
@@ -424,8 +422,8 @@
             "types": [
               "gas_station",
               "car_repair",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -455,9 +453,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
-              "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -477,10 +475,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "food",
-              "store",
-              "point_of_interest",
               "service",
+              "food",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -498,8 +496,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -517,8 +515,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -534,7 +532,8 @@
       "google": {
         "accepted_grades": [
           "diesel",
-          "premium"
+          "premium",
+          "midgrade"
         ],
         "candidates": [
           {
@@ -557,7 +556,7 @@
             ]
           }
         ],
-        "outcome": "prices_returned"
+        "outcome": "partial_prices"
       }
     },
     "Shell — Walpole Street": {
@@ -582,8 +581,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -594,7 +593,7 @@
     "Sunoco — Route 1": {
       "google": {
         "accepted_grades": [
-          "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -614,10 +613,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "food",
-              "store",
-              "point_of_interest",
               "service",
+              "food",
+              "point_of_interest",
+              "store",
               "establishment"
             ]
           }
