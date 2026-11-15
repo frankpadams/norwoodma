@@ -22,7 +22,9 @@ toggle.addEventListener('change',async()=>{
  try{
   // Query the documented TOWN field directly; ArcGIS services may reject UPPER().
   // Use native ArcGIS JSON instead of GeoJSON, which is not supported by every layer.
-  const params=new URLSearchParams({where:"TOWN = 'NORWOOD'",outFields:'*',returnGeometry:'true',outSR:'4326',f:'json'});
+  // Spatial query avoids differences in TOWN capitalization/field values.
+  // Extent is Norwood's MassGIS town bounding box, in WGS84.
+  const params=new URLSearchParams({where:'1=1',geometry:'-71.23848,42.14980,-71.15476,42.21399',geometryType:'esriGeometryEnvelope',inSR:'4326',spatialRel:'esriSpatialRelIntersects',outFields:'*',returnGeometry:'true',outSR:'4326',f:'json'});
   const response=await fetch(service+'?'+params);
   if(!response.ok)throw Error('Service unavailable (HTTP '+response.status+')');
   const data=await response.json();
@@ -32,6 +34,9 @@ toggle.addEventListener('change',async()=>{
    const lng=feature.geometry?.x,lat=feature.geometry?.y;
    if(!Number.isFinite(lat)||!Number.isFinite(lng))continue;
    const p=feature.attributes||{};
+   // Do not accidentally show records from bordering towns in the Norwood-only layer.
+   const town=String(p.TOWN??p.town??'').trim().toUpperCase();
+   if(town&&town!=='NORWOOD')continue;
    const get=k=>p[k]??p[k.toUpperCase()]??p[k.toLowerCase()]??'';
    const rtn=get('rtn'),name=get('name')||'MassDEP cleanup site',address=get('address'),status=get('status');
    const source=get('site_info');
@@ -42,7 +47,7 @@ toggle.addEventListener('change',async()=>{
   loaded=true;
   const count=group.getLayers().length;
   show(count?'Orange dots: '+count+' tier-classified sites. Approximate, incomplete MassDEP data (MassGIS update: August 2025).':'No tier-classified cleanup sites returned for Norwood by this dataset. This does not mean there are no reported releases; check the MassDEP Waste Site Cleanup Portal.');
-  if(count)map.fitBounds(group.getBounds?group.getBounds():L.featureGroup(group.getLayers()).getBounds(),{padding:[35,35],maxZoom:14});
+  if(count)map.fitBounds(L.featureGroup(group.getLayers()).getBounds(),{padding:[35,35],maxZoom:14});
  }catch(error){console.warn('MassDEP cleanup layer:',error);show('Cleanup-site data could not be loaded from the source. Check MassDEP directly or try again later.');}
  finally{loading=false;}
 });
