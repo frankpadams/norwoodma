@@ -1,63 +1,115 @@
 {
-  "updated_at": "2026-11-14T19:54:17.244671-05:00",
-  "date": "2026-11-14",
+  "updated_at": "2026-11-15T02:41:05.404011-05:00",
+  "date": "2026-11-15",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Comcast Cyber Security Presentation 10.19.26",
+      "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 180,
+          "title": "Norwood News 11.13.26"
+        },
+        {
+          "minute": 240,
+          "title": "Abandon Ship! The Sinking of the Laconia 9.14.26"
+        },
+        {
+          "minute": 360,
           "title": "The Vehicle for Change 11.10.26"
         },
         {
-          "minute": 1320,
+          "minute": 420,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 480,
           "title": "Norwood News 11.13.26"
         },
         {
-          "minute": 1380,
-          "title": "Comcast Cyber Security Presentation 10.19.26"
+          "minute": 540,
+          "title": "Norwood News 11.13.26"
+        },
+        {
+          "minute": 600,
+          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-14"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-15"
     },
     "government": {
       "status": "scheduled",
-      "title": "Conservation Commission 11.4.26",
+      "title": "Trails Advisory Committee 11.10.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1230,
+          "minute": 210,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 390,
+          "title": "Board of Selectmen 11.10.26"
+        },
+        {
+          "minute": 450,
           "title": "Trails Advisory Committee 11.10.26"
         },
         {
-          "minute": 1320,
+          "minute": 540,
           "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 630,
+          "title": "Library Board of Trustees 11.10.26"
+        },
+        {
+          "minute": 690,
+          "title": "Board of Selectmen 11.10.26"
+        },
+        {
+          "minute": 750,
+          "title": "Trails Advisory Committee 11.10.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-14"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-15"
     },
     "schools": {
       "status": "scheduled",
-      "title": "1996 Frank Bilotta Retirement Dinner",
+      "title": "NHS Update October 2026",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1200,
+          "minute": 270,
           "title": "Norwood News 11.13.26"
         },
         {
-          "minute": 1290,
+          "minute": 360,
           "title": "Celebrating Innovation Career Pathways at NHS"
         },
         {
-          "minute": 1350,
+          "minute": 420,
           "title": "1996 Frank Bilotta Retirement Dinner"
+        },
+        {
+          "minute": 510,
+          "title": "Celebrating Innovation Career Pathways at NHS"
+        },
+        {
+          "minute": 570,
+          "title": "NHS Update - September 2026"
+        },
+        {
+          "minute": 690,
+          "title": "2026 Early College Readiness"
+        },
+        {
+          "minute": 750,
+          "title": "NHS Update October 2026"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-14"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-15"
     }
   }
 }
