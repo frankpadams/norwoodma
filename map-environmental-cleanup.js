@@ -20,16 +20,18 @@ toggle.addEventListener('change',async()=>{
  if(loading)return;
  loading=true;show('Loading MassDEP cleanup sites…');
  try{
-  const params=new URLSearchParams({where:"UPPER(town) = 'NORWOOD'",outFields:'*',returnGeometry:'true',outSR:'4326',f:'geojson'});
+  // Query the documented TOWN field directly; ArcGIS services may reject UPPER().
+  // Use native ArcGIS JSON instead of GeoJSON, which is not supported by every layer.
+  const params=new URLSearchParams({where:"TOWN = 'NORWOOD'",outFields:'*',returnGeometry:'true',outSR:'4326',f:'json'});
   const response=await fetch(service+'?'+params);
-  if(!response.ok)throw Error('Service unavailable');
+  if(!response.ok)throw Error('Service unavailable (HTTP '+response.status+')');
   const data=await response.json();
+  if(data.error)throw Error(data.error.message||'ArcGIS query failed');
   if(!Array.isArray(data.features))throw Error('Invalid response');
   for(const feature of data.features){
-   if(feature.geometry?.type!=='Point')continue;
-   const [lng,lat]=feature.geometry.coordinates;
+   const lng=feature.geometry?.x,lat=feature.geometry?.y;
    if(!Number.isFinite(lat)||!Number.isFinite(lng))continue;
-   const p=feature.properties||{};
+   const p=feature.attributes||{};
    const get=k=>p[k]??p[k.toUpperCase()]??p[k.toLowerCase()]??'';
    const rtn=get('rtn'),name=get('name')||'MassDEP cleanup site',address=get('address'),status=get('status');
    const source=get('site_info');
@@ -38,8 +40,10 @@ toggle.addEventListener('change',async()=>{
    L.circleMarker([lat,lng],{radius:7,color:'#8c490d',weight:2,fillColor:'#f39a32',fillOpacity:.85}).bindPopup(html).addTo(group);
   }
   loaded=true;
-  show('Orange dots: '+group.getLayers().length+' tier-classified sites. Approximate, incomplete MassDEP data (MassGIS update: August 2025).');
- }catch(error){show('Cleanup-site data could not be loaded. Try again later.');}
+  const count=group.getLayers().length;
+  show(count?'Orange dots: '+count+' tier-classified sites. Approximate, incomplete MassDEP data (MassGIS update: August 2025).':'No tier-classified cleanup sites returned for Norwood by this dataset. This does not mean there are no reported releases; check the MassDEP Waste Site Cleanup Portal.');
+  if(count)map.fitBounds(group.getBounds?group.getBounds():L.featureGroup(group.getLayers()).getBounds(),{padding:[35,35],maxZoom:14});
+ }catch(error){console.warn('MassDEP cleanup layer:',error);show('Cleanup-site data could not be loaded from the source. Check MassDEP directly or try again later.');}
  finally{loading=false;}
 });
 })();
