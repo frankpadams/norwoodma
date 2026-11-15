@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-14T15:53:04.155596-05:00",
+  "generated_at": "2026-11-14T21:05:29.347725-05:00",
   "offline": false,
-  "events_published": 2157,
+  "events_published": 2116,
   "news_published": 120,
   "civic_notices": 56,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2157,
-      "generated_at": "2026-11-14T15:53:03.936873-05:00"
+      "events": 2116,
+      "generated_at": "2026-11-14T21:05:29.080282-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 116,
-      "generated_at": "2026-11-14T15:53:03.946344-05:00"
+      "events": 115,
+      "generated_at": "2026-11-14T21:05:29.087701-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 811,
-      "generated_at": "2026-11-14T15:53:03.964243-05:00"
+      "generated_at": "2026-11-14T21:05:29.103312-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 703,
-      "generated_at": "2026-11-14T15:53:03.978652-05:00"
+      "generated_at": "2026-11-14T21:05:29.115901-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-14T15:53:03.986758-05:00"
+      "generated_at": "2026-11-14T21:05:29.122957-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
-      "events": 76,
-      "generated_at": "2026-11-14T15:53:03.996166-05:00"
+      "events": 75,
+      "generated_at": "2026-11-14T21:05:29.131373-05:00"
     }
   ],
   "recreation_programs": 129,
@@ -414,9 +414,9 @@
       "source_id": "norwood-kofc-events",
       "ok": true,
       "method": "secondary_org_event_discovery",
-      "found": 42,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
-      "outcome": "events",
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted",
+      "outcome": "empty",
       "access_limited": false
     },
     {
@@ -617,7 +617,7 @@
       "source_id": "nps-athletics-arbiter-boys-jv-soccer",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -698,7 +698,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-soccer",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -752,7 +752,7 @@
       "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 15,
+      "found": 14,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -788,7 +788,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-soccer",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -806,7 +806,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -896,7 +896,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -932,7 +932,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 19,
+      "found": 18,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -977,7 +977,7 @@
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1255,10 +1255,11 @@
     },
     {
       "source_id": "resource-knights-of-columbus-norwood-council",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://www.stcatherinenorwood.org/community: 403 Client Error: Forbidden for url: https://www.stcatherinenorwood.org/community",
+      "retained_events": 0
     },
     {
       "source_id": "resource-neponset-valley-sunrise-rotary-club",
@@ -1278,12 +1279,13 @@
     },
     {
       "source_id": "resource-norwood-youth-soccer",
-      "ok": true,
+      "ok": false,
       "method": "nys_multi_schedule",
-      "found": 148,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all NYS/BAYS discovery pages failed: https://norwoodsoccer.com/schedules: 403 Client Error: Forbidden for url: https://norwoodsoccer.com/schedules | https://norwoodsoccer.com/index",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 21
     },
     {
       "source_id": "resource-scouting-america-troop-42-norwood",
@@ -1328,21 +1330,23 @@
     },
     {
       "source_id": "st-catherine-calendar",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
-      "found": 11,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://stcatherinenorwood.org/: 403 Client Error: Forbidden for url: https://stcatherinenorwood.org/",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 11
     },
     {
       "source_id": "st-timothy-calendar",
-      "ok": true,
+      "ok": false,
       "method": "church_events_calendar",
-      "found": 42,
-      "note": null,
-      "outcome": "events",
-      "access_limited": false
+      "found": 0,
+      "note": "all configured pages failed: https://iccnorwood.org/events: 403 Client Error: Forbidden for url: https://iccnorwood.org/events",
+      "outcome": "blocked",
+      "access_limited": true,
+      "retained_events": 0
     },
     {
       "source_id": "town-community-events",
@@ -1452,17 +1456,18 @@
     },
     {
       "source_id": "washington-no7-events",
-      "ok": true,
+      "ok": false,
       "method": "html_page",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://washingtonno7.com/: 403 Client Error: Forbidden for url: https://washingtonno7.com/",
+      "retained_events": 0
     },
     {
       "source_id": "eventbrite-norwood-discovery",
       "ok": true,
       "method": "event_platform_discovery",
       "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "note": null,
       "outcome": "events",
       "access_limited": false
     },
