@@ -1,69 +1,49 @@
 {
-  "updated_at": "2026-11-15T02:41:05.404011-05:00",
+  "updated_at": "2026-11-15T10:29:57.159759-05:00",
   "date": "2026-11-15",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26",
+      "title": "Norwood News 11.13.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 180,
+          "minute": 660,
+          "title": "Local Artist Bill Breen - Public Access 11.4.26"
+        },
+        {
+          "minute": 720,
           "title": "Norwood News 11.13.26"
         },
         {
-          "minute": 240,
+          "minute": 780,
           "title": "Abandon Ship! The Sinking of the Laconia 9.14.26"
         },
         {
-          "minute": 360,
+          "minute": 900,
+          "title": "Norwood News 11.13.26"
+        },
+        {
+          "minute": 960,
           "title": "The Vehicle for Change 11.10.26"
         },
         {
-          "minute": 420,
+          "minute": 1020,
           "title": "Comcast Cyber Security Presentation 10.19.26"
         },
         {
-          "minute": 480,
+          "minute": 1080,
           "title": "Norwood News 11.13.26"
-        },
-        {
-          "minute": 540,
-          "title": "Norwood News 11.13.26"
-        },
-        {
-          "minute": 600,
-          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-15"
     },
     "government": {
       "status": "scheduled",
-      "title": "Trails Advisory Committee 11.10.26",
+      "title": "Library Board of Trustees 11.10.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 210,
-          "title": "Town Meeting Info Session 11.2.26"
-        },
-        {
-          "minute": 390,
-          "title": "Board of Selectmen 11.10.26"
-        },
-        {
-          "minute": 450,
-          "title": "Trails Advisory Committee 11.10.26"
-        },
-        {
-          "minute": 540,
-          "title": "Conservation Commission 11.4.26"
-        },
-        {
-          "minute": 630,
-          "title": "Library Board of Trustees 11.10.26"
-        },
         {
           "minute": 690,
           "title": "Board of Selectmen 11.10.26"
@@ -71,35 +51,35 @@
         {
           "minute": 750,
           "title": "Trails Advisory Committee 11.10.26"
+        },
+        {
+          "minute": 840,
+          "title": "Town Meeting Info Session 11.2.26"
+        },
+        {
+          "minute": 1020,
+          "title": "Board of Selectmen 11.10.26"
+        },
+        {
+          "minute": 1080,
+          "title": "Trails Advisory Committee 11.10.26"
+        },
+        {
+          "minute": 1170,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 1260,
+          "title": "Library Board of Trustees 11.10.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-15"
     },
     "schools": {
       "status": "scheduled",
-      "title": "NHS Update October 2026",
+      "title": "2026 NHS Girls Soccer vs Millis 10.14.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 270,
-          "title": "Norwood News 11.13.26"
-        },
-        {
-          "minute": 360,
-          "title": "Celebrating Innovation Career Pathways at NHS"
-        },
-        {
-          "minute": 420,
-          "title": "1996 Frank Bilotta Retirement Dinner"
-        },
-        {
-          "minute": 510,
-          "title": "Celebrating Innovation Career Pathways at NHS"
-        },
-        {
-          "minute": 570,
-          "title": "NHS Update - September 2026"
-        },
         {
           "minute": 690,
           "title": "2026 Early College Readiness"
@@ -107,6 +87,26 @@
         {
           "minute": 750,
           "title": "NHS Update October 2026"
+        },
+        {
+          "minute": 900,
+          "title": "2015 NPA Sports Extra: October Edition"
+        },
+        {
+          "minute": 960,
+          "title": "NPA Sports Extra: Fall 2012 Edition"
+        },
+        {
+          "minute": 1020,
+          "title": "2026 NHS Football vs Ashland 10.30.26"
+        },
+        {
+          "minute": 1170,
+          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+        },
+        {
+          "minute": 1260,
+          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-15"
