@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T16:42:07.040503-05:00",
+  "generated_at": "2026-11-15T18:07:47.779194-05:00",
   "offline": false,
   "events_published": 2079,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2079,
-      "generated_at": "2026-11-15T16:42:06.212985-05:00"
+      "generated_at": "2026-11-15T18:07:47.143271-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 114,
-      "generated_at": "2026-11-15T16:42:06.220772-05:00"
+      "generated_at": "2026-11-15T18:07:47.154831-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 791,
-      "generated_at": "2026-11-15T16:42:06.236945-05:00"
+      "generated_at": "2026-11-15T18:07:47.178191-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 685,
-      "generated_at": "2026-11-15T16:42:06.249505-05:00"
+      "generated_at": "2026-11-15T18:07:47.197244-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-15T16:42:06.256297-05:00"
+      "generated_at": "2026-11-15T18:07:47.207734-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 68,
-      "generated_at": "2026-11-15T16:42:06.264376-05:00"
+      "generated_at": "2026-11-15T18:07:47.219722-05:00"
     }
   ],
   "recreation_programs": 129,
@@ -53,10 +53,11 @@
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
-      "ok": true,
+      "ok": false,
       "method": "html_calendar",
       "found": 0,
-      "note": "configured pages checked; no dated events extracted"
+      "note": "all configured pages failed: https://massache.org/events/list/: HTTPSConnectionPool(host='massache.org', port=443): Max retries exceeded with url: /events/list/ (Ca",
+      "retained_events": 0
     },
     {
       "source_id": "arts-luke-adams",
@@ -769,7 +770,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-field-hockey",
       "ok": true,
       "method": "ical",
-      "found": 15,
+      "found": 14,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -850,7 +851,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1463,7 +1464,7 @@
       "ok": true,
       "method": "event_platform_discovery",
       "found": 2,
-      "note": null,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
     },
@@ -1626,7 +1627,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 8,
+      "found": 9,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1634,7 +1635,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 24,
+      "found": 25,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
