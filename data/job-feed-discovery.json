@@ -1,0 +1,60 @@
+{
+  "purpose": "Employer discovery queue, NOT live feeds. Only data/job-feeds.json contains enabled integrations.",
+  "updated": "2026-11-15",
+  "priority_employers": [
+    "FM (formerly FM Global)",
+    "Moderna",
+    "UPS",
+    "Amazon",
+    "Home Market Foods",
+    "CertainTeed",
+    "Instron",
+    "M.S. Walker",
+    "Metropolitan Cabinets & Countertops",
+    "Central Auto Team",
+    "Ellis Nursing Home",
+    "Four Points by Sheraton Norwood",
+    "Reliable Respiratory",
+    "Advanced Instruments",
+    "Credit Control Services",
+    "GZA GeoEnvironmental",
+    "National Amusements",
+    "Subaru of New England",
+    "Cramer",
+    "AMETEK",
+    "Cohu",
+    "Applied Industrial Technologies",
+    "EMCOR",
+    "Home Depot",
+    "Organogenesis",
+    "Corbus Pharmaceuticals",
+    "Tekscan",
+    "Town of Norwood",
+    "Norwood Public Schools",
+    "Norwood Municipal Light Department"
+  ],
+  "small_employer_categories": [
+    "Restaurants and cafes",
+    "Retail shops",
+    "Dental and medical offices",
+    "Childcare and education",
+    "Automotive dealerships and repair",
+    "Contractors and trades",
+    "Insurance, accounting and legal offices",
+    "Senior care and healthcare",
+    "Hospitality and recreation"
+  ],
+  "discovery_sources": [
+    "Norwood Center business directory (employer discovery only)",
+    "Norwood.ma business directory (employer discovery only)",
+    "Official employer career pages",
+    "Official Greenhouse, Lever, Ashby, Workable, SmartRecruiters feeds where permitted"
+  ],
+  "requirements": [
+    "Do not add guessed API slugs",
+    "No manual scraping",
+    "No paid services",
+    "Only verified location and active listings",
+    "Norwood-only default; nearby radius optional"
+  ]
+}
