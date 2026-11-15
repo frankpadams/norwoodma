@@ -142,6 +142,10 @@
 <details class="map-layer-more" id="utilityOutages"><summary>Utility outages &amp; service alerts</summary>
 <label class="map-layer-choice"><input type="checkbox" id="norwoodNativeOutagesToggle"><span>Power outage locations (map layer)</span></label>
 <p id="norwoodNativeOutagesStatus" class="map-layer-status" aria-live="polite">Enable to display automatically updated Norwood Light outage locations and affected areas.</p>
+<button type="button" id="utilityOutageLinksButton" style="margin:8px 4px 10px;padding:7px 10px;border:1px solid #b7cbd9;border-radius:7px;background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:.8rem">Other utility outage links &amp; reporting ↗</button>
+<dialog id="utilityOutageLinksDialog" aria-label="Other utility outage links" style="max-width:min(520px,92vw);max-height:80vh;overflow:auto;border:1px solid #b7cbd9;border-radius:12px;padding:20px;color:#20394c;background:#fff">
+<button type="button" id="utilityOutageLinksClose" style="float:right;padding:5px 10px;cursor:pointer" aria-label="Close utility links">✕</button>
+<h3 style="margin:0 0 10px">Other utility outage links</h3>
 <div class="map-layer-links" style="margin:0;padding:8px 4px 10px;border-top:0">
 <p style="margin:0 0 5px;font-size:.75rem;color:#617682">Norwood Light outage locations and affected areas are integrated directly into this map. Other providers currently offer status links only.</p>
 <b>Electric power</b>
@@ -157,7 +161,8 @@
 <a href="https://www.norwoodma.gov/" target="_blank" rel="noopener noreferrer">Town of Norwood — water/sewer advisories ↗</a>
 <a href="https://www.mass.gov/info-details/power-outages" target="_blank" rel="noopener noreferrer">State utility outage information ↗</a>
 <p style="margin:3px 0 0;font-size:.72rem;color:#617682">Provider pages may require an address or account login. No outage shown here does not mean service is operating normally. For downed wires or a gas leak, stay clear and call 911.</p>
-</div></details>
+</div>
+</dialog></details>
 <details class="map-layer-more"><summary>Environment</summary>
 <label class="map-layer-choice"><input type="checkbox" id="environmentCleanupToggle"><span>Environmental cleanup sites (MassDEP)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
@@ -474,5 +479,8 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 </script>
 <script src="map-utility-outages.js?v=20261114b"></script>
 <script src="map-environmental-cleanup.js?v=20261113"></script>
+<script>
+(()=>{const b=document.getElementById('utilityOutageLinksButton'),d=document.getElementById('utilityOutageLinksDialog'),c=document.getElementById('utilityOutageLinksClose');if(!b||!d)return;b.addEventListener('click',()=>typeof d.showModal==='function'?d.showModal():d.setAttribute('open',''));c?.addEventListener('click',()=>d.close?d.close():d.removeAttribute('open'));d.addEventListener('click',e=>{if(e.target===d)d.close();});})();
+</script>
 </body>
 </html>
