@@ -1,0 +1,25 @@
+name: Refresh Norwood Jobs
+on:
+  schedule:
+    - cron: '17 12 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/update-norwood-jobs.py
+      - name: Commit refreshed listings
+        run: |
+          if ! git diff --quiet -- data/jobs.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/jobs.json
+            git commit -m "Refresh Norwood job listings"
+            git push
+          fi
