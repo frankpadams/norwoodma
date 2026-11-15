@@ -56,5 +56,19 @@
     "No paid services",
     "Only verified location and active listings",
     "Norwood-only default; nearby radius optional"
+  ],
+  "official_public_employment_sources": [
+    {
+      "employer": "Town of Norwood",
+      "url": "https://selfservice.norwoodma.gov/ess",
+      "status": "Official application portal confirmed; machine-readable feed not yet verified",
+      "priority": 1
+    },
+    {
+      "employer": "Norwood Public Schools",
+      "url": "https://employer.schoolspring.com/jobs/?employer=11784",
+      "status": "Official SchoolSpring employer listings; machine-readable feed not yet verified",
+      "priority": 1
+    }
   ]
 }
