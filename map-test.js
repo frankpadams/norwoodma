@@ -38,6 +38,14 @@ const venueAddresses={
  'norwood theatre':'109 Central St, Norwood, MA 02062'
 };
 const staticPlaces=[
+ // Nearby urgent care clinics are intentionally included beyond Norwood town boundaries.
+ {name:"AFC Urgent Care Norwood",category:'health',address:"956 Boston Providence Hwy, Norwood, MA 02062",details:"Walk-in urgent care · 617-395-4400 · Mon–Fri 8am–8pm; Sat–Sun 8am–5pm",url:"https://www.afcurgentcare.com/norwood/",also:['care:urgent']},
+ {name:"Norwood Urgent Care (East Walpole)",category:'health',address:"103 Providence Hwy, East Walpole, MA 02032",details:"Walk-in urgent care · 781-255-0500 · Mon–Fri 8am–7pm; Sat–Sun 8am–4pm",url:"https://norwoodurgentcare.com/",also:['care:urgent']},
+ {name:"AFC Urgent Care Dedham",category:'health',address:"370 Boston Providence Hwy, Dedham, MA 02026",details:"Walk-in urgent care · 781-461-0200 · Mon–Fri 8am–8pm; Sat–Sun 8am–5pm",url:"https://www.afcurgentcare.com/ma/westwood/",also:['care:urgent']},
+ {name:"ConvenientMD Urgent Care Dedham",category:'health',address:"983 Providence Hwy, Dedham, MA 02026",details:"Walk-in urgent care · 781-819-6400 · Daily 8am–8pm",url:"https://www.convenientmd.com/",also:['care:urgent']},
+ {name:"Canton Urgent Care",category:'health',address:"95 Washington St Suite 204A, Canton, MA 02021",details:"Walk-in urgent care · 339-502-9889 · Mon–Fri 8am–8pm; Sat–Sun 10am–4pm",url:"https://www.actonuc.com/urgent-care-near-canton/",also:['care:urgent']},
+ {name:"Atrius Health Norwood Urgent Care",category:'health',address:"1177 Providence Hwy, Norwood, MA 02062",details:"Urgent care for Atrius patients · Appointment required; no walk-ins · Call your Atrius primary care office",url:"https://www.atriushealth.org/locations/norwood",also:['care:urgent']},
+
  {name:'Little Library / Book Box — 69 Longwood Terrace',category:'little-library',address:'69 Longwood Terrace, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 44 Blossom St',category:'little-library',address:'44 Blossom St, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
  {name:'Little Library / Book Box — 19 Crestwood Cir',category:'little-library',address:'19 Crestwood Cir, Norwood, MA 02062',details:'Neighborhood book-sharing box',url:'resources.html'},
