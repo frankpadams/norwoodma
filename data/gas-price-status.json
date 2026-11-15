@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:46:34.505146Z",
+  "generated_at": "2026-11-15T16:18:46.755224Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
@@ -64,6 +64,14 @@
       }
     },
     "Costco Gas — Dedham": {
+      "costco": {
+        "accepted_grades": [
+          "regular",
+          "premium"
+        ],
+        "outcome": "prices_observed",
+        "source_url": "https://www.costco.com/warehouse-locations-319.html"
+      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -122,8 +130,9 @@
     },
     "Gulf — Broadway": {
       "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
       },
       "google": {
         "accepted_grades": [],
@@ -154,7 +163,6 @@
         "accepted_grades": [
           "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -259,6 +267,7 @@
       "google": {
         "accepted_grades": [
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -287,8 +296,9 @@
     },
     "Mr. Frank's Food Mart": {
       "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
       },
       "google": {
         "accepted_grades": [],
@@ -402,8 +412,6 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -433,8 +441,9 @@
     },
     "Route 1 Auto Services": {
       "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
       },
       "google": {
         "accepted_grades": [],
@@ -526,12 +535,12 @@
     },
     "Shell — Pleasant Street": {
       "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
       },
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade"
         ],
@@ -561,8 +570,9 @@
     },
     "Shell — Walpole Street": {
       "gasbuddy": {
-        "error": "CloudflareBlocked",
-        "outcome": "source_unavailable"
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
       },
       "google": {
         "accepted_grades": [],
