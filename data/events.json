@@ -278,7 +278,7 @@
     "title": "Mass Cultural Council publishes updates daily. Last update was made on",
     "start": {
       "date": "2026-11-15",
-      "time": "16:06"
+      "time": "20:06"
     },
     "end": {
       "date": "2026-11-15",
@@ -294,7 +294,7 @@
     "series": "Norwood Cultural Council",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 15, 2026 at 04:06 PM UTC",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 15, 2026 at 08:06 PM UTC",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -13010,6 +13010,33 @@
     ]
   },
   {
+    "venue": "F. Holland Day House",
+    "address": "93 Day Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "arts",
+    "source_id": "norwood-historical-society",
+    "source_url": "https://www.norwoodhistoricalsociety.org/",
+    "organizer": "Norwood Historical Society",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "user_provided_2026-11-15",
+    "id": "2026-12-06-nhs-day-house-tour",
+    "title": "Guided Tour of the Day House",
+    "description": "Tour the holiday-decorated F. Holland Day House, with its 1890s interiors, historic artifacts and rarely displayed images. Drop in between 1 and 3 p.m.; tours last approximately 45 minutes.",
+    "start": {
+      "date": "2026-12-06",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-12-06",
+      "time": "15:00"
+    },
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-07-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -16861,6 +16888,35 @@
     ]
   },
   {
+    "venue": "F. Holland Day House",
+    "address": "93 Day Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "arts",
+    "source_id": "norwood-historical-society",
+    "source_url": "https://www.norwoodhistoricalsociety.org/tickets",
+    "organizer": "Norwood Historical Society",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "user_provided_2026-11-15",
+    "id": "2026-12-12-nhs-victorian-christmas",
+    "title": "A Victorian Christmas Concert Fund-Raiser",
+    "description": "Diane Taraz performs and explores Victorian-era Christmas carols in a hand-sewn 1850s gown, accompanying herself on guitar and dulcimer. Arrivals welcome at 4:45 p.m. Tickets $20 per person; advance reservations and payment at the ticket link.",
+    "start": {
+      "date": "2026-12-12",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-12-12",
+      "time": null
+    },
+    "cost": "$20",
+    "registration_url": "https://www.norwoodhistoricalsociety.org/tickets",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-12-a-victorian-christmas-with-diane-taraz-0bad2b3",
     "title": "A Victorian Christmas with Diane Taraz",
     "start": {
@@ -17013,6 +17069,34 @@
     "public_access_status": "confirmed_public",
     "access_type": "paid",
     "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "venue": "F. Holland Day House",
+    "address": "93 Day Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "arts",
+    "source_id": "norwood-historical-society",
+    "source_url": "https://www.norwoodhistoricalsociety.org/",
+    "organizer": "Norwood Historical Society",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "user_provided_2026-11-15",
+    "id": "2026-12-13-nhs-madrigals",
+    "title": "Norwood High School Madrigal Choir Concert",
+    "description": "Norwood High School Madrigals perform familiar holiday songs in the Great Hall of the F. Holland Day House. Seating opens at 12:45 p.m.",
+    "start": {
+      "date": "2026-12-13",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-12-13",
+      "time": null
+    },
     "calendar_ids": [
       "norwood-arts",
       "norwood-community",
