@@ -170,6 +170,7 @@
 <label class="map-layer-choice"><input type="checkbox" id="massgisTreeCanopy"><span>Tree canopy &amp; land cover (2016)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWater"><span>Drinking-water protection areas</span></label>
 </details>
+<details class="map-layer-more"><summary>Crime and Police Activity<button id="policeActivitySecret" type="button" aria-label="Toggle police activity preview" aria-pressed="false" title="Preview" style="border:0;background:transparent;color:inherit;font:inherit;padding:0 1px;cursor:pointer">.</button></summary><label class="map-layer-choice"><input type="checkbox" disabled><span>Crime and Police Activity (preview unavailable)</span></label><div id="policeActivityPanel" hidden style="padding:5px 2px 8px;font-size:.72rem;color:#506775"><div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap"><span>Last <b id="policeActivityDaysValue">30</b> days</span><input id="policeActivityDays" type="range" min="7" max="90" value="30" aria-label="Days of police activity" style="flex:1;min-width:85px;max-width:155px"><button type="button" data-police-days="7">7</button><button type="button" data-police-days="30">30</button><button type="button" data-police-days="90">90</button></div><div id="policeActivityCount" aria-live="polite">0 mapped incidents</div><div id="policeActivityCoverage">No verified incidents loaded yet</div><p style="font-size:.68rem;line-height:1.3;margin:4px 0 0">Source: Norwood Police Department activity reports, where available. Locations are approximate; some incidents may be missing. A reported incident does not establish that a crime occurred.</p></div></details>
 <details class="map-layer-more"><summary>Road Safety &amp; Transportation</summary>
 <label class="map-layer-choice"><input type="checkbox" id="roadSafetyCrashes"><span>Reported traffic crashes (2024–2025)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="roadSafetyCounts"><span>Traffic count stations</span></label>
@@ -242,6 +243,7 @@
 <script src="map-transit-layer.js?v=20261026-mbta-layer-2"></script>
 <script src="map-work-zones.js?v=scheduled-shifts"></script>
 <script src="map-road-safety.js?v=20261112-stations-v2"></script>
+<script src="map-police-activity.js?v=20261116-preview"></script>
 <script src="map-liquor-licenses.js?v=20261112-abcc"></script>
 <script>
 (()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
