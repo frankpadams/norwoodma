@@ -1,55 +1,119 @@
 {
-  "updated_at": "2026-11-15T19:52:55.295517-05:00",
-  "date": "2026-11-15",
+  "updated_at": "2026-11-16T02:46:43.313142-05:00",
+  "date": "2026-11-16",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "The Vehicle for Change 11.10.26",
+      "title": "Norwood News 11.13.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1200,
+          "minute": 180,
+          "title": "Norwood Digest: A Conversation with 3 Retiring Local Bank Presidents"
+        },
+        {
+          "minute": 240,
           "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
         },
         {
-          "minute": 1320,
+          "minute": 360,
           "title": "Norwood News 11.13.26"
         },
         {
-          "minute": 1380,
+          "minute": 420,
           "title": "The Vehicle for Change 11.10.26"
+        },
+        {
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 660,
+          "title": "Norwood News 11.13.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-15"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-16"
     },
     "government": {
       "status": "scheduled",
-      "title": "Trails Advisory Committee 11.10.26",
+      "title": "Town Meeting Info Session 11.2.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 180,
+          "title": "Board of Selectmen 11.10.26"
+        },
+        {
+          "minute": 240,
+          "title": "Trails Advisory Committee 11.10.26"
+        },
+        {
+          "minute": 330,
+          "title": "Conservation Commission 11.4.26"
+        },
+        {
+          "minute": 420,
           "title": "Library Board of Trustees 11.10.26"
         },
         {
-          "minute": 1320,
+          "minute": 480,
           "title": "Trails Advisory Committee 11.10.26"
+        },
+        {
+          "minute": 570,
+          "title": "Library Board of Trustees 11.10.26"
+        },
+        {
+          "minute": 630,
+          "title": "Town Meeting Info Session 11.2.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-15"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-16"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Girls Soccer vs Millis 10.14.26",
+      "title": "TVL Sports Net 10.29.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1260,
+          "minute": 270,
+          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+        },
+        {
+          "minute": 360,
           "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        },
+        {
+          "minute": 480,
+          "title": "2015 NPA Sports Extra: October Edition"
+        },
+        {
+          "minute": 540,
+          "title": "NPA Sports Extra: Fall 2012 Edition"
+        },
+        {
+          "minute": 600,
+          "title": "2026 NHS Football vs Ashland 10.30.26"
+        },
+        {
+          "minute": 750,
+          "title": "2026 NHS Field Hockey vs Ashland 10.29.26"
+        },
+        {
+          "minute": 840,
+          "title": "TVL Sports Net 10.29.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-15"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-16"
     }
   }
 }
