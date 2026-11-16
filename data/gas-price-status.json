@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-11-15T16:18:46.755224Z",
+  "generated_at": "2026-11-16T19:31:53.790845Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
         "accepted_grades": [
-          "diesel",
-          "premium",
           "regular"
         ],
         "candidates": [
@@ -23,9 +21,9 @@
             "station_verified": true,
             "types": [
               "gas_station",
+              "store",
               "service",
               "point_of_interest",
-              "store",
               "establishment"
             ]
           }
@@ -64,14 +62,6 @@
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -163,6 +153,7 @@
         "accepted_grades": [
           "diesel",
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -365,6 +356,26 @@
             ]
           },
           {
+            "address": "917 Washington St, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Smokehouse BBQ",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "917 Washington St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJRc3nUnF_5IkReh5h0CoNT4E",
+            "station_verified": false,
+            "types": [
+              "barbecue_restaurant",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "establishment"
+            ]
+          },
+          {
             "address": "496 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
             "name": "Quick Stop",
@@ -384,36 +395,19 @@
               "store",
               "establishment"
             ]
-          },
-          {
-            "address": "917 Washington St, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Smokehouse BBQ",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "917 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJRc3nUnF_5IkReh5h0CoNT4E",
-            "station_verified": false,
-            "types": [
-              "barbecue_restaurant",
-              "restaurant",
-              "food",
-              "point_of_interest",
-              "establishment"
-            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
       }
     },
     "Norwood Gulf": {
+      "gasbuddy": {
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
+      },
       "google": {
-        "accepted_grades": [
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "707 Neponset St, Norwood, MA 02062, USA",
@@ -541,6 +535,7 @@
       },
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
           "midgrade"
         ],
@@ -603,7 +598,6 @@
     "Sunoco — Route 1": {
       "google": {
         "accepted_grades": [
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -623,10 +617,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "service",
-              "food",
-              "point_of_interest",
               "store",
+              "service",
+              "point_of_interest",
+              "food",
               "establishment"
             ]
           }
@@ -636,6 +630,7 @@
     }
   },
   "unresolved_stations": [
+    "Norwood Gulf",
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
