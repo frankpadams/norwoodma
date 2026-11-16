@@ -25,285 +25,6 @@
     ]
   },
   {
-    "id": "2026-11-15-hooray-for-birds-grab-and-go-80a86cc",
-    "title": "Hooray for Birds Grab and Go",
-    "start": {
-      "date": "2026-11-15",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "arts",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/hooray-for-birds-grab-and-go/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Flap your wings and let your imagination take flight! Inspired by Hooray for Birds! by Lucy Cousins, this Grab and Go kit invites children to imagine what it would be like to be a bird. With fun, bird-themed crafts included, little ones can",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-15-norwood-blaze-vs-c-c-ironbirds-dcbbc6b",
-    "title": "Norwood Blaze vs C-C Ironbirds",
-    "start": {
-      "date": "2026-11-15",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": null
-    },
-    "venue": "Oldham School 9",
-    "field": "Oldham School 9",
-    "grade": "Boys Grade 3",
-    "gender": "boys",
-    "team": "Norwood Blaze",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-3",
-      "nys-team-boys-grade-3-norwood-blaze"
-    ]
-  },
-  {
-    "id": "2026-11-15-dreidels",
-    "title": "Turn Tops and Dreidels — Craft Gifts from the Heart",
-    "start": {
-      "date": "2026-11-15",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": "13:00"
-    },
-    "venue": "Mill Forge Makerspace",
-    "address": "61 Endicott St, Building 46, Norwood, MA",
-    "category": "workshop",
-    "source_id": "mill-forge-events",
-    "source_url": "https://millforge.org/events/list/",
-    "cost": "$75–$150",
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-15-norwood-dash-vs-foxboro-warriors-5b-white-74427c7",
-    "title": "Norwood Dash vs Foxboro Warriors 5B-White",
-    "start": {
-      "date": "2026-11-15",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": null
-    },
-    "venue": "Callahan 12",
-    "field": "Callahan 12",
-    "grade": "Boys Grade 5",
-    "gender": "boys",
-    "team": "Norwood Dash",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-5",
-      "nys-team-boys-grade-5-norwood-dash"
-    ]
-  },
-  {
-    "id": "2026-11-15-fall-craft-fair-sharon",
-    "title": "Fall Craft Fair",
-    "description": "Vendors, face painting, hayrides and more.",
-    "start": {
-      "date": "2026-11-15",
-      "time": "12:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": "15:00"
-    },
-    "venue": "Crescent Ridge Dairy",
-    "town": "Sharon",
-    "category": "craft_fair",
-    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
-    "source_url": "https://www.ashleyfalanga.com",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "owner_supplied_flyer_2026-11-13",
-    "notes": "Out of Town — Sharon, MA. Vendors, face painting, hayrides and more. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes.",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-food-markets"
-    ]
-  },
-  {
-    "id": "2026-11-15-norwood-trappers-vs-mansfield-hornets-iii-caccc10",
-    "title": "Norwood Trappers vs Mansfield Hornets III",
-    "start": {
-      "date": "2026-11-15",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": null
-    },
-    "venue": "Oldham School 8",
-    "field": "Oldham School 8",
-    "grade": "Boys Grade 4",
-    "gender": "boys",
-    "team": "Norwood Trappers",
-    "home_away": "home",
-    "category": "youth_sports",
-    "source_id": "resource-norwood-youth-soccer",
-    "source_url": "https://bays.org/club/NYS",
-    "public_access": "team_only",
-    "publish_candidate": false,
-    "calendar_only": true,
-    "discovered_by": "bays_schedule_card",
-    "verification_status": "auto_primary_source",
-    "curated_default": false,
-    "field_status_url": "https://norwoodsoccer.com/fields",
-    "public_access_status": "confirmed_restricted",
-    "access_type": "team_only",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "nys-grade-boys-grade-4",
-      "nys-team-boys-grade-4-norwood-trappers"
-    ]
-  },
-  {
-    "id": "2026-11-15-public-ice-skating-nov15",
-    "title": "Public Ice Skating",
-    "description": "Public skating session.",
-    "start": {
-      "date": "2026-11-15",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": "14:50"
-    },
-    "venue": "Norfolk Ice Arena",
-    "town": "Norfolk",
-    "category": "sports",
-    "source_id": "owner-supplied-ashley-falanga-weekly-guide",
-    "source_url": "https://www.ashleyfalanga.com",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "owner_supplied_flyer_2026-11-13",
-    "notes": "Out of Town — Norfolk, MA. Public skating session. Details supplied by Ashley Falanga's Nov 14–20 weekly guide; check organizer for changes.",
-    "calendar_ids": [
-      "norwood-sports"
-    ]
-  },
-  {
-    "id": "2026-11-15-celtic-seisun",
-    "title": "Celtic Traditional Open Seisun",
-    "start": {
-      "date": "2026-11-15",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": "18:00"
-    },
-    "venue": "Irish Brewing Boston",
-    "address": "83 Morse St, Building 4AB, Norwood, MA 02062",
-    "category": "music_community",
-    "source_id": "norwood-space-center-events",
-    "source_url": "https://norwoodspacecenter.com/venue/irish-brewing-boston/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Third Sunday Celtic Traditional Open Seisun",
-    "publish_candidate": true,
-    "verification_status": "web_verified_2026-09-17",
-    "notes": null,
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-15-mass-cultural-council-publishes-updates-daily-e765e1c",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-15",
-      "time": "20:06"
-    },
-    "end": {
-      "date": "2026-11-15",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 15, 2026 at 08:06 PM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-16-literacy-volunteers-orientation-94bfc2c",
     "title": "Literacy Volunteers Orientation",
     "start": {
@@ -426,6 +147,36 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-16-mass-cultural-council-publishes-updates-daily-41c7dea",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-16",
+      "time": "04:06"
+    },
+    "end": {
+      "date": "2026-11-16",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 16, 2026 at 04:06 AM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -4672,6 +4423,43 @@
     ]
   },
   {
+    "id": "2026-11-20-norwood-arsenal-vs-westwood-fc-b6-2ffd665",
+    "title": "Norwood Arsenal vs Westwood FC - B6",
+    "start": {
+      "date": "2026-11-20",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": null
+    },
+    "venue": "Coakley Middle School Lower 7",
+    "field": "Coakley Middle School Lower 7",
+    "grade": "Boys Grade 6",
+    "gender": "boys",
+    "team": "Norwood Arsenal",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-boys-grade-6",
+      "nys-team-boys-grade-6-norwood-arsenal"
+    ]
+  },
+  {
     "id": "2026-11-20-ballroom-dance-04c7fe8",
     "title": "Ballroom Dance",
     "start": {
@@ -4927,6 +4715,43 @@
     "public_access_evidence": "public attendance/registration signal",
     "calendar_ids": [
       "norwood-food-markets"
+    ]
+  },
+  {
+    "id": "2026-11-21-norwood-wild-vs-walpole-blaze-6a57061",
+    "title": "Norwood Wild vs Walpole Blaze",
+    "start": {
+      "date": "2026-11-21",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-11-21",
+      "time": null
+    },
+    "venue": "Oldham School 9",
+    "field": "Oldham School 9",
+    "grade": "Girls Grade 3",
+    "gender": "girls",
+    "team": "Norwood Wild",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-3",
+      "nys-team-girls-grade-3-norwood-wild"
     ]
   },
   {
@@ -5567,6 +5392,43 @@
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-21-norwood-cyclones-vs-north-attleboro-revolutio-e235f73",
+    "title": "Norwood Cyclones vs North Attleboro Revolution 5/6 Girls",
+    "start": {
+      "date": "2026-11-21",
+      "time": "21:00"
+    },
+    "end": {
+      "date": "2026-11-21",
+      "time": null
+    },
+    "venue": "Callahan 12",
+    "field": "Callahan 12",
+    "grade": "Girls Grade 6",
+    "gender": "girls",
+    "team": "Norwood Cyclones",
+    "home_away": "home",
+    "category": "youth_sports",
+    "source_id": "resource-norwood-youth-soccer",
+    "source_url": "https://bays.org/club/NYS",
+    "public_access": "team_only",
+    "publish_candidate": false,
+    "calendar_only": true,
+    "discovered_by": "bays_schedule_card",
+    "verification_status": "auto_primary_source",
+    "curated_default": false,
+    "field_status_url": "https://norwoodsoccer.com/fields",
+    "public_access_status": "confirmed_restricted",
+    "access_type": "team_only",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-sports",
+      "nys-grade-girls-grade-6",
+      "nys-team-girls-grade-6-norwood-cyclones"
     ]
   },
   {
@@ -71724,6 +71586,33 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2027-05-15-vfw-post-2452-meat-raffle-b9f3a70",
+    "title": "VFW Post 2452 Meat Raffle",
+    "start": {
+      "date": "2027-05-15",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2027-05-15",
+      "time": "17:00"
+    },
+    "venue": "Norwood VFW Post 2452",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "vfw-post-2452-meat-raffle",
+    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
+    "cost": "$2 per drawing; $20 pre-buy",
+    "public_access": "public",
+    "series": "VFW Post 2452 Meat Raffle",
+    "publish_candidate": true,
+    "verification_status": "established_recurring_schedule",
+    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
+    "discovered_by": "scheduled_recurring_series",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
