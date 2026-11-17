@@ -1,17 +1,21 @@
 {
   "purpose": "Employer discovery queue, NOT live feeds. Only data/job-feeds.json contains enabled integrations.",
-  "updated": "2026-11-15",
+  "updated": "2026-11-17",
   "priority_employers": [
-    "FM (formerly FM Global)",
-    "Moderna",
+    "Nucar (DCD Automotive)",
+    "CarMax",
     "UPS",
     "Amazon",
+    "Central Auto Team",
+    "Jack Madden Ford",
+    "Asbury Automotive / Herb Chambers",
+    "FM (formerly FM Global)",
+    "Moderna",
     "Home Market Foods",
     "CertainTeed",
     "Instron",
     "M.S. Walker",
     "Metropolitan Cabinets & Countertops",
-    "Central Auto Team",
     "Ellis Nursing Home",
     "Four Points by Sheraton Norwood",
     "Reliable Respiratory",
@@ -68,6 +72,18 @@
       "employer": "Norwood Public Schools",
       "url": "https://employer.schoolspring.com/jobs/?employer=11784",
       "status": "Official SchoolSpring employer listings; machine-readable feed not yet verified",
+      "priority": 1
+    },
+    {
+      "employer": "Nucar",
+      "url": "https://www.nucarhondanorwood.com/careers/",
+      "status": "Official careers page verified; automated feed not verified",
+      "priority": 1
+    },
+    {
+      "employer": "CarMax",
+      "url": "https://careers.carmax.com/",
+      "status": "Official Norwood job postings verified; automated feed not verified",
       "priority": 1
     }
   ]
