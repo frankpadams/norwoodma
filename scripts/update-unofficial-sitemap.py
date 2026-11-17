@@ -88,6 +88,18 @@ def global_menu(soup,base):
 
 def local_menu(soup,base):
     candidates=[]
+    # Revize places Related Pages in a sidebar, often separated from its list by wrappers.
+    for heading in soup.find_all(string=lambda t: t and t.strip().lower()=='related pages'):
+        el=heading.parent
+        for level in range(5):
+            if not el or el.name in ('body','html'): break
+            ul=el.find_next_sibling(['ul','ol'])
+            if ul:
+                candidates+=list_tree(ul,base);break
+            ul=el.find(['ul','ol'])
+            if ul:
+                candidates+=list_tree(ul,base);break
+            el=el.parent
     for h in soup.find_all(['h1','h2','h3','h4','div','span']):
         if h.get_text(' ',strip=True).lower()=='related pages':
             for sib in h.next_siblings:
@@ -97,7 +109,8 @@ def local_menu(soup,base):
             if not candidates and h.parent: candidates+=extract(h.parent,base)
     for sel in ['#side-nav','#sidebar-nav','.side-nav','.sidenav','.subnav','.sub-nav','.related-pages','#related-pages','#leftnav','.leftnav','aside nav','nav[aria-label*="Related"]']:
         for el in soup.select(sel): candidates+=extract(el,base)
-    return dedup(candidates)
+    # Remove the repeated global navigation if a broad sidebar selector matched it.
+    return dedup([n for n in candidates if n['title'].lower().strip() not in {'departments','boards/committees','residents','business','how do i...'}])
 
 pages={}; failures={}; queue=deque([ROOT]); queued={ROOT}; roots=[]; global_urls=set()
 while queue:
@@ -130,7 +143,7 @@ while queue:
             if v and crawlable(v) and v not in queued: queued.add(v);queue.append(v)
     except (requests.RequestException,ValueError) as e:
         failures[u]=str(e)
-if not roots or len(pages)<10: raise RuntimeError('Crawl incomplete; preserving previous index')
+if not roots or len(pages)<10 or not all(any('/departments/'+dept+'/' in u and len(p['menu'])>=8 and any(n['children'] for n in p['menu']) for u,p in pages.items()) for dept in ('public_works','town_clerk')): raise RuntimeError('Crawl incomplete; preserving previous index')
 data={'updated':datetime.now(timezone.utc).isoformat(),'roots':roots,'pages':pages,'failures':failures,'count':len(pages)}
 OUT.parent.mkdir(exist_ok=True)
 tmp=OUT.with_suffix('.tmp');tmp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');tmp.replace(OUT)
