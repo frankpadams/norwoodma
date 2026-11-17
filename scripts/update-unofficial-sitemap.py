@@ -32,7 +32,7 @@ def normalize(href, base):
 
 def crawlable(u):
     p=urlsplit(u)
-    return p.hostname in HOSTS and not p.query and not re.search(r'\.(?!php$|html?$|aspx?$)[a-z0-9]{2,8}$',p.path,re.I) and not re.search(r'/(?:login|logout|admin|intranet|search)(?:[/.]|$)',p.path,re.I)
+    return p.hostname in HOSTS and (not p.query or (p.path.endswith('.php') and re.fullmatch(r'(?:id|page_id|item_id|document_id)=\\d+',p.query,re.I))) and not re.search(r'\.(?!php$|html?$|aspx?$)[a-z0-9]{2,8}$',p.path,re.I) and not re.search(r'/(?:login|logout|admin|intranet|search)(?:[/.]|$)',p.path,re.I)
 
 def anchor(a,base):
     u=normalize(a.get('href'),base)
@@ -113,7 +113,7 @@ def local_menu(soup,base):
     # Remove the repeated global navigation if a broad sidebar selector matched it.
     return dedup([n for n in candidates if n['title'].lower().strip() not in {'departments','boards/committees','residents','business','how do i...'}])
 
-pages={}; failures={}; queue=deque([ROOT]); queued={ROOT}; roots=[]; global_urls=set()
+pages={}; failures={}; queue=deque([ROOT]); queued={ROOT}; roots=[]; global_urls=set(); depths={ROOT:0}
 while queue:
     u=queue.popleft()
     if not robots.can_fetch(session.headers['User-Agent'],u):
@@ -133,19 +133,20 @@ while queue:
         other=[]
         for a in soup.find_all('a',href=True):
             n=anchor(a,u)
-            if not n or n['url']==u or n['url'] in global_urls or n['url'] in local_urls: continue
-            if a.find_parent(['footer','header','nav']): continue
-            if crawlable(n['url']): other.append(n)
+            if not n or not n['url'] or n['url']==u or n['url'] in global_urls or n['url'] in local_urls: continue
+            if a.find_parent(['footer','header']): continue
+            if crawlable(n['url']) or urlsplit(n['url']).hostname in HOSTS: other.append(n)
         other=dedup(other)
         title=soup.title.get_text(' ',strip=True) if soup.title else u
         pages[u]={'title':title,'menu':menu,'other':other}
         for n in flatten((roots if u==ROOT else [])+menu+other):
             v=n['url']
-            if v and crawlable(v) and v not in queued: queued.add(v);queue.append(v)
+            if v and crawlable(v) and v not in queued:
+                queued.add(v);queue.append(v);depths[v]=depths[u]+1
     except (requests.RequestException,ValueError) as e:
         failures[u]=str(e)
 if not roots or len(pages)<10 or not any('town_meeting' in u.lower() and p['menu'] for u,p in pages.items()) or not any(p['menu'] and any(pages.get(n['url'],{}).get('menu') for n in flatten(p['menu']) if n['url']!=u) for u,p in pages.items()): raise RuntimeError('Crawl incomplete; preserving previous index')
-data={'updated':datetime.now(timezone.utc).isoformat(),'roots':roots,'pages':pages,'failures':failures,'count':len(pages)}
+data={'updated':datetime.now(timezone.utc).isoformat(),'roots':roots,'pages':pages,'failures':failures,'count':len(pages),'max_discovery_depth':max((depths[u] for u in pages),default=0)}
 OUT.parent.mkdir(exist_ok=True)
 tmp=OUT.with_suffix('.tmp');tmp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');tmp.replace(OUT)
-print(f'{len(pages)} pages indexed; {len(failures)} fetch failures')
+print(f'{len(pages)} pages indexed; {len(failures)} fetch failures; deepest discovery: {data["max_discovery_depth"]}')
