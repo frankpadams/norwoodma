@@ -2,6 +2,8 @@
   "purpose": "Employer discovery queue, NOT live feeds. Only data/job-feeds.json contains enabled integrations.",
   "updated": "2026-11-17",
   "priority_employers": [
+    "FM (formerly FM Global)",
+    "Tempus Unlimited",
     "Nucar (DCD Automotive)",
     "CarMax",
     "UPS",
@@ -9,7 +11,6 @@
     "Central Auto Team",
     "Jack Madden Ford",
     "Asbury Automotive / Herb Chambers",
-    "FM (formerly FM Global)",
     "Moderna",
     "Home Market Foods",
     "CertainTeed",
@@ -64,7 +65,8 @@
     "Supermarkets and independent grocers",
     "Gyms, fitness studios and personal training",
     "Independent mechanic and body shops",
-    "Family entertainment, ice cream shops and seasonal youth employment"
+    "Family entertainment, ice cream shops and seasonal youth employment",
+    "Personal care attendant, home care and staffing agency placements physically in Norwood"
   ],
   "discovery_sources": [
     "Norwood Center business directory (employer discovery only)",
@@ -77,7 +79,8 @@
     "No manual scraping",
     "No paid services",
     "Only verified location and active listings",
-    "Norwood-only default; nearby radius optional"
+    "Norwood-only default; nearby radius optional",
+    "Include employers headquartered elsewhere only when the individual position's actual worksite is verified within Norwood."
   ],
   "official_public_employment_sources": [
     {
