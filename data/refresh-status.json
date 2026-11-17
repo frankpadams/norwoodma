@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-11-16T13:47:13.154331-05:00",
+  "generated_at": "2026-11-16T22:05:26.000355-05:00",
   "offline": false,
-  "events_published": 2074,
+  "events_published": 2075,
   "news_published": 120,
-  "civic_notices": 57,
+  "civic_notices": 58,
   "calendar_feeds": [
     {
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2074,
-      "generated_at": "2026-11-16T13:47:12.827040-05:00"
+      "events": 2075,
+      "generated_at": "2026-11-16T22:05:25.750139-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 112,
-      "generated_at": "2026-11-16T13:47:12.837349-05:00"
+      "generated_at": "2026-11-16T22:05:25.761536-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 788,
-      "generated_at": "2026-11-16T13:47:12.861639-05:00"
+      "generated_at": "2026-11-16T22:05:25.784941-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 684,
-      "generated_at": "2026-11-16T13:47:12.879204-05:00"
+      "generated_at": "2026-11-16T22:05:25.803519-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-16T13:47:12.888412-05:00"
+      "generated_at": "2026-11-16T22:05:25.814121-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 67,
-      "generated_at": "2026-11-16T13:47:12.899248-05:00"
+      "generated_at": "2026-11-16T22:05:25.826219-05:00"
     }
   ],
   "recreation_programs": 128,
@@ -555,7 +555,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured weekday",
+      "note": "authoritative page no longer confirms configured start time",
       "outcome": "failed",
       "access_limited": false
     },
@@ -616,7 +616,7 @@
       "source_id": "nps-athletics-arbiter-boys-jv-soccer",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -652,7 +652,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-cross-country",
       "ok": true,
       "method": "ical",
-      "found": 6,
+      "found": 5,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -751,7 +751,7 @@
       "source_id": "nps-athletics-arbiter-girls-freshman-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 14,
+      "found": 13,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -787,7 +787,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-soccer",
       "ok": true,
       "method": "ical",
-      "found": 15,
+      "found": 14,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -805,7 +805,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -841,7 +841,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-cross-country",
       "ok": true,
       "method": "ical",
-      "found": 6,
+      "found": 5,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -895,7 +895,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -931,7 +931,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 18,
+      "found": 17,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -976,7 +976,7 @@
       "source_id": "nps-athletics-arbiter-varsity-golf",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 14,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1609,16 +1609,17 @@
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
-      "ok": true,
-      "found": 26,
+      "ok": false,
+      "found": 0,
       "method": "google_news_rss",
-      "query": "\"norwood, ma\""
+      "query": "\"norwood, ma\"",
+      "note": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 26,
+      "found": 23,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
