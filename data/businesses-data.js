@@ -5811,4 +5811,12 @@ window.NORWOOD_BUSINESSES=[
     address, locationHint: rawAddress && !isSpecificAddress ? rawAddress : '',
     phone: b[3], website: b[4], town: locality ? locality[1] : 'Norwood'
   };
-});
+});,
+  [
+    "Miller Chiropractic Offices, P.C.",
+    "Chiropractic Care",
+    "884 Washington Street, Suite H",
+    "781-762-5600",
+    "https://www.nfldoc.com/"
+  ]
+
