@@ -41,7 +41,7 @@ def node(n,depth=0,ancestors=frozenset()):
     return f'<details class="{level}"><summary>{escape(n["title"])}</summary>{direct}{body}</details>'
 tree=''.join(node(n) for n in data['roots'])
 root=pages.get('https://www.norwoodma.gov/',{})
-if root.get('other'): tree+=node({'title':'Additional homepage links','children':root['other']})
+if root.get('other'): tree+=node({'title':'Town Homepage Links','children':root['other']})
 # Guarantee discoverability of any page or destination not reached in the rendered tree.
 def flatten(ns):
     for n in ns:
