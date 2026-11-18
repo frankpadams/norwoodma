@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T17:36:00.750906-05:00",
+  "generated_at": "2026-11-17T23:00:21.736784-05:00",
   "offline": false,
   "events_published": 2052,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2052,
-      "generated_at": "2026-11-17T17:36:00.261387-05:00"
+      "generated_at": "2026-11-17T23:00:21.195042-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 111,
-      "generated_at": "2026-11-17T17:36:00.270616-05:00"
+      "generated_at": "2026-11-17T23:00:21.206101-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 781,
-      "generated_at": "2026-11-17T17:36:00.287907-05:00"
+      "generated_at": "2026-11-17T23:00:21.227526-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 679,
-      "generated_at": "2026-11-17T17:36:00.302748-05:00"
+      "generated_at": "2026-11-17T23:00:21.245706-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-17T17:36:00.310726-05:00"
+      "generated_at": "2026-11-17T23:00:21.255526-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 67,
-      "generated_at": "2026-11-17T17:36:00.319741-05:00"
+      "generated_at": "2026-11-17T23:00:21.266745-05:00"
     }
   ],
   "recreation_programs": 125,
@@ -89,7 +89,7 @@
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 16,
+      "found": 17,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -405,7 +405,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured weekday",
+      "note": "authoritative page no longer confirms configured start time",
       "outcome": "failed",
       "access_limited": false
     },
@@ -422,9 +422,9 @@
       "source_id": "norwood-little-league",
       "ok": true,
       "method": "league_schedule_table",
-      "found": 8,
+      "found": 0,
       "note": null,
-      "outcome": "events",
+      "outcome": "offseason_empty",
       "access_limited": false
     },
     {
@@ -555,7 +555,7 @@
       "ok": false,
       "method": "verified_recurring_schedule",
       "found": 0,
-      "note": "authoritative page no longer confirms configured start time",
+      "note": "authoritative page no longer confirms configured weekday",
       "outcome": "failed",
       "access_limited": false
     },
@@ -850,7 +850,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-field-hockey",
       "ok": true,
       "method": "ical",
-      "found": 16,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1610,7 +1610,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 24,
+      "found": 25,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1618,7 +1618,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 24,
+      "found": 25,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1707,14 +1707,14 @@
         "Norwood Public Schools": 6,
         "Go Local Prov": 1,
         "Westwood Minute": 1,
-        "The Norwood Record": 41,
+        "The Norwood Record": 42,
         "The Norwood Record — Latest": 18,
         "Fiorentino Legal, P.C.": 3,
         "NBC Boston": 4,
         "The Cool Down": 1,
         "NEREJ": 1,
         "WCVB": 2,
-        "Norwood Town News": 24,
+        "Norwood Town News": 23,
         "The Daily Tribune News": 1,
         "NewsBreak: Local News & Alerts": 1,
         "Newport Dispatch": 1,
