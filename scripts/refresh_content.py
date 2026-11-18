@@ -2252,6 +2252,12 @@ def calendar_source_health(source, row, previous, checked_at):
             'stale':stale,'stale_reason':reason,'note':note or None}
 
 
+def confirmed_town_meeting_title(title, meeting_date):
+    if meeting_date == '2026-11-19' and title == 'Special Town Meeting (if needed)':
+        return 'Special Town Meeting'
+    return title
+
+
 def refresh_events(offline=False):
     FAMILY_CALENDAR_CACHE.clear()
     seeds=read_json('events-seed.json',[])
@@ -2404,7 +2410,13 @@ def refresh_events(offline=False):
             events.extend(retained); row['retained_events']=len(retained)
     else:
         events.extend(previous_events)
-    events=current_events(dedupe_events(events+legacy_expanded_calendar_events()+([] if offline else town_master_calendar_events())))
+    events.extend(legacy_expanded_calendar_events())
+    if not offline:
+        events.extend(town_master_calendar_events())
+    for event in events:
+        if event.get('source_id') in {'town-master-calendar', 'norwood-civic-meetings'}:
+            event['title']=confirmed_town_meeting_title(event.get('title'), (event.get('start') or {}).get('date'))
+    events=current_events(dedupe_events(events))
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     return events,status
 
@@ -3205,6 +3217,8 @@ def refresh_civic_notices(news,offline=False):
         except Exception:pass
     chosen={}
     for n in notices:
+        if n.get('kind')=='meeting':
+            n=dict(n, title=confirmed_town_meeting_title(n.get('title'), n.get('date')))
         k=(n.get('kind'),n.get('date') or n.get('election_date'),clean_text(n.get('title')).lower())
         chosen[k]=n
     notices=list(chosen.values())
@@ -4010,6 +4024,8 @@ def refresh_civic_notices(news,offline=False):
         except Exception:pass
     chosen={}
     for n in notices:
+        if n.get('kind')=='meeting':
+            n=dict(n, title=confirmed_town_meeting_title(n.get('title'), n.get('date')))
         k=(n.get('kind'),n.get('date') or n.get('election_date'),clean_text(n.get('title')).lower())
         chosen[k]=n
     notices=list(chosen.values())
