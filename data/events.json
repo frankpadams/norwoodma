@@ -514,36 +514,6 @@
     ]
   },
   {
-    "id": "2026-11-18-mass-cultural-council-publishes-updates-daily-65b1c28",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-18",
-      "time": "12:06"
-    },
-    "end": {
-      "date": "2026-11-18",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 18, 2026 at 12:06 PM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-787f7addaf61-2026-11-18",
     "title": "Modern 2 - Wednesdays",
     "start": {
@@ -578,6 +548,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-18-mass-cultural-council-publishes-updates-daily-65b1c28",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-18",
+      "time": "16:06"
+    },
+    "end": {
+      "date": "2026-11-18",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 18, 2026 at 04:06 PM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -9424,6 +9424,36 @@
     ]
   },
   {
+    "id": "2026-12-02-mahjong-dd88a06",
+    "title": "Mahjong",
+    "start": {
+      "date": "2026-12-02",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-12-02",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/mahjong",
+    "cost": null,
+    "public_access": "public",
+    "series": "Castle Island Brewing — Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mahjong Wednesday, December 2, 2026 6:30 PM 8:30 PM Norwood Taproom (map) Google Calendar ICS Learn American mah-jongg with 4 Blondes mah-jongg, December 2nd https://checkout.square.site/merchant/ML27DTM9SX5MM/checkout/D7Y63B2BW2DKJRNC2SAN54R4 * ticket includes one drink* View Event →",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "2026-12-02-youth-group-a6590b6",
     "title": "Youth Group",
     "start": {
@@ -11305,39 +11335,6 @@
     ]
   },
   {
-    "id": "2026-12-07-oldham-pto-winter-wonderland-shop-4c35126",
-    "title": "Oldham PTO Winter Wonderland Shop — Oldham Elementary School",
-    "start": {
-      "date": "2026-12-07",
-      "time": "08:00"
-    },
-    "end": {
-      "date": "2026-12-11",
-      "time": "14:00"
-    },
-    "venue": "Oldham Elementary School",
-    "address": null,
-    "category": "community",
-    "source_id": "nps-oldham",
-    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9521139/oldham-pto-winter-wonderland-shop",
-    "cost": null,
-    "organizer": "Oldham Elementary School",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "school_scope": "Oldham Elementary School",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-b2c972dfe681-2026-12-07",
     "title": "Pre-School Prep Session 13",
     "start": {
@@ -11937,6 +11934,39 @@
       "norwood-community",
       "norwood-sports",
       "recovery-aa"
+    ]
+  },
+  {
+    "id": "2026-12-08-oldham-pto-winter-wonderland-shop-798ac9e",
+    "title": "Oldham PTO Winter Wonderland Shop — Oldham Elementary School",
+    "start": {
+      "date": "2026-12-08",
+      "time": "08:00"
+    },
+    "end": {
+      "date": "2026-12-12",
+      "time": "14:00"
+    },
+    "venue": "Oldham Elementary School",
+    "address": null,
+    "category": "community",
+    "source_id": "nps-oldham",
+    "source_url": "https://www.norwood.k12.ma.us/oldham/calendar/9521139/oldham-pto-winter-wonderland-shop",
+    "cost": null,
+    "organizer": "Oldham Elementary School",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Oldham Elementary School",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -15313,6 +15343,39 @@
       "norwood-arts",
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-12-13-pawliday-christmas-party-get-pet-photos-with--a47ffa0",
+    "title": "Pawliday christmas party! Get Pet Photos with Santa and the Grinch",
+    "start": {
+      "date": "2026-12-13",
+      "time": "12:00"
+    },
+    "end": {
+      "date": "2026-12-13",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "castle-island-calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/pet-photos-with-santa-and-the-grinch",
+    "cost": null,
+    "public_access": "public",
+    "series": "Castle Island Brewing — Calendar",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Pawliday christmas party! Get Pet Photos with Santa and the Grinch Sunday, December 13, 2026 12:00 PM 4:00 PM Norwood Taproom (map) Google Calendar ICS All proceeds to benefit Charley’s Angels Pet Initiative! Stop by our Pawliday fair and get your pet and family photos with Santa and the Grinch! $10 donation for each 4 × 6 picture! View Event →",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-food-markets",
+      "norwood-fundraisers"
     ]
   },
   {
@@ -19225,8 +19288,8 @@
     ]
   },
   {
-    "id": "2026-12-19-brian-thomas-big-band-annual-fallout-shelter--fec8317",
-    "title": "Brian Thomas Big Band Annual Fallout Shelter Show - 19 Piece Orchestra!",
+    "id": "2026-12-19-bt-alc-big-band-annual-brian-thomas-show-19-p-f35a28e",
+    "title": "BT-ALC Big Band Annual Brian Thomas Show - 19 Piece Orchestra!",
     "start": {
       "date": "2026-12-19",
       "time": "19:00"
@@ -19239,13 +19302,13 @@
     "address": null,
     "category": "community",
     "source_id": "fallout-shelter",
-    "source_url": "https://grcpac.yapsody.com/event/index/878897/THE-BRIAN-THOMAS-ALLSTAR-BAND",
+    "source_url": "https://grcpac.yapsody.com/event/index/878897/THE-BRIAN-THOMAS-BTALC-BIG-BAND",
     "cost": null,
     "public_access": "public",
     "series": "The Fallout Shelter / Extended Play Sessions",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Brian Thomas Big Band Annual Fallout Shelter Show - 19 Piece Orchestra! Sat, Dec 19, 20 26 7:00pm When Brian Thomas rolls back into The Fallout Shelter for his annual gig, it’s always a funk-tastic, old-school romp through funk, jazz, soul, and rock that gets hearts pumping and hips moving. This year, he’s pulling out all the stops, bringing the entire 19-piece BT-ALC Big Band, the biggest band we’ve ever hosted. One of New England’s best trombone players, Thomas leads a lineup featuring five sa",
+    "notes": "BT-ALC Big Band Annual Brian Thomas Show - 19 Piece Orchestra! Sat, Dec 19, 20 26 7:00pm When Brian Thomas rolls back into The Fallout Shelter for his annual gig, it’s always a funk-tastic, old-school romp through funk, jazz, soul, and rock that gets hearts pumping and hips moving. This year, he’s pulling out all the stops, bringing the entire 19-piece BT-ALC Big Band, the biggest band we’ve ever hosted. One of New England’s best trombone players, Thomas leads a lineup featuring five saxophones,",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
