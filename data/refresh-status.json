@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T00:01:34.922404-05:00",
+  "generated_at": "2026-11-18T00:11:02.846340-05:00",
   "offline": false,
   "events_published": 2030,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 2030,
-      "generated_at": "2026-11-18T00:01:34.321101-05:00"
+      "generated_at": "2026-11-18T00:11:02.106001-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 108,
-      "generated_at": "2026-11-18T00:01:34.329821-05:00"
+      "generated_at": "2026-11-18T00:11:02.115343-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 775,
-      "generated_at": "2026-11-18T00:01:34.347719-05:00"
+      "generated_at": "2026-11-18T00:11:02.132793-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 675,
-      "generated_at": "2026-11-18T00:01:34.362765-05:00"
+      "generated_at": "2026-11-18T00:11:02.147577-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-18T00:01:34.371189-05:00"
+      "generated_at": "2026-11-18T00:11:02.155793-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 67,
-      "generated_at": "2026-11-18T00:01:34.381183-05:00"
+      "generated_at": "2026-11-18T00:11:02.165083-05:00"
     }
   ],
   "recreation_programs": 125,
@@ -80,7 +80,7 @@
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 9,
+      "found": 8,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -331,7 +331,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 33,
+      "found": 32,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1279,7 +1279,7 @@
       "source_id": "resource-norwood-youth-soccer",
       "ok": true,
       "method": "nys_multi_schedule",
-      "found": 204,
+      "found": 197,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1634,7 +1634,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 24,
+      "found": 23,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
