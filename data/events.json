@@ -313,36 +313,6 @@
     ]
   },
   {
-    "id": "2026-11-18-mass-cultural-council-publishes-updates-daily-65b1c28",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-18",
-      "time": "04:06"
-    },
-    "end": {
-      "date": "2026-11-18",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 18, 2026 at 04:06 AM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-18-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -541,6 +511,36 @@
     "notes": "Out of Town — Walpole, MA. Free drop-in preschool movement, songs and storytime with caregivers; no registration required.",
     "calendar_ids": [
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-18-mass-cultural-council-publishes-updates-daily-65b1c28",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-18",
+      "time": "12:06"
+    },
+    "end": {
+      "date": "2026-11-18",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 18, 2026 at 12:06 PM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -2112,7 +2112,7 @@
     ]
   },
   {
-    "id": "2026-11-19-trivia-with-tim-714009f",
+    "id": "2026-11-19-trivia-with-tim-d397613",
     "title": "Trivia With TIm",
     "start": {
       "date": "2026-11-19",
@@ -2120,20 +2120,21 @@
     },
     "end": {
       "date": "2026-11-19",
-      "time": null
+      "time": "22:00"
     },
-    "venue": null,
-    "address": null,
+    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, MA, 02062, United States",
+    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, MA, 02062, United States",
     "category": "community",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar/trivia-with-tim-shh72-js58b-gener-wnldt-gxt79-m2afy-ayl6z-344w9-hx9gz-dt8k3-yc5ss-rhh7f-dhd5g-hfa69-5g8ch-d5y99-d5zma-gs5k5-fg7el-4spja-52akb",
+    "source_url": "https://www.castleislandbeer.com/calendar",
     "cost": null,
+    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": "Castle Island Brewing — Calendar",
+    "series": null,
     "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Trivia With TIm Thursday, November 19, 2026 7:00 PM 10:00 PM Norwood Taproom (map) Google Calendar ICS Join us every Thursday with Sporcle Events stump trivia! Free to play, fun and a mentally stimulating night out with friends! For more information: https://www.sporcle.com/events/ View Event →",
-    "discovered_by": "visible_dated_page",
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
