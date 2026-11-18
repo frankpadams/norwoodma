@@ -1,9 +1,13 @@
 {
-  "generated_at": "2026-11-17T18:31:33.478303Z",
+  "generated_at": "2026-11-18T18:00:08.857974Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "diesel",
+          "premium",
+          "regular"
+        ],
         "candidates": [
           {
             "address": "1412-1420 Boston-Providence Turnpike, Norwood, MA 02062, USA",
@@ -19,9 +23,9 @@
             "station_verified": true,
             "types": [
               "gas_station",
+              "store",
               "point_of_interest",
               "service",
-              "store",
               "establishment"
             ]
           }
@@ -62,14 +66,6 @@
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -160,6 +156,7 @@
       "google": {
         "accepted_grades": [
           "diesel",
+          "midgrade",
           "premium",
           "regular"
         ],
@@ -181,31 +178,6 @@
               "gas_station",
               "point_of_interest",
               "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "69 Boston Providence Hwy, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Cravings On The Go",
-            "outcome": "no_usable_fuel_prices",
-            "parsed_address": [
-              "69 Boston Providence Hwy",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJtQnH3-eB5IkREHkmbw_z3Uc",
-            "station_verified": true,
-            "types": [
-              "convenience_store",
-              "gas_station",
-              "car_wash",
-              "food_store",
-              "restaurant",
-              "food",
-              "point_of_interest",
-              "service",
-              "store",
               "establishment"
             ]
           },
@@ -252,8 +224,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -264,6 +236,7 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -383,25 +356,23 @@
             ]
           },
           {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
+            "address": "683 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Lucky Mart Inc.",
+            "name": "Norwood Convenience and News",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "501 Washington St",
+              "683 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
             "station_verified": false,
             "types": [
               "convenience_store",
-              "grocery_store",
               "food_store",
               "food",
               "store",
               "point_of_interest",
-              "service",
               "establishment"
             ]
           }
@@ -412,7 +383,9 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -463,9 +436,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -486,27 +459,6 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Norwood Bottled Gas",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "305 Boston-Providence Turnpike",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
-            "station_verified": false,
-            "types": [
-              "supplier",
-              "manufacturer",
               "store",
               "point_of_interest",
               "service",
@@ -550,6 +502,46 @@
               "service",
               "establishment"
             ]
+          },
+          {
+            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Norwood Bottled Gas",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "305 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
+            "station_verified": false,
+            "types": [
+              "supplier",
+              "manufacturer",
+              "store",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
+          },
+          {
+            "address": "238 Pleasant St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Shell",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "238 Pleasant St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -563,7 +555,9 @@
       },
       "google": {
         "accepted_grades": [
-          "premium"
+          "diesel",
+          "premium",
+          "midgrade"
         ],
         "candidates": [
           {
