@@ -14,7 +14,7 @@
   if(ampm){if(h<1||h>12)return text(s);h=(h%12)+(ampm==='pm'?12:0);}
   if(h>23)return text(s);
   const suffix=h>=12?'pm':'am',hour=h%12||12;
-  return String(hour)+(minute===0?'':':'+String(minute).padStart(2,'0'))+suffix;
+  return String(hour)+':'+String(minute).padStart(2,'0')+' '+suffix.toUpperCase();
  }
  const short=s=>date(s).toLocaleDateString('en-US',{month:'short',day:'numeric'});
  function safeUrl(s){try{const u=new URL(s);return /^https?:$/.test(u.protocol)?u.href:'';}catch{return '';}}
