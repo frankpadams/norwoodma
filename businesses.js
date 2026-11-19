@@ -119,7 +119,11 @@ function render(){
  document.querySelector('.resource-back')?.addEventListener('click',()=>{if(sub)setHash(group);else{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});}});
  requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
 }
-$('#businessSearch')?.addEventListener('input',render);
+const search = $('#businessSearch');
+if (search) {
+ search.value = new URLSearchParams(location.search).get('q') || '';
+ search.addEventListener('input', render);
+}
 window.addEventListener('hashchange',()=>{
  const search = $('#businessSearch');
  if (search) search.value = '';
