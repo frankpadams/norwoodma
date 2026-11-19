@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-11-18T18:00:08.857974Z",
+  "generated_at": "2026-11-19T18:13:22.055387Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
-        "accepted_grades": [
-          "diesel",
-          "premium",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "1412-1420 Boston-Providence Turnpike, Norwood, MA 02062, USA",
@@ -24,8 +20,8 @@
             "types": [
               "gas_station",
               "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -37,8 +33,6 @@
       "google": {
         "accepted_grades": [
           "diesel",
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -56,8 +50,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -113,8 +107,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -155,9 +149,8 @@
     "Irving Oil / Rojo": {
       "google": {
         "accepted_grades": [
-          "diesel",
-          "midgrade",
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -178,6 +171,31 @@
               "gas_station",
               "point_of_interest",
               "service",
+              "establishment"
+            ]
+          },
+          {
+            "address": "69 Boston Providence Hwy, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Cravings On The Go",
+            "outcome": "no_usable_fuel_prices",
+            "parsed_address": [
+              "69 Boston Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJtQnH3-eB5IkREHkmbw_z3Uc",
+            "station_verified": true,
+            "types": [
+              "convenience_store",
+              "gas_station",
+              "car_wash",
+              "food_store",
+              "restaurant",
+              "food",
+              "point_of_interest",
+              "service",
+              "store",
               "establishment"
             ]
           },
@@ -236,7 +254,6 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -256,8 +273,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -350,8 +367,8 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
+              "store",
               "establishment"
             ]
           },
@@ -371,8 +388,8 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
+              "store",
               "establishment"
             ]
           }
@@ -382,12 +399,7 @@
     },
     "Norwood Gulf": {
       "google": {
-        "accepted_grades": [
-          "diesel",
-          "premium",
-          "midgrade",
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "707 Neponset St, Norwood, MA 02062, USA",
@@ -404,8 +416,8 @@
             "types": [
               "gas_station",
               "car_repair",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -458,10 +470,10 @@
               "gas_station",
               "convenience_store",
               "food_store",
-              "food",
               "store",
-              "point_of_interest",
               "service",
+              "food",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -479,8 +491,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -498,8 +510,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -519,8 +531,8 @@
               "supplier",
               "manufacturer",
               "store",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           },
@@ -538,8 +550,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -548,16 +560,12 @@
       }
     },
     "Shell — Pleasant Street": {
-      "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
-      },
       "google": {
         "accepted_grades": [
           "diesel",
           "premium",
-          "midgrade"
+          "midgrade",
+          "regular"
         ],
         "candidates": [
           {
@@ -580,7 +588,7 @@
             ]
           }
         ],
-        "outcome": "partial_prices"
+        "outcome": "prices_returned"
       }
     },
     "Shell — Walpole Street": {
@@ -655,7 +663,6 @@
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
-    "Shell — Walpole Street",
-    "Shell — Pleasant Street"
+    "Shell — Walpole Street"
   ]
 }
