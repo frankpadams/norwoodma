@@ -1,91 +1,91 @@
 {
-  "updated_at": "2026-11-18T14:17:53.447435-05:00",
-  "date": "2026-11-18",
+  "updated_at": "2026-11-19T13:32:52.376485-05:00",
+  "date": "2026-11-19",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary",
+      "title": "30th Annual Turkey Trot: 2016 Highlights",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
+          "minute": 840,
+          "title": "Flex and Firm with Steve"
+        },
+        {
           "minute": 900,
-          "title": "Local Artist Bill Breen - Public Access 11.4.26"
-        },
-        {
-          "minute": 960,
-          "title": "Norwood Trails: Wooden Trail Structures Presentation"
-        },
-        {
-          "minute": 1020,
-          "title": "The Kevin Broderick Show: Episode 17 - Matt Sheehan"
-        },
-        {
-          "minute": 1080,
-          "title": "Norwood Postcard: November 1996"
-        },
-        {
-          "minute": 1110,
-          "title": "The Vehicle for Change 11.10.26"
-        },
-        {
-          "minute": 1200,
           "title": "Comcast Cyber Security Presentation 10.19.26"
         },
         {
-          "minute": 1260,
+          "minute": 960,
           "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
-        }
-      ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-18"
-    },
-    "government": {
-      "status": "scheduled",
-      "title": "LIVE at 7:00PM! School Committee",
-      "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
-      "slots": [
-        {
-          "minute": 870,
-          "title": "Board of Health 11.16.26"
         },
         {
-          "minute": 900,
-          "title": "Town Meeting Night #1 11.16.26"
+          "minute": 1080,
+          "title": "Microadventures in Massachusetts"
         },
         {
-          "minute": 1125,
-          "title": "LIVE at 7:00PM! School Committee"
-        }
-      ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-18"
-    },
-    "schools": {
-      "status": "scheduled",
-      "title": "Norwood News 11.13.26",
-      "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
-      "slots": [
-        {
-          "minute": 870,
-          "title": "NHS Update October 2026"
-        },
-        {
-          "minute": 1020,
-          "title": "Jeff Kerr And His Bagpipes 2026"
-        },
-        {
-          "minute": 1050,
-          "title": "Romeo and Juliet - November 23, 2025"
-        },
-        {
-          "minute": 1170,
-          "title": "NHS Update October 2026"
+          "minute": 1200,
+          "title": "Winter Concert Series: Compaq Big Band 1.28.24"
         },
         {
           "minute": 1320,
-          "title": "Norwood News 11.13.26"
+          "title": "Tales From Tiot! Heather Cole and Ed Sweeney"
+        },
+        {
+          "minute": 1350,
+          "title": "30th Annual Turkey Trot: 2016 Highlights"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-18"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-19"
+    },
+    "government": {
+      "status": "scheduled",
+      "title": "LIVE! Town Meeting",
+      "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
+      "slots": [
+        {
+          "minute": 990,
+          "title": "Board of Health 11.16.26"
+        },
+        {
+          "minute": 1050,
+          "title": "Board of Selectmen 11.10.26"
+        },
+        {
+          "minute": 1095,
+          "title": "LIVE! Town Meeting"
+        }
+      ],
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-19"
+    },
+    "schools": {
+      "status": "scheduled",
+      "title": "2026 NHS Girls Soccer vs Millis 10.14.26",
+      "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
+      "slots": [
+        {
+          "minute": 900,
+          "title": "2011 NHS Girls Volleyball vs. Weymouth"
+        },
+        {
+          "minute": 1020,
+          "title": "2026 NHS Field Hockey vs Marshfield - Round of 32 11.5.26"
+        },
+        {
+          "minute": 1110,
+          "title": "2026 NHS Girls Volleyball vs King Philip - Round of 32"
+        },
+        {
+          "minute": 1200,
+          "title": "2026 NHS Football vs Wellesley 11.6.26"
+        },
+        {
+          "minute": 1320,
+          "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        }
+      ],
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-19"
     }
   }
 }
