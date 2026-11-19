@@ -228,7 +228,7 @@ async function news(){
 
 function dateKey(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`;}
 function parseLocalDate(s){if(!s)return null;const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12,0,0);}
-function formatEventTime(t){if(!t)return '';const [h,m]=t.split(':').map(Number);return new Date(2000,0,1,h,m).toLocaleTimeString([],{hour:'numeric',minute:m?'2-digit':undefined});}
+function formatEventTime(t){const s=String(t||'').trim();if(!s||/^(?:0?0:00(?::00)?|12:00\s*AM)$/i.test(s))return '';const m=s.match(/^(\d{1,2}):(\d{2})(?::\d{2})?\s*(AM|PM)?$/i);if(!m)return s;let h=+m[1];if(+m[2]>59||h>23)return s;if(m[3]){if(h<1||h>12)return s;h=h%12+(m[3].toUpperCase()==='PM'?12:0);}return (h%12||12)+':'+m[2]+' '+(h>=12?'PM':'AM');}
 function shortDate(s){const d=parseLocalDate(s);return d?d.toLocaleDateString([],{month:'short',day:'numeric'}):'';}
 function monthDayRange(events){
  const dates=events.map(e=>parseLocalDate(e.start?.date)).filter(Boolean); if(!dates.length)return '';
