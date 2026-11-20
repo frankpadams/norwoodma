@@ -210,6 +210,14 @@
  </details>
  <small id="mapBasemapStatus" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap">Street map</small>
 </div>
+<section id="mapTransitDetails" aria-labelledby="mapTransitTitle" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px">
+ <h2 id="mapTransitTitle">Live MBTA transit</h2>
+ <p><a href="transit.html">Open Norwood.ma Live Transit →</a></p>
+ <h3>Franklin/Foxboro Line arrivals</h3>
+ <div id="mapTransitArrivals" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px"></div>
+ <h3>Service alerts</h3>
+ <div id="mapTransitAlerts"></div>
+</section>
 <div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
 <template id="zoningLayerInfoContent"><section aria-label="Zoning map information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Zoning districts &amp; overlays</strong><p class="map-layer-status">Base districts are historical MAPC 2020 data, not current zoning. MBTA overlay districts are from the state Section 3A atlas. Other overlays are not yet mapped. The official GIS viewer remains the reference for property-specific decisions.</p><div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div><p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://www.mass.gov/info-details/massgis-data-mbta-communities-3a-district-atlas" target="_blank" rel="noopener">MassGIS Section 3A Atlas</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p></section>
 </template>
@@ -518,6 +526,102 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  }catch(e){if(input.checked){status.textContent='Unable to load '+cfg.source+'. Uncheck and retry, or use the official town map.';legend.hidden=true;}}
  });
  }
+})();
+</script>
+<script>
+(()=>{
+ const toggle=document.getElementById('mbtaToggle');
+ const panel=document.getElementById('mapTransitDetails');
+ const arrivals=document.getElementById('mapTransitArrivals');
+ const alerts=document.getElementById('mapTransitAlerts');
+ const api='https://api-v3.mbta.com/';
+ const route='CR-Franklin';
+ const stationNames=['Norwood Depot','Norwood Central','Windsor Gardens'];
+ const easternTime=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});
+ let timer,controller,stations;
+ const element=(tag,label)=>{
+  const node=document.createElement(tag);
+  node.textContent=label;
+  return node;
+ };
+ async function get(path,signal){
+  const response=await fetch(api+path,{cache:'no-store',signal:AbortSignal.any([signal,AbortSignal.timeout(15000)])});
+  if(!response.ok)throw Error('MBTA HTTP '+response.status);
+  const {data}=await response.json();
+  if(!Array.isArray(data))throw Error('Invalid MBTA response');
+  return data;
+ }
+ async function stationArrivals(station,signal){
+  const query=new URLSearchParams({'filter[route]':route,'filter[stop]':station.id,'page[limit]':'100'});
+  const [predictions,schedules]=await Promise.allSettled([
+   get('predictions?'+query,signal),get('schedules?'+query,signal)
+  ]);
+  const upcoming=result=>(result.value||[]).map(({attributes})=>({
+   direction:attributes.direction_id,
+   time:Date.parse(attributes.arrival_time||attributes.departure_time||'')
+  })).filter(item=>item.time>=Date.now()-60000).sort((a,b)=>a.time-b.time);
+  const live=upcoming(predictions),scheduled=upcoming(schedules);
+  const card=element('div','');
+  card.append(element('strong',station.attributes.name));
+  for(const [direction,label] of [[1,'Inbound'],[0,'Outbound']]){
+   const estimates=live.filter(item=>item.direction===direction);
+   const times=(estimates.length?estimates:scheduled.filter(item=>item.direction===direction)).slice(0,2);
+   const text=times.map(item=>(estimates.length?'Est. ':'Scheduled ')+easternTime.format(item.time)).join(' · ');
+   const empty=schedules.status==='fulfilled'?'No upcoming arrivals':'Arrival times unavailable';
+   card.append(element('div',label+': '+(text||empty)));
+  }
+  return card;
+ }
+ async function showArrivals(signal){
+  try{
+   stations??=(await get('stops?filter[route]='+route,signal))
+    .filter(stop=>stationNames.includes(stop.attributes.name))
+    .sort((a,b)=>stationNames.indexOf(a.attributes.name)-stationNames.indexOf(b.attributes.name));
+   if(!stations.length){stations=null;throw Error('Norwood stops unavailable');}
+   const cards=await Promise.all(stations.map(station=>stationArrivals(station,signal)));
+   if(!signal.aborted)arrivals.replaceChildren(...cards);
+  }catch{
+   if(!signal.aborted)arrivals.replaceChildren(element('p','Arrival times are temporarily unavailable.'));
+  }
+ }
+ async function showAlerts(signal){
+  try{
+   const data=await get('alerts?filter[route]=34E,'+route,signal);
+   if(signal.aborted)return;
+   if(!data.length){
+    alerts.replaceChildren(element('p','No current service alerts for the 34E or Franklin/Foxboro Line.'));
+    return;
+   }
+   const list=element('ul','');
+   for(const {attributes} of data){
+    const item=element('li',attributes.header||attributes.short_header||attributes.effect||'MBTA service alert');
+    list.append(item);
+   }
+   alerts.replaceChildren(list);
+  }catch{
+   if(!signal.aborted){
+    const link=element('a','Check MBTA alerts →');
+    link.href='https://www.mbta.com/alerts';
+    alerts.replaceChildren(element('p','Service alerts are temporarily unavailable.'),link);
+   }
+  }
+ }
+ async function refresh(signal){
+  await Promise.all([showArrivals(signal),showAlerts(signal)]);
+  if(!signal.aborted)timer=setTimeout(()=>refresh(signal),30000);
+ }
+ function update(){
+  clearTimeout(timer);
+  controller?.abort();
+  panel.hidden=!toggle.checked;
+  if(panel.hidden)return;
+  arrivals.replaceChildren(element('p','Loading arrivals…'));
+  alerts.replaceChildren(element('p','Checking service alerts…'));
+  controller=new AbortController();
+  refresh(controller.signal);
+ }
+ toggle.addEventListener('change',update);
+ update();
 })();
 </script>
 </body>
