@@ -819,5 +819,149 @@
         "norwood-youth-softball"
       ]
     }
+  },
+  {
+    "id": "nps-callahan-pta",
+    "group": "schools",
+    "name": "Callahan Elementary PTA",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/callahan/pta",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-callahan-pta"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-callahan-pta"
+      ]
+    }
+  },
+  {
+    "id": "nps-cleveland-pto",
+    "group": "schools",
+    "name": "Cleveland Elementary PTO",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/cleveland/pta",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-cleveland-pto"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-cleveland-pto"
+      ]
+    }
+  },
+  {
+    "id": "nps-cms-pto",
+    "group": "schools",
+    "name": "Coakley Middle School PTO",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/cms/pto",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-cms-pto"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-cms-pto"
+      ]
+    }
+  },
+  {
+    "id": "nps-nhs-pto",
+    "group": "schools",
+    "name": "Norwood High School PGTO",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/nhs/pta",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-nhs-pto"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-nhs-pto"
+      ]
+    }
+  },
+  {
+    "id": "nps-oldham-pto",
+    "group": "schools",
+    "name": "Oldham Elementary PTO",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/oldham/pta",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-oldham-pto"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-oldham-pto"
+      ]
+    }
+  },
+  {
+    "id": "nps-prescott-pta",
+    "group": "schools",
+    "name": "Prescott Elementary PTA",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/prescott/pta",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-prescott-pta"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-prescott-pta"
+      ]
+    }
+  },
+  {
+    "id": "nps-willett-pto",
+    "group": "schools",
+    "name": "Willett / Little Mustangs PTO",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/willett/pta",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-willett-pto"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-willett-pto"
+      ]
+    }
+  },
+  {
+    "id": "nps-balch-pto",
+    "group": "schools",
+    "name": "Balch Elementary PTO",
+    "description": "Publicly announced PTO meetings, fundraisers and family events; coverage depends on published dates.",
+    "view_url": "https://www.norwood.k12.ma.us/balch/news",
+    "provider": "Norwood Public Schools",
+    "kind": "monitor_calendar",
+    "possible_conflicts": true,
+    "health_source_ids": [
+      "nps-balch-pto"
+    ],
+    "selector": {
+      "source_ids": [
+        "nps-balch-pto"
+      ]
+    }
   }
 ]
