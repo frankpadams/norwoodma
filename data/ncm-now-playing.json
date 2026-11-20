@@ -1,91 +1,115 @@
 {
-  "updated_at": "2026-11-19T13:32:52.376485-05:00",
-  "date": "2026-11-19",
+  "updated_at": "2026-11-20T03:59:19.323721-05:00",
+  "date": "2026-11-20",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "30th Annual Turkey Trot: 2016 Highlights",
+      "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 840,
-          "title": "Flex and Firm with Steve"
-        },
-        {
-          "minute": 900,
-          "title": "Comcast Cyber Security Presentation 10.19.26"
-        },
-        {
-          "minute": 960,
-          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
-        },
-        {
-          "minute": 1080,
-          "title": "Microadventures in Massachusetts"
-        },
-        {
-          "minute": 1200,
+          "minute": 300,
           "title": "Winter Concert Series: Compaq Big Band 1.28.24"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "Tales From Tiot! Heather Cole and Ed Sweeney"
         },
         {
-          "minute": 1350,
+          "minute": 490,
+          "title": "NHS UPDATE LIVE!"
+        },
+        {
+          "minute": 510,
           "title": "30th Annual Turkey Trot: 2016 Highlights"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 660,
+          "title": "Comcast Cyber Security Presentation 10.19.26"
+        },
+        {
+          "minute": 720,
+          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-19"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-20"
     },
     "government": {
       "status": "scheduled",
-      "title": "LIVE! Town Meeting",
+      "title": "Board of Selectmen 11.10.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 990,
-          "title": "Board of Health 11.16.26"
+          "minute": 270,
+          "title": "Historical Commission 11.5.26"
         },
         {
-          "minute": 1050,
+          "minute": 330,
+          "title": "Library Board of Trustees 11.10.26"
+        },
+        {
+          "minute": 390,
+          "title": "Trails Advisory Committee 11.10.26"
+        },
+        {
+          "minute": 480,
           "title": "Board of Selectmen 11.10.26"
         },
         {
-          "minute": 1095,
-          "title": "LIVE! Town Meeting"
+          "minute": 540,
+          "title": "Library Board of Trustees 11.10.26"
+        },
+        {
+          "minute": 600,
+          "title": "Trails Advisory Committee 11.10.26"
+        },
+        {
+          "minute": 690,
+          "title": "Board of Selectmen 11.10.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-19"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-20"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2026 NHS Girls Soccer vs Millis 10.14.26",
+      "title": "2026 NHS Field Hockey vs Milton - Round of 16 11.11.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 900,
-          "title": "2011 NHS Girls Volleyball vs. Weymouth"
-        },
-        {
-          "minute": 1020,
-          "title": "2026 NHS Field Hockey vs Marshfield - Round of 32 11.5.26"
-        },
-        {
-          "minute": 1110,
-          "title": "2026 NHS Girls Volleyball vs King Philip - Round of 32"
-        },
-        {
-          "minute": 1200,
+          "minute": 300,
           "title": "2026 NHS Football vs Wellesley 11.6.26"
         },
         {
-          "minute": 1320,
+          "minute": 420,
           "title": "2026 NHS Girls Soccer vs Millis 10.14.26"
+        },
+        {
+          "minute": 540,
+          "title": "2011 NHS Girls Volleyball vs. Weymouth"
+        },
+        {
+          "minute": 660,
+          "title": "2026 NHS Field Hockey vs Marshfield - Round of 32 11.5.26"
+        },
+        {
+          "minute": 750,
+          "title": "2026 NHS Girls Volleyball vs King Philip - Round of 32"
+        },
+        {
+          "minute": 840,
+          "title": "TVL Sports Net 11.12.26"
+        },
+        {
+          "minute": 870,
+          "title": "2026 NHS Field Hockey vs Milton - Round of 16 11.11.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-19"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-20"
     }
   }
 }
