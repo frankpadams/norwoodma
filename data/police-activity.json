@@ -1,30 +1,488 @@
 {
-  "generated_at": "2026-11-20T05:42:48.274Z",
-  "coverage_start": "2026-11-06",
-  "coverage_end": "2026-11-06",
-  "source_status": "Partial, manually verified entries from the November 12 Norwood Record police logs, page 10",
+  "generated_at": "2026-11-20T05:46:52.621Z",
+  "coverage_start": "2026-08-24",
+  "coverage_end": "2026-11-11",
+  "source_status": "Partial coverage from The Norwood Record weekly police logs",
   "incidents": [
     {
-      "id": "2026-11-06-peabody-parking",
-      "date": "2026-11-06",
-      "category": "Parking enforcement",
-      "location": "Peabody Road (approximate)",
-      "lat": 42.191,
-      "lng": -71.213,
+      "date": "2026-11-11",
+      "category": "Reported theft or fraud",
+      "location": "Coach Ln (approximate)",
       "location_precision": "street",
-      "description": "The log lists two parking enforcement calls on Peabody Road that day.",
-      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10"
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_19NOV2026.pdf#page=10",
+      "id": "nwd-bf023d7e82d392f1",
+      "lat": 42.159,
+      "lng": -71.193
     },
     {
-      "id": "2026-11-06-washington-cottage-collision",
+      "date": "2026-11-11",
+      "category": "Reported theft or fraud",
+      "location": "Hampden Dr (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_19NOV2026.pdf#page=10",
+      "id": "nwd-d42408021304bd19",
+      "lat": 42.162,
+      "lng": -71.195
+    },
+    {
+      "date": "2026-11-08",
+      "category": "Reported collision",
+      "location": "Hemlock St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-38e0fb29d7a53b94",
+      "lat": 42.183,
+      "lng": -71.181
+    },
+    {
+      "date": "2026-11-07",
+      "category": "Parking enforcement",
+      "location": "Washington St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-3a5844cf1da73d17",
+      "lat": 42.192,
+      "lng": -71.202
+    },
+    {
+      "date": "2026-11-06",
+      "category": "Parking enforcement",
+      "location": "Washington St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-ad254301b936a393",
+      "lat": 42.192,
+      "lng": -71.202
+    },
+    {
+      "date": "2026-11-06",
+      "category": "Parking enforcement",
+      "location": "Peabody Rd (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-1e121765ee8efa44",
+      "lat": 42.191,
+      "lng": -71.213
+    },
+    {
+      "date": "2026-11-06",
+      "category": "Parking enforcement",
+      "location": "Peabody Rd (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-255432d2d574ccff",
+      "lat": 42.191,
+      "lng": -71.213
+    },
+    {
       "date": "2026-11-06",
       "category": "Reported collision",
-      "location": "Washington Street near Cottage Street",
-      "lat": 42.194,
-      "lng": -71.201,
+      "location": "Walpole St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-c67dc35ccef2c7cf",
+      "lat": 42.181,
+      "lng": -71.219
+    },
+    {
+      "date": "2026-11-06",
+      "category": "Reported collision",
+      "location": "Cottage St & Washington St (approximate)",
       "location_precision": "intersection",
-      "description": "Police logged a reported vehicle–pedestrian collision.",
-      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10"
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-fa168198c18e1353",
+      "lat": 42.194,
+      "lng": -71.201
+    },
+    {
+      "date": "2026-11-06",
+      "category": "Reported theft or fraud",
+      "location": "Norwest Dr (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-36cea06bccb8c5c9",
+      "lat": 42.206,
+      "lng": -71.211
+    },
+    {
+      "date": "2026-11-05",
+      "category": "Reported property damage",
+      "location": "Washington St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-75305838dff405b5",
+      "lat": 42.192,
+      "lng": -71.202
+    },
+    {
+      "date": "2026-11-03",
+      "category": "Reported collision",
+      "location": "Nahatan St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-37bd37a924227fcd",
+      "lat": 42.192,
+      "lng": -71.196
+    },
+    {
+      "date": "2026-11-02",
+      "category": "Reported illegal dumping",
+      "location": "Vernon St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10",
+      "id": "nwd-6944a7e26bd0b146",
+      "lat": 42.197,
+      "lng": -71.208
+    },
+    {
+      "date": "2026-11-01",
+      "category": "Parking enforcement",
+      "location": "Washington St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_5NOV2026.pdf#page=10",
+      "id": "nwd-26af635deb7aa8cb",
+      "lat": 42.192,
+      "lng": -71.202
+    },
+    {
+      "date": "2026-10-30",
+      "category": "Reported theft or fraud",
+      "location": "Azalea Dr (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_5NOV2026.pdf#page=10",
+      "id": "nwd-b82663a6ce1fc36f",
+      "lat": 42.181,
+      "lng": -71.178
+    },
+    {
+      "date": "2026-10-28",
+      "category": "Reported theft or fraud",
+      "location": "Washington St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_5NOV2026.pdf#page=10",
+      "id": "nwd-be9d84058eaf9585",
+      "lat": 42.192,
+      "lng": -71.202
+    },
+    {
+      "date": "2026-10-24",
+      "category": "Reported collision",
+      "location": "Short St & Washington St (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_29OCT2026.pdf#page=10",
+      "id": "nwd-9d7ba17359c705db",
+      "lat": 42.173,
+      "lng": -71.208
+    },
+    {
+      "date": "2026-10-24",
+      "category": "Reported collision",
+      "location": "Day St & Washington St (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_29OCT2026.pdf#page=10",
+      "id": "nwd-7edea07de6f181bb",
+      "lat": 42.192,
+      "lng": -71.202
+    },
+    {
+      "date": "2026-10-22",
+      "category": "Parking enforcement",
+      "location": "Fulton St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_29OCT2026.pdf#page=10",
+      "id": "nwd-5c009ab5c1dbfeca",
+      "lat": 42.2,
+      "lng": -71.201
+    },
+    {
+      "date": "2026-10-20",
+      "category": "Reported collision",
+      "location": "Short St & Washington St (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_29OCT2026.pdf#page=10",
+      "id": "nwd-7e7fe7032735ab2b",
+      "lat": 42.173,
+      "lng": -71.208
+    },
+    {
+      "date": "2026-10-20",
+      "category": "Reported collision",
+      "location": "Phillips Ave (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_29OCT2026.pdf#page=10",
+      "id": "nwd-03a0a80a13641b49",
+      "lat": 42.186,
+      "lng": -71.208
+    },
+    {
+      "date": "2026-10-17",
+      "category": "Reported theft or fraud",
+      "location": "Ryan Dr (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-73e6be3cc5733814",
+      "lat": 42.171,
+      "lng": -71.221
+    },
+    {
+      "date": "2026-10-15",
+      "category": "Reported collision",
+      "location": "George F Willett Pkwy & Walpole St (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-b5788586f2d7c570",
+      "lat": 42.182,
+      "lng": -71.218
+    },
+    {
+      "date": "2026-10-15",
+      "category": "Reported collision",
+      "location": "Spruce Rd & Winter St (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-43ebb7d8e20371df",
+      "lat": 42.2,
+      "lng": -71.218
+    },
+    {
+      "date": "2026-10-14",
+      "category": "Reported theft or fraud",
+      "location": "Prospect St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-d012ad061a663b33",
+      "lat": 42.2,
+      "lng": -71.207
+    },
+    {
+      "date": "2026-10-14",
+      "category": "Reported collision",
+      "location": "Nahatan St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-2155052e1a44b4e1",
+      "lat": 42.192,
+      "lng": -71.196
+    },
+    {
+      "date": "2026-10-13",
+      "category": "Reported collision",
+      "location": "Everett St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-8eb43393097116ff",
+      "lat": 42.21,
+      "lng": -71.182
+    },
+    {
+      "date": "2026-10-12",
+      "category": "Reported theft or fraud",
+      "location": "Boston Providence Hwy (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_22OCT2026.pdf#page=10",
+      "id": "nwd-8359e6c626bc8188",
+      "lat": 42.185,
+      "lng": -71.186
+    },
+    {
+      "date": "2026-10-08",
+      "category": "Reported illegal dumping",
+      "location": "Bond St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_15OCT2026.pdf#page=10",
+      "id": "nwd-2fb864e4288e9c80",
+      "lat": 42.191,
+      "lng": -71.207
+    },
+    {
+      "date": "2026-10-08",
+      "category": "Reported theft or fraud",
+      "location": "Centennial Dr (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_15OCT2026.pdf#page=10",
+      "id": "nwd-136ccfb238249f3d",
+      "lat": 42.188,
+      "lng": -71.189
+    },
+    {
+      "date": "2026-10-04",
+      "category": "Reported theft or fraud",
+      "location": "Winslow Ave (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_8OCT2026.pdf#page=10",
+      "id": "nwd-172fed804326c4a7",
+      "lat": 42.186,
+      "lng": -71.207
+    },
+    {
+      "date": "2026-10-04",
+      "category": "Parking enforcement",
+      "location": "Norwest Dr (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_8OCT2026.pdf#page=10",
+      "id": "nwd-fb61345f0c0d8593",
+      "lat": 42.206,
+      "lng": -71.211
+    },
+    {
+      "date": "2026-10-02",
+      "category": "Reported theft or fraud",
+      "location": "Rockhill St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_8OCT2026.pdf#page=10",
+      "id": "nwd-b1a830f807bb5293",
+      "lat": 42.169,
+      "lng": -71.213
+    },
+    {
+      "date": "2026-09-30",
+      "category": "Parking enforcement",
+      "location": "Peabody Rd (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_8OCT2026.pdf#page=10",
+      "id": "nwd-ec32add6ff9a4a01",
+      "lat": 42.191,
+      "lng": -71.213
+    },
+    {
+      "date": "2026-09-24",
+      "category": "Reported theft or fraud",
+      "location": "Walpole St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_1OCT2026.pdf#page=10",
+      "id": "nwd-ab2354f09f95bf0b",
+      "lat": 42.181,
+      "lng": -71.219
+    },
+    {
+      "date": "2026-09-21",
+      "category": "Reported theft or fraud",
+      "location": "Nahatan St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_1OCT2026.pdf#page=10",
+      "id": "nwd-14ee053fed393d72",
+      "lat": 42.192,
+      "lng": -71.196
+    },
+    {
+      "date": "2026-09-19",
+      "category": "Parking enforcement",
+      "location": "Cleveland St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_24SEP2026.pdf#page=10",
+      "id": "nwd-70ab963bed6a05bb",
+      "lat": 42.195,
+      "lng": -71.194
+    },
+    {
+      "date": "2026-09-18",
+      "category": "Reported theft or fraud",
+      "location": "David Ter (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_24SEP2026.pdf#page=10",
+      "id": "nwd-fbbfe196756f4b8a",
+      "lat": 42.21,
+      "lng": -71.188
+    },
+    {
+      "date": "2026-09-11",
+      "category": "Reported property damage",
+      "location": "Saint John Ave (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_17SEP2026.pdf#page=10",
+      "id": "nwd-ea8cc10aad553b99",
+      "lat": 42.176,
+      "lng": -71.206
+    },
+    {
+      "date": "2026-08-30",
+      "category": "Reported collision",
+      "location": "Everett St & Washington St (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-113a9aec5cff5ff1",
+      "lat": 42.214,
+      "lng": -71.19
+    },
+    {
+      "date": "2026-08-28",
+      "category": "Parking enforcement",
+      "location": "Winslow Ave (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-fc69a0c37153ad4e",
+      "lat": 42.186,
+      "lng": -71.207
+    },
+    {
+      "date": "2026-08-27",
+      "category": "Parking enforcement",
+      "location": "Douglas Ave (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-8e95bea16a8662d5",
+      "lat": 42.187,
+      "lng": -71.204
+    },
+    {
+      "date": "2026-08-26",
+      "category": "Reported property damage",
+      "location": "Dean St (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-84662b733fd22b5d",
+      "lat": 42.179,
+      "lng": -71.192
+    },
+    {
+      "date": "2026-08-26",
+      "category": "Traffic hazard",
+      "location": "Dean St & Tamworth Rd (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-bce4850fdf7fc8ea",
+      "lat": 42.178,
+      "lng": -71.185
+    },
+    {
+      "date": "2026-08-26",
+      "category": "Reported collision",
+      "location": "Boston Providence Hwy (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-386c3c1e05373174",
+      "lat": 42.185,
+      "lng": -71.186
+    },
+    {
+      "date": "2026-08-26",
+      "category": "Traffic hazard",
+      "location": "Dean St & Tamworth Rd (approximate)",
+      "location_precision": "intersection",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-51a2c67ded2a6ecf",
+      "lat": 42.178,
+      "lng": -71.185
+    },
+    {
+      "date": "2026-08-25",
+      "category": "Parking enforcement",
+      "location": "David Ter (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-21cbd87c895af6a8",
+      "lat": 42.21,
+      "lng": -71.188
+    },
+    {
+      "date": "2026-08-24",
+      "category": "Reported collision",
+      "location": "Boston Providence Hwy (approximate)",
+      "location_precision": "street",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_3SEP2026.pdf#page=10",
+      "id": "nwd-d99f0dccc5381bbe",
+      "lat": 42.185,
+      "lng": -71.186
     }
   ]
 }
