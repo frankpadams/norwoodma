@@ -105,14 +105,15 @@
 <label class="map-layer-choice"><input type="checkbox" id="massgisHistoric"><span>Historic buildings &amp; districts</span></label>
 <details class="map-layer-more" id="zoningControls"><summary>Zoning districts &amp; overlays</summary>
 
-<label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle"><span>Base zoning districts (MAPC 2020 historical)</span></label><p id="zoningBaseToggleStatus" class="map-layer-status" hidden aria-live="polite"></p><div id="zoningBaseToggleLegend" class="map-layer-status" hidden></div>
+<label class="map-layer-choice"><input type="checkbox" id="zoningBaseToggle"><span>Base zoning districts (Town GIS)</span></label><p id="zoningBaseToggleStatus" class="map-layer-status" hidden aria-live="polite"></p><div id="zoningBaseToggleLegend" class="map-layer-status" hidden></div>
 <label class="map-layer-choice"><input type="checkbox" id="zoningOverlayToggle"><span>MBTA multifamily zoning overlay (MassGIS)</span></label><p id="zoningOverlayToggleStatus" class="map-layer-status" hidden aria-live="polite"></p><div id="zoningOverlayToggleLegend" class="map-layer-status" hidden></div>
+<label class="map-layer-choice"><input type="checkbox" id="zoningLocalOverlayToggle"><span>Local zoning overlays (Town GIS)</span></label><p id="zoningLocalOverlayToggleStatus" class="map-layer-status" hidden aria-live="polite"></p><div id="zoningLocalOverlayToggleLegend" class="map-layer-status" hidden></div>
 
 <dialog id="zoningInfoDialog" aria-labelledby="zoningInfoTitle" style="max-width:min(520px,90vw);border:1px solid #bdcbd4;border-radius:12px;padding:22px;color:#17384d"><h3 id="zoningInfoTitle" style="margin-top:0"></h3><div id="zoningInfoBody"></div><form method="dialog" style="text-align:right;margin-top:18px"><button type="submit">Close</button></form></dialog>
 <template id="zoningDistrictContent"><p class="map-layer-status"><strong>Residential:</strong> S, S1, S2, G, A<br><strong>Business:</strong> GB, CB, BPH, LB<br><strong>Industrial:</strong> O, LM, LMA, M, LSDD</p>
 <p class="map-layer-status"><strong>Overlays:</strong> FPOD, WRPOD, WCSOD, MUOD, SGASGOD, MMOD, MSOD, NSC-MUOD, MCMOD. Some overlay provisions have subdistricts or additional maps; verify against the current bylaws.</p>
 </template>
-<template id="zoningDisclaimerContent"><p class="map-layer-status"><strong>Map disclaimer:</strong> Norwood.ma displays informational GIS data directly from MAPC and MassGIS; base zoning is historical (2020). They may contain errors or be outdated and must not be relied on for legal, permitting, development, or property decisions. Confirm boundaries with the <a href="https://www.axisgis.com/norwoodma/" target="_blank" rel="noopener">official Norwood GIS viewer</a> and <a href="https://ecode360.com/42511353" target="_blank" rel="noopener">zoning bylaws</a>.</p>
+<template id="zoningDisclaimerContent"><p class="map-layer-status"><strong>Map disclaimer:</strong> Norwood.ma displays informational boundaries directly from Norwood’s GIS viewer and MassGIS. These layers may lag recently adopted amendments and must not be relied on for legal, permitting, development, or property decisions. Confirm boundaries with the <a href="https://www.axisgis.com/norwoodma/" target="_blank" rel="noopener">official Norwood GIS viewer</a> and <a href="https://ecode360.com/42511353" target="_blank" rel="noopener">zoning bylaws</a>.</p>
 </template>
 
 </details>
@@ -220,7 +221,7 @@
  <div id="mapTransitAlerts"></div>
 </section>
 <div id="assessmentMapTools" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px"><strong>Property Cards / Assessments</strong><p id="assessmentMapStatus" aria-live="polite" style="margin:6px 0">Zoom in to see property markers.</p><label for="assessmentMapSearch" style="display:block;margin:8px 0 4px">Find a Norwood address</label><input id="assessmentMapSearch" type="search" placeholder="Search street address…" autocomplete="off" style="width:100%;max-width:430px;padding:9px;border:1px solid #9baec0;border-radius:5px"><div id="assessmentMapMatches" style="max-height:180px;overflow:auto;max-width:430px"></div></div>
-<template id="zoningLayerInfoContent"><section aria-label="Zoning map information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Zoning districts &amp; overlays</strong><p class="map-layer-status">Base districts are historical MAPC 2020 data, not current zoning. MBTA overlay districts are from the state Section 3A atlas. Other overlays are not yet mapped. The official GIS viewer remains the reference for property-specific decisions.</p><div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div><p class="map-layer-status">Sources: <a href="https://cms5.revize.com/revize/norwoodma/ZoningMap%2011-3-22.pdf" target="_blank" rel="noopener">Town zoning map (2022 PDF)</a> · <a href="https://www.mass.gov/info-details/massgis-data-mbta-communities-3a-district-atlas" target="_blank" rel="noopener">MassGIS Section 3A Atlas</a> · <a href="https://zoningatlas.mapc.org/" target="_blank" rel="noopener">MAPC Zoning Atlas</a>.</p></section>
+<template id="zoningLayerInfoContent"><section aria-label="Zoning map information" style="margin:10px 0;padding:12px 16px;border:1px solid #d7e1e8;border-radius:8px"><strong>Zoning districts &amp; overlays</strong><p class="map-layer-status">Base districts and available local overlays load from the Town of Norwood’s GIS service. The separate MBTA overlay uses the state Section 3A atlas. Check the town’s zoning bylaws and adopted map amendments for recent changes and parcel-specific decisions.</p><div class="zoning-info-links"><button type="button" class="zoning-info-button" data-zoning-info="districts">District names &amp; regulations</button><button type="button" class="zoning-info-button" data-zoning-info="disclaimer">Map disclaimer</button></div><p class="map-layer-status">Sources: <a href="https://www.axisgis.com/norwoodma/" target="_blank" rel="noopener">Official Norwood GIS viewer</a> · <a href="https://www.mass.gov/info-details/massgis-data-mbta-communities-3a-district-atlas" target="_blank" rel="noopener">MassGIS Section 3A Atlas</a>.</p></section>
 </template>
 <div id="mapLayerStatusStore" hidden><p id="roadSafetyStatus" class="map-layer-status">MassDOT reported crash locations, 2024–2025. Crash reports may be incomplete, delayed, or approximately geocoded. <a href="https://www.mass.gov/motor-vehicle-crash-data" target="_blank" rel="noopener">MassDOT crash data and methodology</a>.</p><p id="femaFloodStatus" class="map-layer-status" aria-live="polite">Official FEMA National Flood Hazard Layer. Off by default; zoom in to view flood zones.</p>
 <p id="schoolZoneStatus" class="map-layer-status" aria-live="polite"></p>
@@ -482,7 +483,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
    const heading=document.createElement('h4');heading.textContent=group.title;heading.style.margin='12px 0 4px';body.append(heading);
    const copy=status.cloneNode(true);copy.removeAttribute('id');copy.removeAttribute('aria-live');copy.hidden=false;body.append(copy);count++;
   }
-  if(document.getElementById('zoningBaseToggle')?.checked||document.getElementById('zoningOverlayToggle')?.checked){const template=document.getElementById('zoningLayerInfoContent');if(template){body.append(template.content.cloneNode(true));count++;}}
+  if(document.getElementById('zoningBaseToggle')?.checked||document.getElementById('zoningOverlayToggle')?.checked||document.getElementById('zoningLocalOverlayToggle')?.checked){const template=document.getElementById('zoningLayerInfoContent');if(template){body.append(template.content.cloneNode(true));count++;}}
   if(!count){const p=document.createElement('p');p.textContent='No additional notes for the currently selected layers.';body.append(p);}
   if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
  });
@@ -496,12 +497,16 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 <script>
 (()=>{
  const map=window.norwoodTrailMap;if(!map||!window.L)return;
- const root='https://geo.mapc.org/server/rest/services/gisdata/Zoning_Atlas_v01/MapServer/';
+ const town='https://services8.arcgis.com/bfUz6BW2GTtwkPut/arcgis/rest/services/AxisGISDataSync/FeatureServer/110';
  const state='https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/MBTA_Communities_3A_District_Atlas/FeatureServer/0';
  const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const colors=['#b77924','#4e8a55','#647bb6','#a85b88','#42949a','#92714f','#b95f41','#7163aa'];
+ const colors=['#b77924','#4e8a55','#647bb6','#a85b88','#42949a','#92714f','#b95f41','#7163aa','#795e9a','#567249','#ae5575','#287787','#8e7540','#4968a1','#905d48','#6c7832'];
+ const baseNames={A:'Multifamily',BPH:'Boston Providence Highway',CB:'Central Business',G:'General Residence',GB:'General Business',LB:'Limited Business',LM:'Limited Manufacturing',LMA:'Limited Manufacturing A',LSDD:'Life Sciences Development',M:'Manufacturing',O:'Office-Research',S:'Single Residence',S1:'Single Residence 1',S2:'Single Residence 2'};
+ const overlayNames={MMOD:'Medical Marijuana',MSOD:'Medical Services',MUOD:'Mixed Use',SGASGOD:'Saint George Avenue Smart Growth',UAMUOD:'University Avenue Mixed Use',VMUOD:'Vanderbilt Mixed Use',WCS:'Wireless Communications Services'};
+ const districtName=(labels,code)=>labels[code]?labels[code]+' ('+code+')':code;
  const configs=[
- {id:'zoningBaseToggle',url:root+'2',where:"UPPER(muni)='NORWOOD'",fields:'zo_code,zo_name,muni',name:p=>p.zo_name||p.zo_code,source:'MAPC 2020 historical zoning'},
+ {id:'zoningBaseToggle',url:town,where:'Type = 0',fields:'Name',name:p=>districtName(baseNames,p.Name),source:'Norwood GIS base zoning'},
+ {id:'zoningLocalOverlayToggle',url:town,where:"Type = 2 AND Name NOT IN ('NC','ND','WG')",fields:'Name',name:p=>districtName(overlayNames,p.Name),source:'Norwood GIS local zoning overlays'},
  {id:'zoningOverlayToggle',url:state,where:"UPPER(MUNI)='NORWOOD'",fields:'ZONENAM,ZONABBR,MUNI',name:p=>p.ZONENAM||p.ZONABBR,source:'MassGIS / HLC MBTA Section 3A'}
  ];
  for(const cfg of configs){
@@ -517,7 +522,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  const names=[...new Set(data.features.map(f=>cfg.name(f.properties)))].sort();
  const color=n=>colors[names.indexOf(n)%colors.length];
  legend.replaceChildren(...names.map(n=>{const row=document.createElement('div');const sw=document.createElement('span');sw.style.cssText='display:inline-block;width:12px;height:12px;margin-right:6px;background:'+color(n);row.append(sw,document.createTextNode(n));return row;}));
- return L.geoJSON(data,{style:f=>({color:color(cfg.name(f.properties)),weight:2,fillOpacity:cfg.id==='zoningBaseToggle'?.25:.38,dashArray:cfg.id==='zoningOverlayToggle'?'6 4':null}),onEachFeature:(f,l)=>l.bindPopup('<strong>'+safe(cfg.name(f.properties))+'</strong><p>'+safe(cfg.source)+'</p><p>Informational only; verify with the town.</p><a href="https://ecode360.com/42511353" target="_blank" rel="noopener">Zoning bylaws ↗</a>')});
+ return L.geoJSON(data,{style:f=>({color:color(cfg.name(f.properties)),weight:2,fillOpacity:cfg.id==='zoningBaseToggle'?.25:.38,dashArray:cfg.id==='zoningBaseToggle'?null:'6 4'}),onEachFeature:(f,l)=>l.bindPopup('<strong>'+safe(cfg.name(f.properties))+'</strong><p>'+safe(cfg.source)+'</p><p>Informational only; verify with the town.</p><a href="https://ecode360.com/42511353" target="_blank" rel="noopener">Zoning bylaws ↗</a>')});
  }
  input.addEventListener('change',async()=>{
  if(!input.checked){if(layer)map.removeLayer(layer);status.hidden=true;legend.hidden=true;return;}
