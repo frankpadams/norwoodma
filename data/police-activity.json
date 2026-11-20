@@ -1,7 +1,30 @@
 {
-  "generated_at": null,
-  "coverage_start": null,
-  "coverage_end": null,
-  "source_status": "No verified current automated police-log source",
-  "incidents": []
+  "generated_at": "2026-11-20T05:42:48.274Z",
+  "coverage_start": "2026-11-06",
+  "coverage_end": "2026-11-06",
+  "source_status": "Partial, manually verified entries from the November 12 Norwood Record police logs, page 10",
+  "incidents": [
+    {
+      "id": "2026-11-06-peabody-parking",
+      "date": "2026-11-06",
+      "category": "Parking enforcement",
+      "location": "Peabody Road (approximate)",
+      "lat": 42.191,
+      "lng": -71.213,
+      "location_precision": "street",
+      "description": "The log lists two parking enforcement calls on Peabody Road that day.",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10"
+    },
+    {
+      "id": "2026-11-06-washington-cottage-collision",
+      "date": "2026-11-06",
+      "category": "Reported collision",
+      "location": "Washington Street near Cottage Street",
+      "lat": 42.194,
+      "lng": -71.201,
+      "location_precision": "intersection",
+      "description": "Police logged a reported vehicle–pedestrian collision.",
+      "source_url": "https://txsqobtbxahbmcdvcdjm.supabase.co/storage/v1/object/public/e-editions//Norwood_Record_pages_1_to_12_12NOV2026.pdf#page=10"
+    }
+  ]
 }
