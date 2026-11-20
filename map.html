@@ -87,7 +87,6 @@
 <option value="culture">Arts & culture</option>
 <option value="historic">Historic sites</option>
 <option value="parking">Public parking</option>
-<option value="transit">Transit</option>
 <option value="event">Upcoming events</option>
 <option value="landmark">Landmarks</option>
 <option value="worship">Houses of Worship</option>
@@ -255,7 +254,7 @@
 <script src="map-liquor-licenses.js?v=20261112-abcc"></script>
 <script>
 (()=>{const select=document.getElementById('mapCategory'),root=document.getElementById('mapLayerChoices'),business=document.getElementById('mapBusinessChoices');if(!select||!root)return;
-const primary=['school','civic','historic','transit','parking','culture','event','landmark'];
+const primary=['school','civic','historic','parking','culture','event','landmark'];
 const businessCategories=['food','business','health'];
 const communityCategories=['resource','little-library','mini-food-pantry'];
 const active=new Set(select.value&&select.value!=='all'?[select.value]:[]);
