@@ -109,7 +109,14 @@ function queryGroups(q){
 function matchesQuery(r,q){const groups=queryGroups(q);if(!groups.length)return true;const hay=haystack(r);return groups.every(group=>group.some(term=>hay.includes(term)));}
 function isTown(r){return !!r.officialTown||/^https?:\/\/([^/]+\.)?norwoodma\.gov\//i.test(r.url||'');}
 function isNorwoodPublicSchool(r){return /^https?:\/\/([^/]+\.)?norwood\.k12\.ma\.us\//i.test(r.url||'')||/^(Norwood High School|Coakley Middle School|Balch Elementary School|Callahan Elementary School|Cleveland Elementary School|Oldham Elementary School|Prescott Elementary School|Willett Elementary School)$/i.test(r.name||'');}
-function isBusiness(r){const h=haystack(r),provider=(r.provider_type||'').toLowerCase(),cat=(r.category||'').toLowerCase();return /^private\b/.test(provider)||/^private\b/.test(cat)||(r.topics||[]).includes('services')||(r.topics||[]).includes('realestate')||(r.topics||[]).includes('wellness')||/local service|driving school|realtor|real estate|barber|laundromat|dry clean|spa|salon|massage|dentist|orthodont|martial arts|gymnastics|music school|ice cream|restaurant|veterinar|contractor|plumb|electrician|hvac/i.test(h);}
+function isBusiness(r){
+ const provider=(r.provider_type||'').trim();
+ const category=(r.category||'').trim();
+ if(provider)return /^private\b|^for-profit\b/i.test(provider);
+ if(/^private\b/i.test(category))return true;
+ if((r.topics||[]).some(topic=>['services','realestate','wellness'].includes(topic)))return true;
+ return /^(?:local service|driving schools?|youth music|martial arts|gymnastics|realtors?|dental & orthodontics|spas, salons & massage|supermarkets?(?: & groceries)?|(?:specialty )?grocery stores?|restaurants?(?: & dining)?)$/i.test(category);
+}
 function reviewLinks(r){if(!isBusiness(r))return'';const links=[];if(r.googleReviews)links.push(`<a href="${esc(r.googleReviews)}" target="_blank" rel="noopener" aria-label="Google reviews" title="Google reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=google.com&sz=32"></a>`);if(r.yelp)links.push(`<a href="${esc(r.yelp)}" target="_blank" rel="noopener" aria-label="Yelp reviews" title="Yelp reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=yelp.com&sz=32"></a>`);if(r.tripadvisor)links.push(`<a href="${esc(r.tripadvisor)}" target="_blank" rel="noopener" aria-label="Tripadvisor reviews" title="Tripadvisor reviews"><img alt="" src="https://www.google.com/s2/favicons?domain=tripadvisor.com&sz=32"></a>`);return links.length?`<span class="resource-review-links" aria-label="Verified review-site listings">${links.join('')}</span>`:'';}
 function townMark(r){const school=isNorwoodPublicSchool(r),town=isTown(r);if(!school&&!town)return'';const label=school?'Official Norwood Public Schools resource':'Official Town of Norwood resource';return '<span class="resource-town-mark" title="'+label+'"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt=""><span class="sr-only">'+label+'</span></span>';}
 function card(r){
@@ -356,7 +363,7 @@ function render(){
    }
    return relevance(b,t,'')-relevance(a,t,'')||a.name.localeCompare(b.name);
  });
- const related=[...topicRows.filter(isBusiness),...businessesForTopic(t[0]).map(businessResource)];
+ const related=t[0]==='basic-needs'?[]:[...topicRows.filter(isBusiness),...businessesForTopic(t[0]).map(businessResource)];
  const seenBiz=new Set();
  const biz=related.filter(b=>{const k=(b.name||'').toLowerCase().trim();if(!k||seenBiz.has(k))return false;seenBiz.add(k);return true;}).sort((a,b)=>a.name.localeCompare(b.name));
  const relatedBusinesses=biz.length?`<details class="resource-related-businesses"><summary><strong>Related Businesses</strong> <span>Local for-profit options (${biz.length})</span></summary><div class="resource-list">${biz.map(card).join('')}</div><p class="resource-related-note"><a href="businesses.html">Browse the full Norwood Business Directory →</a></p></details>`:'';

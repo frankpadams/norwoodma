@@ -370,7 +370,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "benefits senior food medicine utilities assistance",
     "topics": [
       "older",
-      "jobs",
       "financial-assistance",
       "food-assistance",
       "basic-needs"
@@ -459,7 +458,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "immigration detained legal family refugee",
     "topics": [
       "community",
-      "jobs",
       "immigration-language",
       "legal-advocacy",
       "education-family",
@@ -633,7 +631,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "childcare voucher subsidy financial assistance family",
     "topics": [
       "kids",
-      "jobs",
       "financial-assistance",
       "education-family",
       "family-support"
@@ -1144,7 +1141,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "community",
       "business"
-    ]
+    ],
+    "provider_type": "Community business association"
   },
   {
     "name": "Friends of the Morrill Memorial Library",
@@ -1274,7 +1272,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "legal aid housing benefits family immigration",
     "topics": [
       "housing",
-      "jobs",
       "financial-assistance",
       "legal-advocacy",
       "housing-assistance",
@@ -1408,7 +1405,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "health insurance MassHealth coverage help",
     "topics": [
       "health",
-      "jobs",
       "medical-care",
       "financial-assistance"
     ],
@@ -1423,7 +1419,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "health insurance legal rights medical",
     "topics": [
       "health",
-      "jobs",
       "medical-care",
       "legal-advocacy"
     ],
@@ -1799,7 +1794,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "fuel assistance LIHEAP HEAP heat heating oil gas electric energy bill basic needs low income winter utility assistance",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
@@ -1848,7 +1842,8 @@ window.NORWOOD_RESOURCES= [
     "verified": "2026-09",
     "topics": [
       "todo"
-    ]
+    ],
+    "provider_type": "Private arts studio"
   },
   {
     "name": "Marathon Physical Therapy & Sports Medicine — Norwood",
@@ -1890,8 +1885,7 @@ window.NORWOOD_RESOURCES= [
     "tags": "MassAbility MRC assistive technology AT device loan wheelchair communication device adaptive equipment REquipment",
     "topics": [
       "disability-support",
-      "medical-care",
-      "employment"
+      "medical-care"
     ],
     "coverage": "Statewide",
     "verified": "2026-09"
@@ -2003,7 +1997,8 @@ window.NORWOOD_RESOURCES= [
       "community"
     ],
     "coverage": "Statewide",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "provider_type": "Government assistance program"
   },
   {
     "name": "Massachusetts Attorney General Consumer Hotline",
@@ -2013,7 +2008,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "consumer scam fraud tenant legal complaint",
     "topics": [
       "housing",
-      "jobs",
       "financial-assistance",
       "legal-advocacy",
       "housing-assistance"
@@ -2211,7 +2205,8 @@ window.NORWOOD_RESOURCES= [
     ],
     "coverage": "Statewide",
     "verified": "2026-09",
-    "source_note": "Morrill Memorial Library Community Health Resources"
+    "source_note": "Morrill Memorial Library Community Health Resources",
+    "provider_type": "Professional association public information"
   },
   {
     "name": "Massachusetts Department of Developmental Services",
@@ -2248,7 +2243,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/orgs/department-of-transitional-assistance",
     "tags": "DTA SNAP food stamps cash TAFDC EAEDC benefits families assistance",
     "topics": [
-      "jobs",
       "kids",
       "food-assistance",
       "financial-assistance",
@@ -2361,7 +2355,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "Good Neighbor Energy Fund fuel heat heating oil gas electric utility bill energy assistance basic needs hardship",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
@@ -2393,7 +2386,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/other-help-for-residents",
     "tags": "benefits food cash housing utilities childcare transportation healthcare veterans assistance",
     "topics": [
-      "jobs",
       "housing",
       "kids",
       "veterans",
@@ -2432,7 +2424,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "RAFT rent emergency shelter HomeBASE CHAMP voucher housing energy assistance state",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance",
       "financial-assistance",
       "education-family",
@@ -2501,7 +2492,6 @@ window.NORWOOD_RESOURCES= [
       "community-groups",
       "housing-assistance",
       "transport",
-      "employment",
       "legal-advocacy"
     ],
     "coverage": "Statewide",
@@ -2531,7 +2521,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "legal tenant eviction rent housing rights",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance",
       "legal-advocacy"
     ],
@@ -2709,7 +2698,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "older",
       "health",
-      "jobs",
       "disability-support",
       "medical-care",
       "financial-assistance"
@@ -2737,7 +2725,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.mass.gov/snap-benefits-formerly-food-stamps",
     "tags": "SNAP food stamps EBT groceries benefits",
     "topics": [
-      "jobs",
       "food-assistance",
       "financial-assistance",
       "basic-needs"
@@ -2841,7 +2828,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "MassHealth Medicaid health insurance benefits",
     "topics": [
       "health",
-      "jobs",
       "medical-care",
       "financial-assistance"
     ],
@@ -2896,7 +2882,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "home buyer mortgage affordable housing",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance"
     ],
     "coverage": "Statewide",
@@ -2995,7 +2980,6 @@ window.NORWOOD_RESOURCES= [
       "disability-support",
       "education-family",
       "deaf-hard-of-hearing",
-      "employment",
       "legal-advocacy",
       "family-support"
     ],
@@ -3215,7 +3199,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://norwoodlibrary.org/",
     "tags": "legal lawyer rights help community resources",
     "topics": [
-      "jobs",
       "housing",
       "financial-assistance",
       "legal-advocacy"
@@ -3246,7 +3229,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "food fuel heating housing shelter rent utilities homeownership help directory",
     "topics": [
       "housing",
-      "jobs",
       "older",
       "food-assistance",
       "housing-assistance",
@@ -3431,7 +3413,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "rent rental assistance eviction homelessness prevention homebuyer mortgage housing counseling financial coaching",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance",
       "financial-assistance",
       "education-family",
@@ -3460,8 +3441,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.nrrchamber.com/",
     "tags": "business chamber employer networking",
     "topics": [
-      "business",
-      "jobs"
+      "business"
     ],
     "coverage": "Regional",
     "verified": "2026-09"
@@ -3675,7 +3655,8 @@ window.NORWOOD_RESOURCES= [
       "community"
     ],
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "provider_type": "Municipal service"
   },
   {
     "name": "Norwood Assessor / Property Information",
@@ -3795,7 +3776,8 @@ window.NORWOOD_RESOURCES= [
       "housing"
     ],
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "provider_type": "Municipal service"
   },
   {
     "name": "Norwood Challenger Sports",
@@ -4306,7 +4288,8 @@ window.NORWOOD_RESOURCES= [
       "community",
       "education-family",
       "family-support"
-    ]
+    ],
+    "provider_type": "School parent organization"
   },
   {
     "name": "Norwood Parks & Playgrounds",
@@ -4632,7 +4615,8 @@ window.NORWOOD_RESOURCES= [
       "community-groups"
     ],
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "provider_type": "Municipal recreation program"
   },
   {
     "name": "Norwood Recreation School of Dance",
@@ -4741,7 +4725,8 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "todo",
       "business"
-    ]
+    ],
+    "provider_type": "Private commercial venue"
   },
   {
     "name": "Norwood Special Education Parent Advisory Council",
@@ -5137,7 +5122,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "veterans",
       "housing",
-      "jobs",
       "financial-assistance",
       "housing-assistance",
       "education-family",
@@ -5391,7 +5375,6 @@ window.NORWOOD_RESOURCES= [
     "topics": [
       "kids",
       "older",
-      "jobs",
       "food-assistance",
       "financial-assistance",
       "basic-needs"
@@ -5435,7 +5418,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "RAFT rent eviction utility housing emergency assistance basic needs utility shutoff no heat",
     "topics": [
       "housing",
-      "jobs",
       "housing-assistance",
       "financial-assistance",
       "basic-needs"
@@ -5818,7 +5800,6 @@ window.NORWOOD_RESOURCES= [
     "tags": "SNAP WIC groceries nutrition benefits food stamps families baby child",
     "topics": [
       "kids",
-      "jobs",
       "food-assistance",
       "financial-assistance",
       "family-support",
@@ -5836,7 +5817,6 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.ssa.gov/",
     "tags": "Social Security SSI SSDI retirement disability benefits",
     "topics": [
-      "jobs",
       "older",
       "health",
       "disability-support",
@@ -6305,7 +6285,8 @@ window.NORWOOD_RESOURCES= [
       "worship"
     ],
     "coverage": "Local",
-    "verified": "2026-09"
+    "verified": "2026-09",
+    "provider_type": "Faith community"
   },
   {
     "name": "Urban Air Adventure Park — Bellingham",
@@ -6343,9 +6324,7 @@ window.NORWOOD_RESOURCES= [
     "url": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
     "tags": "tax free preparation VITA TCE senior low income",
     "topics": [
-      "jobs",
       "older",
-      "employment",
       "financial-assistance",
       "community-groups"
     ],
