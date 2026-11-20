@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-19T20:13:59.811700-05:00",
+  "generated_at": "2026-11-19T20:21:54.888857-05:00",
   "offline": false,
-  "events_published": 2072,
+  "events_published": 2073,
   "news_published": 120,
   "civic_notices": 53,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 2072,
-      "generated_at": "2026-11-19T20:13:59.549979-05:00"
+      "events": 2073,
+      "generated_at": "2026-11-19T20:21:54.616060-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 102,
-      "generated_at": "2026-11-19T20:13:59.559826-05:00"
+      "generated_at": "2026-11-19T20:21:54.625942-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 817,
-      "generated_at": "2026-11-19T20:13:59.580396-05:00"
+      "generated_at": "2026-11-19T20:21:54.646714-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 684,
-      "generated_at": "2026-11-19T20:13:59.597224-05:00"
+      "generated_at": "2026-11-19T20:21:54.663569-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 5,
-      "generated_at": "2026-11-19T20:13:59.606546-05:00"
+      "generated_at": "2026-11-19T20:21:54.672872-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 67,
-      "generated_at": "2026-11-19T20:13:59.617423-05:00"
+      "generated_at": "2026-11-19T20:21:54.683694-05:00"
     }
   ],
   "recreation_programs": 155,
@@ -89,7 +89,7 @@
       "source_id": "circle-of-hope-events",
       "ok": true,
       "method": "seasonal_org_event_discovery",
-      "found": 21,
+      "found": 22,
       "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
@@ -468,12 +468,13 @@
     },
     {
       "source_id": "norwood-rotary-calendar",
-      "ok": true,
+      "ok": false,
       "method": "clubrunner_calendar",
       "found": 0,
-      "note": null,
-      "outcome": "empty",
-      "access_limited": false
+      "note": "HTTPSConnectionPool(host='www.norwoodrotary.org', port=443): Read timed out. (read timeout=18)",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "norwood-space-center-events",
@@ -1261,12 +1262,13 @@
     },
     {
       "source_id": "resource-neponset-valley-sunrise-rotary-club",
-      "ok": true,
+      "ok": false,
       "method": "clubrunner_calendar",
       "found": 0,
-      "note": null,
-      "outcome": "empty",
-      "access_limited": false
+      "note": "HTTPSConnectionPool(host='neponsetvalleysunriserotary.org', port=443): Read timed out. (read timeout=18)",
+      "outcome": "failed",
+      "access_limited": false,
+      "retained_events": 0
     },
     {
       "source_id": "resource-norwood-american-legion-post-70",
@@ -1635,11 +1637,10 @@
     {
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
-      "ok": false,
-      "found": 0,
+      "ok": true,
+      "found": 8,
       "method": "google_news_rss",
-      "query": "norwoodma",
-      "note": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en"
+      "query": "norwoodma"
     },
     {
       "source": "Google News",
@@ -1714,7 +1715,7 @@
       "target_sources": 4,
       "source_counts": {
         "The Norwood Record": 46,
-        "The Norwood Record — Latest": 21,
+        "The Norwood Record — Latest": 22,
         "Rhode Island Current": 1,
         "Patch": 3,
         "Norwood Public Schools": 6,
@@ -1733,7 +1734,7 @@
         "Town of Norwood": 4,
         "Hoodline": 2,
         "Colliers": 1,
-        "Inside Norwood": 2
+        "Inside Norwood": 1
       },
       "note": null
     }
