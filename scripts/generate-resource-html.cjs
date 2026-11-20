@@ -25,7 +25,6 @@ const block=start+'<div id="resourceTopics">'+sections.join('\n')+'</div>'+end;
 if(html.includes(start))html=html.replace(new RegExp(start+'[\\s\\S]*?'+end),()=>block);
 else html=html.replace('<div id="resourceTopics"></div>',()=>block);
 html=html.replace(/<script src="data\/(?:resources|businesses)-data\.js[^\"]*"><\/script>/g,'');
-html=html.replace(/resources\.js\?v=[^\"]+/, 'resources.js?v=html-topics-20261021');
 if(!html.includes('id="resource-nojs"'))html=html.replace('</head>','<style>[data-resource-topic][hidden]{display:none!important}</style><noscript id="resource-nojs"><style>[data-resource-topic][hidden]{display:block!important}.resource-back,.resource-basic-needs-tools{display:none!important}</style></noscript></head>');
 html=html.replace(/<span id="resourceCount">[^<]*<\/span>/,'<span id="resourceCount">'+context.window.NORWOOD_RESOURCES.length+' curated entries in this build.</span>');
 fs.writeFileSync(path.join(base,'resources.html'),html);

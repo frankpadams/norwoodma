@@ -133,7 +133,7 @@ test('listing size, Show more and category-specific suggestions work', () => {
 
 test('contact form selects the existing topic and prefills an editable suggestion', () => {
   const contact = fs.readFileSync(path.join(root, 'contact.html'), 'utf8');
-  const inline = [...contact.matchAll(/<script>([\s\S]*?)<\/script>/g)].find(([, code]) => code.includes("params.get('business-category')"))[1];
+  const inline = [...contact.matchAll(/<script>([\s\S]*?)<\/script>/g)].find(([, code]) => code.includes("params.has('business-category')"))[1];
   const select = {value: '', options: [{value: 'resource'}, {value: 'job-listings'}]};
   const message = {value: ''};
   const document = {
@@ -144,6 +144,11 @@ test('contact form selects the existing topic and prefills an editable suggestio
   vm.runInNewContext(inline, {URLSearchParams, location, document});
   assert.equal(select.value, 'resource');
   assert.match(message.value, /I recommend this business for the HVAC & Heating category\.\n\nBusiness name:/);
+  message.value = '';
+  location.search = '?topic=resource&resource-category=Food%20%26%20Basic%20Needs';
+  vm.runInNewContext(inline, {URLSearchParams, location, document});
+  assert.equal(select.value, 'resource');
+  assert.match(message.value, /I recommend this resource for the Food & Basic Needs category\.\n\nResource name:/);
   message.value = 'Already typed';
   location.search = '?topic=job-listings';
   vm.runInNewContext(inline, {URLSearchParams, location, document});

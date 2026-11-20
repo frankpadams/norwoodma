@@ -3,9 +3,14 @@
  const topic = params.get('topic');
  const select = document.querySelector('#contactTopic');
  if (topic && select && [...select.options].some(option => option.value === topic)) select.value = topic;
- const category = (params.get('business-category') || '').replace(/\s+/g, ' ').trim().slice(0, 120);
+ const isBusiness = params.has('business-category');
+ const categoryParam = isBusiness ? 'business-category' : 'resource-category';
+ const category = (params.get(categoryParam) || '').replace(/\s+/g, ' ').trim().slice(0, 120);
  const message = document.querySelector('.norwood-contact-form textarea[name="message"]');
  if (topic === 'resource' && category && message && !message.value) {
-  message.value = 'I recommend this business for the ' + category + ' category.\n\nBusiness name: \n\nWebsite, address, phone, or anything else you know: ';
+  const item = isBusiness ? 'business' : 'resource';
+  const nameLabel = isBusiness ? 'Business name' : 'Resource name';
+  message.value = 'I recommend this ' + item + ' for the ' + category + ' category.\n\n' + nameLabel +
+   ': \n\nWebsite, address, phone, or anything else you know: ';
  }
 })();document.querySelectorAll(".reveal-ad-phone").forEach(function(b){b.addEventListener("click",function(){var n=b.dataset.p1+"-"+b.dataset.p2+"-"+b.dataset.p3,o=b.parentElement.querySelector(".ad-phone-output");o.replaceChildren();var a=document.createElement("a");a.href="tel:"+n.replace(/-/g,"");a.textContent=n;o.append("Call or text: ",a);b.remove();});});</script></body></html>
