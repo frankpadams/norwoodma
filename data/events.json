@@ -402,36 +402,6 @@
     ]
   },
   {
-    "id": "2026-11-20-mass-cultural-council-publishes-updates-daily-8195aa6",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-20",
-      "time": "12:06"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 20, 2026 at 12:06 PM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-20-ribbon-cutting-town-common-books-80eb609",
     "title": "Ribbon Cutting-Town Common Books",
     "start": {
@@ -463,37 +433,6 @@
     ]
   },
   {
-    "id": "2026-11-20-trans-day-of-visability-5736645",
-    "title": "Trans Day of Visability",
-    "start": {
-      "date": "2026-11-20",
-      "time": "13:00"
-    },
-    "end": {
-      "date": "2026-11-20",
-      "time": "14:00"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-d5872d8832d3-2026-11-20",
     "title": "Batting Cage",
     "start": {
@@ -520,7 +459,7 @@
     "session_start": "2026-11-20",
     "session_end": "2026-11-20",
     "days": "F",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-d5872d8832d3",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -661,6 +600,67 @@
     "notes": "Ticket information and performance schedule verified from the supplied flyer.",
     "calendar_ids": [
       "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-11-20-mass-cultural-council-publishes-updates-daily-8195aa6",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-20",
+      "time": "20:06"
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 20, 2026 at 08:06 PM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-20-norwood-school-news-0e9f7a9",
+    "title": "Norwood School News",
+    "start": {
+      "date": "2026-11-20",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-20",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "nps-news",
+    "source_url": "https://drive.google.com/file/d/1CXRB6xoOA5rGotvy3Az3D4YqnWxkhh2z/view?usp=sharing",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Public Schools — News",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Norwood School News November 20, 2026 Check out the news and events from around your Norwood Public Schools community for the week ending 11.20.2026, including, Salsa Music Workshop at NHS, Character Strong at the Cleveland and Prescott, Norwood Light Visits the LMPA, and more! Read Article",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community",
       "norwood-family"
     ]
@@ -2377,7 +2377,7 @@
     "session_start": "2026-11-23",
     "session_end": "2026-11-23",
     "days": "M",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-5d4a2f12093b",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -2460,6 +2460,34 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-23-housing-advisory-committee-meeting-549dc5f",
+    "title": "Housing Advisory Committee Meeting",
+    "start": {
+      "date": "2026-11-23",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-23",
+      "time": null
+    },
+    "venue": "Finance Commission Room @ Town Hall",
+    "address": null,
+    "category": "community",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -3046,6 +3074,35 @@
     ]
   },
   {
+    "id": "2026-11-24-board-of-selectmen-meeting-b726132",
+    "title": "Board of Selectmen Meeting",
+    "start": {
+      "date": "2026-11-24",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2026-11-24",
+      "time": "19:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "town-meetings"
+    ]
+  },
+  {
     "id": "2026-11-24-musical-bingo-6606a81",
     "title": "Musical Bingo",
     "start": {
@@ -3175,6 +3232,34 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-24-norwood-housing-authority-virtual-e78de3c",
+    "title": "Norwood Housing Authority (Virtual)",
+    "start": {
+      "date": "2026-11-24",
+      "time": null
+    },
+    "end": {
+      "date": "2026-11-24",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-master-calendar",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": null,
+    "public_access": "public",
+    "series": "Town of Norwood",
+    "publish_candidate": true,
+    "verification_status": "verified_town_master_calendar",
+    "notes": null,
+    "discovered_by": "town_revize_master_calendar",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -6035,7 +6120,7 @@
     "session_start": "2026-11-30",
     "session_end": "2026-11-30",
     "days": "M",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-4dfee47ec431",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -7825,7 +7910,7 @@
     "session_start": "2026-12-03",
     "session_end": "2026-12-03",
     "days": "Th",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-ab4b245660da",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -8483,7 +8568,7 @@
     "session_start": "2026-12-04",
     "session_end": "2026-12-04",
     "days": "F",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-f9f4ffa2f00f",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -9147,6 +9232,41 @@
     ]
   },
   {
+    "id": "2026-12-05-middlesex-girls-varisty-hockey-arlington-high-1b9eb52",
+    "title": "Middlesex Girls Varisty Hockey @ Arlington High School — Norwood High School",
+    "start": {
+      "date": "2026-12-05",
+      "time": "14:20"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": "14:50"
+    },
+    "venue": "422 Summer Street, Arlington MA 02476",
+    "address": "422 Summer Street, Arlington MA 02476",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Girls Varsity Hockey",
+    "public_access": "public",
+    "series": "Norwood Girls Varsity Hockey",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Hockey Level: Middlesex Girls Varisty Team: Norwood High School Site: Ed Burns Ice Arena (Arlington) Subsite: Ed Burns Arena Veterans Mem. (Arlington)",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
     "id": "2026-12-05-circle-of-hope-luminary-night-740932b",
     "title": "Circle of Hope Luminary Night",
     "start": {
@@ -9768,7 +9888,7 @@
     "session_start": "2026-12-07",
     "session_end": "2026-12-07",
     "days": "M",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-039a0385f508",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -12544,7 +12664,7 @@
     "session_start": "2026-12-11",
     "session_end": "2026-12-11",
     "days": "F",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-26ac4e5cf304",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -12914,6 +13034,37 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-12-12-mason-s-blood-drive-in-pingree-f45806c",
+    "title": "Mason's Blood Drive in Pingree",
+    "start": {
+      "date": "2026-12-12",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2026-12-12",
+      "time": "14:00"
+    },
+    "venue": "First Congregational Church in Norwood",
+    "address": null,
+    "category": "community",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events",
+    "cost": null,
+    "organizer": "First Congregational Church in Norwood",
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": null,
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -13835,7 +13986,7 @@
     "session_start": "2026-12-14",
     "session_end": "2026-12-14",
     "days": "M",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-5d4957796d30",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -16902,7 +17053,7 @@
     "session_start": "2026-12-18",
     "session_end": "2026-12-18",
     "days": "F",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-54d37c4f7971",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -18008,7 +18159,7 @@
     "session_start": "2026-12-21",
     "session_end": "2026-12-21",
     "days": "M",
-    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches - area of cage space is small so not conducive for an entire team)",
+    "notes": "Single indoor batting cage adjacent to Civic gym. Available for hourly rentals for baseball and softball. Baseballs and softballs provided, bring your bat. Anyone under the age of 16 must be accompanied by an adult the entire time. (Coaches and Parents - area of cage space is small and not conducive for an entire team, 3-5 players at a time, participants must remain in the batting cage room).",
     "rec_program_id": "rec-2efd16e538bf",
     "verification_status": "auto_primary_source",
     "discovered_by": "myrec_program_weekday_expansion",
@@ -37790,8 +37941,8 @@
     ]
   },
   {
-    "id": "2027-01-29-cms-musical-2459036",
-    "title": "CMS Musical — Coakley Middle School",
+    "id": "2027-01-29-annie-jr-cms-musical-cd4bd25",
+    "title": "Annie Jr. CMS Musical — Coakley Middle School",
     "start": {
       "date": "2027-01-29",
       "time": "19:00"
@@ -38434,8 +38585,8 @@
     ]
   },
   {
-    "id": "2027-01-30-cms-musical-e673885",
-    "title": "CMS Musical — Coakley Middle School",
+    "id": "2027-01-30-annie-jr-cms-musical-db55a0b",
+    "title": "Annie Jr. CMS Musical — Coakley Middle School",
     "start": {
       "date": "2027-01-30",
       "time": "19:00"
@@ -38599,8 +38750,8 @@
     ]
   },
   {
-    "id": "2027-01-31-cms-musical-bb98a93",
-    "title": "CMS Musical — Coakley Middle School",
+    "id": "2027-01-31-annie-jr-cms-musical-67f6606",
+    "title": "Annie Jr. CMS Musical — Coakley Middle School",
     "start": {
       "date": "2027-01-31",
       "time": "14:00"
