@@ -1590,9 +1590,9 @@ window.NORWOOD_RESOURCES= [
   {
     "name": "Jewish Vocational Service Boston",
     "category": "Employment",
-    "description": "Workforce development, career services, vocational training and English-language learning in Greater Boston.",
+    "description": "Workforce development, career services, vocational training and English-language classes in Greater Boston, including programs for immigrants and refugees.",
     "url": "https://www.jvs-boston.org/",
-    "tags": "Jewish Vocational Service Boston Employment",
+    "tags": "JVS Boston Jewish Vocational Service employment job training workforce career English classes ESL immigrants refugees",
     "topics": [
       "employment",
       "immigration-language"
@@ -1626,24 +1626,6 @@ window.NORWOOD_RESOURCES= [
     "coverage": "Local",
     "address": "290 Vanderbilt Ave #1, Norwood, MA 02062",
     "verified": "2026-09"
-  },
-  {
-    "name": "JVS Boston",
-    "category": "Jobs & Education",
-    "description": "Employment training, English classes and career services, including programs for immigrants and refugees.",
-    "url": "https://norwoodlibrary.org/commres-refugee-immigr/",
-    "tags": "jobs employment ESL immigrant training career",
-    "topics": [
-      "jobs",
-      "community",
-      "employment",
-      "immigration-language",
-      "education-family",
-      "family-support"
-    ],
-    "coverage": "Regional",
-    "verified": "2026-09",
-    "source_note": "Current Morrill Memorial Library community-resource guide"
   },
   {
     "name": "Keeping Pace with Multiple Miracles — Tiny Table",

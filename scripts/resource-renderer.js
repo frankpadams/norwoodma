@@ -76,8 +76,10 @@ function belongs(r,t){
    return (explicit&&r.topics.includes('pregnancy'))||pregnancySupport.test(hay);
  }
  if(t[0]==='medical'){
-   const medicalHealth=/medical|health care|healthcare|hospital|urgent care|primary care|physician|doctor|clinic|physical therapy|rehab|pharmac|audiolog|hearing aid|vaccin|immuniz|nursing|home health/i;
-   return (explicit&&r.topics.includes('medical'))||medicalHealth.test(hay);
+   const medicalHealth=/medical|health care|healthcare|hospital|urgent care|primary care|physician|doctor|physical therapy|rehab|pharmac|audiolog|hearing aid|vaccin|immuniz|nursing|home health/i;
+   const hasCareTopic=explicit&&r.topics.some(topic=>topic==='medical'||topic==='medical-care');
+   const mentionsClinic=/\b(?:clinics?|clinical)\b/i.test(hay)&&!/^(?:youth|adult) sports\b/i.test(r.category||'');
+   return hasCareTopic||medicalHealth.test(hay)||mentionsClinic;
  }
  if(explicit){
    const aliases={
