@@ -26,7 +26,12 @@ const boundaryLayers={town:null,precincts:null};
 const geocodeCache=JSON.parse(localStorage.getItem('norwood-map-geocode-v2')||'{}');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
-const today=new Date().toISOString().slice(0,10);
+const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const eventFilter=document.getElementById('mapEventDateFilter');
+const eventDays=document.getElementById('mapEventDays');
+const eventThrough=document.getElementById('mapEventThrough');
+const dayMs=86400000;
+const todayMs=Date.parse(today);
 const venueAddresses={
  'morrill memorial library':'33 Walpole St, Norwood, MA 02062',
  'norwood civic center':'165 Nahatan St, Norwood, MA 02062',
@@ -185,9 +190,9 @@ const dynamic=[];
  const end=e.end?.date||e.start?.date||''; if(end&&end<today)return;
  let a=cleanAddress(e.address);
  if(!a&&e.venue)a=venueAddresses[norm(e.venue)]||'';
- if(a)dynamic.push({name:e.title,category:'event',address:a,details:[e.start?.date,e.start?.time,e.venue,e.cost].filter(Boolean).join(' · '),url:e.registration_url||e.source_url||'events.html'});
+ if(a)dynamic.push({name:e.title,category:'event',eventStart:e.start?.date||end,address:a,details:[e.start?.date,e.start?.time,e.venue,e.cost].filter(Boolean).join(' · '),url:e.registration_url||e.source_url||'events.html'});
 });
-const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address);if(seen.has(k))return false;seen.add(k);return true});
+const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address)+(p.category==='event'?'|'+p.details:'');if(seen.has(k))return false;seen.add(k);return true});
 const healthTypes={
  doctor:'Doctor offices', hospital:'Hospitals', urgent:'Urgent care', psychiatry:'Psychiatry',
  therapy:'Therapy & counseling', rehab:'Physical therapy & rehabilitation', other:'Other health & support'
@@ -263,7 +268,28 @@ window.addEventListener('norwood:resource-topics', event=>{
   if(topics)place.also=[...new Set([...(place.also||[]),...topics])];
  }
 });
-function currentPlaces(){const q=norm(search.value);return places.filter(p=>(!selectedCategories.size||selectedCategories.has(p.category)||(Array.isArray(p.also)&&p.also.some(c=>selectedCategories.has(c))))&&businessTaxonomyMatch(p)&&searchMatch(p,q));}
+if(eventDays){
+ const latest=places.reduce((max,p)=>Math.max(max,Date.parse(p.eventStart)||todayMs),todayMs);
+ eventDays.max=String(Math.ceil((latest-todayMs)/dayMs));
+ eventDays.value=eventDays.max;
+ eventDays.addEventListener('input',()=>render());
+}
+function currentPlaces(){
+ const q=norm(search.value);
+ const filterEvents=Boolean(eventDays&&selectedCategories.has('event'));
+ const limit=todayMs+Number(eventDays?.value||0)*dayMs;
+ if(eventFilter){
+  eventFilter.hidden=!filterEvents;
+  if(filterEvents){
+   const label=new Date(limit).toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'});
+   eventThrough.value=label;
+   eventDays.setAttribute('aria-valuetext',label);
+  }
+ }
+ return places.filter(p=>(!selectedCategories.size||selectedCategories.has(p.category)||(Array.isArray(p.also)&&p.also.some(c=>selectedCategories.has(c))))
+  &&(!filterEvents||p.category!=='event'||!p.eventStart||Date.parse(p.eventStart)<=limit)
+  &&businessTaxonomyMatch(p)&&searchMatch(p,q));
+}
 async function geocode(p){
  if(Number.isFinite(p.lat)&&Number.isFinite(p.lng))return [p.lat,p.lng];
  const key=norm(p.address);
