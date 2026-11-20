@@ -13836,5 +13836,51 @@
       "status": "pending_access_validation"
     },
     "notes": "Important DPW notices: triage urgent closures/outages to yellow alerts and service changes to Heads-Up Norwood. Not actively polled until reliable public post retrieval is established."
+  },
+  {
+    "id": "nps-balch-pto",
+    "name": "Balch Elementary PTO",
+    "organization": "Balch Elementary PTO",
+    "source_class": "organization_page",
+    "authority": "organization",
+    "coverage": "Norwood, MA",
+    "url": "https://www.norwood.k12.ma.us/balch/news",
+    "domain": "www.norwood.k12.ma.us",
+    "produces": [
+      "events",
+      "fundraisers"
+    ],
+    "potential_outputs": [
+      "events",
+      "fundraisers"
+    ],
+    "active_monitor": true,
+    "monitor_priority": 4,
+    "ingestion": {
+      "method": "school_parent_org_composite",
+      "automation": "preferred",
+      "parent_org_url": "https://www.norwood.k12.ma.us/balch/news",
+      "school_calendar_source_id": "nps-balch",
+      "discover_links": true
+    },
+    "filters": {
+      "require_norwood_relevance": true,
+      "require_public_access_for_whats_happening": true,
+      "dedupe_against_primary_source": true
+    },
+    "verification": {
+      "status": "web_checked",
+      "verified_at": "2026-11-19",
+      "basis": "Official Balch school news publishes PTO dates."
+    },
+    "notes": "Monitor Balch school news and calendar for dated PTO events.",
+    "conflict_profile": "optional",
+    "health_policy": {
+      "track_last_checked": true,
+      "track_last_successful_update": true,
+      "track_consecutive_failures": true,
+      "report_stale": true,
+      "empty_result_is_failure": false
+    }
   }
 ]
