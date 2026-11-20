@@ -64,7 +64,7 @@ function buildSearchIndex() {
  const unique = new Map();
  for (const root of sections) {
   const topic = root.querySelector('h2').textContent;
-  for (const item of root.querySelectorAll('.resource-filter-item')) {
+  for (const item of root.querySelectorAll('.resource-item')) {
    const title = item.querySelector('.resource-name');
    const name = title?.querySelector('b')?.textContent || title?.textContent || '';
    const key = [name, title?.getAttribute('href') || '', item.textContent].join('\n');
@@ -83,6 +83,7 @@ function renderSearch(query) {
  matches.sort((a,b) => Number(b.name.includes(query)) - Number(a.name.includes(query)) || a.name.localeCompare(b.name));
  const cards = matches.slice(0, visibleCount).map(({item}) => {
   const card = item.cloneNode(true);
+  card.classList.add('resource-filter-item');
   card.hidden = false;
   return card;
  });
