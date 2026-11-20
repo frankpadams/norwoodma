@@ -21,8 +21,8 @@ function render(){
   const entry=r.log_excerpt?'<br><strong>Police log:</strong> '+safe(r.log_excerpt):'';
   const outcome=r.log_status?'<br><strong>Disposition:</strong> '+safe(r.log_status):'';
   const source=/^https:\/\/txsqobtbxahbmcdvcdjm\.supabase\.co\/storage\/v1\/object\/public\/e-editions\/{1,2}[A-Za-z0-9_]+\.pdf#page=\d+$/.test(r.source_url||'')
-   ?'<br><a href="'+safe(r.source_url)+'" target="_blank" rel="noopener">Read the original police log ↗</a>':'';
-  L.marker([r.lat,r.lng]).bindPopup('<strong>'+safe(r.category||'Police activity')+'</strong><br>'+safe(details)+'<br>'+safe(location)+entry+outcome+(r.description?'<br>'+safe(r.description):'')+source).addTo(group);
+   ?'<br><a href="'+safe(r.source_url)+'" target="_blank" rel="noopener">Norwood Record Police Log ↗</a>':'';
+  L.marker([r.lat,r.lng]).bindPopup('<strong>'+safe(r.category||'Police activity')+'</strong><br>'+safe(details)+'<br>'+safe(location)+entry+outcome+(r.description?'<br>'+safe(r.description):'')+'<br>Source: Norwood Police Department'+source).addTo(group);
  });
  if(!map().hasLayer(group))group.addTo(map());
  count.textContent=visible.length+' mapped incident'+(visible.length===1?'':'s')+' in the last '+range.value+' days';
