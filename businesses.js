@@ -92,42 +92,122 @@ function updateBusinessSchema(rows){
  document.head.appendChild(node);
 }
 
-function render(){
- const {group,sub}=parse(),g=groups[group],root=$('#businessDirectory');
+const pageSizes = [20, 50, 100];
+let pageSize = pageSizes[0];
+let visibleCount = pageSize;
+const categoryToggle = $('#business-category-toggle');
+const phoneLayout = window.matchMedia?.('(max-width: 720px)');
+if (categoryToggle) {
+ categoryToggle.hidden = false;
+ categoryToggle.setAttribute('aria-expanded', 'false');
+ categoryToggle.addEventListener('click', () => {
+  categoryToggle.setAttribute('aria-expanded', String(categoryToggle.getAttribute('aria-expanded') !== 'true'));
+ });
+}
+
+function renderListings(rows, emptyMessage) {
+ const visibleRows = rows.slice(0, visibleCount);
+ updateBusinessSchema(visibleRows);
+ if (!rows.length) return '<p>' + esc(emptyMessage) + '</p>';
+ const options = pageSizes.map(size => '<option' + (size === pageSize ? ' selected' : '') + '>' + size + '</option>').join('');
+ const count = '<span role="status">Showing ' + visibleRows.length + ' of ' + rows.length + '</span>';
+ const controls = '<div class="business-results-controls"><label>Listings at a time <select id="business-page-size">' + options + '</select></label>' + count + '</div>';
+ const more = visibleRows.length < rows.length ? '<button id="business-show-more" class="resource-back" type="button">Show more listings</button>' : '';
+ return controls + '<div class="resource-list">' + visibleRows.map(card).join('') + '</div>' + more;
+}
+
+function bindListingControls(root) {
+ $('#business-page-size')?.addEventListener('change', event => {
+  const size = Number(event.target.value);
+  if (!pageSizes.includes(size)) return;
+  pageSize = size;
+  resetListings();
+  $('#business-page-size')?.focus({preventScroll:true});
+ });
+ $('#business-show-more')?.addEventListener('click', () => {
+  const previousCount = visibleCount;
+  visibleCount += pageSize;
+  render();
+  const firstAdded = root.querySelectorAll('.business-item')[previousCount];
+  if (firstAdded) {
+   firstAdded.tabIndex = -1;
+   firstAdded.focus();
+  }
+ });
+}
+
+function resetListings() {
+ visibleCount = pageSize;
+ render();
+}
+
+function suggestionLink(category) {
+ const url = 'contact.html?topic=resource&business-category=' + encodeURIComponent(category) + '#contact';
+ return '<a class="business-map-link" href="' + esc(url) + '">Suggest a business for this category</a>';
+}
+
+function render(focusResults = false) {
+ const {group,sub}=parse(),g=Object.hasOwn(groups, group) ? groups[group] : null,root=$('#businessDirectory');
  const query = ($('#businessSearch')?.value || '').trim().toLowerCase();
- const groupMapUrl = group === 'food' ? 'map.html?category=food' : 'map.html?businessGroup=' + encodeURIComponent(group || '');
- if (query) {
-  const terms = query.split(/\s+/);
+ const categoryLinks = [...(document.querySelectorAll?.('#business-category-list a[href^="#"]') || [])];
+ const activeLink = query ? null : categoryLinks.find(link => link.hash === location.hash) ||
+  categoryLinks.find(link => link.hash === (g ? '#' + group : ''));
+ for (const link of categoryLinks) {
+  if (link === activeLink) link.setAttribute('aria-current', 'true');
+  else link.removeAttribute('aria-current');
+ }
+ if (query || !g) {
+  const terms = query ? query.split(/\s+/) : [];
   const rows = businesses.filter(b => terms.every(term => (text(b) + ' ' + (b.address || '')).toLowerCase().includes(term))).sort((a,b) => a.name.localeCompare(b.name));
-  updateBusinessSchema(rows);
-  root.innerHTML = '<section class="topic-section selected-resource-topic"><h2>Search results</h2><p>' + rows.length + ' matching ' + (rows.length === 1 ? 'business' : 'businesses') + '</p><div class="resource-list">' + (rows.map(card).join('') || '<p>No businesses match this search.</p>') + '</div></section>';
-  return;
- }
- if(!g){root.innerHTML='';updateBusinessSchema([]);return;}
- if(!sub){
-   const broad=businesses.filter(b=>b.taxonomy.some(x=>x.group===group)).sort((a,b)=>a.name.localeCompare(b.name));
-   const tiles=g.subs.map(s=>{const n=broad.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(s[0]))).length;return n?'<a href="#'+group+'/'+s[0]+'"><b>'+esc(s[1])+'</b><small>'+n+' '+(n===1?'business':'businesses')+'</small></a>':''}).join('');
-   const subcategories=tiles?'<h3 class="business-filter-heading">Narrow this category</h3><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div>':'';
-   updateBusinessSchema(broad);
-   const listings=broad.length?broad.map(card).join(''):'<p>No businesses found in this category yet.</p>';
-   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← All business categories</button><p class="eyebrow">BUSINESS CATEGORY</p><h2>'+esc(g.label)+'</h2><p class="sub">'+broad.length+' '+(broad.length===1?'business':'businesses')+' in this category. <a class="business-map-link" href="'+esc(groupMapUrl)+'">View this category on map</a></p>'+subcategories+'<h3 class="business-list-heading">All '+esc(g.label)+' businesses</h3><div class="resource-list">'+listings+'</div></section>';
+  const heading = query ? 'Search results' : 'All businesses';
+  root.innerHTML = '<section class="topic-section selected-resource-topic"><h2>' + heading + '</h2>' +
+   renderListings(rows, 'No businesses match this search.') + '</section>';
  } else {
-   const s=g.subs.find(x=>x[0]===sub);if(!s){setHash(group);return;}
-   const rows=businesses.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(sub))).sort((a,b)=>a.name.localeCompare(b.name));
-   updateBusinessSchema(rows);
-   root.innerHTML='<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+esc(g.label)+'</button><p class="eyebrow">'+esc(g.label.toUpperCase())+'</p><h2>'+esc(s[1])+'</h2><p class="sub"><a class="business-map-link" href="map.html?businessGroup='+encodeURIComponent(group)+'&businessSub='+encodeURIComponent(sub)+'">View these businesses on map</a></p><div class="resource-list">'+(rows.map(card).join('')||'<p>No businesses found in this category yet.</p>')+'</div></section>';
+  const broad=businesses.filter(b=>b.taxonomy.some(x=>x.group===group)).sort((a,b)=>a.name.localeCompare(b.name));
+  const selected = sub ? g.subs.find(item => item[0] === sub) : null;
+  if (sub && !selected) {setHash(group);return;}
+  const rows = selected ? broad.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(sub))) : broad;
+  const label = selected ? selected[1] : g.label;
+  const groupMapUrl = group === 'food' ? 'map.html?category=food' : 'map.html?businessGroup=' + encodeURIComponent(group);
+  const mapUrl = selected ? groupMapUrl + '&businessSub=' + encodeURIComponent(sub) : groupMapUrl;
+  const tiles = selected ? '' : g.subs.map(([id,name]) => {
+   const count = broad.filter(b=>b.taxonomy.some(x=>x.group===group&&x.subs.includes(id))).length;
+   return count ? '<a href="#'+group+'/'+id+'"><b>'+esc(name)+'</b><small>'+count+' '+(count===1?'business':'businesses')+'</small></a>' : '';
+  }).join('');
+  const subcategories = tiles ? '<h3 class="business-filter-heading">Narrow this category</h3><div class="resource-help-grid business-subcategory-grid">'+tiles+'</div>' : '';
+  root.innerHTML = '<section class="topic-section selected-resource-topic"><button class="resource-back" type="button">← '+
+   esc(selected ? g.label : 'All businesses')+'</button><h2>'+esc(label)+'</h2><p class="sub"><a class="business-map-link" href="'+
+   esc(mapUrl)+'">View these businesses on map</a> · '+suggestionLink(label)+'</p>'+subcategories+
+   renderListings(rows, 'No businesses found in this category yet.')+'</section>';
+  $('.resource-back:not(#business-category-toggle)')?.addEventListener('click', () => {setHash(sub ? group : '');});
  }
- document.querySelector('.resource-back')?.addEventListener('click',()=>{if(sub)setHash(group);else{history.pushState(null,'',location.pathname);render();document.querySelector('.resource-start')?.scrollIntoView({behavior:'smooth',block:'start'});}});
- requestAnimationFrame(()=>root.scrollIntoView({behavior:'smooth',block:'start'}));
+ bindListingControls(root);
+ if (focusResults && phoneLayout?.matches) requestAnimationFrame(() => {
+  const heading = root.querySelector('h2');
+  if (heading) {
+   heading.tabIndex = -1;
+   heading.focus({preventScroll:true});
+  }
+  root.scrollIntoView({behavior:'smooth',block:'start'});
+ });
 }
 const search = $('#businessSearch');
 if (search) {
  search.value = new URLSearchParams(location.search).get('q') || '';
- search.addEventListener('input', render);
+ search.addEventListener('input', resetListings);
 }
-window.addEventListener('hashchange',()=>{
- const search = $('#businessSearch');
+function openCategory() {
  if (search) search.value = '';
- render();
-});render();if($('#businessCount'))$('#businessCount').textContent=businesses.length+' local business listings.';
+ visibleCount = pageSize;
+ categoryToggle?.setAttribute('aria-expanded', 'false');
+ render(true);
+}
+$('#business-category-list')?.addEventListener('click', event => {
+ const link = event.target.closest('a[href^="#"]');
+ if (!link || link.hash !== location.hash || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+ event.preventDefault();
+ openCategory();
+});
+window.addEventListener('hashchange', openCategory);
+render();if($('#businessCount'))$('#businessCount').textContent=businesses.length+' local business listings.';
 })();

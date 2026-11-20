@@ -8,9 +8,11 @@ const root = path.join(__dirname, '..');
 function loadDirectory(extraRestaurants = []) {
   const listeners = {};
   const elements = {
-    '#businessDirectory': {innerHTML: ''},
+    '#businessDirectory': {innerHTML: '', querySelectorAll() { return []; }},
     '#businessSearch': {value: '', addEventListener(event, fn) { listeners[event] = fn; }},
-    '#businessCount': {textContent: ''}
+    '#businessCount': {textContent: ''},
+    '#business-page-size': {addEventListener(event, fn) { listeners.pageSize = fn; }, focus() {}},
+    '#business-show-more': {addEventListener(event, fn) { listeners.showMore = fn; }}
   };
   const context = {
     window: {addEventListener(event, fn) { listeners[event] = fn; }},
@@ -20,7 +22,8 @@ function loadDirectory(extraRestaurants = []) {
       createElement() { return {}; },
       head: {lastNode: null, appendChild(node) { this.lastNode = node; }}
     },
-    location: {hash: ''},
+    location: {hash: '', search: ''},
+    URLSearchParams,
     requestAnimationFrame() {}
   };
   vm.createContext(context);
@@ -74,6 +77,7 @@ test('food category points to the map food layer and renders the full food catal
 
 test('structured search data identifies Walpole Street businesses as Norwood', () => {
   const {context, elements, listeners} = loadDirectory();
+  listeners.pageSize({target: {value: '100'}});
   elements['#businessSearch'].value = 'walpole street';
   listeners.input();
   const schema = JSON.parse(context.document.head.lastNode.textContent);
@@ -97,5 +101,52 @@ test('separate restaurant branches remain visible and category navigation clears
   context.location.hash = '#home';
   listeners.hashchange();
   assert.equal(elements['#businessSearch'].value, '');
-  assert.match(elements['#businessDirectory'].innerHTML, /Home Depot/);
+  assert.match(elements['#businessDirectory'].innerHTML, /Home Services &amp; Contractors/);
+});
+
+test('listing size, Show more and category-specific suggestions work', () => {
+  const {context, elements, listeners} = loadDirectory();
+  const result = () => elements['#businessDirectory'].innerHTML;
+  const cards = () => (result().match(/class="resource-item business-item"/g) || []).length;
+  assert.equal(cards(), 20);
+  elements['#businessSearch'].value = 'norwood';
+  listeners.input();
+  assert.equal(cards(), 20);
+  listeners.pageSize({target: {value: '50'}});
+  assert.equal(cards(), 50);
+  listeners.showMore();
+  assert.equal(cards(), 100);
+  listeners.pageSize({target: {value: '100'}});
+  assert.equal(cards(), 100);
+  listeners.pageSize({target: {value: '20'}});
+  listeners.showMore();
+  assert.equal(cards(), 40);
+  context.location.hash = '#home';
+  listeners.hashchange();
+  assert.equal(cards(), 20);
+  context.location.hash = '#home/plumbing';
+  listeners.hashchange();
+  assert.match(result(), /<h2>Plumbing<\/h2>/);
+  assert.match(result(), /contact\.html\?topic=resource&amp;business-category=Plumbing#contact/);
+  assert.doesNotMatch(result(), /id="business-show-more"/);
+});
+
+test('contact form selects the existing topic and prefills an editable suggestion', () => {
+  const contact = fs.readFileSync(path.join(root, 'contact.html'), 'utf8');
+  const inline = [...contact.matchAll(/<script>([\s\S]*?)<\/script>/g)].find(([, code]) => code.includes("params.get('business-category')"))[1];
+  const select = {value: '', options: [{value: 'resource'}, {value: 'job-listings'}]};
+  const message = {value: ''};
+  const document = {
+    querySelector(s) { return s === '#contactTopic' ? select : message; },
+    querySelectorAll() { return []; }
+  };
+  const location = {search: '?topic=resource&business-category=HVAC%20%26%20Heating'};
+  vm.runInNewContext(inline, {URLSearchParams, location, document});
+  assert.equal(select.value, 'resource');
+  assert.match(message.value, /I recommend this business for the HVAC & Heating category\.\n\nBusiness name:/);
+  message.value = 'Already typed';
+  location.search = '?topic=job-listings';
+  vm.runInNewContext(inline, {URLSearchParams, location, document});
+  assert.equal(select.value, 'job-listings');
+  assert.equal(message.value, 'Already typed');
 });

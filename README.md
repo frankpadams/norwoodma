@@ -38,7 +38,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - `businesses.js` combines the maintained business data with `data/restaurants-data.js` for directory browsing and search. Matching names and food listings at the same normalized address are deduplicated. Restaurant changes therefore reach the directory through the existing food dataset.
 - Every business receives a browsing category. Unmatched classifications remain accessible in Other Local Services.
 - City names are inferred only at the end of an address. Street names such as Walpole Street and Norwood Park South must not establish locality. Preserve explicit neighboring towns and omit map links when no specific address is verified.
-- Search matches names, categories and streets across the directory. The dedicated Food & Drink directory and Dinner Spinner remain linked alongside the food listings.
+- Search matches names, categories and streets across the directory. The directory shows categories beside results on desktop and behind a Categories button on mobile. Results start at 20, with 50 and 100 available and additional listings loaded on request. Category pages link to the existing contact form with an editable business suggestion that identifies the selected category. The dedicated Food & Drink directory and Dinner Spinner remain linked alongside the food listings.
 
 ### Search
 - Site search loads government guide sections directly from the maintained HTML when search is used, including department and board descriptions, membership, contacts, documents and FAQs. Results link to and open the matching section.
