@@ -126,7 +126,7 @@ function openTopic(focusResults) {
   filter = id === 'basic-needs' ? 'food' : 'all';
  }
  visibleCount = pageSize;
- toggle.setAttribute('aria-expanded', 'false');
+ toggle.setAttribute('aria-expanded', String(!sections.some(section => section.dataset.resourceTopic === id)));
  render(focusResults);
 }
 
