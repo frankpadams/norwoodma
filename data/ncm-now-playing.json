@@ -1,29 +1,13 @@
 {
-  "updated_at": "2026-11-21T09:53:05.941679-05:00",
+  "updated_at": "2026-11-21T15:50:22.356542-05:00",
   "date": "2026-11-21",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "2026 Veterans Day Ceremony",
+      "title": "Local Artist Bill Breen - Public Access 11.18.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
-        {
-          "minute": 660,
-          "title": "30th Annual Turkey Trot: 2016 Highlights"
-        },
-        {
-          "minute": 720,
-          "title": "Norwood News 11.20.26"
-        },
-        {
-          "minute": 780,
-          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
-        },
-        {
-          "minute": 900,
-          "title": "Norwood News 11.20.26"
-        },
         {
           "minute": 960,
           "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
@@ -35,27 +19,31 @@
         {
           "minute": 1140,
           "title": "2026 Veterans Day Ceremony"
+        },
+        {
+          "minute": 1200,
+          "title": "\"Have a Cheap Day\" Building #19 Book Presentation 10.24.26"
+        },
+        {
+          "minute": 1260,
+          "title": "John McDonagh Bench Dedication 11/29/17"
+        },
+        {
+          "minute": 1320,
+          "title": "Norwood News 11.20.26"
+        },
+        {
+          "minute": 1380,
+          "title": "Local Artist Bill Breen - Public Access 11.18.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-21"
     },
     "government": {
       "status": "scheduled",
-      "title": "Town Meeting Night #1 11.16.26",
+      "title": "Conservation Commission 11.18.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
-        {
-          "minute": 630,
-          "title": "Conservation Commission 11.18.26"
-        },
-        {
-          "minute": 690,
-          "title": "Community Preservation Committee 11.18.26"
-        },
-        {
-          "minute": 780,
-          "title": "Town Meeting Night #1 11.16.26"
-        },
         {
           "minute": 990,
           "title": "School Committee 11.18.26"
@@ -71,31 +59,19 @@
         {
           "minute": 1140,
           "title": "Town Meeting Night #1 11.16.26"
+        },
+        {
+          "minute": 1350,
+          "title": "Conservation Commission 11.18.26"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-21"
     },
     "schools": {
       "status": "scheduled",
-      "title": "Norwood News 11.20.26",
+      "title": "NHS Update October 2026",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
-        {
-          "minute": 600,
-          "title": "2026 NHS Field Hockey vs Milton - Round of 16 11.11.26"
-        },
-        {
-          "minute": 720,
-          "title": "2026 NHS Girls Volleyball vs King Philip - Round of 32"
-        },
-        {
-          "minute": 810,
-          "title": "TVL Sports Net 11.12.26"
-        },
-        {
-          "minute": 900,
-          "title": "NHS Update October 2026"
-        },
         {
           "minute": 1080,
           "title": "2017 LaLaPalooza Concert"
@@ -107,6 +83,10 @@
         {
           "minute": 1200,
           "title": "Norwood News 11.20.26"
+        },
+        {
+          "minute": 1260,
+          "title": "NHS Update October 2026"
         }
       ],
       "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-21"
