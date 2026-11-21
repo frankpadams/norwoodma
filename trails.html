@@ -97,11 +97,26 @@
 .trail-organizations{margin:18px 0}
 @media(max-width:800px){.trail-related-grid{grid-template-columns:1fr}.nearby-trail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.nearby-trail-grid{grid-template-columns:1fr}}
+</style><style>
+/* Trails-only navigation trial: no shared files or other pages changed. */
+.trial-nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.trial-nav-item{position:relative}
+.trial-nav-main{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:7px 13px;color:#003b71;text-decoration:none;font-weight:750;font-size:12px;min-width:66px}
+.trial-nav-main svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.trial-nav-item:hover .trial-nav-main,.trial-nav-main:focus-visible{background:#edf4f7;border-radius:9px}
+.trial-nav-item details{position:absolute;right:0;top:0}
+.trial-nav-item summary{list-style:none;cursor:pointer;font-size:12px;padding:3px 4px;color:#003b71}
+.trial-nav-item summary::-webkit-details-marker{display:none}
+.trial-nav-menu{position:absolute;right:0;top:25px;z-index:1000;min-width:210px;background:white;border:1px solid #cbd8e0;border-radius:10px;padding:8px;box-shadow:0 10px 28px #1234}
+.trial-nav-menu a{display:block;padding:9px 11px;text-decoration:none;color:#153b56;font-size:14px}
+.trial-nav-menu a:hover,.trial-nav-menu a:focus-visible{background:#edf4f7}
+.trial-nav .trial-nav-item{padding-right:13px}
+@media(max-width:850px){.trial-nav{align-items:stretch}.trial-nav-main{min-width:60px}.trial-nav-menu{position:relative;top:0;right:auto}.trial-nav-item details{right:0}}
 </style></head>
 <body class="trail-visitor">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
-<header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav"><a href="index.html">Home</a><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="calendars.html">Calendars</a><a href="resources.html">Local Resources</a></nav></header>
+<header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav" class="trial-nav"><div class="trial-nav-item"><a class="trial-nav-main" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="2 12 6 12 9 5 13 19 16 12 22 12"/></svg><span>Pulse</span></a><details><summary aria-label="Open Pulse links">▾</summary><div class="trial-nav-menu"><a href="news.html">News</a><a href="events.html">Events</a><a href="transit.html">Transit</a><a href="weather.html">Weather</a></div></details></div><div class="trial-nav-item"><a class="trial-nav-main" href="explore.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="15 9 13 13 9 15 11 11 15 9"/></svg><span>Explore</span></a><details><summary aria-label="Open Explore links">▾</summary><div class="trial-nav-menu"><a href="explore.html">Explore Map</a><a href="trails.html">Trails</a><a href="things-to-do.html">Things to Do</a><a href="businesses.html">Business Directory</a></div></details></div><div class="trial-nav-item"><a class="trial-nav-main" href="resources.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8"/></svg><span>Resources</span></a><details><summary aria-label="Open Resources links">▾</summary><div class="trial-nav-menu"><a href="resources.html">Local Resources</a><a href="trash.html">Trash & Recycling</a><a href="transit.html">Transit</a></div></details></div><div class="trial-nav-item"><a class="trial-nav-main" href="more.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><span>More</span></a><details><summary aria-label="Open More links">▾</summary><div class="trial-nav-menu"><a href="more.html">All Pages</a></div></details></div><div class="trial-nav-item"><a class="trial-nav-main" href="contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg><span>Contact</span></a></div></nav></header>
 <main id="main" class="map-prototype">
 <section class="map-prototype-head"><div><p class="eyebrow">EXPLORE OUTDOORS</p><h1>Norwood Trails</h1>
 <p>Norwood’s beautiful, scenic trails offer the community places to walk, explore and enjoy nature—from quiet woodlands to peaceful riverbanks. Much of this network is made possible by the tireless efforts of the <a href="https://www.norwoodma.gov/government/committees_boards/trails_advisory_committee/index.php" target="_blank" rel="noopener">Norwood Trails Advisory Committee</a> and its volunteers, who help map, maintain and improve our trails, build crossings and create connections between natural areas.</p>
