@@ -357,6 +357,19 @@
   if(textSizeButton)textSizeButton.addEventListener('click',e=>{e.stopPropagation();const show=textSizeMenu.hidden;textSizeMenu.hidden=!show;textSizeButton.setAttribute('aria-expanded',String(show));if(show){const r=textSizeButton.getBoundingClientRect();textSizeMenu.style.right=Math.max(10,window.innerWidth-r.right)+'px';textSizeMenu.style.bottom=(window.innerHeight-r.top+8)+'px';const active=textSizeMenu.querySelector('[aria-checked="true"]')||textSizeMenu.querySelector('button');if(active)active.focus();}});
   textSizeMenu.addEventListener('click',e=>{const b=e.target.closest('button[data-size]');if(!b)return;root.dataset.textSize=b.dataset.size;localStorage.setItem('norwood-text-size',b.dataset.size);sync();closeTextSize();if(textSizeButton)textSizeButton.focus();});
   ctl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-contrast')){const next=root.dataset.highContrast!=='true';root.dataset.highContrast=String(next);localStorage.setItem('norwood-high-contrast',String(next));sync();}});sync();
+  // Quiet, static sponsor recognition above the canonical footer. Leave the footer itself intact.
+  const sponsorFooter=document.querySelector('footer');
+  if(sponsorFooter && !document.getElementById('footer-sponsor-strip')){
+    const strip=document.createElement('aside');
+    strip.id='footer-sponsor-strip';
+    strip.setAttribute('aria-label','Local sponsors');
+    strip.innerHTML='<div class="footer-sponsor-inner"><span class="footer-sponsor-label">THANK YOU TO OUR LOCAL SPONSORS</span><div class="footer-sponsor-logos"><a href="https://bostonmobiletire.com" target="_blank" rel="noopener sponsored" aria-label="Boston Mobile Tire"><img src="/assets/ads/BMT2.webp" alt="Boston Mobile Tire" loading="lazy" decoding="async"></a><a href="https://towncommonbooks.com" target="_blank" rel="noopener sponsored" aria-label="Town Common Books"><img src="/assets/ads/TCB.webp?v=20261120" alt="Town Common Books" loading="lazy" decoding="async"></a></div></div>';
+    const stripStyle=document.createElement('style');
+    stripStyle.id='footer-sponsor-strip-styles';
+    stripStyle.textContent='#footer-sponsor-strip{clear:both;width:100%;box-sizing:border-box;background:#f5f8fb;border-top:1px solid #dce5ed;border-bottom:1px solid #dce5ed;padding:14px 18px 15px;color:#526777}#footer-sponsor-strip .footer-sponsor-inner{max-width:1180px;margin:0 auto;text-align:center}#footer-sponsor-strip .footer-sponsor-label{display:block;margin-bottom:10px;font-size:10px;font-weight:700;letter-spacing:.12em;line-height:1.5}#footer-sponsor-strip .footer-sponsor-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 26px}#footer-sponsor-strip .footer-sponsor-logos a{display:flex;align-items:center;justify-content:center;width:175px;max-width:calc(50% - 14px);min-height:52px;text-decoration:none;border-radius:5px}#footer-sponsor-strip .footer-sponsor-logos img{display:block;width:100%;max-width:175px;height:54px;object-fit:contain}#footer-sponsor-strip .footer-sponsor-logos a:focus-visible{outline:2px solid #003b71;outline-offset:3px}@media(max-width:480px){#footer-sponsor-strip{padding:12px 10px}#footer-sponsor-strip .footer-sponsor-logos{gap:10px 14px}#footer-sponsor-strip .footer-sponsor-logos a{width:145px;max-width:calc(50% - 8px)}#footer-sponsor-strip .footer-sponsor-logos img{height:47px}}';
+    document.head.appendChild(stripStyle);
+    sponsorFooter.before(strip);
+  }
   // Canonical site footer: every page that loads nav.js renders the same footer as the homepage.
   const footer=document.querySelector('footer');
   if(footer){
