@@ -294,7 +294,7 @@
   buttons.forEach(b=>b.addEventListener('click',()=>{const wasOpen=b.getAttribute('aria-expanded')==='true';closeDropdowns();b.setAttribute('aria-expanded',String(!wasOpen));const panel=document.getElementById(b.getAttribute('aria-controls'));if(panel)panel.hidden=wasOpen;}));
   menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
   nav.querySelectorAll('.lab-panel a,.lab-direct').forEach(a=>a.addEventListener('click',close));
-  document.addEventListener('click',e=>{if(!nav.contains(e.target)&&e.target!==menu){closeDropdowns();if(nav.classList.contains('open'))close();}});
+  document.addEventListener('click',e=>{if(!nav.contains(e.target)&&e.target!==menu){closeDropdowns();if(nav.classList.contains('open'))close();}},true);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){const opened=buttons.find(b=>b.getAttribute('aria-expanded')==='true');if(opened){closeDropdowns();opened.focus();}else if(nav.classList.contains('open')){close();menu.focus();}}});
   const header=menu.closest('header.top');
   if(header){
