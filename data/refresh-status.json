@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-22T15:54:42.602349-05:00",
+  "generated_at": "2026-11-22T17:10:12.639919-05:00",
   "offline": false,
-  "events_published": 1996,
+  "events_published": 1994,
   "news_published": 120,
   "civic_notices": 51,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 1996,
-      "generated_at": "2026-11-22T15:54:41.859585-05:00"
+      "events": 1994,
+      "generated_at": "2026-11-22T17:10:12.298089-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 84,
-      "generated_at": "2026-11-22T15:54:41.870289-05:00"
+      "generated_at": "2026-11-22T17:10:12.308066-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 792,
-      "generated_at": "2026-11-22T15:54:41.891594-05:00"
+      "events": 790,
+      "generated_at": "2026-11-22T17:10:12.329279-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 671,
-      "generated_at": "2026-11-22T15:54:41.909362-05:00"
+      "events": 669,
+      "generated_at": "2026-11-22T17:10:12.346415-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 3,
-      "generated_at": "2026-11-22T15:54:41.919074-05:00"
+      "generated_at": "2026-11-22T17:10:12.355606-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 65,
-      "generated_at": "2026-11-22T15:54:41.930289-05:00"
+      "generated_at": "2026-11-22T17:10:12.366417-05:00"
     }
   ],
   "recreation_programs": 143,
@@ -787,7 +787,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-soccer",
       "ok": true,
       "method": "ical",
-      "found": 13,
+      "found": 12,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -895,7 +895,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-soccer",
       "ok": true,
       "method": "ical",
-      "found": 14,
+      "found": 13,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -931,7 +931,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-volleyball",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 16,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -949,7 +949,7 @@
       "source_id": "nps-athletics-arbiter-jv-golf",
       "ok": true,
       "method": "ical",
-      "found": 7,
+      "found": 6,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -994,7 +994,7 @@
       "source_id": "nps-athletics-arbiter-varsity-wrestling",
       "ok": true,
       "method": "ical",
-      "found": 17,
+      "found": 15,
       "note": null,
       "outcome": "events",
       "access_limited": false
