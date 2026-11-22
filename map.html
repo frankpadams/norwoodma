@@ -166,6 +166,11 @@
 <p style="margin:3px 0 0;font-size:.72rem;color:#617682">Provider pages may require an address or account login. No outage shown here does not mean service is operating normally. For downed wires or a gas leak, stay clear and call 911.</p>
 </div>
 </dialog></details>
+<details class="map-layer-more"><summary>Accessibility</summary>
+<label class="map-layer-choice"><input type="checkbox" id="accessibilityPlacesToggle"><span>Wheelchair access information at places</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="accessibilityPathsToggle"><span>Accessible paths &amp; crossing details</span></label>
+<p class="map-layer-status">Community-contributed OpenStreetMap details. Coverage is incomplete; missing information does not mean a place or path is inaccessible.</p>
+</details>
 <details class="map-layer-more"><summary>Environment</summary>
 <label class="map-layer-choice"><input type="checkbox" id="environmentCleanupToggle"><span>Environmental cleanup sites (MassDEP)</span></label>
 <label class="map-layer-choice"><input type="checkbox" id="massgisWetlands"><span>Wetlands &amp; waterways</span></label>
@@ -229,6 +234,7 @@
 <p id="boundaryStatus" class="map-layer-status" aria-live="polite">Town boundary is loading. Voting precincts show the nine official Norwood precinct boundaries.</p>
 <p id="massgisStatus" class="map-layer-status" aria-live="polite">MassGIS reference layers are optional. Parcel boundaries appear at closer zoom levels. These maps are not surveys or legal determinations. <a href="https://www.mass.gov/info-details/massgis-data-layers" target="_blank" rel="noopener">MassGIS sources</a>.</p>
 <p id="alprStatus" class="map-layer-status" aria-live="polite">Community-mapped camera locations from DeFlock / OpenStreetMap. Coverage may be incomplete.</p>
+<p id="accessibilityStatus" class="map-layer-status" aria-live="polite">Accessibility layers use community-contributed OpenStreetMap data around Norwood. Missing information does not mean a place or route is inaccessible. Verify access details before travel.</p>
 <p id="workZoneStatus" class="map-layer-status" aria-live="polite">Active MassDOT work zones near Norwood. Refreshes every 60 seconds while enabled.</p>
 <p id="mbtaStatus" class="map-layer-status" aria-live="polite">Show 34E buses, Franklin/Foxboro Line trains, routes and Norwood stops. Live positions refresh every 30 seconds while enabled.</p></div>
 <div style="margin:10px 0"><button type="button" id="mapLayerInfoOpen" class="zoning-info-button">View Layer information and Source Data</button></div>
@@ -446,6 +452,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 </script>
 <script src="map-massgis-layers.js?v=20261112-canopy-fix"></script>
 <script src="map-overlay-legends.js?v=20261112-canopy"></script>
+<script src="map-accessibility-layers.js?v=20261122-accessibility"></script>
 <script src="data/assessment-map-records.js?v=20261112-1948"></script>
 <script src="map-assessment-layer.js?v=20261112-1948"></script>
 <script>
@@ -472,6 +479,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   {ids:['elementaryZones'],status:'schoolZoneStatus',title:'Elementary school districts'},
   {ids:['townBoundary','votingPrecincts'],status:'boundaryStatus',title:'Town boundaries and voting precincts'},
   {ids:['massgisWetlands','massgisOpenSpace','massgisWater','massgisTreeCanopy','massgisParcels','massgisHistoric','assessmentCardsToggle'],status:'massgisStatus',title:'MassGIS and property reference layers'},
+  {ids:['accessibilityPlacesToggle','accessibilityPathsToggle'],status:'accessibilityStatus',title:'Accessibility map details'},
   {ids:['alprToggle'],status:'alprStatus',title:'ALPR cameras'},
   {ids:['workZoneToggle'],status:'workZoneStatus',title:'Work zones'},
   {ids:['roadSafetyCrashes','roadSafetyCounts'],status:'roadSafetyStatus',title:'Road safety and transportation'},
