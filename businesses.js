@@ -32,6 +32,14 @@ const groups={
 const raw = window.NORWOOD_BUSINESSES || [];
 const businesses = raw.map(b => Array.isArray(b) ? {name:b[0],category:b[1],address:b[2],phone:b[3],website:b[4]} : b);
 const nameKey = value => String(value || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');
+let activeSponsorNames = new Set();
+// Display badges only for confirmed, active sponsors; never influence ranking.
+function sponsorBadge(b) {
+ return activeSponsorNames.has(nameKey(b.name))
+  ? '<span class="business-sponsor-mark" title="This business is a Norwood.ma sponsor"><img src="assets/sponsor-button.webp" alt="Sponsor" width="40" height="40" loading="lazy"></span>'
+  : '';
+}
+
 const addressKey = value => String(value || '').toLowerCase()
  .replace(/,?\s*norwood(?:,?\s*ma(?:\s*02062)?)?$/i, '')
  .replace(/boston[ -]*providence/g, 'providence').replace(/highway|turnpike|tpke/g, 'hwy')
@@ -64,7 +72,7 @@ function classifyBusiness(b){
 }
 businesses.forEach(b=>{b.taxonomy=classifyBusiness(b);});
 window.NORWOOD_BUSINESS_TAXONOMY=Object.fromEntries(businesses.map(b=>[String(b.name||'').toLowerCase(),b.taxonomy]));
-function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');const mapLink=b.address?'<p class="business-map-item-link"><a href="'+esc(b.mapUrl||('map.html?business='+encodeURIComponent(b.name)))+'">Show on map →</a></p>':'';return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+'</div>'+(details?'<p>'+details+'</p>':'')+mapLink+'</article>';}
+function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');const mapLink=b.address?'<p class="business-map-item-link"><a href="'+esc(b.mapUrl||('map.html?business='+encodeURIComponent(b.name)))+'">Show on map →</a></p>':'';return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+sponsorBadge(b)+'</div>'+(details?'<p>'+details+'</p>':'')+mapLink+'</article>';}
 function parse(){const p=location.hash.slice(1).split('/');if(['family','fitness'].includes(p[0])&&p[1]==='driving')return {group:'training',sub:'driving'};return {group:p[0],sub:p[1]};}
 function setHash(h){location.hash=h;}
 
@@ -210,4 +218,13 @@ $('#business-category-list')?.addEventListener('click', event => {
 });
 window.addEventListener('hashchange', openCategory);
 render();if($('#businessCount'))$('#businessCount').textContent=businesses.length+' local business listings.';
+fetch('data/sponsors.json',{cache:'no-store'})
+ .then(response=>response.ok?response.json():Promise.reject(new Error('Sponsor registry unavailable')))
+ .then(data=>{
+  activeSponsorNames=new Set((Array.isArray(data.sponsors)?data.sponsors:[])
+   .filter(item=>item && item.active===true && item.id!=='advertise' && item.name)
+   .map(item=>nameKey(item.name)));
+  render();
+ }).catch(()=>{/* Registry unavailable: do not display unverified sponsorship status. */});
+
 })();
