@@ -1,5 +1,5 @@
 (()=>{
-  const SITE_VERSION='1.7.1';
+  const SITE_VERSION='2.0.0';
   if(!document.querySelector('script[data-norwood-pwa]')){const s=document.createElement('script');s.src='/pwa.js?v=20260928-rounded2';s.dataset.norwoodPwa='true';document.head.appendChild(s);}
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
@@ -267,73 +267,46 @@
   let appTitle=document.querySelector('meta[name="apple-mobile-web-app-title"]');
   if(!appTitle){appTitle=document.createElement('meta');appTitle.name='apple-mobile-web-app-title';document.head.appendChild(appTitle);}
   appTitle.content='Norwood.ma';
-  const close=()=>{nav.classList.remove('open');const hs=nav.querySelector('[data-hamburger-support]');if(hs)hs.hidden=true;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');};
-  const open=()=>{const hs=nav.querySelector('[data-hamburger-support]');if(hs)hs.hidden=false;nav.classList.add('open');menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation menu');};
-  menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
-  // Normalize the shared primary navigation regardless of older page-level markup.
-  // Every page except the homepage gets a Home link, and it stays first in the menu.
-  const isHomePage=/\/(?:index\.html)?$/i.test(location.pathname);
-  const navPath=a=>{try{return new URL(a.getAttribute('href')||'',location.href).pathname}catch(_){return ''}};
-  nav.querySelectorAll('a').forEach(a=>{if(navPath(a)==='/'||/\/index\.html$/i.test(navPath(a))){if(/^home$/i.test(a.textContent.trim()))a.remove();}});
-  if(!isHomePage){
-    const home=document.createElement('a');
-    home.href='https://www.norwood.ma/';
-    home.textContent='Home';
-    nav.insertBefore(home,nav.firstChild);
-  }
-  nav.querySelectorAll('a').forEach(a=>{
-    const p=navPath(a),h=a.getAttribute('href')||'';
-    if(/\/(?:map|transit|calendars)\.html$/i.test(p)||(/\/events\.html$/i.test(p)&&/calendars=/i.test(h)))a.remove();
-  });
-  let more=[...nav.querySelectorAll('a')].find(a=>/\/discover\.html$/i.test(navPath(a)));
-  if(more){more.textContent='More';}
-  else{
-    more=document.createElement('a');more.href='https://www.norwood.ma/discover.html';more.textContent='More';
-    if(/\/discover\.html$/i.test(location.pathname))more.setAttribute('aria-current','page');
-    nav.appendChild(more);
-  }
-  nav.querySelectorAll('a').forEach(a=>{if(/\/support\.html$/i.test(navPath(a)))a.remove();});
-  let contact=[...nav.querySelectorAll('a')].find(a=>/\/contact\.html$/i.test(navPath(a)));
-  if(!contact){
-    contact=document.createElement('a');contact.href='https://www.norwood.ma/contact.html';contact.textContent='Contact';
-    if(/\/contact\.html$/i.test(location.pathname))contact.setAttribute('aria-current','page');
-    nav.appendChild(contact);
-  }
-  if(isIOS&&!isStandalone&&!nav.querySelector('[data-add-home-screen]')){
-    const add=document.createElement('a');add.href='#';add.dataset.addHomeScreen='true';add.className='add-home-screen-link';add.innerHTML='<img class="add-home-screen-icon" src="https://www.norwood.ma/assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true"><span>Add Norwood.ma to your Home Screen</span>';
-    add.addEventListener('click',e=>{e.preventDefault();close();let dlg=document.querySelector('.add-home-screen-dialog');if(dlg){dlg.remove();return;}dlg=document.createElement('aside');dlg.className='add-home-screen-dialog ios-home-prompt';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-label','Add Norwood.ma to your Home Screen');dlg.innerHTML='<button class="ios-home-close" aria-label="Close">×</button><img src="https://www.norwood.ma/assets/apple-touch-icon.png?v=20260921" alt="" width="56" height="56"><div><strong>Add Norwood.ma to your Home Screen</strong><p>In Safari, tap the <b>Share</b> button, choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</p><button class="ios-home-gotit">Got it</button></div>';document.body.appendChild(dlg);const done=()=>dlg.remove();dlg.querySelector('.ios-home-close').onclick=done;dlg.querySelector('.ios-home-gotit').onclick=done;dlg.querySelector('.ios-home-close').focus();});
-    nav.appendChild(add);
-  }
-  const isAndroid=/Android/i.test(navigator.userAgent||'');
-  if(isAndroid&&!isStandalone&&!nav.querySelector('[data-android-install]')){
-    const install=document.createElement('a');install.href='#';install.dataset.androidInstall='true';install.className='add-home-screen-link';install.innerHTML='<img class="add-home-screen-icon" src="https://www.norwood.ma/assets/favicon-approved.png?v=0.13.4.6" alt="" aria-hidden="true"><span>Add Norwood.ma to your Home Screen</span>';
-    install.addEventListener('click',async e=>{e.preventDefault();close();if(window.NorwoodPWA?.canInstall()){await window.NorwoodPWA.install();return;}alert('To install Norwood.ma, open your browser menu and choose “Add to Home screen” or “Install app.”');});
-    nav.appendChild(install);
-  }
-  window.addEventListener('norwood-installed',()=>nav.querySelector('[data-android-install]')?.remove());
-  nav.querySelectorAll('a:not([data-add-home-screen])').forEach(a=>a.addEventListener('click',close));
-  document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==menu)close();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
-  window.addEventListener('resize',()=>{if(window.innerWidth>1100)close();});
-
-  // Collapse only when the actual visible navigation approaches within 8px of the logo.
+  nav.classList.add('nav-lab');
+  nav.setAttribute('aria-label','Primary navigation');
+  nav.innerHTML=`
+    <a class="lab-direct" href="/" aria-label="Home"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span class="lab-caption">Home</span></a>
+    <div class="lab-item"><button class="lab-trigger" type="button" aria-expanded="false" aria-controls="lab-pulse"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v16H3zm3 3v4h6V7zm8 0v2h4V7zm0 4v2h4v-2zM6 14v2h12v-2z"/></svg><span class="lab-caption">Pulse</span></button><div id="lab-pulse" class="lab-panel" hidden><a href="news.html">News</a><a href="events.html">Events Calendar</a><a href="weather.html">Weather &amp; Webcam</a><a href="transit.html">Live MBTA Transit</a><a href="fundraising.html">Current Local Fundraisers</a><a href="live-music.html">Live Music</a><a href="https://norwoodcommunitymedia.org/">Norwood Community Media</a></div></div>
+    <div class="lab-item"><button class="lab-trigger" type="button" aria-expanded="false" aria-controls="lab-explore"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm3.8 6.2-2.1 5.5-5.5 2.1 2.1-5.5z"/></svg><span class="lab-caption">Explore</span></button><div id="lab-explore" class="lab-panel" hidden><a href="map.html">Norwood SuperMap</a><a href="things.html">Things to Do</a><a href="restaurants.html">Food &amp; Restaurants</a><a href="businesses.html">Business Directory</a><a href="trails.html">Norwood Trails</a><a href="parks-trails.html">Parks</a><a href="sports-recreation.html">Sports &amp; Recreation</a><a href="artists-crafters-artisans.html">Artists &amp; Artisans</a><a href="museum-discounts.html">Museum Discounts</a><a href="get-involved.html">Get Involved</a></div></div>
+    <div class="lab-item"><button class="lab-trigger" type="button" aria-expanded="false" aria-controls="lab-resources"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 0a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM1 21v-3c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5v3zm15 0v-3c0-1.8-.7-3.4-2-4.6.7-.3 1.5-.4 2.3-.4 3.7 0 6.7 2.1 6.7 5v3z"/></svg><span class="lab-caption">Resources</span></button><div id="lab-resources" class="lab-panel" hidden><a href="resources.html">Local Resource Directory</a><a href="trash-recycling.html">Trash &amp; Recycling</a><a href="utilities.html">Utilities</a><a href="transit.html">Live MBTA Transit</a><a href="jobs.html">Jobs &amp; Employment</a><a href="gas-prices.html">Gas Prices</a><a href="real-estate.html">Living in Norwood / Real Estate</a><a href="how-do-i.html">How Do I?</a><a href="opportunity-center.html#grants">Grant Opportunities</a><a href="conflict-contraption.html">Calendar &amp; Conflict Contraption</a></div></div>
+    <div class="lab-item"><button class="lab-trigger" type="button" aria-expanded="false" aria-controls="lab-government"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 10 6v2H2V8zm-8 9h3v8H4zm6 0h4v8h-4zm7 0h3v8h-3zM2 20h20v2H2z"/></svg><span class="lab-caption">Civic Life</span></button><div id="lab-government" class="lab-panel" hidden><div class="lab-section-label">Town Government</div><a href="government-guide.html">Understanding Town Government</a><a href="how-do-i.html">How Do I…?</a><a href="unofficialsitemap.html">Unofficial Town Sitemap</a><a href="town-meeting-archive.html">Town Meeting &amp; Archive</a><a href="elections.html">Elections &amp; Voting</a><div class="lab-section-label">Civic Data &amp; Tools</div><a href="map.html">Explore Map &amp; Precincts</a></div></div>
+    <a class="lab-direct" href="discover.html"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="12" r="2.2"/></svg><span class="lab-caption">More</span></a>
+    <a class="lab-direct" href="contact.html"><svg class="lab-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2 8 6 8-6v-1H4zm16 10V9.5l-8 6-8-6V17z"/></svg><span class="lab-caption">Contact</span></a>`;
+  const buttons=[...nav.querySelectorAll('.lab-trigger')];
+  const closeDropdowns=(except=null)=>buttons.forEach(b=>{if(b===except)return;b.setAttribute('aria-expanded','false');const panel=document.getElementById(b.getAttribute('aria-controls'));if(panel)panel.hidden=true;});
+  const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');closeDropdowns();};
+  const open=()=>{nav.classList.add('open');menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation menu');};
+  buttons.forEach(b=>b.addEventListener('click',()=>{const wasOpen=b.getAttribute('aria-expanded')==='true';closeDropdowns();b.setAttribute('aria-expanded',String(!wasOpen));const panel=document.getElementById(b.getAttribute('aria-controls'));if(panel)panel.hidden=wasOpen;}));
+  menu.addEventListener('click',e=>{e.stopPropagation();nav.classList.contains('open')?close():open();});
+  nav.querySelectorAll('.lab-panel a,.lab-direct').forEach(a=>a.addEventListener('click',close));
+  document.addEventListener('click',e=>{if(!nav.contains(e.target)&&e.target!==menu){closeDropdowns();if(nav.classList.contains('open'))close();}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){const opened=buttons.find(b=>b.getAttribute('aria-expanded')==='true');if(opened){closeDropdowns();opened.focus();}else if(nav.classList.contains('open')){close();menu.focus();}}});
   const header=menu.closest('header.top');
   if(header){
-    const updateMenuFit=()=>{
-      const brand=header.querySelector('.brand');
-      // Measure the uncollapsed navigation, not estimated link widths.
+    let fullNavWidth=0;
+    const fit=()=>{
       header.classList.remove('norwood-menu-collapsed');
-      const logoRight=brand?brand.getBoundingClientRect().right:0;
-      const navRect=nav.getBoundingClientRect();
-      const collapse=navRect.left-logoRight<8 || navRect.right>header.getBoundingClientRect().right+1;
+      const brand=header.querySelector('.brand');
+      const logoWidth=brand?.getBoundingClientRect().width||220;
+      const gap=16,headerPadding=36,navGap=7;
+      const items=[...nav.children];
+      const widths=items.map(el=>Math.ceil(el.getBoundingClientRect().width||el.scrollWidth));
+      const visibleTotal=widths.reduce((sum,w)=>sum+w,0)+Math.max(0,items.length-1)*navGap;
+      if(visibleTotal>0)fullNavWidth=visibleTotal;
+      const collapse=header.getBoundingClientRect().width-headerPadding-logoWidth-gap<fullNavWidth+8;
       header.classList.toggle('norwood-menu-collapsed',collapse);
       if(!collapse&&nav.classList.contains('open'))close();
     };
-    updateMenuFit();
-    window.addEventListener('resize',updateMenuFit,{passive:true});
-    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(updateMenuFit);
+    requestAnimationFrame(fit);
+    window.addEventListener('resize',fit,{passive:true});
+    document.fonts?.ready.then(fit);
   }
   const root=document.documentElement;const saved=localStorage.getItem('norwood-text-size')||'standard';root.dataset.textSize=saved;const contrast=localStorage.getItem('norwood-high-contrast')==='true';root.dataset.highContrast=String(contrast);
   const ctl=document.createElement('div');ctl.className='text-size-controls accessibility-controls';ctl.setAttribute('aria-label','Accessibility and language controls');ctl.innerHTML='<span class="sr-only">Display and language settings</span><button type="button" data-text-size-menu aria-haspopup="menu" aria-expanded="false" aria-label="Choose text size">Aa</button><button type="button" data-contrast aria-label="Toggle high contrast">◐</button><button type="button" data-translate aria-haspopup="menu" aria-expanded="false" aria-label="Translate this page">🌐</button>';document.body.appendChild(ctl);
