@@ -8,7 +8,6 @@
  const status=document.getElementById('accessibilityStatus');
  const checkboxes=Object.fromEntries(Object.entries(ids).map(([k,id])=>[k,document.getElementById(id)]));
  if(!status||Object.values(checkboxes).some(x=>!x))return;
- const bbox='42.14,-71.26,42.23,-71.15';
  const cache={places:null,paths:null},layers={places:null,paths:null};
  const osm='https://www.openstreetmap.org/copyright';
  const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
