@@ -14,7 +14,7 @@
   'https://overpass.kumi.systems/api/interpreter'
  ];
  const queries={
-  places:`[out:json][timeout:25];nwr["wheelchair"](\${bbox});out center;`,
+  places:`[out:json][timeout:25];(nwr["wheelchair"]["amenity"](\${bbox});nwr["wheelchair"]["shop"](\${bbox});nwr["wheelchair"]["tourism"](\${bbox});nwr["wheelchair"]["leisure"](\${bbox});nwr["wheelchair"]["healthcare"](\${bbox});nwr["wheelchair"]["office"](\${bbox}););out center;`,
   paths:`[out:json][timeout:25];(
    way["highway"~"^(footway|pedestrian|path)$"]["wheelchair"~"^(yes|designated|limited)$"](\${bbox});
    nwr["kerb"~"^(lowered|flush|rolled|raised|no)$"](\${bbox});
