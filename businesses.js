@@ -72,7 +72,18 @@ function classifyBusiness(b){
 }
 businesses.forEach(b=>{b.taxonomy=classifyBusiness(b);});
 window.NORWOOD_BUSINESS_TAXONOMY=Object.fromEntries(businesses.map(b=>[String(b.name||'').toLowerCase(),b.taxonomy]));
-function card(b){const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');const mapLink=b.address?'<p class="business-map-item-link"><a href="'+esc(b.mapUrl||('map.html?business='+encodeURIComponent(b.name)))+'">Show on map →</a></p>':'';return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+sponsorBadge(b)+'</div>'+(details?'<p>'+details+'</p>':'')+mapLink+'</article>';}
+function card(b){
+ const title=b.website?'<a class="resource-name" href="'+esc(b.website)+'" target="_blank" rel="noopener"><b>'+esc(b.name)+'</b> <span aria-hidden="true">↗</span></a>':'<span class="resource-name resource-name-no-link"><b>'+esc(b.name)+'</b></span>';
+ const details=[b.address,b.phone].filter(Boolean).map(esc).join(' · ');
+ const description=b.description?'<p class="business-description">'+esc(b.description)+'</p>':'';
+ const hours=b.hours?'<p class="business-hours"><strong>Hours:</strong> '+esc(b.hours)+'</p>':'';
+ const extra=[];
+ if(b.email)extra.push('<a href="mailto:'+encodeURIComponent(b.email)+'">Email bookstore</a>');
+ if(b.eventsUrl&&/^https:\/\//i.test(b.eventsUrl))extra.push('<a href="'+esc(b.eventsUrl)+'" target="_blank" rel="noopener">Events &amp; author visits ↗</a>');
+ const extraLinks=extra.length?'<p class="business-extra-links">'+extra.join(' · ')+'</p>':'';
+ const mapLink=b.address?'<p class="business-map-item-link"><a href="'+esc(b.mapUrl||('map.html?business='+encodeURIComponent(b.name)))+'">Show on map →</a></p>':'';
+ return '<article class="resource-item business-item"><div class="resource-meta"><span class="badge">'+esc(b.category||'Local business')+'</span></div><div class="resource-title-row">'+title+sponsorBadge(b)+'</div>'+(details?'<p>'+details+'</p>':'')+description+hours+extraLinks+mapLink+'</article>';
+}
 function parse(){const p=location.hash.slice(1).split('/');if(['family','fitness'].includes(p[0])&&p[1]==='driving')return {group:'training',sub:'driving'};return {group:p[0],sub:p[1]};}
 function setHash(h){location.hash=h;}
 
