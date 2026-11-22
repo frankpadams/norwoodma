@@ -9,7 +9,7 @@
  const checkboxes=Object.fromEntries(Object.entries(ids).map(([k,id])=>[k,document.getElementById(id)]));
  if(!status||Object.values(checkboxes).some(x=>!x))return;
  const bbox='42.14,-71.26,42.23,-71.15';
- const overpass=['https://overpass.kumi.systems/api/interpreter','https://overpass-api.de/api/interpreter'];
+ const overpass=['https://overpass.private.coffee/api/interpreter','https://ovp.dresel.systems/api-na/interpreter','https://overpass-api.de/api/interpreter'];
  const queries={
   places:`[out:json][timeout:20];(nwr["wheelchair"]["amenity"](\${bbox});nwr["wheelchair"]["shop"](\${bbox});nwr["wheelchair"]["tourism"](\${bbox});nwr["wheelchair"]["leisure"](\${bbox});nwr["wheelchair"]["healthcare"](\${bbox});nwr["wheelchair"]["office"](\${bbox}););out center;`,
   paths:`[out:json][timeout:20];(way["highway"~"^(footway|pedestrian|path)$"]["wheelchair"~"^(yes|designated|limited)$"](\${bbox});nwr["kerb"~"^(lowered|flush|rolled|raised|no)$"](\${bbox});nwr["tactile_paving"="yes"](\${bbox}););out center geom;`
@@ -32,7 +32,7 @@
   const query=queries[key].replaceAll('${bbox}',bbox);
   let lastError;
   for(const endpoint of overpass){
-   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),18000);
+   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
    try{
     const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams({data:query}),signal:controller.signal});
     if(!response.ok)throw Error('OpenStreetMap query returned '+response.status);
