@@ -92,7 +92,7 @@
  function updateStatus(){
   const places=checkboxes.places.checked?layers.places?.count:null;
   const paths=checkboxes.paths.checked?layers.paths?.count:null;
-  if(places===null&&paths===null)return;
+  if(places===null&&paths===null){status.textContent='Accessibility layers use community-contributed OpenStreetMap data around Norwood. Missing information does not mean a place or route is inaccessible. Verify access details before travel.';return;}
   const placeText=places===null?'':places+' mapped place'+(places===1?'':'s')+' with wheelchair information';
   const pathText=paths===null?'':paths+' mapped path or crossing feature'+(paths===1?'':'s');
   status.textContent=[placeText,pathText].filter(Boolean).join('; ')+'. Community-contributed details may be incomplete; tagged paths do not establish a continuous accessible route.';
