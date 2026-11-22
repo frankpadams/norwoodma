@@ -902,14 +902,7 @@ window.NORWOOD_BUSINESSES=[
     "781-352-2336",
     "https://www.schoolofrock.com/locations/norwood"
   ],
-  [
-    "Norwood Music Studios",
-    "Music Schools & Lessons",
-    "",
-    "",
-    "https://norwoodmusicstudios.com/"
-  ],
-  [
+    [
     "Merry Melody Music Academy",
     "Music Schools & Lessons",
     "",
@@ -4181,9 +4174,9 @@ window.NORWOOD_BUSINESSES=[
   [
     "Environmental Health Services",
     "Environmental & Pest Services",
-    "Norwood",
-    "",
-    ""
+    "823 Pleasant Street, Norwood, MA 02062",
+    "781-769-9111",
+    "https://www.ehspest.com/"
   ],
   [
     "LaRosa Landscaping",
@@ -4234,14 +4227,7 @@ window.NORWOOD_BUSINESSES=[
     "781-762-0127",
     ""
   ],
-  [
-    "Rock On Adventure",
-    "Sports & Recreation",
-    "Norwood",
-    "",
-    ""
-  ],
-  [
+    [
     "United Citrus Products Corp",
     "Food Distribution & Wholesale",
     "Norwood",
