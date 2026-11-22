@@ -13,7 +13,11 @@ header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: no-referrer');
 if (!empty($_SESSION['bingo_authorized'])) {
   header('Content-Type: text/html; charset=utf-8');
-  readfile(__DIR__ . '/townmeetingbingo.html');
+  $file = file_get_contents(__DIR__ . '/townmeetingbingo-content.php');
+  if ($file === false) { http_response_code(503); exit('Bingo temporarily unavailable.'); }
+  $boundary = strpos($file, '?>');
+  if ($boundary === false) { http_response_code(503); exit('Bingo temporarily unavailable.'); }
+  echo substr($file, $boundary + 2);
   exit;
 }
 $hash = '2eaceb5891bbd08d3188154d17f116cab7ca536749579cc1ff04b14e2fc70387';
