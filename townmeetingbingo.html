@@ -1,1 +1,52 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive"><meta http-equiv="refresh" content="0;url=/townmeetingbingo-gate.php"><title>Private Town Meeting Bingo</title></head><body><p>Private Town Meeting Bingo requires a password. <a href="/townmeetingbingo-gate.php">Continue to password entry</a>.</p></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer">
+<title>Private Town Meeting Bingo | Norwood.ma</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#f3f6fa;color:#17384d;display:grid;place-items:center;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:22px}
+main{max-width:440px;width:100%;background:#fff;padding:30px;border:1px solid #d5e0e6;border-radius:14px;box-shadow:0 10px 32px #003b711c}
+img{max-width:220px;display:block;margin-bottom:23px}h1{margin:0 0 11px;font:700 28px Georgia,serif;color:#003b71}
+p{line-height:1.5;margin:0 0 16px}label{display:block;font-weight:700;margin-bottom:7px}
+input{font:inherit;width:100%;padding:12px;border:1px solid #8da2b2;border-radius:8px;margin-bottom:14px}
+button{font:inherit;font-weight:800;cursor:pointer;background:#003b71;color:white;border:0;border-radius:8px;padding:12px 20px;width:100%}
+button:hover{background:#12558c}button:disabled{opacity:.65;cursor:wait}.error{color:#8d221b;margin:0 0 14px;font-weight:700}
+</style></head><body>
+<main><a href="/"><img src="/assets/logo-dark-approved.png" alt="Norwood.ma"></a>
+<h1>Town Meeting Bingo</h1><p>Enter the password to access this private activity.</p>
+<form id="bingo-access"><label for="bingo-password">Password</label><input type="password" id="bingo-password" autocomplete="current-password" required><p class="error" id="bingo-error" role="alert" hidden></p><button type="submit">Open Bingo</button></form>
+<noscript><p>Please enable JavaScript to open this activity.</p></noscript>
+</main><script src="townmeetingbingo-data.js"></script><script>
+(function(){
+  const payload=window.NORWOOD_BINGO_PAYLOAD,form=document.getElementById('bingo-access');
+  const input=document.getElementById('bingo-password'),error=document.getElementById('bingo-error'),button=form.querySelector('button');
+  const bytes=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  const rot=(x,n)=>(x<<n)|(x>>>(32-n));
+  function chacha(data,key,nonce){
+    const words=a=>Array.from({length:a.length/4},(_,i)=>((a[i*4]|a[i*4+1]<<8|a[i*4+2]<<16|a[i*4+3]<<24)>>>0));
+    const state=[0x61707865,0x3320646e,0x79622d32,0x6b206574,...words(key),0,...words(nonce)];
+    const output=new Uint8Array(data.length);
+    function qr(x,a,b,c,d){x[a]=(x[a]+x[b])>>>0;x[d]=rot(x[d]^x[a],16);x[c]=(x[c]+x[d])>>>0;x[b]=rot(x[b]^x[c],12);x[a]=(x[a]+x[b])>>>0;x[d]=rot(x[d]^x[a],8);x[c]=(x[c]+x[d])>>>0;x[b]=rot(x[b]^x[c],7)}
+    for(let off=0;off<data.length;off+=64){state[12]=(off/64)>>>0;const x=state.slice();
+      for(let i=0;i<10;i++){qr(x,0,4,8,12);qr(x,1,5,9,13);qr(x,2,6,10,14);qr(x,3,7,11,15);qr(x,0,5,10,15);qr(x,1,6,11,12);qr(x,2,7,8,13);qr(x,3,4,9,14)}
+      for(let i=0;i<16;i++){const v=(x[i]+state[i])>>>0;for(let j=0;j<4&&off+i*4+j<data.length;j++)output[off+i*4+j]=data[off+i*4+j]^((v>>>(8*j))&255)}
+    }
+    return output;
+  }
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();error.hidden=true;button.disabled=true;button.textContent='Checking…';
+    try{
+      if(!payload||!window.crypto?.subtle)throw new Error('Your browser does not support secure unlocking.');
+      const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(input.value),'PBKDF2',false,['deriveBits']);
+      const bits=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:bytes(payload.salt),iterations:payload.iterations},material,512);
+      const key=new Uint8Array(bits),cipher=bytes(payload.ciphertext);
+      const mac=await crypto.subtle.importKey('raw',key.slice(32),'HMAC',false,['verify']);
+      const ok=await crypto.subtle.verify('HMAC',mac,bytes(payload.tag),cipher);
+      if(!ok)throw new Error('Incorrect password.');
+      const game=new TextDecoder('utf-8',{fatal:true}).decode(chacha(cipher,key.slice(0,32),bytes(payload.nonce)));
+      document.open();document.write(game);document.close();
+    }catch(err){error.textContent=err?.message==='Incorrect password.'?'Incorrect password.':('Unable to open Bingo: '+(err?.message||'Unknown error'));error.hidden=false;input.select();}
+    finally{button.disabled=false;button.textContent='Open Bingo';}
+  });
+})();
+</script></body></html>
