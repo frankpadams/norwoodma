@@ -307,9 +307,11 @@
       const brandWidth=brand?.getBoundingClientRect().width||0;
       const available=header.clientWidth-padding-brandWidth-gap;
       const required=nav.scrollWidth;
-      const collapse=required>available+1;
+      const compact=window.matchMedia('(max-width:760px)').matches;
+      const collapse=compact||required>available+1;
+      const wasCollapsed=header.classList.contains('norwood-menu-collapsed');
       header.classList.toggle('norwood-menu-collapsed',collapse);
-      if(!collapse&&nav.classList.contains('open'))close();
+      if((!collapse||(collapse&&!wasCollapsed))&&nav.classList.contains('open'))close();
     };
     requestAnimationFrame(fit);
     window.addEventListener('resize',fit,{passive:true});
