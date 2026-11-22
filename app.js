@@ -352,6 +352,30 @@ function diversifyAdjacentOrganizations(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
+ // Optional curated regional events. Keep them source-isolated: never add them to the
+ // default Norwood community calendar, even if they are family shows or festivals.
+ try{
+   const regionalResponse=await fetch('data/regional-events.json',{cache:'no-store'});
+   if(regionalResponse.ok){
+     const regionalItems=await regionalResponse.json();
+     if(Array.isArray(regionalItems)){
+       for(const x of regionalItems){
+         if(!x||!x.id||!x.title||!/^\\d{4}-\\d{2}-\\d{2}$/.test(String(x.start_date||'')))continue;
+         const id='regional-curated-'+x.id;
+         if(items.some(e=>e.id===id))continue;
+         items.push({
+           id,title:x.title,start:{date:x.start_date,...(x.start_time?{time:x.start_time}:{})},
+           ...(x.end_date?{end:{date:x.end_date}}:{}),
+           venue:x.venue||'',town:x.city||'',category:'regional',
+           organizer:x.venue||'Regional organizer',source_id:'regional-curated',
+           source_url:x.source_url||'',public_access:'public',curated_default:false,
+           whats_happening_default:false,calendar_ids:['regional-curated'],
+           notes:[x.category,x.audience,x.notes].filter(Boolean).join(' · ')
+         });
+       }
+     }
+   }
+ }catch(e){console.warn('Optional regional calendar unavailable',e)}
  // Community-submitted November 2026 events; avoid duplicate entries from future feed updates.
  if(!items.some(e=>e.start?.date==='2026-11-07'&&/winsmith mill holiday kickoff/i.test(e.title||''))){
   items.push({id:'winsmith-holiday-kickoff-2026',title:'Winsmith Mill Holiday Kickoff — Books and Bulldogs',start:{date:'2026-11-07',time:'10:00'},end:{date:'2026-11-07',time:'17:00'},venue:'Books and Bulldogs at Winsmith Mill',address:'61 Endicott Street, Norwood, MA',category:'community',organizer:'Books and Bulldogs',source_id:'books-and-bulldogs-community-post',public_access:'public',publish_candidate:true,curated_default:true,notes:'Holiday kickoff with Christmas-themed books, raffles and giveaways throughout the day. Meet small-town romance author Denise Latham from 10 AM to noon.'});
