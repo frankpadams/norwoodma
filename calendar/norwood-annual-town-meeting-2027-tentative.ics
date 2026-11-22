@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Norwood.ma//Town Meeting Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:norwood-annual-town-meeting-2027-tentative@norwood.ma
+DTSTAMP:20261122T070000Z
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270511
+SUMMARY:Norwood Annual Town Meeting (expected date)
+DESCRIPTION:Tentative calendar placeholder based on the regular second-Monday-in-May schedule. Time and location are not yet confirmed. Check official Norwood Town Meeting notices for updates: https://www.norwoodma.gov/government/committees_boards/town_meeting/town_meeting_notices_and_documents.php
+URL:https://www.norwood.ma/town-meeting-archive.html
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
