@@ -8,6 +8,12 @@
  const status=document.getElementById('accessibilityStatus');
  const checkboxes=Object.fromEntries(Object.entries(ids).map(([k,id])=>[k,document.getElementById(id)]));
  if(!status||Object.values(checkboxes).some(x=>!x))return;
+ const bbox='42.14,-71.26,42.23,-71.15';
+ const overpass=['https://overpass.kumi.systems/api/interpreter','https://overpass-api.de/api/interpreter'];
+ const queries={
+  places:`[out:json][timeout:20];(nwr["wheelchair"]["amenity"](\${bbox});nwr["wheelchair"]["shop"](\${bbox});nwr["wheelchair"]["tourism"](\${bbox});nwr["wheelchair"]["leisure"](\${bbox});nwr["wheelchair"]["healthcare"](\${bbox});nwr["wheelchair"]["office"](\${bbox}););out center;`,
+  paths:`[out:json][timeout:20];(way["highway"~"^(footway|pedestrian|path)$"]["wheelchair"~"^(yes|designated|limited)$"](\${bbox});nwr["kerb"~"^(lowered|flush|rolled|raised|no)$"](\${bbox});nwr["tactile_paving"="yes"](\${bbox}););out center geom;`
+ };
  const cache={places:null,paths:null},layers={places:null,paths:null};
  const osm='https://www.openstreetmap.org/copyright';
  const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -23,15 +29,21 @@
  }
  async function load(key){
   if(cache[key])return cache[key];
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),30000);
-  try{
-   const response=await fetch('accessibility-map.php?layer='+encodeURIComponent(key),{cache:'default',credentials:'same-origin',signal:controller.signal});
-   if(!response.ok)throw Error('Accessibility data request returned '+response.status);
-   const data=await response.json();
-   if(!Array.isArray(data.elements))throw Error('Unexpected OpenStreetMap response');
-   cache[key]=data.elements;
-   return cache[key];
-  }finally{clearTimeout(timer);}
+  const query=queries[key].replaceAll('${bbox}',bbox);
+  let lastError;
+  for(const endpoint of overpass){
+   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),18000);
+   try{
+    const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams({data:query}),signal:controller.signal});
+    if(!response.ok)throw Error('OpenStreetMap query returned '+response.status);
+    const data=await response.json();
+    if(!Array.isArray(data.elements))throw Error('Unexpected OpenStreetMap response');
+    cache[key]=data.elements;
+    clearTimeout(timer);
+    return cache[key];
+   }catch(error){lastError=error;clearTimeout(timer);}
+  }
+  throw lastError||Error('OpenStreetMap data is unavailable');
  }
  function popup(e,key){
   const t=e.tags||{},rows=[];
