@@ -206,6 +206,7 @@ window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
  nav.querySelectorAll('.lab-panel a,.lab-direct').forEach(a=>a.addEventListener('click',closeMenu));
  document.addEventListener('click',e=>{if(!header.contains(e.target)){closeDropdowns();if(nav.classList.contains('open'))closeMenu();}else if(!nav.contains(e.target)&&e.target!==menu){closeDropdowns();}});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){const opened=buttons.find(b=>b.getAttribute('aria-expanded')==='true');if(opened){closeDropdowns();opened.focus();}else if(nav.classList.contains('open')){closeMenu();menu.focus();}}});
+ let fullNavWidth=0;
  const fit=()=>{
    // Measure the prototype's actual link/button widths. The production header similarly
    // switches to its hamburger as soon as full-width navigation no longer fits beside the logo.
@@ -213,7 +214,11 @@ window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
    const logoWidth=brand?.getBoundingClientRect().width||220;
    const gap=16,headerPadding=36,navGap=7;
    const items=[...nav.children];
-   const total=items.reduce((sum,el)=>sum+Math.ceil(el.getBoundingClientRect().width||el.scrollWidth),0)+Math.max(0,items.length-1)*navGap;
+   // Retain natural desktop widths while the navigation is hidden in hamburger mode.
+   const visibleWidths=items.map(el=>Math.ceil(el.getBoundingClientRect().width||el.scrollWidth));
+   const visibleTotal=visibleWidths.reduce((sum,w)=>sum+w,0)+Math.max(0,items.length-1)*navGap;
+   if(visibleTotal>Math.max(0,items.length-1)*navGap)fullNavWidth=visibleTotal;
+   const total=fullNavWidth;
    const collapse=header.getBoundingClientRect().width-headerPadding-logoWidth-gap<total+8;
    header.classList.toggle('norwood-menu-collapsed',collapse);
    if(!collapse&&nav.classList.contains('open'))closeMenu();
