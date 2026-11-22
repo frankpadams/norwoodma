@@ -853,17 +853,13 @@ window.NORWOOD_BUSINESSES=[
     "781-326-5805",
     "https://toplegendbarbershop.com/"
   ],
-  {
-    "name": "Town Common Books",
-    "category": "Books & Local Shopping",
-    "address": "679 Washington Street, Norwood, MA 02062",
-    "phone": "781-352-3776",
-    "website": "https://www.towncommonbooks.com/",
-    "email": "info@towncommonbooks.com",
-    "hours": "Regular hours not publicly confirmed; call or check the bookstore before visiting.",
-    "description": "Independent, locally owned bookstore offering new and used books, gifts, toys, and community events.",
-    "eventsUrl": "https://www.towncommonbooks.com/events-1"
-  },
+  [
+    "Town Common Books",
+    "Books & Local Shopping",
+    "679 Washington Street, Norwood, MA 02062",
+    "781-352-3776",
+    "https://www.towncommonbooks.com/"
+  ],
   [
     "THELIMO Services",
     "Notary Services",
@@ -5821,6 +5817,12 @@ window.NORWOOD_BUSINESSES=[
     id: 'biz-' + (i + 1),
     name: b[0], category: labels[0] || 'Local business', labels, tags: labels,
     address, locationHint: rawAddress && !isSpecificAddress ? rawAddress : '',
-    phone: b[3], website: b[4], town: locality ? locality[1] : 'Norwood'
+    phone: b[3], website: b[4], town: locality ? locality[1] : 'Norwood',
+    ...(b[0] === 'Town Common Books' ? {
+      email: 'info@towncommonbooks.com',
+      hours: 'Regular hours not publicly confirmed; call or check the bookstore before visiting.',
+      description: 'Independent, locally owned bookstore offering new and used books, gifts, toys, and community events.',
+      eventsUrl: 'https://www.towncommonbooks.com/events-1'
+    } : {})
   };
 });
