@@ -89,18 +89,23 @@
   return {layer:group,count};
  }
  const builders={places:makePlaces,paths:makePaths};
+ function updateStatus(){
+  const places=checkboxes.places.checked?layers.places?.count:null;
+  const paths=checkboxes.paths.checked?layers.paths?.count:null;
+  if(places===null&&paths===null)return;
+  const placeText=places===null?'':places+' mapped place'+(places===1?'':'s')+' with wheelchair information';
+  const pathText=paths===null?'':paths+' mapped path or crossing feature'+(paths===1?'':'s');
+  status.textContent=[placeText,pathText].filter(Boolean).join('; ')+'. Community-contributed details may be incomplete; tagged paths do not establish a continuous accessible route.';
+ }
  async function toggle(key){
   const input=checkboxes[key];
-  if(!input.checked){if(layers[key])map.removeLayer(layers[key].layer);return;}
+  if(!input.checked){if(layers[key])map.removeLayer(layers[key].layer);updateStatus();return;}
   status.textContent=key==='places'?'Loading wheelchair access information…':'Loading accessible paths and crossing details…';
   try{
    const result=builders[key](await load(key));layers[key]=result;
    if(!input.checked)return;
    result.layer.addTo(map);
-   const count=result.count;
-   status.textContent=key==='places'
-    ?count+' mapped place or feature'+(count===1?'':'s')+' with wheelchair information. OpenStreetMap data are community contributed and may be incomplete.'
-    :count+' mapped path or crossing feature'+(count===1?'':'s')+'. Tagged paths do not guarantee an accessible route; curb and tactile details may be incomplete.';
+   updateStatus();
   }catch(error){
    if(input.checked)status.textContent='Accessibility data could not be loaded right now. Try again later or view the OpenStreetMap map.';
    console.warn('Accessibility map layer could not load',error);
