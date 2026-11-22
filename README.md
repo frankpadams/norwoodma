@@ -1,10 +1,10 @@
-# Norwood.ma v2.0.0
+# Norwood.ma v2.1.0
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.0.0 — introduces a shared, responsive primary navigation with Home, four topic menus, More and Contact.
+**Current release:** v2.1.0 — adds community-mapped accessibility information and accessible path/crossing details to Explore Norwood by Map.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -55,7 +55,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Business categories/subcategories should provide a map route so users can compare nearby options.
 - Food & Drink is backed by the maintained restaurant dataset and includes the Dinner Spinner.
 - Parks/trails/recreation pages expose known amenities and mapping.
-- Explore Norwood by Map keeps categories and boundary/live overlays together in a layer sidebar, with related precinct, school-district, DeFlock, and trail links below the controls. The town outline is on by default; other overlays are off by default. Search sits between the map and result list. On an ordinary page load the map does not geocode places until the visitor selects a category or searches. Small marker clusters fan out when tapped so nearby businesses remain discoverable; duplicate aliases for the same business are omitted from map pins. Voting-precinct boundaries use the official MassGIS 2022 wards-and-precincts service. The MassDOT public GeoJSON work-zone feed is no-signup and CC0. A same-origin PHP relay avoids browser cross-origin blocks; the map displays active events near Norwood and refreshes every 60 seconds while enabled. MBTA V3 data provides live 34E bus and Franklin/Foxboro Line train locations, route paths, and Norwood stops; vehicles refresh every 30 seconds while enabled and appear only when reported. ALPR locations are community-mapped through OpenStreetMap via DeFlock and may be incomplete.
+- Explore Norwood by Map keeps categories and boundary/live overlays together in a layer sidebar, with related precinct, school-district, DeFlock, and trail links below the controls. The town outline is on by default; other overlays are off by default. Search sits between the map and result list. On an ordinary page load the map does not geocode places until the visitor selects a category or searches. Small marker clusters fan out when tapped so nearby businesses remain discoverable; duplicate aliases for the same business are omitted from map pins. Voting-precinct boundaries use the official MassGIS 2022 wards-and-precincts service. The MassDOT public GeoJSON work-zone feed is no-signup and CC0. A same-origin PHP relay avoids browser cross-origin blocks; the map displays active events near Norwood and refreshes every 60 seconds while enabled. MBTA V3 data provides live 34E bus and Franklin/Foxboro Line train locations, route paths, and Norwood stops; vehicles refresh every 30 seconds while enabled and appear only when reported. ALPR locations are community-mapped through OpenStreetMap via DeFlock and may be incomplete. Optional accessibility overlays show wheelchair tags at mapped places and wheelchair-tagged paths, curb details and tactile paving around Norwood. They load from OpenStreetMap on demand, include contextual legends and source information, and may be incomplete; missing tags do not indicate inaccessibility.
 - How Do I provides task-oriented resident guidance and links to authoritative departments/services.
 
 ### Civic information and alerts
