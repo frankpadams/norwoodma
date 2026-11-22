@@ -847,6 +847,13 @@ window.NORWOOD_BUSINESSES=[
     "https://www.premiergymnasticsnorwood.com/"
   ],
   [
+    "Top Legend Barbershop",
+    "Barber Shops",
+    "923 High Street, Westwood, MA 02090",
+    "781-326-5805",
+    "https://toplegendbarbershop.com/"
+  ],
+  [
     "Town Common Books",
     "Books & Local Shopping",
     "",
