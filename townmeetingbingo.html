@@ -40,7 +40,7 @@ button:hover{background:#12558c}button:disabled{opacity:.65;cursor:wait}.error{c
       const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(input.value),'PBKDF2',false,['deriveBits']);
       const bits=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:bytes(payload.salt),iterations:payload.iterations},material,512);
       const key=new Uint8Array(bits),cipher=bytes(payload.ciphertext);
-      const mac=await crypto.subtle.importKey('raw',key.slice(32),'HMAC',false,['verify']);
+      const mac=await crypto.subtle.importKey('raw',key.slice(32),{name:'HMAC',hash:'SHA-256'},false,['verify']);
       const ok=await crypto.subtle.verify('HMAC',mac,bytes(payload.tag),cipher);
       if(!ok)throw new Error('Incorrect password.');
       const game=new TextDecoder('utf-8',{fatal:true}).decode(chacha(cipher,key.slice(0,32),bytes(payload.nonce)));
