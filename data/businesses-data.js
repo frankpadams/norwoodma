@@ -1315,14 +1315,7 @@ window.NORWOOD_BUSINESSES=[
     "781-278-3700",
     "https://www.gza.com/"
   ],
-  [
-    "National Amusements",
-    "Corporate Offices, Entertainment & Major Employers",
-    "",
-    "",
-    "https://www.nationalamusements.com/"
-  ],
-  [
+    [
     "Subaru of New England",
     "Automotive Distribution & Major Employers",
     "111 Morse Street, Norwood, MA 02062",
@@ -4094,14 +4087,7 @@ window.NORWOOD_BUSINESSES=[
     "781-619-9500",
     "https://www.blcompanies.com/"
   ],
-  [
-    "Delphi Valuation Advisors",
-    "Real Estate Appraisal & Valuation",
-    "Norwood",
-    "",
-    ""
-  ],
-  [
+    [
     "Stiles General Contracting",
     "General Contracting & Construction",
     "Norwood",
