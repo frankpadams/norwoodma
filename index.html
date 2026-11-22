@@ -752,7 +752,7 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
  const ads=[
   {href:'https://bostonmobiletire.com',src:'/assets/ads/BMT2.webp',alt:'Boston Mobile Tire'},
   {href:'https://towncommonbooks.com',src:'/assets/ads/TCB.webp?v=20261120',alt:'Town Common Books — Books, Gifts, Community. Norwood’s Independent Bookstore.'},
-  {href:'https://toplegendbarbershop.com/',type:'top-legend',alt:'Top Legend Barbershop — Stay Sharp With Top Legend. 923 High Street, Westwood. 781-326-5805.'}
+  {href:'https://toplegendbarbershop.com/',type:'top-legend',alt:'Top Legend Barber Shop — 923 High Street, Westwood, MA. 781-326-5805. Appointments and walk-ins welcome.'}
  ];
  let current=0;const link=document.getElementById('previewSponsorLink'),img=document.getElementById('previewSponsorImage'),dots=document.getElementById('previewSponsorDots');
  if(!link||!img||!dots)return;
@@ -760,7 +760,7 @@ appearance:none;-webkit-appearance:none;background:transparent!important;border:
  top.className='top-legend-sharp-ad';
  top.setAttribute('role','img');
  top.setAttribute('aria-label',ads[2].alt);
- top.innerHTML='<div class="top-legend-sharp-logo" aria-hidden="true"></div><div class="top-legend-sharp-copy"><strong class="top-legend-sharp-head">Stay Sharp With<br>Top Legend</strong><span class="top-legend-sharp-hours">MON–FRI 8 AM–6:30 PM<br>SAT 8 AM–5:30 PM</span><strong class="top-legend-sharp-phone">781-326-5805</strong><span class="top-legend-sharp-address">923 High Street · Westwood, MA</span><span class="top-legend-sharp-welcome">Appointments &amp; Walk-ins Welcome</span></div>';
+ top.innerHTML='<div class="top-legend-sharp-logo" aria-hidden="true"></div><div class="top-legend-sharp-copy"><strong class="top-legend-sharp-head">Top Legend<br>Barber Shop</strong><span class="top-legend-sharp-hours">MON–FRI 8 AM–6:30 PM<br>SAT 8 AM–5:30 PM</span><strong class="top-legend-sharp-phone">781-326-5805</strong><span class="top-legend-sharp-address">923 High Street · Westwood, MA</span><span class="top-legend-sharp-welcome">Appointments &amp; Walk-ins Welcome</span></div>';
  top.style.display='none';
  link.appendChild(top);
  function show(n){
