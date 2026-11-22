@@ -4265,8 +4265,8 @@ window.NORWOOD_BUSINESSES=[
   [
     "K&M Studio",
     "Creative & Professional Services",
-    "Norwood",
-    "",
+    "55 Carnegie Row, Norwood, MA 02062",
+    "781-769-1020",
     ""
   ],
   [
