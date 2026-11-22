@@ -14,7 +14,9 @@
   {id:'massgisWater',title:'Drinking-water protection',service:geoserver,layers:['massgis:GISDATA.ZONE2_POLY','massgis:GISDATA.IWPA_POLY','massgis:GISDATA.SWP_ZONES_POLY'],description:'These are water-supply protection boundaries, NOT flood-risk zones. Each map symbol is supplied by MassGIS. Click a shaded area to inspect available feature attributes.',waterGuide:true,link:'https://www.mass.gov/info-details/massgis-data-massdep-wellhead-protection-areas-zone-ii-zone-i-iwpa',linkText:'MassDEP wellhead definitions'},
   {id:'massgisAerial',title:'Historical aerial imagery',description:'Photographic basemap. The selected year is shown below; this layer does not use thematic shading.'},
   {id:'elementaryZones',title:'Elementary school attendance areas',colors:[['Prescott','#9d65ac'],['Willett','#4479b0'],['Balch','#e08b39'],['Oldham','#54995a'],['Callahan','#cc6177'],['Cleveland','#399b9a']]},
-  {id:'votingPrecincts',title:'Voting precincts',description:'Nine numbered precinct boundaries. Select a precinct on the map for details.'}
+  {id:'votingPrecincts',title:'Voting precincts',description:'Nine numbered precinct boundaries. Select a precinct on the map for details.'},
+  {id:'accessibilityPlacesToggle',title:'Wheelchair access information at places',symbols:[['Wheelchair access tagged yes / designated','#18834b','dot'],['Limited access tagged','#d18a00','dot'],['Not wheelchair accessible tagged','#bd3434','dot'],['Other wheelchair tag','#687983','dot']],description:'Community-contributed OpenStreetMap information for tagged places around Norwood. Missing or untagged places are not shown and are not necessarily inaccessible.',link:'https://www.openstreetmap.org/copyright',linkText:'OpenStreetMap data & contributors ↗'},
+  {id:'accessibilityPathsToggle',title:'Accessible paths & crossing details',symbols:[['Wheelchair access tagged path','#18834b','line'],['Limited wheelchair access tagged path','#d18a00','line'],['Lowered / flush curb detail','#2470a8','dot'],['Tactile paving','#7547a8','square'],['Raised / other curb detail','#bd3434','dot']],description:'Community-contributed OpenStreetMap path, curb and tactile-paving tags. These details do not establish a continuous accessible route; field conditions may differ.',link:'https://www.openstreetmap.org/copyright',linkText:'OpenStreetMap data & contributors ↗'}
  ];
  function legendUrl(service,layer){
   const q=new URLSearchParams({service:'WMS',request:'GetLegendGraphic',version:'1.1.1',format:'image/png',layer,transparent:'true'});
@@ -27,6 +29,17 @@
   if(def.id==='massgisAerial'){
    const year=document.getElementById('massgisAerialYear')?.selectedOptions[0]?.textContent||'Selected year';
    const p=document.createElement('p');p.textContent='Imagery: '+year;p.style.margin='6px 0';card.append(p);
+  }
+  if(def.symbols){
+   const list=document.createElement('div');list.style.cssText='display:grid;gap:5px;margin-top:8px';
+   for(const [label,color,shape] of def.symbols){
+    const row=document.createElement('div');row.style.cssText='display:flex;align-items:center;gap:8px;font-size:.85rem';
+    const swatch=document.createElement('span');
+    swatch.style.cssText=shape==='line'
+     ?'display:inline-block;width:20px;height:4px;flex:none;border-radius:2px;background:'+color
+     :'display:inline-block;width:12px;height:12px;flex:none;border:2px solid #fff;border-radius:'+(shape==='dot'?'50%':'2px')+';background:'+color+';box-shadow:0 0 0 1px #667';
+    row.append(swatch,document.createTextNode(label));list.append(row);
+   }card.append(list);
   }
   if(def.colors){
    const list=document.createElement('div');list.style.cssText='display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:8px';
