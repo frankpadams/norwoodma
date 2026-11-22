@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:44:56.649454Z",
+  "generated_at": "2026-11-22T17:06:21.240549Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
@@ -23,9 +23,9 @@
             "station_verified": true,
             "types": [
               "gas_station",
+              "service",
               "store",
               "point_of_interest",
-              "service",
               "establishment"
             ]
           }
@@ -199,9 +199,9 @@
               "food_store",
               "restaurant",
               "food",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -231,7 +231,6 @@
     "Mobil / On the Run — Norwood Center": {
       "google": {
         "accepted_grades": [
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -314,8 +313,8 @@
               "store",
               "convenience_store",
               "food_store",
-              "food",
               "point_of_interest",
+              "food",
               "establishment"
             ]
           },
@@ -374,31 +373,29 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
+              "store",
               "establishment"
             ]
           },
           {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
+            "address": "683 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Lucky Mart Inc.",
+            "name": "Norwood Convenience and News",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "501 Washington St",
+              "683 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
             "station_verified": false,
             "types": [
               "convenience_store",
-              "grocery_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
-              "service",
+              "store",
               "establishment"
             ]
           }
@@ -461,9 +458,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -484,9 +481,9 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -520,46 +517,6 @@
               "MA"
             ],
             "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
-            "station_verified": true,
-            "types": [
-              "gas_station",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Norwood Bottled Gas",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "305 Boston-Providence Turnpike",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
-            "station_verified": false,
-            "types": [
-              "supplier",
-              "manufacturer",
-              "store",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "394 Providence Hwy, Westwood, MA 02090, USA",
-            "address_verified": false,
-            "name": "Shell",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "394 Providence Hwy",
-              "Westwood",
-              "MA"
-            ],
-            "place_id": "ChIJ2_n8M5qB5IkR78OxSCOOjI8",
             "station_verified": true,
             "types": [
               "gas_station",
@@ -659,9 +616,9 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           }
