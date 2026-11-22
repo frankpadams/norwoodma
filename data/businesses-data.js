@@ -4097,8 +4097,8 @@ window.NORWOOD_BUSINESSES=[
   [
     "BL Companies — Norwood",
     "Engineering, Architecture & Environmental Services",
-    "Norwood",
-    "",
+    "115 Norwood Park South, Suite 206, Norwood, MA 02062",
+    "781-619-9500",
     "https://www.blcompanies.com/"
   ],
   [
@@ -4167,8 +4167,8 @@ window.NORWOOD_BUSINESSES=[
   [
     "Gaston Electrical",
     "Electricians & Electrical",
-    "Norwood",
-    "",
+    "85 Morse Street, Norwood, MA 02062",
+    "781-255-8881",
     ""
   ],
   [
@@ -4384,8 +4384,8 @@ window.NORWOOD_BUSINESSES=[
   [
     "TaxSense",
     "Accounting & Tax Preparation",
-    "Access Road",
-    "",
+    "100 Access Road, Suite 103, Norwood, MA 02062",
+    "781-440-6640",
     ""
   ],
   [
