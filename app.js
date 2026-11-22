@@ -360,7 +360,7 @@ async function loadEvents(){
      const regionalItems=await regionalResponse.json();
      if(Array.isArray(regionalItems)){
        for(const x of regionalItems){
-         if(!x||!x.id||!x.title||!/^\\d{4}-\\d{2}-\\d{2}$/.test(String(x.start_date||'')))continue;
+         if(!x||!x.id||!x.title||!/^\d{4}-\d{2}-\d{2}$/.test(String(x.start_date||'')))continue;
          const id='regional-curated-'+x.id;
          if(items.some(e=>e.id===id))continue;
          items.push({
