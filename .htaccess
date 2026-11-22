@@ -1,7 +1,3 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule ^townmeetingbingo\.html$ townmeetingbingo-gate.php [L,QSA]
-</IfModule>
 Redirect 301 /trails-test.html /trails.html
 ErrorDocument 400 /400.html
 ErrorDocument 403 /403.html
