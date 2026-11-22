@@ -560,7 +560,7 @@
     ]
   },
   {
-    "id": "2026-11-21-brews-and-botanicals-exotic-plant-show-3254bea",
+    "id": "2026-11-21-brews-and-botanicals-exotic-plant-show-d052c0e",
     "title": "Brews and Botanicals Exotic Plant Show",
     "start": {
       "date": "2026-11-21",
@@ -568,21 +568,20 @@
     },
     "end": {
       "date": "2026-11-21",
-      "time": "17:00"
+      "time": null
     },
-    "venue": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
-    "address": "Norwood Taproom, 31 Astor Avenue, Norwood, Massachusetts, 02062, United States",
+    "venue": null,
+    "address": null,
     "category": "community",
     "source_id": "castle-island-calendar",
-    "source_url": "https://www.castleislandbeer.com/calendar",
+    "source_url": "https://www.castleislandbeer.com/calendar/brews-and-botanicals-exotic-plant-show",
     "cost": null,
-    "organizer": "Castle Island Brewing",
     "public_access": "public",
-    "series": null,
+    "series": "Castle Island Brewing — Calendar",
     "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
+    "verification_status": "official_visible_event_page",
+    "notes": "Brews and Botanicals Exotic Plant Show Saturday, November 21, 2026 12:00 PM 5:00 PM Norwood Taproom (map) Google Calendar ICS https://www.facebook.com/share/1DtPpAT1Ev/ View Event →",
+    "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
     "public_access_evidence": "explicit event access field",
@@ -990,66 +989,6 @@
     ]
   },
   {
-    "id": "2026-11-21-mass-cultural-council-publishes-updates-daily-4676a5c",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-21",
-      "time": "20:06"
-    },
-    "end": {
-      "date": "2026-11-21",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 21, 2026 at 08:06 PM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-21-saturday-nov-ac897f0",
-    "title": "Saturday , Nov",
-    "start": {
-      "date": "2026-11-21",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-21",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/havdalah-service.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Saturday , Nov November 21 , 2026 Havdalah Service Shabbat, Nov 21st 4:30p Held in the Beit Simcah MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-21-shabbat-85b34bb",
     "title": "Shabbat",
     "start": {
@@ -1107,6 +1046,36 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-22-mass-cultural-council-publishes-updates-daily-ba748c0",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-22",
+      "time": "00:06"
+    },
+    "end": {
+      "date": "2026-11-22",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 22, 2026 at 12:06 AM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -8980,6 +8949,36 @@
     "verification_status": "verified",
     "notes": "Local romance author Kathleen Reidy signs copies of her new book, Engineering a Love Story. The bookstore’s event page does not require registration.",
     "discovered_by": "official_organization_review",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-12-06-sunday-dec-5ed0fc0",
+    "title": "Sunday , Dec",
+    "start": {
+      "date": "2026-12-06",
+      "time": null
+    },
+    "end": {
+      "date": "2026-12-06",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "faith-temple-beth-david-westwood",
+    "source_url": "https://www.templebethdavid.net/event/hannukah-happening.html",
+    "cost": null,
+    "public_access": "public",
+    "series": "Temple Beth David — Westwood",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Sunday , Dec December 6 , 2026 Hanukkah Happening Sunday, Dec 6th 9:30a to 11:30a MORE INFO",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
     ]
@@ -27237,6 +27236,42 @@
     "public_access_evidence": "explicit event access field",
     "school_scope": "Norwood High School",
     "calendar_ids": [
+      "norwood-family",
+      "norwood-high-athletics",
+      "norwood-sports",
+      "nps-athletics"
+    ]
+  },
+  {
+    "id": "2027-01-09-boys-varsity-basketball-vs-cambridge-rindge-l-0e24042",
+    "title": "Boys Varsity Basketball vs Cambridge Rindge & Latin School — Norwood High School",
+    "start": {
+      "date": "2027-01-09",
+      "time": "18:30"
+    },
+    "end": {
+      "date": "2027-01-09",
+      "time": "20:30"
+    },
+    "venue": "Unknown, Houston TX 11111",
+    "address": "Unknown, Houston TX 11111",
+    "category": "sports",
+    "source_id": "nps-athletics-arbiter-boys-varsity-basketball",
+    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
+    "cost": null,
+    "organizer": "Norwood Boys Varsity Basketball",
+    "public_access": "public",
+    "series": "Norwood Boys Varsity Basketball",
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "Sport: Basketball Level: Boys Varsity Team: Norwood High School Site: Not Listed",
+    "discovered_by": "scheduled_ical",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "school_scope": "Norwood High School",
+    "calendar_ids": [
+      "norwood-community",
       "norwood-family",
       "norwood-high-athletics",
       "norwood-sports",
