@@ -31,19 +31,23 @@
     {
       "id": "top-legend-barbershop",
       "name": "Top Legend Barbershop",
-      "image": "",
+      "image": "/assets/ads/TopLegend.webp",
       "url": "https://toplegendbarbershop.com/",
-      "alt": "Top Legend Barbershop — Westwood, Massachusetts",
-      "placements": [],
+      "alt": "Top Legend Barbershop — Stay Sharp With Top Legend. 923 High Street, Westwood. 781-326-5805.",
+      "placements": [
+        "home-primary"
+      ],
       "active": true
     },
     {
       "id": "town-common-books",
       "name": "Town Common Books",
-      "image": "",
+      "image": "/assets/ads/TCB.webp",
       "url": "https://www.towncommonbooks.com/",
       "alt": "Town Common Books — local independent bookstore",
-      "placements": [],
+      "placements": [
+        "home-primary"
+      ],
       "active": true
     },
     {
