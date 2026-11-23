@@ -25,220 +25,6 @@
     ]
   },
   {
-    "id": "2026-11-22-diy-wrap-your-own-gifts-station-7119fc9",
-    "title": "DIY Wrap Your Own Gifts Station",
-    "start": {
-      "date": "2026-11-22",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": null
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "community",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/diy-wrap-your-own-gifts-station-2/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Looking for a quiet place to wrap your holiday gifts? Come to the Library's DIY Gift Wrapping Station! This station will be stocked with wrapping paper, tape, bows and ribbons, name tags, and other embellishments. Bring your gifts and wrap ",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-22-40th-norwood-turkey-trot-8740eff",
-    "title": "40th Norwood Turkey Trot",
-    "start": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "venue": "Start & Finish Norwood High School 245 Nichols St",
-    "address": null,
-    "category": "community",
-    "source_id": "friends-center-events",
-    "source_url": "https://www.norwoodcenter.org/event/40th-norwood-turkeytrot/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Register Here Email: wingedfootrunning1@gmail.com",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "friends-norwood-center",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-22-crocettis-veterans-turkey-ham-giveaway",
-    "title": "Crocetti’s Turkey & Ham Giveaway for Veterans (East Bridgewater)",
-    "start": {
-      "date": "2026-11-22",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": "13:00"
-    },
-    "venue": "Crocetti’s, East Bridgewater",
-    "town": "East Bridgewater",
-    "category": "community",
-    "source_id": "norwood-veterans-curated",
-    "source_url": "https://eastbridgewaterma.gov/m/newsflash/Home/Detail/231",
-    "organizer": "Crocetti’s / Norwood Veteran Services",
-    "cost": "Free",
-    "public_access": "public",
-    "publish_candidate": true,
-    "curated_default": true,
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports"
-    ],
-    "verification_status": "official_event_date_verified_and_owner_supplied_norwood_notice",
-    "notes": "Eligible veterans may attend Crocetti’s in East Bridgewater on Sunday, Nov. 22, 11am–1pm. Bring valid proof of veteran status. While supplies last, first come, first served. Norwood veterans with transportation or scheduling barriers may register with Norwood Veteran Services before the event. Director Derek Wennerstrand will coordinate retrieval for registered Norwood veterans. Call (781) 762-1240 before the event to register for municipal pickup coordination or request details. Confirm eligibility, direct-attendance registration and pickup arrangements with the office."
-  },
-  {
-    "id": "manual-approved-blackhole-social-skills-2026-11-22",
-    "title": "Dungeons & Dragons and Social Skill Practice",
-    "start": {
-      "date": "2026-11-22",
-      "time": "12:30"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": "14:00"
-    },
-    "venue": "Blackhole Comics",
-    "address": "732 Washington St, Norwood, MA",
-    "town": "Norwood",
-    "category": "family",
-    "source_id": "community-event-submissions",
-    "source_url": "https://www.facebook.com/photo/?fbid=122170487444658701&set=gm.1449392433751429",
-    "cost": "Free",
-    "organizer": "Blackhole Comics",
-    "recurrence": "biweekly",
-    "recurrence_details": "Every other Sunday; confirm schedule with organizer",
-    "public_access": "public",
-    "publish_candidate": true,
-    "verification_status": "moderator_approved_submission",
-    "notes": "Dungeons & Dragons play for children to practice social skills and connect with peers.",
-    "discovered_by": "approved_submission_fallback",
-    "calendar_ids": [
-      "blackhole-comics",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-22-its-a-wonderful-life",
-    "title": "It's a Wonderful Life",
-    "description": "Norwood High School presents It's a Wonderful Life. Tickets are $10 for general admission and $5 for seniors and students. Tickets are available through the GoFan QR code on the event flyer.",
-    "start": {
-      "date": "2026-11-22",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": null
-    },
-    "venue": "Norwood High School Auditorium",
-    "address": "245 Nichols St, Norwood, MA 02062",
-    "town": "Norwood",
-    "category": "performance",
-    "source_id": "user-submitted",
-    "source_url": null,
-    "purchase_url": "https://gofan.co/app/school/MA14680_1",
-    "organizer": "Norwood High School",
-    "cost": "$10 general admission; $5 seniors and students",
-    "public_access": "public",
-    "publish_candidate": true,
-    "curated_default": true,
-    "agenda_priority": -1,
-    "verification_status": "user_flyer_verified_2026-11-06",
-    "notes": "Ticket information and performance schedule verified from the supplied flyer.",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-22-who-loves-you-eb617ac",
-    "title": "Who Loves You",
-    "start": {
-      "date": "2026-11-22",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/who-loves-you",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
-    "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-22-who-loves-you",
-    "title": "Who Loves You — Frankie Valli & Four Seasons Tribute",
-    "start": {
-      "date": "2026-11-22",
-      "time": "14:00"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": "109 Central St, Norwood, MA 02062",
-    "category": "performance",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/who-loves-you",
-    "cost": null,
-    "organizer": "Norwood Theatre",
-    "public_access": "ticketed_public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "organizer_verified_2026-10-14",
-    "notes": "Public ticketed performance; see official theatre page for ticket prices and availability.",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-23-monday-movie-matinee-1d41da0",
     "title": "Monday Movie Matinee",
     "start": {
@@ -329,36 +115,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "library-calendar",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-23-mass-cultural-council-publishes-updates-daily-70441a5",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-23",
-      "time": "00:06"
-    },
-    "end": {
-      "date": "2026-11-23",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 23, 2026 at 12:06 AM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -639,6 +395,36 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-23-mass-cultural-council-publishes-updates-daily-70441a5",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-23",
+      "time": "12:06"
+    },
+    "end": {
+      "date": "2026-11-23",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 23, 2026 at 12:06 PM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
@@ -2015,6 +1801,36 @@
       "norwood-family",
       "rec-all",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-25-school-committee-meeting-policy-subcommittee--6b30000",
+    "title": "School Committee Meeting: Policy Subcommittee (Virtual)",
+    "start": {
+      "date": "2026-11-25",
+      "time": "12:30"
+    },
+    "end": {
+      "date": "2026-11-25",
+      "time": "13:30"
+    },
+    "venue": "Town of Norwood",
+    "address": null,
+    "category": "government",
+    "source_id": "norwood-civic-meetings",
+    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
+    "registration_url": null,
+    "cost": "Free",
+    "public_access": "public",
+    "series": "Norwood Boards & Committees",
+    "publish_candidate": true,
+    "verification_status": "verified_civic_source",
+    "notes": "Public board/committee meeting. At meeting time, return to Norwood.ma for a Watch Live link when Norwood Community Media confirms a live broadcast.",
+    "discovered_by": "civic_meeting_monitor",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "town-meetings"
     ]
   },
   {
@@ -16283,6 +16099,36 @@
     "calendar_ids": [
       "norwood-arts",
       "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-12-19-mayflower-trade-o-ree",
+    "title": "Mayflower Trade-o-ree — Scout Patch & Memorabilia Trading",
+    "description": "Trade Scout patches, neckerchiefs and vintage Scouting gear at Mayflower Council’s public gathering. Scouts, families, leaders, collectors and the general public are welcome. Register through the official event page and check current pricing; late fees begin December 5.",
+    "start": {
+      "date": "2026-12-19",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": "16:00"
+    },
+    "venue": "First Congregational Church — Pingree Hall",
+    "address": "100 Winter Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "mayflower-council",
+    "source_url": "https://scoutingevent.com/251-Tradeoree2026",
+    "registration_url": "https://scoutingevent.com/251-122173-276494",
+    "organizer": "Mayflower Council, Scouting America",
+    "public_access": "public",
+    "publish_candidate": true,
+    "verification_status": "verified",
+    "notes": "Trade Scout patches, neckerchiefs and vintage Scouting gear. Open to Scouts, families, leaders, collectors and the general public. Registration page lists $10 youth/adult pricing and late fees beginning December 5; check the current total when registering.",
+    "discovered_by": "official_organization_review",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family"
     ]
   },
   {
@@ -69772,6 +69618,33 @@
     "public_access_status": "confirmed_public",
     "access_type": "paid",
     "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2027-05-22-vfw-post-2452-meat-raffle-39e9b17",
+    "title": "VFW Post 2452 Meat Raffle",
+    "start": {
+      "date": "2027-05-22",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2027-05-22",
+      "time": "17:00"
+    },
+    "venue": "Norwood VFW Post 2452",
+    "address": "193 Dean St, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "vfw-post-2452-meat-raffle",
+    "source_url": "https://www.norwoodtownnews.com/2026/04/28/570769/calendar-may-2026",
+    "cost": "$2 per drawing; $20 pre-buy",
+    "public_access": "public",
+    "series": "VFW Post 2452 Meat Raffle",
+    "publish_candidate": true,
+    "verification_status": "established_recurring_schedule",
+    "notes": "Open to the public. Established weekly Saturday raffle, 2-5 p.m., during the September-May season.",
+    "discovered_by": "scheduled_recurring_series",
     "calendar_ids": [
       "norwood-community"
     ]
