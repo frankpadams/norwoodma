@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const groups={
  food:{label:'Restaurants & Food',match:/restaurants?|dining|\bcaf[eé]s?\b|coffee|juice bars|deli|bakery|\bpizza\b|\bsushi\b/i,subs:[]},
- automotive:{label:'Automotive',match:/car.{0,12}rental|van rental|auto|automotive|car wash|vehicle|towing|roadside|collision|tire|truck repair/i,subs:[
+ automotive:{label:'Automotive',match:/car.{0,12}rental|van rental|\\bauto\\b|automotive|car wash|vehicle|towing|roadside|collision|tire|truck repair/i,subs:[
   ['sales','Sales & Dealers',/dealer|sales/i],['repair','Repair & Mechanics',/repair|mechanic/i],['collision','Collision, Body & Detailing',/collision|auto body|detail/i],['tires','Tires',/tire/i],['inspection','Inspections & Car Wash',/inspection|car wash/i],['towing','Towing & Roadside',/towing|roadside/i],['rental','Car, Van & Truck Rental',/(car|van|truck).*rental|rental.*(car|van|truck)/i]
  ]},
  home:{label:'Home Services & Contractors',match:/construction|carpentry|handyman|residential.*cleaning|commercial.*cleaning|vacuum|appliance|hvac|plumb|heating|electric|contractor|home improvement|home repair|house cleaning|painting|remodel|garage door|roof|landscap|tree service|pest|pool service|masonry|chimney|gutter|flooring|fence|interior design|hardscap|cabinet|fireplace|glass|mirror|window repair|drywall|plaster|stucco|tile|marble|excavation|paving|restoration/i,subs:[
