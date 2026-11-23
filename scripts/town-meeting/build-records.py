@@ -5,6 +5,7 @@ def norm(n):return re.sub('[^A-Z]','',n.upper())
 def read(p):return json.loads(p.read_text())
 latest=read(REPO/'data/town-meeting-2026-individual-votes.json');nov=read(REPO/'data/town-meeting-2025-november-individual-votes.json');att=read(SRC/'attendance-parsed.json')
 registry={};aliases={};audit=[]
+identity_fixes={norm('CAROLYN F. BARROWSCAROLYN F.'): 'CAROLYN F. BARROWS'}
 def parts(name):
  t=re.findall(r"[A-Za-z]+(?:[-'][A-Za-z]+)*",name.upper());suffix=[]
  if t and t[-1] in ['JR','III','II','IV']:suffix=[t.pop()]
@@ -16,6 +17,7 @@ def compatible(a,b):
  if sa!=sb or not ga or not gb or ga[0]!=gb[0]:return False
  return all(x==y or len(x)==1 and y.startswith(x) or len(y)==1 and x.startswith(y) for x,y in zip(ga[1:],gb[1:]))
 def register(name):
+ name=identity_fixes.get(norm(name),name)
  key=norm(name)
  if key in aliases:return aliases[key]
  candidates=[k for k,p in registry.items() if compatible(name,p['name'])]
@@ -169,5 +171,5 @@ used={k for period in meetings for k in period['roster']}|{k for period in meeti
 registry={k:v for k,v in registry.items() if k in used}
 result={'schema_version':1,'members':registry,'aliases':{k:v for k,v in aliases.items() if v in used},'meetings':meetings,'coverage_note':'Only uploaded meeting cycles with both electronic voting and attendance reports are included. Test clicker polls are excluded. Missing votes do not establish absence.','source_discrepancies':discrepancies}
 (REPO/'data/town-meeting-member-records.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
-(REPO/'data/town-meeting-member-match-audit.json').write_text(json.dumps({'ocr_corrections':audit,'historical_matches':historical_matches,'unmatched_2024':unmatched,'source_discrepancies':discrepancies,'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in SRC.glob('*.pdf')}},indent=2))
+(REPO/'data/town-meeting-member-match-audit.json').write_text(json.dumps({'ocr_corrections':audit,'identity_corrections':[{'source_name':'CAROLYN F. BARROWSCAROLYN F.','corrected_name':'CAROLYN F. BARROWS','reason':'Concatenated source text verified as the District 8 member Carolyn F. Barrows; no motion has votes under both keys.'}],'historical_matches':historical_matches,'unmatched_2024':unmatched,'source_discrepancies':discrepancies,'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in SRC.glob('*.pdf')}},indent=2))
 print('Members',len(registry),'meetings',[(p['id'],len(p['roster']),len(p['motions'])) for p in meetings]);print('Unmatched 2024',list({(r['date'],r['name'],r['initial']) for r in unmatched}));print('Source discrepancies',discrepancies)
