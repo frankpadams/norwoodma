@@ -262,14 +262,16 @@
   const acronym=/^[A-Z][A-Z0-9&.-]{1,7}$/.test(original);
   raw=norm(original); if(!raw)return [];
   const queryWords=words(raw),expanded=norm(raw+' '+aliasTerms(raw)),expandedWords=[...new Set(words(expanded))];
+  const barberIntent=/\b(?:barber|barbers|barbershop|barbershops|salon|salons)\b/.test(raw);
+  const barberChoices=barberIntent?[{name:'Barbers & Salons',url:'businesses.html#personal/hair',type:'Business directory',text:'barber barbers barbershop barbershops barber shop barber shops salon salons hair salon hair salons personal care',norwoodPage:true,businessCategory:true,barberCategory:true}]:[];
   const vetQuery=/^(vet|vets)$/.test(raw);
   const vetChoices=vetQuery?[
    {name:'Veterans Services',url:'resources.html#veterans',type:'Search category',text:'veterans military benefits assistance',norwoodPage:true},
    {name:'Veterinarians & Animal Hospitals',url:'businesses.html?q=Veterinary',type:'Search category',text:'veterinary veterinarian animal hospital pets',norwoodPage:true}
   ]:[];
-  return [...vetChoices,...items()].map(x=>{
+  return [...barberChoices,...vetChoices,...items()].map(x=>{
    const name=norm(x.name),type=norm(x.type),body=norm(x.text),url=norm(x.url),nameWords=words(name),typeWords=words(type),bodyWords=words(body);
-   let score=vetQuery&&x.type==='Search category'?500:0,matchedCore=vetQuery&&x.type==='Search category'?1:0;
+   let score=x.barberCategory?500:(vetQuery&&x.type==='Search category'?500:0),matchedCore=x.barberCategory?1:(vetQuery&&x.type==='Search category'?1:0);
    if(name===raw)score+=180;else if(name.startsWith(raw))score+=105;else if(name.includes(raw))score+=78;
    if(type===raw)score+=75;else if(type.includes(raw))score+=34;
    if(body.includes(raw))score+=32;
