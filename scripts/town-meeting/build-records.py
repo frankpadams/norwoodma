@@ -5,7 +5,7 @@ def norm(n):return re.sub('[^A-Z]','',n.upper())
 def read(p):return json.loads(p.read_text())
 latest=read(REPO/'data/town-meeting-2026-individual-votes.json');nov=read(REPO/'data/town-meeting-2025-november-individual-votes.json');att=read(SRC/'attendance-parsed.json')
 registry={};aliases={};audit=[]
-identity_fixes={norm('CAROLYN F. BARROWSCAROLYN F.'): 'CAROLYN F. BARROWS'}
+identity_fixes={norm('CAROLYN F. BARROWSCAROLYN F.'): 'CAROLYN F. BARROWS',norm('NO FIRST MARYPAZ'): 'MARYPAZ'}
 def parts(name):
  t=re.findall(r"[A-Za-z]+(?:[-'][A-Za-z]+)*",name.upper());suffix=[]
  if t and t[-1] in ['JR','III','II','IV']:suffix=[t.pop()]
@@ -171,5 +171,5 @@ used={k for period in meetings for k in period['roster']}|{k for period in meeti
 registry={k:v for k,v in registry.items() if k in used}
 result={'schema_version':1,'members':registry,'aliases':{k:v for k,v in aliases.items() if v in used},'meetings':meetings,'coverage_note':'Only uploaded meeting cycles with both electronic voting and attendance reports are included. Test clicker polls are excluded. Missing votes do not establish absence.','source_discrepancies':discrepancies}
 (REPO/'data/town-meeting-member-records.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
-(REPO/'data/town-meeting-member-match-audit.json').write_text(json.dumps({'ocr_corrections':audit,'identity_corrections':[{'source_name':'CAROLYN F. BARROWSCAROLYN F.','corrected_name':'CAROLYN F. BARROWS','reason':'Concatenated source text verified as the District 8 member Carolyn F. Barrows; no motion has votes under both keys.'}],'historical_matches':historical_matches,'unmatched_2024':unmatched,'source_discrepancies':discrepancies,'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in SRC.glob('*.pdf')}},indent=2))
+(REPO/'data/town-meeting-member-match-audit.json').write_text(json.dumps({'ocr_corrections':audit,'identity_corrections':[{'source_name':'CAROLYN F. BARROWSCAROLYN F.','corrected_name':'CAROLYN F. BARROWS','reason':'Concatenated source text verified as the District 8 member Carolyn F. Barrows; no motion has votes under both keys.'},{'source_name':'NO FIRST MARYPAZ','corrected_name':'MARYPAZ','reason':'User confirmed Marypaz is a single-name person; the attendance-only label belongs to the same District 6 member whose voting record uses MARYPAZ.'}],'historical_matches':historical_matches,'unmatched_2024':unmatched,'source_discrepancies':discrepancies,'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in SRC.glob('*.pdf')}},indent=2))
 print('Members',len(registry),'meetings',[(p['id'],len(p['roster']),len(p['motions'])) for p in meetings]);print('Unmatched 2024',list({(r['date'],r['name'],r['initial']) for r in unmatched}));print('Source discrepancies',discrepancies)
