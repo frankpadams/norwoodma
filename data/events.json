@@ -239,36 +239,6 @@
     ]
   },
   {
-    "id": "2026-11-22-mass-cultural-council-publishes-updates-daily-ba748c0",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-22",
-      "time": "20:06"
-    },
-    "end": {
-      "date": "2026-11-22",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 22, 2026 at 08:06 PM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-23-monday-movie-matinee-1d41da0",
     "title": "Monday Movie Matinee",
     "start": {
@@ -359,6 +329,36 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "library-calendar",
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-23-mass-cultural-council-publishes-updates-daily-70441a5",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-23",
+      "time": "00:06"
+    },
+    "end": {
+      "date": "2026-11-23",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 23, 2026 at 12:06 AM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
       "norwood-community"
     ]
   },
