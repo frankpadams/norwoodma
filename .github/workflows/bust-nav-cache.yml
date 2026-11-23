@@ -22,7 +22,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Version nav.js references with current commit
+      - name: Version shared asset references with current commit
         shell: bash
         run: |
           export VERSION="${GITHUB_SHA:0:12}"
@@ -35,6 +35,7 @@ jobs:
           for p in Path(".").glob("*.html"):
               text=p.read_text()
               new=re.sub(r'nav\.js\?v=[^"\'<>]+', f'nav.js?v={version}', text)
+              new=re.sub(r'styles\.css\?v=[^"\'<>]+', f'styles.css?v={version}', new)
               if new != text:
                   p.write_text(new)
                   changed.append(str(p))
@@ -45,11 +46,11 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet -- '*.html'; then
-            echo "No nav.js references needed updating."
+            echo "No shared asset references needed updating."
             exit 0
           fi
           git config user.name "norwood-ma-cache-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -- '*.html'
-          git commit -m "chore: bust nav.js cache"
+          git commit -m "chore: bust shared asset cache"
           git push origin HEAD:main

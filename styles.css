@@ -556,3 +556,48 @@ html[data-text-size="largest"] body{zoom:1.5}
 .site-timely-marquee.ticker-paused .site-timely-marquee-group{animation-play-state:paused}
 @keyframes site-timely-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--ticker-distance,600px)))}}
 @media(prefers-reduced-motion:reduce){.site-timely-marquee-group{animation:none!important}}
+/* Shared, compact title block for interior content pages. Keep hero imagery on the homepage only. */
+.page-hero {
+  box-sizing: border-box !important;
+  width: calc(100% - 32px) !important;
+  max-width: 1180px !important;
+  margin: 16px auto 18px !important;
+  padding: 0 0 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: inherit;
+}
+.page-hero .eyebrow {
+  margin: 0 0 4px !important;
+  color: var(--blue, #003b71) !important;
+  font-size: .76rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  line-height: 1.35 !important;
+  text-transform: uppercase !important;
+}
+.page-hero h1,
+main:not(#home) > h1 {
+  max-width: 100% !important;
+  margin: 0 0 6px !important;
+  color: var(--blue, #003b71) !important;
+  font-family: inherit !important;
+  font-size: clamp(1.8rem, 3.2vw, 2.35rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.025em !important;
+  line-height: 1.12 !important;
+}
+.page-hero > p:not(.eyebrow),
+main:not(#home) > h1 + p {
+  max-width: 780px !important;
+  margin: 0 0 8px !important;
+  color: #526574 !important;
+  font-size: .96rem !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 600px) {
+  .page-hero { width: calc(100% - 28px) !important; margin: 14px auto 16px !important; padding-bottom: 10px !important; }
+  .page-hero h1, main:not(#home) > h1 { font-size: clamp(1.65rem, 7vw, 2rem) !important; }
+}

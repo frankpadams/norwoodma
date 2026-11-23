@@ -1,10 +1,10 @@
-# Norwood.ma v2.1.1
+# Norwood.ma v2.1.2
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.1.1 — fixes mobile navigation so the menu reliably collapses to the hamburger layout.
+**Current release:** v2.1.2 — standardizes compact page titles and removes the redundant Elections photo hero.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -78,6 +78,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Mobile navigation uses the hamburger menu; Support Norwood.ma is intentionally kept there rather than promoted into primary desktop navigation.
 - The More page (`discover.html`) groups destinations by subject: News & Events; Everyday Living; Government & Participation; Food, Shopping & Services; Activities & Recreation; Getting Around; and Fun & Games. Each category spans the full page width, with compact descriptive links arranged in as many columns as the window comfortably supports. Browse current news/events, everyday living, transport, food/services, activities, games, civic participation, device access, then site information. Site search sits above the groups; links use the maintained destination pages rather than retired previews. Maintain coverage of every public destination page here, including topic-specific restaurant guides and public detail guides. Exclude error pages, redirects, empty files, admin pages and development/review previews; audit both the root HTML inventory and sitemap when changing coverage.
 - Approved blue/gold Norwood.ma branding, favicon/home-screen icon, accessibility controls, and independent-site disclosures are sitewide conventions.
+- Interior content pages use a shared compact title treatment: optional category label, consistent title typography, and a short description when useful. Decorative title panels are removed; feature imagery stays separate from the title.
 - Asset query-string versions are cache-busters and are separate from the product release number.
 
 ## Documentation policy
@@ -104,6 +105,20 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 
 ## Current stable release
 
+### v2.1.2 — Compact page titles
+Released November 23, 2026.
+
+- Applies a shared, compact title treatment across interior content pages, with consistent label, heading and description spacing.
+- Removes the Elections photo hero and duplicate title so the voting information begins sooner.
+
+### v2.1.1 — Mobile navigation reliability
+Released November 22, 2026.
+
+- Fixes responsive navigation so screens 760px wide and narrower consistently use the hamburger menu.
+- Closes the expanded navigation when the layout changes into the compact mobile mode.
+
+### Earlier releases
+
 ### v1.7.1 — Business directory coverage
 Released November 10, 2026.
 
@@ -121,7 +136,7 @@ Released November 9, 2026.
 
 - Adds a Substack signup button to homepage Quick Access, between How Townie Are You? and Live Transit.
 
-### Previous release
+### Older release history
 
 ### v1.6.1 — Community-first event calendar
 Released November 6, 2026.
