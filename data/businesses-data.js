@@ -104,13 +104,14 @@ window.NORWOOD_BUSINESSES=[
     "508-505-5860",
     ""
   ],
-  [
-    "Bay State Barber Shop",
-    "Barbers, Salons & Personal Care",
-    "1145 Washington Street",
-    "781-352-3596",
-    "https://baystate-barbershop.com/"
-  ],
+  {
+    name: "Bay State Barber Shop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "1145 Washington Street",
+    phone: "781-352-3596",
+    website: "https://baystate-barbershop.com/"
+  },
   [
     "Bay State Orthodontics",
     "Dental & Orthodontics",
@@ -811,20 +812,22 @@ window.NORWOOD_BUSINESSES=[
     "",
     ""
   ],
-  [
-    "Chris & Sam’s Barber Shop",
-    "Barbers, Salons & Personal Care",
-    "1076 Washington Street, Norwood, MA 02062",
-    "781-440-0700",
-    "https://www.chrisandsamsbarbershop.com/"
-  ],
-  [
-    "Gus’s Barber Shop",
-    "Barbers, Salons & Personal Care",
-    "877 Washington Street, Norwood, MA 02062",
-    "781-440-9161",
-    "https://barbershopgus.com/"
-  ],
+  {
+    name: "Chris & Sam’s Barber Shop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "1076 Washington Street, Norwood, MA 02062",
+    phone: "781-440-0700",
+    website: "https://www.chrisandsamsbarbershop.com/"
+  },
+  {
+    name: "Gus’s Barber Shop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "877 Washington Street, Norwood, MA 02062",
+    phone: "781-440-9161",
+    website: "https://barbershopgus.com/"
+  },
   [
     "Cheer Advantage",
     "Cheer & Tumbling",
@@ -846,13 +849,14 @@ window.NORWOOD_BUSINESSES=[
     "781-347-4438",
     "https://www.premiergymnasticsnorwood.com/"
   ],
-  [
-    "Top Legend Barbershop",
-    "Barber Shops",
-    "923 High Street, Westwood, MA 02090",
-    "781-326-5805",
-    "https://toplegendbarbershop.com/"
-  ],
+  {
+    name: "Top Legend Barbershop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barbers"],
+    address: "923 High Street, Westwood, MA 02090",
+    phone: "781-326-5805",
+    website: "https://toplegendbarbershop.com/"
+  },
   [
     "Town Common Books",
     "Books & Local Shopping",
@@ -1070,27 +1074,30 @@ window.NORWOOD_BUSINESSES=[
     "781-255-5151",
     ""
   ],
-  [
-    "Impeccable Barber Co.",
-    "Barbers, Salons & Personal Care",
-    "599 Washington Street",
-    "781-762-9465",
-    ""
-  ],
-  [
-    "Romeros Barbershop",
-    "Barbers, Salons & Personal Care",
-    "520 Washington Street",
-    "857-258-4531",
-    ""
-  ],
-  [
-    "Charles Barber Shop",
-    "Barbers, Salons & Personal Care",
-    "635 Washington Street",
-    "781-762-8934",
-    ""
-  ],
+  {
+    name: "Impeccable Barber Co.",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "599 Washington Street",
+    phone: "781-762-9465",
+    website: ""
+  },
+  {
+    name: "Romeros Barbershop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "520 Washington Street",
+    phone: "857-258-4531",
+    website: ""
+  },
+  {
+    name: "Charles Barber Shop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "635 Washington Street",
+    phone: "781-762-8934",
+    website: ""
+  },
   [
     "Art and Craft Salon",
     "Barbers, Salons & Personal Care",
@@ -4987,28 +4994,22 @@ window.NORWOOD_BUSINESSES=[
     "617-763-6773",
     "https://salonq.setmore.com/"
   ],
-  [
-    "Exclusive Barber Shop",
-    [
-      "Barbers, Salons & Personal Care",
-      "Barber Shops",
-      "Barbers"
-    ],
-    "640 Washington Street",
-    "781-352-2939",
-    "https://exclusive-barber-shop-ma-8.hub.biz/"
-  ],
-  [
-    "D’Ramon Barbershop",
-    [
-      "Barbers, Salons & Personal Care",
-      "Barber Shops",
-      "Barbers"
-    ],
-    "1105 Washington Street",
-    "781-352-3330",
-    "https://booksy.com/en-us/1883483_d-ramon-barbershop_barber-shop_22348_norwood"
-  ],
+  {
+    name: "Exclusive Barber Shop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "640 Washington Street",
+    phone: "781-352-2939",
+    website: "https://exclusive-barber-shop-ma-8.hub.biz/"
+  },
+  {
+    name: "D’Ramon Barbershop",
+    category: "Barbers, Salons & Personal Care",
+    labels: ["Barber Shops", "Barbers"],
+    address: "1105 Washington Street",
+    phone: "781-352-3330",
+    website: "https://booksy.com/en-us/1883483_d-ramon-barbershop_barber-shop_22348_norwood"
+  },
   [
     "Locs Concept",
     [
