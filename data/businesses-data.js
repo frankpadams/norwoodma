@@ -4999,6 +4999,17 @@ window.NORWOOD_BUSINESSES=[
     "https://exclusive-barber-shop-ma-8.hub.biz/"
   ],
   [
+    "D’Ramon Barbershop",
+    [
+      "Barbers, Salons & Personal Care",
+      "Barber Shops",
+      "Barbers"
+    ],
+    "1105 Washington Street",
+    "781-352-3330",
+    "https://booksy.com/en-us/1883483_d-ramon-barbershop_barber-shop_22348_norwood"
+  ],
+  [
     "Locs Concept",
     [
       "Barbers, Salons & Personal Care",
