@@ -231,7 +231,7 @@
     {
       "date": "2025-05-19",
       "page": 9,
-      "source_name": "SARAH \u00a3. SULLIVAN",
+      "source_name": "SARAH £. SULLIVAN",
       "corrected_name": "SARAH E. SULLIVAN"
     },
     {
@@ -243,7 +243,7 @@
     {
       "date": "2025-11-13",
       "page": 5,
-      "source_name": "JOSEPH \u00a7. BARRETT",
+      "source_name": "JOSEPH §. BARRETT",
       "corrected_name": "JOSEPH S. BARRETT"
     },
     {
@@ -261,7 +261,7 @@
     {
       "date": "2025-11-13",
       "page": 7,
-      "source_name": "\u2018WILLIAM F. COSTELLO II",
+      "source_name": "‘WILLIAM F. COSTELLO II",
       "corrected_name": "WILLIAM F. COSTELLO III"
     },
     {
@@ -4793,7 +4793,7 @@
   "source_discrepancies": [
     {
       "meeting": "2025-may",
-      "motion": "STM #2 1 \u2014 Appoint temporary moderator",
+      "motion": "STM #2 1 — Appoint temporary moderator",
       "official": [
         139,
         12,
@@ -4807,7 +4807,7 @@
     },
     {
       "meeting": "2025-may",
-      "motion": "STM #2 1 \u2014 Move the question",
+      "motion": "STM #2 1 — Move the question",
       "official": [
         153,
         5,
@@ -4835,7 +4835,7 @@
     },
     {
       "meeting": "2024-may",
-      "motion": "ATM 8 \u00b7 Motion 1",
+      "motion": "ATM 8 · Motion 1",
       "official": [
         148,
         16,
@@ -4849,7 +4849,7 @@
     },
     {
       "meeting": "2024-may",
-      "motion": "ATM 8 \u00b7 Motion 2",
+      "motion": "ATM 8 · Motion 2",
       "official": [
         121,
         40,
@@ -4863,7 +4863,7 @@
     },
     {
       "meeting": "2024-may",
-      "motion": "ATM 8 \u00b7 Motion 4",
+      "motion": "ATM 8 · Motion 4",
       "official": [
         145,
         16,
@@ -4877,7 +4877,7 @@
     },
     {
       "meeting": "2024-may",
-      "motion": "ATM 8 \u00b7 Motion 5",
+      "motion": "ATM 8 · Motion 5",
       "official": [
         123,
         34,
@@ -5417,7 +5417,7 @@
       "date": "2024-10-24",
       "report_page": 3,
       "report_row": 64,
-      "source_name": "\u2018ZAMBITO",
+      "source_name": "‘ZAMBITO",
       "member": "PATRICKCHARLESZAMBITO",
       "method": "surname/initial and complete 280-row sequence verified against May 2024 report; OCR differences explicitly reviewed"
     },
@@ -7150,5 +7150,12 @@
       "method": "surname/initial and complete 280-row sequence verified against May 2024 report; OCR differences explicitly reviewed"
     }
   ],
-  "october_2024_attendance_rule": "Attendance is inferred from the electronic voting report: at least one Yes, No or Abstain vote means present; no recorded votes means absent. This is not an official attendance checklist. Districts use the May 13, 2024 official roster."
+  "october_2024_attendance_rule": "Attendance is inferred from the electronic voting report: at least one Yes, No or Abstain vote means present; no recorded votes means absent. This is not an official attendance checklist. Districts use the May 13, 2024 official roster.",
+  "identity_corrections": [
+    {
+      "source_name": "CAROLYN F. BARROWSCAROLYN F.",
+      "corrected_name": "CAROLYN F. BARROWS",
+      "reason": "Concatenated source text was verified as the District 8 member Carolyn F. Barrows; no motion records distinct votes under both keys."
+    }
+  ]
 }
