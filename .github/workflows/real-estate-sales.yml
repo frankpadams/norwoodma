@@ -1,5 +1,9 @@
 name: Refresh Norwood recent home sales
 on:
+  push:
+    paths:
+      - 'scripts/update_norwood_sales.py'
+      - '.github/workflows/real-estate-sales.yml'
   schedule:
     - cron: '17 13 1,15 * *'
   workflow_dispatch:
