@@ -815,7 +815,7 @@ else{window.prompt('Copy this event link:',url)}
 <style id="supermap-label-rotation">
 .quick-transit-head .transit-brand{width:100%;min-width:0;flex-wrap:nowrap}
 .quick-transit-head .transit-brand-name,.quick-transit-head .ncm-head-divider{flex:none;white-space:nowrap}
-.quick-transit-head .transit-live-label{flex:1;min-width:0;overflow:hidden;text-overflow:clip;transition:opacity 150ms ease}
+.quick-transit-head .transit-live-label{flex:1;min-width:0;overflow:hidden;text-overflow:clip;transition:opacity 350ms ease}
 @media(prefers-reduced-motion:reduce){.quick-transit-head .transit-live-label{transition:none}}
 </style>
 <script id="supermap-label-rotation-script">
@@ -837,7 +837,7 @@ function fits(value){probe.textContent=value;return probe.getBoundingClientRect(
 function resetQueue(){queue=pool.slice();for(let i=queue.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[queue[i],queue[j]]=[queue[j],queue[i]];}if(queue.length>1&&queue[0]===label.textContent)queue.push(queue.shift());}
 function stop(){clearInterval(timer);clearTimeout(fade);timer=fade=0;label.style.opacity='1';}
 function active(){return !document.hidden&&visible&&!motion.matches;}
-function start(){stop();if(!active()||!pool.length)return;timer=setInterval(function(){if(!queue.length)resetQueue();let next=queue.shift();if(next===label.textContent&&queue.length){queue.push(next);next=queue.shift();}if(!next||next===label.textContent)return;label.style.opacity='0';fade=setTimeout(function(){label.textContent=next;label.style.opacity='1';fade=0;},150);},2000);}
+function start(){stop();if(!active()||!pool.length)return;timer=setInterval(function(){if(!queue.length)resetQueue();let next=queue.shift();if(next===label.textContent&&queue.length){queue.push(next);next=queue.shift();}if(!next||next===label.textContent)return;label.style.opacity='0';fade=setTimeout(function(){label.textContent=next;label.style.opacity='1';fade=0;},350);},2000);}
 function measure(){stop();pool=[...(fits(initial)?[initial]:[]),...choices.map(group=>group.find(fits)).filter(Boolean)];if(!fits(label.textContent))label.textContent=fits(initial)?initial:(pool[0]||'');if(motion.matches)label.textContent=fits(initial)?initial:'';resetQueue();start();}
 if('ResizeObserver' in window){let previous=-1;new ResizeObserver(function(){if(label.clientWidth!==previous){previous=label.clientWidth;measure();}}).observe(label);}else window.addEventListener('resize',measure);
 if('IntersectionObserver' in window)new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;start();}).observe(label);
