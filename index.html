@@ -812,4 +812,39 @@ else{window.prompt('Copy this event link:',url)}
 .today-sidebar .quick-widget-grid>.quick-widget.tall.trivia-test b{display:block!important;transform:none!important;font-size:.84rem!important;line-height:1.1!important}
 @media(max-width:600px){.today-sidebar .quick-widget-grid>.quick-widget.tall.things-test,.today-sidebar .quick-widget-grid>.quick-widget.tall.trivia-test{min-height:72px!important;padding:5px 7px!important;gap:4px!important}}
 </style>
+<style id="supermap-label-rotation">
+.quick-transit-head .transit-brand{width:100%;min-width:0;flex-wrap:nowrap}
+.quick-transit-head .transit-brand-name,.quick-transit-head .ncm-head-divider{flex:none;white-space:nowrap}
+.quick-transit-head .transit-live-label{flex:1;min-width:0;overflow:hidden;text-overflow:clip;transition:opacity 150ms ease}
+@media(prefers-reduced-motion:reduce){.quick-transit-head .transit-live-label{transition:none}}
+</style>
+<script id="supermap-label-rotation-script">
+(function(){
+const label=document.querySelector('.quick-transit-head .transit-live-label');
+if(!label)return;
+const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+const initial='+LIVE MBTA';
+const choices=[
+['+LIVE TRAFFIC','+TRAFFIC'],['+GAS PRICES'],['+PROPERTY DATA','+ASSESSMENTS'],['+PARCELS'],['+POWER OUTAGES','+OUTAGES'],['+POLICE ACTIVITY','+POLICE'],['+CRASH DATA'],['+ROAD WORK'],['+ALPR CAMERAS','+ALPR'],['+ACCESSIBILITY','+ACCESS'],['+HISTORIC SITES','+HISTORY'],['+LIQUOR LICENSES','+LICENSES'],['+VOTING PRECINCTS','+PRECINCTS'],['+SCHOOL ZONES','+SCHOOLS'],['+ZONING'],['+FLOOD ZONES','+FLOOD MAP'],['+WETLANDS'],['+OPEN SPACE'],['+TREE CANOPY','+TREES'],['+CLEANUP SITES','+CLEANUP'],['+WATER PROTECTION','+WATER'],['+TRAFFIC COUNTS','+COUNTS'],['+BUSINESSES'],['+LITTLE LIBRARIES','+LIBRARIES'],['+FOOD PANTRIES','+PANTRIES']];
+const probe=document.createElement('span');
+probe.className=label.className;
+probe.style.cssText='position:absolute;visibility:hidden;pointer-events:none;width:max-content;max-width:none;flex:none;white-space:nowrap;overflow:visible';
+probe.setAttribute('aria-hidden','true');
+label.parentElement.appendChild(probe);
+label.setAttribute('aria-hidden','true');
+let pool=[],queue=[],timer=0,fade=0,visible=true;
+function fits(value){probe.textContent=value;return probe.getBoundingClientRect().width<=label.clientWidth;}
+function resetQueue(){queue=pool.slice();for(let i=queue.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[queue[i],queue[j]]=[queue[j],queue[i]];}if(queue.length>1&&queue[0]===label.textContent)queue.push(queue.shift());}
+function stop(){clearInterval(timer);clearTimeout(fade);timer=fade=0;label.style.opacity='1';}
+function active(){return !document.hidden&&visible&&!motion.matches;}
+function start(){stop();if(!active()||!pool.length)return;timer=setInterval(function(){if(!queue.length)resetQueue();let next=queue.shift();if(next===label.textContent&&queue.length){queue.push(next);next=queue.shift();}if(!next||next===label.textContent)return;label.style.opacity='0';fade=setTimeout(function(){label.textContent=next;label.style.opacity='1';fade=0;},150);},2000);}
+function measure(){stop();pool=[...(fits(initial)?[initial]:[]),...choices.map(group=>group.find(fits)).filter(Boolean)];if(!fits(label.textContent))label.textContent=fits(initial)?initial:(pool[0]||'');if(motion.matches)label.textContent=fits(initial)?initial:'';resetQueue();start();}
+if('ResizeObserver' in window){let previous=-1;new ResizeObserver(function(){if(label.clientWidth!==previous){previous=label.clientWidth;measure();}}).observe(label);}else window.addEventListener('resize',measure);
+if('IntersectionObserver' in window)new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;start();}).observe(label);
+document.addEventListener('visibilitychange',start);
+if(motion.addEventListener)motion.addEventListener('change',measure);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
+measure();
+})();
+</script>
 </body></html>
