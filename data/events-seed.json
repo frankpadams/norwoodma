@@ -9081,5 +9081,35 @@
     "verification_status": "user_flyer_verified_2026-11-23",
     "notes": "Out of Town — Dedham, MA. Fundraiser is for Norwood High School Model UN Club. The flyer says 20% of event sales will be donated. Online orders must use code 3869682; show the paper or digital flyer for in-person orders.",
     "discovered_by": "user_flyer"
+  },
+  {
+    "id": "2026-11-28-sale-will-be-held-on-70e0128",
+    "title": "WCC Holiday Sale",
+    "description": "Shop the Women’s Community Committee Thrift Shop’s annual holiday sale for ornaments, trees, cards, mugs, lights and other seasonal items. Proceeds support local community programs and charities.",
+    "start": {
+      "date": "2026-11-28",
+      "time": "09:30"
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": "15:00"
+    },
+    "venue": "WCC Thrift Shop",
+    "address": "1194 Washington Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "town-senior-newsletter",
+    "source_url": "https://www.norwoodma.gov/document_center/Senior/Newsletters/20261101N%20(2).pdf?t=202610281211020",
+    "organizer": "Norwood Women’s Community Committee (WCC)",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-fundraisers"
+    ],
+    "verification_status": "verified",
+    "notes": "Annual holiday sale supporting local community programs and charities. The November 2026 Senior Center newsletter lists 9:30 AM–3 PM. The sale is at the WCC Thrift Shop, 1194 Washington Street.",
+    "discovered_by": "official_organization_review"
   }
 ]
