@@ -214,6 +214,27 @@ window.norwoodTrailBasemap=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
  const closeDropdowns=(except=null)=>buttons.forEach(b=>{if(b===except)return;b.setAttribute('aria-expanded','false');const panel=document.getElementById(b.getAttribute('aria-controls'));if(panel)panel.hidden=true;});
  const closeMenu=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');closeDropdowns();};
  buttons.forEach(b=>b.addEventListener('click',()=>{const wasOpen=b.getAttribute('aria-expanded')==='true';closeDropdowns();b.setAttribute('aria-expanded',String(!wasOpen));const panel=document.getElementById(b.getAttribute('aria-controls'));if(panel)panel.hidden=wasOpen;}));
+ // Desktop pointer hover preview: preserve click, keyboard and touch interactions.
+ const hoverSupported=()=>window.matchMedia('(hover: hover) and (pointer: fine)').matches&&!header.classList.contains('norwood-menu-collapsed');
+ let hoverOpenTimer=null,hoverCloseTimer=null;
+ const clearHoverTimers=()=>{clearTimeout(hoverOpenTimer);clearTimeout(hoverCloseTimer);};
+ const openHovered=b=>{if(!hoverSupported())return;closeDropdowns(b);b.setAttribute('aria-expanded','true');const panel=document.getElementById(b.getAttribute('aria-controls'));if(panel)panel.hidden=false;};
+ nav.querySelectorAll('.lab-item').forEach(item=>{
+   const b=item.querySelector('.lab-trigger');if(!b)return;
+   item.addEventListener('pointerenter',e=>{
+     if(e.pointerType!=='mouse'||!hoverSupported())return;
+     clearHoverTimers();
+     const switching=buttons.some(other=>other.getAttribute('aria-expanded')==='true');
+     hoverOpenTimer=setTimeout(()=>openHovered(b),switching?85:175);
+   });
+   item.addEventListener('pointerleave',e=>{
+     if(e.pointerType!=='mouse'||!hoverSupported())return;
+     clearTimeout(hoverOpenTimer);clearTimeout(hoverCloseTimer);
+     hoverCloseTimer=setTimeout(()=>closeDropdowns(),350);
+   });
+ });
+ nav.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&hoverSupported()){clearTimeout(hoverOpenTimer);clearTimeout(hoverCloseTimer);hoverCloseTimer=setTimeout(()=>closeDropdowns(),350);}});
+ nav.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')clearTimeout(hoverCloseTimer);});
  menu.addEventListener('click',e=>{e.stopPropagation();if(nav.classList.contains('open'))closeMenu();else{nav.classList.add('open');menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation menu');}});
  nav.querySelectorAll('.lab-panel a,.lab-direct').forEach(a=>a.addEventListener('click',closeMenu));
  document.addEventListener('click',e=>{if(!header.contains(e.target)){closeDropdowns();if(nav.classList.contains('open'))closeMenu();}else if(!nav.contains(e.target)&&e.target!==menu){closeDropdowns();}});
