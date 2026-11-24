@@ -352,19 +352,29 @@ function diversifyAdjacentOrganizations(list){
 async function loadEvents(){
  let items=Array.isArray(window.NORWOOD_EVENTS)?window.NORWOOD_EVENTS.slice():[];
  try{const r=await fetch('data/events.json',{cache:'no-store'});if(r.ok){const fresh=await r.json();if(Array.isArray(fresh))items=fresh;}}catch(e){}
- // Correct the source-imported South Norwood Cultural District meeting.
- // Keep its stable ID so previously shared event URLs continue to work.
- for(const event of items){
-   if(event.id==='2026-12-02-norwood-seeks-cultural-district-designation-f-a5cfd90' ||
-      (event.start?.date==='2026-12-02' && /norwood seeks cultural district designation for south norwood/i.test(event.title||''))){
-     event.title='South Norwood Cultural District Community Information Session';
-     event.start={...event.start,date:'2026-12-02',time:'18:00'};
-     event.venue='Coakley Middle School Library';
-     event.address='Coakley Middle School, Norwood, MA';
-     event.organizer='Norwood Cultural Council';
-     event.notes='Community information session about the proposed South Norwood Cultural District. Learn about the designation and share input.';
-     event.description=event.notes;
-   }
+ // Canonicalize the imported South Norwood Cultural District meeting after every feed refresh.
+ // Retain compatibility with existing links using the original news-derived ID.
+ const culturalOldId='2026-12-02-norwood-seeks-cultural-district-designation-f-a5cfd90';
+ const culturalNewId='2026-12-02-south-norwood-cultural-district-information-session';
+ const culturalMatches=items.filter(e=>
+   e.id===culturalOldId || e.id===culturalNewId ||
+   (e.start?.date==='2026-12-02' && /(?:norwood seeks cultural district designation for south norwood|south norwood cultural district community information session)/i.test(e.title||'')));
+ if(culturalMatches.length){
+   const canonical=culturalMatches[0];
+   canonical.id=culturalNewId;
+   canonical.title='South Norwood Cultural District Community Information Session';
+   canonical.start={...canonical.start,date:'2026-12-02',time:'18:00'};
+   canonical.venue='Coakley Middle School Library';
+   canonical.address='Coakley Middle School, Norwood, MA';
+   canonical.organizer='Norwood Cultural Council';
+   canonical.notes='Community information session about the proposed South Norwood Cultural District. Learn about the designation and share input.';
+   canonical.description=canonical.notes;
+   items=items.filter(e=>e===canonical || !culturalMatches.includes(e));
+ }
+ const currentEventLink=new URL(location.href);
+ if(currentEventLink.searchParams.get('event')===culturalOldId){
+   currentEventLink.searchParams.set('event',culturalNewId);
+   history.replaceState(null,'',currentEventLink.pathname+currentEventLink.search+currentEventLink.hash);
  }
  // Optional curated regional events. Keep them source-isolated: never add them to the
  // default Norwood community calendar, even if they are family shows or festivals.
