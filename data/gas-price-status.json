@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T21:16:13.350336Z",
+  "generated_at": "2026-11-24T20:07:47.956779Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
@@ -23,8 +23,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "store",
               "point_of_interest",
+              "store",
               "service",
               "establishment"
             ]
@@ -56,8 +56,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "point_of_interest",
               "service",
+              "point_of_interest",
               "establishment"
             ]
           }
@@ -66,14 +66,6 @@
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -208,9 +200,9 @@
               "food_store",
               "restaurant",
               "food",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -240,7 +232,6 @@
     "Mobil / On the Run — Norwood Center": {
       "google": {
         "accepted_grades": [
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -270,7 +261,6 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -419,6 +409,7 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
+          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -494,9 +485,9 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -537,48 +528,6 @@
               "service",
               "establishment"
             ]
-          },
-          {
-            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Norwood Bottled Gas",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "305 Boston-Providence Turnpike",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
-            "station_verified": false,
-            "types": [
-              "supplier",
-              "manufacturer",
-              "store",
-              "point_of_interest",
-              "service",
-              "establishment"
-            ]
-          },
-          {
-            "address": "496 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Quick Stop",
-            "outcome": "address_or_station_type_mismatch",
-            "parsed_address": [
-              "496 Washington St",
-              "Norwood",
-              "MA"
-            ],
-            "place_id": "ChIJsfhtF9p_5IkR3S9AAJHPmmg",
-            "station_verified": false,
-            "types": [
-              "convenience_store",
-              "food_store",
-              "food",
-              "store",
-              "point_of_interest",
-              "establishment"
-            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -587,8 +536,6 @@
     "Shell — Pleasant Street": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
