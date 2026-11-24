@@ -376,6 +376,23 @@ async function loadEvents(){
    currentEventLink.searchParams.set('event',culturalNewId);
    history.replaceState(null,'',currentEventLink.pathname+currentEventLink.search+currentEventLink.hash);
  }
+ // Community-posted winter Swap Shop at the Town recycling facility.
+ // Check both date and title to avoid duplicates if the official calendar feed imports it.
+ if(!items.some(e=>e.start?.date==='2026-12-05'&&/swap shop/i.test(e.title||''))){
+   items.push({
+     id:'2026-12-05-winter-street-swap-shop',
+     title:'Winter Street Swap Shop — Free Community Reuse Event',
+     start:{date:'2026-12-05',time:'08:00'},
+     end:{date:'2026-12-05',time:'12:00'},
+     venue:'Winter Street Composting and Recycling Facility',
+     address:'370 Winter Street, Norwood, MA 02062',
+     town:'Norwood',category:'community',
+     organizer:'Norwood Swap Shop',
+     source_id:'neighbors-helping-neighbors-swap-shop-flyer-2026-12-05',
+     public_access:'public',price:'Free',publish_candidate:true,curated_default:true,
+     notes:'Give reusable items a second life and find a new-to-you treasure. Everything is free. WEATHER PERMITTING: Check for a weather-related update Friday morning, December 4, before going.'
+   });
+ }
  // Optional curated regional events. Keep them source-isolated: never add them to the
  // default Norwood community calendar, even if they are family shows or festivals.
  try{
