@@ -297,6 +297,42 @@
   document.addEventListener('click',e=>{if(!nav.contains(e.target)&&e.target!==menu){closeDropdowns();if(nav.classList.contains('open'))close();}},true);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){const opened=buttons.find(b=>b.getAttribute('aria-expanded')==='true');if(opened){closeDropdowns();opened.focus();}else if(nav.classList.contains('open')){close();menu.focus();}}});
   const header=menu.closest('header.top');
+  // Pointer hover enhances the existing production menu; its links, Home,
+  // controls, click behavior and responsive navigation remain unchanged.
+  if(header){
+    let hoverOpenTimer,hoverCloseTimer;
+    const hoverEnabled=()=>window.matchMedia('(hover: hover) and (pointer: fine)').matches&&!header.classList.contains('norwood-menu-collapsed');
+    const cancelHover=()=>{clearTimeout(hoverOpenTimer);clearTimeout(hoverCloseTimer);};
+    const revealHovered=button=>{
+      if(!hoverEnabled())return;
+      closeDropdowns(button);
+      button.setAttribute('aria-expanded','true');
+      const panel=document.getElementById(button.getAttribute('aria-controls'));
+      if(panel)panel.hidden=false;
+    };
+    nav.querySelectorAll('.lab-item').forEach(item=>{
+      const button=item.querySelector('.lab-trigger');
+      if(!button)return;
+      item.addEventListener('pointerenter',event=>{
+        if(event.pointerType!=='mouse'||!hoverEnabled())return;
+        cancelHover();
+        const switching=buttons.some(other=>other.getAttribute('aria-expanded')==='true');
+        hoverOpenTimer=setTimeout(()=>revealHovered(button),switching?85:175);
+      });
+      item.addEventListener('pointerleave',event=>{
+        if(event.pointerType!=='mouse'||!hoverEnabled())return;
+        cancelHover();
+        hoverCloseTimer=setTimeout(closeDropdowns,350);
+      });
+    });
+    nav.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse')clearTimeout(hoverCloseTimer);});
+    nav.addEventListener('pointerleave',event=>{
+      if(event.pointerType!=='mouse'||!hoverEnabled())return;
+      cancelHover();
+      hoverCloseTimer=setTimeout(closeDropdowns,350);
+    });
+    window.addEventListener('resize',cancelHover,{passive:true});
+  }
   if(header){
     const fit=()=>{
       header.classList.remove('norwood-menu-collapsed');
