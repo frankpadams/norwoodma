@@ -1,5 +1,5 @@
 (()=>{
-  const SITE_VERSION='2.2.3';
+  const SITE_VERSION='2.2.4';
   if(!document.querySelector('script[data-norwood-pwa]')){const s=document.createElement('script');s.src='/pwa.js?v=20260928-rounded2';s.dataset.norwoodPwa='true';document.head.appendChild(s);}
   const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
   if(!menu||!nav)return;
@@ -38,7 +38,7 @@
         if(date!==now.date)return false;
       }
       if(slot.live!==true&&slot.is_live!==true&&!/\blive\b/i.test(title))return false;
-      const key=s=>String(s).toLowerCase().replace(/\b\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}\b/g,'').replace(/\b(live|meeting|broadcast|norwood)\b/g,'').replace(/[^a-z0-9]/g,'');
+      const key=s=>{const normalized=String(s).toLowerCase().replace(/\b\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}\b/g,'').replace(/\b(live|meeting|broadcast|norwood)\b/g,'').replace(/[^a-z0-9]/g,'');return normalized==='boardofselectmen'?'selectboard':normalized;};
       return key(title)===key(notice.title)&&key(notice.title)!=='';
     }
     const normalize=a=>({title:String(a.title||a.event||'Emergency alert'),summary:String(a.summary||a.headline||a.description||''),url:String(a.url||a.web||a['@id']||''),severity:String(a.severity||'Unknown'),expires:a.expires||null,source:a.source||'Public alert',rank:priority[String(a.severity||'Unknown')]||20,kind:'urgent'});
