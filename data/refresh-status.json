@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:15:37.270690-05:00",
+  "generated_at": "2026-11-25T16:57:42.906548-05:00",
   "offline": false,
   "events_published": 1961,
   "news_published": 120,
@@ -10,42 +10,42 @@
       "name": "All public community events",
       "path": "feeds/community-events.ics",
       "events": 1961,
-      "generated_at": "2026-11-25T13:15:36.406045-05:00"
+      "generated_at": "2026-11-25T16:57:42.255028-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 76,
-      "generated_at": "2026-11-25T13:15:36.412650-05:00"
+      "generated_at": "2026-11-25T16:57:42.264316-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
       "events": 794,
-      "generated_at": "2026-11-25T13:15:36.427310-05:00"
+      "generated_at": "2026-11-25T16:57:42.283959-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
       "events": 662,
-      "generated_at": "2026-11-25T13:15:36.438774-05:00"
+      "generated_at": "2026-11-25T16:57:42.300160-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
       "events": 5,
-      "generated_at": "2026-11-25T13:15:36.445150-05:00"
+      "generated_at": "2026-11-25T16:57:42.309267-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 66,
-      "generated_at": "2026-11-25T13:15:36.452588-05:00"
+      "generated_at": "2026-11-25T16:57:42.319631-05:00"
     }
   ],
   "recreation_programs": 145,
@@ -958,7 +958,7 @@
       "source_id": "nps-athletics-arbiter-unified-basketball",
       "ok": true,
       "method": "ical",
-      "found": 7,
+      "found": 6,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1463,7 +1463,7 @@
       "ok": true,
       "method": "event_platform_discovery",
       "found": 2,
-      "note": null,
+      "note": "1 configured page(s) unavailable; remaining sources checked",
       "outcome": "events",
       "access_limited": false
     },
@@ -1627,7 +1627,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 91,
+      "found": 22,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1643,7 +1643,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 32,
+      "found": 33,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1707,21 +1707,22 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 24,
+      "found": 25,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
-        "CBS News": 3,
-        "WCVB": 3,
+        "CBS News": 4,
+        "Patch": 3,
+        "WCVB": 4,
+        "Facebook": 1,
         "cwibc.co.id": 1,
         "John Guilfoil Public Relations": 1,
         "cedarnews.net": 1,
         "NBC Boston": 5,
-        "Norwood Public Schools": 6,
-        "The Norwood Record": 45,
+        "Norwood Public Schools": 5,
+        "The Norwood Record": 42,
         "The Norwood Record — Latest": 20,
         "Rhode Island Current": 1,
-        "Patch": 2,
         "Go Local Prov": 1,
         "Westwood Minute": 1,
         "Fiorentino Legal, P.C.": 3,
