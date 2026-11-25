@@ -58,6 +58,9 @@ Broad web/social discovery is the main gap. The 26 discovery queries and 18 disc
 ## Food & Drink directory
 `data/restaurants.json` is the canonical Food & Drink directory. v0.11.6 contains 80 Norwood eateries/drink/dessert listings. Links use an official business website when verified; when an official site is not available, the record uses a business-specific Google Maps URL. `data/restaurants-data.js` is the static-browser companion file.
 
+## Norwood Pizza Passport and Bar Crawl Bingo
+`pizza-passport.html` reads its eligible stops from the maintained `data/restaurants-data.js` records, including Mak’s Roast Beef & Pizza. `data/bar-crawl-venues.js` holds the separately curated Bar Crawl Bingo venue list and ABCC license IDs, based on the November 6, 2026 active on-premises snapshot and a review of regular public access and hours. Both games keep progress in local browser storage and require an honor-system attestation before generating a certificate. The attestation is not included in the certificate. Review the ABCC snapshot and public hours before maintaining the eligible venue list.
+
 ## Houses of Worship
 The resource taxonomy now includes a dedicated `worship` topic. Norwood congregations are listed first by relevance; nearby Westwood, Needham and Sharon resources are intentionally included when they broaden the faith traditions available to Norwood residents. These entries are resource-directory listings, not endorsements, and do not automatically make routine worship services eligible for What’s Happening.
 
