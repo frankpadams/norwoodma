@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T20:07:47.956779Z",
+  "generated_at": "2026-11-25T19:12:22.273429Z",
   "stations": {
     "BJ's Gas Station": {
       "google": {
@@ -24,8 +24,8 @@
             "types": [
               "gas_station",
               "point_of_interest",
-              "store",
               "service",
+              "store",
               "establishment"
             ]
           }
@@ -38,7 +38,6 @@
         "accepted_grades": [
           "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -56,8 +55,8 @@
             "station_verified": true,
             "types": [
               "gas_station",
-              "service",
               "point_of_interest",
+              "service",
               "establishment"
             ]
           }
@@ -124,9 +123,8 @@
     },
     "Gulf — Broadway": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -156,8 +154,6 @@
       "google": {
         "accepted_grades": [
           "diesel",
-          "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -200,9 +196,9 @@
               "food_store",
               "restaurant",
               "food",
+              "store",
               "point_of_interest",
               "service",
-              "store",
               "establishment"
             ]
           },
@@ -232,6 +228,7 @@
     "Mobil / On the Run — Norwood Center": {
       "google": {
         "accepted_grades": [
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -291,9 +288,8 @@
     },
     "Mr. Frank's Food Mart": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -374,31 +370,29 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
+              "store",
               "establishment"
             ]
           },
           {
-            "address": "501 Washington St, Norwood, MA 02062, USA",
+            "address": "683 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Lucky Mart Inc.",
+            "name": "Norwood Convenience and News",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "501 Washington St",
+              "683 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
             "station_verified": false,
             "types": [
               "convenience_store",
-              "grocery_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
-              "service",
+              "store",
               "establishment"
             ]
           }
@@ -409,7 +403,6 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -441,9 +434,8 @@
     },
     "Route 1 Auto Services": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -462,9 +454,9 @@
             "station_verified": true,
             "types": [
               "car_repair",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           },
@@ -528,6 +520,46 @@
               "service",
               "establishment"
             ]
+          },
+          {
+            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Norwood Bottled Gas",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "305 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
+            "station_verified": false,
+            "types": [
+              "supplier",
+              "manufacturer",
+              "point_of_interest",
+              "service",
+              "store",
+              "establishment"
+            ]
+          },
+          {
+            "address": "238 Pleasant St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Shell",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "238 Pleasant St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
@@ -536,7 +568,7 @@
     "Shell — Pleasant Street": {
       "google": {
         "accepted_grades": [
-          "regular"
+          "midgrade"
         ],
         "candidates": [
           {
@@ -564,9 +596,8 @@
     },
     "Shell — Walpole Street": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -598,7 +629,6 @@
       "google": {
         "accepted_grades": [
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -619,9 +649,9 @@
               "convenience_store",
               "food_store",
               "food",
-              "store",
               "point_of_interest",
               "service",
+              "store",
               "establishment"
             ]
           }
