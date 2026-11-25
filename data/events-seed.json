@@ -9111,5 +9111,31 @@
     "verification_status": "verified",
     "notes": "Annual holiday sale supporting local community programs and charities. The November 2026 Senior Center newsletter lists 9:30 AM–3 PM. The sale is at the WCC Thrift Shop, 1194 Washington Street.",
     "discovered_by": "official_organization_review"
+  },
+  {
+    "id": "2026-12-19-balch-pto-pancake-breakfast",
+    "title": "Balch PTO Pancake Breakfast",
+    "description": "A public Balch PTO fundraiser with pancakes, crafts, raffles, and a visit from Santa and Mrs. Claus. Coffee and hot chocolate are available for purchase.",
+    "start": {
+      "date": "2026-12-19",
+      "time": "08:30"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": "10:30"
+    },
+    "venue": "Balch Elementary School",
+    "address": "1170 Washington Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "fundraiser",
+    "source_id": "nps-balch-pto",
+    "source_url": "https://stayhappening.com/e/balch-pto-pancake-breakfast-E2IT03QBO7B",
+    "organizer": "Balch PTO",
+    "cost": "$7 per person",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "school_scope": "Balch Elementary School",
+    "verification_status": "verified_secondary_event_listing"
   }
 ]
