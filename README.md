@@ -1,10 +1,10 @@
-# Norwood.ma v2.1.8
+# Norwood.ma v2.1.9
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.1.8 — highlights zoning districts from the Super Map legend and shows matching swatches in zoning popups.
+**Current release:** v2.1.9 — uses dots and contrasting hatch lines for overlapping zoning overlays on the Super Map.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.

@@ -518,7 +518,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
  const inputs=[...document.querySelectorAll('[data-zone-code]')], masters=[...document.querySelectorAll('[data-zone-group]')],all=document.getElementById('zoningAll'),status=document.getElementById('zoningStatus'),legend=document.getElementById('zoningLegend'),legendItems=document.getElementById('zoningLegendItems');
  let data=null,pending=null,revision=0,highlightedCode=null,highlightLayer=null;
  const layers=new Map(),overlayCodes=new Set([...groups[3],...groups[4],'SPCO']);
- const patterns={SPCO:['diagonal', '#9b0080'],MUOD:['diagonal','#005ce6'],UAMUOD:['reverse','#005ce6'],VMUOD:['horizontal','#005ce6'],MMOD:['dots','#267300'],MSOD:['horizontal','#a83800'],SGASGOD:['diagonal','#222222'],GSSGOD:['reverse','#222222'],WCS:['vertical','#a000a0'],NC:['dots','#038035'],ND:['reverse','#b00000'],WG:['dots','#0832a6']};
+ const patterns={SPCO:['diagonal', '#9b0080'],MUOD:['diagonal','#005ce6'],UAMUOD:['reverse','#005ce6'],VMUOD:['dots','#004ca8'],MMOD:['dots','#267300'],MSOD:['horizontal','#a83800'],SGASGOD:['diagonal','#222222'],GSSGOD:['reverse','#222222'],WCS:['vertical','#a000a0'],NC:['dots','#038035'],ND:['dots','#b00000'],WG:['dots','#0832a6']};
  const basePane=map.createPane('norwoodZoningBase');basePane.style.zIndex='410';
  const overlayPane=map.createPane('norwoodZoningOverlay');overlayPane.style.zIndex='420';
  const highlightPane=map.createPane('norwoodZoningHighlight');
