@@ -35,12 +35,6 @@ window.NORWOOD_BAR_CRAWL_VENUES={
       "licenseId": "00011-RS-0914"
     },
     {
-      "id": "00030-HT-0914",
-      "name": "Olivadi",
-      "address": "32 Guild Street",
-      "licenseId": "00030-HT-0914"
-    },
-    {
       "id": "00058-RS-0914",
       "name": "Minerva Indian Cuisine",
       "address": "500 Boston Providence Turnpike",
