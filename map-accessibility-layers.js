@@ -88,6 +88,41 @@
   }
   return {layer:group,count};
  }
+ const inventorySource='https://www.norwoodma.gov/Planning/AppendixB_ADAEval_v2.pdf';
+ const inventorySites=[
+ ["Alevizos Park", 42.18009, -71.21997, 11, "The Town recorded picnic tables designed for wheelchair access, a route across mown grass, and no marked accessible parking near the entrances.", "Evaluate a route to the planned pavilion."],
+ ["Ellis Pond", 42.1801, -71.2195, 13, "The Town recorded accessible parking on Nichols Street and a stone-dust path to the water. Some stretches near the pond trail were short and steep."],
+ ["Endean Conservation Land", 42.173604, -71.212938, 13, "The Town described mown-grass paths that could be hard to navigate. Survey respondents reported overgrowth.", "Maintain the paths more frequently."],
+ ["Hawes Recreation Area", 42.17079, -71.21004, 14, "The Town recorded a rebuilt accessible bathhouse and two accessible parking spaces. Tree roots obstructed the playground opening.", "Relocate the opening and install poured rubber surfacing."],
+ ["Bond Street Playground", 42.189592, -71.20452, 15, "The inventory listed wood chips as the play surface.", "Install a poured rubber play surface and an accessible walkway."],
+ ["Father McAleer Recreation Area", 42.19901, -71.21231, 16, "The Town recorded a pool lift and an accessible portable restroom. It reported a parking approach obstructed by stone markers, a bathhouse with access barriers, and railroad ties around the play area.", "Improve the parking approach, playground entry and surface, and bathhouse access."],
+ ["Pleasant Street Park", 42.185155, -71.195943, 17, "The Town recorded railroad ties blocking access to the play area, no accessible parking, and a portable restroom with access barriers.", "Create a playground opening and add accessible parking and a replacement restroom."],
+ ["Wilson Street Playground", 42.17843, -71.22561, 18, "The Town recorded railroad ties around the playground, a slanted accessible picnic table, and no designated accessible parking.", "Improve playground entry, level the picnic table, and designate a parking space."],
+ ["Doherty Field", 42.15591, -71.19725, 19, "The Town recorded a height gap between the path and its footbridge from the parking area. One side of the wood-chip play area was open.", "Level the bridge approaches and upgrade the play surface, restroom, and picnic seating."],
+ ["Charles Eliot Park / Lower Balch", 42.176499, -71.203798, 20, "The inventory listed wood chips and recorded deteriorating restroom and storage buildings.", "Rehabilitate the park with an accessible ramp and combine the restroom and storage in an accessible building."],
+ ["Willett Babe Ruth Baseball Field", 42.19364, -71.22185, 21, "The inventory listed two accessible parking spaces near the school and recorded a portable restroom with access barriers.", "Replace the portable restroom with an accessible unit."],
+ ["Norwood Civic Center", 42.19443, -71.19893, 22, "The Town recorded a step-free main approach, automatic doors, four accessible parking spaces, and an elevator. It also reported elevator controls without Braille and an emergency intercom that required voice communication."]
+];
+ const inventoryToggle=document.getElementById('townAccessInventoryToggle');
+ let inventoryLayer;
+ inventoryToggle?.addEventListener('change',()=>{
+  if(!inventoryToggle.checked){
+   if(inventoryLayer)map.removeLayer(inventoryLayer);
+   return;
+  }
+  if(!inventoryLayer){
+   inventoryLayer=L.layerGroup();
+   for(const [name,lat,lng,page,observed,proposed] of inventorySites){
+    const content='<strong>'+safe(name)+'</strong><p><b>Town inventory observations (2020)</b><br>'+safe(observed)+'</p>'
+     +(proposed?'<p><b>Proposed in the 2020 plan</b><br>'+safe(proposed)+'</p>':'')
+     +'<p>Pin marks the site. Check current conditions before visiting.</p>'
+     +'<a href="'+inventorySource+'#page='+page+'" target="_blank" rel="noopener">Town accessibility inventory ↗</a>';
+    L.circleMarker([lat,lng],{radius:8,color:'#fff',weight:2,fillColor:'#154d79',fillOpacity:1})
+     .bindTooltip(name+' · Town inventory (2020)').bindPopup(content).addTo(inventoryLayer);
+   }
+  }
+  inventoryLayer.addTo(map);
+ });
  const builders={places:makePlaces,paths:makePaths};
  function updateStatus(){
   const places=checkboxes.places.checked&&layers.places?layers.places.count:null;

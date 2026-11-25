@@ -5,6 +5,7 @@
  const geoserver='https://gis-prod.digital.mass.gov/geoserver/wms';
  const fema='https://hazards.fema.gov/arcgis/services/public/NFHLWMS/MapServer/WMSServer';
  const defs=[
+  {id:'townAccessInventoryToggle',title:'Town recreation accessibility inventory (2020)',symbols:[['Site covered by the Town inventory','#154d79','dot']],description:'Site markers show the Town’s dated observations and proposed improvements. Check current conditions before visiting.',link:'https://www.norwoodma.gov/Planning/AppendixB_ADAEval_v2.pdf',linkText:'Town accessibility inventory ↗'},
   {id:'femaFloodToggle',title:'FEMA flood hazard zones',service:fema,layers:['28'],description:'FEMA flood hazard zone symbols. Click a shaded area for its zone designation.',link:'https://msc.fema.gov/portal/search',linkText:'FEMA official map'},
   {id:'massgisWetlands',title:'Wetlands & waterways',service:geoserver,layers:['massgis:GISDATA.WETLANDSDEP_POLY','massgis:GISDATA.MAJPOND_POLY','massgis:GISDATA.MAJSTRM_ARC']},
   {id:'massgisOpenSpace',title:'Conservation & open space',service:geoserver,layers:['massgis:GISDATA.OPENSPACE_POLY']},
