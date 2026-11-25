@@ -64,6 +64,12 @@
 .zoning-legend-entry{display:flex;align-items:center;min-height:32px;padding:4px 7px;border:1px solid transparent;border-radius:5px;background:transparent;color:inherit;text-align:left;font:inherit;cursor:pointer}
 .zoning-legend-entry:hover,.zoning-legend-entry[aria-pressed="true"]{background:#eaf2fa;border-color:#7895ad;color:#17384d}
 .zoning-legend-entry:focus-visible{outline:2px solid #005ce6;outline-offset:2px}
+#zoningLegend{container-type:inline-size}
+#zoningLegendItems,.zoning-legend-column{display:grid;gap:6px 12px}
+#zoningLegendItems{margin-top:6px;align-items:start}
+@container (min-width:590px){
+ #zoningLegendItems:has(> :nth-child(2)){grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
+}
 </style>
 <script src="analytics.js?v=0.13.4.37"></script></head>
 <body>
@@ -220,7 +226,7 @@
 </div>
 <section id="zoningLegend" aria-label="Zoning legend" hidden style="padding:12px 16px;border-top:1px solid #d5e0e6">
  <strong>Zoning legend</strong>
- <div id="zoningLegendItems" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(285px,calc((100% - 12px) / 2))),1fr));gap:6px 12px;margin-top:6px"></div>
+ <div id="zoningLegendItems"></div>
 </section>
 <section id="mapTransitDetails" aria-labelledby="mapTransitTitle" hidden style="padding:12px 16px;margin:10px 0;border:1px solid #d7e1e8;border-radius:8px">
  <h2 id="mapTransitTitle">Live MBTA transit</h2>
@@ -554,7 +560,17 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
    button.setAttribute('aria-pressed',String(button.dataset.legendZone===code));
   }
  }
- async function refresh(){sync();const seq=++revision,keys=chosen();if(highlightedCode&&!keys.includes(highlightedCode))setHighlight(null);for(const [k,l] of layers){if(l&&!keys.includes(k)&&map.hasLayer(l))map.removeLayer(l);}legendItems.replaceChildren();legend.hidden=true;status.hidden=!keys.length;if(!keys.length)return;status.textContent='Loading Town GIS zoning…';try{if(!data){pending ||= load();try{data=await pending;}finally{pending=null;}}if(seq!==revision)return;await ensureTurf();if(seq!==revision)return;const missing=[];for(const k of keys){if(!layers.has(k))layers.set(k,makeLayer(k));const l=layers.get(k);if(!l){missing.push(k);continue;}if(!map.hasLayer(l))l.addTo(map);const button=document.createElement('button');button.type='button';button.className='zoning-legend-entry';button.dataset.legendZone=k;button.setAttribute('aria-pressed',String(k===highlightedCode));button.append(swatch(k),document.createTextNode(names[k]+' ('+k+')'));button.addEventListener('click',()=>setHighlight(highlightedCode===k?null:k));legendItems.append(button);}legend.hidden=!legendItems.childElementCount;status.textContent=missing.length?'No geometry returned for '+missing.join(', ')+'. Other selected districts shown.':'Selected zoning districts loaded. Click the map to see all zoning at that point.';}catch(e){if(seq===revision)status.textContent='Unable to combine the Town GIS zoning boundaries. Check the connection and change a selection to retry.';}}
+ async function refresh(){sync();const seq=++revision,keys=chosen();if(highlightedCode&&!keys.includes(highlightedCode))setHighlight(null);for(const [k,l] of layers){if(l&&!keys.includes(k)&&map.hasLayer(l))map.removeLayer(l);}legendItems.replaceChildren();legend.hidden=true;status.hidden=!keys.length;if(!keys.length)return;status.textContent='Loading Town GIS zoning…';try{if(!data){pending ||= load();try{data=await pending;}finally{pending=null;}}if(seq!==revision)return;await ensureTurf();if(seq!==revision)return;const missing=[],buttons=[];for(const k of keys){if(!layers.has(k))layers.set(k,makeLayer(k));const l=layers.get(k);if(!l){missing.push(k);continue;}if(!map.hasLayer(l))l.addTo(map);const button=document.createElement('button');button.type='button';button.className='zoning-legend-entry';button.dataset.legendZone=k;button.setAttribute('aria-pressed',String(k===highlightedCode));button.append(swatch(k),document.createTextNode(names[k]+' ('+k+')'));button.addEventListener('click',()=>setHighlight(highlightedCode===k?null:k));buttons.push(button);}
+ const ranked=[...buttons].sort((a,b)=>a.textContent.length-b.textContent.length);
+ const shorter=new Set(ranked.slice(0,Math.ceil(ranked.length/2)));
+ for(const entries of [buttons.filter(button=>shorter.has(button)),buttons.filter(button=>!shorter.has(button))]){
+  if(!entries.length)continue;
+  const column=document.createElement('div');
+  column.className='zoning-legend-column';
+  column.append(...entries);
+  legendItems.append(column);
+ }
+ legend.hidden=!buttons.length;status.textContent=missing.length?'No geometry returned for '+missing.join(', ')+'. Other selected districts shown.':'Selected zoning districts loaded. Click the map to see all zoning at that point.';}catch(e){if(seq===revision)status.textContent='Unable to combine the Town GIS zoning boundaries. Check the connection and change a selection to retry.';}}
  map.on('click',({latlng})=>{
   if(!chosen().length||!data||!window.turf?.booleanPointInPolygon)return;
   const point=[latlng.lng,latlng.lat],matches=new Set();
