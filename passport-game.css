@@ -48,7 +48,6 @@
 .passport-details{margin:16px 0;border-top:1px solid #d5e0e6;padding-top:14px}
 .passport-details summary{cursor:pointer;color:#153b56;font-weight:800}
 .passport-footer-note{margin:16px 0 0;color:#667b87;font-size:.76rem;line-height:1.5}
-.certificate-print-note{color:#687d89;font-size:.8rem}
 @media(max-width:480px){
  .passport-page{padding-left:12px;padding-right:12px}
  .passport-progress{align-items:flex-start}
@@ -61,5 +60,5 @@
  body.print-certificate #certificate,body.print-certificate #certificate *{visibility:visible!important}
  body.print-certificate #certificate{position:absolute;left:0;top:0;width:100%;margin:0;padding:0;border:0;box-shadow:none}
  body.print-certificate #certificate img{width:100%;border:0;border-radius:0}
- body.print-certificate #certificate h2,body.print-certificate .certificate-actions,body.print-certificate .certificate-print-note{display:none!important}
+ body.print-certificate #certificate h2,body.print-certificate .certificate-actions{display:none!important}
 }
