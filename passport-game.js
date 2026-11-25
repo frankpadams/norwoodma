@@ -24,22 +24,53 @@
   const a=document.createElement("a");a.className="passport-link";a.textContent=label;a.href=href;
   if(external){a.target="_blank";a.rel="noopener"}return a;
  }
- function drawCertificate(info){
+ function makePhotoLogo(source){
+  const canvas=document.createElement("canvas");canvas.width=source.width;canvas.height=source.height;
+  const context=canvas.getContext("2d");context.drawImage(source,0,0);
+  const imageData=context.getImageData(0,0,canvas.width,canvas.height),pixels=imageData.data;
+  for(let i=0;i<pixels.length;i+=4){
+   const x=(i/4)%canvas.width,y=Math.floor(i/4/canvas.width),r=pixels[i],g=pixels[i+1],b=pixels[i+2];
+   const pinX=x-397,pinY=y-74,inPin=(pinX*pinX)/(30*30)+(pinY*pinY)/(27*27)<=1;
+   if(pinX*pinX+pinY*pinY<=10*10){pixels[i]=255;pixels[i+1]=255;pixels[i+2]=255;pixels[i+3]=255;continue}
+   if(r>238&&g>238&&b>238&&Math.max(r,g,b)-Math.min(r,g,b)<18){pixels[i+3]=0;continue}
+   const isGold=r>150&&r>g*1.12&&g>b*1.25,isPinNavy=inPin&&b>r*1.45&&b>g*1.3;
+   if(!isGold&&!isPinNavy){pixels[i]=255;pixels[i+1]=255;pixels[i+2]=255}
+  }
+  context.putImageData(imageData,0,0);return canvas;
+ }
+ async function drawCertificate(info){
+  const loadImage=src=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error("Could not load the certificate artwork."));image.src=new URL(src,document.baseURI).href});
+  const [logo,background]=await Promise.all([loadImage("assets/logo-approved-transparent.png"),loadImage("assets/CommonGazeeboSeptember.png")]);
   const canvas=document.createElement("canvas");canvas.width=1200;canvas.height=630;
   const c=canvas.getContext("2d");
-  c.fillStyle="#f5f8fb";c.fillRect(0,0,1200,630);
-  c.fillStyle="#003b71";c.fillRect(0,0,1200,18);
-  c.strokeStyle="#d7ad00";c.lineWidth=5;c.strokeRect(32,34,1136,562);
+  c.fillStyle="#fbf8ef";c.fillRect(0,0,1200,630);
+
+  // Keep the logo over the Town Common photo, then fade the image to a pale backdrop behind the certificate text.
+  c.save();c.beginPath();c.roundRect(38,38,1124,554,11);c.clip();
+  const photoRatio=1124/554,sourceHeight=background.width/photoRatio;
+  const sourceY=Math.max(0,Math.min(background.height-sourceHeight,(background.height-sourceHeight)/2));
+  c.drawImage(background,0,sourceY,background.width,sourceHeight,38,38,1124,554);
+  const shade=c.createLinearGradient(0,38,0,265);shade.addColorStop(0,"rgba(0,20,38,.62)");shade.addColorStop(.72,"rgba(0,20,38,.42)");shade.addColorStop(1,"rgba(0,20,38,0)");
+  c.fillStyle=shade;c.fillRect(38,38,1124,170);
+  const wash=c.createLinearGradient(0,145,0,255);wash.addColorStop(0,"rgba(255,253,248,0)");wash.addColorStop(1,"rgba(255,253,248,.84)");
+  c.fillStyle=wash;c.fillRect(38,145,1124,110);c.fillStyle="rgba(255,253,248,.84)";c.fillRect(38,255,1124,337);
+  const brandLogo=makePhotoLogo(logo),logoWidth=490,logoHeight=brandLogo.height*logoWidth/brandLogo.width;
+  c.drawImage(brandLogo,(1200-logoWidth)/2,42,logoWidth,logoHeight);
+  c.restore();
+
+  c.strokeStyle="#c89c18";c.lineWidth=4;c.beginPath();c.roundRect(20,20,1160,590,20);c.stroke();
+  c.strokeStyle="#173b60";c.lineWidth=2;c.beginPath();c.roundRect(32,32,1136,566,15);c.stroke();
   c.textAlign="center";c.textBaseline="middle";
-  c.fillStyle="#003b71";c.font="800 34px system-ui, sans-serif";c.fillText("NORWOOD.MA",600,105);
-  c.fillStyle="#9a7600";c.font="800 22px system-ui, sans-serif";c.fillText(info.kicker.toUpperCase(),600,165);
-  c.fillStyle="#153b56";c.font="800 52px Georgia, serif";c.fillText(info.title,600,235);
-  c.fillStyle="#2f495b";c.font="700 31px system-ui, sans-serif";c.fillText(info.name,600,328);
-  c.fillStyle="#536b7b";c.font="500 24px system-ui, sans-serif";
-  c.fillText(info.subtitle,600,385);
-  c.strokeStyle="#d7ad00";c.lineWidth=2;c.beginPath();c.moveTo(285,435);c.lineTo(915,435);c.stroke();
-  c.fillStyle="#003b71";c.font="800 24px system-ui, sans-serif";c.fillText("OUR TOWN. ONLINE.",600,490);
-  c.fillStyle="#687d89";c.font="500 18px system-ui, sans-serif";c.fillText("An independent community game from Norwood.ma",600,535);
+  c.fillStyle="#fff6d7";c.strokeStyle="#c89c18";c.lineWidth=3;c.beginPath();c.arc(600,224,38,0,Math.PI*2);c.fill();c.stroke();
+  c.strokeStyle="#c89c18";c.lineWidth=2;c.beginPath();c.arc(600,224,22,0,Math.PI*2);c.stroke();
+  c.fillStyle="#a47b00";c.font="800 25px system-ui, sans-serif";c.fillText("★",600,224);
+  c.fillStyle="#987000";c.font="800 17px system-ui, sans-serif";c.fillText("ACHIEVEMENT UNLOCKED",600,284);
+  c.fillStyle="#34566f";c.font="800 19px system-ui, sans-serif";c.fillText(info.kicker.toUpperCase(),600,324);
+  c.fillStyle="#12385a";c.font="800 50px Georgia, serif";c.fillText(info.title,600,376,1040);
+  c.fillStyle="#243f52";c.font="400 34px Georgia, serif";c.fillText(info.name,600,428,1000);
+  c.strokeStyle="#c89c18";c.lineWidth=2;c.beginPath();c.moveTo(360,466);c.lineTo(840,466);c.stroke();
+  c.fillStyle="#536b7b";c.font="500 22px system-ui, sans-serif";c.fillText(info.subtitle,600,500,1040);
+  c.fillStyle="#153b56";c.font="800 17px system-ui, sans-serif";c.fillText("A LOCAL GAME FROM NORWOOD.MA",600,558);
   return new Promise((resolve,reject)=>canvas.toBlob(blob=>blob?resolve({blob,dataUrl:canvas.toDataURL("image/png")}):reject(new Error("Could not prepare the certificate image.")),"image/png"));
  }
  function downloadCertificate(){
@@ -74,7 +105,7 @@
   const prepared=await drawCertificate(info);
   latestCertificate={blob:prepared.blob,filename:info.filename,title:info.title};
   certificateImage.src=prepared.dataUrl;certificateImage.alt=info.title+" certificate for "+info.name+". "+info.subtitle;
-  certificate.hidden=false;certificateStatus.textContent="Your self-attestation unlocked this certificate. The attestation itself is not printed on it.";
+  certificate.hidden=false;certificateStatus.textContent="Your certificate is ready.";
   certificate.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
  }
  function printCertificate(){document.body.classList.add("print-certificate");window.print();window.addEventListener("afterprint",()=>document.body.classList.remove("print-certificate"),{once:true})}
@@ -115,7 +146,7 @@
    stops.forEach(stop=>list.appendChild(stopCard(stop,found.has(stop.id),toggleStop)));
    count.textContent=found.size+" of "+stops.length+" visits stamped";
    const milestone=nextMilestone(found.size);
-   if(milestone){claim.hidden=false;claimTitle.textContent="Claim your "+milestone.title+" certificate";claimText.textContent="You’ve reached the "+milestone.count+"-stop milestone. Attest that your stamps reflect places you visited, then add the name you want on your certificate.";form.dataset.milestone=String(milestone.count)}
+   if(milestone){claim.hidden=false;claimTitle.textContent="Claim your "+milestone.title+" certificate";claimText.textContent="You’ve reached the "+milestone.count+"-stop milestone. Add the name you want on your certificate.";form.dataset.milestone=String(milestone.count)}
    else{claim.hidden=true;if(found.size===stops.length&&milestones.every(m=>data.earned.includes(m.count)))status.textContent="You’ve earned all three passport certificates. Your stamps remain saved in this browser."}
   }
   function toggleStop(id){
@@ -183,7 +214,7 @@
    byId("bingoCount").textContent=selected.size+" of 24 venue squares marked";
    byId("bingoWinStatus").textContent=line?"Bingo! You have a "+line+" line.":"Visit and mark four venues in a line to get Bingo.";
    claim.hidden=!line;
-   if(line){byId("claimTitle").textContent="Claim your Bar Crawl Bingo certificate";byId("claimText").textContent="Attest that you visited the places you marked, then enter the name you want printed on your certificate."}
+   if(line){byId("claimTitle").textContent="Claim your Bar Crawl Bingo certificate";byId("claimText").textContent="Add the name you want on your certificate."}
    list.replaceChildren();
    venues.slice().sort((a,b)=>a.name.localeCompare(b.name)).forEach(venue=>{
     const li=document.createElement("li"),name=document.createElement("strong"),small=document.createElement("small"),link=makeLink("Open Super Map →",mapsUrl(),false);
