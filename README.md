@@ -1,10 +1,10 @@
-# Norwood.ma v2.2.4
+# Norwood.ma v2.3.0
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.2.4 — restores Watch Live for confirmed Select Board meetings in the site alert strip.
+**Current release:** v2.3.0 — adds the Norwood Pizza Passport and Bar Crawl Bingo, with locally saved progress and shareable achievement certificates.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -71,12 +71,12 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Weather uses National Weather Service forecast data plus local radar and the Norwood Airport webcam. On forecast failures, widgets show a labeled cached forecast only while its period is current and the cache is under three hours old; otherwise they offer the forecast link. Network requests time out after eight seconds.
 - Transit predictions beyond two hours use estimated clock times with Tomorrow/date labels in Norwood local time. Invalid or expired predictions are excluded.
 - Gas prices use address-verified Google station lookups, direct official Costco Dedham/Sharon prices, and a best-effort free GasBuddy fallback for stations without recent regular prices. Per-grade provenance and per-station diagnostics preserve original report dates when a source fails. See `GAS-PRICES.md` for matching, coverage and free-source limitations.
-- Interactive tools include Norwood Trivia, How Townie Are You?, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
+- Interactive tools include Norwood Trivia, How Townie Are You?, the Norwood Pizza Passport, Norwood Bar Crawl Bingo, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
 
 ### PWA, navigation, and presentation
 - Primary interior navigation is Home · What's Happening · News · Explore · Transit · Calendars · Local Resources; the homepage omits redundant Home.
 - Mobile navigation uses the hamburger menu; Support Norwood.ma is intentionally kept there rather than promoted into primary desktop navigation.
-- The More page (`discover.html`) groups destinations by subject: News & Events; Everyday Living; Government & Participation; Food, Shopping & Services; Activities & Recreation; Getting Around; and Fun & Games. The dedicated Games & Shenanigans hub (`games.html`) collects Norwood Trivia and How Townie Are You. Each category spans the full page width, with compact descriptive links arranged in as many columns as the window comfortably supports. Browse current news/events, everyday living, transport, food/services, activities, games, civic participation, device access, then site information. Site search sits above the groups; links use the maintained destination pages rather than retired previews. Maintain coverage of every public destination page here, including topic-specific restaurant guides and public detail guides. Exclude error pages, redirects, empty files, admin pages and development/review previews; audit both the root HTML inventory and sitemap when changing coverage.
+- The More page (`discover.html`) groups destinations by subject: News & Events; Everyday Living; Government & Participation; Food, Shopping & Services; Activities & Recreation; Getting Around; and Fun & Games. The dedicated Games & Shenanigans hub (`games.html`) collects Norwood Trivia, How Townie Are You?, Norwood Pizza Passport, and Norwood Bar Crawl Bingo. Each category spans the full page width, with compact descriptive links arranged in as many columns as the window comfortably supports. Browse current news/events, everyday living, transport, food/services, activities, games, civic participation, device access, then site information. Site search sits above the groups; links use the maintained destination pages rather than retired previews. Maintain coverage of every public destination page here, including topic-specific restaurant guides and public detail guides. Exclude error pages, redirects, empty files, admin pages and development/review previews; audit both the root HTML inventory and sitemap when changing coverage.
 - Approved blue/gold Norwood.ma branding, favicon/home-screen icon, accessibility controls, and independent-site disclosures are sitewide conventions.
 - Interior content pages use a shared compact title treatment: optional category label, consistent title typography, and a short description when useful. Decorative title panels are removed; feature imagery stays separate from the title.
 - Asset query-string versions are cache-busters and are separate from the product release number.
@@ -104,6 +104,14 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v2.3.0 — Norwood Pizza Passport and Bar Crawl Bingo
+Released November 24, 2026.
+
+- Adds two self-guided local games with browser-only progress, accessible interaction, randomized bingo cards, milestone certificates, and download/share/print options.
+- Builds the Pizza Passport from the maintained restaurant list, including Mak’s Roast Beef & Pizza; displays current venue details and an advisory for the scheduled Bardo’s trailer.
+- Curates Bar Crawl Bingo from the Massachusetts ABCC active on-premises license snapshot and reviewed public-facing venues; excludes member-only and event-only spaces and states the 21+ and no-purchase rules.
+- Adds both games to the Games & Shenanigans hub, Discover, and the sitemap.
 
 ### v2.1.2 — Compact page titles
 Released November 23, 2026.

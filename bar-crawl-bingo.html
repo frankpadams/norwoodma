@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#003B71">
+<meta name="description" content="Play Norwood Bar Crawl Bingo. Visit regular public Norwood venues with active on-premises licenses and earn a shareable certificate.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://www.norwood.ma/bar-crawl-bingo.html">
+<link rel="icon" href="assets/favicon-approved.png">
+<link rel="stylesheet" href="styles.css?v=2.3.0">
+<link rel="stylesheet" href="passport-game.css?v=2.3.0">
+<title>Norwood Bar Crawl Bingo | Norwood.ma</title>
+<script src="analytics.js?v=0.13.4.37"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="independent"><strong>Norwood.ma is an independent community site — not the Town of Norwood government website.</strong><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></div>
+<header class="top"><a class="brand approved" href="index.html"><img src="assets/logo-dark-approved.png" alt="Norwood.ma — Our Town. Online."></a><button id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu">Menu</button><nav id="nav"><a href="index.html">Home</a><a href="events.html">What’s Happening</a><a href="news.html">News</a><a href="explore.html">Explore</a><a href="transit.html">Transit</a><a href="calendars.html">Calendars</a><a href="resources.html">Local Resources</a><a href="discover.html">Discover</a></nav></header>
+<main class="detail passport-page" id="main" data-norwood-game="bar-crawl">
+<section class="page-hero"><p class="eyebrow">PLAY IN NORWOOD · 21+</p><h1>Norwood Bar Crawl Bingo</h1><p>Get four visited venues in a row, column, or diagonal. Your card mixes Norwood bars, breweries, and restaurants with active on-premises licenses.</p></section>
+<section class="passport-panel" aria-labelledby="bingo-how">
+<h2 id="bingo-how">A local bingo game with simple rules</h2>
+<p class="passport-note">This activity is for adults 21 and older. A venue visit is enough to mark a square: buying or drinking alcohol is never required. Follow each venue’s age and entry policies, check its current public hours, and arrange a safe ride.</p>
+<p class="passport-callout">The center is free. A line of five squares therefore takes four venue visits. Your card and marks stay in this browser on this device, on the honor system.</p>
+<p class="passport-status" id="gameStatus" role="status" aria-live="polite"></p>
+</section>
+<section class="passport-panel" aria-labelledby="board-heading"><div class="passport-progress"><div><h2 id="board-heading">Your bingo card</h2><strong id="bingoCount" aria-live="polite">Loading card…</strong></div><button class="passport-button secondary" id="newCard" type="button">Deal a new card</button></div><div class="bingo-wrap"><div class="bingo-board" id="bingoBoard" role="group" aria-label="Norwood Bar Crawl Bingo card"></div></div><p class="passport-status" id="bingoWinStatus" role="status" aria-live="polite"></p></section>
+<section class="passport-panel passport-claim" id="certificateClaim" aria-labelledby="claimTitle" hidden>
+<h2 id="claimTitle">Claim your certificate</h2><p class="passport-note" id="claimText"></p>
+<form class="passport-form" id="certificateForm">
+<label for="certificateName">Name to print on your certificate<input id="certificateName" name="certificateName" type="text" maxlength="48" autocomplete="nickname" required></label>
+<label class="passport-attest"><input id="certificateAttest" type="checkbox" required><span>I attest that I visited the Norwood venues I marked. This is an honor-system game.</span></label>
+<button class="passport-button" type="submit">Unlock my certificate</button>
+</form></section>
+<section class="passport-panel certificate-preview" id="certificate" hidden aria-labelledby="certificate-heading">
+<h2 id="certificate-heading">Your certificate</h2><img id="certificateImage" alt="">
+<div class="certificate-actions"><button class="passport-button" id="downloadCertificate" type="button">Download certificate</button><button class="passport-button secondary" id="shareCertificate" type="button">Share certificate</button><button class="passport-button secondary" id="printCertificate" type="button">Print / save as PDF</button></div>
+<p class="passport-status" id="certificateStatus" role="status" aria-live="polite"></p><p class="certificate-print-note">The certificate includes your chosen name and achievement. Your attestation is not included.</p>
+</section>
+<section class="passport-panel"><h2>Included venues</h2><p class="passport-note">The list uses Massachusetts ABCC active on-premises retail license data (reviewed November 6, 2026) and a Norwood.ma public-hours review. Member-only clubs, event-only spaces, hotel venues without a public bar schedule, and duplicate licenses at one venue are left out. Check the ABCC portal and each venue before visiting.</p><details class="passport-details"><summary>Show the current eligible venue list</summary><ul class="bingo-location-list" id="bingoVenueList"></ul></details><p><a class="passport-link" href="map.html">Find the Liquor Licenses layer on the Norwood Super Map →</a> &nbsp; <a class="passport-link" href="https://elicensing21.mass.gov/CitizenAccess/GeneralProperty/PropertyLookUp.aspx?TabName=APO&amp;isLicensee=Y" target="_blank" rel="noopener">Verify an active license with Massachusetts ABCC ↗</a></p></section>
+</main>
+<footer class="old-footer"><a class="footer-logo" href="index.html"><img alt="Norwood.ma — Our Town. Online." src="assets/logo-dark-approved.png"></a><div class="footer-legal"><p><strong>Independent community information site. Not affiliated with the Town of Norwood government.</strong></p><p>Bar Crawl Bingo is an adult activity. No purchase or alcohol consumption is required; confirm current venue hours and policies.</p><p><a href="about.html">About &amp; Editorial Standards →</a></p></div><a href="https://www.norwoodma.gov/" rel="noopener" target="_blank">Official Town website ↗</a></footer>
+<script src="nav.js?v=2.3.0"></script><script src="data/restaurants-data.js?v=20261106"></script><script src="data/bar-crawl-venues.js?v=20261106"></script><script src="passport-game.js?v=2.3.0"></script>
+</body></html>
