@@ -130,9 +130,6 @@
 <p class="map-layer-section-label">Layers</p>
 <p>Choose layers to load locations. Select more than one category to compare.</p>
 <label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
-<label class="map-layer-choice"><input type="checkbox" id="aircraftToggle" aria-describedby="aircraftStatus"><span>Live aircraft</span></label>
-<p id="aircraftStatus" class="map-layer-status" role="status" hidden></p>
-<p id="aircraftSource" class="map-layer-status" hidden>Reported aircraft positions within 15 nautical miles of Norwood. Snapshots refresh about every three minutes. Coverage varies. Data from <a href="https://www.adsb.lol/docs/open-data/api" target="_blank" rel="noopener">adsb.lol contributors</a> under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a>.</p>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
 <div id="mapEventDateFilter" class="map-layer-status" hidden><label for="mapEventDays">Upcoming events through <output id="mapEventThrough" for="mapEventDays"></output></label><input id="mapEventDays" type="range" min="0" value="0" style="display:block;width:100%;max-width:225px"></div>
 <label class="map-layer-choice"><input type="checkbox" id="liquorLicensesToggle"><span>Liquor licenses</span></label>
@@ -276,7 +273,6 @@
 <script src="map-test.js?v=20261124-accessibility"></script>
 <script src="map-integrated-trails.js?v=town-pdf-links"></script>
 <script src="map-transit-layer.js?v=20261124-accessibility"></script>
-<script src="map-aircraft-layer.js?v=1"></script>
 <script src="map-work-zones.js?v=scheduled-shifts"></script>
 <script src="map-road-safety.js?v=20261112-stations-v2"></script>
 <script src="map-police-activity.js?v=20261120-police-source-credit"></script>
@@ -502,8 +498,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   {ids:['alprToggle'],status:'alprStatus',title:'ALPR cameras'},
   {ids:['workZoneToggle'],status:'workZoneStatus',title:'Work zones'},
   {ids:['roadSafetyCrashes','roadSafetyCounts'],status:'roadSafetyStatus',title:'Road safety and transportation'},
-  {ids:['mbtaToggle'],status:'mbtaStatus',title:'Live MBTA transit'},
-  {ids:['aircraftToggle'],status:'aircraftSource',title:'Live aircraft'}
+  {ids:['mbtaToggle'],status:'mbtaStatus',title:'Live MBTA transit'}
  ];
  trigger.addEventListener('click',()=>{
   body.replaceChildren();let count=0;
