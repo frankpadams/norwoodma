@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-24T19:58:20.235183-05:00",
+  "generated_at": "2026-11-25T06:34:06.376448-05:00",
   "offline": false,
-  "events_published": 1983,
+  "events_published": 1958,
   "news_published": 120,
   "civic_notices": 52,
   "calendar_feeds": [
@@ -9,47 +9,47 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 1983,
-      "generated_at": "2026-11-24T19:58:19.722427-05:00"
+      "events": 1958,
+      "generated_at": "2026-11-25T06:34:05.848931-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
-      "events": 80,
-      "generated_at": "2026-11-24T19:58:19.728788-05:00"
+      "events": 76,
+      "generated_at": "2026-11-25T06:34:05.858400-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 796,
-      "generated_at": "2026-11-24T19:58:19.742889-05:00"
+      "events": 791,
+      "generated_at": "2026-11-25T06:34:05.878725-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 664,
-      "generated_at": "2026-11-24T19:58:19.754013-05:00"
+      "events": 660,
+      "generated_at": "2026-11-25T06:34:05.894579-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
-      "events": 5,
-      "generated_at": "2026-11-24T19:58:19.760581-05:00"
+      "events": 4,
+      "generated_at": "2026-11-25T06:34:05.903790-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 66,
-      "generated_at": "2026-11-24T19:58:19.767942-05:00"
+      "generated_at": "2026-11-25T06:34:05.914310-05:00"
     }
   ],
   "recreation_programs": 145,
-  "recreation_occurrences": 1216,
+  "recreation_occurrences": 1205,
   "event_sources": [
     {
       "source_id": "ache-massachusetts-events",
@@ -80,7 +80,7 @@
       "source_id": "castle-island-calendar",
       "ok": true,
       "method": "html_calendar",
-      "found": 9,
+      "found": 8,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -331,7 +331,7 @@
       "source_id": "masshire-norwood-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 27,
+      "found": 26,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -349,8 +349,8 @@
       "source_id": "ncm-home",
       "ok": true,
       "method": "html_hub",
-      "found": 1,
-      "note": ""
+      "found": 0,
+      "note": "configured pages checked; no dated events extracted"
     },
     {
       "source_id": "ncm-school-live-broadcasts",
@@ -479,7 +479,7 @@
       "source_id": "norwood-space-center-events",
       "ok": true,
       "method": "tribe_events",
-      "found": 9,
+      "found": 8,
       "note": ""
     },
     {
@@ -522,7 +522,7 @@
       "note": "HTTPSConnectionPool(host='norwoodtoastmaster.toastmastersclubs.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='norwoodtoastm",
       "outcome": "failed",
       "access_limited": false,
-      "retained_events": 1
+      "retained_events": 0
     },
     {
       "source_id": "norwood-town-news",
@@ -1181,7 +1181,7 @@
       "source_id": "nrrc-events",
       "ok": true,
       "method": "html_hub",
-      "found": 3,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1279,7 +1279,7 @@
       "source_id": "resource-norwood-youth-soccer",
       "ok": true,
       "method": "nys_multi_schedule",
-      "found": 150,
+      "found": 151,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1422,7 +1422,7 @@
       "source_id": "town-senior-newsletter",
       "ok": true,
       "method": "newsletter_calendar",
-      "found": 3,
+      "found": 2,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1619,7 +1619,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 90,
+      "found": 88,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1627,7 +1627,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 91,
+      "found": 21,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1635,7 +1635,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 9,
+      "found": 34,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1643,7 +1643,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 25,
+      "found": 24,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
