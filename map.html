@@ -70,6 +70,8 @@
 @container (min-width:590px){
  #zoningLegendItems:has(> :nth-child(2)){grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
 }
+.zoning-popup-scroll{max-height:min(300px,45vh);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.zoning-popup-scroll-hint{padding-top:6px;border-top:1px solid #d5e0e6;color:#36566c;font-size:.75rem;font-weight:700}
 </style>
 <script src="analytics.js?v=0.13.4.37"></script></head>
 <body>
@@ -587,7 +589,36 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
    if(!codes.length)return '';
    return '<section><h4>'+title+'</h4>'+codes.map(code=>'<div>'+popup(code)+'</div>').join('')+'</section>';
   });
-  L.popup({maxWidth:340,maxHeight:300}).setLatLng(latlng).setContent(sections.join('')).openOn(map);
+  const content=document.createElement('div');
+  const districts=document.createElement('div');
+  districts.className='zoning-popup-scroll';
+  districts.innerHTML=sections.join('');
+  const hint=document.createElement('div');
+  hint.className='zoning-popup-scroll-hint';
+  hint.textContent='Scroll down to see all zoning details ↓';
+  hint.hidden=true;
+  content.append(districts,hint);
+  const zoningPopup=L.popup({maxWidth:340}).setLatLng(latlng).setContent(content);
+  function updateScrollHint(){
+   const overflow=districts.scrollHeight>districts.clientHeight;
+   if(overflow===!hint.hidden)return;
+   hint.hidden=!overflow;
+   if(overflow){
+    districts.tabIndex=0;
+    districts.setAttribute('role','region');
+    districts.setAttribute('aria-label','Scrollable zoning details');
+   }else{
+    districts.removeAttribute('tabindex');
+    districts.removeAttribute('role');
+    districts.removeAttribute('aria-label');
+   }
+   zoningPopup.update();
+  }
+  zoningPopup.openOn(map);
+  updateScrollHint();
+  const resizeObserver=new ResizeObserver(updateScrollHint);
+  resizeObserver.observe(districts);
+  zoningPopup.once('remove',()=>resizeObserver.disconnect());
  });
  for(const el of inputs)el.addEventListener('change',refresh);
  for(const el of [all,...masters])el.addEventListener('change',()=>{const codes=el===all?Object.keys(names):groups[Number(el.dataset.zoneGroup)];for(const input of inputs)if(codes.includes(input.dataset.zoneCode))input.checked=el.checked;refresh();});
