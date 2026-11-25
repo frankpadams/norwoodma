@@ -124,7 +124,7 @@ const staticPlaces=[
  {name:'Doherty Park / Doherty Field',category:'athletic',also:['park'],address:'Brewster Dr, Norwood, MA 02062',details:'Playground · Little League baseball',url:'parks-trails.html'},
  {name:'Ellis Playground & Fields',category:'athletic',also:['park'],address:'Ellis Playground, Codman Road, Norwood, MA 02062',details:'Playground · baseball · softball · soccer · pond access',url:'parks-trails.html'},
  {name:'Murphy Park & Playground',category:'athletic',also:['park'],address:'Pleasant St at Lenox St, Norwood, MA 02062',details:'Playground · Little League baseball · basketball · walking connection',url:'parks-trails.html'},
- {name:'Morrill Memorial Library',category:'culture',also:['civic','historic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',url:'resources.html'},
+ {name:'Morrill Memorial Library',category:'culture',also:['civic','historic'],address:'33 Walpole St, Norwood, MA 02062',lat:42.19107,lng:-71.20408,details:'Library · events · museum passes · Library of Things · study spaces',accessibility:{note:'The side of the building has an accessible entrance ramp and accessible parking. Inside, the library has an elevator and accessible restrooms.',sources:[['Library accessibility and directions','https://norwoodlibrary.org/directions-and-contact/']]},url:'resources.html'},
  {name:'The Norwood Theatre',category:'culture',also:['historic'],address:'109 Central St, Norwood, MA 02062',lat:42.19386,lng:-71.19976,details:'Restored 1927 theatre · live music · theatre · comedy · films',url:'things.html'},
  {name:'First Congregational Church — Blessings Box',category:'mini-food-pantry',address:'100 Winter St, Norwood, MA 02062',details:'Little food pantry · shelf-stable meal kits · no registration required',url:'resources.html'},
  {name:'Little Free Food Pantry — Railroad Avenue',category:'mini-food-pantry',address:'280 Railroad Ave, Norwood, MA 02062',details:'Little food pantry · outdoor pickup available at any time · no eligibility requirement',url:'resources.html'},
@@ -132,7 +132,7 @@ const staticPlaces=[
  {name:'Norwood Central',category:'transit',address:'164 Broadway, Norwood, MA 02062',lat:42.18873,lng:-71.19991,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Norwood Depot',category:'transit',address:'Railroad Ave, Norwood, MA 02062',lat:42.19675,lng:-71.19665,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
  {name:'Windsor Gardens',category:'transit',address:'Engamore Ln at Buckminster Dr, Norwood, MA 02062',lat:42.17189,lng:-71.21973,details:'MBTA Franklin/Foxboro Line',url:'transit.html'},
- {name:'Norwood Memorial Airport',category:'landmark',also:['civic','historic'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',url:'things.html'},
+ {name:'Norwood Memorial Airport',category:'landmark',also:['civic','historic','park'],address:'111 Access Rd, Norwood, MA 02062',lat:42.19052,lng:-71.17293,details:'Public-use municipal airport · playground · aviation businesses',accessibility:{note:'The playground opened in 2025. The Town’s project plan called for inclusive play equipment and a poured rubber surface.',sources:[['Town playground plan','https://cms5.revize.com/revize/norwoodma/02.09.22%20CPC%20Minutes_FINAL.pdf'],['Town opening record','https://cms5.revize.com/revize/norwoodma/05.21.25%20CPC%20Minutes_FINAL.pdf']]},url:'things.html'},
  {name:'Town Hall Public Parking',category:'parking',address:'566 Washington St, Norwood, MA 02062',lat:42.194918632598,lng:-71.199780642614,details:'Public municipal parking serving Town Hall and the town-center area',url:'https://www.norwoodma.gov/'},
  {name:'Senior Center Public Parking',category:'parking',address:'275 Prospect St, Norwood, MA 02062',lat:42.199018640536,lng:-71.209590654452,details:'Public municipal parking at the Senior Center / municipal complex',url:'https://www.norwoodma.gov/'},
  {name:'Talbot / Babel’s Municipal Lot',category:'parking',address:'Talbot Lot, Maple St, Norwood, MA 02062',lat:42.1947497,lng:-71.2020598,details:'Downtown municipal public parking lot',url:'https://www.norwoodma.gov/'},
@@ -224,7 +224,10 @@ if(requestedPlace&&!places.some(p=>norm(p.name)===norm(requestedPlace))){
  places.push({name:requestedPlace,category:'park',address:requestedPlace+', Norwood, MA 02062',details:'Norwood park, trail or recreation facility',url:'parks-trails.html'});
 }
 function publicSchoolMark(p){return p.publicSchool?'<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Norwood Public Schools" title="Norwood Public Schools" style="width:14px;height:14px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}
-function popup(p){return '<div class="map-popup"><h3>'+esc(p.name)+publicSchoolMark(p)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p><p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
+function popup(p){
+ const access=p.accessibility;
+ const accessDetails=access?'<p><strong>Accessibility:</strong> '+esc(access.note)+'</p><p>'+access.sources.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(label)+' ↗</a>').join('<br>')+'</p>':'';
+ return '<div class="map-popup"><h3>'+esc(p.name)+publicSchoolMark(p)+'</h3><p>'+esc(p.address)+'</p><p>'+esc(p.details||'')+'</p>'+accessDetails+'<p><a href="'+esc(p.url||'#')+'"'+(/^https?:/i.test(p.url||'')?' target="_blank" rel="noopener"':'')+'>Open details →</a></p></div>'}
 
 const directoryGroups={
  food:{label:'Restaurants & Food',match:/restaurants?|dining|\bcaf[eé]s?\b|coffee|juice bars|deli|bakery|\bpizza\b|\bsushi\b/i,subs:[]},

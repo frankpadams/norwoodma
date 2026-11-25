@@ -45,6 +45,13 @@ function directionName(route,vehicle){
  const a=route?.attributes||{};
  return a.direction_destinations?.[id]||a.direction_names?.[id]||(id===0?'Inbound':'Outbound');
 }
+function railStationPopup(stop){
+ const {name,wheelchair_boarding:boarding}=stop.attributes;
+ const access=boarding===1?'Wheelchair boarding available':boarding===2?'Wheelchair boarding unavailable':'Wheelchair boarding information unavailable';
+ const stationUrl='https://www.mbta.com/stops/'+encodeURIComponent(stop.id);
+ return '<b>🚆 '+esc(name)+'</b><br>Franklin/Foxboro Line<br>'+access
+  +'<br><a href="'+stationUrl+'" target="_blank" rel="noopener">MBTA station details ↗</a>';
+}
 function nearestStop(vehicle,stops){
  let best='',bestDistance=Infinity;
  for(const stop of stops){
@@ -77,7 +84,7 @@ async function loadStatic(){
    if(!Number.isFinite(a.latitude)||!Number.isFinite(a.longitude))return;
    L.circleMarker([a.latitude,a.longitude],{radius:7,color:'#785a91',weight:3,fillColor:'#fff',fillOpacity:1})
     .bindTooltip(esc(a.name),{permanent:true,direction:'top',className:'station-label',offset:[0,-8]})
-    .bindPopup('<b>🚆 '+esc(a.name)+'</b><br>Franklin/Foxboro Line').addTo(stopLayer);
+    .bindPopup(railStationPopup(s)).addTo(stopLayer);
   });
   (busShapes.data||[]).forEach(s=>{
    const encoded=s.attributes?.polyline;

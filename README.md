@@ -1,10 +1,10 @@
-# Norwood.ma v2.2.0
+# Norwood.ma v2.2.1
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.2.0 — adds the Town’s 2020 recreation accessibility inventory to the Super Map. The layer runs independently of OpenStreetMap and links each mapped site to its source page.
+**Current release:** v2.2.1 — adds accessibility notes to Super Map popups for the library, airport playground, and Norwood commuter rail stations.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
