@@ -1,10 +1,10 @@
-# Norwood.ma v2.3.1
+# Norwood.ma v2.3.2
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.3.1 — refines the shareable certificate artwork and simplifies the game-page copy.
+**Current release:** v2.3.2 — adds the Games & Shenanigans hub to the Explore menu.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -74,7 +74,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Interactive tools include Norwood Trivia, How Townie Are You?, the Norwood Pizza Passport, Norwood Bar Crawl Bingo, Dinner Spinner, calendar selection/subscription, maps, gas-price information, and other resident-oriented utilities.
 
 ### PWA, navigation, and presentation
-- Primary interior navigation is Home · What's Happening · News · Explore · Transit · Calendars · Local Resources; the homepage omits redundant Home.
+- Primary interior navigation is Home · What's Happening · News · Explore · Transit · Calendars · Local Resources; the homepage omits redundant Home. The Explore dropdown includes the Games & Shenanigans hub alongside maps, activities, directories, and recreation.
 - Mobile navigation uses the hamburger menu; Support Norwood.ma is intentionally kept there rather than promoted into primary desktop navigation.
 - The More page (`discover.html`) groups destinations by subject: News & Events; Everyday Living; Government & Participation; Food, Shopping & Services; Activities & Recreation; Getting Around; and Fun & Games. The dedicated Games & Shenanigans hub (`games.html`) collects Norwood Trivia, How Townie Are You?, Norwood Pizza Passport, and Norwood Bar Crawl Bingo. Each category spans the full page width, with compact descriptive links arranged in as many columns as the window comfortably supports. Browse current news/events, everyday living, transport, food/services, activities, games, civic participation, device access, then site information. Site search sits above the groups; links use the maintained destination pages rather than retired previews. Maintain coverage of every public destination page here, including topic-specific restaurant guides and public detail guides. Exclude error pages, redirects, empty files, admin pages and development/review previews; audit both the root HTML inventory and sitemap when changing coverage.
 - Approved blue/gold Norwood.ma branding, favicon/home-screen icon, accessibility controls, and independent-site disclosures are sitewide conventions.
@@ -104,6 +104,11 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v2.3.2 — Games & Shenanigans in Explore
+Released November 25, 2026.
+
+- Adds the Games & Shenanigans hub to the Explore dropdown so visitors can reach Norwood’s games from the primary navigation.
 
 ### v2.3.1 — Certificate artwork and cleaner game pages
 Released November 25, 2026.
