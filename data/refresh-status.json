@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-25T06:34:06.376448-05:00",
+  "generated_at": "2026-11-25T13:15:37.270690-05:00",
   "offline": false,
-  "events_published": 1958,
+  "events_published": 1961,
   "news_published": 120,
   "civic_notices": 52,
   "calendar_feeds": [
@@ -9,43 +9,43 @@
       "id": "norwood-community",
       "name": "All public community events",
       "path": "feeds/community-events.ics",
-      "events": 1958,
-      "generated_at": "2026-11-25T06:34:05.848931-05:00"
+      "events": 1961,
+      "generated_at": "2026-11-25T13:15:36.406045-05:00"
     },
     {
       "id": "norwood-arts",
       "name": "Arts, music & entertainment",
       "path": "feeds/arts-entertainment.ics",
       "events": 76,
-      "generated_at": "2026-11-25T06:34:05.858400-05:00"
+      "generated_at": "2026-11-25T13:15:36.412650-05:00"
     },
     {
       "id": "norwood-family",
       "name": "Family & kids",
       "path": "feeds/family-kids.ics",
-      "events": 791,
-      "generated_at": "2026-11-25T06:34:05.878725-05:00"
+      "events": 794,
+      "generated_at": "2026-11-25T13:15:36.427310-05:00"
     },
     {
       "id": "norwood-sports",
       "name": "Sports & active events",
       "path": "feeds/sports-active.ics",
-      "events": 660,
-      "generated_at": "2026-11-25T06:34:05.894579-05:00"
+      "events": 662,
+      "generated_at": "2026-11-25T13:15:36.438774-05:00"
     },
     {
       "id": "norwood-fundraisers",
       "name": "Fundraisers & benefits",
       "path": "feeds/fundraisers-benefits.ics",
-      "events": 4,
-      "generated_at": "2026-11-25T06:34:05.903790-05:00"
+      "events": 5,
+      "generated_at": "2026-11-25T13:15:36.445150-05:00"
     },
     {
       "id": "norwood-food-markets",
       "name": "Food, markets & fairs",
       "path": "feeds/food-markets-fairs.ics",
       "events": 66,
-      "generated_at": "2026-11-25T06:34:05.914310-05:00"
+      "generated_at": "2026-11-25T13:15:36.452588-05:00"
     }
   ],
   "recreation_programs": 145,
@@ -661,7 +661,7 @@
       "source_id": "nps-athletics-arbiter-boys-varsity-hockey",
       "ok": true,
       "method": "ical",
-      "found": 19,
+      "found": 20,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -778,7 +778,7 @@
       "source_id": "nps-athletics-arbiter-girls-jv-lacrosse",
       "ok": true,
       "method": "ical",
-      "found": 14,
+      "found": 13,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -859,7 +859,7 @@
       "source_id": "nps-athletics-arbiter-girls-varsity-hockey",
       "ok": true,
       "method": "ical",
-      "found": 21,
+      "found": 23,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1057,7 +1057,7 @@
       "source_id": "nps-coakley",
       "ok": true,
       "method": "ical",
-      "found": 44,
+      "found": 43,
       "note": null,
       "outcome": "events",
       "access_limited": false
@@ -1463,7 +1463,7 @@
       "ok": true,
       "method": "event_platform_discovery",
       "found": 2,
-      "note": "1 configured page(s) unavailable; remaining sources checked",
+      "note": null,
       "outcome": "events",
       "access_limited": false
     },
@@ -1619,7 +1619,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 88,
+      "found": 91,
       "method": "google_news_rss",
       "query": "\"norwood, ma\""
     },
@@ -1627,7 +1627,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%20ma%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 21,
+      "found": 91,
       "method": "google_news_rss",
       "query": "\"norwood ma\""
     },
@@ -1635,7 +1635,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=norwoodma%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 34,
+      "found": 9,
       "method": "google_news_rss",
       "query": "norwoodma"
     },
@@ -1643,7 +1643,7 @@
       "source": "Google News",
       "url": "https://news.google.com/rss/search?q=%22norwood%2C%20massachusetts%22%20when%3A90d&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "found": 24,
+      "found": 32,
       "method": "google_news_rss",
       "query": "\"norwood, massachusetts\""
     },
@@ -1707,31 +1707,34 @@
     {
       "source": "source_diversity_health",
       "ok": true,
-      "found": 21,
+      "found": 24,
       "method": "source_diversity_check",
       "target_sources": 4,
       "source_counts": {
+        "CBS News": 3,
+        "WCVB": 3,
+        "cwibc.co.id": 1,
+        "John Guilfoil Public Relations": 1,
+        "cedarnews.net": 1,
+        "NBC Boston": 5,
         "Norwood Public Schools": 6,
-        "The Norwood Record": 48,
-        "The Norwood Record — Latest": 22,
+        "The Norwood Record": 45,
+        "The Norwood Record — Latest": 20,
         "Rhode Island Current": 1,
         "Patch": 2,
         "Go Local Prov": 1,
         "Westwood Minute": 1,
         "Fiorentino Legal, P.C.": 3,
-        "NBC Boston": 4,
         "The Cool Down": 1,
         "NEREJ": 1,
-        "WCVB": 2,
         "Norwood Town News": 17,
         "The Daily Tribune News": 1,
         "Boca Post": 1,
         "NewsBreak: Local News & Alerts": 1,
         "Newport Dispatch": 1,
-        "Town of Norwood": 4,
+        "Town of Norwood": 2,
         "Hoodline": 1,
-        "Colliers": 1,
-        "Inside Norwood": 1
+        "Colliers": 1
       },
       "note": null
     }
