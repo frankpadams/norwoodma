@@ -140,7 +140,7 @@
  <div id="liveRoadTrafficStatus" role="status"></div>
 </div>
 <label class="map-layer-choice"><input type="checkbox" id="evChargerToggle"><span>Public EV chargers</span></label>
-<p id="evChargerInfo" class="map-layer-status" hidden><span style="color:#05745e">●</span> Level 1 or 2 <span style="color:#7c3aed">●</span> DC fast charging. <a href="https://afdc.energy.gov/stations/" target="_blank" rel="noopener">U.S. Department of Energy AFDC</a>, checked November 26, 2026. Ports shown are installed counts. Check the charging network for live availability.</p>
+<p id="evChargerInfo" class="map-layer-status" hidden><strong>21 charging locations.</strong> <span style="color:#05745e">●</span> Level 1 or 2 <span style="color:#7c3aed">●</span> DC fast charging. <a href="https://afdc.energy.gov/stations/" target="_blank" rel="noopener">U.S. Department of Energy AFDC</a>, checked November 26, 2026. Ports shown are installed counts. Check the charging network for live availability.</p>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
 <div id="mapEventDateFilter" class="map-layer-status" hidden><label for="mapEventDays">Upcoming events through <output id="mapEventThrough" for="mapEventDays"></output></label><input id="mapEventDays" type="range" min="0" value="0" style="display:block;width:100%;max-width:225px"></div>
 <label class="map-layer-choice"><input type="checkbox" id="liquorLicensesToggle"><span>Liquor licenses</span></label>
@@ -820,6 +820,9 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   {"address":"1315 Washington Street","lat":42.172652,"lon":-71.20994,"stations":[{"id":422156,"name":"EV STATION AT NMS-1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":422155,"name":"EV STATION AT NMS-2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":422154,"name":"EV STATION AT NMS-3","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
   {"address":"1009 Boston-Providence Turnpike","lat":42.13923,"lon":-71.220046,"stations":[{"id":162020,"name":"BIG Y FOODS WALPOLE#65","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]}
  ];
+ const pane=map.createPane('norwoodEvChargers');
+ pane.style.zIndex='450';
+ const siteBounds=L.latLngBounds(sites.map(site=>[site.lat,site.lon]));
  const connectorNames={J1772:'J1772',J1772COMBO:'CCS1',CHADEMO:'CHAdeMO',NACS:'NACS',TESLA:'Tesla'};
  let layer;
 
@@ -844,7 +847,7 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
     if(station.hours)line(popup,'small',station.hours);
    }
    const marker=L.circleMarker([site.lat,site.lon],{
-    radius:hasFastCharging?9:7,color:'#fff',weight:2,
+    pane:'norwoodEvChargers',radius:hasFastCharging?12:9,color:'#fff',weight:2,
     fillColor:hasFastCharging?'#7c3aed':'#05745e',fillOpacity:1
    });
    marker.bindPopup(popup,{maxHeight:260});
@@ -857,6 +860,9 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   if(toggle.checked){
    layer??=createLayer();
    layer.addTo(map);
+   if(!sites.some(site=>map.getBounds().contains([site.lat,site.lon]))){
+    map.fitBounds(siteBounds,{padding:[24,24],maxZoom:15});
+   }
   }else{
    layer?.remove();
   }
