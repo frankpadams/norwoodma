@@ -1,10 +1,10 @@
-# Norwood.ma v2.3.2
+# Norwood.ma v2.3.3
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.3.2 — adds the Games & Shenanigans hub to the Explore menu.
+**Current release:** v2.3.3 — consolidates multi-source coverage of developing local incidents, filters software-download pages, and refreshes news from the latest Norwood Record issue.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -28,6 +28,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - Official Facebook and Instagram posts embedded on the Town homepage are collected daily by `.github/workflows/town-social.yml` and rendered as dated posts on `town-updates.html`. The reader discovers the public embed feed IDs from the Town homepage, merges matching cross-network posts and retains the last available posts during source failures. Details are in `NEWS-SOURCES.md`.
 - The News page displays a single headline feed beside the local source directory. On narrow screens, the directory follows the feed.
 - News is aggregated from local/official and regional sources under the policy in `NEWS-SOURCES.md`.
+- Developing Norwood incidents covered by several outlets appear as one card with the official update and links to distinct reporting; software download/install pages are excluded from news.
 - The system favors current, materially Norwood-related reporting; rejects stale, undated, promotional, obituary, and low-value single-game material; and deduplicates substantially identical coverage.
 - Google News is a discovery mechanism, not a publisher or preferred source.
 - Weekly Norwood Community Media newscasts come from the official series archive and appear by episode date on the News page.
