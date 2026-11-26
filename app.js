@@ -141,7 +141,7 @@ function consolidateShootingCoverage(items){
  for(const item of items||[]){
   const date=String(item.date||'').slice(0,10);
   const text=`${item.title||''} ${item.summary||''} ${item.url||''} ${item.source||''}`;
-  if(!/^20\\d{2}-\\d{2}-\\d{2}$/.test(date)||!/(?:Norwood|Nahatan|Pleasant)/i.test(text)||!/(?:shoot(?:ing|er)?|gunshot|fired.{0,24}rounds?)/i.test(text)){untouched.push(item);continue;}
+  if(!/^20\d{2}-\d{2}-\d{2}$/.test(date)||!/(?:Norwood|Nahatan|Pleasant)/i.test(text)||!/(?:shoot(?:ing|er)?|gunshot|fired.{0,24}rounds?)/i.test(text)){untouched.push(item);continue;}
   if(!groups.has(date))groups.set(date,[]);
   groups.get(date).push(item);
  }
@@ -159,7 +159,7 @@ function consolidateShootingCoverage(items){
   });
   const primary=unique[0], related=unique.slice(1).map(story=>({
    source:String(story.source||'Local news'),
-   title:String(story.title||'').replace(/\\s+[–—-]\\s+[^–—-]{2,60}$/,''),
+   title:String(story.title||'').replace(/\s+[–—-]\s+[^–—-]{2,60}$/,''),
    url:story.url
   }));
   untouched.push({...primary,title:'Norwood shooting investigation: updates and coverage',source:'Norwood Police and local news',relatedCoverage:related});
@@ -298,10 +298,10 @@ function eventHasRealTitle(e){
  const title=String(e.title||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  if(!title)return false;
  if(/^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|today|tomorrow|event|events|calendar|schedule)$/.test(title))return false;
- if(/^(?:(?:mon|tue|wed|thu|fri|sat|sun)(?:day)? )?\\d{1,2}(?:st|nd|rd|th)?$/.test(title))return false;
- if(/^(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]* (?:\\d{1,2}(?:st|nd|rd|th)?(?: \\d{4})?|\\d{4})$/.test(title))return false;
- if(/^\\d{1,2}(?:st|nd|rd|th)? (?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*(?: \\d{4})?$/.test(title))return false;
- return !/^\\d{1,4}(?: \\d{1,4}){1,2}$/.test(title);
+ if(/^(?:(?:mon|tue|wed|thu|fri|sat|sun)(?:day)? )?\d{1,2}(?:st|nd|rd|th)?$/.test(title))return false;
+ if(/^(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]* (?:\d{1,2}(?:st|nd|rd|th)?(?: \d{4})?|\d{4})$/.test(title))return false;
+ if(/^\d{1,2}(?:st|nd|rd|th)? (?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*(?: \d{4})?$/.test(title))return false;
+ return !/^\d{1,4}(?: \d{1,4}){1,2}$/.test(title);
 }
 function eventIsLocalBrewery(e){
  const sid=String(e.source_id||'').toLowerCase();
