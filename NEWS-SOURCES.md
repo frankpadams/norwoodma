@@ -28,6 +28,8 @@ The machine-readable audit is `data/news-source-registry.json`.
 - Reject incidental mentions where Norwood is not materially part of the story.
 - Route event announcements primarily to What's Happening unless the announcement itself is newsworthy.
 - Group/deduplicate substantially identical coverage. Prefer the original/primary source when available; otherwise retain distinct journalism when it adds meaningful reporting.
+- When several outlets cover one developing Norwood incident on the same publication date, show one coverage card with the official update first and link to distinct local reporting beneath it.
+- Reject software download and installer pages, including Adobe Reader links that may appear in school-site navigation.
 - Summaries on Norwood.ma must be neutral and brief; the headline links to the publisher.
 
 ## News page presentation
