@@ -139,6 +139,8 @@
  <span style="color:#eff4f6;text-shadow:0 0 2px #ff0505,0 0 2px #ff0505">●</span> Closed
  <div id="liveRoadTrafficStatus" role="status"></div>
 </div>
+<label class="map-layer-choice"><input type="checkbox" id="evChargerToggle"><span>Public EV chargers</span></label>
+<p id="evChargerInfo" class="map-layer-status" hidden><span style="color:#05745e">●</span> Level 1 or 2 <span style="color:#7c3aed">●</span> DC fast charging. <a href="https://afdc.energy.gov/stations/" target="_blank" rel="noopener">U.S. Department of Energy AFDC</a>, checked November 26, 2026. Ports shown are installed counts. Check the charging network for live availability.</p>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
 <div id="mapEventDateFilter" class="map-layer-status" hidden><label for="mapEventDays">Upcoming events through <output id="mapEventThrough" for="mapEventDays"></output></label><input id="mapEventDays" type="range" min="0" value="0" style="display:block;width:100%;max-width:225px"></div>
 <label class="map-layer-choice"><input type="checkbox" id="liquorLicensesToggle"><span>Liquor licenses</span></label>
@@ -783,6 +785,84 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
 
  toggle.addEventListener('change',update);
  document.addEventListener('visibilitychange',refresh);
+ update();
+})();
+</script>
+
+<script>
+(()=>{
+ const map=window.norwoodTrailMap;
+ const toggle=document.getElementById('evChargerToggle');
+ const info=document.getElementById('evChargerInfo');
+ if(!map||!window.L||!toggle||!info)return;
+
+ // Public, operational Norwood stations from the DOE AFDC snapshot dated November 26, 2026.
+ const sites=[
+  {"address":"188 Central St","lat":42.195168,"lon":-71.199703,"stations":[{"id":226257,"name":"EV STATION AT TOWN HALL 1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":226256,"name":"EV STATION AT TOWN HALL 2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"33 Walpole Street","lat":42.191485,"lon":-71.203645,"stations":[{"id":449697,"name":"EV STATION AT NOR. LIBRARY 2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":449698,"name":"EV STATION AT NOR. LIBRARY 1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1 Central St","lat":42.190723,"lon":-71.202183,"stations":[{"id":235007,"name":"EV STATION AT POST OFFICE 2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":235006,"name":"EV STATION AT POST OFFICE 1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1 Moderna Way","lat":42.206944,"lon":-71.201248,"stations":[{"id":260628,"name":"MODERNA STATION 704","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"One Upland Rd","lat":42.206994,"lon":-71.201024,"stations":[{"id":260611,"name":"MODERNA STATION 203","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260622,"name":"MODERNA STATION 202","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260620,"name":"MODERNA STATION 201","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260619,"name":"MODERNA STATION 103","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260614,"name":"MODERNA STATION 101","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":319688,"name":"MODERNA 104","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260625,"name":"MODERNA STATION 705","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260630,"name":"MODERNA STATION 706","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260632,"name":"MODERNA STATION 707","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260631,"name":"MODERNA STATION 708","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1 Moderna Way Building 100","lat":42.206993,"lon":-71.201713,"stations":[{"id":260613,"name":"MODERNA STATION 302","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"100 Upland Rd","lat":42.207011,"lon":-71.201823,"stations":[{"id":260629,"name":"MODERNA STATION 703","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260627,"name":"MODERNA STATION 702","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260626,"name":"MODERNA STATION 701","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":316071,"name":"MODERNA 105","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":260612,"name":"MODERNA 102 LOWER SOUTH","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"825 Providence Hwy","lat":42.185051,"lon":-71.186675,"stations":[{"id":387072,"name":"825 Providence Hwy","network":"EV Connect","l1":null,"l2":6,"dc":4,"connectors":["J1772","J1772COMBO"],"hours":"Mon: 7:00am-7:00pm; Tue: 7:00am-7:00pm; Wed: 7:00am-7:00pm; Thu: 7:00am-7:00pm; Fri: 7:00am-7:00pm; Sat: 7:00am-7:00pm; Sun: 7:00am-7:00pm"}]},
+  {"address":"1 Moderna Way Building 200","lat":42.209854,"lon":-71.201503,"stations":[{"id":260617,"name":"MODERNA STATION 204","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"842 Providence Hwy","lat":42.1833555,"lon":-71.1867303,"stations":[{"id":250760,"name":"Clay Subaru","network":"FLO","l1":null,"l2":4,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"918 Providence Hwy","lat":42.180944,"lon":-71.188265,"stations":[{"id":162030,"name":"NORWOOD FAST CT4020-1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"136 Access Rd","lat":42.187717,"lon":-71.17952,"stations":[{"id":158533,"name":"EV STATION AT NORWOOD LIGHT","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"125 Access Rd","lat":42.18671,"lon":-71.17814,"stations":[{"id":316126,"name":"EV STATION AT NOR. AIRPORT 1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":316127,"name":"EV STATION AT NOR. AIRPORT 2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"750 University Ave","lat":42.199509,"lon":-71.174434,"stations":[{"id":192868,"name":"SCOB 03","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":192869,"name":"SCOB 01","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":192870,"name":"SCOB 02","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1151 Boston-Providence Turnpike","lat":42.174965,"lon":-71.19703,"stations":[{"id":466575,"name":"MA PORTFOLIO LEARN CENTER 3","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":466574,"name":"MA PORTFOLIO LEARNINGCENTER1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":466576,"name":"MA PORTFOLIO LEARNINGCENTER2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"2 Technology Way","lat":42.211685,"lon":-71.18174,"stations":[{"id":199523,"name":"ADVANCED 1 ADVANCED 2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"434 Walpole St","lat":42.17868,"lon":-71.21984,"stations":[{"id":223518,"name":"BIG Y FOODS NORWOOD #126","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1177 Boston-Providence Turnpike","lat":42.173071,"lon":-71.196867,"stations":[{"id":180029,"name":"MA PORTFOLIO 1175 NORWOOD #6","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":180027,"name":"MA PORTFOLIO 1175 NORWOOD #5","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":180028,"name":"MA PORTFOLIO 1175 NORWOOD #4","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":180030,"name":"MA PORTFOLIO 1175 NORWOOD #3","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":180026,"name":"MA PORTFOLIO 1175 NORWOOD #2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":162004,"name":"MA PORTFOLIO 1175 NORWOOD #1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1261 Washington Street","lat":42.173086,"lon":-71.208694,"stations":[{"id":449695,"name":"EV STATION AT HAWES POOL 2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":449696,"name":"EV STATION AT HAWES POOL 1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1315 Washington Street","lat":42.172652,"lon":-71.20994,"stations":[{"id":422156,"name":"EV STATION AT NMS-1","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":422155,"name":"EV STATION AT NMS-2","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"},{"id":422154,"name":"EV STATION AT NMS-3","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]},
+  {"address":"1009 Boston-Providence Turnpike","lat":42.13923,"lon":-71.220046,"stations":[{"id":162020,"name":"BIG Y FOODS WALPOLE#65","network":"ChargePoint","l1":null,"l2":2,"dc":null,"connectors":["J1772"],"hours":"24 hours daily"}]}
+ ];
+ const connectorNames={J1772:'J1772',J1772COMBO:'CCS1',CHADEMO:'CHAdeMO',NACS:'NACS',TESLA:'Tesla'};
+ let layer;
+
+ function line(parent,tag,content){
+  const element=document.createElement(tag);
+  element.textContent=content;
+  parent.append(element);
+  return element;
+ }
+
+ function createLayer(){
+  return L.layerGroup(sites.map(site=>{
+   const hasFastCharging=site.stations.some(station=>station.dc>0);
+   const popup=document.createElement('div');
+   line(popup,'strong',site.address);
+   for(const station of site.stations){
+    line(popup,'p',[station.name,station.network].filter(Boolean).join(' · '));
+    const ports=[[station.l1,'Level 1'],[station.l2,'Level 2'],[station.dc,'DC fast']]
+     .filter(([count])=>count>0).map(([count,label])=>count+' '+label);
+    (station.connectors||[]).forEach(connector=>ports.push(connectorNames[connector]||connector));
+    if(ports.length)line(popup,'div',ports.join(' · '));
+    if(station.hours)line(popup,'small',station.hours);
+   }
+   const marker=L.circleMarker([site.lat,site.lon],{
+    radius:hasFastCharging?9:7,color:'#fff',weight:2,
+    fillColor:hasFastCharging?'#7c3aed':'#05745e',fillOpacity:1
+   });
+   marker.bindPopup(popup,{maxHeight:260});
+   return marker;
+  }));
+ }
+
+ function update(){
+  info.hidden=!toggle.checked;
+  if(toggle.checked){
+   layer??=createLayer();
+   layer.addTo(map);
+  }else{
+   layer?.remove();
+  }
+ }
+
+ toggle.addEventListener('change',update);
  update();
 })();
 </script>
