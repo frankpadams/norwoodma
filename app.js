@@ -74,6 +74,7 @@ function newsQuality(x){
  if(NEWS_BLOCK_PATTERNS.some(r=>r.test(text)))return {ok:false,reason:'advertisement'};
  if(OTHER_NORWOODS.some(r=>r.test(text)))return {ok:false,reason:'wrong_norwood'};
  if(x.localVerified===false)return {ok:false,reason:'insufficient_local_relevance'};
+ if(x.discovered_by==='editorial_verified'&&x.localVerified===true)return {ok:true};
  if(x.localVerified!==true && /\bNorwood\b/i.test(text) && !LOCAL_SIGNALS.test(text))return {ok:false,reason:'ambiguous_norwood'};
  return {ok:true};
 }
@@ -141,16 +142,18 @@ function consolidateShootingCoverage(items){
  for(const item of items||[]){
   const date=String(item.date||'').slice(0,10);
   const text=`${item.title||''} ${item.summary||''} ${item.url||''} ${item.source||''}`;
-  if(!/^20\d{2}-\d{2}-\d{2}$/.test(date)||!/(?:Norwood|Nahatan|Pleasant)/i.test(text)||!/(?:shoot(?:ing|er)?|gunshot|fired.{0,24}rounds?)/i.test(text)){untouched.push(item);continue;}
+  if(!/^20\d{2}-\d{2}-\d{2}$/.test(date)||!/(?:shoot(?:ing|er)?|shot|gunshot|fired.{0,24}rounds?)/i.test(text)){untouched.push(item);continue;}
   if(!groups.has(date))groups.set(date,[]);
-  groups.get(date).push(item);
+  groups.get(date).push({item,text});
  }
  for(const stories of groups.values()){
+  const localIncident=stories.some(({text})=>/(?:Norwood|Nahatan|Pleasant)/i.test(text));
+  if(!localIncident||stories.length<2){untouched.push(...stories.map(x=>x.item));continue;}
   const unique=[], urls=new Set();
-  for(const story of stories){
-   const url=String(story.url||'').split('?')[0];
+  for(const {item} of stories){
+   const url=String(item.url||'').split('?')[0];
    if(!url||urls.has(url))continue;
-   urls.add(url);unique.push(story);
+   urls.add(url);unique.push(item);
   }
   if(unique.length<2){untouched.push(...unique);continue;}
   unique.sort((x,y)=>{
@@ -162,7 +165,7 @@ function consolidateShootingCoverage(items){
    title:String(story.title||'').replace(/\s+[–—-]\s+[^–—-]{2,60}$/,''),
    url:story.url
   }));
-  untouched.push({...primary,title:'Norwood shooting investigation: updates and coverage',source:'Norwood Police and local news',relatedCoverage:related});
+  untouched.push({...primary,title:'Norwood shooting investigation: updates and coverage',source:'Local news and Norwood Police',relatedCoverage:related});
  }
  return untouched;
 }
@@ -197,8 +200,9 @@ function renderNews(items, episodes = []){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
  const episodeUrls = new Set(episodes.map(episode => episode.url.replace(/\/$/, '')));
- const filtered=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/,'')))return false;if(!isHome && /^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
- const clean=consolidateShootingCoverage(filtered);
+ const filtered=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/,'')))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
+ const consolidated=consolidateShootingCoverage(filtered);
+ const clean=isHome?consolidated:consolidated.filter(x=>!/^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()));
  let selected=[], selectedDays;
  if(isHome){
   // Homepage stays compact and adapts to the smallest recent window that supplies enough current stories.
