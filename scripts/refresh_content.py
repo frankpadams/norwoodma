@@ -2650,8 +2650,8 @@ def news_item_blocked(item):
         return True
     title=clean_text(item.get('title')).lower()
     if re.search(r'\b(?:advertorial|sponsored content|paid advertisement)\b', title):
-    if host == 'get.adobe.com' or re.search(r'\b(?:download|install)\b.{0,50}\badobe (?:acrobat )?reader\b', title):
         return True
+    if host == 'get.adobe.com' or re.search(r'\b(?:download|install)\b.{0,50}\badobe (?:acrobat )?reader\b', title):
         return True
     # Syndicated contractor rankings are marketing copy, including via Google News.
     if re.search(r'\b(?:named|ranked|recognized as)\s+(?:a\s+|the\s+)?(?:top|best|leading)\b.{0,80}\b(?:contractor|service provider|hvac company|heating and cooling company)\b', title):
