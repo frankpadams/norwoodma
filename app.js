@@ -136,6 +136,37 @@ const newsDateFormat = new Intl.DateTimeFormat('en-US', {
  timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric'
 });
 
+function consolidateShootingCoverage(items){
+ const groups=new Map(), untouched=[];
+ for(const item of items||[]){
+  const date=String(item.date||'').slice(0,10);
+  const text=`${item.title||''} ${item.summary||''} ${item.url||''} ${item.source||''}`;
+  if(!/^20\\d{2}-\\d{2}-\\d{2}$/.test(date)||!/(?:Norwood|Nahatan|Pleasant)/i.test(text)||!/(?:shoot(?:ing|er)?|gunshot|fired.{0,24}rounds?)/i.test(text)){untouched.push(item);continue;}
+  if(!groups.has(date))groups.set(date,[]);
+  groups.get(date).push(item);
+ }
+ for(const stories of groups.values()){
+  const unique=[], urls=new Set();
+  for(const story of stories){
+   const url=String(story.url||'').split('?')[0];
+   if(!url||urls.has(url))continue;
+   urls.add(url);unique.push(story);
+  }
+  if(unique.length<2){untouched.push(...unique);continue;}
+  unique.sort((x,y)=>{
+   const official=z=>/norwood police|john guilfoil|jgpr/i.test(`${z.source||''} ${z.url||''}`) ? 1:0;
+   return official(y)-official(x);
+  });
+  const primary=unique[0], related=unique.slice(1).map(story=>({
+   source:String(story.source||'Local news'),
+   title:String(story.title||'').replace(/\\s+[–—-]\\s+[^–—-]{2,60}$/,''),
+   url:story.url
+  }));
+  untouched.push({...primary,title:'Norwood shooting investigation: updates and coverage',source:'Norwood Police and local news',relatedCoverage:related});
+ }
+ return untouched;
+}
+
 function newsPageArticle(item){
  const source = (item.source || '').trim();
  const title = (item.title || '').trim();
@@ -145,6 +176,7 @@ function newsPageArticle(item){
  const summary = (item.summary || '').trim();
  const image = item.image || item.thumbnail || item.image_url || item.imageUrl;
  const thumb = image ? `<img class="news-row-thumbnail" src="${esc(image)}" alt="" width="120" height="80" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : '';
+ const related=(item.relatedCoverage||[]).map(story=>`<a href="${esc(story.url)}" target="_blank" rel="noopener">${esc(story.source)}: ${esc(story.title)}</a>`).join(' · ');
  return `<article>
   <a class="news-story" href="${esc(item.url)}" target="_blank" rel="noopener">
    <div class="news-story-copy">
@@ -157,6 +189,7 @@ function newsPageArticle(item){
    </div>
    ${thumb}
   </a>
+  ${related ? `<p class="news-story-summary"><strong>More coverage:</strong> ${related}</p>` : ''}
  </article>`;
 }
 
@@ -164,7 +197,8 @@ function renderNews(items, episodes = []){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
  const episodeUrls = new Set(episodes.map(episode => episode.url.replace(/\/$/, '')));
- const clean=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/, '')))return false;if(!isHome && /^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
+ const filtered=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/,'')))return false;if(!isHome && /^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
+ const clean=consolidateShootingCoverage(filtered);
  let selected=[], selectedDays;
  if(isHome){
   // Homepage stays compact and adapts to the smallest recent window that supplies enough current stories.
