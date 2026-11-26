@@ -130,6 +130,15 @@
 <p class="map-layer-section-label">Layers</p>
 <p>Choose layers to load locations. Select more than one category to compare.</p>
 <label class="map-layer-choice"><input type="checkbox" id="mbtaToggle"><span>Live MBTA transit</span></label>
+<label class="map-layer-choice"><input type="checkbox" id="liveRoadTrafficToggle"><span>Live road traffic</span></label>
+<div id="liveRoadTrafficLegend" class="map-layer-status" hidden>
+ <span style="color:#2ae57b">●</span> Near normal
+ <span style="color:#ffc105">●</span> Slow
+ <span style="color:#fb2d09">●</span> Very slow
+ <span style="color:#ad0000">●</span> Heavy congestion
+ <span style="color:#eff4f6;text-shadow:0 0 2px #ff0505,0 0 2px #ff0505">●</span> Closed
+ <div id="liveRoadTrafficStatus" role="status"></div>
+</div>
 <div id="mapLayerChoices" class="map-layer-choices"></div>
 <div id="mapEventDateFilter" class="map-layer-status" hidden><label for="mapEventDays">Upcoming events through <output id="mapEventThrough" for="mapEventDays"></output></label><input id="mapEventDays" type="range" min="0" value="0" style="display:block;width:100%;max-width:225px"></div>
 <label class="map-layer-choice"><input type="checkbox" id="liquorLicensesToggle"><span>Liquor licenses</span></label>
@@ -720,6 +729,60 @@ sync();window.addEventListener('norwood:map-categories',e=>{active.clear();(e.de
   refresh(controller.signal);
  }
  toggle.addEventListener('change',update);
+ update();
+})();
+</script>
+
+<script>
+(()=>{
+ const map=window.norwoodTrailMap;
+ const toggle=document.getElementById('liveRoadTrafficToggle');
+ const legend=document.getElementById('liveRoadTrafficLegend');
+ const status=document.getElementById('liveRoadTrafficStatus');
+ if(!map||!window.L||!toggle||!legend||!status)return;
+
+ const refreshInterval=5*60*1000;
+ const pane=map.createPane('norwoodLiveRoadTraffic');
+ pane.style.zIndex='430';
+ pane.style.pointerEvents='none';
+
+ const traffic=L.tileLayer('https://norwood-tomtom.frankpadams.workers.dev/traffic/{z}/{x}/{y}.png',{
+  pane:'norwoodLiveRoadTraffic',
+  bounds:[[42.05,-71.40],[42.35,-71.00]],
+  minZoom:11,
+  maxNativeZoom:17,
+  maxZoom:22,
+  noWrap:true,
+  updateWhenIdle:true,
+  attribution:'Traffic © <a href="https://www.tomtom.com/">TomTom</a>'
+ });
+
+ let lastRefresh=0;
+ let timer;
+ traffic.on('tileerror',()=>{status.textContent='Some live traffic tiles are temporarily unavailable.';});
+
+ function refresh(){
+  if(document.hidden||!toggle.checked||Date.now()-lastRefresh<refreshInterval)return;
+  lastRefresh=Date.now();
+  status.textContent='';
+  traffic.redraw();
+ }
+
+ function update(){
+  clearInterval(timer);
+  legend.hidden=!toggle.checked;
+  status.textContent='';
+  if(!toggle.checked){
+   traffic.remove();
+   return;
+  }
+  lastRefresh=Date.now();
+  traffic.addTo(map);
+  timer=setInterval(refresh,refreshInterval);
+ }
+
+ toggle.addEventListener('change',update);
+ document.addEventListener('visibilitychange',refresh);
  update();
 })();
 </script>
