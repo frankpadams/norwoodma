@@ -200,7 +200,7 @@ function renderNews(items, episodes = []){
  const feed=$('#newsFeed'); if(!feed)return;
  const isHome=!!document.querySelector('#home'), now=Date.now(), day=24*60*60*1000, seen=new Set();
  const episodeUrls = new Set(episodes.map(episode => episode.url.replace(/\/$/, '')));
- const filtered=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/,'')))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day||!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
+ const filtered=(items||[]).filter(x=>{if(episodeUrls.has((x.url||'').split('?')[0].replace(/\/$/,'')))return false;const d=Date.parse(x.date);if(!Number.isFinite(d)||d>now+day)return false;const editorialRecord=x.discovered_by==='editorial_verified'&&x.localVerified===true&&/^https:\/\/www\.norwoodrecord\.com\/article\//i.test(x.url||'');if(!editorialRecord&&!newsQuality(x).ok)return false;const k=(x.title||'').trim().toLowerCase()+'|'+(x.url||'');if(seen.has(k))return false;seen.add(k);return true;});
  const consolidated=consolidateShootingCoverage(filtered);
  const clean=isHome?consolidated:consolidated.filter(x=>!/^(town of norwood|norwood (police|fire|dpw|public works|light)|norwoodma\.gov)/i.test((x.source||'').trim()));
  let selected=[], selectedDays;
