@@ -2336,11 +2336,17 @@ def refresh_events(offline=False):
                                 # event cards but no JSON-LD/<time>/ICS, parse those cards directly.
                                 # A successfully downloaded human-readable events page returning zero
                                 # is not proof that the source is empty.
-                                if not extracted and method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','organization_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','local_town_pages_calendar','town_department_event_discovery'}:
+                                # Publisher pages may expose article publication dates as card dates.
+                                secondary_seasonal_page = (
+                                    method == 'seasonal_org_event_discovery'
+                                    and page_url in (ing.get('secondary_urls') or [])
+                                )
+                                match_fields = ('title', 'notes', 'venue') if secondary_seasonal_page else ('title', 'notes', 'venue', 'series')
+                                if not extracted and not secondary_seasonal_page and method in {'html_calendar','html_list','html_hub','html_page','embedded_calendar','club_calendar','organization_event_discovery','school_parent_org_composite','secondary_org_event_discovery','multi_source_org_discovery','seasonal_org_event_discovery','local_town_pages_calendar','town_department_event_discovery'}:
                                     try: extracted.extend(events_from_visible_dated_page(page_url,temp,category='community',series=src.get('name')))
                                     except Exception: pass
                                 if terms:
-                                    extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                                    extracted=[e for e in extracted if any(t in ' '.join(str(e.get(k) or '') for k in match_fields).lower() for t in terms)]
                                 # Month headings and archive navigation can carry semantic <time>
                                 # elements but are not events. Sources that require a concrete date
                                 # must also have event-specific content beyond a bare month/year label.
@@ -2350,7 +2356,7 @@ def refresh_events(offline=False):
                                 for u in ics[:4]:
                                     try:
                                         rows=events_from_ical(u,temp)
-                                        if terms: rows=[e for e in rows if any(t in ' '.join(str(e.get(k) or '') for k in ('title','notes','venue','series')).lower() for t in terms)]
+                                        if terms: rows=[e for e in rows if any(t in ' '.join(str(e.get(k) or '') for k in match_fields).lower() for t in terms)]
                                         got.extend(rows)
                                     except Exception:
                                         pass
@@ -2416,6 +2422,15 @@ def refresh_events(offline=False):
     for event in events:
         if event.get('source_id') in {'town-master-calendar', 'norwood-civic-meetings'}:
             event['title']=confirmed_town_meeting_title(event.get('title'), (event.get('start') or {}).get('date'))
+    # Older snapshots may still carry newspaper cards through offline or failed-source refreshes.
+    events = [
+        event for event in events
+        if not (
+            event.get('source_id') == 'circle-of-hope-events'
+            and event.get('discovered_by') == 'visible_dated_page'
+            and urlparse(event.get('source_url') or '').hostname in {'norwoodrecord.com', 'www.norwoodrecord.com'}
+        )
+    ]
     events=current_events(dedupe_events(events))
     write_json('events.json',events); write_js('events-data.js','NORWOOD_EVENTS',events)
     return events,status
