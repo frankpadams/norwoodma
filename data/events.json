@@ -448,36 +448,6 @@
     ]
   },
   {
-    "id": "2026-11-26-mass-cultural-council-publishes-updates-daily-baf190a",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-26",
-      "time": "20:06"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 26, 2026 at 08:06 PM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-26-no-school-thanksgiving-break-8f33bd1",
     "title": "No School Thanksgiving Break — All Norwood Public Schools",
     "start": {
@@ -564,6 +534,36 @@
     "verification_status": "verified_town_master_calendar",
     "notes": null,
     "discovered_by": "town_revize_master_calendar",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
+    "id": "2026-11-27-mass-cultural-council-publishes-updates-daily-d8cd8f5",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-27",
+      "time": "00:06"
+    },
+    "end": {
+      "date": "2026-11-27",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 27, 2026 at 12:06 AM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "norwood-community"
     ]
