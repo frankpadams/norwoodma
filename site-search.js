@@ -330,7 +330,29 @@
  }
  function eventDate(s){if(!s)return '';const p=s.split('-').map(Number),d=new Date(p[0],p[1]-1,p[2],12);return d.toLocaleDateString([],{weekday:'short',month:'short',day:'numeric',year:'numeric'});}
  let restaurantIndex=[];
- fetch('data/restaurants.json').then(r=>r.json()).then(rows=>{restaurantIndex=Array.isArray(rows)?rows:[];if(input.value.trim())render(false);}).catch(()=>{});
+ const lazyHomepage=document.currentScript?.hasAttribute('data-lazy-directories')||false;
+ let directoryPromise=null,directoryReady=!lazyHomepage,directoryFailed=false;
+ const homepageSources=[
+  ['NORWOOD_RESTAURANTS','data/restaurants-data.js?v=20261111-expanded'],
+  ['NORWOOD_RESOURCES','data/resources-data.js?v=0.13.3.42'],
+  ['NORWOOD_BUSINESSES','data/businesses-data.js?v=20261123-barber-search-fix']
+ ];
+ function loadHomepageDirectories(){
+  if(directoryReady)return Promise.resolve();
+  if(directoryPromise)return directoryPromise;
+  directoryPromise=Promise.allSettled(homepageSources.map(([key,src])=>Array.isArray(window[key])?Promise.resolve():new Promise((resolve,reject)=>{
+   const script=document.createElement('script');script.src=src;
+   script.onload=()=>{if(Array.isArray(window[key]))resolve();else{script.remove();reject(Error(key));}};
+   script.onerror=()=>{script.remove();reject(Error(key));};document.head.append(script);
+  }))).then(results=>{directoryFailed=results.some(r=>r.status==='rejected');directoryReady=true;directoryPromise=null;});
+  return directoryPromise;
+ }
+ let restaurantPromise=null;
+ function loadRestaurantIndex(){
+  if(!restaurantPromise)restaurantPromise=fetch('data/restaurants.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(rows=>{restaurantIndex=Array.isArray(rows)?rows:[];if(input.value.trim()&&(!lazyHomepage||document.activeElement===input))render(false);}).catch(()=>{restaurantPromise=null;});
+  return restaurantPromise;
+ }
+ if(!lazyHomepage)loadRestaurantIndex();
   const normalize=norm;
   function searchable(r){
     const tags=Array.isArray(r.tags)?r.tags.join(' '):(r.tags||'');
@@ -492,6 +514,13 @@
 
  function render(track=false){
   const raw=input.value.trim(); if(!raw){submitted=false;box.hidden=true;box.innerHTML='';return []}
+  if(lazyHomepage&&!directoryReady){
+   box.hidden=false;box.innerHTML='<p role="status">Loading search directories…</p>';
+   const query=raw;
+   if(!directoryPromise)loadHomepageDirectories().then(()=>{if(input.value.trim()&&document.activeElement===input)render(false);});
+   return [];
+  }
+  if(lazyHomepage)loadRestaurantIndex();
   loadGovernmentIndex();
   loadTownIndex();
   const localHits=search(raw,200);
@@ -521,7 +550,7 @@
   const regularHtml=hits.length?hits.map(({x})=>`<a href="${esc(x.url)}"${x.business?' style="display:block;background:#edf6fc;border:1px solid #c7ddeb;border-radius:9px;padding:10px;margin:5px 0"':''}><b>${esc(x.name)}${x.norwoodPage?' <img class="search-source-icon norwoodma-search-icon" src="assets/favicon-approved.png" alt="Norwood.ma page" title="Norwood.ma page">':''}${x.officialTown?' <img class="search-source-icon town-search-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Town of Norwood resource" title="Official Town of Norwood resource">':''}${x.officialSchool?' <img class="search-source-icon school-search-icon" src="https://www.norwood.k12.ma.us/favicon.ico" alt="Official Norwood Public Schools resource" title="Official Norwood Public Schools resource">':''}${x.type==='Event'?' <span class="search-source-icon event-search-icon" aria-label="Event" title="Event">📅</span>':''}</b><small>${esc(x.type)}${x.type==='Event'&&x.date?' · '+esc(eventDate(x.date)):''}${x.text?' · '+esc(String(x.text).split(/\s+/).slice(0,7).join(' ')):''}</small></a>`).join(''):'<p>No matches. Try a shorter or different term.</p>';
   const heading=track?`<div class="site-search-submitted-head" role="status"><b>Search results for “${esc(raw)}”</b><small>${hits.length+things.length+(facilitySport?1:0)} result${hits.length+things.length+(facilitySport?1:0)===1?'':'s'}</small></div>`:'';
   const resultCount=hits.length+things.length+(facilitySport?1:0)+(seedIntent?1:0); const googleHtml=resultCount<10?`<div class="site-search-google"><a href="https://www.google.com/search?q=${encodeURIComponent(raw+' Norwood MA')}" target="_blank" rel="noopener"><b>Search Google for “${esc(raw)}” →</b><small>Search the wider web for Norwood-related results</small></a></div>`:''; const leagueIntent=/\b(youth|kids|children|softball|baseball|soccer|basketball|football|cheer|hockey|lacrosse|leagues)\b/.test(norm(raw))&&!/\b(field|fields|court|courts|facility|facilities|park|parks|adult|adults)\b/.test(norm(raw)); box.innerHTML=heading+(leagueIntent?regularHtml:'')+facilityHtml+foodMoreHtml+howDoHtml+seedLibraryHtml+thingHtml+(leagueIntent?'':regularHtml)+businessMoreHtml+googleHtml;
-  box.hidden=false;insertArchiveBridge(raw);if(track)noteSearch(raw,hits.length+things.length);return hits;
+  if(directoryFailed)box.insertAdjacentHTML('beforeend','<p>Some directory results are unavailable. Reload the page to retry.</p>');box.hidden=false;insertArchiveBridge(raw);if(track)noteSearch(raw,hits.length+things.length);return hits;
  }
 
  const lotCategories=[
