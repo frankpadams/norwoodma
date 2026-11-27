@@ -25,64 +25,6 @@
     ]
   },
   {
-    "id": "2026-11-26-closed-today-ded34ed",
-    "title": "CLOSED TODAY",
-    "start": {
-      "date": "2026-11-26",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "23:59"
-    },
-    "venue": "MassHire Norwood Events",
-    "address": null,
-    "category": "community",
-    "source_id": "masshire-norwood-events",
-    "source_url": "https://masshiremsw.com/event/closed-nov-26/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "The MassHire Career Centers in Framingham and Norwood will be closed for all services on Thursday, November 26. Regular Friday virtual services will be available on Friday, November 27. All services will resume on Monday, November 30.",
-    "discovered_by": "scheduled_tribe_api",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-26-sunnyside-up-aa",
-    "title": "Sunnyside Up AA",
-    "start": {
-      "date": "2026-11-26",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "08:00"
-    },
-    "venue": "Grace Episcopal Church",
-    "address": "150 Chapel St, Norwood, MA 02062",
-    "category": "recovery",
-    "source_id": "recovery-aa",
-    "source_url": "https://www.gracenor.org/groups",
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Sunnyside Up AA",
-    "publish_candidate": true,
-    "verification_status": "official_recurring_schedule_verified_2026-09-26",
-    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "recovery-aa"
-    ]
-  },
-  {
     "id": "2026-11-26-thanksgiving-holiday-no-school-2a74629",
     "title": "THANKSGIVING HOLIDAY - NO SCHOOL — Coakley Middle School",
     "start": {
@@ -116,338 +58,6 @@
     ]
   },
   {
-    "id": "2026-11-26-varsity-football-oliver-ames-high-school-36cf70e",
-    "title": "Varsity Football @ Oliver Ames High School — Norwood High School",
-    "start": {
-      "date": "2026-11-26",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "12:00"
-    },
-    "venue": "100 Lothrop Street, North Easton Massachusetts 02356",
-    "address": "100 Lothrop Street, North Easton Massachusetts 02356",
-    "category": "sports",
-    "source_id": "nps-athletics-arbiter-varsity-football",
-    "source_url": "https://www.arbiterlive.com/Teams?entityId=16671",
-    "cost": null,
-    "organizer": "Norwood Varsity Football",
-    "public_access": "public",
-    "series": "Norwood Varsity Football",
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Sport: Football Level: Varsity Team: Norwood High School Site: Oliver Ames High School Subsite: Muscato Stadium",
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "school_scope": "Norwood High School",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-high-athletics",
-      "norwood-sports",
-      "nps-athletics"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-7c686bdbe82c-2026-11-26",
-    "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "start": {
-      "date": "2026-11-26",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "20:00"
-    },
-    "venue": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$135.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-07",
-    "session_end": "2027-03-31",
-    "days": "MTuWThF",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-7c686bdbe82c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-232c75e8f43a-2026-11-26",
-    "title": "Tap 1 - Thursdays",
-    "start": {
-      "date": "2026-11-26",
-      "time": "15:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "15:45"
-    },
-    "venue": "09/10/2026 - 05/13/2027 03:00 PM - 03:45 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-10",
-    "session_end": "2027-05-13",
-    "days": "Th",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-232c75e8f43a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-c9d8d3a12d36-2026-11-26",
-    "title": "Ballet 1 - Thursdays",
-    "start": {
-      "date": "2026-11-26",
-      "time": "15:50"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "16:35"
-    },
-    "venue": "09/10/2026 - 05/13/2027 03:50 PM - 04:35 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-10",
-    "session_end": "2027-05-13",
-    "days": "Th",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-c9d8d3a12d36",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-3c6841bc2f75-2026-11-26",
-    "title": "Ballet 2 - Thursdays",
-    "start": {
-      "date": "2026-11-26",
-      "time": "16:35"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "17:25"
-    },
-    "venue": "09/10/2026 - 05/13/2027 04:35 PM - 05:25 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-10",
-    "session_end": "2027-05-13",
-    "days": "Th",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-3c6841bc2f75",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-122acb4ba165-2026-11-26",
-    "title": "Ballet 3 - Thursdays",
-    "start": {
-      "date": "2026-11-26",
-      "time": "17:25"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "18:15"
-    },
-    "venue": "09/10/2026 - 05/13/2027 05:25 PM - 06:15 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-10",
-    "session_end": "2027-05-13",
-    "days": "Th",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-122acb4ba165",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-19c4fc7a167a-2026-11-26",
-    "title": "Fit for You",
-    "start": {
-      "date": "2026-11-26",
-      "time": "18:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "19:00"
-    },
-    "venue": null,
-    "category": "adult_fitness",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30951",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30951",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$90.00 Res, $100.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-11-17",
-    "session_end": "2027-01-21",
-    "days": "TuTh",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-19c4fc7a167a",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-sports",
-      "rec-adult-fitness",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-72ffc1925081-2026-11-26",
-    "title": "Pointe [must be in Ballet 3] - Thursdays",
-    "start": {
-      "date": "2026-11-26",
-      "time": "18:15"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "18:45"
-    },
-    "venue": "09/10/2026 - 05/13/2027 06:15 PM - 06:45 PM Norwood Civic Center - Dance Room",
-    "category": "special_events",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30511",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$375.00 Res, $425.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-10",
-    "session_end": "2027-05-13",
-    "days": "Th",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-72ffc1925081",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-special-events",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-82871eb43ea9-2026-11-26",
-    "title": "Drop-In Volleyball",
-    "start": {
-      "date": "2026-11-26",
-      "time": "19:00"
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": "20:30"
-    },
-    "venue": "10/01/2026 - 05/06/2027 07:00 PM - 08:30 PM Norwood Civic Center - Gymnasium",
-    "category": "drop_in",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30941",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30941",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$5.00 Res, $7.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": true,
-    "session_start": "2026-10-01",
-    "session_end": "2027-05-06",
-    "days": "Th",
-    "notes": "Join the Norwood Recreation for our drop in style volleyball program. Players of all skill levels and ages are welcome to join. Schedule is subject to change, please call ahead 781-762-0466. Fee $5.00",
-    "rec_program_id": "rec-82871eb43ea9",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "rec-all",
-      "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
     "id": "2026-11-26-no-school-thanksgiving-break-8f33bd1",
     "title": "No School Thanksgiving Break — All Norwood Public Schools",
     "start": {
@@ -478,94 +88,6 @@
     "calendar_ids": [
       "norwood-community",
       "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-26-thursday-nov-176f63a",
-    "title": "Thursday , Nov",
-    "start": {
-      "date": "2026-11-26",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shalom-corner-closed18.html",
-    "cost": null,
-    "public_access": "public",
-    "series": "Temple Beth David — Westwood",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Thursday , Nov November 26 , 2026 Shalom Corner Closed Thursday, Nov 26th (All day) MORE INFO",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-26-town-hall-closure-7f42ff0",
-    "title": "Town Hall Closure",
-    "start": {
-      "date": "2026-11-26",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-26",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-master-calendar",
-    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
-    "registration_url": null,
-    "cost": null,
-    "public_access": "public",
-    "series": "Town of Norwood",
-    "publish_candidate": true,
-    "verification_status": "verified_town_master_calendar",
-    "notes": null,
-    "discovered_by": "town_revize_master_calendar",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-27-mass-cultural-council-publishes-updates-daily-d8cd8f5",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-27",
-      "time": "00:06"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 27, 2026 at 12:06 AM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community"
     ]
   },
   {
@@ -633,6 +155,36 @@
       "rec-all",
       "rec-drop-in",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2026-11-27-mass-cultural-council-publishes-updates-daily-d8cd8f5",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-27",
+      "time": "08:06"
+    },
+    "end": {
+      "date": "2026-11-27",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 27, 2026 at 08:06 AM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
     ]
   },
   {
