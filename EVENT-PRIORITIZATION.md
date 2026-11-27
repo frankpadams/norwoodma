@@ -37,4 +37,6 @@ Every event receives the highest applicable priority below. Lower-numbered prior
 
 Show date, title, time, and location on one line when space and content length allow. Let long titles and narrow screens wrap naturally. Do not put times on a dedicated line without need. Keep titles prominent, and show time and location in secondary text. Use compact lowercase time labels such as “9am” or “9:30am,” never “09:00.” Use abbreviated month and day labels, such as “Jan 24,” not numeric dates such as “01/24/2027.”
 
+Routine multi-session Norwood Recreation classes and programs appear as one expandable “Norwood Recreation classes & programs” listing per date in the combined default calendar. Expanding it reveals that day’s scheduled occurrences with their times, locations, descriptions, and registration links. One-time event listings remain separate; the grouping is a display rule and does not change event records or priority.
+
 The shared comparator in `event-agenda.js` implements this policy for the full calendar, generated event listings, and homepage feed. New and refreshed events pass through that comparator automatically. Public religious events and municipal board and committee meetings remain eligible for the calendar.

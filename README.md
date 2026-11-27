@@ -1,10 +1,10 @@
-# Norwood.ma v2.3.3
+# Norwood.ma v2.3.4
 
 Norwood.ma is an independent community information site for Norwood, Massachusetts. It combines local events, news, civic information, directories, maps, transit, weather, recreation, calendars, search, and practical resident resources in one mobile-friendly site.
 
 **Production:** https://www.norwood.ma  
 **Status:** stable 2.x series
-**Current release:** v2.3.3 — consolidates multi-source coverage of developing local incidents, filters software-download pages, and refreshes news from the latest Norwood Record issue.
+**Current release:** v2.3.4 — adds recurring Norwood Recreation classes to the combined default calendar as expandable daily listings.
 **Canonical release policy:** `VERSIONING.md`
 
 > Norwood.ma is independent and is not the Town of Norwood government website. Where appropriate, the site links residents to authoritative Town, school, transit, library, organization, and publisher sources.
@@ -16,6 +16,7 @@ Norwood.ma is an independent community information site for Norwood, Massachuset
 - `data/events.json` / `data/events-data.js` are the shared generated event dataset used by What's Happening and related event experiences.
 - Event ingestion is source-driven, normalized, deduplicated, and expiration-aware.
 - Event suggestions arrive through the Contact page and are reviewed, verified, and added to the shared event pipeline as documented in `EVENT-SUBMISSION-SYSTEM.md`.
+- The default combined calendar includes curated public community events and scheduled occurrences for multi-session Norwood Recreation programs. Recreation sessions are grouped into one expandable listing per date; one-time events remain separate. Calendar selection and subscriptions remain available for visitors who want a narrower or personalized view.
 - Selectable calendars include official/community sources and topic-specific feeds where dependable ingestion is available.
 - Daily event priorities are governed by `EVENT-PRIORITIZATION.md` and enforced by the shared `event-agenda.js` comparator across the homepage and calendar. Election events lead; religious events remain included at the bottom, including events held at churches and events organized by or held at the Knights of Columbus. Ties sort by start time, with untimed events last.
 - Regional events are maintained separately from the core Norwood calendar. Curated nearby/regional events may be included when they are reasonably relevant to Norwood residents, with municipality clearly identified.
@@ -105,6 +106,13 @@ See `VERSIONING.md` for the authoritative release/documentation rules.
 - `RELEASE-vX.Y.Z.md` — historical release notes for intentional product releases.
 
 ## Current stable release
+
+### v2.3.4 — Expandable daily Recreation listings
+Released November 26, 2026.
+
+- Includes recurring Norwood Recreation classes and programs in the combined default calendar.
+- Groups those scheduled occurrences into one expandable entry per day while keeping one-time event listings separate.
+- Keeps calendar selection and subscriptions available as optional filters.
 
 ### v2.3.2 — Games & Shenanigans in Explore
 Released November 25, 2026.

@@ -9,6 +9,8 @@
 .event-agenda-detail{padding:0 24px 15px 2px;font-size:.91rem;line-height:1.6;color:#263f51}.event-agenda-detail p{margin:7px 0}.event-agenda-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:12px}.event-agenda-links a{color:#004e85;font-weight:700;text-decoration:underline;text-underline-offset:3px}.event-agenda-empty{padding:20px 0}
 @media(max-width:600px){#eventPeriods .event-agenda-day{display:block;margin-bottom:26px}#eventPeriods .event-agenda-date{background:none;border-top:0;border-bottom:2px solid #d5ad36;border-radius:0;text-align:left;padding:0 0 8px;margin-bottom:0}.event-agenda-date time{flex-direction:row;align-items:baseline;gap:7px}.agenda-weekday{font-size:.88rem}.agenda-day-number{font-size:1.3rem}.agenda-month{font-size:.8rem}.event-agenda-list{border-top:0}.event-agenda-entry>summary{padding:10px 0;gap:8px}.event-agenda-title{font-size:.96rem}.event-agenda-meta{font-size:.79rem}.event-agenda-detail{padding-right:4px}}
 
+.event-agenda-recreation-list{margin:8px 0 0 4px;padding-left:12px;border-left:3px solid #d5ad36}.event-agenda-recreation-list .event-agenda-entry>summary{padding-left:5px}
+
 /* Keep the controls compact so the daily agenda starts higher. */
 .events-page .events-hero.page-hero{padding:15px 20px;margin-bottom:12px;border-radius:14px}
 .events-page .events-hero>.eyebrow{margin:0 0 3px;font-size:.72rem;line-height:1.2}

@@ -276,7 +276,7 @@ function monthDayRange(events){
  return `${a.toLocaleDateString([],{month:'short',day:'numeric'}).toUpperCase()} – ${b.toLocaleDateString([],{month:'short',day:'numeric'}).toUpperCase()}`;
 }
 function eventKind(cat='community'){
- const m={live_music:'Live music',music:'Live music',music_community:'Music & community',performance:'Performance',school_theatre:'School theatre',sports_education:'Figure skating',sports:'Sports',food_culture:'Food & culture',food:'Food & drink',market:'Market',assistance:'Community assistance',business_community:'Local business',workshop:'Workshop',arts:'Arts & making',fundraiser:'Fundraiser',community:'Community',civic_meeting:'Town meeting'};return m[cat]||String(cat).replaceAll('_',' ');
+ const m={recreation_class_group:'Recreation programs',live_music:'Live music',music:'Live music',music_community:'Music & community',performance:'Performance',school_theatre:'School theatre',sports_education:'Figure skating',sports:'Sports',food_culture:'Food & culture',food:'Food & drink',market:'Market',assistance:'Community assistance',business_community:'Local business',workshop:'Workshop',arts:'Arts & making',fundraiser:'Fundraiser',community:'Community',civic_meeting:'Town meeting'};return m[cat]||String(cat).replaceAll('_',' ');
 }
 function eventClass(cat='community'){if(/music/.test(cat))return'music';if(/arts|theatre|workshop/.test(cat))return'arts';if(/assistance/.test(cat))return'community';if(/food|market/.test(cat))return'food';if(/sport|skating|race|fitness/.test(cat))return'sports';if(/fund/.test(cat))return'fundraiser';return'community';}
 function eventHasPaidAdmission(e){const cost=String(e.cost||'').trim().toLowerCase();return !!cost&&!/^free\b/.test(cost)&&!/donation|suggested/.test(cost)&&(/\$|admission|ticket|fee|per person|per child|per adult/.test(cost));}
@@ -316,7 +316,7 @@ function eventIsLocalBrewery(e){
  }
  return true;
 }
-function eventSummary(e){const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.organizer&&String(e.organizer).trim().toLowerCase()!==String(e.venue||'').trim().toLowerCase())bits.push(e.organizer);if(['castle-island-calendar','irish-brewing-events'].includes(String(e.source_id||'')))bits.push('Additional events may be available at other locations; visit the website for details.');if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);if(String(e.category||'').toLowerCase().includes('fundraiser')&&e.organizer)bits.push(`Benefits: ${e.organizer}`);const context=eventTitleContext(e);if(context)bits.push(context);return bits.join(' · ')||e.address||'Open source for details.';}
+function eventSummary(e){if(e?.recreation_group)return `${(e.grouped_events||[]).length} scheduled Recreation classes and programs. Open to see the daily list.`;const bits=[];if(e.start?.time&&e.start.time!=='00:00')bits.push(formatEventTime(e.start.time));if(e.end?.date&&e.end.date!==e.start?.date)bits.push(`${shortDate(e.start.date)}–${shortDate(e.end.date)}`);if(e.venue)bits.push(e.venue);if(e.organizer&&String(e.organizer).trim().toLowerCase()!==String(e.venue||'').trim().toLowerCase())bits.push(e.organizer);if(['castle-island-calendar','irish-brewing-events'].includes(String(e.source_id||'')))bits.push('Additional events may be available at other locations; visit the website for details.');if(e.town&&String(e.town).trim().toLowerCase()!=='norwood')bits.push(`${e.town}, MA`);if(e.cost)bits.push(e.cost);if(String(e.category||'').toLowerCase().includes('fundraiser')&&e.organizer)bits.push(`Benefits: ${e.organizer}`);const context=eventTitleContext(e);if(context)bits.push(context);return bits.join(' · ')||e.address||'Open source for details.';}
 function eventPriority(e){
  const text=[e.title,e.notes,e.venue,e.address,e.organizer,e.source_id].filter(Boolean).join(' ').toLowerCase();
  if(/farmers'? market|farmer'?s market|town-farmers-market|town common|norwood common|580 washington st/.test(text))return 0;
@@ -660,14 +660,15 @@ function renderEventsPage(items){
  const q=($('#eventSearch')?.value||'').trim().toLowerCase();
  items=calendarListings(items).filter(e=>eventMatchesCalendar(e,calendarKey)).filter(e=>!q||eventSearchText(e).includes(q));
  items=consolidateTempleBethDavid(items);
+ const recreationGrouped=window.NorwoodEventAgenda?.groupRecreationPrograms?.(items)||items;
  if(eventId){
-   const e=items.find(x=>String(x.id||'')===eventId);
+   const e=items.find(x=>String(x.id||'')===eventId)||recreationGrouped.find(x=>String(x.id||'')===eventId);
    if(e){
      // Use the same event row and action decorator as the main calendar.
      // A shared link presents it expanded, without maintaining a second detail template.
      host.innerHTML='<section class="event-period event-shared-detail"><div class="event-period-head"><p class="eyebrow">Event details</p><h2>'+esc(e.title)+'</h2></div><div class="event-agenda-list">'+window.NorwoodEventAgenda.row(e)+'</div><p class="event-full-calendar-link"><a href="events.html">See full Norwood.ma event calendar →</a></p></section>';
      const entry=host.querySelector('.event-agenda-entry');if(entry)entry.open=true;
-     decorateAgendaSharing([e]);
+     decorateAgendaSharing(e.recreation_group?e.grouped_events:[e]);
      const st=$('#eventsStatus');if(st)st.textContent='Showing full event information';
      return;
    }
@@ -675,6 +676,7 @@ function renderEventsPage(items){
  const labels={all:'All community events',arts:'Arts, music & entertainment',family:'Family & kids',sports:'Sports & active events',fundraisers:'Fundraisers & benefits','food-markets':'Food, markets & fairs'};
  const title=document.querySelector('.events-hero h1'), intro=document.querySelector('.events-hero p:not(.eyebrow)');
  if(calendarKey!=='all'&&labels[calendarKey]){if(title)title.textContent=labels[calendarKey];if(intro)intro.textContent='A filtered Norwood.ma calendar view. Use the event link for the latest details.';}
+ items=recreationGrouped;
  if(eventView==='calendar') host.innerHTML=renderCalendarView(items);
  else {
   const g=groupEvents(items),sections=[['today','Today'],['tomorrow','Tomorrow'],['next','Next few days'],['save','Save the date']];
@@ -685,7 +687,8 @@ function renderEventsPage(items){
 }
 function decorateAgendaSharing(items,root){
  const host=root||document.querySelector('#eventPeriods');if(!host)return;
- const byId=new Map(items.map(e=>[String(e.id||''),e]));
+ const shareable=items.flatMap(e=>e?.recreation_group?(e.grouped_events||[]):[e]);
+ const byId=new Map(shareable.map(e=>[String(e.id||''),e]));
  host.querySelectorAll('.event-agenda-entry').forEach(entry=>{
   const id=entry.id.replace(/^agenda-/,'');const e=byId.get(id);if(!e)return;
   const summary=entry.querySelector('summary'),detail=entry.querySelector('.event-agenda-detail');if(!summary||!detail)return;
@@ -723,7 +726,8 @@ function renderHomeEvents(items){
  const host=$('#homeEvents');if(!host)return;
  const today=dateKey(new Date());
  const visible=calendarListings(items,true).filter(e=>(e.end?.date||e.start?.date||'')>=today);
- const ranked=visible.map((e,i)=>({e,i})).sort((a,b)=>{
+ const groupedVisible=window.NorwoodEventAgenda?.groupRecreationPrograms?.(visible)||visible;
+ const ranked=groupedVisible.map((e,i)=>({e,i})).sort((a,b)=>{
    const aStart=a.e.start?.date||'',bStart=b.e.start?.date||'';
    const aEnd=a.e.end?.date||aStart,bEnd=b.e.end?.date||bStart;
    const aOngoing=aStart<today&&aEnd>=today,bOngoing=bStart<today&&bEnd>=today;
@@ -826,6 +830,8 @@ function eventPopupSharedActions(e, options={}){
  return '<div class="event-popup-quick-actions">'+(hasDate?'<details class="event-action-menu"><summary>＋ Add to Calendar</summary>'+calendars+'</details>':'')+'<details class="event-action-menu"><summary>↗ Share</summary>'+sharing+'</details>'+(q?'<details class="event-action-menu"><summary>⌖ Directions</summary>'+maps+'</details>':'')+'</div>'+websites+'<details class="event-popup-more"><summary>More event information</summary>'+costNote+'</details>'+'<p class="event-popup-referral">Please let the event host or organizer know you found this event on Norwood.ma</p>';
 }
 function openEventDetails(id){
+ const recreationGroup=window.NorwoodEventAgenda?.recreationGroup?.(id);
+ if(recreationGroup){const dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');if(!dlg||!box)return;box.innerHTML='<div class="event-popup-unified"><div class="event-agenda-list">'+window.NorwoodEventAgenda.row(recreationGroup)+'</div></div>';const entry=box.querySelector('.event-agenda-recreation-group');if(entry)entry.open=true;decorateAgendaSharing(recreationGroup.grouped_events,box);dlg.showModal();return;}
  const e=allEventsForPage.find(x=>String(x.id||'')===String(id||''));
  const dlg=$('#eventDetailsDialog'),box=$('#eventDetailsContent');
  if(!e||!dlg||!box)return;
