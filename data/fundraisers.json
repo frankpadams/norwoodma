@@ -132,16 +132,29 @@
     "norwood_relevance": "Verified Norwood collection location: Rockland Trust, 61 Lenox Street"
   },
   {
+    "id": "2027-01-23-smile-mass-trivia-fundraiser",
+    "title": "SMILE Mass Trivia Fundraiser",
+    "organizer": "SMILE Mass",
+    "date_label": "2027-01-23",
+    "description": "Public trivia fundraiser at Knights of Columbus Hall, 572 Nichols Street, Norwood, on January 23, 2027 at 7 PM. Entry is $25 per person; teams of 6–8 encouraged, smaller teams welcome (maximum eight). Complimentary desserts and snacks; cash bar. Register and pay through SMILE Mass's official form. No registration closing date or event end time is stated.",
+    "url": "https://pci.jotform.com/form/263144106636049",
+    "end_date": "2027-01-23",
+    "venue": "Knights of Columbus Hall",
+    "time": "19:00",
+    "end_time": null,
+    "origin": "calendar"
+  },
+  {
     "id": "mbf-boston-marathon-fundraising-2027",
     "title": "2027 Boston Marathon — Team MBF Fundraising",
     "organizer": "Matt Brown Foundation",
     "date_label": "Apr 19, 2027 race · Fundraising due Apr 15 · Charity-bib waitlist",
     "description": "Raise funds for grants supporting people living with paralysis. Team MBF’s charity bibs are full, but waitlist applications remain open; runners who already have a Boston Marathon entry may still apply. Fundraising commitments are $15,000 for a charity bib or $3,000 with your own entry, due April 15, 2027. Accepted runners pay a separate $100 team fee; charity-bib runners also pay the $390 race entry fee. Apply through the official CharityTeams page.",
     "url": "https://www.charityteams.com/apply/matt-brown-foundation",
-    "end_date": "2027-04-19",
+    "end_date": "2027-04-15",
     "order_deadline": null,
-    "verified_at": "2026-11-23",
-    "norwood_relevance": "Norwood-based Matt Brown Foundation (EIN 83-3056927), listed in Norwood, MA by IRS filings reproduced at https://projects.propublica.org/nonprofits/organizations/833056927 . The foundation's official https://www.mattbrownfoundation.org/mbf-5k confirms its fundraising event at Norwood High School. Official 2027 campaign https://www.mattbrownfoundation.org/boston-marathon-presented-by-bank-of-america links to CharityTeams. The application destination currently says charity bibs are full/waitlist-only and own-entry applications remain open; full fundraising commitments are due April 15, 2027. This is a fundraising application, not a payment link."
+    "verified_at": "2026-11-27",
+    "norwood_relevance": "Norwood-based Matt Brown Foundation (EIN 83-3056927), listed in Norwood, MA by IRS filings reproduced at https://projects.propublica.org/nonprofits/organizations/833056927 . The foundation's official https://www.mattbrownfoundation.org/mbf-5k confirms its fundraising event at Norwood High School. Official 2027 campaign https://www.mattbrownfoundation.org/boston-marathon-presented-by-bank-of-america links to CharityTeams. The application destination currently says charity bibs are full/waitlist-only and own-entry applications remain open; full fundraising commitments are due April 15, 2027. This is a fundraising application, not a payment link. Rechecked November 27, 2026: CharityTeams explicitly sets April 15, 2027 as the full fundraising commitment deadline. The fundraiser's end_date follows that deadline; April 19 remains the race date in the label and description."
   },
   {
     "id": "buck-for-sally-2026",
