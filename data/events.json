@@ -942,39 +942,6 @@
     ]
   },
   {
-    "id": "2026-11-29-musical-sundays-concert-series-hiroya-tsukamo-e7c7e1a",
-    "title": "Musical Sundays Concert Series: Hiroya Tsukamoto",
-    "start": {
-      "date": "2026-11-29",
-      "time": "00:00"
-    },
-    "end": {
-      "date": "2026-11-29",
-      "time": "00:00"
-    },
-    "venue": "Morrill Memorial Library",
-    "address": null,
-    "category": "school_theatre",
-    "source_id": "library-assabet-calendar",
-    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-hiroya-tsukamoto-4/",
-    "cost": null,
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": "Our Fall Musical Sundays Concert Series concludes on Sunday, November 28 at 2:00pm with a show, \"A Journey Through Strings and Stories,\" by acoustic guitarist, Hiroya Tsukamoto. Tsukamoto brings a blend of masterful fingerstyle guitar and e",
-    "discovered_by": "scheduled_jsonld",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "library-calendar",
-      "norwood-arts",
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
     "id": "2026-11-29-advent-services-e7424fc",
     "title": "Advent Services",
     "start": {
@@ -1099,6 +1066,38 @@
       "norwood-arts",
       "norwood-community"
     ]
+  },
+  {
+    "id": "2026-11-29-musical-sundays-concert-series-hiroya-tsukamo-e7c7e1a",
+    "title": "Musical Sundays Concert Series: Hiroya Tsukamoto",
+    "description": "Acoustic guitar and storytelling with Hiroya Tsukamoto in the library's Simoni Room. Registration required.",
+    "start": {
+      "date": "2026-11-29",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": "15:00"
+    },
+    "venue": "Morrill Memorial Library · Simoni Room",
+    "address": "33 Walpole Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "live_music",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-hiroya-tsukamoto-4/",
+    "registration_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-hiroya-tsukamoto-4/",
+    "organizer": "Morrill Memorial Library",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "notes": "The official calendar heading confirms Sunday, November 29, 2026, 2–3 PM (the narrative contains a conflicting November 28 typo). Registration is required through the library event page or the Reference Desk, 781-769-0200 ext. 2.",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "2026-11-29-reindeer-dash-44ee7c0",
@@ -23725,6 +23724,36 @@
       "rec-special-events",
       "recreation-calendar"
     ]
+  },
+  {
+    "id": "2027-01-09-morrill-human-library",
+    "title": "Human Library® at Morrill Memorial Library",
+    "description": "Borrow a conversation with a person sharing lived experience of prejudice, stereotypes or marginalization. Drop in at the Simoni Room lending desk to choose a conversation; no registration required.",
+    "start": {
+      "date": "2027-01-09",
+      "time": "11:00"
+    },
+    "end": {
+      "date": "2027-01-09",
+      "time": "14:00"
+    },
+    "venue": "Morrill Memorial Library · Simoni Room",
+    "address": "33 Walpole Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "community",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/human-library/",
+    "organizer": "Morrill Memorial Library",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "notes": "Public drop-in event, 11 AM–2 PM. No registration required. In case of inclement weather, the organizer gives January 23 as the alternate date; check library announcements before visiting.",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-community"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "rec-occurrence-rec-80448ec092e4-2027-01-09",
