@@ -7013,14 +7013,19 @@
     "address": "61 Endicott St, Norwood, MA 02062",
     "category": "live_music",
     "source_id": "fallout-shelter",
-    "source_url": "https://www.extendedplaysessions.com/",
+    "source_url": "https://grcpac.yapsody.com/event/index/876715/THE-McDONOUGH-BAND",
     "cost": null,
     "organizer": "GRCPAC / Extended Play Sessions",
     "public_access": "ticketed_public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "organizer_verified_2026-10-14",
-    "notes": "Public ticketed live-music performance; see venue for tickets and availability."
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "notes": "The venue reports this November 28 show is sold out. A free livestream is offered on The Fallout Shelter's YouTube and Facebook channels; see the organizer's website for access. Show starts at 7 PM; venue doors open at 6 PM.",
+    "curated_default": true,
+    "supersedes_event_ids": [
+      "2026-11-28-the-mcdonough-band-annual-saturday-after-than-97d7db1"
+    ],
+    "description": "The McDonough Band's annual Saturday after Thanksgiving show. In-person tickets are sold out; the venue offers a free livestream."
   },
   {
     "id": "2026-10-15-junk-journal-art-journal-club",
@@ -8906,7 +8911,11 @@
     "end": {
       "date": "2026-12-13",
       "time": null
-    }
+    },
+    "curated_default": true,
+    "supersedes_event_ids": [
+      "2026-12-13-madrigals-perform-at-the-day-house-6691709"
+    ]
   },
   {
     "id": "2026-11-21-asa-after-dark",
@@ -9137,5 +9146,391 @@
     "curated_default": true,
     "school_scope": "Balch Elementary School",
     "verification_status": "verified_secondary_event_listing"
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-23-smile-mass-trivia-fundraiser",
+    "title": "SMILE Mass Trivia Fundraiser",
+    "description": "A public trivia night supporting SMILE Mass's inclusive programs for people with disabilities and their families. Teams of 6–8 are encouraged; smaller teams are welcome, with up to eight players per table.",
+    "start": {
+      "date": "2027-01-23",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-23",
+      "time": null
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "fundraiser",
+    "source_id": "smile-mass",
+    "source_url": "https://smilemass.org/social-rec-activities/",
+    "registration_url": "https://pci.jotform.com/form/263144106636049",
+    "organizer": "SMILE Mass",
+    "cost": "$25 per person",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-fundraisers"
+    ],
+    "notes": "Public trivia fundraiser at Knights of Columbus Hall, 572 Nichols Street, Norwood, on January 23, 2027 at 7 PM. Entry is $25 per person; teams of 6–8 encouraged, smaller teams welcome (maximum eight). Complimentary desserts and snacks; cash bar. Register and pay through SMILE Mass's official form. No registration closing date or event end time is stated."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2026-11-29-norwood-sunday-social-dance",
+    "title": "Norwood Sunday Social Dance — Bonus Fifth Sunday",
+    "start": {
+      "date": "2026-11-29",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": "21:00"
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-sunday-dance",
+    "source_url": "https://www.norwoodsundaydance.com/schedule/",
+    "organizer": "Norwood Sunday Dance · Paul and Judy",
+    "cost": "$20 per person",
+    "series": "Norwood Sunday Social Dance",
+    "notes": "Public social dancing with ballroom, Latin and swing music, partner and line dances, and snacks and beverages. Newcomers welcome; no partner required. Dancing 6–9 PM. The organizer's current schedule confirms this date; check for changes."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2026-12-06-norwood-sunday-social-dance",
+    "title": "Norwood Sunday Social Dance",
+    "start": {
+      "date": "2026-12-06",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-12-06",
+      "time": "21:00"
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-sunday-dance",
+    "source_url": "https://www.norwoodsundaydance.com/schedule/",
+    "organizer": "Norwood Sunday Dance · Paul and Judy",
+    "cost": "$20 per person",
+    "series": "Norwood Sunday Social Dance",
+    "notes": "Public social dancing with ballroom, Latin and swing music, partner and line dances, and snacks and beverages. Newcomers welcome; no partner required. Dancing 6–9 PM. The organizer's current schedule confirms this date; check for changes."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2026-12-20-norwood-sunday-social-dance",
+    "title": "Norwood Sunday Social Dance — Holiday Christmas Party",
+    "start": {
+      "date": "2026-12-20",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2026-12-20",
+      "time": "21:00"
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-sunday-dance",
+    "source_url": "https://www.norwoodsundaydance.com/schedule/",
+    "organizer": "Norwood Sunday Dance · Paul and Judy",
+    "cost": "$20 per person",
+    "series": "Norwood Sunday Social Dance",
+    "notes": "Public social dancing with ballroom, Latin and swing music, partner and line dances, and snacks and beverages. Newcomers welcome; no partner required. Dancing 6–9 PM. The organizer's current schedule confirms this date; check for changes."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-03-norwood-sunday-social-dance",
+    "title": "Norwood Sunday Social Dance",
+    "start": {
+      "date": "2027-01-03",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-01-03",
+      "time": "21:00"
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-sunday-dance",
+    "source_url": "https://www.norwoodsundaydance.com/schedule/",
+    "organizer": "Norwood Sunday Dance · Paul and Judy",
+    "cost": "$20 per person",
+    "series": "Norwood Sunday Social Dance",
+    "notes": "Public social dancing with ballroom, Latin and swing music, partner and line dances, and snacks and beverages. Newcomers welcome; no partner required. Dancing 6–9 PM. The organizer's current schedule confirms this date; check for changes."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-17-norwood-sunday-social-dance",
+    "title": "Norwood Sunday Social Dance",
+    "start": {
+      "date": "2027-01-17",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-01-17",
+      "time": "21:00"
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-sunday-dance",
+    "source_url": "https://www.norwoodsundaydance.com/schedule/",
+    "organizer": "Norwood Sunday Dance · Paul and Judy",
+    "cost": "$20 per person",
+    "series": "Norwood Sunday Social Dance",
+    "notes": "Public social dancing with ballroom, Latin and swing music, partner and line dances, and snacks and beverages. Newcomers welcome; no partner required. Dancing 6–9 PM. The organizer's current schedule confirms this date; check for changes."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-31-norwood-sunday-social-dance",
+    "title": "Norwood Sunday Social Dance — Bonus Fifth Sunday",
+    "start": {
+      "date": "2027-01-31",
+      "time": "18:00"
+    },
+    "end": {
+      "date": "2027-01-31",
+      "time": "21:00"
+    },
+    "venue": "Knights of Columbus Hall",
+    "address": "572 Nichols Street, Norwood, MA 02062",
+    "category": "community",
+    "source_id": "norwood-sunday-dance",
+    "source_url": "https://www.norwoodsundaydance.com/schedule/",
+    "organizer": "Norwood Sunday Dance · Paul and Judy",
+    "cost": "$20 per person",
+    "series": "Norwood Sunday Social Dance",
+    "notes": "Public social dancing with ballroom, Latin and swing music, partner and line dances, and snacks and beverages. Newcomers welcome; no partner required. Dancing 6–9 PM. The organizer's current schedule confirms this date; check for changes."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-08-fallout-shelter-hayley-reardon",
+    "title": "Hayley Reardon",
+    "description": "Folk-pop songs and storytelling.",
+    "start": {
+      "date": "2027-01-08",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-08",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott Street, Norwood, MA 02062",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/879201/HAYLEY-REARDON",
+    "ticket_url": "https://grcpac.yapsody.com/event/index/879201/HAYLEY-REARDON",
+    "organizer": "GRCPAC / Extended Play Sessions",
+    "cost": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "notes": "Folk-pop songs and storytelling. Show starts at 7 PM; doors open at 6 PM. All ages. Public tickets through the venue's official Yapsody page; check current prices and availability. Venue provides wheelchair access."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-15-fallout-shelter-krishna-guthrie-band",
+    "title": "Krishna Guthrie Band",
+    "description": "Roots rock and original songs.",
+    "start": {
+      "date": "2027-01-15",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-15",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott Street, Norwood, MA 02062",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/879203/KRISHNA-GUTHRIE-BAND",
+    "ticket_url": "https://grcpac.yapsody.com/event/index/879203/KRISHNA-GUTHRIE-BAND",
+    "organizer": "GRCPAC / Extended Play Sessions",
+    "cost": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "notes": "Roots rock and original songs. Show starts at 7 PM; doors open at 6 PM. All ages. Public tickets through the venue's official Yapsody page; check current prices and availability. Venue provides wheelchair access."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-16-fallout-shelter-debo-ray-band",
+    "title": "The Debo Ray Band",
+    "description": "Soul and R&B performance.",
+    "start": {
+      "date": "2027-01-16",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-16",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott Street, Norwood, MA 02062",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/879205/THE-DEBO-RAY-BAND",
+    "ticket_url": "https://grcpac.yapsody.com/event/index/879205/THE-DEBO-RAY-BAND",
+    "organizer": "GRCPAC / Extended Play Sessions",
+    "cost": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "notes": "Soul and R&B performance. Show starts at 7 PM; doors open at 6 PM. All ages. Public tickets through the venue's official Yapsody page; check current prices and availability. Venue provides wheelchair access."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-20-fallout-shelter-no-static-steely-hang",
+    "title": "No Static Presents: Steely Hang",
+    "description": "Steely Dan music with No Static's smaller ensemble and invited guests.",
+    "start": {
+      "date": "2027-01-20",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-20",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott Street, Norwood, MA 02062",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/879207/NO-STATIC-PRESENTS-STEELY-HANG",
+    "ticket_url": "https://grcpac.yapsody.com/event/index/879207/NO-STATIC-PRESENTS-STEELY-HANG",
+    "organizer": "GRCPAC / Extended Play Sessions",
+    "cost": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "notes": "Steely Dan music with No Static's smaller ensemble and invited guests. Show starts at 7 PM; doors open at 6 PM. All ages. Public tickets through the venue's official Yapsody page; check current prices and availability. Venue provides wheelchair access."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-21-fallout-shelter-suitcase-junket",
+    "title": "The Suitcase Junket",
+    "description": "Solo folk and roots music by Matt Lorenz.",
+    "start": {
+      "date": "2027-01-21",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-21",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott Street, Norwood, MA 02062",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/879209/THE-SUITCASE-JUNKET",
+    "ticket_url": "https://grcpac.yapsody.com/event/index/879209/THE-SUITCASE-JUNKET",
+    "organizer": "GRCPAC / Extended Play Sessions",
+    "cost": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "notes": "Solo folk and roots music by Matt Lorenz. Show starts at 7 PM; doors open at 6 PM. All ages. Public tickets through the venue's official Yapsody page; check current prices and availability. Venue provides wheelchair access."
+  },
+  {
+    "town": "Norwood",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "discovered_by": "official_organization_review",
+    "id": "2027-01-23-fallout-shelter-otis-grove",
+    "title": "Otis Grove — Album Release Show",
+    "description": "Organ-funk trio celebrating its live album.",
+    "start": {
+      "date": "2027-01-23",
+      "time": "19:00"
+    },
+    "end": {
+      "date": "2027-01-23",
+      "time": null
+    },
+    "venue": "The Fallout Shelter",
+    "address": "61 Endicott Street, Norwood, MA 02062",
+    "category": "live_music",
+    "source_id": "fallout-shelter",
+    "source_url": "https://grcpac.yapsody.com/event/index/879215/OTIS-GROVE",
+    "ticket_url": "https://grcpac.yapsody.com/event/index/879215/OTIS-GROVE",
+    "organizer": "GRCPAC / Extended Play Sessions",
+    "cost": null,
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "notes": "Organ-funk trio celebrating its live album. Show starts at 7 PM; doors open at 6 PM. All ages. Public tickets through the venue's official Yapsody page; check current prices and availability. Venue provides wheelchair access."
   }
 ]
