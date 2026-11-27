@@ -67,6 +67,7 @@ def collect(curated, events, today):
                    date_label=start if start == end else f'{start} – {end}',
                    description=e.get('notes') or '', url=url, end_date=end,
                    venue=e.get('venue'), time=(e.get('start') or {}).get('time'),
+                   end_time=(e.get('end') or {}).get('time'),
                    origin='calendar')
         rows.append(row)
         seen_urls.add(url.rstrip('/'))
@@ -119,7 +120,9 @@ def render(rows, today):
         else:
             heading = f'<h3>{esc("title")}</h3>'
             popup_markup = ''
-        parts.append(f'<article class="item"><div class="date">{esc("date_label")}</div>'
+        parts.append(f'<article class="item" data-fundraiser-end="{esc("end_date")}" '
+                     f'data-fundraiser-deadline="{esc("order_deadline")}" data-fundraiser-end-time="{esc("end_time")}">'
+                     f'<div class="date">{esc("date_label")}</div>'
                      f'{heading}<p class="fundraiser-organizer">{esc("organizer")}</p>'
                      f'<p>{escape(text)}</p><p><a class="action" href="{esc("url")}" '
                      'target="_blank" rel="noopener">Details &amp; participation ↗</a></p>'
