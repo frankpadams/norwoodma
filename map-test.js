@@ -178,6 +178,8 @@ function cleanAddress(a){
 // Reuse verified local map records instead of inventing new pins or coordinates.
 const landmarkNames=new Set(['norwood town common','norwood memorial municipal building norwood town hall','morrill memorial library','the norwood theatre','f holland day house norwood historical society','oakview mansion','old parish cemetery','little red brick schoolhouse','st gabriel the archangel chapel','highland cemetery cemetery department','norwood memorial airport','norwood civic center','ellis pond alevizos park']);
 for(const p of staticPlaces){if(landmarkNames.has(norm(p.name)))p.also=[...new Set([...(p.also||[]),'landmark'])];}
+const places=[];
+function rebuildPlaces(){
 const dynamic=[];
 (window.NORWOOD_RESTAURANTS||[]).forEach(r=>{const a=cleanAddress(r.address);if(a)dynamic.push({name:r.name,category:'food',address:a,details:r.cuisine||r.category||'Restaurant',url:r.url||'restaurants.html'});});
 (window.NORWOOD_BUSINESSES||[]).forEach(b=>{const a=cleanAddress(b.address);if(!a)return;
@@ -192,7 +194,20 @@ const dynamic=[];
  if(!a&&e.venue)a=venueAddresses[norm(e.venue)]||'';
  if(a)dynamic.push({name:e.title,category:'event',eventStart:e.start?.date||end,address:a,details:[e.start?.date,e.start?.time,e.venue,e.cost].filter(Boolean).join(' · '),url:e.registration_url||e.source_url||'events.html'});
 });
-const seen=new Set(),places=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address)+(p.category==='event'?'|'+p.details:'');if(seen.has(k))return false;seen.add(k);return true});
+const seen=new Set(),nextPlaces=[...staticPlaces,...dynamic].filter(p=>{const k=norm(p.name)+'|'+norm(p.address)+(p.category==='event'?'|'+p.details:'');if(seen.has(k))return false;seen.add(k);return true});
+places.splice(0,places.length,...nextPlaces);
+for(const place of places){
+ if(!['business','health','resource'].includes(place.category))continue;
+ const types=classifyCare(place);
+ if(types.length)place.also=[...new Set([...(place.also||[]),'health',...types.map(type=>'care:'+type)])];
+}
+// A page may deep-link a named park/facility before it has a dedicated static map record.
+// Keep that interface functional by geocoding the named Norwood place instead of returning an empty map.
+if(requestedPlace&&!places.some(p=>norm(p.name)===norm(requestedPlace))){
+ places.push({name:requestedPlace,category:'park',address:requestedPlace+', Norwood, MA 02062',details:'Norwood park, trail or recreation facility',url:'parks-trails.html'});
+}
+applyResourceTopics();
+}
 const healthTypes={
  doctor:'Doctor offices', hospital:'Hospitals', urgent:'Urgent care', psychiatry:'Psychiatry',
  therapy:'Therapy & counseling', rehab:'Physical therapy & rehabilitation', other:'Other health & support'
@@ -212,16 +227,6 @@ function classifyCare(place){
  if(/primary care|internal medicine|family medicine|physicians|specialty medical care|multi specialty medical care|ophthalmology|orthopedics/.test(labels))types.push('doctor');
  if(!types.length&&(place.category==='health'||/mental health services/.test(labels)))types.push('other');
  return types;
-}
-for(const place of places){
- if(!['business','health','resource'].includes(place.category))continue;
- const types=classifyCare(place);
- if(types.length)place.also=[...new Set([...(place.also||[]),'health',...types.map(type=>'care:'+type)])];
-}
-// A page may deep-link a named park/facility before it has a dedicated static map record.
-// Keep that interface functional by geocoding the named Norwood place instead of returning an empty map.
-if(requestedPlace&&!places.some(p=>norm(p.name)===norm(requestedPlace))){
- places.push({name:requestedPlace,category:'park',address:requestedPlace+', Norwood, MA 02062',details:'Norwood park, trail or recreation facility',url:'parks-trails.html'});
 }
 function publicSchoolMark(p){return p.publicSchool?'<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Seal_of_Norwood%2C_Massachusetts.png" alt="Official Norwood Public Schools" title="Norwood Public Schools" style="width:14px;height:14px;object-fit:contain;vertical-align:-2px;margin-left:5px">':''}
 function popup(p){
@@ -275,21 +280,41 @@ function searchMatch(p,q){
  return hay.includes(q);
 }
 // Use the directory's published membership, including resources in several topics.
-window.addEventListener('norwood:resource-topics', event=>{
+let resourceTopics=[];
+function applyResourceTopics(){
  const topicsByName=new Map();
- for(const {key,names} of event.detail){
-  for(const name of names){
-   const id=norm(name);
-   if(!topicsByName.has(id))topicsByName.set(id,new Set());
-   topicsByName.get(id).add(key);
-  }
+ for(const {key,names} of resourceTopics){for(const name of names){const id=norm(name);if(!topicsByName.has(id))topicsByName.set(id,new Set());topicsByName.get(id).add(key);}}
+ for(const place of places){if(['little-library','mini-food-pantry'].includes(place.category))continue;const topics=topicsByName.get(norm(place.name));if(topics)place.also=[...new Set([...(place.also||[]),...topics])];}
+}
+window.addEventListener('norwood:resource-topics',event=>{resourceTopics=event.detail||[];applyResourceTopics();});
+const directorySources={
+ business:['NORWOOD_BUSINESSES','data/businesses-data.js?v=20261120-directory-category-fix'],
+ resource:['NORWOOD_RESOURCES','data/resources-data.js?v=worship-addresses'],
+ food:['NORWOOD_RESTAURANTS','data/restaurants-data.js?v=20261111-expanded']
+};
+const directoryPending=new Map();
+function loadDirectory(key){
+ const [global,src]=directorySources[key];
+ if(Array.isArray(window[global]))return Promise.resolve();
+ if(directoryPending.has(key))return directoryPending.get(key);
+ const promise=new Promise((resolve,reject)=>{
+  const script=document.createElement('script');script.src=src;
+  script.onload=()=>{if(Array.isArray(window[global]))resolve();else{script.remove();reject(Error('Directory unavailable: '+key));}};
+  script.onerror=()=>{script.remove();reject(Error('Directory unavailable: '+key));};
+  document.head.append(script);
+ }).catch(err=>{directoryPending.delete(key);throw err;});
+ directoryPending.set(key,promise);return promise;
+}
+function neededDirectories(q){
+ if((!selectedCategories.size&&(q||requestedCategory==='all'))||requestedPlace)return ['business','resource','food'];
+ const keys=new Set();
+ for(const c of selectedCategories){
+  if(c==='food')keys.add('food');
+  if(['business','health','resource','civic','culture','school','worship','little-library','mini-food-pantry'].includes(c)||c.startsWith('resource:')||c.startsWith('care:')){keys.add('business');keys.add('resource');}
  }
- for(const place of places){
-  if(['little-library','mini-food-pantry'].includes(place.category))continue;
-  const topics=topicsByName.get(norm(place.name));
-  if(topics)place.also=[...new Set([...(place.also||[]),...topics])];
- }
-});
+ return [...keys];
+}
+rebuildPlaces();
 if(eventDays){
  const latest=places.reduce((max,p)=>Math.max(max,Date.parse(p.eventStart)||todayMs),todayMs);
  eventDays.max=String(Math.ceil((latest-todayMs)/dayMs));
@@ -342,7 +367,7 @@ function gasPriceSummary(row){
  return 'Regular $'+price.toFixed(2)+'/gal · '+(grade?.observed_at?'Checked ':'Reported ')+when;
 }
 async function render(){
- const token=++renderToken,shown=currentPlaces(),q=norm(search.value);
+ const token=++renderToken,q=norm(search.value);
  cluster.clearLayers();list.innerHTML='';
  if(!selectedCategories.size&&!q&&requestedCategory!=='all'){
   count.textContent='Choose map layers';
@@ -350,6 +375,14 @@ async function render(){
   if(searchHelp)searchHelp.hidden=true;
   return;
  }
+ const needed=neededDirectories(q);
+ if(needed.some(key=>!Array.isArray(window[directorySources[key][0]]))){
+  status.textContent='Loading directory locations…';count.textContent='Loading locations';
+  try{await Promise.all(needed.map(loadDirectory));}catch(err){if(token===renderToken)status.textContent='Directory locations could not load. Change the selection or search to retry.';return;}
+  if(token!==renderToken)return;
+ }
+ rebuildPlaces();
+ const shown=currentPlaces();
  if(searchHelp){
    const lgbtq=/\blgbtq\b|\bgay\b|\blesbian\b|\btrans\b|\btransgender\b|\bqueer\b|\bnonbinary\b/.test(q);
    const employment=selectedCategories.has('resource:employment');
