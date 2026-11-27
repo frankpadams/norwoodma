@@ -1,7 +1,12 @@
 {
-  "generated_at": "2026-11-26T18:58:43.947967Z",
+  "generated_at": "2026-11-27T18:54:44.042501Z",
   "stations": {
     "BJ's Gas Station": {
+      "gasbuddy": {
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
+      },
       "google": {
         "accepted_grades": [
           "diesel",
@@ -64,14 +69,6 @@
       }
     },
     "Costco Gas — Dedham": {
-      "costco": {
-        "accepted_grades": [
-          "regular",
-          "premium"
-        ],
-        "outcome": "prices_observed",
-        "source_url": "https://www.costco.com/warehouse-locations-319.html"
-      },
       "google": {
         "accepted_grades": [],
         "candidates": [
@@ -237,7 +234,9 @@
     },
     "Mobil / On the Run — Norwood Center": {
       "google": {
-        "accepted_grades": [],
+        "accepted_grades": [
+          "regular"
+        ],
         "candidates": [
           {
             "address": "499 Washington St, Norwood, MA 02062, USA",
@@ -325,23 +324,22 @@
             ]
           },
           {
-            "address": "683 Washington St, Norwood, MA 02062, USA",
-            "address_verified": false,
-            "name": "Norwood Convenience and News",
+            "address": "917 Washington St, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Smokehouse BBQ",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "683 Washington St",
+              "917 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "place_id": "ChIJRc3nUnF_5IkReh5h0CoNT4E",
             "station_verified": false,
             "types": [
-              "convenience_store",
-              "food_store",
+              "barbecue_restaurant",
+              "restaurant",
               "food",
               "point_of_interest",
-              "store",
               "establishment"
             ]
           },
@@ -386,22 +384,23 @@
             ]
           },
           {
-            "address": "917 Washington St, Norwood, MA 02062, USA",
-            "address_verified": true,
-            "name": "Smokehouse BBQ",
+            "address": "683 Washington St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Norwood Convenience and News",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "917 Washington St",
+              "683 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJRc3nUnF_5IkReh5h0CoNT4E",
+            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
             "station_verified": false,
             "types": [
-              "barbecue_restaurant",
-              "restaurant",
+              "convenience_store",
+              "food_store",
               "food",
               "point_of_interest",
+              "store",
               "establishment"
             ]
           }
@@ -537,10 +536,14 @@
       }
     },
     "Shell — Pleasant Street": {
+      "gasbuddy": {
+        "accepted_grades": [],
+        "matched_stations": 0,
+        "outcome": "no_address_match"
+      },
       "google": {
         "accepted_grades": [
-          "midgrade",
-          "regular"
+          "premium"
         ],
         "candidates": [
           {
@@ -602,7 +605,6 @@
       "google": {
         "accepted_grades": [
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -638,6 +640,8 @@
     "Gulf — Broadway",
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
-    "Shell — Walpole Street"
+    "BJ's Gas Station",
+    "Shell — Walpole Street",
+    "Shell — Pleasant Street"
   ]
 }
