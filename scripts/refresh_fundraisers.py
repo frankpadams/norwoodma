@@ -71,7 +71,19 @@ def collect(curated, events, today):
         rows.append(row)
         seen_urls.add(url.rstrip('/'))
         seen_titles.add(key)
-    return rows
+    # Prioritize the next actionable deadline, not the campaign start date.
+    def urgency(row):
+        deadlines = []
+        for field in ('order_deadline', 'end_date'):
+            try:
+                value = date.fromisoformat(row.get(field) or '')
+            except (ValueError, TypeError):
+                continue
+            if value >= today:
+                deadlines.append(value)
+        return min(deadlines, default=date.max)
+
+    return sorted(rows, key=urgency)
 
 
 def render(rows, today):
