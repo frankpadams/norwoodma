@@ -9550,15 +9550,47 @@
     "town": "Norwood",
     "category": "community",
     "source_id": "library-assabet-calendar",
-    "source_url": "https://patch.com/massachusetts/norwood/calendar/event/20270109/bdcb5962-eda6-473e-9fd6-e24a0600146f/human-library-at-morrill-memorial-library",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/human-library/",
     "organizer": "Morrill Memorial Library",
     "public_access": "public",
     "publish_candidate": true,
     "curated_default": true,
-    "verification_status": "organizer_public_announcement_verified_2026-11-27",
-    "notes": "Public drop-in event, 11 AM–2 PM. No registration required. In case of inclement weather, the organizer gives January 23 as the alternate date; check library announcements before visiting. The library's original public announcement supplies these details and links to https://norwoodlibrary.assabetinteractive.com/calendar/human-library/ .",
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "notes": "Public drop-in event, 11 AM–2 PM. No registration required. In case of inclement weather, the organizer gives January 23 as the alternate date; check library announcements before visiting.",
     "calendar_ids": [
       "library-calendar",
+      "norwood-community"
+    ],
+    "discovered_by": "official_organization_review"
+  },
+  {
+    "id": "2026-11-29-musical-sundays-concert-series-hiroya-tsukamo-e7c7e1a",
+    "title": "Musical Sundays Concert Series: Hiroya Tsukamoto",
+    "description": "Acoustic guitar and storytelling with Hiroya Tsukamoto in the library's Simoni Room. Registration required.",
+    "start": {
+      "date": "2026-11-29",
+      "time": "14:00"
+    },
+    "end": {
+      "date": "2026-11-29",
+      "time": "15:00"
+    },
+    "venue": "Morrill Memorial Library · Simoni Room",
+    "address": "33 Walpole Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "live_music",
+    "source_id": "library-assabet-calendar",
+    "source_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-hiroya-tsukamoto-4/",
+    "registration_url": "https://norwoodlibrary.assabetinteractive.com/calendar/musical-sundays-concert-series-hiroya-tsukamoto-4/",
+    "organizer": "Morrill Memorial Library",
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_organizer_verified_2026-11-27",
+    "notes": "The official calendar heading confirms Sunday, November 29, 2026, 2–3 PM (the narrative contains a conflicting November 28 typo). Registration is required through the library event page or the Reference Desk, 781-769-0200 ext. 2.",
+    "calendar_ids": [
+      "library-calendar",
+      "norwood-arts",
       "norwood-community"
     ],
     "discovered_by": "official_organization_review"
