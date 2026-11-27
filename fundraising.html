@@ -23,15 +23,24 @@
  const time=raw.match(/[–—-]\s*(\d{1,2})(?::(\d{2}))?\s*(AM|PM)\b/i);
  if(time&&!deadline)endMinute=(+time[1]%12+(time[3].toUpperCase()==="PM"?12:0))*60+ +(time[2]||0);
  }
+ const structured=row.hasAttribute("data-fundraiser-end");
+ if(structured){
+ const parse=v=>/^\d{4}-\d{2}-\d{2}$/.test(v||"")?Date.parse(v+"T00:00:00Z"):Infinity;
+ const end=parse(row.dataset.fundraiserEnd),due=parse(row.dataset.fundraiserDeadline);
+ const t=(row.dataset.fundraiserEndTime||"").match(/^(\d{1,2}):(\d{2})(?::\d{2})?$/);
+ if(t)endMinute=+t[1]*60+ +t[2];
+ key=Math.min(end,due>=today?due:Infinity);
+ row.hidden=end<today||(end===today&&minute>=endMinute);
+ }
  const days=(key-today)/dayMs;
  // A themed giving day is not necessarily a donation closing deadline.
  const openCampaign=/donations open/i.test(raw)&&!deadline;
- row.hidden=!openCampaign&&(days<0||(days===0&&minute>=endMinute));
+ if(!structured)row.hidden=!openCampaign&&(days<0||(days===0&&minute>=endMinute));
  row.querySelector(".fundraiser-urgency")?.remove();
  if(!row.hidden&&days>=0&&days<=3&&label){
  const badge=document.createElement("span");badge.className="fundraiser-urgency";badge.textContent=days===0?"Today":days===1?"Tomorrow":deadline?"Ending soon":"Coming up";label.after(badge);
  }
- return {row,i,key:openCampaign&&days<0?Infinity:key,endMinute};
+ return {row,i,key:!structured&&openCampaign&&days<0?Infinity:key,endMinute};
  });
  rows.sort((a,b)=>(a.key===b.key?0:a.key-b.key)||a.endMinute-b.endMinute||a.i-b.i).forEach(({row})=>list.append(row));
  }
