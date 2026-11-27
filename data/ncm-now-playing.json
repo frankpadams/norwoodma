@@ -1,27 +1,43 @@
 {
-  "updated_at": "2026-11-26T20:52:49.365186-05:00",
-  "date": "2026-11-26",
+  "updated_at": "2026-11-27T05:40:46.050429-05:00",
+  "date": "2026-11-27",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "2026 Veterans Day Ceremony",
+      "title": "Norwood Community Chorale: Holiday Concert 12.5.19",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1260,
-          "title": "Norwood Digest Thanksgiving 2010"
-        },
-        {
-          "minute": 1320,
+          "minute": 360,
           "title": "Alice's Restaurant - Arlo Guthrie"
         },
         {
-          "minute": 1380,
+          "minute": 420,
           "title": "2026 Veterans Day Ceremony"
+        },
+        {
+          "minute": 480,
+          "title": "Alice's Restaurant - Arlo Guthrie"
+        },
+        {
+          "minute": 540,
+          "title": "LEAD Update November 2026"
+        },
+        {
+          "minute": 570,
+          "title": "Behind The Scenes: The Making of a Boch Commercial"
+        },
+        {
+          "minute": 600,
+          "title": "Flex and Firm with Steve"
+        },
+        {
+          "minute": 660,
+          "title": "Norwood Community Chorale: Holiday Concert 12.5.19"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-26"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-27"
     },
     "government": {
       "status": "scheduled",
@@ -29,31 +45,71 @@
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1290,
+          "minute": 420,
+          "title": "Conservation Commission 11.18.26"
+        },
+        {
+          "minute": 480,
           "title": "School Committee 11.18.26"
         },
         {
-          "minute": 1350,
-          "title": "Board of Health 11.16.26"
+          "minute": 540,
+          "title": "Town Meeting Night #1 11.16.26"
         },
         {
-          "minute": 1380,
+          "minute": 750,
+          "title": "Conservation Commission 11.18.26"
+        },
+        {
+          "minute": 810,
+          "title": "School Committee 11.18.26"
+        },
+        {
+          "minute": 870,
+          "title": "Community Preservation Committee 11.18.26"
+        },
+        {
+          "minute": 960,
           "title": "Conservation Commission 11.18.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-26"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-27"
     },
     "schools": {
       "status": "scheduled",
-      "title": "2025 NHS Football vs Dedham Thanksgiving Day 11.27.25",
+      "title": "1964 Oldham School Dedication",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1385,
-          "title": "2025 NHS Football vs Dedham Thanksgiving Day 11.27.25"
+          "minute": 406,
+          "title": "\"The Catch\": 2006 Thanksgiving Football Game"
+        },
+        {
+          "minute": 436,
+          "title": "1959 Norwood vs Dedham Football"
+        },
+        {
+          "minute": 455,
+          "title": "1962 Football Norwood vs. Dedham"
+        },
+        {
+          "minute": 480,
+          "title": "2012 Norwood vs. Dedham Football"
+        },
+        {
+          "minute": 616,
+          "title": "2014 Thanksgiving Football vs. Dedham"
+        },
+        {
+          "minute": 815,
+          "title": "All History is Local: 1933 Norwood vs. Dedham"
+        },
+        {
+          "minute": 900,
+          "title": "1964 Oldham School Dedication"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-26"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-27"
     }
   }
 }
