@@ -13,7 +13,24 @@ async function rotatingHero(){
     const weights=eligible.map(x=>Math.max(0,Number(x.weight??1))), totalWeight=weights.reduce((a,b)=>a+b,0);
     let photo=eligible[Math.floor(Math.random()*eligible.length)];
     if(totalWeight>0){let pick=Math.random()*totalWeight;for(let i=0;i<eligible.length;i++){pick-=weights[i];if(pick<=0){photo=eligible[i];break;}}}
-    el.style.backgroundImage=`url("${photo.url.replace(/"/g,'%22')}")`; el.style.backgroundPosition=photo.position||'center'; el.setAttribute('aria-label',photo.alt);
+    let imageUrl=photo.url;
+    if(photo.url.startsWith('assets/')){
+      try{
+        const response=await fetch('data/hero-optimized.json');
+        if(response.ok){
+          const variants=(await response.json())[photo.id];
+          const width=Math.max(el.clientWidth,window.innerWidth)*Math.min(window.devicePixelRatio||1,2);
+          const size=width<=960?'mobile':width<=1280?'tablet':'desktop';
+          if(variants?.original===photo.url&&variants[size])imageUrl=variants[size];
+        }
+      }catch(e){}
+    }
+    if(imageUrl!==photo.url){
+      const candidate=new Image();
+      candidate.onerror=()=>{el.style.backgroundImage=`url("${photo.url.replace(/"/g,'%22')}")`;};
+      candidate.onload=()=>{el.style.backgroundImage=`url("${imageUrl.replace(/"/g,'%22')}")`;};
+      candidate.src=imageUrl;
+    }else el.style.backgroundImage=`url("${photo.url.replace(/"/g,'%22')}")`; el.style.backgroundPosition=photo.position||'center'; el.setAttribute('aria-label',photo.alt);
     const hist=photo.historical?'<span class="historical-badge">HISTORIC IMAGE</span> ':'';
     const meta=photo.license==='Photo: Frank P. Adams' ? 'Photo: Frank P. Adams' : [photo.date,photo.creator,photo.license].filter(Boolean).map(esc).join(' · ');
     const sourceLink=photo.source ? `<a href="${photo.source}" target="_blank" rel="noopener">Image source and license ↗</a>` : '';
