@@ -1,0 +1,35 @@
+name: Optimize hero photographs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/hero-photos-data.js'
+      - 'assets/**'
+      - '!assets/hero-optimized/**'
+      - 'scripts/optimize-hero.py'
+      - '.github/workflows/optimize-hero.yml'
+permissions:
+  contents: write
+concurrency:
+  group: optimize-hero-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  optimize:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install Pillow
+      - run: python scripts/optimize-hero.py
+      - name: Commit generated images and manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero-optimized data/hero-optimized.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Generate responsive optimized hero photographs"
+          git pull --rebase
+          git push
