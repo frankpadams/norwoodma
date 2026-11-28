@@ -4432,38 +4432,6 @@
     ]
   },
   {
-    "id": "2026-12-05-evergreen-faire-6d4a783",
-    "title": "Evergreen Faire",
-    "start": {
-      "date": "2026-12-05",
-      "time": "09:00"
-    },
-    "end": {
-      "date": "2026-12-05",
-      "time": "14:30"
-    },
-    "venue": "First Congregational Church in Norwood",
-    "address": null,
-    "category": "community",
-    "source_id": "first-congregational-events",
-    "source_url": "https://www.fccnorwood.org/events",
-    "cost": null,
-    "organizer": "First Congregational Church in Norwood",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-food-markets"
-    ]
-  },
-  {
     "id": "2026-12-05-home-depot-kids-workshop",
     "title": "Home Depot Kids Workshop — Holiday Train",
     "description": "Free hands-on building workshop for children ages 5–12, with parent or guardian participation. Kits and tools provided while supplies last.",
@@ -4523,6 +4491,39 @@
     "calendar_ids": [
       "norwood-food-markets"
     ]
+  },
+  {
+    "id": "2026-12-05-evergreen-faire-6d4a783",
+    "title": "Evergreen Faire & Silent Auction",
+    "description": "Holiday craft vendors, baked goods, jewelry, secondhand finds and a silent auction at First Congregational Church Norwood. Public fair hours are 9:30 AM–2 PM.",
+    "start": {
+      "date": "2026-12-05",
+      "time": "09:30"
+    },
+    "end": {
+      "date": "2026-12-05",
+      "time": "14:00"
+    },
+    "venue": "First Congregational Church Norwood",
+    "address": "100 Winter Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "fundraiser",
+    "source_id": "first-congregational-events",
+    "source_url": "https://www.fccnorwood.org/events/evergreen-faire-2",
+    "organizer": "First Congregational Church Norwood",
+    "cost": null,
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "Holiday craft vendors, baked goods, jewelry, secondhand finds and a silent auction at First Congregational Church Norwood, 100 Winter Street. Public fair hours: 9:30 AM–2 PM.",
+    "calendar_ids": [
+      "norwood-community",
+      "norwood-family",
+      "norwood-food-markets",
+      "norwood-fundraisers"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "rec-occurrence-rec-612e68cd5d10-2026-12-05",
@@ -14394,7 +14395,7 @@
   },
   {
     "id": "2026-12-19-norwood-theatre-nutcracker-matinee",
-    "title": "The Nutcracker",
+    "title": "The Nutcracker — Matinee",
     "description": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
     "start": {
       "date": "2026-12-19",
@@ -14482,6 +14483,39 @@
       "norwood-community",
       "norwood-family"
     ]
+  },
+  {
+    "id": "2026-12-19-norwood-theatre-nutcracker-evening",
+    "title": "The Nutcracker — Evening Performance",
+    "description": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
+    "start": {
+      "date": "2026-12-19",
+      "time": "19:30"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": "109 Central Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "performance",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/the-nutcracker-2026",
+    "ticket_url": "https://ci.ovationtix.com/35817/production/1271602",
+    "cost": "Premium $55; adults $50; seniors/children $45",
+    "organizer": "Norwood Theatre",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "2026-12-19-tvl-girls-varsity-ice-hockey-medfield-senior--011379d",
