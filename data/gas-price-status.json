@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-11-27T18:54:44.042501Z",
+  "generated_at": "2026-11-28T17:29:50.452462Z",
   "stations": {
     "BJ's Gas Station": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium"
         ],
         "candidates": [
@@ -28,20 +26,80 @@
             "types": [
               "gas_station",
               "point_of_interest",
+              "service",
               "store",
+              "establishment"
+            ]
+          },
+          {
+            "address": "971 Providence Hwy, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Mobil",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "971 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJpd6WIoKA5IkRYMvsQ1aamRU",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
+          },
+          {
+            "address": "960 Boston Providence Hwy, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Citgo",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "960 Boston Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJZxedLoKA5IkRVOZiAa9AGq4",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
+          },
+          {
+            "address": "515 Providence Hwy, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Sunoco",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "515 Providence Hwy",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJJ985jXCA5IkRDjHiZEhtYqE",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "convenience_store",
+              "food_store",
+              "food",
+              "store",
+              "point_of_interest",
               "service",
               "establishment"
             ]
           }
         ],
-        "outcome": "prices_returned"
+        "outcome": "partial_prices"
       }
     },
     "CITGO": {
       "google": {
         "accepted_grades": [
-          "premium",
-          "midgrade",
+          "diesel",
           "regular"
         ],
         "candidates": [
@@ -127,9 +185,8 @@
     },
     "Gulf — Broadway": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -158,7 +215,6 @@
     "Irving Oil / Rojo": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -203,9 +259,9 @@
               "food_store",
               "restaurant",
               "food",
+              "store",
               "point_of_interest",
               "service",
-              "store",
               "establishment"
             ]
           },
@@ -234,9 +290,7 @@
     },
     "Mobil / On the Run — Norwood Center": {
       "google": {
-        "accepted_grades": [
-          "regular"
-        ],
+        "accepted_grades": [],
         "candidates": [
           {
             "address": "499 Washington St, Norwood, MA 02062, USA",
@@ -264,9 +318,7 @@
     "Mobil — Route 1": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
-          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -295,9 +347,8 @@
     },
     "Mr. Frank's Food Mart": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -338,8 +389,8 @@
             "types": [
               "barbecue_restaurant",
               "restaurant",
-              "food",
               "point_of_interest",
+              "food",
               "establishment"
             ]
           },
@@ -376,31 +427,33 @@
             "station_verified": false,
             "types": [
               "convenience_store",
-              "food_store",
-              "food",
               "point_of_interest",
+              "food_store",
               "store",
+              "food",
               "establishment"
             ]
           },
           {
-            "address": "683 Washington St, Norwood, MA 02062, USA",
+            "address": "501 Washington St, Norwood, MA 02062, USA",
             "address_verified": false,
-            "name": "Norwood Convenience and News",
+            "name": "Lucky Mart Inc.",
             "outcome": "address_or_station_type_mismatch",
             "parsed_address": [
-              "683 Washington St",
+              "501 Washington St",
               "Norwood",
               "MA"
             ],
-            "place_id": "ChIJd8TbpdF_5IkRYLnfIlLpASs",
+            "place_id": "ChIJtyYcE9p_5IkR7RvAuOnUWk4",
             "station_verified": false,
             "types": [
               "convenience_store",
-              "food_store",
-              "food",
               "point_of_interest",
+              "service",
+              "grocery_store",
+              "food_store",
               "store",
+              "food",
               "establishment"
             ]
           }
@@ -411,7 +464,6 @@
     "Norwood Gulf": {
       "google": {
         "accepted_grades": [
-          "diesel",
           "premium",
           "midgrade",
           "regular"
@@ -443,9 +495,8 @@
     },
     "Route 1 Auto Services": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -530,20 +581,57 @@
               "service",
               "establishment"
             ]
+          },
+          {
+            "address": "305 Boston-Providence Turnpike, Norwood, MA 02062, USA",
+            "address_verified": true,
+            "name": "Norwood Bottled Gas",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "305 Boston-Providence Turnpike",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJ5U-FinSA5IkRD1lptl0ZuxE",
+            "station_verified": false,
+            "types": [
+              "supplier",
+              "manufacturer",
+              "point_of_interest",
+              "service",
+              "store",
+              "establishment"
+            ]
+          },
+          {
+            "address": "238 Pleasant St, Norwood, MA 02062, USA",
+            "address_verified": false,
+            "name": "Shell",
+            "outcome": "address_or_station_type_mismatch",
+            "parsed_address": [
+              "238 Pleasant St",
+              "Norwood",
+              "MA"
+            ],
+            "place_id": "ChIJFdFdrXiA5IkR2Y8C__DrJjs",
+            "station_verified": true,
+            "types": [
+              "gas_station",
+              "point_of_interest",
+              "service",
+              "establishment"
+            ]
           }
         ],
         "outcome": "no_usable_fuel_prices"
       }
     },
     "Shell — Pleasant Street": {
-      "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
-      },
       "google": {
         "accepted_grades": [
-          "premium"
+          "diesel",
+          "premium",
+          "regular"
         ],
         "candidates": [
           {
@@ -571,9 +659,8 @@
     },
     "Shell — Walpole Street": {
       "gasbuddy": {
-        "accepted_grades": [],
-        "matched_stations": 0,
-        "outcome": "no_address_match"
+        "error": "CloudflareBlocked",
+        "outcome": "source_unavailable"
       },
       "google": {
         "accepted_grades": [],
@@ -605,6 +692,7 @@
       "google": {
         "accepted_grades": [
           "premium",
+          "midgrade",
           "regular"
         ],
         "candidates": [
@@ -625,9 +713,9 @@
               "convenience_store",
               "food_store",
               "food",
+              "store",
               "point_of_interest",
               "service",
-              "store",
               "establishment"
             ]
           }
@@ -641,7 +729,6 @@
     "Mr. Frank's Food Mart",
     "Route 1 Auto Services",
     "BJ's Gas Station",
-    "Shell — Walpole Street",
-    "Shell — Pleasant Street"
+    "Shell — Walpole Street"
   ]
 }
