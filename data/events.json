@@ -25,244 +25,6 @@
     ]
   },
   {
-    "id": "2026-11-26-thanksgiving-holiday-no-school-2a74629",
-    "title": "THANKSGIVING HOLIDAY - NO SCHOOL — Coakley Middle School",
-    "start": {
-      "date": "2026-11-26",
-      "time": "08:45"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "15:20"
-    },
-    "venue": "Coakley Middle School",
-    "address": null,
-    "category": "community",
-    "source_id": "nps-coakley",
-    "source_url": "https://www.norwood.k12.ma.us/cms/calendar/9179643/thanksgiving-holiday-no-school",
-    "cost": null,
-    "organizer": "Coakley Middle School",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "school_scope": "Coakley Middle School",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-26-no-school-thanksgiving-break-8f33bd1",
-    "title": "No School Thanksgiving Break — All Norwood Public Schools",
-    "start": {
-      "date": "2026-11-26",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": null
-    },
-    "venue": "All Norwood Public Schools",
-    "address": null,
-    "category": "community",
-    "source_id": "nps-district",
-    "source_url": "https://www.norwood.k12.ma.us/about/calendar/9174375/no-school-thanksgiving-break-clone-clone",
-    "cost": null,
-    "organizer": "Norwood Public Schools",
-    "public_access": "public",
-    "series": null,
-    "publish_candidate": true,
-    "verification_status": "auto_primary_source",
-    "notes": null,
-    "discovered_by": "scheduled_ical",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "school_scope": "All Norwood Public Schools",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-family"
-    ]
-  },
-  {
-    "id": "2026-11-27-sunnyside-up-aa",
-    "title": "Sunnyside Up AA",
-    "start": {
-      "date": "2026-11-27",
-      "time": "07:00"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "08:00"
-    },
-    "venue": "Grace Episcopal Church",
-    "address": "150 Chapel St, Norwood, MA 02062",
-    "category": "recovery",
-    "source_id": "recovery-aa",
-    "source_url": "https://www.gracenor.org/groups",
-    "cost": "Free",
-    "public_access": "public",
-    "series": "Sunnyside Up AA",
-    "publish_candidate": true,
-    "verification_status": "official_recurring_schedule_verified_2026-09-26",
-    "notes": "Open Alcoholics Anonymous meeting. Weekdays, 7:00–8:00 AM. Verify current schedule with the linked local host page.",
-    "calendar_ids": [
-      "norwood-community",
-      "norwood-sports",
-      "recovery-aa"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-bc81380d7d8f-2026-11-27",
-    "title": "Drop-In Pickleball",
-    "start": {
-      "date": "2026-11-27",
-      "time": "08:00"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "10:00"
-    },
-    "venue": "11/06/2026 - 05/07/2027 08:00 AM - 10:00 AM Norwood Civic Center - Gymnasium",
-    "category": "drop_in",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30942",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30942",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$5.00 Res, $7.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": true,
-    "session_start": "2026-11-06",
-    "session_end": "2027-05-07",
-    "days": "F",
-    "notes": "A combination of tennis, badminton, ping pong and racquetball - one of the fastest growing sports in America! A few racquets and balls are available for newcomers. Participants must help set up and break down at the end of each class. Drop in style pickleball - players of all skill levels and ages are welcome to join. Friday mornings from 8:00am-10:00am Civic Center Gym Drop-In Fee: Res: $5.00/NR: $7.00 Schedule is subject to change, please call ahead. 781-762-0466. Closed on holidays and school vacation weeks!",
-    "rec_program_id": "rec-bc81380d7d8f",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-sports",
-      "rec-all",
-      "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-fc27544fe5d5-2026-11-27",
-    "title": "Indoor Tot Time - Fridays",
-    "start": {
-      "date": "2026-11-27",
-      "time": "10:00"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "12:00"
-    },
-    "venue": "09/18/2026 - 04/16/2027 10:00 AM - 12:00 PM Norwood Civic Center - Gymnasium",
-    "category": "drop_in",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30920",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$75.00 Res, $75.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": true,
-    "session_start": "2026-09-18",
-    "session_end": "2027-04-16",
-    "days": "F",
-    "notes": "Are you looking for fun and safe play for your child during the fall/winter months? Would you like to meet local parents with children similar in age to your child? Look no further! This program will allow your children to explore a large open space and interact with other children. Climbing mats, sports equipment, and play equipment will all be pulled out for the kids to enjoy. Parents/caregivers must accompany their children at all times during this unstructured program. No fee for children under 1 if accompanied by a sibling. $5.00 per day per family (Drop-In) NO FOOD OR DRINKS IN THE GYM PLEASE! NO TOT TIME DURING VACATION WEEKS OR DAYS WHEN CIVIC CENTER IS CLOSED.",
-    "rec_program_id": "rec-fc27544fe5d5",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "norwood-food-markets",
-      "norwood-sports",
-      "rec-all",
-      "rec-drop-in",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "rec-occurrence-rec-7c686bdbe82c-2026-11-27",
-    "title": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "start": {
-      "date": "2026-11-27",
-      "time": "11:00"
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": "20:00"
-    },
-    "venue": "Band Gig School of Music and Performance - Fall/Winter Weekdays",
-    "category": "programs",
-    "source_id": "town-recreation-programs",
-    "source_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "registration_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "guide_url": "https://norwoodma.myrec.com/info/activities/program_details.aspx?ProgramID=30911",
-    "organizer": "Norwood Recreation Department",
-    "cost": "$135.00 Res, $135.00 Non-Res",
-    "public_access": "registration_required",
-    "publish_candidate": true,
-    "curated_default": false,
-    "session_based": true,
-    "drop_in": false,
-    "session_start": "2026-09-07",
-    "session_end": "2027-03-31",
-    "days": "MTuWThF",
-    "notes": "This activity is part of a multi-week Recreation session. The session may already be underway, and advance registration may be required. Check MyRec for current availability before attending.",
-    "rec_program_id": "rec-7c686bdbe82c",
-    "verification_status": "auto_primary_source",
-    "discovered_by": "myrec_program_weekday_expansion",
-    "calendar_ids": [
-      "norwood-family",
-      "rec-all",
-      "recreation-calendar"
-    ]
-  },
-  {
-    "id": "2026-11-27-town-hall-closure-54460d0",
-    "title": "Town Hall Closure",
-    "start": {
-      "date": "2026-11-27",
-      "time": null
-    },
-    "end": {
-      "date": "2026-11-27",
-      "time": null
-    },
-    "venue": "Norwood Town Hall, 566 Washington Street Norwood, MA 02062",
-    "address": null,
-    "category": "community",
-    "source_id": "town-master-calendar",
-    "source_url": "https://www.norwoodma.gov/_assets_/plugins/revizeCalendar/calendar_data_handler.php?webspace=norwoodma25&relative_revize_url=//cms5.revize.com&protocol=https:",
-    "registration_url": null,
-    "cost": null,
-    "public_access": "public",
-    "series": "Town of Norwood",
-    "publish_candidate": true,
-    "verification_status": "verified_town_master_calendar",
-    "notes": null,
-    "discovered_by": "town_revize_master_calendar",
-    "calendar_ids": [
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-11-28-small-business-saturday-6595bda",
     "title": "Small Business Saturday",
     "start": {
@@ -290,36 +52,6 @@
     "public_access_evidence": "explicit event access field",
     "calendar_ids": [
       "friends-norwood-center",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-11-28-mass-cultural-council-publishes-updates-daily-ed1f30f",
-    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
-    "start": {
-      "date": "2026-11-28",
-      "time": "00:06"
-    },
-    "end": {
-      "date": "2026-11-28",
-      "time": null
-    },
-    "venue": null,
-    "address": null,
-    "category": "community",
-    "source_id": "town-cultural-council",
-    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Cultural Council",
-    "publish_candidate": true,
-    "verification_status": "official_visible_event_page",
-    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 28, 2026 at 12:06 AM UTC",
-    "discovered_by": "visible_dated_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
       "norwood-community"
     ]
   },
@@ -662,6 +394,36 @@
     ]
   },
   {
+    "id": "2026-11-28-mass-cultural-council-publishes-updates-daily-ed1f30f",
+    "title": "Mass Cultural Council publishes updates daily. Last update was made on",
+    "start": {
+      "date": "2026-11-28",
+      "time": "12:06"
+    },
+    "end": {
+      "date": "2026-11-28",
+      "time": null
+    },
+    "venue": null,
+    "address": null,
+    "category": "community",
+    "source_id": "town-cultural-council",
+    "source_url": "https://massculturalcouncil.org/local-council/norwood/",
+    "cost": null,
+    "public_access": "public",
+    "series": "Norwood Cultural Council",
+    "publish_candidate": true,
+    "verification_status": "official_visible_event_page",
+    "notes": "Mass Cultural Council publishes updates daily. Last update was made on November 28, 2026 at 12:06 PM UTC",
+    "discovered_by": "visible_dated_page",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-community"
+    ]
+  },
+  {
     "id": "rec-occurrence-rec-4eefd7ddaaf6-2026-11-28",
     "title": "Jazz 1 - Saturdays",
     "start": {
@@ -793,7 +555,7 @@
     "title": "Celebrate Shabbat",
     "start": {
       "date": "2026-11-28",
-      "time": "18:30"
+      "time": "18:00"
     },
     "end": {
       "date": "2026-11-28",
@@ -803,13 +565,13 @@
     "address": null,
     "category": "community",
     "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shalom-corner-closed18.html",
+    "source_url": "https://www.templebethdavid.net/event/shabbat-services---bat-mitzvah-margo-pickering.html",
     "cost": null,
     "public_access": "public",
     "series": "Temple Beth David — Westwood",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Celebrate Shabbat Upcoming Shabbat Services Friday Night Shabbat Evening Service : 6:30pm Shabbat Day Shalom Corner Closed Early Shabbat Service and Study : 9:00am This week's Torah portion is Parashat Vayishlach Shabbat, Nov 28 Join Shabbat Livestream Here",
+    "notes": "Celebrate Shabbat Upcoming Shabbat Services Friday Night Shabbat Evening Service : 6:00pm Shabbat Day Early Shabbat Service and Study : 9:00am Shabbat Services - Bat Mitzvah Margo Pickering : 10:30am This week's Torah portion is Parashat Vayishlach Shabbat, Nov 28 Join Shabbat Livestream Here",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -823,7 +585,7 @@
     "title": "Friday Night",
     "start": {
       "date": "2026-11-28",
-      "time": "18:30"
+      "time": "18:00"
     },
     "end": {
       "date": "2026-11-28",
@@ -833,13 +595,13 @@
     "address": null,
     "category": "community",
     "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shalom-corner-closed18.html",
+    "source_url": "https://www.templebethdavid.net/event/shabbat-services---bat-mitzvah-margo-pickering.html",
     "cost": null,
     "public_access": "public",
     "series": "Temple Beth David — Westwood",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Friday Night Shabbat Evening Service : 6:30pm Shabbat Day Shalom Corner Closed Early Shabbat Service and Study : 9:00am This week's Torah portion is Parashat Vayishlach Shabbat, Nov 28",
+    "notes": "Friday Night Shabbat Evening Service : 6:00pm Shabbat Day Early Shabbat Service and Study : 9:00am Shabbat Services - Bat Mitzvah Margo Pickering : 10:30am This week's Torah portion is Parashat Vayishlach Shabbat, Nov 28",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -853,7 +615,7 @@
     "title": "Upcoming Shabbat Services",
     "start": {
       "date": "2026-11-28",
-      "time": "18:30"
+      "time": "18:00"
     },
     "end": {
       "date": "2026-11-28",
@@ -863,13 +625,13 @@
     "address": null,
     "category": "community",
     "source_id": "faith-temple-beth-david-westwood",
-    "source_url": "https://www.templebethdavid.net/event/shalom-corner-closed18.html",
+    "source_url": "https://www.templebethdavid.net/event/shabbat-services---bat-mitzvah-margo-pickering.html",
     "cost": null,
     "public_access": "public",
     "series": "Temple Beth David — Westwood",
     "publish_candidate": true,
     "verification_status": "official_visible_event_page",
-    "notes": "Upcoming Shabbat Services Friday Night Shabbat Evening Service : 6:30pm Shabbat Day Shalom Corner Closed Early Shabbat Service and Study : 9:00am This week's Torah portion is Parashat Vayishlach Shabbat, Nov 28 Join Shabbat Livestream Here",
+    "notes": "Upcoming Shabbat Services Friday Night Shabbat Evening Service : 6:00pm Shabbat Day Early Shabbat Service and Study : 9:00am Shabbat Services - Bat Mitzvah Margo Pickering : 10:30am This week's Torah portion is Parashat Vayishlach Shabbat, Nov 28 Join Shabbat Livestream Here",
     "discovered_by": "visible_dated_page",
     "public_access_status": "confirmed_public",
     "access_type": "public",
@@ -5216,6 +4978,38 @@
     ]
   },
   {
+    "id": "2026-12-06-guided-tour-of-the-day-house-dec-6-2026-66b8924",
+    "title": "Guided Tour of the Day House – Dec 6, 2026",
+    "start": {
+      "date": "2026-12-06",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-12-06",
+      "time": "15:00"
+    },
+    "venue": "93 Day Street, Norwood, Ma, 02062",
+    "address": "93 Day Street, Norwood, 02062",
+    "category": "arts",
+    "source_id": "historical-society-events",
+    "source_url": "https://norwoodhistoricalsociety.org/event/tour-december-6-2026/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ Join us for a tour of the Day House, decorated for the holidays, any time between 1:00 and 3:00 pm. Enjoy the house’s unique design and beautiful interiors dating to the 1890s. This is a great opportunity to see diverse items in the socie",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-historical-society"
+    ]
+  },
+  {
     "id": "2026-12-06-town-common-books-5391",
     "title": "Local Author Kathleen Reidy",
     "description": "Local romance author Kathleen Reidy signs copies of her new book, Engineering a Love Story. The bookstore’s event page does not require registration.",
@@ -9443,7 +9237,7 @@
     "series": null,
     "publish_candidate": true,
     "verification_status": "auto_primary_source",
-    "notes": "Christmas The Stories Behind the Carols We Still Sing @ per person Clad in a hand-sewn 1850s gown and accompanying herself on guitar and dulcimer, Diane Taraz brings to life the beloved carols written or revived in the Victorian era – the a",
+    "notes": "Christmas The Stories Behind the Carols We Still Sing @ per person Please join us for this fund-raiser holiday event at the Day House Saturday, December 12th at 5:00 pm . Tickets are $20 per person. Reserve your seats in advance using this ",
     "discovered_by": "scheduled_tribe_api",
     "public_access_status": "confirmed_public",
     "access_type": "paid",
@@ -9644,6 +9438,39 @@
       "norwood-arts",
       "norwood-community",
       "norwood-family"
+    ]
+  },
+  {
+    "id": "2026-12-13-norwood-high-school-madrigals-2026-f0850ac",
+    "title": "Norwood High School Madrigals 2026",
+    "start": {
+      "date": "2026-12-13",
+      "time": "13:00"
+    },
+    "end": {
+      "date": "2026-12-13",
+      "time": "13:00"
+    },
+    "venue": "93 Day St, Norwood, MA, United States, Massachusetts 02062",
+    "address": "93 Day St, Norwood, MA, United States, Massachusetts 02062",
+    "category": "arts",
+    "source_id": "historical-society-events",
+    "source_url": "https://norwoodhistoricalsociety.org/event/madrigals-2026/",
+    "cost": null,
+    "public_access": "public",
+    "series": null,
+    "publish_candidate": true,
+    "verification_status": "auto_primary_source",
+    "notes": "@ We are excited to continue this holiday tradition, as the Norwood High School Madrigals, conducted by Director of Choirs Jennifer Hartnett, perform crowd-pleasing versions of familiar songs in the Great Hall of the Day House. Seating open",
+    "discovered_by": "scheduled_tribe_api",
+    "public_access_status": "confirmed_public",
+    "access_type": "public",
+    "public_access_evidence": "explicit event access field",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family",
+      "norwood-historical-society"
     ]
   },
   {
@@ -31021,6 +30848,36 @@
       "rec-all",
       "rec-special-events",
       "recreation-calendar"
+    ]
+  },
+  {
+    "id": "2027-01-23-norwood-food-pantry-food-assistance-b26c452",
+    "title": "Norwood Food Pantry — Food Assistance",
+    "start": {
+      "date": "2027-01-23",
+      "time": "09:00"
+    },
+    "end": {
+      "date": "2027-01-23",
+      "time": "11:40"
+    },
+    "venue": "Norwood Food Pantry",
+    "address": "150 Chapel Street, Norwood, MA 02062",
+    "category": "assistance",
+    "source_id": "norwood-food-pantry-hours",
+    "source_url": "https://www.norwoodpantry.org/food",
+    "cost": "Free",
+    "public_access": "eligibility_applies",
+    "series": "Norwood Food Pantry Saturday Hours",
+    "publish_candidate": true,
+    "verification_status": "official_schedule",
+    "notes": "Food assistance for eligible Norwood and Westwood residents; new clients may register during pantry hours.",
+    "discovered_by": "scheduled_recurring_service",
+    "public_access_status": "inferred_public",
+    "access_type": "paid",
+    "public_access_evidence": "public attendance/registration signal",
+    "calendar_ids": [
+      "norwood-food-markets"
     ]
   },
   {
