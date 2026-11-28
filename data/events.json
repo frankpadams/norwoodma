@@ -4992,37 +4992,6 @@
     ]
   },
   {
-    "id": "2026-12-05-john-denver-christmas-6e2773f",
-    "title": "John Denver Christmas",
-    "start": {
-      "date": "2026-12-05",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-12-05",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/john-denver-christmas",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
-    "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "2026-12-05-john-denver-christmas",
     "title": "John Denver Christmas — Chris Collins & Boulder Canyon",
     "start": {
@@ -5035,19 +5004,27 @@
     },
     "venue": "Norwood Theatre",
     "address": "109 Central St, Norwood, MA 02062",
-    "category": "performance",
+    "category": "live_music",
     "source_id": "norwood-theatre-season",
     "source_url": "https://norwoodstage.com/john-denver-christmas",
-    "cost": null,
+    "cost": "Premium $65; adults $56–$60; seniors/students $51–$55",
     "organizer": "Norwood Theatre",
     "public_access": "ticketed_public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "organizer_verified_2026-10-14",
-    "notes": "Public ticketed performance; see official theatre page for ticket prices and availability.",
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "Chris Collins and Boulder Canyon perform the music of John Denver. Children under five are not permitted. See the official ticket page for availability.",
+    "town": "Norwood",
+    "ticket_url": "https://ci.ovationtix.com/35817/performance/11788813",
+    "description": "Chris Collins and Boulder Canyon perform the music of John Denver. Children under five are not permitted. See the official ticket page for availability.",
+    "curated_default": true,
     "calendar_ids": [
       "norwood-arts",
-      "norwood-community"
+      "norwood-community",
+      "norwood-family"
+    ],
+    "supersedes_event_ids": [
+      "2026-12-05-john-denver-christmas-6e2773f"
     ]
   },
   {
@@ -9703,7 +9680,7 @@
     ]
   },
   {
-    "id": "2026-12-12-the-great-american-soulbook-holiday-show-9fb9564",
+    "id": "2026-12-12-great-american-soulbook",
     "title": "The Great American SoulBook Holiday Show",
     "start": {
       "date": "2026-12-12",
@@ -9714,51 +9691,28 @@
       "time": null
     },
     "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/great-american-soulbook",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
-    "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
-    "id": "2026-12-12-great-american-soulbook",
-    "title": "The Great American SoulBook — Motown & R&B Revue",
-    "start": {
-      "date": "2026-12-12",
-      "time": "19:30"
-    },
-    "end": {
-      "date": "2026-12-12",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
     "address": "109 Central St, Norwood, MA 02062",
-    "category": "performance",
+    "category": "live_music",
     "source_id": "norwood-theatre-season",
     "source_url": "https://norwoodstage.com/great-american-soulbook",
-    "cost": null,
+    "cost": "Premium $65; adults $56–$60; seniors/students $51–$55",
     "organizer": "Norwood Theatre",
     "public_access": "ticketed_public",
     "series": null,
     "publish_candidate": true,
-    "verification_status": "organizer_verified_2026-10-14",
-    "notes": "Public ticketed performance; see official theatre page for ticket prices and availability.",
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "The American Soul Band performs Motown, R&B and holiday favorites. Children under five are not permitted. See the official ticket page for availability.",
+    "town": "Norwood",
+    "ticket_url": "https://ci.ovationtix.com/35817/performance/11785690",
+    "description": "The American Soul Band performs Motown, R&B and holiday favorites. Children under five are not permitted. See the official ticket page for availability.",
+    "curated_default": true,
     "calendar_ids": [
       "norwood-arts",
-      "norwood-community"
+      "norwood-community",
+      "norwood-family"
+    ],
+    "supersedes_event_ids": [
+      "2026-12-12-the-great-american-soulbook-holiday-show-9fb9564"
     ]
   },
   {
@@ -12349,6 +12303,38 @@
     ]
   },
   {
+    "id": "2026-12-17-boch-exotics-toys-for-tots-broadcast",
+    "title": "Boch Exotics Toys for Tots Live Broadcast",
+    "description": "Ernie Boch Jr. and WEEI’s Greg Hill Show host the 22nd annual Toys for Tots broadcast, with live music, complimentary breakfast, special guests and Santa. Bring new, unwrapped toys; toy donations must arrive by 9 AM, although the broadcast continues until 10 AM.",
+    "start": {
+      "date": "2026-12-17",
+      "time": "06:00"
+    },
+    "end": {
+      "date": "2026-12-17",
+      "time": "10:00"
+    },
+    "venue": "Boch Exotics",
+    "address": "441 Providence Highway, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "fundraiser",
+    "source_id": "boch-exotics",
+    "source_url": "https://www.bochexotics.com/toys-for-tots-at-boch-exotics-norwood-ma.htm",
+    "organizer": "Boch Exotics · Ernie Boch Jr. · WEEI The Greg Hill Show",
+    "cost": null,
+    "public_access": "public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_and_flyer_verified_2026-11-28",
+    "notes": "The official updated 22nd-anniversary flyer says Thursday, December 17, 6–10 AM; the organizer labels its image BE_ToysForTots 2026_650x800.jpg. December 17, 2026 is Thursday. The official page confirms new, unwrapped toys, Norwood address and donation deadline of 9 AM December 17. This supersedes older December 5, 2025 and drive-through annual announcements. Collection before broadcast: sales/showroom hours Monday–Friday 9 AM–6 PM, Saturday 9 AM–5 PM, Sunday closed; confirm holiday exceptions with the host. No flyer copy retained.",
+    "calendar_ids": [
+      "fundraisers",
+      "norwood-community",
+      "norwood-fundraisers"
+    ],
+    "discovered_by": "official_organization_review"
+  },
+  {
     "id": "2026-12-17-sunnyside-up-aa",
     "title": "Sunnyside Up AA",
     "start": {
@@ -13776,6 +13762,7 @@
   {
     "id": "2026-12-18-the-nutcracker-fff96f1",
     "title": "The Nutcracker",
+    "description": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
     "start": {
       "date": "2026-12-18",
       "time": "19:30"
@@ -13785,24 +13772,25 @@
       "time": null
     },
     "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
+    "address": "109 Central Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "performance",
     "source_id": "norwood-theatre-season",
     "source_url": "https://norwoodstage.com/the-nutcracker-2026",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
+    "ticket_url": "https://ci.ovationtix.com/35817/production/1271602",
+    "cost": "Premium $55; adults $50; seniors/children $45",
+    "organizer": "Norwood Theatre",
+    "public_access": "ticketed_public",
     "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
     "calendar_ids": [
       "norwood-arts",
-      "norwood-community"
-    ]
+      "norwood-community",
+      "norwood-family"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "2026-12-19-balch-pto-pancake-breakfast",
@@ -14405,6 +14393,39 @@
     ]
   },
   {
+    "id": "2026-12-19-norwood-theatre-nutcracker-matinee",
+    "title": "The Nutcracker",
+    "description": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
+    "start": {
+      "date": "2026-12-19",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-12-19",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": "109 Central Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "performance",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/the-nutcracker-2026",
+    "ticket_url": "https://ci.ovationtix.com/35817/production/1271602",
+    "cost": "Premium $55; adults $50; seniors/children $45",
+    "organizer": "Norwood Theatre",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ],
+    "discovered_by": "official_organization_review"
+  },
+  {
     "id": "2026-12-19-vfw-post-2452-meat-raffle-6626405",
     "title": "VFW Post 2452 Meat Raffle",
     "start": {
@@ -14594,6 +14615,39 @@
       "blackhole-comics",
       "norwood-family"
     ]
+  },
+  {
+    "id": "2026-12-20-norwood-theatre-nutcracker-matinee",
+    "title": "The Nutcracker",
+    "description": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
+    "start": {
+      "date": "2026-12-20",
+      "time": "13:30"
+    },
+    "end": {
+      "date": "2026-12-20",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": "109 Central Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "performance",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/the-nutcracker-2026",
+    "ticket_url": "https://ci.ovationtix.com/35817/production/1271602",
+    "cost": "Premium $55; adults $50; seniors/children $45",
+    "organizer": "Norwood Theatre",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "The Dancing Arts Center presents The Nutcracker. Recommended for ages four and up; infants and children under two are not permitted. Four separately scheduled performances December 18–20; select the correct date and time when buying tickets.",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community",
+      "norwood-family"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "2026-12-20-celtic-seisun",
@@ -19593,37 +19647,6 @@
     ]
   },
   {
-    "id": "2026-12-31-new-year-s-eve-comedy-night-8311c01",
-    "title": "New Year’s Eve Comedy Night",
-    "start": {
-      "date": "2026-12-31",
-      "time": "11:30"
-    },
-    "end": {
-      "date": "2026-12-31",
-      "time": null
-    },
-    "venue": "Norwood Theatre",
-    "address": null,
-    "category": "arts",
-    "source_id": "norwood-theatre-season",
-    "source_url": "https://norwoodstage.com/nye-comedy-night",
-    "cost": null,
-    "public_access": "public",
-    "series": "Norwood Theatre — Shows & Events",
-    "publish_candidate": true,
-    "verification_status": "official_dated_event_page",
-    "notes": "Dated event from the official venue site.",
-    "discovered_by": "official_event_page",
-    "public_access_status": "confirmed_public",
-    "access_type": "public",
-    "public_access_evidence": "explicit event access field",
-    "calendar_ids": [
-      "norwood-arts",
-      "norwood-community"
-    ]
-  },
-  {
     "id": "rec-occurrence-rec-232c75e8f43a-2026-12-31",
     "title": "Tap 1 - Thursdays",
     "start": {
@@ -19733,6 +19756,38 @@
       "rec-special-events",
       "recreation-calendar"
     ]
+  },
+  {
+    "id": "2026-12-31-new-year-s-eve-comedy-night-8311c01",
+    "title": "New Year’s Eve Comedy Night",
+    "description": "Tony V, Harrison Stebbins, Corey Rodrigues and Kelly MacFarland perform the theatre’s early-evening New Year’s Eve comedy show. Official start time is 5 PM; see the ticket page for availability.",
+    "start": {
+      "date": "2026-12-31",
+      "time": "17:00"
+    },
+    "end": {
+      "date": "2026-12-31",
+      "time": null
+    },
+    "venue": "Norwood Theatre",
+    "address": "109 Central Street, Norwood, MA 02062",
+    "town": "Norwood",
+    "category": "performance",
+    "source_id": "norwood-theatre-season",
+    "source_url": "https://norwoodstage.com/nye-comedy-night",
+    "ticket_url": "https://ci.ovationtix.com/35817/performance/11793499",
+    "cost": "Premium $56; adults $50; seniors $42",
+    "organizer": "Norwood Theatre",
+    "public_access": "ticketed_public",
+    "publish_candidate": true,
+    "curated_default": true,
+    "verification_status": "official_website_verified_2026-11-28",
+    "notes": "Tony V, Harrison Stebbins, Corey Rodrigues and Kelly MacFarland perform the theatre’s early-evening New Year’s Eve comedy show. Official start time is 5 PM; see the ticket page for availability.",
+    "calendar_ids": [
+      "norwood-arts",
+      "norwood-community"
+    ],
+    "discovered_by": "official_organization_review"
   },
   {
     "id": "rec-occurrence-rec-9c1a31905d07-2026-12-31",
