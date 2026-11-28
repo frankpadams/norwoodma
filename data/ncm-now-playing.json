@@ -1,47 +1,119 @@
 {
-  "updated_at": "2026-11-27T21:32:41.768823-05:00",
-  "date": "2026-11-27",
+  "updated_at": "2026-11-28T06:30:04.141011-05:00",
+  "date": "2026-11-28",
   "timezone": "America/New_York",
   "channels": {
     "community": {
       "status": "scheduled",
-      "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary",
+      "title": "Cold Brew & Cream: Episode 1 - Bob Blood",
       "url": "https://norwoodcommunitymedia.org/programs/site/community-1/broadcast/",
       "slots": [
         {
-          "minute": 1320,
+          "minute": 420,
+          "title": "LEAD Update November 2026"
+        },
+        {
+          "minute": 480,
           "title": "Norwood News 11.20.26"
         },
         {
-          "minute": 1350,
-          "title": "Ernie's Jukebox: The Last Waltz 50th Anniversary"
+          "minute": 540,
+          "title": "The Vehicle for Change 11.10.26"
+        },
+        {
+          "minute": 600,
+          "title": "Norwood Digest with Jack McCarthy #4"
+        },
+        {
+          "minute": 660,
+          "title": "Bells & Whistles: The History of NPD/NFD"
+        },
+        {
+          "minute": 720,
+          "title": "Norwood News 11.20.26"
+        },
+        {
+          "minute": 780,
+          "title": "The Kevin Broderick Show: Episode 17 - Matt Sheehan"
+        },
+        {
+          "minute": 840,
+          "title": "Cold Brew & Cream: Episode 1 - Bob Blood"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-27"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=1&currentDay=2026-11-28"
     },
     "government": {
       "status": "scheduled",
-      "title": "School Committee 11.18.26",
+      "title": "Town Meeting Night #1 11.16.26",
       "url": "https://norwoodcommunitymedia.org/programs/site/government-3/broadcast/",
       "slots": [
         {
-          "minute": 1350,
+          "minute": 480,
+          "title": "Conservation Commission 11.18.26"
+        },
+        {
+          "minute": 540,
           "title": "School Committee 11.18.26"
+        },
+        {
+          "minute": 600,
+          "title": "Select Board 11.24.26"
+        },
+        {
+          "minute": 690,
+          "title": "Board of Health 11.16.26"
+        },
+        {
+          "minute": 750,
+          "title": "Town Meeting Night #2 11.19.26"
+        },
+        {
+          "minute": 900,
+          "title": "Community Preservation Committee 11.18.26"
+        },
+        {
+          "minute": 990,
+          "title": "Town Meeting Night #1 11.16.26"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-27"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=3&currentDay=2026-11-28"
     },
     "schools": {
       "status": "scheduled",
-      "title": "Townwide Elementary Basketball: Prescott vs. Oldham 10/3/09",
+      "title": "1964 Oldham School Dedication",
       "url": "https://norwoodcommunitymedia.org/programs/site/school-2/broadcast/",
       "slots": [
         {
-          "minute": 1380,
+          "minute": 480,
           "title": "Townwide Elementary Basketball: Prescott vs. Oldham 10/3/09"
+        },
+        {
+          "minute": 540,
+          "title": "2015 George Usevich Retirement Dinner"
+        },
+        {
+          "minute": 660,
+          "title": "Willett School Celebrates Thanksgiving 2007"
+        },
+        {
+          "minute": 720,
+          "title": "1996 Thanksgiving Rally"
+        },
+        {
+          "minute": 750,
+          "title": "2003 Balch Thanksgiving Show"
+        },
+        {
+          "minute": 780,
+          "title": "1991 NHS Fall Rally"
+        },
+        {
+          "minute": 840,
+          "title": "1964 Oldham School Dedication"
         }
       ],
-      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-27"
+      "source": "https://reflect-npa.cablecast.tv/internetchannel/?channel=1&site=2&currentDay=2026-11-28"
     }
   }
 }
